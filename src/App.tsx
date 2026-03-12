@@ -5,6 +5,7 @@ import { Cursor } from './components/shared/Cursor';
 import { C9X } from './pages/C9X';
 import { Pricing } from './pages/Pricing';
 import { Landing } from './pages/Landing';
+import { SaaSHomepage } from './pages/SaaSHomepage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/c9x" element={<C9X />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/saas" element={<SaaSHomepage />} />
       </Routes>
       <Footer />
     </Router>
