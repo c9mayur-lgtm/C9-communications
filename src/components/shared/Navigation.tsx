@@ -1,216 +1,345 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Menu, X, ChevronDown, ArrowRight, Wifi, Phone, Shield, Server, Cloud, Smartphone, Building2, Globe } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
+/* ── Dropdown data ── */
+const SOLUTIONS_MENU = [
+  { icon: <Wifi size={16} />, label: 'Business NBN & Fibre', desc: 'Ultra-fast leased line & broadband', path: '/solutions' },
+  { icon: <Phone size={16} />, label: 'Cloud Phone System', desc: 'Enterprise VoIP & PBX replacement', path: '/c9x' },
+  { icon: <Smartphone size={16} />, label: 'Unified Communications', desc: 'Voice, video & collaboration in one', path: '/solutions' },
+  { icon: <Server size={16} />, label: 'Managed IT Services', desc: 'Proactive support & monitoring', path: '/solutions' },
+  { icon: <Shield size={16} />, label: 'Cybersecurity', desc: 'Zero-trust & endpoint protection', path: '/solutions' },
+  { icon: <Cloud size={16} />, label: 'Cloud Infrastructure', desc: 'Hybrid & multi-cloud hosting', path: '/solutions' },
+];
+
+const COMPANY_MENU = [
+  { icon: <Building2 size={16} />, label: 'About C9', desc: 'Our story and mission', path: '/about' },
+  { icon: <Globe size={16} />, label: 'Case Studies', desc: 'Client success stories', path: '/about' },
+];
+
+const NAV_LINKS = [
+  { name: 'Solutions', path: '/solutions', hasMenu: true, menuKey: 'solutions' },
+  { name: 'Pricing', path: '/pricing', hasMenu: false },
+  { name: 'Industries', path: '/industries', hasMenu: false },
+  { name: 'Company', path: '/about', hasMenu: true, menuKey: 'company' },
+  { name: 'Support', path: '/support', hasMenu: false },
+];
+
+/* ── Dropdown Panel ── */
+const DropdownPanel = ({ items, visible }: { items: typeof SOLUTIONS_MENU; visible: boolean }) => (
+  <div style={{
+    position: 'absolute', top: 'calc(100% + 16px)', left: '50%',
+    background: 'rgba(10,0,16,0.97)', backdropFilter: 'blur(28px)', WebkitBackdropFilter: 'blur(28px)',
+    border: '1px solid rgba(167,139,250,0.18)', borderRadius: '16px', padding: '16px',
+    width: '360px', boxShadow: '0 24px 64px rgba(0,0,0,0.6)',
+    opacity: visible ? 1 : 0, visibility: visible ? 'visible' : 'hidden',
+    transform: visible ? 'translateX(-50%) translateY(0px)' : 'translateX(-50%) translateY(-8px)',
+    transition: 'all 0.22s cubic-bezier(0.16,1,0.3,1)',
+    zIndex: 100,
+  }}>
+    {items.map((item, i) => (
+      <Link key={i} to={item.path || '#'} style={{ textDecoration: 'none' }}>
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: '14px', padding: '12px 14px',
+          borderRadius: '10px', transition: 'background 0.15s',
+          cursor: 'pointer',
+        }}
+          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(167,139,250,0.08)')}
+          onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+        >
+          <div style={{
+            width: '36px', height: '36px', borderRadius: '10px', flexShrink: 0,
+            background: 'rgba(124,58,237,0.2)', border: '1px solid rgba(167,139,250,0.2)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C4B5FD',
+          }}>{item.icon}</div>
+          <div>
+            <div style={{ fontSize: '14px', fontWeight: 600, color: '#fff', marginBottom: '2px' }}>{item.label}</div>
+            <div style={{ fontSize: '12px', color: 'rgba(248,245,255,0.45)' }}>{item.desc}</div>
+          </div>
+          <ArrowRight size={13} style={{ color: '#7C3AED', marginLeft: 'auto', flexShrink: 0 }} />
+        </div>
+      </Link>
+    ))}
+  </div>
+);
+
+/* ── Main Navigation ── */
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
-  const [isDarkPage, setIsDarkPage] = useState(true);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const location = useLocation();
+  const timeoutRef = useRef<any>(null);
+
+  const isHome = location.pathname === '/' || location.pathname === '/saas';
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
-
-    // Very simple check to determine if the page starts dark
-    // On /pricing we might want it forced to light or determined by page
-    const bodyBg = getComputedStyle(document.body).backgroundColor;
-    setIsDarkPage(bodyBg !== 'rgb(255, 255, 255)'); 
-
+    const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location.pathname]);
+  }, []);
 
-  const links = [
-    { name: 'Solutions', path: '/#solutions' },
-    { name: 'Pricing', path: '/pricing' },
-    { name: 'Industries', path: '/#industries' },
-    { name: 'About', path: '/#about' },
-    { name: 'Support', path: '/#support' }
-  ];
+  // Close mobile nav on route change
+  useEffect(() => { setNavOpen(false); setOpenMenu(null); }, [location.pathname]);
+
+  const handleMouseEnter = (key: string) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setOpenMenu(key);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setOpenMenu(null), 150);
+  };
+
+  const navBg = scrolled
+    ? 'rgba(10,0,16,0.94)'
+    : isHome ? 'transparent' : 'rgba(10,0,16,0.94)';
 
   return (
     <>
-      <nav 
-        style={{
-          position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '0 2rem', 
-          transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
-          height: scrolled ? '56px' : '72px',
-          background: scrolled ? 'rgba(26,0,58,0.85)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(20px)' : 'none',
-          WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent'
-        }}
-      >
+      <nav style={{
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '0 2.5rem',
+        height: scrolled ? '58px' : '72px',
+        background: navBg,
+        backdropFilter: (scrolled || !isHome) ? 'blur(24px)' : 'none',
+        WebkitBackdropFilter: (scrolled || !isHome) ? 'blur(24px)' : 'none',
+        borderBottom: (scrolled || !isHome) ? '1px solid rgba(167,139,250,0.1)' : '1px solid transparent',
+        transition: 'all 0.35s cubic-bezier(0.16,1,0.3,1)',
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
+      }}>
         {/* LOGO */}
-        <Link to="/" style={{ 
-          fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 600, 
-          color: scrolled || isDarkPage ? 'white' : 'var(--c9-text)',
-          position: 'relative', transition: 'color 0.3s',
-          textDecoration: 'none'
+        <Link to="/" style={{
+          fontFamily: "'Clash Display', sans-serif",
+          fontSize: '1.3rem', fontWeight: 800,
+          color: '#fff', textDecoration: 'none', letterSpacing: '-0.03em',
+          display: 'flex', alignItems: 'center', gap: '8px',
         }}>
-          C9 Communications
-          {/* Active dot indicator simulation for logo */}
           <div style={{
-            position: 'absolute', bottom: '-8px', left: '50%', transform: 'translateX(-50%)',
-            width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--c9-accent)',
-            opacity: location.pathname === '/' ? 1 : 0
-          }} />
+            width: '28px', height: '28px', borderRadius: '8px',
+            background: 'linear-gradient(135deg, #7C3AED, #A855F7)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: '12px', fontWeight: 900, color: '#fff', flexShrink: 0,
+          }}>C9</div>
+          Communications
         </Link>
 
         {/* DESKTOP LINKS */}
-        <div className="nav-desktop-links" style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-          {links.map((item) => {
-            const isExternal = !item.path.startsWith('/#');
-            const Element = isExternal ? Link : 'a' as any;
-            const props = isExternal ? { to: item.path } : { href: item.path };
+        <div style={{ display: 'flex', gap: '2px', alignItems: 'center' }} className="nav-desktop-links">
+          {NAV_LINKS.map((item) => {
+            const isActive = location.pathname === item.path || (item.path.startsWith('/#') && location.pathname === '/');
+            const isDropdownOpen = item.hasMenu && openMenu === item.menuKey;
 
             return (
-              <Element 
-                key={item.name} 
-                {...props}
-                className="nav-link"
-                style={{
-                  color: scrolled || isDarkPage ? 'rgba(255,255,255,0.75)' : 'var(--c9-mid)',
-                  fontSize: '15px', fontWeight: 500, position: 'relative',
-                  transition: 'color 0.15s ease',
-                  textDecoration: 'none'
-                }}
+              <div
+                key={item.name}
+                style={{ position: 'relative' }}
+                onMouseEnter={() => item.hasMenu && handleMouseEnter(item.menuKey!)}
+                onMouseLeave={handleMouseLeave}
               >
-                {item.name}
-                <div style={{
-                  position: 'absolute', bottom: '-8px', left: '50%', transform: 'translateX(-50%)',
-                  width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--c9-accent)',
-                  opacity: location.pathname === item.path ? 1 : 0, transition: 'opacity 0.15s'
-                }} />
-                
-                {/* Mega Dropdown for Solutions */}
-                {item.name === 'Solutions' && (
-                  <div className="mega-menu">
-                    <div className="mega-menu-content">
-                      {['Voice/VoIP', 'Business NBN', 'IT Services', 'Cloud Hosting', 'Mobile Plans', 'Print & Hardware'].map(s => (
-                        <div key={s} className="mega-item">
-                          <span style={{color: 'white', fontWeight: 600, display: 'block'}}>{s}</span>
-                          <span style={{color: 'var(--c9-muted)', fontSize: '13px'}}>Learn more about {s.toLowerCase()}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                {item.hasMenu ? (
+                  <button style={{
+                    display: 'flex', alignItems: 'center', gap: '4px',
+                    color: isActive ? '#E9D5FF' : 'rgba(248,245,255,0.65)',
+                    fontSize: '14px', fontWeight: 500, background: 'none',
+                    border: 'none', padding: '8px 14px', borderRadius: '8px',
+                    cursor: 'pointer', transition: 'all 0.15s',
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  }}
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLElement).style.color = '#fff';
+                      (e.currentTarget as HTMLElement).style.background = 'rgba(167,139,250,0.07)';
+                    }}
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLElement).style.color = isActive ? '#E9D5FF' : 'rgba(248,245,255,0.65)';
+                      (e.currentTarget as HTMLElement).style.background = 'transparent';
+                    }}
+                  >
+                    {item.name}
+                    <ChevronDown size={13} style={{
+                      transition: 'transform 0.2s',
+                      transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                      color: '#A855F7',
+                    }} />
+                  </button>
+                ) : (
+                  item.path.startsWith('/#') ? (
+                    <a href={item.path} style={{
+                      display: 'flex', alignItems: 'center', gap: '4px',
+                      color: isActive ? '#E9D5FF' : 'rgba(248,245,255,0.65)',
+                      fontSize: '14px', fontWeight: 500,
+                      padding: '8px 14px', borderRadius: '8px',
+                      textDecoration: 'none', transition: 'all 0.15s',
+                    }}
+                      onMouseEnter={e => {
+                        (e.currentTarget as HTMLElement).style.color = '#fff';
+                        (e.currentTarget as HTMLElement).style.background = 'rgba(167,139,250,0.07)';
+                      }}
+                      onMouseLeave={e => {
+                        (e.currentTarget as HTMLElement).style.color = isActive ? '#E9D5FF' : 'rgba(248,245,255,0.65)';
+                        (e.currentTarget as HTMLElement).style.background = 'transparent';
+                      }}
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link to={item.path} style={{
+                      display: 'flex', alignItems: 'center', gap: '4px',
+                      color: location.pathname === item.path ? '#E9D5FF' : 'rgba(248,245,255,0.65)',
+                      fontSize: '14px', fontWeight: 500,
+                      padding: '8px 14px', borderRadius: '8px',
+                      textDecoration: 'none', transition: 'all 0.15s',
+                    }}
+                      onMouseEnter={e => {
+                        (e.currentTarget as HTMLElement).style.color = '#fff';
+                        (e.currentTarget as HTMLElement).style.background = 'rgba(167,139,250,0.07)';
+                      }}
+                      onMouseLeave={e => {
+                        (e.currentTarget as HTMLElement).style.color = location.pathname === item.path ? '#E9D5FF' : 'rgba(248,245,255,0.65)';
+                        (e.currentTarget as HTMLElement).style.background = 'transparent';
+                      }}
+                    >
+                      {item.name}
+                    </Link>
+                  )
                 )}
-              </Element>
+
+                {/* Dropdown panel */}
+                {item.menuKey === 'solutions' && (
+                  <DropdownPanel items={SOLUTIONS_MENU} visible={isDropdownOpen} />
+                )}
+                {item.menuKey === 'company' && (
+                  <DropdownPanel items={COMPANY_MENU} visible={isDropdownOpen} />
+                )}
+              </div>
             );
           })}
         </div>
 
         {/* RIGHT ACTIONS */}
-        <div className="nav-desktop-actions" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-          <span className="mono-tag hover-white" style={{ color: 'var(--c9-light)', fontSize: '13px' }}>1800 000 C9X</span>
-          <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.15)' }} />
-          <button className="btn-primary">
+        <div className="nav-desktop-actions" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          <a href="tel:1800000000" style={{
+            fontSize: '13px', fontWeight: 600, color: 'rgba(248,245,255,0.5)',
+            textDecoration: 'none', transition: 'color 0.15s',
+          }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#C4B5FD')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(248,245,255,0.5)')}
+          >
+            1800 C9 TECH
+          </a>
+          <Link to="/contact" style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
+            color: '#fff', fontSize: '14px', fontWeight: 700,
+            padding: '9px 20px', borderRadius: '100px',
+            border: '1px solid rgba(167,139,250,0.3)',
+            textDecoration: 'none',
+            transition: 'all 0.25s cubic-bezier(0.16,1,0.3,1)',
+            boxShadow: '0 0 0 0 rgba(124,58,237,0)',
+          }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.transform = 'translateY(-1px)';
+              (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 24px rgba(124,58,237,0.35)';
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
+              (e.currentTarget as HTMLElement).style.boxShadow = '0 0 0 0 rgba(124,58,237,0)';
+            }}
+          >
             Get a Quote
-          </button>
+          </Link>
         </div>
 
         {/* MOBILE HAMBURGER */}
-        <div className="nav-mobile-btn" style={{ display: 'none' }}>
-           <button onClick={() => setNavOpen(true)} style={{ color: scrolled || isDarkPage ? 'white' : 'var(--c9-text)' }}>
-              <Menu size={28} />
-           </button>
-        </div>
+        <button
+          className="nav-mobile-btn"
+          onClick={() => setNavOpen(true)}
+          style={{
+            display: 'none', color: '#fff', background: 'none', border: 'none',
+            padding: '8px', borderRadius: '8px', cursor: 'pointer',
+          }}
+        >
+          <Menu size={24} />
+        </button>
       </nav>
 
-      {/* MOBILE FULL SCREEN NAV */}
-      <div 
-        className={`mobile-overlay ${navOpen ? 'open' : ''}`}
-        style={{
-          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-          background: 'var(--c9-hero-bg)', zIndex: 100,
-          clipPath: navOpen ? 'circle(150% at 100% 0%)' : 'circle(0% at 100% 0%)',
-          transition: 'clip-path 0.4s ease-out',
-          display: 'flex', flexDirection: 'column', padding: '2rem'
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4rem' }}>
-           <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'white' }}>
-            C9 Communications
-          </div>
-          <button onClick={() => setNavOpen(false)} style={{ color: 'white' }}>
-            <X size={28} />
+      {/* ── MOBILE OVERLAY ── */}
+      <div style={{
+        position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
+        background: 'rgba(10,0,16,0.98)', backdropFilter: 'blur(20px)',
+        zIndex: 100,
+        opacity: navOpen ? 1 : 0,
+        visibility: navOpen ? 'visible' : 'hidden',
+        transition: 'all 0.35s ease',
+        display: 'flex', flexDirection: 'column', padding: '24px',
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
+      }}>
+        {/* Mobile header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
+          <Link to="/" style={{
+            fontFamily: "'Clash Display', sans-serif",
+            fontSize: '1.3rem', fontWeight: 800, color: '#fff', textDecoration: 'none',
+          }}>C9 Communications</Link>
+          <button onClick={() => setNavOpen(false)} style={{ color: '#fff', background: 'none', border: 'none', cursor: 'pointer' }}>
+            <X size={24} />
           </button>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'center' }}>
-          {links.map((item, i) => {
-            const isExternal = !item.path.startsWith('/#');
-            const Element = isExternal ? Link : 'a' as any;
-            const props = isExternal ? { to: item.path } : { href: item.path };
-
-            return (
-              <Element 
-                key={item.name} 
-                {...props}
-                onClick={() => setNavOpen(false)}
-                className="fade-up"
-                style={{ 
-                  color: 'white', fontSize: '48px', fontFamily: 'var(--font-heading)', fontWeight: 600,
-                  opacity: navOpen ? 1 : 0, transform: navOpen ? 'translateY(0)' : 'translateY(28px)',
-                  transition: `all 0.4s ease ${i * 0.08}s`,
-                  textDecoration: 'none'
-                }}
-              >
-                {item.name}
-              </Element>
-            );
-          })}
+        {/* Mobile links */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', flex: 1 }}>
+          {NAV_LINKS.map((item, i) => (
+            <div key={item.name} style={{
+              opacity: navOpen ? 1 : 0,
+              transform: navOpen ? 'translateY(0)' : 'translateY(16px)',
+              transition: `all 0.4s ease ${i * 0.06}s`,
+            }}>
+              {item.path.startsWith('/#') ? (
+                <a href={item.path} onClick={() => setNavOpen(false)} style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                  color: 'rgba(248,245,255,0.8)', fontSize: '20px', fontWeight: 700,
+                  padding: '16px 0',
+                  borderBottom: '1px solid rgba(167,139,250,0.1)',
+                  textDecoration: 'none',
+                }}>
+                  {item.name}
+                  {item.hasMenu && <ChevronDown size={16} color="#7C3AED" />}
+                </a>
+              ) : (
+                <Link to={item.path} onClick={() => setNavOpen(false)} style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                  color: 'rgba(248,245,255,0.8)', fontSize: '20px', fontWeight: 700,
+                  padding: '16px 0',
+                  borderBottom: '1px solid rgba(167,139,250,0.1)',
+                  textDecoration: 'none',
+                }}>
+                  {item.name}
+                </Link>
+              )}
+            </div>
+          ))}
         </div>
 
-        <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'center' }}>
-           <span className="mono-tag" style={{ color: 'var(--c9-light)', fontSize: '14px' }}>1800 000 C9X</span>
-           <button className="btn-primary" style={{ width: '100%', padding: '1.2rem', justifyContent: 'center' }} onClick={() => setNavOpen(false)}>
-            Get a Quote
-          </button>
+        {/* Mobile CTA */}
+        <div style={{ paddingTop: '32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <a href="tel:1800000000" style={{
+            textAlign: 'center', padding: '16px', borderRadius: '100px',
+            border: '1px solid rgba(167,139,250,0.25)', color: 'rgba(248,245,255,0.7)',
+            fontSize: '15px', fontWeight: 600, textDecoration: 'none',
+          }}>📞 1800 C9 TECH</a>
+          <Link to="/contact" onClick={() => setNavOpen(false)} style={{
+            textAlign: 'center', padding: '16px', borderRadius: '100px',
+            background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
+            color: '#fff', fontSize: '15px', fontWeight: 700, textDecoration: 'none',
+          }}>Get a Free Quote →</Link>
         </div>
       </div>
+
       <style>{`
-        @media(max-width: 768px) {
+        @media (max-width: 900px) {
           .nav-desktop-links, .nav-desktop-actions { display: none !important; }
-          .nav-mobile-btn { display: block !important; }
+          .nav-mobile-btn { display: flex !important; }
         }
-        .hover-white:hover { color: white !important; cursor: none; }
-        
-        .nav-indicator {
-          position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
-          width: 4px; height: 4px; border-radius: 50%; background-color: var(--c9-accent);
-          opacity: 0; transition: opacity 0.15s;
-        }
-        .nav-link:hover { color: white !important; }
-        .nav-link:hover .nav-indicator { opacity: 1; }
-        
-        .mega-menu {
-          position: absolute; top: 100%; left: -20px;
-          padding-top: 24px;
-          opacity: 0; visibility: hidden;
-          transition: all 0.2s; transform: translateY(-8px);
-        }
-        .nav-link:hover .mega-menu {
-          opacity: 1; visibility: visible; transform: translateY(0);
-        }
-        .mega-menu-content {
-          background: rgba(26,0,58,0.95);
-          backdrop-filter: blur(20px);
-          border: 1px solid rgba(255,255,255,0.06);
-          border-radius: 12px;
-          padding: 1.5rem;
-          display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 400px;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-        .mega-item {
-          padding: 0.75rem; border-radius: 8px; transition: background 0.15s;
-        }
-        .mega-item:hover { background: rgba(255,255,255,0.05); }
       `}</style>
     </>
   );

@@ -2,10 +2,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/shared/Navigation';
 import { Footer } from './components/shared/Footer';
 import { Cursor } from './components/shared/Cursor';
+import { SaaSHomepage } from './pages/SaaSHomepage';
 import { C9X } from './pages/C9X';
 import { Pricing } from './pages/Pricing';
+import { Contact } from './pages/Contact';
+import { About } from './pages/About';
+import { Industries } from './pages/Industries';
+import { Solutions } from './pages/Solutions';
+import { Support } from './pages/Support';
 import { Landing } from './pages/Landing';
-import { SaaSHomepage } from './pages/SaaSHomepage';
 
 function App() {
   return (
@@ -13,10 +18,16 @@ function App() {
       <Cursor />
       <Navigation />
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/c9x" element={<C9X />} />
+        <Route path="/" element={<SaaSHomepage />} />
+        <Route path="/solutions" element={<Solutions />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/saas" element={<SaaSHomepage />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/c9x" element={<C9X />} />
+        {/* Old landing page preserved at /classic */}
+        <Route path="/classic" element={<Landing />} />
       </Routes>
       <Footer />
     </Router>
