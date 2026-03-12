@@ -59,7 +59,7 @@ const INDUSTRIES_DATA = [
 
 export const Industries = () => {
   return (
-    <div style={{ background: '#0A0010', color: '#F8F5FF', fontFamily: "'Plus Jakarta Sans', sans-serif", paddingTop: '72px', minHeight: '100vh' }}>
+    <div style={{ background: '#0A0010', color: '#F8F5FF', paddingTop: '72px', minHeight: '100vh' }}>
       
       {/* ── HERO ── */}
       <section style={{ padding: '100px 0 80px', textAlign: 'center', position: 'relative' }}>
@@ -74,7 +74,7 @@ export const Industries = () => {
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)',
-              color: '#C4B5FD', fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
+              color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em',
               textTransform: 'uppercase', padding: '6px 14px', borderRadius: '100px', marginBottom: '24px',
             }}>
               Vertical Expertise
@@ -82,7 +82,6 @@ export const Industries = () => {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 style={{
-              fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(40px,6vw,72px)',
               fontWeight: 900, letterSpacing: '-0.04em', color: '#fff',
               marginBottom: '20px', lineHeight: 1.0,
             }}>
@@ -94,7 +93,7 @@ export const Industries = () => {
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p style={{ fontSize: '18px', lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '540px', margin: '0 auto' }}>
+            <p style={{ lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '540px', margin: '0 auto' }}>
               We've developed tailored communication stacks for Australia's most demanding industries.
             </p>
           </FadeIn>
@@ -123,16 +122,16 @@ export const Industries = () => {
                   }}>
                     {ind.icon}
                   </div>
-                  <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '16px' }}>
+                  <h3 style={{ fontWeight: 800, color: '#fff', marginBottom: '16px' }}>
                     {ind.title}
                   </h3>
-                  <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
+                  <p style={{ lineHeight: 1.6, color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
                     {ind.desc}
                   </p>
                   <button style={{
                     marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '8px',
                     background: 'none', border: 'none', color: '#C4B5FD',
-                    fontSize: '14px', fontWeight: 700, cursor: 'pointer', padding: 0
+                    fontWeight: 700, cursor: 'pointer', padding: 0
                   }}>
                     Explore {ind.title} Solutions <ArrowRight size={16} />
                   </button>
@@ -148,8 +147,8 @@ export const Industries = () => {
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
             <FadeIn>
-              <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '40px', fontWeight: 900, color: '#fff', marginBottom: '24px' }}>Proven in the field.</h2>
-              <p style={{ fontSize: '18px', color: 'rgba(248,245,255,0.6)', lineHeight: 1.7 }}>
+              <h2 style={{ fontWeight: 900, color: '#fff', marginBottom: '24px' }}>Proven in the field.</h2>
+              <p style={{ color: 'rgba(248,245,255,0.6)', lineHeight: 1.7 }}>
                 See how we're helping Australian enterprises transform their communication infrastructure with C9 technology.
               </p>
               <div style={{ marginTop: '40px' }}>
@@ -161,11 +160,11 @@ export const Industries = () => {
             <FadeIn delay={0.2}>
               <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(167,139,250,0.15)', borderRadius: '24px', padding: '40px' }}>
                  <div style={{ display: 'flex', gap: '4px', color: '#F59E0B', marginBottom: '20px' }}>★★★★★</div>
-                 <p style={{ fontSize: '16px', fontStyle: 'italic', lineHeight: 1.7, color: '#fff', marginBottom: '24px' }}>
+                 <p style={{ fontStyle: 'italic', lineHeight: 1.7, color: '#fff', marginBottom: '24px' }}>
                    "C9 was the only telco that understood our HIPAA compliance requirements for healthcare. Their setup was flawless and our team loves the new handsets."
                  </p>
                  <div style={{ fontWeight: 800, color: '#C4B5FD' }}>Acacia Health Group</div>
-                 <div style={{ fontSize: '13px', color: 'rgba(248,245,255,0.4)', marginTop: '4px' }}>Medical Practice Management</div>
+                 <div style={{ color: 'rgba(248,245,255,0.4)', marginTop: '4px' }}>Medical Practice Management</div>
               </div>
             </FadeIn>
           </div>

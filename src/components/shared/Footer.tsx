@@ -15,7 +15,6 @@ export const Footer = () => {
     <footer style={{
       background: '#060010',
       borderTop: '1px solid rgba(167,139,250,0.1)',
-      fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif",
       color: 'rgba(248,245,255,0.5)',
     }}>
       <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '80px 2rem 0' }}>
@@ -35,14 +34,14 @@ export const Footer = () => {
                   width: '32px', height: '32px', borderRadius: '10px',
                   background: 'linear-gradient(135deg, #7C3AED, #A855F7)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '13px', fontWeight: 900, color: '#fff',
+                  fontWeight: 900, color: '#fff',
                 }}>C9</div>
-                <span style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '1.1rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>
+                <span style={{ fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>
                   Communications
                 </span>
               </div>
             </Link>
-            <p style={{ fontSize: '14px', lineHeight: 1.7, maxWidth: '280px', marginBottom: '28px' }}>
+            <p style={{ lineHeight: 1.7, maxWidth: '280px', marginBottom: '28px' }}>
               Australia's enterprise connectivity partner — delivering NBN, cloud voice, managed IT, and cybersecurity under one roof.
             </p>
             {/* Social links */}
@@ -51,7 +50,7 @@ export const Footer = () => {
                 <a key={s} href="#" style={{
                   padding: '7px 14px', borderRadius: '100px',
                   background: 'rgba(167,139,250,0.07)', border: '1px solid rgba(167,139,250,0.15)',
-                  fontSize: '12px', fontWeight: 600, color: 'rgba(248,245,255,0.5)',
+                  fontWeight: 600, color: 'rgba(248,245,255,0.5)',
                   textDecoration: 'none', transition: 'all 0.2s',
                 }}
                   onMouseEnter={e => {
@@ -69,14 +68,14 @@ export const Footer = () => {
 
           {/* Solutions */}
           <div>
-            <h5 style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
+            <h5 style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
               Solutions
             </h5>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {solutions.map(s => (
                 <Link key={s.label} to="/solutions" style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
-                  fontSize: '14px', color: 'rgba(248,245,255,0.5)',
+                  color: 'rgba(248,245,255,0.5)',
                   textDecoration: 'none', transition: 'color 0.15s',
                 }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#E9D5FF')}
@@ -90,7 +89,7 @@ export const Footer = () => {
 
           {/* Company */}
           <div>
-            <h5 style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
+            <h5 style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
               Company
             </h5>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -103,7 +102,7 @@ export const Footer = () => {
                 { label: 'Contact', path: '/contact' }
               ].map(l => (
                 <Link key={l.label} to={l.path} style={{
-                  fontSize: '14px', color: 'rgba(248,245,255,0.5)',
+                  color: 'rgba(248,245,255,0.5)',
                   textDecoration: 'none', transition: 'color 0.15s',
                 }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#E9D5FF')}
@@ -115,20 +114,20 @@ export const Footer = () => {
 
           {/* CTA Block */}
           <div>
-            <h5 style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
+            <h5 style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
               Get Started
             </h5>
             <div style={{
               background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(167,139,250,0.2)',
               borderRadius: '16px', padding: '24px',
             }}>
-              <p style={{ fontSize: '14px', lineHeight: 1.6, marginBottom: '20px', color: 'rgba(248,245,255,0.6)' }}>
+              <p style={{ lineHeight: 1.6, marginBottom: '20px', color: 'rgba(248,245,255,0.6)' }}>
                 Book a free, no-obligation audit. We'll review your existing setup and show you a better path.
               </p>
               <Link to="/contact" style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                 background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
-                color: '#fff', fontSize: '14px', fontWeight: 700,
+                color: '#fff', fontWeight: 700,
                 padding: '11px 20px', borderRadius: '100px', textDecoration: 'none',
                 border: '1px solid rgba(167,139,250,0.3)',
               }}>
@@ -143,15 +142,14 @@ export const Footer = () => {
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           flexWrap: 'wrap', gap: '16px',
           padding: '28px 0',
-          fontSize: '13px', color: 'rgba(248,245,255,0.25)',
+          color: 'rgba(248,245,255,0.25)',
         }}>
           <div>© 2026 C9 Communications Pty Ltd. Part of the C9 Group. ABN XX XXX XXX XXX</div>
           <div style={{ display: 'flex', gap: '24px' }}>
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(l => (
               <a key={l} href="#" style={{
                 color: 'rgba(248,245,255,0.25)', textDecoration: 'none', transition: 'color 0.15s',
-                fontSize: '13px',
-              }}
+                }}
                 onMouseEnter={e => (e.currentTarget.style.color = 'rgba(248,245,255,0.6)')}
                 onMouseLeave={e => (e.currentTarget.style.color = 'rgba(248,245,255,0.25)')}
               >{l}</a>

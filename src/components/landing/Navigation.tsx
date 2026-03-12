@@ -41,7 +41,7 @@ export const Navigation = () => {
         }}
       >
         {/* LOGO */}
-        <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'white' }}>
+        <div style={{ fontWeight: 700, color: 'white' }}>
           C9 Communications
         </div>
 
@@ -53,7 +53,7 @@ export const Navigation = () => {
               href={`#${item.toLowerCase()}`}
               style={{
                 color: activeHash === item.toLowerCase() ? 'var(--color-pale-tint)' : 'var(--color-text-light)',
-                fontSize: '0.95rem', fontWeight: 500
+                fontWeight: 500
               }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
               onMouseLeave={(e) => e.currentTarget.style.color = activeHash === item.toLowerCase() ? 'var(--color-pale-tint)' : 'var(--color-text-light)'}
@@ -65,8 +65,8 @@ export const Navigation = () => {
 
         {/* RIGHT ACTIONS */}
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }} className="hidden-mobile">
-          <span style={{ color: 'var(--color-pale-tint)', fontWeight: 500, fontSize: '0.95rem' }}>1800 000 C9X</span>
-          <button className="btn-primary" style={{ padding: '0.6rem 1.5rem', minHeight: '38px', fontSize: '0.95rem' }}>
+          <span style={{ color: 'var(--color-pale-tint)', fontWeight: 500, }}>1800 000 C9X</span>
+          <button className="btn-primary" style={{ padding: '0.6rem 1.5rem', minHeight: '38px', }}>
             Get a Quote
           </button>
         </div>
@@ -94,7 +94,7 @@ export const Navigation = () => {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4rem' }}>
-               <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'white' }}>
+               <div style={{ fontWeight: 700, color: 'white' }}>
                 C9 Communications
               </div>
               <button onClick={() => setNavOpen(false)} style={{ color: 'white' }}>
@@ -108,7 +108,7 @@ export const Navigation = () => {
                   key={item} 
                   href={`#${item.toLowerCase()}`}
                   onClick={() => setNavOpen(false)}
-                  style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-heading)', fontWeight: 600 }}
+                  style={{ color: 'white', fontWeight: 600 }}
                 >
                   {item}
                 </a>
@@ -116,7 +116,7 @@ export const Navigation = () => {
             </div>
 
             <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-               <span style={{ color: 'var(--color-pale-tint)', fontWeight: 500, fontSize: '1.2rem', textAlign: 'center' }}>1800 000 C9X</span>
+               <span style={{ color: 'var(--color-pale-tint)', fontWeight: 500, textAlign: 'center' }}>1800 000 C9X</span>
                <button className="btn-primary" style={{ width: '100%', padding: '1rem' }} onClick={() => setNavOpen(false)}>
                 Get a Quote
               </button>

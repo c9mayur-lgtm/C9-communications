@@ -16,7 +16,7 @@ export const C9XSpotlight = () => {
         {/* Left Side */}
         <div style={{ position: 'relative', zIndex: 10 }}>
           <p className="mono-tag" style={{ color: 'var(--color-accent)', marginBottom: '1.5rem' }}>C9X PLATFORM</p>
-          <h2 style={{ fontSize: 'clamp(36px, 4vw, 48px)', color: 'white', marginBottom: '3rem' }}>
+          <h2 style={{ color: 'white', marginBottom: '3rem' }}>
             Australia's Next-Generation Unified Communications Platform
           </h2>
 
@@ -25,8 +25,8 @@ export const C9XSpotlight = () => {
               <div key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                 <CheckCircle2 color="var(--color-accent)" size={24} style={{ flexShrink: 0, marginTop: '4px' }} />
                 <div>
-                  <span style={{ fontWeight: 700, fontSize: '1.1rem', color: 'white', display: 'block' }}>{b.title}</span>
-                  <span style={{ color: 'var(--color-pale-tint)', fontSize: '1rem' }}>{b.desc}</span>
+                  <span style={{ fontWeight: 700, color: 'white', display: 'block' }}>{b.title}</span>
+                  <span style={{ color: 'var(--color-pale-tint)', }}>{b.desc}</span>
                 </div>
               </div>
             ))}

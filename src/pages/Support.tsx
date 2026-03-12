@@ -20,7 +20,7 @@ const FadeIn = ({ children, delay = 0, style }: { children: ReactNode; delay?: n
 
 export const Support = () => {
   return (
-    <div style={{ background: '#0A0010', color: '#F8F5FF', fontFamily: "'Plus Jakarta Sans', sans-serif", paddingTop: '72px', minHeight: '100vh' }}>
+    <div style={{ background: '#0A0010', color: '#F8F5FF', paddingTop: '72px', minHeight: '100vh' }}>
       
       {/* ── HERO ── */}
       <section style={{ padding: '100px 0 80px', textAlign: 'center', position: 'relative' }}>
@@ -35,7 +35,7 @@ export const Support = () => {
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)',
-              color: '#C4B5FD', fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
+              color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em',
               textTransform: 'uppercase', padding: '6px 14px', borderRadius: '100px', marginBottom: '24px',
             }}>
               Support Hub
@@ -43,7 +43,6 @@ export const Support = () => {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 style={{
-              fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(40px,6vw,72px)',
               fontWeight: 900, letterSpacing: '-0.04em', color: '#fff',
               marginBottom: '20px', lineHeight: 1.0,
             }}>
@@ -55,7 +54,7 @@ export const Support = () => {
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p style={{ fontSize: '18px', lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '540px', margin: '0 auto' }}>
+            <p style={{ lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '540px', margin: '0 auto' }}>
               Access our 24/7 technical support, knowledge base, and live network status.
             </p>
           </FadeIn>
@@ -69,11 +68,11 @@ export const Support = () => {
             <FadeIn>
               <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(167,139,250,0.15)', borderRadius: '24px', padding: '40px', height: '100%' }}>
                 <div style={{ color: '#A855F7', marginBottom: '24px' }}><Phone size={32} /></div>
-                <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '12px' }}>Phone Support</h3>
-                <p style={{ fontSize: '15px', color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
+                <h3 style={{ fontWeight: 800, color: '#fff', marginBottom: '12px' }}>Phone Support</h3>
+                <p style={{ color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
                   24/7/365 assistance for critical network faults and enterprise voice issues.
                 </p>
-                <a href="tel:1300000000" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#C4B5FD', fontWeight: 800, fontSize: '18px', textDecoration: 'none' }}>
+                <a href="tel:1300000000" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#C4B5FD', fontWeight: 800, textDecoration: 'none' }}>
                   1300 C9 TECH <ArrowRight size={18} />
                 </a>
               </div>
@@ -82,8 +81,8 @@ export const Support = () => {
             <FadeIn delay={0.1}>
               <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(167,139,250,0.15)', borderRadius: '24px', padding: '40px', height: '100%' }}>
                 <div style={{ color: '#A855F7', marginBottom: '24px' }}><MessageSquare size={32} /></div>
-                <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '12px' }}>Live Chat</h3>
-                <p style={{ fontSize: '15px', color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
+                <h3 style={{ fontWeight: 800, color: '#fff', marginBottom: '12px' }}>Live Chat</h3>
+                <p style={{ color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
                   Quick technical queries and billing assistance. Available 8am–6pm AEDT.
                 </p>
                 <button style={{ padding: '12px 24px', borderRadius: '100px', background: 'linear-gradient(135deg, #7C3AED, #6B21A8)', color: '#fff', fontWeight: 700, border: 'none', cursor: 'pointer' }}>
@@ -95,8 +94,8 @@ export const Support = () => {
             <FadeIn delay={0.2}>
               <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(167,139,250,0.15)', borderRadius: '24px', padding: '40px', height: '100%' }}>
                 <div style={{ color: '#A855F7', marginBottom: '24px' }}><Activity size={32} /></div>
-                <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '12px' }}>Network Status</h3>
-                <p style={{ fontSize: '15px', color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
+                <h3 style={{ fontWeight: 800, color: '#fff', marginBottom: '12px' }}>Network Status</h3>
+                <p style={{ color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
                   Live monitoring of our core fibre, NBN, and C9X voice infrastructure.
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#00C27C', fontWeight: 700 }}>
@@ -113,7 +112,7 @@ export const Support = () => {
       <section style={{ padding: '100px 0', background: 'rgba(255,255,255,0.015)' }}>
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-            <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '32px', fontWeight: 800, color: '#fff' }}>Self-Service Resources</h2>
+            <h2 style={{ fontWeight: 800, color: '#fff' }}>Self-Service Resources</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             {[
@@ -128,8 +127,8 @@ export const Support = () => {
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(167,139,250,0.1)'; }}
                 >
                   <div style={{ color: '#A855F7', marginBottom: '16px' }}>{res.icon}</div>
-                  <h4 style={{ color: '#fff', fontSize: '18px', fontWeight: 700, marginBottom: '8px' }}>{res.title}</h4>
-                  <p style={{ color: 'rgba(248,245,255,0.4)', fontSize: '14px', lineHeight: 1.5 }}>{res.desc}</p>
+                  <h4 style={{ color: '#fff', fontWeight: 700, marginBottom: '8px' }}>{res.title}</h4>
+                  <p style={{ color: 'rgba(248,245,255,0.4)', lineHeight: 1.5 }}>{res.desc}</p>
                 </div>
               </FadeIn>
             ))}
@@ -142,7 +141,7 @@ export const Support = () => {
          <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem' }}>
            <FadeIn>
              <div style={{ background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: '24px', padding: '60px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '28px', fontWeight: 900, color: '#fff', marginBottom: '16px' }}>Cant find what you're looking for?</h3>
+                <h3 style={{ fontWeight: 900, color: '#fff', marginBottom: '16px' }}>Cant find what you're looking for?</h3>
                 <p style={{ color: 'rgba(248,245,255,0.5)', maxWidth: '500px', margin: '0 auto 32px' }}>
                   Our team is available 24/7. Don't waste time with bots when you can talk to an expert.
                 </p>

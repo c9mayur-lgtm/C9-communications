@@ -60,7 +60,7 @@ const SOLUTIONS_DATA = [
 
 export const Solutions = () => {
   return (
-    <div style={{ background: '#0A0010', color: '#F8F5FF', fontFamily: "'Plus Jakarta Sans', sans-serif", paddingTop: '72px', minHeight: '100vh' }}>
+    <div style={{ background: '#0A0010', color: '#F8F5FF', paddingTop: '72px', minHeight: '100vh' }}>
       
       {/* ── HERO ── */}
       <section style={{ padding: '100px 0 80px', textAlign: 'center', position: 'relative' }}>
@@ -75,7 +75,7 @@ export const Solutions = () => {
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)',
-              color: '#C4B5FD', fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
+              color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em',
               textTransform: 'uppercase', padding: '6px 14px', borderRadius: '100px', marginBottom: '24px',
             }}>
               Our Expertise
@@ -83,7 +83,6 @@ export const Solutions = () => {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 style={{
-              fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(40px,6vw,72px)',
               fontWeight: 900, letterSpacing: '-0.04em', color: '#fff',
               marginBottom: '20px', lineHeight: 1.0,
             }}>
@@ -95,7 +94,7 @@ export const Solutions = () => {
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p style={{ fontSize: '18px', lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '540px', margin: '0 auto' }}>
+            <p style={{ lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '540px', margin: '0 auto' }}>
               We provide a single, unified environment for your internet, voice, and IT infrastructure.
             </p>
           </FadeIn>
@@ -124,17 +123,17 @@ export const Solutions = () => {
                   }}>
                     {sol.icon}
                   </div>
-                  <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '16px' }}>
+                  <h3 style={{ fontWeight: 800, color: '#fff', marginBottom: '16px' }}>
                     {sol.title}
                   </h3>
-                  <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
+                  <p style={{ lineHeight: 1.6, color: 'rgba(248,245,255,0.5)', marginBottom: '32px' }}>
                     {sol.desc}
                   </p>
                   
                   <div style={{ marginTop: 'auto' }}>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '32px' }}>
                       {sol.features.map(f => (
-                        <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: 'rgba(248,245,255,0.7)', fontWeight: 600 }}>
+                        <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'rgba(248,245,255,0.7)', fontWeight: 600 }}>
                           <CheckCircle2 size={14} color="#7C3AED" /> {f}
                         </div>
                       ))}
@@ -142,7 +141,7 @@ export const Solutions = () => {
                     <Link to="/contact" style={{
                       display: 'flex', alignItems: 'center', gap: '8px',
                       background: 'none', border: 'none', color: '#C4B5FD',
-                      fontSize: '14px', fontWeight: 700, cursor: 'pointer', padding: 0,
+                      fontWeight: 700, cursor: 'pointer', padding: 0,
                       textDecoration: 'none'
                     }}>
                       Learn More <ArrowRight size={16} />
@@ -164,15 +163,15 @@ export const Solutions = () => {
               border: '1px solid rgba(167,139,250,0.25)', borderRadius: '32px', padding: '80px 40px',
               textAlign: 'center', position: 'relative', overflow: 'hidden'
             }}>
-              <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(32px,5vw,52px)', fontWeight: 900, color: '#fff', marginBottom: '24px' }}>
+              <h2 style={{ fontWeight: 900, color: '#fff', marginBottom: '24px' }}>
                 Not sure which solution fits?
               </h2>
-              <p style={{ fontSize: '18px', color: 'rgba(248,245,255,0.6)', maxWidth: '600px', margin: '0 auto 40px' }}>
+              <p style={{ color: 'rgba(248,245,255,0.6)', maxWidth: '600px', margin: '0 auto 40px' }}>
                 Book a free consultation with our solutions architects. We'll map your requirements and design a custom tech stack.
               </p>
               <Link to="/contact" style={{
                 display: 'inline-block', padding: '16px 36px', borderRadius: '100px', background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
-                color: '#fff', fontSize: '15px', fontWeight: 700, border: '1px solid rgba(167,139,250,0.3)', cursor: 'pointer',
+                color: '#fff', fontWeight: 700, border: '1px solid rgba(167,139,250,0.3)', cursor: 'pointer',
                 textDecoration: 'none'
               }}>
                 Book Solutions Audit →

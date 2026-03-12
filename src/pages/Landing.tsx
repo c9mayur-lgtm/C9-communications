@@ -48,7 +48,7 @@ export const Landing = () => {
 
       <div className={`mobile-sticky-cta ${showSticky ? 'visible' : ''}`}>
          <a href="#contact" style={{ display: 'block', textDecoration: 'none' }}>
-           <button className="btn-primary" style={{ width: '100%', padding: '1rem', fontSize: '1.1rem' }}>
+           <button className="btn-primary" style={{ width: '100%', padding: '1rem', }}>
              Book a Free Audit
            </button>
          </a>

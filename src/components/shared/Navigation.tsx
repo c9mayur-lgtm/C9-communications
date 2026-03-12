@@ -53,8 +53,8 @@ const DropdownPanel = ({ items, visible }: { items: typeof SOLUTIONS_MENU; visib
             display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C4B5FD',
           }}>{item.icon}</div>
           <div>
-            <div style={{ fontSize: '14px', fontWeight: 600, color: '#fff', marginBottom: '2px' }}>{item.label}</div>
-            <div style={{ fontSize: '12px', color: 'rgba(248,245,255,0.45)' }}>{item.desc}</div>
+            <div style={{ fontWeight: 600, color: '#fff', marginBottom: '2px' }}>{item.label}</div>
+            <div style={{ color: 'rgba(248,245,255,0.45)' }}>{item.desc}</div>
           </div>
           <ArrowRight size={13} style={{ color: '#7C3AED', marginLeft: 'auto', flexShrink: 0 }} />
         </div>
@@ -107,12 +107,10 @@ export const Navigation = () => {
         WebkitBackdropFilter: (scrolled || !isHome) ? 'blur(24px)' : 'none',
         borderBottom: (scrolled || !isHome) ? '1px solid rgba(167,139,250,0.1)' : '1px solid transparent',
         transition: 'all 0.35s cubic-bezier(0.16,1,0.3,1)',
-        fontFamily: "'Plus Jakarta Sans', sans-serif",
-      }}>
+        }}>
         {/* LOGO */}
         <Link to="/" style={{
-          fontFamily: "'Clash Display', sans-serif",
-          fontSize: '1.3rem', fontWeight: 800,
+          fontWeight: 800,
           color: '#fff', textDecoration: 'none', letterSpacing: '-0.03em',
           display: 'flex', alignItems: 'center', gap: '8px',
         }}>
@@ -120,7 +118,7 @@ export const Navigation = () => {
             width: '28px', height: '28px', borderRadius: '8px',
             background: 'linear-gradient(135deg, #7C3AED, #A855F7)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: '12px', fontWeight: 900, color: '#fff', flexShrink: 0,
+            fontWeight: 900, color: '#fff', flexShrink: 0,
           }}>C9</div>
           Communications
         </Link>
@@ -142,11 +140,10 @@ export const Navigation = () => {
                   <button style={{
                     display: 'flex', alignItems: 'center', gap: '4px',
                     color: isActive ? '#E9D5FF' : 'rgba(248,245,255,0.65)',
-                    fontSize: '14px', fontWeight: 500, background: 'none',
+                    fontWeight: 500, background: 'none',
                     border: 'none', padding: '8px 14px', borderRadius: '8px',
                     cursor: 'pointer', transition: 'all 0.15s',
-                    fontFamily: "'Plus Jakarta Sans', sans-serif",
-                  }}
+                    }}
                     onMouseEnter={e => {
                       (e.currentTarget as HTMLElement).style.color = '#fff';
                       (e.currentTarget as HTMLElement).style.background = 'rgba(167,139,250,0.07)';
@@ -168,7 +165,7 @@ export const Navigation = () => {
                     <a href={item.path} style={{
                       display: 'flex', alignItems: 'center', gap: '4px',
                       color: isActive ? '#E9D5FF' : 'rgba(248,245,255,0.65)',
-                      fontSize: '14px', fontWeight: 500,
+                      fontWeight: 500,
                       padding: '8px 14px', borderRadius: '8px',
                       textDecoration: 'none', transition: 'all 0.15s',
                     }}
@@ -187,7 +184,7 @@ export const Navigation = () => {
                     <Link to={item.path} style={{
                       display: 'flex', alignItems: 'center', gap: '4px',
                       color: location.pathname === item.path ? '#E9D5FF' : 'rgba(248,245,255,0.65)',
-                      fontSize: '14px', fontWeight: 500,
+                      fontWeight: 500,
                       padding: '8px 14px', borderRadius: '8px',
                       textDecoration: 'none', transition: 'all 0.15s',
                     }}
@@ -220,7 +217,7 @@ export const Navigation = () => {
         {/* RIGHT ACTIONS */}
         <div className="nav-desktop-actions" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
           <a href="tel:1800000000" style={{
-            fontSize: '13px', fontWeight: 600, color: 'rgba(248,245,255,0.5)',
+            fontWeight: 600, color: 'rgba(248,245,255,0.5)',
             textDecoration: 'none', transition: 'color 0.15s',
           }}
             onMouseEnter={e => (e.currentTarget.style.color = '#C4B5FD')}
@@ -231,7 +228,7 @@ export const Navigation = () => {
           <Link to="/contact" style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
-            color: '#fff', fontSize: '14px', fontWeight: 700,
+            color: '#fff', fontWeight: 700,
             padding: '9px 20px', borderRadius: '100px',
             border: '1px solid rgba(167,139,250,0.3)',
             textDecoration: 'none',
@@ -273,13 +270,11 @@ export const Navigation = () => {
         visibility: navOpen ? 'visible' : 'hidden',
         transition: 'all 0.35s ease',
         display: 'flex', flexDirection: 'column', padding: '24px',
-        fontFamily: "'Plus Jakarta Sans', sans-serif",
-      }}>
+        }}>
         {/* Mobile header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
           <Link to="/" style={{
-            fontFamily: "'Clash Display', sans-serif",
-            fontSize: '1.3rem', fontWeight: 800, color: '#fff', textDecoration: 'none',
+            fontWeight: 800, color: '#fff', textDecoration: 'none',
           }}>C9 Communications</Link>
           <button onClick={() => setNavOpen(false)} style={{ color: '#fff', background: 'none', border: 'none', cursor: 'pointer' }}>
             <X size={24} />
@@ -297,7 +292,7 @@ export const Navigation = () => {
               {item.path.startsWith('/#') ? (
                 <a href={item.path} onClick={() => setNavOpen(false)} style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  color: 'rgba(248,245,255,0.8)', fontSize: '20px', fontWeight: 700,
+                  color: 'rgba(248,245,255,0.8)', fontWeight: 700,
                   padding: '16px 0',
                   borderBottom: '1px solid rgba(167,139,250,0.1)',
                   textDecoration: 'none',
@@ -308,7 +303,7 @@ export const Navigation = () => {
               ) : (
                 <Link to={item.path} onClick={() => setNavOpen(false)} style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  color: 'rgba(248,245,255,0.8)', fontSize: '20px', fontWeight: 700,
+                  color: 'rgba(248,245,255,0.8)', fontWeight: 700,
                   padding: '16px 0',
                   borderBottom: '1px solid rgba(167,139,250,0.1)',
                   textDecoration: 'none',
@@ -325,12 +320,12 @@ export const Navigation = () => {
           <a href="tel:1800000000" style={{
             textAlign: 'center', padding: '16px', borderRadius: '100px',
             border: '1px solid rgba(167,139,250,0.25)', color: 'rgba(248,245,255,0.7)',
-            fontSize: '15px', fontWeight: 600, textDecoration: 'none',
+            fontWeight: 600, textDecoration: 'none',
           }}>📞 1800 C9 TECH</a>
           <Link to="/contact" onClick={() => setNavOpen(false)} style={{
             textAlign: 'center', padding: '16px', borderRadius: '100px',
             background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
-            color: '#fff', fontSize: '15px', fontWeight: 700, textDecoration: 'none',
+            color: '#fff', fontWeight: 700, textDecoration: 'none',
           }}>Get a Free Quote →</Link>
         </div>
       </div>

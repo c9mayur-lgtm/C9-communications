@@ -31,17 +31,17 @@ export const LeadCapture = () => {
       }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center', maxWidth: '800px' }}>
-        <h2 style={{ fontSize: 'clamp(36px, 4vw, 48px)', color: 'white', marginBottom: '1.5rem' }}>
+        <h2 style={{ color: 'white', marginBottom: '1.5rem' }}>
           Book Your Free Business Telco Audit
         </h2>
         
-        <p style={{ color: 'var(--color-pale-tint)', fontSize: '1.125rem', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
+        <p style={{ color: 'var(--color-pale-tint)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
           We'll review your current costs, identify savings, and propose a better solution — at no charge, no obligation.
         </p>
 
         {submitted ? (
           <div style={{ background: 'rgba(255,255,255,0.05)', padding: '3rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-accent)' }}>
-            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '1rem' }}>Audit Requested Successfully</h3>
+            <h3 style={{ color: 'white', marginBottom: '1rem' }}>Audit Requested Successfully</h3>
             <p style={{ color: 'var(--color-pale-tint)' }}>We'll call you within 2 business hours. Check your inbox for our confirmation email.</p>
           </div>
         ) : (
@@ -52,19 +52,19 @@ export const LeadCapture = () => {
           }}>
             <div className="form-grid">
               <div>
-                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', fontSize: '0.9rem' }}>Full Name</label>
+                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', }}>Full Name</label>
                 <input name="name" type="text" placeholder="John Doe" className="form-input" />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', fontSize: '0.9rem' }}>Business Email</label>
+                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', }}>Business Email</label>
                 <input name="email" type="email" placeholder="john@company.com" className="form-input" />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', fontSize: '0.9rem' }}>Phone Number</label>
+                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', }}>Phone Number</label>
                 <input name="phone" type="tel" placeholder="0400 000 000" className="form-input" />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', fontSize: '0.9rem' }}>Current Provider</label>
+                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', }}>Current Provider</label>
                 <select name="provider" className="form-input">
                   <option value="Telstra">Telstra</option>
                   <option value="Optus">Optus</option>
@@ -73,7 +73,7 @@ export const LeadCapture = () => {
                 </select>
               </div>
               <div style={{ gridColumn: '1 / -1' }}>
-                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', fontSize: '0.9rem' }}>Estimated Monthly Spend</label>
+                <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', }}>Estimated Monthly Spend</label>
                 <select name="spend" className="form-input">
                   <option value="Under $200">Under $200</option>
                   <option value="$200–$500">$200–$500</option>
@@ -83,12 +83,12 @@ export const LeadCapture = () => {
               </div>
             </div>
 
-            {error && <p style={{ color: 'var(--color-accent)', fontSize: '0.9rem', margin: 0 }}>{error}</p>}
+            {error && <p style={{ color: 'var(--color-accent)', margin: 0 }}>{error}</p>}
 
             <button type="submit" className="btn-primary" style={{ width: '100%', marginTop: '1rem' }}>
               Get My Free Audit →
             </button>
-            <p style={{ textAlign: 'center', color: 'var(--color-light-accent)', fontSize: '0.875rem', margin: 0, marginTop: '1rem' }}>
+            <p style={{ textAlign: 'center', color: 'var(--color-light-accent)', margin: 0, marginTop: '1rem' }}>
               We respond within 2 business hours. No spam, no lock-in.
             </p>
           </form>

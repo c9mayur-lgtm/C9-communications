@@ -102,7 +102,7 @@ export const Pricing = () => {
   });
 
   return (
-    <div style={{ background: '#0A0010', color: '#F8F5FF', fontFamily: "'Plus Jakarta Sans', sans-serif", paddingTop: '72px' }}>
+    <div style={{ background: '#0A0010', color: '#F8F5FF', paddingTop: '72px' }}>
       
       {/* ── HERO ── */}
       <section style={{ padding: '100px 0 80px', textAlign: 'center', position: 'relative' }}>
@@ -117,7 +117,7 @@ export const Pricing = () => {
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)',
-              color: '#C4B5FD', fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
+              color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em',
               textTransform: 'uppercase', padding: '6px 14px', borderRadius: '100px', marginBottom: '24px',
             }}>
               <Zap size={11} fill="currentColor" /> Transparent Pricing
@@ -125,7 +125,6 @@ export const Pricing = () => {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 style={{
-              fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(40px,6vw,72px)',
               fontWeight: 900, letterSpacing: '-0.04em', color: '#fff',
               marginBottom: '20px', lineHeight: 1.0,
             }}>
@@ -137,7 +136,7 @@ export const Pricing = () => {
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p style={{ fontSize: '18px', lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '540px', margin: '0 auto' }}>
+            <p style={{ lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '540px', margin: '0 auto' }}>
               Month-to-month, zero lock-in plans designed for Australian businesses of every size.
             </p>
           </FadeIn>
@@ -148,8 +147,8 @@ export const Pricing = () => {
       <section style={{ padding: '80px 0' }}>
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem' }}>
           <FadeIn style={{ textAlign: 'center', marginBottom: '52px' }}>
-            <span style={{ display: 'inline-block', background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)', color: '#C4B5FD', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '100px', marginBottom: '16px' }}>NBN Solutions</span>
-            <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(28px,4vw,48px)', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em' }}>Ultra-Fast Business NBN</h2>
+            <span style={{ display: 'inline-block', background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)', color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '100px', marginBottom: '16px' }}>NBN Solutions</span>
+            <h2 style={{ fontWeight: 900, color: '#fff', letterSpacing: '-0.03em' }}>Ultra-Fast Business NBN</h2>
           </FadeIn>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             {NBN_PLANS.map((plan, i) => (
@@ -159,20 +158,20 @@ export const Pricing = () => {
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}
                 >
                   {plan.highlight && (
-                    <div style={{ position: 'absolute', top: '16px', right: '16px', background: 'linear-gradient(135deg, #7C3AED, #A855F7)', color: '#fff', fontSize: '11px', fontWeight: 700, padding: '4px 12px', borderRadius: '100px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                    <div style={{ position: 'absolute', top: '16px', right: '16px', background: 'linear-gradient(135deg, #7C3AED, #A855F7)', color: '#fff', fontWeight: 700, padding: '4px 12px', borderRadius: '100px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                       Most Popular
                     </div>
                   )}
-                  <div style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '36px', fontWeight: 900, color: '#fff', marginBottom: '4px', letterSpacing: '-0.03em' }}>{plan.speed}</div>
-                  <div style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#A855F7', marginBottom: '24px' }}>{plan.tier}</div>
+                  <div style={{ fontWeight: 900, color: '#fff', marginBottom: '4px', letterSpacing: '-0.03em' }}>{plan.speed}</div>
+                  <div style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#A855F7', marginBottom: '24px' }}>{plan.tier}</div>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '32px' }}>
-                    <span style={{ fontSize: '16px', fontWeight: 600, color: 'rgba(248,245,255,0.6)' }}>$</span>
-                    <span style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '52px', fontWeight: 900, color: '#fff', lineHeight: 1, letterSpacing: '-0.04em' }}>{plan.price}</span>
-                    <span style={{ fontSize: '14px', color: 'rgba(248,245,255,0.4)', marginLeft: '4px' }}>/mo</span>
+                    <span style={{ fontWeight: 600, color: 'rgba(248,245,255,0.6)' }}>$</span>
+                    <span style={{ fontWeight: 900, color: '#fff', lineHeight: 1, letterSpacing: '-0.04em' }}>{plan.price}</span>
+                    <span style={{ color: 'rgba(248,245,255,0.4)', marginLeft: '4px' }}>/mo</span>
                   </div>
                   <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     {plan.features.map(f => (
-                      <li key={f} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14px', color: 'rgba(248,245,255,0.75)', fontWeight: 500 }}>
+                      <li key={f} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(248,245,255,0.75)', fontWeight: 500 }}>
                         <span style={{ width: '18px', height: '18px', borderRadius: '50%', background: 'rgba(124,58,237,0.25)', border: '1px solid rgba(167,139,250,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                           <Check size={11} color="#A855F7" />
                         </span>
@@ -181,7 +180,7 @@ export const Pricing = () => {
                     ))}
                   </ul>
                   <button style={{
-                    width: '100%', padding: '13px', borderRadius: '100px', fontSize: '14px', fontWeight: 700, cursor: 'pointer',
+                    width: '100%', padding: '13px', borderRadius: '100px', fontWeight: 700, cursor: 'pointer',
                     background: plan.highlight ? 'linear-gradient(135deg, #7C3AED, #6B21A8)' : 'transparent',
                     color: '#fff', border: plan.highlight ? '1px solid rgba(167,139,250,0.3)' : '1px solid rgba(167,139,250,0.3)',
                     transition: 'all 0.2s',
@@ -200,8 +199,8 @@ export const Pricing = () => {
       <section style={{ padding: '80px 0', background: 'rgba(255,255,255,0.015)' }}>
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem' }}>
           <FadeIn style={{ textAlign: 'center', marginBottom: '52px' }}>
-            <span style={{ display: 'inline-block', background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)', color: '#C4B5FD', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '100px', marginBottom: '16px' }}>C9X Voice Plans</span>
-            <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(28px,4vw,48px)', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em' }}>Everything in one box.</h2>
+            <span style={{ display: 'inline-block', background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)', color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '100px', marginBottom: '16px' }}>C9X Voice Plans</span>
+            <h2 style={{ fontWeight: 900, color: '#fff', letterSpacing: '-0.03em' }}>Everything in one box.</h2>
           </FadeIn>
           <FadeIn>
             <div style={{
@@ -212,9 +211,9 @@ export const Pricing = () => {
               <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
                   <tr style={{ borderBottom: '1px solid rgba(167,139,250,0.15)' }}>
-                    <th style={{ padding: '20px 28px', textAlign: 'left', fontSize: '14px', fontWeight: 700, color: 'rgba(248,245,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Feature</th>
-                    <th style={{ padding: '20px 28px', textAlign: 'center', fontSize: '16px', fontWeight: 800, color: '#fff', width: '22%' }}>Basic</th>
-                    <th style={{ padding: '20px 28px', textAlign: 'center', fontSize: '16px', fontWeight: 800, color: '#fff', width: '22%', background: 'rgba(124,58,237,0.2)', borderLeft: '1px solid rgba(167,139,250,0.2)' }}>
+                    <th style={{ padding: '20px 28px', textAlign: 'left', fontWeight: 700, color: 'rgba(248,245,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Feature</th>
+                    <th style={{ padding: '20px 28px', textAlign: 'center', fontWeight: 800, color: '#fff', width: '22%' }}>Basic</th>
+                    <th style={{ padding: '20px 28px', textAlign: 'center', fontWeight: 800, color: '#fff', width: '22%', background: 'rgba(124,58,237,0.2)', borderLeft: '1px solid rgba(167,139,250,0.2)' }}>
                       <span style={{ background: 'linear-gradient(135deg, #C4B5FD, #A855F7)', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Ultimate</span>
                     </th>
                   </tr>
@@ -222,16 +221,16 @@ export const Pricing = () => {
                 <tbody>
                   {VOICE_TABLE.map((row, i) => (
                     <tr key={i} style={{ borderBottom: i < VOICE_TABLE.length - 1 ? '1px solid rgba(167,139,250,0.08)' : 'none' }}>
-                      <td style={{ padding: '16px 28px', fontSize: '14px', fontWeight: 500, color: 'rgba(248,245,255,0.7)' }}>{row.feature}</td>
+                      <td style={{ padding: '16px 28px', fontWeight: 500, color: 'rgba(248,245,255,0.7)' }}>{row.feature}</td>
                       <td style={{ padding: '16px 28px', textAlign: 'center' }}>
                         {typeof row.basic === 'boolean'
                           ? (row.basic ? <Check size={18} color="#A855F7" style={{ margin: '0 auto', display: 'block' }} /> : <Minus size={18} color="rgba(248,245,255,0.2)" style={{ margin: '0 auto', display: 'block' }} />)
-                          : <span style={{ fontSize: '14px', fontWeight: 600, color: '#C4B5FD' }}>{row.basic}</span>}
+                          : <span style={{ fontWeight: 600, color: '#C4B5FD' }}>{row.basic}</span>}
                       </td>
                       <td style={{ padding: '16px 28px', textAlign: 'center', background: 'rgba(124,58,237,0.08)', borderLeft: '1px solid rgba(167,139,250,0.12)' }}>
                         {typeof row.ultimate === 'boolean'
                           ? (row.ultimate ? <Check size={18} color="#A855F7" style={{ margin: '0 auto', display: 'block' }} /> : <Minus size={18} color="rgba(248,245,255,0.2)" style={{ margin: '0 auto', display: 'block' }} />)
-                          : <span style={{ fontSize: '14px', fontWeight: 600, color: '#C4B5FD' }}>{row.ultimate}</span>}
+                          : <span style={{ fontWeight: 600, color: '#C4B5FD' }}>{row.ultimate}</span>}
                       </td>
                     </tr>
                   ))}
@@ -256,14 +255,14 @@ export const Pricing = () => {
                 <Zap size={220} strokeWidth={0.4} color="#A855F7" />
               </div>
               <div style={{ position: 'relative', zIndex: 1 }}>
-                <span style={{ display: 'inline-block', background: 'rgba(167,139,250,0.2)', color: '#C4B5FD', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '4px 12px', borderRadius: '100px', marginBottom: '16px' }}>Business Mobile</span>
-                <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(24px,3vw,36px)', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em', marginBottom: '12px' }}>Premium Mobile Plans</h3>
-                <p style={{ fontSize: '15px', color: 'rgba(248,245,255,0.6)', maxWidth: '400px', lineHeight: 1.65, marginBottom: '28px' }}>
+                <span style={{ display: 'inline-block', background: 'rgba(167,139,250,0.2)', color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '4px 12px', borderRadius: '100px', marginBottom: '16px' }}>Business Mobile</span>
+                <h3 style={{ fontWeight: 900, color: '#fff', letterSpacing: '-0.03em', marginBottom: '12px' }}>Premium Mobile Plans</h3>
+                <p style={{ color: 'rgba(248,245,255,0.6)', maxWidth: '400px', lineHeight: 1.65, marginBottom: '28px' }}>
                   Powered by Australia's best network. 5G included, unlimited talk & text, shared data pools for your entire team.
                 </p>
                 <button style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
-                  background: '#fff', color: '#6B21A8', fontSize: '14px', fontWeight: 700,
+                  background: '#fff', color: '#6B21A8', fontWeight: 700,
                   padding: '12px 24px', borderRadius: '100px', border: 'none', cursor: 'pointer',
                 }}>
                   <Phone size={15} /> View Mobile Plans
@@ -278,8 +277,8 @@ export const Pricing = () => {
       <section style={{ padding: '80px 0', background: 'rgba(255,255,255,0.015)' }}>
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem' }}>
           <FadeIn style={{ textAlign: 'center', marginBottom: '52px' }}>
-            <span style={{ display: 'inline-block', background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)', color: '#C4B5FD', fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '100px', marginBottom: '16px' }}>Self-Qualify</span>
-            <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(28px,4vw,48px)', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em' }}>What's the best plan for you?</h2>
+            <span style={{ display: 'inline-block', background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)', color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '100px', marginBottom: '16px' }}>Self-Qualify</span>
+            <h2 style={{ fontWeight: 900, color: '#fff', letterSpacing: '-0.03em' }}>What's the best plan for you?</h2>
           </FadeIn>
           <FadeIn>
             <div style={{ maxWidth: '720px', margin: '0 auto', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: '24px', padding: '52px' }}>
@@ -287,11 +286,11 @@ export const Pricing = () => {
                 <>
                   {quizStep === 1 && (
                     <div>
-                      <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 900, color: '#fff', marginBottom: '28px', letterSpacing: '-0.02em' }}>How would you describe your business?</h3>
+                      <h3 style={{ fontWeight: 900, color: '#fff', marginBottom: '28px', letterSpacing: '-0.02em' }}>How would you describe your business?</h3>
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px' }}>
                         {['Solo / Startup', 'Growing SME', 'Enterprise'].map(opt => (
                           <div key={opt} onClick={() => handleSelect(1, opt)} style={{
-                            padding: '20px', borderRadius: '14px', fontSize: '15px', fontWeight: 700,
+                            padding: '20px', borderRadius: '14px', fontWeight: 700,
                             color: '#fff', background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(167,139,250,0.2)',
                             cursor: 'pointer', transition: 'all 0.2s', textAlign: 'center',
                           }}
@@ -304,10 +303,10 @@ export const Pricing = () => {
                   )}
                   {quizStep === 2 && (
                     <div>
-                      <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 900, color: '#fff', marginBottom: '28px', letterSpacing: '-0.02em' }}>How many employees?</h3>
+                      <h3 style={{ fontWeight: 900, color: '#fff', marginBottom: '28px', letterSpacing: '-0.02em' }}>How many employees?</h3>
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px' }}>
                         {['1–10', '11–50', '50+'].map(opt => (
-                          <div key={opt} onClick={() => handleSelect(2, opt)} style={{ padding: '20px', borderRadius: '14px', fontSize: '15px', fontWeight: 700, color: '#fff', background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(167,139,250,0.2)', cursor: 'pointer', transition: 'all 0.2s', textAlign: 'center' }}
+                          <div key={opt} onClick={() => handleSelect(2, opt)} style={{ padding: '20px', borderRadius: '14px', fontWeight: 700, color: '#fff', background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(167,139,250,0.2)', cursor: 'pointer', transition: 'all 0.2s', textAlign: 'center' }}
                             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(124,58,237,0.3)'; }}
                             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(124,58,237,0.12)'; }}
                           >{opt}</div>
@@ -317,10 +316,10 @@ export const Pricing = () => {
                   )}
                   {quizStep === 3 && (
                     <div>
-                      <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 900, color: '#fff', marginBottom: '28px', letterSpacing: '-0.02em' }}>What is your primary need?</h3>
+                      <h3 style={{ fontWeight: 900, color: '#fff', marginBottom: '28px', letterSpacing: '-0.02em' }}>What is your primary need?</h3>
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px' }}>
                         {['Voice Only', 'Internet Only', 'Unified Comm'].map(opt => (
-                          <div key={opt} onClick={() => handleSelect(3, opt)} style={{ padding: '20px', borderRadius: '14px', fontSize: '15px', fontWeight: 700, color: '#fff', background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(167,139,250,0.2)', cursor: 'pointer', transition: 'all 0.2s', textAlign: 'center' }}
+                          <div key={opt} onClick={() => handleSelect(3, opt)} style={{ padding: '20px', borderRadius: '14px', fontWeight: 700, color: '#fff', background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(167,139,250,0.2)', cursor: 'pointer', transition: 'all 0.2s', textAlign: 'center' }}
                             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(124,58,237,0.3)'; }}
                             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(124,58,237,0.12)'; }}
                           >{opt}</div>
@@ -331,7 +330,7 @@ export const Pricing = () => {
 
                   {/* Progress */}
                   <div style={{ marginTop: '36px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: '13px', color: 'rgba(248,245,255,0.4)', fontWeight: 500 }}>Step {quizStep} of 3</span>
+                    <span style={{ color: 'rgba(248,245,255,0.4)', fontWeight: 500 }}>Step {quizStep} of 3</span>
                     <div style={{ width: '120px', height: '3px', background: 'rgba(167,139,250,0.15)', borderRadius: '2px', overflow: 'hidden' }}>
                       <div style={{ width: `${(quizStep / 3) * 100}%`, height: '100%', background: 'linear-gradient(90deg, #7C3AED, #A855F7)', transition: 'width 0.4s ease' }} />
                     </div>
@@ -344,15 +343,15 @@ export const Pricing = () => {
                   <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
                     <CheckCircle size={28} color="#A855F7" />
                   </div>
-                  <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 900, color: '#fff', marginBottom: '12px' }}>
+                  <h3 style={{ fontWeight: 900, color: '#fff', marginBottom: '12px' }}>
                     We recommend <span style={{ color: '#C4B5FD' }}>{result.plan}</span>
                   </h3>
-                  <p style={{ fontSize: '15px', color: 'rgba(248,245,255,0.6)', lineHeight: 1.65, marginBottom: '32px' }}>{result.text}</p>
+                  <p style={{ color: 'rgba(248,245,255,0.6)', lineHeight: 1.65, marginBottom: '32px' }}>{result.text}</p>
                   <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <button style={{ padding: '13px 28px', borderRadius: '100px', background: 'linear-gradient(135deg, #7C3AED, #6B21A8)', color: '#fff', fontSize: '14px', fontWeight: 700, border: '1px solid rgba(167,139,250,0.3)', cursor: 'pointer' }}>
+                    <button style={{ padding: '13px 28px', borderRadius: '100px', background: 'linear-gradient(135deg, #7C3AED, #6B21A8)', color: '#fff', fontWeight: 700, border: '1px solid rgba(167,139,250,0.3)', cursor: 'pointer' }}>
                       Get Started <ArrowRight size={14} style={{ display: 'inline', verticalAlign: 'middle' }} />
                     </button>
-                    <button onClick={resetQuiz} style={{ padding: '13px 28px', borderRadius: '100px', background: 'transparent', color: 'rgba(248,245,255,0.7)', fontSize: '14px', fontWeight: 600, border: '1px solid rgba(167,139,250,0.25)', cursor: 'pointer' }}>
+                    <button onClick={resetQuiz} style={{ padding: '13px 28px', borderRadius: '100px', background: 'transparent', color: 'rgba(248,245,255,0.7)', fontWeight: 600, border: '1px solid rgba(167,139,250,0.25)', cursor: 'pointer' }}>
                       Start Again
                     </button>
                   </div>
@@ -367,7 +366,7 @@ export const Pricing = () => {
       <section style={{ padding: '80px 0 100px' }}>
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem' }}>
           <FadeIn style={{ textAlign: 'center', marginBottom: '52px' }}>
-            <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(28px,4vw,48px)', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em' }}>Pricing FAQ</h2>
+            <h2 style={{ fontWeight: 900, color: '#fff', letterSpacing: '-0.03em' }}>Pricing FAQ</h2>
           </FadeIn>
           <div style={{ maxWidth: '720px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {FAQ.map((faq, i) => (
@@ -378,9 +377,9 @@ export const Pricing = () => {
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
                     <span style={{ color: '#A855F7' }}>{faq.icon}</span>
-                    <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#fff', margin: 0 }}>{faq.q}</h4>
+                    <h4 style={{ fontWeight: 700, color: '#fff', margin: 0 }}>{faq.q}</h4>
                   </div>
-                  <p style={{ fontSize: '14px', color: 'rgba(248,245,255,0.55)', lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
+                  <p style={{ color: 'rgba(248,245,255,0.55)', lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
                 </div>
               </FadeIn>
             ))}
@@ -398,17 +397,17 @@ export const Pricing = () => {
               textAlign: 'center', position: 'relative', overflow: 'hidden',
             }}>
               <div style={{ position: 'absolute', top: '-80px', left: '50%', transform: 'translateX(-50%)', width: '500px', height: '300px', background: 'radial-gradient(ellipse, rgba(168,85,247,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
-              <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(28px,4vw,52px)', fontWeight: 900, color: '#fff', letterSpacing: '-0.03em', marginBottom: '16px', position: 'relative', zIndex: 1 }}>
+              <h2 style={{ fontWeight: 900, color: '#fff', letterSpacing: '-0.03em', marginBottom: '16px', position: 'relative', zIndex: 1 }}>
                 Need a custom enterprise solution?
               </h2>
-              <p style={{ fontSize: '16px', color: 'rgba(248,245,255,0.6)', maxWidth: '520px', margin: '0 auto 40px', lineHeight: 1.65, position: 'relative', zIndex: 1 }}>
+              <p style={{ color: 'rgba(248,245,255,0.6)', maxWidth: '520px', margin: '0 auto 40px', lineHeight: 1.65, position: 'relative', zIndex: 1 }}>
                 Multi-site, dedicated fibre, or complex integration — we build from the ground up with transparent, upfront pricing.
               </p>
               <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
-                <button style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'linear-gradient(135deg, #7C3AED, #6B21A8)', color: '#fff', fontSize: '15px', fontWeight: 700, padding: '14px 28px', borderRadius: '100px', border: '1px solid rgba(167,139,250,0.3)', cursor: 'pointer' }}>
+                <button style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'linear-gradient(135deg, #7C3AED, #6B21A8)', color: '#fff', fontWeight: 700, padding: '14px 28px', borderRadius: '100px', border: '1px solid rgba(167,139,250,0.3)', cursor: 'pointer' }}>
                   <Phone size={15} /> Call 1800 C9 TECH
                 </button>
-                <button style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'transparent', color: 'rgba(248,245,255,0.8)', fontSize: '15px', fontWeight: 600, padding: '14px 28px', borderRadius: '100px', border: '1px solid rgba(167,139,250,0.25)', cursor: 'pointer' }}>
+                <button style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'transparent', color: 'rgba(248,245,255,0.8)', fontWeight: 600, padding: '14px 28px', borderRadius: '100px', border: '1px solid rgba(167,139,250,0.25)', cursor: 'pointer' }}>
                   Contact Solutions Team
                 </button>
               </div>

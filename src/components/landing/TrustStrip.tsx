@@ -19,7 +19,7 @@ export const TrustStrip = () => {
               <div 
                 key={i} 
                 style={{
-                  fontSize: '1.5rem', fontWeight: 700, 
+                  fontWeight: 700, 
                   color: 'var(--color-text-mid)', opacity: 0.5,
                   transition: 'all 0.3s ease', cursor: 'default'
                 }}

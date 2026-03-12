@@ -100,18 +100,18 @@ export const C9X = () => {
               <FadeIn delay={0.4} style={{ marginTop: '56px' }}>
                 <div style={{ display: 'flex', gap: '32px' }}>
                   <div>
-                    <div style={{ fontSize: '28px', fontWeight: 900, color: '#fff', fontFamily: "'Clash Display', sans-serif" }}>80+</div>
-                    <div style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Features</div>
+                    <div style={{ fontWeight: 900, color: '#fff', }}>80+</div>
+                    <div style={{ fontWeight: 600, color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Features</div>
                   </div>
                   <div style={{ width: '1px', background: 'rgba(167,139,250,0.2)' }} />
                   <div>
-                    <div style={{ fontSize: '28px', fontWeight: 900, color: '#fff', fontFamily: "'Clash Display', sans-serif" }}>$0</div>
-                    <div style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Setup Cost</div>
+                    <div style={{ fontWeight: 900, color: '#fff', }}>$0</div>
+                    <div style={{ fontWeight: 600, color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Setup Cost</div>
                   </div>
                   <div style={{ width: '1px', background: 'rgba(167,139,250,0.2)' }} />
                   <div>
-                    <div style={{ fontSize: '28px', fontWeight: 900, color: '#fff', fontFamily: "'Clash Display', sans-serif" }}>99.99%</div>
-                    <div style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Uptime</div>
+                    <div style={{ fontWeight: 900, color: '#fff', }}>99.99%</div>
+                    <div style={{ fontWeight: 600, color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Uptime</div>
                   </div>
                 </div>
               </FadeIn>
@@ -126,8 +126,8 @@ export const C9X = () => {
               }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '32px', borderBottom: '1px solid rgba(167,139,250,0.1)', paddingBottom: '16px' }}>
                   <div>
-                    <div style={{ color: '#fff', fontWeight: 700, fontSize: '14px' }}>C9X Admin Console</div>
-                    <div style={{ color: 'rgba(248,245,255,0.4)', fontSize: '12px' }}>Active System Status • Australia SE 1</div>
+                    <div style={{ color: '#fff', fontWeight: 700, }}>C9X Admin Console</div>
+                    <div style={{ color: 'rgba(248,245,255,0.4)', }}>Active System Status • Australia SE 1</div>
                   </div>
                   <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Activity size={14} color="#A855F7" />
@@ -137,12 +137,12 @@ export const C9X = () => {
                 {/* Stats Row */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '32px' }}>
                   <div style={{ background: 'rgba(255,255,255,0.02)', padding: '16px', borderRadius: '12px', border: '1px solid rgba(167,139,250,0.1)' }}>
-                    <div style={{ fontSize: '11px', color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', marginBottom: '4px' }}>Active Calls</div>
-                    <div style={{ fontSize: '20px', fontWeight: 800, color: '#fff' }}>12</div>
+                    <div style={{ color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', marginBottom: '4px' }}>Active Calls</div>
+                    <div style={{ fontWeight: 800, color: '#fff' }}>12</div>
                   </div>
                   <div style={{ background: 'rgba(255,255,255,0.02)', padding: '16px', borderRadius: '12px', border: '1px solid rgba(167,139,250,0.1)' }}>
-                    <div style={{ fontSize: '11px', color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', marginBottom: '4px' }}>Inbound Waiting</div>
-                    <div style={{ fontSize: '20px', fontWeight: 800, color: '#A855F7' }}>2</div>
+                    <div style={{ color: 'rgba(248,245,255,0.4)', textTransform: 'uppercase', marginBottom: '4px' }}>Inbound Waiting</div>
+                    <div style={{ fontWeight: 800, color: '#A855F7' }}>2</div>
                   </div>
                 </div>
 
@@ -155,8 +155,8 @@ export const C9X = () => {
                       border: '1px solid rgba(167,139,250,0.1)'
                     }}>
                       <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: i === 2 ? '#6B21A8' : '#7C3AED', boxShadow: '0 0 10px #7C3AED' }} />
-                      <span style={{ flex: 1, fontSize: '14px', fontWeight: 600, color: 'rgba(248,245,255,0.8)' }}>{name}</span>
-                      <span style={{ fontSize: '12px', color: 'rgba(248,245,255,0.3)', fontFamily: 'monospace' }}>00:{12 + i * 15}</span>
+                      <span style={{ flex: 1, fontWeight: 600, color: 'rgba(248,245,255,0.8)' }}>{name}</span>
+                      <span style={{ color: 'rgba(248,245,255,0.3)', }}>00:{12 + i * 15}</span>
                     </div>
                   ))}
                 </div>
@@ -165,8 +165,7 @@ export const C9X = () => {
                 <div style={{ 
                   position: 'absolute', bottom: '-20px', right: '-20px', 
                   padding: '12px 20px', background: '#7C3AED', color: '#fff',
-                  borderRadius: '12px', fontWeight: 700, fontSize: '13px',
-                  boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
+                  borderRadius: '12px', fontWeight: 700, boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
                 }}>
                   Crystal Clear Voice Guaranteed
                 </div>
@@ -190,7 +189,7 @@ export const C9X = () => {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 style={{
-                  padding: '10px 24px', borderRadius: '100px', fontSize: '14px', fontWeight: 700,
+                  padding: '10px 24px', borderRadius: '100px', fontWeight: 700,
                   transition: 'all 0.2s', cursor: 'pointer',
                   background: activeTab === tab ? 'linear-gradient(135deg, #7C3AED, #6B21A8)' : 'rgba(167,139,250,0.08)',
                   color: activeTab === tab ? '#fff' : 'rgba(248,245,255,0.5)',
@@ -216,8 +215,8 @@ export const C9X = () => {
                     {activeTab === 'Collaboration' && <Video size={20} />}
                     {activeTab === 'Management' && <Settings size={20} />}
                   </div>
-                  <h4 style={{ fontSize: '18px', fontWeight: 800, color: '#fff', marginBottom: '12px' }}>{feat.name}</h4>
-                  <p style={{ fontSize: '14px', color: 'rgba(248,245,255,0.5)', lineHeight: 1.6 }}>{feat.desc}</p>
+                  <h4 style={{ fontWeight: 800, color: '#fff', marginBottom: '12px' }}>{feat.name}</h4>
+                  <p style={{ color: 'rgba(248,245,255,0.5)', lineHeight: 1.6 }}>{feat.desc}</p>
                 </div>
               </FadeIn>
             ))}
@@ -233,7 +232,7 @@ export const C9X = () => {
               <FadeIn>
                 <span className="sp-eyebrow">Zero-Risk Migration</span>
                 <h2 className="sp-h2" style={{ textAlign: 'left', margin: '0 0 24px' }}>Switch in 48 hours. <br />No downtime.</h2>
-                <p className="sp-body-lg" style={{ textAlign: 'left', fontSize: '16px' }}>
+                <p className="sp-body-lg" style={{ textAlign: 'left', }}>
                   Our migration engineers handle the heavy lifting. We map your current workflows and recreate them 
                   perfectly inside C9X before you ever flip the switch.
                 </p>
@@ -252,10 +251,10 @@ export const C9X = () => {
               ].map((item, i) => (
                 <FadeIn key={item.step} delay={i * 0.15}>
                   <div className="sp-card" style={{ display: 'flex', gap: '24px', alignItems: 'flex-start', padding: '24px' }}>
-                    <div style={{ fontSize: '24px', fontWeight: 900, color: '#7C3AED', opacity: 0.4, fontFamily: "'Clash Display', sans-serif" }}>{item.step}</div>
+                    <div style={{ fontWeight: 900, color: '#7C3AED', opacity: 0.4, }}>{item.step}</div>
                     <div>
-                      <h4 style={{ color: '#fff', fontSize: '17px', fontWeight: 700, marginBottom: '4px' }}>{item.title}</h4>
-                      <p style={{ color: 'rgba(248,245,255,0.45)', fontSize: '14px' }}>{item.desc}</p>
+                      <h4 style={{ color: '#fff', fontWeight: 700, marginBottom: '4px' }}>{item.title}</h4>
+                      <p style={{ color: 'rgba(248,245,255,0.45)', }}>{item.desc}</p>
                     </div>
                   </div>
                 </FadeIn>

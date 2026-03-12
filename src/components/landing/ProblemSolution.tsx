@@ -25,7 +25,7 @@ export const ProblemSolution = () => {
     <SectionWrapper style={{ background: 'var(--color-alt-bg)', padding: '6rem 0' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem' }}>
-          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)' }}>
+          <h2 style={{ }}>
             Still paying for a phone system that holds your business back?
           </h2>
         </div>
@@ -49,16 +49,16 @@ export const ProblemSolution = () => {
               <div>
                 <p style={{
                   color: 'var(--color-text-dark)', fontWeight: 700,
-                  fontSize: '1.25rem', marginBottom: '1rem'
+                  marginBottom: '1rem'
                 }}>
                   {item.problem}
                 </p>
                 
-                <div style={{ color: 'var(--color-accent)', marginBottom: '1rem', fontSize: '1.5rem' }}>
+                <div style={{ color: 'var(--color-accent)', marginBottom: '1rem', }}>
                   →
                 </div>
                 
-                <p style={{ color: 'var(--color-text-mid)', fontWeight: 500, fontSize: '1.1rem' }}>
+                <p style={{ color: 'var(--color-text-mid)', fontWeight: 500, }}>
                   {item.solution}
                 </p>
               </div>

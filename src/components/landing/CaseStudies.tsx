@@ -22,7 +22,7 @@ export const CaseStudies = () => {
   return (
     <SectionWrapper style={{ background: 'var(--color-body-bg)', padding: '6rem 0' }}>
       <div className="container">
-        <h2 style={{ fontSize: 'clamp(32px, 4vw, 40px)', marginBottom: '4rem' }}>
+        <h2 style={{ marginBottom: '4rem' }}>
           Real Australian businesses. Real results.
         </h2>
 
@@ -32,19 +32,19 @@ export const CaseStudies = () => {
           {cases.map((c, i) => (
             <div key={i} className="glass-card-light" style={{ padding: '3rem', position: 'relative' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-                <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-text-dark)' }}>{c.logo}</div>
+                <div style={{ fontWeight: 700, color: 'var(--color-text-dark)' }}>{c.logo}</div>
                 <div className="mono-tag" style={{
-                  fontSize: '0.75rem', background: 'var(--color-alt-bg)', color: 'var(--color-primary)',
+                  background: 'var(--color-alt-bg)', color: 'var(--color-primary)',
                   padding: '0.4rem 0.8rem', borderRadius: 'var(--radius-full)'
                 }}>
                   {c.industry}
                 </div>
               </div>
 
-              <p style={{ color: 'var(--color-text-mid)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>{c.challenge}</p>
+              <p style={{ color: 'var(--color-text-mid)', marginBottom: '1.5rem', }}>{c.challenge}</p>
               
               <div style={{ 
-                fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-primary)', 
+                fontWeight: 700, color: 'var(--color-primary)', 
                 marginBottom: '1.5rem', padding: '1rem', background: 'var(--color-alt-bg)', borderRadius: 'var(--radius-sm)'
               }}>
                 {c.result}
@@ -62,7 +62,7 @@ export const CaseStudies = () => {
         </div>
 
         <div style={{ textAlign: 'center' }}>
-          <a href="#" style={{ color: 'var(--color-primary)', fontWeight: 600, fontSize: '1.125rem' }}>
+          <a href="#" style={{ color: 'var(--color-primary)', fontWeight: 600, }}>
             Read All Case Studies →
           </a>
         </div>

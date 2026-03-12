@@ -57,14 +57,14 @@ export const Hero = () => {
             style={{ 
               display: 'inline-block', padding: '0.25rem 0.75rem', 
               borderRadius: 'var(--radius-full)', border: '1px solid var(--color-accent)',
-              color: 'var(--color-accent)', fontSize: '0.75rem', marginBottom: '1.5rem'
+              color: 'var(--color-accent)', marginBottom: '1.5rem'
             }}
           >
             Australian Business Telco
           </div>
           
           <h1 style={{ 
-            fontSize: 'clamp(40px, 5vw, 72px)', color: 'white', 
+            color: 'white', 
             lineHeight: 1.1, marginBottom: '1.5rem'
           }}>
             Cut Your Telco Bill by Up to <span style={{
@@ -75,7 +75,7 @@ export const Hero = () => {
           </h1>
           
           <p style={{ 
-            fontSize: '18px', color: 'var(--color-pale-tint)', 
+            color: 'var(--color-pale-tint)', 
             marginBottom: '2.5rem', maxWidth: '600px', lineHeight: 1.6
           }}>
             Award-winning business NBN, cloud phone systems and IT services. All-Australian support. No lock-in contracts.
@@ -100,7 +100,7 @@ export const Hero = () => {
                <span style={{fontWeight: 700}}>AUSSIE BB</span>
             </div>
             <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.2)' }} />
-            <span style={{ color: 'var(--color-pale-tint)', fontSize: '0.9rem' }}>4.8★ Google Rating</span>
+            <span style={{ color: 'var(--color-pale-tint)', }}>4.8★ Google Rating</span>
           </div>
         </div>
       </motion.div>

@@ -20,7 +20,7 @@ const FadeIn = ({ children, delay = 0, style }: { children: ReactNode; delay?: n
 
 export const About = () => {
   return (
-    <div style={{ background: '#0A0010', color: '#F8F5FF', fontFamily: "'Plus Jakarta Sans', sans-serif", paddingTop: '72px', minHeight: '100vh' }}>
+    <div style={{ background: '#0A0010', color: '#F8F5FF', paddingTop: '72px', minHeight: '100vh' }}>
       
       {/* ── HERO ── */}
       <section style={{ padding: '100px 0 80px', textAlign: 'center', position: 'relative' }}>
@@ -35,7 +35,7 @@ export const About = () => {
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.3)',
-              color: '#C4B5FD', fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
+              color: '#C4B5FD', fontWeight: 700, letterSpacing: '0.12em',
               textTransform: 'uppercase', padding: '6px 14px', borderRadius: '100px', marginBottom: '24px',
             }}>
               Our Mission
@@ -43,7 +43,6 @@ export const About = () => {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 style={{
-              fontFamily: "'Clash Display', sans-serif", fontSize: 'clamp(40px,6vw,72px)',
               fontWeight: 900, letterSpacing: '-0.04em', color: '#fff',
               marginBottom: '20px', lineHeight: 1.0,
             }}>
@@ -55,7 +54,7 @@ export const About = () => {
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p style={{ fontSize: '18px', lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '580px', margin: '0 auto' }}>
+            <p style={{ lineHeight: 1.7, color: 'rgba(248,245,255,0.55)', maxWidth: '580px', margin: '0 auto' }}>
               We're on a mission to simplify enterprise connectivity for Australian businesses through innovation and human-first support.
             </p>
           </FadeIn>
@@ -77,8 +76,8 @@ export const About = () => {
                   borderRadius: '24px', padding: '40px', height: '100%'
                 }}>
                   <div style={{ color: '#A855F7', marginBottom: '24px' }}>{v.icon}</div>
-                  <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '16px' }}>{v.title}</h3>
-                  <p style={{ fontSize: '15px', lineHeight: 1.6, color: 'rgba(248,245,255,0.5)' }}>{v.desc}</p>
+                  <h3 style={{ fontWeight: 800, color: '#fff', marginBottom: '16px' }}>{v.title}</h3>
+                  <p style={{ lineHeight: 1.6, color: 'rgba(248,245,255,0.5)' }}>{v.desc}</p>
                 </div>
               </FadeIn>
             ))}
@@ -97,8 +96,8 @@ export const About = () => {
               { label: 'Locations', val: 'AU Wide' }
             ].map((s, i) => (
               <FadeIn key={i} delay={i * 0.05}>
-                <div style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '40px', fontWeight: 900, color: '#fff', marginBottom: '8px' }}>{s.val}</div>
-                <div style={{ fontSize: '12px', fontWeight: 700, color: '#A855F7', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{s.label}</div>
+                <div style={{ fontWeight: 900, color: '#fff', marginBottom: '8px' }}>{s.val}</div>
+                <div style={{ fontWeight: 700, color: '#A855F7', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{s.label}</div>
               </FadeIn>
             ))}
           </div>
@@ -114,11 +113,11 @@ export const About = () => {
                 <div style={{ position: 'absolute', inset: '-20px', background: 'linear-gradient(135deg, #7C3AED, transparent)', opacity: 0.1, borderRadius: '32px', filter: 'blur(20px)' }} />
                 <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: '24px', padding: '48px', position: 'relative' }}>
                   <Building2 size={48} color="#A855F7" style={{ marginBottom: '32px' }} />
-                  <h3 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '32px', fontWeight: 900, color: '#fff', marginBottom: '24px' }}>Born in Sydney</h3>
-                  <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'rgba(248,245,255,0.6)', marginBottom: '24px' }}>
+                  <h3 style={{ fontWeight: 900, color: '#fff', marginBottom: '24px' }}>Born in Sydney</h3>
+                  <p style={{ lineHeight: 1.8, color: 'rgba(248,245,255,0.6)', marginBottom: '24px' }}>
                     C9 Communications started with a simple observation: mid-market Australian businesses was being underserved by the major telcos.
                   </p>
-                  <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'rgba(248,245,255,0.6)' }}>
+                  <p style={{ lineHeight: 1.8, color: 'rgba(248,245,255,0.6)' }}>
                     We built a telco that prioritises engineering over marketing, ensuring that when you connect with C9, you're getting the most reliable tech in the country.
                   </p>
                 </div>
@@ -126,7 +125,7 @@ export const About = () => {
             </FadeIn>
             <div>
               <FadeIn delay={0.2}>
-                <h2 style={{ fontFamily: "'Clash Display', sans-serif", fontSize: '40px', fontWeight: 900, color: '#fff', marginBottom: '32px' }}>A team of Australian experts.</h2>
+                <h2 style={{ fontWeight: 900, color: '#fff', marginBottom: '32px' }}>A team of Australian experts.</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                   {[
                     { icon: <Globe2 size={20} />, title: "AU Wide Core", text: "We own and operate our own core network infrastructure across all AU capitals." },
@@ -135,8 +134,8 @@ export const About = () => {
                     <div key={i} style={{ display: 'flex', gap: '20px' }}>
                       <div style={{ color: '#A855F7', marginTop: '4px' }}>{f.icon}</div>
                       <div>
-                        <h4 style={{ color: '#fff', fontSize: '18px', fontWeight: 700, marginBottom: '6px' }}>{f.title}</h4>
-                        <p style={{ color: 'rgba(248,245,255,0.5)', fontSize: '14px', lineHeight: 1.6 }}>{f.text}</p>
+                        <h4 style={{ color: '#fff', fontWeight: 700, marginBottom: '6px' }}>{f.title}</h4>
+                        <p style={{ color: 'rgba(248,245,255,0.5)', lineHeight: 1.6 }}>{f.text}</p>
                       </div>
                     </div>
                   ))}

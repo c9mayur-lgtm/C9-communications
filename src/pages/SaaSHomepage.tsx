@@ -178,7 +178,7 @@ export const SaaSHomepage = () => {
                         border: '2px solid rgba(10,0,16,0.8)',
                         marginLeft: i === 0 ? 0 : '-8px',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontSize: '9px', fontWeight: 800, color: '#fff',
+                        fontWeight: 800, color: '#fff',
                         zIndex: 5 - i, position: 'relative'
                       }}>{ini}</div>
                     ))}
@@ -195,10 +195,10 @@ export const SaaSHomepage = () => {
                   </div>
                   <div style={{ height: '14px', width: '1px', background: 'rgba(167,139,250,0.3)' }} />
                   <div>
-                    <span style={{ fontSize: '14px', fontWeight: 800, color: '#fff' }}>4.9</span>
-                    <span style={{ fontSize: '12px', color: 'rgba(248,245,255,0.45)', marginLeft: '4px' }}>/ 5.0</span>
+                    <span style={{ fontWeight: 800, color: '#fff' }}>4.9</span>
+                    <span style={{ color: 'rgba(248,245,255,0.45)', marginLeft: '4px' }}>/ 5.0</span>
                   </div>
-                  <div style={{ fontSize: '12px', color: 'rgba(248,245,255,0.45)', fontWeight: 500 }}>
+                  <div style={{ color: 'rgba(248,245,255,0.45)', fontWeight: 500 }}>
                     from <strong style={{ color: 'rgba(248,245,255,0.8)' }}>247 reviews</strong>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export const SaaSHomepage = () => {
                 {['99.99% Uptime', '24/7 AU Support', 'No Lock-In'].map((t) => (
                   <span key={t} style={{
                     display: 'flex', alignItems: 'center', gap: '7px',
-                    fontSize: '13px', fontWeight: 600,
+                    fontWeight: 600,
                     color: 'rgba(248,245,255,0.5)'
                   }}>
                     <CheckCircle size={13} color="#A855F7" /> {t}
@@ -229,7 +229,7 @@ export const SaaSHomepage = () => {
         <div className="sp-divider" />
         <div style={{ padding: '40px 0 36px' }}>
           <p style={{
-            textAlign: 'center', fontSize: '11px', fontWeight: 700,
+            textAlign: 'center', fontWeight: 700,
             letterSpacing: '0.14em', textTransform: 'uppercase',
             color: 'rgba(248,245,255,0.25)', marginBottom: '28px'
           }}>
@@ -330,7 +330,7 @@ export const SaaSHomepage = () => {
                   <div className="sp-card-icon">{sol.icon}</div>
                   <div className="sp-card-title">{sol.title}</div>
                   <p className="sp-card-body" style={{ marginBottom: '20px' }}>{sol.desc}</p>
-                  <span style={{ fontSize: '13px', fontWeight: 700, color: '#A855F7', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ fontWeight: 700, color: '#A855F7', display: 'flex', alignItems: 'center', gap: '6px' }}>
                     Learn more <ArrowRight size={13} />
                   </span>
                 </div>
@@ -373,7 +373,7 @@ export const SaaSHomepage = () => {
               </p>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
                 {BENEFITS.map((b, i) => (
-                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '15px', color: 'rgba(248,245,255,0.8)', fontWeight: 500 }}>
+                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', color: 'rgba(248,245,255,0.8)', fontWeight: 500 }}>
                     <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(124,58,237,0.25)', border: '1px solid rgba(167,139,250,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                       <CheckCircle size={11} color="#A855F7" />
                     </span>
@@ -396,10 +396,10 @@ export const SaaSHomepage = () => {
                       <Activity size={18} color="#fff" />
                     </div>
                     <div>
-                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#fff' }}>Network Status</div>
-                      <div style={{ fontSize: '12px', color: '#A855F7' }}>● All systems operational</div>
+                      <div style={{ fontWeight: 700, color: '#fff' }}>Network Status</div>
+                      <div style={{ color: '#A855F7' }}>● All systems operational</div>
                     </div>
-                    <div style={{ marginLeft: 'auto', fontSize: '12px', color: 'rgba(248,245,255,0.4)' }}>Live</div>
+                    <div style={{ marginLeft: 'auto', color: 'rgba(248,245,255,0.4)' }}>Live</div>
                   </div>
 
                   {/* Mini metrics */}
@@ -410,8 +410,8 @@ export const SaaSHomepage = () => {
                     { label: 'Active sites', val: '247', color: '#FCA5A5' },
                   ].map((m) => (
                     <div key={m.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '14px', marginBottom: '14px', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
-                      <span style={{ fontSize: '13px', color: 'rgba(248,245,255,0.5)', fontWeight: 500 }}>{m.label}</span>
-                      <span style={{ fontSize: '14px', fontWeight: 700, color: m.color }}>{m.val}</span>
+                      <span style={{ color: 'rgba(248,245,255,0.5)', fontWeight: 500 }}>{m.label}</span>
+                      <span style={{ fontWeight: 700, color: m.color }}>{m.val}</span>
                     </div>
                   ))}
                 </div>
@@ -422,7 +422,7 @@ export const SaaSHomepage = () => {
                   transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
                   style={{ position: 'absolute', top: '-20px', right: '-24px', background: 'rgba(124,58,237,0.95)', border: '1px solid rgba(167,139,250,0.4)', borderRadius: '12px', padding: '12px 18px', backdropFilter: 'blur(20px)', whiteSpace: 'nowrap' }}
                 >
-                  <div style={{ fontSize: '12px', fontWeight: 700, color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ fontWeight: 700, color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <Shield size={12} /> Threat blocked <span style={{ color: '#86EFAC' }}>just now</span>
                   </div>
                 </motion.div>
@@ -449,7 +449,7 @@ export const SaaSHomepage = () => {
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="sp-card" style={{ height: '100%' }}>
                   <div className="sp-step-num">{step.num}</div>
-                  <div className="sp-card-title" style={{ fontSize: '19px', marginBottom: '12px' }}>{step.title}</div>
+                  <div className="sp-card-title" style={{ marginBottom: '12px' }}>{step.title}</div>
                   <p className="sp-card-body">{step.desc}</p>
                 </div>
               </FadeIn>
@@ -483,8 +483,8 @@ export const SaaSHomepage = () => {
                   <div className="sp-testimonial-author">
                     <div className="sp-avatar">{t.initials}</div>
                     <div>
-                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#fff' }}>{t.name}</div>
-                      <div style={{ fontSize: '12px', color: 'rgba(248,245,255,0.45)' }}>{t.role}</div>
+                      <div style={{ fontWeight: 700, color: '#fff' }}>{t.name}</div>
+                      <div style={{ color: 'rgba(248,245,255,0.45)' }}>{t.role}</div>
                     </div>
                   </div>
                 </div>
@@ -510,10 +510,10 @@ export const SaaSHomepage = () => {
                 Book a free, no-obligation audit. Our engineers will review your existing setup and present a better path forward.
               </p>
               <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <Link to="/contact" className="sp-btn-primary" style={{ fontSize: '16px', padding: '15px 32px' }}>
+                <Link to="/contact" className="sp-btn-primary" style={{ padding: '15px 32px' }}>
                   Book Your Free Audit <ArrowRight size={17} />
                 </Link>
-                <a href="tel:1800000000" className="sp-btn-ghost" style={{ fontSize: '16px', padding: '15px 32px' }}>
+                <a href="tel:1800000000" className="sp-btn-ghost" style={{ padding: '15px 32px' }}>
                   Call 1800 C9 TECH
                 </a>
               </div>

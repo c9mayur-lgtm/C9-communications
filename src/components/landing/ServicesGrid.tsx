@@ -31,7 +31,7 @@ export const ServicesGrid = () => {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <p className="mono-tag" style={{ color: 'var(--color-primary)', marginBottom: '1rem' }}>WHAT WE DO</p>
-          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)' }}>Everything your business needs. One provider.</h2>
+          <h2 style={{ }}>Everything your business needs. One provider.</h2>
         </div>
 
         <div style={{
@@ -40,7 +40,7 @@ export const ServicesGrid = () => {
           {services.map((svc, i) => (
             <div key={i} className="glass-card-light" style={{ padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column' }}>
               <div style={{ marginBottom: '1.5rem' }}>{svc.icon}</div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>{svc.title}</h3>
+              <h3 style={{ marginBottom: '0.75rem' }}>{svc.title}</h3>
               <p style={{ color: 'var(--color-text-light)', marginBottom: '2rem', flex: 1 }}>{svc.desc}</p>
               
               <a href="#" style={{ 

@@ -29,7 +29,7 @@ export const Differentiators = () => {
   return (
     <SectionWrapper style={{ background: 'var(--color-alt-bg)', padding: '6rem 0' }}>
       <div className="container">
-        <h2 style={{ fontSize: 'clamp(32px, 4vw, 40px)', textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem' }}>
           Why 1,000+ businesses choose C9 over Telstra and TPG
         </h2>
 
@@ -45,8 +45,8 @@ export const Differentiators = () => {
               }}>
                 {p.icon}
               </div>
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--color-text-dark)' }}>{p.title}</h3>
-              <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem' }}>{p.desc}</p>
+              <h3 style={{ marginBottom: '0.75rem', color: 'var(--color-text-dark)' }}>{p.title}</h3>
+              <p style={{ color: 'var(--color-text-light)', }}>{p.desc}</p>
             </div>
           ))}
         </div>

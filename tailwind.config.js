@@ -56,8 +56,8 @@ export default {
         "c9-purple": "#6B21A8",
       },
       fontFamily: {
-        avenir: ["Avenir", "sans-serif"],
-        clash: ["Clash Display", "sans-serif"],
+        sans: ["Proxima Nova", "Inter", "sans-serif"],
+        heading: ["Proxima Nova", "Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
