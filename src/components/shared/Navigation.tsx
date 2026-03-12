@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   const [isDarkPage, setIsDarkPage] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,14 +14,21 @@ export const Navigation = () => {
     };
 
     // Very simple check to determine if the page starts dark
+    // On /pricing we might want it forced to light or determined by page
     const bodyBg = getComputedStyle(document.body).backgroundColor;
-    setIsDarkPage(bodyBg !== 'rgb(255, 255, 255)'); // If not white, assume dark
+    setIsDarkPage(bodyBg !== 'rgb(255, 255, 255)'); 
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
-  const links = ['Solutions', 'Pricing', 'Industries', 'About', 'Support'];
+  const links = [
+    { name: 'Solutions', path: '/#solutions' },
+    { name: 'Pricing', path: '/pricing' },
+    { name: 'Industries', path: '/#industries' },
+    { name: 'About', path: '/#about' },
+    { name: 'Support', path: '/#support' }
+  ];
 
   return (
     <>
@@ -37,51 +46,63 @@ export const Navigation = () => {
         }}
       >
         {/* LOGO */}
-        <div style={{ 
+        <Link to="/" style={{ 
           fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 600, 
           color: scrolled || isDarkPage ? 'white' : 'var(--c9-text)',
-          position: 'relative', transition: 'color 0.3s'
+          position: 'relative', transition: 'color 0.3s',
+          textDecoration: 'none'
         }}>
           C9 Communications
           {/* Active dot indicator simulation for logo */}
           <div style={{
             position: 'absolute', bottom: '-8px', left: '50%', transform: 'translateX(-50%)',
             width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--c9-accent)',
-            opacity: 1 // Assuming we're active
+            opacity: location.pathname === '/' ? 1 : 0
           }} />
-        </div>
+        </Link>
 
         {/* DESKTOP LINKS */}
         <div className="nav-desktop-links" style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-          {links.map((item) => (
-            <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`}
-              className="nav-link"
-              style={{
-                color: scrolled || isDarkPage ? 'rgba(255,255,255,0.75)' : 'var(--c9-mid)',
-                fontSize: '15px', fontWeight: 500, position: 'relative',
-                transition: 'color 0.15s ease'
-              }}
-            >
-              {item}
-              <div className="nav-indicator" />
-              
-              {/* Mega Dropdown for Solutions */}
-              {item === 'Solutions' && (
-                <div className="mega-menu">
-                  <div className="mega-menu-content">
-                    {['Voice/VoIP', 'Business NBN', 'IT Services', 'Cloud Hosting', 'Mobile Plans', 'Print & Hardware'].map(s => (
-                      <div key={s} className="mega-item">
-                        <span style={{color: 'white', fontWeight: 600, display: 'block'}}>{s}</span>
-                        <span style={{color: 'var(--c9-muted)', fontSize: '13px'}}>Learn more about {s.toLowerCase()}</span>
-                      </div>
-                    ))}
+          {links.map((item) => {
+            const isExternal = !item.path.startsWith('/#');
+            const Element = isExternal ? Link : 'a' as any;
+            const props = isExternal ? { to: item.path } : { href: item.path };
+
+            return (
+              <Element 
+                key={item.name} 
+                {...props}
+                className="nav-link"
+                style={{
+                  color: scrolled || isDarkPage ? 'rgba(255,255,255,0.75)' : 'var(--c9-mid)',
+                  fontSize: '15px', fontWeight: 500, position: 'relative',
+                  transition: 'color 0.15s ease',
+                  textDecoration: 'none'
+                }}
+              >
+                {item.name}
+                <div style={{
+                  position: 'absolute', bottom: '-8px', left: '50%', transform: 'translateX(-50%)',
+                  width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--c9-accent)',
+                  opacity: location.pathname === item.path ? 1 : 0, transition: 'opacity 0.15s'
+                }} />
+                
+                {/* Mega Dropdown for Solutions */}
+                {item.name === 'Solutions' && (
+                  <div className="mega-menu">
+                    <div className="mega-menu-content">
+                      {['Voice/VoIP', 'Business NBN', 'IT Services', 'Cloud Hosting', 'Mobile Plans', 'Print & Hardware'].map(s => (
+                        <div key={s} className="mega-item">
+                          <span style={{color: 'white', fontWeight: 600, display: 'block'}}>{s}</span>
+                          <span style={{color: 'var(--c9-muted)', fontSize: '13px'}}>Learn more about {s.toLowerCase()}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </a>
-          ))}
+                )}
+              </Element>
+            );
+          })}
         </div>
 
         {/* RIGHT ACTIONS */}
@@ -122,21 +143,28 @@ export const Navigation = () => {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'center' }}>
-          {links.map((item, i) => (
-            <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`}
-              onClick={() => setNavOpen(false)}
-              className="fade-up"
-              style={{ 
-                color: 'white', fontSize: '48px', fontFamily: 'var(--font-heading)', fontWeight: 600,
-                opacity: navOpen ? 1 : 0, transform: navOpen ? 'translateY(0)' : 'translateY(28px)',
-                transition: `all 0.4s ease ${i * 0.08}s`
-              }}
-            >
-              {item}
-            </a>
-          ))}
+          {links.map((item, i) => {
+            const isExternal = !item.path.startsWith('/#');
+            const Element = isExternal ? Link : 'a' as any;
+            const props = isExternal ? { to: item.path } : { href: item.path };
+
+            return (
+              <Element 
+                key={item.name} 
+                {...props}
+                onClick={() => setNavOpen(false)}
+                className="fade-up"
+                style={{ 
+                  color: 'white', fontSize: '48px', fontFamily: 'var(--font-heading)', fontWeight: 600,
+                  opacity: navOpen ? 1 : 0, transform: navOpen ? 'translateY(0)' : 'translateY(28px)',
+                  transition: `all 0.4s ease ${i * 0.08}s`,
+                  textDecoration: 'none'
+                }}
+              >
+                {item.name}
+              </Element>
+            );
+          })}
         </div>
 
         <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'center' }}>
