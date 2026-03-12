@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { SectionWrapper } from './SectionWrapper';
 import { CheckCircle2 } from 'lucide-react';
 

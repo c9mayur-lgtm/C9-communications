@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { SectionWrapper } from './SectionWrapper';
 import { PhoneOff, HeadphonesIcon, FileX } from 'lucide-react';
 

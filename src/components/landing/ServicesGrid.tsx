@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { SectionWrapper } from './SectionWrapper';
 import { PhoneCall, Wifi, Laptop, Cloud } from 'lucide-react';
 

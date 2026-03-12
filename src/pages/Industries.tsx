@@ -1,6 +1,6 @@
 import { useRef, type ReactNode } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Building2, Stethoscope, Briefcase, GraduationCap, ShoppingBag, Truck, Layout, ArrowRight } from 'lucide-react';
+import { Stethoscope, Briefcase, GraduationCap, ShoppingBag, Truck, Layout, ArrowRight } from 'lucide-react';
 
 /* ---- FadeIn ---- */
 const FadeIn = ({ children, delay = 0, style }: { children: ReactNode; delay?: number; style?: React.CSSProperties }) => {

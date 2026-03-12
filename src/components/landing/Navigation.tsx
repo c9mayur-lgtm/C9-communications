@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
@@ -12,9 +12,9 @@ export const Navigation = () => {
       setScrolled(window.scrollY > 80);
       
       const sections = ['solutions', 'pricing', 'industries', 'about', 'support'];
-      const current = sections.findLast(section => {
+      const current = [...sections].reverse().find((section: string) => {
         const el = document.getElementById(section);
-        if(el) return window.scrollY >= el.offsetTop - 150;
+        if (el) return window.scrollY >= el.offsetTop - 150;
         return false;
       });
       if(current) setActiveHash(current);

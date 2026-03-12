@@ -1,5 +1,4 @@
-import React from 'react';
-import { SectionWrapper } from './SectionWrapper';
+
 
 export const AccreditationStrip = () => {
   const accreditations = [

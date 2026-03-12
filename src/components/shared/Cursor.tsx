@@ -12,7 +12,7 @@ export const Cursor: React.FC = () => {
   const [isHidden, setIsHidden] = useState(true);
   const [isCoarse, setIsCoarse] = useState(false);
 
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number>(0);
   const ringRef = useRef({ x: -100, y: -100 });
 
   useEffect(() => {

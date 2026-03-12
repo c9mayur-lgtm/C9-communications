@@ -1,20 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import type { ReactNode } from 'react';
+import { motion, type HTMLMotionProps } from 'framer-motion';
 import { useMagnetic } from '../hooks/useMagnetic';
 
-interface MagneticButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+interface MagneticButtonProps extends HTMLMotionProps<"button"> {
+  children: ReactNode;
   strength?: number;
   friction?: number;
 }
 
-export const MagneticButton: React.FC<MagneticButtonProps> = ({ 
+export const MagneticButton = ({ 
   children, 
   strength = 0.3, 
   friction = 15,
   className,
   ...props 
-}) => {
+}: MagneticButtonProps) => {
   const { ref, x, y } = useMagnetic(friction, strength);
 
   return (

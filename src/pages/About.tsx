@@ -87,7 +87,7 @@ export const About = () => {
       </section>
 
       {/* ── STATS SECTION ── */}
-      <section style={{ padding: '100px 0', background: 'rgba(255,255,255,0.015)', borderY: '1px solid rgba(167,139,250,0.1)' }}>
+      <section style={{ padding: '100px 0', background: 'rgba(255,255,255,0.015)', borderTop: '1px solid rgba(167,139,250,0.1)', borderBottom: '1px solid rgba(167,139,250,0.1)' }}>
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '40px', textAlign: 'center' }}>
             {[

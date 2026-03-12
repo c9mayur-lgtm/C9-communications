@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { SectionWrapper } from './SectionWrapper';
 import { MapPin, ShieldCheck, FileKey, User2 } from 'lucide-react';
 

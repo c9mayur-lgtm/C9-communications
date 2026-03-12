@@ -1,9 +1,8 @@
 import React, { useRef, useState, useEffect, type ReactNode } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { 
-  Check, ArrowRight, Zap, Phone, Activity, Shield, 
-  Smartphone, Building2, Server, Globe, Cpu, Lock, 
-  ChevronRight, Mic, Video, Users, BarChart3, Settings
+  ArrowRight, Zap, Activity, 
+  ChevronRight, Mic, Video, Settings
 } from 'lucide-react';
 import './SaaSHomepage.css';
 

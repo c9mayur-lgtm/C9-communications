@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700,900&display=swap');
 
 @layer base {
   :root {
@@ -28,34 +28,34 @@
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
 
-    --c9-primary:     #6B21A8;
-  --c9-secondary:   #7C3AED;
-  --c9-accent:      #A855F7;
-  --c9-light:       #C084FC;
-  --c9-pale:        #DDD6FE;
-  --c9-hero-bg:     #1A003A;
-  --c9-white:       #FFFFFF;
-  --c9-surface:     #F5F0FF;
-  --c9-text:        #0F172A;
-  --c9-mid:         #374151;
-  --c9-muted:       #6B7280;
-  --c9-border:      rgba(109,33,168,0.15);
+    --c9-primary:     #7C3AED;
+    --c9-secondary:   #6B21A8;
+    --c9-accent:      #A855F7;
+    --c9-light:       #C4B5FD;
+    --c9-pale:        #DDD6FE;
+    --c9-hero-bg:     #0A0010;
+    --c9-white:       #0A0010;
+    --c9-surface:     rgba(167,139,250,0.03);
+    --c9-text:        #FFFFFF;
+    --c9-mid:         rgba(248,245,255,0.7);
+    --c9-muted:       rgba(248,245,255,0.45);
+    --c9-border:      rgba(167,139,250,0.12);
 
-  /* Backwards compatibility for original landing page components */
-  --color-primary: var(--c9-primary);
-  --color-secondary: var(--c9-secondary);
-  --color-accent: var(--c9-accent);
-  --color-light-accent: var(--c9-light);
-  --color-pale-tint: var(--c9-pale);
-  --color-hero-bg: var(--c9-hero-bg);
-  --color-body-bg: var(--c9-white);
-  --color-alt-bg: var(--c9-surface);
-  --color-text-dark: var(--c9-text);
-  --color-text-mid: var(--c9-mid);
-  --color-text-light: var(--c9-muted);
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-full: 9999px;
+    /* Backwards compatibility for original landing page components */
+    --color-primary: var(--c9-primary);
+    --color-secondary: var(--c9-secondary);
+    --color-accent: var(--c9-accent);
+    --color-light-accent: var(--c9-light);
+    --color-pale-tint: var(--c9-pale);
+    --color-hero-bg: var(--c9-hero-bg);
+    --color-body-bg: var(--c9-white);
+    --color-alt-bg: var(--c9-surface);
+    --color-text-dark: var(--c9-text);
+    --color-text-mid: var(--c9-mid);
+    --color-text-light: var(--c9-muted);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-full: 9999px;
 
   --font-heading: 'Clash Display', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -106,8 +106,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: #ffffff;
-  color: #111111;
+  background-color: #0A0010;
+  color: #FFFFFF;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
