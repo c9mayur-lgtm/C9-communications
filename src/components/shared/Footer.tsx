@@ -29,16 +29,8 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" style={{ textDecoration: 'none' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-                <div style={{
-                  width: '32px', height: '32px', borderRadius: '10px',
-                  background: 'linear-gradient(135deg, #7C3AED, #A855F7)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 900, color: '#fff',
-                }}>C9</div>
-                <span style={{ fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>
-                  Communications
-                </span>
+              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+                <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '36px' }} />
               </div>
             </Link>
             <p style={{ lineHeight: 1.7, maxWidth: '280px', marginBottom: '28px' }}>

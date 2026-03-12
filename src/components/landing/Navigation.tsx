@@ -41,8 +41,8 @@ export const Navigation = () => {
         }}
       >
         {/* LOGO */}
-        <div style={{ fontWeight: 700, color: 'white' }}>
-          C9 Communications
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '32px' }} />
         </div>
 
         {/* DESKTOP LINKS */}
@@ -94,8 +94,8 @@ export const Navigation = () => {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4rem' }}>
-               <div style={{ fontWeight: 700, color: 'white' }}>
-                C9 Communications
+               <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '28px' }} />
               </div>
               <button onClick={() => setNavOpen(false)} style={{ color: 'white' }}>
                 <X size={28} />

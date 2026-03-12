@@ -109,18 +109,8 @@ export const Navigation = () => {
         transition: 'all 0.35s cubic-bezier(0.16,1,0.3,1)',
         }}>
         {/* LOGO */}
-        <Link to="/" style={{
-          fontWeight: 800,
-          color: '#fff', textDecoration: 'none', letterSpacing: '-0.03em',
-          display: 'flex', alignItems: 'center', gap: '8px',
-        }}>
-          <div style={{
-            width: '28px', height: '28px', borderRadius: '8px',
-            background: 'linear-gradient(135deg, #7C3AED, #A855F7)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontWeight: 900, color: '#fff', flexShrink: 0,
-          }}>C9</div>
-          Communications
+        <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '32px' }} />
         </Link>
 
         {/* DESKTOP LINKS */}
@@ -273,9 +263,9 @@ export const Navigation = () => {
         }}>
         {/* Mobile header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
-          <Link to="/" style={{
-            fontWeight: 800, color: '#fff', textDecoration: 'none',
-          }}>C9 Communications</Link>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+            <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '28px' }} />
+          </Link>
           <button onClick={() => setNavOpen(false)} style={{ color: '#fff', background: 'none', border: 'none', cursor: 'pointer' }}>
             <X size={24} />
           </button>
