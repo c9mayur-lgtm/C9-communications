@@ -28,9 +28,8 @@ export const Footer = () => {
             <div>
             <Link to="/" style={{ textDecoration: 'none' }}>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-                <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ 
-                  height: '36px',
-                  filter: theme === 'light' ? 'brightness(0)' : 'none'
+                <img src={theme === 'light' ? "/images/c9_logo_light.svg" : "/images/c9_logo.svg"} alt="C9 Communications" style={{ 
+                  height: '45px'
                 }} />
               </div>
             </Link>
@@ -110,31 +109,43 @@ export const Footer = () => {
           </div>
           </FadeIn>
 
-          {/* CTA Block */}
-          <FadeIn delay={0.4}>
-            <div>
-            <h5 style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
-              Get Started
-            </h5>
-            <div style={{
-              background: 'rgba(124,58,237,0.12)', border: '1px solid var(--c9-border)',
-              borderRadius: '16px', padding: '24px',
-            }}>
-              <p style={{ lineHeight: 1.6, marginBottom: '20px', color: 'var(--c9-muted)' }}>
-                Book a free, no-obligation audit. We'll review your existing setup and show you a better path.
-              </p>
-              <Link to="/contact" style={{
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
-                color: 'hsl(var(--foreground))', fontWeight: 700,
-                padding: '11px 20px', borderRadius: '100px', textDecoration: 'none',
-                border: '1px solid var(--c9-border)',
-              }}>
-                Book Free Audit <ArrowRight size={14} />
-              </Link>
-            </div>
-          </div>
-          </FadeIn>
+            {/* CTA Block */}
+            <FadeIn delay={0.4}>
+              <div style={{ width: '100%' }}>
+                <h5 style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
+                  Get Started
+                </h5>
+                <div style={{
+                  background: theme === 'light' ? 'rgba(124,58,237,0.05)' : 'rgba(124,58,237,0.12)',
+                  border: '1px solid var(--c9-border)',
+                  borderRadius: '16px',
+                  padding: '24px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '20px'
+                }}>
+                  <p style={{ lineHeight: 1.6, color: 'var(--c9-muted)', margin: 0 }}>
+                    Book a free, no-obligation audit. We'll review your existing setup and show you a better path.
+                  </p>
+                  <Link 
+                    to="/contact" 
+                    className="btn-primary"
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      textDecoration: 'none',
+                      background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
+                      border: 'none',
+                    }}
+                  >
+                    Book Free Audit <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
         </div>
 
         {/* Bottom row */}

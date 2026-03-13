@@ -445,9 +445,8 @@ export const Navigation = () => {
 
         {/* LOGO */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-          <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ 
-            height: '30px',
-            filter: theme === 'light' ? 'brightness(0)' : 'none'
+          <img src={theme === 'light' ? "/images/c9_logo_light.svg" : "/images/c9_logo.svg"} alt="C9 Communications" style={{ 
+            height: '45px'
           }} />
         </Link>
 
@@ -631,7 +630,7 @@ export const Navigation = () => {
           zIndex: 201, backdropFilter: 'blur(10px)',
         }}>
           <Link to="/" onClick={() => setNavOpen(false)}>
-            <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '28px', filter: theme === 'light' ? 'brightness(0)' : 'none' }} />
+            <img src={theme === 'light' ? "/images/c9_logo_light.svg" : "/images/c9_logo.svg"} alt="C9 Communications" style={{ height: '45px' }} />
           </Link>
           <button onClick={() => setNavOpen(false)} style={{ color: 'hsl(var(--foreground))', background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>
             <X size={28} />
