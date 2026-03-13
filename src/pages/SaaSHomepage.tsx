@@ -164,8 +164,8 @@ export const SaaSHomepage = () => {
                 {/* Stars + Score */}
                 <div style={{
                   display: 'inline-flex', alignItems: 'center', gap: '12px',
-                  background: 'rgba(167,139,250,0.08)',
-                  border: '1px solid rgba(167,139,250,0.22)',
+                  background: 'var(--c9-border)',
+                  border: '1px solid var(--c9-border)',
                   borderRadius: '100px', padding: '10px 20px 10px 14px',
                   backdropFilter: 'blur(12px)'
                 }}>
@@ -175,11 +175,12 @@ export const SaaSHomepage = () => {
                       <div key={ini} style={{
                         width: '28px', height: '28px', borderRadius: '50%',
                         background: `linear-gradient(135deg, hsl(${260 + i*20}, 70%, 55%), hsl(${280 + i*20}, 80%, 65%))`,
-                        border: '2px solid rgba(10,0,16,0.8)',
+                        border: '2px solid hsl(var(--background))',
                         marginLeft: i === 0 ? 0 : '-8px',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         fontWeight: 800, color: '#fff',
-                        zIndex: 5 - i, position: 'relative'
+                        zIndex: 5 - i, position: 'relative',
+                        fontSize: '9px'
                       }}>{ini}</div>
                     ))}
                   </div>
@@ -193,25 +194,25 @@ export const SaaSHomepage = () => {
                       />
                     ))}
                   </div>
-                  <div style={{ height: '14px', width: '1px', background: 'rgba(167,139,250,0.3)' }} />
+                  <div style={{ height: '14px', width: '1px', background: 'var(--c9-border)' }} />
                   <div>
-                    <span style={{ fontWeight: 800, color: '#fff' }}>4.9</span>
-                    <span style={{ color: 'rgba(248,245,255,0.45)', marginLeft: '4px' }}>/ 5.0</span>
+                    <span style={{ fontWeight: 800, color: 'hsl(var(--foreground))' }}>4.9</span>
+                    <span style={{ color: 'var(--c9-muted)', marginLeft: '4px' }}>/ 5.0</span>
                   </div>
-                  <div style={{ color: 'rgba(248,245,255,0.45)', fontWeight: 500 }}>
-                    from <strong style={{ color: 'rgba(248,245,255,0.8)' }}>247 reviews</strong>
+                  <div style={{ color: 'var(--c9-muted)', fontWeight: 500 }}>
+                    from <strong style={{ color: 'var(--c9-muted)' }}>247 reviews</strong>
                   </div>
                 </div>
 
                 {/* Separator */}
-                <div style={{ height: '28px', width: '1px', background: 'rgba(167,139,250,0.2)' }} />
+                <div style={{ height: '28px', width: '1px', background: 'var(--c9-border)' }} />
 
                 {/* Trust pills */}
                 {['99.99% Uptime', '24/7 AU Support', 'No Lock-In'].map((t) => (
                   <span key={t} style={{
                     display: 'flex', alignItems: 'center', gap: '7px',
                     fontWeight: 600,
-                    color: 'rgba(248,245,255,0.5)'
+                    color: 'var(--c9-muted)'
                   }}>
                     <CheckCircle size={13} color="#A855F7" /> {t}
                   </span>
@@ -231,7 +232,7 @@ export const SaaSHomepage = () => {
           <p style={{
             textAlign: 'center', fontWeight: 700,
             letterSpacing: '0.14em', textTransform: 'uppercase',
-            color: 'rgba(248,245,255,0.25)', marginBottom: '28px'
+            color: 'var(--c9-muted)', marginBottom: '28px'
           }}>
             Trusted by leading Australian businesses
           </p>
@@ -309,7 +310,7 @@ export const SaaSHomepage = () => {
       {/* ═══════════════════════════════════
           SECTION 4 — SOLUTIONS BENTO GRID
       ═══════════════════════════════════ */}
-      <section className="sp-section" style={{ background: 'rgba(255,255,255,0.01)' }}>
+      <section className="sp-section" style={{ background: 'var(--c9-surface)' }}>
         <div className="sp-glow-left" />
         <div className="sp-container" style={{ position: 'relative', zIndex: 1 }}>
           <FadeIn style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -361,7 +362,7 @@ export const SaaSHomepage = () => {
       <section className="sp-section">
         <div className="sp-glow-right" />
         <div className="sp-container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
+          <div className="grid-2col" style={{ gap: '80px' }}>
             <FadeIn direction="left">
               <span className="sp-eyebrow">Why C9</span>
               <h2 className="sp-h2">
@@ -373,8 +374,8 @@ export const SaaSHomepage = () => {
               </p>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
                 {BENEFITS.map((b, i) => (
-                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', color: 'rgba(248,245,255,0.8)', fontWeight: 500 }}>
-                    <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(124,58,237,0.25)', border: '1px solid rgba(167,139,250,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', color: 'var(--c9-muted)', fontWeight: 500 }}>
+                    <span style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(124,58,237,0.25)', border: '1px solid var(--c9-border)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                       <CheckCircle size={11} color="#A855F7" />
                     </span>
                     {b}
@@ -391,15 +392,15 @@ export const SaaSHomepage = () => {
               <div style={{ position: 'relative' }}>
                 {/* Main card */}
                 <div className="sp-card" style={{ padding: '40px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', paddingBottom: '20px', borderBottom: '1px solid rgba(167,139,250,0.1)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', paddingBottom: '20px', borderBottom: '1px solid var(--c9-border)' }}>
                     <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'linear-gradient(135deg, #7C3AED, #A855F7)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Activity size={18} color="#fff" />
                     </div>
                     <div>
-                      <div style={{ fontWeight: 700, color: '#fff' }}>Network Status</div>
+                      <div style={{ fontWeight: 700, color: 'hsl(var(--foreground))' }}>Network Status</div>
                       <div style={{ color: '#A855F7' }}>● All systems operational</div>
                     </div>
-                    <div style={{ marginLeft: 'auto', color: 'rgba(248,245,255,0.4)' }}>Live</div>
+                    <div style={{ marginLeft: 'auto', color: 'var(--c9-muted)' }}>Live</div>
                   </div>
 
                   {/* Mini metrics */}
@@ -409,8 +410,8 @@ export const SaaSHomepage = () => {
                     { label: 'Data throughput', val: '10 Gbps', color: '#7DD3FC' },
                     { label: 'Active sites', val: '247', color: '#FCA5A5' },
                   ].map((m) => (
-                    <div key={m.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '14px', marginBottom: '14px', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
-                      <span style={{ color: 'rgba(248,245,255,0.5)', fontWeight: 500 }}>{m.label}</span>
+                    <div key={m.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '14px', marginBottom: '14px', borderBottom: '1px solid var(--c9-surface)' }}>
+                      <span style={{ color: 'var(--c9-muted)', fontWeight: 500 }}>{m.label}</span>
                       <span style={{ fontWeight: 700, color: m.color }}>{m.val}</span>
                     </div>
                   ))}
@@ -420,9 +421,9 @@ export const SaaSHomepage = () => {
                 <motion.div
                   animate={{ y: [-6, 6, -6] }}
                   transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-                  style={{ position: 'absolute', top: '-20px', right: '-24px', background: 'rgba(124,58,237,0.95)', border: '1px solid rgba(167,139,250,0.4)', borderRadius: '12px', padding: '12px 18px', backdropFilter: 'blur(20px)', whiteSpace: 'nowrap' }}
+                  style={{ position: 'absolute', top: '-20px', right: '-24px', background: 'rgba(124,58,237,0.95)', border: '1px solid var(--c9-border)', borderRadius: '12px', padding: '12px 18px', backdropFilter: 'blur(20px)', whiteSpace: 'nowrap' }}
                 >
-                  <div style={{ fontWeight: 700, color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ fontWeight: 700, color: 'hsl(var(--foreground))', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <Shield size={12} /> Threat blocked <span style={{ color: '#86EFAC' }}>just now</span>
                   </div>
                 </motion.div>
@@ -435,7 +436,7 @@ export const SaaSHomepage = () => {
       {/* ═══════════════════════════════════
           SECTION 7 — HOW IT WORKS
       ═══════════════════════════════════ */}
-      <section className="sp-section" style={{ background: 'rgba(255,255,255,0.015)' }}>
+      <section className="sp-section" style={{ background: 'var(--c9-surface)' }}>
         <div className="sp-container">
           <FadeIn style={{ textAlign: 'center', marginBottom: '64px' }}>
             <span className="sp-eyebrow">Our Process</span>
@@ -483,8 +484,8 @@ export const SaaSHomepage = () => {
                   <div className="sp-testimonial-author">
                     <div className="sp-avatar">{t.initials}</div>
                     <div>
-                      <div style={{ fontWeight: 700, color: '#fff' }}>{t.name}</div>
-                      <div style={{ color: 'rgba(248,245,255,0.45)' }}>{t.role}</div>
+                      <div style={{ fontWeight: 700, color: 'hsl(var(--foreground))' }}>{t.name}</div>
+                      <div style={{ color: 'var(--c9-muted)' }}>{t.role}</div>
                     </div>
                   </div>
                 </div>

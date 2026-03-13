@@ -26,9 +26,7 @@ export const CaseStudies = () => {
           Real Australian businesses. Real results.
         </h2>
 
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', marginBottom: '3rem'
-        }}>
+        <div className="grid-auto-small" style={{ gap: '2rem', marginBottom: '3rem' }}>
           {cases.map((c, i) => (
             <div key={i} className="glass-card-light" style={{ padding: '3rem', position: 'relative' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>

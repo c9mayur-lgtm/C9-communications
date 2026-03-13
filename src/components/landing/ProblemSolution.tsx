@@ -30,9 +30,7 @@ export const ProblemSolution = () => {
           </h2>
         </div>
 
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'
-        }}>
+        <div className="grid-auto-small" style={{ gap: '2rem' }}>
           {items.map((item, idx) => (
             <div key={idx} className="glass-card" style={{
               background: 'white', border: '1px solid var(--color-pale-tint)',

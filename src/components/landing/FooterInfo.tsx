@@ -29,9 +29,8 @@ export const Footer = () => {
   return (
     <footer style={{ background: 'var(--color-text-dark)', color: 'var(--color-text-light)', padding: '6rem 0 2rem' }}>
       <div className="container">
-        <div style={{ 
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
-          gap: '4rem', paddingBottom: '4rem', borderBottom: '1px solid rgba(255,255,255,0.1)' 
+        <div className="footer-grid" style={{ 
+          paddingBottom: '4rem', borderBottom: '1px solid var(--c9-surface)' 
         }}>
           <div>
             <div style={{ fontWeight: 700, color: 'white', marginBottom: '1rem' }}>

@@ -11,7 +11,7 @@ export const C9XSpotlight = () => {
 
   return (
     <SectionWrapper style={{ background: 'var(--color-hero-bg)', padding: '8rem 0', color: 'white', position: 'relative', overflow: 'hidden' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+      <div className="container grid-2col" style={{ gap: '4rem', alignItems: 'center' }}>
         
         {/* Left Side */}
         <div style={{ position: 'relative', zIndex: 10 }}>
@@ -43,25 +43,25 @@ export const C9XSpotlight = () => {
           <div style={{
             width: '100%', maxWidth: '500px', height: '600px',
             background: 'linear-gradient(145deg, rgba(20,20,25,0.9), rgba(10,10,15,0.9))',
-            borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)',
-            boxShadow: '0 30px 60px -15px rgba(107,33,168,0.5), inset 0 1px 0 rgba(255,255,255,0.1)',
+            borderRadius: '24px', border: '1px solid var(--c9-surface)',
+            boxShadow: '0 30px 60px -15px rgba(107,33,168,0.5), inset 0 1px 0 var(--c9-surface)',
             padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem'
           }}>
              {/* Mock UI Elements */}
              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ width: '40%', height: '24px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px' }}/>
+                <div style={{ width: '40%', height: '24px', background: 'var(--c9-surface)', borderRadius: '4px' }}/>
                 <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--color-primary)' }}/>
              </div>
              
              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div style={{ height: '100px', background: 'rgba(168,85,247,0.1)', borderRadius: '12px', border: '1px solid rgba(168,85,247,0.3)', padding: '1rem' }}>
-                  <div style={{ width: '30%', height: '12px', background: 'rgba(255,255,255,0.2)', borderRadius: '2px', marginBottom: '0.5rem'}}/>
-                  <div style={{ width: '70%', height: '32px', background: 'rgba(255,255,255,0.8)', borderRadius: '4px'}}/>
+                  <div style={{ width: '30%', height: '12px', background: 'var(--c9-surface)', borderRadius: '2px', marginBottom: '0.5rem'}}/>
+                  <div style={{ width: '70%', height: '32px', background: 'var(--c9-surface)', borderRadius: '4px'}}/>
                 </div>
-                <div style={{ height: '100px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}/>
+                <div style={{ height: '100px', background: 'var(--c9-surface)', borderRadius: '12px', border: '1px solid var(--c9-surface)' }}/>
              </div>
 
-             <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', marginTop: '1rem' }}/>
+             <div style={{ flex: 1, background: 'var(--c9-surface)', borderRadius: '12px', border: '1px solid var(--c9-surface)', marginTop: '1rem' }}/>
           </div>
 
           {/* Background decoration */}
@@ -73,11 +73,6 @@ export const C9XSpotlight = () => {
         </div>
 
       </div>
-      <style>{`
-        @media(max-width: 768px) {
-          .container { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </SectionWrapper>
   );
 };

@@ -13,19 +13,13 @@ export const Footer = () => {
 
   return (
     <footer style={{
-      background: '#060010',
-      borderTop: '1px solid rgba(167,139,250,0.1)',
-      color: 'rgba(248,245,255,0.5)',
+      background: 'hsl(var(--background))',
+      borderTop: '1px solid var(--c9-border)',
+      color: 'var(--c9-muted)',
     }}>
       <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '80px 2rem 0' }}>
         {/* Top row */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1.8fr 1fr 1fr 1fr',
-          gap: '48px',
-          paddingBottom: '64px',
-          borderBottom: '1px solid rgba(167,139,250,0.1)',
-        }}>
+        <div className="footer-grid" style={{ paddingBottom: '64px', borderBottom: '1px solid var(--c9-border)' }}>
           {/* Brand */}
           <div>
             <Link to="/" style={{ textDecoration: 'none' }}>
@@ -41,17 +35,17 @@ export const Footer = () => {
               {['LinkedIn', 'Twitter', 'Facebook'].map(s => (
                 <a key={s} href="#" style={{
                   padding: '7px 14px', borderRadius: '100px',
-                  background: 'rgba(167,139,250,0.07)', border: '1px solid rgba(167,139,250,0.15)',
-                  fontWeight: 600, color: 'rgba(248,245,255,0.5)',
+                  background: 'var(--c9-border)', border: '1px solid var(--c9-border)',
+                  fontWeight: 600, color: 'var(--c9-muted)',
                   textDecoration: 'none', transition: 'all 0.2s',
                 }}
                   onMouseEnter={e => {
                     (e.currentTarget as HTMLElement).style.color = '#C4B5FD';
-                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(167,139,250,0.4)';
+                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--c9-border)';
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLElement).style.color = 'rgba(248,245,255,0.5)';
-                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(167,139,250,0.15)';
+                    (e.currentTarget as HTMLElement).style.color = 'var(--c9-muted)';
+                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--c9-border)';
                   }}
                 >{s}</a>
               ))}
@@ -67,11 +61,11 @@ export const Footer = () => {
               {solutions.map(s => (
                 <Link key={s.label} to="/solutions" style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
-                  color: 'rgba(248,245,255,0.5)',
+                  color: 'var(--c9-muted)',
                   textDecoration: 'none', transition: 'color 0.15s',
                 }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#E9D5FF')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(248,245,255,0.5)')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'var(--c9-muted)')}
                 >
                   {s.icon}{s.label}
                 </Link>
@@ -94,11 +88,11 @@ export const Footer = () => {
                 { label: 'Contact', path: '/contact' }
               ].map(l => (
                 <Link key={l.label} to={l.path} style={{
-                  color: 'rgba(248,245,255,0.5)',
+                  color: 'var(--c9-muted)',
                   textDecoration: 'none', transition: 'color 0.15s',
                 }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#E9D5FF')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(248,245,255,0.5)')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'var(--c9-muted)')}
                 >{l.label}</Link>
               ))}
             </div>
@@ -110,18 +104,18 @@ export const Footer = () => {
               Get Started
             </h5>
             <div style={{
-              background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(167,139,250,0.2)',
+              background: 'rgba(124,58,237,0.12)', border: '1px solid var(--c9-border)',
               borderRadius: '16px', padding: '24px',
             }}>
-              <p style={{ lineHeight: 1.6, marginBottom: '20px', color: 'rgba(248,245,255,0.6)' }}>
+              <p style={{ lineHeight: 1.6, marginBottom: '20px', color: 'var(--c9-muted)' }}>
                 Book a free, no-obligation audit. We'll review your existing setup and show you a better path.
               </p>
               <Link to="/contact" style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                 background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
-                color: '#fff', fontWeight: 700,
+                color: 'hsl(var(--foreground))', fontWeight: 700,
                 padding: '11px 20px', borderRadius: '100px', textDecoration: 'none',
-                border: '1px solid rgba(167,139,250,0.3)',
+                border: '1px solid var(--c9-border)',
               }}>
                 Book Free Audit <ArrowRight size={14} />
               </Link>
@@ -134,16 +128,16 @@ export const Footer = () => {
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           flexWrap: 'wrap', gap: '16px',
           padding: '28px 0',
-          color: 'rgba(248,245,255,0.25)',
+          color: 'var(--c9-muted)',
         }}>
           <div>© 2026 C9 Communications Pty Ltd. Part of the C9 Group. ABN XX XXX XXX XXX</div>
           <div style={{ display: 'flex', gap: '24px' }}>
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(l => (
               <a key={l} href="#" style={{
-                color: 'rgba(248,245,255,0.25)', textDecoration: 'none', transition: 'color 0.15s',
+                color: 'var(--c9-muted)', textDecoration: 'none', transition: 'color 0.15s',
                 }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'rgba(248,245,255,0.6)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(248,245,255,0.25)')}
+                onMouseEnter={e => (e.currentTarget.style.color = 'var(--c9-muted)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'var(--c9-muted)')}
               >{l}</a>
             ))}
           </div>

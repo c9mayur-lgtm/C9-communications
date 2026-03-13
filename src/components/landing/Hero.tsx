@@ -92,14 +92,14 @@ export const Hero = () => {
 
           {/* Trust Bar below CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap', opacity: 0.8 }}>
-            <div style={{ display: 'flex', gap: '1.2rem', filter: 'grayscale(100%) brightness(200%)' }}>
+            <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap', filter: 'grayscale(100%) brightness(200%)' }}>
                <span style={{fontWeight: 700}}>TELSTRA</span>
                <span style={{fontWeight: 700}}>OPTUS</span>
                <span style={{fontWeight: 700}}>VOCUS</span>
                <span style={{fontWeight: 700}}>AAPT</span>
                <span style={{fontWeight: 700}}>AUSSIE BB</span>
             </div>
-            <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.2)' }} />
+            <div style={{ width: '1px', height: '20px', background: 'var(--c9-surface)' }} />
             <span style={{ color: 'var(--color-pale-tint)', }}>4.8★ Google Rating</span>
           </div>
         </div>

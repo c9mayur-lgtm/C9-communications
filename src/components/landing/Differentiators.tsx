@@ -33,20 +33,19 @@ export const Differentiators = () => {
           Why 1,000+ businesses choose C9 over Telstra and TPG
         </h2>
 
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '2.5rem'
-        }}>
+        <div className="grid-auto-small" style={{ gap: '2.5rem' }}>
           {points.map((p, i) => (
             <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               <div style={{ 
-                width: '80px', height: '80px', borderRadius: '50%', background: 'white',
+                width: '80px', height: '80px', borderRadius: '50%', background: 'var(--c9-surface)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem',
-                boxShadow: '0 4px 20px rgba(107,33,168,0.05)'
+                border: '1px solid var(--c9-border)',
+                transition: 'all 0.3s ease',
               }}>
                 {p.icon}
               </div>
-              <h3 style={{ marginBottom: '0.75rem', color: 'var(--color-text-dark)' }}>{p.title}</h3>
-              <p style={{ color: 'var(--color-text-light)', }}>{p.desc}</p>
+              <h3 style={{ marginBottom: '0.75rem', color: 'hsl(var(--foreground))', fontWeight: 800 }}>{p.title}</h3>
+              <p style={{ color: 'var(--c9-muted)', lineHeight: '1.6' }}>{p.desc}</p>
             </div>
           ))}
         </div>

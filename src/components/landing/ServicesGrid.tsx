@@ -34,9 +34,7 @@ export const ServicesGrid = () => {
           <h2 style={{ }}>Everything your business needs. One provider.</h2>
         </div>
 
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem'
-        }}>
+        <div className="grid-auto-small" style={{ gap: '1.5rem' }}>
           {services.map((svc, i) => (
             <div key={i} className="glass-card-light" style={{ padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column' }}>
               <div style={{ marginBottom: '1.5rem' }}>{svc.icon}</div>

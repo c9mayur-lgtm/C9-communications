@@ -9,80 +9,118 @@
 @tailwind utilities;
 
 @layer base {
+  /* ── TWEAKCN: Cosmic Night (C9 Brand Edition) ── */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 100% 98%;
+    --foreground: 240 28% 23%;
+
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 240 28% 23%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
+    --popover-foreground: 240 28% 23%;
 
-    --c9-primary:     #7C3AED;
-    --c9-secondary:   #6B21A8;
-    --c9-accent:      #A855F7;
-    --c9-light:       #C4B5FD;
-    --c9-pale:        #DDD6FE;
-    --c9-hero-bg:     #0A0010;
-    --c9-white:       #0A0010;
-    --c9-surface:     rgba(167,139,250,0.03);
-    --c9-text:        #FFFFFF;
-    --c9-mid:         rgba(248,245,255,0.7);
-    --c9-muted:       rgba(248,245,255,0.45);
-    --c9-border:      rgba(167,139,250,0.12);
+    /* Primary — Unified Cosmic Purple */
+    --primary: 252 56% 57%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Backwards compatibility for original landing page components */
-    --color-primary: var(--c9-primary);
-    --color-secondary: var(--c9-secondary);
-    --color-accent: var(--c9-accent);
-    --color-light-accent: var(--c9-light);
-    --color-pale-tint: var(--c9-pale);
-    --color-hero-bg: var(--c9-hero-bg);
-    --color-body-bg: var(--c9-white);
-    --color-alt-bg: var(--c9-surface);
-    --color-text-dark: var(--c9-text);
-    --color-text-mid: var(--c9-mid);
-    --color-text-light: var(--c9-muted);
-    --radius-sm: 8px;
-    --radius-md: 16px;
+    /* Secondary — Soft Peri-tint */
+    --secondary: 249 100% 94%;
+    --secondary-foreground: 249 33% 38%;
+
+    --muted: 240 50% 96%;
+    --muted-foreground: 240 12% 48%;
+
+    /* Accent — Cool Sky tint */
+    --accent: 218 100% 92%;
+    --accent-foreground: 240 28% 23%;
+
+    --destructive: 350 100% 66%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 35% 91%;
+    --input: 240 35% 91%;
+    --ring: 252 56% 57%;
+    --radius: 0.625rem;
+
+    /* ── C9 Brand variables (Light - Cosmic Edition) ── */
+    --c9-primary:    #7C3AED;
+    --c9-secondary:  #6366F1;
+    --c9-accent:     #4F46E5; /* Darker indigo for better contrast in light mode */
+    --c9-light:      #C7D2FE;
+    --c9-pale:       #EEF2FF;
+    --c9-hero-bg:    #F8FAFF;
+    --c9-white:      #FFFFFF;
+    --c9-surface:    rgba(99, 102, 241, 0.05);
+    --c9-text:       #1E1B4B;
+    --c9-mid:        rgba(30, 27, 75, 0.82); /* Darkened for accessibility */
+    --c9-muted:      rgba(30, 27, 75, 0.62); /* Darkened for accessibility */
+    --c9-border:     rgba(99, 102, 241, 0.18);
+    --nav-bg:        rgba(248, 250, 255, 0.92);
+
+    /* Backwards compatibility */
+    --color-primary:       var(--c9-primary);
+    --color-secondary:     var(--c9-secondary);
+    --color-accent:        var(--c9-accent);
+    --color-light-accent:  var(--c9-light);
+    --color-pale-tint:     var(--c9-pale);
+    --color-hero-bg:       var(--c9-hero-bg);
+    --color-body-bg:       var(--c9-white);
+    --color-alt-bg:        var(--c9-surface);
+    --color-text-dark:     var(--c9-text);
+    --color-text-mid:      var(--c9-mid);
+    --color-text-light:    var(--c9-muted);
+    --radius-sm:   8px;
+    --radius-md:   16px;
     --radius-full: 9999px;
   }
 
+  /* ── DARK MODE (Cosmic Night) ── */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background: 240 27% 8%;
+    --foreground: 240 49% 92%;
+
+    --card: 240 28% 14%;
+    --card-foreground: 240 49% 92%;
+    --popover: 240 28% 14%;
+    --popover-foreground: 240 49% 92%;
+
+    /* Primary — Luminous Cosmic Violet */
+    --primary: 251 100% 78%;
+    --primary-foreground: 240 27% 8%;
+
+    --secondary: 243 33% 25%;
+    --secondary-foreground: 242 100% 88%;
+
+    --muted: 240 33% 20%;
+    --muted-foreground: 240 20% 69%;
+
+    --accent: 240 33% 28%;
+    --accent-foreground: 240 49% 92%;
+
+    --destructive: 350 100% 66%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 26% 25%;
+    --input: 240 26% 25%;
+    --ring: 251 100% 78%;
+
+    /* ── C9 Brand variables (Dark - Cosmic Edition) ── */
+    --c9-primary:    #818CF8;
+    --c9-secondary:  #6366F1;
+    --c9-accent:     #A5B4FC;
+    --c9-light:      #C7D2FE;
+    --c9-pale:       #312E81;
+    --c9-hero-bg:    #0A0A0F;
+    --c9-white:      #0C0C14;
+    --c9-surface:    rgba(129, 140, 248, 0.04);
+    --c9-text:       #EEF2FF;
+    --c9-mid:        rgba(238, 242, 255, 0.70);
+    --c9-muted:      rgba(238, 242, 255, 0.45);
+    --c9-border:     rgba(129, 140, 248, 0.14);
+    --nav-bg:        rgba(10, 10, 15, 0.92);
   }
 }
+
 
 @layer base {
   * {
@@ -124,8 +162,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: #0A0010;
-  color: #FFFFFF;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -335,17 +373,19 @@ button {
 }
 
 .glass-card-light {
-  background: #ffffff;
-  border: 1px solid var(--c9-pale);
-  border-radius: 16px;
-  transition: all 0.3s ease;
+  background: hsl(var(--card));
+  border: 1px solid var(--c9-border);
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .glass-card-light:hover {
   background: var(--c9-surface);
-  border-color: var(--c9-light);
-  transform: scale(1.015);
-  box-shadow: 0 10px 30px -10px rgba(107, 33, 168, 0.15);
+  border-color: var(--c9-accent);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(124, 58, 237, 0.12);
 }
 
 /* Marquee Animation */

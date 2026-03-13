@@ -40,14 +40,14 @@ export const LeadCapture = () => {
         </p>
 
         {submitted ? (
-          <div style={{ background: 'rgba(255,255,255,0.05)', padding: '3rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-accent)' }}>
+          <div style={{ background: 'var(--c9-surface)', padding: '3rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-accent)' }}>
             <h3 style={{ color: 'white', marginBottom: '1rem' }}>Audit Requested Successfully</h3>
             <p style={{ color: 'var(--color-pale-tint)' }}>We'll call you within 2 business hours. Check your inbox for our confirmation email.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} style={{ 
-            background: 'rgba(255,255,255,0.02)', padding: '2rem', backdropFilter: 'blur(10px)',
-            borderRadius: 'var(--radius-md)', border: '1px solid rgba(255,255,255,0.08)',
+            background: 'var(--c9-surface)', padding: '2rem', backdropFilter: 'blur(10px)',
+            borderRadius: 'var(--radius-md)', border: '1px solid var(--c9-surface)',
             display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left'
           }}>
             <div className="form-grid">
@@ -107,8 +107,8 @@ export const LeadCapture = () => {
         .form-input {
           width: 100%;
           padding: 0.875rem 1rem;
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.1);
+          background: var(--c9-surface);
+          border: 1px solid var(--c9-surface);
           border-radius: var(--radius-sm);
           color: white;
           font-family: var(--font-body);
@@ -117,7 +117,7 @@ export const LeadCapture = () => {
         .form-input:focus {
           outline: none;
           border-color: var(--color-accent);
-          background: rgba(255,255,255,0.1);
+          background: var(--c9-surface);
         }
         select.form-input option {
           background: var(--color-hero-bg);

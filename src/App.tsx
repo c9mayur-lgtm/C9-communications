@@ -3,7 +3,7 @@ import { Navigation } from './components/shared/Navigation';
 import { Footer } from './components/shared/Footer';
 import { Cursor } from './components/shared/Cursor';
 import { SaaSHomepage } from './pages/SaaSHomepage';
-import { C9X } from './pages/C9X';
+
 import { Pricing } from './pages/Pricing';
 import { Contact } from './pages/Contact';
 import { About } from './pages/About';
@@ -25,7 +25,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/c9x" element={<C9X />} />
+
         {/* Old landing page preserved at /classic */}
         <Route path="/classic" element={<Landing />} />
       </Routes>
