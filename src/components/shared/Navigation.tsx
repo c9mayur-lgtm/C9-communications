@@ -6,6 +6,7 @@ import {
   LayoutGrid, Video, Mail, Users, CheckCircle
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { ThemeToggle } from './ThemeToggle';
 import { useTheme } from '../theme-provider';
 
@@ -426,23 +427,27 @@ export const Navigation = () => {
         />
       )}
 
-      <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99,
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '0 2.5rem',
-        height: scrolled ? '58px' : '72px',
-        background: navBg,
-        backdropFilter: (scrolled || !isHome) ? 'blur(24px)' : 'none',
-        WebkitBackdropFilter: (scrolled || !isHome) ? 'blur(24px)' : 'none',
-        borderBottom: (scrolled || !isHome) ? '1px solid var(--c9-border)' : '1px solid transparent',
-        transition: 'all 0.35s cubic-bezier(0.16,1,0.3,1)',
+      <motion.nav 
+        initial={{ y: '-100%' }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        style={{
+          position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99,
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '0 2.5rem',
+          height: scrolled ? '58px' : '72px',
+          background: navBg,
+          backdropFilter: (scrolled || !isHome) ? 'blur(24px)' : 'none',
+          WebkitBackdropFilter: (scrolled || !isHome) ? 'blur(24px)' : 'none',
+          borderBottom: (scrolled || !isHome) ? '1px solid var(--c9-border)' : '1px solid transparent',
+          transition: 'all 0.35s cubic-bezier(0.16,1,0.3,1)',
       }}>
 
         {/* LOGO */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
           <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ 
             height: '30px',
-            filter: theme === 'light' ? 'brightness(0.2)' : 'none'
+            filter: theme === 'light' ? 'brightness(0)' : 'none'
           }} />
         </Link>
 
@@ -565,20 +570,18 @@ export const Navigation = () => {
           </a>
           <Link to="/contact" style={{
             display: 'inline-flex', alignItems: 'center', gap: '6px',
-            background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
+            background: 'var(--c9-primary)',
             color: '#fff', fontWeight: 700, fontSize: '13px',
             padding: '9px 20px', borderRadius: '100px',
-            border: '1px solid rgba(124,58,237,0.4)',
+            border: 'none',
             textDecoration: 'none',
             transition: 'all 0.25s cubic-bezier(0.16,1,0.3,1)',
           }}
             onMouseEnter={e => {
               (e.currentTarget as HTMLElement).style.transform = 'translateY(-1px)';
-              (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 24px rgba(124,58,237,0.4)';
             }}
             onMouseLeave={e => {
               (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-              (e.currentTarget as HTMLElement).style.boxShadow = 'none';
             }}
           >
             Get a Quote
@@ -595,7 +598,7 @@ export const Navigation = () => {
             <Menu size={24} />
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* ── MEGA PANELS (rendered outside nav for full-width) ── */}
       <div onMouseEnter={() => { if (timeoutRef.current) clearTimeout(timeoutRef.current); setOpenMenu(openMenu); }}
@@ -628,7 +631,7 @@ export const Navigation = () => {
           zIndex: 201, backdropFilter: 'blur(10px)',
         }}>
           <Link to="/" onClick={() => setNavOpen(false)}>
-            <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '28px', filter: theme === 'light' ? 'brightness(0.2)' : 'none' }} />
+            <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '28px', filter: theme === 'light' ? 'brightness(0)' : 'none' }} />
           </Link>
           <button onClick={() => setNavOpen(false)} style={{ color: 'hsl(var(--foreground))', background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>
             <X size={28} />
@@ -726,9 +729,9 @@ export const Navigation = () => {
             }}>📞 1800 C9 TECH</a>
             <Link to="/contact" onClick={() => setNavOpen(false)} style={{
               textAlign: 'center', padding: '18px', borderRadius: '100px',
-              background: 'linear-gradient(135deg, #7C3AED, #6B21A8)',
+              background: 'var(--c9-primary)',
               color: '#fff', fontWeight: 800, textDecoration: 'none',
-              fontSize: '16px', boxShadow: '0 10px 30px rgba(124,58,237,0.3)',
+              fontSize: '16px',
             }}>Get a Free Quote →</Link>
           </div>
         </div>

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Globe, Phone, Shield, Server, Cloud, Smartphone, ArrowRight } from 'lucide-react';
+import { FadeIn } from './FadeIn';
+import { useTheme } from '../theme-provider';
 
 export const Footer = () => {
+  const { theme } = useTheme();
   const solutions = [
     { label: 'Business NBN & Fibre', icon: <Globe size={14} /> },
     { label: 'Cloud Phone System', icon: <Phone size={14} /> },
@@ -21,10 +24,14 @@ export const Footer = () => {
         {/* Top row */}
         <div className="footer-grid" style={{ paddingBottom: '64px', borderBottom: '1px solid var(--c9-border)' }}>
           {/* Brand */}
-          <div>
+          <FadeIn delay={0.1}>
+            <div>
             <Link to="/" style={{ textDecoration: 'none' }}>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-                <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ height: '36px' }} />
+                <img src="/images/c9_logo.svg" alt="C9 Communications" style={{ 
+                  height: '36px',
+                  filter: theme === 'light' ? 'brightness(0)' : 'none'
+                }} />
               </div>
             </Link>
             <p style={{ lineHeight: 1.7, maxWidth: '280px', marginBottom: '28px' }}>
@@ -51,9 +58,11 @@ export const Footer = () => {
               ))}
             </div>
           </div>
+          </FadeIn>
 
           {/* Solutions */}
-          <div>
+          <FadeIn delay={0.2}>
+            <div>
             <h5 style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
               Solutions
             </h5>
@@ -72,9 +81,11 @@ export const Footer = () => {
               ))}
             </div>
           </div>
+          </FadeIn>
 
           {/* Company */}
-          <div>
+          <FadeIn delay={0.3}>
+            <div>
             <h5 style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
               Company
             </h5>
@@ -97,9 +108,11 @@ export const Footer = () => {
               ))}
             </div>
           </div>
+          </FadeIn>
 
           {/* CTA Block */}
-          <div>
+          <FadeIn delay={0.4}>
+            <div>
             <h5 style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#C4B5FD', marginBottom: '20px' }}>
               Get Started
             </h5>
@@ -121,9 +134,11 @@ export const Footer = () => {
               </Link>
             </div>
           </div>
+          </FadeIn>
         </div>
 
         {/* Bottom row */}
+        <FadeIn delay={0.5}>
         <div style={{
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           flexWrap: 'wrap', gap: '16px',
@@ -140,8 +155,9 @@ export const Footer = () => {
                 onMouseLeave={e => (e.currentTarget.style.color = 'var(--c9-muted)')}
               >{l}</a>
             ))}
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </footer>
   );

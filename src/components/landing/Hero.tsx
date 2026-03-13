@@ -15,15 +15,7 @@ export const Hero = () => {
         paddingTop: '88px' // offset for nav
       }}
     >
-      {/* Radial Bloom Glow */}
-      <div 
-        style={{
-          position: 'absolute', top: '50%', left: '50%',
-          transform: 'translate(-50%, -50%)', width: '80vw', height: '80vw',
-          background: 'radial-gradient(circle, var(--color-secondary) 0%, transparent 60%)',
-          opacity: 0.4, filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0
-        }}
-      />
+
       
       {/* Grain Overlay */}
       <div 
@@ -33,16 +25,7 @@ export const Hero = () => {
         }}
       />
 
-      {/* Hero Orb */}
-      <div 
-        className="hero-orb"
-        style={{
-          position: 'absolute', top: '20%', right: '-10%', width: '600px', height: '600px',
-          borderRadius: '50%', filter: 'blur(40px)', zIndex: 0,
-          background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 50%, #000 100%)',
-          opacity: 0.6
-        }}
-      />
+
 
       <motion.div 
         className="container"

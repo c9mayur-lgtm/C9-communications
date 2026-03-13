@@ -1,22 +1,5 @@
-import { useRef, type ReactNode } from 'react';
-import { motion, useInView } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ArrowRight } from 'lucide-react';
-
-/* ---- FadeIn ---- */
-const FadeIn = ({ children, delay = 0, style }: { children: ReactNode; delay?: number; style?: React.CSSProperties }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-8%' });
-  return (
-    <motion.div ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      style={style}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import { FadeIn } from '../components/shared/FadeIn';
 
 export const Contact = () => {
   return (
@@ -24,12 +7,7 @@ export const Contact = () => {
       
       {/* ── HERO ── */}
       <section style={{ padding: '100px 0 60px', textAlign: 'center', position: 'relative' }}>
-        <div style={{
-          position: 'absolute', top: '-100px', left: '50%', transform: 'translateX(-50%)',
-          width: '700px', height: '500px',
-          background: 'radial-gradient(ellipse, rgba(124,58,237,0.2) 0%, transparent 65%)',
-          pointerEvents: 'none',
-        }} />
+
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem', position: 'relative', zIndex: 1 }}>
           <FadeIn>
             <span style={{
@@ -71,7 +49,7 @@ export const Contact = () => {
                 background: 'var(--c9-surface)', border: '1px solid var(--c9-border)',
                 borderRadius: '24px', padding: '48px', position: 'relative', overflow: 'hidden'
               }}>
-                <div style={{ position: 'absolute', top: 0, right: 0, width: '200px', height: '200px', background: 'radial-gradient(circle at top right, rgba(124,58,237,0.1), transparent 70%)' }} />
+
                 
                 <h3 style={{ fontWeight: 800, color: 'hsl(var(--foreground))', marginBottom: '32px' }}>Send us a message</h3>
                 

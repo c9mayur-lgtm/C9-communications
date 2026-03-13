@@ -1,3 +1,14 @@
+/* Hide OS cursor on fine-pointer (mouse) devices — custom cursor renders instead */
+@media (pointer: fine) {
+  html, html * {
+    cursor: none !important;
+  }
+  /* But keep pointer feedback so browser knows it's interactive */
+  a, button, [role="button"], input, select, textarea, label {
+    cursor: none !important;
+  }
+}
+
 .cursor-dot {
   position: fixed;
   top: 0;

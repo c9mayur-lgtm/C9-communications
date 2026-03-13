@@ -1,27 +1,13 @@
-import { useRef, type ReactNode } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Stethoscope, Briefcase, GraduationCap, ShoppingBag, Truck, Layout, ArrowRight } from 'lucide-react';
 
-/* ---- FadeIn ---- */
-const FadeIn = ({ children, delay = 0, style }: { children: ReactNode; delay?: number; style?: React.CSSProperties }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-8%' });
-  return (
-    <motion.div ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      style={style}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import {
+  HeartPulse, Truck, Layout, ArrowRight, Briefcase, ShoppingBag, GraduationCap
+} from 'lucide-react';
+import { FadeIn } from '../components/shared/FadeIn';
 
 const INDUSTRIES_DATA = [
   {
     title: "Healthcare",
-    icon: <Stethoscope size={24} />,
+    icon: <HeartPulse size={24} />,
     desc: "HIPAA-compliant voice and secure data networks for clinics and medical centres.",
     id: "health"
   },
@@ -63,12 +49,7 @@ export const Industries = () => {
       
       {/* ── HERO ── */}
       <section style={{ padding: '100px 0 80px', textAlign: 'center', position: 'relative' }}>
-        <div style={{
-          position: 'absolute', top: '-100px', left: '50%', transform: 'translateX(-50%)',
-          width: '700px', height: '500px',
-          background: 'radial-gradient(ellipse, rgba(124,58,237,0.2) 0%, transparent 65%)',
-          pointerEvents: 'none',
-        }} />
+
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem', position: 'relative', zIndex: 1 }}>
           <FadeIn>
             <span style={{

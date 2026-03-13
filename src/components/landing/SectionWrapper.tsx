@@ -13,8 +13,7 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, id, cl
       className={className}
       style={style}
       initial={{ y: 24, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true, margin: "-50px" }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}

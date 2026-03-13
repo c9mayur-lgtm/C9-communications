@@ -157,7 +157,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* cursor: none;  Disabled for better preview experience */
 }
 
 body {
@@ -230,14 +229,14 @@ a {
   color: var(--c9-primary);
   text-decoration: none;
   transition: all 0.2s ease;
-  cursor: none;
+  cursor: pointer;
 }
 
 button {
   font-family: inherit;
   border: none;
   background: none;
-  cursor: none;
+  cursor: pointer;
 }
 
 :focus-visible {
@@ -274,9 +273,8 @@ button {
 }
 
 .btn-primary:hover {
-  background-color: var(--c9-secondary);
+  background: linear-gradient(135deg, #8B5CF6 0%, #7E22CE 100%);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(109,33,168,0.4);
 }
 
 .btn-ghost {
@@ -311,8 +309,8 @@ button {
 
 /* Scroll Animations */
 .fade-up {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
+  transform: translateY(0);
   will-change: transform, opacity;
   transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -323,8 +321,8 @@ button {
 }
 
 .fade-in-scale {
-  opacity: 0;
-  transform: scale(0.92);
+  opacity: 1;
+  transform: scale(1);
   will-change: transform, opacity;
   transition: opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -382,10 +380,9 @@ button {
 }
 
 .glass-card-light:hover {
-  background: var(--c9-surface);
   border-color: var(--c9-accent);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px -15px rgba(124, 58, 237, 0.12);
+  background: var(--c9-surface);
+  transform: translateY(-4px);
 }
 
 /* Marquee Animation */

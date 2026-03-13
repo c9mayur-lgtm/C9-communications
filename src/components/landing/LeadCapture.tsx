@@ -22,13 +22,7 @@ export const LeadCapture = () => {
       background: 'var(--color-hero-bg)', color: 'white', padding: '8rem 0', 
       position: 'relative', overflow: 'hidden'
     }}>
-      {/* Radial Background Glow */}
-      <div style={{
-        position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-        width: '60vw', height: '60vw',
-        background: 'radial-gradient(circle, var(--color-primary) 0%, transparent 60%)',
-        opacity: 0.3, filter: 'blur(80px)', zIndex: 0, pointerEvents: 'none'
-      }} />
+
 
       <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center', maxWidth: '800px' }}>
         <h2 style={{ color: 'white', marginBottom: '1.5rem' }}>

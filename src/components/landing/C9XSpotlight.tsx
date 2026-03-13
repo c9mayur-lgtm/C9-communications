@@ -43,8 +43,8 @@ export const C9XSpotlight = () => {
           <div style={{
             width: '100%', maxWidth: '500px', height: '600px',
             background: 'linear-gradient(145deg, rgba(20,20,25,0.9), rgba(10,10,15,0.9))',
-            borderRadius: '24px', border: '1px solid var(--c9-surface)',
-            boxShadow: '0 30px 60px -15px rgba(107,33,168,0.5), inset 0 1px 0 var(--c9-surface)',
+            borderRadius: '24px', border: '1px solid var(--c9-border)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
             padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem'
           }}>
              {/* Mock UI Elements */}
@@ -64,12 +64,7 @@ export const C9XSpotlight = () => {
              <div style={{ flex: 1, background: 'var(--c9-surface)', borderRadius: '12px', border: '1px solid var(--c9-surface)', marginTop: '1rem' }}/>
           </div>
 
-          {/* Background decoration */}
-          <div style={{
-            position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-            width: '120%', height: '120%', background: 'radial-gradient(circle, var(--color-primary) 0%, transparent 70%)',
-            opacity: 0.2, filter: 'blur(60px)', zIndex: -1
-          }}/>
+
         </div>
 
       </div>

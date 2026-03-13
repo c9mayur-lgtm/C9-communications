@@ -1,4 +1,6 @@
+// @refresh reset
 import { createContext, useContext, useEffect, useState } from "react"
+
 
 type Theme = "dark" | "light" | "system"
 
@@ -14,7 +16,7 @@ type ThemeProviderState = {
 }
 
 const initialState: ThemeProviderState = {
-  theme: "system",
+  theme: "dark",
   setTheme: () => null,
 }
 
@@ -65,9 +67,7 @@ export function ThemeProvider({
 
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
-
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider")
-
+  // Return safe fallback instead of throwing — prevents crash during HMR
+  if (context === undefined) return initialState
   return context
 }

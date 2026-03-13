@@ -1,22 +1,6 @@
-import { useState, useRef, type ReactNode } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Check, Minus, Clock, DollarSign, ArrowUp, Zap, Phone, CheckCircle, ArrowRight } from 'lucide-react';
-
-/* ---- FadeIn ---- */
-const FadeIn = ({ children, delay = 0, style }: { children: ReactNode; delay?: number; style?: React.CSSProperties }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-8%' });
-  return (
-    <motion.div ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      style={style}
-    >
-      {children}
-    </motion.div>
-  );
-};
+import { useState } from 'react';
+import { Check, ArrowRight, Minus, Clock, DollarSign, ArrowUp, Zap, Phone, CheckCircle } from 'lucide-react';
+import { FadeIn } from '../components/shared/FadeIn';
 
 /* ---- Types ---- */
 const NBN_PLANS = [
@@ -106,12 +90,7 @@ export const Pricing = () => {
       
       {/* ── HERO ── */}
       <section style={{ padding: '100px 0 80px', textAlign: 'center', position: 'relative' }}>
-        <div style={{
-          position: 'absolute', top: '-100px', left: '50%', transform: 'translateX(-50%)',
-          width: '700px', height: '500px',
-          background: 'radial-gradient(ellipse, rgba(124,58,237,0.25) 0%, transparent 65%)',
-          pointerEvents: 'none',
-        }} />
+
         <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 2rem', position: 'relative', zIndex: 1 }}>
           <FadeIn>
             <span style={{
@@ -165,9 +144,9 @@ export const Pricing = () => {
                   <div style={{ fontWeight: 900, color: 'hsl(var(--foreground))', marginBottom: '4px', letterSpacing: '-0.03em' }}>{plan.speed}</div>
                   <div style={{ fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#A855F7', marginBottom: '24px' }}>{plan.tier}</div>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '32px' }}>
-                    <span style={{ fontWeight: 600, color: 'hsl(var(--muted-foreground)))' }}>$</span>
+                    <span style={{ fontWeight: 600, color: 'hsl(var(--muted-foreground))' }}>$</span>
                     <span style={{ fontWeight: 900, color: 'hsl(var(--foreground))', lineHeight: 1, letterSpacing: '-0.04em' }}>{plan.price}</span>
-                    <span style={{ color: 'hsl(var(--muted-foreground)))', marginLeft: '4px' }}>/mo</span>
+                    <span style={{ color: 'hsl(var(--muted-foreground))', marginLeft: '4px' }}>/mo</span>
                   </div>
                   <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     {plan.features.map(f => (
@@ -211,7 +190,7 @@ export const Pricing = () => {
               <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
                   <tr style={{ borderBottom: '1px solid var(--c9-border)' }}>
-                    <th style={{ padding: '20px 28px', textAlign: 'left', fontWeight: 700, color: 'hsl(var(--muted-foreground)))', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Feature</th>
+                    <th style={{ padding: '20px 28px', textAlign: 'left', fontWeight: 700, color: 'hsl(var(--muted-foreground))', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Feature</th>
                     <th style={{ padding: '20px 28px', textAlign: 'center', fontWeight: 800, color: 'hsl(var(--foreground))', width: '22%' }}>Basic</th>
                     <th style={{ padding: '20px 28px', textAlign: 'center', fontWeight: 800, color: 'hsl(var(--foreground))', width: '22%', background: 'rgba(124,58,237,0.2)', borderLeft: '1px solid var(--c9-border)' }}>
                       <span style={{ background: 'linear-gradient(135deg, #C4B5FD, #A855F7)', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Ultimate</span>
@@ -396,7 +375,7 @@ export const Pricing = () => {
               border: '1px solid var(--c9-border)', borderRadius: '24px', padding: '72px 60px',
               textAlign: 'center', position: 'relative', overflow: 'hidden',
             }}>
-              <div style={{ position: 'absolute', top: '-80px', left: '50%', transform: 'translateX(-50%)', width: '500px', height: '300px', background: 'radial-gradient(ellipse, rgba(168,85,247,0.2) 0%, transparent 70%)', pointerEvents: 'none' }} />
+
               <h2 style={{ fontWeight: 900, color: 'hsl(var(--foreground))', letterSpacing: '-0.03em', marginBottom: '16px', position: 'relative', zIndex: 1 }}>
                 Need a custom enterprise solution?
               </h2>

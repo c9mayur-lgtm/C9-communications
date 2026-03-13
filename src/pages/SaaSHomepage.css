@@ -57,40 +57,10 @@
   opacity: 0.35;
 }
 
-/* ---- Glow Orbs ---- */
-.saas-page .sp-glow-hero {
-  position: absolute;
-  top: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 800px;
-  height: 700px;
-  background: radial-gradient(ellipse at center, rgba(124,58,237,0.28) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 0;
-}
-.saas-page .sp-glow-left {
-  position: absolute;
-  bottom: 0; left: -200px;
-  width: 600px; height: 600px;
-  background: radial-gradient(ellipse, rgba(107,33,168,0.2) 0%, transparent 70%);
-  pointer-events: none;
-}
-.saas-page .sp-glow-right {
-  position: absolute;
-  top: 0; right: -200px;
-  width: 600px; height: 600px;
-  background: radial-gradient(ellipse, rgba(168,85,247,0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.light .saas-page .sp-glow-hero,
-.light .saas-page .sp-glow-left,
-.light .saas-page .sp-glow-right {
-  display: none !important;
-}
+/* ---- Glow Orbs (Removed for clean styling) ---- */
 
 .light .saas-page .sp-cta-block {
+
   background: var(--c9-surface) !important;
 }
 
@@ -186,13 +156,14 @@
   border-radius: var(--sp-radius-btn);
   border: 1px solid rgba(255,255,255,0.1);
   transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
-  box-shadow: 0 4px 12px rgba(124,58,237,0.15);
   white-space: nowrap;
 }
 .saas-page .sp-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(124,58,237,0.4);
   background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+}
+.saas-page .sp-btn-primary:active {
+  transform: translateY(0);
 }
 
 .saas-page .sp-btn-ghost {
@@ -239,7 +210,6 @@
   border-color: var(--c9-border);
   background: var(--c9-surface);
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(107,33,168,0.15);
 }
 
 .saas-page .sp-card-icon {
@@ -458,6 +428,7 @@
   pointer-events: none;
 }
 
+
 /* ---- Testimonial Card ---- */
 .saas-page .sp-testimonial {
   background: var(--c9-surface);
@@ -661,4 +632,125 @@
 
   .saas-page .sp-h1 { font-size: clamp(34px, 10vw, 52px); }
   .saas-page .sp-h2 { font-size: clamp(26px, 8vw, 38px); }
+}
+/* ---- Testimonial Marquee (Shadcn 06 Style) ---- */
+.tm-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.tm-mask {
+  height: 600px;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+.tm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .tm-mask { height: 500px; }
+  .tm-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .hidden-mobile { display: none !important; }
+}
+
+@media (max-width: 600px) {
+  .tm-mask { height: 400px; }
+  .tm-grid { grid-template-columns: 1fr; }
+}
+
+.tm-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* We duplicate content 3 times making it 300% high. We animate 0 -> -33.33% */
+.tm-scroll-up {
+  animation: tm-scrolling-up 45s linear infinite;
+}
+.tm-scroll-down {
+  animation: tm-scrolling-down 45s linear infinite;
+  /* Start half way to avoid identical patterns matching neighbors */
+  transform: translateY(-33.33%);
+}
+
+@keyframes tm-scrolling-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-33.3333%); }
+}
+
+@keyframes tm-scrolling-down {
+  0% { transform: translateY(-33.3333%); }
+  100% { transform: translateY(0); }
+}
+
+.tm-card {
+  background: var(--c9-surface);
+  border: 1px solid var(--c9-border);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.tm-card:hover {
+  border-color: var(--c9-primary);
+}
+
+.tm-quote-mark {
+  font-size: 40px;
+  line-height: 1;
+  color: var(--c9-border);
+  font-family: serif;
+  opacity: 0.5;
+  height: 20px;
+}
+
+.tm-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.tm-author-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.tm-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c9-primary);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.tm-name {
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.tm-role {
+  color: var(--c9-muted);
+  font-size: 13px;
 }
