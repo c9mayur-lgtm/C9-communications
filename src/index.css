@@ -19,13 +19,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 28% 23%;
 
-    /* Primary — Unified Cosmic Purple */
-    --primary: 252 56% 57%;
+    /* Primary — Unified Cosmic Purple (#5D00D6) */
+    --primary: 266 100% 42%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary — Soft Peri-tint */
-    --secondary: 249 100% 94%;
-    --secondary-foreground: 249 33% 38%;
+    /* Secondary — Soft Peri-tint (#F4F0FA) */
+    --secondary: 266 60% 96%;
+    --secondary-foreground: 266 100% 42%;
 
     --muted: 240 50% 96%;
     --muted-foreground: 240 12% 48%;
@@ -39,23 +39,23 @@
 
     --border: 240 35% 91%;
     --input: 240 35% 91%;
-    --ring: 252 56% 57%;
-    --radius: 0.625rem;
+    --ring: 266 100% 42%;
+    --radius: 12px;
 
     /* ── C9 Brand variables (Light - Cosmic Edition) ── */
-    --c9-primary:    #7C3AED;
-    --c9-secondary:  #6366F1;
-    --c9-accent:     #4F46E5; /* Darker indigo for better contrast in light mode */
+    --c9-primary:    #5D00D6;
+    --c9-secondary:  #F4F0FA;
+    --c9-accent:     #0027E2;
     --c9-light:      #C7D2FE;
     --c9-pale:       #EEF2FF;
     --c9-hero-bg:    #F8FAFF;
     --c9-white:      #FFFFFF;
-    --c9-surface:    rgba(99, 102, 241, 0.05);
-    --c9-text:       #1E1B4B;
-    --c9-mid:        rgba(30, 27, 75, 0.82); /* Darkened for accessibility */
-    --c9-muted:      rgba(30, 27, 75, 0.62); /* Darkened for accessibility */
-    --c9-border:     rgba(99, 102, 241, 0.18);
-    --nav-bg:        rgba(248, 250, 255, 0.92);
+    --c9-surface:    rgba(93, 0, 214, 0.05);
+    --c9-text:       #0c1024;
+    --c9-mid:        rgba(12, 16, 36, 0.82);
+    --c9-muted:      rgba(12, 16, 36, 0.62);
+    --c9-border:     rgba(93, 0, 214, 0.18);
+    --nav-bg:        rgba(255, 255, 255, 0.92);
 
     /* Backwards compatibility */
     --color-primary:       var(--c9-primary);

@@ -1,8 +1,7 @@
 import { Component, type ReactNode } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navigation } from './components/shared/Navigation';
 import { Footer } from './components/shared/Footer';
-import { Cursor } from './components/shared/Cursor';
 import { SaaSHomepage } from './pages/SaaSHomepage';
 
 import { Pricing } from './pages/Pricing';
@@ -12,6 +11,7 @@ import { Industries } from './pages/Industries';
 import { Solutions } from './pages/Solutions';
 import { Support } from './pages/Support';
 import { Landing } from './pages/Landing';
+import { Wordpress1 } from './pages/Wordpress1';
 
 /* ── Error Boundary ── catches any render crash and shows a friendly message */
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
@@ -58,29 +58,34 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | 
   }
 }
 
+function AppBody() {
+  const location = useLocation();
+  const isReplica = location.pathname === '/wordpress1';
+
+  return (
+    <ErrorBoundary>
+      {!isReplica && <Navigation />}
+      <Routes>
+        <Route path="/" element={<SaaSHomepage />} />
+        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/landing" element={<Landing />} />
+        <Route path="/classic" element={<Landing />} />
+        <Route path="/wordpress1" element={<Wordpress1 />} />
+      </Routes>
+      {!isReplica && <Footer />}
+    </ErrorBoundary>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <ErrorBoundary>
-        <Cursor />
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<SaaSHomepage />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/contact" element={<Contact />} />
-
-          {/* Landing page alias for easy preview */}
-          <Route path="/landing" element={<Landing />} />
-          
-          {/* Old landing page preserved at /classic */}
-          <Route path="/classic" element={<Landing />} />
-        </Routes>
-        <Footer />
-      </ErrorBoundary>
+      <AppBody />
     </Router>
   );
 }

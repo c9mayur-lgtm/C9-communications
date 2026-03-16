@@ -9,17 +9,19 @@ import {
 
 import { useTheme } from '../components/theme-provider';
 import { TestimonialMarquee } from '../components/landing/TestimonialMarquee';
+import { UseCasesSection } from '../components/landing/UseCasesSection';
+import { FAQSection } from '../components/landing/FAQSection';
 import './SaaSHomepage.css';
 import { FadeIn } from '../components/shared/FadeIn';
 
 /* ---- Static data (NO JSX at module level) ---- */
 const SOLUTIONS = [
-  { iconName: 'Wifi',        title: 'Business NBN & Fibre',        desc: 'Enterprise-grade internet with guaranteed SLAs and failover redundancy built in.' },
-  { iconName: 'Phone',       title: 'Cloud Phone System',          desc: 'Replace your PBX with a fully managed cloud voice platform that scales with you.' },
-  { iconName: 'Smartphone',  title: 'Unified Communications',      desc: 'Voice, video, chat and collaboration — all in one integrated workspace.' },
-  { iconName: 'Server',      title: 'Managed IT Services',         desc: 'Proactive monitoring, patching and support for your entire IT infrastructure.' },
-  { iconName: 'Shield',      title: 'Cybersecurity & Compliance',  desc: 'Zero-trust framework, endpoint protection and compliance reporting at scale.' },
-  { iconName: 'Cloud',       title: 'Cloud Infrastructure',        desc: 'Hybrid and multi-cloud environments designed, deployed, and managed for you.' },
+  { iconName: 'Wifi',        title: 'Business Internet & Connectivity',        desc: 'Fast and reliable internet services designed for modern organisations.' },
+  { iconName: 'Phone',       title: 'Cloud Phone Systems',          desc: 'Flexible communication platforms that support teams across locations.' },
+  { iconName: 'Smartphone',  title: 'Unified Communications',      desc: 'Integrated voice and collaboration tools that improve communication across teams.' },
+  { iconName: 'Server',      title: 'Managed IT Services',         desc: 'Proactive infrastructure management and ongoing technical support.' },
+  { iconName: 'Shield',      title: 'Network Security',  desc: 'Security solutions designed to protect business infrastructure and data.' },
+  { iconName: 'Cloud',       title: 'Workplace Collaboration Tools',        desc: 'Technology that supports productive and connected teams.' },
 ];
 
 const STATS = [
@@ -30,12 +32,11 @@ const STATS = [
 ];
 
 const BENEFITS = [
-  'Single provider for voice, data & IT',
-  'Dedicated account management',
-  'Enterprise-grade Australian network',
-  'No lock-in contracts available',
-  'On-site technicians nationwide',
-  'Real-time dashboard and reporting',
+  'Reliable connectivity designed for business operations',
+  'Integrated IT and telecommunications expertise',
+  'Solutions built for modern workplaces',
+  'Dedicated infrastructure specialists',
+  'Ongoing support and proactive management',
 ];
 
 const MARQUEE_LABELS = [
@@ -45,10 +46,10 @@ const MARQUEE_LABELS = [
 ];
 
 const STEPS = [
-  { num: '01', title: 'Free Audit',              desc: 'We analyze your current network, bills, and pain points to identify quick wins and long-term improvements.' },
-  { num: '02', title: 'Solution Design',         desc: 'Our engineers design a bespoke, high-availability architecture that aligns with your specific business goals.' },
-  { num: '03', title: 'Zero-Downtime Migration', desc: 'A dedicated project manager handles the cutover outside business hours, ensuring zero disruption.' },
-  { num: '04', title: 'Proactive Management',    desc: '24/7 monitoring and an all-Australian support team just a phone call away.' },
+  { num: '01', title: 'Consultation',              desc: 'We assess your connectivity and IT infrastructure requirements.' },
+  { num: '02', title: 'Solution Design',         desc: 'Our specialists design a technology solution tailored to your organisation.' },
+  { num: '03', title: 'Deployment', desc: 'Systems are implemented with minimal disruption to operations.' },
+  { num: '04', title: 'Ongoing Support',    desc: 'Our team monitors and manages your infrastructure to keep everything running reliably.' },
 ];
 
 const TICKER_ROW1 = [
@@ -107,26 +108,25 @@ export const SaaSHomepage = () => {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="sp-h1">
-                Business Internet, Voice<br />
-                &amp; IT —{' '}
-                <span className="sp-gradient-text">One Provider.</span>
+              <h1 className="sp-h1" style={{ fontSize: 'clamp(36px, 5vw, 64px)' }}>
+                Technology Infrastructure That<br />
+                <span className="sp-gradient-text">Keeps Your Business Running.</span>
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <p className="sp-body-lg" style={{ margin: '0 auto 40px', textAlign: 'center', maxWidth: '600px' }}>
-                C9 Communications delivers enterprise-grade connectivity, cloud communications, and managed IT under one roof — with 24/7 Australian support.
+              <p className="sp-body-lg" style={{ margin: '0 auto 40px', textAlign: 'center', maxWidth: '640px' }}>
+                Managed IT, business connectivity, and modern workplace solutions designed to keep organisations connected, secure, and productive.
               </p>
             </FadeIn>
 
             <FadeIn delay={0.3}>
               <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/contact" className="sp-btn-primary">
-                  Book a Free Audit <ArrowRight size={16} />
+                  Book a Consultation <ArrowRight size={16} />
                 </Link>
                 <button className="sp-btn-ghost">
-                  Watch Overview <ChevronRight size={16} />
+                  Explore Solutions <ChevronRight size={16} />
                 </button>
               </div>
             </FadeIn>
@@ -256,18 +256,23 @@ export const SaaSHomepage = () => {
       </section>
 
       {/* ══════════════════════════════
-          SECTION 4 — SOLUTIONS
+          SECTION 4 — CAPABILITIES
+      ══════════════════════════════ */}
+      <UseCasesSection />
+
+      {/* ══════════════════════════════
+          SECTION 5 — SOLUTIONS
       ══════════════════════════════ */}
       <section className="sp-section" style={{ background: 'var(--c9-surface)' }}>
         <div className="sp-container" style={{ position: 'relative', zIndex: 1 }}>
           <FadeIn style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <span className="sp-eyebrow">Core Solutions</span>
+            <span className="sp-eyebrow">Solutions</span>
             <h2 className="sp-h2">
-              Everything Your Business Needs,<br />
-              <span className="sp-gradient-text">Under One Roof</span>
+              Infrastructure Solutions<br />
+              <span className="sp-gradient-text">Designed for Business</span>
             </h2>
             <p className="sp-body-lg" style={{ margin: '16px auto 0', textAlign: 'center' }}>
-              Stop juggling multiple providers. We deliver connectivity, voice, security and managed IT as one seamless, accountable service.
+              C9 Communications combines IT management, telecommunications infrastructure, and workplace technology to simplify how businesses operate.
             </p>
           </FadeIn>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
@@ -288,7 +293,7 @@ export const SaaSHomepage = () => {
       </section>
 
       {/* ══════════════════════════════
-          SECTION 5 — CAPABILITY MARQUEE
+          SECTION 6 — CAPABILITY MARQUEE
       ══════════════════════════════ */}
       <section className="sp-section-sm">
         <FadeIn delay={0.1}>
@@ -305,7 +310,7 @@ export const SaaSHomepage = () => {
       </section>
 
       {/* ══════════════════════════════
-          SECTION 6 — WHY C9
+          SECTION 7 — WHY C9
       ══════════════════════════════ */}
       <section className="sp-section">
         <div className="sp-container" style={{ position: 'relative', zIndex: 1 }}>
@@ -313,11 +318,11 @@ export const SaaSHomepage = () => {
             <FadeIn direction="left">
               <span className="sp-eyebrow">Why C9</span>
               <h2 className="sp-h2">
-                One Call Fixes<br />
-                <span className="sp-gradient-text">Everything.</span>
+                A Reliable<br />
+                <span className="sp-gradient-text">Technology Partner.</span>
               </h2>
               <p className="sp-body-lg" style={{ margin: '20px 0 32px' }}>
-                We're not a reseller. We own and operate our own infrastructure, meaning faster resolutions, transparent pricing, and real accountability.
+                We integrate IT management, telecommunications infrastructure, and workplace technology into one connected environment, improving reliability and supporting modern ways of working.
               </p>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
                 {BENEFITS.map(b => (
@@ -376,14 +381,14 @@ export const SaaSHomepage = () => {
       </section>
 
       {/* ══════════════════════════════
-          SECTION 7 — HOW IT WORKS
+          SECTION 8 — HOW IT WORKS
       ══════════════════════════════ */}
       <section className="sp-section" style={{ background: 'var(--c9-surface)' }}>
         <div className="sp-container">
           <FadeIn style={{ textAlign: 'center', marginBottom: '64px' }}>
-            <span className="sp-eyebrow">Our Process</span>
+            <span className="sp-eyebrow">Implementation Process</span>
             <h2 className="sp-h2">
-              From Quote to <span className="sp-gradient-text">Go-Live in Days</span>
+              Simple and Structured <span className="sp-gradient-text">Implementation</span>
             </h2>
           </FadeIn>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
@@ -401,7 +406,7 @@ export const SaaSHomepage = () => {
       </section>
 
       {/* ══════════════════════════════
-          SECTION 8 — TESTIMONIALS
+          SECTION 9 — TESTIMONIALS (Moved up or renumbered?) - wait let's use SECTION 8-A or just let it be. Let's fix the numbering.
       ══════════════════════════════ */}
       <section className="sp-section" style={{ overflow: 'hidden' }}>
         <div className="sp-container">
@@ -418,23 +423,28 @@ export const SaaSHomepage = () => {
       </section>
 
       {/* ══════════════════════════════
-          SECTION 9 — CTA
+          SECTION 9 — FAQ
+      ══════════════════════════════ */}
+      <FAQSection />
+
+      {/* ══════════════════════════════
+          SECTION 10 — CTA
       ══════════════════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
           <FadeIn>
             <div className="sp-cta-block">
-              <span className="sp-eyebrow" style={{ margin: '0 auto 24px' }}>Get Started</span>
+              <span className="sp-eyebrow" style={{ margin: '0 auto 24px' }}>Upgrade Your Infrastructure</span>
               <h2 className="sp-h2" style={{ marginBottom: '16px' }}>
                 Ready to Upgrade Your<br />
-                <span className="sp-gradient-text">Business Infrastructure?</span>
+                <span className="sp-gradient-text">Business Technology?</span>
               </h2>
               <p className="sp-body-lg" style={{ margin: '0 auto 40px', textAlign: 'center', maxWidth: '520px' }}>
-                Book a free, no-obligation audit. Our engineers will review your existing setup and present a better path forward.
+                Speak with our specialists to design the right connectivity, IT, and workplace technology solution for your organisation.
               </p>
               <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/contact" className="sp-btn-primary" style={{ padding: '15px 32px' }}>
-                  Book Your Free Audit <ArrowRight size={17} />
+                  Book a Call with an Expert <ArrowRight size={17} />
                 </Link>
                 <a href="tel:1800000000" className="sp-btn-ghost" style={{ padding: '15px 32px' }}>
                   Call 1800 C9 TECH
