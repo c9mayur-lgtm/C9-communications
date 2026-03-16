@@ -344,6 +344,7 @@ const SECONDARY_LINKS = [
   { name: 'Pricing', path: '/pricing' },
   { name: 'Industries', path: '/industries' },
   { name: 'Company', path: '/about', menuKey: 'company' as MenuKey },
+  { name: 'Wordpress V1', path: '/wordpress1' },
   { name: 'Support', path: '/support' },
 ];
 
