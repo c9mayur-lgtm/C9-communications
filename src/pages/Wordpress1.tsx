@@ -9,7 +9,7 @@ import {
   Globe, Monitor, Radio, Cpu, BarChart3, 
   Infinity as InfinityIcon, LayoutGrid, ShieldCheck, Volume2, 
   GraduationCap, ShieldAlert, Users, Play, Star,
-  HelpCircle, ChevronLeft, PhoneCall, Layers
+  HelpCircle, ChevronLeft, PhoneCall, Layers, Menu, X
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
@@ -24,7 +24,7 @@ const TELCO_SERVICES_CONTENT: Record<string, any> = {
     options: [
       { title: 'Business nbn®', desc: 'A network built for business backed by dedicated local support.', icon: <Wifi size={20} /> },
       { title: 'nbn® Enterprise Ethernet', desc: 'Future-proof your business with fibre fast internet.', icon: <Network size={20} /> },
-      { title: 'Aussie Fibre', desc: 'Ultrafast plans of up to 10,000 Mbps with a 99.95% uptime guarantee.', icon: <Monitor size={20} /> }
+      { title: 'C9 Fibre', desc: 'Ultrafast plans of up to 10,000 Mbps with a 99.95% uptime guarantee.', icon: <Monitor size={20} /> }
     ]
   },
   network: {
@@ -138,10 +138,6 @@ const TELCO_MENU = {
           ]
         }
       ],
-      promo: {
-        title: 'Upgrade To The Latest Small Business Phone System Technology And Save Up To 70% Off Your Calls',
-        button: 'Start Now'
-      }
     },
     {
       sections: [
@@ -156,7 +152,11 @@ const TELCO_MENU = {
             { icon: <Headphones size={14} />, label: 'Contact Centre', path: '#' },
           ]
         }
-      ]
+      ],
+      promo: {
+        title: 'Upgrade To The Latest Small Business Phone System Technology And Save Up To 70% Off Your Calls',
+        button: 'Start Now'
+      }
     }
   ],
   challenges: [
@@ -252,7 +252,8 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
         <div style={{
           background: '#ffffff', border: '1px solid #eaeaea', borderTop: 'none',
           borderRadius: '0 0 32px 32px', boxShadow: '0 50px 100px rgba(0,0,0,0.15)',
-          overflow: 'hidden', display: 'flex', flexDirection: 'column'
+          overflow: 'hidden', display: 'flex', flexDirection: 'column',
+          fontFamily: '"Proxima Nova", sans-serif'
         }}>
           {/* Main Content Area */}
           <div style={{ 
@@ -262,24 +263,25 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
           }}>
             {/* NAVIGATION LANE (Lane 1) - Icons Removed for Cleanliness */}
             <div style={{ 
-              padding: '36px 32px', 
+              padding: '28px 32px', 
               borderRight: '1px solid #f2f2f2',
               backgroundColor: '#fff' 
             }}>
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col gap-8">
                 {data.columns.map((col: any, ci: number) => (
-                  <div key={ci} className="flex flex-col gap-10">
+                  <div key={ci} className="flex flex-col gap-8">
                     {col.sections.map((sec: any, si: number) => (
                       <div key={si}>
                         <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5D00D6]/50 mb-5">{sec.heading}</h4>
-                        <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
+                        <div className="flex flex-col gap-3">
                           {sec.items.map((item: any, ii: number) => (
                             <a 
                               key={ii} 
                               href={item.path} 
-                              className={`group flex items-center py-2 px-2.5 rounded-xl transition-all hover:bg-[#F4F0FA] ${item.active ? 'text-[#5D00D6] bg-[#F4F0FA]' : 'text-slate-600'}`}
+                              className={`group flex items-center gap-2 transition-all ${item.active ? 'text-[#5D00D6]' : 'text-slate-600 hover:text-[#5D00D6]'}`}
                             >
-                              <span className="text-[14px] font-semibold tracking-tight whitespace-nowrap group-hover:translate-x-1 transition-transform">{item.label}</span>
+                              <div className={`w-1.5 h-1.5 rounded-full transition-all ${item.active ? 'bg-[#5D00D6] scale-100' : 'bg-[#5D00D6] scale-0 font-bold group-hover:scale-100'}`}></div>
+                              <span className="text-[14px] font-semibold tracking-tight transition-transform group-hover:translate-x-1">{item.label}</span>
                             </a>
                           ))}
                         </div>
@@ -287,9 +289,9 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                     ))}
                     
                     {col.promo && (
-                      <div className="bg-[#5D00D6]/5 p-6 rounded-[24px] border border-[#5D00D6]/10 relative overflow-hidden group">
+                      <div className="bg-[#5D00D6]/5 p-5 rounded-[20px] border border-[#5D00D6]/10 relative overflow-hidden group">
                         <div className="relative z-10">
-                          <h5 className="text-[14px] font-semibold text-[#0c1024] mb-4 leading-relaxed pr-10">{col.promo.title}</h5>
+                          <h5 className="text-[14px] font-semibold text-[#0c1024] mb-3 leading-relaxed pr-10">{col.promo.title}</h5>
                           <Button size="sm" className="rounded-full font-bold uppercase tracking-wider">
                             {col.promo.button}
                           </Button>
@@ -304,7 +306,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
             {/* VISUAL LANE (Lane 2) - Icons kept for card identification */}
             <div style={{ 
-              padding: '36px 40px', 
+              padding: '28px 40px', 
               borderRight: '1px solid #f2f2f2',
               backgroundColor: '#fff' 
             }}>
@@ -314,9 +316,9 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                     <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5D00D6]/40 mb-8">Primary Focus</h4>
                     <div className="grid grid-cols-2 gap-4">
                       {data.challenges.map((c: any, i: number) => (
-                        <div key={i} className="aspect-square p-7 border border-gray-100 rounded-[24px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6] hover:bg-[#F4F0FA] hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500 cursor-pointer group">
-                          <div className="mb-5 p-4 rounded-2xl bg-slate-50 text-[#5D00D6]/30 group-hover:bg-white group-hover:text-[#5D00D6] group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">{c.icon}</div>
-                          <span className="text-[14px] font-semibold text-slate-800 leading-tight tracking-tight">{c.title}</span>
+                        <div key={i} className="aspect-[4/3] p-5 border border-gray-100 rounded-[20px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6] hover:bg-[#F4F0FA] hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500 cursor-pointer group">
+                          <div className="mb-3 p-3 rounded-xl bg-slate-50 text-[#5D00D6]/30 group-hover:bg-white group-hover:text-[#5D00D6] group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">{c.icon}</div>
+                          <span className="text-[13px] font-semibold text-slate-800 leading-tight tracking-tight">{c.title}</span>
                         </div>
                       ))}
                     </div>
@@ -358,11 +360,11 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             {/* FOCUS LANE (Lane 3) */}
             <div style={{ 
               background: '#F9F7FE', 
-              padding: '36px 32px',
+              padding: '28px 32px',
               display: 'flex',
               flexDirection: 'column'
             }}>
-              <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5D00D6]/40 mb-8">{data.sidebar.heading}</h4>
+              <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5D00D6]/40 mb-6">{data.sidebar.heading}</h4>
               
               <div className="flex-1">
                 {data.layout === 'it-solutions' && (
@@ -377,11 +379,11 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                 )}
 
                 {data.layout === 'telco' && (
-                  <div className="flex flex-col gap-6">
+                  <div className="flex flex-col gap-4">
                     {data.sidebar.items.map((item: any, i: number) => (
-                      <div key={i} className="group cursor-pointer bg-white/40 p-5 rounded-[20px] border border-transparent hover:border-[#5D00D6]/10 hover:bg-white hover:shadow-xl hover:shadow-purple-900/5 transition-all duration-500">
-                        <h5 className="text-[14px] font-semibold text-slate-900 mb-1.5 group-hover:text-[#5D00D6] transition-colors">{item.title}</h5>
-                        <p className="text-[12px] text-slate-400 font-medium leading-relaxed line-clamp-2">{item.desc}</p>
+                      <div key={i} className="group cursor-pointer bg-white/40 p-4 rounded-[16px] border border-transparent hover:border-[#5D00D6]/10 hover:bg-white hover:shadow-xl hover:shadow-purple-900/5 transition-all duration-500">
+                        <h5 className="text-[13px] font-semibold text-slate-900 mb-1 group-hover:text-[#5D00D6] transition-colors">{item.title}</h5>
+                        <p className="text-[11px] text-slate-400 font-medium leading-relaxed line-clamp-1">{item.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -411,10 +413,10 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
           {/* COMPACT CTA BANNER */}
           {data.ctaBanner && (
-            <div style={{ background: 'linear-gradient(90deg, #5D00D6 0%, #3a0088 100%)', padding: '24px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div style={{ background: 'linear-gradient(90deg, #5D00D6 0%, #3a0088 100%)', padding: '16px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <div className="max-w-xl">
-                <h4 className="text-white font-semibold text-[22px] mb-1 leading-tight tracking-tight">{data.ctaBanner.title}</h4>
-                <p className="text-white/60 text-[13px] font-medium">{data.ctaBanner.body}</p>
+                <h4 className="text-white font-semibold text-[18px] mb-0.5 leading-tight tracking-tight">{data.ctaBanner.title}</h4>
+                <p className="text-white/60 text-[12px] font-medium">{data.ctaBanner.body}</p>
               </div>
               <Button size="default" className="bg-white text-[#5D00D6] hover:bg-white/95 rounded-full shadow-xl">
                 {data.ctaBanner.button}
@@ -474,9 +476,9 @@ const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) 
 // Vendor Components
 const VendorCard = ({ card }: { card: any }) => {
   return (
-    <div className="group relative bg-[#0D0D0D] border border-white/5 p-8 flex flex-col h-full hover:border-[#5D00D6]/30 transition-all duration-500 overflow-hidden">
-        <h3 className="text-[22px] font-bold text-white mb-3 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{card.title}</h3>
-        <p className="text-white/50 text-[14px] leading-relaxed mb-8 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <div className="group relative bg-[#0D0D0D] border border-white/5 p-6 md:p-8 flex flex-col h-full hover:border-[#5D00D6]/30 transition-all duration-500 overflow-hidden">
+        <h3 className="text-[24px] font-bold text-white mb-3 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{card.title}</h3>
+        <p className="text-white/60 text-[18px] leading-relaxed mb-8 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
           {card.description}
         </p>
 
@@ -585,17 +587,18 @@ const VENDORS_DATA: Record<string, any[]> = {
 
 export const Wordpress1 = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [categoryIndex, setCategoryIndex] = useState(0);
   const [activeTelcoTab, setActiveTelcoTab] = useState('internet');
   const [testimonialIdx, setTestimonialIdx] = useState(0);
   const [caseStudyIdx, setCaseStudyIdx] = useState(0);
 
   const TESTIMONIALS = [
-    { name: "Craig Bator", role: "CEO & Co Founder at Zendesk", content: "I've been using C9 for a year now and it's made managing our multi-site connectivity so much easier and quick." },
-    { name: "Martin Dorwart", role: "Product manager at Orbit", content: "With C9 Communications, I can easily track our network performance and see how our systems are running in real-time." },
-    { name: "Sarah Johnson", role: "Lead Designer at Figma", content: "The custom IT solutions are beautifully architected and incredibly easy to manage. It's transformed our business workflow." },
-    { name: "Alex Chen", role: "Frontend Developer at Vercel", content: "C9 has saved us countless hours in infrastructure management. Their team is comprehensive and remarkably proactive." },
-    { name: "James Wilson", role: "CTO at Atlassian", content: "The transition to C9's managed infrastructure was seamless. Their technical expertise is world-class." }
+    { name: "Craig Bator", role: "CEO & Co Founder at Zendesk", content: "I've been using C9 for a year now and it's made managing our multi-site connectivity so much easier and quick.", avatar: "CB" },
+    { name: "Martin Dorwart", role: "Product manager at Orbit", content: "With C9 Communications, I can easily track our network performance and see how our systems are running in real-time.", avatar: "MD" },
+    { name: "Sarah Johnson", role: "Lead Designer at Figma", content: "The custom IT solutions are beautifully architected and incredibly easy to manage. It's transformed our business workflow.", avatar: "SJ" },
+    { name: "Alex Chen", role: "Frontend Developer at Vercel", content: "C9 has saved us countless hours in infrastructure management. Their team is remarkably proactive.", avatar: "AC" },
+    { name: "James Wilson", role: "CTO at Atlassian", content: "The transition to C9's managed infrastructure was seamless. Their technical expertise is world-class.", avatar: "JW" }
   ];
 
   const CASE_STUDIES = [
@@ -641,10 +644,10 @@ export const Wordpress1 = () => {
     <div className="text-slate-900 bg-white min-h-screen" style={{ fontFamily: '"Proxima Nova", "Inter", sans-serif' }}>
       {/* Light Theme Navbar */}
       <div className="fixed w-full z-50 transition-all bg-white border-b border-gray-100 shadow-sm" onMouseLeave={handleLeave}>
-        <nav className="relative z-50 py-4 px-8 flex justify-between items-center text-slate-900 font-sans mx-auto" style={{ maxWidth: '1240px' }}>
+        <nav className="relative z-50 py-4 px-6 lg:px-8 flex justify-between items-center text-slate-900 font-sans mx-auto" style={{ maxWidth: '1240px' }}>
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-             <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="h-[36px]" />
+             <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="h-[34px] md:h-[36px]" />
           </Link>
           
           <div className="hidden xl:flex gap-2 font-semibold text-[14px] items-center">
@@ -662,7 +665,7 @@ export const Wordpress1 = () => {
             })}
           </div>
           
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 md:gap-6">
             <div className="hidden lg:flex flex-col items-end border-r border-gray-200 pr-6 mr-1">
                <a href="#" className="text-[11px] font-bold text-slate-500 hover:text-[#5D00D6] flex items-center gap-1 mb-0.5">
                  Client Support <ArrowRight size={12} strokeWidth={3} />
@@ -675,11 +678,48 @@ export const Wordpress1 = () => {
             <Button variant="outline" size="sm" className="hidden sm:inline-flex rounded-xl">
               C9 Defense
             </Button>
-            <Button size="sm" className="rounded-xl shadow-md">
+            <Button size="sm" className="hidden xs:inline-flex rounded-xl shadow-md">
               Contact Us
             </Button>
+
+            {/* Mobile Menu Toggle */}
+            <button 
+              className="xl:hidden p-2 text-slate-900"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={26} className="text-[#5D00D6]" /> : <Menu size={26} />}
+            </button>
           </div>
         </nav>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="xl:hidden bg-white border-t border-gray-100 overflow-hidden shadow-xl"
+            >
+              <div className="px-6 py-8 flex flex-col gap-6">
+                {TABS.map(tab => (
+                  <div key={tab.name} className="flex flex-col gap-4">
+                    <button className="flex items-center justify-between text-[18px] font-bold text-[#0c1024] text-left">
+                      {tab.name}
+                      <ChevronRight size={18} className="text-gray-300" />
+                    </button>
+                    <div className="h-px bg-gray-50"></div>
+                  </div>
+                ))}
+                <div className="flex flex-col gap-4 pt-4">
+                  <a href="tel:1800000299" className="text-[20px] font-bold text-[#5D00D6]">1800 000 299</a>
+                  <p className="text-[14px] text-gray-400">Client Support Available 24/7</p>
+                  <Button size="lg" className="w-full rounded-2xl">Contact Us</Button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Mega Menus Overlay */}
         {TABS.map(tab => (
@@ -692,28 +732,28 @@ export const Wordpress1 = () => {
       </div>
 
       {/* Hero Section (Pixel-perfected to match reference) */}
-      <section className="relative pt-16 pb-8 lg:pt-24 lg:pb-12 bg-white text-slate-900 overflow-hidden min-h-[350px] lg:min-h-[420px] flex items-center">
-        <div className="container mx-auto px-8 relative z-10 grid xl:grid-cols-2 gap-12 items-center" style={{ maxWidth: '1240px' }}>
-          <div className="max-w-[700px] xl:pr-10 py-4">
-            <h1 className="text-[48px] lg:text-[64px] font-bold tracking-tight mb-8 text-[#0c1024] leading-[1.1]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+      <section className="relative pt-16 pb-10 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20 bg-white text-slate-900 overflow-hidden min-h-[320px] lg:min-h-[480px] flex items-center">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 grid xl:grid-cols-2 gap-12 items-center" style={{ maxWidth: '1240px' }}>
+          <div className="max-w-[750px] xl:pr-10 py-4">
+            <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[56px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.1]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               We manage your IT, so you can manage your business.
             </h1>
-            <p className="text-[18px] lg:text-[20px] text-slate-600 mb-10 max-w-[540px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="text-[17px] md:text-[18px] lg:text-[20px] text-slate-600 mb-8 max-w-[500px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Take charge of your business continuity with innovative IT solutions designed for growth.
             </p>
-            <div className="flex flex-wrap gap-4 items-center">
-              <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group">
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 transition-all group">
                 Schedule a Free Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="secondary" size="lg">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                 Services
               </Button>
             </div>
           </div>
         </div>
  
-        {/* Right side diagonal image - More contained height */}
-        <div className="hidden xl:block absolute top-[5%] right-0 w-[55%] h-[90%] z-0 overflow-hidden" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)', borderRadius: '24px 0 0 24px' }}>
+        {/* Right side diagonal image - Increased vertical stretch */}
+        <div className="hidden xl:block absolute top-0 right-0 w-[55%] h-full z-0 overflow-hidden" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)' }}>
           <div className="w-full h-full relative">
             <img 
                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2850" 
@@ -725,66 +765,66 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Highlights Strip (Pixel-perfected mapping) */}
-      <section className="bg-white border-y border-gray-100 py-12 relative z-20">
-        <div className="container mx-auto px-10" style={{ maxWidth: '1240px' }}>
-          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-12">
+      <section className="bg-white border-y border-gray-100 py-12 lg:py-16 relative z-20 overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-10" style={{ maxWidth: '1240px' }}>
+          <div className="flex flex-nowrap overflow-x-auto gap-8 items-center no-scrollbar pb-4 md:pb-0">
             
             {/* Clutch Rating */}
-            <div className="flex items-center gap-5 pr-4">
+            <div className="flex items-center gap-5 shrink-0">
               <div className="flex flex-col">
-                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-2 leading-none">Reviewed on</div>
+                <div className="text-[12px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-2 leading-none">Reviewed on</div>
                 <div className="flex items-center gap-4">
                   <span className="font-extrabold text-[28px] tracking-tighter text-slate-800 leading-none">Clutch</span>
                   <div className="flex flex-col gap-1">
                     <div className="flex text-[#ff3b30] text-[12px] leading-none">★★★★★</div>
-                    <span className="text-[11px] font-bold text-gray-500 uppercase tracking-tight leading-none whitespace-nowrap">31 Reviews</span>
+                    <span className="text-[12px] font-bold text-gray-500 uppercase tracking-tight leading-none whitespace-nowrap">31 Reviews</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="hidden md:block h-14 w-[1px] bg-gray-200"></div>
+            <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
 
             {/* Metric 1 */}
-            <div className="flex flex-col px-4">
+            <div className="flex flex-col shrink-0">
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-[36px] font-bold text-[#0c1024] leading-none tracking-tight">20</span>
-                <span className="text-[18px] font-bold text-[#0c1024]">Years</span>
+                <span className="text-[32px] font-bold text-[#0c1024] leading-none tracking-tight">20</span>
+                <span className="text-[16px] font-bold text-[#0c1024]">Years</span>
               </div>
-              <span className="text-[13px] text-gray-600 font-semibold tracking-tight uppercase">Proven Track Record</span>
+              <span className="text-[12px] text-gray-500 font-bold tracking-tight uppercase">Proven Track Record</span>
             </div>
 
-            <div className="hidden lg:block h-14 w-[1px] bg-gray-200"></div>
+            <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
 
             {/* Metric 2 */}
-            <div className="flex flex-col px-4">
+            <div className="flex flex-col shrink-0">
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-[36px] font-bold text-[#0c1024] leading-none tracking-tight">98</span>
-                <span className="text-[18px] font-bold text-[#0c1024]">%</span>
+                <span className="text-[32px] font-bold text-[#0c1024] leading-none tracking-tight">98</span>
+                <span className="text-[16px] font-bold text-[#0c1024]">%</span>
               </div>
-              <span className="text-[13px] text-gray-600 font-semibold tracking-tight uppercase">Customer Satisfaction</span>
+              <span className="text-[12px] text-gray-500 font-bold tracking-tight uppercase">Customer Satisfaction</span>
             </div>
 
-            <div className="hidden xl:block h-14 w-[1px] bg-gray-200"></div>
+            <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
 
             {/* Metric 3 */}
-            <div className="flex flex-col px-4">
+            <div className="flex flex-col shrink-0">
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-[36px] font-bold text-[#0c1024] leading-none tracking-tight">1,500</span>
-                <span className="text-[18px] font-bold text-[#0c1024]">Projects</span>
+                <span className="text-[32px] font-bold text-[#0c1024] leading-none tracking-tight">1,500</span>
+                <span className="text-[16px] font-bold text-[#0c1024]">Projects</span>
               </div>
-              <span className="text-[13px] text-gray-600 font-semibold tracking-tight uppercase">We Have Completed</span>
+              <span className="text-[12px] text-gray-500 font-bold tracking-tight uppercase">We Have Completed</span>
             </div>
 
-            <div className="hidden xl:block h-14 w-[1px] bg-gray-200"></div>
+            <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
 
             {/* Metric 4 */}
-            <div className="flex flex-col px-4">
+            <div className="flex flex-col shrink-0">
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-[36px] font-bold text-[#0c1024] leading-none tracking-tight">3</span>
-                <span className="text-[18px] font-bold text-[#0c1024]">Mins</span>
+                <span className="text-[32px] font-bold text-[#0c1024] leading-none tracking-tight">3</span>
+                <span className="text-[16px] font-bold text-[#0c1024]">Mins</span>
               </div>
-              <span className="text-[13px] text-gray-600 font-semibold tracking-tight uppercase">Average Answer Time</span>
+              <span className="text-[12px] text-gray-500 font-bold tracking-tight uppercase">Average Answer Time</span>
             </div>
 
           </div>
@@ -794,9 +834,9 @@ export const Wordpress1 = () => {
       {/* Simplifying IT Section (Updated to Light Theme) */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
             <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-widest mb-4 block">Proven Experience</span>
-            <h2 className="text-[48px] font-bold text-[#0c1024] tracking-tight leading-tight">
+            <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-bold text-[#0c1024] tracking-tight leading-tight">
               Simplifying IT for a complex world.
             </h2>
           </div>
@@ -832,8 +872,8 @@ export const Wordpress1 = () => {
                 <div className="w-14 h-14 mb-6 flex items-center justify-start">
                   <img src={f.icon} alt={f.title} className="max-w-full max-h-full object-contain object-left" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-[#0c1024]">{f.title}</h3>
-                <p className="text-gray-600 text-[14px] leading-relaxed">{f.desc}</p>
+                <h3 className="text-[20px] md:text-[24px] font-bold mb-3 text-[#0c1024] tracking-tight">{f.title}</h3>
+                <p className="text-gray-600 text-[14px] md:text-[18px] leading-relaxed font-normal">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -845,12 +885,12 @@ export const Wordpress1 = () => {
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="mb-12">
             <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-widest mb-4 block">Our Expertise</span>
-            <h2 className="text-[48px] font-bold text-[#0c1024] tracking-tight mb-8">
+            <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight mb-8">
               Telco services, tailored for business.
             </h2>
             
             {/* Tabs Header */}
-            <div className="flex border-b border-gray-200">
+            <div className="flex flex-nowrap overflow-x-auto no-scrollbar border-b border-gray-200">
               {[
                 { id: 'internet', label: 'Internet', icon: <Wifi size={20} /> },
                 { id: 'network', label: 'Network', icon: <Radio size={20} /> },
@@ -862,16 +902,16 @@ export const Wordpress1 = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTelcoTab(tab.id)}
-                    className={`flex items-center gap-3 px-8 py-5 text-[15px] font-bold transition-all border-b-2 relative ${
+                    className={`flex items-center gap-2 md:gap-3 px-4 md:px-8 py-4 md:py-5 text-[14px] md:text-[15px] font-bold transition-all border-b-2 relative shrink-0 ${
                       isActive 
                         ? 'text-[#5D00D6] border-[#5D00D6] bg-[#F4F0FA]' 
                         : 'text-gray-500 border-transparent hover:text-gray-700 hover:bg-gray-50'
                     }`}
                   >
-                    <span className={`${isActive ? 'text-[#5D00D6]' : 'text-gray-400'}`}>
+                    <span className={`${isActive ? 'text-[#5D00D6]' : 'text-gray-400'} shrink-0`}>
                       {tab.icon}
                     </span>
-                    {tab.label}
+                    <span className="whitespace-nowrap">{tab.label}</span>
                   </button>
                 );
               })}
@@ -907,12 +947,12 @@ export const Wordpress1 = () => {
                       className="group flex items-center justify-between p-6 bg-white border border-gray-100 rounded-xl hover:border-[#5D00D6] hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all cursor-pointer"
                     >
                       <div className="flex items-center gap-5">
-                        <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
+                        <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0">
                           {option.icon}
                         </div>
                         <div>
-                          <h4 className="font-bold text-[17px] text-[#0c1024] mb-1">{option.title}</h4>
-                          <p className="text-[13px] text-gray-400 font-medium">{option.desc}</p>
+                          <h4 className="font-bold text-[18px] md:text-[24px] text-[#0c1024] mb-1 leading-tight">{option.title}</h4>
+                          <p className="text-[14px] md:text-[18px] text-gray-500 font-normal leading-relaxed">{option.desc}</p>
                         </div>
                       </div>
                       <ArrowRight size={18} className="text-gray-300 group-hover:text-[#5D00D6] group-hover:translate-x-1 transition-all" />
@@ -931,9 +971,9 @@ export const Wordpress1 = () => {
         <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#946CE2] to-white z-0" />
         
         <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
-          <div className="flex flex-col mb-16 gap-4">
+          <div className="flex flex-col mb-12 md:mb-16 gap-4">
             <span className="bg-white/20 backdrop-blur-sm text-white text-[12px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded w-fit border border-white/20" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>HOW WE DO</span>
-            <h2 className="text-[48px] lg:text-[56px] font-bold tracking-tight text-white leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Solutions</h2>
+            <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold tracking-tight text-white leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Solutions</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -945,12 +985,12 @@ export const Wordpress1 = () => {
               { icon: Users, title: 'Voice', desc: 'Streamline communication with VoIP, SIP, Teams Calling, and unified solutions that connect teams, customers, and contact centers effortlessly.' },
               { icon: Smartphone, title: 'Mobile', desc: 'Empower a mobile workforce with business mobile plans and secure access to data and apps anytime, anywhere.' }
             ].map((s, i) => (
-              <div key={i} className="bg-white p-12 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
+              <div key={i} className="bg-white p-6 md:p-10 lg:p-12 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
                 <div className="mb-8">
                   <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-[24px] font-bold mb-4 text-[#0c1024] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.title}</h3>
-                <p className="text-gray-600 text-[16px] mb-8 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.desc}</p>
+                <h3 className="text-[20px] md:text-[24px] font-bold mb-4 text-[#0c1024] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.title}</h3>
+                <p className="text-gray-600 text-[14px] md:text-[18px] mb-8 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.desc}</p>
                 <div className="w-full h-[1px] bg-gray-300 mt-auto mb-6"></div>
                 <div className="flex items-center text-[14px] font-bold text-[#5D00D6] group-hover:underline uppercase tracking-wider" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                   Learn more
@@ -1008,9 +1048,9 @@ export const Wordpress1 = () => {
       {/* Datashake Inspired Section */}
       <section className="py-32 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="text-center mb-24 max-w-3xl mx-auto">
+          <div className="text-center mb-16 md:mb-24 max-w-3xl mx-auto px-6">
             <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.4em] mb-6 block">Why Partner With Us</span>
-            <h2 className="text-[52px] font-bold text-[#0c1024] leading-[1.1] tracking-tight">
+            <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-bold text-[#0c1024] leading-[1.1] tracking-tight">
               What global companies use C9 Communications for
             </h2>
           </div>
@@ -1029,7 +1069,7 @@ export const Wordpress1 = () => {
               },
               { 
                 title: 'Business NBN', 
-                desc: 'Unlimited data, static IP, and a business-grade SLA backed by Telstra, Optus, Vocus and Aussie Broadband wholesale networks. Always-on connectivity, guaranteed.',
+                desc: 'Unlimited data, static IP, and a business-grade SLA backed by Telstra, Optus, Vocus and C9 Communications wholesale networks. Always-on connectivity, guaranteed.',
                 icon: Wifi,
                 tag: 'BUSINESS INTERNET',
                 metrics: [
@@ -1078,17 +1118,17 @@ export const Wordpress1 = () => {
                 ]
               }
             ].map((block, i) => (
-              <div key={i} className="p-16 border-r border-b border-gray-200 transition-all duration-300 cursor-default flex flex-col">
+              <div key={i} className="p-8 md:p-12 lg:p-16 border-r border-b border-gray-200 transition-all duration-300 cursor-default flex flex-col">
                 <div className="mb-4 self-start">
-                  <span className="px-4 py-1.5 rounded-full border bg-[#F4F0FA] border-[#5D00D6]/20 text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.08em]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <span className="px-4 py-1.5 rounded-full border bg-[#F4F0FA] border-[#5D00D6]/20 text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.08em]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                     {block.tag}
                   </span>
                 </div>
                 <div className="mb-6 mt-4">
                   <block.icon size={32} strokeWidth={1.5} color="#5D00D6" fill="none" />
                 </div>
-                <h3 className="text-[18px] font-bold text-[#0F172A] mb-3 tracking-tight">{block.title}</h3>
-                <p className="text-[#6B7280] text-[14px] leading-[1.65] font-normal mb-8 flex-grow">
+                <h3 className="text-[20px] md:text-[24px] font-bold text-[#0c1024] mb-4 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{block.title}</h3>
+                <p className="text-gray-600 text-[14px] md:text-[18px] leading-relaxed font-normal mb-8 flex-grow" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                   {block.desc}
                 </p>
 
@@ -1115,20 +1155,20 @@ export const Wordpress1 = () => {
       </section>
 
       {/* IT Vendors Carousel Section (Dark Premium Theme) */}
-      <section className="py-32 bg-[#0c1024] text-white overflow-hidden">
-        <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-10">
-            <div className="max-w-2xl">
-              <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.3em] mb-6 block">Strategic Partnerships</span>
-              <h2 className="text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight mb-8">
+      <section className="py-20 md:py-32 bg-[#0c1024] text-white overflow-hidden">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 md:mb-20 gap-10">
+            <div className="max-w-2xl w-full">
+              <span className="text-[#5D00D6] text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block">Strategic Partnerships</span>
+              <h2 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[54px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 Leading the way in IT excellence.
               </h2>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-nowrap overflow-x-auto gap-2 md:gap-3 pb-4 no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0 w-full">
                 {IT_CHALLENGES.map((cat, idx) => (
                   <button
                     key={cat.id}
                     onClick={() => setCategoryIndex(idx)}
-                    className={`px-6 py-3 rounded-full text-[13px] font-bold transition-all duration-300 border ${
+                    className={`px-5 py-2.5 rounded-full text-[12px] md:text-[13px] font-bold transition-all duration-300 border whitespace-nowrap shrink-0 ${
                       categoryIndex === idx 
                         ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-xl shadow-purple-900/40' 
                         : 'bg-white/5 border-white/10 text-white/60 hover:border-white/30 hover:bg-white/10'
@@ -1140,18 +1180,18 @@ export const Wordpress1 = () => {
               </div>
             </div>
             
-            <div className="flex gap-4">
+            <div className="hidden lg:flex gap-3 mt-4 lg:mt-0">
               <button 
                 onClick={() => setCategoryIndex((prev) => (prev > 0 ? prev - 1 : IT_CHALLENGES.length - 1))}
-                className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all text-white/50 hover:text-white"
+                className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all text-white/50 hover:text-white"
               >
-                <ChevronLeft size={24} />
+                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
               </button>
               <button 
                 onClick={() => setCategoryIndex((prev) => (prev < IT_CHALLENGES.length - 1 ? prev + 1 : 0))}
-                className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all text-white/50 hover:text-white"
+                className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all text-white/50 hover:text-white"
               >
-                <ChevronRight size={24} />
+                <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
               </button>
             </div>
           </div>
@@ -1208,12 +1248,12 @@ export const Wordpress1 = () => {
 
           <div className="relative">
             <motion.div 
-              className="flex gap-8"
-              animate={{ x: `calc(-${caseStudyIdx * 50}% - ${caseStudyIdx * 16}px)` }}
+              className="flex gap-6 md:gap-8"
+              animate={{ x: `calc(-${caseStudyIdx * (typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 50)}% - ${caseStudyIdx * (typeof window !== 'undefined' && window.innerWidth < 768 ? 24 : 16)}px)` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               {CASE_STUDIES.map((cs, idx) => (
-                <div key={idx} className="min-w-[calc(50%-16px)] group cursor-pointer">
+                <div key={idx} className="min-w-full md:min-w-[calc(50%-16px)] group cursor-pointer">
                   <div className="relative aspect-video rounded-none overflow-hidden mb-8 shadow-2xl">
                     <img src={cs.img} alt={cs.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
@@ -1229,7 +1269,7 @@ export const Wordpress1 = () => {
                   </div>
                   <span className="text-[14px] font-bold mb-4 block text-[#5D00D6] uppercase tracking-widest">{cs.tag}</span>
                   <h3 className="text-[24px] font-bold text-[#0c1024] mb-4 group-hover:text-[#5D00D6] transition-colors line-clamp-1">{cs.title}</h3>
-                  <p className="text-gray-500 text-[16px] leading-relaxed mb-6 line-clamp-2 font-medium">{cs.desc}</p>
+                  <p className="text-gray-500 text-[18px] leading-relaxed mb-6 line-clamp-2 font-medium">{cs.desc}</p>
                   <a href="#" className="text-[#5D00D6] font-bold text-[14px] underline underline-offset-4 decoration-2 hover:decoration-[#5D00D6]/50">Read case study</a>
                 </div>
               ))}
@@ -1251,14 +1291,14 @@ export const Wordpress1 = () => {
                 <div className="w-4 h-4 text-[#5D00D6]"><HelpCircle size={16} /></div>
                 <span className="text-[12px] font-bold text-[#5D00D6] uppercase tracking-wider">FAQ</span>
               </div>
-              <h2 className="text-[48px] font-bold text-[#0c1024] leading-tight tracking-tight mb-6">
+              <h2 className="text-[28px] md:text-[36px] lg:text-[42px] font-bold text-[#0c1024] leading-tight tracking-tight mb-6">
                 Have more questions?
               </h2>
               <p className="text-gray-500 text-[18px] mb-12 leading-relaxed">
                 Our team is designed to make managing your IT easy and stress-free. With intuitive features, you can track your needs and support effortlessly.
               </p>
 
-              <div className="bg-[#F9F7FE] p-10 rounded-[32px] border border-[#5D00D6]/5">
+              <div className="bg-[#F9F7FE] p-8 md:p-10 rounded-[32px] border border-[#5D00D6]/5">
                 <h3 className="text-[24px] font-bold mb-4 text-[#0c1024]">Can't find answers?</h3>
                 <p className="text-gray-500 mb-8 font-medium">We're here to help you out whenever you need! Get in touch with our dedicated support team.</p>
                 <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4a00ab] rounded-full px-8 gap-3 group border-none shadow-xl shadow-purple-900/20">
@@ -1286,17 +1326,17 @@ export const Wordpress1 = () => {
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="grid lg:grid-cols-[1fr_2.4fr] gap-16 items-start">
             {/* Left Column: Heading & Navigation */}
-            <div className="sticky top-32">
+            <div className="md:sticky top-32 lg:static">
               <span className="text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.2em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Real Customers</span>
-              <h2 className="text-[48px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h2 className="text-[28px] md:text-[36px] lg:text-[42px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 Customers Feedback
               </h2>
               <p className="text-[16px] text-[#64748b] mb-10 leading-relaxed font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 From startups to global enterprises, here's how C9 Communications is transforming business connectivity.
               </p>
               
-              {/* Navigation Arrows */}
-              <div className="flex gap-3">
+              {/* Navigation Arrows (Desktop) */}
+              <div className="hidden lg:flex gap-3">
                 <button 
                   onClick={() => setTestimonialIdx(prev => Math.max(0, prev - 1))}
                   className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${testimonialIdx === 0 ? 'bg-gray-100 text-gray-300 cursor-not-allowed' : 'bg-[#F4F0FA] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white'}`}
@@ -1304,8 +1344,8 @@ export const Wordpress1 = () => {
                   <ChevronLeft size={20} />
                 </button>
                 <button 
-                  onClick={() => setTestimonialIdx(prev => Math.min(TESTIMONIALS.length - 2, prev + 1))}
-                  className={`w-12 h-12 rounded-full bg-[#5D00D6] text-white flex items-center justify-center transition-all hover:bg-[#4c00b0] shadow-lg shadow-purple-900/20 ${testimonialIdx >= TESTIMONIALS.length - 2 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  onClick={() => setTestimonialIdx(prev => Math.min((typeof window !== 'undefined' && window.innerWidth < 768 ? TESTIMONIALS.length - 1 : TESTIMONIALS.length - 2), prev + 1))}
+                  className={`w-12 h-12 rounded-full bg-[#5D00D6] text-white flex items-center justify-center transition-all hover:bg-[#4c00b0] shadow-lg shadow-purple-900/20 ${testimonialIdx >= (typeof window !== 'undefined' && window.innerWidth < 768 ? TESTIMONIALS.length - 1 : TESTIMONIALS.length - 2) ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   <ChevronRight size={20} />
                 </button>
@@ -1317,7 +1357,7 @@ export const Wordpress1 = () => {
               <div className="flex gap-6 overflow-hidden">
                 <motion.div 
                   className="flex gap-6"
-                  animate={{ x: `calc(-${testimonialIdx * 50}% - ${testimonialIdx * 24}px)` }}
+                  animate={{ x: `calc(-${testimonialIdx * (typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 50)}% - ${testimonialIdx * 24}px)` }}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 >
                   {[
@@ -1352,14 +1392,14 @@ export const Wordpress1 = () => {
                       avatar: "JW"
                     }
                   ].map((t, idx) => (
-                    <div key={idx} className="min-w-[calc(50%-12px)] bg-white border border-gray-100 p-10 rounded-[32px] hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all flex flex-col h-full group">
+                    <div key={idx} className="min-w-full md:min-w-[calc(50%-12px)] bg-white border border-gray-100 p-6 md:p-10 rounded-[32px] hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all flex flex-col h-full group">
                       <div className="flex items-center gap-4 mb-8">
-                        <div className="w-14 h-14 rounded-full bg-[#F4F0FA] flex items-center justify-center text-[15px] font-bold text-[#5D00D6]">
+                        <div className="w-14 h-14 rounded-full bg-[#F4F0FA] flex items-center justify-center text-[15px] font-bold text-[#5D00D6] shrink-0">
                           {t.avatar}
                         </div>
                         <div>
-                          <h4 className="font-bold text-[18px] text-[#0c1024] leading-none mb-1.5" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{t.name}</h4>
-                          <p className="text-[14px] text-[#64748b] font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{t.role}</p>
+                          <h4 className="font-bold text-[20px] md:text-[24px] text-[#0c1024] leading-none mb-1.5" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{t.name}</h4>
+                          <p className="text-[14px] md:text-[16px] text-[#64748b] font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{t.role}</p>
                         </div>
                       </div>
                       
@@ -1369,12 +1409,33 @@ export const Wordpress1 = () => {
                         ))}
                       </div>
 
-                      <p className="text-[17px] text-gray-600 leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                      <p className="text-[16px] md:text-[18px] text-gray-600 leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                         "{t.content}"
                       </p>
                     </div>
                   ))}
                 </motion.div>
+              </div>
+
+              {/* Navigation Arrows (Mobile) */}
+              <div className="flex lg:hidden gap-6 justify-center mt-12 items-center">
+                <button 
+                  onClick={() => setTestimonialIdx(prev => Math.max(0, prev - 1))}
+                  className={`w-14 h-14 rounded-full flex items-center justify-center transition-all ${testimonialIdx === 0 ? 'bg-gray-100 text-gray-300' : 'bg-[#F4F0FA] text-[#5D00D6]'}`}
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <div className="flex gap-1.5">
+                  {TESTIMONIALS.map((_, i) => (
+                    <div key={i} className={`w-2 h-2 rounded-full transition-all ${testimonialIdx === i ? 'w-6 bg-[#5D00D6]' : 'bg-gray-200'}`}></div>
+                  ))}
+                </div>
+                <button 
+                  onClick={() => setTestimonialIdx(prev => Math.min(TESTIMONIALS.length - 1, prev + 1))}
+                  className={`w-14 h-14 rounded-full bg-[#5D00D6] text-white flex items-center justify-center transition-all ${testimonialIdx >= TESTIMONIALS.length - 1 ? 'opacity-50' : ''}`}
+                >
+                  <ChevronRight size={24} />
+                </button>
               </div>
             </div>
           </div>
@@ -1444,15 +1505,15 @@ export const Wordpress1 = () => {
             </div>
 
             {/* Right side: Logo & CTA */}
-            <div className="flex flex-col justify-center items-center h-full gap-8">
-               <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[380px] filter brightness-0 invert" />
-               <Button size="lg" className="px-12 shadow-2xl group">
+            <div className="flex flex-col justify-center items-center lg:items-end h-full gap-8 mb-16 lg:mb-0">
+               <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] md:w-[280px] lg:w-[380px] filter brightness-0 invert" />
+               <Button size="lg" className="w-full sm:w-auto px-12 shadow-2xl group">
                  Schedule Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
                </Button>
             </div>
          </div>
          
-         <div className="bg-white text-slate-900 py-6">
+         <div className="bg-white text-slate-900 py-10">
            <div className="container mx-auto px-10 flex flex-col xl:flex-row justify-between items-center gap-8" style={{ maxWidth: '1240px' }}>
              
              <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
@@ -1465,15 +1526,15 @@ export const Wordpress1 = () => {
                   </div>
                </div>
                <div className="hidden lg:block w-[1px] h-10 bg-gray-200"></div>
-               <div className="hidden lg:block text-[13px] text-gray-600 leading-[1.6]">
-                  Seventh Ave, 20th Floor<br/>
-                  New York, NY 10018
-               </div>
+                <div className="hidden lg:block text-[13px] text-gray-600 leading-[1.6]">
+                  level 3 480 Collins Street<br/>
+                  Melbourne 3000
+                </div>
                <div className="hidden lg:block w-[1px] h-10 bg-gray-200"></div>
-               <div className="hidden lg:block text-[13px] text-gray-600 leading-[1.6]">
-                  T: 1-800-356-8933<br/>
+                <div className="hidden lg:block text-[13px] text-gray-600 leading-[1.6]">
+                  T: 1800 000 299<br/>
                   E: office@c9communications.com.au
-               </div>
+                </div>
              </div>
              
              <div className="flex gap-8 lg:gap-10 font-semibold text-[11px] text-gray-500">
@@ -1519,9 +1580,9 @@ function FAQItem({ question, answer, defaultOpen = false }: { question: string; 
     <div className={`overflow-hidden border transition-all duration-300 rounded-[24px] ${isOpen ? 'bg-white shadow-2xl shadow-[#5D00D6]/10 border-[#5D00D6]/20' : 'bg-gray-50/50 hover:bg-gray-50 border-gray-100'}`}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-7 text-left group"
+        className="w-full flex items-center justify-between p-5 md:p-7 text-left group"
       >
-        <span className={`text-[18px] font-bold transition-colors pr-8 ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{question}</span>
+        <span className={`text-[24px] font-bold transition-colors pr-8 ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{question}</span>
         <div className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-[#5D00D6] text-white rotate-180' : 'bg-white border border-gray-200 text-gray-400 group-hover:border-[#5D00D6]/30 group-hover:text-[#5D00D6]'}`}>
           <ChevronDown size={18} />
         </div>
@@ -1534,9 +1595,9 @@ function FAQItem({ question, answer, defaultOpen = false }: { question: string; 
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
-            <div className="px-7 pb-8 pt-0">
+            <div className="px-5 md:px-7 pb-6 md:pb-8 pt-0">
               <div className="h-px bg-gray-100 w-full mb-6"></div>
-              <p className="text-gray-500 leading-relaxed text-[16px] font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-gray-500 leading-relaxed text-[18px] font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 {answer}
               </p>
             </div>
