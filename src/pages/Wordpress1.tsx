@@ -7,8 +7,8 @@ import {
   ChevronDown, Wifi, Cloud, HardDrive, Headphones, Phone, Network,
   Globe, Monitor, Radio, Cpu, BarChart3, 
   Infinity as InfinityIcon, LayoutGrid, ShieldCheck, Volume2, 
-  GraduationCap, ShieldAlert, Users, Play, MessageCircle, Star,
-  Plus, Minus, HelpCircle, Quote
+  GraduationCap, ShieldAlert, Users, Play, Star,
+  HelpCircle
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
@@ -1018,7 +1018,7 @@ export const Wordpress1 = () => {
                  </div>
               </div>
               
-              <div className="max-w-md w-full flex flex-col gap-7">
+              <div className="max-w-md w-full flex flex-col gap-7 pb-10">
                   <div>
                     <p className="text-[13px] text-gray-400 font-semibold uppercase tracking-widest mb-3">Stay in the loop</p>
                     <div className="bg-transparent rounded-xl border border-[#333] flex items-center overflow-hidden focus-within:border-[#5D00D6] transition-colors">
