@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -450,9 +451,9 @@ export const Wordpress1 = () => {
       <div className="fixed w-full z-50 transition-all bg-white border-b border-gray-100 shadow-sm" onMouseLeave={handleLeave}>
         <nav className="relative z-50 py-4 px-8 flex justify-between items-center text-slate-900 font-sans mx-auto" style={{ maxWidth: '1240px' }}>
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
              <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="h-[36px]" />
-          </div>
+          </Link>
           
           <div className="hidden xl:flex gap-2 font-semibold text-[14px] items-center">
             {/* Nav items with mega menus */}
