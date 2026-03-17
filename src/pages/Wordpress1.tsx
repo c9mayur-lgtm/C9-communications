@@ -9,9 +9,11 @@ import {
   Globe, Monitor, Radio, Cpu, BarChart3, 
   Infinity as InfinityIcon, LayoutGrid, ShieldCheck, Volume2, 
   GraduationCap, ShieldAlert, Users, Play, Star,
-  HelpCircle, ChevronLeft, PhoneCall, Layers, Menu, X
+  HelpCircle, ChevronLeft, PhoneCall, Layers, Menu, X, CheckCircle
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { ConsultationForm } from '../components/landing/ConsultationForm';
+
 
 /* ─────────────────────────────────────────────
    MEGA PANEL DATA (Light Theme / Purple Accent)
@@ -732,52 +734,221 @@ export const Wordpress1 = () => {
       </div>
 
       {/* Hero Section (Pixel-perfected to match reference) */}
-      <section className="relative pt-16 pb-10 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20 bg-white text-slate-900 overflow-hidden min-h-[320px] lg:min-h-[480px] flex items-center">
-        <div className="container mx-auto px-6 lg:px-8 relative z-10 grid xl:grid-cols-2 gap-12 items-center" style={{ maxWidth: '1240px' }}>
-          <div className="max-w-[750px] xl:pr-10 py-4">
-            <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[56px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.1]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-              We manage your IT, so you can manage your business.
-            </h1>
-            <p className="text-[17px] md:text-[18px] lg:text-[20px] text-slate-600 mb-8 max-w-[500px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-              Take charge of your business continuity with innovative IT solutions designed for growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 transition-all group">
-                Schedule a Free Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
-                Services
-              </Button>
+      <section className="pt-16 pb-10 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20 bg-white overflow-hidden min-h-[450px] lg:min-h-[580px] flex items-center">
+        <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
+          <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-6 items-center relative z-10 w-full">
+            <div className="py-4 pr-0 xl:pr-6">
+              <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[56px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.1]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                We manage your IT, so you can manage your business.
+              </h1>
+              <p className="text-[17px] md:text-[18px] lg:text-[20px] text-slate-600 mb-8 max-w-[500px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                Take charge of your business continuity with innovative IT solutions designed for growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 transition-all group px-8">
+                  Schedule a Free Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
+                </Button>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto px-10 border-gray-200">
+                  Services
+                </Button>
+              </div>
+
+              {/* Uptime, Support, No Lock-In marks */}
+              <div className="flex items-center gap-5 md:gap-8 mt-10 md:mt-12 flex-wrap pb-4">
+                {['99.99% Uptime', '24/7 AU Support', 'No Lock-In'].map((t, i) => (
+                  <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                    <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Right side rectangular image */}
+            <div className="hidden xl:block w-full h-[400px] lg:h-[500px] relative rounded-3xl overflow-hidden shadow-2xl">
+              <img 
+                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2850" 
+                 alt="Office Team" 
+                 className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
- 
-        {/* Right side diagonal image - Increased vertical stretch */}
-        <div className="hidden xl:block absolute top-0 right-0 w-[55%] h-full z-0 overflow-hidden" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)' }}>
-          <div className="w-full h-full relative">
-            <img 
-               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2850" 
-               alt="Office Team" 
-               className="w-full h-full object-cover"
-            />
+      </section>
+
+      {/* Trusted By Ticker — Two-row pill style */}
+      <section className="bg-[#f8f7fc] py-10 md:py-14 border-t border-gray-100 overflow-hidden relative">
+        <style>{`
+          @keyframes ticker-left {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @keyframes ticker-right {
+            0%   { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+          .ticker-row-left {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            animation: ticker-left 40s linear infinite;
+            will-change: transform;
+          }
+          .ticker-row-right {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            animation: ticker-right 44s linear infinite;
+            will-change: transform;
+          }
+          .ticker-row-left:hover,
+          .ticker-row-right:hover {
+            animation-play-state: paused;
+          }
+          .ticker-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px 8px 10px;
+            border-radius: 100px;
+            background: white;
+            border: 1px solid #e5e7f0;
+            margin: 0 6px;
+            white-space: nowrap;
+            cursor: default;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            user-select: none;
+          }
+          .ticker-pill:hover {
+            border-color: rgba(93, 0, 214, 0.3);
+            box-shadow: 0 2px 12px rgba(93, 0, 214, 0.08);
+          }
+          .ticker-pill img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            border-radius: 4px;
+            flex-shrink: 0;
+          }
+          .ticker-pill-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #6b7280;
+            letter-spacing: 0.02em;
+            font-family: "Proxima Nova", sans-serif;
+            text-transform: uppercase;
+          }
+        `}</style>
+
+        {/* Heading */}
+        <p
+          className="text-center font-bold tracking-[0.18em] uppercase text-slate-400 text-[11px] mb-8"
+          style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+        >
+          Trusted by leading Australian businesses
+        </p>
+
+        {/* Gradient fade masks */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10"
+          style={{ width: '120px', background: 'linear-gradient(to right, #f8f7fc 60%, transparent)' }} />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10"
+          style={{ width: '120px', background: 'linear-gradient(to left, #f8f7fc 60%, transparent)' }} />
+
+        <div className="flex flex-col gap-3 overflow-hidden">
+
+          {/* Row 1 — scrolls LEFT */}
+          <div className="w-full overflow-hidden">
+            <div className="ticker-row-left">
+              {[
+                { name: 'Launch Housing', domain: 'launchhousing.org.au' },
+                { name: 'Akubra',         domain: 'akubra.com.au' },
+                { name: 'Pacific Steel',  domain: 'pacificsteel.com.au' },
+                { name: 'Novo Shoes',     domain: 'novoshoes.com.au' },
+                { name: 'RetailCare',     domain: 'retailcare.com.au' },
+                { name: 'Chameleon',      domain: 'chameleon.pro' },
+                { name: 'Atlassian',      domain: 'atlassian.com' },
+                { name: 'Afterpay',       domain: 'afterpay.com' },
+                { name: 'Canva',          domain: 'canva.com' },
+                { name: 'Zip',            domain: 'zip.co' },
+                // duplicate
+                { name: 'Launch Housing', domain: 'launchhousing.org.au' },
+                { name: 'Akubra',         domain: 'akubra.com.au' },
+                { name: 'Pacific Steel',  domain: 'pacificsteel.com.au' },
+                { name: 'Novo Shoes',     domain: 'novoshoes.com.au' },
+                { name: 'RetailCare',     domain: 'retailcare.com.au' },
+                { name: 'Chameleon',      domain: 'chameleon.pro' },
+                { name: 'Atlassian',      domain: 'atlassian.com' },
+                { name: 'Afterpay',       domain: 'afterpay.com' },
+                { name: 'Canva',          domain: 'canva.com' },
+                { name: 'Zip',            domain: 'zip.co' },
+              ].map((c, i) => (
+                <div key={i} className="ticker-pill">
+                  <img
+                    src={`https://logo.clearbit.com/${c.domain}`}
+                    alt={c.name}
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                  />
+                  <span className="ticker-pill-label">{c.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Row 2 — scrolls RIGHT */}
+          <div className="w-full overflow-hidden">
+            <div className="ticker-row-right">
+              {[
+                { name: 'Cotton On',     domain: 'cottonon.com' },
+                { name: 'Bonds',         domain: 'bonds.com.au' },
+                { name: 'Lendlease',     domain: 'lendlease.com' },
+                { name: 'Seek',          domain: 'seek.com.au' },
+                { name: 'Realestate',    domain: 'realestate.com.au' },
+                { name: 'Kmart',         domain: 'kmart.com.au' },
+                { name: 'Target',        domain: 'target.com.au' },
+                { name: 'Officeworks',   domain: 'officeworks.com.au' },
+                { name: 'Bunnings',      domain: 'bunnings.com.au' },
+                { name: 'Domain',        domain: 'domain.com.au' },
+                // duplicate
+                { name: 'Cotton On',     domain: 'cottonon.com' },
+                { name: 'Bonds',         domain: 'bonds.com.au' },
+                { name: 'Lendlease',     domain: 'lendlease.com' },
+                { name: 'Seek',          domain: 'seek.com.au' },
+                { name: 'Realestate',    domain: 'realestate.com.au' },
+                { name: 'Kmart',         domain: 'kmart.com.au' },
+                { name: 'Target',        domain: 'target.com.au' },
+                { name: 'Officeworks',   domain: 'officeworks.com.au' },
+                { name: 'Bunnings',      domain: 'bunnings.com.au' },
+                { name: 'Domain',        domain: 'domain.com.au' },
+              ].map((c, i) => (
+                <div key={i} className="ticker-pill">
+                  <img
+                    src={`https://logo.clearbit.com/${c.domain}`}
+                    alt={c.name}
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                  />
+                  <span className="ticker-pill-label">{c.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* Highlights Strip (Pixel-perfected mapping) */}
       <section className="bg-white border-y border-gray-100 py-12 lg:py-16 relative z-20 overflow-hidden">
         <div className="container mx-auto px-6 lg:px-10" style={{ maxWidth: '1240px' }}>
-          <div className="flex flex-nowrap overflow-x-auto gap-8 items-center no-scrollbar pb-4 md:pb-0">
+          <div className="flex flex-nowrap md:flex-wrap lg:flex-nowrap overflow-x-auto lg:overflow-visible gap-8 md:gap-y-10 items-center justify-between no-scrollbar pb-4 md:pb-0">
             
-            {/* Clutch Rating */}
+            {/* Google review Rating */}
             <div className="flex items-center gap-5 shrink-0">
               <div className="flex flex-col">
                 <div className="text-[12px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-2 leading-none">Reviewed on</div>
                 <div className="flex items-center gap-4">
-                  <span className="font-extrabold text-[28px] tracking-tighter text-slate-800 leading-none">Clutch</span>
+                  <span className="font-extrabold text-[28px] tracking-tighter text-slate-800 leading-none">Google</span>
                   <div className="flex flex-col gap-1">
-                    <div className="flex text-[#ff3b30] text-[12px] leading-none">★★★★★</div>
-                    <span className="text-[12px] font-bold text-gray-500 uppercase tracking-tight leading-none whitespace-nowrap">31 Reviews</span>
+                    <div className="flex text-[#4285F4] text-[12px] leading-none">★★★★★</div>
+                    <span className="text-[12px] font-bold text-gray-500 uppercase tracking-tight leading-none whitespace-nowrap">4.9/5 Rating</span>
                   </div>
                 </div>
               </div>
@@ -832,9 +1003,9 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Simplifying IT Section (Updated to Light Theme) */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
             <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-widest mb-4 block">Proven Experience</span>
             <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-bold text-[#0c1024] tracking-tight leading-tight">
               Simplifying IT for a complex world.
@@ -881,7 +1052,7 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Telco Services Section (Matching Reference Image) */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="mb-12">
             <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-widest mb-4 block">Our Expertise</span>
@@ -966,12 +1137,12 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Solutions Section - Original Purple Gradient */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-14 md:py-20 overflow-hidden">
         {/* Full-width purple-to-white gradient */}
         <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#946CE2] to-white z-0" />
         
         <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
-          <div className="flex flex-col mb-12 md:mb-16 gap-4">
+          <div className="flex flex-col mb-10 md:mb-14 gap-4">
             <span className="bg-white/20 backdrop-blur-sm text-white text-[12px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded w-fit border border-white/20" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>HOW WE DO</span>
             <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold tracking-tight text-white leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Solutions</h2>
           </div>
@@ -1046,9 +1217,9 @@ export const Wordpress1 = () => {
       */}
 
       {/* Datashake Inspired Section */}
-      <section className="py-32 bg-white border-t border-gray-100">
+      <section className="py-14 md:py-20 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="text-center mb-16 md:mb-24 max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto px-6">
             <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.4em] mb-6 block">Why Partner With Us</span>
             <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-bold text-[#0c1024] leading-[1.1] tracking-tight">
               What global companies use C9 Communications for
@@ -1155,9 +1326,9 @@ export const Wordpress1 = () => {
       </section>
 
       {/* IT Vendors Carousel Section (Dark Premium Theme) */}
-      <section className="py-20 md:py-32 bg-[#0c1024] text-white overflow-hidden">
+      <section className="py-14 md:py-20 bg-[#0c1024] text-white overflow-hidden">
         <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 md:mb-20 gap-10">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-10">
             <div className="max-w-2xl w-full">
               <span className="text-[#5D00D6] text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block">Strategic Partnerships</span>
               <h2 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[54px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
@@ -1216,9 +1387,9 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Case Studies Section (Interactive Slider) */}
-      <section className="py-24 bg-white overflow-hidden relative">
+      <section className="py-12 md:py-16 bg-white overflow-hidden relative">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8">
             <div className="max-w-2xl">
               <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.3em] mb-4 block">Success Stories</span>
               <h2 className="text-[48px] font-bold text-[#0c1024] leading-tight tracking-tight">
@@ -1282,7 +1453,7 @@ export const Wordpress1 = () => {
 
 
       {/* FAQ Section (Matching UI Inspiration) */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-20">
             {/* Left side */}
@@ -1322,7 +1493,7 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Testimonials Section (Shadcn Studio inspired) */}
-      <section className="py-24 bg-white border-t border-gray-100 overflow-hidden">
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100 overflow-hidden">
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="grid lg:grid-cols-[1fr_2.4fr] gap-16 items-start">
             {/* Left Column: Heading & Navigation */}
@@ -1442,7 +1613,13 @@ export const Wordpress1 = () => {
         </div>
       </section>
 
+      {/* Consultation Section */}
+      <section id="consultation-section">
+        <ConsultationForm showHeader={false} />
+      </section>
+
       {/* Footer (Dark Theme with Animated Bubbles) */}
+
       <footer className="bg-black text-white pt-24 font-sans">
          <div className="container mx-auto px-10 grid lg:grid-cols-2 gap-16 mb-24" style={{ maxWidth: '1240px' }}>
             
@@ -1507,9 +1684,14 @@ export const Wordpress1 = () => {
             {/* Right side: Logo & CTA */}
             <div className="flex flex-col justify-center items-center lg:items-end h-full gap-8 mb-16 lg:mb-0">
                <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] md:w-[280px] lg:w-[380px] filter brightness-0 invert" />
-               <Button size="lg" className="w-full sm:w-auto px-12 shadow-2xl group">
+               <Button 
+                 size="lg" 
+                 className="w-full sm:w-auto px-12 shadow-2xl group"
+                 onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
+               >
                  Schedule Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
                </Button>
+
             </div>
          </div>
          
@@ -1518,11 +1700,11 @@ export const Wordpress1 = () => {
              
              <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
                <div className="flex items-center gap-3">
-                  <span className="font-black text-[22px] tracking-tight text-slate-900">Clutch</span>
+                  <span className="font-black text-[22px] tracking-tight text-slate-900">Google</span>
                   <div className="flex flex-col gap-0.5">
                      <div className="text-[10px] font-bold text-gray-400 leading-none uppercase tracking-wide">Reviewed on</div>
-                     <div className="flex text-[#ff3b30] text-sm leading-none">★★★★★</div>
-                     <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wide leading-none">31 Reviews</span>
+                     <div className="flex text-[#4285F4] text-sm leading-none">★★★★★</div>
+                     <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wide leading-none">4.9/5 Rating</span>
                   </div>
                </div>
                <div className="hidden lg:block w-[1px] h-10 bg-gray-200"></div>

@@ -55,7 +55,7 @@ export const LeadCapture = () => {
               </div>
               <div>
                 <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', }}>Phone Number</label>
-                <input name="phone" type="tel" placeholder="0400 000 000" className="form-input" />
+                <input name="phone" type="tel" placeholder="0488 444 863" className="form-input" />
               </div>
               <div>
                 <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-pale-tint)', }}>Current Provider</label>

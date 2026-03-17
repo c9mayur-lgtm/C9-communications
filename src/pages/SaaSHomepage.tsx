@@ -52,11 +52,12 @@ const STEPS = [
   { num: '04', title: 'Ongoing Support',    desc: 'Our team monitors and manages your infrastructure to keep everything running reliably.' },
 ];
 
-const TICKER_ROW1 = [
-  'Telstra', 'Microsoft', 'Optus', 'NBN Co', 'Cisco', 'ISO 27001', 'Salesforce', 'AWS',
-  'Telstra', 'Microsoft', 'Optus', 'NBN Co', 'Cisco', 'ISO 27001', 'Salesforce', 'AWS',
+const clientLogos = [
+  'RetailCare', 'Chameleon Customer Contact', 'Novo Shoes',
+  'Launch Housing', 'Akubra', 'Pacific Steel', 'Atlassian', 'Afterpay'
 ];
 
+const TICKER_ROW1 = [...clientLogos, ...clientLogos];
 const TICKER_ROW2 = [
   'Avaya', 'RingCentral', 'Fortinet', '8x8', 'Nutanix', 'Poly', 'Juniper', 'Palo Alto',
   'Avaya', 'RingCentral', 'Fortinet', '8x8', 'Nutanix', 'Poly', 'Juniper', 'Palo Alto',
@@ -169,7 +170,7 @@ export const SaaSHomepage = () => {
                     <span style={{ color: 'var(--c9-muted)', marginLeft: '4px' }}>/ 5.0</span>
                   </div>
                   <div style={{ color: 'var(--c9-muted)', fontWeight: 500 }}>
-                    from <strong style={{ color: 'var(--c9-muted)' }}>247 reviews</strong>
+                    on <strong style={{ color: 'var(--c9-muted)' }}>Google Reviews</strong>
                   </div>
                 </div>
                 <div style={{ height: '28px', width: '1px', background: 'var(--c9-border)' }} />
@@ -446,8 +447,8 @@ export const SaaSHomepage = () => {
                 <Link to="/contact" className="sp-btn-primary" style={{ padding: '15px 32px' }}>
                   Book a Call with an Expert <ArrowRight size={17} />
                 </Link>
-                <a href="tel:1800000000" className="sp-btn-ghost" style={{ padding: '15px 32px' }}>
-                  Call 1800 C9 TECH
+                <a href="tel:1800000299" className="sp-btn-ghost" style={{ padding: '15px 32px' }}>
+                  Call 1800 000 299
                 </a>
               </div>
             </div>

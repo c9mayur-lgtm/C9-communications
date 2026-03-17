@@ -50,8 +50,8 @@ export const Support = () => {
                 <p style={{ color: 'var(--c9-muted)', marginBottom: '32px' }}>
                   24/7/365 assistance for critical network faults and enterprise voice issues.
                 </p>
-                <a href="tel:1300000000" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#C4B5FD', fontWeight: 800, textDecoration: 'none' }}>
-                  1300 C9 TECH <ArrowRight size={18} />
+                <a href="tel:1800000299" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#C4B5FD', fontWeight: 800, textDecoration: 'none' }}>
+                  1800 000 299 <ArrowRight size={18} />
                 </a>
               </div>
             </FadeIn>

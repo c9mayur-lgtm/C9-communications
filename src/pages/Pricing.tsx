@@ -384,7 +384,9 @@ export const Pricing = () => {
               </p>
               <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
                 <button style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'linear-gradient(135deg, #7C3AED, #6B21A8)', color: 'hsl(var(--foreground))', fontWeight: 700, padding: '14px 28px', borderRadius: '100px', border: '1px solid var(--c9-border)', cursor: 'pointer' }}>
-                  <Phone size={15} /> Call 1800 C9 TECH
+                  <a href="tel:1800000299" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Phone size={15} /> Call 1800 000 299
+                  </a>
                 </button>
                 <button style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'transparent', color: 'var(--c9-muted)', fontWeight: 600, padding: '14px 28px', borderRadius: '100px', border: '1px solid var(--c9-border)', cursor: 'pointer' }}>
                   Contact Solutions Team

@@ -12,6 +12,8 @@ import { Solutions } from './pages/Solutions';
 import { Support } from './pages/Support';
 import { Landing } from './pages/Landing';
 import { Wordpress1 } from './pages/Wordpress1';
+import { Consultation } from './pages/Consultation';
+
 
 /* ── Error Boundary ── catches any render crash and shows a friendly message */
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
@@ -76,7 +78,9 @@ function AppBody() {
         <Route path="/landing" element={<Landing />} />
         <Route path="/classic" element={<Landing />} />
         <Route path="/wordpress1" element={<Wordpress1 />} />
+        <Route path="/consultation" element={<Consultation />} />
       </Routes>
+
       {!isReplica && <Footer />}
     </ErrorBoundary>
   );

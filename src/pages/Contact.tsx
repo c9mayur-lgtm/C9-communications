@@ -95,7 +95,7 @@ export const Contact = () => {
                   </div>
                   <h4 style={{ fontWeight: 700, color: 'hsl(var(--foreground))', marginBottom: '8px' }}>Call Support</h4>
                   <p style={{ color: 'var(--c9-muted)', marginBottom: '16px' }}>Available 24/7 for critical faults.</p>
-                  <a href="tel:1300000000" style={{ fontWeight: 800, color: '#C4B5FD', textDecoration: 'none' }}>1300 C9 TECH</a>
+                  <a href="tel:1800000299" style={{ fontWeight: 800, color: '#C4B5FD', textDecoration: 'none' }}>1800 000 299</a>
                 </div>
               </FadeIn>
 

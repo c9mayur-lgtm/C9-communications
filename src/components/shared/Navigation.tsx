@@ -344,9 +344,12 @@ const SECONDARY_LINKS = [
   { name: 'Pricing', path: '/pricing' },
   { name: 'Industries', path: '/industries' },
   { name: 'Company', path: '/about', menuKey: 'company' as MenuKey },
+  { name: 'Consultation', path: '/consultation' },
   { name: 'Wordpress V1', path: '/wordpress1' },
   { name: 'Support', path: '/support' },
 ];
+
+
 
 export const Navigation = () => {
   const { theme } = useTheme();
@@ -559,16 +562,16 @@ export const Navigation = () => {
         {/* RIGHT ACTIONS */}
         <div className="nav-desktop-actions" style={{ display: 'flex', gap: '10px', alignItems: 'center', flexShrink: 0 }}>
           <ThemeToggle />
-          <a href="tel:1800000000" style={{
+          <a href="tel:1800000299" style={{
             fontWeight: 700, fontSize: '13px', color: 'var(--c9-muted)',
             textDecoration: 'none', transition: 'color 0.15s',
           }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--c9-primary)')}
             onMouseLeave={e => (e.currentTarget.style.color = 'var(--c9-muted)')}
           >
-            1800 C9 TECH
+            1800 000 299
           </a>
-          <Link to="/contact" style={{
+          <Link to="/consultation" style={{
             display: 'inline-flex', alignItems: 'center', gap: '6px',
             background: 'var(--c9-primary)',
             color: '#fff', fontWeight: 700, fontSize: '13px',
@@ -586,6 +589,7 @@ export const Navigation = () => {
           >
             Get a Quote
           </Link>
+
         </div>
 
         {/* MOBILE HAMBURGER */}
@@ -721,18 +725,19 @@ export const Navigation = () => {
 
           {/* Mobile CTAs */}
           <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '12px', paddingTop: '32px', paddingBottom: '24px' }}>
-            <a href="tel:1800000000" style={{
+            <a href="tel:1800000299" style={{
               textAlign: 'center', padding: '16px', borderRadius: '100px',
               border: '1px solid var(--c9-border)', color: 'var(--c9-primary)',
               fontWeight: 700, textDecoration: 'none', fontSize: '15px',
               background: 'var(--c9-surface)',
-            }}>📞 1800 C9 TECH</a>
-            <Link to="/contact" onClick={() => setNavOpen(false)} style={{
+            }}>📞 1800 000 299</a>
+            <Link to="/consultation" onClick={() => setNavOpen(false)} style={{
               textAlign: 'center', padding: '18px', borderRadius: '100px',
               background: 'var(--c9-primary)',
               color: '#fff', fontWeight: 800, textDecoration: 'none',
               fontSize: '16px',
             }}>Get a Free Quote →</Link>
+
           </div>
         </div>
       </div>

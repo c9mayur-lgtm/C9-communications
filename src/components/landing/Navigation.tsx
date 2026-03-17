@@ -65,7 +65,7 @@ export const Navigation = () => {
 
         {/* RIGHT ACTIONS */}
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }} className="hidden-mobile">
-          <span style={{ color: 'var(--color-pale-tint)', fontWeight: 500, }}>1800 000 C9X</span>
+          <a href="tel:1800000299" style={{ color: 'var(--color-pale-tint)', fontWeight: 500, textDecoration: 'none' }}>1800 000 299</a>
           <button className="btn-primary" style={{ padding: '0.6rem 1.5rem', minHeight: '38px', }}>
             Get a Quote
           </button>
@@ -116,7 +116,7 @@ export const Navigation = () => {
             </div>
 
             <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-               <span style={{ color: 'var(--color-pale-tint)', fontWeight: 500, textAlign: 'center' }}>1800 000 C9X</span>
+               <a href="tel:1800000299" style={{ color: 'var(--color-pale-tint)', fontWeight: 500, textAlign: 'center', textDecoration: 'none' }}>1800 000 299</a>
                <button className="btn-primary" style={{ width: '100%', padding: '1rem' }} onClick={() => setNavOpen(false)}>
                 Get a Quote
               </button>

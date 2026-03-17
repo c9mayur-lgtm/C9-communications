@@ -2,9 +2,9 @@ import { SectionWrapper } from './SectionWrapper';
 
 export const TrustStrip = () => {
   const logos = [
-    'BHP', 'Qantas', 'Woolworths', 'Commonwealth', 
-    'Wesfarmers', 'Macquarie', 'Cochlear', 'Atlassian'
-  ]; // Placeholders
+    'RetailCare', 'Chameleon Customer Contact', 'Novo Shoes', 
+    'Launch Housing', 'Akubra', 'Pacific Steel', 'Atlassian', 'Afterpay'
+  ]; // Updated with actual Australian clients
 
   return (
     <SectionWrapper style={{ background: 'var(--color-body-bg)', padding: '4rem 0' }}>
