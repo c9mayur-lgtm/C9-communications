@@ -2,14 +2,14 @@ import { SectionWrapper } from './SectionWrapper';
 
 export const TrustStrip = () => {
   const logos = [
-    { name: 'Atlassian', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg' },
-    { name: 'Microsoft', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg' },
-    { name: 'Slack', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg' },
-    { name: 'Google', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg' },
-    { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au' },
-    { name: 'Akubra', logo: 'https://logo.clearbit.com/akubra.com.au' },
-    { name: 'Novo Shoes', logo: 'https://logo.clearbit.com/novoshoes.com.au' },
-    { name: 'Pacific Steel', logo: 'https://logo.clearbit.com/pacificsteel.com.au' },
+    { name: 'Atlassian', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg', isWordmark: true },
+    { name: 'Microsoft', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg', isWordmark: true },
+    { name: 'Slack', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg', isWordmark: true },
+    { name: 'Google', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg', isWordmark: true },
+    { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au', isWordmark: false },
+    { name: 'Akubra', logo: 'https://logo.clearbit.com/akubra.com.au', isWordmark: false },
+    { name: 'Novo Shoes', logo: 'https://logo.clearbit.com/novoshoes.com.au', isWordmark: false },
+    { name: 'Pacific Steel', logo: 'https://logo.clearbit.com/pacificsteel.com.au', isWordmark: false },
   ];
 
   return (
@@ -42,10 +42,10 @@ export const TrustStrip = () => {
                 <img 
                   src={item.logo} 
                   alt={item.name} 
-                  style={{ height: '20px', width: 'auto', filter: 'grayscale(1) brightness(1.5)', opacity: 0.7 }} 
+                  style={{ height: item.isWordmark ? '24px' : '20px', width: 'auto', filter: 'grayscale(1) brightness(1.5)', opacity: 0.7 }} 
                   onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                 />
-                {item.name}
+                {!item.isWordmark && item.name}
               </div>
             ))}
           </div>

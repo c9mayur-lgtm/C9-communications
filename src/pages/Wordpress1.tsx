@@ -800,10 +800,7 @@ export const Wordpress1 = () => {
             animation: ticker-right 44s linear infinite;
             will-change: transform;
           }
-          .ticker-row-left:hover,
-          .ticker-row-right:hover {
-            animation-play-state: paused;
-          }
+          /* Hover pause removed per user request */
           .ticker-pill {
             display: inline-flex;
             align-items: center;
@@ -860,36 +857,36 @@ export const Wordpress1 = () => {
           <div className="w-full overflow-hidden">
             <div className="ticker-row-left">
               {[
-                { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au' },
-                { name: 'Akubra',         logo: 'https://logo.clearbit.com/akubra.com.au' },
-                { name: 'Pacific Steel',  logo: 'https://logo.clearbit.com/pacificsteel.com.au' },
-                { name: 'Novo Shoes',     logo: 'https://logo.clearbit.com/novoshoes.com.au' },
-                { name: 'RetailCare',     logo: 'https://logo.clearbit.com/retailcare.com.au' },
-                { name: 'Atlassian',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg' },
-                { name: 'Microsoft',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg' },
-                { name: 'Salesforce',     logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/salesforce.svg' },
-                { name: 'Slack',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg' },
-                { name: 'Zoom',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zoom.svg' },
+                { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au', isWordmark: false },
+                { name: 'Akubra',         logo: 'https://logo.clearbit.com/akubra.com.au', isWordmark: false },
+                { name: 'Pacific Steel',  logo: 'https://logo.clearbit.com/pacificsteel.com.au', isWordmark: false },
+                { name: 'Novo Shoes',     logo: 'https://logo.clearbit.com/novoshoes.com.au', isWordmark: false },
+                { name: 'RetailCare',     logo: 'https://logo.clearbit.com/retailcare.com.au', isWordmark: false },
+                { name: 'Atlassian',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg', isWordmark: true },
+                { name: 'Microsoft',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg', isWordmark: true },
+                { name: 'Salesforce',     logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/salesforce.svg', isWordmark: true },
+                { name: 'Slack',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg', isWordmark: true },
+                { name: 'Zoom',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zoom.svg', isWordmark: true },
                 // duplicate for parallax
-                { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au' },
-                { name: 'Akubra',         logo: 'https://logo.clearbit.com/akubra.com.au' },
-                { name: 'Pacific Steel',  logo: 'https://logo.clearbit.com/pacificsteel.com.au' },
-                { name: 'Novo Shoes',     logo: 'https://logo.clearbit.com/novoshoes.com.au' },
-                { name: 'RetailCare',     logo: 'https://logo.clearbit.com/retailcare.com.au' },
-                { name: 'Atlassian',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg' },
-                { name: 'Microsoft',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg' },
-                { name: 'Salesforce',     logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/salesforce.svg' },
-                { name: 'Slack',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg' },
-                { name: 'Zoom',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zoom.svg' },
+                { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au', isWordmark: false },
+                { name: 'Akubra',         logo: 'https://logo.clearbit.com/akubra.com.au', isWordmark: false },
+                { name: 'Pacific Steel',  logo: 'https://logo.clearbit.com/pacificsteel.com.au', isWordmark: false },
+                { name: 'Novo Shoes',     logo: 'https://logo.clearbit.com/novoshoes.com.au', isWordmark: false },
+                { name: 'RetailCare',     logo: 'https://logo.clearbit.com/retailcare.com.au', isWordmark: false },
+                { name: 'Atlassian',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg', isWordmark: true },
+                { name: 'Microsoft',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg', isWordmark: true },
+                { name: 'Salesforce',     logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/salesforce.svg', isWordmark: true },
+                { name: 'Slack',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg', isWordmark: true },
+                { name: 'Zoom',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zoom.svg', isWordmark: true },
               ].map((c, i) => (
                 <div key={i} className="ticker-pill">
                   <img
                     src={c.logo}
                     alt={c.name}
-                    style={{ height: '18px', width: 'auto', objectFit: 'contain' }}
+                    style={{ height: c.isWordmark ? '20px' : '18px', width: 'auto', objectFit: 'contain' }}
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                   />
-                  <span className="ticker-pill-label">{c.name}</span>
+                  {!c.isWordmark && <span className="ticker-pill-label">{c.name}</span>}
                 </div>
               ))}
             </div>
@@ -899,36 +896,36 @@ export const Wordpress1 = () => {
           <div className="w-full overflow-hidden">
             <div className="ticker-row-right">
               {[
-                { name: 'Google',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg' },
-                { name: 'AWS',              logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-amplify.svg' }, // AWS wordmark
-                { name: 'HubSpot',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/hubspot.svg' },
-                { name: 'Zendesk',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zendesk.svg' },
-                { name: 'Intercom',         logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/intercom.svg' },
-                { name: 'Adobe',            logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/adobe.svg' },
-                { name: 'ActiveCampaign',   logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/active-campaign.svg' },
-                { name: 'Mailchimp',        logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/mailchimp.svg' },
-                { name: 'Shopify',          logo: 'https://logo.clearbit.com/shopify.com' },
-                { name: 'Trello',           logo: 'https://logo.clearbit.com/trello.com' },
+                { name: 'Google',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg', isWordmark: true },
+                { name: 'AWS',              logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-amplify.svg', isWordmark: true }, // AWS wordmark
+                { name: 'HubSpot',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/hubspot.svg', isWordmark: true },
+                { name: 'Zendesk',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zendesk.svg', isWordmark: true },
+                { name: 'Intercom',         logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/intercom.svg', isWordmark: true },
+                { name: 'Adobe',            logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/adobe.svg', isWordmark: true },
+                { name: 'ActiveCampaign',   logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/active-campaign.svg', isWordmark: true },
+                { name: 'Mailchimp',        logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/mailchimp.svg', isWordmark: true },
+                { name: 'Shopify',          logo: 'https://logo.clearbit.com/shopify.com', isWordmark: false },
+                { name: 'Trello',           logo: 'https://logo.clearbit.com/trello.com', isWordmark: false },
                 // duplicate
-                { name: 'Google',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg' },
-                { name: 'AWS',              logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-amplify.svg' },
-                { name: 'HubSpot',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/hubspot.svg' },
-                { name: 'Zendesk',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zendesk.svg' },
-                { name: 'Intercom',         logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/intercom.svg' },
-                { name: 'Adobe',            logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/adobe.svg' },
-                { name: 'ActiveCampaign',   logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/active-campaign.svg' },
-                { name: 'Mailchimp',        logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/mailchimp.svg' },
-                { name: 'Shopify',          logo: 'https://logo.clearbit.com/shopify.com' },
-                { name: 'Trello',           logo: 'https://logo.clearbit.com/trello.com' },
+                { name: 'Google',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg', isWordmark: true },
+                { name: 'AWS',              logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-amplify.svg', isWordmark: true },
+                { name: 'HubSpot',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/hubspot.svg', isWordmark: true },
+                { name: 'Zendesk',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zendesk.svg', isWordmark: true },
+                { name: 'Intercom',         logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/intercom.svg', isWordmark: true },
+                { name: 'Adobe',            logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/adobe.svg', isWordmark: true },
+                { name: 'ActiveCampaign',   logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/active-campaign.svg', isWordmark: true },
+                { name: 'Mailchimp',        logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/mailchimp.svg', isWordmark: true },
+                { name: 'Shopify',          logo: 'https://logo.clearbit.com/shopify.com', isWordmark: false },
+                { name: 'Trello',           logo: 'https://logo.clearbit.com/trello.com', isWordmark: false },
               ].map((c, i) => (
                 <div key={i} className="ticker-pill">
                   <img
                     src={c.logo}
                     alt={c.name}
-                    style={{ height: '18px', width: 'auto', objectFit: 'contain' }}
+                    style={{ height: c.isWordmark ? '20px' : '18px', width: 'auto', objectFit: 'contain' }}
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                   />
-                  <span className="ticker-pill-label">{c.name}</span>
+                  {!c.isWordmark && <span className="ticker-pill-label">{c.name}</span>}
                 </div>
               ))}
             </div>

@@ -395,9 +395,7 @@ button {
   animation: marquee 40s linear infinite;
 }
 
-.marquee-container:hover .animate-marquee {
-  animation-play-state: paused;
-}
+/* Marquee pause removed per user request */
 
 /* Orb Animation */
 @keyframes spin-orb {
