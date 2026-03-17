@@ -860,32 +860,33 @@ export const Wordpress1 = () => {
           <div className="w-full overflow-hidden">
             <div className="ticker-row-left">
               {[
-                { name: 'Launch Housing', domain: 'launchhousing.org.au' },
-                { name: 'Akubra',         domain: 'akubra.com.au' },
-                { name: 'Pacific Steel',  domain: 'pacificsteel.com.au' },
-                { name: 'Novo Shoes',     domain: 'novoshoes.com.au' },
-                { name: 'RetailCare',     domain: 'retailcare.com.au' },
-                { name: 'Chameleon',      domain: 'chameleon.pro' },
-                { name: 'Atlassian',      domain: 'atlassian.com' },
-                { name: 'Afterpay',       domain: 'afterpay.com' },
-                { name: 'Canva',          domain: 'canva.com' },
-                { name: 'Zip',            domain: 'zip.co' },
-                // duplicate
-                { name: 'Launch Housing', domain: 'launchhousing.org.au' },
-                { name: 'Akubra',         domain: 'akubra.com.au' },
-                { name: 'Pacific Steel',  domain: 'pacificsteel.com.au' },
-                { name: 'Novo Shoes',     domain: 'novoshoes.com.au' },
-                { name: 'RetailCare',     domain: 'retailcare.com.au' },
-                { name: 'Chameleon',      domain: 'chameleon.pro' },
-                { name: 'Atlassian',      domain: 'atlassian.com' },
-                { name: 'Afterpay',       domain: 'afterpay.com' },
-                { name: 'Canva',          domain: 'canva.com' },
-                { name: 'Zip',            domain: 'zip.co' },
+                { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au' },
+                { name: 'Akubra',         logo: 'https://logo.clearbit.com/akubra.com.au' },
+                { name: 'Pacific Steel',  logo: 'https://logo.clearbit.com/pacificsteel.com.au' },
+                { name: 'Novo Shoes',     logo: 'https://logo.clearbit.com/novoshoes.com.au' },
+                { name: 'RetailCare',     logo: 'https://logo.clearbit.com/retailcare.com.au' },
+                { name: 'Atlassian',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg' },
+                { name: 'Microsoft',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg' },
+                { name: 'Salesforce',     logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/salesforce.svg' },
+                { name: 'Slack',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg' },
+                { name: 'Zoom',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zoom.svg' },
+                // duplicate for parallax
+                { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au' },
+                { name: 'Akubra',         logo: 'https://logo.clearbit.com/akubra.com.au' },
+                { name: 'Pacific Steel',  logo: 'https://logo.clearbit.com/pacificsteel.com.au' },
+                { name: 'Novo Shoes',     logo: 'https://logo.clearbit.com/novoshoes.com.au' },
+                { name: 'RetailCare',     logo: 'https://logo.clearbit.com/retailcare.com.au' },
+                { name: 'Atlassian',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg' },
+                { name: 'Microsoft',      logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg' },
+                { name: 'Salesforce',     logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/salesforce.svg' },
+                { name: 'Slack',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg' },
+                { name: 'Zoom',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zoom.svg' },
               ].map((c, i) => (
                 <div key={i} className="ticker-pill">
                   <img
-                    src={`https://logo.clearbit.com/${c.domain}`}
+                    src={c.logo}
                     alt={c.name}
+                    style={{ height: '18px', width: 'auto', objectFit: 'contain' }}
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                   />
                   <span className="ticker-pill-label">{c.name}</span>
@@ -898,32 +899,33 @@ export const Wordpress1 = () => {
           <div className="w-full overflow-hidden">
             <div className="ticker-row-right">
               {[
-                { name: 'Cotton On',     domain: 'cottonon.com' },
-                { name: 'Bonds',         domain: 'bonds.com.au' },
-                { name: 'Lendlease',     domain: 'lendlease.com' },
-                { name: 'Seek',          domain: 'seek.com.au' },
-                { name: 'Realestate',    domain: 'realestate.com.au' },
-                { name: 'Kmart',         domain: 'kmart.com.au' },
-                { name: 'Target',        domain: 'target.com.au' },
-                { name: 'Officeworks',   domain: 'officeworks.com.au' },
-                { name: 'Bunnings',      domain: 'bunnings.com.au' },
-                { name: 'Domain',        domain: 'domain.com.au' },
+                { name: 'Google',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg' },
+                { name: 'AWS',              logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-amplify.svg' }, // AWS wordmark
+                { name: 'HubSpot',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/hubspot.svg' },
+                { name: 'Zendesk',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zendesk.svg' },
+                { name: 'Intercom',         logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/intercom.svg' },
+                { name: 'Adobe',            logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/adobe.svg' },
+                { name: 'ActiveCampaign',   logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/active-campaign.svg' },
+                { name: 'Mailchimp',        logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/mailchimp.svg' },
+                { name: 'Shopify',          logo: 'https://logo.clearbit.com/shopify.com' },
+                { name: 'Trello',           logo: 'https://logo.clearbit.com/trello.com' },
                 // duplicate
-                { name: 'Cotton On',     domain: 'cottonon.com' },
-                { name: 'Bonds',         domain: 'bonds.com.au' },
-                { name: 'Lendlease',     domain: 'lendlease.com' },
-                { name: 'Seek',          domain: 'seek.com.au' },
-                { name: 'Realestate',    domain: 'realestate.com.au' },
-                { name: 'Kmart',         domain: 'kmart.com.au' },
-                { name: 'Target',        domain: 'target.com.au' },
-                { name: 'Officeworks',   domain: 'officeworks.com.au' },
-                { name: 'Bunnings',      domain: 'bunnings.com.au' },
-                { name: 'Domain',        domain: 'domain.com.au' },
+                { name: 'Google',           logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg' },
+                { name: 'AWS',              logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-amplify.svg' },
+                { name: 'HubSpot',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/hubspot.svg' },
+                { name: 'Zendesk',          logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zendesk.svg' },
+                { name: 'Intercom',         logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/intercom.svg' },
+                { name: 'Adobe',            logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/adobe.svg' },
+                { name: 'ActiveCampaign',   logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/active-campaign.svg' },
+                { name: 'Mailchimp',        logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/mailchimp.svg' },
+                { name: 'Shopify',          logo: 'https://logo.clearbit.com/shopify.com' },
+                { name: 'Trello',           logo: 'https://logo.clearbit.com/trello.com' },
               ].map((c, i) => (
                 <div key={i} className="ticker-pill">
                   <img
-                    src={`https://logo.clearbit.com/${c.domain}`}
+                    src={c.logo}
                     alt={c.name}
+                    style={{ height: '18px', width: 'auto', objectFit: 'contain' }}
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                   />
                   <span className="ticker-pill-label">{c.name}</span>

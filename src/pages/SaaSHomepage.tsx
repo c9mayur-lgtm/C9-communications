@@ -53,14 +53,35 @@ const STEPS = [
 ];
 
 const clientLogos = [
-  'RetailCare', 'Chameleon Customer Contact', 'Novo Shoes',
-  'Launch Housing', 'Akubra', 'Pacific Steel', 'Atlassian', 'Afterpay'
+  { name: 'Atlassian', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/atlassian.svg' },
+  { name: 'Microsoft', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg' },
+  { name: 'Slack', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/slack.svg' },
+  { name: 'Google', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/google.svg' },
+  { name: 'Launch Housing', logo: 'https://logo.clearbit.com/launchhousing.org.au' },
+  { name: 'Akubra', logo: 'https://logo.clearbit.com/akubra.com.au' },
+  { name: 'Novo Shoes', logo: 'https://logo.clearbit.com/novoshoes.com.au' },
+  { name: 'Pacific Steel', logo: 'https://logo.clearbit.com/pacificsteel.com.au' },
 ];
 
 const TICKER_ROW1 = [...clientLogos, ...clientLogos];
 const TICKER_ROW2 = [
-  'Avaya', 'RingCentral', 'Fortinet', '8x8', 'Nutanix', 'Poly', 'Juniper', 'Palo Alto',
-  'Avaya', 'RingCentral', 'Fortinet', '8x8', 'Nutanix', 'Poly', 'Juniper', 'Palo Alto',
+  { name: 'Salesforce', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/salesforce.svg' },
+  { name: 'Zoom', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zoom.svg' },
+  { name: 'Adobe', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/adobe.svg' },
+  { name: 'HubSpot', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/hubspot.svg' },
+  { name: 'Zendesk', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zendesk.svg' },
+  { name: 'Intercom', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/intercom.svg' },
+  { name: 'AWS', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-amplify.svg' },
+  { name: 'ActiveCampaign', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/active-campaign.svg' },
+  // duplicate
+  { name: 'Salesforce', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/salesforce.svg' },
+  { name: 'Zoom', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zoom.svg' },
+  { name: 'Adobe', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/adobe.svg' },
+  { name: 'HubSpot', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/hubspot.svg' },
+  { name: 'Zendesk', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/zendesk.svg' },
+  { name: 'Intercom', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/intercom.svg' },
+  { name: 'AWS', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/aws-amplify.svg' },
+  { name: 'ActiveCampaign', logo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/active-campaign.svg' },
 ];
 
 /* ---- Icon renderer (no module-level JSX) ---- */
@@ -76,10 +97,18 @@ const SolutionIcon = ({ name }: { name: string }) => {
 };
 
 /* ---- Theme-Aware Logo Ticker Item ---- */
-const TickerBadge = ({ label }: { label: string }) => {
+const TickerBadge = ({ label, logo }: { label: string; logo?: string }) => {
   const { theme } = useTheme();
   return (
-    <div className="sp-ticker-item" style={{ opacity: theme === 'light' ? 0.65 : 1 }}>
+    <div className="sp-ticker-item" style={{ opacity: theme === 'light' ? 0.65 : 1, display: 'flex', alignItems: 'center', gap: '8px' }}>
+      {logo && (
+        <img 
+          src={logo} 
+          alt={label} 
+          style={{ height: '14px', width: 'auto', filter: theme === 'light' ? 'grayscale(1) brightness(0.5)' : 'brightness(0) invert(1)', opacity: 0.8 }} 
+          onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+        />
+      )}
       {label}
     </div>
   );
@@ -205,8 +234,8 @@ export const SaaSHomepage = () => {
                 transition={{ repeat: Infinity, duration: 28, ease: 'linear' }}
                 style={{ display: 'flex', gap: '0' }}
               >
-                {TICKER_ROW1.map((name, i) => (
-                  <TickerBadge key={`r1-${i}`} label={name} />
+                {TICKER_ROW1.map((item, i) => (
+                  <TickerBadge key={`r1-${i}`} label={item.name} logo={item.logo} />
                 ))}
               </motion.div>
             </div>
@@ -220,9 +249,9 @@ export const SaaSHomepage = () => {
                 transition={{ repeat: Infinity, duration: 32, ease: 'linear' }}
                 style={{ display: 'flex', gap: '0' }}
               >
-                {TICKER_ROW2.map((name, i) => (
+                {TICKER_ROW2.map((item, i) => (
                   <div key={`r2-${i}`} className="sp-ticker-item-dim" style={{ display: 'inline-flex', padding: 0, margin: '0 0px' }}>
-                    <TickerBadge label={name} />
+                    <TickerBadge label={item.name} logo={item.logo} />
                   </div>
                 ))}
               </motion.div>
