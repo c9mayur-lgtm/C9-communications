@@ -65,14 +65,14 @@
 
 | Route | File | Status | Notes |
 |---|---|---|---|
-| `/wordpress1` | `src/pages/Wordpress1.tsx` | ✅ **FINAL** | Client-approved homepage design |
-| `/` | `src/pages/SaaSHomepage.tsx` | 🔄 Experimental | Dark theme variant, may be replaced |
-| `/pricing` | `src/pages/Pricing.tsx` | 🔄 Built | Needs review |
-| `/about` | `src/pages/About.tsx` | 🔄 Built | Needs design system alignment |
-| `/contact` | `src/pages/Contact.tsx` | 🔄 Built | Needs design system alignment |
-| `/solutions` | `src/pages/Solutions.tsx` | 🔄 Built | Needs design system alignment |
-| `/industries` | `src/pages/Industries.tsx` | 🔄 Built | Needs design system alignment |
-| `/support` | `src/pages/Support.tsx` | 🔄 Built | Needs design system alignment |
+| `/` (Next.js) | `c9-next/src/app/page.tsx` | ✅ **MODULAR** | Full rebuild of Wordpress1 as modular components |
+| `/wordpress1` (Vite) | `src/pages/Wordpress1.tsx` | ✅ **LEGACY** | Approved design source of truth |
+| `/pricing` | `c9-next/src/app/pricing/page.tsx` | ✅ **PORTED** | Rebuilt with Design System |
+| `/about` | `c9-next/src/app/about/page.tsx` | ✅ **PORTED** | Rebuilt with Design System |
+| `/contact` | `c9-next/src/app/contact/page.tsx` | ✅ **PORTED** | Rebuilt with Design System |
+| `/solutions` | `c9-next/src/app/solutions/page.tsx` | ✅ **PORTED** | Rebuilt with Design System |
+| `/industries` | `c9-next/src/app/industries/page.tsx` | ✅ **PORTED** | Rebuilt with Design System |
+| `/support` | `c9-next/src/app/support/page.tsx` | ✅ **PORTED** | Rebuilt with Design System |
 | `/consultation` | `src/pages/Consultation.tsx` | 🔄 Built | Uses `ConsultationForm` component |
 
 ---
@@ -229,16 +229,22 @@ const country = request.geo?.country ?? 'AU';
 
 ## Next Steps (Ordered Priority)
 
-- [ ] **Phase 1:** Scaffold Next.js 15 project (new folder alongside current Vite project)
-- [ ] **Phase 1:** Port Wordpress1 navbar + mega menu → `components/layout/Navbar.tsx`
-- [ ] **Phase 1:** Port Wordpress1 footer → `components/layout/Footer.tsx`
-- [ ] **Phase 1:** Rebuild homepage at `app/page.tsx` using extracted components
-- [ ] **Phase 2:** Extract design tokens → `components/design-system/tokens.css`
-- [ ] **Phase 2:** Build `Typography.tsx`, `Button.tsx`, `Section.tsx` primitives
-- [ ] **Phase 3:** Build inner pages (Solutions, IT Services, About, Contact, Pricing)
-- [ ] **Phase 4:** Add metadata, JSON-LD, sitemap, robots.txt
-- [ ] **Phase 4:** Implement GEO middleware
-- [ ] **Phase 5:** Deploy to Vercel, connect `c9communications.com.au`, submit sitemap
+- [x] **Phase 1:** Scaffold Next.js 15 project (new folder `c9-next`)
+- [x] **Phase 1:** Port Wordpress1 navbar + mega menu → `c9-next/src/components/layout/Navbar.tsx`
+- [x] **Phase 1:** Port Wordpress1 footer → `c9-next/src/components/layout/WpFooter.tsx`
+- [x] **Phase 1:** Rebuild homepage at `c9-next/src/app/page.tsx` using extracted components (Hero, Ticker, Highlights, Services, Solutions, Why Partner, Vendors, Case Studies, FAQ, Consultation)
+- [x] **Phase 2:** Design System Implementation
+  - [x] Extract design tokens → `c9-next/src/components/design-system/tokens.css`
+  - [x] Build `Typography.tsx` (H1, H2, H3, Body, Label variants)
+  - [x] Build `Button.tsx` (Wrapped as `C9Button.tsx`) 
+  - [x] Build `Section.tsx` primitive for consistent padding
+- [x] **Phase 3:** Build inner pages (Solutions, About, Contact, Pricing, Industries, Support)
+- [ ] **Phase 4:** SEO & Metadata Implementation
+  - [ ] Add `generateMetadata()` to all pages
+  - [ ] Add `app/sitemap.ts` and `app/robots.ts`
+  - [ ] Implement JSON-LD schema for all pages
+- [ ] **Phase 5:** Implement GEO middleware
+- [ ] **Phase 6:** Deploy to Vercel and connect `c9communications.com.au`
 
 ---
 
