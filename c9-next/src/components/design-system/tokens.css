@@ -1,0 +1,58 @@
+@layer base {
+  :root {
+    /* Brand Colors */
+    --c9-primary: #5D00D6;
+    --c9-primary-rgb: 93, 0, 214;
+    --c9-secondary: #F4F0FA;
+    --c9-accent: #0027E2;
+    
+    /* Text Colors */
+    --c9-text: #0c1024;
+    --c9-text-muted: rgba(12, 16, 36, 0.62);
+    --c9-text-mid: rgba(12, 16, 36, 0.82);
+    
+    /* Backgrounds */
+    --c9-hero-bg: #F8FAFF;
+    --c9-surface: rgba(93, 0, 214, 0.05);
+    
+    /* Borders & Utils */
+    --c9-border: rgba(93, 0, 214, 0.18);
+    --c9-radius-card: 24px;
+    --c9-radius-button: 12px;
+    --c9-radius-pill: 100px;
+    
+    /* Typography */
+    --font-proxima: "Proxima Nova", "Inter", system-ui, sans-serif;
+  }
+
+  .dark {
+    --c9-primary: #8B5CF6; /* Lighter purple for dark mode visibility */
+    --c9-text: #F8FAFC;
+    --c9-text-muted: rgba(248, 250, 252, 0.62);
+    --c9-text-mid: rgba(248, 250, 252, 0.82);
+    --c9-hero-bg: #0c1024;
+    --c9-surface: rgba(139, 92, 246, 0.1);
+    --c9-border: rgba(139, 92, 246, 0.2);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .c9-container {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .c9-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
