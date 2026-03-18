@@ -47,6 +47,15 @@ const TELCO_SERVICES_CONTENT: Record<string, any> = {
       { title: 'Hardware Bundles', desc: 'The latest business devices with integrated service plans.', icon: <Server size={20} /> }
     ]
   },
+  voice_ai: {
+    heading: 'Voice AI Solutions',
+    description: 'Revolutionize your customer engagement with AI-powered voice solutions. From intelligent receptionists to real-time sentiment analysis, we bring the future of communication to your business.',
+    options: [
+      { title: 'AI Receptionist', desc: 'Automate your front desk with human-like AI that handles calls 24/7.', icon: <UserPlus size={20} /> },
+      { title: 'Intelligent IVR', desc: 'Smart menus that understand natural language for faster resolution.', icon: <Layers size={20} /> },
+      { title: 'Sentiment Analytics', desc: 'Real-time analysis of call quality and customer mood.', icon: <BarChart3 size={20} /> }
+    ]
+  },
   voice: {
     heading: 'Business Voice & Comms',
     description: "Modernize your communications with cloud-based phone systems that offer advanced features, crystal-clear quality, and easy management.",
@@ -1069,7 +1078,8 @@ export const Wordpress1 = () => {
             <div className="flex flex-nowrap overflow-x-auto no-scrollbar border-b border-gray-200">
               {[
                 { id: 'internet', label: 'Internet', icon: <Wifi size={20} /> },
-                { id: 'voice', label: 'Voice AI', icon: <Phone size={20} />, isNew: true },
+                { id: 'voice_ai', label: 'Voice AI', icon: <Volume2 size={20} />, isNew: true },
+                { id: 'voice', label: 'Voice', icon: <Phone size={20} /> },
                 { id: 'network', label: 'Network', icon: <Radio size={20} /> },
                 { id: 'mobile', label: 'Mobile', icon: <Smartphone size={20} /> },
               ].map((tab) => {
