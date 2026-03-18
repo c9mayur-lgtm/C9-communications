@@ -734,7 +734,7 @@ export const Wordpress1 = () => {
       </div>
 
       {/* Hero Section (Pixel-perfected to match reference) */}
-      <section className="pt-16 pb-10 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20 bg-white overflow-hidden min-h-[450px] lg:min-h-[580px] flex items-center">
+      <section className="pt-12 pb-8 md:pt-16 md:pb-12 lg:pt-20 lg:pb-16 bg-white overflow-hidden min-h-[400px] lg:min-h-[500px] flex items-center">
         <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
           <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-6 items-center relative z-10 w-full">
             <div className="py-4 pr-0 xl:pr-6">
@@ -776,7 +776,7 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Trusted By Ticker — Two-row pill style */}
-      <section className="bg-[#f8f7fc] py-10 md:py-14 border-t border-gray-100 overflow-hidden relative">
+      <section className="bg-[#f8f7fc] py-8 md:py-10 border-t border-gray-100 overflow-hidden relative">
         <style>{`
           @keyframes ticker-left {
             0%   { transform: translateX(0); }
@@ -942,7 +942,7 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Highlights Strip (Pixel-perfected mapping) */}
-      <section className="bg-white border-y border-gray-100 py-12 lg:py-16 relative z-20 overflow-hidden">
+      <section className="bg-white border-y border-gray-100 py-8 lg:py-12 relative z-20 overflow-hidden">
         <div className="container mx-auto px-6 lg:px-10" style={{ maxWidth: '1240px' }}>
           <div className="flex flex-nowrap md:flex-wrap lg:flex-nowrap overflow-x-auto lg:overflow-visible gap-8 md:gap-y-10 items-center justify-between no-scrollbar pb-4 md:pb-0">
 
@@ -1009,9 +1009,9 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Simplifying IT Section (Updated to Light Theme) */}
-      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
+      <section className="py-10 md:py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Proven Experience</span>
             <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-bold text-[#0c1024] tracking-tight leading-tight">
               Simplifying IT for a complex world.
@@ -1041,9 +1041,9 @@ export const Wordpress1 = () => {
                 icon: '/images/icons/scalability.png?v=2'
               }
             ].map((f, i) => (
-              <div key={i} className={`flex flex-col items-start flex-1 ${i === 0 ? 'pb-8 lg:pb-0 lg:pr-8' :
-                i === 3 ? 'pt-8 lg:pt-0 lg:pl-8' :
-                  'py-8 lg:py-0 lg:px-8'
+              <div key={i} className={`flex flex-col items-start flex-1 ${i === 0 ? 'pb-6 lg:pb-0 lg:pr-8' :
+                i === 3 ? 'pt-6 lg:pt-0 lg:pl-8' :
+                  'py-6 lg:py-0 lg:px-8'
                 }`}>
                 <div className="w-14 h-14 mb-6 flex items-center justify-start">
                   <img src={f.icon} alt={f.title} className="max-w-full max-h-full object-contain object-left" />
@@ -1057,9 +1057,9 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Telco Services Section (Matching Reference Image) */}
-      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
+      <section className="py-10 md:py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="mb-12">
+          <div className="mb-10">
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Our Expertise</span>
             <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight mb-8">
               Telco services, tailored for business.
@@ -1146,17 +1146,17 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Solutions Section - Original Purple Gradient */}
-      <section className="relative py-14 md:py-20 overflow-hidden">
+      <section className="relative py-12 md:py-16 overflow-hidden">
         {/* Full-width purple-to-white gradient */}
         <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#946CE2] to-white z-0" />
 
         <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
-          <div className="flex flex-col mb-10 md:mb-14 gap-4">
+          <div className="flex flex-col mb-10 gap-4">
             <span className="text-white text-[13px] font-bold uppercase tracking-[0.3em] mb-2 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>What we do</span>
             <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold tracking-tight text-white leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Solutions</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
               { icon: UserPlus, title: 'Managed Services', desc: 'Free your team from day-to-day IT issues with fully managed support, monitoring, and maintenance designed to keep your systems running smoothly.' },
               { icon: Cloud, title: 'Infrastructure & Cloud', desc: 'Modernize your IT environment with scalable cloud solutions and robust infrastructure services that support your business today and tomorrow.' },
@@ -1226,9 +1226,9 @@ export const Wordpress1 = () => {
       */}
 
       {/* Datashake Inspired Section */}
-      <section className="py-14 md:py-20 bg-white border-t border-gray-100">
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto px-6">
+          <div className="text-center mb-10 max-w-3xl mx-auto px-6">
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>What we do</span>
             <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-bold text-[#0c1024] leading-[1.1] tracking-tight">
               Solving IT challenges in every industry, every day.
@@ -1335,9 +1335,9 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Support Section (Inspiration from Aussie Broadband) */}
-      <section className="py-14 md:py-20 bg-white border-t border-gray-100">
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="mb-14 text-center">
+          <div className="mb-10 text-center">
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Support</span>
             <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight leading-[1.1] mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               World‑Class Support Delivered by <br />Fully Trained Australian Experts
@@ -1426,9 +1426,9 @@ export const Wordpress1 = () => {
       </section>
 
       {/* IT Vendors Carousel Section (Dark Premium Theme) */}
-      <section className="py-14 md:py-20 bg-[#0c1024] text-white overflow-hidden">
+      <section className="py-12 md:py-16 bg-[#0c1024] text-white overflow-hidden">
         <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-10">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 gap-10">
             <div className="max-w-2xl w-full">
               <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Strategic Partnerships</span>
               <h2 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[54px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
@@ -1486,9 +1486,9 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Case Studies Section (Interactive Slider) */}
-      <section className="py-12 md:py-16 bg-white overflow-hidden relative">
+      <section className="py-10 md:py-12 bg-white overflow-hidden relative">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-8">
             <div className="max-w-2xl">
               <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Success Stories</span>
               <h2 className="text-[48px] font-bold text-[#0c1024] leading-tight tracking-tight">
@@ -1555,13 +1555,13 @@ export const Wordpress1 = () => {
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-20">
             {/* Left side */}
             <div>
-              <div className="mb-6">
+              <div className="mb-4">
                 <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>FAQ</span>
               </div>
-              <h2 className="text-[28px] md:text-[36px] lg:text-[42px] font-bold text-[#0c1024] leading-tight tracking-tight mb-6">
+              <h2 className="text-[28px] md:text-[36px] lg:text-[42px] font-bold text-[#0c1024] leading-tight tracking-tight mb-4">
                 Have more questions?
               </h2>
-              <p className="text-gray-500 text-[18px] mb-12 leading-relaxed">
+              <p className="text-gray-500 text-[18px] mb-8 leading-relaxed">
                 Our team is designed to make managing your IT easy and stress-free. With intuitive features, you can track your needs and support effortlessly.
               </p>
 
@@ -1589,7 +1589,7 @@ export const Wordpress1 = () => {
       </section>
 
       {/* Testimonials Section (Shadcn Studio inspired) */}
-      <section className="py-12 md:py-16 bg-white border-t border-gray-100 overflow-hidden">
+      <section className="py-10 md:py-12 bg-white border-t border-gray-100 overflow-hidden">
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="grid lg:grid-cols-[1fr_2.4fr] gap-16 items-start">
             {/* Left Column: Heading & Navigation */}
@@ -1716,13 +1716,13 @@ export const Wordpress1 = () => {
 
       {/* Footer (Dark Theme with Animated Bubbles) */}
 
-      <footer className="bg-black text-white pt-24 font-sans">
-        <div className="container mx-auto px-10 grid lg:grid-cols-2 gap-16 mb-24" style={{ maxWidth: '1240px' }}>
+      <footer className="bg-black text-white pt-16 font-sans">
+        <div className="container mx-auto px-10 grid lg:grid-cols-2 gap-16 mb-16" style={{ maxWidth: '1240px' }}>
 
           {/* Left side: Navigation links & compliance */}
           <div className="flex flex-col justify-between">
 
-            <div className="mb-16">
+            <div className="mb-10">
               <h4 className="font-bold text-[22px] mb-6 text-white tracking-tight">Solutions</h4>
               <div className="grid grid-cols-2 gap-8">
                 <ul className="space-y-3.5 text-[15px]">
@@ -1740,7 +1740,7 @@ export const Wordpress1 = () => {
               </div>
             </div>
 
-            <div className="mb-16">
+            <div className="mb-10">
               <h4 className="font-bold text-[22px] mb-6 text-white tracking-tight">Company</h4>
               <div className="grid grid-cols-2 gap-8">
                 <ul className="space-y-3.5 text-[15px]">
@@ -1778,7 +1778,7 @@ export const Wordpress1 = () => {
           </div>
 
           {/* Right side: Logo & CTA */}
-          <div className="flex flex-col justify-center items-center lg:items-end h-full gap-8 mb-16 lg:mb-0">
+          <div className="flex flex-col justify-center items-center lg:items-end h-full gap-8 mb-10 lg:mb-0">
             <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] md:w-[280px] lg:w-[380px] filter brightness-0 invert" />
             <Button
               size="lg"
@@ -1839,7 +1839,7 @@ export const Wordpress1 = () => {
             </div>
           </div>
 
-          <div className="container mx-auto px-10 mt-10 flex flex-col justify-center items-center text-[12px] text-gray-500 gap-2" style={{ maxWidth: '1240px' }}>
+          <div className="container mx-auto px-10 mt-6 flex flex-col justify-center items-center text-[12px] text-gray-500 gap-2" style={{ maxWidth: '1240px' }}>
             <span>© 2026 C9 Communications. All rights reserved.</span>
             <div className="flex gap-4">
               <a href="#" className="hover:text-slate-900 transition-colors">Terms & Conditions</a>
@@ -1848,7 +1848,7 @@ export const Wordpress1 = () => {
           </div>
 
           {/* Acknowledgement of Country */}
-          <div className="container mx-auto px-10 mt-24 pb-12 flex flex-col items-center text-center" style={{ maxWidth: '900px' }}>
+          <div className="container mx-auto px-10 mt-16 pb-12 flex flex-col items-center text-center" style={{ maxWidth: '900px' }}>
             <p className="text-[13px] text-gray-500 leading-relaxed font-medium italic" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               We acknowledge the Traditional Owners on whose lands we work. We pay our respects to their elders past and present and recognise their continuing connection to this land.
             </p>

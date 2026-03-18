@@ -3,9 +3,9 @@ import { FadeIn } from '../shared/FadeIn';
 
 export const ConsultationForm = ({ showHeader = true }) => {
   return (
-    <div className="bg-[#C4B5FD] py-16 md:py-24" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <div className="bg-[#C4B5FD] py-12 md:py-16" style={{ fontFamily: "'Inter', sans-serif" }}>
       {showHeader && (
-        <section className="bg-[#0B0121] py-20 md:py-32 relative text-white">
+        <section className="bg-[#0B0121] py-16 md:py-24 relative text-white">
           <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
             <FadeIn>
               <div className="inline-block bg-white/10 px-3 py-1.5 rounded-[4px] text-[11px] font-bold tracking-[0.05em] uppercase mb-8 border border-white/10">
@@ -21,14 +21,14 @@ export const ConsultationForm = ({ showHeader = true }) => {
         </section>
       )}
 
-      <div className={`container mx-auto px-6 md:px-8 max-w-[1100px] relative transition-all duration-500 ${showHeader ? '-mt-24 md:-mt-32' : 'mt-10'}`}>
+      <div className={`container mx-auto px-6 md:px-8 max-w-[1100px] relative transition-all duration-500 ${showHeader ? '-mt-24 md:-mt-32' : 'mt-4'}`}>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-12 lg:gap-16 items-start">
           
           {/* Left Column (Content) */}
           <div className={`text-left ${showHeader ? 'pt-24 md:pt-32' : 'pt-0'}`}>
             <FadeIn delay={0.2}>
               {!showHeader && (
-                <div className="mb-10">
+                <div className="mb-6">
                   <div className="inline-block bg-[#0B0121] text-white px-3 py-1.5 rounded-[4px] text-[11px] font-bold tracking-[0.05em] uppercase mb-6">
                     CONTACT US
                   </div>
@@ -38,11 +38,11 @@ export const ConsultationForm = ({ showHeader = true }) => {
                 </div>
               )}
 
-              <p className="text-[16px] md:text-[18px] text-[#1A1C1E] font-medium leading-[1.6] mb-10 max-w-[480px]">
+              <p className="text-[16px] md:text-[18px] text-[#1A1C1E] font-medium leading-[1.6] mb-6 max-w-[480px]">
                 We're happy to answer any questions you may have and help you determine which of our services best fit your needs.
               </p>
               
-              <div className="mb-12">
+              <div className="mb-8">
                 <p className="font-extrabold text-[#0B0121] text-[18px] md:text-[20px] mb-6">
                   Call us at: <a href="tel:1800000299" className="text-[#0B0121] no-underline border-b-2 border-[#0B0121] hover:text-[#5D00D6] hover:border-[#5D00D6] transition-colors">1800 000 299</a>
                 </p>
