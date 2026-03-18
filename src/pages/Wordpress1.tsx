@@ -8,7 +8,7 @@ import {
   ChevronDown, Wifi, Cloud, HardDrive, Headphones, Phone, Network,
   Globe, Monitor, Radio, Cpu, BarChart3,
   Infinity as InfinityIcon, LayoutGrid, ShieldCheck, Volume2,
-  GraduationCap, ShieldAlert, Users, Play, Star,
+  GraduationCap, ShieldAlert, Users, Star,
   ChevronLeft, PhoneCall, Layers, Menu, X, CheckCircle
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -605,25 +605,25 @@ export const Wordpress1 = () => {
 
   const CASE_STUDIES = [
     {
-      tag: 'Non-profit organisation',
-      title: 'Launch Housing: Connected for change',
-      desc: "As essential services moved online, Launch Housing's aging buildings and lean IT capabilities made it difficult to provide the reliable connectivity that residents depended on.",
-      img: 'https://placehold.co/1200x675/1a1a2e/5D00D6?text=Launch+Housing+Case+Study',
-      videoText: 'C9 CONNECTING AUSTRALIA'
+      tag: 'NON-PROFIT ORGANISATION',
+      title: 'Launch Housing Case Study',
+      videoText: 'Launch Housing Case Study',
+      desc: "Launch Housing helps hundreds of Melburnians find stable housing every single day. But their aging phone system and...",
+      img: '/images/case-studies/case-study-1.jpg'
     },
     {
-      tag: 'Retail',
-      title: 'Akubra: Rural setting, old copper',
+      tag: 'RETAIL',
+      title: 'Akubra Case Study',
+      videoText: 'Akubra Case Study',
       desc: 'The rural setting and old copper technology at Akubra posed significant hurdles, with a sluggish internet connection that dropped out frequently.',
-      img: 'https://placehold.co/1200x675/0c1024/5D00D6?text=Akubra+Case+Study',
-      videoText: 'C9 CONNECTING AUSTRALIA'
+      img: '/images/case-studies/case-study-2.jpg'
     },
     {
-      tag: 'Manufacturing',
-      title: 'Pacific Steel: Streamlined Comms',
+      tag: 'MANUFACTURING',
+      title: 'Pacific Steel Case Study',
+      videoText: 'Pacific Steel Case Study',
       desc: 'Modernizing legacy PABX systems with cloud voice and fiber connectivity across multiple factory sites.',
-      img: 'https://placehold.co/1200x675/0c1024/5D00D6?text=Pacific+Steel+Case+Study',
-      videoText: 'C9 CONNECTING AUSTRALIA'
+      img: '/images/case-studies/case-study-3.jpg'
     }
   ];
 
@@ -1069,9 +1069,9 @@ export const Wordpress1 = () => {
             <div className="flex flex-nowrap overflow-x-auto no-scrollbar border-b border-gray-200">
               {[
                 { id: 'internet', label: 'Internet', icon: <Wifi size={20} /> },
+                { id: 'voice', label: 'Voice AI', icon: <Phone size={20} />, isNew: true },
                 { id: 'network', label: 'Network', icon: <Radio size={20} /> },
                 { id: 'mobile', label: 'Mobile', icon: <Smartphone size={20} /> },
-                { id: 'voice', label: 'Voice', icon: <Phone size={20} /> },
               ].map((tab) => {
                 const isActive = activeTelcoTab === tab.id;
                 return (
@@ -1087,6 +1087,11 @@ export const Wordpress1 = () => {
                       {tab.icon}
                     </span>
                     <span className="whitespace-nowrap">{tab.label}</span>
+                    {tab.isNew && (
+                      <span className="ml-1.5 px-1.5 py-0.5 bg-red-500 text-white text-[9px] font-bold rounded-sm uppercase tracking-tighter leading-none inline-flex items-center justify-center">
+                        NEW
+                      </span>
+                    )}
                   </button>
                 );
               })}
@@ -1353,7 +1358,7 @@ export const Wordpress1 = () => {
               {
                 title: "Safeguarding Your Business",
                 desc: "Our Priority 1 Support Team ensures critical issues are escalated instantly. We monitor our network 24/7 to safeguard your business connectivity.",
-                img: "/images/support/team.png",
+                img: "/images/support/safeguarding-support.jpg",
                 link: "SEE MORE"
               },
               {
@@ -1503,8 +1508,8 @@ export const Wordpress1 = () => {
                 <ChevronLeft size={24} />
               </button>
               <button
-                onClick={() => setCaseStudyIdx(prev => Math.min(CASE_STUDIES.length - 2, prev + 1))}
-                className={`w-14 h-14 rounded-full border flex items-center justify-center transition-all ${caseStudyIdx >= CASE_STUDIES.length - 2 ? 'border-gray-100 text-gray-300 cursor-not-allowed' : 'border-[#5D00D6]/20 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white shadow-lg'}`}
+                onClick={() => setCaseStudyIdx(prev => Math.min((typeof window !== 'undefined' && window.innerWidth < 768 ? CASE_STUDIES.length - 1 : CASE_STUDIES.length - 2), prev + 1))}
+                className={`w-14 h-14 rounded-full border flex items-center justify-center transition-all ${caseStudyIdx >= (typeof window !== 'undefined' && window.innerWidth < 768 ? CASE_STUDIES.length - 1 : CASE_STUDIES.length - 2) ? 'border-gray-100 text-gray-300 cursor-not-allowed' : 'border-[#5D00D6]/20 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white shadow-lg'}`}
               >
                 <ChevronRight size={24} />
               </button>
@@ -1521,14 +1526,12 @@ export const Wordpress1 = () => {
                 <div key={idx} className="min-w-full md:min-w-[calc(50%-16px)] group cursor-pointer">
                   <div className="relative aspect-video rounded-none overflow-hidden mb-8 shadow-2xl">
                     <img src={cs.img} alt={cs.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-white text-[24px] lg:text-[32px] font-black tracking-tighter mb-4 px-4 leading-tight">
-                          {cs.videoText}
-                        </div>
-                        <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto hover:bg-white/30 transition-all">
-                          <Play size={24} fill="white" className="text-white ml-1" />
-                        </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-8">
+                      <div className="text-white text-[24px] md:text-[28px] font-bold leading-tight">
+                        C9 Communications Australia
+                      </div>
+                      <div className="text-white text-[18px] md:text-[22px] font-bold leading-tight">
+                        {cs.videoText}
                       </div>
                     </div>
                   </div>
