@@ -9,7 +9,7 @@ import {
   Globe, Monitor, Radio, Cpu, BarChart3,
   Infinity as InfinityIcon, LayoutGrid, ShieldCheck, Volume2,
   GraduationCap, ShieldAlert, Users, Play, Star,
-  HelpCircle, ChevronLeft, PhoneCall, Layers, Menu, X, CheckCircle
+  ChevronLeft, PhoneCall, Layers, Menu, X, CheckCircle
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ConsultationForm } from '../components/landing/ConsultationForm';
