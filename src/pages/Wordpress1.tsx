@@ -9,10 +9,11 @@ import {
   Globe, Monitor, Radio, Cpu, BarChart3,
   Infinity as InfinityIcon, LayoutGrid, ShieldCheck, Volume2,
   GraduationCap, ShieldAlert, Users, Star,
-  ChevronLeft, PhoneCall, Layers, Menu, X, CheckCircle
+  ChevronLeft, Layers, Menu, X, CheckCircle
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ConsultationForm } from '../components/landing/ConsultationForm';
+import { IndustryMarquee } from '../components/landing/IndustryMarquee';
 
 
 /* ─────────────────────────────────────────────
@@ -442,6 +443,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
 // ── Components ─────────────────────────────────────────────────────────────
 
+/*
 const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) => {
   const [displayValue, setDisplayValue] = useState("0");
   const nodeRef = useRef<HTMLSpanElement>(null);
@@ -481,6 +483,7 @@ const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) 
 
   return <span ref={nodeRef}>{displayValue}</span>;
 };
+*/
 
 
 
@@ -1197,51 +1200,33 @@ export const Wordpress1 = () => {
         </div>
       </section>
 
-      {/* Industries Section - Hidden for now
-      <section className="py-24 bg-gray-50 border-t border-gray-100">
+      {/* Industry Marquee Section (Premium Vertical Scroll) */}
+      <section className="py-12 md:py-16 bg-[#f8f7fc] border-t border-gray-100 overflow-hidden">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="max-w-3xl mb-16">
-            <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-widest mb-4 block">Industry Solutions</span>
-            <h2 className="text-[48px] font-bold text-[#0c1024] tracking-tight leading-tight">
+          <div className="text-center mb-10">
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>What we do</span>
+            <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight mb-8">
               Solving IT challenges in every industry, every day.
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-            {[
-              { icon: HeartPulse, name: 'Healthcare' },
-              { icon: Briefcase, name: 'Professional Services' },
-              { icon: Heart, name: 'Non-profit' },
-              { icon: GraduationCap, name: 'Education' },
-              { icon: ShoppingBag, name: 'Retail' },
-              { icon: Home, name: 'Real Estate' },
-            ].map((ind, i) => (
-              <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-[#5D00D6] hover:shadow-md transition-all group">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-[#F4F0FA] text-[#5D00D6] rounded-lg flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
-                    <ind.icon size={20} />
-                  </div>
-                  <span className="font-bold text-[15px] text-[#0c1024]">{ind.name}</span>
-                </div>
-                <ChevronRight className="text-gray-300 group-hover:text-[#5D00D6]" size={20} />
-              </div>
-            ))}
-          </div>
+          <IndustryMarquee />
 
-          <button className="text-[#5D00D6] font-bold text-[15px] flex items-center gap-2 hover:underline">
-            View All Industries <ArrowRight size={16} />
-          </button>
+          <div className="flex justify-center mt-12">
+            <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group">
+              Explore Industry Solutions <ArrowRight className="transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
         </div>
       </section>
-      */}
 
-      {/* Datashake Inspired Section */}
+      {/* Datashake Inspired Section Hidden for now
       <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="text-center mb-10 max-w-3xl mx-auto px-6">
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>What we do</span>
-            <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-bold text-[#0c1024] leading-[1.1] tracking-tight">
-              Solving IT challenges in every industry, every day.
+            <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight mb-8">
+              Our Solutions
             </h2>
           </div>
 
@@ -1322,7 +1307,6 @@ export const Wordpress1 = () => {
                   {block.desc}
                 </p>
 
-                {/* Metrics Row */}
                 <div className="mt-auto pt-6 border-t border-gray-200 flex items-center gap-0">
                   {block.metrics.map((m, mi) => (
                     <React.Fragment key={mi}>
@@ -1343,6 +1327,7 @@ export const Wordpress1 = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Support Section (Inspiration from Aussie Broadband) */}
       <section className="py-12 md:py-16 bg-white border-t border-gray-100">
