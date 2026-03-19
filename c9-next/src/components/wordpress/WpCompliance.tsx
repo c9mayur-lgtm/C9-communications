@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ShieldCheck, Database, Globe } from 'lucide-react';
+import { ShieldCheck, Database } from 'lucide-react';
 
 export const WpCompliance = () => {
   return (
@@ -42,71 +42,67 @@ export const WpCompliance = () => {
 
           {/* Right Column (Compliance Grid) */}
           <div className="flex flex-col gap-4 w-full">
-            {/* Top row: 4 blocks */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              
-              {/* NBN Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-[3/4] sm:aspect-[3/4.5] flex flex-col items-center justify-center p-4 relative overflow-hidden group hover:bg-[#5200BD] transition-colors shadow-xl">
-                <div className="flex items-center gap-1.5 text-white">
-                  <span className="font-bold text-[28px] tracking-tight">nbn</span>
-                  <span className="text-[10px] self-start mt-2">™</span>
-                  <div className="w-8 h-8 rounded-full border-[2px] border-dotted border-white/60 ml-1 flex items-center justify-center">
-                    <div className="w-4 h-4 rounded-full border border-white/60 flex items-center justify-center">
-                      <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
+            {/* Top row: 3 blocks */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
 
-              {/* Telco Together Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-[3/4] sm:aspect-[3/4.5] flex flex-col items-center justify-center p-5 relative group hover:bg-[#5200BD] transition-colors shadow-xl">
-                <div className="text-white flex flex-col items-start leading-none font-medium">
-                  <div className="flex items-center text-[22px]">
-                    Telc<span className="text-green-400">o</span>
-                  </div>
-                  <div className="text-[26px] tracking-tight italic" style={{ fontFamily: 'serif' }}>Together</div>
-                  <div className="text-[9px] uppercase tracking-widest mt-1 opacity-80">Foundation</div>
-                </div>
+              {/* NBN Box */}
+              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-colors shadow-xl">
+                <img
+                  src="/images/compliance/nbn.png"
+                  alt="NBN"
+                  className="w-full h-full object-contain"
+                />
               </div>
 
               {/* ISO Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-[3/4] sm:aspect-[3/4.5] flex flex-col items-center justify-center p-6 relative group hover:bg-[#5200BD] transition-colors shadow-xl text-white">
-                <Globe size={48} strokeWidth={1} className="mb-4 opacity-90" />
-                <span className="font-black text-[15px] tracking-widest mt-auto">ISO 27001</span>
+              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-colors shadow-xl">
+                <img
+                  src="/images/compliance/ISO.png"
+                  alt="ISO 27001"
+                  className="w-full h-full object-contain"
+                />
               </div>
 
               {/* APNIC Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-[3/4] sm:aspect-[3/4.5] flex flex-col items-center justify-center p-4 relative group hover:bg-[#5200BD] transition-colors shadow-xl">
-                 <div className="text-white font-black text-[22px] tracking-wider flex items-center gap-1">
-                   <span className="text-[16px] font-normal tracking-tight opacity-80">(::)</span> APNIC
-                 </div>
+              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-colors shadow-xl">
+                <img
+                  src="/images/compliance/APNIC.png"
+                  alt="APNIC"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Middle row: 2 blocks */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              {/* Telco Together Foundation Box */}
+              <div className="bg-[#5D00D6] rounded-2xl h-[160px] flex items-center justify-center p-8 group hover:bg-[#5200BD] transition-colors shadow-xl">
+                <img
+                  src="/images/compliance/TTF.png"
+                  alt="Telco Together Foundation"
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
 
+              {/* TIO Box */}
+              <div className="bg-[#5D00D6] rounded-2xl h-[160px] flex items-center justify-center p-8 group hover:bg-[#5200BD] transition-colors shadow-xl">
+                <img
+                  src="/images/compliance/TIO.png"
+                  alt="Telecommunications Industry Ombudsman"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
             </div>
 
             {/* Bottom Row: ACMA */}
-            <div className="bg-[#5D00D6] rounded-[24px] w-full p-6 sm:p-8 flex items-center justify-center hover:bg-[#5200BD] transition-colors shadow-xl gap-6 flex-wrap sm:flex-nowrap">
-               <div className="flex items-center gap-4 border-r-0 sm:border-r border-white/20 pr-0 sm:pr-8">
-                 <div className="w-12 h-16 flex items-center justify-center opacity-80">
-                   <img src="/images/compliance/aus-gov.png" alt="" className="h-full object-contain" onError={(e) => {
-                     (e.currentTarget as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNOSAxMmwyIDIgNC00Ii8+PC9zdmc+';
-                   }} />
-                 </div>
-                 <div className="flex text-white font-black text-[32px] tracking-tighter">
-                   <div className="relative w-8 h-8 rounded-full overflow-hidden mr-2 mt-1 hidden xs:block">
-                     <div className="absolute top-0 right-0 w-4 h-4 rounded-full bg-red-500"></div>
-                     <div className="absolute bottom-0 left-0 w-4 h-4 rounded-full bg-yellow-400"></div>
-                     <div className="absolute top-0 left-0 w-4 h-4 rounded-full bg-teal-400"></div>
-                   </div>
-                   acma
-                 </div>
-               </div>
-               
-               <div className="text-white font-bold leading-tight text-[15px] sm:text-[18px] max-w-[200px]">
-                 Australian<br/>
-                 Communications<br/>
-                 and Media Authority
-               </div>
+            <div className="bg-[#5D00D6] rounded-2xl w-full py-6 px-10 flex items-center justify-center hover:bg-[#5200BD] transition-colors shadow-xl">
+              <img
+                src="/images/compliance/ACMA.png"
+                alt="ACMA - Australian Communications and Media Authority"
+                className="max-h-[64px] object-contain"
+              />
             </div>
 
           </div>
