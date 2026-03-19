@@ -213,7 +213,7 @@ export const Navbar = () => {
             <img 
               src="/images/c9_logo_scrolled.svg" 
               alt="C9 Communications" 
-              className="h-[34px] md:h-[36px]" 
+              className="h-[45px] w-auto object-contain" 
             />
         </Link>
         
