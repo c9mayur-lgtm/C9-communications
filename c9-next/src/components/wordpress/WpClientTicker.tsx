@@ -28,6 +28,10 @@ export const WpClientTicker = () => {
           animation: ticker-right 44s linear infinite;
           will-change: transform;
         }
+        .ticker-wrapper:hover .ticker-row-left,
+        .ticker-wrapper:hover .ticker-row-right {
+          animation-play-state: paused;
+        }
         .ticker-pill {
           display: inline-flex;
           align-items: center;
@@ -59,9 +63,8 @@ export const WpClientTicker = () => {
 
       {/* Heading */}
       <p
-        className="text-center font-bold tracking-[0.18em] uppercase text-slate-400 text-[11px] mb-8"
-        style={{ fontFamily: '"Proxima Nova", sans-serif' }}
-      >
+        className="text-center font-bold tracking-[0.3em] uppercase text-[#5D00D6] text-[13px] mb-8"
+        style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
         Trusted by leading Australian businesses
       </p>
 
@@ -71,7 +74,7 @@ export const WpClientTicker = () => {
       <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10"
         style={{ width: '120px', background: 'linear-gradient(to left, #f8f7fc 60%, transparent)' }} />
 
-      <div className="flex flex-col gap-3 overflow-hidden">
+      <div className="ticker-wrapper flex flex-col gap-3 overflow-hidden">
 
         {/* Row 1 — scrolls LEFT */}
         <div className="w-full overflow-hidden">

@@ -9,21 +9,21 @@ const CASE_STUDIES = [
     tag: 'Non-profit organisation',
     title: 'Launch Housing: Connected for change',
     desc: "As essential services moved online, Launch Housing's aging buildings and lean IT capabilities made it difficult to provide the reliable connectivity that residents depended on.",
-    img: 'https://placehold.co/1200x675/1a1a2e/5D00D6?text=Launch+Housing+Case+Study',
+    img: '/images/case-studies/case-study-1.jpg',
     videoText: 'C9 CONNECTING AUSTRALIA'
   },
   {
     tag: 'Retail',
     title: 'Akubra: Rural setting, old copper',
     desc: 'The rural setting and old copper technology at Akubra posed significant hurdles, with a sluggish internet connection that dropped out frequently.',
-    img: 'https://placehold.co/1200x675/0c1024/5D00D6?text=Akubra+Case+Study',
+    img: '/images/case-studies/case-study-2.jpg',
     videoText: 'C9 CONNECTING AUSTRALIA'
   },
   {
     tag: 'Manufacturing',
     title: 'Pacific Steel: Streamlined Comms',
     desc: 'Modernizing legacy PABX systems with cloud voice and fiber connectivity across multiple factory sites.',
-    img: 'https://placehold.co/1200x675/0c1024/5D00D6?text=Pacific+Steel+Case+Study',
+    img: '/images/case-studies/case-study-3.jpg',
     videoText: 'C9 CONNECTING AUSTRALIA'
   }
 ];

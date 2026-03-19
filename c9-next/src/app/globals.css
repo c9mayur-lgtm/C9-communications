@@ -69,3 +69,33 @@
     font-family: var(--font-proxima);
   }
 }
+
+@layer utilities {
+  .mask-fade-v {
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  }
+}
+
+@keyframes marquee-v-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes marquee-v-down {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-marquee-v-up {
+  animation: marquee-v-up 50s linear infinite;
+}
+
+.animate-marquee-v-down {
+  animation: marquee-v-down 50s linear infinite;
+}
+
+.hover\:pause:hover {
+  animation-play-state: paused;
+}
+
