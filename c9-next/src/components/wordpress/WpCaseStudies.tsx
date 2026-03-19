@@ -6,25 +6,25 @@ import { ChevronRight, ChevronLeft, Play } from 'lucide-react';
 
 const CASE_STUDIES = [
   {
-    tag: 'Non-profit organisation',
-    title: 'Launch Housing: Connected for change',
-    desc: "As essential services moved online, Launch Housing's aging buildings and lean IT capabilities made it difficult to provide the reliable connectivity that residents depended on.",
+    tag: 'NON-PROFIT ORGANISATION',
+    title: 'Launch Housing Case Study',
+    desc: "Launch Housing helps hundreds of Melburnians find stable housing every single day. But their aging phone system and...",
     img: '/images/case-studies/case-study-1.jpg',
-    videoText: 'C9 CONNECTING AUSTRALIA'
+    videoText: 'Launch Housing Case Study'
   },
   {
-    tag: 'Retail',
-    title: 'Akubra: Rural setting, old copper',
+    tag: 'RETAIL',
+    title: 'Akubra Case Study',
     desc: 'The rural setting and old copper technology at Akubra posed significant hurdles, with a sluggish internet connection that dropped out frequently.',
     img: '/images/case-studies/case-study-2.jpg',
-    videoText: 'C9 CONNECTING AUSTRALIA'
+    videoText: 'Akubra Case Study'
   },
   {
-    tag: 'Manufacturing',
-    title: 'Pacific Steel: Streamlined Comms',
+    tag: 'MANUFACTURING',
+    title: 'Pacific Steel Case Study',
     desc: 'Modernizing legacy PABX systems with cloud voice and fiber connectivity across multiple factory sites.',
     img: '/images/case-studies/case-study-3.jpg',
-    videoText: 'C9 CONNECTING AUSTRALIA'
+    videoText: 'Pacific Steel Case Study'
   }
 ];
 
@@ -72,14 +72,12 @@ export const WpCaseStudies = () => {
               <div key={idx} className="min-w-full md:min-w-[calc(50%-16px)] group cursor-pointer">
                 <div className="relative aspect-video rounded-none overflow-hidden mb-8 shadow-2xl">
                   <img src={cs.img} alt={cs.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-white text-[24px] lg:text-[32px] font-black tracking-tighter mb-4 px-4 leading-tight">
-                        {cs.videoText}
-                      </div>
-                      <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto hover:bg-white/30 transition-all">
-                        <Play size={24} fill="white" className="text-white ml-1" />
-                      </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-8">
+                    <div className="text-white text-[24px] md:text-[28px] font-bold leading-tight">
+                      C9 Communications Australia
+                    </div>
+                    <div className="text-white text-[18px] md:text-[22px] font-bold leading-tight">
+                      {cs.videoText}
                     </div>
                   </div>
                 </div>

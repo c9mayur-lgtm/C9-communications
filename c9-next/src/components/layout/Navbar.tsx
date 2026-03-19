@@ -252,13 +252,6 @@ export const Navbar = () => {
           <Button variant="outline" className="hidden sm:flex border-2 font-bold px-6 h-11 border-gray-200 text-gray-400 hover:bg-gray-800 hover:text-white transition-all rounded-xl">
             C9 DEFENSE 🛡️
           </Button>
-
-          <Button 
-            className="md:px-8 h-11 shadow-2xl hover:gap-3 transition-all group font-bold rounded-xl"
-            onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Contact Us <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </Button>
           
           <button 
             className="xl:hidden p-2 rounded-lg transition-colors text-[#0c1024] hover:bg-gray-100"
