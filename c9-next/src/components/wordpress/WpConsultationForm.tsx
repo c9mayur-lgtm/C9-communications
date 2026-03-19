@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
   <motion.div
@@ -17,106 +18,63 @@ const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export const WpConsultationForm = ({ showHeader = true }) => {
   return (
-    <div style={{ background: '#C4B5FD', padding: '100px 0', fontFamily: "'Inter', sans-serif" }}>
+    <div className="bg-[#C4B5FD] py-20 md:py-32" style={{ fontFamily: "'Inter', sans-serif" }}>
       {showHeader && (
-        <section style={{ 
-          background: '#0B0121', 
-          padding: '120px 0 160px', 
-          position: 'relative',
-          color: 'white',
-        }}>
-          <div className="container mx-auto" style={{ maxWidth: '1200px', padding: '0 2rem' }}>
+        <section className="bg-[#0B0121] pt-32 pb-40 md:pt-40 md:pb-56 relative text-white -mt-20 md:-mt-32">
+          <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
             <FadeIn>
-              <div style={{
-                display: 'inline-block',
-                background: 'rgba(255,255,255,0.1)',
-                padding: '6px 12px',
-                borderRadius: '4px',
-                fontSize: '11px',
-                fontWeight: 700,
-                letterSpacing: '0.05em',
-                textTransform: 'uppercase',
-                marginBottom: '32px',
-                border: '1px solid rgba(255,255,255,0.1)'
-              }}>
-                CONTACT US
+              <div className="inline-block bg-white/10 px-4 py-1.5 rounded-lg text-[11px] font-bold tracking-widest uppercase mb-8 border border-white/10">
+                Contact Us
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h1 style={{ 
-                fontSize: 'clamp(40px, 6vw, 72px)', 
-                fontWeight: 800, 
-                lineHeight: 1.1,
-                maxWidth: '800px',
-                marginBottom: '40px',
-                fontFamily: '"Proxima Nova", sans-serif'
-              }}>
-                Partner with Us for Comprehensive IT
+              <h1 className="text-[40px] md:text-[60px] lg:text-[72px] font-bold leading-[1.1] max-w-4xl mb-10 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                 Partner with Us for<br className="hidden md:block" /> Comprehensive IT
               </h1>
             </FadeIn>
           </div>
         </section>
       )}
 
-      <div className="container mx-auto" style={{ 
-        maxWidth: '1100px', 
-        padding: '0 2rem',
-        marginTop: showHeader ? '-120px' : '40px',
-        position: 'relative'
-      }}>
-        <div className="grid lg:grid-cols-[1fr_0.9fr] gap-[60px] items-center">
+      <div className={`container mx-auto px-6 md:px-8 max-w-[1200px] relative ${showHeader ? '-mt-32 md:-mt-48' : 'mt-10'}`}>
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-start">
           
           {/* Left Column (Content) */}
-          <div style={{ paddingTop: showHeader ? '120px' : '0', textAlign: 'left' }}>
+          <div className={`${showHeader ? 'pt-10 md:pt-20' : ''}`}>
             <FadeIn delay={0.2}>
               {!showHeader && (
-                <div style={{ marginBottom: '40px' }}>
-                  <div style={{
-                    display: 'inline-block',
-                    background: '#0B0121',
-                    color: 'white',
-                    padding: '6px 12px',
-                    borderRadius: '4px',
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    letterSpacing: '0.05em',
-                    textTransform: 'uppercase',
-                    marginBottom: '24px',
-                  }}>
-                    CONTACT US
+                <div className="mb-12">
+                  <div className="inline-block bg-[#0B0121] text-white px-4 py-1.5 rounded-lg text-[11px] font-bold tracking-widest uppercase mb-6">
+                    Contact Us
                   </div>
-                  <h2 style={{ fontSize: '48px', fontWeight: 800, color: '#0B0121', lineHeight: 1.1, marginBottom: '24px', fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[#0B0121] leading-[1.1] mb-8 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                     Partner with Us for Comprehensive IT
                   </h2>
                 </div>
               )}
 
-              <p style={{ fontSize: '18px', color: '#1A1C1E', fontWeight: 500, lineHeight: 1.6, marginBottom: '40px', maxWidth: '480px' }}>
-                We're happy to answer any questions you may have and help you determine which of our services best fit your needs.
+              <p className="text-[18px] md:text-[20px] text-slate-900/80 leading-relaxed mb-12 max-w-lg font-medium">
+                We're happy to answer any questions you may have and help you determine which of our services best fit your business needs.
               </p>
               
-              <div style={{ marginBottom: '60px' }}>
-                <p style={{ fontWeight: 800, color: '#0B0121', fontSize: '20px', marginBottom: '24px' }}>
-                  Call us at: <a href="tel:1800000299" style={{ color: '#0B0121', textDecoration: 'none', borderBottom: '2px solid #0B0121' }}>1800 000 299</a>
+              <div className="mb-16">
+                <p className="font-extrabold text-[#0B0121] text-[20px] md:text-[24px]">
+                  Call us today: <a href="tel:1800000299" className="text-[#5D00D6] decoration-[#5D00D6]/30 underline-offset-8 underline transition-all hover:text-[#4c00b0]">1800 000 299</a>
                 </p>
               </div>
 
-              <div style={{ marginBottom: '20px' }}>
-                <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#0B0121', marginBottom: '24px' }}>Your benefits:</h3>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div>
+                <h3 className="text-[20px] font-bold text-[#0B0121] mb-8">What you can expect:</h3>
+                <div className="grid sm:grid-cols-2 gap-x-8 gap-y-5">
                   {[
-                    'Client-oriented', 'Independent', 'Competent',
-                    'Results-driven', 'Problem-solving', 'Transparent'
+                    'Client-oriented approach', 'Independent advice', 'Competent engineering',
+                    'Results-driven focus', 'Rapid problem-solving', 'Full transparency'
                   ].map((benefit, idx) => (
-                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <div style={{ 
-                        width: '20px', height: '20px', borderRadius: '50%', 
-                        background: '#5D00D6', display: 'flex', alignItems: 'center', 
-                        justifyContent: 'center', color: 'white' 
-                      }}>
-                        <Check size={12} strokeWidth={3} />
+                    <div key={idx} className="flex items-center gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#5D00D6] flex items-center justify-center text-white shadow-lg shadow-purple-900/20 shrink-0">
+                        <Check size={14} strokeWidth={3} />
                       </div>
-                      <span style={{ fontSize: '16px', fontWeight: 700, color: '#0B0121' }}>{benefit}</span>
+                      <span className="text-[16px] font-bold text-[#0B0121]">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -126,74 +84,42 @@ export const WpConsultationForm = ({ showHeader = true }) => {
 
           {/* Right Column (Form) */}
           <FadeIn delay={0.3}>
-            <div style={{ 
-              background: '#F8FAFC', 
-              borderRadius: '8px', 
-              boxShadow: '0 30px 60px rgba(0,0,0,0.12)',
-              padding: '32px',
-              position: 'relative',
-              border: '1px solid rgba(0,0,0,0.05)'
-            }}>
-              <h2 style={{ 
-                fontSize: '24px', 
-                fontWeight: 800, 
-                textAlign: 'center', 
-                color: '#0B0121',
-                marginBottom: '24px',
-                fontFamily: '"Proxima Nova", sans-serif'
-              }}>
-                Schedule a Free Consultation
+            <div className="bg-white rounded-[40px] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.1)] p-8 md:p-12 border border-white/20">
+              <h2 className="text-[24px] md:text-[28px] font-bold text-center text-[#0B0121] mb-10 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                 Schedule a Free Consultation
               </h2>
     
-              <form onSubmit={e => e.preventDefault()} style={{ display: 'grid', gap: '16px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#4A5568', marginBottom: '6px', textTransform: 'uppercase' }}>First name</label>
-                    <input type="text" placeholder="John" style={{ 
-                      width: '100%', padding: '10px 14px', borderRadius: '4px', 
-                      border: '1px solid #E2E8F0', fontSize: '15px', background: 'white'
-                    }} />
+              <form onSubmit={e => e.preventDefault()} className="grid gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">First name</label>
+                    <input type="text" placeholder="John" className="w-full px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-100 focus:border-[#5D00D6]/30 focus:bg-white outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
                   </div>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#4A5568', marginBottom: '6px', textTransform: 'uppercase' }}>Last name</label>
-                    <input type="text" placeholder="Doe" style={{ 
-                      width: '100%', padding: '10px 14px', borderRadius: '4px', 
-                      border: '1px solid #E2E8F0', fontSize: '15px', background: 'white'
-                    }} />
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Last name</label>
+                    <input type="text" placeholder="Doe" className="w-full px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-100 focus:border-[#5D00D6]/30 focus:bg-white outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
                   </div>
                 </div>
     
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#4A5568', marginBottom: '6px', textTransform: 'uppercase' }}>Company</label>
-                    <input type="text" placeholder="Acme Inc" style={{ 
-                      width: '100%', padding: '10px 14px', borderRadius: '4px', 
-                      border: '1px solid #E2E8F0', fontSize: '15px', background: 'white'
-                    }} />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Company</label>
+                    <input type="text" placeholder="Acme Inc" className="w-full px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-100 focus:border-[#5D00D6]/30 focus:bg-white outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
                   </div>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#4A5568', marginBottom: '6px', textTransform: 'uppercase' }}>Phone</label>
-                    <input type="tel" placeholder="1800 000 299" style={{ 
-                      width: '100%', padding: '10px 14px', borderRadius: '4px', 
-                      border: '1px solid #E2E8F0', fontSize: '15px', background: 'white'
-                    }} />
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Phone</label>
+                    <input type="tel" placeholder="1800 000 299" className="w-full px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-100 focus:border-[#5D00D6]/30 focus:bg-white outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
                   </div>
                 </div>
     
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                  <div style={{ gridColumn: 'span 1' }}>
-                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#4A5568', marginBottom: '6px', textTransform: 'uppercase' }}>Work email</label>
-                    <input type="email" placeholder="john@company.com" style={{ 
-                      width: '100%', padding: '10px 14px', borderRadius: '4px', 
-                      border: '1px solid #E2E8F0', fontSize: '15px', background: 'white'
-                    }} />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Work email</label>
+                    <input type="email" placeholder="john@company.com" className="w-full px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-100 focus:border-[#5D00D6]/30 focus:bg-white outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
                   </div>
-                  <div style={{ gridColumn: 'span 1' }}>
-                    <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#4A5568', marginBottom: '6px', textTransform: 'uppercase' }}>How Can We Help?</label>
-                    <select style={{ 
-                      width: '100%', padding: '10px 14px', borderRadius: '4px', 
-                      border: '1px solid #E2E8F0', fontSize: '15px', background: 'white', cursor: 'pointer'
-                    }}>
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">How Can We Help?</label>
+                    <select className="w-full px-5 py-3.5 rounded-2xl bg-slate-50 border border-slate-100 focus:border-[#5D00D6]/30 focus:bg-white outline-none transition-all text-[15px] font-medium cursor-pointer appearance-none">
                       <option>Select Option</option>
                       <option>Managed IT Services</option>
                       <option>Cloud Communications</option>
@@ -203,30 +129,17 @@ export const WpConsultationForm = ({ showHeader = true }) => {
                   </div>
                 </div>
     
-                <div>
-                  <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: '#4A5568', marginBottom: '6px', textTransform: 'uppercase' }}>Message</label>
+                <div className="flex flex-col gap-2">
+                  <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Message</label>
                   <textarea 
-                    placeholder="Briefly describe your needs..."
-                    style={{ 
-                      width: '100%', padding: '10px 14px', borderRadius: '4px', 
-                      border: '1px solid #E2E8F0', fontSize: '15px', minHeight: '80px',
-                      resize: 'none', background: 'white'
-                    }} 
+                    placeholder="Briefly describe your requirements..."
+                    className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:border-[#5D00D6]/30 focus:bg-white outline-none transition-all text-[15px] font-medium min-h-[120px] resize-none placeholder:text-slate-300"
                   />
                 </div>
     
-                <button type="submit" style={{ 
-                  background: '#5D00D6', color: 'white', fontWeight: 800, 
-                  padding: '14px', borderRadius: '6px', border: 'none',
-                  fontSize: '16px', cursor: 'pointer', marginTop: '12px',
-                  transition: 'background 0.2s',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px'
-                }}
-                onMouseEnter={e => (e.currentTarget.style.background = '#4C00B0')}
-                onMouseLeave={e => (e.currentTarget.style.background = '#5D00D6')}
-                >
-                  Submit Inquiry <ArrowRight size={18} />
-                </button>
+                <Button size="lg" className="w-full h-16 rounded-[20px] bg-[#5D00D6] hover:bg-[#4c00b0] text-[16px] font-extrabold shadow-2xl shadow-purple-900/30 gap-3 group mt-4">
+                  Request Free Audit <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                </Button>
               </form>
             </div>
           </FadeIn>
