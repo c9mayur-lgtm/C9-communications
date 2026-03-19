@@ -8,6 +8,7 @@ import { WpIndustryMarquee } from "@/components/landing/WpIndustryMarquee";
 import { WpSupport } from "@/components/wordpress/WpSupport";
 import { WpVendors } from "@/components/wordpress/WpVendors";
 import { WpCaseStudies } from "@/components/wordpress/WpCaseStudies";
+import { WpCompliance } from "@/components/wordpress/WpCompliance";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
 import { ArrowRight } from "lucide-react";
@@ -26,6 +27,7 @@ export default function Home() {
       <WpSupport />
       <WpVendors />
       <WpCaseStudies />
+      <WpCompliance />
       <WpFAQAndFeedback />
 
       <section id="consultation-section">
