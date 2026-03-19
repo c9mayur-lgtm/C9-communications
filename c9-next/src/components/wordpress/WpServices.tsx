@@ -66,13 +66,48 @@ export const WpServices = () => {
                 className="grid lg:grid-cols-2 gap-16 items-start"
               >
                 {/* Left side: Heading & Description */}
-                <div>
-                  <h3 className="text-[32px] font-bold text-[#0c1024] mb-6 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                    {TELCO_SERVICES_CONTENT[activeTelcoTab].heading}
-                  </h3>
-                  <p className="text-[18px] text-gray-500 leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                    {TELCO_SERVICES_CONTENT[activeTelcoTab].description}
-                  </p>
+                <div className="flex flex-col h-full">
+                  <div className="mb-10 lg:mb-12">
+                    <h3 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mb-6 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                      {TELCO_SERVICES_CONTENT[activeTelcoTab].heading}
+                    </h3>
+                    <p className="text-[17px] md:text-[19px] text-gray-500 leading-relaxed font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                      {TELCO_SERVICES_CONTENT[activeTelcoTab].description}
+                    </p>
+                  </div>
+
+                  {/* Native Rectangle Visuals (As Provided) */}
+                  <div className="mt-auto w-full group/gfx">
+                    {activeTelcoTab === 'internet' ? (
+                      <img 
+                        src="/images/business_internet_hero.png" 
+                        alt="Business Internet" 
+                        className="w-full h-auto transition-transform duration-700 group-hover/gfx:scale-[1.02]"
+                      />
+                    ) : (activeTelcoTab === 'voice' || activeTelcoTab === 'voice_ai') ? (
+                      <img 
+                        src="/images/voice_service_graphic.png" 
+                        alt="Voice AI & Comms" 
+                        className="w-full h-auto transition-transform duration-700 group-hover/gfx:scale-[1.02]"
+                      />
+                    ) : activeTelcoTab === 'network' ? (
+                      <img 
+                        src="/images/networking_graphic.png" 
+                        alt="Business Networking" 
+                        className="w-full h-auto transition-transform duration-700 group-hover/gfx:scale-[1.02]"
+                      />
+                    ) : activeTelcoTab === 'mobile' ? (
+                      <img 
+                        src="/images/mobile_service_graphic.png" 
+                        alt="Mobile 5G Coverage" 
+                        className="w-full h-auto transition-transform duration-700 group-hover/gfx:scale-[1.02]"
+                      />
+                    ) : (
+                      <div className="w-full aspect-[16/9] flex items-center justify-center bg-gray-50 rounded-none uppercase text-[12px] font-bold tracking-widest text-gray-300">
+                        Visual for {activeTelcoTab} coming soon
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Right side: Feature Cards */}

@@ -39,8 +39,10 @@ export const WpSupport = () => {
             }
           ].map((card, idx) => (
             <div key={idx} className="group cursor-pointer">
-              <div className="relative aspect-[16/10] rounded-[24px] overflow-hidden mb-8 shadow-sm group-hover:shadow-xl transition-all duration-500">
+              <div className="relative aspect-[16/10] rounded-none overflow-hidden mb-8 shadow-sm group-hover:shadow-xl transition-all duration-500">
                 <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay group-hover:bg-[#5D00D6]/20 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 via-transparent to-transparent opacity-60" />
               </div>
               <h3 className="text-[18px] md:text-[20px] font-bold text-[#0c1024] mb-4 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 {card.title}
@@ -83,8 +85,10 @@ export const WpSupport = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
+            <div className="aspect-[4/3] rounded-none overflow-hidden shadow-2xl relative">
               <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000" alt="Customer Care" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent opacity-60" />
             </div>
             <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-[24px] shadow-2xl max-w-[280px] border border-gray-100 hidden md:block">
               <div className="text-[#5D00D6] font-bold text-[36px] mb-2 leading-none">24/7</div>

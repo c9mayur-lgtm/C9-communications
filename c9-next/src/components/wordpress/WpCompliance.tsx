@@ -11,7 +11,7 @@ export const WpCompliance = () => {
           
           {/* Left Column */}
           <div className="max-w-xl">
-            <h2 className="text-[28px] md:text-[38px] lg:text-[42px] font-bold leading-tight mb-6 text-[#9F7AEA] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[38px] lg:text-[42px] font-bold leading-tight mb-6 text-[#9F7AEA] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Compliant, accredited, and<br className="hidden md:block" />
               built for Australian business.
             </h2>
@@ -40,71 +40,46 @@ export const WpCompliance = () => {
             </div>
           </div>
 
-          {/* Right Column (Compliance Grid) */}
-          <div className="flex flex-col gap-4 w-full">
-            
-            {/* Top row: 1 col on mobile, 3 on desktop */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-
+          {/* Right Column (High-Fidelity Restored Structure) */}
+          <div className="flex flex-col gap-3 md:gap-4 w-full">
+            {/* Top Row: 3 Squares */}
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
               {/* NBN Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-[1.2/1] sm:aspect-square flex items-center justify-center p-5 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl overflow-hidden cursor-default border border-white/5">
-                <img
-                  src="/images/compliance/NBN_Co-Logo.wine 1 (1).svg"
-                  alt="NBN"
-                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="bg-[#5D00D6] rounded-[24px] aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl border border-white/5">
+                <img src="/images/compliance/NBN_Co-Logo.wine 1 (1).svg" alt="NBN" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
               </div>
 
-              {/* ISO Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-[1.2/1] sm:aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl overflow-hidden cursor-default border border-white/5">
-                <img
-                  src="/images/compliance/Vector (2).svg"
-                  alt="ISO 27001"
-                  className="w-full h-full object-contain scale-[1.2] group-hover:scale-[1.3] transition-transform duration-500"
-                />
+              {/* ISO Box (With Text as per Image) */}
+              <div className="bg-[#5D00D6] rounded-[24px] aspect-square flex flex-col items-center justify-center p-4 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl border border-white/5">
+                <div className="relative w-16 h-16 md:w-20 md:h-20 mb-2">
+                  <img src="/images/compliance/Vector (2).svg" alt="ISO Globe" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <span className="text-white font-black text-[14px] md:text-[16px] tracking-tight">ISO 27001</span>
               </div>
 
               {/* APNIC Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-[1.2/1] sm:aspect-square flex items-center justify-center p-5 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl overflow-hidden cursor-default border border-white/5">
-                <img
-                  src="/images/compliance/APNIC_logo 1 (1).svg"
-                  alt="APNIC"
-                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="bg-[#5D00D6] rounded-[24px] aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl border border-white/5">
+                <img src="/images/compliance/APNIC_logo 1 (1).svg" alt="APNIC" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
               </div>
             </div>
 
-            {/* Middle row: 1 col on mobile, 2 on desktop */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              
-              {/* Telco Together Foundation Box (PNG) */}
-              <div className="bg-[#5D00D6] rounded-2xl h-[120px] sm:h-[160px] flex items-center justify-center p-8 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl overflow-hidden cursor-default border border-white/5">
-                <img
-                  src="/images/compliance/TTF.png"
-                  alt="Telco Together Foundation"
-                  className="h-full w-auto max-h-[110px] object-contain scale-[1.4] group-hover:scale-[1.5] transition-transform duration-500"
-                />
+            {/* Middle Row: 2 Wide Boxes */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+              {/* Telco Together Foundation */}
+              <div className="bg-[#5D00D6] rounded-[24px] h-[160px] md:h-[180px] flex items-center justify-center p-8 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl border border-white/5 overflow-hidden">
+                <img src="/images/compliance/TTF.png" alt="TTF" className="h-full w-auto max-h-[135px] object-contain scale-[1.3] group-hover:scale-[1.4] transition-transform duration-500" />
               </div>
 
-              {/* TIO Box */}
-              <div className="bg-[#5D00D6] rounded-2xl h-[120px] sm:h-[160px] flex items-center justify-center p-8 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl overflow-hidden cursor-default border border-white/5">
-                <img
-                  src="/images/compliance/Page 3.svg"
-                  alt="Telecommunications Industry Ombudsman"
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                />
+              {/* TIO */}
+              <div className="bg-[#5D00D6] rounded-[24px] h-[160px] md:h-[180px] flex items-center justify-center p-10 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl border border-white/5 overflow-hidden">
+                <img src="/images/compliance/Page 3.svg" alt="TIO" className="w-full h-full object-contain scale-[1.3] group-hover:scale-[1.4] transition-transform duration-500" />
               </div>
             </div>
 
-            {/* Bottom Row: ACMA full-width banner */}
-            <div className="bg-[#5D00D6] rounded-2xl w-full min-h-[100px] sm:min-h-[110px] py-7 px-10 flex items-center justify-center hover:bg-[#5200BD] transition-all duration-500 shadow-xl overflow-hidden border border-white/5 cursor-default group">
-              <img
-                src="/images/compliance/Group (1).svg"
-                alt="ACMA - Australian Communications and Media Authority"
-                className="w-full max-w-[420px] h-auto object-contain group-hover:scale-[1.03] transition-transform duration-500"
-              />
+            {/* Bottom Row: 1 Full-Width Box */}
+            <div className="bg-[#5D00D6] rounded-[24px] w-full min-h-[140px] flex items-center justify-center px-12 md:px-24 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl border border-white/5">
+              <img src="/images/compliance/Group (1).svg" alt="ACMA" className="w-full max-w-[500px] h-auto object-contain group-hover:scale-[1.02] transition-transform duration-500" />
             </div>
-
           </div>
         </div>
       </div>

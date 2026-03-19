@@ -81,8 +81,12 @@ export const WpCaseStudies = () => {
           >
             {CASE_STUDIES.map((cs, idx) => (
               <div key={idx} className="w-full lg:w-[calc(50%-16px)] shrink-0 group cursor-pointer">
-                <div className="relative aspect-[16/10] rounded-[32px] overflow-hidden mb-10 shadow-2xl shadow-purple-900/10 bg-slate-100">
+                <div className="relative aspect-[16/10] rounded-none overflow-hidden mb-10 shadow-2xl shadow-purple-900/10 bg-slate-100">
                   <img src={cs.img} alt={cs.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                  
+                  {/* Brand Tint Overlays */}
+                  <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay group-hover:bg-[#5D00D6]/20 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent opacity-60" />
                   
                   {/* Glass Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8 md:p-10">

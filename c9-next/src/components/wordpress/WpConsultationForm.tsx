@@ -137,7 +137,7 @@ export const WpConsultationForm = ({ showHeader = true }) => {
                   />
                 </div>
     
-                <Button size="lg" className="w-full h-16 rounded-[20px] bg-[#5D00D6] hover:bg-[#4c00b0] text-[16px] font-extrabold shadow-2xl shadow-purple-900/30 gap-3 group mt-4">
+                <Button size="lg" className="w-full shadow-2xl shadow-purple-900/30 group mt-4">
                   Request Free Audit <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Button>
               </form>

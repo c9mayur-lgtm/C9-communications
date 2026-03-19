@@ -239,9 +239,15 @@ export const Navbar = () => {
             <a href="tel:1800000299" className={`text-[15px] font-bold tracking-tight hover:text-[#5D00D6] transition-colors ${isScrolled ? 'text-[#0c1024]' : 'text-gray-800'}`}>1800 000 299</a>
           </div>
           
-          <Button variant="outline" className={`hidden sm:flex border-2 font-bold px-6 h-11 transition-all rounded-xl ${
-            isScrolled ? 'border-gray-200 text-gray-500 hover:bg-gray-900 hover:text-white hover:border-gray-900' : 'border-gray-800/20 text-gray-800 hover:bg-gray-800 hover:text-white'
-          }`}>
+          <Button 
+            variant="outline" 
+            size="sm"
+            className={`hidden sm:flex border-2 transition-all ${
+              isScrolled 
+                ? 'border-gray-200 text-gray-500 hover:bg-gray-900 hover:text-white hover:border-gray-900' 
+                : 'border-gray-800/20 text-gray-800 hover:bg-gray-800 hover:text-white'
+            }`}
+          >
             C9 DEFENSE
           </Button>
           

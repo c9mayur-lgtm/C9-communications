@@ -11,6 +11,7 @@ import { WpCaseStudies } from "@/components/wordpress/WpCaseStudies";
 import { WpCompliance } from "@/components/wordpress/WpCompliance";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
+import { WpITDepartmentOptions } from "@/components/wordpress/WpITDepartmentOptions";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,6 +22,7 @@ export default function Home() {
       <WpClientTicker />
       <WpHighlights />
       <WpSimplifyingIT />
+      <WpITDepartmentOptions />
       <WpServices />
       <WpSolutions />
       <WpIndustryMarquee />

@@ -15,10 +15,10 @@ export const WpHero = () => {
               Take charge of your business continuity with innovative IT solutions designed for growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 transition-all group px-8">
+              <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 group">
                 Schedule a Free Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto px-10 border-gray-200">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-gray-200">
                 Services
               </Button>
             </div>
@@ -34,12 +34,14 @@ export const WpHero = () => {
           </div>
 
           {/* Right side rectangular image */}
-          <div className="hidden xl:block w-full h-[400px] lg:h-[500px] relative rounded-3xl overflow-hidden shadow-2xl">
+          <div className="hidden xl:block w-full h-[400px] lg:h-[500px] relative rounded-none overflow-hidden shadow-2xl">
             <img 
                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2850" 
                alt="Office Team" 
                className="absolute inset-0 w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/60 via-transparent to-transparent opacity-60" />
           </div>
         </div>
       </div>
