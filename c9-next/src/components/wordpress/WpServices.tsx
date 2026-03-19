@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Wifi, Radio, Smartphone, Phone, ArrowRight } from 'lucide-react';
+import { Wifi, Radio, Smartphone, Phone, ArrowRight, Volume2 } from 'lucide-react';
 import { TELCO_SERVICES_CONTENT } from '@/components/layout/NavbarData';
 
 export const WpServices = () => {
@@ -60,10 +60,10 @@ export const WpServices = () => {
       </section>
 
       {/* Telco Services Section (Matching Reference Image) */}
-      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
+      <section className="py-10 md:py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="mb-12">
-            <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-widest mb-4 block">Our Expertise</span>
+          <div className="mb-10">
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Our Expertise</span>
             <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight mb-8">
               Telco services, tailored for business.
             </h2>
@@ -72,9 +72,10 @@ export const WpServices = () => {
             <div className="flex flex-nowrap overflow-x-auto no-scrollbar border-b border-gray-200">
               {[
                 { id: 'internet', label: 'Internet', icon: <Wifi size={20} /> },
+                { id: 'voice_ai', label: 'Voice AI', icon: <Volume2 size={20} />, isNew: true },
+                { id: 'voice', label: 'Voice', icon: <Phone size={20} /> },
                 { id: 'network', label: 'Network', icon: <Radio size={20} /> },
                 { id: 'mobile', label: 'Mobile', icon: <Smartphone size={20} /> },
-                { id: 'voice', label: 'Voice', icon: <Phone size={20} /> },
               ].map((tab) => {
                 const isActive = activeTelcoTab === tab.id;
                 return (
@@ -91,6 +92,11 @@ export const WpServices = () => {
                       {tab.icon}
                     </span>
                     <span className="whitespace-nowrap">{tab.label}</span>
+                    {tab.isNew && (
+                      <span className="ml-1.5 px-1.5 py-0.5 bg-red-500 text-white text-[9px] font-bold rounded-sm uppercase tracking-tighter leading-none inline-flex items-center justify-center">
+                        NEW
+                      </span>
+                    )}
                   </button>
                 );
               })}
@@ -126,8 +132,18 @@ export const WpServices = () => {
                       className="group flex items-center justify-between p-6 bg-white border border-gray-100 rounded-xl hover:border-[#5D00D6] hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all cursor-pointer"
                     >
                       <div className="flex items-center gap-5">
-                        <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0">
-                          {option.icon}
+                        <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0 overflow-hidden">
+                          <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ 
+                              duration: 4, 
+                              repeat: Infinity, 
+                              ease: "easeInOut",
+                              delay: idx * 0.2 
+                            }}
+                          >
+                            {option.icon}
+                          </motion.div>
                         </div>
                         <div>
                           <h4 className="font-bold text-[18px] md:text-[24px] text-[#0c1024] mb-1 leading-tight">{option.title}</h4>

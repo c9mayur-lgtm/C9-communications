@@ -4,7 +4,7 @@ import {
   Headphones, Database, Shield, LayoutGrid, Monitor, 
   UserPlus, Cloud, HardDrive, Cpu, ShieldCheck, 
   Infinity as InfinityIcon, BarChart3, Building2, 
-  Volume2, GraduationCap, ShieldAlert 
+  Volume2, GraduationCap, ShieldAlert, Layers
 } from 'lucide-react';
 
 export const TELCO_SERVICES_CONTENT: Record<string, any> = {
@@ -33,6 +33,15 @@ export const TELCO_SERVICES_CONTENT: Record<string, any> = {
       { title: 'SIM Only Plans', desc: 'High data allowances with no lock-in monthly contracts.', icon: <Smartphone size={20} /> },
       { title: 'Mobile Fleet Management', desc: 'Centrally manage all team connections and data usage.', icon: <Truck size={20} /> },
       { title: 'Hardware Bundles', desc: 'The latest business devices with integrated service plans.', icon: <Server size={20} /> }
+    ]
+  },
+  voice_ai: {
+    heading: 'Voice AI Solutions',
+    description: 'Revolutionize your customer engagement with AI-powered voice solutions. From intelligent receptionists to real-time sentiment analysis, we bring the future of communication to your business.',
+    options: [
+      { title: 'AI Receptionist', desc: 'Automate your front desk with human-like AI that handles calls 24/7.', icon: <UserPlus size={20} /> },
+      { title: 'Intelligent IVR', desc: 'Smart menus that understand natural language for faster resolution.', icon: <Layers size={20} /> },
+      { title: 'Sentiment Analytics', desc: 'Real-time analysis of call quality and customer mood.', icon: <BarChart3 size={20} /> }
     ]
   },
   voice: {
