@@ -39,7 +39,7 @@ export const FAQSection = () => {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
