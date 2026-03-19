@@ -44,64 +44,64 @@ export const WpCompliance = () => {
           <div className="flex flex-col gap-4 w-full">
             
             {/* Top row: 3 square blocks */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4">
 
               {/* NBN Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-8 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
+              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-5 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
                 <img
-                  src="/images/compliance/nbn.png"
+                  src="/images/compliance/NBN_Co-Logo.wine 1 (1).svg"
                   alt="NBN"
-                  className="w-[75%] h-[75%] object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
               {/* ISO Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-7 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
+              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
                 <img
-                  src="/images/compliance/ISO.png"
+                  src="/images/compliance/Vector (2).svg"
                   alt="ISO 27001"
-                  className="w-[80%] h-[80%] object-contain"
+                  className="w-full h-full object-contain scale-110"
                 />
               </div>
 
               {/* APNIC Box */}
-              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
+              <div className="bg-[#5D00D6] rounded-2xl aspect-square flex items-center justify-center p-5 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
                 <img
-                  src="/images/compliance/APNIC.png"
+                  src="/images/compliance/APNIC_logo 1 (1).svg"
                   alt="APNIC"
-                  className="w-[85%] h-[85%] object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
 
             {/* Middle row: 2 wider blocks */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               
-              {/* Telco Together Foundation Box */}
-              <div className="bg-[#5D00D6] rounded-2xl h-[160px] flex items-center justify-center px-10 py-6 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
+              {/* Telco Together Foundation Box (PNG as requested) */}
+              <div className="bg-[#5D00D6] rounded-2xl h-[160px] flex items-center justify-center p-8 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
                 <img
                   src="/images/compliance/TTF.png"
                   alt="Telco Together Foundation"
-                  className="h-[110px] w-auto object-contain"
+                  className="h-full w-auto max-h-[110px] object-contain scale-[1.4]"
                 />
               </div>
 
               {/* TIO Box */}
-              <div className="bg-[#5D00D6] rounded-2xl h-[160px] flex items-center justify-center px-10 py-6 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
+              <div className="bg-[#5D00D6] rounded-2xl h-[160px] flex items-center justify-center p-7 group hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
                 <img
-                  src="/images/compliance/TIO.png"
+                  src="/images/compliance/Page 3.svg"
                   alt="Telecommunications Industry Ombudsman"
-                  className="h-[100px] w-auto object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
 
-            {/* Bottom Row: ACMA full-width */}
-            <div className="bg-[#5D00D6] rounded-2xl w-full py-5 px-12 flex items-center justify-center hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden">
+            {/* Bottom Row: ACMA full-width banner */}
+            <div className="bg-[#5D00D6] rounded-2xl w-full py-7 px-10 flex items-center justify-center hover:bg-[#5200BD] transition-colors shadow-xl overflow-hidden min-h-[90px]">
               <img
-                src="/images/compliance/ACMA.png"
+                src="/images/compliance/Group (1).svg"
                 alt="ACMA - Australian Communications and Media Authority"
-                className="h-[52px] w-auto object-contain"
+                className="w-full max-w-[420px] h-auto object-contain"
               />
             </div>
 
