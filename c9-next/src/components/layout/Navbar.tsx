@@ -209,9 +209,9 @@ export const Navbar = () => {
       onMouseLeave={handleLeave}
     >
       <div className="container mx-auto px-6 md:px-8 flex items-center justify-between" style={{ maxWidth: '1240px' }}>
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
             <img 
-              src="/images/c9_logo.svg" 
+              src="/images/c9_logo_scrolled.svg" 
               alt="C9 Communications" 
               className="h-[34px] md:h-[36px]" 
             />
@@ -242,7 +242,7 @@ export const Navbar = () => {
           <Button variant="outline" className={`hidden sm:flex border-2 font-bold px-6 h-11 transition-all rounded-xl ${
             isScrolled ? 'border-gray-200 text-gray-500 hover:bg-gray-900 hover:text-white hover:border-gray-900' : 'border-gray-800/20 text-gray-800 hover:bg-gray-800 hover:text-white'
           }`}>
-            C9 DEFENSE 🛡️
+            C9 DEFENSE
           </Button>
           
           <button 

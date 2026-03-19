@@ -93,9 +93,6 @@ export const WpCaseStudies = () => {
                     <div className="text-white text-[24px] md:text-[32px] font-bold leading-tight mb-2 tracking-tight">
                        {cs.videoText}
                     </div>
-                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mt-4 border border-white/20 group-hover:scale-110 transition-transform">
-                       <Play size={20} className="text-white fill-white ml-1" />
-                    </div>
                   </div>
                 </div>
 

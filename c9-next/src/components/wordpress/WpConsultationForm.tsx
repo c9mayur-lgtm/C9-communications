@@ -84,7 +84,7 @@ export const WpConsultationForm = ({ showHeader = true }) => {
 
           {/* Right Column (Form) */}
           <FadeIn delay={0.3}>
-            <div className="bg-white rounded-[40px] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.1)] p-8 md:p-12 border border-white/20">
+            <div className="bg-white rounded-none shadow-[0_40px_100px_-15px_rgba(0,0,0,0.1)] p-8 md:p-12 border border-white/20">
               <h2 className="text-[24px] md:text-[28px] font-bold text-center text-[#0B0121] mb-10 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                  Schedule a Free Consultation
               </h2>
