@@ -72,7 +72,7 @@ export const WpFAQAndFeedback = () => {
             {/* Left side */}
             <div className="lg:sticky lg:top-32">
               <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-full border border-[#5D00D6]/10 mb-8">
-                <HelpCircle className="text-[#5D00D6] size={16} />
+                <HelpCircle className="text-[#5D00D6]" size={16} />
                 <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-[0.2em] leading-none mt-0.5">Quick Answers</span>
               </div>
               <h2 className="text-[32px] md:text-[44px] lg:text-[48px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
@@ -124,7 +124,7 @@ export const WpFAQAndFeedback = () => {
               <button 
                 onClick={() => setTestimonialIdx(prev => Math.max(0, prev - 1))}
                 disabled={testimonialIdx === 0}
-                className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all shadow-sm ${testimonialIdx === 0 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white border border-gray-100 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white hover:shadow-xl hover:shadow-[#5D00D6]/20'}`}
+                className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all shadow-sm ${testimonialIdx === 0 ? 'bg-gray-100 text-gray-300 cursor-not-allowed' : 'bg-white border border-gray-100 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white hover:shadow-xl hover:shadow-[#5D00D6]/20'}`}
               >
                 <ChevronLeft size={24} />
               </button>
@@ -141,8 +141,8 @@ export const WpFAQAndFeedback = () => {
           <div className="relative">
             <div className="overflow-visible">
               <motion.div 
-                className="flex gap-6 md:gap-8"
-                animate={{ x: `calc(-${testimonialIdx * (100 / cardsPerView)}% - ${testimonialIdx * (cardsPerView === 1 ? 0 : 32)}px)` }}
+                className="flex gap-8"
+                animate={{ x: `calc(-${testimonialIdx * (100 / cardsPerView)}% - ${testimonialIdx * 32}px)` }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
                 {TESTIMONIALS.map((t, idx) => (

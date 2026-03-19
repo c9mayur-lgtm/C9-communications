@@ -64,7 +64,6 @@ export const WpCaseStudies = () => {
               <ChevronLeft size={24} />
             </button>
             <button 
-              onClick={() => setTestimonialIdx(prev => Math.min(maxIdx, prev + 1))} // Wait, wrong name
               onClick={() => setCaseStudyIdx(prev => Math.min(maxIdx, prev + 1))}
               disabled={caseStudyIdx >= maxIdx}
               className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-xl shadow-purple-900/20 ${caseStudyIdx >= maxIdx ? 'opacity-50 cursor-not-allowed' : ''}`}
