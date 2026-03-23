@@ -6,79 +6,78 @@ import { Button } from "@/components/ui/button";
 
 export const WpFooter = () => {
   return (
-    <footer className="bg-black text-white pt-24 font-sans">
-      <div className="container mx-auto px-10 grid lg:grid-cols-2 gap-16 mb-24" style={{ maxWidth: '1240px' }}>
+    <footer className="bg-black text-white pt-16 font-sans">
+      <div className="container mx-auto px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mb-16" style={{ maxWidth: '1240px' }}>
          
-         {/* Left side: Navigation links & compliance */}
-         <div className="flex flex-col justify-between">
-           
-           <div className="mb-16">
-              <h4 className="font-bold text-[22px] mb-6 text-white tracking-tight">Solutions</h4>
-              <div className="grid grid-cols-2 gap-8">
-                 <ul className="space-y-3.5 text-[15px]">
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Managed Services</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">IT Consulting & Advisory</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Cyber Security</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Web Development</a></li>
-                 </ul>
-                 <ul className="space-y-3.5 text-[15px]">
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Mobile Development</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Cloud Services</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Network Connectivity</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">ERP Solutions</a></li>
-                 </ul>
-              </div>
-           </div>
-
-           <div className="mb-16">
-              <h4 className="font-bold text-[22px] mb-6 text-white tracking-tight">Company</h4>
-              <div className="grid grid-cols-2 gap-8">
-                 <ul className="space-y-3.5 text-[15px]">
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">About us</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Why us</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Team</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Careers</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Partners & Certifications</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Reviews & Awards</a></li>
-                 </ul>
-                 <ul className="space-y-3.5 text-[15px]">
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Blog</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Case studies</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">Events</a></li>
-                     <li><a href="#" className="!text-white hover:!text-[#5D00D6] transition-colors block">FAQ</a></li>
-                 </ul>
-              </div>
-           </div>
-           
-           <div className="max-w-md w-full flex flex-col gap-7 pb-10">
-               <div>
-                 <p className="text-[13px] text-gray-400 font-semibold uppercase tracking-widest mb-3">Stay in the loop</p>
-                 <div className="bg-transparent rounded-xl border border-[#333] flex items-center overflow-hidden focus-within:border-[#5D00D6] transition-colors">
-                   <input type="email" placeholder="Your business email" className="bg-transparent px-5 py-4 w-full text-[14px] outline-none text-white placeholder-gray-500 font-medium" />
-                 </div>
-               </div>
-               <div className="flex items-start gap-3">
-                 <input type="checkbox" className="mt-0.5 border-gray-600 rounded-sm bg-black text-[#5D00D6] focus:ring-[#5D00D6] cursor-pointer shrink-0" />
-                 <span className="text-[12px] text-[#A0AABB] leading-[1.7]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>I agree to the Privacy Policy and give my permission to process my personal data for the purposes specified in the Privacy Policy.</span>
-               </div>
-               <Button size="lg" className="shadow-xl group self-start border-none">
-                 Send Message <ArrowRight className="transition-transform group-hover:translate-x-1" />
-               </Button>
-           </div>
+         {/* Col 1: Solutions */}
+         <div className="flex flex-col">
+            <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Solutions</h4>
+            <ul className="space-y-3 text-[14px]">
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Managed Services</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">IT Consulting & Advisory</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Cyber Security</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Web Development</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Mobile Development</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Cloud Services</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Network Connectivity</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">ERP Solutions</a></li>
+            </ul>
          </div>
 
-         {/* Right side: Logo & CTA */}
-         <div className="flex flex-col justify-center items-center lg:items-end h-full gap-8 mb-16 lg:mb-0">
-            <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] md:w-[280px] lg:w-[380px] filter brightness-0 invert" />
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto px-12 shadow-2xl group border-none"
-              onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Schedule Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Button>
-
+         {/* Col 2: Company */}
+         <div className="flex flex-col">
+            <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Company</h4>
+            <ul className="space-y-3 text-[14px]">
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">About us</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Why us</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Team</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Careers</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Partners & Certifications</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Reviews & Awards</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Blog</a></li>
+                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Case studies</a></li>
+            </ul>
          </div>
+
+         {/* Col 3: Group & More */}
+         <div className="flex flex-col">
+            <div className="mb-10">
+               <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Also from the C9 Group:</h4>
+               <ul className="space-y-3 text-[14px]">
+                 <li><a href="#" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Teams</a></li>
+                 <li><a href="#" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Defense</a></li>
+                 <li><a href="#" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Digital</a></li>
+                 <li><a href="#" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Lumina</a></li>
+               </ul>
+            </div>
+            
+            <div className="flex flex-col gap-4 pt-4 border-t border-white/5">
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-widest leading-none">Stay in the loop</p>
+                <div className="bg-transparent rounded-lg border border-[#333] flex items-center overflow-hidden focus-within:border-[#5D00D6] transition-colors">
+                  <input type="email" placeholder="Email" className="bg-transparent px-4 py-3 w-full text-[13px] outline-none text-white placeholder-gray-600" />
+                  <button className="bg-[#5D00D6] p-3 hover:bg-[#4d00b3] transition-colors">
+                    <ArrowRight size={16} />
+                  </button>
+                </div>
+                <div className="flex items-center gap-2.5 mt-0.5">
+                   <input type="checkbox" className="w-3 h-3 border-gray-600 rounded-sm bg-black text-[#5D00D6] focus:ring-[#5D00D6] cursor-pointer" />
+                   <span className="text-[10px] text-gray-500 leading-tight">I agree to the Privacy Policy</span>
+                </div>
+            </div>
+         </div>
+
+          {/* Col 4: Logo & CTA Area - Grouped Together */}
+          <div className="flex flex-col items-center lg:items-end pt-2">
+             <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] filter brightness-0 invert mb-8" />
+             
+             <Button 
+               size="lg" 
+               className="w-full lg:max-w-[260px] shadow-2xl group border-none text-[14px] h-12 rounded-lg"
+               onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
+             >
+               Schedule Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
+             </Button>
+          </div>
       </div>
       
       {/* High-Fidelity White Footer Section */}
@@ -133,7 +132,7 @@ export const WpFooter = () => {
                   <div className="h-6 flex items-center justify-center text-slate-700 opacity-80 group-hover:opacity-100 transition-opacity">
                     <social.icon size={20} strokeWidth={2.5} />
                   </div>
-                  <span className="text-[10px] font-extrabold text-[#5D00D6] tracking-[0.05em] group-hover:underline">
+                  <span className="text-[10px] font-semibold text-[#5D00D6] tracking-[0.05em] group-hover:underline">
                     {social.label}
                   </span>
                 </a>
@@ -144,8 +143,8 @@ export const WpFooter = () => {
           <div className="w-full h-px bg-gray-100 mb-2"></div>
 
           {/* Legal Links Row */}
-          <div className="flex justify-center items-center gap-8 mb-2 text-[13px] font-extrabold text-[#5D00D6]">
-            <a href="#" className="hover:underline">Terms & Conditions</a>
+          <div className="flex justify-center items-center gap-8 mb-2 text-[13px] font-semibold text-[#5D00D6]">
+            <a href="#" className="hover:underline">Terms &amp; Conditions</a>
             <a href="#" className="hover:underline">Privacy Policy</a>
           </div>
 

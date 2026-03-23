@@ -70,7 +70,7 @@ const INDUSTRIES = [
   }
 ];
 
-const IndustryCard = ({ industry }: { industry: any }) => (
+export const IndustryCard = ({ industry }: { industry: any }) => (
   <div className="bg-[#F9F7FF] border border-[#E9E4FF] rounded-[32px] p-10 shadow-sm hover:shadow-2xl hover:border-[#5D00D6]/30 transition-all group flex flex-col h-full w-full">
     <div className="flex justify-between items-start mb-8">
       <span className="px-4 py-1.5 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] text-[11px] font-bold tracking-widest uppercase">

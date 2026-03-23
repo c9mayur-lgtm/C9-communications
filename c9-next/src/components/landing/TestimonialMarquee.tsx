@@ -67,11 +67,18 @@ const TestimonialCard = ({ testimonial }: { testimonial: typeof MOCK_TESTIMONIAL
   </div>
 );
 
-export const TestimonialMarquee = () => {
+export interface Testimonial {
+  text: string;
+  author: string;
+  role: string;
+  initials: string;
+}
+
+export const TestimonialMarquee = ({ testimonials = MOCK_TESTIMONIALS }: { testimonials?: Testimonial[] }) => {
   // Split into columns for desktop
-  const col1 = useMemo(() => MOCK_TESTIMONIALS.slice(0, Math.ceil(MOCK_TESTIMONIALS.length / 3)), []);
-  const col2 = useMemo(() => MOCK_TESTIMONIALS.slice(Math.ceil(MOCK_TESTIMONIALS.length / 3), Math.ceil(MOCK_TESTIMONIALS.length / 3) * 2), []);
-  const col3 = useMemo(() => MOCK_TESTIMONIALS.slice(Math.ceil(MOCK_TESTIMONIALS.length / 3) * 2), []);
+  const col1 = useMemo(() => testimonials.slice(0, Math.ceil(testimonials.length / 3)), [testimonials]);
+  const col2 = useMemo(() => testimonials.slice(Math.ceil(testimonials.length / 3), Math.ceil(testimonials.length / 3) * 2), [testimonials]);
+  const col3 = useMemo(() => testimonials.slice(Math.ceil(testimonials.length / 3) * 2), [testimonials]);
 
   return (
     <div className="tm-wrapper">

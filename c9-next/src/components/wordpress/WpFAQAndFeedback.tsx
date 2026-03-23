@@ -47,7 +47,22 @@ const TESTIMONIALS = [
   { name: "James Wilson", role: "CTO at Atlassian", content: "The transition to C9's managed infrastructure was seamless. Their technical expertise is world-class.", avatar: "JW" }
 ];
 
-export const WpFAQAndFeedback = () => {
+export interface TestimonialData {
+  name: string;
+  role: string;
+  content: string;
+  avatar: string | React.ReactNode;
+}
+
+export const WpFAQAndFeedback = ({ 
+  showFAQ = true, 
+  showTestimonials = true, 
+  testimonials = TESTIMONIALS 
+}: { 
+  showFAQ?: boolean; 
+  showTestimonials?: boolean; 
+  testimonials?: TestimonialData[]; 
+} = {}) => {
   const [testimonialIdx, setTestimonialIdx] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(2);
 
@@ -60,13 +75,14 @@ export const WpFAQAndFeedback = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const totalSteps = Math.ceil(TESTIMONIALS.length / cardsPerView);
-  const maxIdx = TESTIMONIALS.length - cardsPerView;
+  const totalSteps = Math.ceil(testimonials.length / cardsPerView);
+  const maxIdx = Math.max(0, testimonials.length - cardsPerView);
 
   return (
     <>
       {/* FAQ Section */}
-      <section className="py-20 md:py-32 bg-white border-t border-gray-50">
+      {showFAQ && (
+        <section className="py-20 md:py-32 bg-white border-t border-gray-50">
         <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
           <div className="grid lg:grid-cols-[1fr_1.6fr] gap-16 lg:gap-24 items-start">
             {/* Left side */}
@@ -107,9 +123,11 @@ export const WpFAQAndFeedback = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Testimonials Section */}
-      <section className="py-20 md:py-32 bg-[#F9FBFE] border-t border-gray-100 overflow-hidden">
+      {showTestimonials && (
+        <section className="py-20 md:py-32 bg-[#F9FBFE] border-t border-gray-100 overflow-hidden">
         <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
           <div className="flex flex-col lg:flex-row justify-between items-end gap-10 mb-16">
             <div className="max-w-2xl">
@@ -145,8 +163,8 @@ export const WpFAQAndFeedback = () => {
                 animate={{ x: `calc(-${testimonialIdx * (100 / cardsPerView)}% - ${testimonialIdx * 32}px)` }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                {TESTIMONIALS.map((t, idx) => (
-                  <div key={idx} className="w-full lg:w-[calc(50%-16px)] shrink-0 bg-white border border-gray-100/60 p-8 md:p-12 rounded-[40px] hover:border-[#5D00D6]/30 hover:shadow-[0_40px_80px_-15px_rgba(93,0,214,0.08)] transition-all flex flex-col h-full group relative">
+                {testimonials.map((t, idx) => (
+                  <div key={idx} className="w-[100vw] lg:w-[calc(50%-16px)] shrink-0 bg-white border border-gray-100/60 p-8 md:p-12 rounded-[40px] hover:border-[#5D00D6]/30 hover:shadow-[0_40px_80px_-15px_rgba(93,0,214,0.08)] transition-all flex flex-col h-full group relative">
                     <div className="flex items-center gap-5 mb-10">
                       <div className="w-16 h-16 rounded-2xl bg-[#F4F0FA] flex items-center justify-center text-[18px] font-bold text-[#5D00D6] shrink-0 shadow-inner group-hover:scale-110 transition-transform duration-500">
                         {t.avatar}
@@ -189,6 +207,7 @@ export const WpFAQAndFeedback = () => {
           </div>
         </div>
       </section>
+      )}
     </>
   );
 };

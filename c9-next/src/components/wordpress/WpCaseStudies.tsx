@@ -107,7 +107,7 @@ export const WpCaseStudies = () => {
                    <p className="text-gray-500 text-[17px] md:text-[18px] leading-relaxed mb-8 line-clamp-2 font-medium">
                      {cs.desc}
                    </p>
-                   <div className="flex items-center gap-2 text-[#5D00D6] font-extrabold text-[14px] uppercase tracking-wider group/link">
+                   <div className="flex items-center gap-2 text-[#5D00D6] font-semibold text-[14px] uppercase tracking-wider group/link">
                       Read full study 
                       <ArrowUpRight size={16} className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                    </div>

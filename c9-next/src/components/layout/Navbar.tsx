@@ -42,7 +42,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                 <div key={ci} className="space-y-8">
                   {col.sections.map((sec: any, si: number) => (
                     <div key={si}>
-                      <h4 className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#5D00D6] mb-5 opacity-40">{sec.heading}</h4>
+                      <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5D00D6] mb-5 opacity-40">{sec.heading}</h4>
                       <div className="flex flex-col gap-3.5">
                         {sec.items.map((item: any, ii: number) => (
                           <Link 
@@ -63,7 +63,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
             {/* COLUMN 2: HIGHLIGHTS/CHALLENGES */}
             <div className="p-10 border-r border-gray-50 bg-[#FCFBFE]/30">
-              <h4 className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-40">Modern Infrastructure</h4>
+              <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-40">Modern Infrastructure</h4>
               <div className="grid grid-cols-2 gap-5">
                 {(data.challenges || data.modernization)?.map((c: any, i: number) => (
                   <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[24px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-500 cursor-pointer overflow-hidden leading-tight">
@@ -81,7 +81,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             <div className="p-10 bg-[#FCFBFE]">
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <h4 className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-40">Support & Resources</h4>
+                  <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-40">Support & Resources</h4>
                   <div className="flex flex-col gap-6">
                     {(data.sidebar?.items || []).slice(0, 3).map((item: any, i: number) => (
                       <div key={i} className="group flex items-start gap-4 cursor-pointer">
@@ -235,7 +235,7 @@ export const Navbar = () => {
         
         <div className="flex items-center gap-4 md:gap-6">
           <div className={`hidden lg:flex flex-col items-end border-r pr-6 mr-1 ${isScrolled ? 'border-gray-200' : 'border-gray-300'}`}>
-            <span className={`text-[10px] font-extrabold uppercase tracking-[0.2em] mb-0.5 ${isScrolled ? 'text-gray-400' : 'text-gray-500'}`}>Client Support</span>
+            <span className={`text-[10px] font-semibold uppercase tracking-[0.2em] mb-0.5 ${isScrolled ? 'text-gray-400' : 'text-gray-500'}`}>Client Support</span>
             <a href="tel:1800000299" className={`text-[15px] font-bold tracking-tight hover:text-[#5D00D6] transition-colors ${isScrolled ? 'text-[#0c1024]' : 'text-gray-800'}`}>1800 000 299</a>
           </div>
           

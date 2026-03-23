@@ -109,7 +109,7 @@ export default function SolutionsPage() {
 
                   <Link 
                     href="/contact" 
-                    className="inline-flex items-center gap-2 text-[#5D00D6] font-extrabold text-[15px] group-hover:underline uppercase tracking-wide"
+                    className="inline-flex items-center gap-2 text-[#5D00D6] font-semibold text-[15px] group-hover:underline uppercase tracking-wide"
                   >
                     Learn More <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                   </Link>

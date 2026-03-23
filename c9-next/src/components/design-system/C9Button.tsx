@@ -15,7 +15,7 @@ export const C9Button = React.forwardRef<HTMLButtonElement, C9ButtonProps>(
       <Button
         ref={ref}
         className={cn(
-          "font-bold transition-all duration-300",
+          "font-medium transition-all duration-300",
           // Custom shadow for primary variant if it's the default or explicitly set
           (variant === 'default' || !variant) ? "shadow-xl shadow-purple-900/20 hover:shadow-purple-900/30 active:scale-95" : "",
           className
