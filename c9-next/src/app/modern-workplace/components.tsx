@@ -510,13 +510,6 @@ export const OtherSolutions = () => {
         </AnimatePresence>
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-        
-        {/* Floating icon badge */}
-        <div className="absolute bottom-10 right-10 flex gap-2">
-           <div className="w-12 h-12 rounded-2xl bg-white/95 backdrop-blur-md shadow-xl flex items-center justify-center border border-black/5">
-              <Star size={18} fill="#7C3AED" className="text-[#7C3AED]" />
-           </div>
-        </div>
       </div>
     </div>
   );
