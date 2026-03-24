@@ -8,6 +8,7 @@ import {
   MessageSquare, Layout, HardDrive, Lock 
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { C9Button } from '@/components/design-system/C9Button';
 
 const ease = [0.22, 1, 0.36, 1] as any;
 
@@ -77,12 +78,16 @@ export default function Homepage() {
               Consolidate your entire business infrastructure into one unified, high-performance ecosystem. Built for growth, powered by Aussie experts.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-              <Link href="/contact" className="px-10 py-5 rounded-full bg-[#5D00D6] text-white font-bold text-[16px] hover:shadow-[0_20px_40px_rgba(93,0,214,0.3)] hover:-translate-y-1 transition-all duration-300">
-                Book Free Assessment
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-12">
+              <Link href="/contact" passHref>
+                <C9Button size="lg" className="min-w-[240px]">
+                  Book Free Assessment
+                </C9Button>
               </Link>
-              <Link href="/solutions" className="px-10 py-5 rounded-full bg-white border border-gray-100 text-[#0c1024] font-bold text-[16px] hover:bg-gray-50 transition-all">
-                Explore Solutions
+              <Link href="/solutions" passHref>
+                <C9Button variant="secondary" size="lg" className="min-w-[240px]">
+                  Explore Solutions
+                </C9Button>
               </Link>
             </div>
           </motion.div>

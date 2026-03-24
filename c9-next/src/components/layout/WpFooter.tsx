@@ -72,7 +72,7 @@ export const WpFooter = () => {
              
              <Button 
                size="lg" 
-               className="w-full lg:max-w-[260px] shadow-2xl group border-none text-[14px] h-12 rounded-lg"
+               className="w-full lg:max-w-[260px] shadow-2xl group border-none text-[14px] h-12 rounded-full"
                onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
              >
                Schedule Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
@@ -144,8 +144,8 @@ export const WpFooter = () => {
 
           {/* Legal Links Row */}
           <div className="flex justify-center items-center gap-8 mb-2 text-[13px] font-semibold text-[#5D00D6]">
-            <a href="#" className="hover:underline">Terms &amp; Conditions</a>
-            <a href="#" className="hover:underline">Privacy Policy</a>
+            <a href="/terms" className="hover:underline">Terms of Use</a>
+            <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
           </div>
 
           {/* Acknowledgement of Country */}

@@ -229,10 +229,10 @@ export default function TelcoPage() {
               
               <FadeIn delay={0.5}>
                 <div className="flex flex-wrap items-center gap-4">
-                  <C9Button variant="default" className="h-14 px-8 text-[16px] rounded-full bg-[#5D00D6] hover:bg-[#4d00b3]">
+                  <C9Button size="lg" className="px-10">
                     Get My Free Telco Audit <ArrowRight size={18} className="ml-2" />
                   </C9Button>
-                  <C9Button variant="outline" className="h-14 px-8 text-[16px] rounded-full border border-[#5D00D6] text-white hover:bg-[#5D00D6]/10">
+                  <C9Button variant="outline" size="lg" className="px-10 text-white border-white/20 hover:bg-white/10">
                     See What's Included <ArrowDown size={18} className="ml-2" />
                   </C9Button>
                 </div>
@@ -439,7 +439,7 @@ export default function TelcoPage() {
               </div>
               
               <FadeIn delay={0.3} className="hidden lg:flex shrink-0">
-                 <C9Button variant="default" className="h-14 px-8 text-[16px] rounded-full bg-[#5D00D6] hover:bg-[#4d00b3]">
+                 <C9Button size="lg" className="px-10">
                    Explore C9X <ArrowRight size={18} className="ml-2" />
                  </C9Button>
               </FadeIn>
@@ -518,8 +518,8 @@ export default function TelcoPage() {
           </div>
           
           <FadeIn delay={0.4} className="lg:hidden mt-12 flex justify-center w-full">
-             <C9Button variant="default" className="h-14 px-8 text-[16px] w-full rounded-full bg-[#5D00D6] hover:bg-[#4d00b3]">
-               Explore C9X <ArrowRight size={18} className="ml-2" />
+             <C9Button size="lg" className="w-full">
+               See SIP Trunking Plans <ArrowRight size={18} className="ml-2" />
              </C9Button>
           </FadeIn>
           
@@ -612,7 +612,7 @@ export default function TelcoPage() {
 
                 <div className="mt-8 mb-8 flex flex-col items-start gap-3">
                   <span className="text-[28px] font-bold text-[#0c1024] tracking-tight font-proxima">Transparent pricing</span>
-                  <C9Button variant="default" className="w-full h-12 bg-[#0c1024] text-white hover:bg-[#5D00D6] rounded-full text-[15px]">
+                  <C9Button className="w-full">
                     See Detailed Plans
                   </C9Button>
                 </div>
@@ -915,8 +915,8 @@ export default function TelcoPage() {
 
           <div className="flex justify-center mt-12">
              <Link href="/industries">
-               <C9Button size="lg" className="shadow-2xl hover:gap-4 transition-all group rounded-full">
-                 Explore Industry Solutions <ArrowRight className="transition-transform group-hover:translate-x-1" />
+               <C9Button size="lg" className="shadow-2xl hover:gap-4 group">
+                 Book My Free Audit <ArrowRight size={22} className="ml-2 transition-transform group-hover:translate-x-2" />
                </C9Button>
              </Link>
           </div>
@@ -955,7 +955,7 @@ export default function TelcoPage() {
 
       {/* ── Consultation ─────────────────────────────────────────── */}
       <WpConsultationForm 
-        showHeader={true}
+        showHeader={false}
         eyebrow="FREE TELCO AUDIT"
         title="Your telco headaches stop here."
         description="Book a 30-minute session with our senior telco engineers to review your current costs and design a roadmap for 99.99% uptime."
@@ -971,7 +971,7 @@ export default function TelcoPage() {
           </div>
           1800 000 C9X
         </a>
-        <C9Button variant="default" className="h-11 px-6 text-[14px] rounded-full bg-[#5D00D6] hover:bg-[#4d00b3]">
+        <C9Button className="h-11 px-6">
           Get a Quote
         </C9Button>
       </div>

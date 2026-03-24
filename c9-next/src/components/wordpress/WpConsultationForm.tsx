@@ -36,10 +36,10 @@ export const WpConsultationForm = ({
   return (
     <div className="bg-[#C4B5FD] py-20 md:py-32" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
       {showHeader && (
-        <section className="bg-[#0B0121] pt-32 pb-40 md:pt-40 md:pb-56 relative text-white -mt-20 md:-mt-32">
+        <section className="bg-[#0c1024] pt-32 pb-48 md:pt-40 md:pb-64 relative text-white">
           <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
             <FadeIn>
-              <div className="inline-block bg-white/10 px-4 py-1.5 rounded-lg text-[11px] font-bold tracking-widest uppercase mb-8 border border-white/10">
+              <div className="inline-block bg-[#5D00D6]/20 px-4 py-1.5 rounded-lg text-[11px] font-bold tracking-widest uppercase mb-8 border border-[#5D00D6]/30 text-[#a166ff]">
                 {eyebrow}
               </div>
             </FadeIn>
@@ -52,7 +52,7 @@ export const WpConsultationForm = ({
         </section>
       )}
 
-      <div className={`container mx-auto px-6 md:px-8 max-w-[1200px] relative ${showHeader ? '-mt-32 md:-mt-48' : ''}`}>
+      <div className={`container mx-auto px-6 md:px-8 max-w-[1200px] relative ${showHeader ? '-mt-32 md:-mt-48 z-10' : ''}`}>
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-start">
           
           {/* Left Column (Content) */}
@@ -161,7 +161,7 @@ export const WpConsultationForm = ({
                 </div>
     
                 <div className="text-center">
-                   <Button size="lg" className="w-full h-16 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] shadow-xl shadow-purple-900/20 group mt-4 text-[17px] font-semibold">
+                   <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4c00b0] shadow-xl shadow-purple-900/20 group mt-4">
                     Request Free Audit <ArrowRight size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
                    </Button>
                    <p className="text-[11px] text-zinc-400 mt-6 font-semibold tracking-tight">Typical response: 2 business hours • No lock-in • Your details stay private</p>
