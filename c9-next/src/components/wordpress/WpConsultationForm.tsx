@@ -108,42 +108,42 @@ export const WpConsultationForm = ({
 
           {/* Right Column (Form) */}
           <FadeIn delay={0.3}>
-            <div className="bg-white rounded-none shadow-[0_40px_100px_-15px_rgba(0,0,0,0.1)] p-10 md:p-14 border border-white">
-              <h2 className="text-[28px] md:text-[32px] font-semibold text-center text-[#1a1a2e] mb-12 tracking-tight">
+            <div className="bg-white rounded-none shadow-[0_40px_100px_-15px_rgba(0,0,0,0.1)] p-8 md:p-12 border border-white">
+              <h2 className="text-[28px] md:text-[32px] font-semibold text-center text-[#1a1a2e] mb-8 tracking-tight">
                  {formTitle}
               </h2>
     
-              <form onSubmit={e => e.preventDefault()} className="grid gap-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-3">
-                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">FIRST NAME</label>
-                    <input type="text" placeholder="John" className="w-full px-6 py-4 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
+              <form onSubmit={e => e.preventDefault()} className="grid gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">FIRST NAME</label>
+                    <input type="text" placeholder="John" className="w-full px-6 py-3.5 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-400" />
                   </div>
-                  <div className="flex flex-col gap-3">
-                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">LAST NAME</label>
-                    <input type="text" placeholder="Doe" className="w-full px-6 py-4 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
-                  </div>
-                </div>
-    
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-3">
-                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">COMPANY</label>
-                    <input type="text" placeholder="Acme Pty Ltd" className="w-full px-6 py-4 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
-                  </div>
-                  <div className="flex flex-col gap-3">
-                    <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">PHONE</label>
-                    <input type="tel" placeholder="1800 000 299" className="w-full px-6 py-4 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">LAST NAME</label>
+                    <input type="text" placeholder="Doe" className="w-full px-6 py-3.5 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-400" />
                   </div>
                 </div>
     
-                <div className="flex flex-col gap-3">
-                  <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">WORK EMAIL</label>
-                  <input type="email" placeholder="john@company.com" className="w-full px-6 py-4 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-300" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">COMPANY</label>
+                    <input type="text" placeholder="Acme Pty Ltd" className="w-full px-6 py-3.5 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-400" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">PHONE</label>
+                    <input type="tel" placeholder="1800 000 299" className="w-full px-6 py-3.5 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-400" />
+                  </div>
+                </div>
+    
+                <div className="flex flex-col gap-2">
+                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">WORK EMAIL</label>
+                  <input type="email" placeholder="john@company.com" className="w-full px-6 py-3.5 rounded-xl bg-white border border-slate-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium placeholder:text-slate-400" />
                 </div>
 
-                <div className="flex flex-col gap-3">
-                  <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">CURRENT PROVIDER</label>
-                  <select className="w-full px-6 py-4 rounded-xl bg-white border border-zinc-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium cursor-pointer appearance-none text-slate-800">
+                <div className="flex flex-col gap-2">
+                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">CURRENT PROVIDER</label>
+                  <select className="w-full px-6 py-3.5 rounded-xl bg-white border border-zinc-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium cursor-pointer appearance-none text-slate-800">
                     <option className="text-slate-400">Select provider...</option>
                     <option>Telstra</option>
                     <option>Optus</option>
@@ -152,11 +152,11 @@ export const WpConsultationForm = ({
                   </select>
                 </div>
     
-                <div className="flex flex-col gap-3">
-                  <label className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">MESSAGE</label>
+                <div className="flex flex-col gap-2">
+                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">MESSAGE</label>
                   <textarea 
                     placeholder="Briefly describe your requirements..."
-                    className="w-full px-6 py-4 rounded-xl bg-white border border-zinc-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium min-h-[120px] resize-none placeholder:text-slate-300"
+                    className="w-full px-6 py-3.5 rounded-xl bg-white border border-zinc-100 focus:border-[#5D00D6] outline-none transition-all text-[15px] font-medium min-h-[100px] resize-none placeholder:text-slate-400"
                   />
                 </div>
     
