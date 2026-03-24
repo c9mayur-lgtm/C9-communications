@@ -1,5 +1,5 @@
-import Home from '../page';
+import { redirect } from 'next/navigation';
 
 export default function Wordpress1Page() {
-  return <Home />;
+  redirect('/managed-it');
 }

@@ -4,7 +4,8 @@ import {
   Headphones, Database, Shield, LayoutGrid, Monitor, 
   UserPlus, Cloud, HardDrive, Cpu, ShieldCheck, 
   Infinity as InfinityIcon, BarChart3, Building2, 
-  Volume2, GraduationCap, ShieldAlert, Layers
+  Volume2, GraduationCap, ShieldAlert, Layers,
+  Users, Star, Layout, MessageSquare, Calendar, Briefcase
 } from 'lucide-react';
 
 export const TELCO_SERVICES_CONTENT: Record<string, any> = {
@@ -216,16 +217,88 @@ export const MODERN_WORKPLACE_MENU = {
   }
 };
 
+export const COMPANY_MENU = {
+  layout: 'company',
+  heading: 'Simplifying IT for a complex world.',
+  columns: [
+    {
+      sections: [
+        {
+          heading: 'Our Company',
+          items: [
+            { icon: <Building2 size={14} />, label: 'About Us', path: '/about' },
+            { icon: <ShieldCheck size={14} />, label: 'Why C9', path: '/about/why-c9' },
+            { icon: <Users size={14} />, label: 'Our Team', path: '/about/team' },
+            { icon: <Briefcase size={14} />, label: 'Careers', path: '/about/careers' },
+            { icon: <ShieldCheck size={14} />, label: 'Partners & Certifications', path: '/about/partners' },
+            { icon: <Star size={14} />, label: 'Reviews & Awards', path: '/about/reviews' },
+          ]
+        }
+      ]
+    }
+  ],
+  challenges: [
+    { title: 'Innovation', icon: <Cpu size={24} /> },
+    { title: 'Reliability', icon: <Shield size={24} /> },
+    { title: 'Global Support', icon: <Globe size={24} /> },
+    { title: 'Scalability', icon: <Layers size={24} /> },
+  ],
+  sidebar: {
+    heading: 'Platform Partnerships',
+    items: [
+      { icon: <Cloud size={14} />, title: 'AWS Partner' },
+      { icon: <Cloud size={14} />, title: 'Google Cloud Partner' },
+      { icon: <Monitor size={14} />, title: 'Microsoft Solution Partner' },
+      { icon: <Smartphone size={14} />, title: 'Salesforce Partner' },
+    ]
+  }
+};
+
+export const RESOURCES_MENU = {
+  layout: 'resources',
+  heading: 'Industry Expertise & Growth',
+  columns: [
+    {
+      sections: [
+        {
+          heading: 'Learning Center',
+          items: [
+            { icon: <Layout size={14} />, label: 'Case Studies', path: '/about/case-studies' },
+            { icon: <MessageSquare size={14} />, label: 'Blog', path: '/resources/blog' },
+            { icon: <Calendar size={14} />, label: 'Events', path: '#' },
+            { icon: <Headphones size={14} />, label: 'FAQ', path: '/support/faq' },
+            { icon: <Phone size={14} />, label: 'Schedule a Consultation', path: '#consultation-section' },
+          ]
+        }
+      ]
+    }
+  ],
+  challenges: [
+    { title: 'Strategy Guides', icon: <BarChart3 size={24} /> },
+    { title: 'Video Demos', icon: <Monitor size={24} /> },
+    { title: 'Whitepapers', icon: <Database size={24} /> },
+    { title: 'Infographics', icon: <LayoutGrid size={24} /> },
+  ],
+  sidebar: {
+    heading: 'How to Build',
+    items: [
+      { icon: <Building2 size={18} />, title: 'Set Up New Office', desc: 'Seamlessly transition your business tech.' },
+      { icon: <Wifi size={18} />, title: 'Secure Business WiFi', desc: 'Fast, secure, enterprise-grade connectivity.' },
+      { icon: <Phone size={18} />, title: 'Modernize Voice', desc: 'Cloud phone systems for the modern team.' },
+    ]
+  }
+};
+
 export const MEGA_MAP: Record<string, any> = {
   'it-solutions': IT_SOLUTIONS_MENU,
   'telco': TELCO_MENU,
   'modern-workplace': MODERN_WORKPLACE_MENU,
-  'company': IT_SOLUTIONS_MENU, // Fallback for now
-  'resources': IT_SOLUTIONS_MENU  // Fallback for now
+  'company': COMPANY_MENU,
+  'resources': RESOURCES_MENU
 };
 
 export const TABS = [
-  { name: 'IT Solutions', menuKey: 'it-solutions', path: '/solutions/it' },
+  { name: 'IT Solutions', menuKey: 'it-solutions', path: '/managed-it' },
   { name: 'Telco', menuKey: 'telco', path: '/solutions/telco' },
   { name: 'Modern Workplace', menuKey: 'modern-workplace', path: '/solutions/modern-workplace' },
   { name: 'Company', menuKey: 'company', path: '/about' },

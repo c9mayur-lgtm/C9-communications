@@ -162,7 +162,6 @@ const WORKFLOW_STEPS = [
 export default function TelcoPage() {
   const [activeTab, setActiveTab] = useState('overview');
   const [activeProcessStep, setActiveProcessStep] = useState(0);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   
   const toggleService = (svc: string) => {
@@ -366,8 +365,9 @@ export default function TelcoPage() {
                            alt={svc.title} 
                            className={`w-full h-full object-cover ${svc.imgPosition || 'object-center'} transition-transform duration-700 group-hover:scale-105`} 
                          />
-                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                       </div>
+                          <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay group-hover:bg-[#5D00D6]/20 transition-colors duration-500" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 via-transparent to-transparent" />
+                        </div>
                      ) : (
                        <div className="w-full h-full flex flex-col items-center justify-center px-8 relative">
                          <span className="text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest border border-[#5D00D6]/20 px-4 py-2 rounded-full border-dashed bg-white/80 shadow-sm backdrop-blur-sm relative z-10 flex items-center gap-2">
@@ -953,164 +953,14 @@ export default function TelcoPage() {
         </div>
       </section>
 
-      {/* SECTION 10 - CONVERSION CTA */}
-      <div id="audit-form" className="bg-[#C4B5FD] py-20 md:py-32" style={{ fontFamily: "'Inter', sans-serif" }}>
-        <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-start">
-
-            {/* LEFT – telco content */}
-            <FadeIn delay={0.1} className="pt-4">
-              <div className="inline-block bg-[#0c1024] text-white px-4 py-1.5 rounded-lg text-[11px] font-bold tracking-widest uppercase mb-8">
-                Free Telco Audit
-              </div>
-              <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[#0c1024] leading-[1.1] mb-8 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                Find out exactly how much you could save with C9.
-              </h2>
-              <p className="text-[18px] md:text-[20px] text-slate-900/80 leading-relaxed mb-12 max-w-lg font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                We'll review your current telco costs, identify where you're overpaying, and show you a better option. No obligation — just 10 minutes.
-              </p>
-
-              <div className="mb-10">
-                <p className="font-extrabold text-[#0c1024] text-[20px] md:text-[24px]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                  Call us today: <a href="tel:1800000299" className="text-[#5D00D6] decoration-[#5D00D6]/30 underline-offset-8 underline transition-all hover:text-[#4c00b0]">1800 000 299</a>
-                </p>
-              </div>
-
-              <div>
-                <div className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-8">
-                  WHAT HAPPENS AFTER YOU SUBMIT
-                </div>
-
-                <div className="flex flex-col gap-8 mb-10">
-                  <div className="flex items-start gap-5">
-                    <div className="w-10 h-10 rounded-full bg-[#5D00D6]/10 border border-[#5D00D6]/30 flex items-center justify-center shrink-0 mt-0.5">
-                      <Phone size={18} className="text-[#5D00D6]" />
-                    </div>
-                    <div>
-                      <h4 className="text-[17px] font-bold text-[#0c1024] leading-tight mb-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>1. A real Australian calls you</h4>
-                      <p className="text-[15px] text-slate-700 leading-[1.6]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Not a call centre. Not a script. Someone who actually knows telco.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-5">
-                    <div className="w-10 h-10 rounded-full bg-[#5D00D6]/10 border border-[#5D00D6]/30 flex items-center justify-center shrink-0 mt-0.5">
-                      <Search size={18} className="text-[#5D00D6]" />
-                    </div>
-                    <div>
-                      <h4 className="text-[17px] font-bold text-[#0c1024] leading-tight mb-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>2. We review your current costs</h4>
-                      <p className="text-[15px] text-slate-700 leading-[1.6]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>We show you exactly where you're overpaying right now.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-5">
-                    <div className="w-10 h-10 rounded-full bg-[#5D00D6]/10 border border-[#5D00D6]/30 flex items-center justify-center shrink-0 mt-0.5">
-                      <FileText size={18} className="text-[#5D00D6]" />
-                    </div>
-                    <div>
-                      <h4 className="text-[17px] font-bold text-[#0c1024] leading-tight mb-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>3. You get a clear proposal</h4>
-                      <p className="text-[15px] text-slate-700 leading-[1.6]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Plain English. Exact pricing. No lock-in if it's not for you.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 border-t border-[#0c1024]/10 pt-8">
-                  <Star size={20} className="fill-[#F59E0B] text-[#F59E0B] shrink-0 mt-0.5" />
-                  <p className="text-[15px] text-slate-800 leading-[1.6]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                    <strong>4.8★ Google Rating</strong> from 200+ verified Australian businesses
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* RIGHT – white form card (exact WpConsultationForm style) */}
-            <FadeIn delay={0.3}>
-              <div className="bg-white shadow-[0_40px_100px_-15px_rgba(0,0,0,0.1)] p-8 md:p-12 border border-white/20">
-                <h2 className="text-[24px] md:text-[28px] font-bold text-center text-[#0c1024] mb-10 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                  Request Your Free Telco Audit
-                </h2>
-
-                {!isSubmitted ? (
-                  <form onSubmit={(e) => { e.preventDefault(); setIsSubmitted(true); }} className="grid gap-6">
-                    
-                    {/* Row 1: First / Last name */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-[11px] font-bold text-slate-600 uppercase tracking-widest">First name</label>
-                        <input required type="text" placeholder="John" className="w-full px-5 py-3.5 rounded-2xl bg-white border border-slate-200 focus:border-[#5D00D6] focus:ring-2 focus:ring-[#5D00D6]/10 outline-none transition-all text-[15px] font-medium text-slate-800 placeholder:text-slate-400" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-[11px] font-bold text-slate-600 uppercase tracking-widest">Last name</label>
-                        <input required type="text" placeholder="Doe" className="w-full px-5 py-3.5 rounded-2xl bg-white border border-slate-200 focus:border-[#5D00D6] focus:ring-2 focus:ring-[#5D00D6]/10 outline-none transition-all text-[15px] font-medium text-slate-800 placeholder:text-slate-400" />
-                      </div>
-                    </div>
-
-                    {/* Row 2: Company / Phone */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-[11px] font-bold text-slate-600 uppercase tracking-widest">Company</label>
-                        <input type="text" placeholder="Acme Pty Ltd" className="w-full px-5 py-3.5 rounded-2xl bg-white border border-slate-200 focus:border-[#5D00D6] focus:ring-2 focus:ring-[#5D00D6]/10 outline-none transition-all text-[15px] font-medium text-slate-800 placeholder:text-slate-400" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-[11px] font-bold text-slate-600 uppercase tracking-widest">Phone</label>
-                        <input required type="tel" placeholder="1800 000 299" className="w-full px-5 py-3.5 rounded-2xl bg-white border border-slate-200 focus:border-[#5D00D6] focus:ring-2 focus:ring-[#5D00D6]/10 outline-none transition-all text-[15px] font-medium text-slate-800 placeholder:text-slate-400" />
-                      </div>
-                    </div>
-
-                    {/* Row 3: Email / Current Provider */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-[11px] font-bold text-slate-600 uppercase tracking-widest">Work email</label>
-                        <input required type="email" placeholder="john@company.com.au" className="w-full px-5 py-3.5 rounded-2xl bg-white border border-slate-200 focus:border-[#5D00D6] focus:ring-2 focus:ring-[#5D00D6]/10 outline-none transition-all text-[15px] font-medium text-slate-800 placeholder:text-slate-400" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-[11px] font-bold text-slate-600 uppercase tracking-widest">Current Provider</label>
-                        <div className="relative">
-                          <select className="w-full px-5 py-3.5 pr-10 rounded-2xl bg-white border border-slate-200 focus:border-[#5D00D6] focus:ring-2 focus:ring-[#5D00D6]/10 outline-none transition-all text-[15px] text-slate-800 cursor-pointer appearance-none">
-                            <option value="">Select provider...</option>
-                            <option value="telstra">Telstra</option>
-                            <option value="optus">Optus</option>
-                            <option value="tpg">TPG</option>
-                            <option value="superloop">Superloop</option>
-                            <option value="aussie">Aussie Broadband</option>
-                            <option value="other">Other</option>
-                          </select>
-                          <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Message */}
-                    <div className="flex flex-col gap-2">
-                      <label className="text-[11px] font-bold text-slate-600 uppercase tracking-widest">Message</label>
-                      <textarea
-                        placeholder="Briefly describe your current setup or what's not working..."
-                        className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 focus:border-[#5D00D6] focus:ring-2 focus:ring-[#5D00D6]/10 outline-none transition-all text-[15px] text-slate-800 font-medium min-h-[110px] resize-none placeholder:text-slate-400"
-                      />
-                    </div>
-
-                    <button type="submit" className="w-full h-14 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold text-[16px] rounded-full transition-colors flex items-center justify-center gap-2 mt-2 shadow-2xl shadow-purple-900/30">
-                      Request Free Audit <ArrowRight size={20} />
-                    </button>
-
-                    <p className="text-center text-[12px] text-slate-400 -mt-2" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                      Response within 2 business hours · No lock-in · Your details stay private
-                    </p>
-                  </form>
-                ) : (
-                  <div className="flex flex-col items-center text-center py-10 gap-6">
-                    <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-                      <CheckCircle2 size={36} className="text-green-600" />
-                    </div>
-                    <h3 className="text-[24px] font-bold text-[#0c1024]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>You're in. We'll call within 2 business hours.</h3>
-                    <p className="text-slate-500 text-[16px]">Check your email for confirmation.</p>
-                  </div>
-                )}
-              </div>
-            </FadeIn>
-
-          </div>
-        </div>
-      </div>
+      {/* ── Consultation ─────────────────────────────────────────── */}
+      <WpConsultationForm 
+        showHeader={true}
+        eyebrow="FREE TELCO AUDIT"
+        title="Your telco headaches stop here."
+        description="Book a 30-minute session with our senior telco engineers to review your current costs and design a roadmap for 99.99% uptime."
+        formTitle="Request Free Telco Audit"
+      />
 
 
       {/* STICKY MOBILE BAR */}

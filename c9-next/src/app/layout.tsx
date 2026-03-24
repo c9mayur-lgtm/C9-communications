@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { WpFooter } from "@/components/layout/WpFooter";
 import { WpFloatingContact } from "@/components/wordpress/WpFloatingContact";
+import { BusinessAdvisor } from "@/components/wordpress/BusinessAdvisor";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -71,6 +72,7 @@ export default function RootLayout({
         {children}
         <WpFooter />
         <WpFloatingContact />
+        <BusinessAdvisor />
       </body>
     </html>
   );

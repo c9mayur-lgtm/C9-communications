@@ -1,0 +1,82 @@
+﻿
+> c9-communications@0.0.0 build
+> tsc -b && vite build
+
+src/pages/ModernWorkplace1.tsx(1,1): error TS6192: All imports in import declaration are unused.
+src/pages/ModernWorkplace1.tsx(2,29): error TS6133: 'useTransform' is declared but its value is never read.
+src/pages/ModernWorkplace1.tsx(3,18): error TS6133: 'Smartphone' is declared but its value is never read.
+src/pages/ModernWorkplace1.tsx(3,88): error TS6133: 'Bell' is declared but its value is never read.
+src/pages/ModernWorkplace1.tsx(3,94): error TS6133: 'Clock' is declared but its value is never read.
+src/pages/ModernWorkplace1.tsx(19,9): error TS6133: 'scrollYProgress' is declared but its value is never read.
+src/pages/ModernWorkplace1.tsx(39,25): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+src/pages/ModernWorkplace1.tsx(43,24): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+src/pages/ModernWorkplace1.tsx(46,23): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+src/pages/ModernWorkplace1.tsx(51,25): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+src/pages/ModernWorkplace1.tsx(63,25): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+src/pages/ModernWorkplace1.tsx(272,28): error TS2322: Type '{ children: Element[]; type: string; collapsible: true; className: string; }' is not assignable to type 'IntrinsicAttributes & AccordionRootProps'.
+  Property 'type' does not exist on type 'IntrinsicAttributes & AccordionRootProps'.

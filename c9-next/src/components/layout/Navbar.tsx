@@ -36,22 +36,29 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
         <div className="bg-white border border-gray-100 border-top-0 rounded-b-[40px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] overflow-hidden">
           <div className="grid" style={{ gridTemplateColumns: gridTemplate }}>
             
-            {/* COLUMN 1: NAVIGATION */}
+            {/* COLUMN 1: NAVIGATION / HEADING */}
             <div className="p-8 border-r border-gray-50 flex flex-col gap-10">
+              {data.heading && (
+                <div className="max-w-[280px]">
+                  <h2 className="text-[28px] font-semibold text-slate-800 leading-[1.2] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                    {data.heading}
+                  </h2>
+                </div>
+              )}
               {data.columns?.map((col: any, ci: number) => (
                 <div key={ci} className="space-y-8">
                   {col.sections.map((sec: any, si: number) => (
                     <div key={si}>
-                      <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5D00D6] mb-5 opacity-40">{sec.heading}</h4>
+                      <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-5 opacity-30">{sec.heading}</h4>
                       <div className="flex flex-col gap-3.5">
                         {sec.items.map((item: any, ii: number) => (
                           <Link 
                             key={ii} 
                             href={item.path} 
-                            className="group flex items-center gap-3 text-slate-600 hover:text-[#5D00D6] transition-all"
+                            className="group flex items-center gap-3 text-slate-500 hover:text-[#5D00D6] transition-all"
                           >
                             <div className="w-1 h-1 rounded-full bg-[#5D00D6] scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                            <span className="text-[14px] font-bold tracking-tight transition-transform group-hover:translate-x-1">{item.label}</span>
+                            <span className="text-[14px] font-medium tracking-tight transition-transform group-hover:translate-x-1">{item.label}</span>
                           </Link>
                         ))}
                       </div>
@@ -63,14 +70,14 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
             {/* COLUMN 2: HIGHLIGHTS/CHALLENGES */}
             <div className="p-10 border-r border-gray-50 bg-[#FCFBFE]/30">
-              <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-40">Modern Infrastructure</h4>
+              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-30">Modern Infrastructure</h4>
               <div className="grid grid-cols-2 gap-5">
                 {(data.challenges || data.modernization)?.map((c: any, i: number) => (
                   <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[24px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-500 cursor-pointer overflow-hidden leading-tight">
-                    <div className="mb-4 p-4 rounded-2xl bg-slate-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white group-hover:rotate-[15deg] transition-all duration-500">
+                    <div className="mb-4 p-4 rounded-full bg-slate-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white group-hover:scale-110 transition-all duration-500">
                       {c.icon}
                     </div>
-                    <span className="text-[14px] font-bold text-[#0c1024] px-2">{c.title}</span>
+                    <span className="text-[13px] font-semibold text-slate-700 px-2">{c.title}</span>
                     <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
                 ))}
@@ -81,7 +88,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             <div className="p-10 bg-[#FCFBFE]">
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-40">Support & Resources</h4>
+                  <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-30">Support & Resources</h4>
                   <div className="flex flex-col gap-6">
                     {(data.sidebar?.items || []).slice(0, 3).map((item: any, i: number) => (
                       <div key={i} className="group flex items-start gap-4 cursor-pointer">
@@ -89,8 +96,8 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                           {item.icon || <ChevronRight size={14} />}
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-[14px] font-bold text-[#0c1024] group-hover:text-[#5D00D6] transition-colors">{typeof item === 'string' ? item : item.title}</span>
-                          {item.desc && <p className="text-[12px] text-slate-500 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
+                          <span className="text-[14px] font-semibold text-slate-700 group-hover:text-[#5D00D6] transition-colors">{typeof item === 'string' ? item : item.title}</span>
+                          {item.desc && <p className="text-[12px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
                         </div>
                       </div>
                     ))}
@@ -147,7 +154,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                   {MEGA_MAP[tab.menuKey as keyof typeof MEGA_MAP]?.columns?.[0]?.sections?.map((section: any) => 
                     section.items.map((item: any, i: number) => (
                       <Link key={i} href={item.path} onClick={onClose} className="flex items-center justify-between group">
-                        <span className="text-[18px] font-bold text-[#0c1024]">{item.label}</span>
+                        <span className="text-[18px] font-semibold text-slate-800">{item.label}</span>
                         <ChevronRight size={18} className="text-slate-300 group-hover:text-[#5D00D6] transition-colors" />
                       </Link>
                     ))
@@ -159,10 +166,10 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
           <div className="p-6 border-t border-gray-100 bg-slate-50">
             <div className="flex flex-col gap-4">
-              <a href="tel:1800000299" className="flex items-center justify-center gap-3 w-full py-4 bg-white border border-gray-200 rounded-2xl font-bold text-[#0c1024]">
+              <a href="tel:1800000299" className="flex items-center justify-center gap-3 w-full py-4 bg-white border border-gray-200 rounded-2xl font-semibold text-slate-800">
                 <PhoneCall size={18} /> 1800 000 299
               </a>
-              <Button size="lg" className="w-full py-7 text-[16px] font-bold rounded-2xl shadow-xl shadow-purple-900/20 bg-[#5D00D6]">
+              <Button size="lg" className="w-full py-7 text-[16px] font-semibold rounded-2xl shadow-xl shadow-purple-900/20 bg-[#5D00D6]">
                 Get Started
               </Button>
             </div>
@@ -222,8 +229,8 @@ export const Navbar = () => {
             const isOpen = openMenu === tab.menuKey;
             return (
               <div key={tab.name} className="relative h-full flex items-center" onMouseEnter={() => handleEnter(tab.menuKey)}>
-                <button className={`flex items-center gap-1 px-4 py-2 rounded-xl font-[700] transition-all tracking-tight ${
-                  isOpen ? 'text-[#5D00D6] bg-[#5D00D6]/5' : (isScrolled ? 'text-[#0c1024] hover:bg-gray-50' : 'text-gray-800 hover:text-[#5D00D6]')
+                <button className={`flex items-center gap-1 px-4 py-2 rounded-xl font-semibold transition-all tracking-tight ${
+                  isOpen ? 'text-[#5D00D6] bg-[#5D00D6]/5' : (isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]')
                 }`}>
                   {tab.name}
                   <ChevronDown size={14} className={`transition-transform duration-300 opacity-40 ${isOpen ? 'rotate-180 text-[#5D00D6] opacity-100' : ''}`} />
@@ -235,8 +242,8 @@ export const Navbar = () => {
         
         <div className="flex items-center gap-4 md:gap-6">
           <div className={`hidden lg:flex flex-col items-end border-r pr-6 mr-1 ${isScrolled ? 'border-gray-200' : 'border-gray-300'}`}>
-            <span className={`text-[10px] font-semibold uppercase tracking-[0.2em] mb-0.5 ${isScrolled ? 'text-gray-400' : 'text-gray-500'}`}>Client Support</span>
-            <a href="tel:1800000299" className={`text-[15px] font-bold tracking-tight hover:text-[#5D00D6] transition-colors ${isScrolled ? 'text-[#0c1024]' : 'text-gray-800'}`}>1800 000 299</a>
+            <span className={`text-[10px] font-semibold uppercase tracking-[0.2em] mb-0.5 ${isScrolled ? 'text-slate-400' : 'text-slate-500'}`}>Client Support</span>
+            <a href="tel:1800000299" className={`text-[15px] font-bold tracking-tight hover:text-[#5D00D6] transition-colors ${isScrolled ? 'text-slate-600' : 'text-slate-800'}`}>1800 000 299</a>
           </div>
           
           <Button 
