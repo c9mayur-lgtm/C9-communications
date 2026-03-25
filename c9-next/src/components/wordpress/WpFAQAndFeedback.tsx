@@ -18,7 +18,10 @@ export interface TestimonialData {
   name: string;
   role: string;
   content: string;
-  avatar: string | React.ReactNode;
+  avatar?: string | React.ReactNode;
+  image?: string;
+  metric?: string;
+  metricLabel?: string;
 }
 
 export interface FAQItemData {
@@ -111,9 +114,9 @@ export const WpFAQAndFeedback = ({
             role: t.role,
             content: t.content,
             avatar: t.avatar,
-            metric: (t as any).metric,
-            metricLabel: (t as any).metricLabel,
-            image: (t as any).image
+            metric: t.metric,
+            metricLabel: t.metricLabel,
+            image: t.image
           })) : undefined} 
         />
       )}

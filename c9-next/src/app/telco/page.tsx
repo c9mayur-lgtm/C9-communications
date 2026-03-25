@@ -16,19 +16,25 @@ const TELCO_TESTIMONIALS = [
     content: "We cut our telco bill by $1,800 a month. The migration took 2 days and our team didn't miss a single call.",
     name: "James R.",
     role: "Operations Manager - Healthcare Group",
-    avatar: "JR"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+    metric: "$1,800",
+    metricLabel: "Monthly Saving"
   },
   {
     content: "After years of Telstra hold queues, having an account manager who knows our name is something we didn't know we needed until we had it.",
     name: "Michelle T.",
     role: "Director - Legal Firm",
-    avatar: "MT"
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800",
+    metric: "0 Min",
+    metricLabel: "Hold Times"
   },
   {
     content: "Three sites. One system. 48 hours. C9 made the thing we dreaded look completely routine.",
     name: "David K.",
     role: "IT Manager - Retail Chain",
-    avatar: "DK"
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800",
+    metric: "48 Hrs",
+    metricLabel: "To Go-Live"
   }
 ];
 
