@@ -7,7 +7,7 @@ import { ChevronRight, ChevronLeft, Server, Shield, Cpu, Network, Wifi, Monitor,
 const VendorCard = ({ card }: { card: any }) => {
   return (
     <div className="group relative bg-[#0D0D0D] border border-white/5 p-6 md:p-8 flex flex-col h-full hover:border-[#5D00D6]/30 transition-all duration-500 overflow-hidden">
-        <h3 className="text-[24px] font-bold text-white mb-3 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{card.title}</h3>
+        <h3 className="text-[20px] font-bold text-white mb-3 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{card.title}</h3>
         <p className="text-white/60 text-[18px] leading-relaxed mb-8 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
           {card.description}
         </p>
@@ -123,7 +123,7 @@ export const WpVendors = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-10">
           <div className="max-w-2xl w-full">
             <span className="text-[#5D00D6] text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block">Strategic Partnerships</span>
-            <h2 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[54px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Leading the way in IT excellence.
             </h2>
             <div className="flex flex-nowrap overflow-x-auto gap-2 md:gap-3 pb-4 no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0 w-full">

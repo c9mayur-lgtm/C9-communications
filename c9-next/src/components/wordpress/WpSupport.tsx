@@ -9,7 +9,7 @@ export const WpSupport = () => {
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="mb-10 text-center">
           <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Support</span>
-          <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight leading-[1.1] mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight leading-[1.1] mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             World‑Class Support Delivered by <br />Fully Trained Australian Experts
           </h2>
           <p className="text-[18px] text-gray-600 leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
@@ -44,7 +44,7 @@ export const WpSupport = () => {
                 <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay group-hover:bg-[#5D00D6]/20 transition-colors duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 via-transparent to-transparent opacity-60" />
               </div>
-              <h3 className="text-[18px] md:text-[20px] font-bold text-[#0c1024] mb-4 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 {card.title}
               </h3>
               <p className="text-[15px] md:text-[16px] text-gray-600 leading-relaxed mb-6 font-normal line-clamp-3" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
@@ -60,7 +60,7 @@ export const WpSupport = () => {
         {/* Secondary Support Content (Puts People Before Profit) */}
         <div className="mt-20 pt-20 border-t border-gray-100 grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           <div>
-            <h2 className="text-[28px] md:text-[34px] font-bold text-[#0c1024] leading-tight tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-tight tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Support That Puts People Before Profit
             </h2>
             <p className="text-[18px] text-gray-600 leading-relaxed font-normal mb-10" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>

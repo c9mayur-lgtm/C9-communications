@@ -63,7 +63,7 @@ export const WpConsultationForm = ({
                   <div className="inline-block bg-[#0B0121] text-white px-4 py-1.5 rounded-lg text-[11px] font-semibold tracking-widest uppercase mb-6">
                     {eyebrow}
                   </div>
-                  <h2 className="text-[36px] md:text-[48px] lg:text-[60px] font-semibold text-[#1a1a2e] leading-[1.05] mb-8 tracking-tighter">
+                  <h2 className="text-[32px] md:text-[40px] font-bold text-[#1a1a2e] leading-[1.05] mb-8 tracking-tight">
                     {title}
                   </h2>
                 </div>
@@ -71,7 +71,7 @@ export const WpConsultationForm = ({
 
               {children ? children : (
                 <>
-                  <p className="text-[20px] text-[#1a1a2e] leading-relaxed mb-12 max-w-lg font-medium opacity-70">
+                  <p className="text-[18px] text-[#1a1a2e] leading-relaxed mb-12 max-w-lg font-normal opacity-70">
                     {description}
                   </p>
                   

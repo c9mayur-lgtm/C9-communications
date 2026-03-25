@@ -6,7 +6,7 @@ export const WpSimplifyingIT = () => {
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Proven Experience</span>
-          <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-bold text-[#0c1024] tracking-tight leading-tight">
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight leading-tight">
             Simplifying IT for a complex world.
           </h2>
         </div>
@@ -40,7 +40,7 @@ export const WpSimplifyingIT = () => {
               <div className="w-14 h-14 mb-6 flex items-center justify-start">
                 <img src={f.icon} alt={f.title} className="max-w-full max-h-full object-contain object-left" />
               </div>
-              <h3 className="text-[20px] md:text-[24px] font-bold mb-3 text-[#0c1024] tracking-tight">{f.title}</h3>
+              <h3 className="text-[20px] font-bold mb-3 text-[#0c1024] tracking-tight">{f.title}</h3>
               <p className="text-gray-600 text-[14px] md:text-[18px] leading-relaxed font-normal">{f.desc}</p>
             </div>
           ))}

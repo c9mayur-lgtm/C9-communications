@@ -37,7 +37,7 @@ export const WpFloatingContact = () => {
               >
                 <X size={20} />
               </button>
-              <h3 className="text-[24px] font-bold mb-2">How can we help?</h3>
+              <h3 className="text-[20px] font-bold mb-2">How can we help?</h3>
               <p className="text-white/60 text-[14px]">Our experts are ready to assist you. Select your preferred contact method.</p>
             </div>
             

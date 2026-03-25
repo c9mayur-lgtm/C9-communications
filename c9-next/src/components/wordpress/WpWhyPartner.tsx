@@ -49,7 +49,7 @@ export const WpWhyPartner = () => {
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto px-6">
           <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.4em] mb-6 block">Why Partner With Us</span>
-          <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-bold text-[#0c1024] leading-[1.1] tracking-tight">
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight">
             What global companies use C9 Communications for
           </h2>
         </div>
@@ -126,7 +126,7 @@ export const WpWhyPartner = () => {
               <div className="mb-6 mt-4">
                 <block.icon size={32} strokeWidth={1.5} color="#5D00D6" fill="none" />
               </div>
-              <h3 className="text-[20px] md:text-[24px] font-bold text-[#0c1024] mb-4 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{block.title}</h3>
+              <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{block.title}</h3>
               <p className="text-gray-600 text-[14px] md:text-[18px] leading-relaxed font-normal mb-8 flex-grow" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 {block.desc}
               </p>

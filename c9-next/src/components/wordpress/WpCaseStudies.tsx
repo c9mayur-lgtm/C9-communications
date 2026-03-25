@@ -49,7 +49,7 @@ export const WpCaseStudies = () => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-10">
           <div className="max-w-2xl">
             <span className="text-[#5D00D6] text-[12px] font-extrabold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Impact Realized</span>
-            <h2 className="text-[32px] md:text-[44px] lg:text-[48px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Hear From Businesses<br /> Like Yours
             </h2>
           </div>
@@ -101,7 +101,7 @@ export const WpCaseStudies = () => {
                 </div>
 
                 <div className="px-2">
-                   <h3 className="text-[24px] md:text-[28px] font-bold text-[#0c1024] mb-4 group-hover:text-[#5D00D6] transition-colors leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                   <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 group-hover:text-[#5D00D6] transition-colors leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                      {cs.title}
                    </h3>
                    <p className="text-gray-500 text-[17px] md:text-[18px] leading-relaxed mb-8 line-clamp-2 font-medium">

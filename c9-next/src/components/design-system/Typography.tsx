@@ -19,7 +19,7 @@ export const H1 = ({ children, className, as: Component = 'h1' }: TypographyProp
 
 export const H2 = ({ children, className, as: Component = 'h2' }: TypographyProps) => (
   <Component className={cn(
-    "text-[28px] md:text-[36px] lg:text-[44px] font-bold text-[#0c1024] tracking-tight leading-tight",
+    "text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight leading-tight",
     "font-proxima",
     className
   )}>
@@ -29,7 +29,7 @@ export const H2 = ({ children, className, as: Component = 'h2' }: TypographyProp
 
 export const H3 = ({ children, className, as: Component = 'h3' }: TypographyProps) => (
   <Component className={cn(
-    "text-[20px] md:text-[24px] lg:text-[28px] font-bold text-[#0c1024] tracking-tight",
+    "text-[20px] font-bold text-[#0c1024] tracking-tight",
     "font-proxima",
     className
   )}>
@@ -39,7 +39,7 @@ export const H3 = ({ children, className, as: Component = 'h3' }: TypographyProp
 
 export const Body = ({ children, className, as: Component = 'p' }: TypographyProps) => (
   <Component className={cn(
-    "text-[16px] md:text-[18px] text-gray-600 leading-relaxed font-normal",
+    "text-[18px] text-gray-500 leading-relaxed font-normal",
     "font-proxima",
     className
   )}>

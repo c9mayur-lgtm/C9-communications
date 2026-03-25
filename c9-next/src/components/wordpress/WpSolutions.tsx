@@ -21,7 +21,7 @@ export const WpSolutions = () => {
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
         <div className="flex flex-col mb-10 gap-4">
           <span className="text-white text-[13px] font-bold uppercase tracking-[0.3em] mb-2 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>What we do</span>
-          <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold tracking-tight text-white leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Solutions</h2>
+          <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-white leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Solutions</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -37,7 +37,7 @@ export const WpSolutions = () => {
               <div className="mb-8">
                 <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[20px] md:text-[24px] font-bold mb-4 text-[#0c1024] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.title}</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-[#0c1024] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.title}</h3>
               <p className="text-gray-600 text-[14px] md:text-[18px] mb-8 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.desc}</p>
               <div className="w-full h-[1px] bg-gray-300 mt-auto mb-6"></div>
               <div className="flex items-center text-[14px] font-bold text-[#5D00D6] group-hover:underline uppercase tracking-wider" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>

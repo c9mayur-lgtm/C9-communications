@@ -15,7 +15,7 @@ export const WpServices = () => {
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="mb-10">
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Our Expertise</span>
-            <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight mb-8">
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight mb-8">
               Telco services, tailored for business.
             </h2>
             
@@ -68,7 +68,7 @@ export const WpServices = () => {
                 {/* Left side: Heading & Description */}
                 <div className="flex flex-col h-full">
                   <div className="mb-10 lg:mb-12">
-                    <h3 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mb-6 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                    <h3 className="text-[20px] font-bold text-[#0c1024] mb-6 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                       {TELCO_SERVICES_CONTENT[activeTelcoTab].heading}
                     </h3>
                     <p className="text-[17px] md:text-[19px] text-gray-500 leading-relaxed font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>

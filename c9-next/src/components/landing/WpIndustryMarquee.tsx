@@ -81,7 +81,7 @@ export const IndustryCard = ({ industry }: { industry: any }) => (
       </div>
     </div>
     
-    <h3 className="text-[22px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
       {industry.title}
     </h3>
     
@@ -110,7 +110,7 @@ export const WpIndustryMarquee = () => {
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center mb-10">
           <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>What we do</span>
-          <h2 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-[#0c1024] tracking-tight mb-8">
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight mb-8">
             Solving IT challenges in every industry, every day.
           </h2>
         </div>

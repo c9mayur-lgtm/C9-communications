@@ -80,7 +80,7 @@ const IndustryCard = ({ industry }: { industry: typeof INDUSTRIES[0] }) => (
       </div>
     </div>
     
-    <h3 className="text-[22px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
       {industry.title}
     </h3>
     

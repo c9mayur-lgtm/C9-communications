@@ -50,7 +50,7 @@ export const WpITDepartmentOptions = () => {
 
               {/* Text Area (Matching Case Study Style) */}
               <div className="px-2">
-                 <h3 className="text-[24px] md:text-[28px] font-bold text-[#0c1024] mb-4 group-hover:text-[#5D00D6] transition-colors leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                 <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 group-hover:text-[#5D00D6] transition-colors leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                    {opt.title}
                  </h3>
                  <div className="h-[1px] w-full bg-gray-100 mb-6" />

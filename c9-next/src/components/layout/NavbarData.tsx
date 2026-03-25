@@ -66,7 +66,7 @@ export const IT_SOLUTIONS_MENU = {
           items: [
             { icon: <Headphones size={14} />, label: 'Helpdesk Support', path: '#' },
             { icon: <UserPlus size={14} />, label: 'Outsourcing', path: '#' },
-            { icon: <Globe size={14} />, label: 'Strategy & Consulting', path: '#' },
+            { icon: <Globe size={14} />, label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting' },
           ]
         },
         {

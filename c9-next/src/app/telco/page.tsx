@@ -388,7 +388,7 @@ export default function TelcoPage() {
                       {svc.tag}
                     </span>
 
-                    <H3 className="mb-4 text-[24px] md:text-[28px] text-[#0c1024] tracking-tight font-proxima">{svc.title}</H3>
+                    <H3 className="mb-4 text-[20px] text-[#0c1024] tracking-tight font-proxima">{svc.title}</H3>
                     <p className="mb-8 text-[15px] leading-[1.7] flex-grow text-gray-500 font-medium font-proxima">
                       {svc.body}
                     </p>
@@ -427,7 +427,7 @@ export default function TelcoPage() {
                   <span className="text-[#5D00D6] text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block">C9X PLATFORM</span>
                 </FadeIn>
                 <FadeIn delay={0.1}>
-                  <h2 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[54px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-6 text-white mt-4" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <h2 className="text-[32px] md:text-[40px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-6 text-white mt-4" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                     Your phone system is costing you more than money. It's costing you customers.
                   </h2>
                 </FadeIn>
@@ -490,7 +490,7 @@ export default function TelcoPage() {
                   ].map((benefit, i) => (
                     <div key={i} className="group relative bg-[#0D0D0D] border border-white/5 p-6 md:p-8 flex flex-col h-full hover:border-[#5D00D6]/30 transition-all duration-500 overflow-hidden rounded-[20px]">
                       <benefit.icon size={28} className="text-[#a166ff] mb-6 group-hover:scale-110 transition-transform duration-500 origin-left" />
-                      <h3 className="text-[24px] font-bold text-white mb-3 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{benefit.title}</h3>
+                      <h3 className="text-[20px] font-bold text-white mb-3 tracking-tight group-hover:text-[#5D00D6] transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{benefit.title}</h3>
                       <p className="text-white/60 text-[18px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                         {benefit.desc}
                       </p>
@@ -506,7 +506,7 @@ export default function TelcoPage() {
                          activeTab === 'compliance' ? <ShieldCheck size={28} /> :
                          <PieChart size={28} />}
                       </div>
-                      <h3 className="text-[24px] font-bold text-white mb-3 tracking-tight group-hover:text-[#5D00D6] transition-colors capitalize" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{activeTab.replace('-', ' ')} Feature {i}</h3>
+                      <h3 className="text-[20px] font-bold text-white mb-3 tracking-tight group-hover:text-[#5D00D6] transition-colors capitalize" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{activeTab.replace('-', ' ')} Feature {i}</h3>
                       <p className="text-white/60 text-[18px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                         Powerful enterprise-grade capabilities built instantly into your unified communications flow.
                       </p>
@@ -547,7 +547,7 @@ export default function TelcoPage() {
             {/* TELSTRA CARD */}
             <FadeIn delay={0.2} className="flex h-full">
               <div className="flex flex-col w-full border border-gray-200 rounded-[20px] bg-white pt-10 pb-8 px-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group">
-                <H3 className="text-[28px] font-bold text-[#0c1024]">Telstra</H3>
+                <H3 className="text-[20px] font-bold text-[#0c1024]">Telstra</H3>
                 <p className="text-gray-500 mt-3 text-[16px] leading-relaxed min-h-[72px]">
                   The industry default focus typically built for massive enterprise logic.
                 </p>
@@ -574,7 +574,7 @@ export default function TelcoPage() {
             {/* TPG OPTUS CARD */}
             <FadeIn delay={0.3} className="flex h-full">
               <div className="flex flex-col w-full border border-gray-200 rounded-[20px] bg-white pt-10 pb-8 px-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group">
-                <H3 className="text-[28px] font-bold text-[#0c1024]">TPG / Optus</H3>
+                <H3 className="text-[20px] font-bold text-[#0c1024]">TPG / Optus</H3>
                 <p className="text-gray-500 mt-3 text-[16px] leading-relaxed min-h-[72px]">
                   Standard commodity connectivity prioritizing volume.
                 </p>
@@ -605,7 +605,7 @@ export default function TelcoPage() {
                   Most Businesses Switch To
                 </div>
 
-                <H3 className="text-[28px] font-bold text-[#5D00D6] font-proxima tracking-tight">C9 Communications</H3>
+                <H3 className="text-[20px] font-bold text-[#5D00D6] font-proxima tracking-tight">C9 Communications</H3>
                 <p className="text-gray-600 mt-3 text-[16px] leading-relaxed min-h-[72px] font-medium font-proxima">
                   Built precisely for modern Australian businesses that require elite support.
                 </p>
@@ -646,8 +646,8 @@ export default function TelcoPage() {
           {/* Header */}
           <FadeIn className="text-center max-w-[640px] mx-auto mb-16">
             <span className="block text-[#5D00D6] text-[11px] font-mono font-bold uppercase tracking-[0.2em] mb-5">OUR PROCESS</span>
-            <H2 className="mb-5 text-white">Switching to C9 takes less time than your next Telstra hold queue.</H2>
-            <p className="text-[18px] text-gray-300 leading-relaxed" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>We've done this 1,000+ times. Here's exactly what happens.</p>
+            <H2 className="mb-5 text-[32px] md:text-[40px] text-white">Switching to C9 takes less time than your next Telstra hold queue.</H2>
+            <p className="text-[18px] text-gray-300 font-normal leading-relaxed" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>We've done this 1,000+ times. Here's exactly what happens.</p>
           </FadeIn>
 
           {/* Step Track */}
@@ -735,7 +735,7 @@ export default function TelcoPage() {
                       className="inline-block text-[11px] font-mono font-bold text-[#a166ff] px-3 py-1.5 rounded-full mb-5"
                       style={{ background: 'rgba(93,0,214,0.2)', border: '1px solid rgba(93,0,214,0.3)' }}
                     >{WORKFLOW_STEPS[activeProcessStep].tag}</span>
-                    <h3 className="text-[18px] md:text-[22px] font-bold text-white mb-3 leading-snug" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                    <h3 className="text-[20px] font-bold text-white mb-3 leading-snug" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                       {WORKFLOW_STEPS[activeProcessStep].title}
                     </h3>
                     <p className="text-[15px] text-gray-300 leading-[1.65] mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
@@ -833,7 +833,7 @@ export default function TelcoPage() {
               <span className="block text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>WHO WE WORK WITH</span>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[#0c1024] tracking-tight mb-8">
+              <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight mb-8">
                  Built for your industry.<br />Not just your postcode.
               </h2>
             </FadeIn>

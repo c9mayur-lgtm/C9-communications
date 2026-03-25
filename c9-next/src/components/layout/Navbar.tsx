@@ -40,7 +40,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             <div className="p-8 border-r border-gray-50 flex flex-col gap-10">
               {data.heading && (
                 <div className="max-w-[280px]">
-                  <h2 className="text-[28px] font-semibold text-slate-800 leading-[1.2] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <h2 className="text-[32px] md:text-[40px] font-semibold text-slate-800 leading-[1.2] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                     {data.heading}
                   </h2>
                 </div>
@@ -149,7 +149,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-8">
             {TABS.map(tab => (
               <div key={tab.name}>
-                <h3 className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-6">{tab.name}</h3>
+                <h3 className="text-[20px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-6">{tab.name}</h3>
                 <div className="flex flex-col gap-5">
                   {MEGA_MAP[tab.menuKey as keyof typeof MEGA_MAP]?.columns?.[0]?.sections?.map((section: any) => 
                     section.items.map((item: any, i: number) => (
@@ -210,8 +210,8 @@ export const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md py-3 shadow-sm border-gray-100' : 'bg-transparent py-5 border-transparent'
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b bg-white ${
+        isScrolled ? 'py-3 shadow-sm border-gray-100' : 'py-5 border-gray-100'
       }`}
       onMouseLeave={handleLeave}
     >

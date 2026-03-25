@@ -37,33 +37,37 @@ export const Eyebrow = ({ children, light = false }: { children: React.ReactNode
 
 /* ── Microsoft 365 Dashboard Mockup ─────────────────────────── */
 export const M365Mockup = () => (
-  <div className="rounded-2xl overflow-hidden shadow-2xl border" style={{ borderColor: BD, background: '#fff' }}>
-    <div className="flex items-center gap-2 px-4 py-3 border-b" style={{ background: '#F8FAFF', borderColor: BD }}>
+  <div className="rounded-2xl overflow-hidden shadow-2xl border bg-white" style={{ borderColor: BD }}>
+    <div className="flex items-center gap-2 px-5 py-3.5 border-b shadow-sm" style={{ background: '#F8FAFF', borderColor: BD }}>
       {['#FF5F57','#FEBC2E','#28C840'].map(c => <div key={c} className="w-3 h-3 rounded-full" style={{ background: c }} />)}
-      <div className="flex-1 mx-3 rounded-md px-3 py-1 text-[11px]" style={{ background: 'rgba(93,0,214,0.06)', color: TM }}>Microsoft 365 — C9 Managed Tenant</div>
+      <div className="flex-1 mx-3 rounded-full px-4 py-1.5 text-[11px] font-bold text-center border-gray-100 bg-white" style={{ color: TM }}>portal.c9.com — <span className="text-[#5D00D6]">Workplace Sync</span></div>
     </div>
-    <div className="p-5 grid grid-cols-4 gap-3">
-      {[{l:'Word',bg:'#185ABD',t:'W'},{l:'Excel',bg:'#217346',t:'X'},{l:'Teams',bg:'#6264A7',t:'T'},{l:'Outlook',bg:'#0072C6',t:'O'}].map(a => (
-        <div key={a.l} className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer">
-          <div className="w-11 h-11 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-sm" style={{ background: a.bg }}>{a.t}</div>
-          <span className="text-[11px] font-medium" style={{ color: TM }}>{a.l}</span>
-        </div>
+    <div className="p-8 grid grid-cols-4 gap-6 relative">
+      {[
+        {l:'Word',bg:'https://img.icons8.com/color/144/microsoft-word-2019.png'},
+        {l:'Excel',bg:'https://img.icons8.com/color/144/microsoft-excel-2019.png'},
+        {l:'Teams',bg:'https://img.icons8.com/color/144/microsoft-teams.png'},
+        {l:'Outlook',bg:'https://img.icons8.com/color/144/microsoft-outlook-2019.png'}
+      ].map((a, i) => (
+        <motion.div 
+          key={a.l} 
+          animate={{ y: [0, -4, 0] }}
+          transition={{ duration: 4, repeat: Infinity, delay: i * 0.5, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-3 p-4 rounded-2xl hover:bg-gray-50 transition-all cursor-pointer group/icon"
+        >
+          <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white shadow-lg border border-gray-100 group-hover/icon:scale-110 group-hover/icon:-rotate-3 transition-transform">
+             <img src={a.bg} alt={a.l} className="w-9 h-9 object-contain" />
+          </div>
+          <span className="text-[11px] font-bold tracking-tight uppercase" style={{ color: TM }}>{a.l}</span>
+        </motion.div>
       ))}
     </div>
-    <div className="px-5 pb-5 grid grid-cols-3 gap-3">
+    <div className="px-8 pb-8 grid grid-cols-3 gap-4">
       {[{l:'Users',v:'24/24',c:'#5D00D6',icon:Users},{l:'Security',v:'94%',c:'#00875A',icon:Shield},{l:'Devices',v:'47',c:'#6264A7',icon:Laptop}].map(({l,v,c,icon:Icon})=>(
-        <div key={l} className="rounded-xl p-3 text-center border" style={{ borderColor: BD, background: PL }}>
-          <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center" style={{ background: c+'20' }}><Icon size={16} style={{ color: c }} /></div>
-          <div className="text-[20px] font-bold leading-none mb-0.5" style={{ color: c }}>{v}</div>
-          <div className="text-[10px] font-medium" style={{ color: TM }}>{l}</div>
-        </div>
-      ))}
-    </div>
-    <div className="border-t px-5 py-4" style={{ borderColor: BD }}>
-      {[{msg:'Surface Pro enrolled — Sarah M.',c:'#5D00D6'},{msg:'Phishing simulation sent to 14 staff',c:'#D97706'},{msg:'All 24 devices updated',c:'#00875A'}].map(({msg,c})=>(
-        <div key={msg} className="flex items-center gap-2 py-1.5">
-          <div className="w-2 h-2 rounded-full shrink-0" style={{ background: c }} />
-          <span className="text-[12px]" style={{ color: TM2 }}>{msg}</span>
+        <div key={l} className="rounded-2xl p-4 text-center border bg-gray-50/50" style={{ borderColor: BD }}>
+          <div className="w-9 h-9 rounded-xl mx-auto mb-3 flex items-center justify-center font-bold" style={{ background: c+'15', color: c }}><Icon size={18} /></div>
+          <div className="text-[20px] font-bold leading-none mb-1" style={{ color: c }}>{v}</div>
+          <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400">{l}</div>
         </div>
       ))}
     </div>
@@ -72,23 +76,46 @@ export const M365Mockup = () => (
 
 /* ── Teams Meeting Mockup ─────────────────────────────────────── */
 export const TeamsMockup = () => (
-  <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ background: '#1e1e2e', border: '1px solid rgba(255,255,255,0.1)' }}>
-    <div className="flex items-center justify-between px-4 py-3 border-b" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
-      <span className="text-[12px] font-semibold text-white/80">Weekly All-Hands · 0:24:17</span>
-      <span className="text-[11px] px-2 py-0.5 rounded-full text-white font-semibold" style={{ background: '#E53E3E' }}>● REC</span>
+  <div className="rounded-2xl overflow-hidden shadow-2xl bg-[#0c1024] relative border border-white/5">
+    <div className="flex items-center justify-between px-5 py-4 border-b border-white/5 bg-white/5 backdrop-blur-md">
+       <div className="flex items-center gap-3">
+         <img src="https://img.icons8.com/color/144/microsoft-teams.png" className="w-5 h-5 object-contain" alt="Teams" />
+         <span className="text-[13px] font-bold text-white/90">Customer Success Sync</span>
+       </div>
+       <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+          <span className="text-[10px] font-bold text-white/50 tracking-widest uppercase">Live</span>
+       </div>
     </div>
-    <div className="p-4 grid grid-cols-2 gap-2">
-      {['Mark','Priya','James','You (Sarah)'].map((n,i)=>(
-        <div key={n} className="aspect-video rounded-xl flex items-end p-2 relative overflow-hidden" style={{ background: `hsl(${220+i*20},30%,18%)` }}>
-          <div className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-white text-sm" style={{ background: '#6264A7' }}>{n[0]}</div>
-          <span className="text-[11px] text-white/70 ml-2">{n}</span>
-          {i===3&&<div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-green-400 animate-pulse" />}
+    <div className="p-4 grid grid-cols-2 gap-3 aspect-[4/3]">
+      {[
+        {n:'Mark', img:'https://randomuser.me/api/portraits/men/32.jpg', status: 'Speaking'},
+        {n:'Priya', img:'https://randomuser.me/api/portraits/women/44.jpg', status: 'Muted'},
+        {n:'James', img:'https://randomuser.me/api/portraits/men/46.jpg', status: 'Muted'},
+        {n:'You', img:'https://randomuser.me/api/portraits/women/68.jpg', status: 'Muted'}
+      ].map((user, i)=>(
+        <div key={user.n} className="rounded-2xl relative overflow-hidden group/call aspect-video">
+           <img src={user.img} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/call:scale-110" alt={user.n} />
+           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+           <div className="absolute bottom-3 left-3 flex items-center gap-2">
+              <div className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/10 overflow-hidden">
+                <img src={user.img} className="w-full h-full object-cover" alt="" />
+              </div>
+              <span className="text-[11px] font-bold text-white shadow-sm">{user.n}</span>
+           </div>
+           {user.status === 'Speaking' && (
+             <div className="absolute top-3 right-3 flex gap-1">
+                {[1,2,3].map(j => <motion.div key={j} animate={{ height: [4, 12, 4] }} transition={{ repeat: Infinity, delay: j*0.2 }} className="w-1 bg-[#4B5EAA] rounded-full" />)}
+             </div>
+           )}
         </div>
       ))}
     </div>
-    <div className="flex gap-3 justify-center pb-4">
-      {['🎙️','📹','🖥️','💬','✋'].map(e=>(
-        <button key={e} className="w-9 h-9 rounded-full flex items-center justify-center text-sm hover:opacity-80 transition-opacity" style={{ background: 'rgba(255,255,255,0.1)' }}>{e}</button>
+    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 px-6 py-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 shadow-2xl">
+      {['🎙️', '📹', '🏢', '💬', '📞'].map((e, i)=>(
+        <div key={i} className={`w-8 h-8 rounded-full flex items-center justify-center text-sm cursor-pointer shadow-sm ${i === 4 ? 'bg-red-500 text-white' : 'bg-white/10 text-white'}`}>
+          {e}
+        </div>
       ))}
     </div>
   </div>
@@ -96,25 +123,48 @@ export const TeamsMockup = () => (
 
 /* ── Security Score Mockup ────────────────────────────────────── */
 export const SecurityMockup = () => (
-  <div className="rounded-2xl overflow-hidden shadow-2xl border" style={{ borderColor: BD, background: '#fff' }}>
-    <div className="p-6 border-b" style={{ borderColor: BD }}>
-      <div className="flex items-center justify-between mb-4">
-        <span className="text-[13px] font-bold" style={{ color: T }}>Microsoft Secure Score</span>
-        <span className="text-[12px] px-2 py-1 rounded-full font-semibold" style={{ background: '#00875A15', color: '#00875A' }}>+12 this month</span>
+  <div className="rounded-2xl overflow-hidden shadow-2xl border bg-white" style={{ borderColor: BD }}>
+    <div className="p-8 border-b bg-gray-50/30" style={{ borderColor: BD }}>
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-[#00875A15] flex items-center justify-center">
+            <Shield size={20} className="text-[#00875A]" />
+          </div>
+          <div>
+            <span className="block text-[13px] font-bold text-[#0c1024]">Security Health</span>
+            <span className="block text-[10px] font-bold text-[#00875A] uppercase tracking-wider">Monitored by C9 SOC</span>
+          </div>
+        </div>
+        <div className="text-right">
+           <span className="block text-[24px] font-bold text-[#0c1024]">94<span className="text-gray-300 text-[14px]">/100</span></span>
+        </div>
       </div>
-      <div className="flex items-end gap-2">
-        <span className="text-[56px] font-bold leading-none" style={{ color: P }}>94</span>
-        <span className="text-[20px] pb-2" style={{ color: TM }}>/100</span>
-      </div>
-      <div className="mt-3 h-3 rounded-full overflow-hidden" style={{ background: PL }}>
-        <motion.div className="h-full rounded-full" style={{ background: `linear-gradient(90deg, ${P}, #a855f7)` }} initial={{ width: 0 }} whileInView={{ width: '94%' }} transition={{ duration: 1.2, ease: [0.22,1,0.36,1] }} viewport={{ once: true }} />
+      
+      <div className="relative h-4 rounded-full bg-gray-100 overflow-hidden">
+        <motion.div 
+          className="h-full rounded-full" 
+          style={{ background: 'linear-gradient(90deg, #00875A, #10b981)' }} 
+          initial={{ width: 0 }} 
+          whileInView={{ width: '94%' }} 
+          transition={{ duration: 1.5, ease: [0.22,1,0.36,1] }} 
+          viewport={{ once: true }} 
+        />
       </div>
     </div>
-    <div className="p-4 flex flex-col gap-2">
-      {[{l:'MFA enabled',v:'24/24',ok:true},{l:'Devices compliant',v:'47/47',ok:true},{l:'DLP policies active',v:'12',ok:true},{l:'Threats blocked (30d)',v:'143',ok:true}].map(({l,v,ok})=>(
-        <div key={l} className="flex items-center justify-between py-2 border-b last:border-0" style={{ borderColor: BD }}>
-          <div className="flex items-center gap-2"><CheckCircle2 size={15} className="text-green-500 shrink-0" /><span className="text-[13px]" style={{ color: TM2 }}>{l}</span></div>
-          <span className="text-[13px] font-bold" style={{ color: '#00875A' }}>{v}</span>
+    <div className="p-6 space-y-3 bg-white">
+      {[
+        {l:'Endpoint Protection active', ok:true},
+        {l:'24/7 SOC Monitoring on', ok:true},
+        {l:'Identity MFA enforced', ok:true}
+      ].map(({l,ok})=>(
+        <div key={l} className="flex items-center justify-between p-3 rounded-xl border border-gray-50 bg-gray-50/30">
+          <div className="flex items-center gap-3">
+             <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
+               <Check size={12} className="text-green-600" />
+             </div>
+             <span className="text-[12px] font-bold text-gray-600">{l}</span>
+          </div>
+          <span className="text-[10px] font-bold text-green-600 uppercase">Live</span>
         </div>
       ))}
     </div>
@@ -123,18 +173,45 @@ export const SecurityMockup = () => (
 
 /* ── Device Management Mockup ─────────────────────────────────── */
 export const DeviceMockup = () => (
-  <div className="rounded-2xl overflow-hidden shadow-2xl border" style={{ borderColor: BD, background: '#fff' }}>
-    <div className="px-5 py-4 border-b flex items-center justify-between" style={{ borderColor: BD, background: '#F8FAFF' }}>
-      <span className="text-[13px] font-bold" style={{ color: T }}>Microsoft Intune — All Devices</span>
-      <span className="text-[11px] px-2 py-1 rounded-full font-semibold" style={{ background: `${P}15`, color: P }}>47 enrolled</span>
+  <div className="rounded-2xl overflow-hidden shadow-2xl border bg-white" style={{ borderColor: BD }}>
+    <div className="px-6 py-5 border-b flex items-center justify-between bg-gray-50/50" style={{ borderColor: BD }}>
+      <div className="flex items-center gap-3">
+        <Laptop size={18} className="text-[#6264A7]" />
+        <span className="text-[13px] font-bold font-proxima text-[#0c1024]">Microsoft Intune Fleet</span>
+      </div>
+      <div className="flex items-center gap-1.5 px-3 py-1 bg-[#6264A715] rounded-full">
+         <div className="w-1.5 h-1.5 rounded-full bg-[#6264A7] animate-pulse" />
+         <span className="text-[10px] font-bold text-[#6264A7]">47 Synchronized</span>
+      </div>
     </div>
-    <div className="p-4 flex flex-col gap-2">
-      {[{n:'Sarah M. — Surface Pro',os:'Windows 11',s:'Compliant',c:'#00875A'},{n:'James R. — MacBook Pro',os:'macOS 15',s:'Compliant',c:'#00875A'},{n:'Priya K. — iPhone 16',os:'iOS 18',s:'Compliant',c:'#00875A'},{n:'New device — Enrolling...',os:'Windows 11',s:'Pending',c:'#D97706'}].map(({n,os,s,c})=>(
-        <div key={n} className="flex items-center justify-between p-3 rounded-xl hover:bg-gray-50 transition-colors border" style={{ borderColor: BD }}>
-          <div><div className="text-[13px] font-semibold" style={{ color: T }}>{n}</div><div className="text-[11px]" style={{ color: TM }}>{os}</div></div>
-          <span className="text-[12px] font-bold px-2 py-1 rounded-full" style={{ background: c+'15', color: c }}>{s}</span>
+    <div className="p-6 space-y-4">
+      {[
+        {n:'Surface Laptop 7 — Admin', s:'Compliant', i:'https://img.icons8.com/color/144/surface-pro-7.png'},
+        {n:'MacBook Pro M3 — Dev', s:'Compliant', i:'https://img.icons8.com/color/144/macbook.png'},
+        {n:'iPhone 16 Pro — Sales', s:'Compliant', i:'https://img.icons8.com/color/144/iphone-14-pro.png'}
+      ].map(({n,s,i})=>(
+        <div key={n} className="flex items-center gap-4 p-3 rounded-2xl bg-white border border-gray-100 shadow-sm transition-transform hover:scale-[1.02] cursor-pointer">
+          <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center p-2">
+             <img src={i} className="w-full h-full object-contain" alt="" />
+          </div>
+          <div className="flex-1">
+             <div className="text-[13px] font-bold text-[#0c1024]">{n}</div>
+             <div className="flex items-center gap-1.5 mt-0.5">
+               <CheckCircle2 size={12} className="text-green-500" />
+               <span className="text-[10px] font-bold text-green-600 uppercase tracking-widest">{s}</span>
+             </div>
+          </div>
         </div>
       ))}
+      <div className="flex items-center justify-center p-4">
+         <motion.div 
+           animate={{ opacity: [0.5, 1, 0.5] }} 
+           transition={{ repeat: Infinity, duration: 2 }}
+           className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em]"
+         >
+           Scanning for new endpoints...
+         </motion.div>
+      </div>
     </div>
   </div>
 );
@@ -415,7 +492,7 @@ export const InfraCarousel = () => {
 /* ── Other Solutions ──────────────────────────────────────────── */
 const OTHER = [
   { 
-    icon: Camera, 
+    icon: 'https://img.icons8.com/color/144/cctv.png', 
     tag: 'PHYSICAL SECURITY', 
     title: 'CCTV & People Count', 
     metric: '95%',
@@ -425,7 +502,7 @@ const OTHER = [
     img: '/images/workplace-cctv.jpg' 
   },
   { 
-    icon: Printer, 
+    icon: 'https://img.icons8.com/color/144/print.png', 
     tag: 'MANAGED PRINT', 
     title: 'Managed Print Solution', 
     metric: '30%',
@@ -435,7 +512,7 @@ const OTHER = [
     img: '/images/workplace-print.jpg' 
   },
   { 
-    icon: UserCheck, 
+    icon: 'https://img.icons8.com/color/144/identification-documents.png', 
     tag: 'WORKPLACE', 
     title: 'Visitor Solution', 
     metric: '100%',
@@ -454,7 +531,6 @@ export const OtherSolutions = () => {
       {/* Left: List */}
       <div className="flex flex-col">
         {OTHER.map((item, i) => {
-          const Icon = item.icon;
           const isActive = active === i;
           return (
             <div 
@@ -466,13 +542,13 @@ export const OtherSolutions = () => {
               <div className={`py-10 transition-colors duration-500 ${isActive ? 'translate-x-2' : ''}`}>
                 <div className="grid grid-cols-[auto_1fr_auto] gap-8 items-start">
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500" style={{ background: isActive ? item.color+'15' : 'transparent' }}>
-                    <Icon size={24} style={{ color: isActive ? item.color : '#0c1024', opacity: isActive ? 1 : 0.4 }} />
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 bg-white shadow-sm border border-gray-100" style={{ transform: isActive ? 'scale(1.1) rotate(-3deg)' : 'scale(1)' }}>
+                    <img src={item.icon} alt={item.title} className={`w-8 h-8 object-contain transition-all duration-500 ${isActive ? 'grayscale-0 opacity-100' : 'grayscale opacity-40'}`} />
                   </div>
                   
                   {/* Title */}
                   <div className="pt-2.5">
-                    <h3 className={`text-[20px] md:text-[22px] font-bold tracking-tight transition-all duration-500 ${isActive ? 'text-[#0c1024]' : 'text-gray-400'}`} style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                    <h3 className={`text-[20px] font-bold tracking-tight transition-all duration-500 ${isActive ? 'text-[#0c1024]' : 'text-gray-400'}`} style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                       {item.title}
                     </h3>
                     <p className={`text-[15px] leading-relaxed mt-2 max-w-[360px] transition-all duration-500 overflow-hidden ${isActive ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'}`} style={{ color: 'rgba(0,0,0,0.5)', fontFamily: '"Proxima Nova", sans-serif' }}>{item.body}</p>
@@ -545,6 +621,211 @@ export const FAQSection = () => {
           </div>
         </FadeUp>
       ))}
+    </div>
+  );
+};
+
+/* ── Interactive Hero Dashboard (Animated Demo) ──────────────── */
+export const InteractiveHeroDashboard = () => {
+  const [step, setStep] = useState(0);
+  const [securityScore, setSecurityScore] = useState(0);
+  const [deviceCount, setDeviceCount] = useState(0);
+  const [activeUsers, setActiveUsers] = useState(0);
+  const [showToast, setShowToast] = useState<string | null>(null);
+
+  // Demo sequence
+  React.useEffect(() => {
+    let active = true;
+    const sequence = async () => {
+      while (active) {
+        // 1. Initial pause
+        setStep(0);
+        await new Promise(r => setTimeout(r, 2000));
+        if (!active) break;
+        
+        // 2. Animate Active Users
+        setStep(1); // Move to users
+        await new Promise(r => setTimeout(r, 1200));
+        if (!active) break;
+        setActiveUsers(24);
+        setShowToast("24 Users Onboarded to M365 ✨");
+        await new Promise(r => setTimeout(r, 2500));
+        setShowToast(null);
+
+        // 3. Animate Security
+        setStep(2); // Move to security
+        await new Promise(r => setTimeout(r, 1200));
+        if (!active) break;
+        setSecurityScore(94);
+        setShowToast("Microsoft Defender Activated 🛡️");
+        await new Promise(r => setTimeout(r, 2500));
+        setShowToast(null);
+
+        // 4. Animate Devices
+        setStep(3); // Move to devices
+        await new Promise(r => setTimeout(r, 1200));
+        if (!active) break;
+        setDeviceCount(47);
+        setShowToast("47 Devices Enrolled into Intune 💻");
+        await new Promise(r => setTimeout(r, 2500));
+        setShowToast(null);
+
+        // 5. Final
+        setStep(4); // Move to support
+        await new Promise(r => setTimeout(r, 3500));
+        
+        // Reset for loop
+        setActiveUsers(0);
+        setSecurityScore(0);
+        setDeviceCount(0);
+        await new Promise(r => setTimeout(r, 1000));
+      }
+    };
+    sequence();
+    return () => { active = false; };
+  }, []);
+
+  const cursorPositions = [
+    { x: '15%', y: '85%' }, // 0: Start (bottom left)
+    { x: '20%', y: '25%' }, // 1: Active Users card
+    { x: '45%', y: '25%' }, // 2: Security card
+    { x: '70%', y: '25%' }, // 3: Devices card
+    { x: '90%', y: '25%' }, // 4: Support card
+  ];
+
+  return (
+    <div className="relative rounded-t-[32px] border-t border-x overflow-hidden shadow-2xl" 
+      style={{ borderColor: BD, background: '#fff' }}>
+      
+      {/* Browser Chrome */}
+      <div className="flex items-center gap-2 px-6 py-4 border-b" style={{ background: '#F8FAFF', borderColor: BD }}>
+        {['#FF5F57','#FEBC2E','#28C840'].map(c => <div key={c} className="w-3 h-3 rounded-full shadow-sm" style={{ background: c }} />)}
+        <div className="flex-1 mx-4 rounded-full px-4 py-1.5 text-[11px] font-bold text-center border bg-white shadow-inner" style={{ borderColor: BD, color: TM }}>
+          portal.c9communications.com.au — <span className="text-[#5D00D6]">Live Managed Workspace</span>
+        </div>
+      </div>
+
+      <div className="p-10 relative bg-white">
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12">
+          {[
+            { l:'Active Users', v: activeUsers === 0 ? '0/24' : '24/24', c:P, s: step === 1 },
+            { l:'Security Score', v: securityScore === 0 ? '0%' : securityScore + '%', c:'#00875A', s: step === 2 },
+            { l:'Devices Managed', v: deviceCount === 0 ? '0' : deviceCount, c:'#6264A7', s: step === 3 },
+            { l:'Support Response', v:'< 2m', c:'#D97706', s: step === 4 },
+          ].map(({ l, v, c, s }) => (
+            <motion.div 
+              key={l} 
+              animate={{ 
+                scale: s ? 1.05 : 1,
+                borderColor: s ? c : BD,
+                backgroundColor: s ? c + '05' : '#fff'
+              }}
+              className="rounded-3xl p-6 border transition-all duration-500 shadow-sm" 
+              style={{ boxShadow: s ? `0 15px 40px ${c}25` : '0 4px 6px rgba(0,0,0,0.02)' }}
+            >
+              <div className="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-gray-400">{l}</div>
+              <div className="text-[36px] font-bold leading-none mb-3" style={{ color: c }}>{v}</div>
+              <div className="flex items-center gap-2">
+                <div className={`w-2 h-2 rounded-full ${String(v).includes('0') && !String(v).includes('24') ? 'bg-gray-200' : 'bg-green-500 animate-pulse'}`} />
+                <span className="text-[10px] font-bold text-gray-400 tracking-wider">
+                  {String(v).includes('0') && !String(v).includes('24') ? 'Syncing...' : 'Active Now'}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Activity Row */}
+        <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-100 pt-10 gap-8">
+          <div className="flex gap-4">
+            {[
+              { t: 'Word', bg: 'https://img.icons8.com/color/144/microsoft-word-2019.png' },
+              { t: 'Excel', bg: 'https://img.icons8.com/color/144/microsoft-excel-2019.png' },
+              { t: 'Teams', bg: 'https://img.icons8.com/color/144/microsoft-teams.png' },
+              { t: 'Outlook', bg: 'https://img.icons8.com/color/144/microsoft-outlook-2019.png' }
+            ].map((app, i) => (
+              <motion.div 
+                key={app.t}
+                animate={{ 
+                  y: activeUsers > 0 ? 0 : 10,
+                  opacity: activeUsers > 0 ? 1 : 0.2,
+                  scale: activeUsers > 0 ? 1.1 : 0.9,
+                  rotate: activeUsers > 0 ? 0 : -5
+                }}
+                transition={{ delay: i * 0.1, type: 'spring', stiffness: 200 }}
+                className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-gray-100 group/app" 
+              >
+                <img src={app.bg} alt={app.t} className="w-9 h-9 object-contain transition-transform duration-500 group-hover/app:scale-110" />
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="flex-1 max-w-lg md:ml-12 overflow-hidden py-2 min-h-[80px]">
+             <AnimatePresence mode="wait">
+                <motion.div 
+                  key={step}
+                  initial={{ opacity:0, y:20 }}
+                  animate={{ opacity:1, y:0 }}
+                  exit={{ opacity:0, y:-20 }}
+                  className="flex items-center gap-5 p-5 bg-gray-50/50 rounded-2xl border border-gray-100/50"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 shadow-sm flex items-center justify-center shrink-0">
+                     <Zap size={20} className="text-[#5D00D6]" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-[15px] font-bold text-[#0c1024] leading-tight">
+                      {step === 0 && "System initialized. Polling remote tenants..."}
+                      {step === 1 && "Onboarding 24 employees to Microsoft 365..."}
+                      {step === 2 && "Hardening endpoints with Microsoft Defender SOC."}
+                      {step === 3 && "Deploying Intune compliance and wipe policies."}
+                      {step === 4 && "Global support desk active. Avg response: 1m 40s."}
+                    </div>
+                    <div className="text-[11px] font-bold text-gray-400 mt-1 uppercase tracking-widest flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#5D00D6] animate-ping" />
+                      Live Network Feedback
+                    </div>
+                  </div>
+                </motion.div>
+             </AnimatePresence>
+          </div>
+        </div>
+
+        {/* Floating Toast Notification */}
+        <AnimatePresence>
+          {showToast && (
+            <motion.div 
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="absolute bottom-12 left-1/2 -translate-x-1/2 px-8 py-4 bg-[#0c1024] text-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] flex items-center gap-4 z-50 border border-white/20 backdrop-blur-md"
+            >
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                 <Shield size={20} className="text-green-400" />
+              </div>
+              <span className="text-[15px] font-bold tracking-tight pr-4">{showToast}</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Simulated Cursor - The "Ghost" Guide */}
+        <motion.div
+          animate={{ 
+            left: cursorPositions[step].x, 
+            top: cursorPositions[step].y,
+            scale: showToast ? 0.9 : 1
+          }}
+          transition={{ 
+            duration: 1.2, 
+            ease: [0.22, 1, 0.36, 1]
+          }}
+          className="absolute z-[100] pointer-events-none drop-shadow-2xl"
+        >
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.65376 12.3822L15.4226 21.0478C15.7404 21.3344 16.2308 21.1031 16.1952 20.6726L15.3677 10.5113L21.3533 11.2335C21.7826 11.2855 22.0421 10.7483 21.7317 10.4554L3.63571 3.03688C3.25304 3.1234 3.03713 3.56385 3.19323 3.91107L10.0381 19.3303C10.2038 19.7047 10.7161 19.7431 10.9328 19.3905L12.9806 16.0357L16.1035 18.0673L17.2035 16.0673L14.0806 14.0357" fill="#0c1024" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
+          </svg>
+        </motion.div>
+      </div>
     </div>
   );
 };
