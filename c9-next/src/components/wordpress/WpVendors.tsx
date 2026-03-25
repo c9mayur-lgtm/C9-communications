@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, ChevronLeft, Server, Shield, Cpu, Network, Wifi, Monitor, ShieldCheck } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Server, Shield, Cpu, Network, Wifi, Monitor, ShieldCheck, LayoutGrid } from 'lucide-react';
 
 const VendorCard = ({ card }: { card: any }) => {
   return (
@@ -43,6 +43,8 @@ const VendorCard = ({ card }: { card: any }) => {
 const IT_CHALLENGES = [
   { id: 'challenges', label: 'Your IT Challenges' },
   { id: 'strategy', label: 'Network Strategy' },
+  { id: 'modern-workplace', label: 'Modern Workplace' },
+  { id: 'telco', label: 'Business Telco' },
   { id: 'devices', label: 'Device Management' },
   { id: 'security', label: 'Security Excellence' },
 ];
@@ -84,6 +86,14 @@ const VENDORS_DATA: Record<string, any[]> = {
       brandLogo: 'https://cdn.simpleicons.org/cisco/white'
     },
     {
+      title: 'SASE Architecture',
+      description: 'Unify network and security at the edge for seamless access.',
+      icon: ShieldCheck,
+      details: ['Cloud access security broker', 'Secure web gateway', 'Zero-trust network access'],
+      brandName: 'Palo Alto Networks',
+      brandLogo: 'https://cdn.simpleicons.org/paloaltonetworks/white'
+    },
+    {
       title: 'Private 5G Networks',
       description: 'Dedicated wireless infrastructure for high-bandwidth sites.',
       icon: Wifi,
@@ -92,22 +102,90 @@ const VENDORS_DATA: Record<string, any[]> = {
       brandLogo: 'https://cdn.simpleicons.org/nokia/white'
     }
   ],
+  'modern-workplace': [
+    {
+      title: 'Hybrid Workplace Governance',
+      description: 'Control your digital estate with enterprise-grade policy management.',
+      icon: Monitor,
+      details: ['Teams/Slack optimization', 'Digital whiteboarding', 'Async work patterns'],
+      brandName: 'Microsoft Teams',
+      brandLogo: 'https://cdn.simpleicons.org/microsoftteams/white'
+    },
+    {
+      title: 'Intelligent Productivity',
+      description: 'Empower hybrid teams with seamless digital collaboration tools.',
+      icon: Cpu,
+      details: ['AI-powered search & discover', 'Modern intranet portals', 'Centralized knowledge hubs'],
+      brandName: 'Microsoft 365',
+      brandLogo: 'https://cdn.simpleicons.org/microsoft/white'
+    },
+    {
+      title: 'App Ecosystem Integration',
+      description: 'Unified your fragmented toolset into one cohesive work hub.',
+      icon: LayoutGrid,
+      details: ['Single Sign-On (SSO)', 'Workflow cross-integration', 'Contextual team spaces'],
+      brandName: 'Slack',
+      brandLogo: 'https://cdn.simpleicons.org/slack/white'
+    }
+  ],
+  telco: [
+    {
+      title: 'Private Dark Fiber',
+      description: 'Ultra-fast connectivity for mission-critical operations.',
+      icon: Network,
+      details: ['Dedicated 100Gbps links', 'P2P data center interconnect', 'Low-latency direct routing'],
+      brandName: 'NBN Australia',
+      brandLogo: 'https://cdn.simpleicons.org/nbn/white'
+    },
+    {
+      title: 'Next-Gen Cloud Voice',
+      description: 'Enterprise telephony that moves with your business.',
+      icon: Wifi,
+      details: ['Global SIP trunking', 'CRM-integrated dialers', 'AI sentiment analysis'],
+      brandName: 'C9 Communications',
+      brandLogo: 'https://cdn.simpleicons.org/c9/white'
+    },
+    {
+      title: 'Edge Connectivity',
+      description: 'Bringing high-speed access to remote and temporary sites.',
+      icon: Server,
+      details: ['Satellite/Starlink backup', 'Carrier-neutral peering', 'Rapid site deployment'],
+      brandName: 'Telstra Business',
+      brandLogo: 'https://cdn.simpleicons.org/telstra/white'
+    }
+  ],
   devices: [
     {
-      title: 'Zero-Touch Provisioning',
-      description: 'Ship hardware directly to users; auto-configure on first boot.',
+      title: 'Fleet Management (MDM)',
+      description: 'Control every device in your organization from a single console.',
       icon: Monitor,
-      details: ['Autopilot deployment', 'Unified endpoint management', 'Compliance enforcement'],
+      details: ['Security policy enforcement', 'Remote wipe & lock', 'App distribution profiles'],
+      brandName: 'Jamf Pro',
+      brandLogo: 'https://cdn.simpleicons.org/jamf/white'
+    },
+    {
+      title: 'Secure Device Lifecycle',
+      description: 'Ship hardware directly to users; auto-configure on first boot.',
+      icon: LayoutGrid,
+      details: ['Autopilot deployment', 'Asset tracking & refresh', 'Secure e-waste disposal'],
       brandName: 'Apple Business',
       brandLogo: 'https://cdn.simpleicons.org/apple/white'
     }
   ],
   security: [
     {
-      title: 'Zero Trust Architecture',
-      description: 'Never trust, always verify every access request.',
+      title: '24/7 Managed SOC',
+      description: 'Continuous monitoring by experts to find and kill threats.',
       icon: ShieldCheck,
-      details: ['Identity management', 'Micro-segmentation', 'Continuous verification'],
+      details: ['Threat hunting', 'Vulnerability scanning', 'Compliance reporting'],
+      brandName: 'Tenable',
+      brandLogo: 'https://cdn.simpleicons.org/tenable/white'
+    },
+    {
+      title: 'Identity Protection',
+      description: 'Never trust, always verify every access request.',
+      icon: Shield,
+      details: ['MFA enforcement', 'Conditional access scoring', 'Privileged identity management'],
       brandName: 'Okta',
       brandLogo: 'https://cdn.simpleicons.org/okta/white'
     }
@@ -121,17 +199,17 @@ export const WpVendors = () => {
     <section className="py-14 md:py-20 bg-[#0c1024] text-white overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-10">
-          <div className="max-w-2xl w-full">
+          <div className="w-full">
             <span className="text-[#5D00D6] text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block">Strategic Partnerships</span>
-            <h2 className="text-[32px] md:text-[40px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-              Leading the way in IT excellence.
+            <h2 className="text-[32px] md:text-[40px] font-bold leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              Leading the way in IT & Telco excellence.
             </h2>
-            <div className="flex flex-nowrap overflow-x-auto gap-2 md:gap-3 pb-4 no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0 w-full">
+            <div className="flex flex-wrap gap-2 md:gap-3 w-full">
               {IT_CHALLENGES.map((cat, idx) => (
                 <button
                   key={cat.id}
                   onClick={() => setCategoryIndex(idx)}
-                  className={`px-5 py-2.5 rounded-full text-[12px] md:text-[13px] font-bold transition-all duration-300 border whitespace-nowrap shrink-0 ${
+                  className={`px-5 py-2.5 rounded-full text-[12px] md:text-[13px] font-bold transition-all duration-300 border whitespace-nowrap ${
                     categoryIndex === idx 
                       ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-xl shadow-purple-900/40' 
                       : 'bg-white/5 border-white/10 text-white/60 hover:border-white/30 hover:bg-white/10'

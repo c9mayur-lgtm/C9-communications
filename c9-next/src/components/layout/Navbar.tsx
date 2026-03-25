@@ -247,15 +247,10 @@ export const Navbar = () => {
           </div>
           
           <Button 
-            variant="outline" 
             size="sm"
-            className={`hidden sm:flex border-2 transition-all ${
-              isScrolled 
-                ? 'border-gray-200 text-gray-500 hover:bg-gray-900 hover:text-white hover:border-gray-900' 
-                : 'border-gray-800/20 text-gray-800 hover:bg-gray-800 hover:text-white'
-            }`}
+            className="hidden sm:flex transition-all bg-[#1c1c1c] text-white hover:bg-black font-semibold tracking-tight px-6 rounded-full"
           >
-            C9 DEFENSE
+            C9 defense
           </Button>
           
           <button 

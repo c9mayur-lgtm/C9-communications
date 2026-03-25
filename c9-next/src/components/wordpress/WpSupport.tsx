@@ -60,7 +60,7 @@ export const WpSupport = () => {
         {/* Secondary Support Content (Puts People Before Profit) */}
         <div className="mt-20 pt-20 border-t border-gray-100 grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           <div>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-tight tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Support That Puts People Before Profit
             </h2>
             <p className="text-[18px] text-gray-600 leading-relaxed font-normal mb-10" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>

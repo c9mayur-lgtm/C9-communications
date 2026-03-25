@@ -15,7 +15,7 @@ export const WpServices = () => {
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="mb-10">
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Our Expertise</span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight mb-8">
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Telco services, tailored for business.
             </h2>
             
@@ -119,17 +119,7 @@ export const WpServices = () => {
                     >
                       <div className="flex items-center gap-5">
                         <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0 overflow-hidden">
-                          <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ 
-                              duration: 4, 
-                              repeat: Infinity, 
-                              ease: "easeInOut",
-                              delay: idx * 0.2 
-                            }}
-                          >
-                            {option.icon}
-                          </motion.div>
+                          {option.icon}
                         </div>
                         <div>
                           <h4 className="font-bold text-[18px] md:text-[24px] text-[#0c1024] mb-1 leading-tight">{option.title}</h4>

@@ -4,7 +4,7 @@ import { WpHighlights } from "@/components/wordpress/WpHighlights";
 import { WpSimplifyingIT } from "@/components/wordpress/WpSimplifyingIT";
 import { WpServices } from "@/components/wordpress/WpServices";
 import { WpSolutions } from "@/components/wordpress/WpSolutions";
-import { WpIndustryMarquee } from "@/components/landing/WpIndustryMarquee";
+import { WpIndustryGrid } from "@/components/landing/WpIndustryGrid";
 import { WpSupport } from "@/components/wordpress/WpSupport";
 import { WpVendors } from "@/components/wordpress/WpVendors";
 import { WpCaseStudies } from "@/components/wordpress/WpCaseStudies";
@@ -12,18 +12,22 @@ import { WpCompliance } from "@/components/wordpress/WpCompliance";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
 import { WpITDepartmentOptions } from "@/components/wordpress/WpITDepartmentOptions";
+import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { WpHeroProducts } from "@/components/wordpress/WpHeroProducts";
 
 export default function ManagedIT() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white managed-it-base">
       <WpHero />
       <WpClientTicker />
       <WpHighlights />
+      <WpHeroProducts />
       <WpSimplifyingIT />
       <WpITDepartmentOptions />
       <WpServices />
       <WpSolutions />
-      <WpIndustryMarquee />
+      <WpIndustryGrid />
+      <WpDefenseBanner />
       <WpSupport />
       <WpVendors />
       <WpCaseStudies />

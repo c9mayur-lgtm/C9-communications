@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Syne, DM_Sans } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { WpFooter } from "@/components/layout/WpFooter";
 import { WpFloatingContact } from "@/components/wordpress/WpFloatingContact";
@@ -14,6 +14,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -60,17 +72,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+import { headers } from "next/headers";
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const fullPath = headersList.get('referer');
+  const isManagedPage = fullPath?.includes('/managed');
+
   return (
     <html lang="en-AU">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-purple-500/30`}>
-        <Navbar />
+      <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30`}>
+        {!isManagedPage && <Navbar />}
         {children}
-        <WpFooter />
+        {!isManagedPage && <WpFooter />}
         <WpFloatingContact />
         <BusinessAdvisor />
       </body>

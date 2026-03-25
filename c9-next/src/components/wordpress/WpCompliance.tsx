@@ -11,7 +11,7 @@ export const WpCompliance = () => {
           
           {/* Left Column */}
           <div className="max-w-xl">
-            <h2 className="text-[32px] md:text-[40px] font-bold leading-tight mb-6 text-[#9F7AEA] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold leading-[1.1] mb-6 text-[#9F7AEA] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Compliant, accredited, and<br className="hidden md:block" />
               built for Australian business.
             </h2>
