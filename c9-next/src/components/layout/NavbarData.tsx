@@ -112,7 +112,7 @@ export const IT_SOLUTIONS_MENU = {
       { label: 'Non-profit', path: '/industries/non-profit' },
       { label: 'Education', path: '/industries/education' },
       { label: 'Retail', path: '/industries/retail' },
-      { label: 'Real Estate', path: '#' }
+      { label: 'Real Estate', path: '/industries/real-estate' }
     ]
   },
   ctaBanner: {

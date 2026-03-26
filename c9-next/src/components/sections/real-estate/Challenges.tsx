@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield } from "lucide-react";
+import { Shield, Smartphone, ShieldAlert, Building2, MonitorPlay } from "lucide-react";
 import Link from "next/link";
 
 const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };
@@ -13,28 +13,32 @@ export default function Challenges() {
             CHALLENGES WE SOLVE
           </span>
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={fontStyle}>
-            The problems non-profit organisations <br className="hidden md:block" /> bring to us.
+            The problems real estate agencies <br className="hidden md:block" /> bring to us.
           </h2>
         </div>
 
         <div className="flex flex-col lg:flex-row lg:flex-wrap divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
           {[
             {
-              title: 'Making limited IT budgets go further',
-              desc: "Unpredictable IT costs make budgeting nearly impossible. C9's fixed monthly managed services model gives non-profits predictable costs, no surprise invoices, and a technology partner invested in getting maximum value from every dollar.",
+              title: 'Keeping agents connected in the field',
+              desc: "Agents need reliable access to property management systems, email, and communication tools from anywhere. C9 manages mobile plans, secure remote access, and device management so your agents are always connected and always secure.",
+              icon: Smartphone
             },
             {
-              title: 'Donor and beneficiary data protection',
-              desc: "Donor databases, beneficiary records, and grant documentation are sensitive and regulated. A breach doesn't just create legal exposure — it damages the trust your organisation has spent years building.",
-              link: { href: 'https://c9defense.com.au/', text: 'C9 DEFENSE — Data protection and compliance for non-profits →' }
+              title: 'Client data privacy and protection',
+              desc: "Client financial information, property records, and personal details require strict privacy controls. A data breach in a real estate agency isn't just an IT problem — it's a Professional Standards Board issue.",
+              icon: ShieldAlert,
+              link: { href: 'https://c9defense.com.au/', text: 'C9 DEFENSE — READ MORE' }
             },
             {
-              title: 'Supporting volunteer and remote workforces',
-              desc: "Non-profits often operate with a mix of full-time staff, part-time employees, and volunteers across multiple locations. C9 manages secure access, devices, and connectivity for every type of worker in your organisation.",
+              title: 'Managing IT across multiple office locations',
+              desc: "Each office location shouldn't require its own IT management. C9 manages your entire agency network — consistent standards, centralised monitoring, and one point of contact for every office.",
+              icon: Building2
             },
             {
-              title: 'Grant compliance and reporting obligations',
-              desc: "Grants often come with IT and data governance requirements attached. C9 helps non-profit organisations meet those obligations with documented controls, audit trails, and compliance reporting.",
+              title: 'Shopfront displays and digital signage',
+              desc: "Window displays, property listing screens, and digital signage need to be current, on, and professionally managed. C9 deploys and maintains display technology as part of your broader IT environment.",
+              icon: MonitorPlay
             }
           ].map((f, i) => (
             <div key={i} className={`flex flex-col items-start w-full lg:w-1/4 ${

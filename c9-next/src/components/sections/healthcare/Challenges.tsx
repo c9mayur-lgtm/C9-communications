@@ -13,7 +13,7 @@ export default function Challenges() {
             CHALLENGES WE SOLVE
           </span>
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={fontStyle}>
-            The problems healthcare providers bring to us.
+            The problems healthcare organisations <br className="hidden md:block" /> bring to us.
           </h2>
         </div>
 
