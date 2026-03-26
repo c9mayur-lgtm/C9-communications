@@ -11,47 +11,47 @@ import {
 export const TELCO_SERVICES_CONTENT: Record<string, any> = {
   internet: {
     heading: 'Business Internet',
-    description: "Switch your business to ultrafast nbn® backed by Australia's most-trusted telco. From nbn® to fibre, we deliver great value internet with 24/7 enterprise support.",
+    description: "C9 delivers business-grade nbn® and fibre connectivity designed around uptime, not price. Every connection is backed by a 99.95% SLA, local engineering support, and proactive monitoring — so your team stays online without chasing your provider.",
     options: [
-      { title: 'Business nbn®', desc: 'A network built for business backed by dedicated local support.', icon: <Wifi size={20} /> },
-      { title: 'nbn® Enterprise Ethernet', desc: 'Future-proof your business with fibre fast internet.', icon: <Network size={20} /> },
-      { title: 'C9 Fibre', desc: 'Ultrafast plans of up to 10,000 Mbps with a 99.95% uptime guarantee.', icon: <Monitor size={20} /> }
+      { title: 'Business nbn®', desc: 'Reliable nbn® plans built for Australian businesses, with dedicated local support and no shared residential traffic.', icon: <Wifi size={20} /> },
+      { title: 'nbn® Enterprise Ethernet', desc: 'Symmetrical speeds and priority-grade connectivity for offices that cannot afford to wait on uploads.', icon: <Network size={20} /> },
+      { title: 'C9 Fibre', desc: 'Direct fibre to your premises — up to 10,000 Mbps with a 99.95% uptime guarantee and 24/7 C9 engineering support.', icon: <Monitor size={20} /> }
     ]
   },
   network: {
     heading: 'Business Networking',
-    description: "Connect your offices and remote teams with secure, high-performance private networking solutions designed for enterprise reliability.",
+    description: "C9 designs, deploys, and manages the network infrastructure that keeps your business running. From multi-site connectivity to secure remote access, every solution is engineered and supported by our local team — not outsourced.",
     options: [
-      { title: 'SD-WAN', desc: 'Optimize application performance with intelligent traffic routing.', icon: <Network size={20} /> },
-      { title: 'Private IP / MPLS', desc: 'Secure, private connectivity for multiple business locations.', icon: <Globe size={20} /> },
-      { title: 'Network Security', desc: 'Enterprise-grade firewall and threat protection for your data.', icon: <Shield size={20} /> }
+      { title: 'SD-WAN', desc: 'Intelligent traffic management across multiple sites — lower costs, better performance, single pane of glass visibility.', icon: <Network size={20} /> },
+      { title: 'Private IP / MPLS', desc: 'Dedicated private networking for businesses that need secure, low-latency links between locations.', icon: <Globe size={20} /> },
+      { title: 'Network Security', desc: 'C9-managed firewall, threat detection, and network segmentation — security baked into your infrastructure, not bolted on.', icon: <Shield size={20} /> }
     ]
   },
   mobile: {
-    heading: 'Business Mobile Solutions',
-    description: "Keep your team connected anywhere with flexible SIM plans on Australia's leading networks, managed through a single business bill.",
+    heading: 'Business Mobile',
+    description: "C9 manages your mobile fleet end-to-end — from SIM provisioning and plan management to device procurement and a single consolidated bill. One provider. One point of contact. No more chasing multiple carriers.",
     options: [
-      { title: 'SIM Only Plans', desc: 'High data allowances with no lock-in monthly contracts.', icon: <Smartphone size={20} /> },
-      { title: 'Mobile Fleet Management', desc: 'Centrally manage all team connections and data usage.', icon: <Truck size={20} /> },
-      { title: 'Hardware Bundles', desc: 'The latest business devices with integrated service plans.', icon: <Server size={20} /> }
+      { title: 'Business SIM Plans', desc: "High-data SIM plans on Australia's leading networks, managed through your C9 account with no lock-in contracts.", icon: <Smartphone size={20} /> },
+      { title: 'Mobile Fleet Management', desc: 'Centralised visibility and control over every device and SIM in your business — usage, costs, and security in one place.', icon: <Truck size={20} /> },
+      { title: 'Device Procurement', desc: 'Source and deploy the latest business devices through C9 — fully configured and ready to use from day one.', icon: <Server size={20} /> }
     ]
   },
   voice_ai: {
-    heading: 'Voice AI Solutions',
-    description: 'Revolutionize your customer engagement with AI-powered voice solutions. From intelligent receptionists to real-time sentiment analysis, we bring the future of communication to your business.',
+    heading: 'C9 Voice AI',
+    description: "C9's Voice AI layer sits on top of your existing phone system and transforms how your business handles inbound calls — reducing missed calls, cutting hold times, and freeing your team from routine call handling.",
     options: [
-      { title: 'AI Receptionist', desc: 'Automate your front desk with human-like AI that handles calls 24/7.', icon: <UserPlus size={20} /> },
-      { title: 'Intelligent IVR', desc: 'Smart menus that understand natural language for faster resolution.', icon: <Layers size={20} /> },
-      { title: 'Sentiment Analytics', desc: 'Real-time analysis of call quality and customer mood.', icon: <BarChart3 size={20} /> }
+      { title: 'AI Receptionist', desc: 'An always-on virtual receptionist that answers, qualifies, and routes calls 24/7 — in natural, human-sounding voice.', icon: <UserPlus size={20} /> },
+      { title: 'Intelligent IVR', desc: 'Replace outdated press-1 menus with AI that understands intent and gets callers to the right person faster.', icon: <Layers size={20} /> },
+      { title: 'Call Analytics', desc: 'Real-time insights into call volumes, sentiment, and resolution rates — so you can improve service with data, not guesswork.', icon: <BarChart3 size={20} /> }
     ]
   },
   voice: {
-    heading: 'Business Voice & Comms',
-    description: "Modernize your communications with cloud-based phone systems that offer advanced features, crystal-clear quality, and easy management.",
+    heading: 'Business Voice',
+    description: "C9 replaces legacy phone infrastructure with the C9X cloud phone system — a fully managed, Microsoft Teams-integrated voice platform built for Australian businesses that need reliability, flexibility, and a local team behind it.",
     options: [
-      { title: 'Cloud PBX', desc: 'Enterprise-grade phone system functionality in the cloud.', icon: <Phone size={20} /> },
-      { title: 'Teams Integration', desc: 'Enable crystal-clear calling directly within Microsoft Teams.', icon: <Headphones size={20} /> },
-      { title: 'SIP Trunking', desc: 'Connect your existing PBX to our high-performance voice network.', icon: <Database size={20} /> }
+      { title: 'C9X Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording — no hardware required.', icon: <Phone size={20} /> },
+      { title: 'Microsoft Teams Calling', desc: 'Make and receive business calls directly inside Teams — C9 handles the provisioning, porting, and ongoing management.', icon: <Headphones size={20} /> },
+      { title: 'SIP Trunking', desc: 'Retain your existing phone hardware and phone numbers while connecting to the C9 voice network for better reliability and cost.', icon: <Database size={20} /> }
     ]
   }
 };

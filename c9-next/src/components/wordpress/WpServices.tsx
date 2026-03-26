@@ -14,9 +14,9 @@ export const WpServices = () => {
       <section className="py-10 md:py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
           <div className="mb-10">
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Our Expertise</span>
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>C9 Telco & Connectivity</span>
             <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-              Telco services, tailored for business.
+              One provider for every connection your business needs.
             </h2>
             
             {/* Tabs Header */}
@@ -115,18 +115,18 @@ export const WpServices = () => {
                   {TELCO_SERVICES_CONTENT[activeTelcoTab].options.map((option: any, idx: number) => (
                     <div 
                       key={idx} 
-                      className="group flex items-center justify-between p-6 bg-white border border-gray-100 rounded-xl hover:border-[#5D00D6] hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all cursor-pointer"
+                      className="group flex items-start justify-between p-6 bg-white border border-gray-100 rounded-xl hover:border-[#5D00D6] hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all cursor-pointer"
+                      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
                     >
-                      <div className="flex items-center gap-5">
-                        <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0 overflow-hidden">
+                      <div className="flex items-start gap-5">
+                        <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0 overflow-hidden mt-1">
                           {option.icon}
                         </div>
                         <div>
-                          <h4 className="font-bold text-[18px] md:text-[24px] text-[#0c1024] mb-1 leading-tight">{option.title}</h4>
-                          <p className="text-[14px] md:text-[18px] text-gray-500 font-normal leading-relaxed">{option.desc}</p>
+                          <h4 className="font-bold text-[18px] md:text-[24px] text-[#0c1024] mb-1 leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{option.title}</h4>
+                          <p className="text-[14px] md:text-[18px] text-gray-500 font-normal leading-relaxed" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{option.desc}</p>
                         </div>
                       </div>
-                      <ArrowRight size={18} className="text-gray-300 group-hover:text-[#5D00D6] group-hover:translate-x-1 transition-all" />
                     </div>
                   ))}
                 </div>
