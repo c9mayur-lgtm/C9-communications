@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowRight,
@@ -306,6 +307,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
    MAIN NAVBAR COMPONENT
    ───────────────────────────────────────────── */
 export const Navbar = () => {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -318,6 +320,12 @@ export const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close menus when route changes
+  useEffect(() => {
+    setOpenMenu(null);
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   const handleEnter = (key: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
