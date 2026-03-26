@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne, DM_Sans } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { WpFooter } from "@/components/layout/WpFooter";
 import { WpFloatingContact } from "@/components/wordpress/WpFloatingContact";
 import { BusinessAdvisor } from "@/components/wordpress/BusinessAdvisor";
@@ -87,6 +88,7 @@ export default async function RootLayout({
     <html lang="en-AU">
       <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30`}>
         {!isManagedPage && <Navbar />}
+        {!isManagedPage && <Breadcrumbs />}
         {children}
         {!isManagedPage && <WpFooter />}
         <WpFloatingContact />

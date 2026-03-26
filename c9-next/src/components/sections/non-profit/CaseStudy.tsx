@@ -11,7 +11,7 @@ export default function CaseStudy() {
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-3 h-auto md:h-[380px]">
           <div className="relative w-full h-[300px] md:h-full rounded-xl md:rounded-2xl overflow-hidden shadow-md">
             <img
-              src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb8?auto=format&fit=crop&q=80&w=800"
+              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800"
               alt="Non-Profit Organisation"
               className="w-full h-full object-cover object-center"
             />

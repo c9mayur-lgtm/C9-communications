@@ -149,6 +149,12 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
    MOBILE MENU COMPONENT
    ───────────────────────────────────────────── */
 const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+  const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
+
+  const toggleAccordion = (key: string) => {
+    setActiveAccordion(activeAccordion === key ? null : key);
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -157,41 +163,137 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: '100%' }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="fixed inset-0 z-[200] bg-white flex flex-col"
+          className="fixed inset-0 z-[200] bg-white flex flex-col h-full"
         >
-          <div className="flex items-center justify-between p-6 border-b border-gray-100">
-            <img src="/images/c9_logo.svg" alt="C9" className="h-[28px]" />
+          {/* Header */}
+          <div className="flex items-center justify-between p-6 border-b border-gray-100 shrink-0">
+            <Link href="/" onClick={onClose}>
+              <img src="/images/c9_logo_scrolled.svg" alt="C9" className="h-[32px]" />
+            </Link>
             <button onClick={onClose} className="p-2 text-slate-900 hover:bg-slate-50 rounded-lg">
               <X size={24} />
             </button>
           </div>
           
-          <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-8">
-            {TABS.map(tab => (
-              <div key={tab.name}>
-                <h3 className="text-[20px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-6">{tab.name}</h3>
-                <div className="flex flex-col gap-5">
-                  {MEGA_MAP[tab.menuKey as keyof typeof MEGA_MAP]?.columns?.[0]?.sections?.map((section: any) => 
-                    section.items.map((item: any, i: number) => (
-                      <Link key={i} href={item.path} onClick={onClose} className="flex items-center justify-between group">
-                        <span className="text-[18px] font-semibold text-slate-800">{item.label}</span>
-                        <ChevronRight size={18} className="text-slate-300 group-hover:text-[#5D00D6] transition-colors" />
-                      </Link>
-                    ))
-                  )}
-                </div>
-              </div>
-            ))}
+          {/* Scrollable Content */}
+          <div className="flex-1 overflow-y-auto overflow-x-hidden p-6">
+            <div className="flex flex-col gap-2">
+              {TABS.map(tab => {
+                const menuData = MEGA_MAP[tab.menuKey as keyof typeof MEGA_MAP];
+                const isActive = activeAccordion === tab.menuKey;
+
+                return (
+                  <div key={tab.name} className="border-b border-gray-50 last:border-none pb-2">
+                    <button 
+                      onClick={() => toggleAccordion(tab.menuKey)}
+                      className="flex items-center justify-between w-full py-4 text-left group"
+                    >
+                      <span className={`text-[20px] font-bold tracking-tight transition-colors ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}>
+                        {tab.name}
+                      </span>
+                      <ChevronDown size={20} className={`text-slate-400 transition-transform duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
+                    </button>
+
+                    <AnimatePresence>
+                      {isActive && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <div className="flex flex-col gap-8 pb-6 pt-2 pl-2">
+                            {/* Rendering Columns & Sections */}
+                            {menuData?.columns?.map((col: any, ci: number) => (
+                              <div key={ci} className="flex flex-col gap-6">
+                                {col.sections.map((sec: any, si: number) => (
+                                  <div key={si}>
+                                    <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-4 opacity-40">{sec.heading}</h4>
+                                    <div className="flex flex-col gap-4">
+                                      {sec.items?.map((item: any, ii: number) => (
+                                        <Link 
+                                          key={ii} 
+                                          href={item.path} 
+                                          onClick={onClose}
+                                          className="flex items-center gap-3 group"
+                                        >
+                                          <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                          <span className="text-[16px] font-semibold text-slate-600 group-hover:text-[#5D00D6] transition-colors">{item.label}</span>
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            ))}
+
+                            {/* Industry Focus / Sidebar Items */}
+                            {menuData?.sidebar && menuData.sidebar.items && (
+                              <div className="bg-[#F8F7FF] p-6 rounded-3xl mt-2 border border-[#5D00D6]/5">
+                                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-6">
+                                  {menuData.sidebar.heading}
+                                </h4>
+                                <div className="grid grid-cols-1 gap-4">
+                                  {menuData.sidebar.items.map((item: any, i: number) => (
+                                    <Link 
+                                      key={i} 
+                                      href={item.path || '#'} 
+                                      onClick={onClose}
+                                      className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100 shadow-sm"
+                                    >
+                                      <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6]">
+                                        {item.icon || <ChevronRight size={14} />}
+                                      </div>
+                                      <div className="flex flex-col">
+                                        <span className="text-[14px] font-bold text-slate-700 leading-tight">{item.label || item.title}</span>
+                                        {item.desc && <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.desc}</p>}
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* Handling Sidebar without items (like Modern Workplace) */}
+                            {menuData?.sidebar && !menuData.sidebar.items && (
+                                <div className="bg-[#F8F7FF] p-6 rounded-3xl mt-2 border border-[#5D00D6]/5">
+                                    <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-4 opacity-40">
+                                        {menuData.sidebar.heading}
+                                    </h4>
+                                    <div className="flex flex-col gap-4">
+                                        {menuData.sidebar.title && <p className="text-[16px] font-bold text-slate-800 leading-snug">{menuData.sidebar.title}</p>}
+                                        <Link 
+                                            href="/contact" 
+                                            onClick={onClose}
+                                            className="inline-flex items-center justify-center py-3 bg-[#5D00D6] text-white rounded-xl font-bold text-[14px] hover:bg-[#4d00b3] transition-colors"
+                                        >
+                                            {menuData.sidebar.button || 'Learn More'}
+                                        </Link>
+                                    </div>
+                                </div>
+                            )}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          <div className="p-6 border-t border-gray-100 bg-slate-50">
-            <div className="flex flex-col gap-4">
-              <a href="tel:1800000299" className="flex items-center justify-center gap-3 w-full py-4 bg-white border border-gray-200 rounded-2xl font-semibold text-slate-800">
-                <PhoneCall size={18} /> 1800 000 299
+          {/* Footer CTAs */}
+          <div className="p-6 border-t border-gray-100 bg-white shrink-0">
+            <div className="flex flex-col gap-3">
+              <a href="tel:1800000299" className="flex items-center justify-center gap-3 w-full py-4 bg-gray-50 rounded-2xl font-bold text-slate-800 hover:bg-gray-100 transition-colors">
+                <PhoneCall size={18} className="text-[#5D00D6]" /> 1800 000 299
               </a>
-              <Button size="lg" className="w-full py-7 text-[16px] font-semibold rounded-2xl shadow-xl shadow-purple-900/20 bg-[#5D00D6]">
-                Get Started
-              </Button>
+              <Link href="/consultation" onClick={onClose} className="w-full">
+                <Button size="lg" className="w-full py-7 text-[16px] font-bold rounded-2xl shadow-xl shadow-purple-900/20 bg-[#5D00D6] border-none text-white transition-transform active:scale-95">
+                  Get Free Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         </motion.div>
