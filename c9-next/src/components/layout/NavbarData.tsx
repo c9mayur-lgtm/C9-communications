@@ -107,8 +107,12 @@ export const IT_SOLUTIONS_MENU = {
   sidebar: {
     heading: 'Industry Focus',
     items: [
-      'Healthcare', 'Professional Services', 'Non-profit', 
-      'Education', 'Retail', 'Real Estate'
+      { label: 'Healthcare', path: '/industries/healthcare' },
+      { label: 'Professional Services', path: '#' },
+      { label: 'Non-profit', path: '#' }, 
+      { label: 'Education', path: '#' },
+      { label: 'Retail', path: '#' },
+      { label: 'Real Estate', path: '#' }
     ]
   },
   ctaBanner: {
