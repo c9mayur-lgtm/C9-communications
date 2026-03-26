@@ -11,15 +11,15 @@ export default function CaseStudy() {
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-3 h-auto md:h-[380px]">
           <div className="relative w-full h-[300px] md:h-full rounded-xl md:rounded-2xl overflow-hidden shadow-md">
             <img
-              src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=800"
-              alt="Healthcare Client"
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800"
+              alt="Education Provider"
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
           </div>
           <div className="bg-[#343331] rounded-xl md:rounded-2xl p-8 md:p-10 flex flex-col justify-center shadow-md relative">
             <p className="text-[#FDFDFD] text-[20px] md:text-[24px] lg:text-[28px] leading-[1.35] font-bold mb-8 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-              "C9 has provided us with great product technology, IT consultation and advice that has lifted our telecommunications and network capabilities beyond our expectations."
+              "Managing campus-wide Wi-Fi and a massive student device fleet was a struggle until C9 stepped in. Their understanding of the education environment and commitment to data privacy is exceptional."
             </p>
             <div className="mt-auto">
               <div className="flex items-center gap-2.5 mb-5 opacity-90">
@@ -28,10 +28,10 @@ export default function CaseStudy() {
                   <div className="bg-white rounded-full"></div><div className="bg-white rounded-full"></div><div className="bg-white rounded-full"></div>
                   <div className="bg-white rounded-full"></div><div className="bg-white rounded-full"></div><div className="bg-white rounded-full"></div>
                 </div>
-                <span className="text-white text-[16px] font-bold tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>HEALTHCARE ORGANISATION</span>
+                <span className="text-white text-[16px] font-bold tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>EDUCATION PROVIDER CLIENT</span>
               </div>
               <div className="text-white/80 text-[14px] md:text-[15px] font-medium tracking-wide" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                Practice Manager — Australian Healthcare Network
+                Principal — Australian Education Provider
               </div>
             </div>
           </div>

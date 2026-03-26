@@ -88,34 +88,35 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             <div className="p-10 bg-[#FCFBFE]">
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-30">Support & Resources</h4>
+                  <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-30">
+                    {data.sidebar?.heading || "Support & Resources"}
+                  </h4>
                   <div className="flex flex-col gap-6">
-                    {(data.sidebar?.items || []).slice(0, 3).map((item: any, i: number) => (
+                    {(data.sidebar?.items || []).map((item: any, i: number) => (
                       typeof item === 'string' ? (
-                        <div key={i} className="group flex items-start gap-4 cursor-pointer">
-                          <div className="mt-1 p-2 bg-white rounded-lg border border-gray-100 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
+                        <div key={i} className="group flex items-center gap-4 cursor-pointer">
+                          <div className="p-1 px-2.5 bg-white rounded-md border border-gray-100 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                             {<ChevronRight size={14} />}
                           </div>
                           <span className="text-[14px] font-semibold text-slate-700 group-hover:text-[#5D00D6] transition-colors">{item}</span>
                         </div>
                       ) : item.path && item.path !== '#' ? (
-                        <Link key={i} href={item.path} className="group flex items-start gap-4">
-                          <div className="mt-1 p-2 bg-white rounded-lg border border-gray-100 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
+                        <Link key={i} href={item.path} className="group flex items-center gap-4">
+                          <div className="p-1 px-2.5 bg-white rounded-md border border-gray-100 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                             {item.icon || <ChevronRight size={14} />}
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[14px] font-semibold text-slate-700 group-hover:text-[#5D00D6] transition-colors">{item.label || item.title}</span>
+                            <span className="text-[14px] font-bold text-slate-700 group-hover:text-[#5D00D6] transition-colors leading-[1.1]">{item.label || item.title}</span>
                             {item.desc && <p className="text-[12px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
                           </div>
                         </Link>
                       ) : (
-                        <div key={i} className="group flex items-start gap-4 cursor-pointer">
-                          <div className="mt-1 p-2 bg-white rounded-lg border border-gray-100 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
+                        <div key={i} className="group flex items-center gap-4 cursor-default opacity-60">
+                          <div className="p-1 px-2.5 bg-white rounded-md border border-gray-100 text-slate-300">
                             {item.icon || <ChevronRight size={14} />}
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[14px] font-semibold text-slate-700 group-hover:text-[#5D00D6] transition-colors">{item.label || item.title}</span>
-                            {item.desc && <p className="text-[12px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
+                            <span className="text-[14px] font-semibold text-slate-400 leading-[1.1]">{item.label || item.title}</span>
                           </div>
                         </div>
                       )

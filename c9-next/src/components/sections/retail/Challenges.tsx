@@ -13,41 +13,41 @@ export default function Challenges() {
             CHALLENGES WE SOLVE
           </span>
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={fontStyle}>
-            The problems healthcare providers bring to us.
+            The problems retail businesses bring to us.
           </h2>
         </div>
 
         <div className="flex flex-col lg:flex-row lg:flex-wrap divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
           {[
             {
-              title: 'Unreliable internet at critical moments',
-              desc: 'Clinical staff can\'t access patient records, booking systems go offline, telehealth drops out. We replace single-point connectivity with redundant, business-grade solutions that stay on.',
+              title: 'Store connectivity that never goes down',
+              desc: "A store without internet can't process payments, access inventory systems, or run digital displays. We implement redundant connectivity with automatic failover — so a line fault never closes your store.",
             },
             {
-              title: 'Security and compliance pressure',
-              desc: 'Healthcare is highly targeted for ransomware. We implement Essential 8 controls. Where full enterprise security is needed, C9 Defense takes over.',
-              link: { href: 'https://c9defense.com.au/', text: 'C9 DEFENSE — Read more' }
+              title: 'Payment security and PCI-DSS compliance',
+              desc: "Retailers processing card payments have PCI-DSS obligations that require documented security controls across your payment environment. We implement the controls and maintain the evidence trail.",
+              link: { href: 'https://c9defense.com.au/', text: 'C9 DEFENSE — READ MORE' }
             },
             {
-              title: 'Aging hardware and patchy support',
-              desc: 'Outdated workstations and no proactive maintenance. C9 manages your full device fleet — patched, monitored, and replaced on a lifecycle plan.',
+              title: 'Managing IT across multiple store locations',
+              desc: "Each new store shouldn't mean a new IT headache. C9 manages your entire retail network from a single agreement — consistent standards, centralised monitoring, and one point of contact for every location.",
             },
             {
-              title: 'IT support that limits clinical environments',
-              desc: 'Generic helpdesk doesn\'t cut it when staff are mid-consultation. You get a dedicated account manager and team that understands clinical workflows.',
+              title: 'Digital displays and in-store technology',
+              desc: "Digital signage, promotional displays, and in-store screens need to be on, current, and managed. C9 deploys and maintains in-store display technology as part of your broader IT environment.",
             }
           ].map((f, i) => (
-            <div key={i} className={`flex flex-col items-start w-full lg:w-1/4 ${i === 0 ? 'pb-8 lg:pb-0 lg:pr-8' :
+            <div key={i} className={`flex flex-col items-start w-full lg:w-1/4 ${
+              i === 0 ? 'pb-8 lg:pb-0 lg:pr-8' :
               i === 3 ? 'pt-8 lg:pt-0 lg:pl-8' :
-                'py-8 lg:py-0 lg:px-8'}`}>
-              <div className="w-14 h-14 mb-8 flex items-center justify-start">
+              'py-8 lg:py-0 lg:px-8'}`}>
+              <div className="w-14 h-14 mb-6 flex items-center justify-start">
                 <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/5 border border-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] font-bold text-xl" style={fontStyle}>
                   0{i + 1}
                 </div>
               </div>
               <h3 className="text-[20px] font-bold mb-4 text-[#0c1024] tracking-tight leading-snug" style={fontStyle}>{f.title}</h3>
               <p className="text-gray-600 text-[15px] md:text-[16px] leading-relaxed font-normal mb-6" style={fontStyle}>{f.desc}</p>
-
               {f.link && (
                 <div className="mt-auto pt-2 border-t-[1px] border-gray-100 w-full">
                   <Link href={f.link.href} className="inline-flex items-center gap-2 text-[12px] font-black text-[#5D00D6] uppercase tracking-[0.12em] hover:opacity-80 transition-opacity mt-4" style={fontStyle}>
@@ -59,6 +59,6 @@ export default function Challenges() {
           ))}
         </div>
       </div>
-    </section >
+    </section>
   );
 }

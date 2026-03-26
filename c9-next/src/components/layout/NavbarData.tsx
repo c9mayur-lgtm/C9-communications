@@ -108,10 +108,10 @@ export const IT_SOLUTIONS_MENU = {
     heading: 'Industry Focus',
     items: [
       { label: 'Healthcare', path: '/industries/healthcare' },
-      { label: 'Professional Services', path: '#' },
-      { label: 'Non-profit', path: '#' }, 
-      { label: 'Education', path: '#' },
-      { label: 'Retail', path: '#' },
+      { label: 'Professional Services', path: '/industries/professional-services' },
+      { label: 'Non-profit', path: '/industries/non-profit' },
+      { label: 'Education', path: '/industries/education' },
+      { label: 'Retail', path: '/industries/retail' },
       { label: 'Real Estate', path: '#' }
     ]
   },
