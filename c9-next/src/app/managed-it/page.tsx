@@ -3,7 +3,7 @@ import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
 import { WpHighlights } from "@/components/wordpress/WpHighlights";
 import { WpSimplifyingIT } from "@/components/wordpress/WpSimplifyingIT";
 import { WpServices } from "@/components/wordpress/WpServices";
-import { WpSolutions } from "@/components/wordpress/WpSolutions";
+import { WpBentoSolutions } from "@/components/wordpress/WpBentoSolutions";
 import { WpIndustryGrid } from "@/components/landing/WpIndustryGrid";
 import { WpSupport } from "@/components/wordpress/WpSupport";
 import { WpVendors } from "@/components/wordpress/WpVendors";
@@ -25,7 +25,7 @@ export default function ManagedIT() {
       <WpSimplifyingIT />
       <WpITDepartmentOptions />
       <WpServices />
-      <WpSolutions />
+      <WpBentoSolutions />
       <WpIndustryGrid />
       <WpDefenseBanner />
       <WpSupport />

@@ -1,0 +1,67 @@
+import React from 'react';
+import Link from 'next/link';
+
+export default function CaseStudy() {
+  return (
+    <section className="w-full bg-white py-12 md:py-16 border-t border-gray-100">
+      <div className="container mx-auto px-4 md:px-6 max-w-[1100px]">
+        {/* Title for the section, optional but good for structure */}
+        <div className="mb-10 text-center">
+           <span className="text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.3em]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Client Success</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-3 h-auto md:h-[380px]">
+          {/* Left Card: Portrait Image */}
+          <div className="relative w-full h-[300px] md:h-full rounded-xl md:rounded-2xl overflow-hidden shadow-md">
+            <img 
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" 
+              alt="Zoran Radevski" 
+              className="w-full h-full object-cover object-top" 
+            />
+            {/* Subtle inner gradient to give it depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+          </div>
+
+          {/* Right Card: Dark Background with Quote */}
+          <div className="bg-[#343331] rounded-xl md:rounded-2xl p-8 md:p-10 flex flex-col justify-center shadow-md relative">
+            <p className="text-[#FDFDFD] text-[20px] md:text-[24px] lg:text-[28px] leading-[1.35] font-bold mb-8 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              “C9 has provided us with great product technology, IT consultation and advice that has lifted our telecommunications and network capabilities beyond our expectations.”
+            </p>
+
+            <div className="mt-auto">
+              {/* Abstract Logo Placeholder to match the 'collective' logo in reference */}
+              <div className="flex items-center gap-2.5 mb-5 opacity-90">
+                <div className="grid grid-cols-3 gap-0.5 w-6 h-6 rotate-45 opacity-80">
+                  <div className="bg-white rounded-full"></div>
+                  <div className="bg-white rounded-full"></div>
+                  <div className="bg-transparent rounded-full"></div>
+                  <div className="bg-white rounded-full"></div>
+                  <div className="bg-white rounded-full"></div>
+                  <div className="bg-white rounded-full"></div>
+                  <div className="bg-white rounded-full"></div>
+                  <div className="bg-white rounded-full"></div>
+                  <div className="bg-white rounded-full"></div>
+                </div>
+                <span className="text-white text-[16px] font-bold tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  HEALTHCARE CLIENT
+                </span>
+              </div>
+              
+              {/* Attribution */}
+              <div className="text-white/80 text-[14px] md:text-[15px] font-medium tracking-wide" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                Zoran Radevski - Telecom & Network Capabilities
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Global CTA linking to more case studies */}
+        <div className="flex justify-center mt-12">
+            <Link href="/about/case-studies" className="inline-flex items-center gap-2 text-[#5D00D6] text-[13px] font-bold uppercase tracking-wider hover:opacity-70 transition-opacity" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              Read more case studies <span className="text-[16px]">→</span>
+            </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

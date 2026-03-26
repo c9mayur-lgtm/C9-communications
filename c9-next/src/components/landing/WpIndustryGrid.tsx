@@ -93,7 +93,7 @@ export const WpIndustryGrid = () => {
                 </span>
               </div>
               <div className="mb-6 text-[#5D00D6]">
-                <block.icon size={28} strokeWidth={1.5} />
+                <block.icon size={40} strokeWidth={1.5} />
               </div>
               <h3 className="text-[20px] md:text-[22px] font-bold text-[#0c1024] mb-4 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{block.title}</h3>
               <p className="text-gray-500 text-[18px] leading-relaxed font-normal mb-8 flex-grow" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
