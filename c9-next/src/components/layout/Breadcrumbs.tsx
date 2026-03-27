@@ -37,7 +37,8 @@ const routeLabels: Record<string, string> = {
   'careers': 'Careers',
   'partners': 'Partners',
   'reviews': 'Reviews & Awards',
-  'faq': 'FAQ'
+  'faq': 'FAQ',
+  'helpdesk-support': 'Helpdesk Support'
 };
 
 export function Breadcrumbs() {

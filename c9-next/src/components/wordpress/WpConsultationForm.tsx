@@ -34,7 +34,7 @@ export const WpConsultationForm = ({
   children
 }: WpConsultationFormProps) => {
   return (
-    <div className="bg-[#C4B5FD] py-20 md:py-32" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <div id="consultation-section" className="bg-[#C4B5FD] py-20 md:py-32" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
       {showHeader && (
         <section className="bg-[#0c1024] pt-32 pb-48 md:pt-40 md:pb-64 relative text-white">
           <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
@@ -60,9 +60,11 @@ export const WpConsultationForm = ({
             <FadeIn delay={0.2}>
               {!showHeader && (
                 <div className="mb-12">
-                  <div className="inline-block bg-[#0B0121] text-white px-4 py-1.5 rounded-lg text-[11px] font-semibold tracking-widest uppercase mb-6">
-                    {eyebrow}
-                  </div>
+                  {eyebrow && (
+                    <div className="inline-block bg-[#0B0121] text-white px-4 py-1.5 rounded-lg text-[11px] font-semibold tracking-widest uppercase mb-6">
+                      {eyebrow}
+                    </div>
+                  )}
                   <h2 className="text-[32px] md:text-[40px] font-bold text-[#1a1a2e] leading-[1.05] mb-8 tracking-tight">
                     {title}
                   </h2>

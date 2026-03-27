@@ -271,8 +271,10 @@ export const BusinessAdvisor = () => {
   const msgId = useRef(1);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isTyping]);
+    if (isOpen) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, isTyping, isOpen]);
 
   const sendMessage = (text?: string) => {
     const msg = (text || input).trim();

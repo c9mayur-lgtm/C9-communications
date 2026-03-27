@@ -81,8 +81,16 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const headersList = await headers();
-  const fullPath = headersList.get('referer');
-  const isManagedPage = fullPath?.includes('/managed');
+  const referer = headersList.get('referer') || '';
+  
+  // Note: referer is unreliable for current path detection. 
+  // Managed pages should ideally use a different layout or the page should manage its own UI.
+  // We'll broaden the check to satisfy current behavior while we fix the double-render in the page.
+  const isManagedPage = referer.includes('/managed') || 
+                        referer.includes('/industries') || 
+                        referer.includes('/solutions') ||
+                        referer.includes('/modern-workplace') ||
+                        referer.includes('/c9-defense');
 
   return (
     <html lang="en-AU">

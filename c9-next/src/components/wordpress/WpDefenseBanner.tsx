@@ -4,7 +4,19 @@ import React from 'react';
 import { Shield, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
-export const WpDefenseBanner = () => {
+export interface WpDefenseBannerProps {
+  title?: React.ReactNode;
+  description?: string;
+  buttonText?: string;
+  href?: string;
+}
+
+export const WpDefenseBanner = ({
+  title = <>Protecting Australian organisations <br className="hidden lg:block" /> with enterprise cybersecurity</>,
+  description = "Essential 8 compliance, continuous defence, and tested recovery.",
+  buttonText = "Discover C9 Defense",
+  href = "https://c9defense.com.au/"
+}: WpDefenseBannerProps) => {
   return (
     <section className="py-6 bg-white">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
@@ -23,11 +35,11 @@ export const WpDefenseBanner = () => {
 
             {/* Text Content */}
             <div className="text-center md:text-left">
-              <h2 className="text-[32px] md:text-[40px] font-bold text-white leading-[1.1] mb-3 tracking-tight">
-                Protecting Australian organisations <br className="hidden lg:block" /> with enterprise cybersecurity
+              <h2 className="text-[32px] md:text-[40px] font-medium text-white leading-[1.15] mb-3 tracking-tight">
+                {title}
               </h2>
               <p className="text-white/50 text-[16px] md:text-[18px] font-medium leading-relaxed">
-                Essential 8 compliance, continuous defence, and tested recovery.
+                {description}
               </p>
             </div>
           </div>
@@ -35,12 +47,12 @@ export const WpDefenseBanner = () => {
           {/* Action Button */}
           <div className="mt-8 md:mt-0 relative z-10 w-full md:w-auto">
             <a 
-              href="https://c9defense.com.au/" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              href={href} 
+              target={href.startsWith('http') ? "_blank" : undefined}
+              rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
               className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-[#5D00D6]/30 text-white rounded-full font-bold text-[16px] hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300 shadow-xl shadow-purple-900/10 group/btn whitespace-nowrap"
             >
-              Discover C9 Defense <ArrowRight size={20} className="ml-3 transition-transform group-hover/btn:translate-x-1" />
+              {buttonText} <ArrowRight size={20} className="ml-3 transition-transform group-hover/btn:translate-x-1" />
             </a>
           </div>
         </div>
