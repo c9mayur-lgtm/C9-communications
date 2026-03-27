@@ -19,7 +19,7 @@ export const ServiceHero = ({
 }: ServiceHeroProps) => {
   return (
     <section 
-      className="relative pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-[#001968] bg-no-repeat bg-cover bg-[center_right_10%]"
+      className="relative pt-8 pb-12 md:pt-10 md:pb-16 lg:pt-12 lg:pb-20 overflow-hidden bg-[#001968] bg-no-repeat bg-cover bg-[center_right_10%]"
       style={bgImage ? { backgroundImage: `url(${bgImage})` } : {}}
     >
       {/* Background Image Layer */}

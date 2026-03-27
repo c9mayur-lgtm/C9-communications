@@ -149,3 +149,33 @@
   animation-play-state: paused;
 }
 
+/* 
+  Fix excessive gap between Breadcrumbs and Hero sections (Global)
+  When Breadcrumbs (which already has pt-24) is followed by a Hero (which usually has pt-16+),
+  this override ensures the Hero starts much higher up.
+*/
+.c9-breadcrumbs + main > section:first-of-type,
+.c9-breadcrumbs + section:first-of-type,
+.c9-breadcrumbs + main > div > section:first-of-type,
+.c9-breadcrumbs + div > section:first-of-type {
+  padding-top: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .c9-breadcrumbs + main > section:first-of-type,
+  .c9-breadcrumbs + section:first-of-type,
+  .c9-breadcrumbs + main > div > section:first-of-type,
+  .c9-breadcrumbs + div > section:first-of-type {
+    padding-top: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c9-breadcrumbs + main > section:first-of-type,
+  .c9-breadcrumbs + section:first-of-type,
+  .c9-breadcrumbs + main > div > section:first-of-type,
+  .c9-breadcrumbs + div > section:first-of-type {
+    padding-top: 3.5rem !important;
+  }
+}
+

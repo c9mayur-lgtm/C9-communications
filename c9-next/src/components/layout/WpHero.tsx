@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const WpHero = () => {
   return (
-    <section className="pt-16 pb-10 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20 bg-white overflow-hidden min-h-[450px] lg:min-h-[580px] flex items-center">
+    <section className="pt-4 pb-10 md:pt-6 md:pb-16 lg:pt-8 lg:pb-20 bg-white overflow-hidden min-h-[450px] lg:min-h-[580px] flex items-center">
       <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
         <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-6 items-center relative z-10 w-full">
           <div className="py-4 pr-0 xl:pr-6">
