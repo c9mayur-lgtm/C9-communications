@@ -31,7 +31,7 @@ const helpdeskFaqs = [
 
 export default function HelpdeskSupportPage() {
   return (
-    <main className="managed-it-base min-h-screen bg-white font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <main className="min-h-screen bg-white font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
       <Navbar />
       <Hero />
       <Recognition />
