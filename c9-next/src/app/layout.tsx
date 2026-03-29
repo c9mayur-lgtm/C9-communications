@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne, DM_Sans } from "next/font/google";
+import { headers } from "next/headers";
 import { Navbar } from "@/components/layout/Navbar";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { WpFooter } from "@/components/layout/WpFooter";
@@ -73,32 +74,29 @@ export const metadata: Metadata = {
   },
 };
 
-import { headers } from "next/headers";
-
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const headersList = await headers();
-  const referer = headersList.get('referer') || '';
+  const currentPath = headersList.get('x-pathname') || '';
   
-  // Note: referer is unreliable for current path detection. 
-  // Managed pages should ideally use a different layout or the page should manage its own UI.
-  // We'll broaden the check to satisfy current behavior while we fix the double-render in the page.
-  const isManagedPage = referer.includes('/managed') || 
-                        referer.includes('/industries') || 
-                        referer.includes('/solutions') ||
-                        referer.includes('/modern-workplace') ||
-                        referer.includes('/c9-defense');
+  // List of paths that render their own Navbar/Breadcrumbs/Footer to avoid doubling
+  const pagesWithSelfNavigation = [
+    '/managed-it/helpdesk-support',
+    '/managed-it/outsourcing'
+  ];
+
+  const hasSelfNav = pagesWithSelfNavigation.includes(currentPath);
 
   return (
     <html lang="en-AU">
       <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30`}>
-        {!isManagedPage && <Navbar />}
-        {!isManagedPage && <Breadcrumbs />}
+        {!hasSelfNav && <Navbar />}
+        {!hasSelfNav && <Breadcrumbs />}
         {children}
-        {!isManagedPage && <WpFooter />}
+        {!hasSelfNav && <WpFooter />}
         <WpFloatingContact />
         <BusinessAdvisor />
       </body>
