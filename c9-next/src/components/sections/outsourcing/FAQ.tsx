@@ -52,7 +52,7 @@ export default function FAQ() {
           </h2>
         </div>
 
-        <Accordion type="single" collapsible className="mt-10 border-t border-[#E5E7EB]">
+        <Accordion className="mt-10 border-t border-[#E5E7EB]">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="border-b border-[#E5E7EB] py-2">
               <AccordionTrigger className="text-[16px] font-normal text-[#0c1024] hover:text-[#5D00D6] hover:no-underline transition-colors  text-left font-sans">
