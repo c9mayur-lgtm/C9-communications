@@ -43,11 +43,11 @@ export default function FAQ() {
   return (
     <section className="bg-white py-24 px-6 md:px-8 lg:px-12 overflow-hidden">
       <div className="container mx-auto max-w-[760px]">
-        <div className="text-left mb-12">
-          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE] font-dm-sans">
+        <div className="text-left mb-12 font-sans">
+          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE]  font-sans">
             COMMON QUESTIONS
           </span>
-          <h2 className="text-[28px] md:text-[40px] font-bold text-[#1A1A2E] mt-4 font-syne leading-tight">
+          <h2 className="text-[32px] md:text-[40px] tracking-tight -[1.1] font-sans">
             What businesses ask before<br className="hidden md:block" /> outsourcing their IT.
           </h2>
         </div>
@@ -55,10 +55,10 @@ export default function FAQ() {
         <Accordion type="single" collapsible className="mt-10 border-t border-[#E5E7EB]">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="border-b border-[#E5E7EB] py-2">
-              <AccordionTrigger className="text-[16px] font-medium text-[#1A1A2E] hover:text-[#7B2FBE] hover:no-underline transition-colors font-dm-sans text-left">
+              <AccordionTrigger className="text-[16px] font-normal text-[#0c1024] hover:text-[#5D00D6] hover:no-underline transition-colors  text-left font-sans">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-[15px] text-[#6B7280] leading-[1.7] pb-4 font-dm-sans">
+              <AccordionContent className="text-[15px] text-slate-600 leading-[1.7] pb-4  font-sans">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>

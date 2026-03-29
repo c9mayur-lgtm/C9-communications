@@ -7,13 +7,13 @@ export const WpSupport = () => {
   return (
     <section className="py-12 md:py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-8 max-w-[1240px]">
-        <div className="mb-10 text-center">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Support</span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight leading-[1.1] mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-            World‑Class Support Delivered by <br />Fully Trained Australian Experts
+        <div className="mb-16 text-center">
+          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>SUPPORT</span>
+          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] tracking-tight leading-[1.05] mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            World-Class Support Delivered by <br />Fully Trained Australian Experts
           </h2>
-          <p className="text-[18px] text-gray-600 leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-            At C9 Communications, support isn’t just a service — it’s a promise. Our fully trained, nationally deployed team is dedicated to providing human‑centred support backed by genuine accountability.
+          <p className="text-[18px] md:text-[20px] text-slate-600/90 leading-relaxed max-w-3xl mx-auto font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            At C9 Communications, support isn't just a service — it's a promise. Our fully trained, nationally deployed team is dedicated to providing human-centred support backed by genuine accountability.
           </p>
         </div>
 
@@ -60,10 +60,10 @@ export const WpSupport = () => {
         {/* Secondary Support Content (Puts People Before Profit) */}
         <div className="mt-20 pt-20 border-t border-gray-100 grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           <div>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Support That Puts People Before Profit
             </h2>
-            <p className="text-[18px] text-gray-600 leading-relaxed font-normal mb-10" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="text-[18px] md:text-[20px] text-slate-600/90 leading-relaxed font-medium mb-10" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               We believe support should be driven by care and genuine service — not sales targets. Our nationwide team is committed to solving problems fast and reducing downtime, making every interaction feel human.
             </p>
             <div className="space-y-8">

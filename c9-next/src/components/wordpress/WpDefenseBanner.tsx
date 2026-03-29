@@ -35,10 +35,10 @@ export const WpDefenseBanner = ({
 
             {/* Text Content */}
             <div className="text-center md:text-left">
-              <h2 className="text-[32px] md:text-[40px] font-medium text-white leading-[1.15] mb-3 tracking-tight">
+              <h2 className="text-[36px] md:text-[40px] lg:text-[44px] font-bold text-white leading-[1.05] mb-3 tracking-tight">
                 {title}
               </h2>
-              <p className="text-white/50 text-[16px] md:text-[18px] font-medium leading-relaxed">
+              <p className="text-white/60 text-[18px] md:text-[20px] font-medium leading-relaxed">
                 {description}
               </p>
             </div>

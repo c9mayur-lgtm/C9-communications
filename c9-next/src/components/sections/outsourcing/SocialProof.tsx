@@ -28,11 +28,11 @@ export default function SocialProof() {
   return (
     <section className="bg-[#F3EEFF] py-24 px-6 md:px-8 lg:px-12 overflow-hidden">
       <div className="container mx-auto max-w-[1240px]">
-        <div className="text-left mb-12">
-          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE] font-dm-sans">
+        <div className="text-left mb-12 font-sans">
+          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE]  font-sans">
             WHAT OUR CLIENTS SAY
           </span>
-          <h2 className="text-[28px] md:text-[40px] font-bold text-[#1A1A2E] mt-4 font-syne leading-tight">
+          <h2 className="text-[32px] md:text-[40px] tracking-tight -[1.1] font-sans">
             From businesses that made the switch.
           </h2>
         </div>
@@ -41,26 +41,26 @@ export default function SocialProof() {
           {testimonials.map((t, i) => (
             <Card 
               key={i} 
-              className="group h-full bg-white rounded-2xl border-[0.5px] border-[#7B2FBE]/15 p-8 flex flex-col gap-4 hover:border-[#7B2FBE] hover:-translate-y-0.5 transition-all duration-200 shadow-sm"
+              className="group h-full bg-white rounded-none border-[0.5px] border-[#7B2FBE]/15 p-8 flex flex-col gap-4 hover:border-[#7B2FBE] hover:-translate-y-0.5 transition-all duration-200 shadow-sm"
             >
               <div className="flex gap-1 mb-2">
                 {[1, 2, 3, 4, 5].map((_, star) => (
-                  <Star key={star} className="w-4 h-4 text-[#F59E0B] fill-[#F59E0B]" />
+                  <Star key={star} className="w-4 h-4 text-[#F59E0B] fill-[#F59E0B] font-sans" />
                 ))}
               </div>
 
-              <p className="text-[16px] text-[#1A1A2E] italic leading-[1.7] flex-1 font-dm-sans">
+              <p className="text-[16px] text-[#0c1024] italic leading-[1.7] flex-1  font-sans">
                 "{t.quote}"
               </p>
 
               <div className="mt-auto pt-4 border-t border-[#F3F4F6] flex flex-col gap-1">
-                <span className="text-[14px] font-bold text-[#1A1A2E] font-dm-sans uppercase tracking-[0.02em]">
+                <span className="text-[14px] font-bold text-[#0c1024]  uppercase tracking-[0.02em] font-sans">
                   {t.name}
                 </span>
-                <span className="text-[13px] text-[#6B7280] font-dm-sans leading-none opacity-80">
+                <span className="text-[13px] text-slate-600  leading-none opacity-80 font-sans">
                   {t.company}
                 </span>
-                <Badge variant="outline" className="mt-3 w-fit bg-[#F3EEFF] text-[#7B2FBE] border-[#7B2FBE] text-[11px] font-bold px-3 py-0.5">
+                <Badge variant="outline" className="mt-3 w-fit bg-[#F3EEFF] text-[#7B2FBE] border-[#7B2FBE] text-[11px] font-bold px-3 py-0.5 font-sans">
                   {t.badge}
                 </Badge>
               </div>

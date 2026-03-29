@@ -13,9 +13,9 @@ export const WpServices = () => {
       {/* Telco Services Section (Matching Reference Image) */}
       <section className="py-10 md:py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="mb-10">
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>C9 Telco & Connectivity</span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <div className="mb-14">
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>C9 TELCO & CONNECTIVITY</span>
+            <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               One provider for every connection your business needs.
             </h2>
             

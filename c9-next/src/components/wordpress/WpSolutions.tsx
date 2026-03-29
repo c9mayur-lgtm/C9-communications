@@ -68,12 +68,12 @@ export const WpSolutions = () => {
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#946CE2] to-white z-0" />
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
-        <div className="flex flex-col mb-10 gap-4">
-          <span className="text-white text-[13px] font-bold uppercase tracking-[0.3em] mb-2 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>COMPLETE WORKPLACE MANAGEMENT</span>
-          <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-white leading-[1.1]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <div className="flex flex-col mb-16 gap-4">
+          <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>COMPLETE WORKPLACE MANAGEMENT</span>
+          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             Your entire workplace.<br />Managed from one place.
           </h2>
-          <p className="text-white/85 text-[16px] md:text-[18px] max-w-[720px] leading-relaxed mt-2" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <p className="text-white/85 text-[18px] md:text-[20px] max-w-[720px] leading-relaxed mt-2 font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             From the boardroom screen to the front-door camera — C9 manages every layer of your physical and digital workplace so your team can focus on work, not IT.
           </p>
         </div>

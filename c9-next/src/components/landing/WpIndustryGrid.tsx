@@ -77,9 +77,9 @@ export const WpIndustryGrid = () => {
   return (
     <section className="py-14 md:py-20 bg-white">
       <div className="container mx-auto px-8 max-w-[1240px]">
-        <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto px-6">
-          <span className="text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.2em] mb-4 block">Why Partner With Us</span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <div className="text-center mb-16 max-w-3xl mx-auto px-6">
+          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>WHY PARTNER WITH US</span>
+          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             Solving IT challenges in every industry, every day.
           </h2>
         </div>

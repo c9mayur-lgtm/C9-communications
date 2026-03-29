@@ -200,8 +200,8 @@ export const WpVendors = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-10">
           <div className="w-full">
-            <span className="text-[#5D00D6] text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block">Strategic Partnerships</span>
-            <h2 className="text-[32px] md:text-[40px] font-bold leading-[1.1] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>STRATEGIC PARTNERSHIPS</span>
+            <h2 className="text-[36px] md:text-[48px] font-bold leading-[1.05] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Leading the way in IT & Telco excellence.
             </h2>
             <div className="flex flex-wrap gap-2 md:gap-3 w-full">

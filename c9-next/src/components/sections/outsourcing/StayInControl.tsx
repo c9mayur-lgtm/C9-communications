@@ -24,24 +24,24 @@ export default function StayInControl() {
           
           {/* LEFT COLUMN */}
           <div>
-            <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE] font-dm-sans">
+            <span className="text-[13px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block font-sans">
               TRANSPARENCY
             </span>
-            <h2 className="text-[28px] md:text-[40px] font-bold text-[#1A1A2E] mt-4 font-syne leading-tight">
+            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-[1.05] text-[#0c1024] font-sans">
               Outsourcing IT doesn't mean handing over control. It means getting it back.
             </h2>
-            <p className="text-[17px] text-[#6B7280] leading-[1.75] mt-6 font-dm-sans">
+            <p className="text-[18px] md:text-[20px] text-slate-600/90 leading-relaxed mt-8 font-normal font-sans">
               The businesses most nervous about outsourcing IT are usually the ones who built everything themselves. They know every cable, every password, every quirk. The fear is: what happens to all that knowledge when C9 takes over?
             </p>
-            <p className="text-[17px] text-[#6B7280] leading-[1.75] mt-4 font-dm-sans">
+            <p className="text-[18px] md:text-[20px] text-slate-600/90 leading-relaxed mt-4 font-normal font-sans">
               Answer: it gets documented, structured, and managed properly for the first time. You don't lose visibility — you gain a monthly report, a named account manager, a strategic roadmap, and a team that is accountable to you for every outcome.
             </p>
 
             <div className="flex flex-col gap-3 mt-8">
               {features.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-[18px] h-[18px] text-[#7B2FBE] shrink-0 mt-0.5" />
-                  <span className="text-[15px] text-[#1A1A2E] font-medium font-dm-sans leading-tight">
+                  <CheckCircle className="w-[18px] h-[18px] text-[#5D00D6] shrink-0 mt-0.5 font-sans" />
+                  <span className="text-[15px] text-[#0c1024] font-normal  leading-tight font-sans">
                     {item}
                   </span>
                 </div>
@@ -51,30 +51,30 @@ export default function StayInControl() {
 
           {/* RIGHT COLUMN */}
           <div className="flex justify-center md:justify-end">
-            <Card className="w-full max-w-[440px] bg-[#1A1A2E] rounded-2xl p-8 border-none shadow-2xl">
-              <h3 className="text-[22px] font-semibold text-white font-syne mb-6">
+            <Card className="w-full max-w-[440px] bg-[#0c1024] rounded-none p-8 border-none shadow-2xl">
+              <h3 className="text-[22px] font-semibold text-white  mb-6 font-sans">
                 What you see every month
               </h3>
 
               <div className="flex flex-col gap-0 mt-6">
                 {metrics.map((m, i) => (
                   <div key={i} className="flex justify-between items-center py-[0.875rem] border-b border-[#374151]">
-                    <span className="text-[14px] text-[#6B7280] font-dm-sans">{m.label}</span>
-                    <span className="text-[14px] text-white font-medium font-dm-sans">{m.value}</span>
+                    <span className="text-[14px] text-slate-600  font-sans">{m.label}</span>
+                    <span className="text-[14px] text-white font-normal  font-sans">{m.value}</span>
                   </div>
                 ))}
               </div>
 
               <div className="mt-6 pt-6 border-t border-[#374151]">
-                <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#7B2FBE] mb-3 font-dm-sans">
+                <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#5D00D6] mb-3  font-sans">
                   PLUS QUARTERLY
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-2 text-white font-dm-sans text-[14px]">
-                    <span className="text-[#7B2FBE] font-bold">›</span> IT roadmap review
+                  <div className="flex items-center gap-2 text-white  text-[14px] font-sans">
+                    <span className="text-[#5D00D6] font-bold font-sans">›</span> IT roadmap review
                   </div>
-                  <div className="flex items-center gap-2 text-white font-dm-sans text-[14px]">
-                    <span className="text-[#7B2FBE] font-bold">›</span> Budget and lifecycle planning
+                  <div className="flex items-center gap-2 text-white  text-[14px] font-sans">
+                    <span className="text-[#5D00D6] font-bold font-sans">›</span> Budget and lifecycle planning
                   </div>
                 </div>
               </div>

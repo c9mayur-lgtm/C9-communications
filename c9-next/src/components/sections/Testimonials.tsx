@@ -18,7 +18,7 @@ export const Testimonials = () => {
         {/* Testimonial Track (CSS Flex with Snap) */}
         <div className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-12 mask-fade-r no-scrollbar">
           {TESTIMONIALS.map((t, i) => (
-            <Card key={i} className="min-w-[320px] md:min-w-[420px] p-10 bg-white border border-brand-purple/5 shadow-sm rounded-3xl snap-center flex flex-col group relative">
+            <Card key={i} className="min-w-[320px] md:min-w-[420px] p-10 bg-white border border-brand-purple/5 shadow-sm rounded-none snap-center flex flex-col group relative">
               <div className="absolute top-6 right-8 text-brand-purple/10 scale-x-[-1] pointer-events-none">
                  <Quote size={80} fill="currentColor" strokeWidth={0} />
               </div>
@@ -29,16 +29,16 @@ export const Testimonials = () => {
                 ))}
               </div>
               
-              <p className="text-text-secondary text-lg leading-relaxed font-dm-sans mb-10 flex-grow relative z-10 italic">
+              <p className="text-[#4B5563] text-lg leading-relaxed font-sans mb-10 flex-grow relative z-10 italic">
                 "{t.quote}"
               </p>
               
               <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-8 relative z-10">
                 <div className="flex flex-col gap-1">
-                  <h4 className="text-text-primary font-bold font-syne text-[16px] tracking-tight">{t.name}</h4>
-                  <p className="text-gray-500 text-[11px] font-bold uppercase tracking-widest font-dm-sans">{t.company}</p>
+                  <h4 className="text-[#0c1024] font-bold font-sans text-[16px] tracking-tight">{t.name}</h4>
+                  <p className="text-slate-500 text-[11px] font-bold uppercase tracking-widest font-sans">{t.company}</p>
                 </div>
-                <Badge variant="secondary" className="bg-light-purple-bg text-brand-purple font-bold px-3 py-1 font-dm-sans rounded-full text-[10px] uppercase tracking-wider">
+                <Badge variant="secondary" className="bg-light-purple-bg text-brand-purple font-bold px-3 py-1 font-sans rounded-full text-[10px] uppercase tracking-wider">
                   {t.tag}
                 </Badge>
               </div>

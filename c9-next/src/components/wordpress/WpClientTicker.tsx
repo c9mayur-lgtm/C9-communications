@@ -4,7 +4,7 @@ import React from 'react';
 
 export const WpClientTicker = () => {
   return (
-    <section className="bg-[#f8f7fc] py-10 md:py-14 border-t border-gray-100 overflow-hidden relative">
+    <section className="bg-white py-12 md:py-16 border-t border-b border-gray-100 overflow-hidden relative">
       <style>{`
         @keyframes ticker-left {
           0%   { transform: translateX(0); }
@@ -36,7 +36,6 @@ export const WpClientTicker = () => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 0 40px;
           margin: 0;
           white-space: nowrap;
           cursor: default;
@@ -47,16 +46,16 @@ export const WpClientTicker = () => {
 
       {/* Heading */}
       <p
-        className="text-center font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#5D00D6] text-[11px] md:text-[13px] mb-6 md:mb-10 px-4"
+        className="text-center font-bold tracking-[0.1em] md:tracking-[0.3em] uppercase text-[#5D00D6] text-[11px] md:text-[13px] mb-6 md:mb-10 px-4 font-sans"
         style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
         Trusted by leading Australian businesses
       </p>
 
       {/* Gradient fade masks */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10"
-        style={{ width: '100px', background: 'linear-gradient(to right, #f8f7fc 80%, transparent)' }} />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10"
-        style={{ width: '100px', background: 'linear-gradient(to left, #f8f7fc 80%, transparent)' }} />
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-[40px] md:w-[100px]"
+        style={{ background: 'linear-gradient(to right, #ffffff 80%, transparent)' }} />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-[40px] md:w-[100px]"
+        style={{ background: 'linear-gradient(to left, #ffffff 80%, transparent)' }} />
 
       <div className="ticker-wrapper overflow-hidden py-4 md:py-8">
         <div className="ticker-row-left" style={{ animationDuration: '60s' }}>
@@ -85,11 +84,11 @@ export const WpClientTicker = () => {
             { name: 'Stockdale & Leggo',  logo: '/images/clients/stockdale & leggo.png' },
             { name: 'Yealink',            logo: '/images/clients/yealink.png' },
           ].map((c, i) => (
-            <div key={i} className="ticker-pill group">
+            <div key={i} className="ticker-pill group px-[20px] md:px-[40px]">
               <img
                 src={c.logo}
                 alt={c.name}
-                className="h-[40px] md:h-[80px] lg:h-[110px] w-auto object-contain transition-all duration-500 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                className="h-[60px] md:h-[80px] lg:h-[110px] w-auto object-contain transition-all duration-500 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
               />
             </div>

@@ -4,9 +4,9 @@ export const WpSimplifyingIT = () => {
   return (
     <section className="py-10 md:py-12 bg-white border-t border-gray-100">
       <div className="container mx-auto px-8 max-w-[1240px]">
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Proven Experience</span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>PROVEN EXPERIENCE</span>
+          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             Simplifying IT for a complex world.
           </h2>
         </div>

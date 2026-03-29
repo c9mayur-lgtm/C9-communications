@@ -48,8 +48,8 @@ export const WpCaseStudies = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-10">
           <div className="max-w-2xl">
-            <span className="text-[#5D00D6] text-[12px] font-extrabold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Impact Realized</span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>IMPACT REALIZED</span>
+            <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               Hear From Businesses<br /> Like Yours
             </h2>
           </div>

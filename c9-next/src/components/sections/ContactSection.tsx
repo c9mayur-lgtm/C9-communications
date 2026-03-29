@@ -43,33 +43,33 @@ export const ContactSection = () => {
           
           {/* Right: Form */}
           <div className="relative">
-             <div className="absolute inset-0 bg-brand-purple/5 rounded-[40px] transform -rotate-1 scale-105" />
+             <div className="absolute inset-0 bg-brand-purple/5 rounded-none transform -rotate-1 scale-105" />
              
-             <div className="bg-white p-10 md:p-12 rounded-[40px] border border-brand-purple/10 shadow-2xl relative z-10 flex flex-col gap-8">
+             <div className="bg-white p-10 md:p-12 rounded-none border border-brand-purple/10 shadow-2xl relative z-10 flex flex-col gap-8">
                 <div className="flex flex-col gap-6">
                    <div className="grid grid-cols-2 gap-6">
                       <div className="flex flex-col gap-2">
-                         <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-dm-sans ml-1">Your Name</label>
-                         <Input placeholder="Full Name" className="bg-[#F8F9FA] border-none rounded-xl h-12 px-4 font-dm-sans focus:ring-brand-purple focus:ring-1" />
+                         <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Your Name</label>
+                         <Input placeholder="Full Name" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-brand-purple focus:ring-1" />
                       </div>
                       <div className="flex flex-col gap-2">
-                         <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-dm-sans ml-1">Phone Number</label>
-                         <Input placeholder="+61 (0) 000 000 000" className="bg-[#F8F9FA] border-none rounded-xl h-12 px-4 font-dm-sans focus:ring-brand-purple focus:ring-1" />
+                         <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Phone Number</label>
+                         <Input placeholder="+61 (0) 000 000 000" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-brand-purple focus:ring-1" />
                       </div>
                    </div>
                    
                    <div className="flex flex-col gap-2">
-                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-dm-sans ml-1">Email Address</label>
-                      <Input placeholder="name@company.com.au" className="bg-[#F8F9FA] border-none rounded-xl h-12 px-4 font-dm-sans focus:ring-brand-purple focus:ring-1" />
+                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Email Address</label>
+                      <Input placeholder="name@company.com.au" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-brand-purple focus:ring-1" />
                    </div>
                    
                    <div className="flex flex-col gap-2">
-                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-dm-sans ml-1">I'm interested in</label>
+                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>I'm interested in</label>
                       <Select>
-                        <SelectTrigger className="bg-[#F8F9FA] border-none rounded-xl h-12 px-4 font-dm-sans focus:ring-brand-purple focus:ring-1">
+                        <SelectTrigger className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-brand-purple focus:ring-1">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="rounded-none">
                           <SelectItem value="managed-it">Managed IT</SelectItem>
                           <SelectItem value="telco">Telco</SelectItem>
                           <SelectItem value="modern-workplace">Modern Workplace</SelectItem>
@@ -80,16 +80,16 @@ export const ContactSection = () => {
                    </div>
                    
                    <div className="flex flex-col gap-2">
-                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-dm-sans ml-1">Message</label>
-                      <Textarea placeholder="How can we help your business?" className="bg-[#F8F9FA] border-none rounded-2xl px-4 py-4 min-h-[120px] font-dm-sans focus:ring-brand-purple focus:ring-1" />
+                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Message</label>
+                      <Textarea placeholder="How can we help your business?" className="bg-[#F8F9FA] border-none rounded-none px-4 py-4 min-h-[120px] font-sans focus:ring-brand-purple focus:ring-1" />
                    </div>
                 </div>
                 
                 <div className="flex flex-col gap-4">
-                   <Button size="lg" className="bg-brand-purple hover:bg-dark-purple text-white px-10 rounded-full h-14 text-base font-bold font-dm-sans shadow-lg shadow-brand-purple/20">
+                   <Button size="lg" className="bg-brand-purple hover:bg-dark-purple text-white px-10 rounded-full h-14 text-base font-bold font-sans shadow-lg shadow-brand-purple/20">
                      Send Message <ArrowRight className="ml-2 w-5 h-5" />
                    </Button>
-                   <p className="text-[11px] text-gray-400 font-bold text-center uppercase tracking-widest font-dm-sans">
+                   <p className="text-[11px] text-gray-400 font-bold text-center uppercase tracking-widest font-sans">
                      Australian team responds within 1 business day
                    </p>
                 </div>

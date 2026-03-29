@@ -16,29 +16,29 @@ export default function Comparison() {
   return (
     <section className="bg-white py-24 px-6 md:px-8 lg:px-12 overflow-hidden">
       <div className="container mx-auto max-w-[1240px]">
-        <div className="text-left mb-12">
-          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE] font-dm-sans">
+        <div className="text-left mb-12 font-sans">
+          <span className="text-[13px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block font-sans">
             THE COMPARISON
           </span>
-          <h2 className="text-[28px] md:text-[40px] font-bold text-[#1A1A2E] mt-4 font-syne leading-tight">
+          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-[1.05] text-[#0c1024] font-sans">
             What it actually costs to do this<br className="hidden md:block" /> in-house versus outsourcing to C9.
           </h2>
-          <p className="text-[17px] text-[#6B7280] leading-[1.75] mt-4 max-w-[680px] font-dm-sans">
+          <p className="text-[18px] md:text-[20px] text-slate-600/90 leading-relaxed mt-6 max-w-[680px] font-normal font-sans">
             The real cost of in-house IT is almost always underestimated. Salary is only the beginning. Here's what the full picture looks like.
           </p>
         </div>
 
-        <div className="rounded-2xl border-[0.5px] border-[#7B2FBE]/15 overflow-hidden mt-10 shadow-sm">
+        <div className="rounded-none border-[0.5px] border-[#5D00D6]/15 overflow-hidden mt-10 shadow-sm">
           <Table className="w-full">
-            <TableHeader className="bg-[#F3EEFF]">
+            <TableHeader className="bg-[#F4F0FA]">
               <TableRow className="hover:bg-transparent transition-none">
-                <TableHead className="w-[40%] text-left px-5 py-4 text-[13px] font-bold uppercase tracking-[0.06em] text-[#6B7280] font-dm-sans border-b-0">
+                <TableHead className="w-[40%] text-left px-5 py-4 text-[13px] font-bold uppercase tracking-[0.06em] text-slate-600  border-b-0 font-sans">
                    {/* EMPTY LABEL COLUMN */}
                 </TableHead>
-                <TableHead className="text-center px-5 py-4 text-[13px] font-bold uppercase tracking-[0.06em] text-[#6B7280] font-dm-sans border-b-0">
+                <TableHead className="text-center px-5 py-4 text-[13px] font-bold uppercase tracking-[0.06em] text-slate-600  border-b-0 font-sans">
                   In-house IT
                 </TableHead>
-                <TableHead className="text-center px-5 py-4 text-[13px] font-bold uppercase tracking-[0.06em] text-[#7B2FBE] bg-[#F3EEFF] font-dm-sans border-b-0">
+                <TableHead className="text-center px-5 py-4 text-[13px] font-bold uppercase tracking-[0.06em] text-[#5D00D6] bg-[#F4F0FA]  border-b-0 font-sans">
                   C9 Managed IT
                 </TableHead>
               </TableRow>
@@ -46,13 +46,13 @@ export default function Comparison() {
             <TableBody>
               {rows.map((row, i) => (
                 <TableRow key={i} className={`border-b border-[#F3F4F6] transition-none ${i % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFA]'}`}>
-                  <TableCell className="px-5 py-4 text-[14px] text-[#1A1A2E] font-medium font-dm-sans">
+                  <TableCell className="px-5 py-4 text-[14px] text-[#0c1024] font-normal  font-sans">
                     {row.label}
                   </TableCell>
-                  <TableCell className="text-center px-5 py-4 text-[14px] text-[#9CA3AF] font-dm-sans">
+                  <TableCell className="text-center px-5 py-4 text-[14px] text-[#9CA3AF]  font-sans">
                     {row.inhouse}
                   </TableCell>
-                  <TableCell className="text-center px-5 py-4 text-[14px] text-[#1A1A2E] font-bold bg-[#F9F5FF] font-dm-sans">
+                  <TableCell className="text-center px-5 py-4 text-[14px] text-[#0c1024] font-bold bg-[#F9F5FF]  font-sans">
                     {row.c9}
                   </TableCell>
                 </TableRow>
@@ -61,7 +61,7 @@ export default function Comparison() {
           </Table>
         </div>
 
-        <p className="text-[13px] text-[#9CA3AF] italic mt-4 font-dm-sans text-left">
+        <p className="text-[13px] text-[#9CA3AF] italic mt-4  text-left font-sans">
           "Salary figures are indicative for an IT support generalist in Australia. Senior or specialised hires cost significantly more."
         </p>
       </div>
