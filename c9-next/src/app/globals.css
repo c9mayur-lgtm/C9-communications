@@ -12,9 +12,9 @@
   --color-secondary: var(--c9-secondary);
   --color-accent: var(--c9-accent);
   --color-hero-bg: var(--c9-hero-bg);
-  --color-brand-purple: #7B2FBE;
-  --color-dark-purple: #4B1A7C;
-  --color-light-purple-bg: #F3EEFF;
+  --color-brand-purple: #5D00D6;
+  --color-dark-purple: #42004D;
+  --color-light-purple-bg: #F4F0FA;
   --color-text-primary: #1A1A2E;
   --color-text-secondary: #6B7280;
   --color-dark-surface: #0F0F1A;
@@ -22,9 +22,9 @@
 }
 
 :root {
-  --brand-purple: #7B2FBE;
-  --dark-purple: #4B1A7C;
-  --light-purple-bg: #F3EEFF;
+  --brand-purple: #5D00D6;
+  --dark-purple: #42004D;
+  --light-purple-bg: #F4F0FA;
   --text-primary: #1A1A2E;
   --text-secondary: #6B7280;
   --dark-surface: #0F0F1A;

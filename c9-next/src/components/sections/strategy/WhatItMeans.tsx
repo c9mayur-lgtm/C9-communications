@@ -60,7 +60,7 @@ export default function WhatItMeans() {
           <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             Strategy without execution<br />is just a document. We do both.
           </h2>
-          <p className="text-white/85 text-[18px] md:text-[20px] max-w-[720px] leading-relaxed mt-2 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <p className="text-white/85 text-[16px] max-w-[720px] leading-relaxed mt-2 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             A virtual CIO from C9 is not a consultant who delivers a report and disappears. It is an ongoing strategic relationship — someone who attends your planning meetings, manages your vendors, and ensures your technology investment is aligned with your business goals.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function WhatItMeans() {
                 {s.title}
               </h3>
 
-              <p className="text-[#4B5563] text-[16px] md:text-[18px] mb-6 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-[#4B5563] text-[16px] mb-6 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 {s.body}
               </p>
 

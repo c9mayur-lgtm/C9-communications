@@ -68,13 +68,6 @@ export const IT_SOLUTIONS_MENU = {
             { icon: <UserPlus size={14} />, label: 'IT Outsourcing', path: '/managed-it/outsourcing' },
             { icon: <Globe size={14} />, label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting' },
           ]
-        },
-        {
-          heading: 'Cybersecurity',
-          items: [
-            { icon: <Shield size={14} />, label: 'Security Solutions', path: '/managed-it/security-solutions' },
-            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '#' },
-          ]
         }
       ]
     },
@@ -85,17 +78,19 @@ export const IT_SOLUTIONS_MENU = {
           items: [
             { icon: <Server size={14} />, label: 'IT Infrastructure Services', path: '#' },
             { icon: <Network size={14} />, label: 'Network Solutions', path: '#' },
-            { icon: <Cloud size={14} />, label: 'Cloud Services', path: '#' },
+            { icon: <Cloud size={14} />, label: 'Cloud Services', path: '/managed-it/cloud-services' },
             { icon: <HardDrive size={14} />, label: 'Software Solutions', path: '#' },
           ]
+        },
+        {
+          heading: 'Cybersecurity',
+          action: { label: 'C9 defense →', path: '/c9-defense' },
+          items: [
+            { icon: <Shield size={14} />, label: 'Security Solutions', path: '/managed-it/security-solutions' },
+            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
+          ]
         }
-      ],
-      extra: (
-        <div className="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg flex items-center justify-center">
-          <img src="/images/c9_defense_logo.svg" alt="C9 Defense" className="h-8 opacity-70" onError={(e: any) => e.currentTarget.style.display='none'} />
-          <span className="font-bold text-gray-400">c9 defense</span>
-        </div>
-      )
+      ]
     }
   ],
   challenges: [

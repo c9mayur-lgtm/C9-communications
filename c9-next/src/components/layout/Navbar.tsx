@@ -41,7 +41,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             <div className="p-8 border-r border-gray-50 flex flex-col gap-10">
               {data.heading && (
                 <div className="max-w-[280px]">
-                  <h2 className="text-[32px] md:text-[40px] font-semibold text-slate-800 leading-[1.2] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <h2 className="text-[26px] md:text-[34px] font-semibold text-slate-800 leading-[1.2] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                     {data.heading}
                   </h2>
                 </div>
@@ -50,7 +50,17 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                 <div key={ci} className="space-y-8">
                   {col.sections.map((sec: any, si: number) => (
                     <div key={si}>
-                      <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-5 opacity-30">{sec.heading}</h4>
+                      <div className="flex items-center justify-between mb-5 border-b border-gray-50 pb-2">
+                        <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-30 leading-none">{sec.heading}</h4>
+                        {sec.action && (
+                          <Link 
+                            href={sec.action.path} 
+                            className="bg-[#1c1c1c] text-white text-[12px] font-bold px-4 py-2 rounded-full hover:bg-black transition-all shadow-xl shadow-black/10 active:scale-95 shrink-0"
+                          >
+                            {sec.action.label}
+                          </Link>
+                        )}
+                      </div>
                       <div className="flex flex-col gap-3.5">
                         {sec.items.map((item: any, ii: number) => (
                           <Link 
@@ -189,7 +199,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                       onClick={() => toggleAccordion(tab.menuKey)}
                       className="flex items-center justify-between w-full py-4 text-left group"
                     >
-                      <span className={`text-[20px] font-bold tracking-tight transition-colors ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}>
+                      <span className={`text-[18px] font-bold tracking-tight transition-colors ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}>
                         {tab.name}
                       </span>
                       <ChevronDown size={20} className={`text-slate-400 transition-transform duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
@@ -210,7 +220,18 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                               <div key={ci} className="flex flex-col gap-6">
                                 {col.sections.map((sec: any, si: number) => (
                                   <div key={si}>
-                                    <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-4 opacity-40">{sec.heading}</h4>
+                                    <div className="flex items-center justify-between mb-4 border-b border-gray-50 pb-2 pr-2">
+                                      <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-40 leading-none">{sec.heading}</h4>
+                                      {sec.action && (
+                                        <Link 
+                                          href={sec.action.path} 
+                                          onClick={onClose}
+                                          className="bg-[#1c1c1c] text-white text-[12px] font-bold px-4 py-2 rounded-full shadow-lg shadow-black/10 active:scale-95 shrink-0"
+                                        >
+                                          {sec.action.label}
+                                        </Link>
+                                      )}
+                                    </div>
                                     <div className="flex flex-col gap-4">
                                       {sec.items?.map((item: any, ii: number) => (
                                         <Link 

@@ -88,7 +88,9 @@ export default async function RootLayout({
     '/managed-it/helpdesk-support',
     '/managed-it/outsourcing',
     '/managed-it/strategy-consulting',
-    '/managed-it/security-solutions'
+    '/managed-it/security-solutions',
+    '/managed-it/backup-disaster-recovery',
+    '/managed-it/cloud-services',
   ];
 
   const hasSelfNavFooter = pagesWithSelfNavFooter.includes(currentPath);

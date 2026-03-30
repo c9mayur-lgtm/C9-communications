@@ -61,7 +61,7 @@ export default function WhatYouGet() {
           <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             Not a helpdesk number.<br />A full IT department.
           </h2>
-          <p className="text-white/85 text-[18px] md:text-[20px] max-w-[720px] leading-relaxed mt-2 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <p className="text-white/85 text-[16px] max-w-[720px] leading-relaxed mt-2 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
             Here is exactly what C9 manages when you outsource your IT to us. A consolidated service layer that covers every aspect of your business technology.
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function WhatYouGet() {
                 {s.title}
               </h3>
 
-              <p className="text-[#4B5563] text-[16px] md:text-[18px] mb-6 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-[#4B5563] text-[16px] mb-6 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 {s.body}
               </p>
 
