@@ -72,7 +72,7 @@ export const IT_SOLUTIONS_MENU = {
         {
           heading: 'Cybersecurity',
           items: [
-            { icon: <Shield size={14} />, label: 'Security Solutions', path: '#' },
+            { icon: <Shield size={14} />, label: 'Security Solutions', path: '/managed-it/security-solutions' },
             { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '#' },
           ]
         }

@@ -82,21 +82,24 @@ export default async function RootLayout({
   const headersList = await headers();
   const currentPath = headersList.get('x-pathname') || '';
   
-  // List of paths that render their own Navbar/Breadcrumbs/Footer to avoid doubling
-  const pagesWithSelfNavigation = [
+  // Pages that render their OWN Navbar + Breadcrumbs + Footer.
+  // Each page in this list MUST include <Navbar />, <Breadcrumbs />, and <Footer /> locally.
+  const pagesWithSelfNavFooter = [
     '/managed-it/helpdesk-support',
-    '/managed-it/outsourcing'
+    '/managed-it/outsourcing',
+    '/managed-it/strategy-consulting',
+    '/managed-it/security-solutions'
   ];
 
-  const hasSelfNav = pagesWithSelfNavigation.includes(currentPath);
+  const hasSelfNavFooter = pagesWithSelfNavFooter.includes(currentPath);
 
   return (
     <html lang="en-AU">
       <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30`}>
-        {!hasSelfNav && <Navbar />}
-        {!hasSelfNav && <Breadcrumbs />}
+        {!hasSelfNavFooter && <Navbar />}
+        {!hasSelfNavFooter && <Breadcrumbs />}
         {children}
-        {!hasSelfNav && <WpFooter />}
+        {!hasSelfNavFooter && <WpFooter />}
         <WpFloatingContact />
         <BusinessAdvisor />
       </body>

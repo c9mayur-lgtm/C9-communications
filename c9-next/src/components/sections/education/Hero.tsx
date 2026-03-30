@@ -11,8 +11,8 @@ export default function Hero() {
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               EDUCATION
             </span>
-            <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[56px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.1]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-              Managed IT and Telco built for Australian education providers.
+            <h1 className="text-[38px] sm:text-[48px] md:text-[52px] lg:text-[62px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.08]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              Managed IT and Telco built for Australian <span className="text-[#5D00D6]">education providers.</span>
             </h1>
             <p className="text-[17px] md:text-[18px] lg:text-[20px] text-slate-600 mb-8 max-w-[560px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
               From classrooms to administration — C9 manages your entire IT environment so educators can focus on teaching, not technology.

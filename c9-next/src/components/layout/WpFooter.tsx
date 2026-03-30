@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export const WpFooter = () => {
   return (
     <footer className="bg-black text-white pt-16 font-sans">
-      <div className="container mx-auto px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mb-16" style={{ maxWidth: '1240px' }}>
+      <div className="container mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mb-16 w-full" style={{ maxWidth: '1240px' }}>
          
          {/* Col 1: Solutions */}
          <div className="flex flex-col">
@@ -82,7 +82,7 @@ export const WpFooter = () => {
       
       {/* High-Fidelity White Footer Section */}
       <div className="bg-white text-slate-900 py-12">
-        <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
+        <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
           
           {/* Main Info Row */}
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center gap-10 lg:gap-4 pb-12">

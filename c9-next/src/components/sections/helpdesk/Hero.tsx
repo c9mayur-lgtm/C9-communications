@@ -15,8 +15,8 @@ export default function Hero() {
               Managed IT · Helpdesk Support
             </Badge>
 
-            <h1 className="text-[36px] md:text-[52px] font-bold text-[#1A1A2E] leading-tight mb-6" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
-              Your staff deserve IT support that actually shows up.
+            <h1 className="text-[38px] md:text-[52px] lg:text-[62px] tracking-tight font-bold text-[#0c1024] leading-[1.08] mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              Your staff deserve IT support that <span className="text-[#5D00D6]">actually shows up.</span>
             </h1>
 
             <p className="text-[18px] text-[#6B7280] max-w-[560px] leading-[1.7] mb-8" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>

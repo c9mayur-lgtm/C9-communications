@@ -1,116 +1,79 @@
-import React from 'react';
-import { ServiceHero } from "@/components/layout/ServiceHero";
-import { ServiceDetailBenefits } from "@/components/wordpress/ServiceDetailBenefits";
-import { ServiceImageText } from "@/components/wordpress/ServiceImageText";
-import { ServiceFeatureScroll } from "@/components/wordpress/ServiceFeatureScroll";
-import { ServiceTestimonialKajabi } from "@/components/wordpress/ServiceTestimonialKajabi";
-import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
-import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
-import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
-
-const STRATEGY_BULLETS = [
-  'Align technology investments with core business goals.',
-  'Reduce IT sprawl and minimize unnecessary expenditure.',
-  'Accelerate digital transformation through proven frameworks.',
-  'Enhance security posture with industry-leading risk audits.'
-];
-
-const STRATEGY_SUB_BENEFITS = [
-  { 
-    title: 'Custom IT Strategy', 
-    description: 'We build tailored roadmaps that reflect your specific industry challenges and growth targets.' 
-  },
-  { 
-    title: 'Cloud Maturity', 
-    description: 'Enable secure, remote work with a modern cloud strategy built on Azure and Microsoft 365.' 
-  },
-  { 
-    title: 'Predictable ROI', 
-    description: 'Stop guessing. We measure the impact of every technology dollar to ensure maximum ROI.' 
-  },
-  { 
-    title: 'Future-Ready Security', 
-    description: 'We build resilient security frameworks that proactively evolve alongside the modern threat landscape.' 
-  }
-];
-
-const STRATEGY_FEATURES = [
-  { title: 'Technical Implementation', description: 'Execute your technology roadmap with precision-engineered solutions that scale with your growth.' },
-  { title: 'IT Helpdesk Support', description: 'Empower your workforce with strategic support that resolves issues before they impact productivity.' },
-  { title: 'Managed IT Services', description: 'Offload the complexity of infrastructure management to our experts, allowing you to focus on core strategy.' },
-  { title: 'IT Consulting', description: 'Leverage senior-level expertise to navigate digital transformation and complex architecture decisions.' },
-  { title: 'Network Support', description: 'Build a resilient, high-performance foundation for your business operations with our strategic network design.' },
-  { title: 'Field Tech Support', description: 'On-site expertise whenever you need it, ensuring your physical infrastructure is always optimized.' }
-];
+import { Navbar } from "@/components/layout/Navbar"
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
+import { WpFooter as Footer } from "@/components/layout/WpFooter"
+import Hero from "@/components/sections/strategy/Hero"
+import Recognition from "@/components/sections/strategy/Recognition"
+import WhatItMeans from "@/components/sections/strategy/WhatItMeans"
+import EngagementModel from "@/components/sections/strategy/EngagementModel"
+import DefenseBridge from "@/components/sections/strategy/DefenseBridge"
+import FinalCTA from "@/components/sections/strategy/FinalCTA"
+import FAQ from "@/components/sections/strategy/FAQ"
+import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback"
+import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm"
 
 const STRATEGY_FAQS = [
-  { 
-    q: 'How do you help with IT strategy?', 
-    a: 'We conduct a deep-dive analysis of your current systems, processes, and business goals to develop a 12-24 month technology roadmap that prioritizes high-impact projects.' 
+  {
+    q: "What is a virtual CIO and how is it different from a regular IT consultant?",
+    a: "A virtual CIO is an ongoing strategic relationship — not a one-off engagement. Unlike a consultant who delivers a report and moves on, a C9 vCIO attends your planning meetings, manages your vendors, updates your roadmap quarterly, and is accountable for the outcomes of your technology investment over time."
   },
-  { 
-    q: 'What is a risk assessment?', 
-    a: 'We evaluate your security posture, data handling, and disaster recovery plans against industry standards like the ACSC Essential Eight to ensure your business is resilient.' 
+  {
+    q: "Is this only available as part of a Managed IT agreement?",
+    a: "The strategic engagement is most effective when paired with Managed IT — because C9 can both set the strategy and execute it directly. However, we can discuss standalone strategic consulting for businesses with existing IT resources who need strategic oversight only."
   },
-  { 
-    q: 'Can you help with migrating to the cloud?', 
-    a: 'Yes, we specialize in architecting and executing cloud migrations. Whether you are moving from on-premise servers to Azure or AWS, or consolidating workloads in M365, we manage the entire process.' 
+  {
+    q: "How often does the vCIO meet with our team?",
+    a: "At minimum, quarterly reviews are included as standard. Most clients engage more frequently during active roadmap phases or when significant technology decisions are being made. Your account manager is available between formal reviews."
   },
-  { 
-    q: 'How often should we review our IT strategy?', 
-    a: 'We recommend a major strategic review annually, with quarterly progress check-ins to ensure your technology roadmap continues to align with your evolving business goals.' 
+  {
+    q: "Will you recommend technology we don't actually need?",
+    a: "No. C9's strategic advice is vendor-agnostic — we are not incentivised to recommend any specific product or vendor. Our job is to identify what your business needs and source the best-fit solution, regardless of who makes it."
+  },
+  {
+    q: "What does a technology roadmap actually look like?",
+    a: "A C9 roadmap is a prioritised 12-month plan covering: initiatives ranked by business impact and urgency, budget requirements per initiative, dependencies and sequencing, risk items requiring attention, and quick wins achievable within 90 days. It is updated every quarter to reflect your evolving business priorities."
+  },
+  {
+    q: "Can you help us prepare for a board technology presentation?",
+    a: "Yes — board-level technology reporting is included in the strategic engagement. C9 translates your IT environment into language your board understands: risk exposure, investment rationale, and roadmap progress — without technical jargon."
   }
 ];
 
-export default function StrategyConsulting() {
+export const metadata = {
+  title: "IT Strategy & Consulting | Managed IT | C9 Communications",
+  description: "C9 provides virtual CIO services and strategic IT consulting for Australian businesses — IT roadmaps, budget planning, vendor management, and board reporting. Strategy that gets executed.",
+  openGraph: {
+    title: "IT Strategy & Consulting | C9 Communications",
+    description: "Virtual CIO and strategic IT consulting. Roadmaps, budget planning, and vendor management for Australian businesses.",
+    url: "https://c9communications.com.au/managed-it/strategy-consulting",
+  },
+}
+
+export default function StrategyConsultingPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <ServiceHero 
-        eyebrow="SOLUTIONS"
-        title="Strategy & Consulting"
-        description="Align your technology with your business goals. Our strategic IT consulting services help you navigate complex technology landscapes and drive sustainable growth for your Australian business."
-        bgImage="/images/strategy-hero-banner.png"
+    <main className="font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+      <Navbar />
+      <Breadcrumbs />
+      <Hero />
+      <Recognition />
+      <WhatItMeans />
+      <EngagementModel />
+      <DefenseBridge />
+      
+      {/* FAQ & Testimonials Section */}
+      <WpFAQAndFeedback faqItems={STRATEGY_FAQS} showTestimonials={true} />
+      
+      <FinalCTA />
+      
+      {/* Strategic Consultation Form */}
+      <WpConsultationForm 
+        showHeader={true}
+        eyebrow="STRATEGIC IT ADVISORY"
+        title="Ready to turn your IT spend into a strategic asset?"
+        description="Book a strategy session with C9 — no obligation, no jargon, no product pitch. Just a clear conversation about where your technology is today and where it needs to be."
+        formTitle="Schedule Strategy Session"
       />
       
-      <ServiceDetailBenefits 
-        title="Why partner with C9 for IT strategy?"
-        intro="Turn technology into a competitive advantage. Our senior consultants provide the roadmap and expertise you need to align your IT infrastructure with your core business goals."
-        bullets={STRATEGY_BULLETS}
-        subBenefits={STRATEGY_SUB_BENEFITS}
-        imageSrc="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000"
-      />
-
-      <ServiceImageText 
-        reverse={false}
-        title="Unlocking Your Full Business Potential"
-        description="Our strategic advisors work closely with you to understand your unique business requirements and challenges. We provide expert guidance on how technology can be used as a strategic lever to drive growth, increase efficiency, and gain a competitive edge in your market."
-        imageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000"
-      />
-
-      <ServiceFeatureScroll 
-        title="Cutting-edge tools that drive performance"
-        description="If your technology is draining resources rather than optimizing them, we can get you back on track. A professionally managed services provider can give you the decisive edge to:"
-        features={STRATEGY_FEATURES}
-      />
-
-      <ServiceTestimonialKajabi />
-
-      <WpFAQAndFeedback 
-        showFAQ={true}
-        showTestimonials={false}
-        faqItems={STRATEGY_FAQS}
-        showStillQuestions={false}
-      />
-
-      <section id="consultation-section">
-        <WpConsultationForm 
-          showHeader={false} 
-          eyebrow="STRATEGIC IT ADVISORY"
-          title="The IT partner your business deserves."
-          description="Book a 30-minute strategy session with our senior consultants. We'll review your current infrastructure and security posture — no obligation, just expert advice."
-          formTitle="Schedule Strategy Session"
-        />
-      </section>
+      <Footer />
     </main>
-  );
+  )
 }

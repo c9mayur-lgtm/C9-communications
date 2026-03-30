@@ -168,15 +168,9 @@ export default function Hero() {
 
           {/* LEFT COLUMN */}
           <div className="py-4 pr-0 xl:pr-6">
-            <FadeIn>
-              <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                HELPDESK SUPPORT
-              </span>
-            </FadeIn>
-
             <FadeIn delay={0.1}>
               <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[58px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                Your staff deserve IT support that actually shows up.
+                Your staff deserve IT support that <span className="text-[#5D00D6]">actually shows up.</span>
               </h1>
             </FadeIn>
 
