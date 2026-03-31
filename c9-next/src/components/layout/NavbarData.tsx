@@ -76,7 +76,7 @@ export const IT_SOLUTIONS_MENU = {
         {
           heading: 'Infrastructure',
           items: [
-            { icon: <Server size={14} />, label: 'IT Infrastructure Services', path: '#' },
+            { icon: <Server size={14} />, label: 'IT Infrastructure Services', path: '/managed-it/infrastructure' },
             { icon: <Network size={14} />, label: 'Network Solutions', path: '#' },
             { icon: <Cloud size={14} />, label: 'Cloud Services', path: '/managed-it/cloud-services' },
             { icon: <HardDrive size={14} />, label: 'Software Solutions', path: '#' },

@@ -45,6 +45,7 @@ export default function InfrastructurePage() {
           formTitle="Schedule Strategy Session"
         />
       </section>
+      <ManagedFooter />
     </main>
   )
 }

@@ -52,6 +52,7 @@ export default function CloudServicesPage() {
         description="Discuss your migration, management, or cost optimization needs with a C9 engineer. No obligation."
         formTitle="Request a Cloud Consultation"
       />
+      <Footer />
     </main>
   )
 }
