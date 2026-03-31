@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar"
-import { ManagedFooter } from "@/components/layout/ManagedFooter"
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
+import { WpFooter } from "@/components/layout/WpFooter"
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm"
 import { ServiceTestimonialKajabi } from "@/components/wordpress/ServiceTestimonialKajabi"
 import Hero from "@/components/sections/infrastructure/Hero"
@@ -26,6 +27,7 @@ export default function InfrastructurePage() {
   return (
     <main className="bg-white text-[#1A1A2E] font-['Proxima_Nova']">
       <Navbar />
+      <Breadcrumbs />
       <Hero />
       <Credibility />
       <InfraScope />
@@ -45,7 +47,7 @@ export default function InfrastructurePage() {
           formTitle="Schedule Strategy Session"
         />
       </section>
-      <ManagedFooter />
+      <WpFooter />
     </main>
   )
 }
