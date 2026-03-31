@@ -93,6 +93,7 @@ export default async function RootLayout({
     '/managed-it/cloud-services',
     '/managed-it/network-solutions',
     '/managed-it/infrastructure',
+    '/telco/business-nbn',
   ];
 
   const hasSelfNavFooter = pagesWithSelfNavFooter.includes(currentPath);
