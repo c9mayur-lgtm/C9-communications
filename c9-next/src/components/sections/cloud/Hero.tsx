@@ -170,16 +170,29 @@ export default function Hero() {
 
             <FadeIn delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-8">
-                <Link href="#cloud-consultation" passHref>
-                  <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                    Request a Cloud Proposal <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
-                  </Button>
-                </Link>
-                <Link href="#cloud-scope" passHref>
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto border-gray-200 text-[#0c1024] font-bold h-14 px-8 rounded-full hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                    See What We Manage
-                  </Button>
-                </Link>
+                <Button 
+                  size="lg" 
+                  onClick={() => {
+                    const el = document.getElementById('consultation-section');
+                    if(el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none" 
+                  style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+                >
+                  Request a Cloud Proposal <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  onClick={() => {
+                    const el = document.getElementById('cloud-scope');
+                    if(el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="w-full sm:w-auto border-gray-200 text-[#0c1024] font-bold h-14 px-8 rounded-full hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white transition-colors" 
+                  style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+                >
+                  See What We Manage
+                </Button>
               </div>
             </FadeIn>
 

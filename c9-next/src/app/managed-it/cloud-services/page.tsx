@@ -11,6 +11,7 @@ import CostSecurity from "@/components/sections/cloud/CostSecurity"
 import DefenseBridge from "@/components/sections/cloud/DefenseBridge"
 import FAQ from "@/components/sections/cloud/FAQ"
 import FinalCTA from "@/components/sections/cloud/FinalCTA"
+import CloudScope from "@/components/sections/cloud/CloudScope"
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
 
 export const metadata = {
@@ -30,6 +31,7 @@ export default function CloudServicesPage() {
       <Breadcrumbs />
       <Hero />
       <DualAudience />
+      {/* <CloudScope /> */}
       <BlandExplorer />
       <MigrationPath />
       <AustralianData />
@@ -50,7 +52,6 @@ export default function CloudServicesPage() {
         description="Discuss your migration, management, or cost optimization needs with a C9 engineer. No obligation."
         formTitle="Request a Cloud Consultation"
       />
-      <Footer />
     </main>
   )
 }

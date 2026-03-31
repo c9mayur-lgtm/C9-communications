@@ -120,60 +120,62 @@ export default function MigrationPath() {
           C9 manages the full migration lifecycle — from initial assessment through to ongoing management. The managed service starts from day one of go-live, not after a handoff period.
         </p>
 
-        {/* Step track */}
-        <div className="relative flex items-start mt-16 lg:mt-24 mb-12">
-          {/* Track line */}
-          <div className="absolute top-6 left-[10%] right-[10%] h-px bg-brand-purple/10 z-0">
-            <div
-              className="h-full bg-brand-purple transition-all duration-700"
-              style={{ width: `${progressPct}%` }}
-            />
-          </div>
-
+        {/* Step track cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16 lg:mt-24 mb-12">
           {phases.map((phase, i) => {
             const PhaseIcon = phase.Icon
             const isActive = i === cur
-            const isDone = i < cur
+            
             return (
               <button
                 key={i}
                 onClick={() => setCur(i)}
-                className="flex-1 flex flex-col items-center relative z-10 group px-1"
+                className={cn(
+                  'flex items-center text-left p-3.5 md:p-4 rounded-[1.25rem] border transition-all duration-300 w-full group outline-none focus:ring-2 focus:ring-brand-purple/30',
+                  isActive 
+                    ? 'border-brand-purple bg-white shadow-lg shadow-brand-purple/5' 
+                    : 'border-brand-purple/10 bg-white/50 hover:bg-white hover:border-brand-purple/40 hover:shadow-md hover:shadow-brand-purple/5'
+                )}
               >
                 <div
                   className={cn(
-                    'w-12 h-12 rounded-none flex items-center justify-center',
-                    'border-[1.5px] transition-all duration-300',
-                    isActive && 'bg-brand-purple border-brand-purple scale-110 shadow-2xl shadow-purple-900/20',
-                    isDone && 'bg-light-purple-bg border-brand-purple',
-                    !isActive && !isDone && 'bg-white border-purple-100 group-hover:border-brand-purple group-hover:-translate-y-1'
+                    'w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center shrink-0 mr-4 transition-all duration-300',
+                    isActive 
+                      ? 'bg-[#5D00D6] text-white shadow-lg shadow-[#5D00D6]/20' 
+                      : 'bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#EDE9FE]'
                   )}
                 >
-                  {isDone
-                    ? <CheckCircle size={18} className="text-brand-purple" />
-                    : <PhaseIcon size={18} className={isActive ? 'text-white' : 'text-brand-purple'} />
-                  }
+                  <PhaseIcon size={22} className="w-[22px] h-[22px]" />
                 </div>
-                <span className="text-[11px] font-bold text-slate-400 mt-3 uppercase tracking-wider" style={FONT_FAMILY}>{phase.week}</span>
-                <span className={cn(
-                  'text-[13px] font-bold mt-1 text-center max-w-[100px] leading-snug transition-colors',
-                  isActive ? 'text-brand-purple' : 'text-slate-500'
-                )} style={FONT_FAMILY}>
-                  {phase.label}
-                </span>
+                
+                <div className="flex-1 min-w-0">
+                  <div className="text-[10px] md:text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1 leading-none" style={FONT_FAMILY}>
+                    {phase.week}
+                  </div>
+                  <div className={cn(
+                    'text-[16px] md:text-[18px] font-bold leading-tight transition-colors truncate',
+                    isActive ? 'text-[#1A1A2E]' : 'text-slate-500 group-hover:text-brand-purple'
+                  )} style={FONT_FAMILY}>
+                    {phase.label}
+                  </div>
+                </div>
+                
+                {isActive && (
+                  <ChevronRight size={18} className="text-[#5D00D6] ml-2 shrink-0 animate-in fade-in slide-in-from-left-1" />
+                )}
               </button>
             )
           })}
         </div>
 
         {/* Detail panel */}
-        <div className="mt-12 bg-white rounded-none border border-brand-purple/10 overflow-hidden shadow-2xl shadow-purple-900/5">
+        <div className="mt-12 bg-white rounded-3xl border border-brand-purple/10 overflow-hidden shadow-2xl shadow-purple-900/5">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_320px]">
 
             {/* Left */}
             <div className="p-8 lg:p-12 md:border-r border-brand-purple/5 flex flex-col">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-light-purple-bg text-brand-purple text-[11px] font-bold tracking-widest uppercase px-4 py-2 rounded-none w-fit mb-8" style={FONT_FAMILY}>
+              <div className="inline-flex items-center gap-2 bg-light-purple-bg text-brand-purple text-[11px] font-bold tracking-widest uppercase px-4 py-2 rounded-full w-fit mb-8" style={FONT_FAMILY}>
                 <CheckCircle size={14} />
                 {p.badge}
               </div>
@@ -189,7 +191,7 @@ export default function MigrationPath() {
               <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 flex-1 mb-10">
                 {p.checklist.map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
-                    <div className="w-6 h-6 rounded-none bg-light-purple-bg flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-md bg-light-purple-bg flex items-center justify-center flex-shrink-0">
                       <CheckCircle size={12} className="text-brand-purple" />
                     </div>
                     <span className="text-[15px] font-semibold text-text-primary leading-snug" style={FONT_FAMILY}>{item}</span>
@@ -213,7 +215,7 @@ export default function MigrationPath() {
                 <div
                   key={i}
                   className={cn(
-                    'rounded-none p-5 border transition-all duration-300',
+                    'rounded-xl p-5 border transition-all duration-300',
                     m.hi
                       ? 'bg-white border-brand-purple shadow-xl shadow-purple-900/5'
                       : 'bg-white/50 border-brand-purple/10 hover:border-brand-purple/30'
@@ -248,7 +250,7 @@ export default function MigrationPath() {
               onClick={() => setCur(Math.max(0, cur - 1))}
               disabled={cur === 0}
               className={cn(
-                'px-6 py-3 rounded-none text-[14px] font-bold border transition-all duration-300',
+                'px-6 py-3 rounded-full text-[14px] font-bold border transition-all duration-300',
                 'border-brand-purple/10 text-text-primary hover:border-brand-purple hover:text-brand-purple',
                 'disabled:opacity-25 disabled:cursor-not-allowed'
               )}
@@ -275,8 +277,8 @@ export default function MigrationPath() {
               onClick={() => setCur(Math.min(phases.length - 1, cur + 1))}
               disabled={cur === phases.length - 1}
               className={cn(
-                'px-8 py-3 rounded-none text-[14px] font-bold transition-all duration-300',
-                'bg-brand-purple text-white hover:bg-dark-purple shadow-xl shadow-purple-900/20',
+                'px-8 py-3 rounded-full text-[14px] font-bold transition-all duration-300',
+                'bg-brand-purple text-white hover:bg-dark-purple shadow-lg shadow-purple-900/20',
                 'disabled:opacity-25 disabled:cursor-not-allowed'
               )}
               style={FONT_FAMILY}

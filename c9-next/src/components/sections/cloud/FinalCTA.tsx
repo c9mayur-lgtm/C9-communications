@@ -17,7 +17,7 @@ export default function FinalCTA() {
 
         <div className="flex flex-row flex-wrap gap-4 justify-center mt-10">
           <Button 
-            className="bg-brand-purple hover:bg-dark-purple text-white px-8 h-[52px] rounded-lg font-bold text-[16px] transition-all"
+            className="bg-brand-purple hover:bg-[#4c00b0] text-white px-8 h-14 rounded-full font-bold text-[16px] transition-all shadow-xl hover:-translate-y-0.5"
             style={FONT_FAMILY}
           >
             Discuss My Cloud Environment →
@@ -25,7 +25,7 @@ export default function FinalCTA() {
           <a href="tel:1800000299">
             <Button 
               variant="outline" 
-              className="border-brand-purple text-brand-purple hover:bg-light-purple-bg px-8 h-[52px] rounded-lg font-bold text-[16px] transition-all"
+              className="border-[1.5px] border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white px-8 h-14 rounded-full font-bold text-[16px] transition-all"
               style={FONT_FAMILY}
             >
               Call 1800 000 299
