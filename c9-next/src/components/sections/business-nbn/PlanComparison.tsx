@@ -1,18 +1,19 @@
 'use client';
 
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { CheckCircle, Star } from 'lucide-react';
+import { Check, Star, ShieldCheck, Zap, ArrowRight, Info, Package, Truck, Clock } from 'lucide-react';
 
-const bestEffortSpeeds = ['50/50 Mbps', '100/100 Mbps', '250/250 Mbps', '500/500 Mbps'];
-const committedSpeeds = ['100/100 Mbps', '250/250 Mbps', '500/500 Mbps', '1000/1000 Mbps'];
+const bestEffortSpeeds = ['50/50', '100/100', '250/250', '500/500'];
+const committedSpeeds = ['100/100', '250/250', '500/500', '1000/1000'];
 
 const bestEffortIncludes = [
   'Managed router included',
   '4G LTE failover connectivity',
   'NBN™ accredited support',
   'Dedicated account manager',
-  'Monthly billing — no hidden fees',
+  'Month-to-month flexibility'
 ];
 
 const committedIncludes = [
@@ -20,224 +21,304 @@ const committedIncludes = [
   'Traffic Class 2 (TC2) prioritisation',
   'SLA-backed performance guarantee',
   'Priority fault resolution',
-  'Enhanced network monitoring',
+  'Managed Enterprise Firewall'
 ];
 
+const SpeedBar = ({ activeCount }: { activeCount: number }) => {
+   const totalBars = 20;
+   return (
+     <div className="flex gap-1 h-3 mt-4 relative overflow-hidden rounded-sm group/speed">
+        {/* Under-glow for Entire Bar */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#5D00D6]/20 to-transparent animate-speed-slide pointer-events-none" />
+
+        {[...Array(totalBars)].map((_, i) => {
+           let colorClass = 'bg-gray-100'; // default empty
+           let glowClass = '';
+           
+           if (i < activeCount) {
+              if (i < 5) colorClass = 'bg-cyan-400';
+              else if (i < 10) colorClass = 'bg-green-400';
+              else if (i < 15) colorClass = 'bg-yellow-400 font-bold';
+              else if (i < 18) colorClass = 'bg-orange-500';
+              else colorClass = 'bg-purple-600';
+
+              if (i >= activeCount - 2) {
+                 glowClass = 'shadow-[0_0_12px_rgba(168,85,247,0.8)] border-t border-white/40';
+              }
+           }
+           
+           return (
+             <motion.div 
+               key={i}
+               initial={{ opacity: i < activeCount ? 1 : 0.2 }}
+               animate={{ 
+                 opacity: i < activeCount ? [0.8, 1, 0.8] : 0.2,
+                 scaleY: i < activeCount ? [1, 1.15, 1] : 1,
+                 filter: i < activeCount ? ['brightness(1)', 'brightness(1.5)', 'brightness(1)'] : 'none'
+               }}
+               transition={{ 
+                 duration: 0.8, 
+                 delay: i * 0.05, 
+                 repeat: Infinity, 
+                 ease: "easeInOut" 
+               }}
+               className={`flex-1 rounded-[2px] transition-all relative overflow-hidden ${colorClass} ${glowClass}`}
+             >
+                {/* Internal Flame/Nitro Flow Effect */}
+                {i < activeCount && (
+                   <motion.div 
+                     animate={{ x: ['-200%', '200%'] }}
+                     transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
+                   />
+                )}
+             </motion.div>
+           );
+        })}
+     </div>
+   );
+};
+
 export default function PlanComparison() {
-  const [contract, setContract] = useState<24 | 36>(36);
-  const [bestEffortSpeed, setBestEffortSpeed] = useState(0);
-  const [committedSpeed, setCommittedSpeed] = useState(3);
+  const [bestEffortIdx, setBestEffortIdx] = useState(0);
+  const [committedIdx, setCommittedIdx] = useState(3);
+
+  // Dynamic calculations based on speed
+  const getSimulatedStats = (speedStr: string) => {
+     const speed = parseInt(speedStr.split('/')[0]);
+     const downloadTime = Math.round((4096 * 8) / speed); // 4GB in seconds
+     const minutes = Math.floor(downloadTime / 60);
+     const seconds = downloadTime % 60;
+     const timeStr = minutes > 0 ? `${minutes}m ${seconds}s` : `${seconds} sec`;
+     const barCount = Math.min(20, Math.ceil((speed / 1000) * 20) + 4);
+     return { timeStr, barCount, speedLimit: speed === 1000 ? 2000 : 1000 };
+  };
+
+  const beStats = getSimulatedStats(bestEffortSpeeds[bestEffortIdx]);
+  const coStats = getSimulatedStats(committedSpeeds[committedIdx]);
 
   return (
-    <section
-      id="plan-comparison"
-      className="w-full bg-white py-24"
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
-    >
-      <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
-
-        {/* Header */}
-        <span className="text-[11px] uppercase tracking-widest text-[#5D00D6] font-semibold block">
-          NBN™ PLANS
-        </span>
-        <h2 className="text-[36px] md:text-[44px] text-[#1A1A2E] font-bold mt-3 leading-[1.25]">
-          Choose your Business NBN™ plan.
-        </h2>
-        <p className="text-[17px] text-[#6B7280] mt-3 max-w-[680px] leading-[1.7]">
-          Two bandwidth tiers — Best Effort for standard business use, or Committed for organisations that need
-          guaranteed performance. All plans include a managed router, 4G LTE failover, and dedicated support.
-        </p>
-
-        {/* Contract Toggle */}
-        <div className="flex items-center justify-center gap-4 mt-8">
-          {([24, 36] as const).map((m) => (
-            <button
-              key={m}
-              onClick={() => setContract(m)}
-              className={`rounded-full px-5 py-2 text-[13px] font-semibold transition-all duration-200 cursor-pointer ${
-                contract === m
-                  ? 'bg-[#5D00D6] text-white'
-                  : 'bg-[#F9F9F9] text-[#6B7280] border cursor-pointer hover:border-[#5D00D6]'
-              }`}
-              style={{ border: contract === m ? 'none' : '0.5px solid #E5E7EB' }}
-            >
-              {m} months
-            </button>
-          ))}
+    <section id="plan-comparison" className="w-full bg-white py-16 px-6 md:px-8 border-y border-gray-100" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+      <div className="container mx-auto max-w-[1240px]">
+        
+        {/* Modern Centered Header */}
+        <div className="flex flex-col items-center text-center mb-20">
+           <span className="text-[11px] uppercase tracking-[0.3em] text-[#5D00D6] font-bold block mb-4">E-ETHERNET PRICING</span>
+           <h2 className="text-[36px] md:text-[52px] font-bold text-[#1A1A2E] leading-[1.1] tracking-tight max-w-3xl">
+              Engineered for scale. <br /> Priced for business.
+           </h2>
+           <p className="text-[17px] text-gray-500 mt-6 max-w-2xl leading-relaxed">
+             Select your bandwidth tier below. All C9 Enterprise Ethernet plans include professional hardware and are backed by Australia&apos;s most reliable NBN™ architecture.
+           </p>
         </div>
-        {contract === 36 && (
-          <div className="flex items-center gap-1 justify-center mt-2">
-            <Star size={12} className="text-[#5D00D6]" />
-            <span className="text-[12px] text-[#5D00D6]">
-              $0 fibre install available on 36-month contracts
-            </span>
-          </div>
-        )}
 
-        {/* Plan Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-
-          {/* PLAN 1: Best Effort */}
-          <div
-            className="rounded-2xl overflow-hidden flex flex-col"
-            style={{ background: 'white', border: '0.5px solid rgba(93,0,214,0.15)' }}
-          >
-            {/* Header */}
-            <div className="bg-[#F8F7FF] p-6" style={{ borderBottom: '0.5px solid rgba(93,0,214,0.12)' }}>
-              <span
-                className="bg-white border border-[#5D00D6] rounded-full px-3 py-1 text-[10px] text-[#5D00D6] font-semibold"
-              >
-                NBN™ Enterprise Ethernet
-              </span>
-              <h3 className="text-[26px] text-[#1A1A2E] font-bold mt-3">Best Effort</h3>
-              <p className="text-[14px] text-[#6B7280] mt-1">Low CoS — shared bandwidth pool</p>
-              <p className="text-[13px] text-[#6B7280] leading-[1.6] mt-3">
-                High-quality business internet with consistent performance for everyday business use —
-                email, cloud applications, video conferencing, and web browsing.
-              </p>
-            </div>
-
-            {/* Speed Options */}
-            <div className="p-6" style={{ borderBottom: '0.5px solid rgba(93,0,214,0.08)' }}>
-              <span className="text-[11px] text-[#9CA3AF] uppercase tracking-wider block mb-4">SELECT SPEED</span>
-              <div className="flex flex-col gap-2">
-                {bestEffortSpeeds.map((speed, i) => (
-                  <button
-                    key={speed}
-                    onClick={() => setBestEffortSpeed(i)}
-                    className={`flex justify-between items-center p-3 rounded-xl transition-all duration-200 cursor-pointer ${
-                      bestEffortSpeed === i
-                        ? 'bg-[#F8F7FF] border-[#5D00D6]'
-                        : 'bg-[#F9F9F9] border-[#E5E7EB] hover:border-[#5D00D6]'
-                    }`}
-                    style={{ border: `0.5px solid ${bestEffortSpeed === i ? '#5D00D6' : '#E5E7EB'}` }}
-                  >
-                    <span className="text-[16px] text-[#1A1A2E] font-semibold">{speed}</span>
-                    <div
-                      className={`w-3 h-3 rounded-full transition-all ${
-                        bestEffortSpeed === i ? 'bg-[#5D00D6]' : 'border border-[#E5E7EB] bg-white'
-                      }`}
-                    />
-                  </button>
-                ))}
+        {/* Plan Comparison Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+           
+           {/* THE "BEST EFFORT" CARD */}
+           <motion.div 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="bg-white rounded-[40px] border border-gray-100 p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] flex flex-col relative overflow-hidden group"
+           >
+              <div className="flex justify-between items-start mb-8">
+                 <div>
+                    <h3 className="text-[28px] font-bold text-[#1A1A2E] mb-2">Best Effort</h3>
+                    <p className="text-[14px] text-gray-500 font-medium tracking-tight uppercase">TC-4 Enterprise Backbone</p>
+                 </div>
+                 <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-[#5D00D6]">
+                    <Zap size={24} strokeWidth={1.5} />
+                 </div>
               </div>
-            </div>
 
-            {/* Includes */}
-            <div className="p-6 flex-1">
-              <span className="text-[11px] text-[#9CA3AF] uppercase tracking-wider block mb-4">INCLUDED IN EVERY PLAN</span>
-              <div className="flex flex-col gap-3">
-                {bestEffortIncludes.map((item) => (
-                  <div key={item} className="flex items-center gap-2.5">
-                    <CheckCircle size={16} className="text-[#5D00D6] shrink-0" />
-                    <span className="text-[14px] text-[#1A1A2E]">{item}</span>
-                  </div>
-                ))}
+              {/* Real-time Bandwidth Visualizer */}
+              <div className="mb-10 bg-[#FAFAFA] rounded-3xl p-6 border border-gray-100">
+                 <div className="flex justify-between items-end mb-4">
+                    <div>
+                       <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Typical Speed</p>
+                       <h4 className="text-[24px] font-bold text-[#1A1A2E]">{bestEffortSpeeds[bestEffortIdx]} <span className="text-[14px] text-gray-400 font-medium">Mbps</span></h4>
+                    </div>
+                    <div className="text-right">
+                       <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">4GB FILE</p>
+                       <p className="text-[14px] font-bold text-[#5D00D6]">~ {beStats.timeStr}</p>
+                    </div>
+                 </div>
+                 
+                 <SpeedBar activeCount={beStats.barCount} />
+                 
+                 <div className="flex justify-between mt-3">
+                    <span className="text-[11px] font-extrabold text-gray-400 uppercase tracking-wider">{beStats.timeStr}</span>
+                    <span className="text-[11px] font-extrabold text-[#1A1A2E] uppercase tracking-wider">{beStats.speedLimit} MBPS</span>
+                 </div>
               </div>
-            </div>
 
-            {/* CTA */}
-            <div className="p-6 pt-0">
-              <Link
-                href="/contact"
-                className="flex items-center justify-center w-full h-[52px] text-[15px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white rounded-xl transition-colors duration-200"
-                style={{ fontFamily: '"Proxima Nova", sans-serif' }}
-              >
-                Get a Quote →
+              {/* Speed Grid */}
+              <div className="mb-10">
+                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Select Speed (Mbps)</p>
+                 <div className="grid grid-cols-4 gap-2">
+                    {bestEffortSpeeds.map((s, i) => (
+                      <button 
+                        key={s} 
+                        onClick={() => setBestEffortIdx(i)}
+                        className={`py-3 rounded-xl text-[13px] font-bold transition-all border ${bestEffortIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-lg' : 'bg-white border-gray-100 text-gray-500 hover:border-[#5D00D6]/30'}`}
+                      >
+                         {s}
+                      </button>
+                    ))}
+                 </div>
+              </div>
+
+              {/* Inclusions */}
+              <div className="space-y-4 mb-10 flex-1">
+                 {bestEffortIncludes.map((item, i) => (
+                   <div key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                         <Check size={12} className="text-green-500" />
+                      </div>
+                      <span className="text-[14px] text-gray-600 font-medium">{item}</span>
+                   </div>
+                 ))}
+              </div>
+
+              {/* HIGHLIGHTED CONTRACT BOX */}
+              <div className="mb-8 p-6 bg-[#F8F7FF] rounded-[24px] border border-[#5D00D6]/5 flex flex-col gap-4">
+                 <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-[#5D00D6] shadow-sm">
+                       <Clock size={16} />
+                    </div>
+                    <div>
+                       <p className="text-[12px] font-bold text-[#1A1A2E]">24 & 36 Month Terms</p>
+                       <p className="text-[11px] text-gray-500 font-medium">Flexible business contracts available.</p>
+                    </div>
+                 </div>
+                 <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-green-500 shadow-sm">
+                       <Package size={16} />
+                    </div>
+                    <div>
+                       <p className="text-[12px] font-bold text-[#1A1A2E]">Free Managed Router</p>
+                       <p className="text-[11px] text-gray-500 font-medium">Included on all 36-month plans.</p>
+                    </div>
+                 </div>
+              </div>
+
+              <Link href="/contact" className="w-full h-16 rounded-2xl bg-gray-100 text-[#1A1A2E] font-bold flex items-center justify-center gap-2 hover:bg-gray-200 transition-all group/btn">
+                 Get A Standard Quote <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
               </Link>
-              <p className="text-[12px] text-[#9CA3AF] text-center mt-2">
-                Site qualification required. Call 1800 000 299 to check availability.
-              </p>
-            </div>
-          </div>
+           </motion.div>
 
-          {/* PLAN 2: Committed — Featured */}
-          <div
-            className="rounded-2xl overflow-hidden flex flex-col"
-            style={{
-              background: '#0F0F1A',
-              border: '1.5px solid #5D00D6',
-              boxShadow: '0 0 0 4px rgba(93,0,214,0.06)',
-            }}
-          >
-            {/* Header */}
-            <div className="bg-[#0F0F1A] p-6" style={{ borderBottom: '0.5px solid rgba(93,0,214,0.3)' }}>
-              <div className="bg-[#5D00D6] text-white rounded-full px-3 py-1 text-[10px] font-semibold w-fit mb-4">
-                ★ Most Popular
+           {/* THE "COMMITTED" CARD (Featured) */}
+           <motion.div 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="bg-[#1A1A2E] rounded-[40px] p-8 md:p-12 shadow-[0_30px_60px_rgba(93,0,214,0.15)] flex flex-col relative overflow-hidden group"
+           >
+              {/* Dynamic Aura Background */}
+              <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6]/20 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+              
+              <div className="flex justify-between items-start mb-8 relative z-10">
+                 <div>
+                    <div className="flex items-center gap-2 mb-2">
+                       <h3 className="text-[28px] font-bold text-white leading-tight">Committed</h3>
+                       <div className="bg-[#5D00D6] text-white text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full ring-4 ring-[#5D00D6]/20">Pro Tier</div>
+                    </div>
+                    <p className="text-[14px] text-gray-400 font-medium tracking-tight uppercase">TC-2 Priority Bandwidth</p>
+                 </div>
+                 <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/20 border border-[#5D00D6]/30 flex items-center justify-center text-[#5D00D6]">
+                    <ShieldCheck size={24} strokeWidth={1.5} />
+                 </div>
               </div>
-              <span
-                className="rounded-full px-3 py-1 text-[10px] font-semibold"
-                style={{ background: 'rgba(93,0,214,0.2)', color: '#A855F7' }}
-              >
-                Traffic Class 2 + Enterprise Ethernet
-              </span>
-              <h3 className="text-[26px] text-white font-bold mt-3">Committed</h3>
-              <p className="text-[14px] text-[#9CA3AF] mt-1">High CoS — 100% guaranteed bandwidth</p>
-              <p className="text-[13px] text-[#9CA3AF] leading-[1.6] mt-3">
-                Enterprise-grade performance with 100% committed bandwidth — guaranteed speeds at all times,
-                regardless of network load. Designed for organisations where internet performance directly
-                impacts business operations.
-              </p>
-            </div>
 
-            {/* Speed Options */}
-            <div className="p-6 bg-[#0F0F1A]" style={{ borderBottom: '0.5px solid rgba(93,0,214,0.15)' }}>
-              <span className="text-[11px] text-[#6B7280] uppercase tracking-wider block mb-4">SELECT SPEED</span>
-              <div className="flex flex-col gap-2">
-                {committedSpeeds.map((speed, i) => (
-                  <button
-                    key={speed}
-                    onClick={() => setCommittedSpeed(i)}
-                    className={`flex justify-between items-center p-3 rounded-xl transition-all duration-200 cursor-pointer ${
-                      committedSpeed === i
-                        ? 'bg-[#2D003E] border-[#5D00D6]'
-                        : 'bg-[#1A1A2E] border-[#374151] hover:border-[#5D00D6]'
-                    }`}
-                    style={{ border: `0.5px solid ${committedSpeed === i ? '#5D00D6' : '#374151'}` }}
-                  >
-                    <span className="text-[16px] text-white font-semibold">{speed}</span>
-                    <div
-                      className={`w-3 h-3 rounded-full transition-all ${
-                        committedSpeed === i ? 'bg-[#5D00D6]' : 'border-[#374151] bg-transparent'
-                      }`}
-                      style={{ border: committedSpeed === i ? 'none' : '1px solid #374151' }}
-                    />
-                  </button>
-                ))}
+              {/* Real-time Bandwidth Visualizer (Dark) */}
+              <div className="mb-10 bg-white/5 rounded-3xl p-6 border border-white/10 relative z-10 backdrop-blur-md">
+                 <div className="flex justify-between items-end mb-4">
+                    <div>
+                       <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Guaranteed Speed</p>
+                       <h4 className="text-[24px] font-bold text-white">{committedSpeeds[committedIdx]} <span className="text-[14px] text-gray-500 font-medium">Mbps</span></h4>
+                    </div>
+                    <div className="text-right">
+                       <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">4GB FILE</p>
+                       <p className="text-[14px] font-bold text-[#A855F7]">~ {coStats.timeStr}</p>
+                    </div>
+                 </div>
+                 
+                 <SpeedBar activeCount={coStats.barCount} />
+                 
+                 <div className="flex justify-between mt-3">
+                    <span className="text-[11px] font-extrabold text-gray-500 uppercase tracking-wider">{coStats.timeStr}</span>
+                    <span className="text-[11px] font-extrabold text-[#5D00D6] uppercase tracking-wider">{coStats.speedLimit} MBPS</span>
+                 </div>
               </div>
-            </div>
 
-            {/* Includes */}
-            <div className="p-6 bg-[#0F0F1A] flex-1">
-              <span className="text-[11px] text-[#6B7280] uppercase tracking-wider block mb-4">
-                INCLUDED — EVERYTHING IN BEST EFFORT PLUS
-              </span>
-              <div className="flex flex-col gap-3">
-                {committedIncludes.map((item) => (
-                  <div key={item} className="flex items-center gap-2.5">
-                    <CheckCircle size={16} className="text-[#5D00D6] shrink-0" />
-                    <span className="text-[14px] text-white">{item}</span>
-                  </div>
-                ))}
+              {/* Speed Grid */}
+              <div className="mb-10 relative z-10">
+                 <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-4">Select Speed (Mbps)</p>
+                 <div className="grid grid-cols-4 gap-2">
+                    {committedSpeeds.map((s, i) => (
+                      <button 
+                        key={s} 
+                        onClick={() => setCommittedIdx(i)}
+                        className={`py-3 rounded-xl text-[13px] font-bold transition-all border ${committedIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-[0_10px_30px_rgba(93,0,214,0.5)]' : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/20'}`}
+                      >
+                         {s}
+                      </button>
+                    ))}
+                 </div>
               </div>
-            </div>
 
-            {/* CTA */}
-            <div className="p-6 pt-0 bg-[#0F0F1A]">
-              <Link
-                href="/contact"
-                className="flex items-center justify-center w-full h-[52px] text-[15px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white rounded-xl transition-colors duration-200"
-                style={{ fontFamily: '"Proxima Nova", sans-serif' }}
-              >
-                Get a Quote →
+              {/* Inclusions */}
+              <div className="space-y-4 mb-10 flex-1 relative z-10">
+                 {committedIncludes.map((item, i) => (
+                   <div key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-[#5D00D6]/20 flex items-center justify-center shrink-0">
+                         <Check size={12} className="text-[#5D00D6]" />
+                      </div>
+                      <span className="text-[14px] text-gray-300 font-medium">{item}</span>
+                   </div>
+                 ))}
+              </div>
+
+              {/* HIGHLIGHTED CONTRACT BOX (DARK) */}
+              <div className="mb-8 p-6 bg-white/5 rounded-[24px] border border-white/5 relative z-10 flex flex-col gap-4">
+                 <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#5D00D6] flex items-center justify-center text-white shadow-lg">
+                       <Star size={20} fill="currentColor" />
+                    </div>
+                    <div>
+                       <p className="text-[14px] font-bold text-white tracking-tight">Enterprise Offer: 36 Months</p>
+                       <p className="text-[11px] text-purple-300 font-bold uppercase tracking-widest mt-0.5">$0 Fibre Installation (Save $2,500+)</p>
+                    </div>
+                 </div>
+                 <div className="h-0.5 bg-white/10 rounded-full w-full" />
+                 <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center text-green-500">
+                       <Zap size={16} fill="currentColor" />
+                    </div>
+                    <p className="text-[12px] font-medium text-gray-400"><span className="text-white font-bold">Free Cisco Managed Hardware</span> included on all 36mo tiers.</p>
+                 </div>
+              </div>
+
+              <Link href="/contact" className="w-full h-16 rounded-2xl bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/40 relative z-10 group/btn">
+                 Get High-Performance Quote <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
               </Link>
-              <p className="text-[12px] text-[#6B7280] text-center mt-2">
-                Site qualification required. Call 1800 000 299 to check availability.
-              </p>
-            </div>
-          </div>
+           </motion.div>
 
         </div>
+
+        {/* Bottom Verification Text */}
+        <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
+           <div className="flex items-center gap-2 text-gray-400 text-[13px] font-medium">
+              <Info size={16} className="text-[#5D00D6]" />
+              <span>Quotes provided reflect 36-month enterprise commitments.</span>
+           </div>
+           <div className="w-px h-4 bg-gray-200 hidden md:block" />
+           <p className="text-[13px] text-[#5D00D6] font-bold uppercase tracking-[0.2em]">
+              VERIFY SITE ELIGIBILITY: 1800 000 299
+           </p>
+        </div>
+
       </div>
     </section>
   );

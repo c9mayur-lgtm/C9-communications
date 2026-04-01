@@ -110,56 +110,66 @@ export default function Hero() {
 
   return (
     <section
-      className="w-full bg-white flex items-center overflow-hidden pt-6 pb-10 md:pt-8 md:pb-14"
+      className="w-full bg-white flex items-center overflow-hidden pt-4 pb-8 md:pt-6 md:pb-10"
       style={{ fontFamily: '"Proxima Nova", sans-serif' }}
     >
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
         <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-12 items-center w-full">
-
           {/* LEFT */}
           <div>
-            <div className="flex items-center flex-wrap gap-3">
-              <Badge variant="outline" className="border-[#5D00D6] text-[10px] uppercase tracking-widest font-semibold text-[#5D00D6] px-3 py-1">
-                Telco · Business NBN™
-              </Badge>
-              <div className="bg-[#F8F7FF] border border-[#5D00D6] rounded-full px-3 py-1 flex items-center gap-1.5">
-                <Award size={12} className="text-[#5D00D6] shrink-0" />
-                <span className="text-[10px] text-[#5D00D6] font-semibold">NBN™ Accredited Adviser</span>
+            <div className="flex items-center gap-3">
+              <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full px-4 py-1.5 flex items-center gap-2">
+                <Award size={14} className="text-[#5D00D6] shrink-0" />
+                <span className="text-[11px] text-[#5D00D6] font-bold uppercase tracking-widest">NBN™ Accredited Business Adviser</span>
               </div>
             </div>
 
-            <h1 className="text-[34px] md:text-[46px] lg:text-[52px] text-[#1A1A2E] font-bold leading-[1.15] mt-4">
-              Business NBN™ built for businesses that{' '}
-              <span className="text-[#5D00D6]">can't afford to be offline.</span>
+            <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] font-bold tracking-tight mb-6 text-[#1A1A2E] leading-none lg:leading-[1.05] mt-8">
+              Business NBN™ built for <br className="hidden lg:block" /> businesses that{' '}
+              <span className="text-[#5D00D6]">can't afford <br className="hidden lg:block" /> to be offline.</span>
             </h1>
 
-            <p className="text-[16px] md:text-[17px] text-[#6B7280] max-w-[520px] leading-[1.7] mt-4">
-              C9 delivers enterprise-grade NBN™ with speeds up to 1000/1000 Mbps, automatic 4G LTE failover,
-              and a dedicated account manager. Your business internet managed end-to-end — with an accredited partner.
+            <p
+              className="text-[16px] md:text-[18px] text-[#6B7280] max-w-[580px] leading-relaxed mt-6"
+              style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+            >
+              Enterprise-grade NBN™ with speeds up to 1000/1000 Mbps, 
+              automatic 4G LTE failover, and a dedicated Australian account manager.
             </p>
 
-            <div className="flex flex-wrap gap-3 mt-6">
-              <Link href="/contact" className="inline-flex items-center justify-center h-[48px] px-7 text-[15px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white rounded-xl transition-colors duration-200">
-                Check Availability →
-              </Link>
-              <button onClick={scrollToPlanComparison} className="inline-flex items-center justify-center h-[48px] px-7 text-[15px] font-semibold border border-[#5D00D6] text-[#5D00D6] hover:bg-[#F8F7FF] rounded-xl transition-colors duration-200 bg-transparent cursor-pointer">
-                Compare Plans →
-              </button>
-            </div>
-
-            <div className="flex flex-wrap gap-x-5 gap-y-1.5 mt-5">
-              {trustSignals.map((t) => (
-                <div key={t} className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6] shrink-0" />
-                  <span className="text-[12px] text-[#6B7280]">{t}</span>
+            {/* Address Checker Input */}
+            <div className="relative mt-10 w-full lg:max-w-[540px]">
+              <div className="flex bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden focus-within:ring-4 focus-within:ring-[#5D00D6]/5 focus-within:border-[#5D00D6] transition-all shadow-[0_10px_30px_rgba(0,0,0,0.04)] h-14 md:h-16">
+                <div className="flex items-center pl-4 md:pl-5 pr-2 text-gray-400">
+                  <Globe size={20} />
                 </div>
-              ))}
+                <input 
+                  type="text" 
+                  placeholder="Enter address..." 
+                  className="flex-1 bg-transparent outline-none text-[14px] md:text-[16px] font-medium text-[#1A1A2E] placeholder:text-gray-400 w-full"
+                />
+                <button className="bg-[#5D00D6] text-white px-6 md:px-10 font-bold text-[14px] md:text-[15px] hover:bg-[#4B00AD] transition-all whitespace-nowrap h-full">
+                  Check
+                </button>
+              </div>
+
+
             </div>
 
-            <div className="mt-5 bg-[#F8F7FF] border border-[rgba(93,0,214,0.2)] rounded-xl p-3 px-4 flex items-center gap-3 w-fit">
-              <Star size={15} className="text-[#5D00D6] shrink-0" />
-              <span className="text-[13px] text-[#5D00D6] font-semibold">$0 fibre install on 36-month contracts</span>
-              <span className="text-[12px] text-[#6B7280]">— subject to site qualification</span>
+            <div className="mt-10 flex items-center gap-8">
+              <button 
+                onClick={scrollToPlanComparison} 
+                className="text-[15px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors cursor-pointer"
+              >
+                Or, compare all plans <Zap size={16} className="text-[#5D00D6] transition-transform group-hover:scale-110" />
+              </button>
+              
+              <div className="w-px h-4 bg-gray-200" />
+              
+              <div className="flex items-center gap-2 text-[13px] text-gray-500 font-medium">
+                <Shield size={14} className="text-green-500" />
+                SLA Backed
+              </div>
             </div>
           </div>
 

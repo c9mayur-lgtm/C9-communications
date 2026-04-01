@@ -52,7 +52,7 @@ const inclusions = [
 
 export default function WhatsIncluded() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="relative py-14 md:py-16 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
       {/* Full-width purple-to-white gradient */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#7D38E2] to-white z-0" />
 
@@ -79,16 +79,7 @@ export default function WhatsIncluded() {
               <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight">{item.title}</h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-[18px] mb-6 leading-relaxed flex-grow font-normal">{item.desc}</p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-8">
-                {item.tags.map((tag, ti) => (
-                  <span key={ti} className="text-[11px] font-semibold uppercase tracking-wider text-[#5D00D6] bg-[#5D00D6]/8 px-3 py-1 rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <p className="text-gray-600 text-[16px] md:text-[17px] mb-6 leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
 
             </div>
           ))}

@@ -28,7 +28,25 @@ const CASE_STUDIES = [
   }
 ];
 
-export const WpCaseStudies = () => {
+interface CaseStudy {
+  tag: string;
+  title: string;
+  desc: string;
+  img: string;
+  videoText: string;
+}
+
+interface CaseStudiesProps {
+  title?: string;
+  eyebrow?: string;
+  articles?: CaseStudy[];
+}
+
+export const WpCaseStudies = ({ 
+  title = "Hear From Businesses Like Yours", 
+  eyebrow = "IMPACT REALIZED",
+  articles = CASE_STUDIES
+}: CaseStudiesProps) => {
   const [caseStudyIdx, setCaseStudyIdx] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(2);
 
@@ -48,9 +66,9 @@ export const WpCaseStudies = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-10">
           <div className="max-w-2xl">
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>IMPACT REALIZED</span>
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{eyebrow}</span>
             <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-              Hear From Businesses<br /> Like Yours
+              {title}
             </h2>
           </div>
           
@@ -79,7 +97,7 @@ export const WpCaseStudies = () => {
             animate={{ x: `calc(-${caseStudyIdx * (100 / cardsPerView)}% - ${caseStudyIdx * 32}px)` }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            {CASE_STUDIES.map((cs, idx) => (
+            {articles.map((cs, idx) => (
               <div key={idx} className="w-full lg:w-[calc(50%-16px)] shrink-0 group cursor-pointer">
                 <div className="relative aspect-[16/10] rounded-none overflow-hidden mb-10 shadow-2xl shadow-purple-900/10 bg-slate-100">
                   <img src={cs.img} alt={cs.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
@@ -108,7 +126,7 @@ export const WpCaseStudies = () => {
                      {cs.desc}
                    </p>
                    <div className="flex items-center gap-2 text-[#5D00D6] font-semibold text-[14px] uppercase tracking-wider group/link">
-                      Read full study 
+                      Read full article 
                       <ArrowUpRight size={16} className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                    </div>
                 </div>
