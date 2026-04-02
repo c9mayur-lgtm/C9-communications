@@ -148,7 +148,13 @@ export default function Hero() {
                   placeholder="Enter address..." 
                   className="flex-1 bg-transparent outline-none text-[14px] md:text-[16px] font-medium text-[#1A1A2E] placeholder:text-gray-400 w-full"
                 />
-                <button className="bg-[#5D00D6] text-white px-6 md:px-10 font-bold text-[14px] md:text-[15px] hover:bg-[#4B00AD] transition-all whitespace-nowrap h-full">
+                <button 
+                  onClick={() => {
+                    const el = document.getElementById('consultation-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-[#5D00D6] text-white px-6 md:px-10 font-bold text-[14px] md:text-[15px] hover:bg-[#4B00AD] transition-all whitespace-nowrap h-full"
+                >
                   Check
                 </button>
               </div>

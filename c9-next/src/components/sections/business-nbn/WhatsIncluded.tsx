@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { ArrowRight, Router, Smartphone, UserCheck, Zap, Award, BarChart2 } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { useInquiry } from '@/components/context/InquiryContext';
 
 const inclusions = [
   {
@@ -51,9 +50,16 @@ const inclusions = [
 ];
 
 export default function WhatsIncluded() {
+  const { setInquiryMessage } = useInquiry();
+
+  const handleGetStarted = () => {
+    setInquiryMessage("I'm interested in the Business NBN™ solutions from C9.");
+    const el = document.getElementById('consultation-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative py-14 md:py-16 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-      {/* Full-width purple-to-white gradient */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#7D38E2] to-white z-0" />
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
@@ -70,28 +76,22 @@ export default function WhatsIncluded() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {inclusions.map((item, i) => (
             <div key={i} className="bg-white p-6 md:p-8 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
-              {/* Icon */}
               <div className="mb-6">
                 <item.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
               </div>
-
-              {/* Title */}
               <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight">{item.title}</h3>
-
-              {/* Description */}
               <p className="text-gray-600 text-[16px] md:text-[17px] mb-6 leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
-
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-12">
-          <Link 
-            href="/contact" 
+          <button 
+            onClick={handleGetStarted}
             className="inline-flex items-center justify-center gap-2 shadow-2xl hover:gap-4 transition-all group bg-[#5D00D6] text-white rounded-full h-14 px-10 text-base font-bold"
           >
             Get Started Now <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-          </Link>
+          </button>
         </div>
       </div>
     </section>

@@ -127,8 +127,8 @@ export const TELCO_MENU = {
           heading: 'Internet',
           items: [
             { icon: <Wifi size={14} />, label: 'Business NBN™', path: '/telco/business-nbn', active: true },
-            { icon: <Wifi size={14} />, label: 'Fast Fibre', path: '#' },
-            { icon: <Network size={14} />, label: 'NBN™ Enterprise Ethernet', path: '#' },
+            { icon: <Wifi size={14} />, label: 'Fast Fibre', path: '/telco/fast-fibre' },
+            { icon: <Network size={14} />, label: 'NBN™ Enterprise Ethernet', path: '/telco/enterprise-ethernet' },
           ]
         },
         {

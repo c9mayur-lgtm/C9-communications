@@ -1,14 +1,25 @@
+'use client';
+
+import React from 'react';
 import { buttonVariants } from '@/components/ui/button';
 import { ArrowRight, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
+import { useInquiry } from '@/components/context/InquiryContext';
 
 export default function FinalCTA() {
+  const { setInquiryMessage } = useInquiry();
+
+  const handleAssessmentRequest = () => {
+    setInquiryMessage("I'm interested in an infrastructure assessment. We'd like to discuss what we're currently running and what we need to achieve with C9.");
+    const el = document.getElementById('consultation-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="w-full bg-white py-32 px-6">
       <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
         <div className="max-w-[700px] mx-auto text-center mb-12">
-          <h2 className="font-['Proxima_Nova'] text-[38px] md:text-[46px] text-[#1A1A2E] font-bold leading-[1.2] mb-6">
+          <h2 className="font-['Proxima_Nova'] text-[38px] md:text-[46px] text-[#1A1A2E] font-bold leading-[1.2] mb-6 whitespace-normal">
             Ready to talk infrastructure with people who actually get it?
           </h2>
           <p className="font-['Proxima_Nova'] text-[18px] text-[#6B7280] leading-[1.7] max-w-[600px] mx-auto">
@@ -17,31 +28,31 @@ export default function FinalCTA() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link 
-            href="/contact" 
+          <button 
+            onClick={handleAssessmentRequest}
             className={cn(
               buttonVariants({ variant: "default" }),
-              "text-white font-['Proxima_Nova'] font-bold text-[14px] h-[52px] px-10 rounded-full hover:opacity-90 shadow-xl shadow-purple-900/10 transition-all border-0 flex items-center gap-2"
+              "bg-[#5D00D6] text-white font-['Proxima_Nova'] font-bold text-[15px] h-[52px] px-10 rounded-full hover:bg-[#4c00b0] shadow-xl shadow-purple-900/10 transition-all border-none flex items-center gap-2"
             )}
           >
             Get an Infrastructure Assessment <ArrowRight className="w-4 h-4 ml-1" />
-          </Link>
+          </button>
           
-          <Link 
+          <a 
             href="tel:1800000299" 
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "border-[rgba(93,0,214,0.2)] text-[#1A1A2E] font-['Proxima_Nova'] font-bold text-[14px] h-[52px] px-10 rounded-full hover:bg-[color:var(--brand-purple)] hover:text-white transition-all flex items-center gap-2"
+              "border-[rgba(93,0,214,0.2)] text-[#1A1A2E] font-['Proxima_Nova'] font-bold text-[15px] h-[52px] px-10 rounded-full hover:bg-[#5D00D6] hover:text-white transition-all flex items-center gap-2 no-underline bg-white"
             )}
           >
             <Phone className="w-4 h-4 mr-1" /> Call 1800 000 299
-          </Link>
+          </a>
         </div>
         
         <div className="mt-8 flex justify-center flex-wrap gap-y-2 divide-x divide-slate-200">
-          <span className="font-['Proxima_Nova'] text-[13px] text-[#6B7280] px-4">Australian team</span>
-          <span className="font-['Proxima_Nova'] text-[13px] text-[#6B7280] px-4">Responds within 1 business day</span>
-          <span className="font-['Proxima_Nova'] text-[13px] text-[#6B7280] px-4 font-semibold text-[color:var(--brand-purple)]">No lock-in consultations</span>
+          <span className="font-['Proxima_Nova'] text-[13px] text-[#6B7280] px-4 font-bold uppercase tracking-tight">Australian team</span>
+          <span className="font-['Proxima_Nova'] text-[13px] text-[#6B7280] px-4 font-bold uppercase tracking-tight">Responds within 1 business day</span>
+          <span className="font-['Proxima_Nova'] text-[13px] text-[#5D00D6] px-4 font-bold uppercase tracking-tight">No lock-in consultations</span>
         </div>
       </div>
     </section>

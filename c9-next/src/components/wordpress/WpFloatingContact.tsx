@@ -12,7 +12,7 @@ export const WpFloatingContact = () => {
     <>
       <div 
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-8 right-8 z-[200] group cursor-pointer"
+        className="fixed bottom-8 right-8 z-[200] group cursor-pointer wp-floating-contact-btn transition-all duration-300"
       >
         <div className="absolute inset-0 bg-[#5D00D6] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
         <div className="relative w-16 h-16 bg-[#5D00D6] rounded-full flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">

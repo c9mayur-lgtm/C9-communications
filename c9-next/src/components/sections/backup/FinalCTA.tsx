@@ -1,10 +1,21 @@
+'use client';
+
 import React from 'react';
 import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useInquiry } from '@/components/context/InquiryContext';
 
 const F = '"Proxima Nova", sans-serif';
 
 export default function FinalCTA() {
+  const { setInquiryMessage } = useInquiry();
+
+  const handleAssessmentRequest = () => {
+    setInquiryMessage("I'd like to request a backup assessment for my business to review our current environment and test our recovery capabilities.");
+    const el = document.getElementById('consultation-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="bg-[#0c1024] py-24" style={{ fontFamily: F }}>
       <div className="container mx-auto px-6 md:px-8 text-center w-full" style={{ maxWidth: '760px' }}>
@@ -17,21 +28,22 @@ export default function FinalCTA() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
-            className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[15px] shadow-lg shadow-purple-900/30 flex items-center gap-2"
+            onClick={handleAssessmentRequest}
+            className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[15px] shadow-lg shadow-purple-900/30 flex items-center gap-2 border-none"
             style={{ fontFamily: F }}
           >
             Assess My Backup Environment <ArrowRight size={16} />
           </Button>
           <a
             href="tel:1800000299"
-            className="flex items-center gap-2 text-[#9CA3AF] hover:text-white font-bold text-[15px] transition-colors"
+            className="flex items-center gap-2 text-[#9CA3AF] hover:text-white font-bold text-[15px] transition-colors no-underline"
             style={{ fontFamily: F }}
           >
             <Phone size={16} /> Call 1800 000 299
           </a>
         </div>
 
-        <p className="text-[13px] text-[#6B7280] mt-8 font-normal tracking-wide" style={{ fontFamily: F }}>
+        <p className="text-[13px] text-[#6B7280] mt-8 font-normal tracking-wide uppercase font-bold" style={{ fontFamily: F }}>
           Australian team · Responds within 1 business day · No lock-in consultations
         </p>
       </div>

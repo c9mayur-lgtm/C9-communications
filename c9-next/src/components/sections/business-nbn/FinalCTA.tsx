@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
-import Link from 'next/link';
 import { CheckCircle } from 'lucide-react';
+import { useInquiry } from '@/components/context/InquiryContext';
 
 const trustItems = [
   'No lock-in beyond contract term',
@@ -10,6 +12,14 @@ const trustItems = [
 ];
 
 export default function FinalCTA() {
+  const { setInquiryMessage } = useInquiry();
+
+  const handleCheck = () => {
+    setInquiryMessage("I'd like to check my address availability and indicative pricing for Business NBN™.");
+    const el = document.getElementById('consultation-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section
       className="w-full bg-[#0F0F1A] py-20"
@@ -17,7 +27,6 @@ export default function FinalCTA() {
     >
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[700px] text-center">
 
-        {/* Badge */}
         <div
           className="rounded-full text-[11px] font-semibold uppercase tracking-wider px-4 py-1.5 mx-auto mb-6 w-fit"
           style={{ background: 'rgba(93,0,214,0.2)', color: '#A855F7' }}
@@ -25,38 +34,31 @@ export default function FinalCTA() {
           NBN™ Accredited Adviser
         </div>
 
-        {/* Headline */}
-        <h2
-          className="text-[40px] md:text-[48px] text-white font-bold leading-[1.2]"
-        >
+        <h2 className="text-[40px] md:text-[48px] text-white font-bold leading-[1.2]">
           Ready to get your business connected properly?
         </h2>
 
-        {/* Paragraph */}
         <p className="text-[18px] text-[#9CA3AF] mt-4 leading-[1.7]">
           Tell us your address and we'll run a site qualification — confirming available technology type,
           speeds, and indicative pricing within one business day.
         </p>
 
-        {/* Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
-          <Link
-            href="/contact"
+          <button
+            onClick={handleCheck}
             className="inline-flex items-center justify-center h-[56px] px-10 rounded-xl text-[15px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-colors duration-200"
-            style={{ fontFamily: '"Proxima Nova", sans-serif' }}
           >
             Check Availability →
-          </Link>
-          <Link
+          </button>
+          <a
             href="tel:1800000299"
             className="inline-flex items-center justify-center h-[56px] px-10 rounded-xl text-[15px] text-[#9CA3AF] border bg-transparent hover:border-white hover:text-white transition-all duration-200"
             style={{ borderColor: '#4B5563', fontFamily: '"Proxima Nova", sans-serif' }}
           >
             Call 1800 000 299
-          </Link>
+          </a>
         </div>
 
-        {/* Trust Row */}
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-6">
           {trustItems.map((item) => (
             <div key={item} className="flex items-center gap-2">

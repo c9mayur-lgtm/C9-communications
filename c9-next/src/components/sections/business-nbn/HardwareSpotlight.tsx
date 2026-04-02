@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe, Database, Radio, Check, Smartphone, Shield, Wifi, Zap, Activity, Cpu, Server, Lock, Layers } from 'lucide-react';
+import { Globe, Check, Smartphone, Cpu, Layers, Lock, Zap, Activity } from 'lucide-react';
 
 const hardwareSections = [
   {
@@ -37,24 +37,24 @@ const hardwareSections = [
 
 export default function HardwareSpotlight() {
   return (
-    <section className="w-full bg-white py-14 md:py-20 overflow-visible" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section id="managed-hardware" className="w-full bg-white py-12 md:py-16 overflow-visible" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
-        <div className="grid grid-cols-1 lg:grid-cols-[50%_45%] gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[50%_45%] gap-12 lg:gap-20 relative overflow-visible items-start">
           
           {/* STICKY VISUAL COLUMN */}
-          <div className="lg:sticky lg:top-32 relative order-1 lg:order-1 h-fit">
-             {/* Mobile-Only Header - Shows first on mobile */}
+          <div className="lg:sticky lg:top-[160px] h-fit md:mb-0 mb-16 lg:self-start overflow-visible z-0">
+             {/* Mobile-Only Header */}
              <div className="lg:hidden mb-12">
                <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
                  MANAGED HARDWARE KIT
                </span>
-               <h2 className="text-[34px] font-bold text-[#1A1A2E] leading-[1.1] tracking-tight">
+               <h2 className="text-[34px] font-bold text-[#1A1A2E] leading-[1.1] tracking-tight mb-4 text-center lg:text-left">
                  Hardware designed for <br /> zero-fail business.
                </h2>
              </div>
-             
-             <div className="relative w-full aspect-square max-w-[540px] mx-auto">
+
+             <div className="relative w-full aspect-square max-w-[540px] mx-auto overflow-visible rounded-full bg-gradient-to-br from-[#5D00D6]/[0.02] to-transparent">
                 
                 {/* 1. LAYER: TECHNICAL INFRASTRUCTURE GRID */}
                 <div className="absolute inset-0 bg-[radial-gradient(#5D00D6_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.04]" />
@@ -124,9 +124,9 @@ export default function HardwareSpotlight() {
                          </div>
                          <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
                             <motion.div 
-                              animate={{ x: ['-100%', '100%'] }}
-                              transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-                              className="w-1/3 h-full bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent" 
+                               animate={{ x: ['-100%', '100%'] }}
+                               transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                               className="w-1/3 h-full bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent" 
                             />
                          </div>
                          <div className="flex justify-between mt-2">
@@ -145,7 +145,7 @@ export default function HardwareSpotlight() {
                 {[1, 2, 3].map(i => (
                   <motion.div
                     key={`dl-${i}`}
-                    className="absolute w-2 h-2 rounded-full bg-[#5D00D6] z-30"
+                    className="absolute w-1.5 h-1.5 rounded-full bg-[#5D00D6] z-30"
                     animate={{ x: [60, 270, 480], opacity: [0, 1, 0] }}
                     transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.8 }}
                   />
@@ -153,7 +153,7 @@ export default function HardwareSpotlight() {
                 {[1, 2, 3].map(i => (
                   <motion.div
                     key={`ul-${i}`}
-                    className="absolute w-2 h-2 rounded-full bg-purple-400 z-30"
+                    className="absolute w-1.5 h-1.5 rounded-full bg-purple-400 z-30"
                     animate={{ x: [480, 270, 60], opacity: [0, 1, 0] }}
                     transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.8 + 1.25 }}
                   />
@@ -172,40 +172,40 @@ export default function HardwareSpotlight() {
                    </div>
                    <span className="text-[9px] font-bold text-[#5D00D6] uppercase tracking-widest">Office LAN</span>
                 </div>
-             </div>
 
-             <div className="mt-8 flex items-center justify-center gap-8">
-                <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 rounded-full bg-[#5D00D6] shadow-[0_0_8px_#5D00D6]" />
-                   <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest text-center">Bi-Directional Stream Active</span>
+                <div className="absolute -bottom-12 left-0 right-0 flex items-center justify-center gap-8">
+                  <div className="flex items-center gap-2">
+                     <div className="w-2 h-2 rounded-full bg-[#5D00D6] shadow-[0_0_8px_#5D00D6]" />
+                     <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest text-center">Bi-Directional Stream Active</span>
+                  </div>
                 </div>
              </div>
           </div>
 
           {/* SCROLLABLE DETAIL COLUMN */}
-          <div className="order-2 lg:order-2">
-            <div className="mb-16 hidden lg:block">
+          <div className="relative z-10 lg:pt-0">
+            <div className="mb-12 hidden lg:block">
               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
                 MANAGED HARDWARE KIT
               </span>
               <h2 className="text-[34px] md:text-[52px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight">
                 Hardware designed for <br /> zero-fail business.
               </h2>
-              <p className="text-[18px] text-[#6B7280] mt-8 leading-relaxed">
+              <p className="text-[18px] text-[#6B7280] mt-8 leading-relaxed max-w-[90%]">
                 C9 NBN™ isn’t just a raw line—it’s a managed ecosystem. We engineer the path, 
                 provide the hardware, and proactively monitor the connectivity to ensure your 
                 business infrastructure remains impenetrable.
               </p>
             </div>
 
-            <div className="flex flex-col gap-24">
+            <div className="flex flex-nowrap lg:flex-col overflow-x-auto lg:overflow-x-visible no-scrollbar gap-8 lg:gap-14 pb-4 lg:pb-0 snap-x snap-mandatory">
               {hardwareSections.map((section, i) => (
                 <motion.div 
                   key={i}
                   initial={{ opacity: 0.3, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, margin: "-100px" }}
-                  className="flex flex-col gap-6"
+                  viewport={{ once: false, margin: "-10%" }}
+                  className="flex flex-col gap-6 min-w-[85vw] sm:min-w-[70vw] lg:min-w-full snap-start bg-white lg:bg-transparent"
                 >
                    <div className="w-14 h-14 rounded-2xl bg-[#F8F7FF] border border-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shadow-sm">
                       <section.icon size={28} strokeWidth={1.5} />
@@ -229,7 +229,7 @@ export default function HardwareSpotlight() {
               ))}
             </div>
 
-            <div className="mt-24 pt-10 border-t border-gray-100 italic text-gray-400 text-[12px] leading-relaxed">
+            <div className="mt-12 pt-8 border-t border-gray-100 italic text-gray-400 text-[12px] leading-relaxed pb-8 lg:pb-0">
                * Hardware specifications may vary based on site technology. C9 provides Cisco, Fortinet, or custom C9-Engineered managed gateways depending on organization scale and throughput requirements.
             </div>
           </div>

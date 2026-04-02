@@ -1,16 +1,13 @@
 'use client';
 
-import React from "react";
-import Link from "next/link";
+import React from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Server, Globe, Shield, Database, RefreshCw } from "lucide-react";
+import { useInquiry } from '@/components/context/InquiryContext';
 
-import { Server, Globe, Shield, Database, RefreshCw, Layers } from "lucide-react";
-
-// ─── Cloud Journey Simulator (Light-Theme High-Fidelity) ───────────────────
 const CloudMonitorVisual = () => {
-  const [phase, setPhase] = React.useState(0); // 0: Discovery, 1: Migration, 2: Managed
+  const [phase, setPhase] = React.useState(0);
   
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -27,8 +24,6 @@ const CloudMonitorVisual = () => {
 
   return (
     <div className="w-full h-full flex flex-col bg-white rounded-[40px] overflow-hidden shadow-[0_40px_80px_-16px_rgba(93,0,214,0.1)] border border-slate-100 relative p-6">
-      
-      {/* ── Phase Header ── */}
       <div className="flex items-center justify-between mb-8 relative z-10">
         <div className="flex gap-1.5">
           {phases.map((p, i) => (
@@ -48,11 +43,8 @@ const CloudMonitorVisual = () => {
         </div>
       </div>
 
-      {/* ── Visual Core ── */}
       <div className="flex-1 relative flex items-center justify-center mb-8 bg-slate-50/50 rounded-3xl border border-slate-100 scale-75 sm:scale-100 transition-transform duration-500">
-        
         <AnimatePresence mode="wait">
-          {/* Phase 0: Discovery - Scanning dots */}
           {phase === 0 && (
             <motion.div key="discovery" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center">
               <div className="relative w-32 h-32 flex items-center justify-center">
@@ -64,7 +56,6 @@ const CloudMonitorVisual = () => {
             </motion.div>
           )}
 
-          {/* Phase 1: Migration - Moving packets */}
           {phase === 1 && (
             <motion.div key="migration" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="w-full px-6 sm:px-12">
               <div className="flex items-center justify-between mb-8">
@@ -86,7 +77,6 @@ const CloudMonitorVisual = () => {
             </motion.div>
           )}
 
-          {/* Phase 2: Managed - The optimized core */}
           {phase === 2 && (
             <motion.div key="managed" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center">
                <div className="relative w-40 h-40 flex items-center justify-center">
@@ -112,7 +102,6 @@ const CloudMonitorVisual = () => {
         </AnimatePresence>
       </div>
 
-      {/* ── Real-time Telemetry ── */}
       <div className="grid grid-cols-2 gap-4">
         <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4">
           <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Network Load</p>
@@ -136,46 +125,42 @@ const CloudMonitorVisual = () => {
   );
 };
 
-// ─── FadeIn Helper ───────────────────────────────────────────────────────────
-const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
-  >
-    {children}
-  </motion.div>
-);
-
-// ─── Hero ────────────────────────────────────────────────────────────────────
 export default function Hero() {
+  const { setInquiryMessage } = useInquiry();
+  
+  const handleProposalRequest = () => {
+    setInquiryMessage("I'm interested in receiving a cloud proposal for my business.");
+    const el = document.getElementById('consultation-section');
+    if(el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleSeeScope = () => {
+    const el = document.getElementById('cloud-scope');
+    if(el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="pt-4 pb-8 md:pt-6 md:pb-10 lg:pt-8 lg:pb-12 bg-white overflow-hidden min-h-[450px] lg:min-h-[640px] flex items-center border-b border-gray-100">
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center relative z-10 w-full">
-
-          {/* LEFT COLUMN */}
           <div className="py-4 pr-0 xl:pr-6">
-            <FadeIn delay={0.1}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
               <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[58px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                  Cloud infrastructure that <span className="text-[#5D00D6]" style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>actually works.</span>
               </h1>
-            </FadeIn>
+            </motion.div>
 
-            <FadeIn delay={0.2}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
               <p className="text-[17px] md:text-[19px] lg:text-[20px] text-slate-600 mb-8 max-w-[580px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                 C9 migrates Australian businesses to cloud and manages the environment ongoing — Microsoft 365, Azure, IaaS, private and hybrid cloud. Not a one-off project. A managed service with your data staying in Australia.
               </p>
-            </FadeIn>
+            </motion.div>
 
-            <FadeIn delay={0.3}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-8">
                 <Button 
                   size="lg" 
-                  onClick={() => {
-                    const el = document.getElementById('consultation-section');
-                    if(el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                  onClick={handleProposalRequest}
                   className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none" 
                   style={{ fontFamily: '"Proxima Nova", sans-serif' }}
                 >
@@ -183,20 +168,17 @@ export default function Hero() {
                 </Button>
                 <Button 
                   variant="outline" 
-                  size="lg" 
-                  onClick={() => {
-                    const el = document.getElementById('cloud-scope');
-                    if(el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                   size="lg" 
+                  onClick={handleSeeScope}
                   className="w-full sm:w-auto border-gray-200 text-[#0c1024] font-bold h-14 px-8 rounded-full hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white transition-colors" 
                   style={{ fontFamily: '"Proxima Nova", sans-serif' }}
                 >
                   See What We Manage
                 </Button>
               </div>
-            </FadeIn>
+            </motion.div>
 
-            <FadeIn delay={0.4}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
               <div className="flex flex-wrap gap-5 md:gap-8 mt-10 md:mt-12 pb-4">
                 {[
                   "Microsoft 365 & Azure managed",
@@ -208,19 +190,12 @@ export default function Hero() {
                   </span>
                 ))}
               </div>
-            </FadeIn>
+            </motion.div>
           </div>
 
-          {/* RIGHT COLUMN – Cloud Visual */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="block w-full h-[450px] sm:h-[500px] mt-12 lg:mt-0"
-          >
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="block w-full h-[450px] sm:h-[500px] mt-12 lg:mt-0">
             <CloudMonitorVisual />
           </motion.div>
-
         </div>
       </div>
     </section>

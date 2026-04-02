@@ -6,6 +6,8 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { WpFooter } from "@/components/layout/WpFooter";
 import { WpFloatingContact } from "@/components/wordpress/WpFloatingContact";
 import { BusinessAdvisor } from "@/components/wordpress/BusinessAdvisor";
+import { CookieConsent } from "@/components/layout/CookieConsent";
+import { InquiryProvider } from "@/components/context/InquiryContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -74,6 +76,9 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 0;
+export const dynamic = 'force-dynamic';
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -94,6 +99,7 @@ export default async function RootLayout({
     '/managed-it/network-solutions',
     '/managed-it/infrastructure',
     '/telco/business-nbn',
+    '/telco/fast-fibre',
   ];
 
   const hasSelfNavFooter = pagesWithSelfNavFooter.includes(currentPath);
@@ -101,12 +107,15 @@ export default async function RootLayout({
   return (
     <html lang="en-AU">
       <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30`}>
-        {!hasSelfNavFooter && <Navbar />}
-        {!hasSelfNavFooter && <Breadcrumbs />}
-        {children}
-        {!hasSelfNavFooter && <WpFooter />}
-        <WpFloatingContact />
-        <BusinessAdvisor />
+        <InquiryProvider>
+          {!hasSelfNavFooter && <Navbar />}
+          {!hasSelfNavFooter && <Breadcrumbs />}
+          {children}
+          {!hasSelfNavFooter && <WpFooter />}
+          <WpFloatingContact />
+          <BusinessAdvisor />
+          <CookieConsent />
+        </InquiryProvider>
       </body>
     </html>
   );

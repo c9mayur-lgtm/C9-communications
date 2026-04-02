@@ -273,6 +273,9 @@ export const BusinessAdvisor = () => {
   useEffect(() => {
     if (isOpen) {
       messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+      document.body.classList.add('hide-floating-contact');
+    } else {
+      document.body.classList.remove('hide-floating-contact');
     }
   }, [messages, isTyping, isOpen]);
 
@@ -417,9 +420,9 @@ export const BusinessAdvisor = () => {
 
               {/* ── CHAT TAB ── */}
               {activeTab === 'chat' && (
-                <div className="flex flex-col" style={{ height: '380px' }}>
+                <div className="flex flex-col h-[380px] max-h-[60vh]">
                   {/* Messages */}
-                  <div className="flex-1 overflow-y-auto px-5 py-4 flex flex-col gap-4 scroll-smooth">
+                  <div className="flex-1 min-h-0 overflow-y-auto px-5 py-4 flex flex-col gap-4 scroll-smooth">
                     {messages.map((msg) => (
                       <div key={msg.id} className={`flex gap-2.5 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                         {msg.role === 'ai' && (
@@ -518,27 +521,37 @@ export const BusinessAdvisor = () => {
         </AnimatePresence>
 
         {/* Pill trigger */}
-        <>
-          <style>{`
-            @keyframes glow-pulse {
-              0%, 100% { box-shadow: 0 0 0 0 rgba(93,0,214,0.0), 0 8px 30px rgba(12,16,36,0.08); border-color: rgba(93,0,214,0.15); }
-              50% { box-shadow: 0 0 0 4px rgba(93,0,214,0.10), 0 8px 30px rgba(93,0,214,0.15); border-color: rgba(93,0,214,0.4); }
-            }
-            .advisor-pill { animation: glow-pulse 2.8s ease-in-out infinite; }
-          `}</style>
-          <motion.button
-            onClick={() => setIsOpen(!isOpen)}
-            whileTap={{ scale: 0.985 }}
-            className="advisor-pill flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-[#5D00D6]/20 group"
-          >
-            <span className="text-[14px] font-semibold text-gray-600 tracking-tight group-hover:text-[#5D00D6] transition-colors whitespace-nowrap" style={fontStyle}>
-              What type of business are you building?
-            </span>
-            <div className={`w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 ${isOpen ? 'bg-gray-100 text-[#5D00D6] rotate-90' : 'bg-[#5D00D6] text-white group-hover:scale-105'}`}>
-              <ArrowRight size={13} className="stroke-[2.5px]" />
-            </div>
-          </motion.button>
-        </>
+        <AnimatePresence>
+          {!isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 20, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="w-full flex justify-center"
+            >
+              <style>{`
+                @keyframes glow-pulse {
+                  0%, 100% { box-shadow: 0 0 0 0 rgba(93,0,214,0.0), 0 8px 30px rgba(12,16,36,0.08); border-color: rgba(93,0,214,0.15); }
+                  50% { box-shadow: 0 0 0 4px rgba(93,0,214,0.10), 0 8px 30px rgba(93,0,214,0.15); border-color: rgba(93,0,214,0.4); }
+                }
+                .advisor-pill { animation: glow-pulse 2.8s ease-in-out infinite; }
+              `}</style>
+              <button
+                onClick={() => setIsOpen(true)}
+                className="advisor-pill flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-[#5D00D6]/20 group hover:scale-[0.985] transition-transform"
+              >
+                <span className="text-[14px] font-semibold text-gray-600 tracking-tight group-hover:text-[#5D00D6] transition-colors whitespace-nowrap" style={fontStyle}>
+                  <span className="hidden sm:inline">What type of business are you building?</span>
+                  <span className="sm:hidden">C9 AI Advisor</span>
+                </span>
+                <div className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 bg-[#5D00D6] text-white group-hover:scale-105">
+                  <ArrowRight size={13} className="stroke-[2.5px]" />
+                </div>
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
