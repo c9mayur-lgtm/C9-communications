@@ -100,6 +100,8 @@ export default async function RootLayout({
     '/managed-it/infrastructure',
     '/telco/business-nbn',
     '/telco/fast-fibre',
+    '/telco/enterprise-ethernet',
+    '/telco/mobile-plans',
   ];
 
   const hasSelfNavFooter = pagesWithSelfNavFooter.includes(currentPath);

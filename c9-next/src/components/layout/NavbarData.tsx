@@ -134,7 +134,7 @@ export const TELCO_MENU = {
         {
           heading: 'Mobile',
           items: [
-            { icon: <Smartphone size={14} />, label: 'Mobile Plans', path: '#' },
+            { icon: <Smartphone size={14} />, label: 'Mobile Plans', path: '/telco/mobile-plans' },
           ]
         }
       ],

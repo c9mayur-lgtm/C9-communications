@@ -155,7 +155,7 @@ export default function PlanComparison() {
                       <button 
                         key={s} 
                         onClick={() => setBestEffortIdx(i)}
-                        className={`py-3 rounded-xl text-[13px] font-bold transition-all border ${bestEffortIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-lg' : 'bg-white border-gray-100 text-gray-500 hover:border-[#5D00D6]/30'}`}
+                        className={`py-3 rounded-full text-[13px] font-bold transition-all border ${bestEffortIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-lg' : 'bg-white border-gray-100 text-gray-500 hover:border-[#5D00D6]/30'}`}
                       >
                          {s}
                       </button>
@@ -197,7 +197,7 @@ export default function PlanComparison() {
 
               <button 
                 onClick={() => handleSelectPlan('Best Effort', bestEffortSpeeds[bestEffortIdx])}
-                className="w-full h-16 rounded-2xl bg-gray-100 text-[#1A1A2E] font-bold flex items-center justify-center gap-2 hover:bg-gray-200 transition-all group/btn"
+                className="w-full h-16 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/30 relative z-10 group/btn"
               >
                   Get A Standard Quote <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
               </button>
@@ -252,7 +252,7 @@ export default function PlanComparison() {
                       <button 
                         key={s} 
                         onClick={() => setCommittedIdx(i)}
-                        className={`py-3 rounded-xl text-[13px] font-bold transition-all border ${committedIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-[0_10px_30px_rgba(93,0,214,0.5)]' : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/20'}`}
+                        className={`py-3 rounded-full text-[13px] font-bold transition-all border ${committedIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-[0_10px_30px_rgba(93,0,214,0.5)]' : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/20'}`}
                       >
                          {s}
                       </button>
@@ -292,7 +292,7 @@ export default function PlanComparison() {
 
               <button 
                 onClick={() => handleSelectPlan('Committed (TC-2)', committedSpeeds[committedIdx])}
-                className="w-full h-16 rounded-2xl bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/40 relative z-10 group/btn"
+                className="w-full h-16 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/40 relative z-10 group/btn"
               >
                   Get High-Performance Quote <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
               </button>

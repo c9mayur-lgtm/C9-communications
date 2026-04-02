@@ -38,13 +38,13 @@ export default function FinalCTA() {
                            const el = document.getElementById('consultation-section');
                            if (el) el.scrollIntoView({ behavior: 'smooth' });
                         }}
-                        className="w-full sm:w-auto bg-white text-[#5D00D6] px-7 py-3.5 rounded-xl font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2 text-[14px] shadow-lg"
+                        className="w-full sm:w-auto bg-white text-[#5D00D6] px-8 py-4 rounded-full font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2 text-[14px] shadow-lg"
                      >
                         Get a Fibre Quote <ArrowRight size={16} />
                      </button>
                      <a 
                         href="tel:1800000299"
-                        className="w-full sm:w-auto bg-[#1A1A2E] text-white px-7 py-3.5 rounded-xl font-bold hover:bg-black transition-all flex items-center justify-center gap-3 text-[14px]"
+                        className="w-full sm:w-auto bg-[#5D00D6] text-white px-8 py-4 rounded-full font-bold hover:bg-[#4B00AD] transition-all shadow-xl shadow-[#5D00D6]/20 flex items-center justify-center gap-3 text-[14px]"
                      >
                         <Phone size={16} className="text-[#5D00D6]" /> Call 1800 000 299
                      </a>

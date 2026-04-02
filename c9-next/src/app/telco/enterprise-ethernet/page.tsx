@@ -1,4 +1,6 @@
-
+import { Navbar } from "@/components/layout/Navbar";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WpFooter } from "@/components/layout/WpFooter";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpConsultationForm as ContactSection } from "@/components/wordpress/WpConsultationForm";
 import Hero from "@/components/sections/enterprise-ethernet/Hero";
@@ -23,7 +25,8 @@ export const metadata = {
 export default function EnterpriseEthernetPage() {
   return (
     <main className="min-h-screen bg-white font-['Proxima_Nova']">
-      {/* Global Navbar handled by RootLayout */}
+      <Navbar />
+      <Breadcrumbs />
       
       <div id="ee-overview">
         <Hero />
@@ -59,8 +62,7 @@ export default function EnterpriseEthernetPage() {
           formTitle="Schedule Strategy Session"
         />
       </section>
-
+      <WpFooter />
     </main>
   );
 }
-// Navbar is removed from imports to avoid duplicates as RootLayout is handling it now.

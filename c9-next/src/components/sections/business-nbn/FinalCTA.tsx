@@ -46,13 +46,13 @@ export default function FinalCTA() {
         <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
           <button
             onClick={handleCheck}
-            className="inline-flex items-center justify-center h-[56px] px-10 rounded-xl text-[15px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-colors duration-200"
+            className="inline-flex items-center justify-center h-[56px] px-10 rounded-full text-[15px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-colors duration-200"
           >
             Check Availability →
           </button>
           <a
             href="tel:1800000299"
-            className="inline-flex items-center justify-center h-[56px] px-10 rounded-xl text-[15px] text-[#9CA3AF] border bg-transparent hover:border-white hover:text-white transition-all duration-200"
+            className="inline-flex items-center justify-center h-[56px] px-10 rounded-full text-[15px] text-[#9CA3AF] border bg-transparent hover:border-white hover:text-white transition-all duration-200"
             style={{ borderColor: '#4B5563', fontFamily: '"Proxima Nova", sans-serif' }}
           >
             Call 1800 000 299

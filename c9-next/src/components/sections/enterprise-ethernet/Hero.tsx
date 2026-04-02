@@ -73,7 +73,7 @@ export default function Hero() {
                     <Button 
                        type="submit"
                        disabled={isChecking}
-                       className="w-full sm:w-auto h-12 bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold px-8 rounded-2xl flex items-center gap-2 shadow-lg shadow-[#5D00D6]/20 transition-all active:scale-95 border-none"
+                       className="w-full sm:w-auto h-12 bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold px-8 rounded-full flex items-center gap-2 shadow-lg shadow-[#5D00D6]/20 transition-all active:scale-95 border-none"
                     >
                        {isChecking ? <Loader2 className="w-5 h-5 animate-spin" /> : <Search className="w-5 h-5" />}
                        {isChecking ? "Checking..." : "Check Availability"}

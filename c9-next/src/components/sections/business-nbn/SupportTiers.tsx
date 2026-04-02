@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Shield, ShieldCheck, ShieldPlus, ChevronDown, Wifi } from 'lucide-react';
+import { Check, Shield, ShieldCheck, ShieldPlus, ChevronDown, Wifi, ArrowRight } from 'lucide-react';
 
 const tiers = [
   {
@@ -104,8 +104,8 @@ export default function SupportTiers() {
                      <Wifi size={14} className="opacity-40" />
                   </div>
 
-                  <button className={`absolute -bottom-7 left-8 right-8 py-4 rounded-2xl font-bold transition-all shadow-xl group-hover:scale-[1.02] active:scale-[0.98] z-20 ${t.recommended || i === 2 ? 'bg-white text-[#1A1A2E] hover:bg-gray-100 shadow-purple-900/20' : 'bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-purple-900/10'}`}>
-                    {t.cta}
+                  <button className={`absolute -bottom-7 left-8 right-8 py-4 rounded-full font-bold transition-all shadow-xl group-hover:scale-[1.02] active:scale-[0.98] z-20 flex items-center justify-center gap-2 ${t.recommended || i === 2 ? 'bg-white text-[#5D00D6] hover:bg-gray-50 shadow-purple-900/20' : 'bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-[#5D00D6]/20'}`}>
+                    {t.cta} <ArrowRight size={16} />
                   </button>
               </div>
 

@@ -78,7 +78,7 @@ const ComparisonTable = () => {
                 setInquiryMessage("I'm comparing Standard NBN and Enterprise Ethernet. Can you help me decide which is better for my current business scale?");
                 document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
              }}
-             className="bg-[#1A1A2E] text-white px-8 py-3 rounded-full font-bold text-[13px] hover:bg-black transition-all shadow-lg active:scale-95 flex items-center gap-2"
+             className="bg-[#5D00D6] text-white px-8 py-3.5 rounded-full font-bold text-[13px] hover:bg-[#4B00AD] transition-all shadow-lg shadow-[#5D00D6]/20 active:scale-95 flex items-center gap-2"
           >
              Speak with an Enterprise Advisor <ArrowRight size={14} />
           </button>

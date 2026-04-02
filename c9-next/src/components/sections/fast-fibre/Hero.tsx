@@ -48,13 +48,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
               <button 
                 onClick={scrollToForm}
-                className="w-full sm:w-auto bg-[#5D00D6] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#4E00AD] transition-all flex items-center justify-center gap-2 shadow-xl shadow-purple-900/20"
+                className="w-full sm:w-auto bg-[#5D00D6] text-white px-8 py-4 rounded-full font-bold hover:bg-[#4E00AD] transition-all flex items-center justify-center gap-2 shadow-xl shadow-purple-900/20"
               >
                 Get a Fibre Quote <ArrowRight size={18} />
               </button>
               <button 
                 onClick={scrollToPlans}
-                className="w-full sm:w-auto bg-white text-[#1A1A2E] border border-[#E5E7EB] px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto bg-white text-[#1A1A2E] border border-[#E5E7EB] px-8 py-4 rounded-full font-bold hover:bg-gray-50 hover:border-[#5D00D6] transition-all flex items-center justify-center gap-2"
               >
                 View Plans <ArrowRight size={18} />
               </button>

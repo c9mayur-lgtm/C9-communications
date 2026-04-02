@@ -132,7 +132,7 @@ export default function Plans() {
           <div className="bg-white border p-1 rounded-2xl flex items-center shadow-sm">
             <button 
               onClick={() => setActiveTier('400')}
-              className={`px-8 py-3 rounded-xl font-bold text-[15px] transition-all ${activeTier === '400' ? 'bg-[#5D00D6] text-white' : 'text-gray-500 hover:text-[#5D00D6]'}`}
+              className={`px-8 py-3 rounded-full font-bold text-[15px] transition-all ${activeTier === '400' ? 'bg-[#5D00D6] text-white' : 'text-gray-500 hover:text-[#5D00D6]'}`}
             >
               Fibre 400
             </button>
@@ -150,14 +150,14 @@ export default function Plans() {
           <div className="flex items-center gap-4 bg-gray-100 p-1.5 rounded-xl border">
             {activeTier === '400' ? (
               <>
-                <button onClick={() => setContract400('24')} className={`px-5 py-2 rounded-lg font-bold text-[13px] transition-all ${contract400 === '24' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>24 Months</button>
-                <button onClick={() => setContract400('36')} className={`px-5 py-2 rounded-lg font-bold text-[13px] transition-all ${contract400 === '36' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>36 Months</button>
+                <button onClick={() => setContract400('24')} className={`px-5 py-2 rounded-full font-bold text-[13px] transition-all ${contract400 === '24' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>24 Months</button>
+                <button onClick={() => setContract400('36')} className={`px-5 py-2 rounded-full font-bold text-[13px] transition-all ${contract400 === '36' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>36 Months</button>
               </>
             ) : (
               <>
-                <button onClick={() => setContract1000('24')} className={`px-5 py-2 rounded-lg font-bold text-[13px] transition-all ${contract1000 === '24' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>24 Months</button>
-                <button onClick={() => setContract1000('36')} className={`px-5 py-2 rounded-lg font-bold text-[13px] transition-all ${contract1000 === '36' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>36 Months</button>
-                <button onClick={() => setContract1000('48')} className={`px-5 py-2 rounded-lg font-bold text-[13px] transition-all ${contract1000 === '48' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>48 Months</button>
+                <button onClick={() => setContract1000('24')} className={`px-5 py-2 rounded-full font-bold text-[13px] transition-all ${contract1000 === '24' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>24 Months</button>
+                <button onClick={() => setContract1000('36')} className={`px-5 py-2 rounded-full font-bold text-[13px] transition-all ${contract1000 === '36' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>36 Months</button>
+                <button onClick={() => setContract1000('48')} className={`px-5 py-2 rounded-full font-bold text-[13px] transition-all ${contract1000 === '48' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-500'}`}>48 Months</button>
               </>
             )}
           </div>
@@ -239,7 +239,7 @@ export default function Plans() {
 
                   <button 
                     onClick={() => handleSelectPlan(plan)}
-                    className={`w-full h-16 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all relative z-10 group/btn ${isDark ? 'bg-[#5D00D6] hover:bg-[#4c00b0] text-white shadow-xl shadow-[#5D00D6]/40' : 'bg-gray-100 hover:bg-gray-200 text-[#1A1A2E]'}`}
+                    className={`w-full h-16 rounded-full font-bold flex items-center justify-center gap-2 transition-all relative z-10 group/btn ${isDark ? 'bg-[#5D00D6] hover:bg-[#4c00b0] text-white shadow-xl shadow-[#5D00D6]/40' : 'bg-[#5D00D6] hover:bg-[#4c00b0] text-white shadow-xl shadow-[#5D00D6]/20'}`}
                   >
                      Select This Plan <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
                   </button>
