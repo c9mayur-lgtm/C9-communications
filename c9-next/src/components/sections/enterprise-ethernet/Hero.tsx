@@ -83,10 +83,8 @@ export default function Hero() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10 w-full sm:w-auto">
                 <Button 
-                  variant="outline" 
-                   size="lg" 
                   onClick={handleCompareClick}
-                  className="border-2 border-slate-100 text-[#1A1A2E] font-bold h-15 px-10 rounded-full hover:bg-slate-50 bg-white transition-all text-[16px]"
+                  className="bg-[#5D00D6] text-white hover:bg-[#4c00b0] font-bold h-14 px-10 rounded-full transition-all text-[16px] shadow-lg shadow-[#5D00D6]/20 transform hover:-translate-y-0.5"
                 >
                   View Plans & Pricing
                 </Button>
