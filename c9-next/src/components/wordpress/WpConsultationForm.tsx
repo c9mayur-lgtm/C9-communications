@@ -34,7 +34,6 @@ export const WpConsultationForm = ({
     <section 
       id="consultation-section" 
       className="bg-[#E4E0FD] py-20 md:py-28 overflow-hidden" 
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
     >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-center">
@@ -42,26 +41,26 @@ export const WpConsultationForm = ({
           {/* Left Column (Content) */}
           <div className="max-w-[580px]">
             <FadeIn>
-              <div className="inline-block bg-[#0c1024] text-white px-4 py-1.5 rounded-lg text-[11px] font-bold tracking-[0.2em] uppercase mb-6">
+              <span className="c9-eyebrow !text-white bg-[#0c1024] px-4 py-1.5 rounded-lg mb-6 block w-fit">
                 {eyebrow}
-              </div>
+              </span>
               
-              <h2 className="text-[36px] md:text-[42px] lg:text-[48px] font-bold text-[#0c1024] leading-[1.05] mb-8 tracking-tight">
+              <h2 className="c9-section-heading text-[#0c1024] mb-8">
                 {title}
               </h2>
 
-              <p className="text-[16px] md:text-[18px] text-[#0c1024]/70 leading-relaxed mb-10 font-normal">
+              <p className="c9-body !text-[#0c1024]/70 mb-10">
                 {description}
               </p>
               
               <div className="mb-12">
-                <p className="font-bold text-[#0c1024] text-[24px] md:text-[28px] tracking-tight">
+                <p className="c9-card-title !text-[24px] md:!text-[28px] text-[#0c1024]">
                   Call us today: <a href="tel:1800000299" className="text-[#5D00D6] hover:text-[#4c00b0] transition-colors decoration-[#5D00D6]/20 underline underline-offset-8">1800 000 299</a>
                 </p>
               </div>
 
               <div>
-                <h3 className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-6">WHAT HAPPENS AFTER YOU SUBMIT</h3>
+                <h3 className="c9-eyebrow !text-[11px] mb-6">WHAT HAPPENS AFTER YOU SUBMIT</h3>
                 <div className="flex flex-col gap-6">
                   {[
                     { title: '1. A real Australian calls you', body: 'Not a call centre. Not a script. Someone who actually knows IT.', icon: Phone },
@@ -73,8 +72,8 @@ export const WpConsultationForm = ({
                         <step.icon size={18} />
                       </div>
                       <div className="pt-0.5">
-                        <h4 className="text-[15px] font-bold text-[#0c1024] mb-1 uppercase tracking-tight">{step.title}</h4>
-                        <p className="text-[14px] font-normal text-[#0c1024]/60 leading-relaxed">{step.body}</p>
+                        <h4 className="c9-eyebrow !text-[#0c1024] !text-[11px] mb-1">{step.title}</h4>
+                        <p className="c9-body !text-[14px] !leading-relaxed !text-[#0c1024]/60">{step.body}</p>
                       </div>
                     </div>
                   ))}

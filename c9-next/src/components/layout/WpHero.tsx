@@ -20,10 +20,10 @@ export const WpHero = () => {
       <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
         <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-6 items-center relative z-10 w-full">
           <div className="py-4 pr-0 xl:pr-6">
-            <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[56px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.1]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h1 className="c9-hero-title mb-6 text-[#0c1024]">
               We manage your IT & Telco, so you can manage your business.
             </h1>
-            <p className="text-[17px] md:text-[18px] lg:text-[20px] text-slate-600 mb-8 max-w-[500px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="c9-body mb-8 max-w-[500px]">
               Take charge of your business continuity with innovative IT solutions designed for growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">

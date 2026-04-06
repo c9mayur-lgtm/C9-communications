@@ -120,19 +120,16 @@ export default function Hero() {
             <div className="flex items-center gap-3">
               <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full px-4 py-1.5 flex items-center gap-2">
                 <Award size={14} className="text-[#5D00D6] shrink-0" />
-                <span className="text-[11px] text-[#5D00D6] font-bold uppercase tracking-widest">NBN™ Accredited Business Adviser</span>
+                <span className="c9-eyebrow !text-[11px]">NBN™ Accredited Business Adviser</span>
               </div>
             </div>
 
-            <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] font-bold tracking-tight mb-6 text-[#1A1A2E] leading-none lg:leading-[1.05] mt-8">
+            <h1 className="c9-hero-title text-[#1A1A2E] mt-8">
               Business NBN™ built for <br className="hidden lg:block" /> businesses that{' '}
               <span className="text-[#5D00D6]">can't afford <br className="hidden lg:block" /> to be offline.</span>
             </h1>
 
-            <p
-              className="text-[16px] md:text-[18px] text-[#6B7280] max-w-[580px] leading-relaxed mt-6"
-              style={{ fontFamily: '"Proxima Nova", sans-serif' }}
-            >
+            <p className="c9-body text-[#6B7280] max-w-[580px] mt-6 md:text-[18px]">
               Enterprise-grade NBN™ with speeds up to 1000/1000 Mbps, 
               automatic 4G LTE failover, and a dedicated Australian account manager.
             </p>

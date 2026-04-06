@@ -50,14 +50,14 @@ export const WpITDepartmentOptions = () => {
 
               {/* Text Area (Matching Case Study Style) */}
               <div className="px-2">
-                 <h3 className="text-[28px] md:text-[36px] font-bold text-[#0c1024] mb-4 group-hover:text-[#5D00D6] transition-colors leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                 <h3 className="text-[28px] md:text-[32px] font-medium text-[#0c1024] mb-4 group-hover:text-[#5D00D6] transition-colors leading-[1.1] tracking-tight">
                    {opt.title}
                  </h3>
                  <div className="h-[1px] w-full bg-gray-100 mb-6" />
-                 <p className="text-slate-600/90 text-[18px] md:text-[20px] leading-relaxed mb-8 line-clamp-2 font-medium">
+                 <p className="c9-body !text-[17px] mb-8 line-clamp-2">
                    {opt.desc}
                  </p>
-                 <div className="flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] leading-none uppercase tracking-[0.15em] group/link">
+                 <div className="flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] leading-none uppercase tracking-[0.2em] group/link">
                     Explore solutions 
                     <ArrowUpRight size={16} className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                  </div>

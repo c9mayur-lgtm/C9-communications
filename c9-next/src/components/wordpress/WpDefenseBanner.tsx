@@ -22,7 +22,6 @@ export const WpDefenseBanner = ({
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div 
           className="bg-[#0c1024] rounded-[32px] overflow-hidden shadow-2xl shadow-purple-950/20 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 min-h-[250px] md:min-h-[280px] relative group"
-          style={{ fontFamily: '"Proxima Nova", sans-serif' }}
         >
           {/* Subtle Background Glow */}
           <div className="absolute top-0 right-0 w-[400px] h-full bg-gradient-to-l from-[#5D00D6]/20 to-transparent blur-3xl pointer-events-none" />
@@ -35,10 +34,10 @@ export const WpDefenseBanner = ({
 
             {/* Text Content */}
             <div className="text-center md:text-left">
-              <h2 className="text-[36px] md:text-[40px] lg:text-[44px] font-bold text-white leading-[1.05] mb-3 tracking-tight">
+              <h2 className="c9-section-heading !text-white mb-3">
                 {title}
               </h2>
-              <p className="text-white/60 text-[18px] md:text-[20px] font-medium leading-relaxed">
+              <p className="c9-body !text-white/60">
                 {description}
               </p>
             </div>
@@ -50,7 +49,7 @@ export const WpDefenseBanner = ({
               href={href} 
               target={href.startsWith('http') ? "_blank" : undefined}
               rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-              className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-[#5D00D6]/30 text-white rounded-full font-bold text-[16px] hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300 shadow-xl shadow-purple-900/10 group/btn whitespace-nowrap"
+              className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-[#5D00D6]/30 text-white rounded-full font-medium text-[16px] hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300 shadow-xl shadow-purple-900/10 group/btn whitespace-nowrap"
             >
               {buttonText} <ArrowRight size={20} className="ml-3 transition-transform group-hover/btn:translate-x-1" />
             </a>

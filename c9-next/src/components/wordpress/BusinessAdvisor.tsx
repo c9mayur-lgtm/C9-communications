@@ -6,10 +6,8 @@ import Link from 'next/link';
 import { 
   Stethoscope, ShoppingBag, HardHat, ArrowRight, X, 
   CheckCircle2, PhoneCall, Scale, GraduationCap, Briefcase,
-  Sparkles, MessageSquare, Building2, Send, Bot, User
+  Sparkles, MessageSquare, Building2, Send, Bot, User, Heart
 } from 'lucide-react';
-
-const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };
 
 /* ─── INDUSTRIES DATA ──────────────────────────────────────── */
 const INDUSTRIES = [
@@ -17,8 +15,8 @@ const INDUSTRIES = [
     id: 'medical', icon: Stethoscope, label: 'Medical & Healthcare', tag: 'Healthcare',
     color: 'bg-blue-50 text-blue-600 border-blue-100', iconBg: 'bg-blue-50 text-blue-500',
     recommend: [
-      { name: 'Enterprise Security', href: '/modern-workplace#security' },
-      { name: 'Modern Workplace', href: '/modern-workplace' }
+      { name: 'C9 Defense Security', href: '/c9-defense' },
+      { name: 'Managed IT Support', href: '/managed-it/helpdesk-support' }
     ],
     benefit: 'HIPAA/Privacy Act-compliant IT with zero-touch device setup and 24/7 monitoring.'
   },
@@ -26,8 +24,8 @@ const INDUSTRIES = [
     id: 'legal', icon: Scale, label: 'Legal & Finance', tag: 'Professional',
     color: 'bg-amber-50 text-amber-700 border-amber-100', iconBg: 'bg-amber-50 text-amber-600',
     recommend: [
-      { name: 'SaaS Backup', href: '/modern-workplace#infra' },
-      { name: 'Managed IT', href: '/managed-it' }
+      { name: 'SaaS Backup & DR', href: '/managed-it/backup-disaster-recovery' },
+      { name: 'Legal IT Strategy', href: '/managed-it/strategy-consulting' }
     ],
     benefit: 'Unlimited cloud backup and rapid engineering support for uninterrupted billing.'
   },
@@ -36,7 +34,7 @@ const INDUSTRIES = [
     color: 'bg-pink-50 text-pink-700 border-pink-100', iconBg: 'bg-pink-50 text-pink-500',
     recommend: [
       { name: 'CCTV & People Count', href: '/modern-workplace#other-solutions' },
-      { name: 'Fibre NBN', href: '/telco' }
+      { name: 'Business NBN™', href: '/telco/business-nbn' }
     ],
     benefit: 'Real-time occupancy analytics and guest WiFi that actually works.'
   },
@@ -45,16 +43,34 @@ const INDUSTRIES = [
     color: 'bg-green-50 text-green-700 border-green-100', iconBg: 'bg-green-50 text-green-500',
     recommend: [
       { name: 'Device Management', href: '/modern-workplace#infra' },
-      { name: 'Visitor Management', href: '/modern-workplace#other-solutions' }
+      { name: 'Network Solutions', href: '/managed-it/network-solutions' }
     ],
     benefit: 'Zero-touch enrolment for 1,000+ student devices across campuses.'
+  },
+  { 
+    id: 'real-estate', icon: Building2, label: 'Real Estate', tag: 'Property',
+    color: 'bg-indigo-50 text-indigo-700 border-indigo-100', iconBg: 'bg-indigo-50 text-indigo-600',
+    recommend: [
+      { name: 'Cloud Phone System', href: '/telco' },
+      { name: 'IT Outsourcing', href: '/managed-it/outsourcing' }
+    ],
+    benefit: 'Streamlined communication for agents and fast, secure internet for sales offices.'
+  },
+  { 
+    id: 'non-profit', icon: Heart, label: 'Non-profit', tag: 'NFP',
+    color: 'bg-red-50 text-red-700 border-red-100', iconBg: 'bg-red-50 text-red-500',
+    recommend: [
+      { name: 'Microsoft 365 NFP', href: '/modern-workplace' },
+      { name: 'Fast Fibre Internet', href: '/telco/fast-fibre' }
+    ],
+    benefit: 'Maximise your impact with nonprofit licensing and zero-setup fee IT infrastructure.'
   },
   { 
     id: 'professional', icon: Briefcase, label: 'Professional Services', tag: 'Services',
     color: 'bg-purple-50 text-purple-700 border-purple-100', iconBg: 'bg-purple-50 text-[#5D00D6]',
     recommend: [
       { name: 'Cloud Phone System', href: '/telco' },
-      { name: 'Microsoft 365', href: '/modern-workplace' }
+      { name: 'Modern Workplace', href: '/modern-workplace' }
     ],
     benefit: 'Cloud-first workspace — Microsoft 365, Teams Phone, and secure remote access.'
   },
@@ -62,8 +78,8 @@ const INDUSTRIES = [
     id: 'construction', icon: HardHat, label: 'Construction', tag: 'Construction',
     color: 'bg-orange-50 text-orange-700 border-orange-100', iconBg: 'bg-orange-50 text-orange-500',
     recommend: [
-      { name: '4G Failover', href: '/telco#nbn' },
-      { name: 'Mobile Data', href: '/telco#mobile' }
+      { name: 'Mobile Data Plans', href: '/telco/mobile-plans' },
+      { name: 'Managed IT Support', href: '/managed-it/helpdesk-support' }
     ],
     benefit: 'Stay connected on-site with 4G failover and pooled mobile data plans.'
   }
@@ -78,124 +94,167 @@ function getResponse(query: string): ChatResponse {
   if (q.match(/hello|hi|hey|g'day|good/)) {
     return { text: "G'day! I'm the C9 Advisor — happy to help you find the right IT or telco solution for your business. You can ask me about Managed IT, internet, voice, Microsoft 365, cybersecurity, mobile, or which solution suits your industry." };
   }
-  if (q.match(/managed.?it|helpdesk|it support|outsource.?it|it partner/)) {
+  if (q.match(/nbn|business.?nbn/)) {
     return { 
-      text: "C9's Managed IT service gives your business a fully outsourced IT team — including an Australian helpdesk with defined SLAs (P1 critical: < 1hr response), a named account manager, proactive monitoring, and monthly performance reports. Most businesses switch to us because they're tired of explaining their setup on every support call. We document your environment from day one.", 
-      links: [{ label: 'Explore Managed IT', href: '/managed-it' }, { label: 'Helpdesk SLAs', href: '/managed-it/helpdesk-support#sla-section' }]
+      text: "C9 provides reliable Business nbn® plans built around uptime, not price. Every connection is backed by dedicated local support and no shared residential traffic — perfect for small to medium businesses needing stability.", 
+      links: [{ label: 'Business NBN™', href: '/telco/business-nbn' }]
+    };
+  }
+  if (q.match(/fast.?fibre|c9.?fibre|fibre.?internet/)) {
+    return { 
+      text: "C9 Fibre is our flagship internet solution — offering asymmetrical and symmetrical speeds up to 10,000 Mbps with a 99.95% uptime guarantee and 24/7 engineering support. It's built for performance-critical businesses.", 
+      links: [{ label: 'Fast Fibre', href: '/telco/fast-fibre' }]
+    };
+  }
+  if (q.match(/enterprise.?ethernet|symmetrical/)) {
+    return { 
+      text: "nbn® Enterprise Ethernet provides priority-grade connectivity and symmetrical speeds for offices that can't afford to wait on uploads. It's highly reliable and scalable as your business grows.", 
+      links: [{ label: 'Enterprise Ethernet', href: '/telco/enterprise-ethernet' }]
+    };
+  }
+  if (q.match(/managed.?it|it support|it partner/)) {
+    return { 
+      text: "C9's Managed IT service gives your business a fully outsourced IT team — including an Australian helpdesk with defined SLAs, proactive monitoring, and monthly performance reports. We document your environment from day one so you never have to repeat yourself.", 
+      links: [{ label: 'Managed IT', href: '/managed-it' }, { label: 'Helpdesk Support', href: '/managed-it/helpdesk-support' }]
+    };
+  }
+  if (q.match(/outsource.?it|outsourcing|it.?team/)) {
+    return { 
+      text: "Our IT Outsourcing model gives you the power of a full IT department at a fraction of the cost. We handle everything from vendor management and procurement to strategic planning and daily support.", 
+      links: [{ label: 'IT Outsourcing', href: '/managed-it/outsourcing' }]
+    };
+  }
+  if (q.match(/strategy|consulting|roadmap|vcio|it.?planning/)) {
+    return { 
+      text: "C9 Strategy & Consulting provides your business with a vCIO (Virtual CIO) to build your IT roadmap, manage budgets, and ensure your technology aligns with your commercial goals. We don't just fix things — we help you grow.", 
+      links: [{ label: 'Strategy & Consulting', href: '/managed-it/strategy-consulting' }]
     };
   }
   if (q.match(/helpdesk|sla|response time|ticket|support call/)) {
     return { 
-      text: "C9's helpdesk operates with defined SLA tiers: P1 Critical (business-wide outage) — response < 1 hour, resolution < 4 hours. P2 High — < 4hr response. P3 Medium — < 8hr response. P4 Low — next business day. Every ticket is documented and reviewed in your monthly report. The team is fully Australian-based — no offshore routing.", 
-      links: [{ label: 'View Full SLA Table', href: '/managed-it/helpdesk-support#sla-section' }]
+      text: "C9's helpdesk operates with defined SLA tiers: P1 Critical — response < 1 hour. P2 High — < 4hr response. Every ticket is documented and reviewed in your monthly report. The team is 100% Australian-based.", 
+      links: [{ label: 'Helpdesk Support', href: '/managed-it/helpdesk-support' }]
     };
   }
-  if (q.match(/internet|nbn|fibre|broadband|connectivity|bandwidth/)) {
+  if (q.match(/cloud.?services|aws|azure|google.?cloud|hosting/)) {
     return { 
-      text: "C9 provides business-grade NBN®, Enterprise Ethernet, and C9 Fibre (up to 10,000 Mbps) — all backed by a 99.95% uptime SLA and 24/7 engineering support. Unlike residential ISPs, every C9 connection has dedicated local support and proactive fault monitoring. No shared traffic.",
-      links: [{ label: 'Business Internet', href: '/telco' }]
+      text: "C9 manages your cloud environment end-to-end — from migration to ongoing optimization. We work with AWS, Azure, and Google Cloud to ensure your data is secure, scalable, and cost-effective.", 
+      links: [{ label: 'Cloud Services', href: '/managed-it/cloud-services' }]
     };
   }
-  if (q.match(/voice|phone system|pbx|phone call|cloud phone|c9x|sip trunk/)) {
+  if (q.match(/infrastructure|server|hardware|office.?setup/)) {
     return { 
-      text: "C9's voice solution is the C9X Cloud Phone System — a fully managed cloud PBX with auto-attendants, call recording, and Microsoft Teams integration. We handle provisioning, number porting, and ongoing management. SIP Trunking is also available if you want to keep existing hardware but connect to a better network.",
-      links: [{ label: 'Business Voice', href: '/telco' }]
+      text: "C9 manages your entire physical and virtual infrastructure — servers, storage, network hardware, and multi-site connectivity. We specialize in zero-downtime office relocations and infrastructure upgrades.", 
+      links: [{ label: 'IT Infrastructure', href: '/managed-it/infrastructure' }]
     };
   }
-  if (q.match(/microsoft.?365|m365|office.?365|teams|sharepoint|outlook|onedrive/)) {
+  if (q.match(/security|cyber|threat|ransomware|breach|c9.?defense|defence/)) {
     return { 
-      text: "C9 manages your Microsoft 365 environment end-to-end — user provisioning, licence management, Teams calling, SharePoint, OneDrive, and Entra ID. We also handle Microsoft Teams Phone integration so your staff can make and receive business calls directly from Teams. Nonprofit licensing is available for eligible organisations.",
+      text: "C9 Defense is our dedicated security solution — 24/7 threat detection, endpoint protection, and managed firewall. We help businesses achieve 'Essential 8' compliance and protect against modern cyber threats.", 
+      links: [{ label: 'C9 Defense', href: '/c9-defense' }, { label: 'Security Solutions', href: '/managed-it/security-solutions' }]
+    };
+  }
+  if (q.match(/backup|disaster.?recovery|dr|data.?loss/)) {
+    return { 
+      text: "Never lose sleep over data loss again. C9 provides automated SaaS backup for Microsoft 365 and full disaster recovery plans for your critical infrastructure with guaranteed recovery time objectives.", 
+      links: [{ label: 'Backup & Recovery', href: '/managed-it/backup-disaster-recovery' }]
+    };
+  }
+  if (q.match(/microsoft.?365|m365|teams|sharepoint/)) {
+    return { 
+      text: "C9 is a Microsoft Solutions Partner. We manage your M365 environment, license lifecycle, and complex Teams Phone integrations so your team can work securely from anywhere.", 
       links: [{ label: 'Modern Workplace', href: '/modern-workplace' }]
     };
   }
-  if (q.match(/security|cyber|threat|ransomware|breach|firewall|antivirus|c9.?defense|defence/)) {
+  if (q.match(/internet|broadband|connectivity/)) {
     return { 
-      text: "C9 Defense is our enterprise security layer — continuous threat monitoring, incident response, endpoint detection, and firewall management. For businesses facing active threats or needing compliance (ISO 27001, Essential 8), C9 Defense provides the 24/7 protection that helpdesk alone cannot. It sits on top of your existing infrastructure.",
-      links: [{ label: 'C9 Defense', href: '/c9-defense' }]
+      text: "We offer more than just NBN. C9 provides Business NBN™, Fast Fibre (up to 10Gbps), and Enterprise Ethernet. All connections are carrier-grade with business SLAs.", 
+      links: [{ label: 'Telco Solutions', href: '/telco' }]
     };
   }
-  if (q.match(/mobile|sim|4g|5g|fleet|phone plan|data plan/)) {
+  if (q.match(/voice|phone system|pbx|c9 voice|c9x|teams.?calling/)) {
     return { 
-      text: "C9 manages your entire mobile fleet — SIM provisioning, high-data business plans, device procurement, and a single consolidated bill. All plans run on Australia's leading networks. You get centralised visibility over every device and SIM through your C9 account. No lock-in contracts.",
-      links: [{ label: 'Business Mobile', href: '/telco' }]
+      text: "The C9 Voice Cloud Phone System is built for modern work. It includes enterprise features, mobile apps, and deep Microsoft Teams integration to keep your team connected on one platform.", 
+      links: [{ label: 'Business Voice', href: '/telco/c9voice' }]
     };
   }
-  if (q.match(/network|sd.?wan|mpls|private.?ip|wan|lan|wifi|networking/)) {
+  if (q.match(/voice.?ai|ai.?receptionist/)) {
     return { 
-      text: "C9 designs, deploys, and manages your network infrastructure — from SD-WAN for multi-site performance optimisation, to Private IP/MPLS for secure low-latency links between locations. All solutions are engineered and supported in-house by our local team, not contracted out.",
-      links: [{ label: 'Business Networking', href: '/telco' }]
+      text: "Reduce missed calls with C9 Voice AI. Our AI Receptionist answers, qualifies, and routes inbound calls 24/7, freeing your staff from routine enquiries.", 
+      links: [{ label: 'Voice AI', href: '/telco' }]
     };
   }
-  if (q.match(/voice.?ai|ai.?receptionist|ivr|ai.?call|call.?analytic/)) {
+  if (q.match(/mobile|sim|phone.plan/)) {
     return { 
-      text: "C9 Voice AI sits on top of your phone system and handles inbound calls 24/7 — AI receptionist, intelligent IVR (natural language, not press-1 menus), and call analytics showing volume, sentiment, and resolution rates. It reduces missed calls and frees your team from routine enquiries.",
-      links: [{ label: 'Voice AI Solutions', href: '/telco' }]
+      text: "Manage your business mobile fleet with C9. We provide high-data plans, device procurement, and centralized billing for your entire team with no lock-in contracts.", 
+      links: [{ label: 'Mobile Plans', href: '/telco/mobile-plans' }]
     };
   }
-  if (q.match(/healthcare|medical|clinic|hospital|hipaa|health|gp|aged.?care/)) {
+  if (q.match(/healthcare|medical|hipaa|GP|clinic/)) {
     return { 
-      text: "For healthcare providers, C9 specialises in HIPAA-aligned and Australian Privacy Act-compliant IT — secure patient data environments, 24/7 monitoring, zero-touch device setup for clinical staff, and rapid helpdesk response so your team focuses on care, not IT tickets. Uptime SLA: 99.9%.",
+      text: "For healthcare, we provide HIPAA-aligned and Privacy Act-compliant IT solutions, including secure patient data storage and zero-touch device enrollment for clinical staff.", 
       links: [{ label: 'Healthcare IT', href: '/industries/healthcare' }]
     };
   }
-  if (q.match(/legal|law|lawyer|barrister|solicitor|legal.?firm|law.?firm/)) {
+  if (q.match(/legal|lawyer|solicitor/)) {
     return { 
-      text: "C9 works with legal firms who need data sovereignty, document security, and zero downtime during billable hours. We provide SaaS backup, cloud infrastructure, Managed IT with rapid helpdesk, and Microsoft 365 management — all with Australian data residency guaranteed.",
-      links: [{ label: 'Professional Services IT', href: '/industries/professional-services' }]
+      text: "We support legal firms with data sovereignty, document security, and rapid response times (SLA) to ensure zero billable downtime.", 
+      links: [{ label: 'Professional Services', href: '/industries/professional-services' }]
     };
   }
-  if (q.match(/retail|store|eftpos|pos|shop|f&b|restaurant|hospitality/)) {
+  if (q.match(/retail|hospitality|F&B|restaurant/)) {
     return { 
-      text: "For retail and F&B, C9 ensures EFTPOS-ready connectivity, multi-site networking, CCTV with people counting analytics, and guest WiFi. Our average fault response time for retail clients is 15 minutes — because every minute of downtime costs you a sale.",
+      text: "Retail businesses rely on C9 for fail-safe internet connectivty for payments, CCTV with people counting, and managed WiFi that works for staff and guests.", 
       links: [{ label: 'Retail IT', href: '/industries/retail' }]
     };
   }
-  if (q.match(/nonprofit|non.?profit|ngo|charity|not.?for.?profit/)) {
+  if (q.match(/nonprofit|charity|NFP/)) {
     return { 
-      text: "C9 offers tailored IT packages for non-profits — including Microsoft nonprofit licensing, NBN connectivity, and managed IT support. We help stretch every dollar so more of your budget goes to the mission, not infrastructure. Zero setup fees for eligible organisations.",
-      links: [{ label: 'Non-Profit IT', href: '/industries/non-profit' }]
+      text: "We offer discounted Microsoft nonprofit licensing and tailored IT packages to help NFPs stretch their budget further towards their mission.", 
+      links: [{ label: 'Non-profit IT', href: '/industries/non-profit' }]
     };
   }
-  if (q.match(/education|school|university|campus|student|tablet|device/)) {
+  if (q.match(/education|school|campus/)) {
     return { 
-      text: "C9 supports schools and universities with zero-touch device enrolment for 1,000+ student tablets, campus-wide networking, visitor management systems, and Managed IT for admin and teaching staff. We understand procurement cycles and budget constraints in education.",
+      text: "Campus-wide WiFi, Chromebook/Tablet management, and secure student data environments — we support schools in scaling their digital learning programs.", 
       links: [{ label: 'Education IT', href: '/industries/education' }]
     };
   }
-  if (q.match(/price|cost|pricing|how much|quote|proposal|affordable|budget/)) {
+  if (q.match(/real.estate|property|agent/)) {
     return { 
-      text: "C9's Managed IT and telco solutions are scoped to your business size and requirements — there's no one-size-fits-all pricing. Most clients receive a scoped proposal within 2 business days. For a quick ballpark, our helpdesk-only engagements typically start from a per-seat monthly fee, while full Managed IT includes monitoring, helpdesk, and an account manager.",
+      text: "Fast office internet, cloud phone systems for agents on-the-go, and secure document storage — we help real estate agencies stay mobile and responsive.", 
+      links: [{ label: 'Real Estate IT', href: '/industries/real-estate' }]
+    };
+  }
+  if (q.match(/case.study|case.studies|projects|success.story/)) {
+    return { 
+      text: "We've helped hundreds of businesses across Australia transform their IT. You can browse our case studies to see how we've solved complex challenges for clients in various industries.", 
+      links: [{ label: 'View Case Studies', href: '/about/case-studies' }]
+    };
+  }
+  if (q.match(/faq|help|question/)) {
+    return { 
+      text: "Have a specific question? Our FAQ section covers common enquiries about Managed IT, telco transitions, and support SLAs.", 
+      links: [{ label: 'View FAQ', href: '/support/faq' }]
+    };
+  }
+  if (q.match(/career|job|join|team|about.us/)) {
+    return { 
+      text: "C9 is a team of passionate Australian engineers and strategists. We're always looking for talent to join our growing team as we simplify IT for businesses.", 
+      links: [{ label: 'About Us', href: '/about' }, { label: 'Careers', href: '/about/careers' }]
+    };
+  }
+  if (q.match(/pricing|cost|quote/)) {
+    return { 
+      text: "Our IT and telco solutions are scoped to your exact requirements. Contact us for a free consultation and we'll provide a transparent proposal within 1-2 business days.", 
       links: [{ label: 'Get a Proposal', href: '/contact' }]
     };
   }
-  if (q.match(/contact|call|phone|speak|talk|consult|meeting|demo/)) {
-    return { 
-      text: "The best way to talk to us is via our free consultation — a quick call with a C9 engineer who will understand your environment before suggesting anything. You can also call us directly on 1800 000 299 during business hours. We respond to all enquiries within 1 business day.",
-      links: [{ label: 'Book Free Consultation', href: '/contact' }, { label: 'Industries', href: '/industries' }]
-    };
-  }
-  if (q.match(/backup|disaster.?recovery|dr|data.?loss|restore|cloud.?backup/)) {
-    return { 
-      text: "C9 provides SaaS Backup for Microsoft 365 — protecting your emails, SharePoint, Teams, and OneDrive data with daily automated backups and rapid restoration. For infrastructure, C9 designs disaster recovery strategies with defined RTOs (Recovery Time Objectives) based on your business criticality.",
-      links: [{ label: 'Managed IT', href: '/managed-it' }]
-    };
-  }
-  if (q.match(/onboard|setup|new starter|new employee|provisioning|offboard/)) {
-    return { 
-      text: "C9 handles full employee onboarding and offboarding — device provisioning, account creation, Microsoft 365 licence assignment, and access revocation for leavers. New starters are set up and ready on day one. Departing staff are offboarded immediately with all access revoked. This is included in C9 Managed IT.",
-      links: [{ label: 'Helpdesk Services', href: '/managed-it/helpdesk-support' }]
-    };
-  }
-  if (q.match(/about|who.?are|c9|company|c9 communications|australian/)) {
-    return { 
-      text: "C9 Communications is an Australian telco and managed IT provider — we handle voice, internet, networking, mobile, Microsoft 365, cloud, and cybersecurity under one roof. Every solution is designed, deployed, and supported by our local engineering team. We've completed 500+ office relocations with zero downtime reported.",
-      links: [{ label: 'Our Industries', href: '/industries' }]
-    };
-  }
+
   // Default fallback
   return { 
-    text: "Great question! I'm not sure I have a specific answer for that, but I can help you with Managed IT, helpdesk support, NBN and fibre internet, voice and phone systems, Microsoft 365, cybersecurity, mobile fleet management, or industry-specific IT solutions. What would you like to know more about?",
-    links: [{ label: 'All Services', href: '/managed-it' }, { label: 'Contact Us', href: '/contact' }]
+    text: "Great question! I can help you with Managed IT, Helpdesk, Fast Fibre internet, NBN, Voice AI, Security (C9 Defense), or industry-specific IT solutions. What would you like to know more about?",
+    links: [{ label: 'Explore All Services', href: '/managed-it' }, { label: 'Contact Us', href: '/contact' }]
   };
 }
 
@@ -228,14 +287,14 @@ const TypingBubble = ({ text, links, onDone }: { text: string; links?: { label: 
 
   return (
     <div>
-      <p className="text-[13px] leading-relaxed text-[#0c1024]" style={fontStyle}>
+      <p className="c9-body !text-[13.5px] !leading-relaxed text-[#0c1024]">
         {displayed}
         {!done && <span className="inline-block w-[2px] h-[14px] bg-[#5D00D6] ml-0.5 animate-pulse align-middle" />}
       </p>
       {done && links && links.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-3">
           {links.map(l => (
-            <Link key={l.href} href={l.href} className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full text-[11px] font-bold text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all" style={fontStyle}>
+            <Link key={l.href} href={l.href} className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full c9-eyebrow !text-[10px] !text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all">
               {l.label} <ArrowRight size={10} />
             </Link>
           ))}
@@ -314,23 +373,21 @@ export const BusinessAdvisor = () => {
                   <div className="w-7 h-7 rounded-lg bg-[#5D00D6] flex items-center justify-center shrink-0">
                     <Sparkles size={13} className="text-white" />
                   </div>
-                  <span className="text-[15px] font-bold text-[#0c1024] tracking-tight" style={fontStyle}>C9 Advisor</span>
-                  <span className="hidden sm:inline text-[12px] text-gray-400" style={fontStyle}>— powered by C9 content</span>
+                  <span className="text-[15px] font-medium text-[#0c1024] tracking-tight">C9 Advisor</span>
+                  <span className="hidden sm:inline text-[11px] text-gray-400">— powered by C9 content</span>
                 </div>
                 <div className="flex items-center gap-2">
                   {/* Tab switcher */}
                   <div className="flex bg-gray-50 rounded-full p-0.5 gap-0.5">
                     <button
                       onClick={() => setActiveTab('industry')}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-bold transition-all ${activeTab === 'industry' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
-                      style={fontStyle}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium transition-all ${activeTab === 'industry' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
                     >
                       <Building2 size={12} /> Industry
                     </button>
                     <button
                       onClick={() => { setActiveTab('chat'); setTimeout(() => inputRef.current?.focus(), 100); }}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-bold transition-all ${activeTab === 'chat' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
-                      style={fontStyle}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium transition-all ${activeTab === 'chat' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
                     >
                       <MessageSquare size={12} /> Ask AI
                     </button>
@@ -349,7 +406,7 @@ export const BusinessAdvisor = () => {
                 <>
                   {!selected ? (
                     <div className="p-5">
-                      <p className="text-[12px] font-bold uppercase tracking-widest text-gray-400 mb-4" style={fontStyle}>Select your industry</p>
+                      <p className="c9-eyebrow !text-[10px] !text-gray-400 mb-4">Select your industry</p>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                         {INDUSTRIES.map((ind) => {
                           const Icon = ind.icon;
@@ -365,8 +422,8 @@ export const BusinessAdvisor = () => {
                                 <Icon size={18} strokeWidth={1.8} />
                               </div>
                               <div>
-                                <div className="text-[13px] font-bold text-[#0c1024] leading-tight" style={fontStyle}>{ind.label}</div>
-                                <div className={`inline-flex items-center mt-1 px-1.5 py-0.5 rounded-md text-[10px] font-bold border ${ind.color}`} style={fontStyle}>{ind.tag}</div>
+                                <div className="text-[13px] font-medium text-[#0c1024] leading-tight">{ind.label}</div>
+                                <div className={`inline-flex items-center mt-1 px-1.5 py-0.5 rounded-md text-[9px] font-medium border ${ind.color}`}>{ind.tag}</div>
                               </div>
                             </motion.button>
                           );
@@ -381,20 +438,20 @@ export const BusinessAdvisor = () => {
                       className="grid sm:grid-cols-[1fr_200px]"
                     >
                       <div className="p-5">
-                        <button onClick={() => setSelected(null)} className="flex items-center gap-1 text-[11px] font-bold text-[#5D00D6]/60 hover:text-[#5D00D6] transition-colors mb-4 uppercase tracking-widest" style={fontStyle}>
+                        <button onClick={() => setSelected(null)} className="flex items-center gap-1 c9-eyebrow !text-[#5D00D6]/60 hover:text-[#5D00D6] mb-4">
                           <ArrowRight size={10} className="rotate-180" /> Back
                         </button>
-                        <h4 className="text-[18px] font-bold text-[#0c1024] mb-1 tracking-tight" style={fontStyle}>
+                        <h4 className="c9-card-title !text-[18px] text-[#0c1024] mb-1">
                           Best for <span className="text-[#5D00D6]">{selected.label}</span>
                         </h4>
-                        <p className="text-[13px] text-gray-400 leading-relaxed mb-4" style={fontStyle}>{selected.benefit}</p>
+                        <p className="c9-body !text-[13px] !text-gray-400 mb-4">{selected.benefit}</p>
                         <div className="flex flex-col gap-2">
                           {selected.recommend.map(rec => (
                             <Link key={rec.name} href={rec.href} onClick={() => setIsOpen(false)}
                               className="group flex items-center justify-between px-4 py-3 rounded-xl border border-gray-100 hover:border-[#5D00D6]/30 hover:bg-[#5D00D6]/[0.02] transition-all">
                               <div className="flex items-center gap-2.5">
                                 <CheckCircle2 size={14} className="text-[#5D00D6]" />
-                                <span className="text-[14px] font-semibold text-[#0c1024]" style={fontStyle}>{rec.name}</span>
+                                <span className="text-[14px] font-medium text-[#0c1024]">{rec.name}</span>
                               </div>
                               <ArrowRight size={13} className="text-gray-300 group-hover:text-[#5D00D6] group-hover:translate-x-0.5 transition-all" />
                             </Link>
@@ -406,10 +463,10 @@ export const BusinessAdvisor = () => {
                           <div className="w-9 h-9 rounded-xl bg-[#5D00D6] flex items-center justify-center mb-4">
                             <PhoneCall size={16} className="text-white" />
                           </div>
-                          <h5 className="text-[14px] font-bold text-white mb-1 leading-snug" style={fontStyle}>Talk to an Engineer</h5>
-                          <p className="text-[12px] text-gray-400 leading-relaxed" style={fontStyle}>15-min free call tailored to {selected.label}.</p>
+                          <h5 className="text-[14px] font-medium text-white mb-1 leading-snug">Talk to an Engineer</h5>
+                          <p className="text-[12px] text-gray-400 leading-relaxed">15-min free call tailored to {selected.label}.</p>
                         </div>
-                        <Link href="/contact" className="mt-4 block w-full py-2.5 text-center rounded-xl bg-[#5D00D6] text-white font-bold text-[13px] hover:bg-[#4c00b0] transition-colors" style={fontStyle}>
+                        <Link href="/contact" className="mt-4 block w-full py-2.5 text-center rounded-xl bg-[#5D00D6] text-white font-medium text-[13px] hover:bg-[#4c00b0] transition-colors">
                           Book Free Session →
                         </Link>
                       </div>
@@ -435,18 +492,18 @@ export const BusinessAdvisor = () => {
                           : 'bg-gray-50 border border-gray-100 rounded-bl-sm'}`}
                         >
                           {msg.role === 'user' ? (
-                            <p className="text-[13px] text-white leading-relaxed" style={fontStyle}>{msg.text}</p>
+                            <p className="c9-body !text-[13.5px] !text-white !leading-relaxed">{msg.text}</p>
                           ) : (
                             // Only animate the last AI message
                             msg.id === messages.filter(m => m.role === 'ai').slice(-1)[0]?.id && !typingDone ? (
                               <TypingBubble text={msg.text} links={msg.links} onDone={() => setTypingDone(true)} />
                             ) : (
                               <div>
-                                <p className="text-[13px] leading-relaxed text-[#0c1024]" style={fontStyle}>{msg.text}</p>
+                                <p className="c9-body !text-[13.5px] !leading-relaxed text-[#0c1024]">{msg.text}</p>
                                 {msg.links && (
                                   <div className="flex flex-wrap gap-2 mt-3">
                                     {msg.links.map(l => (
-                                      <Link key={l.href} href={l.href} className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full text-[11px] font-bold text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all" style={fontStyle}>
+                                      <Link key={l.href} href={l.href} className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full c9-eyebrow !text-[10px] !text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all">
                                         {l.label} <ArrowRight size={10} />
                                       </Link>
                                     ))}
@@ -485,8 +542,7 @@ export const BusinessAdvisor = () => {
                     <div className="px-5 pb-2 flex flex-wrap gap-1.5">
                       {SUGGESTIONS.map(s => (
                         <button key={s} onClick={() => sendMessage(s)}
-                          className="px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/15 rounded-full text-[11px] font-semibold text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all"
-                          style={fontStyle}
+                          className="px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/15 rounded-full c9-eyebrow !text-[10px] !text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all"
                         >
                           {s}
                         </button>
@@ -496,16 +552,15 @@ export const BusinessAdvisor = () => {
 
                   {/* Input */}
                   <div className="border-t border-gray-50 px-4 py-3 flex items-center gap-2">
-                    <input
-                      ref={inputRef}
-                      value={input}
-                      onChange={e => setInput(e.target.value)}
-                      onKeyDown={e => { if (e.key === 'Enter') sendMessage(); }}
-                      placeholder="Ask about Managed IT, internet, voice, security..."
-                      className="flex-1 text-[13px] text-[#0c1024] placeholder:text-gray-300 outline-none bg-transparent"
-                      style={fontStyle}
-                      disabled={isTyping}
-                    />
+                      <input
+                        ref={inputRef}
+                        value={input}
+                        onChange={e => setInput(e.target.value)}
+                        onKeyDown={e => { if (e.key === 'Enter') sendMessage(); }}
+                        placeholder="Ask about Managed IT, internet, voice, security..."
+                        className="flex-1 text-[13.5px] text-[#0c1024] placeholder:text-gray-300 outline-none bg-transparent"
+                        disabled={isTyping}
+                      />
                     <button
                       onClick={() => sendMessage()}
                       disabled={!input.trim() || isTyping}
@@ -541,7 +596,7 @@ export const BusinessAdvisor = () => {
                 onClick={() => setIsOpen(true)}
                 className="advisor-pill flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-[#5D00D6]/20 group hover:scale-[0.985] transition-transform"
               >
-                <span className="text-[14px] font-semibold text-gray-600 tracking-tight group-hover:text-[#5D00D6] transition-colors whitespace-nowrap" style={fontStyle}>
+                <span className="text-[14px] font-medium text-gray-600 tracking-tight group-hover:text-[#5D00D6] transition-colors whitespace-nowrap">
                   <span className="hidden sm:inline">What type of business are you building?</span>
                   <span className="sm:hidden">C9 AI Advisor</span>
                 </span>

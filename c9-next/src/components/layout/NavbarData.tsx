@@ -47,9 +47,9 @@ export const TELCO_SERVICES_CONTENT: Record<string, any> = {
   },
   voice: {
     heading: 'Business Voice',
-    description: "C9 replaces legacy phone infrastructure with the C9X cloud phone system — a fully managed, Microsoft Teams-integrated voice platform built for Australian businesses that need reliability, flexibility, and a local team behind it.",
+    description: "C9 replaces legacy phone infrastructure with the C9 Voice cloud phone system — a fully managed, Microsoft Teams-integrated voice platform built for Australian businesses that need reliability, flexibility, and a local team behind it.",
     options: [
-      { title: 'C9X Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording — no hardware required.', icon: <Phone size={20} /> },
+      { title: 'C9 Voice Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording — no hardware required.', icon: <Phone size={20} /> },
       { title: 'Microsoft Teams Calling', desc: 'Make and receive business calls directly inside Teams — C9 handles the provisioning, porting, and ongoing management.', icon: <Headphones size={20} /> },
       { title: 'SIP Trunking', desc: 'Retain your existing phone hardware and phone numbers while connecting to the C9 voice network for better reliability and cost.', icon: <Database size={20} /> }
     ]
@@ -144,7 +144,7 @@ export const TELCO_MENU = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />, label: 'C9X', path: '#' },
+            { icon: <Phone size={14} />, label: 'C9 Voice', path: '/telco/c9voice' },
             { icon: <Headphones size={14} />, label: 'Inbound Services', path: '#' },
             { icon: <Phone size={14} />, label: 'Microsoft Teams Calling', path: '#' },
             { icon: <Network size={14} />, label: 'SIP Trunking', path: '#' },

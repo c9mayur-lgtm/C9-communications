@@ -69,33 +69,33 @@ export const WpSolutions = () => {
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
         <div className="flex flex-col mb-16 gap-4">
-          <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>COMPLETE WORKPLACE MANAGEMENT</span>
-          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <span className="c9-eyebrow !text-white mb-4 block">COMPLETE WORKPLACE MANAGEMENT</span>
+          <h2 className="c9-section-heading !text-white mb-6">
             Your entire workplace.<br />Managed from one place.
           </h2>
-          <p className="text-white/85 text-[18px] md:text-[20px] max-w-[720px] leading-relaxed mt-2 font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <p className="c9-body !text-white/85 max-w-[720px]">
             From the boardroom screen to the front-door camera — C9 manages every layer of your physical and digital workplace so your team can focus on work, not IT.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((s, i) => (
-            <div key={i} className="bg-white p-6 md:p-8 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
+            <div key={i} className="bg-white p-6 md:p-10 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
               {/* Icon */}
               <div className="mb-6">
-                <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
+                <s.icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />
               </div>
 
               {/* Title */}
-              <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.title}</h3>
+              <h3 className="c9-card-title mb-3 text-[#0c1024] group-hover:text-[#5D00D6] transition-colors">{s.title}</h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-[18px] mb-6 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.desc}</p>
+              <p className="c9-body mb-6 flex-grow">{s.desc}</p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {s.tags.map((tag, ti) => (
-                  <span key={ti} className="text-[11px] font-semibold uppercase tracking-wider text-[#5D00D6] bg-[#5D00D6]/8 px-3 py-1 rounded-full" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <span key={ti} className="c9-eyebrow !text-[#5D00D6] !text-[9px] bg-[#5D00D6]/5 px-3 py-1 rounded-full border border-[#5D00D6]/10">
                     {tag}
                   </span>
                 ))}
@@ -103,15 +103,7 @@ export const WpSolutions = () => {
 
               {/* Optional italic note */}
               {s.note && (
-                <p className="text-[13px] text-gray-400 italic mb-3" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{s.note}</p>
-              )}
-
-              {/* Defense callout - light */}
-              {s.defense && (
-                <div className="flex items-center gap-2 border border-[#5D00D6]/20 bg-[#5D00D6]/5 rounded-lg px-3 py-2.5 mb-3">
-                  <span className="text-[#5D00D6] text-[15px] shrink-0">🛡</span>
-                  <p className="text-[12px] font-semibold text-[#5D00D6] leading-snug m-0" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Pairs with C9 Defense<span className="font-normal text-[#5D00D6]/70 ml-1">for physical + cyber security coverage</span></p>
-                </div>
+                <p className="text-[13px] text-gray-400 italic mb-4">{s.note}</p>
               )}
 
               {/* Defense callout - ultra-compact stacked style */}
@@ -120,24 +112,24 @@ export const WpSolutions = () => {
                   href="https://c9defense.com.au/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-[#0c1024] flex flex-col px-3 py-2 rounded-md mb-3 hover:bg-[#1C223A] transition-all group/defense"
+                  className="bg-[#0c1024] flex flex-col px-3 py-2.5 rounded-none mb-4 hover:bg-[#1C223A] transition-all group/defense"
                 >
-                  <p className="text-[11px] font-medium text-white mb-0.5" style={{ fontFamily: '"Proxima Nova", sans-serif', fontSize: '11px !important' }}>Pairs with C9 Defense</p>
-                  <p className="text-[10px] font-normal text-white/50 leading-snug group-hover/defense:text-white transition-colors" style={{ fontFamily: '"Proxima Nova", sans-serif', fontSize: '10px !important' }}>{s.defenseDark} →</p>
-                </a>
+                    <p className="c9-eyebrow !text-white !text-[8.5px] mb-0.5">Pairs with C9 Defense</p>
+                    <p className="c9-body !text-[11px] !text-white/50 !leading-snug group-hover/defense:text-white transition-colors">{s.defenseDark} →</p>
+                  </a>
               )}
 
-              <div className="w-full h-[1px] bg-gray-200 mt-auto mb-5"></div>
-              <div className="flex items-center text-[13px] font-bold text-[#5D00D6] group-hover:underline uppercase tracking-wider" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <div className="w-full h-[1px] bg-gray-100 mt-auto mb-6"></div>
+              <div className="flex items-center c9-eyebrow !text-[#5D00D6] !text-[10px] group-hover:underline">
                 Learn more
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex justify-center mt-12">
-          <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group">
-            View All Solutions <ArrowRight className="transition-transform group-hover:translate-x-1" />
+        <div className="flex justify-center mt-14">
+          <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group px-10 h-14 rounded-full font-medium">
+            View All Solutions <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
       </div>

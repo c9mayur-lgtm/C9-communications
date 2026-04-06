@@ -41,8 +41,8 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             <div className="p-8 border-r border-gray-50 flex flex-col gap-10">
               {data.heading && (
                 <div className="max-w-[280px]">
-                  <h2 className="text-[26px] md:text-[34px] font-semibold text-slate-800 leading-[1.2] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                    {data.heading}
+                  <h2 className="text-[22px] md:text-[24px] font-bold text-slate-800 leading-[1.3] tracking-tight">
+                     {data.heading}
                   </h2>
                 </div>
               )}
@@ -51,11 +51,11 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                   {col.sections.map((sec: any, si: number) => (
                     <div key={si}>
                       <div className="flex items-center justify-between mb-5 border-b border-gray-50 pb-2">
-                        <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-30 leading-none">{sec.heading}</h4>
+                        <h4 className="c9-eyebrow !text-[9px] !text-[#5D00D6]/40 leading-none">{sec.heading}</h4>
                         {sec.action && (
                           <Link 
                             href={sec.action.path} 
-                            className="bg-[#1c1c1c] text-white text-[12px] font-bold px-4 py-2 rounded-full hover:bg-black transition-all shadow-xl shadow-black/10 active:scale-95 shrink-0"
+                            className="bg-[#0c1024] text-white text-[11px] font-medium px-4 py-1.5 rounded-full hover:bg-black transition-all shadow-xl shadow-black/10 active:scale-95 shrink-0"
                           >
                             {sec.action.label}
                           </Link>
@@ -69,7 +69,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                             className="group flex items-center gap-3 text-slate-500 hover:text-[#5D00D6] transition-all"
                           >
                             <div className="w-1 h-1 rounded-full bg-[#5D00D6] scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                            <span className="text-[14px] font-medium tracking-tight transition-transform group-hover:translate-x-1">{item.label}</span>
+                            <span className="text-[13.5px] font-semibold tracking-tight transition-transform group-hover:translate-x-1">{item.label}</span>
                           </Link>
                         ))}
                       </div>
@@ -81,14 +81,14 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
             {/* COLUMN 2: HIGHLIGHTS/CHALLENGES */}
             <div className="p-10 border-r border-gray-50 bg-[#FCFBFE]/30">
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-30">Modern Infrastructure</h4>
+              <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-8 opacity-40">Modern Infrastructure</h4>
               <div className="grid grid-cols-2 gap-5">
                 {(data.challenges || data.modernization)?.map((c: any, i: number) => (
                   <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[24px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-500 cursor-pointer overflow-hidden leading-tight">
-                    <div className="mb-4 p-4 rounded-full bg-slate-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white group-hover:scale-110 transition-all duration-500">
+                    <div className="mb-4 p-4 rounded-full bg-purple-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white group-hover:scale-110 transition-all duration-500">
                       {c.icon}
                     </div>
-                    <span className="text-[13px] font-semibold text-slate-700 px-2">{c.title}</span>
+                    <span className="text-[12px] font-bold text-slate-700 px-2">{c.title}</span>
                     <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
                 ))}
@@ -99,7 +99,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             <div className="p-10 bg-[#FCFBFE]">
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-8 opacity-30">
+                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-8 opacity-40">
                     {data.sidebar?.heading || "Support & Resources"}
                   </h4>
                   <div className="flex flex-col gap-6">
@@ -109,7 +109,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                           <div className="p-1 px-2.5 bg-white rounded-md border border-gray-100 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                             {<ChevronRight size={14} />}
                           </div>
-                          <span className="text-[14px] font-semibold text-slate-700 group-hover:text-[#5D00D6] transition-colors">{item}</span>
+                          <span className="text-[13px] font-medium text-slate-700 group-hover:text-[#5D00D6] transition-colors">{item}</span>
                         </div>
                       ) : item.path && item.path !== '#' ? (
                         <Link key={i} href={item.path} className="group flex items-center gap-4">
@@ -117,8 +117,8 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                             {item.icon || <ChevronRight size={14} />}
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[14px] font-bold text-slate-700 group-hover:text-[#5D00D6] transition-colors leading-[1.1]">{item.label || item.title}</span>
-                            {item.desc && <p className="text-[12px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
+                            <span className="text-[13px] font-medium text-slate-700 group-hover:text-[#5D00D6] transition-colors leading-[1.1]">{item.label || item.title}</span>
+                            {item.desc && <p className="text-[11px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
                           </div>
                         </Link>
                       ) : (
@@ -127,7 +127,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                             {item.icon || <ChevronRight size={14} />}
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[14px] font-semibold text-slate-400 leading-[1.1]">{item.label || item.title}</span>
+                            <span className="text-[13px] font-bold text-slate-400 leading-[1.1]">{item.label || item.title}</span>
                           </div>
                         </div>
                       )
@@ -361,27 +361,27 @@ export const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b bg-white ${
-        isScrolled ? 'py-3 shadow-sm border-gray-100' : 'py-5 border-gray-100'
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 border-b bg-white/95 backdrop-blur-md ${
+        isScrolled ? 'py-2.5 shadow-sm border-gray-100' : 'py-4 border-gray-100'
       }`}
       onMouseLeave={handleLeave}
     >
       <div className="container mx-auto px-6 md:px-8 flex items-center justify-between" style={{ maxWidth: '1240px' }}>
-        <Link href="/" className="flex items-center gap-3 shrink-0">
+        <Link href="/" className="flex items-center gap-3 shrink-0 transition-transform active:scale-95">
             <img 
               src="/images/c9_logo_scrolled.svg" 
               alt="C9 Communications" 
-              className="h-[45px] w-auto object-contain" 
+              className="h-[36px] w-auto object-contain" 
             />
         </Link>
         
-        <div className="hidden lg:flex gap-1 font-semibold text-[14px] items-center">
+        <div className="hidden lg:flex gap-1.5 items-center">
           {TABS.map(tab => {
             const isOpen = openMenu === tab.menuKey;
             return (
               <div key={tab.name} className="relative h-full flex items-center" onMouseEnter={() => handleEnter(tab.menuKey)}>
-                <button className={`flex items-center gap-1 px-4 py-2 rounded-xl font-semibold transition-all tracking-tight ${
-                  isOpen ? 'text-[#5D00D6] bg-[#5D00D6]/5' : (isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]')
+                <button className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[13px] font-medium tracking-tight transition-all duration-300 ${
+                  isOpen ? 'text-[#5D00D6] bg-purple-50/80 shadow-sm' : (isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]')
                 }`}>
                   {tab.name}
                   <ChevronDown size={14} className={`transition-transform duration-300 opacity-40 ${isOpen ? 'rotate-180 text-[#5D00D6] opacity-100' : ''}`} />
@@ -391,24 +391,24 @@ export const Navbar = () => {
           })}
         </div>
         
-        <div className="flex items-center gap-4 md:gap-6">
-          <div className={`hidden lg:flex flex-col items-end border-r pr-6 mr-1 ${isScrolled ? 'border-gray-200' : 'border-gray-300'}`}>
-            <span className={`text-[10px] font-semibold uppercase tracking-[0.2em] mb-0.5 ${isScrolled ? 'text-slate-400' : 'text-slate-500'}`}>Client Support</span>
-            <a href="tel:1800000299" className={`text-[15px] font-bold tracking-tight hover:text-[#5D00D6] transition-colors ${isScrolled ? 'text-slate-600' : 'text-slate-800'}`}>1800 000 299</a>
+        <div className="flex items-center gap-4 md:gap-7">
+          <div className={`hidden lg:flex flex-col items-end border-r pr-7 mr-1 ${isScrolled ? 'border-gray-200' : 'border-gray-300'}`}>
+            <span className="c9-eyebrow !text-[9px] !text-slate-400 mb-1 leading-none">Client Support</span>
+            <a href="tel:1800000299" className={`text-[14px] font-medium tracking-tight hover:text-[#5D00D6] transition-colors leading-none font-dm-sans ${isScrolled ? 'text-slate-600' : 'text-slate-800'}`}>1800 000 299</a>
           </div>
           
           <Button 
             size="sm"
-            className="hidden sm:flex transition-all bg-[#1c1c1c] text-white hover:bg-black font-semibold tracking-tight px-6 rounded-full"
+            className="hidden sm:flex transition-all bg-[#0c1024] text-white hover:bg-black font-bold tracking-tight px-6 rounded-full text-[11px] h-10 border-none shadow-lg shadow-black/5"
           >
             C9 defense
           </Button>
           
           <button 
-            className="lg:hidden p-2 rounded-lg transition-colors text-[#0c1024] hover:bg-gray-100"
+            className="lg:hidden p-2.5 rounded-xl transition-colors text-[#0c1024] hover:bg-gray-50 border border-gray-100"
             onClick={() => setIsMobileMenuOpen(true)}
           >
-            <Menu size={24} />
+            <Menu size={22} />
           </button>
         </div>
       </div>

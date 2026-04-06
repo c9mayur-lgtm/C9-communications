@@ -4,7 +4,7 @@ import React from 'react';
 
 export const WpClientTicker = () => {
   return (
-    <section className="bg-white py-12 md:py-16 border-t border-b border-gray-100 overflow-hidden relative">
+    <section className="bg-white py-8 md:py-10 border-t border-b border-gray-100 overflow-hidden relative">
       <style>{`
         @keyframes ticker-left {
           0%   { transform: translateX(0); }
@@ -46,7 +46,7 @@ export const WpClientTicker = () => {
 
       {/* Heading */}
       <p
-        className="text-center font-bold tracking-[0.1em] md:tracking-[0.3em] uppercase text-[#5D00D6] text-[11px] md:text-[13px] mb-6 md:mb-10 px-4 font-sans"
+        className="text-center font-bold tracking-[0.1em] md:tracking-[0.3em] uppercase text-[#5D00D6] text-[11px] md:text-[13px] mb-4 md:mb-6 px-4 font-sans"
         style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
         Trusted by leading Australian businesses
       </p>
@@ -57,7 +57,7 @@ export const WpClientTicker = () => {
       <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-[40px] md:w-[100px]"
         style={{ background: 'linear-gradient(to left, #ffffff 80%, transparent)' }} />
 
-      <div className="ticker-wrapper overflow-hidden py-4 md:py-8">
+      <div className="ticker-wrapper overflow-hidden py-2 md:py-4">
         <div className="ticker-row-left" style={{ animationDuration: '60s' }}>
           {[
             { name: 'Arthritis',        logo: '/images/clients/Arthritis.png' },

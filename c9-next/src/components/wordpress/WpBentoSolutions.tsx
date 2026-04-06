@@ -14,8 +14,6 @@ import { Button } from "@/components/ui/button";
 
 const ease = [0.22, 1, 0.36, 1] as any;
 
-const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };
-
 export const WpBentoSolutions = () => {
   const [activeScreen, setActiveScreen] = useState(0);
   
@@ -31,13 +29,13 @@ export const WpBentoSolutions = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         {/* Section Header */}
         <div className="flex flex-col mb-12 max-w-2xl px-2 text-left">
-          <span className="text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.3em] mb-3 block" style={fontStyle}>
+          <span className="c9-eyebrow mb-3 block">
             COMPLETE WORKPLACE MANAGEMENT
           </span>
-          <h2 className="text-[30px] md:text-[36px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" style={fontStyle}>
+          <h2 className="c9-section-heading text-[#0c1024] mb-6">
             Your entire workplace.<br />Managed from one place.
           </h2>
-          <p className="text-gray-500 text-[16px] md:text-[17px] leading-relaxed font-medium" style={fontStyle}>
+          <p className="c9-body !text-gray-500">
             From the boardroom screen to the front-door camera — C9 manages every layer so your team can focus on work.
           </p>
         </div>
@@ -85,7 +83,7 @@ export const WpBentoSolutions = () => {
                           {[1, 2, 3, 4].map((user, i) => (
                             <div key={i} className="flex-1 h-full py-1.5">
                               <div className={`w-full h-full rounded-md bg-[#2d2d2d] relative flex items-center justify-center overflow-hidden ${i === 1 ? 'ring-2 ring-[#5D00D6]/40' : ''}`}>
-                                  <div className="w-5 h-5 rounded-full bg-white/5 flex items-center justify-center text-[7px] text-white/50 font-bold border border-white/5">{['JD', 'MS', 'AK', 'PR'][i]}</div>
+                                  <div className="w-5 h-5 rounded-full bg-white/5 flex items-center justify-center text-[7px] text-white/50 font-medium border border-white/5">{['JD', 'MS', 'AK', 'PR'][i]}</div>
                               </div>
                             </div>
                           ))}
@@ -124,15 +122,15 @@ export const WpBentoSolutions = () => {
                     >
                         <div className="absolute top-4 left-6 flex items-center gap-2">
                           <motion.div className="w-1.5 h-1.5 rounded-full bg-red-500" animate={{ opacity: [1, 0, 1] }} transition={{ duration: 1.5, repeat: Infinity }} />
-                          <span className="text-[9px] text-white/50 font-bold tracking-widest uppercase" style={fontStyle}>Smart Display</span>
+                          <span className="c9-eyebrow !text-white/50 !text-[8.5px]">Smart Display</span>
                         </div>
                         <div className="w-full h-full border border-dashed border-[#5D00D6]/40 rounded-[30px] flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-[#5D00D6]/10 to-transparent relative">
                           <motion.div animate={{ y: [-3, 3, -3] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="w-14 h-14 rounded-full bg-[#5D00D6] flex items-center justify-center text-white shadow-[0_0_30px_rgba(93,0,214,0.4)] relative z-10">
                               <MonitorPlay size={28} />
                           </motion.div>
                           <div className="flex flex-col items-center gap-1 relative z-10">
-                              <div className="text-white text-[13px] font-bold tracking-tight" style={fontStyle}>Active Mode</div>
-                              <div className="text-white/30 text-[9px] font-medium uppercase tracking-[0.3em]" style={fontStyle}>C9 Managed</div>
+                              <div className="text-white text-[13px] font-medium tracking-tight">Active Mode</div>
+                              <div className="c9-eyebrow !text-white/30 !text-[8.5px]">C9 Managed</div>
                           </div>
                         </div>
                     </motion.div>
@@ -154,17 +152,17 @@ export const WpBentoSolutions = () => {
 
               {/* Content Area - Aligned */}
               <div className="flex flex-col flex-1 text-left px-1">
-                <h3 className="text-[24px] md:text-[26px] font-bold text-[#0c1024] mb-3 tracking-tight" style={fontStyle}>
+                <h3 className="c9-card-title text-[#0c1024] mb-3">
                   Video Conferencing & Displays
                 </h3>
-                <p className="text-gray-500 text-[15px] md:text-[16px] leading-relaxed mb-6 font-medium max-w-[95%]" style={fontStyle}>
+                <p className="c9-body mb-6 max-w-[95%]">
                   End-to-end deployment for Teams-certified rooms. Procuring, installing, and managing smart boards and signage.
                 </p>
                 
                 {/* Push tags to bottom */}
                 <div className="mt-auto flex flex-nowrap gap-2 overflow-x-auto no-scrollbar pb-1">
                   {['MTR Rooms', 'Digital Signage', 'Boardrooms'].map(tag => (
-                    <span key={tag} className="px-3 py-1.5 bg-[#F8FAFC] border border-gray-100 text-[#5D00D6] shadow-sm text-[10px] font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={fontStyle}>{tag}</span>
+                    <span key={tag} className="px-3 py-1.5 bg-[#F8FAFC] border border-gray-100 text-[#5D00D6] shadow-sm c9-eyebrow !text-[9px] rounded-full whitespace-nowrap">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -218,16 +216,16 @@ export const WpBentoSolutions = () => {
               
               {/* Content Area - Aligned */}
               <div className="flex flex-col flex-1 text-left px-1">
-                <h3 className="text-[24px] md:text-[26px] font-bold text-[#0c1024] mb-3 tracking-tight" style={fontStyle}>
+                <h3 className="c9-card-title text-[#0c1024] mb-3">
                   Microsoft 365 Managed
                 </h3>
-                <p className="text-gray-500 text-[15px] md:text-[16px] leading-relaxed mb-6 font-medium max-w-[95%]" style={fontStyle}>
+                <p className="c9-body mb-6 max-w-[95%]">
                   Licensing, governance, and architecture done properly. Complete ecosystem management for your enterprise.
                 </p>
                 
                 {/* Push tags to bottom */}
                 <div className="mt-auto flex flex-nowrap gap-2">
-                  <span className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm text-[10px] font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={fontStyle}>M365 Ecosystem</span>
+                  <span className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm c9-eyebrow !text-[9px] rounded-full whitespace-nowrap">M365 Ecosystem</span>
                 </div>
               </div>
             </div>
@@ -245,9 +243,9 @@ export const WpBentoSolutions = () => {
                       <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
                           <ShieldCheck className="text-[#5D00D6]" size={16} />
                       </motion.div>
-                      <span className="text-[11px] font-bold text-[#0c1024]" style={fontStyle}>Security Active</span>
+                      <span className="text-[11px] font-medium text-[#0c1024]">Security Active</span>
                     </div>
-                    <div className="text-[9px] text-green-500 font-bold bg-green-50 px-1.5 py-0.5 rounded" style={fontStyle}>PATCED</div>
+                    <div className="text-[8px] text-green-500 font-medium bg-green-50 px-1.5 py-0.5 rounded uppercase tracking-wider">PATCHED</div>
                   </div>
                   
                   <div className="h-1.5 w-full bg-gray-50 rounded-full overflow-hidden mb-2 relative">
@@ -259,7 +257,7 @@ export const WpBentoSolutions = () => {
                       />
                   </div>
                   
-                  <div className="flex justify-between items-center text-[8px] text-gray-400 font-bold uppercase tracking-wider mb-2" style={fontStyle}>
+                  <div className="flex justify-between items-center text-[8px] text-gray-400 font-medium uppercase tracking-wider mb-2">
                       <span>Threat Status</span>
                       <span className="text-[#5D00D6] flex items-center gap-1"><Zap size={8} fill="currentColor" /> CLEAN</span>
                   </div>
@@ -283,14 +281,14 @@ export const WpBentoSolutions = () => {
               </div>
               
               <div className="flex flex-col flex-1 text-left">
-                <h3 className="text-[22px] font-bold text-[#0c1024] mb-3 tracking-tight" style={fontStyle}>
+                <h3 className="c9-card-title !text-[20px] text-[#0c1024] mb-3">
                   Endpoint Security
                 </h3>
-                <p className="text-gray-500 text-[15px] leading-relaxed font-medium mb-4" style={fontStyle}>
+                <p className="c9-body mb-4">
                   Laptops and tablets monitored, patched, and protected 24/7.
                 </p>
                 <div className="mt-auto flex flex-nowrap gap-2">
-                  <span className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm text-[10px] font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={fontStyle}>Security First</span>
+                  <span className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm c9-eyebrow !text-[9px] rounded-full whitespace-nowrap">Security First</span>
                 </div>
               </div>
             </div>
@@ -312,33 +310,33 @@ export const WpBentoSolutions = () => {
                       
                       {i % 2 === 0 && (
                         <motion.div className="absolute w-6 h-6 border border-[#5D00D6]/60 rounded-sm z-10" style={{ top: '20%', left: '30%' }} animate={{ opacity: [0, 1, 0], scale: [0.8, 1, 0.8] }} transition={{ duration: 2, delay: i, repeat: Infinity }}>
-                          <div className="absolute -top-1.5 left-0 text-[4px] text-[#5D00D6] font-bold uppercase tracking-tight">Person 98%</div>
+                          <div className="absolute -top-1.5 left-0 c9-eyebrow !text-[#5D00D6] !text-[5px]">Person 98%</div>
                         </motion.div>
                       )}
 
                       <div className="absolute top-1.5 left-1.5 flex items-center gap-1 z-30">
                         <motion.div className="w-1 h-1 rounded-full bg-red-600 shadow-[0_0_8px_rgba(220,38,38,0.6)]" animate={{ opacity: [1, 0.4, 1] }} transition={{ duration: 1, repeat: Infinity }} />
-                        <span className="text-[6px] text-white/40 font-bold tracking-tighter uppercase" style={fontStyle}>CH_0{i}</span>
+                        <span className="c9-eyebrow !text-white/40 !text-[6px]">CH_0{i}</span>
                       </div>
                   </div>
                 ))}
                 <div className="absolute inset-0 pointer-events-none flex flex-col justify-end p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="bg-[#0c1024]/80 backdrop-blur-sm rounded px-2 py-1 flex items-center gap-2 border border-white/5">
                       <Activity size={8} className="text-[#5D00D6]" />
-                      <div className="text-[6px] text-white/60 font-mono tracking-widest uppercase">Processing...</div>
+                      <div className="c9-eyebrow !text-white/60 !text-[6px]">Processing...</div>
                     </div>
                 </div>
               </div>
               
               <div className="flex flex-col flex-1 text-left">
-                <h3 className="text-[22px] font-bold text-[#0c1024] mb-3 tracking-tight" style={fontStyle}>
+                <h3 className="c9-card-title !text-[20px] text-[#0c1024] mb-3">
                   CCTV & Analytics
                 </h3>
-                <p className="text-gray-500 text-[15px] leading-relaxed font-medium mb-4" style={fontStyle}>
+                <p className="c9-body mb-4">
                   Cloud dashboards and real-time people-counting intelligence.
                 </p>
                 <div className="mt-auto flex flex-nowrap gap-2">
-                  <span className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm text-[10px] font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={fontStyle}>Smart Vision</span>
+                  <span className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm c9-eyebrow !text-[9px] rounded-full whitespace-nowrap">Smart Vision</span>
                 </div>
               </div>
             </div>
@@ -385,15 +383,15 @@ export const WpBentoSolutions = () => {
               </div>
               
               <div className="flex flex-col flex-1 text-left">
-                <h3 className="text-[22px] font-bold text-[#0c1024] mb-3 tracking-tight" style={fontStyle}>
+                <h3 className="c9-card-title !text-[20px] text-[#0c1024] mb-3">
                   Visitor & Access Control
                 </h3>
-                <p className="text-gray-500 text-[15px] leading-relaxed font-medium mb-4" style={fontStyle}>
+                <p className="c9-body mb-4">
                   Visitor sign-in, notifications, and encrypted access control.
                 </p>
                 <div className="mt-auto flex flex-nowrap gap-2 overflow-x-auto no-scrollbar pb-1">
                   {['Sign-in', 'NDA', 'Audit'].map(tag => (
-                    <span key={tag} className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm text-[10px] font-bold rounded-full uppercase tracking-wider whitespace-nowrap" style={fontStyle}>{tag}</span>
+                    <span key={tag} className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm c9-eyebrow !text-[9px] rounded-full whitespace-nowrap">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -404,7 +402,7 @@ export const WpBentoSolutions = () => {
 
         {/* Global CTA - Updated to C9 Brand Purple */}
         <div className="flex justify-center mt-16">
-          <Button size="lg" className="rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] px-10 py-7 text-[16px] font-bold group shadow-2xl shadow-[#5D00D6]/20 transition-all border-none" style={fontStyle}>
+          <Button size="lg" className="rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] px-10 py-7 text-[16px] font-medium group shadow-2xl shadow-[#5D00D6]/20 transition-all border-none">
             View All Workplace Solutions <ArrowRight className="ml-3 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>

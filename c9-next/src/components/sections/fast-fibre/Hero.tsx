@@ -33,15 +33,15 @@ export default function Hero() {
           <div>
             <div className="inline-flex items-center gap-2 bg-[#F3EEFF] border border-[#5D00D6]/20 rounded-full px-4 py-1.5 mb-8">
               <Award size={14} className="text-[#5D00D6]" />
-              <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em]">Telco · Fast Fibre</span>
+              <span className="c9-eyebrow !text-[11px]">Telco · Fast Fibre</span>
             </div>
 
-            <h1 className="text-[40px] md:text-[56px] lg:text-[64px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight mb-8">
+            <h1 className="c9-hero-title text-[#1A1A2E] mb-8">
               Up to 1000 Mbps fibre internet. <br />
               <span className="text-[#5D00D6]">Unlimited data. Built for business.</span>
             </h1>
 
-            <p className="text-[18px] md:text-[20px] text-[#6B7280] leading-relaxed mb-10 max-w-[580px]">
+            <p className="c9-body text-[#6B7280] mb-10 max-w-[580px] md:text-[18px]">
               C9 delivers enterprise-grade fast fibre through Fibre400 and Fibre1000 — powered by Australia's most trusted carrier networks including AAPT, Vocus, Optus, Telstra, and Aussie Broadband. High bandwidth reserved and guaranteed.
             </p>
 

@@ -48,8 +48,8 @@ export const WpWhyPartner = () => {
     <section className="py-14 md:py-20 bg-white border-t border-gray-100">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto px-6">
-          <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.4em] mb-6 block">Why Partner With Us</span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight">
+          <span className="c9-eyebrow mb-6 block">Why Partner With Us</span>
+          <h2 className="c9-section-heading">
             What global companies use C9 Communications for
           </h2>
         </div>
@@ -119,15 +119,15 @@ export const WpWhyPartner = () => {
           ].map((block, i) => (
             <div key={i} className="p-8 md:p-12 lg:p-16 border-r border-b border-gray-200 transition-all duration-300 cursor-default flex flex-col">
               <div className="mb-4 self-start">
-                <span className="px-4 py-1.5 rounded-full border bg-[#F4F0FA] border-[#5D00D6]/20 text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.08em]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <span className="c9-eyebrow !text-[#5D00D6] !text-[10px] px-4 py-1.5 rounded-full border bg-[#F4F0FA] border-[#5D00D6]/20">
                   {block.tag}
                 </span>
               </div>
               <div className="mb-6 mt-4">
                 <block.icon size={32} strokeWidth={1.5} color="#5D00D6" fill="none" />
               </div>
-              <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{block.title}</h3>
-              <p className="text-gray-600 text-[14px] md:text-[18px] leading-relaxed font-normal mb-8 flex-grow" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h3 className="c9-card-title !text-[20px] text-[#0c1024] mb-4">{block.title}</h3>
+              <p className="c9-body text-gray-600 flex-grow">
                 {block.desc}
               </p>
 
@@ -136,10 +136,10 @@ export const WpWhyPartner = () => {
                 {block.metrics.map((m, mi) => (
                   <React.Fragment key={mi}>
                     <div className="flex-1">
-                      <div className="text-[28px] font-bold text-[#5D00D6] leading-none tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                      <div className="text-[28px] font-medium text-[#5D00D6] leading-none tracking-tight">
                         <CountUp value={m.value} />
                       </div>
-                      <div className="text-[12px] text-[#6B7280] mt-1 font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                      <div className="text-[11px] text-[#6B7280] mt-2 font-medium uppercase tracking-wider">
                         {m.label}
                       </div>
                     </div>

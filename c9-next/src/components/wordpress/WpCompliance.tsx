@@ -11,11 +11,11 @@ export const WpCompliance = () => {
           
           {/* Left Column */}
           <div className="max-w-xl">
-            <h2 className="text-[36px] md:text-[48px] font-bold leading-[1.05] mb-8 text-white tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="c9-section-heading text-white mb-8">
               Compliant, accredited, and<br className="hidden md:block" />
               built for Australian business.
             </h2>
-            <p className="text-white/85 text-[18px] md:text-[20px] leading-relaxed mb-12 font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="c9-body !text-white/85 !text-[18px] mb-12">
               As an Australian telco provider, we meet every mandatory compliance obligation — and hold the accreditations your business needs to trust us with its communications.
             </p>
 

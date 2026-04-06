@@ -5,8 +5,8 @@ export const WpSimplifyingIT = () => {
     <section className="py-10 md:py-12 bg-white border-t border-gray-100">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>PROVEN EXPERIENCE</span>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <span className="c9-eyebrow mb-4 block">PROVEN EXPERIENCE</span>
+          <h2 className="c9-section-heading text-[#0c1024]">
             Simplifying IT for a complex world.
           </h2>
         </div>
@@ -40,8 +40,8 @@ export const WpSimplifyingIT = () => {
               <div className="w-14 h-14 mb-6 flex items-center justify-start">
                 <img src={f.icon} alt={f.title} className="max-w-full max-h-full object-contain object-left" />
               </div>
-              <h3 className="text-[20px] font-bold mb-3 text-[#0c1024] tracking-tight">{f.title}</h3>
-              <p className="text-gray-600 text-[14px] md:text-[18px] leading-relaxed font-normal">{f.desc}</p>
+              <h3 className="c9-card-title mb-3 text-[#0c1024]">{f.title}</h3>
+              <p className="c9-body">{f.desc}</p>
             </div>
           ))}
         </div>

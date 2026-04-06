@@ -66,8 +66,8 @@ export const WpCaseStudies = ({
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-10">
           <div className="max-w-2xl">
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{eyebrow}</span>
-            <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <span className="c9-eyebrow mb-4 block">{eyebrow}</span>
+            <h2 className="c9-section-heading text-[#0c1024]">
               {title}
             </h2>
           </div>
@@ -108,26 +108,26 @@ export const WpCaseStudies = ({
                   
                   {/* Glass Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8 md:p-10">
-                    <div className="flex items-center gap-2 text-white/60 text-[12px] font-bold uppercase tracking-widest mb-4">
-                      <div className="w-2 h-2 rounded-full bg-[#5D00D6]"></div>
+                    <div className="flex items-center gap-2 c9-eyebrow !text-white/60 !text-[8.5px] mb-4">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]"></div>
                       {cs.tag}
                     </div>
-                    <div className="text-white text-[24px] md:text-[32px] font-bold leading-tight mb-2 tracking-tight">
+                    <div className="text-white text-[24px] md:text-[28px] font-medium leading-[1.1] mb-2 tracking-tight">
                        {cs.videoText}
                     </div>
                   </div>
                 </div>
 
                 <div className="px-2">
-                   <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 group-hover:text-[#5D00D6] transition-colors leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                   <h3 className="c9-card-title text-[#0c1024] mb-3 group-hover:text-[#5D00D6] transition-colors">
                      {cs.title}
                    </h3>
-                   <p className="text-gray-500 text-[17px] md:text-[18px] leading-relaxed mb-8 line-clamp-2 font-medium">
+                   <p className="c9-body mb-8 line-clamp-2">
                      {cs.desc}
                    </p>
-                   <div className="flex items-center gap-2 text-[#5D00D6] font-semibold text-[14px] uppercase tracking-wider group/link">
+                   <div className="flex items-center gap-2 text-[#5D00D6] c9-eyebrow !text-[10px] group/link group-hover:underline">
                       Read full article 
-                      <ArrowUpRight size={16} className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                      <ArrowUpRight size={14} className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                    </div>
                 </div>
               </div>
