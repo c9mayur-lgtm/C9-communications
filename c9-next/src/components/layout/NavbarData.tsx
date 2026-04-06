@@ -144,7 +144,7 @@ export const TELCO_MENU = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />, label: 'C9 Voice', path: '/telco/c9voice' },
+            { icon: <Phone size={14} />, label: 'C9 Voice', path: '/telco/c9x' },
             { icon: <Headphones size={14} />, label: 'Inbound Services', path: '#' },
             { icon: <Phone size={14} />, label: 'Microsoft Teams Calling', path: '#' },
             { icon: <Network size={14} />, label: 'SIP Trunking', path: '#' },
