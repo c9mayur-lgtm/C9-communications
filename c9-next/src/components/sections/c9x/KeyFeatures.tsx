@@ -20,7 +20,7 @@ const FeatureCard = ({ title, body, icon: Icon, delay }: { title: string, body: 
     <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#5D00D6]/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-[#5D00D6]/20 transition-all duration-700" />
     
     <div className="relative z-10">
-        <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 mb-8 border border-white/10 group-hover:bg-[#5D00D6] group-hover:text-white group-hover:border-[#5D00D6] transition-all duration-500 group-hover:-rotate-6">
+        <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 mb-8 border border-white/10 group-hover:bg-[#5D00D6] group-hover:text-white group-hover:border-[#5D00D6] transition-all duration-500">
             <Icon size={24} strokeWidth={1.5} />
         </div>
 
@@ -31,10 +31,6 @@ const FeatureCard = ({ title, body, icon: Icon, delay }: { title: string, body: 
         <p className="text-slate-400 text-[14px] leading-relaxed font-normal mb-8 max-w-[260px]">
           {body}
         </p>
-
-        <div className="mt-auto pt-4 flex items-center gap-2 text-[10px] font-bold text-[#5D00D6] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
-            Learn Details <ChevronRight size={14} strokeWidth={3} />
-        </div>
     </div>
 
     {/* Bottom Accent */}
