@@ -147,10 +147,10 @@ export const TELCO_MENU = {
           heading: 'Voice',
           items: [
             { icon: <Phone size={14} />, label: 'Voice Systems — Overview', path: '/telco/voice-systems' },
+            { icon: <Phone size={14} />, label: 'C9 Voice Cloud Phone', path: '/telco/c9x' },
             { icon: <Headphones size={14} />, label: 'Inbound Services', path: '/telco/inbound-services' },
             { icon: <Phone size={14} />, label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { icon: <Network size={14} />, label: 'SIP Trunking', path: '/telco/sip-trunking' },
-            { icon: <Monitor size={14} />, label: 'Unified Communications', path: '#' },
             { icon: <Headphones size={14} />, label: 'Contact Centre', path: '/telco/contact-centre' },
           ]
         }
