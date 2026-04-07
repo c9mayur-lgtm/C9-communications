@@ -15,10 +15,10 @@ import FinalCTA from "@/components/sections/mobile-plans/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Business Mobile Plans | C9 Communications",
-  description: "Business mobile fleet plans for Australian businesses — 4G and 5G on Optus coverage, shared data pools, unlimited calls and texts, and a single bill for your entire fleet. Dedicated account manager for 10+ services.",
+  description: "Business mobile fleet plans for Australian businesses — 4G and 5G on Optus coverage, shared data pools, unlimited calls, and up to $500 international credit. No bill shock with automatic data throttling.",
   openGraph: {
     title: "Business Mobile Plans | C9 Communications",
-    description: "Flexible mobile fleet plans on Optus coverage. 4G from $149/month, 5G from $179/month. Shared data, unlimited calls, single bill with internet and voice.",
+    description: "Flexible mobile fleet plans with shared data and no bill shock. Up to $500 international credit included. 4G from $149/month, 5G from $179/month.",
     url: "https://c9communications.com.au/telco/mobile-plans",
     type: 'website',
   }

@@ -15,12 +15,12 @@ const AdvantageItem = ({ title, description, metric, isLast }: { title: string, 
     </div>
 
     {/* 2. BOLD TITLE */}
-    <h3 className="text-[18px] font-bold text-[#0c1024] mb-4 leading-tight tracking-tight group-hover:text-[#5D00D6] transition-colors duration-300">
+    <h3 className="c9-card-title mb-4 group-hover:text-[#5D00D6] transition-colors duration-300">
         {title}
     </h3>
 
     {/* 3. DESCRIPTION */}
-    <p className="text-gray-500 text-[15px] leading-relaxed font-normal mb-auto max-w-[280px]">
+    <p className="c9-body mb-auto max-w-[280px]">
       {description}
     </p>
 
@@ -52,14 +52,14 @@ export const TeamsCallingAdvantage = () => {
              viewport={{ once: true }}
              className="inline-flex items-center gap-2 bg-[#5D00D6]/5 px-4 py-2 rounded-full mb-8"
            >
-             <span className="c9-eyebrow !text-[#5D00D6] !text-[10px]">C9 TEAMS ADVANTAGE</span>
+             <span className="c9-eyebrow !text-[#5D00D6]">C9 TEAMS ADVANTAGE</span>
            </motion.div>
            
            <motion.h2 
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="c9-section-heading !text-[32px] md:!text-[46px]"
+             className="c9-section-heading"
            >
               Native telephony inside <br className="hidden md:block" />
               <span className="text-[#5D00D6]">the Microsoft Teams tools you already use.</span>

@@ -9,10 +9,10 @@ export default function Challenges() {
     <section className="py-12 md:py-16 bg-white border-y border-gray-100">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={fontStyle}>
+          <span className="c9-eyebrow mb-4 block">
             CHALLENGES WE SOLVE
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={fontStyle}>
+          <h2 className="c9-section-heading">
             The problems retail businesses <br className="hidden md:block" /> bring to us.
           </h2>
         </div>
@@ -42,15 +42,15 @@ export default function Challenges() {
               i === 3 ? 'pt-8 lg:pt-0 lg:pl-8' :
               'py-8 lg:py-0 lg:px-8'}`}>
               <div className="w-14 h-14 mb-6 flex items-center justify-start">
-                <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/5 border border-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] font-bold text-xl" style={fontStyle}>
+                <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/5 border border-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] font-bold text-xl">
                   0{i + 1}
                 </div>
               </div>
-              <h3 className="text-[20px] font-bold mb-4 text-[#0c1024] tracking-tight leading-snug" style={fontStyle}>{f.title}</h3>
-              <p className="text-gray-600 text-[15px] md:text-[16px] leading-relaxed font-normal mb-6" style={fontStyle}>{f.desc}</p>
+              <h3 className="c9-card-title mb-4 !text-[20px]">{f.title}</h3>
+              <p className="c9-body !text-[15px] md:!text-[16px] mb-6">{f.desc}</p>
               {f.link && (
                 <div className="mt-auto pt-2 border-t-[1px] border-gray-100 w-full">
-                  <Link href={f.link.href} className="inline-flex items-center gap-2 text-[12px] font-black text-[#5D00D6] uppercase tracking-[0.12em] hover:opacity-80 transition-opacity mt-4" style={fontStyle}>
+                  <Link href={f.link.href} className="inline-flex items-center gap-2 c9-eyebrow !text-[12px] hover:opacity-80 transition-opacity mt-4">
                     <Shield size={14} fill="currentColor" /> C9 DEFENSE — READ MORE
                   </Link>
                 </div>

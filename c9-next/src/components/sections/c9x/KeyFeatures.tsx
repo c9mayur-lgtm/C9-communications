@@ -39,13 +39,13 @@ const FeatureCard = ({ title, body, icon: Icon, delay }: { title: string, body: 
 );
 
 const features = [
-  { title: "Auto Attendant", body: "Intelligent voice menus that route callers to the right department automatically.", icon: Headset },
-  { title: "Follow Me", body: "Global diversions through to any device—never miss a business opportunity again.", icon: Repeat },
+  { title: "Command Portal", body: "Complete self-service control. Instant extension management and real-time call flow configuration.", icon: Users },
+  { title: "Global Follow Me", body: "Smart diversions to any device anywhere—never miss a business opportunity again.", icon: Repeat },
   { title: "Call Queues", body: "Distribute high-volume traffic across your team with professional handling rules.", icon: ListOrdered },
-  { title: "Call Parking", body: "Retrieve active calls from any handset in your system across any location.", icon: Inbox },
+  { title: "HD Audio Engine", body: "Crystal-clear voice quality backed by our cloud-optimized infrastructure.", icon: Volume2 },
   { title: "Time-based Routing", body: "Automatically manage after-hours, weekends, and holidays for seamless coverage.", icon: Clock },
   { title: "Teams Direct Link", body: "Make and receive PSTN calls directly inside Microsoft Teams via our unified link.", icon: Link2 },
-  { title: "HD Audio Engine", body: "Crystal-clear voice quality backed by our cloud-optimized infrastructure.", icon: Volume2 },
+  { title: "AI Analytics", body: "Real-time call transcription and sentiment analysis to optimize agent performance.", icon: Sparkles },
   { title: "eFax & Archive", body: "Digitally send and receive faxes with full number portability and cloud storage.", icon: Printer }
 ];
 

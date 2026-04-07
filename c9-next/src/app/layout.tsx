@@ -106,6 +106,9 @@ export default async function RootLayout({
     '/telco/c9voice',
     '/telco/inbound-services',
     '/telco/teams-calling',
+    '/telco/sip-trunking',
+    '/telco/contact-centre',
+    '/telco/voice-systems',
   ];
 
   const hasSelfNavFooter = pagesWithSelfNavFooter.includes(currentPath);

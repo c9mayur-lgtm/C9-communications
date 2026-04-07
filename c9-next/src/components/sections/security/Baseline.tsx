@@ -36,19 +36,19 @@ export default function Baseline() {
   ];
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Full-width purple-to-white gradient */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#946CE2] to-white z-0" />
 
       <div className="container mx-auto px-6 md:px-8 relative z-10 w-full" style={{ maxWidth: '1240px' }}>
-        <div className="flex flex-col mb-16 gap-4">
-          <span className="text-white text-[11px] font-bold uppercase tracking-[0.2em] mb-4 block">
+        <div className="flex flex-col mb-16 gap-4 text-left">
+          <span className="c9-eyebrow !text-white opacity-80 mb-4 block">
             MANAGED IT SECURITY — WHAT'S INCLUDED
           </span>
-          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.05] max-w-2xl text-left">
-            Security built into every<br />Managed IT engagement.
+          <h2 className="c9-section-heading !text-white">
+            Security built into every<br className="hidden md:block" /> Managed IT engagement.
           </h2>
-          <p className="text-white/85 text-[18px] md:text-[20px] max-w-[600px] leading-relaxed mt-2 font-normal">
+          <p className="c9-body !text-white/85 max-w-[600px] mt-2">
             You don't need to add security as an extra. Every C9 Managed IT client receives these controls as standard.
           </p>
         </div>
@@ -63,18 +63,18 @@ export default function Baseline() {
               </div>
 
               {/* Title */}
-              <h3 className="text-[22px] font-bold mb-3 text-[#1A1A2E] tracking-tight leading-tight">
+              <h3 className="c9-card-title mb-3 !text-[20px]">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <p className="text-[#6B7280] text-[18px] mb-6 leading-relaxed flex-grow font-normal">
+              <p className="c9-body mb-6 flex-grow !text-[15px] md:!text-[16px]">
                 {card.body}
               </p>
 
               {/* Divider and Footer */}
               <div className="w-full h-[1px] bg-gray-200 mt-auto mb-5"></div>
-              <div className="flex items-center text-[13px] font-bold text-[#5D00D6] group-hover:underline uppercase tracking-wider">
+              <div className="flex items-center c9-eyebrow !text-[12px] group-hover:underline">
                 Learn more
               </div>
 

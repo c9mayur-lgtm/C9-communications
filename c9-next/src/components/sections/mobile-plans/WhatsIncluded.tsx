@@ -95,13 +95,13 @@ const ITEMS = [
     ]
   },
   {
-    title: 'Global Roaming Capability',
-    desc: 'Stay connected beyond the mainland. High-speed international roaming available in 100+ countries with simple, cost-effective daily data packs.',
+    title: 'Global Capability',
+    desc: 'Bypass bill shock. Every plan includes specific international call credits ($100–$500) and automated data throttling instead of excess charges, keeping your fleet costs 100% predictable.',
     icon: Globe,
     tag: 'GLOBAL REACH',
     metrics: [
-      { value: '100+', label: 'countries' },
-      { value: '4G/5G', label: 'intl speeds' }
+      { value: '$500', label: 'incl. credit' },
+      { value: '0$', label: 'overage fees' }
     ]
   }
 ];
@@ -112,11 +112,11 @@ export default function WhatsIncluded() {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         <div className="text-center mb-10 md:mb-12 max-w-4xl mx-auto">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">The Enterprise Edge</span>
-          <h2 className="text-[36px] md:text-[52px] font-bold text-[#1A1A2E] leading-[1.1] tracking-tight">
+          <span className="c9-eyebrow mb-6 block">The Enterprise Edge</span>
+          <h2 className="c9-section-heading">
             The Business Fleet Upgrade.<br /> What the Pros use.
           </h2>
-          <p className="text-[17px] md:text-[19px] text-[#6B7280] mt-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="c9-body mt-8 max-w-3xl mx-auto !text-[17px] md:!text-[19px] font-medium">
             When your business scales beyond retail SIM packs, you need a mobile fleet that is professionally managed, contractually transparent, and built for 24/7 operations.
           </p>
         </div>
@@ -125,15 +125,15 @@ export default function WhatsIncluded() {
           {ITEMS.map((block, i) => (
             <div key={i} className="p-10 md:p-12 border-r border-b border-gray-100 flex flex-col group transition-all duration-300 hover:bg-[#F8F7FF]">
               <div className="mb-6 self-start">
-                <span className="px-3 py-1 rounded-full bg-[#5D00D6]/5 border border-[#5D00D6]/10 text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">
-                  {block.tag}
-                </span>
+                  <span className="c9-eyebrow !text-[#5D00D6] bg-[#5D00D6]/5 px-3 py-1 rounded-full border border-[#5D00D6]/10">
+                    {block.tag}
+                  </span>
               </div>
               <div className="mb-6">
                 <block.icon size={32} strokeWidth={1.5} className="text-[#5D00D6]" />
               </div>
-              <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4 tracking-tight">{block.title}</h3>
-              <p className="text-[#6B7280] text-[15.5px] leading-relaxed mb-10 flex-grow font-medium">
+              <h3 className="c9-card-title mb-4">{block.title}</h3>
+              <p className="c9-body mb-10 flex-grow font-medium">
                 {block.desc}
               </p>
 

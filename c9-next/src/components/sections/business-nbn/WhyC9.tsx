@@ -17,8 +17,8 @@ const reasons = [
   },
   {
     icon: ShieldAlert,
-    title: 'Unleash possibilities',
-    desc: 'Our remit at C9 is to "unleash business potential". We know the unlimited possibilities of the internet and we’re here to deliver all that and more with zero downtime commitments.'
+    title: 'Carrier-grade transparency',
+    desc: 'We monitor the C9 Core 24/7 with zero-contention guarantees. We don’t just rent a pipe; we provide real-time visibility into the health of your critical business infrastructure.'
   },
   {
     icon: MonitorCheck,

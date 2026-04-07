@@ -10,7 +10,7 @@ export const Testimonials = () => {
     <section className="py-24 md:py-32 bg-[#F8F9FA] overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="text-center max-w-3xl mx-auto mb-20 flex flex-col gap-6">
-          <h2 className="text-text-primary text-[40px] md:text-[48px] font-bold leading-[1.1] tracking-tight font-syne">
+          <h2 className="c9-section-heading">
             Trusted by businesses across Australia
           </h2>
         </div>
@@ -18,8 +18,8 @@ export const Testimonials = () => {
         {/* Testimonial Track (CSS Flex with Snap) */}
         <div className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-12 mask-fade-r no-scrollbar">
           {TESTIMONIALS.map((t, i) => (
-            <Card key={i} className="min-w-[320px] md:min-w-[420px] p-10 bg-white border border-brand-purple/5 shadow-sm rounded-none snap-center flex flex-col group relative">
-              <div className="absolute top-6 right-8 text-brand-purple/10 scale-x-[-1] pointer-events-none">
+            <Card key={i} className="min-w-[320px] md:min-w-[420px] p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-none snap-center flex flex-col group relative">
+              <div className="absolute top-6 right-8 text-[#5D00D6]/10 scale-x-[-1] pointer-events-none">
                  <Quote size={80} fill="currentColor" strokeWidth={0} />
               </div>
               
@@ -29,16 +29,16 @@ export const Testimonials = () => {
                 ))}
               </div>
               
-              <p className="text-[#4B5563] text-lg leading-relaxed font-sans mb-10 flex-grow relative z-10 italic">
+              <p className="c9-body !text-slate-600 mb-10 flex-grow relative z-10 italic">
                 "{t.quote}"
               </p>
               
               <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-8 relative z-10">
                 <div className="flex flex-col gap-1">
-                  <h4 className="text-[#0c1024] font-bold font-sans text-[16px] tracking-tight">{t.name}</h4>
-                  <p className="text-slate-500 text-[11px] font-bold uppercase tracking-widest font-sans">{t.company}</p>
+                  <h4 className="c9-card-title !text-[16px]">{t.name}</h4>
+                  <p className="c9-eyebrow !text-slate-500 !text-[10px]">{t.company}</p>
                 </div>
-                <Badge variant="secondary" className="bg-light-purple-bg text-brand-purple font-bold px-3 py-1 font-sans rounded-full text-[10px] uppercase tracking-wider">
+                <Badge variant="secondary" className="bg-[#5D00D6]/5 text-[#5D00D6] px-3 py-1 c9-eyebrow rounded-full">
                   {t.tag}
                 </Badge>
               </div>
@@ -47,7 +47,7 @@ export const Testimonials = () => {
         </div>
         
         <div className="flex justify-center mt-12 pt-8 border-t border-gray-100">
-          <Button variant="link" size="lg" className="text-brand-purple font-bold text-base font-dm-sans group">
+          <Button variant="link" size="lg" className="text-[#5D00D6] font-bold text-base group">
              Read Our Case Studies <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

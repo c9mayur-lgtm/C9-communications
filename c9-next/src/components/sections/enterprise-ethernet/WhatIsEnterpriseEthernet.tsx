@@ -16,10 +16,10 @@ const Card = ({ icon: Icon, title, body, delay }: any) => (
     <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
       <Icon size={28} strokeWidth={1.5} />
     </div>
-    <h3 className="text-[22px] md:text-[24px] font-bold text-[#1A1A2E] mb-6 leading-tight group-hover:text-[#5D00D6] transition-colors">
+    <h3 className="c9-card-title mb-6 group-hover:text-[#5D00D6] transition-colors">
       {title}
     </h3>
-    <p className="text-[16px] md:text-[17px] text-slate-600 leading-relaxed font-normal">
+    <p className="c9-body">
       {body}
     </p>
   </motion.div>
@@ -94,14 +94,13 @@ export default function WhatIsEnterpriseEthernet() {
         
         {/* HEADER */}
         <div className="max-w-[800px] mb-20">
-          <div className="inline-flex items-center gap-3 mb-6 px-4 py-1.5 bg-[#5D00D6]/5 rounded-none border border-[#5D00D6]/10">
-             <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6] animate-pulse" />
-             <span className="text-[#5D00D6] text-[11px] font-black uppercase tracking-[0.3em]">NBN™ ENTERPRISE ETHERNET</span>
+          <div className="mb-6 px-4 py-1.5 bg-[#5D00D6]/5 rounded-none border border-[#5D00D6]/10 inline-block">
+             <span className="c9-eyebrow">NBN™ ENTERPRISE ETHERNET</span>
           </div>
-          <h2 className="text-[36px] md:text-[48px] lg:text-[52px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight mb-10">
+          <h2 className="c9-section-heading mb-10">
             Rethink what business internet looks like at an <span className="text-[#5D00D6]">enterprise level.</span>
           </h2>
-          <p className="text-[18px] md:text-[21px] text-slate-600 leading-relaxed max-w-[700px] font-normal">
+          <p className="c9-body !text-[18px] md:!text-[21px] !text-slate-600 max-w-[700px] font-normal">
             NBN™ Enterprise Ethernet is not standard business NBN™. It is a dedicated, symmetrical connectivity product designed for larger businesses with complex needs — delivering guaranteed bandwidth, multiple classes of service, and SLA-backed performance.
           </p>
         </div>

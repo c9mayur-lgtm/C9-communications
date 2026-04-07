@@ -16,15 +16,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center bg-white overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24 lg:pt-16 lg:pb-28" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center bg-white overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24 lg:pt-16 lg:pb-28">
       <div className="container mx-auto px-6 md:px-8 relative z-10 w-full" style={{ maxWidth: '1240px' }}>
         <div className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center">
           <div className="flex flex-col items-start max-w-[640px]">
-            <h1 className="text-[38px] md:text-[52px] lg:text-[62px] tracking-tight font-bold text-[#0c1024] leading-[1.08] mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h1 className="c9-hero-title mb-6">
               Cybersecurity isn't a product you buy once. It's an <span className="text-[#5D00D6]">environment you maintain.</span>
             </h1>
             
-            <p className="text-[18px] text-[#6B7280] leading-[1.7] max-w-[560px] font-normal mb-8">
+            <p className="c9-body mb-8 max-w-[560px]">
               C9 manages your security baseline as part of every Managed IT engagement — endpoint protection, patch management, access controls, and backup. For organisations requiring continuous monitoring and Essential 8 compliance, C9 Defense extends the coverage.
             </p>
 
@@ -44,23 +44,23 @@ export default function Hero() {
           <div className="w-full flex flex-col gap-4">
             <div className="bg-slate-50 border border-slate-100 rounded-none p-6 md:p-8 flex flex-col gap-2 shadow-xl shadow-purple-900/5">
               <div className="bg-white rounded-none p-8 flex flex-col items-center text-center justify-center border border-[#5D00D6]/10 shadow-sm transition-all hover:-translate-y-1">
-                <span className="text-[12px] md:text-[14px] uppercase text-slate-400 font-bold tracking-widest mb-3">Most targeted AU sector</span>
+                <span className="c9-eyebrow !text-slate-400 !text-[12px] mb-3">Most targeted AU sector</span>
                 <span className="text-[64px] md:text-[84px] text-[#5D00D6] font-bold leading-none mb-3 tracking-tighter">#1</span>
-                <span className="text-[18px] md:text-[20px] text-[#0c1024] font-bold tracking-tight">Healthcare</span>
+                <span className="c9-card-title !text-[18px] md:!text-[20px]">Healthcare</span>
               </div>
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white rounded-none p-6 md:p-8 flex flex-col items-center justify-center text-center shadow-lg shadow-purple-900/5 border border-slate-100 transition-all hover:-translate-y-1">
-                <span className="text-[11px] md:text-[13px] uppercase text-slate-400 font-bold tracking-widest mb-2 leading-snug h-8 flex items-center">Attacks via email</span>
+                <span className="c9-eyebrow !text-slate-400 !text-[11px] mb-2 h-8 flex items-center">Attacks via email</span>
                 <span className="text-[44px] md:text-[56px] text-[#0c1024] font-bold leading-none mb-2 tracking-tight">94%</span>
-                <span className="text-[12px] md:text-[14px] text-[#5D00D6] font-bold uppercase tracking-wider">ACSC Report</span>
+                <span className="c9-eyebrow !text-[#5D00D6] !text-[11px]">ACSC Report</span>
               </div>
 
               <div className="bg-white rounded-none p-6 md:p-8 flex flex-col items-center justify-center text-center shadow-lg shadow-purple-900/5 border border-slate-100 transition-all hover:-translate-y-1">
-                <span className="text-[11px] md:text-[13px] uppercase text-slate-400 font-bold tracking-widest mb-2 leading-snug h-8 flex items-center">Avg AU breach cost</span>
+                <span className="c9-eyebrow !text-slate-400 !text-[11px] mb-2 h-8 flex items-center">Avg AU breach cost</span>
                 <span className="text-[44px] md:text-[56px] text-[#0c1024] font-bold leading-none mb-2 tracking-tight">$3.4M</span>
-                <span className="text-[12px] md:text-[14px] text-[#5D00D6] font-bold uppercase tracking-wider">IBM Cost Report</span>
+                <span className="c9-eyebrow !text-[#5D00D6] !text-[11px]">IBM Cost Report</span>
               </div>
             </div>
           </div>

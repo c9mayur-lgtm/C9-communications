@@ -18,7 +18,7 @@ const PLANS_DATA = {
       features: [
         '50GB shared data allowance',
         'Unlimited local, mobile & 1300',
-        'No excess data charges',
+        'Data Throttling (No Bill Shock)',
         'Standard 4G Optus coverage'
       ],
       recommended: false,
@@ -37,7 +37,7 @@ const PLANS_DATA = {
       features: [
         '150GB shared data allowance',
         'Priority fault escalation path',
-        'Dedicated support triage',
+        '$100 International Call Credit',
         'Zero-waste data banking'
       ],
       recommended: true,
@@ -56,7 +56,7 @@ const PLANS_DATA = {
       features: [
         '300GB shared data allowance',
         'Enterprise-grade reliability',
-        'Direct account manager access',
+        '$500 International Call Credit',
         'Priority routing pathing'
       ],
       recommended: false,
@@ -77,7 +77,7 @@ const PLANS_DATA = {
       features: [
         '5G high-speed capability',
         'Unlimited local, mobile & 1300',
-        'No excess data charges',
+        'Data Throttling (No Bill Shock)',
         'Premium 5G Optus coverage'
       ],
       recommended: false,
@@ -97,7 +97,7 @@ const PLANS_DATA = {
       features: [
         '150GB shared 5G data',
         'Maximum priority access',
-        '5G Ultra Wideband support',
+        '$250 International Call Credit',
         'Zero-waste shared pool'
       ],
       recommended: true,
@@ -117,7 +117,7 @@ const PLANS_DATA = {
       features: [
         '300GB ultra-fast 5G data',
         'Mission-critical priority',
-        'Direct engineer support',
+        '$500 International Call Credit',
         'Enterprise fleet dashboard'
       ],
       recommended: false,

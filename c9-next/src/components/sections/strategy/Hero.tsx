@@ -39,8 +39,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[38px] md:text-[50px] lg:text-[62px] tracking-tighter font-bold text-[#0c1024] leading-[1.08] mb-6 font-sans"
-              style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+              className="c9-hero-title mb-6"
             >
               Your technology should be driving your business. <span className="text-[#5D00D6]">Not holding it back.</span>
             </motion.h1>
@@ -49,8 +48,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[18px] md:text-[20px] text-slate-600/90 leading-relaxed max-w-[500px] mb-10 font-normal font-sans"
-              style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+              className="c9-body mb-10 max-w-[500px]"
             >
               C9 provides professional vCIO advisory and a prioritised 12-month technology roadmap designed for long-term Australian business growth.
             </motion.p>

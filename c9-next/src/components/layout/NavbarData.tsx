@@ -49,10 +49,11 @@ export const TELCO_SERVICES_CONTENT: Record<string, any> = {
     heading: 'Business Voice',
     description: "C9 replaces legacy phone infrastructure with the C9 Voice cloud phone system — a fully managed, Microsoft Teams-integrated voice platform built for Australian businesses that need reliability, flexibility, and a local team behind it.",
     options: [
-      { title: 'Inbound Services', desc: 'Secure 13, 1300, and 1800 numbers for your business with advanced call routing and intelligent analytics.', icon: <Headphones size={20} /> },
-      { title: 'Microsoft Teams Calling', desc: 'Make and receive business calls directly inside Teams — C9 handles the provisioning, porting, and ongoing management.', icon: <Phone size={20} /> },
-      { title: 'C9 Voice Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording — no hardware required.', icon: <Phone size={20} /> },
-      { title: 'SIP Trunking', desc: 'Retain your existing phone hardware and phone numbers while connecting to the C9 voice network for better reliability and cost.', icon: <Database size={20} /> }
+      { title: 'Inbound Services', desc: 'Secure 13, 1300, and 1800 numbers for your business with advanced call routing and intelligent analytics.', icon: <Headphones size={20} />, path: '/telco/inbound-services' },
+      { title: 'Microsoft Teams Calling', desc: 'Make and receive business calls directly inside Teams — C9 handles the provisioning, porting, and ongoing management.', icon: <Phone size={20} />, path: '/telco/teams-calling' },
+      { title: 'C9 Voice Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording — no hardware required.', icon: <Phone size={20} />, path: '/telco/c9x' },
+      { title: 'SIP Trunking', desc: 'Retain your existing phone hardware and phone numbers while connecting to the C9 voice network for better reliability and cost.', icon: <Database size={20} />, path: '/telco/sip-trunking' },
+      { title: 'Contact Centre', desc: 'C9X Omni Channel Contact Centre — voice, chat, social, and app interactions in one platform with advanced CRM integration.', icon: <LayoutGrid size={20} />, path: '/telco/contact-centre' }
     ]
   }
 };
@@ -145,12 +146,12 @@ export const TELCO_MENU = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />, label: 'C9 Voice', path: '/telco/c9voice' },
+            { icon: <Phone size={14} />, label: 'Voice Systems — Overview', path: '/telco/voice-systems' },
             { icon: <Headphones size={14} />, label: 'Inbound Services', path: '/telco/inbound-services' },
             { icon: <Phone size={14} />, label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
-            { icon: <Network size={14} />, label: 'SIP Trunking', path: '#' },
+            { icon: <Network size={14} />, label: 'SIP Trunking', path: '/telco/sip-trunking' },
             { icon: <Monitor size={14} />, label: 'Unified Communications', path: '#' },
-            { icon: <Headphones size={14} />, label: 'Contact Centre', path: '#' },
+            { icon: <Headphones size={14} />, label: 'Contact Centre', path: '/telco/contact-centre' },
           ]
         }
       ],

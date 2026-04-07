@@ -31,13 +31,13 @@ export default function WhyBusiness() {
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
 
         {/* Header */}
-        <span className="text-[11px] uppercase tracking-widest text-[#5D00D6] font-semibold block">
+        <span className="c9-eyebrow block">
           BUSINESS GRADE VS CONSUMER
         </span>
-        <h2 className="text-[36px] md:text-[44px] text-[#1A1A2E] font-bold mt-3 leading-[1.25] max-w-3xl">
+        <h2 className="c9-section-heading mt-3 max-w-3xl">
           Not all NBN™ is created equal. Business NBN™ is different — here's how.
         </h2>
-        <p className="text-[17px] text-[#6B7280] mt-3 max-w-[640px] leading-[1.7]">
+        <p className="c9-body mt-3 max-w-[640px]">
           Consumer NBN™ is designed for households. Business NBN™ is designed for businesses that depend on
           their connection. These are the differences that matter.
         </p>
@@ -56,10 +56,10 @@ export default function WhyBusiness() {
               >
                 <Icon size={22} className="text-[#5D00D6]" />
               </div>
-              <h3 className="text-[18px] text-[#1A1A2E] font-semibold mt-5 leading-snug">
+              <h3 className="c9-card-title mt-5">
                 {title}
               </h3>
-              <p className="text-[14px] text-[#6B7280] leading-[1.65] mt-2 flex-1">
+              <p className="c9-body mt-2 flex-1">
                 {body}
               </p>
               <div

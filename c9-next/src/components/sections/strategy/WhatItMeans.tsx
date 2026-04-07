@@ -53,14 +53,14 @@ export default function WhatItMeans() {
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#7B2FBE] to-white z-0" />
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
-        <div className="flex flex-col mb-16 gap-4 font-sans text-white">
-          <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <div className="flex flex-col mb-16 gap-4 text-white text-left">
+          <span className="c9-eyebrow !text-white opacity-80 mb-6 block">
             WHAT WE ACTUALLY DO
           </span>
-          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-            Strategy without execution<br />is just a document. We do both.
+          <h2 className="c9-section-heading !text-white">
+            Strategy without execution<br className="hidden md:block" /> is just a document. We do both.
           </h2>
-          <p className="text-white/85 text-[16px] max-w-[720px] leading-relaxed mt-2 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <p className="c9-body !text-white/85 max-w-[720px] mt-2">
             A virtual CIO from C9 is not a consultant who delivers a report and disappears. It is an ongoing strategic relationship — someone who attends your planning meetings, manages your vendors, and ensures your technology investment is aligned with your business goals.
           </p>
         </div>
@@ -72,17 +72,17 @@ export default function WhatItMeans() {
                 <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
               </div>
 
-              <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h3 className="c9-card-title mb-3 !text-[20px]">
                 {s.title}
               </h3>
 
-              <p className="text-[#4B5563] text-[16px] mb-6 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="c9-body mb-6 flex-grow !text-[15px]">
                 {s.body}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
                 {s.tags.map((tag, ti) => (
-                  <span key={ti} className="text-[11px] font-semibold uppercase tracking-wider text-[#5D00D6] bg-[#5D00D6]/10 px-3 py-1 rounded-none font-sans">
+                  <span key={ti} className="c9-eyebrow !text-[10px] !text-[#5D00D6] bg-[#5D00D6]/10 px-3 py-1 rounded-none">
                     {tag}
                   </span>
                 ))}
@@ -90,7 +90,7 @@ export default function WhatItMeans() {
 
               <div className="w-full h-[1px] bg-gray-100 mt-auto mb-5"></div>
               
-              <div className="flex items-center text-[13px] font-bold text-[#5D00D6] group-hover:underline uppercase tracking-wider font-sans">
+              <div className="flex items-center c9-eyebrow !text-[12px] group-hover:underline">
                 {s.link ? 'Explore Defense' : 'Strategic Outcome'}
                 <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </div>

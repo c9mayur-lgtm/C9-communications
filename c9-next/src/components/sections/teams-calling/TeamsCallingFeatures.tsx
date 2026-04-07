@@ -24,11 +24,11 @@ const FeatureCard = ({ title, body, icon: Icon, delay }: { title: string, body: 
             <Icon size={24} strokeWidth={1.5} />
         </div>
 
-        <h3 className="text-[20px] font-bold text-white mb-4 leading-tight tracking-tight flex items-center gap-2 group-hover:text-[#5D00D6] transition-colors">
+        <h3 className="c9-card-title !text-white !text-[20px] mb-4 group-hover:text-[#5D00D6] transition-colors">
             {title}
         </h3>
 
-        <p className="text-slate-400 text-[14px] leading-relaxed font-normal mb-8 max-w-[260px]">
+        <p className="c9-body !text-slate-400 !text-[14px] mb-8 max-w-[260px]">
           {body}
         </p>
     </div>
@@ -69,16 +69,16 @@ export const TeamsCallingFeatures = () => {
                     className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8"
                 >
                     <Sparkles size={14} className="text-[#5D00D6]" />
-                    <span className="c9-eyebrow !text-white/60 !text-[10px]">POWERED BY TEAMS</span>
+                    <span className="c9-eyebrow !text-white/60">POWERED BY TEAMS</span>
                 </motion.div>
                 
                 <motion.h2 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-[36px] md:text-[56px] font-bold text-white leading-[1.1] tracking-tight"
+                    className="c9-section-heading !text-white"
                 >
-                    Seamless telephony <br />
+                    Seamless telephony <br className="hidden md:block" />
                     <span className="text-[#5D00D6]">inside your workspace.</span>
                 </motion.h2>
             </div>
@@ -88,7 +88,7 @@ export const TeamsCallingFeatures = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="text-slate-400 max-w-sm text-[16px] leading-relaxed mb-4 text-left lg:text-right"
+                className="c9-body !text-slate-400 max-w-sm mb-4 text-left lg:text-right"
             >
                 Professional calling features fully integrated into the Microsoft Teams experience you already know.
             </motion.p>

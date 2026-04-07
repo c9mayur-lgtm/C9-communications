@@ -200,25 +200,25 @@ export default function TelcoPage() {
             
             <div className="flex flex-col max-w-2xl">
               <FadeIn>
-                <div className="text-[13px] text-gray-400 mb-6 font-semibold uppercase tracking-widest">
+                <div className="c9-eyebrow !text-gray-400 mb-6 !tracking-widest">
                   Home &rarr; Telco
                 </div>
               </FadeIn>
               
               <FadeIn delay={0.1}>
-                <div className="text-[#5D00D6] text-[11px] font-bold uppercase tracking-[0.2em] mb-6 flex items-center">
+                <div className="c9-eyebrow mb-6 flex items-center">
                   BUSINESS TELCO &mdash; VOICE, INTERNET & MOBILE
                 </div>
               </FadeIn>
               
               <FadeIn delay={0.2}>
-                <h1 className="text-white text-[44px] md:text-[56px] lg:text-[64px] font-bold leading-[1.05] tracking-tight mb-6">
+                <h1 className="c9-hero-title !text-white mb-6">
                   One provider.<br />Zero telco headaches.
                 </h1>
               </FadeIn>
               
               <FadeIn delay={0.3}>
-                <p className="text-gray-300 text-[18px] leading-[1.6] mb-8 font-proxima max-w-xl">
+                <p className="c9-body !text-gray-300 mb-8 max-w-xl">
                   Voice, internet, and mobile for Australian businesses &mdash; one account, one bill, one team.
                 </p>
               </FadeIn>
@@ -226,7 +226,7 @@ export default function TelcoPage() {
               <FadeIn delay={0.4}>
                 <div className="flex flex-wrap gap-3 mb-10">
                   {['NBN Co Accredited', 'No Lock-in Contracts', '1,000+ Businesses'].map((pill, i) => (
-                    <span key={i} className="text-[#a166ff] text-[11px] font-bold uppercase tracking-wider px-4 py-2 border border-[#5D00D6]/40 bg-[#5D00D6]/10 rounded-full flex items-center gap-1.5">
+                    <span key={i} className="c9-eyebrow !text-[#a166ff] !text-[11px] px-4 py-2 border border-[#5D00D6]/40 bg-[#5D00D6]/10 rounded-full flex items-center gap-1.5">
                       <span className="text-xs">✓</span> {pill}
                     </span>
                   ))}
@@ -235,14 +235,14 @@ export default function TelcoPage() {
               
               <FadeIn delay={0.5}>
                 <div className="flex flex-wrap items-center gap-4">
-                  <C9Button size="lg" className="px-10">
+                  <C9Button size="lg" className="px-10 rounded-full">
                     Get My Free Telco Audit <ArrowRight size={18} className="ml-2" />
                   </C9Button>
-                  <C9Button variant="outline" size="lg" className="px-10 text-white border-white/20 hover:bg-white/10">
+                  <C9Button variant="outline" size="lg" className="px-10 text-white border-white/20 hover:bg-white/10 rounded-full">
                     See What's Included <ArrowDown size={18} className="ml-2" />
                   </C9Button>
                 </div>
-                <div className="flex items-center gap-2 mt-5 text-[13px] text-gray-400 font-medium">
+                <div className="flex items-center gap-2 mt-5 c9-body !text-[13px] !text-gray-400 !font-medium">
                   <Clock size={14} className="text-[#a166ff]" />
                   Response within 2 business hours. No obligation.
                 </div>
@@ -390,26 +390,26 @@ export default function TelcoPage() {
                   {/* ---------------------------------- */}
 
                   <div className="p-8 md:p-10 flex flex-col flex-grow">
-                    <span className="text-[12px] font-bold uppercase tracking-[0.15em] text-[#5D00D6] mb-4 block">
+                    <span className="c9-eyebrow mb-4 block">
                       {svc.tag}
                     </span>
 
-                    <H3 className="mb-4 text-[20px] text-[#0c1024] tracking-tight font-proxima">{svc.title}</H3>
-                    <p className="mb-8 text-[15px] leading-[1.7] flex-grow text-gray-500 font-medium font-proxima">
+                    <H3 className="mb-4">{svc.title}</H3>
+                    <Body className="mb-8 flex-grow !text-[15px] !text-gray-500">
                       {svc.body}
-                    </p>
+                    </Body>
 
                     {/* Metrics mapped like the reference 'Deploys' stats */}
                     <div className="flex gap-10 mb-8 pb-8 border-b border-gray-100">
                       {svc.metrics.map((m, idx) => (
                         <div key={idx} className="flex flex-col gap-2">
-                          <span className="text-[13px] font-bold text-gray-500 capitalize tracking-wide">{m.label}</span>
-                          <span className="text-[32px] md:text-[40px] font-bold text-[#5D00D6] leading-none tracking-tight">{m.val}</span>
+                          <span className="c9-eyebrow !text-gray-500 !text-[11px] !tracking-wide normal-case">{m.label}</span>
+                          <span className="text-[32px] md:text-[40px] font-extrabold text-[#5D00D6] leading-none tracking-tight">{m.val}</span>
                         </div>
                       ))}
                     </div>
 
-                    <Link href={svc.link} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] uppercase tracking-wider group/link w-max mt-auto hover:text-[#4d00b3] transition-colors">
+                    <Link href={svc.link} className="inline-flex items-center gap-2 c9-eyebrow !text-[14px] group/link w-max mt-auto hover:text-[#4d00b3]">
                       {svc.cta} <ArrowRight size={16} className="transition-transform group-hover/link:translate-x-1" />
                     </Link>
                   </div>
@@ -430,22 +430,22 @@ export default function TelcoPage() {
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10">
               <div className="max-w-4xl w-full">
                 <FadeIn>
-                  <span className="text-[#5D00D6] text-[12px] md:text-[14px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block">C9X PLATFORM</span>
+                  <Label>C9X PLATFORM</Label>
                 </FadeIn>
                 <FadeIn delay={0.1}>
-                  <h2 className="text-[32px] md:text-[40px] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-6 text-white mt-4" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <H2 className="!text-white mt-4">
                     Your phone system is costing you more than money. It's costing you customers.
-                  </h2>
+                  </H2>
                 </FadeIn>
                 <FadeIn delay={0.2}>
-                  <p className="text-gray-300 text-[18px] leading-[1.6] max-w-2xl" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <Body className="!text-gray-300 max-w-2xl">
                     Every missed call during peak hours is a lost sale. Every voicemail instead of a person is your competitor's opportunity. C9X fixes this &mdash; without buying a single piece of hardware.
-                  </p>
+                  </Body>
                 </FadeIn>
               </div>
               
               <FadeIn delay={0.3} className="hidden lg:flex shrink-0">
-                 <C9Button size="lg" className="px-10">
+                 <C9Button size="lg" className="px-10 rounded-full">
                    Explore C9X <ArrowRight size={18} className="ml-2" />
                  </C9Button>
               </FadeIn>
@@ -553,10 +553,10 @@ export default function TelcoPage() {
             {/* TELSTRA CARD */}
             <FadeIn delay={0.2} className="flex h-full">
               <div className="flex flex-col w-full border border-gray-200 rounded-[20px] bg-white pt-10 pb-8 px-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group">
-                <H3 className="text-[20px] font-bold text-[#0c1024]">Telstra</H3>
-                <p className="text-gray-500 mt-3 text-[16px] leading-relaxed min-h-[72px]">
+                <H3>Telstra</H3>
+                <Body className="mt-3 min-h-[72px] !text-[16px]">
                   The industry default focus typically built for massive enterprise logic.
-                </p>
+                </Body>
 
                 <div className="mt-8 mb-8">
                   <span className="text-[28px] font-bold text-[#0c1024] tracking-tight">Call for pricing</span>
@@ -565,7 +565,7 @@ export default function TelcoPage() {
 
                 <div className="h-px bg-gray-100 w-full mb-8"></div>
                 
-                <span className="text-[12px] font-bold tracking-[0.1em] text-gray-400 capitalize mb-6 block">What you get</span>
+                <span className="c9-eyebrow !text-gray-400 mb-6 block">What you get</span>
                 
                 <ul className="space-y-4 flex-grow text-gray-600 text-[15px]">
                   <li className="flex items-start gap-4"><XCircle size={18} className="text-gray-300 shrink-0 mt-0.5" /> Mostly offshore support</li>
@@ -580,10 +580,10 @@ export default function TelcoPage() {
             {/* TPG OPTUS CARD */}
             <FadeIn delay={0.3} className="flex h-full">
               <div className="flex flex-col w-full border border-gray-200 rounded-[20px] bg-white pt-10 pb-8 px-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group">
-                <H3 className="text-[20px] font-bold text-[#0c1024]">TPG / Optus</H3>
-                <p className="text-gray-500 mt-3 text-[16px] leading-relaxed min-h-[72px]">
+                <H3>TPG / Optus</H3>
+                <Body className="mt-3 min-h-[72px] !text-[16px]">
                   Standard commodity connectivity prioritizing volume.
-                </p>
+                </Body>
 
                 <div className="mt-8 mb-8">
                   <span className="text-[28px] font-bold text-[#0c1024] tracking-tight">Varies</span>
@@ -592,7 +592,7 @@ export default function TelcoPage() {
 
                 <div className="h-px bg-gray-100 w-full mb-8"></div>
                 
-                <span className="text-[12px] font-bold tracking-[0.1em] text-gray-400 capitalize mb-6 block">What you get</span>
+                <span className="c9-eyebrow !text-gray-400 mb-6 block">What you get</span>
                 
                 <ul className="space-y-4 flex-grow text-gray-600 text-[15px]">
                   <li className="flex items-start gap-4"><XCircle size={18} className="text-gray-300 shrink-0 mt-0.5" /> Offshore support explicitly</li>
@@ -607,27 +607,27 @@ export default function TelcoPage() {
             {/* C9 CARD */}
             <FadeIn delay={0.4} className="flex h-full">
               <div className="relative flex flex-col w-full border-2 border-[#5D00D6] rounded-[20px] bg-white pt-10 pb-8 px-8 shadow-2xl shadow-purple-900/10 hover:-translate-y-1 transition-all duration-300">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#5D00D6] text-white px-4 py-1.5 rounded-full text-[12px] font-bold tracking-wider uppercase whitespace-nowrap">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#5D00D6] text-white c9-eyebrow !text-white px-4 py-1.5 rounded-full !text-[12px] whitespace-nowrap">
                   Most Businesses Switch To
                 </div>
 
-                <H3 className="text-[20px] font-bold text-[#5D00D6] font-proxima tracking-tight">C9 Communications</H3>
-                <p className="text-gray-600 mt-3 text-[16px] leading-relaxed min-h-[72px] font-medium font-proxima">
+                <H3 className="!text-[#5D00D6] tracking-tight">C9 Communications</H3>
+                <Body className="mt-3 min-h-[72px] !text-[16px] !text-gray-600">
                   Built precisely for modern Australian businesses that require elite support.
-                </p>
+                </Body>
 
                 <div className="mt-8 mb-8 flex flex-col items-start gap-3">
-                  <span className="text-[28px] font-bold text-[#0c1024] tracking-tight font-proxima">Transparent pricing</span>
-                  <C9Button className="w-full">
+                  <span className="text-[28px] font-bold text-[#0c1024] tracking-tight">Transparent pricing</span>
+                  <C9Button className="w-full rounded-full">
                     See Detailed Plans
                   </C9Button>
                 </div>
 
                 <div className="h-px bg-gray-100 w-full mb-8"></div>
                 
-                <span className="text-[12px] font-bold tracking-[0.1em] text-[#5D00D6] capitalize mb-6 block">Every feature included</span>
+                <span className="c9-eyebrow !text-[#5D00D6] mb-6 block">Every feature included</span>
                 
-                <ul className="space-y-4 flex-grow text-[#0c1024] text-[15px] font-medium font-proxima">
+                <ul className="space-y-4 flex-grow text-[#0c1024] text-[15px] font-medium">
                   <li className="flex items-start gap-4"><CheckCircle2 size={18} className="text-[#00C27C] shrink-0 mt-0.5" /> 100% onshore Australian support</li>
                   <li className="flex items-start gap-4"><CheckCircle2 size={18} className="text-[#00C27C] shrink-0 mt-0.5" /> Dedicated account manager always</li>
                   <li className="flex items-start gap-4"><CheckCircle2 size={18} className="text-[#00C27C] shrink-0 mt-0.5" /> 0 lock-in contracts</li>
@@ -651,9 +651,9 @@ export default function TelcoPage() {
 
           {/* Header */}
           <FadeIn className="text-center max-w-[640px] mx-auto mb-16">
-            <span className="block text-[#5D00D6] text-[11px] font-mono font-bold uppercase tracking-[0.2em] mb-5">OUR PROCESS</span>
-            <H2 className="mb-5 text-[32px] md:text-[40px] text-white">Switching to C9 takes less time than your next Telstra hold queue.</H2>
-            <p className="text-[18px] text-gray-300 font-normal leading-relaxed" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>We've done this 1,000+ times. Here's exactly what happens.</p>
+            <Label className="justify-center">OUR PROCESS</Label>
+            <H2 className="mb-5 !text-white text-center">Switching to C9 takes less time than your next Telstra hold queue.</H2>
+            <Body className="!text-gray-300">We've done this 1,000+ times. Here's exactly what happens.</Body>
           </FadeIn>
 
           {/* Step Track */}

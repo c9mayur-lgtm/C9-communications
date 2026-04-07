@@ -40,12 +40,12 @@ export default function UnifiedStack() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
            <div className="max-w-2xl">
-              <span className="text-[11px] uppercase tracking-[0.25em] text-[#5D00D6] font-bold block mb-4">THE C9 UNIFIED STACK</span>
-              <h2 className="text-[34px] md:text-[46px] font-bold text-[#1A1A2E] leading-tight tracking-tight">
+              <span className="c9-eyebrow mb-4 block">THE C9 UNIFIED STACK</span>
+              <h2 className="c9-section-heading">
                  Your internet is only <br className="hidden md:block" /> the beginning.
               </h2>
            </div>
-           <p className="text-[17px] text-[#6B7280] max-w-[420px] leading-relaxed font-medium">
+           <p className="c9-body max-w-[420px] font-medium leading-relaxed">
               A high-performance NBN™ connection is the foundation. Layer on C9’s managed voice, mobile, and security services to build a truly unified communication ecosystem.
            </p>
         </div>
@@ -67,16 +67,16 @@ export default function UnifiedStack() {
                 </div>
 
                 {/* Content */}
-                <span className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-widest mb-2 block">{item.subtitle}</span>
-                <h3 className="text-[22px] font-bold text-[#1A1A2E] leading-tight mb-4 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
-                <p className="text-[15px] text-[#6B7280] leading-relaxed mb-10 flex-1">
+                <span className="c9-eyebrow !text-[#5D00D6] !text-[10px] mb-2 block">{item.subtitle}</span>
+                <h3 className="c9-card-title mb-4 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
+                <p className="c9-body mb-10 flex-1">
                    {item.desc}
                 </p>
 
                 {/* Link */}
                 <Link 
                   href={item.link} 
-                  className="inline-flex items-center gap-2 text-[13px] font-bold text-[#1A1A2E] group/link hover:gap-4 transition-all"
+                  className="inline-flex items-center gap-2 c9-eyebrow group/link hover:gap-4 transition-all"
                 >
                    {item.label} <ArrowRight size={18} className="text-[#5D00D6] group-hover/link:translate-x-1" />
                 </Link>
@@ -92,12 +92,12 @@ export default function UnifiedStack() {
            <div className="relative z-10 text-center md:text-left flex-1 max-w-2xl">
               <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                 <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em]">Unified Network Live</span>
+                 <span className="c9-eyebrow">Unified Network Live</span>
               </div>
-              <h3 className="text-[26px] md:text-[32px] font-bold text-white leading-tight">
+              <h3 className="c9-section-heading !text-white !text-[26px] md:!text-[32px] mb-3">
                  Looking for a multi-site solution?
               </h3>
-              <p className="text-[15px] text-gray-400 mt-3 leading-relaxed">
+              <p className="c9-body !text-gray-400 leading-relaxed">
                  We specialise in connecting complex multi-site organisations via private IP networks, MPLS, or SD-WAN fabric. Talk to our engineering team about a custom-scoped enterprise network.
               </p>
            </div>

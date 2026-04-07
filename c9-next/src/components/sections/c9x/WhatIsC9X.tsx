@@ -15,12 +15,12 @@ const AdvantageItem = ({ title, description, metric, isLast }: { title: string, 
     </div>
 
     {/* 2. BOLD TITLE */}
-    <h3 className="text-[18px] font-bold text-[#0c1024] mb-4 leading-tight tracking-tight">
+    <h3 className="c9-card-title mb-4">
         {title}
     </h3>
 
     {/* 3. DESCRIPTION (Fills space) */}
-    <p className="text-gray-500 text-[15px] leading-relaxed font-normal mb-auto max-w-[280px]">
+    <p className="c9-body mb-auto max-w-[280px]">
       {description}
     </p>
 
@@ -59,7 +59,7 @@ export const WhatIsC9Voice = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="c9-section-heading !text-[32px] md:!text-[46px]"
+            className="c9-section-heading"
           >
              Australia's leading cloud-based phone system <br className="hidden md:block" />
             <span className="text-[#5D00D6]">designed to move your business forward.</span>

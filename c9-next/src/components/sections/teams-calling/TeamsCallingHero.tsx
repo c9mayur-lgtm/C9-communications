@@ -56,8 +56,8 @@ export const TeamsCallingHero = () => {
                      <ShieldCheck size={20} />
                   </div>
                   <div className="text-left">
-                     <p className="text-[14px] font-bold text-[#0c1024] leading-tight mb-0.5">Global Resilience</p>
-                     <p className="text-[12px] text-slate-400 font-medium tracking-tight">99.9% Uptime SLA</p>
+                     <p className="c9-card-title !text-[16px] leading-tight mb-0.5">Global Resilience</p>
+                     <p className="c9-eyebrow !text-slate-400 !text-[10px]">99.9% Uptime SLA</p>
                   </div>
                </div>
             </motion.div>
@@ -70,12 +70,12 @@ export const TeamsCallingHero = () => {
                 className="mt-16 pt-10 border-t border-gray-100 grid grid-cols-2 gap-8 max-w-sm"
             >
                 <div className="flex flex-col">
-                    <span className="text-[24px] font-bold text-[#0c1024]">100%</span>
-                    <span className="text-[12px] font-bold text-slate-400 uppercase tracking-widest">Native Sync</span>
+                    <span className="text-[28px] font-black text-[#0c1024] leading-none mb-1">100%</span>
+                    <span className="c9-eyebrow !text-slate-400 !text-[10px]">Native Sync</span>
                 </div>
                 <div className="flex flex-col text-left">
-                    <span className="text-[24px] font-bold text-[#0c1024]">70%</span>
-                    <span className="text-[12px] font-bold text-slate-400 uppercase tracking-widest">Cost Savings</span>
+                    <span className="text-[28px] font-black text-[#0c1024] leading-none mb-1">70%</span>
+                    <span className="c9-eyebrow !text-slate-400 !text-[10px]">Cost Savings</span>
                 </div>
             </motion.div>
           </div>
