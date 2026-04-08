@@ -14,7 +14,7 @@ export const DualAudienceLadder = () => {
             <span className="bg-[#F4F0FA] text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full w-max mb-8">
               FOR GROWING BUSINESSES
             </span>
-            <h2 className="text-[32px] md:text-[42px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[42px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" >
               IT that works like it should — without the IT team.
             </h2>
             <p className="c9-body mb-10">
@@ -43,7 +43,7 @@ export const DualAudienceLadder = () => {
             <span className="bg-[#1D1D1D] text-white text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full w-max mb-8">
               FOR ENTERPRISE & MULTI-SITE
             </span>
-            <h2 className="text-[32px] md:text-[42px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[42px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" >
               One managed partner. Every site. Every system.
             </h2>
             <p className="c9-body mb-10">
@@ -69,3 +69,4 @@ export const DualAudienceLadder = () => {
     </section>
   );
 };
+

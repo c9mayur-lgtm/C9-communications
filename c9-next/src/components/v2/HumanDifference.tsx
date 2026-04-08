@@ -36,8 +36,8 @@ export const HumanDifference = () => {
     <section className="py-20 md:py-32 bg-[#FDFDFF]">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>THE C9 DIFFERENCE</span>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" >THE C9 DIFFERENCE</span>
+          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight mb-6" >
             Technology is the tool. People are the point.
           </h2>
           <p className="c9-body">
@@ -58,7 +58,7 @@ export const HumanDifference = () => {
                 >
                   {card.tag}
                 </span>
-                <p className="text-[17px] md:text-[19px] text-[#0c1024] font-medium leading-relaxed mb-6 italic" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <p className="text-[17px] md:text-[19px] text-[#0c1024] font-medium leading-relaxed mb-6 italic" >
                   "{card.quote}"
                 </p>
                 <p className="mt-auto text-[12px] text-[#6B7280] italic">
@@ -78,3 +78,4 @@ export const HumanDifference = () => {
     </section>
   );
 };
+

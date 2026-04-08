@@ -28,7 +28,7 @@ export default function Partners() {
   return (
     <section 
       className="w-full bg-[#0c1024] py-16 md:py-24 overflow-hidden relative" 
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(93,0,182,0.1),transparent_50%)]" />
 
@@ -70,3 +70,4 @@ export default function Partners() {
     </section>
   );
 }
+

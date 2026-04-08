@@ -205,7 +205,7 @@ export const WpVendorsV2 = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-10">
           <div className="w-full">
             <span className="c9-eyebrow !text-[#5D00D6] mb-6 block">STRATEGIC PARTNERSHIPS</span>
-            <h2 className="c9-section-heading !text-white mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="c9-section-heading !text-white mb-8" >
               Leading the way in IT & Telco excellence.
             </h2>
             <div className="flex flex-wrap gap-2 md:gap-3 w-full">
@@ -218,7 +218,7 @@ export const WpVendorsV2 = () => {
                       ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-xl shadow-purple-900/40' 
                       : 'bg-white/5 border-white/10 text-white/60 hover:border-white/30 hover:bg-white/10'
                   }`}
-                  style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+                  
                 >
                   {cat.label}
                 </button>
@@ -262,3 +262,4 @@ export const WpVendorsV2 = () => {
     </section>
   );
 };
+

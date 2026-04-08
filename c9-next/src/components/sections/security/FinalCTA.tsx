@@ -15,7 +15,7 @@ export default function FinalCTA() {
   };
 
   return (
-    <section className="bg-white py-24 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="bg-white py-24 overflow-hidden" >
       <div className="container mx-auto px-6 md:px-8 w-full text-center" style={{ maxWidth: '640px' }}>
         <h2 className="text-[36px] md:text-[44px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight">
           Find out where your organisation actually stands.
@@ -48,3 +48,4 @@ export default function FinalCTA() {
     </section>
   );
 }
+

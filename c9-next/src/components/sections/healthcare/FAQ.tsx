@@ -40,9 +40,9 @@ export default function FAQ() {
         <div className="flex flex-col items-center text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-none border border-[#5D00D6]/10 mb-6 cursor-default">
             <HelpCircle className="text-[#5D00D6]" size={16} />
-            <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-[0.2em] leading-none mt-0.5" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Quick Answers</span>
+            <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-[0.2em] leading-none mt-0.5" >Quick Answers</span>
           </div>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" >
             What healthcare providers ask us most.
           </h2>
         </div>
@@ -58,7 +58,7 @@ export default function FAQ() {
                 >
                   <span 
                     className={`text-[18px] md:text-[20px] font-bold leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} 
-                    style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+                    
                   >
                     {item.question}
                   </span>
@@ -74,7 +74,7 @@ export default function FAQ() {
                       className="overflow-hidden"
                     >
                       <div className="pb-8 pt-0 pr-8">
-                        <p className="text-[17px] md:text-[18px] leading-[1.65] text-gray-500 font-normal max-w-[680px]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                        <p className="text-[17px] md:text-[18px] leading-[1.65] text-gray-500 font-normal max-w-[680px]" >
                           {item.answer}
                         </p>
                       </div>
@@ -89,3 +89,4 @@ export default function FAQ() {
     </section>
   );
 }
+

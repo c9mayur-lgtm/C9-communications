@@ -145,13 +145,13 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center relative z-10 w-full">
           <div className="py-4 pr-0 xl:pr-6">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-              <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[58px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[58px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.05]" >
                  Cloud infrastructure that <span className="text-[#5D00D6]" style={{ fontSize: 'inherit', fontWeight: 'inherit' }}>actually works.</span>
               </h1>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-              <p className="text-[17px] md:text-[19px] lg:text-[20px] text-slate-600 mb-8 max-w-[580px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-[17px] md:text-[19px] lg:text-[20px] text-slate-600 mb-8 max-w-[580px] leading-relaxed font-normal" >
                 C9 migrates Australian businesses to cloud and manages the environment ongoing — Microsoft 365, Azure, IaaS, private and hybrid cloud. Not a one-off project. A managed service with your data staying in Australia.
               </p>
             </motion.div>
@@ -162,7 +162,7 @@ export default function Hero() {
                   size="lg" 
                   onClick={handleProposalRequest}
                   className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none" 
-                  style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+                  
                 >
                   Request a Cloud Proposal <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
                 </Button>
@@ -171,7 +171,7 @@ export default function Hero() {
                    size="lg" 
                   onClick={handleSeeScope}
                   className="w-full sm:w-auto border-gray-200 text-[#0c1024] font-bold h-14 px-8 rounded-full hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white transition-colors" 
-                  style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+                  
                 >
                   See What We Manage
                 </Button>
@@ -185,7 +185,7 @@ export default function Hero() {
                   "Australian data centres",
                   "Migration + ongoing management"
                 ].map((text, i) => (
-                  <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
                     <CheckCircle size={16} className="text-[#5D00D6]" /> {text}
                   </span>
                 ))}
@@ -201,3 +201,4 @@ export default function Hero() {
     </section>
   );
 }
+

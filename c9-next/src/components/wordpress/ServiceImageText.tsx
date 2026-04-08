@@ -32,11 +32,11 @@ export const ServiceImageText = ({
 
           {/* Content Column */}
           <div className={`flex flex-col ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mb-6 leading-tight tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mb-6 leading-tight tracking-tight" >
               {title}
             </h2>
             <div className="space-y-6">
-              <p className="text-[18px] text-gray-500 leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-[18px] text-gray-500 leading-relaxed font-normal" >
                 {description}
               </p>
               {/* Added a subtle detail to make it feel premium */}
@@ -51,3 +51,4 @@ export const ServiceImageText = ({
     </section>
   );
 };
+

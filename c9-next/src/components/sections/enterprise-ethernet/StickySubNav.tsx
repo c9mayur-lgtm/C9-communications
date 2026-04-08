@@ -53,7 +53,7 @@ export default function StickySubNav() {
           animate={{ y: 0 }}
           exit={{ y: -100 }}
           className="fixed top-[71px] left-0 w-full bg-white/95 backdrop-blur-xl border-b border-gray-100 z-[90] h-[72px] flex items-center shadow-lg shadow-black/5"
-          style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+          
         >
           <div className="container mx-auto px-8 max-w-[1240px] flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -88,3 +88,4 @@ export default function StickySubNav() {
     </AnimatePresence>
   );
 }
+

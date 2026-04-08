@@ -35,7 +35,7 @@ export default function HowItWorks() {
   return (
     <section 
       className="w-full bg-white py-16 md:py-24" 
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
         <div className="text-center max-w-[800px] mx-auto mb-16 md:mb-20">
@@ -82,3 +82,4 @@ export default function HowItWorks() {
     </section>
   );
 }
+

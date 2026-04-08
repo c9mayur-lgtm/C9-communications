@@ -26,11 +26,11 @@ export const ServiceDetailBenefits = ({
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-stretch">
           {/* Left Column: Text Content */}
           <div className="flex flex-col">
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mb-6 leading-tight tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mb-6 leading-tight tracking-tight" >
               {title}
             </h2>
             
-            <p className="text-[18px] text-gray-500 mb-8 leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="text-[18px] text-gray-500 mb-8 leading-relaxed font-normal" >
               {intro}
             </p>
 
@@ -48,7 +48,7 @@ export const ServiceDetailBenefits = ({
             <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10">
               {subBenefits.map((item, i) => (
                 <div key={i} className="flex flex-col gap-2.5 pl-4 border-l-2 border-[#012FB7]/20 hover:border-[#012FB7] transition-colors duration-300">
-                  <h4 className="text-[20px] font-bold text-[#0c1024] leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <h4 className="text-[20px] font-bold text-[#0c1024] leading-tight" >
                     {item.title}
                   </h4>
                   <p className="text-gray-500 text-[16px] leading-relaxed font-normal">
@@ -74,3 +74,4 @@ export const ServiceDetailBenefits = ({
     </section>
   );
 };
+

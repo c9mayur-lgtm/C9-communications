@@ -106,7 +106,7 @@ export const ServiceTestimonialKajabi = ({ testimonials = DEFAULT_TESTIMONIALS }
   return (
     <section className="py-16 bg-[#000000] overflow-hidden text-white">
       <div className="container mx-auto max-w-full px-0">
-        <h2 className="text-[32px] md:text-[40px] font-bold text-center mb-10 tracking-tight px-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <h2 className="text-[32px] md:text-[40px] font-bold text-center mb-10 tracking-tight px-6" >
           Why leaders trust C9 Communications
         </h2>
 
@@ -153,7 +153,7 @@ export const ServiceTestimonialKajabi = ({ testimonials = DEFAULT_TESTIMONIALS }
                           <Quote size={28} fill="currentColor" />
                         </div>
 
-                        <p className="text-[15px] md:text-[17px] lg:text-[19px] text-gray-300 leading-relaxed mb-6 font-normal italic" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                        <p className="text-[15px] md:text-[17px] lg:text-[19px] text-gray-300 leading-relaxed mb-6 font-normal italic" >
                           "{t.content}"
                         </p>
 
@@ -222,3 +222,4 @@ export const ServiceTestimonialKajabi = ({ testimonials = DEFAULT_TESTIMONIALS }
     </section>
   );
 };
+

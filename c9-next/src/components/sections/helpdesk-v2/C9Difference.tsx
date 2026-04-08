@@ -18,18 +18,18 @@ export default function C9Difference() {
           
           {/* LEFT COLUMN */}
           <div>
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
               THE C9 DIFFERENCE
             </span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mt-4 leading-[1.1] tracking-tight max-w-[500px]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mt-4 leading-[1.1] tracking-tight max-w-[500px]" >
               Not a call centre. <br />A <span className="text-[#5D00D6]">partner</span> that knows your business.
             </h2>
             
-            <p className="text-[15px] md:text-[16px] text-slate-600 leading-relaxed mt-6 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="text-[15px] md:text-[16px] text-slate-600 leading-relaxed mt-6 font-normal" >
               Most IT helpdesks operate as volume-based call centres — a different technician every time, no knowledge of your environment, and no accountability for outcomes. 
             </p>
             
-            <p className="text-[15px] md:text-[16px] text-slate-600 leading-relaxed mt-4 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="text-[15px] md:text-[16px] text-slate-600 leading-relaxed mt-4 font-normal" >
               C9 operates differently. From day one we document your entire environment — your systems, your users, your priorities, and your quirks. Every technician who touches your tickets knows your business before they pick up the call.
             </p>
 
@@ -43,7 +43,7 @@ export default function C9Difference() {
                   <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
                       <CheckCircle size={14} className="text-[#5D00D6]" strokeWidth={2.5} />
                   </div>
-                  <span className="text-[15px] md:text-[16px] text-[#0c1024] font-bold leading-snug" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{text}</span>
+                  <span className="text-[15px] md:text-[16px] text-[#0c1024] font-bold leading-snug" >{text}</span>
                 </div>
               ))}
             </div>
@@ -60,7 +60,7 @@ export default function C9Difference() {
                 <div className="md:w-[35%] p-5 md:p-8 flex items-center bg-slate-50/30 border-b md:border-b-0 md:border-r border-purple-50">
                    <div className="space-y-1">
                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Service Aspect</span>
-                     <span className="text-[15px] md:text-[16px] font-bold text-[#0c1024] leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                     <span className="text-[15px] md:text-[16px] font-bold text-[#0c1024] leading-tight" >
                        {row.label}
                      </span>
                    </div>
@@ -72,7 +72,7 @@ export default function C9Difference() {
                     <XCircle size={14} />
                     <span className="text-[11px] font-bold uppercase tracking-widest">Legacy Helpdesk</span>
                   </div>
-                  <p className="text-[14px] text-slate-400 font-medium leading-[1.3]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <p className="text-[14px] text-slate-400 font-medium leading-[1.3]" >
                     {row.generic}
                   </p>
                 </div>
@@ -84,7 +84,7 @@ export default function C9Difference() {
                       <CheckCircle size={14} strokeWidth={3} />
                       <span className="text-[11px] font-black uppercase tracking-widest">The C9 Standard</span>
                     </div>
-                    <p className="text-[14px] font-bold text-[#5D00D6] leading-[1.3]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                    <p className="text-[14px] font-bold text-[#5D00D6] leading-[1.3]" >
                       {row.c9}
                     </p>
                   </div>
@@ -100,3 +100,4 @@ export default function C9Difference() {
     </section>
   );
 }
+

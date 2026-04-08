@@ -6,11 +6,11 @@ export default function FinalCTA() {
   return (
     <section className="bg-white py-24 px-6 md:px-8 lg:px-12 overflow-hidden">
       <div className="container mx-auto max-w-[700px] text-center font-sans">
-        <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight font-sans" >
           Ready to turn your IT spend into a strategic asset?
         </h2>
         
-        <p className="text-[18px] md:text-[20px] text-slate-600/90 mt-8 leading-relaxed font-normal font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <p className="text-[18px] md:text-[20px] text-slate-600/90 mt-8 leading-relaxed font-normal font-sans" >
           Book a strategy session with C9 — no obligation, no jargon, no product pitch. Just a clear conversation about where your technology is today and where it needs to be.
         </p>
 
@@ -34,3 +34,4 @@ export default function FinalCTA() {
     </section>
   );
 }
+

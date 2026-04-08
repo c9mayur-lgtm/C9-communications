@@ -23,7 +23,7 @@ export const ServiceFeatureScroll = ({
           
           {/* Left Column: Sticky Content */}
           <div className="lg:sticky lg:top-32 flex flex-col pt-4">
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" >
               {title}
             </h2>
             <p className="text-gray-500 text-[16px] md:text-[18px] leading-relaxed max-w-[440px] mb-8">
@@ -42,7 +42,7 @@ export const ServiceFeatureScroll = ({
                   <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <h4 className="text-[20px] md:text-[22px] font-bold text-[#0c1024]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <h4 className="text-[20px] md:text-[22px] font-bold text-[#0c1024]" >
                     {feature.title}
                   </h4>
                   <p className="text-gray-500 text-[14px] md:text-[15px] leading-relaxed max-w-[400px]">
@@ -58,3 +58,4 @@ export const ServiceFeatureScroll = ({
     </section>
   );
 };
+

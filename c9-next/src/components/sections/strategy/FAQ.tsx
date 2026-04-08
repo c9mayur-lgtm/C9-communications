@@ -43,7 +43,7 @@ export default function FAQ() {
             <HelpCircle className="text-[#5D00D6]" size={16} />
             <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-[0.2em] leading-none mt-0.5">Quick Answers</span>
           </div>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" >
             Frequently Asked Questions
           </h2>
         </div>
@@ -60,7 +60,7 @@ export default function FAQ() {
                 >
                   <span 
                     className={`text-[18px] md:text-[20px] font-bold leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} 
-                    style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+                    
                   >
                     {item.q}
                   </span>
@@ -76,7 +76,7 @@ export default function FAQ() {
                       className="overflow-hidden"
                     >
                       <div className="pb-8 pt-0 pr-8">
-                        <p className="text-[18px] leading-[1.65] text-gray-500 font-normal max-w-[680px]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                        <p className="text-[18px] leading-[1.65] text-gray-500 font-normal max-w-[680px]" >
                           {item.a}
                         </p>
                       </div>
@@ -92,3 +92,4 @@ export default function FAQ() {
     </section>
   );
 }
+

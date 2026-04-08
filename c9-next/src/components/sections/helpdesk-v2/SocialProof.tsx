@@ -31,10 +31,10 @@ export default function SocialProof() {
     <section className="w-full bg-[#fcfaff] py-12 md:py-20">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="mb-16">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
             WHAT OUR CLIENTS SAY
           </span>
-          <h2 className="text-[28px] md:text-[36px] font-medium text-[#0c1024] mt-4 leading-[1.1] tracking-tight max-w-[700px]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[28px] md:text-[36px] font-medium text-[#0c1024] mt-4 leading-[1.1] tracking-tight max-w-[700px]" >
             From businesses that <span className="text-[#5D00D6]">made the switch.</span>
           </h2>
         </div>
@@ -51,7 +51,7 @@ export default function SocialProof() {
                 ))}
               </div>
               
-              <p className="text-[15px] md:text-[16px] text-[#0c1024] font-medium leading-relaxed italic mb-10 flex-grow" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-[15px] md:text-[16px] text-[#0c1024] font-medium leading-relaxed italic mb-10 flex-grow" >
                 "{review.quote}"
               </p>
 
@@ -60,10 +60,10 @@ export default function SocialProof() {
                     <img src={review.avatar} alt={review.name} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <div className="text-[16px] font-medium text-[#0c1024] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <div className="text-[16px] font-medium text-[#0c1024] tracking-tight" >
                     {review.name}
                   </div>
-                  <div className="text-[13px] text-slate-500 font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <div className="text-[13px] text-slate-500 font-medium" >
                     {review.company} · {review.badge}
                   </div>
                 </div>
@@ -75,3 +75,4 @@ export default function SocialProof() {
     </section>
   );
 }
+

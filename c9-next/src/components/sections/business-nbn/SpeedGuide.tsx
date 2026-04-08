@@ -27,7 +27,7 @@ export default function SpeedGuide() {
   return (
     <section
       className="w-full bg-[#F8F7FF] py-24"
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
 
@@ -89,3 +89,4 @@ export default function SpeedGuide() {
     </section>
   );
 }
+

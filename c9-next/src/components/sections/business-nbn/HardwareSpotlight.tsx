@@ -37,7 +37,7 @@ const hardwareSections = [
 
 export default function HardwareSpotlight() {
   return (
-    <section id="managed-hardware" className="w-full bg-white py-12 md:py-16 overflow-visible" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section id="managed-hardware" className="w-full bg-white py-12 md:py-16 overflow-visible" >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         <div className="grid grid-cols-1 lg:grid-cols-[50%_45%] gap-12 lg:gap-20 relative overflow-visible items-start">
@@ -240,3 +240,4 @@ export default function HardwareSpotlight() {
     </section>
   );
 }
+

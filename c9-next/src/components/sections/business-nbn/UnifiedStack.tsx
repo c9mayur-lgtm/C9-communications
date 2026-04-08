@@ -34,7 +34,7 @@ const stackItems = [
 
 export default function UnifiedStack() {
   return (
-    <section className="w-full bg-[#F8F7FF] py-24 px-6 md:px-8 border-y border-gray-100" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="w-full bg-[#F8F7FF] py-24 px-6 md:px-8 border-y border-gray-100" >
       <div className="container mx-auto max-w-[1240px]">
         
         {/* Header Section */}
@@ -113,3 +113,4 @@ export default function UnifiedStack() {
     </section>
   );
 }
+

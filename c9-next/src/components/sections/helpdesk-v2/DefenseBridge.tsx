@@ -14,17 +14,17 @@ export default function DefenseBridge() {
                 <Shield size={32} className="text-white" strokeWidth={2.5} />
             </div>
             <div className="max-w-[700px]">
-                <h3 className="text-[28px] md:text-[36px] font-medium text-white mb-4 leading-tight tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <h3 className="text-[28px] md:text-[36px] font-medium text-white mb-4 leading-tight tracking-tight" >
                     Security incidents need more <span className="text-[#5D00D6]">than helpdesk.</span>
                 </h3>
-                <p className="text-[15px] md:text-[16px] text-slate-300 leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <p className="text-[15px] md:text-[16px] text-slate-300 leading-relaxed font-normal" >
                     When your team is facing a potential breach, ransomware, or active threat — C9 Defense provides continuous monitoring and incident response so helpdesk is never your only line of defence.
                 </p>
             </div>
           </div>
 
           <Link href="/c9-defense" className="shrink-0 relative z-10 w-full lg:w-auto" passHref>
-            <Button className="w-full lg:w-auto shadow-2xl hover:gap-6 group bg-white hover:bg-slate-100 text-[#0c1024] font-bold h-14 px-8 rounded-full transition-all duration-300" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <Button className="w-full lg:w-auto shadow-2xl hover:gap-6 group bg-white hover:bg-slate-100 text-[#0c1024] font-bold h-14 px-8 rounded-full transition-all duration-300" >
               Learn About C9 Defense <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2 text-[#5D00D6]" />
             </Button>
           </Link>
@@ -37,3 +37,4 @@ export default function DefenseBridge() {
     </section>
   );
 }
+

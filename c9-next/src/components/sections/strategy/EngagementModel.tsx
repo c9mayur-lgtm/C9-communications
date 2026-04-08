@@ -87,14 +87,14 @@ export default function EngagementModel() {
       <div className="container mx-auto max-w-[1240px]">
 
         {/* Header */}
-        <p className="text-[13px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <p className="text-[13px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block" >
           THE ENGAGEMENT MODEL
         </p>
-        <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-[1.05] text-[#0c1024] mb-6 max-w-2xl" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-[1.05] text-[#0c1024] mb-6 max-w-2xl" >
           Not a one-off report.<br />
           An ongoing strategic partnership.
         </h2>
-        <p className="text-[18px] md:text-[20px] text-slate-600/90 max-w-[680px] leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <p className="text-[18px] md:text-[20px] text-slate-600/90 max-w-[680px] leading-relaxed font-normal" >
           C9's strategic engagement follows three phases — assessment, strategy, and ongoing execution. Here's how we move from audit to ROI.
         </p>
 
@@ -156,10 +156,10 @@ export default function EngagementModel() {
                 {s.badge}
               </div>
 
-              <h3 className="text-[24px] md:text-[28px] font-bold text-[#0c1024] leading-tight mb-4 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h3 className="text-[24px] md:text-[28px] font-bold text-[#0c1024] leading-tight mb-4 tracking-tight" >
                 {s.heading}
               </h3>
-              <p className="text-[16px] text-slate-600 leading-relaxed mb-8 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-[16px] text-slate-600 leading-relaxed mb-8 font-normal" >
                 {s.body}
               </p>
 
@@ -266,3 +266,4 @@ export default function EngagementModel() {
     </section>
   )
 }
+

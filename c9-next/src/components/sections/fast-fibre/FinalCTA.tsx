@@ -13,7 +13,7 @@ export default function FinalCTA() {
   return (
     <section 
       className="w-full bg-[#FAFAFA] py-10 md:py-16 border-y border-gray-100 overflow-hidden" 
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       <div className="container mx-auto px-4 sm:px-8 md:px-12 w-full max-w-[1240px]">
         <div className="bg-[#5D00D6] rounded-[2rem] p-6 md:p-10 relative overflow-hidden shadow-[0_40px_100px_rgba(93,0,182,0.15)]">
@@ -67,3 +67,4 @@ export default function FinalCTA() {
     </section>
   );
 }
+

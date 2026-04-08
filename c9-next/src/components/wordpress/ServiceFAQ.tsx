@@ -18,7 +18,7 @@ const FAQAccordionItem = ({ question, answer }: FAQItemProps) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-8 text-left group"
       >
-        <span className="text-[20px] md:text-[24px] font-bold text-[#0c1024] group-hover:text-[#5D00D6] transition-colors leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <span className="text-[20px] md:text-[24px] font-bold text-[#0c1024] group-hover:text-[#5D00D6] transition-colors leading-tight" >
           {question}
         </span>
         <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-[#5D00D6] text-white' : 'bg-gray-100 text-gray-400 group-hover:bg-gray-200'}`}>
@@ -35,7 +35,7 @@ const FAQAccordionItem = ({ question, answer }: FAQItemProps) => {
             className="overflow-hidden"
           >
             <div className="pb-8">
-              <p className="text-gray-500 text-[16px] md:text-[18px] leading-relaxed max-w-4xl font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-gray-500 text-[16px] md:text-[18px] leading-relaxed max-w-4xl font-normal" >
                 {answer}
               </p>
             </div>
@@ -62,7 +62,7 @@ export const ServiceFAQ = ({ eyebrow, title, faqs }: ServiceFAQProps) => {
               {eyebrow}
             </span>
           </div>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-tight tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-tight tracking-tight" >
             {title}
           </h2>
         </div>
@@ -76,3 +76,4 @@ export const ServiceFAQ = ({ eyebrow, title, faqs }: ServiceFAQProps) => {
     </section>
   );
 };
+

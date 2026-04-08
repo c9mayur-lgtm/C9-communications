@@ -28,7 +28,7 @@ export const ServiceBenefits = ({
               {eyebrow}
             </span>
           </div>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight leading-[1.1]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight leading-[1.1]" >
             {title}
           </h2>
         </div>
@@ -43,11 +43,11 @@ export const ServiceBenefits = ({
                 <benefit.icon size={32} strokeWidth={1.5} />
               </div>
               
-              <h3 className="text-[20px] font-bold mb-5 text-[#0c1024] tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h3 className="text-[20px] font-bold mb-5 text-[#0c1024] tracking-tight leading-tight" >
                 {benefit.title}
               </h3>
               
-              <p className="text-gray-500 text-[16px] md:text-[18px] mb-10 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-gray-500 text-[16px] md:text-[18px] mb-10 leading-relaxed flex-grow font-normal" >
                 {benefit.description}
               </p>
               
@@ -64,3 +64,4 @@ export const ServiceBenefits = ({
     </section>
   );
 };
+

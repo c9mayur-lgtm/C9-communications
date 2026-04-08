@@ -23,7 +23,7 @@ export default function DefenseSection() {
   ];
 
   return (
-    <section className="bg-[#0F0F1A] py-24" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="bg-[#0F0F1A] py-24" >
       <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
         <div className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-20 items-center">
           
@@ -95,3 +95,4 @@ export default function DefenseSection() {
     </section>
   );
 }
+

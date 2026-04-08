@@ -14,10 +14,10 @@ export const ContactSection = () => {
           {/* Left: Info */}
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-6">
-              <h2 className="text-[#0c1024] text-[32px] md:text-[42px] font-bold leading-[1.1] tracking-tight font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h2 className="text-[#0c1024] text-[32px] md:text-[42px] font-bold leading-[1.1] tracking-tight font-sans" >
                 Let's build something<br />that works.
               </h2>
-              <p className="text-slate-600/90 text-[18px] md:text-[20px] leading-relaxed font-sans max-w-xl" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-slate-600/90 text-[18px] md:text-[20px] leading-relaxed font-sans max-w-xl" >
                 Our Australian team is ready to map out a solution tailored for your business outcomes. No high-pressure sales, just expert advice.
               </p>
             </div>
@@ -33,8 +33,8 @@ export const ContactSection = () => {
                     <item.icon size={24} />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <span className="text-[#0c1024] text-[18px] md:text-[20px] font-bold font-sans tracking-tight group-hover:text-[#5D00D6] transition-all duration-300" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{item.text}</span>
-                    <p className="text-slate-500 text-[14px] font-sans font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{item.sub}</p>
+                    <span className="text-[#0c1024] text-[18px] md:text-[20px] font-bold font-sans tracking-tight group-hover:text-[#5D00D6] transition-all duration-300" >{item.text}</span>
+                    <p className="text-slate-500 text-[14px] font-sans font-medium" >{item.sub}</p>
                   </div>
                 </div>
               ))}
@@ -49,24 +49,24 @@ export const ContactSection = () => {
                 <div className="flex flex-col gap-6">
                    <div className="grid grid-cols-2 gap-6">
                       <div className="flex flex-col gap-2">
-                         <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Your Name</label>
-                         <Input placeholder="Full Name" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }} />
+                         <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >Your Name</label>
+                         <Input placeholder="Full Name" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
                       </div>
                       <div className="flex flex-col gap-2">
-                         <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Phone Number</label>
-                         <Input placeholder="+61 (0) 000 000 000" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }} />
+                         <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >Phone Number</label>
+                         <Input placeholder="+61 (0) 000 000 000" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
                       </div>
                    </div>
                    
                    <div className="flex flex-col gap-2">
-                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Email Address</label>
-                      <Input placeholder="name@company.com.au" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }} />
+                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >Email Address</label>
+                      <Input placeholder="name@company.com.au" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
                    </div>
                    
                    <div className="flex flex-col gap-2">
-                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>I'm interested in</label>
+                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >I'm interested in</label>
                       <Select>
-                        <SelectTrigger className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                        <SelectTrigger className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1" >
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent className="rounded-none">
@@ -80,8 +80,8 @@ export const ContactSection = () => {
                    </div>
                    
                    <div className="flex flex-col gap-2">
-                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Message</label>
-                      <Textarea placeholder="How can we help your business?" className="bg-[#F8F9FA] border-none rounded-none px-4 py-4 min-h-[120px] font-sans focus:ring-[#5D00D6] focus:ring-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }} />
+                      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >Message</label>
+                      <Textarea placeholder="How can we help your business?" className="bg-[#F8F9FA] border-none rounded-none px-4 py-4 min-h-[120px] font-sans focus:ring-[#5D00D6] focus:ring-1"  />
                    </div>
                 </div>
                 
@@ -101,3 +101,4 @@ export const ContactSection = () => {
     </section>
   );
 };
+

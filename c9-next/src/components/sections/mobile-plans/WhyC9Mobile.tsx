@@ -45,7 +45,7 @@ const cards = [
 
 export default function WhyC9Mobile() {
   return (
-    <section className="relative py-16 md:py-20 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="relative py-16 md:py-20 overflow-hidden" >
       {/* Full-width purple-to-white gradient to match homepage WpSolutions */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#946CE2] to-[#FAFAFA] z-0" />
 
@@ -87,3 +87,4 @@ export default function WhyC9Mobile() {
     </section>
   );
 }
+

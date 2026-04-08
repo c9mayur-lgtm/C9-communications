@@ -81,18 +81,18 @@ export const IndustryCard = ({ industry }: { industry: any }) => (
       </div>
     </div>
     
-    <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" >
       {industry.title}
     </h3>
     
-    <p className="text-gray-500 text-[16px] leading-relaxed mb-10 flex-grow" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <p className="text-gray-500 text-[16px] leading-relaxed mb-10 flex-grow" >
       {industry.desc}
     </p>
     
     <div className="grid grid-cols-2 gap-8 pt-8 border-t border-[#E9E4FF]">
       {industry.metrics.map((m: any, i: number) => (
         <div key={i} className="flex flex-col">
-          <span className="text-[24px] font-bold text-[#5D00D6] leading-none mb-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{m.value}</span>
+          <span className="text-[24px] font-bold text-[#5D00D6] leading-none mb-1" >{m.value}</span>
           <span className="text-[11px] text-gray-400 font-bold uppercase tracking-tight">{m.label}</span>
         </div>
       ))}
@@ -109,7 +109,7 @@ export const WpIndustryMarquee = () => {
     <section className="py-12 md:py-16 bg-[#f8f7fc] border-t border-gray-100 overflow-hidden">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center mb-10">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>What we do</span>
+          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >What we do</span>
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight mb-8">
             Solving IT challenges in every industry, every day.
           </h2>
@@ -149,3 +149,4 @@ export const WpIndustryMarquee = () => {
     </section>
   );
 };
+

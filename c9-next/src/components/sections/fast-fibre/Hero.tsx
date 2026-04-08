@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <section 
       className="relative w-full bg-white pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden" 
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -123,3 +123,4 @@ export default function Hero() {
     </section>
   );
 }
+

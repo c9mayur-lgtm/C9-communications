@@ -89,7 +89,7 @@ const ComparisonTable = () => {
 
 export default function WhatIsEnterpriseEthernet() {
   return (
-    <section className="bg-[#FAFAFA] py-12 md:py-16 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="bg-[#FAFAFA] py-12 md:py-16 overflow-hidden" >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         {/* HEADER */}
@@ -140,3 +140,4 @@ export default function WhatIsEnterpriseEthernet() {
     </section>
   );
 }
+

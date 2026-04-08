@@ -49,11 +49,11 @@ export const ServiceHero = ({
             </span>
           </div>
 
-          <h1 className="text-[32px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-semibold text-white leading-[1.05] tracking-tight mb-5" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h1 className="text-[32px] sm:text-[40px] md:text-[46px] lg:text-[50px] font-semibold text-white leading-[1.05] tracking-tight mb-5" >
             {title}
           </h1>
           
-          <p className="text-[17px] md:text-[18px] lg:text-[19px] text-white/85 mb-8 max-w-xl leading-relaxed font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <p className="text-[17px] md:text-[18px] lg:text-[19px] text-white/85 mb-8 max-w-xl leading-relaxed font-normal" >
             {description}
           </p>
 
@@ -67,3 +67,4 @@ export const ServiceHero = ({
     </section>
   );
 };
+

@@ -63,11 +63,11 @@ export const InboundPlans = () => {
                 Transparent rates for <br className="hidden md:block" /> <span className="text-[#5D00D6]">national reach.</span>
               </h2>
            </div>
-           <div className="max-w-[500px]">
-              <p className="c9-body !text-[15px] !text-[#6B7280] italic opacity-80 leading-relaxed">
+            <div className="max-w-[500px]">
+              <p className="c9-body italic opacity-80 leading-relaxed">
                  * Pricing excludes GST. Calls terminating on Australian mobile services are billed at 38.50c per minute. Global routing options available for high-volume networks.
               </p>
-           </div>
+            </div>
         </div>
 
         {/* Card Grid - Centered 2 Card Layout */}
@@ -87,7 +87,7 @@ export const InboundPlans = () => {
                     {t.offer}
                  </div>
 
-                 <h3 className="text-[32px] font-bold leading-tight mb-4 tracking-tight">{t.title}</h3>
+                 <h3 className="c9-card-title mb-4">{t.title}</h3>
                  <div className="flex items-baseline gap-2 mb-4">
                     <span className="text-[52px] font-bold">{t.price}</span>
                     <span className="text-[14px] opacity-70 font-bold uppercase tracking-widest leading-none translate-y-[-10px]">/mth</span>
@@ -112,13 +112,13 @@ export const InboundPlans = () => {
               <div className="p-8 md:p-10 pt-28 flex-1 flex flex-col text-left">
                  <div className="flex items-center justify-between mb-8 pb-6 border-b border-gray-50">
                     <div>
-                       <p className="c9-eyebrow !text-[#5D00D6] !text-[10px] mb-1">CALL RATES</p>
-                       <p className="text-[20px] font-bold text-[#0c1024] leading-none">Usage Charges</p>
+                       <p className="c9-eyebrow !text-[#5D00D6] mb-1">CALL RATES</p>
+                       <p className="c9-card-title leading-none">Usage Charges</p>
                     </div>
                     <Package size={20} className="text-gray-100" />
                  </div>
 
-                 <p className="c9-body !text-[15px] !text-[#6B7280] mb-8">
+                 <p className="c9-body mb-8">
                     {t.desc}
                  </p>
 

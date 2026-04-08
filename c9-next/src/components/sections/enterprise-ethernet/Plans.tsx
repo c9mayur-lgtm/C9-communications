@@ -98,7 +98,7 @@ export default function Plans() {
   const coStats = getSimulatedStats(committedSpeeds[committedIdx]);
 
   return (
-    <section id="ee-plans" className="w-full bg-[#FAFAFA] py-12 md:py-16 border-y border-gray-100" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section id="ee-plans" className="w-full bg-[#FAFAFA] py-12 md:py-16 border-y border-gray-100" >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         <div className="flex flex-col items-center text-center mb-20">
@@ -343,3 +343,4 @@ export default function Plans() {
     </section>
   );
 }
+

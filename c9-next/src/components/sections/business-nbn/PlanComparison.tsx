@@ -96,7 +96,7 @@ export default function PlanComparison() {
   const coStats = getSimulatedStats(committedSpeeds[committedIdx]);
 
   return (
-    <section id="plan-comparison" className="w-full bg-white py-16 px-6 md:px-8 border-y border-gray-100" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section id="plan-comparison" className="w-full bg-white py-16 px-6 md:px-8 border-y border-gray-100" >
       <div className="container mx-auto max-w-[1240px]">
         
         <div className="flex flex-col items-center text-center mb-20">
@@ -315,3 +315,4 @@ export default function PlanComparison() {
     </section>
   );
 }
+

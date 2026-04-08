@@ -111,7 +111,7 @@ export default function Hero() {
   return (
     <section
       className="w-full bg-white flex items-center overflow-hidden pt-4 pb-8 md:pt-6 md:pb-10"
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
         <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-12 items-center w-full">
@@ -334,3 +334,4 @@ export default function Hero() {
     </section>
   );
 }
+

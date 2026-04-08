@@ -16,7 +16,7 @@ export default function AccreditationBar() {
   return (
     <section
       className="w-full bg-white py-12 md:py-16 border-y border-gray-100 overflow-hidden"
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
         <span className="text-[11px] uppercase tracking-[0.3em] text-[#9CA3AF] text-center font-bold block mb-12">
@@ -58,3 +58,4 @@ export default function AccreditationBar() {
     </section>
   );
 }
+

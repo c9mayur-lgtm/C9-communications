@@ -42,13 +42,13 @@ export default function SLACommitment() {
           
           {/* LEFT COLUMN */}
           <div>
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
               RESPONSE SLAs
             </span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mt-4 leading-[1.1] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mt-4 leading-[1.1] tracking-tight" >
               Defined response times. <br /><span className="text-[#5D00D6]">Not estimates.</span>
             </h2>
-            <p className="text-[15px] md:text-[16px] text-slate-600 leading-relaxed mt-6 max-w-[560px] font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="text-[15px] md:text-[16px] text-slate-600 leading-relaxed mt-6 max-w-[560px] font-normal" >
               Every ticket C9 receives is assigned a priority level based on business impact. Response and resolution targets are defined in your agreement — and we report against them monthly so you always know if we're hitting them.
             </p>
 
@@ -57,7 +57,7 @@ export default function SLACommitment() {
                 <div 
                   key={i} 
                   className="bg-white rounded-[24px] border border-gray-100 p-6 md:p-8 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-[#5D00D6]/10 hover:border-[#5D00D6]/20 transition-all duration-300 group flex flex-col justify-between"
-                  style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+                  
                 >
                   <div className="mb-6">
                     <div className="flex justify-between items-start mb-5">
@@ -94,7 +94,7 @@ export default function SLACommitment() {
               ))}
             </div>
             
-            <div className="flex items-center gap-2 mt-6 text-slate-400 font-medium text-[14px]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <div className="flex items-center gap-2 mt-6 text-slate-400 font-medium text-[14px]" >
               <Clock size={16} />
               <span>Standard SLAs apply during business hours. 24/7 coverage available on select plans.</span>
             </div>
@@ -107,10 +107,10 @@ export default function SLACommitment() {
                 <div className="w-14 h-14 bg-[#5D00D6] rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-[#5D00D6]/20">
                     <ShieldCheck size={28} className="text-white" />
                 </div>
-                <h3 className="text-[18px] md:text-[28px] font-bold text-white leading-tight mb-4" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <h3 className="text-[18px] md:text-[28px] font-bold text-white leading-tight mb-4" >
                   Full transparency. <br />Monthly accountability.
                 </h3>
-                <p className="text-[16px] text-slate-400 leading-relaxed mb-10 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <p className="text-[16px] text-slate-400 leading-relaxed mb-10 font-normal" >
                   We don't just promise results — we prove them. Every month, you'll receive a performance report covering:
                 </p>
                 
@@ -126,7 +126,7 @@ export default function SLACommitment() {
                       <div className="w-5 h-5 rounded-full bg-[#5D00D6] flex items-center justify-center shrink-0 mt-1 shadow-lg shadow-[#5D00D6]/30">
                         <CheckCircle size={12} className="text-white" strokeWidth={3} />
                       </div>
-                      <span className="text-[15px] text-slate-200 leading-snug font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                      <span className="text-[15px] text-slate-200 leading-snug font-medium" >
                         {item}
                       </span>
                     </div>
@@ -134,7 +134,7 @@ export default function SLACommitment() {
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-white/10">
-                  <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.2em]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.2em]" >
                     Zero Extra Charge. Built-in Accountability.
                   </span>
                 </div>
@@ -151,3 +151,4 @@ export default function SLACommitment() {
     </section>
   );
 }
+

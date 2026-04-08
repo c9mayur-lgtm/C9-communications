@@ -177,7 +177,7 @@ export default function Hero() {
   return (
     <section
       className="relative py-12 md:py-16 bg-white overflow-hidden min-h-[65vh] flex items-center"
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       {/* Ambient BG */}
       <div className="absolute top-0 right-[-5%] w-[50%] h-[80%] bg-[#5D00D6]/4 blur-[140px] rounded-full pointer-events-none" />
@@ -366,3 +366,4 @@ export default function Hero() {
     </section>
   );
 }
+

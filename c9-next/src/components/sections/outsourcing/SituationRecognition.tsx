@@ -34,7 +34,7 @@ export default function SituationRecognition() {
   ];
 
   return (
-    <section className="bg-[#0c1024] py-24 px-6 md:px-8 lg:px-12 overflow-hidden relative border-t border-white/5" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="bg-[#0c1024] py-24 px-6 md:px-8 lg:px-12 overflow-hidden relative border-t border-white/5" >
       {/* Background Lighting Effect */}
       <div className="absolute top-0 left-1/4 w-[50%] h-[120%] bg-[#5D00D6]/10 blur-[120px] rounded-full pointer-events-none -z-1" />
       
@@ -115,3 +115,4 @@ export default function SituationRecognition() {
     </section>
   );
 }
+

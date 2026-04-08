@@ -22,7 +22,7 @@ const RelatedService = ({ title, body, link, href }: any) => (
 
 export default function MultiSiteSection() {
   return (
-    <section className="bg-white py-12 md:py-16 overflow-hidden border-y border-gray-100" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="bg-white py-12 md:py-16 overflow-hidden border-y border-gray-100" >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         {/* HEADER */}
@@ -95,3 +95,4 @@ export default function MultiSiteSection() {
     </section>
   );
 }
+

@@ -119,15 +119,15 @@ export const WpWhyPartner = () => {
           ].map((block, i) => (
             <div key={i} className="p-8 md:p-12 lg:p-16 border-r border-b border-gray-200 transition-all duration-300 cursor-default flex flex-col">
               <div className="mb-4 self-start">
-                <span className="c9-eyebrow !text-[#5D00D6] !text-[10px] px-4 py-1.5 rounded-full border bg-[#F4F0FA] border-[#5D00D6]/20">
+                <span className="c9-eyebrow !text-[#5D00D6] px-4 py-1.5 rounded-full border bg-[#F4F0FA] border-[#5D00D6]/20">
                   {block.tag}
                 </span>
               </div>
               <div className="mb-6 mt-4">
                 <block.icon size={32} strokeWidth={1.5} color="#5D00D6" fill="none" />
               </div>
-              <h3 className="c9-card-title !text-[20px] text-[#0c1024] mb-4">{block.title}</h3>
-              <p className="c9-body text-gray-600 flex-grow">
+              <h3 className="c9-card-title mb-4">{block.title}</h3>
+              <p className="c9-body flex-grow">
                 {block.desc}
               </p>
 
@@ -139,7 +139,7 @@ export const WpWhyPartner = () => {
                       <div className="text-[28px] font-medium text-[#5D00D6] leading-none tracking-tight">
                         <CountUp value={m.value} />
                       </div>
-                      <div className="text-[11px] text-[#6B7280] mt-2 font-medium uppercase tracking-wider">
+                      <div className="c9-eyebrow !text-[#6B7280] mt-2">
                         {m.label}
                       </div>
                     </div>

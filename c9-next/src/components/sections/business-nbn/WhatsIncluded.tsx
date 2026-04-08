@@ -59,7 +59,7 @@ export default function WhatsIncluded() {
   };
 
   return (
-    <section className="relative py-14 md:py-16 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="relative py-14 md:py-16 overflow-hidden" >
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#7D38E2] to-white z-0" />
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
@@ -97,3 +97,4 @@ export default function WhatsIncluded() {
     </section>
   );
 }
+

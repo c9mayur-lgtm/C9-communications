@@ -22,9 +22,9 @@ export default function FAQ() {
         <div className="flex flex-col items-center text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-none border border-[#5D00D6]/10 mb-6 cursor-default">
             <HelpCircle className="text-[#5D00D6]" size={16} />
-            <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-[0.2em] leading-none mt-0.5" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Quick Answers</span>
+            <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-[0.2em] leading-none mt-0.5" >Quick Answers</span>
           </div>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" >
             What non-profit organisations ask us most.
           </h2>
         </div>
@@ -34,14 +34,14 @@ export default function FAQ() {
             return (
               <div key={i} className="border-b border-[#5D00D6]/10">
                 <button onClick={() => setOpenIdx(isOpen ? null : i)} className="w-full flex items-start justify-between gap-6 py-6 md:py-8 text-left group">
-                  <span className={`text-[18px] md:text-[20px] font-bold leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{item.question}</span>
+                  <span className={`text-[18px] md:text-[20px] font-bold leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} >{item.question}</span>
                   <ChevronDown size={22} className={`shrink-0 mt-0.5 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : 'text-gray-400 group-hover:text-[#5D00D6]'}`} />
                 </button>
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }} className="overflow-hidden">
                       <div className="pb-8 pt-0 pr-8">
-                        <p className="text-[17px] md:text-[18px] leading-[1.65] text-gray-500 font-normal max-w-[680px]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{item.answer}</p>
+                        <p className="text-[17px] md:text-[18px] leading-[1.65] text-gray-500 font-normal max-w-[680px]" >{item.answer}</p>
                       </div>
                     </motion.div>
                   )}
@@ -54,3 +54,4 @@ export default function FAQ() {
     </section>
   );
 }
+

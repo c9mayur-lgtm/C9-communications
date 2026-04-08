@@ -41,7 +41,7 @@ const cards = [
 export default function WhyFastFibre() {
   const { setInquiryMessage } = useInquiry();
   return (
-    <section className="relative py-14 md:py-16 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="relative py-14 md:py-16 overflow-hidden" >
       {/* Full-width purple-to-white gradient */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#7D38E2] to-white z-0" />
 
@@ -89,3 +89,4 @@ export default function WhyFastFibre() {
     </section>
   );
 }
+

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function TwoLayers() {
   return (
-    <section className="bg-white py-24" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="bg-white py-24" >
       <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
         <div className="mb-16">
           <span className="text-[11px] uppercase font-bold tracking-[0.2em] text-[#5D00D6] block mb-6">
@@ -96,3 +96,4 @@ export default function TwoLayers() {
     </section>
   );
 }
+

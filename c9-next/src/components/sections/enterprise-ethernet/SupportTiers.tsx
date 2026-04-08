@@ -71,7 +71,7 @@ export default function SupportTiers() {
   };
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 border-y border-gray-50" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="w-full bg-white py-12 md:py-16 border-y border-gray-50" >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         {/* Header */}
@@ -177,3 +177,4 @@ const Info = ({ size, className }: any) => (
     <path d="M12 8h.01" />
   </svg>
 );
+

@@ -20,7 +20,7 @@ export const WpHero = () => {
       <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
         <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-6 items-center relative z-10 w-full">
           <div className="py-4 pr-0 xl:pr-6">
-            <h1 className="c9-hero-title mb-6 text-[#0c1024]">
+            <h1 className="c9-hero-title mb-6">
               We manage your IT & Telco, so you can manage your business.
             </h1>
             <p className="c9-body mb-8 max-w-[500px]">
@@ -38,7 +38,7 @@ export const WpHero = () => {
             {/* Uptime, Support, No Lock-In marks */}
             <div className="flex items-center gap-5 md:gap-8 mt-10 md:mt-12 flex-wrap pb-4">
               {['99.99% Uptime', '24/7 AU Support', 'No Lock-In'].map((t, i) => (
-                <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <span key={i} className="flex items-center gap-2 c9-eyebrow !text-slate-500">
                   <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                 </span>
               ))}

@@ -35,11 +35,11 @@ export const WpHeroProducts = () => {
         {/* Header Area following the Page's "Regular Pattern" */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>OUR PRODUCTS</span>
-            <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight mb-8" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <span className="c9-eyebrow mb-6 block">OUR PRODUCTS</span>
+            <h2 className="c9-section-heading mb-8">
               Strategic solutions tailored to your unique challenges.
             </h2>
-            <p className="text-slate-600/90 text-[18px] md:text-[20px] leading-relaxed max-w-[640px] font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="c9-body mb-8 max-w-[640px]">
               Explore our core service pillars — built to scale, secured by design, and managed by our Australian expert team.
             </p>
           </div>
@@ -78,7 +78,7 @@ export const WpHeroProducts = () => {
                 </div>
                 
                 {/* Product Label */}
-                <span className="text-[14px] md:text-[16px] font-bold text-[#0c1024] tracking-tight transition-colors group-hover:text-[#5D00D6]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <span className="c9-card-title !text-[14px] md:!text-[16px] transition-colors group-hover:text-[#5D00D6]">
                   {product.label}
                 </span>
               </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ThreatReality() {
   return (
-    <section className="bg-[#0c1024] py-24" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="bg-[#0c1024] py-24" >
       <div className="container mx-auto px-6 md:px-8 w-full text-center" style={{ maxWidth: '800px' }}>
         <span className="text-[11px] uppercase font-bold tracking-[0.2em] text-[#5D00D6] block mb-6">
           THE THREAT LANDSCAPE
@@ -23,3 +23,4 @@ export default function ThreatReality() {
     </section>
   );
 }
+

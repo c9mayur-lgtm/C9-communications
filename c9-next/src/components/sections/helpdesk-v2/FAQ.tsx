@@ -18,7 +18,7 @@ const FAQAccordionItem = ({ question, answer }: FAQItemProps) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-8 text-left group"
       >
-        <span className="text-[18px] md:text-[18px] font-medium text-[#0c1024] group-hover:text-[#5D00D6] transition-colors leading-tight pr-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+        <span className="text-[18px] md:text-[18px] font-medium text-[#0c1024] group-hover:text-[#5D00D6] transition-colors leading-tight pr-6" >
           {question}
         </span>
         <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-[#5D00D6] text-white' : 'bg-[#5D00D6]/5 text-[#5D00D6] group-hover:bg-[#5D00D6]/10'}`}>
@@ -35,7 +35,7 @@ const FAQAccordionItem = ({ question, answer }: FAQItemProps) => {
             className="overflow-hidden"
           >
             <div className="pb-8">
-              <p className="text-slate-600 text-[17px] md:text-[18px] leading-relaxed max-w-4xl font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-slate-600 text-[17px] md:text-[18px] leading-relaxed max-w-4xl font-normal" >
                 {answer}
               </p>
             </div>
@@ -78,7 +78,7 @@ export default function FAQ() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+            className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" 
           >
             COMMON QUESTIONS
           </motion.span>
@@ -87,7 +87,7 @@ export default function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-[28px] md:text-[36px] font-medium text-[#0c1024] leading-tight tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+            className="text-[28px] md:text-[36px] font-medium text-[#0c1024] leading-tight tracking-tight" 
           >
             Everything you need to <span className="text-[#5D00D6]">know.</span>
           </motion.h2>
@@ -110,3 +110,4 @@ export default function FAQ() {
     </section>
   );
 }
+

@@ -78,8 +78,8 @@ export const WpIndustryGridV2 = () => {
     <section className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="text-center mb-16 max-w-3xl mx-auto px-6">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>WHY PARTNER WITH US</span>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" >WHY PARTNER WITH US</span>
+          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" >
             Solving IT challenges in every industry, every day.
           </h2>
         </div>
@@ -88,15 +88,15 @@ export const WpIndustryGridV2 = () => {
           {INDUSTRIES.map((block, i) => (
             <div key={i} className="p-8 md:p-10 border-r border-b border-gray-200 flex flex-col bg-white transition-all duration-300 hover:bg-[#F9F9F9] group">
               <div className="mb-6 self-start">
-                <span className="px-4 py-1.5 rounded-full bg-[#F4F0FA] text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.1em]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                <span className="px-4 py-1.5 rounded-full bg-[#F4F0FA] text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.1em]" >
                   {block.tag}
                 </span>
               </div>
               <div className="mb-6 text-[#5D00D6] transition-transform duration-300 group-hover:scale-110">
                 <block.icon size={40} strokeWidth={1.5} />
               </div>
-              <h3 className="text-[20px] md:text-[22px] font-bold text-[#0c1024] mb-4 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{block.title}</h3>
-              <p className="text-gray-500 text-[16px] md:text-[18px] leading-relaxed font-normal mb-8 flex-grow" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h3 className="text-[20px] md:text-[22px] font-bold text-[#0c1024] mb-4 tracking-tight leading-tight" >{block.title}</h3>
+              <p className="text-gray-500 text-[16px] md:text-[18px] leading-relaxed font-normal mb-8 flex-grow" >
                 {block.desc}
               </p>
 
@@ -105,7 +105,7 @@ export const WpIndustryGridV2 = () => {
                 {block.metrics.map((m, mi) => (
                   <React.Fragment key={mi}>
                     <div className="flex-1 shrink-0">
-                      <div className="text-[24px] md:text-[28px] font-bold text-[#5D00D6] leading-none tracking-tight line-clamp-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                      <div className="text-[24px] md:text-[28px] font-bold text-[#5D00D6] leading-none tracking-tight line-clamp-1" >
                         {m.value}
                       </div>
                       <div className="text-[10px] md:text-[11px] text-gray-400 mt-2 font-medium uppercase tracking-wider font-proxima leading-tight pr-2 line-clamp-2 min-h-[24px]">
@@ -123,3 +123,4 @@ export const WpIndustryGridV2 = () => {
     </section>
   );
 };
+

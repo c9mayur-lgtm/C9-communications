@@ -55,13 +55,13 @@ export default function WhatYouGet() {
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
         <div className="flex flex-col mb-16 gap-4 font-sans">
-          <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" >
             SCOPE OF SERVICE
           </span>
-          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.05]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.05]" >
             Not a helpdesk number.<br />A full IT department.
           </h2>
-          <p className="text-white/85 text-[16px] max-w-[720px] leading-relaxed mt-2 font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <p className="text-white/85 text-[16px] max-w-[720px] leading-relaxed mt-2 font-normal" >
             Here is exactly what C9 manages when you outsource your IT to us. A consolidated service layer that covers every aspect of your business technology.
           </p>
         </div>
@@ -73,11 +73,11 @@ export default function WhatYouGet() {
                 <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
               </div>
 
-              <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight" >
                 {s.title}
               </h3>
 
-              <p className="text-[#4B5563] text-[16px] mb-6 leading-relaxed flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+              <p className="text-[#4B5563] text-[16px] mb-6 leading-relaxed flex-grow font-normal" >
                 {s.body}
               </p>
 
@@ -102,3 +102,4 @@ export default function WhatYouGet() {
     </section>
   );
 }
+

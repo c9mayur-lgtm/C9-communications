@@ -19,7 +19,7 @@ export default function FinalCTA() {
   return (
     <section
       className="w-full bg-[#0F0F1A] py-20"
-      style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+      
     >
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[700px] text-center">
 
@@ -95,3 +95,4 @@ export default function FinalCTA() {
     </section>
   );
 }
+

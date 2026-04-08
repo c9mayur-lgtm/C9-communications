@@ -23,7 +23,7 @@ export default function ContactCentreFeatures() {
   };
 
   return (
-    <section className="relative py-14 md:py-16 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="relative py-14 md:py-16 overflow-hidden" >
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#0c1024] via-[#1A1A2E] to-white z-0" />
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
@@ -61,3 +61,4 @@ export default function ContactCentreFeatures() {
     </section>
   );
 }
+

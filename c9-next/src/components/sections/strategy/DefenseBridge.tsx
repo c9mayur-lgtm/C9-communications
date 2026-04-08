@@ -26,10 +26,10 @@ export default function DefenseBridge() {
 
           {/* Content Area */}
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-[24px] md:text-[32px] font-bold text-white leading-tight tracking-tight mb-3" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <h2 className="text-[24px] md:text-[32px] font-bold text-white leading-tight tracking-tight mb-3" >
               Strategic roadmap meets enterprise cybersecurity
             </h2>
-            <p className="text-[15px] md:text-[16px] text-white/50 leading-relaxed max-w-[700px] font-normal font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="text-[15px] md:text-[16px] text-white/50 leading-relaxed max-w-[700px] font-normal font-sans" >
               Every strategic IT engagement includes a security posture review. For organisations with compliance obligations — <strong>C9 Defense</strong> provides Essential 8 implementation and continuous monitoring as a formal program alongside your strategy.
             </p>
           </div>
@@ -47,3 +47,4 @@ export default function DefenseBridge() {
     </section>
   );
 }
+

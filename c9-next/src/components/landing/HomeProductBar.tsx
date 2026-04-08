@@ -18,7 +18,7 @@ export const HomeProductBar = () => {
           <div className="inline-block bg-[#5D00D6] text-white px-4 py-1.5 rounded-full text-[13px] font-bold tracking-wide mb-6 shadow-md shadow-purple-900/20">
             Our products
           </div>
-          <h2 className="text-[32px] md:text-[40px] font-black text-[#0c1024] uppercase tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <h2 className="text-[32px] md:text-[40px] font-black text-[#0c1024] uppercase tracking-tight" >
             We've got something to suit every need
           </h2>
         </div>
@@ -46,3 +46,4 @@ export const HomeProductBar = () => {
     </section>
   );
 };
+

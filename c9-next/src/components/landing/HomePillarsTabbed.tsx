@@ -51,7 +51,7 @@ export const HomePillarsTabbed = () => {
                  OUR CORE PILLARS
                  <div className="h-[1px] w-12 bg-gray-200" />
                </div>
-               <h2 className="text-[32px] md:text-[40px] text-[#0c1024] font-bold leading-[1.05] tracking-tight mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+               <h2 className="text-[32px] md:text-[40px] text-[#0c1024] font-bold leading-[1.05] tracking-tight mb-6" >
                  Three core divisions. <br className="hidden md:block"/> One powerful partner.
                </h2>
                <p className="text-[18px] text-gray-500 font-normal leading-relaxed max-w-xl">
@@ -77,7 +77,7 @@ export const HomePillarsTabbed = () => {
                  onClick={() => setActiveTab(i)}
                  className={`relative flex-1 p-6 md:p-8 flex justify-center items-center border-b md:border-b-0 md:border-r last:border-r-0 border-gray-200 transition-colors group cursor-pointer ${activeTab === i ? 'bg-[#FCFCFD]' : 'bg-white hover:bg-gray-50/50'}`}
                >
-                  <span className={`text-[18px] md:text-[22px] font-bold transition-colors ${activeTab === i ? 'text-[#0c1024]' : 'text-gray-400 group-hover:text-gray-600'}`} style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <span className={`text-[18px] md:text-[22px] font-bold transition-colors ${activeTab === i ? 'text-[#0c1024]' : 'text-gray-400 group-hover:text-gray-600'}`} >
                     {tab.label}
                   </span>
                   {/* Subtle Active Bottom Border matching the exact style of the image */}
@@ -106,7 +106,7 @@ export const HomePillarsTabbed = () => {
                 className="p-8 md:p-14 lg:p-16 flex flex-col justify-end border-r-0 lg:border-r border-gray-200 relative lg:col-start-1 lg:row-start-1"
               >
                 <div className="relative z-10 w-full">
-                  <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 leading-tight tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 leading-tight tracking-tight" >
                     {TABS[activeTab].headline}
                   </h3>
                   <p className="text-[18px] text-gray-500 font-normal leading-relaxed mb-8 max-w-[90%]">
@@ -145,3 +145,4 @@ export const HomePillarsTabbed = () => {
     </section>
   );
 };
+

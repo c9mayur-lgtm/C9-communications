@@ -17,7 +17,7 @@ export const LegalLayout = ({ title, effectiveDate, links, toc, children }: Lega
   const pathname = usePathname();
 
   return (
-    <main className="min-h-screen bg-white pt-32 pb-24 md:pt-40 md:pb-32" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <main className="min-h-screen bg-white pt-32 pb-24 md:pt-40 md:pb-32" >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         {/* Header Section */}
         <motion.div
@@ -97,3 +97,4 @@ export const LegalLayout = ({ title, effectiveDate, links, toc, children }: Lega
     </main>
   );
 };
+

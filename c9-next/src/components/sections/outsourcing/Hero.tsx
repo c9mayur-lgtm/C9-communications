@@ -45,7 +45,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[56px] tracking-tight font-bold text-[#0c1024] leading-[1.1] mb-8 font-sans"
-              style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+              
             >
               You didn't start a business to <span className="text-[#5D00D6]">manage IT.</span>
             </motion.h1>
@@ -55,7 +55,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="text-[18px] md:text-[20px] text-slate-600/90 max-w-[580px] leading-relaxed mb-12 font-normal font-sans"
-              style={{ fontFamily: '"Proxima Nova", sans-serif' }}
+              
             >
               C9 becomes your complete IT department — or replaces the one that's letting you down. Helpdesk, infrastructure, strategy, and security. All managed under one Aussie roof.
             </motion.p>
@@ -218,3 +218,4 @@ export default function Hero() {
     </section>
   );
 }
+

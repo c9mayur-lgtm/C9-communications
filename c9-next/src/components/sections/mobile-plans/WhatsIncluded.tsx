@@ -108,7 +108,7 @@ const ITEMS = [
 
 export default function WhatsIncluded() {
   return (
-    <section className="py-16 md:py-20 bg-white border-y border-gray-100" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="py-16 md:py-20 bg-white border-y border-gray-100" >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         <div className="text-center mb-10 md:mb-12 max-w-4xl mx-auto">
@@ -161,3 +161,4 @@ export default function WhatsIncluded() {
     </section>
   );
 }
+

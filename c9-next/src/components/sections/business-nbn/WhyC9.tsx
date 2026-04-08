@@ -29,7 +29,7 @@ const reasons = [
 
 export default function WhyC9() {
   return (
-    <section className="w-full bg-[#0c1024] py-24 px-6 md:px-8 overflow-hidden" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="w-full bg-[#0c1024] py-24 px-6 md:px-8 overflow-hidden" >
       <div className="container mx-auto max-w-[1240px] text-center">
         
         {/* Dark Header */}
@@ -66,3 +66,4 @@ export default function WhyC9() {
     </section>
   );
 }
+

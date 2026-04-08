@@ -80,18 +80,18 @@ const IndustryCard = ({ industry }: { industry: typeof INDUSTRIES[0] }) => (
       </div>
     </div>
     
-    <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" >
       {industry.title}
     </h3>
     
-    <p className="text-gray-500 text-[16px] leading-relaxed mb-10 flex-grow font-normal" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <p className="text-gray-500 text-[16px] leading-relaxed mb-10 flex-grow font-normal" >
       {industry.desc}
     </p>
     
     <div className="grid grid-cols-2 gap-8 pt-8 border-t border-[#E9E4FF]">
       {industry.metrics.map((m, i) => (
         <div key={i} className="flex flex-col">
-          <span className="text-[24px] font-bold text-[#5D00D6] leading-none mb-1" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{m.value}</span>
+          <span className="text-[24px] font-bold text-[#5D00D6] leading-none mb-1" >{m.value}</span>
           <span className="text-[11px] text-gray-400 font-bold uppercase tracking-tight">{m.label}</span>
         </div>
       ))}
@@ -165,3 +165,4 @@ export const IndustryMarquee = () => {
     </div>
   );
 };
+

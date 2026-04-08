@@ -39,7 +39,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-white py-24 px-6 md:px-8 lg:px-12" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="bg-white py-24 px-6 md:px-8 lg:px-12" >
       <div className="container mx-auto max-w-[800px]">
         <span className="text-[11px] uppercase font-bold tracking-[0.2em] text-[#7B2FBE] block mb-4">
           COMMON QUESTIONS
@@ -87,3 +87,4 @@ export default function FAQ() {
     </section>
   );
 }
+

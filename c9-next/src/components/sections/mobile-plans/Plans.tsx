@@ -236,7 +236,7 @@ export default function Plans() {
   const [network, setNetwork] = useState<'4G' | '5G'>('5G');
 
   return (
-    <section id="mobile-plans" className="bg-[#FAFAFA] py-16 md:py-20 overflow-hidden border-y border-gray-100" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section id="mobile-plans" className="bg-[#FAFAFA] py-16 md:py-20 overflow-hidden border-y border-gray-100" >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         {/* HEADER */}
@@ -303,3 +303,4 @@ export default function Plans() {
     </section>
   );
 }
+

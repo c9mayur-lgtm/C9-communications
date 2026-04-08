@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function FutureProof() {
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-8 border-y border-gray-50" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+    <section className="w-full bg-white py-16 px-6 md:px-8 border-y border-gray-50" >
       <div className="container mx-auto max-w-[1240px]">
         
         {/* Horizontal Call-out Card */}
@@ -60,3 +60,4 @@ export default function FutureProof() {
     </section>
   );
 }
+

@@ -29,7 +29,7 @@ export const WpHeroV2 = () => {
               {/* Uptime, Support, No Lock-In marks */}
               <div className="flex items-center gap-5 md:gap-8 mt-10 md:mt-12 flex-wrap pb-4">
                 {['99.99% SLA Uptime', '24/7 AU Local Support', '0 Lock-In Contracts'].map((t, i) => (
-                  <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                  <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
                     <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                   </span>
                 ))}
@@ -66,12 +66,12 @@ export const WpHeroV2 = () => {
                 </div>
               ))}
             </div>
-            <p className="text-[14px] font-bold text-[#4B5563]" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+            <p className="text-[14px] font-bold text-[#4B5563]" >
               Join 500+ Australian businesses already managed by C9
             </p>
           </div>
           
-          <div className="hidden md:flex items-center gap-4 text-[13px] text-[#6B7280] font-medium" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+          <div className="hidden md:flex items-center gap-4 text-[13px] text-[#6B7280] font-medium" >
             <span>20 years in business</span>
             <span className="opacity-30">·</span>
             <span>100% AU-based support</span>
@@ -83,3 +83,4 @@ export const WpHeroV2 = () => {
     </>
   );
 };
+
