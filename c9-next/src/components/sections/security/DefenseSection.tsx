@@ -33,7 +33,7 @@ export default function DefenseSection() {
               C9 Defense
             </div>
             
-            <h2 className="text-[36px] md:text-[48px] font-bold text-white leading-[1.05] tracking-tight mb-8">
+            <h2 className="c9-section-heading !text-white mb-8">
               Some organisations need more than a baseline. C9 Defense is built for them.
             </h2>
             
@@ -61,7 +61,7 @@ export default function DefenseSection() {
             {/* Subtle glow */}
             <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-[#5D00D6]/10 blur-[90px] pointer-events-none" />
 
-            <h3 className="text-[26px] md:text-[32px] font-bold text-white mb-8 tracking-tight relative z-10 leading-tight">
+            <h3 className="c9-section-heading !text-white mb-8 relative z-10">
               C9 Defense includes:
             </h3>
 

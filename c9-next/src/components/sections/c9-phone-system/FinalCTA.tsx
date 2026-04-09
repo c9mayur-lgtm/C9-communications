@@ -33,9 +33,9 @@ export const FinalCTA = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* NBN Accredited Style Eyebrow */}
+          {/* nbn Accredited Style Eyebrow */}
           <div className="rounded-full text-[11px] font-medium uppercase tracking-[0.2em] px-5 py-2 mx-auto mb-10 w-fit bg-[#5D00D6]/20 text-[#A855F7] border border-[#5D00D6]/10">
-            NBN™ Accredited Adviser
+            nbn™ Accredited Adviser
           </div>
 
           <h2 className="c9-section-heading !text-white !text-[40px] md:!text-[52px] mb-8 text-balance">

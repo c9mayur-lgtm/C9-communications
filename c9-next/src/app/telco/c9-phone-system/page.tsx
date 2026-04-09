@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { WpFooter } from "@/components/layout/WpFooter";
-import { Hero } from "@/components/sections/c9x/Hero";
-import { WhatIsC9Voice } from "@/components/sections/c9x/WhatIsC9X";
-import { Advantage } from "@/components/sections/c9x/Advantage";
-import { KeyFeatures } from "@/components/sections/c9x/KeyFeatures";
-import { Plans } from "@/components/sections/c9x/Plans";
-import { PhoneCompatibility } from "@/components/sections/c9x/PhoneCompatibility";
-import { FinalCTA } from "@/components/sections/c9x/FinalCTA";
+import { Hero } from "@/components/sections/c9-phone-system/Hero";
+import { WhatIsC9PhoneSystem } from "@/components/sections/c9-phone-system/WhatIsC9PhoneSystem";
+import { C9PhoneSystemAdvantage } from "@/components/sections/c9-phone-system/C9PhoneSystemAdvantage";
+import { KeyFeatures } from "@/components/sections/c9-phone-system/KeyFeatures";
+import { Plans } from "@/components/sections/c9-phone-system/Plans";
+import { PhoneCompatibility } from "@/components/sections/c9-phone-system/PhoneCompatibility";
+import { FinalCTA } from "@/components/sections/c9-phone-system/FinalCTA";
 
 
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "C9 Voice Cloud Phone System | C9 Communications",
     description: "Save up to 70% on business calls with C9 Voice — Australia's next generation in cloud-based phone systems.",
-    url: "https://c9communications.com.au/telco/c9x",
+    url: "https://c9communications.com.au/telco/c9-phone-system",
   }
 };
 
@@ -33,8 +33,8 @@ export default function C9VoicePage() {
       
       <Hero />
       <WpClientTicker />
-      <WhatIsC9Voice />
-      <Advantage />
+      <WhatIsC9PhoneSystem />
+      <C9PhoneSystemAdvantage />
       <KeyFeatures />
       
       {/* Plans Section */}

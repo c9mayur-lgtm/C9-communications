@@ -48,7 +48,7 @@ export default function HowItWorks() {
         <span className="text-[11px] uppercase tracking-[0.1em] text-[#7B2FBE]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
           HOW IT WORKS
         </span>
-        <h2 className="text-[40px] font-bold text-[#1A1A2E] mt-4 mb-16 leading-tight max-w-2xl" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
+        <h2 className="c9-section-heading mt-4 mb-16 max-w-2xl" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
           From problem to resolved. Here's exactly what happens.
         </h2>
 

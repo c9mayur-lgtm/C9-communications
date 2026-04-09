@@ -12,7 +12,7 @@ const tiers = [
     price: '$0',
     priceSub: 'Included with all plans',
     esla: '12-hour eSLA',
-    desc: 'Best for standard business operations. Backed by the NBN™ enhanced SLA program.',
+    desc: 'Best for standard business operations. Backed by the nbn™ enhanced SLA program.',
     features: [
       '12-hour restoration commitment',
       'Unified Business Support team',
@@ -49,7 +49,7 @@ const tiers = [
     desc: 'The fastest response available. For organizations where internet downtime is unacceptable.',
     features: [
       '4-hour restoration commitment',
-      'Fastest available NBN™ eSLA',
+      'Fastest available nbn™ eSLA',
       'Real-time status notifications',
       'Priority routing pathing'
     ],
@@ -67,7 +67,7 @@ export default function SupportTiers() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
            <div>
               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">Support Packages</span>
-              <h2 className="text-[36px] md:text-[48px] font-bold text-[#1A1A2E] leading-tight">
+              <h2 className="c9-section-heading">
                 Premium support <br className="hidden md:block" /> for premium business.
               </h2>
            </div>
@@ -94,7 +94,7 @@ export default function SupportTiers() {
                     {t.offer}
                  </div>
 
-                 <h3 className="text-[32px] font-bold leading-tight mb-4 tracking-tight">{t.title}</h3>
+                 <h3 className="c9-section-heading mb-4">{t.title}</h3>
                  <div className="flex items-baseline gap-2 mb-2">
                     <span className="text-[52px] font-bold">{t.price}</span>
                     <span className="text-[16px] opacity-70">/mth</span>

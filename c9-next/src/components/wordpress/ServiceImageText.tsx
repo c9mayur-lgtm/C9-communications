@@ -32,7 +32,7 @@ export const ServiceImageText = ({
 
           {/* Content Column */}
           <div className={`flex flex-col ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mb-6 leading-tight tracking-tight" >
+            <h2 className="c9-section-heading mb-6" >
               {title}
             </h2>
             <div className="space-y-6">

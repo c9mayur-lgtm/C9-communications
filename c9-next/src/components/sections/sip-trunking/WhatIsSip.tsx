@@ -40,7 +40,7 @@ export default function WhatIsSip() {
               transition={{ delay: 0.1 }}
               className="c9-body !text-gray-600 !font-semibold"
             >
-              C9X uses VoIP to connect you to the internet rather than traditional phone systems, where bundles of physical wires join your business to a service provider. With SIP Trunking, you can secure your IP phone systems via a business-grade data service.
+              C9 phone system uses VoIP to connect you to the internet rather than traditional phone systems, where bundles of physical wires join your business to a service provider. With SIP Trunking, you can secure your IP phone systems via a business-grade data service.
             </motion.p>
             
             <motion.p 

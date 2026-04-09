@@ -19,7 +19,7 @@ export default function Hero() {
     // Simulate a check
     setTimeout(() => {
       setIsChecking(false);
-      setInquiryMessage(`I'd like to check NBN™ Enterprise Ethernet availability for the following address: ${address}. Please run a formal site qualification.`);
+      setInquiryMessage(`I'd like to check nbn™ Enterprise Ethernet availability for the following address: ${address}. Please run a formal site qualification.`);
       const el = document.getElementById('consultation-section');
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     }, 1200);
@@ -42,10 +42,10 @@ export default function Hero() {
             <div className="flex flex-col items-start">
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <div className="bg-[#5D00D6]/10 text-[#5D00D6] px-4 py-1.5 rounded-none text-[11px] font-bold uppercase tracking-[0.2em] border border-[#5D00D6]/20">
-                  Telco · NBN™ Enterprise Ethernet
+                  Telco · nbn™ Enterprise Ethernet
                 </div>
                 <div className="bg-[#1A1A2E]/5 text-[#1A1A2E]/60 px-4 py-1.5 rounded-none text-[11px] font-bold uppercase tracking-[0.2em] border border-[#1A1A2E]/10 flex items-center gap-2">
-                   <ShieldCheck size={12} className="text-[#5D00D6]" /> NBN™ Accredited Adviser
+                   <ShieldCheck size={12} className="text-[#5D00D6]" /> nbn™ Accredited Adviser
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-[18px] md:text-[20px] text-slate-600 mb-8 max-w-[620px] leading-relaxed font-normal">
-                NBN™ Enterprise Ethernet delivers dedicated, symmetrical connectivity from 50/50 Mbps up to 1000/1000 Mbps — with guaranteed bandwidth, enhanced SLAs, and the infrastructure to connect multiple sites across Australia.
+                nbn™ Enterprise Ethernet delivers dedicated, symmetrical connectivity from 50/50 Mbps up to 1000/1000 Mbps — with guaranteed bandwidth, enhanced SLAs, and the infrastructure to connect multiple sites across Australia.
               </p>
 
               {/* SALES FUNNEL HOOK: ADDRESS CHECKER */}

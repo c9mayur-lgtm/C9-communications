@@ -14,7 +14,7 @@ const speedTiers = [
 ];
 
 const trustSignals = [
-  'NBN™ Accredited Adviser',
+  'nbn™ Accredited Adviser',
   'Up to 1000/1000 Mbps',
   '4G LTE failover included',
   '4-hour eSLA available',
@@ -120,17 +120,17 @@ export default function Hero() {
             <div className="flex items-center gap-3">
               <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full px-4 py-1.5 flex items-center gap-2">
                 <Award size={14} className="text-[#5D00D6] shrink-0" />
-                <span className="c9-eyebrow !text-[11px]">NBN™ Accredited Business Adviser</span>
+                <span className="c9-eyebrow !text-[11px]">nbn™ Accredited Business Adviser</span>
               </div>
             </div>
 
             <h1 className="c9-hero-title text-[#1A1A2E] mt-8">
-              Business NBN™ built for <br className="hidden lg:block" /> businesses that{' '}
+              Small Business nbn™ built for <br className="hidden lg:block" /> businesses that{' '}
               <span className="text-[#5D00D6]">can't afford <br className="hidden lg:block" /> to be offline.</span>
             </h1>
 
             <p className="c9-body text-[#6B7280] max-w-[580px] mt-6 md:text-[18px]">
-              Enterprise-grade NBN™ with speeds up to 1000/1000 Mbps, 
+              Enterprise-grade nbn™ with speeds up to 1000/1000 Mbps, 
               automatic 4G LTE failover, and a dedicated Australian account manager.
             </p>
 
@@ -304,7 +304,7 @@ export default function Hero() {
                   <div className="w-7 h-7 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center">
                     <Zap size={13} className="text-blue-500" />
                   </div>
-                  <span className="text-[7px] text-[#9CA3AF]">NBN™ Node</span>
+                  <span className="text-[7px] text-[#9CA3AF]">nbn™ Node</span>
                 </div>
                 <div className="flex-1 relative h-1.5 flex items-center">
                   <div className="w-full h-px bg-gray-200" />

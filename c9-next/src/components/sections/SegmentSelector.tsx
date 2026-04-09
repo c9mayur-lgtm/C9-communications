@@ -69,10 +69,10 @@ export const SegmentSelector = () => {
             </div>
             <h3 className="c9-card-title mb-4">Telco</h3>
             <p className="c9-body mb-8 flex-grow">
-              Business NBN, cloud voice, mobile plans, and hardware — all on one bill with one point of contact.
+              Small Business nbn™, cloud voice, mobile plans, and hardware — all on one bill with one point of contact.
             </p>
             <div className="flex flex-wrap gap-2 mb-10">
-              {['Business NBN', 'C9X Voice', 'Mobile'].map(pill => (
+              {['Small Business nbn™', 'C9 phone system Voice', 'Mobile'].map(pill => (
                 <Badge key={pill} variant="secondary" className="bg-[#5D00D6]/5 text-[#5D00D6] px-3 py-1 c9-eyebrow rounded-full">
                   {pill}
                 </Badge>

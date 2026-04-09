@@ -133,7 +133,7 @@ export default function TheTransition() {
         <p className="text-[13px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block">
           Getting started
         </p>
-        <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-[1.05] text-[#0c1024] mb-6 max-w-2xl">
+        <h2 className="c9-section-heading mb-6 max-w-2xl">
           The part everyone worries about.<br />
           Here's exactly how it works.
         </h2>
@@ -201,7 +201,7 @@ export default function TheTransition() {
                 {s.badge}
               </div>
 
-              <h3 className="text-[24px] md:text-[28px] font-bold text-[#0c1024] leading-tight mb-4 tracking-tight">
+              <h3 className="c9-section-heading mb-4">
                 {s.heading}
               </h3>
               <p className="text-[16px] text-slate-600 leading-relaxed mb-8 font-normal">

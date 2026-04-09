@@ -69,7 +69,7 @@ export default function Homepage() {
       <section className="py-32 px-6 border-y border-gray-50 bg-[#F9FAFF]">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Built for high-performance teams.</h2>
+            <h2 className="c9-section-heading mb-6" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>Built for high-performance teams.</h2>
             <p className="text-[18px] text-gray-500 font-normal max-w-xl mx-auto leading-relaxed">Everything we do is focused on 99.99% reliability and zero friction for your staff.</p>
           </div>
           

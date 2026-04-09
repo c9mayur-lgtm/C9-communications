@@ -29,7 +29,7 @@ const inclusions = [
   {
     icon: Timer,
     title: 'Up to 4-hour Enhanced SLA',
-    desc: 'Backed by the fastest restoration commitment on the NBN™ network. Choose from 4, 8, or 12-hour eSLA targets to ensure your organisation is back online within hours.',
+    desc: 'Backed by the fastest restoration commitment on the nbn™ network. Choose from 4, 8, or 12-hour eSLA targets to ensure your organisation is back online within hours.',
   },
   {
     icon: BarChart2,
@@ -42,7 +42,7 @@ export default function Features() {
   const { setInquiryMessage } = useInquiry();
 
   const handleGetStarted = () => {
-    setInquiryMessage("I'm interested in the NBN™ Enterprise Ethernet solutions from C9.");
+    setInquiryMessage("I'm interested in the nbn™ Enterprise Ethernet solutions from C9.");
     const el = document.getElementById('consultation-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -55,7 +55,7 @@ export default function Features() {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px] relative z-10">
         <div className="flex flex-col mb-16 gap-4">
           <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-4 block">WHAT'S INCLUDED</span>
-          <h2 className="text-[36px] md:text-[52px] font-bold tracking-tight text-white leading-[1.05] max-w-[1000px]">
+          <h2 className="c9-section-heading !text-white max-w-[1000px]">
              Engineering your scale with more than just <span className="text-white/60">an internet connection.</span>
           </h2>
           <p className="text-white/85 text-[18px] md:text-[20px] max-w-[800px] leading-relaxed mt-4 font-medium">

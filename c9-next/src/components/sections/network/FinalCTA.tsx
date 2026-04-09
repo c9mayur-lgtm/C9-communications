@@ -45,7 +45,7 @@ export default function FinalCTA() {
              <span className="text-[#5D00D6] text-[11px] font-black uppercase tracking-[0.25em]">Strategic Engagement</span>
           </div>
           
-          <h2 className="text-[42px] md:text-[58px] lg:text-[62px] font-bold text-[#1A1A2E] leading-[1.0] tracking-[-0.03em] max-w-[900px] mx-auto">
+          <h2 className="c9-section-heading lg: max-w-[900px] mx-auto">
             Ready to <span className="text-[#5D00D6]">re-architect</span> your core network?
           </h2>
           

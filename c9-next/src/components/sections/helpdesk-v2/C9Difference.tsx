@@ -21,7 +21,7 @@ export default function C9Difference() {
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
               THE C9 DIFFERENCE
             </span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mt-4 leading-[1.1] tracking-tight max-w-[500px]" >
+            <h2 className="c9-section-heading mt-4 max-w-[500px]" >
               Not a call centre. <br />A <span className="text-[#5D00D6]">partner</span> that knows your business.
             </h2>
             

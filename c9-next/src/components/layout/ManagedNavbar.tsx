@@ -134,7 +134,7 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Internet</h4>
                          <ul className="flex flex-col gap-2">
-                           <ListItem href="#" title="Business NBN">Fast, reliable local internet.</ListItem>
+                           <ListItem href="#" title="Small Business nbn™">Fast, reliable local internet.</ListItem>
                            <ListItem href="#" title="Fast Fibre">Ultrafast dedicated connections.</ListItem>
                            <ListItem href="#" title="Enterprise Ethernet">Symmetrical high-speed fibre.</ListItem>
                          </ul>
@@ -151,7 +151,7 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Voice</h4>
                          <ul className="flex flex-col gap-2">
-                           <ListItem href="#" title="C9X Cloud Voice">Smart phone systems.</ListItem>
+                           <ListItem href="#" title="C9 phone system Cloud Voice">Smart phone systems.</ListItem>
                            <ListItem href="#" title="Inbound Services" />
                            <ListItem href="#" title="Microsoft Teams Calling" />
                            <ListItem href="#" title="SIP Trunking" />

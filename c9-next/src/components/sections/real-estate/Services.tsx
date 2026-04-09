@@ -50,8 +50,8 @@ const cards = [
   {
     icon: Phone,
     title: 'Cloud Voice & Virtual Reception',
-    desc: 'C9X cloud phone system, inbound 1300/1800, and virtual receptionist services — professional voice infrastructure for every office.',
-    tags: ['C9X CLOUD', 'VIRTUAL RECEPTION', 'MOBILE FOLLOW-ME'],
+    desc: 'C9 phone system cloud phone system, inbound 1300/1800, and virtual receptionist services — professional voice infrastructure for every office.',
+    tags: ['C9 phone system CLOUD', 'VIRTUAL RECEPTION', 'MOBILE FOLLOW-ME'],
     defenseDark: null,
     link: '/telco',
   },
@@ -66,7 +66,7 @@ export default function Services() {
           <span className="text-white text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={fontStyle}>
             WHAT C9 MANAGES FOR REAL ESTATE
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-white leading-[1.1] mb-6" style={fontStyle}>
+          <h2 className="c9-section-heading !text-white mb-6" style={fontStyle}>
             Everything under one managed services agreement.
           </h2>
           <p className="text-white text-[16px] md:text-[18px] max-w-[720px] leading-relaxed mt-2 font-normal" style={fontStyle}>

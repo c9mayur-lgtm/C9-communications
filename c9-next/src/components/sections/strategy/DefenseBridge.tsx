@@ -26,7 +26,7 @@ export default function DefenseBridge() {
 
           {/* Content Area */}
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-[24px] md:text-[32px] font-bold text-white leading-tight tracking-tight mb-3" >
+            <h2 className="c9-section-heading !text-white mb-3" >
               Strategic roadmap meets enterprise cybersecurity
             </h2>
             <p className="text-[15px] md:text-[16px] text-white/50 leading-relaxed max-w-[700px] font-normal font-sans" >

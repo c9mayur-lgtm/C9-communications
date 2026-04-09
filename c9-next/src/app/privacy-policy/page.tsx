@@ -82,7 +82,7 @@ export default function PrivacyPolicy() {
         <ul>
           <li><strong>Public Sources:</strong> Information available via phone books and public record databases.</li>
           <li><strong>Affiliates:</strong> Other companies within the C9 Group that you have dealt with previously.</li>
-          <li><strong>Partners & Wholesalers:</strong> Our business partners, authorized representatives, and infrastructure wholesalers (e.g., NBN Co).</li>
+          <li><strong>Partners & Wholesalers:</strong> Our business partners, authorized representatives, and infrastructure wholesalers (e.g., nbn Co).</li>
           <li><strong>Agents:</strong> Our dealers, contractors, and other representatives performing specialist tasks.</li>
           <li><strong>Information Brokers:</strong> Specialized fraud checking and credit reporting agencies.</li>
         </ul>

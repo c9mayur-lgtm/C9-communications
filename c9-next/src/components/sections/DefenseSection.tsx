@@ -22,7 +22,7 @@ export const DefenseSection = () => {
                   C9 Defense
                 </span>
               </div>
-              <h2 className="text-white text-[40px] md:text-[48px] font-bold leading-[1.1] tracking-tight font-syne">
+              <h2 className="c9-section-heading !text-white md: font-syne">
                 Enterprise cybersecurity built for Australian organisations.
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed font-dm-sans max-w-xl">

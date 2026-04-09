@@ -656,7 +656,7 @@ export default function BlandExplorer() {
           <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#5D00D6] block mb-4">
             CLOUD SERVICES OVERVIEW
           </span>
-          <h2 className="text-[32px] md:text-[42px] font-bold text-text-primary leading-tight tracking-tight max-w-[640px]">
+          <h2 className="c9-section-heading text-text-primary max-w-[640px]">
             Everything you need — managed, secured, and delivered.
           </h2>
         </div>

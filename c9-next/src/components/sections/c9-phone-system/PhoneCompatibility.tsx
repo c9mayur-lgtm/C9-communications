@@ -50,7 +50,7 @@ export const PhoneCompatibility = () => {
         >
              <div className="relative z-10">
                 <div className="flex flex-col items-center justify-center text-center mb-12 gap-2">
-                   <h3 className="text-[#0c1024] text-[28px] md:text-[34px] font-medium tracking-tight">C9 Voice is compatible with:</h3>
+                   <h3 className="c9-section-heading font-medium">C9 Voice is compatible with:</h3>
                    <p className="c9-body !text-slate-500 max-w-lg text-[16px]">
                      Got your own phones? C9 Voice works with most major brands.
                    </p>

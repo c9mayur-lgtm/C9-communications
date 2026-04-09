@@ -51,7 +51,7 @@ const tiers = [
     desc: 'The fastest available response. For organizations with high-consequence downtime risk.',
     features: [
       '4-hour restoration commitment',
-      'Fastest available NBN™ eSLA',
+      'Fastest available nbn™ eSLA',
       'Real-time status notifications',
       'Priority routing pathing',
       '24/7 direct engineer access'
@@ -78,14 +78,14 @@ export default function SupportTiers() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
            <div className="max-w-[700px]">
               <span className="text-[11px] uppercase tracking-[0.3em] text-[#5D00D6] font-black block mb-6">Support Packages</span>
-              <h2 className="text-[36px] md:text-[52px] font-bold text-[#1A1A2E] leading-[1.1] tracking-tight">
+              <h2 className="c9-section-heading">
                 Three eSLA tiers — choose your <span className="text-[#5D00D6]">restoration commitment.</span>
               </h2>
            </div>
            <div className="max-w-[400px]">
               <p className="text-[15px] md:text-[16px] text-[#6B7280] leading-relaxed italic border-l-2 border-[#5D00D6]/20 pl-6">
                  * Restoration targets (eSLA) ensure your business has a contractually backed commitment 
-                 to service uptime on the NBN™ enterprise backbone.
+                 to service uptime on the nbn™ enterprise backbone.
               </p>
            </div>
         </div>
@@ -107,7 +107,7 @@ export default function SupportTiers() {
                     {t.offer}
                  </div>
 
-                 <h3 className="text-[32px] font-bold leading-tight mb-4 tracking-tight">{t.title}</h3>
+                 <h3 className="c9-section-heading mb-4">{t.title}</h3>
                  <div className="flex items-baseline gap-2 mb-4">
                     <span className="text-[52px] font-bold">{t.price}</span>
                     <span className="text-[14px] opacity-70 font-bold uppercase tracking-widest leading-none translate-y-[-10px]">/mth</span>

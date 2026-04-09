@@ -19,13 +19,13 @@ import FinalCTA from '@/components/sections/business-nbn/FinalCTA';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 
 export const metadata = {
-  title: 'Business NBN™ Plans | C9 Communications',
+  title: 'Small Business nbn™ Plans | C9 Communications',
   description:
-    'Business NBN™ Enterprise Ethernet with speeds up to 1000/1000 Mbps, 4G LTE failover, enhanced SLA from 4 hours, and a dedicated account manager. NBN™ Accredited Business Adviser.',
+    'Small Business nbn™ Enterprise Ethernet with speeds up to 1000/1000 Mbps, 4G LTE failover, enhanced SLA from 4 hours, and a dedicated account manager. nbn™ Accredited Business Adviser.',
   openGraph: {
-    title: 'Business NBN™ Plans | C9 Communications',
+    title: 'Small Business nbn™ Plans | C9 Communications',
     description:
-      'Enterprise-grade Business NBN™ with guaranteed bandwidth, 4G LTE failover, and eSLA from 4 hours. NBN accredited partner.',
+      'Enterprise-grade Small Business nbn™ with guaranteed bandwidth, 4G LTE failover, and eSLA from 4 hours. nbn accredited partner.',
     url: 'https://c9communications.com.au/telco/business-nbn',
   },
 };
@@ -45,7 +45,7 @@ export default function BusinessNBNPage() {
       <WhyC9 />
       <WpCaseStudies 
         title="Technical Insights" 
-        eyebrow="NBN™ CORE CLINIC"
+        eyebrow="nbn™ CORE CLINIC"
         articles={[
           {
             tag: 'NETWORK ARCHITECTURE',

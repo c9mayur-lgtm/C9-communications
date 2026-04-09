@@ -11,7 +11,7 @@ const PRODUCTS = [
   { label: 'M365 & Hardware', icon: Monitor },
   { label: 'Cloud Infrastructure', icon: Cloud },
   { label: '24/7 Service Desk', icon: Headphones },
-  { label: 'NBN & Starlink', icon: Wifi },
+  { label: 'nbn & Starlink', icon: Wifi },
   { label: 'Print Solutions', icon: Printer },
   { label: 'Compliance & E8', icon: Fingerprint },
 ];

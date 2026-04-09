@@ -52,7 +52,7 @@ export const ManagedFooter = () => {
            <div className="flex flex-col gap-8">
               <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans opacity-40">Telco</h4>
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
-                 {['Internet', 'Voice (C9X)', 'Mobile', 'Hardware', 'Contact Centre', 'Network'].map(item => (
+                 {['Internet', 'Voice (C9 phone system)', 'Mobile', 'Hardware', 'Contact Centre', 'Network'].map(item => (
                    <li key={item}><a href="#" className="hover:text-brand-purple transition-colors">{item}</a></li>
                  ))}
               </ul>
@@ -92,7 +92,7 @@ export const ManagedFooter = () => {
         
         {/* Accreditation Logos */}
         <div className="flex flex-wrap items-center gap-12 py-12 border-t border-gray-100 opacity-20 filter grayscale group-hover:grayscale-0 transition-opacity">
-           {['NBN Accredited Advisor', 'APNIC', 'TIO', 'CommCom'].map(acc => (
+           {['nbn Accredited Advisor', 'APNIC', 'TIO', 'CommCom'].map(acc => (
              <div key={acc} className="flex flex-col gap-2">
                 <div className="h-6 w-16 bg-text-primary rounded" />
                 <span className="text-[8px] font-bold uppercase tracking-widest leading-none">{acc}</span>

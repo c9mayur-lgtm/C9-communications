@@ -24,7 +24,7 @@ export default function FAQ() {
             <HelpCircle className="text-[#5D00D6]" size={16} />
             <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-[0.2em] leading-none mt-0.5" >Quick Answers</span>
           </div>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" >
+          <h2 className="c9-section-heading" >
             What retail businesses ask us most.
           </h2>
         </div>

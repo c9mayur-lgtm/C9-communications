@@ -17,7 +17,7 @@ export default function FinalCTA() {
   return (
     <section className="bg-white py-24 px-6 md:px-8 lg:px-12 overflow-hidden">
       <div className="container mx-auto max-w-[700px] text-center font-sans">
-        <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight font-sans" >
+        <h2 className="c9-section-heading font-sans" >
           Ready to hand IT over to a team that owns the outcome?
         </h2>
         

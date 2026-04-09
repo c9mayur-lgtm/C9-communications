@@ -24,7 +24,7 @@ export const VoiceLeadCapture = () => {
             <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8">
               <span className="c9-eyebrow !text-white/60 !text-[10px]">GET YOUR SYSTEM MAPPED</span>
             </div>
-            <h2 className="text-[36px] md:text-[48px] font-bold text-white leading-[1.1] tracking-tight mb-6">
+            <h2 className="c9-section-heading !text-white mb-6">
               Not sure which phone system<br />
               <span className="text-[#5D00D6]">is right for you?</span>
             </h2>

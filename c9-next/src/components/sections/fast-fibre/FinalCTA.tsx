@@ -25,7 +25,7 @@ export default function FinalCTA() {
 
            <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-8 items-center relative z-10">
               <div className="text-left">
-                 <h2 className="text-[24px] md:text-[32px] font-bold text-white leading-[1.1] mb-4">
+                 <h2 className="c9-section-heading !text-white mb-4">
                      Ready to future-proof your business connectivity?
                  </h2>
                  <p className="text-[14px] md:text-[15px] text-white/80 leading-relaxed mb-6 max-w-[560px]">

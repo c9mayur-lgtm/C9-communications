@@ -15,7 +15,7 @@ export default function AustralianData() {
               Australian Data Centres
             </span>
 
-            <h2 className="text-[32px] md:text-[40px] font-bold text-white mt-6 leading-[1.3] tracking-tight" style={FONT_FAMILY}>
+            <h2 className="c9-section-heading !text-white mt-6" style={FONT_FAMILY}>
               Your data stays in Australia.<br className="hidden md:block" /> No exceptions.
             </h2>
 

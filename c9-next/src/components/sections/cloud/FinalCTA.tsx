@@ -18,7 +18,7 @@ export default function FinalCTA() {
   return (
     <section className="bg-white py-24" style={FONT_FAMILY}>
       <div className="container mx-auto px-6 md:px-8 max-w-[640px] w-full text-center">
-        <h2 className="text-[34px] md:text-[46px] font-bold text-[#0c1024] leading-[1.2] tracking-tight" style={FONT_FAMILY}>
+        <h2 className="c9-section-heading" style={FONT_FAMILY}>
           Cloud is the future.<br className="hidden md:block" /> C9 will take you there — and keep you there.
         </h2>
         

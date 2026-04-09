@@ -52,7 +52,7 @@ export default function HowItWorks() {
           <span className="text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.35em] mb-5 block" style={fontStyle}>
             HOW IT WORKS
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-white leading-[1.15] tracking-tight" style={fontStyle}>
+          <h2 className="c9-section-heading !text-white" style={fontStyle}>
             From problem to resolution. <br />
             <span className="text-slate-400 font-normal">Exactly what happens.</span>
           </h2>

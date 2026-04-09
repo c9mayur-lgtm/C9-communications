@@ -85,7 +85,7 @@ export const Plans = () => {
                     {t.offer}
                  </div>
 
-                 <h3 className="text-[32px] font-bold leading-tight mb-4 tracking-tight">{t.title}</h3>
+                 <h3 className="c9-section-heading mb-4">{t.title}</h3>
                  <div className="flex items-baseline gap-2 mb-4">
                     <span className="text-[52px] font-bold">{t.price}</span>
                     <span className="text-[14px] opacity-70 font-bold uppercase tracking-widest leading-none translate-y-[-10px]">/mth</span>

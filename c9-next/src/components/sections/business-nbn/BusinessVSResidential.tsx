@@ -60,13 +60,13 @@ export default function BusinessVSResidential() {
             <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-3">
               The Business Upgrade
             </span>
-            <h2 className="text-[28px] md:text-[36px] font-bold text-[#1A1A2E] leading-tight">
+            <h2 className="c9-section-heading">
               A connection designed for enterprise, <span className="text-[#5D00D6]">not Netflix.</span>
             </h2>
           </div>
           <p className="text-[14px] text-[#6B7280] max-w-[360px] leading-relaxed mb-1">
             When connectivity is revenue-critical, a standard residential line isn’t enough. 
-            C9 Business NBN™ bridges the gap with a professional-grade tech stack.
+            C9 Small Business nbn™ bridges the gap with a professional-grade tech stack.
           </p>
         </div>
 

@@ -10,7 +10,7 @@ const stackItems = [
     icon: PhoneCall,
     title: 'Cloud Voice & Teams',
     subtitle: 'Unified Communication',
-    desc: 'Run your entire C9X or Microsoft Teams Calling environment over our tier-1 NBN™ backbone for crystal-clear voice quality.',
+    desc: 'Run your entire C9 phone system or Microsoft Teams Calling environment over our tier-1 nbn™ backbone for crystal-clear voice quality.',
     link: '/voice/microsoft-teams-calling',
     label: 'Explore Voice Solutions'
   },
@@ -18,7 +18,7 @@ const stackItems = [
     icon: Smartphone,
     title: 'Business Mobile Fleet',
     subtitle: 'On-the-go Connectivity',
-    desc: 'The perfect companion to your office NBN™. Professional 5G mobile plans and data pools for your entire team.',
+    desc: 'The perfect companion to your office nbn™. Professional 5G mobile plans and data pools for your entire team.',
     link: '/mobile/business-plans',
     label: 'View Mobile Plans'
   },
@@ -26,7 +26,7 @@ const stackItems = [
     icon: ShieldCheck,
     title: 'Managed SD-WAN',
     subtitle: 'Secure Networking',
-    desc: 'Layer your NBN™ with professional SD-WAN management, next-gen firewalls, and multi-site secure VPN tunneling.',
+    desc: 'Layer your nbn™ with professional SD-WAN management, next-gen firewalls, and multi-site secure VPN tunneling.',
     link: '/managed-it/network-solutions',
     label: 'Secure Your Network'
   }
@@ -46,7 +46,7 @@ export default function UnifiedStack() {
               </h2>
            </div>
            <p className="c9-body max-w-[420px] font-medium leading-relaxed">
-              A high-performance NBN™ connection is the foundation. Layer on C9’s managed voice, mobile, and security services to build a truly unified communication ecosystem.
+              A high-performance nbn™ connection is the foundation. Layer on C9’s managed voice, mobile, and security services to build a truly unified communication ecosystem.
            </p>
         </div>
 

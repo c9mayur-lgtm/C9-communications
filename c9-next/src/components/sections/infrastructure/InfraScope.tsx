@@ -343,7 +343,7 @@ export default function InfraScope() {
           <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#5D00D6] block mb-4">
             SCOPE OF SERVICE
           </span>
-          <h2 className="text-[32px] md:text-[42px] font-bold text-[#1A1A2E] leading-tight tracking-tight max-w-[640px]">
+          <h2 className="c9-section-heading max-w-[640px]">
             Everything C9 designs, deploys, and manages.
           </h2>
           <p className="text-[18px] text-[#6B7280] mt-4 max-w-[600px] leading-[1.7] mx-auto lg:mx-0">

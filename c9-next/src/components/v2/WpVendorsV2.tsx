@@ -138,7 +138,7 @@ const VENDORS_DATA: Record<string, any[]> = {
       description: 'Ultra-fast connectivity for mission-critical operations.',
       icon: Network,
       details: ['Dedicated 100Gbps links', 'P2P data center interconnect', 'Low-latency direct routing'],
-      brandName: 'NBN Australia',
+      brandName: 'nbn Australia',
       brandLogo: 'https://cdn.simpleicons.org/nbn/white'
     },
     {

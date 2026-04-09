@@ -84,7 +84,7 @@ export default function SupportPage() {
               </div>
               <H3 className="mb-4 text-2xl tracking-tight text-white">Network Status</H3>
               <Body className="mb-10 text-[17px] text-gray-400">
-                Live monitoring of our core fibre, NBN, and C9X voice infrastructure.
+                Live monitoring of our core fibre, nbn, and C9 phone system voice infrastructure.
               </Body>
               <div className="mt-auto inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full w-fit">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_#10b981]" />
@@ -102,7 +102,7 @@ export default function SupportPage() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: Book, title: "Knowledge Base", desc: "Detailed guides for C9X and network setup." },
+            { icon: Book, title: "Knowledge Base", desc: "Detailed guides for C9 phone system and network setup." },
             { icon: HelpCircle, title: "FAQ", desc: "Common questions about billing and service." },
             { icon: ShieldCheck, title: "Trust Centre", desc: "Compliance, security, and data privacy info." },
             { icon: Mail, title: "Submit a Ticket", desc: "Open a case with our engineering team." }

@@ -11,7 +11,7 @@ export const WpCompliance = () => {
           
           {/* Left Column */}
           <div className="max-w-xl">
-            <h2 className="c9-section-heading text-white mb-8">
+            <h2 className="c9-section-heading !text-white mb-8">
               Compliant, accredited, and<br className="hidden md:block" />
               built for Australian business.
             </h2>
@@ -44,9 +44,9 @@ export const WpCompliance = () => {
           <div className="flex flex-col gap-3 md:gap-4 w-full">
             {/* Top Row: 3 Squares */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-              {/* NBN Box */}
+              {/* nbn Box */}
               <div className="bg-[#5D00D6] rounded-[24px] aspect-square flex items-center justify-center p-6 group hover:bg-[#5200BD] transition-all duration-500 shadow-xl border border-white/5">
-                <img src="/images/compliance/NBN_Co-Logo.wine 1 (1).svg" alt="NBN" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                <img src="/images/compliance/NBN_Co-Logo.wine 1 (1).svg" alt="nbn" className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
               </div>
 
               {/* ISO Box (With Text as per Image) */}

@@ -45,7 +45,7 @@ const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) 
 
 export const WpWhyPartner = () => {
   return (
-    <section className="py-14 md:py-20 bg-white border-t border-gray-100">
+    <section className="py-12 md:py-16 bg-white overflow-hidden relative">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto px-6">
           <span className="c9-eyebrow mb-6 block">Why Partner With Us</span>
@@ -57,8 +57,8 @@ export const WpWhyPartner = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-gray-200">
           {[
             { 
-              title: 'Business Voice & C9X', 
-              desc: "Replace your legacy phone system with C9X — 80+ features, $0 hardware, and a migration your team won't even notice. From $20/user per month.",
+              title: 'Business Voice & C9 phone system', 
+              desc: "Replace your legacy phone system with C9 phone system — 80+ features, $0 hardware, and a migration your team won't even notice. From $20/user per month.",
               icon: PhoneCall,
               tag: 'VOICE & CLOUD PHONE',
               metrics: [
@@ -67,7 +67,7 @@ export const WpWhyPartner = () => {
               ]
             },
             { 
-              title: 'Business NBN', 
+              title: 'Small Business nbn™', 
               desc: 'Unlimited data, static IP, and a business-grade SLA backed by Telstra, Optus, Vocus and C9 Communications wholesale networks. Always-on connectivity, guaranteed.',
               icon: Wifi,
               tag: 'BUSINESS INTERNET',
@@ -98,7 +98,7 @@ export const WpWhyPartner = () => {
             },
             { 
               title: 'Unified Communications', 
-              desc: "Voice, video, messaging, and collaboration — all in one platform. C9X connects your team whether they're in the office, at home, or on the road.",
+              desc: "Voice, video, messaging, and collaboration — all in one platform. C9 phone system connects your team whether they're in the office, at home, or on the road.",
               icon: Layers,
               tag: 'UNIFIED COMMS',
               metrics: [
@@ -149,6 +149,21 @@ export const WpWhyPartner = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <a
+            href="#consultation-section"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center gap-3 px-10 py-4 bg-[#5D00D6] text-white rounded-full font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20"
+          >
+            Start with a free consultation →
+          </a>
+          <p className="text-[12px] text-slate-400 mt-4 font-medium">No lock-in contracts. Australian-based engineers.</p>
         </div>
       </div>
     </section>

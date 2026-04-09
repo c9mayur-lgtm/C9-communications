@@ -8,7 +8,7 @@ export default function ThreatReality() {
           THE THREAT LANDSCAPE
         </span>
         
-        <h2 className="text-[32px] md:text-[42px] font-bold text-white leading-[1.1] mb-8 tracking-tight max-w-[700px] mx-auto">
+        <h2 className="c9-section-heading !text-white mb-8 max-w-[700px] mx-auto">
           Australian businesses are being targeted. The question is whether you are ready.
         </h2>
         

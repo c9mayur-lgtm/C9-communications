@@ -40,7 +40,7 @@ export default function ContactCentreHero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-[42px] md:text-[60px] lg:text-[72px] font-bold text-white leading-[1.05] tracking-tight mb-8"
             >
-              C9X Omni Channel <br className="hidden md:block"/>
+              C9 phone system Omni Channel <br className="hidden md:block"/>
               <span className="text-[#5D00D6]">Contact Centre.</span>
             </motion.h1>
             

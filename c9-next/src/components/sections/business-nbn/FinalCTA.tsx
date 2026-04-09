@@ -15,7 +15,7 @@ export default function FinalCTA() {
   const { setInquiryMessage } = useInquiry();
 
   const handleCheck = () => {
-    setInquiryMessage("I'd like to check my address availability and indicative pricing for Business NBN™.");
+    setInquiryMessage("I'd like to check my address availability and indicative pricing for Small Business nbn™.");
     const el = document.getElementById('consultation-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -31,10 +31,10 @@ export default function FinalCTA() {
           className="rounded-full text-[11px] font-semibold uppercase tracking-wider px-4 py-1.5 mx-auto mb-6 w-fit"
           style={{ background: 'rgba(93,0,214,0.2)', color: '#A855F7' }}
         >
-          NBN™ Accredited Adviser
+          nbn™ Accredited Adviser
         </div>
 
-        <h2 className="text-[40px] md:text-[48px] text-white font-bold leading-[1.2]">
+        <h2 className="c9-section-heading !text-white">
           Ready to get your business connected properly?
         </h2>
 

@@ -35,7 +35,7 @@ export default function SpeedGuide() {
         <span className="text-[11px] uppercase tracking-widest text-[#5D00D6] font-semibold block">
           SPEED GUIDE
         </span>
-        <h2 className="text-[36px] md:text-[44px] text-[#1A1A2E] font-bold mt-3 leading-[1.25]">
+        <h2 className="c9-section-heading mt-3">
           What does your speed tier mean in real business terms?
         </h2>
         <p className="text-[17px] text-[#6B7280] mt-3 max-w-[680px] leading-[1.7]">

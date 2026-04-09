@@ -8,7 +8,7 @@ import { ServiceTestimonialKajabi } from './ServiceTestimonialKajabi';
 
 const FAQS = [
   { q: 'How does C9 handle emergency support?', a: 'We provide 24/7 dedicated local support with priority resolution for infrastructure issues. Our local engineers are always on standby to assist with critical failures.' },
-  { q: 'What connectivity options do you provide?', a: 'We offer a full range of business-grade connectivity including NBN™ Enterprise Ethernet, high-speed Fibre (up to 10Gbps), and secure SD-WAN solutions.' },
+  { q: 'What connectivity options do you provide?', a: 'We offer a full range of business-grade connectivity including nbn™ Enterprise Ethernet, high-speed Fibre (up to 10Gbps), and secure SD-WAN solutions.' },
   { q: 'Do you manage existing IT infrastructure?', a: 'Yes, we specialize in managed services and can take over management of your existing endpoints, servers, and cloud environments while improving security.' },
   { q: 'How secure is my business data with C9?', a: 'All data is stored exclusively in Australian-based data centres, adhering strictly to Australian privacy laws and data sovereignty requirements.' },
   { q: 'Can I scale my services as we grow?', a: 'Absolutely. Our solutions are designed for agility, allowing you to add users, bandwidth, or new office locations seamlessly as your requirements evolve.' }

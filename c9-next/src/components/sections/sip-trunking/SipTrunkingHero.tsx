@@ -51,7 +51,7 @@ export default function SipTrunkingHero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="c9-body !text-white/50 max-w-2xl mb-12"
             >
-              C9 delivers Australia&apos;s best SIP Trunk solutions — connecting your on-premises PBX to the cloud via public internet or private IP connections, with full support from configuration to installation. Crystal-clear calls. NBN-ready. Fully owned network.
+              C9 delivers Australia&apos;s best SIP Trunk solutions — connecting your on-premises PBX to the cloud via public internet or private IP connections, with full support from configuration to installation. Crystal-clear calls. nbn-ready. Fully owned network.
             </motion.p>
             
             <motion.div 
@@ -106,7 +106,7 @@ export default function SipTrunkingHero() {
                             { icon: Wifi, title: "Public internet or private IP" },
                             { icon: PhoneForwarded, title: "Port existing numbers" },
                             { icon: PlugZap, title: "Analogue PBX support available" },
-                            { icon: ShieldCheck, title: "NBN ready & heavily encrypted" }
+                            { icon: ShieldCheck, title: "nbn ready & heavily encrypted" }
                         ].map((item, idx) => (
                             <li key={idx} className="flex items-center gap-4">
                                 <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] transition-colors">

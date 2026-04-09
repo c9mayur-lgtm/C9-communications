@@ -28,7 +28,7 @@ export const ServiceBenefits = ({
               {eyebrow}
             </span>
           </div>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight leading-[1.1]" >
+          <h2 className="c9-section-heading" >
             {title}
           </h2>
         </div>

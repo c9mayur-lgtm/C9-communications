@@ -45,7 +45,7 @@ export default function WhatIsIncluded() {
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
         <div className="text-center max-w-[800px] mx-auto mb-16 md:mb-20">
           <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.3em] block mb-6">WHAT'S INCLUDED</span>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-[#1A1A2E] leading-tight mb-8">
+          <h2 className="c9-section-heading mb-8">
             More than just fast internet.
           </h2>
           <p className="text-[17px] md:text-[19px] text-[#6B7280] leading-relaxed">

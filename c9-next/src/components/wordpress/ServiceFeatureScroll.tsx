@@ -23,7 +23,7 @@ export const ServiceFeatureScroll = ({
           
           {/* Left Column: Sticky Content */}
           <div className="lg:sticky lg:top-32 flex flex-col pt-4">
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-6" >
+            <h2 className="c9-section-heading mb-6" >
               {title}
             </h2>
             <p className="text-gray-500 text-[16px] md:text-[18px] leading-relaxed max-w-[440px] mb-8">

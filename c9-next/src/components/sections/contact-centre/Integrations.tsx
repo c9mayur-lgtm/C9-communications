@@ -68,7 +68,7 @@ export default function Integrations() {
         {/* Note */}
         <div className="max-w-2xl mx-auto text-center bg-slate-50 rounded-2xl p-6 border border-gray-100">
             <p className="text-[14px] text-gray-500 font-medium leading-relaxed italic">
-                Don&apos;t see your platform? C9X integrates with any CRM through its CRM SDK. Contact us to discuss your specific integration requirements.
+                Don&apos;t see your platform? C9 phone system integrates with any CRM through its CRM SDK. Contact us to discuss your specific integration requirements.
             </p>
         </div>
 

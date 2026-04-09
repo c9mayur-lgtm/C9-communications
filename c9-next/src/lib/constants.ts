@@ -6,8 +6,8 @@ export const NAV_LINKS = {
     { title: "Business Challenges", items: ["Digital Transformation", "Security", "Business Continuity", "Growth"] },
   ],
   telco: [
-    { title: "Internet", items: ["Business NBN", "Fast Fibre", "Enterprise Ethernet"] },
-    { title: "Voice", items: ["C9X", "Inbound", "Teams Calling", "SIP", "Unified Comms", "Contact Centre"] },
+    { title: "Internet", items: ["Small Business nbn™", "Fast Fibre", "Enterprise Ethernet"] },
+    { title: "Voice", items: ["C9 phone system", "Inbound", "Teams Calling", "SIP", "Unified Comms", "Contact Centre"] },
     { title: "Mobile", items: ["Mobile Plans"] },
     { title: "Hardware", items: ["Handsets", "Headsets", "Routers & Switches", "Access Points"] },
   ],

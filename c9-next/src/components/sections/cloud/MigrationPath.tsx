@@ -113,7 +113,7 @@ export default function MigrationPath() {
         <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-brand-purple" style={FONT_FAMILY}>
           CLOUD MIGRATION
         </span>
-        <h2 className="text-[36px] md:text-[42px] font-bold tracking-tight leading-[1.2] text-text-primary mt-4 mb-6 max-w-2xl" style={FONT_FAMILY}>
+        <h2 className="c9-section-heading text-text-primary mt-4 mb-6 max-w-2xl" style={FONT_FAMILY}>
           Moving to cloud without losing sleep over the transition.
         </h2>
         <p className="text-[17px] md:text-[18px] text-text-secondary max-w-[680px] leading-relaxed font-normal mb-8" style={FONT_FAMILY}>
@@ -180,7 +180,7 @@ export default function MigrationPath() {
                 {p.badge}
               </div>
 
-              <h3 className="text-[24px] md:text-[28px] font-bold text-text-primary leading-tight mb-4 tracking-tight" style={FONT_FAMILY}>
+              <h3 className="c9-section-heading text-text-primary mb-4" style={FONT_FAMILY}>
                 {p.heading}
               </h3>
               <p className="text-[16px] text-text-secondary leading-relaxed mb-8 font-normal" style={FONT_FAMILY}>

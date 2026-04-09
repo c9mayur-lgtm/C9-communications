@@ -35,7 +35,7 @@ export default function TestingCommitment() {
               <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#5D00D6] block mb-3" style={{ fontFamily: F }}>
                 THE TESTING COMMITMENT
               </span>
-              <h3 className="text-[28px] md:text-[32px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mt-3" style={{ fontFamily: F }}>
+              <h3 className="c9-section-heading mt-3" style={{ fontFamily: F }}>
                 We test your recovery. Every time. <span className="text-[#5D00D6]">On a schedule.</span>
               </h3>
               <p className="text-[16px] text-[#6B7280] leading-[1.75] mt-4" style={{ fontFamily: F }}>

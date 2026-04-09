@@ -13,21 +13,33 @@ import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
 import { WpITDepartmentOptions } from "@/components/wordpress/WpITDepartmentOptions";
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { WpPromoBanner } from "@/components/wordpress/WpPromoBanner";
 import { WpHeroProducts } from "@/components/wordpress/WpHeroProducts";
+import { WpUnifiedClassification } from "@/components/wordpress/WpUnifiedClassification";
 
 export default function ManagedIT() {
   return (
     <main className="min-h-screen bg-white managed-it-base">
       <WpHero />
       <WpClientTicker />
+      <WpITDepartmentOptions />
+      <WpUnifiedClassification />
       <WpHighlights />
       <WpHeroProducts />
       <WpSimplifyingIT />
-      <WpITDepartmentOptions />
-      <WpServices />
-      <WpBentoSolutions />
       <WpIndustryGrid />
       <WpDefenseBanner />
+
+      {/* Promo Offer — Managed IT Audit */}
+      <WpPromoBanner 
+        eyebrow="STRATEGIC ADVISORY"
+        title="Get a free Cybersecurity & IT Audit"
+        description="Identify vulnerabilities and optimize your performance with a comprehensive 25-point technology review by our senior engineers. No strings attached."
+        ctaText="Book my free audit"
+        ctaHref="#consultation-section"
+        imageSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1500"
+        disclaimer="*Audit subject to qualification based on team size and infrastructure complexity."
+      />
       <WpSupport />
       <WpVendors />
       <WpCaseStudies />
@@ -37,7 +49,7 @@ export default function ManagedIT() {
       <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false} 
-          eyebrow="STRATEGIC IT ADVISORY"
+          eyebrow="Strategic IT advisory"
           title="The IT partner your business deserves."
           description="Book a 30-minute strategy session with our senior consultants. We'll review your current infrastructure and security posture — no obligation, just expert advice."
           formTitle="Schedule Strategy Session"

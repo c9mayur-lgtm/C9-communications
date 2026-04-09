@@ -28,7 +28,7 @@ export default function MultiSiteSection() {
         {/* HEADER */}
         <div className="text-center max-w-[800px] mx-auto mb-20 md:mb-24">
           <span className="text-[#5D00D6] text-[11px] font-black uppercase tracking-[0.3em] block mb-6">MULTI-SITE CONNECTIVITY</span>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-[#1A1A2E] leading-tight mb-8">
+          <h2 className="c9-section-heading mb-8">
             Connecting multiple sites? <span className="text-[#5D00D6]">C9 designs the whole network.</span>
           </h2>
           <p className="text-[17px] md:text-[19px] text-slate-600 leading-relaxed font-normal">

@@ -36,7 +36,7 @@ const AdvantageItem = ({ title, description, metric, isLast }: { title: string, 
   </div>
 );
 
-export const WhatIsC9Voice = () => {
+export const WhatIsC9PhoneSystem = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Cinematic Elements */}

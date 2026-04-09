@@ -13,11 +13,11 @@ import AccreditationBar from "@/components/sections/enterprise-ethernet/Accredit
 import FinalCTA from "@/components/sections/enterprise-ethernet/FinalCTA";
 
 export const metadata = {
-  title: "NBN™ Enterprise Ethernet | C9 Communications",
-  description: "NBN™ Enterprise Ethernet for Australian businesses — symmetrical speeds from 50/50 to 1000/1000 Mbps, guaranteed bandwidth, 4G LTE failover, and eSLA from 4 hours. NBN™ Accredited Adviser.",
+  title: "nbn™ Enterprise Ethernet | C9 Communications",
+  description: "nbn™ Enterprise Ethernet for Australian businesses — symmetrical speeds from 50/50 to 1000/1000 Mbps, guaranteed bandwidth, 4G LTE failover, and eSLA from 4 hours. nbn™ Accredited Adviser.",
   openGraph: {
-    title: "NBN™ Enterprise Ethernet | C9 Communications",
-    description: "Dedicated enterprise NBN™ connectivity with symmetrical speeds, guaranteed bandwidth, and multi-site architecture. NBN™ Accredited Adviser. eSLA from 4 hours.",
+    title: "nbn™ Enterprise Ethernet | C9 Communications",
+    description: "Dedicated enterprise nbn™ connectivity with symmetrical speeds, guaranteed bandwidth, and multi-site architecture. nbn™ Accredited Adviser. eSLA from 4 hours.",
     url: "https://c9communications.com.au/telco/enterprise-ethernet",
   },
 }

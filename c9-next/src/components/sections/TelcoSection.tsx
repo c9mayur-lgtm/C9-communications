@@ -15,7 +15,7 @@ export const TelcoSection = () => {
             
             <div className="grid grid-cols-2 gap-6 relative z-10">
               {[
-                { name: "C9X Managed Handset", icon: Phone, color: "from-blue-500/10 to-transparent" },
+                { name: "C9 phone system Managed Handset", icon: Phone, color: "from-blue-500/10 to-transparent" },
                 { name: "Wireless Enterprise AP", icon: Signal, color: "from-brand-purple/10 to-transparent" },
                 { name: "Premium Headset", icon: Headphones, color: "from-indigo-500/10 to-transparent" },
                 { name: "Security Gateway / Router", icon: Shield, color: "from-cyan-500/10 to-transparent" }
@@ -38,7 +38,7 @@ export const TelcoSection = () => {
               
               {/* Promo Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 bg-[#5D00D6] text-white rounded-3xl shadow-[0_20px_60px_-10px_rgba(93,0,214,0.6)] z-20 flex flex-col items-center gap-2 w-56 text-center transform -rotate-6 hover:rotate-0 transition-transform cursor-pointer">
-                 <span className="c9-eyebrow !text-white opacity-80">Upgrade to C9X</span>
+                 <span className="c9-eyebrow !text-white opacity-80">Upgrade to C9 phone system</span>
                  <span className="text-[28px] font-black leading-none">Save 70%</span>
                  <span className="c9-body !text-white !text-xs">on your call costs</span>
               </div>
@@ -70,7 +70,7 @@ export const TelcoSection = () => {
                 <AccordionContent className="c9-body pb-6 flex flex-col gap-3">
                   <p>Fast, reliable, and Australian-supported business connectivity.</p>
                   <ul className="grid grid-cols-2 gap-x-4 gap-y-2 c9-eyebrow !text-[#5D00D6] mt-2">
-                    <li>• Business NBN™</li>
+                    <li>• Small Business nbn™</li>
                     <li>• Fast Fibre</li>
                     <li>• Enterprise Ethernet</li>
                     <li>• Fixed Wireless</li>
@@ -85,7 +85,7 @@ export const TelcoSection = () => {
                 <AccordionContent className="c9-body pb-6 flex flex-col gap-3">
                   <p>Professional phone systems that scale with your team, anywhere.</p>
                   <ul className="grid grid-cols-2 gap-x-4 gap-y-2 c9-eyebrow !text-[#5D00D6] mt-2">
-                    <li>• C9X Cloud Voice</li>
+                    <li>• C9 phone system Cloud Voice</li>
                     <li>• MS Teams Calling</li>
                     <li>• SIP Trunking</li>
                     <li>• Contact Centre</li>

@@ -43,7 +43,7 @@ export default function Recognition() {
             <p className="text-[#a855f7] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block">
               DOES THIS SOUND FAMILIAR?
             </p>
-            <h2 className="text-[36px] md:text-[48px] font-bold text-white leading-[1.05] tracking-tight mb-8">
+            <h2 className="c9-section-heading !text-white mb-8">
               Most businesses have IT.<br/>Very few have an IT strategy.
             </h2>
             <p className="text-white/60 text-[18px] md:text-[20px] max-w-[600px] leading-relaxed font-normal">
@@ -73,7 +73,7 @@ export default function Recognition() {
                    {card.label}
                 </div>
 
-                <h3 className="text-[24px] font-bold text-white mb-4 leading-tight">
+                <h3 className="c9-section-heading !text-white mb-4">
                   {card.title}
                 </h3>
                 

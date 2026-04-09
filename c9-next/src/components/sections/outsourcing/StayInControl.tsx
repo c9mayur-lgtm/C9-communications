@@ -27,7 +27,7 @@ export default function StayInControl() {
             <span className="text-[13px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block font-sans">
               TRANSPARENCY
             </span>
-            <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight leading-[1.05] text-[#0c1024] font-sans">
+            <h2 className="c9-section-heading font-sans">
               Outsourcing IT doesn't mean handing over control. It means getting it back.
             </h2>
             <p className="text-[18px] md:text-[20px] text-slate-600/90 leading-relaxed mt-8 font-normal font-sans">

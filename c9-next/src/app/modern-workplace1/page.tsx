@@ -158,7 +158,7 @@ export default function ModernWorkplace1Page() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            <h2 className="c9-section-heading mb-6">
               Most workplaces <br/>
               <span className="text-slate-400">fail under real conditions.</span>
             </h2>
@@ -198,7 +198,7 @@ export default function ModernWorkplace1Page() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold mb-4">C9 Workplace System Architecture</h2>
+            <h2 className="c9-section-heading mb-4">C9 Workplace System Architecture</h2>
             <p className="text-xl text-slate-600">A layered, orchestrated approach to business operations.</p>
           </div>
 
@@ -244,7 +244,7 @@ export default function ModernWorkplace1Page() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="mb-16">
-            <h2 className="text-4xl font-bold mb-4">Solution Modules</h2>
+            <h2 className="c9-section-heading mb-4">Solution Modules</h2>
             <p className="text-xl text-slate-600 max-w-2xl">Structured capabilities designed to fit your operational exact requirements.</p>
           </div>
 
@@ -304,7 +304,7 @@ export default function ModernWorkplace1Page() {
             <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8">
               <Cloud className="w-8 h-8" />
             </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Get more from Microsoft 365</h2>
+            <h2 className="c9-section-heading mb-6">Get more from Microsoft 365</h2>
             <p className="text-xl text-slate-600 mb-8">
               We configure, secure, and optimise the Microsoft ecosystem for real business productivity. It's not just licenses; it's operational architecture.
             </p>
@@ -368,7 +368,7 @@ export default function ModernWorkplace1Page() {
         
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
           <Shield className="w-16 h-16 text-purple-400 mx-auto mb-8 opacity-80" />
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+          <h2 className="c9-section-heading mb-8 !text-white">
             Modern Workplace Without Security is a Risk
           </h2>
           
@@ -402,7 +402,7 @@ export default function ModernWorkplace1Page() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Built for Real Scenarios</h2>
+            <h2 className="c9-section-heading mb-4">Built for Real Scenarios</h2>
             <p className="text-xl text-slate-600">The Modern Workplace adapts to how you actually operate.</p>
           </div>
 
@@ -454,7 +454,7 @@ export default function ModernWorkplace1Page() {
       {/* SECTION 9: HOW IT WORKS (PIPELINE) */}
       <section className="py-24 bg-slate-50 border-t border-slate-200/50 overflow-hidden">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-16 text-center">Engagement Pipeline</h2>
+          <h2 className="c9-section-heading mb-16 text-center">Engagement Pipeline</h2>
           
           <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-4">
             {/* Line connecting steps */}
@@ -496,7 +496,7 @@ export default function ModernWorkplace1Page() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Built for Australian operations.</h2>
+            <h2 className="c9-section-heading mb-6">Built for Australian operations.</h2>
             <p className="text-xl text-slate-600 mb-8">We are the infrastructure layer supporting modern business.</p>
             <div className="space-y-6">
               {[
@@ -562,7 +562,7 @@ export default function ModernWorkplace1Page() {
       {/* SECTION 12: SMART WORKPLACE EXTENSION */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 text-center max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6 text-slate-900">Extend beyond the screen.</h2>
+          <h2 className="c9-section-heading mb-6">Extend beyond the screen.</h2>
           <p className="text-xl text-slate-600 mb-16">The Modern Workplace integrates physical office intelligence.</p>
 
           <div className="grid md:grid-cols-3 gap-6 text-left">
@@ -589,7 +589,7 @@ export default function ModernWorkplace1Page() {
       <section className="py-32 relative overflow-hidden bg-purple-600 text-white">
         <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
         <div className="container mx-auto px-6 relative z-10 text-center max-w-3xl">
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+          <h2 className="c9-section-heading mb-8">
             Fix your workplace before it breaks your business.
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">

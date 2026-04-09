@@ -41,7 +41,7 @@ const BENEFITS = [
 ];
 
 const MARQUEE_LABELS = [
-  'Business NBN', 'Cloud PBX', 'Cybersecurity', 'Managed IT',
+  'Small Business nbn™', 'Cloud PBX', 'Cybersecurity', 'Managed IT',
   'UCaaS', 'SD-WAN', 'Cloud Hosting', 'Zero Trust',
   'Network Design', 'Contact Centre', 'Enterprise Plans', 'Fibre Leased Line',
 ];

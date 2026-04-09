@@ -13,7 +13,7 @@ export const TELCO_SERVICES_CONTENT: Record<string, any> = {
     heading: 'Business Internet',
     description: "C9 delivers business-grade nbn® and fibre connectivity designed around uptime, not price. Every connection is backed by a 99.95% SLA, local engineering support, and proactive monitoring — so your team stays online without chasing your provider.",
     options: [
-      { title: 'Business nbn®', desc: 'Reliable nbn® plans built for Australian businesses, with dedicated local support and no shared residential traffic.', icon: <Wifi size={20} /> },
+      { title: 'Small Business nbn™®', desc: 'Reliable nbn® plans built for Australian businesses, with dedicated local support and no shared residential traffic.', icon: <Wifi size={20} /> },
       { title: 'nbn® Enterprise Ethernet', desc: 'Symmetrical speeds and priority-grade connectivity for offices that cannot afford to wait on uploads.', icon: <Network size={20} /> },
       { title: 'C9 Fibre', desc: 'Direct fibre to your premises — up to 10,000 Mbps with a 99.95% uptime guarantee and 24/7 C9 engineering support.', icon: <Monitor size={20} /> }
     ]
@@ -51,9 +51,9 @@ export const TELCO_SERVICES_CONTENT: Record<string, any> = {
     options: [
       { title: 'Inbound Services', desc: 'Secure 13, 1300, and 1800 numbers for your business with advanced call routing and intelligent analytics.', icon: <Headphones size={20} />, path: '/telco/inbound-services' },
       { title: 'Microsoft Teams Calling', desc: 'Make and receive business calls directly inside Teams — C9 handles the provisioning, porting, and ongoing management.', icon: <Phone size={20} />, path: '/telco/teams-calling' },
-      { title: 'C9 Voice Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording — no hardware required.', icon: <Phone size={20} />, path: '/telco/c9x' },
+      { title: 'C9 Voice Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording — no hardware required.', icon: <Phone size={20} />, path: '/telco/c9-phone-system' },
       { title: 'SIP Trunking', desc: 'Retain your existing phone hardware and phone numbers while connecting to the C9 voice network for better reliability and cost.', icon: <Database size={20} />, path: '/telco/sip-trunking' },
-      { title: 'Contact Centre', desc: 'C9X Omni Channel Contact Centre — voice, chat, social, and app interactions in one platform with advanced CRM integration.', icon: <LayoutGrid size={20} />, path: '/telco/contact-centre' }
+      { title: 'Contact Centre', desc: 'C9 phone system Omni Channel Contact Centre — voice, chat, social, and app interactions in one platform with advanced CRM integration.', icon: <LayoutGrid size={20} />, path: '/telco/contact-centre' }
     ]
   }
 };
@@ -128,9 +128,9 @@ export const TELCO_MENU = {
         {
           heading: 'Internet',
           items: [
-            { icon: <Wifi size={14} />, label: 'Business NBN™', path: '/telco/business-nbn', active: true },
+            { icon: <Wifi size={14} />, label: 'Small Business nbn™', path: '/telco/business-nbn', active: true },
             { icon: <Wifi size={14} />, label: 'Fast Fibre', path: '/telco/fast-fibre' },
-            { icon: <Network size={14} />, label: 'NBN™ Enterprise Ethernet', path: '/telco/enterprise-ethernet' },
+            { icon: <Network size={14} />, label: 'nbn™ Enterprise Ethernet', path: '/telco/enterprise-ethernet' },
           ]
         },
         {
@@ -147,7 +147,7 @@ export const TELCO_MENU = {
           heading: 'Voice',
           items: [
             { icon: <Phone size={14} />, label: 'Voice Systems — Overview', path: '/telco/voice-systems' },
-            { icon: <Phone size={14} />, label: 'C9 Voice Cloud Phone', path: '/telco/c9x' },
+            { icon: <Phone size={14} />, label: 'C9 Voice Cloud Phone', path: '/telco/c9-phone-system' },
             { icon: <Headphones size={14} />, label: 'Inbound Services', path: '/telco/inbound-services' },
             { icon: <Phone size={14} />, label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { icon: <Network size={14} />, label: 'SIP Trunking', path: '/telco/sip-trunking' },

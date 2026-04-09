@@ -11,7 +11,7 @@ const committedSpeeds = ['100/100', '250/250', '500/500', '1000/1000'];
 const bestEffortIncludes = [
   'Managed router included',
   '4G LTE failover connectivity',
-  'NBN™ accredited support',
+  'nbn™ accredited support',
   'Dedicated account manager',
   'Month-to-month flexibility'
 ];
@@ -77,7 +77,7 @@ export default function PlanComparison() {
   const [committedIdx, setCommittedIdx] = useState(3);
 
   const handleSelectPlan = (tierName: string, speed: string) => {
-    setInquiryMessage(`I'm interested in the Business NBN™ ${tierName} plan at ${speed} Mbps speeds.`);
+    setInquiryMessage(`I'm interested in the Small Business nbn™ ${tierName} plan at ${speed} Mbps speeds.`);
     const el = document.getElementById('consultation-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -101,11 +101,11 @@ export default function PlanComparison() {
         
         <div className="flex flex-col items-center text-center mb-20">
            <span className="text-[11px] uppercase tracking-[0.3em] text-[#5D00D6] font-bold block mb-4">E-ETHERNET PRICING</span>
-           <h2 className="text-[36px] md:text-[52px] font-bold text-[#1A1A2E] leading-[1.1] tracking-tight max-w-3xl">
+           <h2 className="c9-section-heading max-w-3xl">
               Engineered for scale. <br /> Priced for business.
            </h2>
            <p className="text-[17px] text-gray-500 mt-6 max-w-2xl leading-relaxed">
-             Select your bandwidth tier below. All C9 Enterprise Ethernet plans include professional hardware and are backed by Australia's most reliable NBN™ architecture.
+             Select your bandwidth tier below. All C9 Enterprise Ethernet plans include professional hardware and are backed by Australia's most reliable nbn™ architecture.
            </p>
         </div>
 
@@ -120,7 +120,7 @@ export default function PlanComparison() {
            >
               <div className="flex justify-between items-start mb-8">
                  <div>
-                    <h3 className="text-[28px] font-bold text-[#1A1A2E] mb-2">Best Effort</h3>
+                    <h3 className="c9-section-heading mb-2">Best Effort</h3>
                     <p className="text-[14px] text-gray-500 font-medium tracking-tight uppercase">TC-4 Enterprise Backbone</p>
                  </div>
                  <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-[#5D00D6]">
@@ -215,7 +215,7 @@ export default function PlanComparison() {
               <div className="flex justify-between items-start mb-8 relative z-10">
                  <div>
                     <div className="flex items-center gap-2 mb-2">
-                       <h3 className="text-[28px] font-bold text-white leading-tight">Committed</h3>
+                       <h3 className="c9-section-heading !text-white">Committed</h3>
                        <div className="bg-[#5D00D6] text-white text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full ring-4 ring-[#5D00D6]/20">Pro Tier</div>
                     </div>
                     <p className="text-[14px] text-gray-400 font-medium tracking-tight uppercase">TC-2 Priority Bandwidth</p>

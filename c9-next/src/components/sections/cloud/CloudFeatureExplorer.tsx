@@ -143,7 +143,7 @@ export default function CloudFeatureExplorer() {
         
         <div className="mb-16">
           <span className="text-brand-purple text-[13px] font-bold uppercase tracking-[0.2em] mb-4 block">EXPLORE THE PLATFORM</span>
-          <h2 className="text-[36px] md:text-[54px] font-bold tracking-tight text-text-primary leading-[1.1]">
+          <h2 className="c9-section-heading text-text-primary">
             Managed cloud, simplified.
           </h2>
         </div>

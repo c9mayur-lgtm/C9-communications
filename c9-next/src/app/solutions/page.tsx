@@ -13,15 +13,15 @@ import { cn } from '@/lib/utils';
 
 const SOLUTIONS_DATA = [
   {
-    title: "Business NBN & Fibre",
+    title: "Small Business nbn™ & Fibre",
     icon: Wifi,
     desc: "Enterprise-grade connectivity with 99.9% uptime and local Australian support.",
-    features: ["Dedicated Fibre", "High-Speed NBN", "4G/5G Backup", "Managed Router"]
+    features: ["Dedicated Fibre", "High-Speed nbn", "4G/5G Backup", "Managed Router"]
   },
   {
     title: "Cloud Phone System",
     icon: Phone,
-    desc: "The C9X platform: a complete PBX replacement with 80+ enterprise features.",
+    desc: "The C9 phone system platform: a complete PBX replacement with 80+ enterprise features.",
     features: ["Unified Comms", "Softphone Apps", "CRM Integration", "Call Analytics"]
   },
   {

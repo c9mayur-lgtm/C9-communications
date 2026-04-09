@@ -12,7 +12,7 @@ export default function Challenges() {
           <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={fontStyle}>
             CHALLENGES WE SOLVE
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight" style={fontStyle}>
+          <h2 className="c9-section-heading" style={fontStyle}>
             The problems healthcare organisations <br className="hidden md:block" /> bring to us.
           </h2>
         </div>

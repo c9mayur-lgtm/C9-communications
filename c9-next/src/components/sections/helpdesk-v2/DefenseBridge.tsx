@@ -14,7 +14,7 @@ export default function DefenseBridge() {
                 <Shield size={32} className="text-white" strokeWidth={2.5} />
             </div>
             <div className="max-w-[700px]">
-                <h3 className="text-[28px] md:text-[36px] font-medium text-white mb-4 leading-tight tracking-tight" >
+                <h3 className="c9-section-heading font-medium !text-white mb-4" >
                     Security incidents need more <span className="text-[#5D00D6]">than helpdesk.</span>
                 </h3>
                 <p className="text-[15px] md:text-[16px] text-slate-300 leading-relaxed font-normal" >

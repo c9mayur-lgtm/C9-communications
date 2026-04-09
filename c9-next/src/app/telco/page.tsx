@@ -54,21 +54,21 @@ const SERVICES = [
   {
     icon: Wifi,
     tag: "INTERNET",
-    title: "Business NBN",
+    title: "Small Business nbn™",
     body: "Unlimited data. Static IP. 99.99% uptime SLA with financial credits if we miss the mark. Best connection at your address \u2014 guaranteed.",
     metrics: [{ val: "99.99%", label: "uptime" }, { val: "1Gbps", label: "max speed" }],
-    cta: "See NBN Plans",
+    cta: "See nbn Plans",
     link: "/nbn",
     img: "/images/nbn-feature.jpg"
   },
   {
     icon: PhoneCall,
     tag: "VOICE",
-    title: "C9X Cloud Phone System",
+    title: "C9 phone system Cloud Phone System",
     body: "80+ features. $0 hardware. $0 setup. Your team live in 48 hours. Works on any device. From $20 per user per month.",
     metrics: [{ val: "80+", label: "features" }, { val: "$20", label: "/user/mo" }],
-    cta: "Explore C9X",
-    link: "/c9x",
+    cta: "Explore C9 phone system",
+    link: "/c9-phone-system",
     img: "/images/voice-feature.jpg",
     imgPosition: "object-[80%_center]"
   },
@@ -225,7 +225,7 @@ export default function TelcoPage() {
               
               <FadeIn delay={0.4}>
                 <div className="flex flex-wrap gap-3 mb-10">
-                  {['NBN Co Accredited', 'No Lock-in Contracts', '1,000+ Businesses'].map((pill, i) => (
+                  {['nbn Co Accredited', 'No Lock-in Contracts', '1,000+ Businesses'].map((pill, i) => (
                     <span key={i} className="c9-eyebrow !text-[#a166ff] !text-[11px] px-4 py-2 border border-[#5D00D6]/40 bg-[#5D00D6]/10 rounded-full flex items-center gap-1.5">
                       <span className="text-xs">✓</span> {pill}
                     </span>
@@ -263,8 +263,8 @@ export default function TelcoPage() {
                 
                 <div className="flex flex-col gap-1">
                   {[
-                    { icon: Wifi, name: "Business NBN \u2014 1Gbps", status: "99.99% uptime", ok: true },
-                    { icon: PhoneCall, name: "C9X Voice \u2014 14 users online", status: "3 calls active", ok: false },
+                    { icon: Wifi, name: "Small Business nbn™ \u2014 1Gbps", status: "99.99% uptime", ok: true },
+                    { icon: PhoneCall, name: "C9 phone system Voice \u2014 14 users online", status: "3 calls active", ok: false },
                     { icon: Smartphone, name: "Mobile \u2014 8 SIMs", status: "All active", ok: true }
                   ].map((row, i) => (
                     <div key={i} className="flex items-center justify-between py-4 border-b border-white/5 last:border-0 last:pb-0">
@@ -282,7 +282,7 @@ export default function TelcoPage() {
                 <div className="grid grid-cols-3 gap-4 mt-8 bg-black/20 p-5 rounded-[16px] border border-white/5">
                   <div className="flex flex-col gap-1">
                     <span className="text-[28px] font-bold text-white leading-none">80+</span>
-                    <span className="text-[11px] text-gray-400 font-semibold uppercase tracking-wider">C9X features</span>
+                    <span className="text-[11px] text-gray-400 font-semibold uppercase tracking-wider">C9 phone system features</span>
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className="text-[28px] font-bold text-white leading-none">$20</span>
@@ -421,7 +421,7 @@ export default function TelcoPage() {
         </div>
       </section>
 
-      {/* SECTION 4 - C9X SPOTLIGHT (WpVendors Style) */}
+      {/* SECTION 4 - C9 phone system SPOTLIGHT (WpVendors Style) */}
       <section className="py-24 md:py-32 bg-[#0c1024] text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(93,0,214,0.15)_0%,transparent_70%)] pointer-events-none"></div>
         <div className="container mx-auto px-6 md:px-8 max-w-[1240px] relative z-10">
@@ -430,7 +430,7 @@ export default function TelcoPage() {
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10">
               <div className="max-w-4xl w-full">
                 <FadeIn>
-                  <Label>C9X PLATFORM</Label>
+                  <Label>C9 phone system PLATFORM</Label>
                 </FadeIn>
                 <FadeIn delay={0.1}>
                   <H2 className="!text-white mt-4">
@@ -439,14 +439,14 @@ export default function TelcoPage() {
                 </FadeIn>
                 <FadeIn delay={0.2}>
                   <Body className="!text-gray-300 max-w-2xl">
-                    Every missed call during peak hours is a lost sale. Every voicemail instead of a person is your competitor's opportunity. C9X fixes this &mdash; without buying a single piece of hardware.
+                    Every missed call during peak hours is a lost sale. Every voicemail instead of a person is your competitor's opportunity. C9 phone system fixes this &mdash; without buying a single piece of hardware.
                   </Body>
                 </FadeIn>
               </div>
               
               <FadeIn delay={0.3} className="hidden lg:flex shrink-0">
                  <C9Button size="lg" className="px-10 rounded-full">
-                   Explore C9X <ArrowRight size={18} className="ml-2" />
+                   Explore C9 phone system <ArrowRight size={18} className="ml-2" />
                  </C9Button>
               </FadeIn>
             </div>
@@ -839,7 +839,7 @@ export default function TelcoPage() {
               <span className="block text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>WHO WE WORK WITH</span>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight mb-8">
+              <h2 className="c9-section-heading mb-8">
                  Built for your industry.<br />Not just your postcode.
               </h2>
             </FadeIn>
@@ -856,7 +856,7 @@ export default function TelcoPage() {
                       tag: 'HEALTHCARE',
                       icon: PhoneCall,
                       title: 'Voice & Connectivity for Healthcare Providers',
-                      desc: "Never miss a patient call again. C9X routes after-hours calls, manages callback queues, and records every call for AHPRA compliance.",
+                      desc: "Never miss a patient call again. C9 phone system routes after-hours calls, manages callback queues, and records every call for AHPRA compliance.",
                       metrics: [{ value: '40%', label: 'fewer missed calls' }, { value: '48hr', label: 'avg go-live' }]
                     },
                     {
@@ -894,14 +894,14 @@ export default function TelcoPage() {
                       tag: 'NON-PROFIT',
                       icon: Heart,
                       title: 'Enterprise Telco at NFP Prices',
-                      desc: "We stretch every telco dollar with NFP-specific pricing. Replace expensive phone systems with C9X — more features, lower cost.",
+                      desc: "We stretch every telco dollar with NFP-specific pricing. Replace expensive phone systems with C9 phone system — more features, lower cost.",
                       metrics: [{ value: '78%', label: 'cost reduction' }, { value: '$0', label: 'setup fees' }]
                     },
                     {
                       tag: 'EDUCATION',
                       icon: BookOpen,
                       title: 'Connected Classrooms & Campuses',
-                      desc: "Unify multiple campuses under one phone number with smart IVR routing. Business NBN at every site. Microsoft 365 integration.",
+                      desc: "Unify multiple campuses under one phone number with smart IVR routing. Small Business nbn™ at every site. Microsoft 365 integration.",
                       metrics: [{ value: '1', label: 'global number' }, { value: '60%', label: 'fewer redirects' }]
                     }
                   ]
@@ -942,7 +942,7 @@ export default function TelcoPage() {
           
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: "NBN Co", desc: "Accredited RSP" },
+              { name: "nbn Co", desc: "Accredited RSP" },
               { name: "APNIC", desc: "Member" },
               { name: "TIO", desc: "Member" },
               { name: "ISO 27001", desc: "Certified" },
@@ -971,11 +971,11 @@ export default function TelcoPage() {
 
       {/* STICKY MOBILE BAR */}
       <div className="md:hidden fixed bottom-0 left-0 w-full h-[72px] bg-[#0c1024] border-t border-[#5D00D6]/40 z-[999] px-6 py-2 flex items-center justify-between animate-fade-in-up">
-        <a href="tel:1800000C9X" className="flex items-center gap-2 text-white text-[15px] font-bold font-proxima">
+        <a href="tel:1800000C9 phone system" className="flex items-center gap-2 text-white text-[15px] font-bold font-proxima">
           <div className="w-8 h-8 rounded-full bg-[#5D00D6]/20 flex items-center justify-center">
              <Phone size={14} className="text-[#a166ff] fill-current" />
           </div>
-          1800 000 C9X
+          1800 000 C9 phone system
         </a>
         <C9Button className="h-11 px-6">
           Get a Quote

@@ -58,7 +58,7 @@ export default function WhatYouGet() {
           <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" >
             SCOPE OF SERVICE
           </span>
-          <h2 className="text-[36px] md:text-[48px] font-bold tracking-tight text-white leading-[1.05]" >
+          <h2 className="c9-section-heading !text-white" >
             Not a helpdesk number.<br />A full IT department.
           </h2>
           <p className="text-white/85 text-[16px] max-w-[720px] leading-relaxed mt-2 font-normal" >

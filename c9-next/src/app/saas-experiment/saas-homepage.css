@@ -456,12 +456,12 @@
 }
 
 /* ════════════════════════════════════════════
-   C9X Page Layout Classes
+   C9 phone system Page Layout Classes
    ════════════════════════════════════════════ */
 
 /* Hero Section */
-.c9x-hero-section { min-height: 95vh; display: flex; align-items: center; position: relative; overflow: hidden; }
-.c9x-hero-inner {
+.c9-phone-system-hero-section { min-height: 95vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+.c9-phone-system-hero-inner {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 64px;
@@ -470,11 +470,11 @@
   z-index: 1;
   width: 100%;
 }
-.c9x-hero-copy { display: flex; flex-direction: column; }
-.c9x-hero-panel { width: 100%; }
+.c9-phone-system-hero-copy { display: flex; flex-direction: column; }
+.c9-phone-system-hero-panel { width: 100%; }
 
 /* CTA Row */
-.c9x-cta-row {
+.c9-phone-system-cta-row {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -482,21 +482,21 @@
 }
 
 /* Stats Row */
-.c9x-stats-row {
+.c9-phone-system-stats-row {
   display: flex;
   gap: 0;
   align-items: center;
 }
-.c9x-stat-item {
+.c9-phone-system-stat-item {
   flex: 1;
   padding: 0 24px 0 0;
   border-right: 1px solid var(--c9-border);
   margin-right: 24px;
 }
-.c9x-stat-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+.c9-phone-system-stat-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
 
 /* Two Column Layout */
-.c9x-two-col {
+.c9-phone-system-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -504,22 +504,22 @@
 }
 
 /* Problems Grid */
-.c9x-problems-grid {
+.c9-phone-system-problems-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.c9x-problem-card { height: 100%; }
+.c9-phone-system-problem-card { height: 100%; }
 
 /* Benefits Grid */
-.c9x-benefits-grid {
+.c9-phone-system-benefits-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 /* Benefits List */
-.c9x-benefit-list-grid {
+.c9-phone-system-benefit-list-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px 48px;
@@ -528,28 +528,28 @@
 }
 
 /* Devices Grid */
-.c9x-devices-grid {
+.c9-phone-system-devices-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 /* Industries Grid */
-.c9x-industries-grid {
+.c9-phone-system-industries-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 /* Why Grid */
-.c9x-why-grid {
+.c9-phone-system-why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 /* Related Grid */
-.c9x-related-grid {
+.c9-phone-system-related-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;

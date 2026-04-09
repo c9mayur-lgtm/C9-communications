@@ -19,7 +19,7 @@ export default function CostSecurity() {
               CLOUD COST MANAGEMENT
             </span>
 
-            <h3 className="text-[28px] font-bold text-text-primary mt-3 leading-tight tracking-tight" style={FONT_FAMILY}>
+            <h3 className="c9-section-heading text-text-primary mt-3" style={FONT_FAMILY}>
               Most businesses overspend on cloud. We find exactly where.
             </h3>
 
@@ -53,7 +53,7 @@ export default function CostSecurity() {
               CLOUD SECURITY
             </span>
 
-            <h3 className="text-[28px] font-bold text-text-primary mt-3 leading-tight tracking-tight" style={FONT_FAMILY}>
+            <h3 className="c9-section-heading text-text-primary mt-3" style={FONT_FAMILY}>
               Cloud environments need security governance. Most don't have it.
             </h3>
 

@@ -13,7 +13,7 @@ const PRODUCTS = [
   { icon: Wifi,       label: 'SIP Trunking',   desc: 'Replace legacy PSTN'  },
   { icon: Video,      label: 'MS Teams',        desc: 'Direct routing'       },
   { icon: Smartphone, label: 'Mobile App',      desc: 'Work from anywhere'   },
-  { icon: Headphones, label: 'Contact Centre',  desc: 'C9X Omnichannel'      },
+  { icon: Headphones, label: 'Contact Centre',  desc: 'C9 phone system Omnichannel'      },
   { icon: Building2,  label: '1300 / 1800',     desc: 'National numbers'     },
 ];
 

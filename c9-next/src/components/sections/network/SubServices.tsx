@@ -450,7 +450,7 @@ export default function SubServices() {
         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#5D00D6] mb-4 block">
           Network Solutions
         </p>
-        <h2 className="text-[32px] md:text-[44px] font-bold text-[#1A1A2E] mt-2 leading-[1.1] tracking-tight" style={{fontFamily:"'Proxima Nova',sans-serif"}}>
+        <h2 className="c9-section-heading mt-2" style={{fontFamily:"'Proxima Nova',sans-serif"}}>
           Network solutions for every business requirement.
         </h2>
         <p className="text-[17px] text-[#6B7280] mt-5 max-w-xl font-medium leading-[1.6]">

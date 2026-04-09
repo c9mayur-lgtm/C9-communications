@@ -53,7 +53,7 @@ export default function FAQ() {
           <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-brand-purple" style={FONT_FAMILY}>
             COMMON QUESTIONS
           </span>
-          <h2 className="text-[32px] md:text-[42px] font-bold text-text-primary mt-4 tracking-tight" style={FONT_FAMILY}>
+          <h2 className="c9-section-heading text-text-primary mt-4" style={FONT_FAMILY}>
             What businesses ask about cloud services.
           </h2>
         </div>

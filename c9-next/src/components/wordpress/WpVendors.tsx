@@ -134,7 +134,7 @@ const VENDORS_DATA: Record<string, any[]> = {
       description: 'Ultra-fast connectivity for mission-critical operations.',
       icon: Network,
       details: ['Dedicated 100Gbps links', 'P2P data center interconnect', 'Low-latency direct routing'],
-      brandName: 'NBN Australia',
+      brandName: 'nbn Australia',
       brandLogo: 'https://cdn.simpleicons.org/nbn/white'
     },
     {
@@ -201,7 +201,7 @@ export const WpVendors = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-10">
           <div className="w-full">
             <span className="c9-eyebrow mb-6 block">STRATEGIC PARTNERSHIPS</span>
-            <h2 className="c9-section-heading mb-8">
+            <h2 className="c9-section-heading !text-white mb-8">
               Leading the way in IT & Telco excellence.
             </h2>
             <div className="flex flex-wrap gap-2 md:gap-3 w-full">

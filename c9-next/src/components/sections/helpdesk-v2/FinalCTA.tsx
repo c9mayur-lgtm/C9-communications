@@ -14,7 +14,7 @@ export default function FinalCTA() {
               GET STARTED
             </span>
             
-            <h2 className="text-[36px] md:text-[52px] lg:text-[64px] font-medium text-white mb-10 leading-[1.05] tracking-tight" >
+            <h2 className="c9-section-heading lg: font-medium !text-white mb-10" >
               Ready to fix your <br /><span className="text-[#5D00D6]">helpdesk experience?</span>
             </h2>
 

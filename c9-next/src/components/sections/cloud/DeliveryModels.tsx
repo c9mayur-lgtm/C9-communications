@@ -32,7 +32,7 @@ export default function DeliveryModels() {
           <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-brand-purple" style={FONT_FAMILY}>
             CLOUD DELIVERY MODELS
           </span>
-          <h2 className="text-[32px] md:text-[42px] font-bold text-text-primary mt-4 leading-tight tracking-tight" style={FONT_FAMILY}>
+          <h2 className="c9-section-heading text-text-primary mt-4" style={FONT_FAMILY}>
             How C9 delivers cloud — and which model fits you.
           </h2>
           <p className="text-[16px] text-text-secondary mt-3 max-w-[640px] leading-relaxed font-normal" style={FONT_FAMILY}>

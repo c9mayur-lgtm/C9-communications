@@ -103,7 +103,7 @@ export default function OmniChannel() {
                                 <LayoutDashboard size={32} />
                             </div>
                             <p className="text-[#5D00D6] text-[10px] uppercase font-bold tracking-widest mb-2">One Platform</p>
-                            <p className="text-white font-bold text-[18px] leading-tight">C9X Agent Interface</p>
+                            <p className="text-white font-bold text-[18px] leading-tight">C9 phone system Agent Interface</p>
                         </div>
                     </div>
                 </div>

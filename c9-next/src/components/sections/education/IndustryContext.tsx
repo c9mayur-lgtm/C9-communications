@@ -6,7 +6,7 @@ export default function IndustryContext() {
           <span className="text-[#5D00D6] text-[12px] font-extrabold uppercase tracking-[0.3em] mb-4 block" >
             WHY IT MATTERS IN EDUCATION
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mb-8" >
+          <h2 className="c9-section-heading mb-8" >
             Education institutions run on connectivity and trust. Both need to be managed.
           </h2>
           <div className="text-gray-600 text-[17px] md:text-[18px] leading-relaxed font-normal text-left sm:text-center w-full flex flex-col gap-6" >

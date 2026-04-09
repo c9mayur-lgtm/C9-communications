@@ -7,7 +7,7 @@ import { useInquiry } from '@/components/context/InquiryContext';
 const inclusions = [
   { title: "Keep existing numbers", desc: "Bring your existing phone, fax, 1800, 1300, and 13 numbers with you — no number changes, no disruption to your customers. Too easy.", icon: Repeat },
   { title: "Business-grade connectivity", desc: "C9's expert pre-sales engineers are dedicated and equipped to connect your business to scale for maximum uptime and productivity — configuration to installation fully managed.", icon: HardHat },
-  { title: "NBN ready", desc: "Move with the times and put your calls into the cloud with safety, security, and reliability guaranteed. SIP Trunking works across NBN, fibre, and enterprise ethernet connections.", icon: Wifi },
+  { title: "nbn ready", desc: "Move with the times and put your calls into the cloud with safety, security, and reliability guaranteed. SIP Trunking works across nbn, fibre, and enterprise ethernet connections.", icon: Wifi },
   { title: "Fully owned C9 network", desc: "Unlike other telcos, C9 owns its network — giving full control over service and reliability and passing the benefits directly to you. No middle layer, no dependency on third-party infrastructure.", icon: Network },
   { title: "Flexible call plans", desc: "From basic timed call plans to fully unlimited — there is a SIP Trunk plan to suit your business and your budget. Scale lines up or down as your business needs change.", icon: Layers },
   { title: "Inbound services integration", desc: "Combine SIP Trunking with C9's inbound 1300 and 1800 services for a complete inbound and outbound voice solution on a single platform.", icon: LayoutGrid }

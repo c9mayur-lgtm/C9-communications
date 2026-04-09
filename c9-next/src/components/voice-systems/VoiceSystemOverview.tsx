@@ -10,7 +10,7 @@ const CAPABILITIES = [
     icon: Phone,
     title: "Cloud calling for your whole team",
     desc: "HD voice calls, auto-attendant, voicemail-to-email, call recording, and 80+ features — all in the cloud. No hardware, no maintenance, no on-site PBX.",
-    tags: ["Powered by C9X"],
+    tags: ["Powered by C9 phone system"],
     link: "/telco/cloud-phone"
   },
   {

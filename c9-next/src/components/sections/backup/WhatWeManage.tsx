@@ -20,7 +20,7 @@ export default function WhatWeManage() {
           <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#5D00D6] block mb-3" style={{ fontFamily: F }}>
             SCOPE OF SERVICE
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mt-3" style={{ fontFamily: F }}>
+          <h2 className="c9-section-heading mt-3" style={{ fontFamily: F }}>
             Everything your business needs to <span className="text-[#5D00D6]">recover from anything.</span>
           </h2>
         </div>

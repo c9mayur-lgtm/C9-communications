@@ -51,7 +51,7 @@ const cards = [
     icon: Phone,
     title: 'Cloud Voice & Administration',
     desc: 'Cloud phone system and inbound services for administration — reliable, managed voice infrastructure for your entire institution.',
-    tags: ['C9X CLOUD', 'ADMIN VOICE', 'TEAMS DIRECT ROUTING'],
+    tags: ['C9 phone system CLOUD', 'ADMIN VOICE', 'TEAMS DIRECT ROUTING'],
     defenseDark: null,
     link: '/telco',
   },
@@ -66,7 +66,7 @@ export default function Services() {
           <span className="text-white text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={fontStyle}>
             WHAT C9 MANAGES FOR EDUCATION
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-white leading-[1.1] mb-6" style={fontStyle}>
+          <h2 className="c9-section-heading !text-white mb-6" style={fontStyle}>
             Everything under one managed services agreement.
           </h2>
           <p className="text-white text-[16px] md:text-[18px] max-w-[720px] leading-relaxed mt-2 font-normal" style={fontStyle}>

@@ -45,7 +45,7 @@ export default function SLACommitment() {
             <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
               RESPONSE SLAs
             </span>
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mt-4 leading-[1.1] tracking-tight" >
+            <h2 className="c9-section-heading mt-4" >
               Defined response times. <br /><span className="text-[#5D00D6]">Not estimates.</span>
             </h2>
             <p className="text-[15px] md:text-[16px] text-slate-600 leading-relaxed mt-6 max-w-[560px] font-normal" >
@@ -107,7 +107,7 @@ export default function SLACommitment() {
                 <div className="w-14 h-14 bg-[#5D00D6] rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-[#5D00D6]/20">
                     <ShieldCheck size={28} className="text-white" />
                 </div>
-                <h3 className="text-[18px] md:text-[28px] font-bold text-white leading-tight mb-4" >
+                <h3 className="c9-section-heading !text-white mb-4" >
                   Full transparency. <br />Monthly accountability.
                 </h3>
                 <p className="text-[16px] text-slate-400 leading-relaxed mb-10 font-normal" >

@@ -1,31 +1,38 @@
 import { WpHero } from "@/components/layout/WpHero";
-import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
-import { WpHighlights } from "@/components/wordpress/WpHighlights";
-import { WpSimplifyingIT } from "@/components/wordpress/WpSimplifyingIT";
-import { WpServices } from "@/components/wordpress/WpServices";
-import { WpSolutions } from "@/components/wordpress/WpSolutions";
-import { WpIndustryGrid } from "@/components/landing/WpIndustryGrid";
-import { WpSupport } from "@/components/wordpress/WpSupport";
-import { WpVendors } from "@/components/wordpress/WpVendors";
-import { WpCaseStudies } from "@/components/wordpress/WpCaseStudies";
-import { WpCompliance } from "@/components/wordpress/WpCompliance";
-import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
+import { AudienceSolutions } from "@/components/sections/AudienceSolutions";
+import { ResponsibilityBuckets } from "@/components/sections/ResponsibilityBuckets";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { WpWhyPartner } from "@/components/wordpress/WpWhyPartner";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
-import { WpITDepartmentOptions } from "@/components/wordpress/WpITDepartmentOptions";
+import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
+import { WpCompliance } from "@/components/wordpress/WpCompliance";
+import { WpCaseStudies } from "@/components/wordpress/WpCaseStudies";
+import { WpVendors } from "@/components/wordpress/WpVendors";
+import { WpSupport } from "@/components/wordpress/WpSupport";
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { WpIndustryGrid } from "@/components/landing/WpIndustryGrid";
+import { WpITDepartmentOptions } from "@/components/wordpress/WpITDepartmentOptions";
+import { WpSimplifyingIT } from "@/components/wordpress/WpSimplifyingIT";
 import { WpHeroProducts } from "@/components/wordpress/WpHeroProducts";
+import { WpHighlights } from "@/components/wordpress/WpHighlights";
+import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
+import { WpUnifiedClassification } from "@/components/wordpress/WpUnifiedClassification";
 
 export default function Homepage() {
   return (
     <main className="min-h-screen bg-white managed-it-base">
       <WpHero />
+      <AudienceSolutions />
+      <ResponsibilityBuckets />
+      <ProcessSection />
+      <WpWhyPartner />
+      
+      {/* Supporting Content */}
       <WpClientTicker />
+      <WpITDepartmentOptions />
       <WpHighlights />
       <WpHeroProducts />
       <WpSimplifyingIT />
-      <WpITDepartmentOptions />
-      <WpServices />
-      <WpSolutions />
       <WpIndustryGrid />
       <WpDefenseBanner />
       <WpSupport />

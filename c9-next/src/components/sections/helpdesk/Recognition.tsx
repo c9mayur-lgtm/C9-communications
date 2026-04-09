@@ -8,7 +8,7 @@ export default function Recognition() {
           SOUND FAMILIAR?
         </span>
         
-        <h2 className="text-[28px] md:text-[40px] font-bold text-[#1A1A2E] mt-4 leading-tight" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
+        <h2 className="c9-section-heading mt-4" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
           Most businesses come to us after the same experience.
         </h2>
 

@@ -17,7 +17,7 @@ export default function DefenseBridge() {
               <div className="inline-flex items-center gap-2 bg-[#5D00D6] text-white px-4 py-1.5 text-[11px] font-bold tracking-[0.2em] uppercase mb-6 rounded-none">
                 <ShieldCheck size={14} /> C9 Defense
               </div>
-              <h2 className="text-[28px] md:text-[36px] font-bold text-white leading-[1.1] tracking-tight mb-4" style={{ fontFamily: F }}>
+              <h2 className="c9-section-heading !text-white mb-4" style={{ fontFamily: F }}>
                 Recovery Assurance as a formal compliance program.
               </h2>
               <p className="text-[17px] text-[#9CA3AF] leading-[1.75] font-normal" style={{ fontFamily: F }}>

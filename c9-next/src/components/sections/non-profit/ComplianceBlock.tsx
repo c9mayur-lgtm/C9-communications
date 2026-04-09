@@ -11,7 +11,7 @@ export default function ComplianceBlock() {
           <span className="text-[#A266FF] text-[12px] font-extrabold uppercase tracking-[0.3em] mb-4 block" >
             Essential 8 Ready
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-white leading-[1.1] tracking-tight mb-6" >
+          <h2 className="c9-section-heading !text-white mb-6" >
             Donor data and grant compliance aren't optional. We make them manageable.
           </h2>
           <p className="text-gray-400 text-[17px] md:text-[18px] leading-relaxed font-normal" >

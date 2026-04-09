@@ -21,7 +21,7 @@ export default function C9Difference() {
             <span className="text-[11px] uppercase tracking-[0.1em] text-[#7B2FBE]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
               THE C9 DIFFERENCE
             </span>
-            <h2 className="text-[40px] font-bold text-[#1A1A2E] mt-4 leading-tight" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
+            <h2 className="c9-section-heading mt-4" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
               Not a call centre. A team that knows your business.
             </h2>
             

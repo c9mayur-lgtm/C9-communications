@@ -15,7 +15,7 @@ export default function Recognition() {
         <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#5D00D6] block mb-3" style={{ fontFamily: F }}>
           THE UNTESTED BACKUP PROBLEM
         </span>
-        <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mt-3 mb-10" style={{ fontFamily: F }}>
+        <h2 className="c9-section-heading mt-3 mb-10" style={{ fontFamily: F }}>
           Most businesses think they have backup. Very few have <span className="text-[#5D00D6]">tested recovery.</span>
         </h2>
 

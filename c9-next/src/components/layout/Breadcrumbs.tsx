@@ -56,7 +56,7 @@ export function Breadcrumbs() {
   const pathSegments = pathname.split('/').filter(Boolean);
 
   return (
-    <div className="w-full bg-white pt-24 pb-1 c9-breadcrumbs relative z-40">
+    <div className="w-full bg-white pt-8 pb-1 c9-breadcrumbs relative z-40">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <Breadcrumb>
           <BreadcrumbList className="flex-wrap items-center">

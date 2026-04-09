@@ -106,7 +106,7 @@ export default function ServiceTerms() {
         <p>Transparent cost and service breakdowns for our digital voice and SIP solutions.</p>
         
         <div className="grid gap-2">
-          <DocItem title="Critical Information Summary C9X" icon={Phone} />
+          <DocItem title="Critical Information Summary C9 phone system" icon={Phone} />
           <DocItem title="Critical Information Summary Sip Trunk" icon={Phone} />
           <DocItem title="Critical Information Summary Inbound Services 1300 1800" icon={Phone} />
         </div>
@@ -118,13 +118,13 @@ export default function ServiceTerms() {
         <h2 id="cis-internet" className="flex items-center gap-4">
           <Globe size={32} className="text-[#5D00D6]" /> Critical Information Summary - Internet
         </h2>
-        <p>Detailed summaries of our high-speed internet and NBN business connectivity plans.</p>
+        <p>Detailed summaries of our high-speed internet and nbn business connectivity plans.</p>
         
         <div className="grid gap-2">
           <DocItem title="Critical Information Summary Fixed Wireless" icon={Globe} />
           <DocItem title="Critical Information Summary Fibre Internet" icon={Globe} />
-          <DocItem title="Critical Information Summary NBN Fibre Plans" icon={Globe} />
-          <DocItem title="Critical Information Summary Small Business nbn" icon={Globe} />
+          <DocItem title="Critical Information Summary nbn Fibre Plans" icon={Globe} />
+          <DocItem title="Critical Information Summary Small Small Business nbn™" icon={Globe} />
           <DocItem title="Critical Information Summary 4G Backup" icon={Globe} />
         </div>
       </section>

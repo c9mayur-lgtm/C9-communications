@@ -34,7 +34,7 @@ export default function SocialProof() {
           <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
             WHAT OUR CLIENTS SAY
           </span>
-          <h2 className="text-[28px] md:text-[36px] font-medium text-[#0c1024] mt-4 leading-[1.1] tracking-tight max-w-[700px]" >
+          <h2 className="c9-section-heading font-medium mt-4 max-w-[700px]" >
             From businesses that <span className="text-[#5D00D6]">made the switch.</span>
           </h2>
         </div>

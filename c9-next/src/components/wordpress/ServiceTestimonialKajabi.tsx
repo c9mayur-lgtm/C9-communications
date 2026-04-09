@@ -20,7 +20,7 @@ const DEFAULT_TESTIMONIALS: Testimonial[] = [
     id: 1,
     name: "David Chen",
     role: "Operations Director",
-    content: "Consolidating our nationwide connectivity and IT infrastructure under C9 Communications was the best strategic move we made. Their enterprise Fibre NBN eliminated our downtime, and having a single, proactive Australian support team means zero IT headaches.",
+    content: "Consolidating our nationwide connectivity and IT infrastructure under C9 Communications was the best strategic move we made. Their enterprise Fibre nbn eliminated our downtime, and having a single, proactive Australian support team means zero IT headaches.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
     metric: "99.99%",
     metricLabel: "Network Uptime"
@@ -106,7 +106,7 @@ export const ServiceTestimonialKajabi = ({ testimonials = DEFAULT_TESTIMONIALS }
   return (
     <section className="py-16 bg-[#000000] overflow-hidden text-white">
       <div className="container mx-auto max-w-full px-0">
-        <h2 className="text-[32px] md:text-[40px] font-bold text-center mb-10 tracking-tight px-6" >
+        <h2 className="c9-section-heading text-center mb-10 px-6" >
           Why leaders trust C9 Communications
         </h2>
 

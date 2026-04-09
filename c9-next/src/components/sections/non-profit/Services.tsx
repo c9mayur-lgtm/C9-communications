@@ -11,7 +11,7 @@ const cards = [
     icon: Wifi,
     title: 'Connectivity & Telco',
     desc: 'Reliable internet and cloud voice — keeping your offices, remote staff, and volunteers connected without the complexity of managing multiple providers.',
-    tags: ['BUSINESS NBN', 'FAST FIBRE', 'FAILOVER', 'VOIP'],
+    tags: ['Small Business nbn™', 'FAST FIBRE', 'FAILOVER', 'VOIP'],
     defenseDark: null,
     link: '/telco',
   },
@@ -51,7 +51,7 @@ const cards = [
     icon: Phone,
     title: 'Cloud Voice & Inbound',
     desc: 'Cloud phone system, inbound 1300/1800, and Contact Centre — reliable voice infrastructure for organisations that depend on community communication.',
-    tags: ['C9X CLOUD', '1300/1800 NUMBERS', 'CONTACT CENTRE'],
+    tags: ['C9 phone system CLOUD', '1300/1800 NUMBERS', 'CONTACT CENTRE'],
     defenseDark: null,
     link: '/telco',
   },
@@ -66,7 +66,7 @@ export default function Services() {
           <span className="text-white text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={fontStyle}>
             WHAT C9 MANAGES FOR NON-PROFITS
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-white leading-[1.1] mb-6" style={fontStyle}>
+          <h2 className="c9-section-heading !text-white mb-6" style={fontStyle}>
             Everything under one managed services agreement.
           </h2>
           <p className="text-white text-[16px] md:text-[18px] max-w-[720px] leading-relaxed mt-2 font-normal" style={fontStyle}>

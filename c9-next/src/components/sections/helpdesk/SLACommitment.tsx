@@ -45,7 +45,7 @@ export default function SLACommitment() {
             <span className="text-[11px] uppercase tracking-[0.1em] text-[#7B2FBE]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
               RESPONSE SLAs
             </span>
-            <h2 className="text-[40px] font-bold text-[#1A1A2E] mt-4 leading-tight" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
+            <h2 className="c9-section-heading mt-4" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
               Defined response times. Not estimates. Not 'as soon as possible.'
             </h2>
             <p className="text-[17px] text-[#6B7280] leading-[1.75] mt-4 max-w-[520px]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>

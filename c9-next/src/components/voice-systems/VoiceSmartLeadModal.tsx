@@ -92,7 +92,7 @@ export const VoiceSmartLeadModal = () => {
                       <div className="w-14 h-14 rounded-2xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-8">
                         <PhoneCall size={24} />
                       </div>
-                      <h2 className="text-[28px] font-bold text-[#0c1024] mb-3 leading-tight tracking-tight">
+                      <h2 className="c9-section-heading mb-3">
                         What can we help you solve?
                       </h2>
                       <p className="text-slate-500 text-[15px] mb-8">
@@ -136,7 +136,7 @@ export const VoiceSmartLeadModal = () => {
                         ← Back
                       </button>
 
-                      <h2 className="text-[28px] font-bold text-[#0c1024] mb-3 leading-tight tracking-tight">
+                      <h2 className="c9-section-heading mb-3">
                         Let's get that sorted.
                       </h2>
                       <p className="text-slate-500 text-[15px] mb-8">
@@ -203,7 +203,7 @@ export const VoiceSmartLeadModal = () => {
                       <div className="w-20 h-20 rounded-full bg-green-50 border border-green-100 flex items-center justify-center text-green-500 mb-6">
                         <CheckCircle2 size={32} />
                       </div>
-                      <h2 className="text-[28px] font-bold text-[#0c1024] mb-3 leading-tight tracking-tight">
+                      <h2 className="c9-section-heading mb-3">
                         We're on it.
                       </h2>
                       <p className="text-slate-500 text-[15px] mb-8 max-w-[300px]">

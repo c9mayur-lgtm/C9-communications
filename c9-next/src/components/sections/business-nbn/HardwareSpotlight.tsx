@@ -49,7 +49,7 @@ export default function HardwareSpotlight() {
                <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
                  MANAGED HARDWARE KIT
                </span>
-               <h2 className="text-[34px] font-bold text-[#1A1A2E] leading-[1.1] tracking-tight mb-4 text-center lg:text-left">
+               <h2 className="c9-section-heading mb-4 text-center lg:text-left">
                  Hardware designed for <br /> zero-fail business.
                </h2>
              </div>
@@ -188,11 +188,11 @@ export default function HardwareSpotlight() {
               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
                 MANAGED HARDWARE KIT
               </span>
-              <h2 className="text-[34px] md:text-[52px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight">
+              <h2 className="c9-section-heading">
                 Hardware designed for <br /> zero-fail business.
               </h2>
               <p className="text-[18px] text-[#6B7280] mt-8 leading-relaxed max-w-[90%]">
-                C9 NBN™ isn’t just a raw line—it’s a managed ecosystem. We engineer the path, 
+                C9 nbn™ isn’t just a raw line—it’s a managed ecosystem. We engineer the path, 
                 provide the hardware, and proactively monitor the connectivity to ensure your 
                 business infrastructure remains impenetrable.
               </p>
@@ -212,7 +212,7 @@ export default function HardwareSpotlight() {
                    </div>
                    <div>
                       <p className="text-[11px] font-bold text-[#5D00D6] tracking-[0.15em] mb-2">{section.subtitle}</p>
-                      <h3 className="text-[26px] font-bold text-[#1A1A2E] leading-tight mb-4 tracking-tight">{section.title}</h3>
+                      <h3 className="c9-section-heading mb-4">{section.title}</h3>
                       <p className="text-[16px] text-[#6B7280] leading-relaxed mb-6">{section.desc}</p>
                       <ul className="space-y-3">
                          {section.features.map((feat, fi) => (

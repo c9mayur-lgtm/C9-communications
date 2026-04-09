@@ -81,7 +81,7 @@ export default function IndustryGrid() {
                 <industry.icon size={40} strokeWidth={1.5} />
               </div>
 
-              <h3 className="text-[26px] md:text-[28px] font-bold text-[#0c1024] mb-4 tracking-tight leading-tight" style={fontStyle}>
+              <h3 className="c9-section-heading mb-4" style={fontStyle}>
                 {industry.title}
               </h3>
               

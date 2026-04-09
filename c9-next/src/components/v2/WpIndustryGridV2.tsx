@@ -34,7 +34,7 @@ const INDUSTRIES = [
   {
     tag: 'NON-PROFIT',
     title: 'Affordable IT for Good Causes',
-    desc: 'We stretch every dollar with tailored IT packages, NBN, and Microsoft nonprofit licensing — so more of your budget goes to the mission, not infrastructure.',
+    desc: 'We stretch every dollar with tailored IT packages, nbn, and Microsoft nonprofit licensing — so more of your budget goes to the mission, not infrastructure.',
     metrics: [
       { label: 'avg cost savings', value: '40%' },
       { label: 'Setup fees', value: '0$' }
@@ -79,7 +79,7 @@ export const WpIndustryGridV2 = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="text-center mb-16 max-w-3xl mx-auto px-6">
           <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" >WHY PARTNER WITH US</span>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-[#0c1024] leading-[1.05] tracking-tight" >
+          <h2 className="c9-section-heading" >
             Solving IT challenges in every industry, every day.
           </h2>
         </div>

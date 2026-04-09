@@ -28,7 +28,7 @@ export default function RTOExplainer() {
           <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#5D00D6] block mb-3" style={{ fontFamily: F }}>
             UNDERSTANDING RECOVERY
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] leading-[1.1] tracking-tight mt-3" style={{ fontFamily: F }}>
+          <h2 className="c9-section-heading mt-3" style={{ fontFamily: F }}>
             Two numbers every business needs to know — <span className="text-[#5D00D6]">and almost none do.</span>
           </h2>
           <p className="text-[17px] text-[#6B7280] mt-4 max-w-[640px] mx-auto leading-relaxed" style={{ fontFamily: F }}>
@@ -42,7 +42,7 @@ export default function RTOExplainer() {
               <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: '#EDE9FE' }}>
                 <card.icon size={22} style={{ color: '#5D00D6' }} />
               </div>
-              <h3 className="text-[24px] font-bold text-[#0c1024] mt-4 tracking-tight" style={{ fontFamily: F }}>{card.title}</h3>
+              <h3 className="c9-section-heading mt-4" style={{ fontFamily: F }}>{card.title}</h3>
               <p className="text-[14px] font-bold mt-1" style={{ fontFamily: F, color: '#5D00D6' }}>{card.subtitle}</p>
               <p className="text-[15px] text-[#6B7280] leading-[1.7] mt-4" style={{ fontFamily: F }}>{card.body}</p>
               <div className="rounded-xl p-4 mt-6" style={{ backgroundColor: '#F3EEFF' }}>

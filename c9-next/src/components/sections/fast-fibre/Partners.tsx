@@ -35,7 +35,7 @@ export default function Partners() {
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px] relative z-10">
         <div className="text-center max-w-[800px] mx-auto mb-16 md:mb-20">
           <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.3em] block mb-6">CLOUD CONNECTIVITY</span>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-white leading-tight mb-8">
+          <h2 className="c9-section-heading !text-white mb-8">
             More than just internet <br /> with unlimited data.
           </h2>
           <p className="text-[17px] md:text-[19px] text-[#94A3B8] leading-relaxed">

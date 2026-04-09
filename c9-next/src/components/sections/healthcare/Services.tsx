@@ -10,8 +10,8 @@ const cards = [
   {
     icon: Wifi,
     title: 'Connectivity & Telco',
-    desc: 'Business NBN, Fast Fibre, failover connections, and phone systems — all managed and supported by C9.',
-    tags: ['BUSINESS NBN', 'FAST FIBRE', 'FAILOVER', 'VOIP'],
+    desc: 'Small Business nbn™, Fast Fibre, failover connections, and phone systems — all managed and supported by C9.',
+    tags: ['Small Business nbn™', 'FAST FIBRE', 'FAILOVER', 'VOIP'],
     defenseDark: null,
     link: '/telco',
   },
@@ -50,8 +50,8 @@ const cards = [
   {
     icon: Phone,
     title: 'Cloud Voice & Inbound',
-    desc: 'C9X cloud phone system, inbound 1300/1800 services, and Contact Centre — one provider for all your voice needs.',
-    tags: ['C9X CLOUD', '1300/1800 NUMBERS', 'CONTACT CENTRE'],
+    desc: 'C9 phone system cloud phone system, inbound 1300/1800 services, and Contact Centre — one provider for all your voice needs.',
+    tags: ['C9 phone system CLOUD', '1300/1800 NUMBERS', 'CONTACT CENTRE'],
     defenseDark: null,
     link: '/telco',
   },
@@ -68,7 +68,7 @@ export default function Services() {
           <span className="text-white text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={fontStyle}>
             WHAT C9 MANAGES FOR HEALTHCARE
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-white leading-[1.1] mb-6" style={fontStyle}>
+          <h2 className="c9-section-heading !text-white mb-6" style={fontStyle}>
             Everything under one managed services agreement.
           </h2>
           <p className="text-white text-[16px] md:text-[18px] max-w-[720px] leading-relaxed mt-2 font-normal" style={fontStyle}>

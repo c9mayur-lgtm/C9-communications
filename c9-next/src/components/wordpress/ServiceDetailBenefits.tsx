@@ -26,7 +26,7 @@ export const ServiceDetailBenefits = ({
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-stretch">
           {/* Left Column: Text Content */}
           <div className="flex flex-col">
-            <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] mb-6 leading-tight tracking-tight" >
+            <h2 className="c9-section-heading mb-6" >
               {title}
             </h2>
             

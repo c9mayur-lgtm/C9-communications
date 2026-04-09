@@ -47,7 +47,7 @@ export default function FAQ() {
           <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE]  font-sans">
             COMMON QUESTIONS
           </span>
-          <h2 className="text-[32px] md:text-[40px] tracking-tight -[1.1] font-sans">
+          <h2 className="c9-section-heading -[1.1] font-sans">
             What businesses ask before<br className="hidden md:block" /> outsourcing their IT.
           </h2>
         </div>

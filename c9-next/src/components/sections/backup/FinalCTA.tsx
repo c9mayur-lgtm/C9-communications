@@ -19,7 +19,7 @@ export default function FinalCTA() {
   return (
     <section className="bg-[#0c1024] py-24" style={{ fontFamily: F }}>
       <div className="container mx-auto px-6 md:px-8 text-center w-full" style={{ maxWidth: '760px' }}>
-        <h2 className="text-[32px] md:text-[44px] font-bold text-white leading-[1.1] tracking-tight mb-6" style={{ fontFamily: F }}>
+        <h2 className="c9-section-heading !text-white mb-6" style={{ fontFamily: F }}>
           Find out if your backup would <span className="text-[#5D00D6]">actually save you.</span>
         </h2>
         <p className="text-[18px] text-[#9CA3AF] leading-[1.7] mb-10 font-normal" style={{ fontFamily: F }}>

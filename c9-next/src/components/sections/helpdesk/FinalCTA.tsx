@@ -5,7 +5,7 @@ export default function FinalCTA() {
   return (
     <section className="w-full bg-white py-24">
       <div className="container mx-auto px-6 max-w-[640px] text-center">
-        <h2 className="text-[44px] font-bold text-[#1A1A2E] leading-tight" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
+        <h2 className="c9-section-heading" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
           Let's talk about what your staff actually need from IT support.
         </h2>
         

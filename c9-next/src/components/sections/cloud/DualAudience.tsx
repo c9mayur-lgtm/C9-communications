@@ -11,7 +11,7 @@ export default function DualAudience() {
           <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-brand-purple" style={FONT_FAMILY}>
             TWO SITUATIONS. SAME SOLUTION.
           </span>
-          <h2 className="text-[30px] md:text-[42px] font-bold text-text-primary mt-4 leading-tight tracking-tight" style={FONT_FAMILY}>
+          <h2 className="c9-section-heading text-text-primary mt-4" style={FONT_FAMILY}>
             Whether you're migrating or managing —<br className="hidden md:block" /> C9 owns the outcome.
           </h2>
         </div>

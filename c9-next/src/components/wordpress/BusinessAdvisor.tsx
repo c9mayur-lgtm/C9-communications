@@ -34,7 +34,7 @@ const INDUSTRIES = [
     color: 'bg-pink-50 text-pink-700 border-pink-100', iconBg: 'bg-pink-50 text-pink-500',
     recommend: [
       { name: 'CCTV & People Count', href: '/modern-workplace#other-solutions' },
-      { name: 'Business NBN™', href: '/telco/business-nbn' }
+      { name: 'Small Business nbn™', href: '/telco/business-nbn' }
     ],
     benefit: 'Real-time occupancy analytics and guest WiFi that actually works.'
   },
@@ -96,8 +96,8 @@ function getResponse(query: string): ChatResponse {
   }
   if (q.match(/nbn|business.?nbn/)) {
     return { 
-      text: "C9 provides reliable Business nbn® plans built around uptime, not price. Every connection is backed by dedicated local support and no shared residential traffic — perfect for small to medium businesses needing stability.", 
-      links: [{ label: 'Business NBN™', href: '/telco/business-nbn' }]
+      text: "C9 provides reliable Small Business nbn™® plans built around uptime, not price. Every connection is backed by dedicated local support and no shared residential traffic — perfect for small to medium businesses needing stability.", 
+      links: [{ label: 'Small Business nbn™', href: '/telco/business-nbn' }]
     };
   }
   if (q.match(/fast.?fibre|c9.?fibre|fibre.?internet/)) {
@@ -168,11 +168,11 @@ function getResponse(query: string): ChatResponse {
   }
   if (q.match(/internet|broadband|connectivity/)) {
     return { 
-      text: "We offer more than just NBN. C9 provides Business NBN™, Fast Fibre (up to 10Gbps), and Enterprise Ethernet. All connections are carrier-grade with business SLAs.", 
+      text: "We offer more than just nbn. C9 provides Small Business nbn™, Fast Fibre (up to 10Gbps), and Enterprise Ethernet. All connections are carrier-grade with business SLAs.", 
       links: [{ label: 'Telco Solutions', href: '/telco' }]
     };
   }
-  if (q.match(/voice|phone system|pbx|c9 voice|c9x|teams.?calling/)) {
+  if (q.match(/voice|phone system|pbx|c9 voice|c9-phone-system|teams.?calling/)) {
     return { 
       text: "The C9 Voice Cloud Phone System is built for modern work. It includes enterprise features, mobile apps, and deep Microsoft Teams integration to keep your team connected on one platform.", 
       links: [{ label: 'Business Voice', href: '/telco/c9voice' }]
@@ -253,7 +253,7 @@ function getResponse(query: string): ChatResponse {
 
   // Default fallback
   return { 
-    text: "Great question! I can help you with Managed IT, Helpdesk, Fast Fibre internet, NBN, Voice AI, Security (C9 Defense), or industry-specific IT solutions. What would you like to know more about?",
+    text: "Great question! I can help you with Managed IT, Helpdesk, Fast Fibre internet, nbn, Voice AI, Security (C9 Defense), or industry-specific IT solutions. What would you like to know more about?",
     links: [{ label: 'Explore All Services', href: '/managed-it' }, { label: 'Contact Us', href: '/contact' }]
   };
 }

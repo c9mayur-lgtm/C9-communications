@@ -9,7 +9,7 @@ export default function FinalCTA() {
       <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/20 via-transparent to-transparent pointer-events-none" />
 
       <div className="container mx-auto max-w-[800px] text-center relative z-10">
-        <h2 className="text-[36px] md:text-[48px] font-bold text-white mb-6 leading-[1.1] tracking-tight" >
+        <h2 className="c9-section-heading !text-white mb-6" >
           Ready to talk to an IT partner that understands healthcare?
         </h2>
 

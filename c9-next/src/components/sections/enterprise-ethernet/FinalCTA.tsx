@@ -10,7 +10,7 @@ export default function FinalCTA() {
   const { setInquiryMessage } = useInquiry();
 
   const handleQuoteClick = () => {
-    setInquiryMessage("I'm ready for an NBN™ Enterprise Ethernet quote for my business locations.");
+    setInquiryMessage("I'm ready for an nbn™ Enterprise Ethernet quote for my business locations.");
     const el = document.getElementById('consultation-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -20,8 +20,8 @@ export default function FinalCTA() {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="max-w-[1000px] mx-auto text-center">
           
-          <h2 className="text-[36px] md:text-[52px] lg:text-[58px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight mb-10">
-            Ready to connect your business with <span className="text-[#5D00D6]">enterprise-grade NBN™?</span>
+          <h2 className="c9-section-heading lg: mb-10">
+            Ready to connect your business with <span className="text-[#5D00D6]">enterprise-grade nbn™?</span>
           </h2>
           
           <p className="text-[18px] md:text-[21px] text-slate-600 mb-14 leading-relaxed font-normal max-w-[800px] mx-auto">

@@ -10,7 +10,7 @@ export default function TwoLayers() {
           <span className="text-[11px] uppercase font-bold tracking-[0.2em] text-[#5D00D6] block mb-6">
             UNDERSTANDING YOUR SECURITY OPTIONS
           </span>
-          <h2 className="text-[36px] md:text-[48px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight mb-6 max-w-2xl">
+          <h2 className="c9-section-heading mb-6 max-w-2xl">
             Security baseline versus enterprise defence. Here's the difference.
           </h2>
           <p className="text-[18px] text-[#6B7280] leading-relaxed max-w-[640px] font-normal">
@@ -25,7 +25,7 @@ export default function TwoLayers() {
               Managed IT — Security Baseline
             </div>
 
-            <h3 className="text-[28px] md:text-[32px] font-bold text-[#1A1A2E] mb-4 tracking-tight leading-tight">
+            <h3 className="c9-section-heading mb-4">
               Included with every<br/>Managed IT engagement.
             </h3>
 
@@ -60,7 +60,7 @@ export default function TwoLayers() {
               C9 Defense — Enterprise Layer
             </div>
 
-            <h3 className="text-[28px] md:text-[32px] font-bold text-white mb-4 tracking-tight leading-tight relative z-10">
+            <h3 className="c9-section-heading !text-white mb-4 relative z-10">
               For organisations with elevated<br/>risk or compliance obligations.
             </h3>
 

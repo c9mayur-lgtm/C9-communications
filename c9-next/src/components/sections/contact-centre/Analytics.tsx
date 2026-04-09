@@ -94,7 +94,7 @@ export default function Analytics() {
                     <CreditCard size={32} />
                 </div>
 
-                <h3 className="text-[28px] font-bold text-white leading-tight mb-6 relative z-10">
+                <h3 className="c9-section-heading !text-white mb-6 relative z-10">
                     Payments 24/7, 365 days a year
                 </h3>
 

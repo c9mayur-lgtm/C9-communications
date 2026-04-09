@@ -40,7 +40,7 @@ const items = [
   }
 ];
 
-export const Advantage = () => {
+export const C9PhoneSystemAdvantage = () => {
   const { setInquiryMessage } = useInquiry();
 
   const handleGetStarted = () => {

@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 
 const SERVICES = [
   {
-    title: "Business NBN™",
-    body: "Enterprise-grade NBN™ with guaranteed bandwidth.",
-    link: "View Business NBN →",
+    title: "Small Business nbn™",
+    body: "Enterprise-grade nbn™ with guaranteed bandwidth.",
+    link: "View Small Business nbn™ →",
     href: "/telco/business-nbn",
     icon: Network
   },
@@ -50,7 +50,7 @@ export default function SingleBillSection() {
                 Most Australian businesses manage their internet, mobile, and voice services with separate providers — separate bills, separate contacts, and separate headaches when something goes wrong.
               </p>
               <p>
-                C9 combines your business NBN™ or fibre internet, mobile fleet, and voice services on a single monthly bill — one invoice, one payment run, and one dedicated account manager who handles everything.
+                C9 combines your Small Business nbn™ or fibre internet, mobile fleet, and voice services on a single monthly bill — one invoice, one payment run, and one dedicated account manager who handles everything.
               </p>
             </div>
 

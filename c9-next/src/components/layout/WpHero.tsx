@@ -3,58 +3,146 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+
+import { useAudience } from '@/components/context/AudienceContext';
 
 export const WpHero = () => {
   const pathname = usePathname();
   const isHome = pathname === '/';
-  
-  // If it's the home page, add huge top padding to clear the fixed navbar.
-  // If it's a subpage, the global Breadcrumbs already handle the navbar offset.
-  const paddingClass = isHome 
-    ? "pt-16 pb-10 md:pt-24 md:pb-16 lg:pt-32 lg:pb-20" 
-    : "pt-4 pb-10 md:pt-6 md:pb-16 lg:pt-8 lg:pb-20";
+  const { audience } = useAudience();
+
+  const paddingClass = isHome
+    ? "pt-20 pb-14 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24"
+    : "pt-12 pb-14 md:pt-16 md:pb-20 lg:pt-16 lg:pb-24";
+
+  const content = {
+    startup: {
+      title: "Focus on your product.\nWe'll build your platform.",
+      description: "One partner. Total IT & Telco infrastructure. We manage the logic, the security, and the connectivity so you can scale faster.",
+      cta1: "Get Complete Launch Plan",
+      cta1Href: "#consultation-section",
+      cta2: "View Startup Packages",
+      cta2Href: "/solutions",
+      tags: ["End-to-End Setup", "nbn® Fast Fiber", "Secure Office IT"],
+      image: "/images/hero_startup.png"
+    },
+    business: {
+      title: "From Setup to Scale — We Run Your Entire IT, Telco & Workplace",
+      description: "No vendors. No coordination. No downtime.\nWe design, deliver, and manage everything.",
+      cta1: "Get Complete Setup Plan",
+      cta1Href: "#consultation-section",
+      cta2: "Talk to an Expert",
+      cta2Href: "tel:1300293332",
+      tags: ["Managed IT & Telco", "Switch & Upgrade", "System Optimization"],
+      image: "/images/hero_business.png"
+    },
+    enterprise: {
+      title: "Scalable managed infrastructure for complex environments.",
+      description: "End-to-end managed services across Telco, IT, and Modern Workplace. One provider. Complete accountability. Australian-wide.",
+      cta1: "Book a Consultation",
+      cta1Href: "#consultation-section",
+      cta2: "Capability Statement",
+      cta2Href: "/managed-it",
+      tags: ["Enterprise Infrastructure", "24/7 Security", "Hybrid Cloud"],
+      image: "/images/hero_enterprise.png"
+    }
+  };
+
+  const activeContent = content[audience as keyof typeof content] || content.business;
+
+  const handlePrimaryCta = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = activeContent.cta1Href;
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <section className={`${paddingClass} bg-white overflow-hidden min-h-[450px] lg:min-h-[580px] flex items-center`}>
-      <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
-        <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-6 items-center relative z-10 w-full">
+    <section className={`${paddingClass} relative overflow-hidden flex items-center min-h-[520px] lg:min-h-[600px]`}>
+
+      {/* ── Mobile/Tablet: full-bleed background image with overlay ── */}
+      <div className="absolute inset-0 xl:hidden">
+        <img
+          src={activeContent.image}
+          alt={activeContent.title}
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Dark gradient so text is always readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c1024]/80 via-[#0c1024]/70 to-[#0c1024]/90" />
+        <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
+      </div>
+
+      {/* ── Desktop: white background ── */}
+      <div className="absolute inset-0 hidden xl:block bg-white" />
+
+      <div className="container mx-auto px-6 md:px-8 w-full relative z-10" style={{ maxWidth: '1240px' }}>
+        <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-6 xl:gap-8 items-center w-full">
+
+          {/* Text column */}
           <div className="py-4 pr-0 xl:pr-6">
-            <h1 className="c9-hero-title mb-6">
-              We manage your IT & Telco, so you can manage your business.
+            <h1 className="c9-hero-title mb-5 whitespace-pre-line xl:text-slate-900 text-white">
+              {activeContent.title}
             </h1>
-            <p className="c9-body mb-8 max-w-[500px]">
-              Take charge of your business continuity with innovative IT solutions designed for growth.
+            <p className="c9-body mb-8 max-w-[550px] whitespace-pre-line xl:text-slate-600 text-white/80">
+              {activeContent.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 group">
-                Schedule a Free Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto border-gray-200">
-                Services
-              </Button>
+
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+              <a
+                href={activeContent.cta1Href}
+                onClick={handlePrimaryCta}
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/30 group"
+              >
+                {activeContent.cta1}
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href={activeContent.cta2Href}
+                className="inline-flex items-center justify-center gap-2 border-2 border-white xl:border-[#5D00D6] text-white xl:text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-white/10 xl:hover:bg-[#5D00D6] xl:hover:text-white transition-colors"
+              >
+                {activeContent.cta2}
+              </a>
             </div>
 
-            {/* Uptime, Support, No Lock-In marks */}
-            <div className="flex items-center gap-5 md:gap-8 mt-10 md:mt-12 flex-wrap pb-4">
-              {['99.99% Uptime', '24/7 AU Support', 'No Lock-In'].map((t, i) => (
-                <span key={i} className="flex items-center gap-2 c9-eyebrow !text-slate-500">
-                  <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
-                </span>
-              ))}
-            </div>
+            {/* Quick Tags for Homepage */}
+            {isHome && (
+              <div className="flex flex-wrap gap-3 mt-8">
+                {activeContent.tags.map((tag: string, i: number) => (
+                  <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 xl:bg-slate-50 border border-white/20 xl:border-slate-100 text-white xl:text-slate-600 text-[13px] font-bold">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
+                    {tag}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Trust marks */}
+            {!isHome && (
+              <div className="flex items-center gap-5 md:gap-8 mt-10 flex-wrap">
+                {['99.99% Uptime', '24/7 AU Support', 'No Lock-In'].map((t, i) => (
+                  <span key={i} className="inline-flex items-center gap-2">
+                    <CheckCircle size={16} className="text-[#5D00D6] shrink-0 xl:text-[#5D00D6]" />
+                    <span className="c9-eyebrow !text-white xl:!text-slate-500 tracking-widest leading-none pt-0.5 whitespace-nowrap">
+                      {t}
+                    </span>
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* Right side rectangular image */}
-          <div className="hidden xl:block w-full h-[400px] lg:h-[500px] relative rounded-none overflow-hidden shadow-2xl">
-            <img 
-               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2850" 
-               alt="Office Team" 
-               className="absolute inset-0 w-full h-full object-cover"
+          {/* Right side image — desktop only */}
+          <div className="hidden xl:block w-full h-[480px] relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src={activeContent.image}
+              alt={activeContent.title}
+              className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/60 via-transparent to-transparent opacity-60" />
           </div>
+
         </div>
       </div>
     </section>

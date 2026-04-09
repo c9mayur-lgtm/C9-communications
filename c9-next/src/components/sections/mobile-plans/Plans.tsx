@@ -151,7 +151,7 @@ const PlanCard = ({ plan, index, isRecommended }: { plan: any; index: number; is
             )}
          </div>
 
-         <h3 className="text-[26px] font-bold leading-tight mb-4 tracking-tight">{plan.title}</h3>
+         <h3 className="c9-section-heading mb-4">{plan.title}</h3>
          <div className="flex items-baseline gap-2 mb-2">
             <span className="text-[48px] font-bold tracking-tighter">{plan.price}</span>
             <div className={`flex flex-col leading-none ${isRecommended || plan.isDark ? 'text-white/60' : 'text-slate-400'}`}>
@@ -246,7 +246,7 @@ export default function Plans() {
                <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6] animate-pulse" />
                <span className="text-[#5D00D6] text-[11px] font-black uppercase tracking-[0.3em]">MOBILE PLAN OPTIONS</span>
             </div>
-            <h2 className="text-[36px] md:text-[56px] font-bold tracking-tight text-[#1A1A2E] leading-[1.05]">
+            <h2 className="c9-section-heading">
               Simple business pricing. <br /><span className="text-[#5D00D6]">No hidden costs.</span>
             </h2>
           </div>

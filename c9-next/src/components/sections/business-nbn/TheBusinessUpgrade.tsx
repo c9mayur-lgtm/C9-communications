@@ -46,7 +46,7 @@ const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) 
 const upgradeBlocks = [
   {
     title: 'Symmetrical Bandwidth',
-    desc: 'Unlike standard NBN where uploads are throttled, C9 Enterprise Ethernet provides identical upload and download speeds. Critical for cloud backups and teams.',
+    desc: 'Unlike standard nbn where uploads are throttled, C9 Enterprise Ethernet provides identical upload and download speeds. Critical for cloud backups and teams.',
     icon: Gauge,
     tag: 'PERFORMANCE',
     metrics: [
@@ -56,7 +56,7 @@ const upgradeBlocks = [
   },
   {
     title: 'Financial Uptime SLA',
-    desc: "Standard NBN has no time-bound repair commitment. C9 provides a contractually backed eSLA with financial rebates if we don't meet our 4-hour target.",
+    desc: "Standard nbn has no time-bound repair commitment. C9 provides a contractually backed eSLA with financial rebates if we don't meet our 4-hour target.",
     icon: ShieldCheck,
     tag: 'RELIABILITY',
     metrics: [
@@ -75,8 +75,8 @@ const upgradeBlocks = [
     ]
   },
   {
-    title: 'NBN™ Accredited Support',
-    desc: 'Bypass the generic call centers. Every C9 account is assigned a dedicated Network Advisor with direct access to NBN™ engineering escalations.',
+    title: 'nbn™ Accredited Support',
+    desc: 'Bypass the generic call centers. Every C9 account is assigned a dedicated Network Advisor with direct access to nbn™ engineering escalations.',
     icon: Headphones,
     tag: 'HUMAN EXPERTISE',
     metrics: [
@@ -113,7 +113,7 @@ export default function TheBusinessUpgrade() {
         
         <div className="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
           <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">The Enterprise Edge</span>
-          <h2 className="text-[36px] md:text-[52px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight">
+          <h2 className="c9-section-heading">
             The Business Upgrade.<br /> What the Pros use.
           </h2>
           <p className="text-[17px] md:text-[19px] text-[#6B7280] mt-8 leading-relaxed">

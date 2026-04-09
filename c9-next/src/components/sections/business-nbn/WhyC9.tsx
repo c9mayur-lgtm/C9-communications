@@ -34,7 +34,7 @@ export default function WhyC9() {
         
         {/* Dark Header */}
         <div className="flex flex-col items-center mb-20">
-           <h2 className="text-[32px] md:text-[46px] font-bold text-white leading-tight">
+           <h2 className="c9-section-heading !text-white">
               Why businesses choose C9
            </h2>
            <div className="w-20 h-1 bg-gradient-to-r from-[#5D00D6] to-[#7C3AED] mt-6 rounded-full" />

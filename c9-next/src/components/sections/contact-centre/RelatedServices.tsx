@@ -7,10 +7,10 @@ import Link from 'next/link';
 
 const services = [
   {
-    title: "C9X Cloud Phone System",
+    title: "C9 phone system Cloud Phone System",
     description: "The voice engine powering your contact centre.",
-    linkText: "View C9X",
-    href: "/telco/c9x",
+    linkText: "View C9 phone system",
+    href: "/telco/c9-phone-system",
     icon: Phone
   },
   {
@@ -21,9 +21,9 @@ const services = [
     icon: Headset
   },
   {
-    title: "Business NBN™",
+    title: "Small Business nbn™",
     description: "Enterprise internet to keep your contact centre online.",
-    linkText: "View Business NBN",
+    linkText: "View Small Business nbn™",
     href: "/telco/business-nbn",
     icon: Wifi
   }

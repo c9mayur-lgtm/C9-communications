@@ -44,7 +44,7 @@ export default function FAQ() {
         <span className="text-[11px] uppercase font-bold tracking-[0.2em] text-[#7B2FBE] block mb-4">
           COMMON QUESTIONS
         </span>
-        <h2 className="text-[36px] md:text-[48px] font-bold text-[#1A1A2E] leading-[1.05] tracking-tight mb-16">
+        <h2 className="c9-section-heading mb-16">
           What businesses ask about<br/>IT security.
         </h2>
 

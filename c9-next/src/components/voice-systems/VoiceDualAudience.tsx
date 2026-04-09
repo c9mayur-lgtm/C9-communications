@@ -58,7 +58,7 @@ export const VoiceDualAudience = () => {
             </div>
 
             <div className="p-8 md:p-10">
-              <h3 className="text-[26px] font-bold text-[#0c1024] tracking-tight leading-tight mb-4">
+              <h3 className="c9-section-heading mb-4">
                 Simple, reliable phones for your whole team —{' '}
                 <span className="text-[#5D00D6]">set up in days, not weeks.</span>
               </h3>
@@ -100,7 +100,7 @@ export const VoiceDualAudience = () => {
             </div>
 
             <div className="p-8 md:p-10">
-              <h3 className="text-[26px] font-bold text-white tracking-tight leading-tight mb-4">
+              <h3 className="c9-section-heading !text-white mb-4">
                 Multi-site. Microsoft Teams integrated.{' '}
                 <span className="text-[#5D00D6]">Contact centre ready.</span>
               </h3>

@@ -19,11 +19,11 @@ import ContactCentreCta from '@/components/sections/contact-centre/ContactCentre
 
 export const metadata: Metadata = {
   title: "Contact Centre Solutions | C9 Communications",
-  description: "C9X Omni Channel Contact Centre — voice, chat, social, and app interactions in one platform. PCI-DSS payments, CRM integration, real-time analytics, and workforce management. Hosted on Microsoft Azure.",
+  description: "C9 phone system Omni Channel Contact Centre — voice, chat, social, and app interactions in one platform. PCI-DSS payments, CRM integration, real-time analytics, and workforce management. Hosted on Microsoft Azure.",
   openGraph: {
     url: "https://c9communications.com.au/telco/contact-centre",
     title: "Contact Centre Solutions | C9 Communications",
-    description: "C9X Omni Channel Contact Centre — voice, chat, social, and app interactions in one platform. Hosted on Microsoft Azure.",
+    description: "C9 phone system Omni Channel Contact Centre — voice, chat, social, and app interactions in one platform. Hosted on Microsoft Azure.",
   }
 };
 

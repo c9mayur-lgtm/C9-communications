@@ -10,21 +10,24 @@ const CASE_STUDIES = [
     title: 'Launch Housing Case Study',
     desc: "Launch Housing helps hundreds of Melburnians find stable housing every single day. But their aging phone system and...",
     img: '/images/case-studies/case-study-1.jpg',
-    videoText: 'Launch Housing Case Study'
+    videoText: 'Launch Housing Case Study',
+    href: '/case-studies'
   },
   {
     tag: 'RETAIL',
     title: 'Akubra Case Study',
     desc: 'The rural setting and old copper technology at Akubra posed significant hurdles, with a sluggish internet connection that dropped out frequently.',
     img: '/images/case-studies/case-study-2.jpg',
-    videoText: 'Akubra Case Study'
+    videoText: 'Akubra Case Study',
+    href: '/case-studies'
   },
   {
     tag: 'MANUFACTURING',
     title: 'Pacific Steel Case Study',
     desc: 'Modernizing legacy PABX systems with cloud voice and fiber connectivity across multiple factory sites.',
     img: '/images/case-studies/case-study-3.jpg',
-    videoText: 'Pacific Steel Case Study'
+    videoText: 'Pacific Steel Case Study',
+    href: '/case-studies'
   }
 ];
 
@@ -34,6 +37,7 @@ interface CaseStudy {
   desc: string;
   img: string;
   videoText: string;
+  href?: string;
 }
 
 interface CaseStudiesProps {
@@ -62,7 +66,7 @@ export const WpCaseStudies = ({
   const maxIdx = CASE_STUDIES.length - cardsPerView;
 
   return (
-    <section className="py-20 md:py-32 bg-white overflow-hidden relative border-t border-gray-100">
+    <section className="py-12 md:py-16 bg-white overflow-hidden relative border-t border-gray-100">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-10">
           <div className="max-w-2xl">
@@ -125,10 +129,13 @@ export const WpCaseStudies = ({
                    <p className="c9-body mb-8 line-clamp-2">
                      {cs.desc}
                    </p>
-                   <div className="flex items-center gap-2 text-[#5D00D6] c9-eyebrow !text-[10px] group/link group-hover:underline">
+                   <a
+                     href={cs.href || '/case-studies'}
+                     className="flex items-center gap-2 text-[#5D00D6] c9-eyebrow !text-[10px] hover:underline"
+                   >
                       Read full article 
-                      <ArrowUpRight size={14} className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                   </div>
+                      <ArrowUpRight size={14} className="transition-transform" />
+                   </a>
                 </div>
               </div>
             ))}

@@ -141,7 +141,7 @@ export default function ModernWorkplacePage() {
         <div className="c9-container">
           <FadeUp className="max-w-[640px] mb-16">
             <Eyebrow>Services</Eyebrow>
-            <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight leading-[1.1] mb-5 text-[#0c1024] font-proxima">
+            <h2 className="c9-section-heading mb-5 font-proxima">
               Everything your team needs.<br />One partner.
             </h2>
             <p className="text-[18px] leading-[1.6] text-gray-500 font-medium font-proxima">
@@ -283,7 +283,7 @@ export default function ModernWorkplacePage() {
         <div className="c9-container relative z-10">
           <FadeUp className="text-center max-w-[680px] mx-auto mb-16">
             <Eyebrow light>Modern Infrastructure</Eyebrow>
-            <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight leading-[1.1] mb-5 text-white font-proxima">
+            <h2 className="c9-section-heading mb-5 !text-white font-proxima">
               The stack behind the scenes.
             </h2>
             <p className="text-[18px] leading-[1.6] font-medium font-proxima text-white/60">
@@ -299,7 +299,7 @@ export default function ModernWorkplacePage() {
         <div className="c9-container">
           <FadeUp className="max-w-[620px] mb-14">
             <Eyebrow>Additional Solutions</Eyebrow>
-            <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight leading-[1.1] mb-5 text-[#0c1024] font-proxima">
+            <h2 className="c9-section-heading mb-5 font-proxima">
               Beyond the desktop.
             </h2>
             <p className="text-[18px] leading-[1.6] font-medium text-gray-500 font-proxima">
@@ -315,7 +315,7 @@ export default function ModernWorkplacePage() {
         <div className="c9-container">
           <FadeUp className="text-center max-w-[540px] mx-auto mb-14">
             <Eyebrow>Why C9</Eyebrow>
-            <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight leading-[1.1] text-[#0c1024] font-proxima">The C9 difference.</h2>
+            <h2 className="c9-section-heading font-proxima">The C9 difference.</h2>
           </FadeUp>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -362,7 +362,7 @@ export default function ModernWorkplacePage() {
         <div className="c9-container">
           <FadeUp className="text-center max-w-[560px] mx-auto mb-16">
             <Eyebrow>Plans & Pricing</Eyebrow>
-            <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight leading-[1.1] mb-5 text-[#0c1024] font-proxima">Simple pricing.<br />Expert support included.</h2>
+            <h2 className="c9-section-heading mb-5 font-proxima">Simple pricing.<br />Expert support included.</h2>
             <p className="text-[18px] leading-[1.6] font-medium text-gray-500 font-proxima">All plans include onboarding, migration, and an Australian account manager. Zero hidden fees.</p>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">

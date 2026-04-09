@@ -43,7 +43,7 @@ export default function Included() {
           <span className="text-[14px] font-bold text-brand-purple uppercase tracking-[0.2em] font-dm-sans">
             SCOPE OF SERVICE
           </span>
-          <h2 className="text-[36px] md:text-[40px] font-bold text-[#1A1A2E] leading-tight tracking-tight font-syne mt-2">
+          <h2 className="c9-section-heading font-syne mt-2">
             Everything included in a strategic<br />IT engagement with C9.
           </h2>
         </div>

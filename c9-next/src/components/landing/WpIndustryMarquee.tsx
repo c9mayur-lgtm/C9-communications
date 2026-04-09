@@ -31,7 +31,7 @@ const INDUSTRIES = [
   {
     tag: 'NON-PROFIT',
     title: 'Affordable IT for Good Causes',
-    desc: 'We stretch every dollar with tailored IT packages, NBN, and Microsoft nonprofit licensing — so more of your budget goes to the mission, not infrastructure.',
+    desc: 'We stretch every dollar with tailored IT packages, nbn, and Microsoft nonprofit licensing — so more of your budget goes to the mission, not infrastructure.',
     metrics: [
       { label: 'avg cost savings', value: '40%' },
       { label: 'Setup fees', value: '$0' }
@@ -110,7 +110,7 @@ export const WpIndustryMarquee = () => {
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center mb-10">
           <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >What we do</span>
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#0c1024] tracking-tight mb-8">
+          <h2 className="c9-section-heading mb-8">
             Solving IT challenges in every industry, every day.
           </h2>
         </div>

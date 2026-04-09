@@ -35,7 +35,7 @@ const ComparisonTable = () => {
              <thead>
                 <tr>
                    <th className="text-left py-10 px-10 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] bg-gray-50/50 border-b border-gray-100">Comparison Feature</th>
-                   <th className="text-center py-10 px-8 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] bg-gray-50/50 border-b border-gray-100">Standard Business NBN™</th>
+                   <th className="text-center py-10 px-8 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] bg-gray-50/50 border-b border-gray-100">Standard Small Business nbn™</th>
                    <th className="text-center py-10 px-8 text-[12px] font-black text-[#5D00D6] uppercase tracking-[0.2em] bg-[#5D00D6]/[0.03] border-b border-[#5D00D6]/10 relative">
                       Enterprise Ethernet
                       <div className="absolute top-0 left-0 right-0 h-1 bg-[#5D00D6]" />
@@ -72,10 +72,10 @@ const ComparisonTable = () => {
        
        {/* Bottom CTA bar inside table card */}
        <div className="bg-gray-50/80 border-t border-gray-100 p-6 flex flex-col md:flex-row items-center justify-center gap-6">
-          <p className="text-[14px] font-bold text-slate-500">Need helping deciding between Business NBN and Enterprise Ethernet?</p>
+          <p className="text-[14px] font-bold text-slate-500">Need helping deciding between Small Business nbn™ and Enterprise Ethernet?</p>
           <button 
              onClick={() => {
-                setInquiryMessage("I'm comparing Standard NBN and Enterprise Ethernet. Can you help me decide which is better for my current business scale?");
+                setInquiryMessage("I'm comparing Standard nbn and Enterprise Ethernet. Can you help me decide which is better for my current business scale?");
                 document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
              }}
              className="bg-[#5D00D6] text-white px-8 py-3.5 rounded-full font-bold text-[13px] hover:bg-[#4B00AD] transition-all shadow-lg shadow-[#5D00D6]/20 active:scale-95 flex items-center gap-2"
@@ -95,13 +95,13 @@ export default function WhatIsEnterpriseEthernet() {
         {/* HEADER */}
         <div className="max-w-[800px] mb-20">
           <div className="mb-6 px-4 py-1.5 bg-[#5D00D6]/5 rounded-none border border-[#5D00D6]/10 inline-block">
-             <span className="c9-eyebrow">NBN™ ENTERPRISE ETHERNET</span>
+             <span className="c9-eyebrow">nbn™ ENTERPRISE ETHERNET</span>
           </div>
           <h2 className="c9-section-heading mb-10">
             Rethink what business internet looks like at an <span className="text-[#5D00D6]">enterprise level.</span>
           </h2>
           <p className="c9-body !text-[18px] md:!text-[21px] !text-slate-600 max-w-[700px] font-normal">
-            NBN™ Enterprise Ethernet is not standard business NBN™. It is a dedicated, symmetrical connectivity product designed for larger businesses with complex needs — delivering guaranteed bandwidth, multiple classes of service, and SLA-backed performance.
+            nbn™ Enterprise Ethernet is not standard Small Business nbn™. It is a dedicated, symmetrical connectivity product designed for larger businesses with complex needs — delivering guaranteed bandwidth, multiple classes of service, and SLA-backed performance.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export default function WhatIsEnterpriseEthernet() {
           <Card 
             icon={Zap}
             title="Symmetrical speeds — up and down"
-            body="Unlike standard NBN™ plans where download speeds are significantly higher than upload, Enterprise Ethernet delivers equal upload and download speeds — from 50/50 to 1000/1000 Mbps. Critical for businesses with cloud workloads, hosted applications, and video conferencing at scale."
+            body="Unlike standard nbn™ plans where download speeds are significantly higher than upload, Enterprise Ethernet delivers equal upload and download speeds — from 50/50 to 1000/1000 Mbps. Critical for businesses with cloud workloads, hosted applications, and video conferencing at scale."
             delay={0.1}
           />
           <Card 

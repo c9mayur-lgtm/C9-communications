@@ -45,8 +45,8 @@ const VOICE_TABLE = [
 ];
 
 const FAQ = [
-  { q: 'What is the contract length?', a: "All standard NBN and C9X voice plans are month-to-month with zero lock-in. You're free to scale up or move at any time.", icon: Clock },
-  { q: 'Are there any setup fees?', a: "For standard NBN connections and C9X voice systems, we offer $0 setup. Complex enterprise deployments are quoted upfront.", icon: DollarSign },
+  { q: 'What is the contract length?', a: "All standard nbn and C9 phone system voice plans are month-to-month with zero lock-in. You're free to scale up or move at any time.", icon: Clock },
+  { q: 'Are there any setup fees?', a: "For standard nbn connections and C9 phone system voice systems, we offer $0 setup. Complex enterprise deployments are quoted upfront.", icon: DollarSign },
   { q: 'Can I upgrade mid-cycle?', a: "Absolutely. Plan upgrades take effect within 1 business day, or instantly for voice user seats via your portal.", icon: ArrowUp },
 ];
 
@@ -73,13 +73,13 @@ export default function PricingPage() {
     if (step < 3) {
       setQuizStep(step + 1);
     } else {
-      let plan = 'Business NBN';
+      let plan = 'Small Business nbn™';
       let text = "We recommend our Business 100/40 plan for reliable, scalable performance.";
       if (next[3] === 'Voice Only' || next[3] === 'Unified Comm') {
-        plan = next[2] === '50+' ? 'C9X Ultimate' : 'C9X Basic';
-        text = `Since voice is your priority, C9X ${next[2] === '50+' ? 'Ultimate' : 'Basic'} fits your team perfectly.`;
+        plan = next[2] === '50+' ? 'C9 phone system Ultimate' : 'C9 phone system Basic';
+        text = `Since voice is your priority, C9 phone system ${next[2] === '50+' ? 'Ultimate' : 'Basic'} fits your team perfectly.`;
       } else if (next[2] === '50+' || next[1] === 'Enterprise') {
-        plan = 'Performance 250 NBN';
+        plan = 'Performance 250 nbn';
         text = "Your organisation's scale calls for our Performance tier with proactive monitoring.";
       }
       setResult({ plan, text });
@@ -116,12 +116,12 @@ export default function PricingPage() {
         </FadeIn>
       </Section>
 
-      {/* ── NBN PLANS ── */}
+      {/* ── nbn PLANS ── */}
       <Section className="bg-gray-50/50">
         <div className="text-center mb-16">
           <FadeIn>
-            <Label>NBN Solutions</Label>
-            <H2>Ultra-Fast Business NBN</H2>
+            <Label>nbn Solutions</Label>
+            <H2>Ultra-Fast Small Business nbn™</H2>
           </FadeIn>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -171,7 +171,7 @@ export default function PricingPage() {
       <Section>
         <div className="text-center mb-16">
           <FadeIn>
-            <Label>C9X Voice Plans</Label>
+            <Label>C9 phone system Voice Plans</Label>
             <H2>Everything in one box.</H2>
           </FadeIn>
         </div>

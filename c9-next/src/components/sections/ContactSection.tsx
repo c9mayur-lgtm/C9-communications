@@ -14,7 +14,7 @@ export const ContactSection = () => {
           {/* Left: Info */}
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-6">
-              <h2 className="text-[#0c1024] text-[32px] md:text-[42px] font-bold leading-[1.1] tracking-tight font-sans" >
+              <h2 className="c9-section-heading font-sans" >
                 Let's build something<br />that works.
               </h2>
               <p className="text-slate-600/90 text-[18px] md:text-[20px] leading-relaxed font-sans max-w-xl" >

@@ -306,7 +306,7 @@ export default function CloudMegaExplorer() {
                 className="flex flex-col items-start"
               >
                 <span className="text-brand-purple font-bold text-[14px] mb-4">■ {currentSection.number}</span>
-                <h2 className="text-[48px] md:text-[64px] font-bold text-text-primary leading-none tracking-tight">
+                <h2 className="c9-section-heading text-text-primary leading-none">
                   {currentSection.title}
                 </h2>
                 <p className="text-text-secondary text-[16px] mt-8 leading-relaxed max-w-[240px]">

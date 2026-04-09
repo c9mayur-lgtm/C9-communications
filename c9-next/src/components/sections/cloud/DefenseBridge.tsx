@@ -20,7 +20,7 @@ export default function DefenseBridge() {
           {/* Text Content */}
           <div className="flex-1 flex flex-col gap-3 z-10">
             <div className="flex flex-col">
-              <h3 className="text-[24px] md:text-[28px] font-bold text-white tracking-tight !leading-none">
+              <h3 className="c9-section-heading !text-white !leading-none">
                 Cloud security needs more <br className="hidden md:block" />
                 <span className="text-[#5D00D6] !text-[inherit]">than standard management.</span>
               </h3>

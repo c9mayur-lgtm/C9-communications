@@ -18,7 +18,7 @@ const TABS = [
     id: 'telco',
     label: 'Business Telco',
     headline: 'Enterprise connectivity and voice',
-    description: 'Deploy enterprise-grade Fibre NBN and highly resilient SD-WAN networks perfectly suited for your office. Centralize your high-volume mobile fleet management and enable your remote teams with C9X cloud voice and unified communications.',
+    description: 'Deploy enterprise-grade Fibre nbn and highly resilient SD-WAN networks perfectly suited for your office. Centralize your high-volume mobile fleet management and enable your remote teams with C9 phone system cloud voice and unified communications.',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000',
     color: '#012FB7',
     link: '/telco'
@@ -51,7 +51,7 @@ export const HomePillarsTabbed = () => {
                  OUR CORE PILLARS
                  <div className="h-[1px] w-12 bg-gray-200" />
                </div>
-               <h2 className="text-[32px] md:text-[40px] text-[#0c1024] font-bold leading-[1.05] tracking-tight mb-6" >
+               <h2 className="c9-section-heading mb-6" >
                  Three core divisions. <br className="hidden md:block"/> One powerful partner.
                </h2>
                <p className="text-[18px] text-gray-500 font-normal leading-relaxed max-w-xl">

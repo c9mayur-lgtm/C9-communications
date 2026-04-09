@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne, DM_Sans } from "next/font/google";
-import { headers } from "next/headers";
-import { Navbar } from "@/components/layout/Navbar";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { WpFooter } from "@/components/layout/WpFooter";
+import { ConditionalHeader } from "@/components/layout/ConditionalHeader";
+import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
 import { WpFloatingContact } from "@/components/wordpress/WpFloatingContact";
 import { BusinessAdvisor } from "@/components/wordpress/BusinessAdvisor";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { InquiryProvider } from "@/components/context/InquiryContext";
+import { AudienceProvider } from "@/components/context/AudienceContext";
+import { AudienceSwitcher } from "@/components/layout/AudienceSwitcher";
+import { NextStepStrip } from "@/components/layout/NextStepStrip";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,11 +36,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://c9communications.com.au'),
   title: {
-    default: "C9 Communications | Business NBN, Cloud Voice & Managed IT",
+    default: "C9 Communications | Small Business nbn™, Cloud Voice & Managed IT",
     template: "%s | C9 Communications Australia"
   },
-  description: "Australia's trusted partner for business nbn®, C9X cloud phone systems, and enterprise managed IT services. 99.99% uptime SLA with 24/7 local engineering support.",
-  keywords: ["Business NBN", "Cloud Phone System", "Managed IT Services", "C9X", "Australian Telco"],
+  description: "Australia's trusted partner for Small Business nbn™®, C9 phone system cloud phone systems, and enterprise managed IT services. 99.99% uptime SLA with 24/7 local engineering support.",
+  keywords: ["Small Business nbn™", "Cloud Phone System", "Managed IT Services", "C9 phone system", "Australian Telco"],
   authors: [{ name: "C9 Communications" }],
   creator: "C9 Communications",
   publisher: "C9 Communications",
@@ -79,52 +80,29 @@ export const metadata: Metadata = {
 export const revalidate = 0;
 export const dynamic = 'force-dynamic';
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const currentPath = headersList.get('x-pathname') || '';
-  
-  // Pages that render their OWN Navbar + Breadcrumbs + Footer.
-  // Each page in this list MUST include <Navbar />, <Breadcrumbs />, and <Footer /> locally.
-  const pagesWithSelfNavFooter = [
-    '/managed-it/helpdesk-support',
-    '/managed-it/outsourcing',
-    '/managed-it/strategy-consulting',
-    '/managed-it/security-solutions',
-    '/managed-it/backup-disaster-recovery',
-    '/managed-it/cloud-services',
-    '/managed-it/network-solutions',
-    '/managed-it/infrastructure',
-    '/telco/business-nbn',
-    '/telco/fast-fibre',
-    '/telco/enterprise-ethernet',
-    '/telco/mobile-plans',
-    '/telco/c9x',
-    '/telco/c9voice',
-    '/telco/inbound-services',
-    '/telco/teams-calling',
-    '/telco/sip-trunking',
-    '/telco/contact-centre',
-    '/telco/voice-systems',
-  ];
-
-  const hasSelfNavFooter = pagesWithSelfNavFooter.includes(currentPath);
-
   return (
     <html lang="en-AU">
       <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30`}>
-        <InquiryProvider>
-          {!hasSelfNavFooter && <Navbar />}
-          {!hasSelfNavFooter && <Breadcrumbs />}
-          {children}
-          {!hasSelfNavFooter && <WpFooter />}
-          <WpFloatingContact />
-          <BusinessAdvisor />
-          <CookieConsent />
-        </InquiryProvider>
+        <AudienceProvider>
+          <InquiryProvider>
+            <div className="flex flex-col min-h-screen">
+              <ConditionalHeader />
+              <div className="flex-1">
+                {children}
+              </div>
+              <NextStepStrip />
+              <ConditionalFooter />
+            </div>
+            <WpFloatingContact />
+            <BusinessAdvisor />
+            <CookieConsent />
+          </InquiryProvider>
+        </AudienceProvider>
       </body>
     </html>
   );
