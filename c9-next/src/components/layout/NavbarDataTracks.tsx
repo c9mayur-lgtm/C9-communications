@@ -427,7 +427,7 @@ export const getMegaMap = (audience: string) => {
     'products': PRODUCTS_MENU,
     'solutions': SOLUTIONS_MENU,
     'industries': INDUSTRIES_MENU,
-    'company': { layout: 'company', heading: 'The C9 Standard.', sidebar: { heading: '', items: [] } },
+    'company': { layout: 'company', heading: 'The C9 Standard.', columns: [], sidebar: { heading: '', items: [] } },
   };
 };
 

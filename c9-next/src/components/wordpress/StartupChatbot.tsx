@@ -157,7 +157,7 @@ export const StartupChatbot = () => {
     setSubmitted(true);
   };
 
-  const currentFlow = FLOWS[step];
+  const currentFlow: any = FLOWS[step];
 
   return (
     <>
@@ -272,7 +272,7 @@ export const StartupChatbot = () => {
                   </form>
                 ) : (
                   <div className="space-y-2">
-                    {currentFlow.options.map((opt, i) => (
+                    {currentFlow.options.map((opt: any, i: number) => (
                       <button
                         key={i}
                         onClick={() => handleOption(opt.label, opt.next as FlowKey)}

@@ -41,8 +41,8 @@ export const WpUnifiedClassification = ({
     }
   };
 
-  const menuData = getActiveData();
-  const activeData = getActiveData();
+  const menuData: any = getActiveData();
+  const activeData: any = getActiveData();
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">

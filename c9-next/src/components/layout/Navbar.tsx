@@ -287,7 +287,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           <div className="flex-1 overflow-y-auto overflow-x-hidden p-6">
             <div className="flex flex-col gap-2">
               {TABS.map(tab => {
-                const menuData = MEGA_MAP[tab.menuKey as keyof typeof MEGA_MAP];
+                const menuData: any = MEGA_MAP[tab.menuKey as keyof typeof MEGA_MAP];
                 const isActive = activeAccordion === tab.menuKey;
 
                 return (
