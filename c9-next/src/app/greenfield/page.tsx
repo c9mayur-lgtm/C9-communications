@@ -107,13 +107,13 @@ const Hero = () => (
 
         {/* Right — hero image */}
         <FadeIn delay={0.1} className="relative">
-          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/80 aspect-[4/3]">
+          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/80 aspect-[4/3] group cursor-pointer">
             <img
               src="/images/greenfield_hero.png"
               alt="Modern office setup managed by C9 Communications"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/20 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/20 via-transparent to-transparent group-hover:from-[#0c1024]/30 transition-colors duration-700" />
             {/* Floating badge */}
             <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-lg border border-white/60">
               <div className="text-[11px] font-bold uppercase tracking-widest text-[#5D00D6] mb-1">Quick Setup</div>
@@ -730,13 +730,13 @@ const FinalCTA = () => (
           </div>
         </FadeIn>
         <FadeIn delay={0.12}>
-          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3]">
+          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group cursor-pointer">
             <img
-              src="/images/greenfield_hero.png"
+              src="/images/greenfield_consultation.png"
               alt="Business owner meeting with C9 consultant"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/20 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/20 via-transparent to-transparent group-hover:from-[#5D00D6]/30 transition-colors duration-700" />
           </div>
         </FadeIn>
       </div>
