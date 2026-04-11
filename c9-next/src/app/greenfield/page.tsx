@@ -38,7 +38,7 @@ const FadeIn = ({
    SECTION 1 — HERO
    ───────────────────────────────────────────────────────── */
 const Hero = () => (
-  <section className="relative overflow-hidden bg-white pt-20 pb-20 lg:pt-32 lg:pb-32">
+  <section className="relative overflow-hidden bg-white pt-10 pb-20 lg:pt-14 lg:pb-32">
     {/* Subtle grid backdrop */}
     <div
       className="pointer-events-none absolute inset-0 opacity-[0.03]"
