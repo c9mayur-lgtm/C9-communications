@@ -14,10 +14,10 @@ export const AudienceSolutions = () => {
     {
       id: 'startup',
       icon: <Rocket className="w-8 h-8 text-[#5D00D6]" />,
-      title: "Starting a New Office / Business",
-      description: "We set up everything from internet to security and IT. Your entire technology stack delivered before your first hire starts.",
-      cta: "See Full Solution",
-      href: "/telco/business-nbn"
+      title: "Greenfield Business Launch",
+      description: "Opening a new office, showroom, or shop? We synchronize your entire technology stack—from internet and 5G backup to CCTV, printers, and monitors—before your launch day.",
+      cta: "Full Growth Solution",
+      href: "/greenfield"
     },
     {
       id: 'business',

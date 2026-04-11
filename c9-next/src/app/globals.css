@@ -251,3 +251,12 @@
 .hover\:pause:hover {
   animation-play-state: paused;
 }
+
+/* ── Greenfield slider utility ── */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

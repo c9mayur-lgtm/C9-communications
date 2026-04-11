@@ -123,17 +123,22 @@ export const WpUnifiedClassification = ({
                             </h3>
                           </div>
 
-                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {sec.items.map((item: any, ii: number) => (
                               <Link 
                                 key={ii} 
                                 href={item.path || '#'} 
-                                className="group flex flex-col bg-white border border-gray-200 p-8 rounded-[24px] hover:border-[#5D00D6] hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 overflow-hidden"
+                                className="group flex flex-col h-full bg-white border border-slate-100 p-6 rounded-[24px] hover:border-[#5D00D6]/30 hover:shadow-2xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
                               >
-                                <h4 className="text-[20px] font-bold text-slate-900 mb-4 group-hover:text-[#5D00D6] transition-colors leading-tight tracking-tight pt-2">
+                                {item.icon && (
+                                  <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 flex items-center justify-center mb-5 group-hover:bg-[#5D00D6]/10 group-hover:text-[#5D00D6] transition-all duration-500">
+                                    {React.cloneElement(item.icon, { size: 20, strokeWidth: 1.5 })}
+                                  </div>
+                                )}
+                                <h4 className="text-[15.5px] font-bold text-slate-900 mb-2 group-hover:text-[#5D00D6] transition-colors leading-tight tracking-tight">
                                    {item.label || item.title}
                                 </h4>
-                                <p className="text-[14px] text-slate-500 leading-relaxed mb-4 flex-grow">
+                                <p className="text-[12.5px] text-slate-500 leading-relaxed font-medium flex-1">
                                    {item.desc || `Explore integrated ${item.label?.toLowerCase() || 'solutions'} designed for seamless organisational growth.`}
                                 </p>
                               </Link>

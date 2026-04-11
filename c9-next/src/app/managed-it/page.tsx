@@ -15,7 +15,6 @@ import { WpITDepartmentOptions } from "@/components/wordpress/WpITDepartmentOpti
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
 import { WpPromoBanner } from "@/components/wordpress/WpPromoBanner";
 import { WpHeroProducts } from "@/components/wordpress/WpHeroProducts";
-import { WpUnifiedClassification } from "@/components/wordpress/WpUnifiedClassification";
 
 export default function ManagedIT() {
   return (
@@ -23,7 +22,6 @@ export default function ManagedIT() {
       <WpHero />
       <WpClientTicker />
       <WpITDepartmentOptions />
-      <WpUnifiedClassification />
       <WpHighlights />
       <WpHeroProducts />
       <WpSimplifyingIT />

@@ -240,16 +240,16 @@ export const SOLUTIONS_MENU = {
         {
           heading: 'Managed IT Service',
           items: [
-            { icon: <Headphones size={14} />, label: 'Helpdesk Support', path: '/managed-it/helpdesk' },
-            { icon: <Users size={14} />, label: 'Outsourcing', path: '/managed-it/outsourcing' },
-            { icon: <Globe size={14} />, label: 'Strategy & Consulting', path: '/managed-it/consulting' },
+            { icon: <Headphones size={14} />, label: 'Helpdesk Support', path: '/managed-it/helpdesk', desc: 'Australian-based 24/7 technical support for your entire team.' },
+            { icon: <Users size={14} />, label: 'Outsourcing', path: '/managed-it/outsourcing', desc: 'Strategic IT staffing and expertise to augment your internal capability.' },
+            { icon: <Globe size={14} />, label: 'Strategy & Consulting', path: '/managed-it/consulting', desc: 'Expert IT roadmaps aligned with your business growth and budget.' },
           ]
         },
         {
           heading: 'Cybersecurity',
           items: [
-            { icon: <Shield size={14} />, label: 'Security Solutions', path: '/managed-it/security' },
-            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup' },
+            { icon: <Shield size={14} />, label: 'Security Solutions', path: '/managed-it/security', desc: 'Multi-layer defense against sophisticated ransomware and phishing.' },
+            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup', desc: 'Guaranteed business continuity with automated cloud-based backups.' },
           ]
         }
       ]
@@ -259,10 +259,10 @@ export const SOLUTIONS_MENU = {
         {
           heading: 'Infrastructure',
           items: [
-            { icon: <Server size={14} />, label: 'IT Infrastructure Services', path: '/enterprise/it' },
-            { icon: <Network size={14} />, label: 'Network Solutions', path: '/managed-it/network' },
-            { icon: <Cloud size={14} />, label: 'Cloud Services', path: '/solutions/cloud' },
-            { icon: <Layers size={14} />, label: 'Software Solutions', path: '/solutions/software' },
+            { icon: <Server size={14} />, label: 'IT Infrastructure Services', path: '/enterprise/it', desc: 'Secure, high-availability server and compute environments.' },
+            { icon: <Network size={14} />, label: 'Network Solutions', path: '/managed-it/network', desc: 'Robust SD-WAN and LAN architectures for multi-site companies.' },
+            { icon: <Cloud size={14} />, label: 'Cloud Services', path: '/solutions/cloud', desc: 'Seamless migration and management for Azure and AWS cloud stacks.' },
+            { icon: <Layers size={14} />, label: 'Software Solutions', path: '/solutions/software', desc: 'Tailored software licensing and custom integration services.' },
           ]
         }
       ]
@@ -296,15 +296,15 @@ export const PRODUCTS_MENU = {
         {
           heading: 'Internet',
           items: [
-            { icon: <Wifi size={14} />, label: 'Business nbn™', path: '/telco/business-nbn' },
-            { icon: <Zap size={14} />, label: 'Fast Fibre', path: '/telco/fast-fibre' },
-            { icon: <Network size={14} />, label: 'nbn™ Enterprise Ethernet', path: '/enterprise/ethernet' },
+            { icon: <Wifi size={14} />, label: 'Business nbn™', path: '/telco/business-nbn', desc: 'Enterprise-grade speed and reliability for your main office.' },
+            { icon: <Zap size={14} />, label: 'Fast Fibre', path: '/telco/fast-fibre', desc: 'Ultra-low latency connectivity for high-performance teams.' },
+            { icon: <Network size={14} />, label: 'nbn™ Enterprise Ethernet', path: '/enterprise/ethernet', desc: 'Dedicated 1:1 bandwidth with a premium 99.95% uptime SLA.' },
           ]
         },
         {
           heading: 'Mobile',
           items: [
-            { icon: <Smartphone size={14} />, label: 'Mobile Plans', path: '/telco/mobile-plans' },
+            { icon: <Smartphone size={14} />, label: 'Mobile Plans', path: '/telco/mobile-plans', desc: 'Scalable fleet plans with data sharing across all your devices.' },
           ]
         }
       ]
@@ -314,12 +314,12 @@ export const PRODUCTS_MENU = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />, label: 'C9 phone system', path: '/telco/c9-phone-system' },
-            { icon: <Headphones size={14} />, label: 'Inbound Services', path: '/telco/inbound-services' },
-            { icon: <MessageSquare size={14} />, label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
-            { icon: <Link2 size={14} />, label: 'SIP Trunking', path: '/enterprise/sip' },
-            { icon: <InfinityIcon size={14} />, label: 'Unified Communications', path: '/telco/voice' },
-            { icon: <Users size={14} />, label: 'Contact Centre', path: '/enterprise/contact-center' },
+            { icon: <Phone size={14} />, label: 'C9 phone system', path: '/telco/c9-phone-system', desc: 'Our flagship cloud voice solution with 100+ Enterprise features.' },
+            { icon: <Headphones size={14} />, label: 'Inbound Services', path: '/telco/inbound-services', desc: '1300, 1800, and local numbers for professional presence.' },
+            { icon: <MessageSquare size={14} />, label: 'Microsoft Teams Calling', path: '/telco/teams-calling', desc: 'Direct routing to make and receive calls inside Microsoft Teams.' },
+            { icon: <Link2 size={14} />, label: 'SIP Trunking', path: '/enterprise/sip', desc: 'Connect your legacy PBX to our high-grade voice network.' },
+            { icon: <InfinityIcon size={14} />, label: 'Unified Communications', path: '/telco/voice', desc: 'Sync phone, chat, and video across all your office hardware.' },
+            { icon: <Users size={14} />, label: 'Contact Centre', path: '/enterprise/contact-center', desc: 'Cloud-based omni-channel support for high-volume teams.' },
           ]
         }
       ]
@@ -329,20 +329,20 @@ export const PRODUCTS_MENU = {
         {
           heading: 'Services',
           items: [
-            { icon: <Zap size={14} />, label: 'Productivity', path: '/solutions/productivity' },
-            { icon: <MessageSquare size={14} />, label: 'Communication Tools', path: '/solutions/comms' },
-            { icon: <Laptop size={14} />, label: 'Secure Remote Work', path: '/solutions/remote-work' },
-            { icon: <Shield size={14} />, label: 'Compliance & Data Protection', path: '/solutions/compliance' },
-            { icon: <Users size={14} />, label: 'Collaboration', path: '/solutions/collaboration' },
-            { icon: <Monitor size={14} />, label: 'Device & Endpoint Management', path: '/solutions/endpoints' },
+            { icon: <Zap size={14} />, label: 'Productivity', path: '/solutions/productivity', desc: 'Streamline workflows with integrated business productivity tools.' },
+            { icon: <MessageSquare size={14} />, label: 'Communication Tools', path: '/solutions/comms', desc: 'Secure internal messaging and collaboration for modern teams.' },
+            { icon: <Laptop size={14} />, label: 'Secure Remote Work', path: '/solutions/remote-work', desc: 'VPN and cloud access solutions for a distributed workforce.' },
+            { icon: <Shield size={14} />, label: 'Compliance & Data Protection', path: '/solutions/compliance', desc: 'Regulatory-grade security and backup for sensitive sectors.' },
+            { icon: <Users size={14} />, label: 'Collaboration', path: '/solutions/collaboration', desc: 'Joint workspaces and digital boardrooms for better teamwork.' },
+            { icon: <Monitor size={14} />, label: 'Device & Endpoint Management', path: '/solutions/endpoints', desc: 'Manage your entire hardware fleet from a single dashboard.' },
           ]
         },
         {
           heading: 'Other',
           items: [
-            { icon: <LayoutGrid size={14} />, label: 'CCTV Camera & People Count', path: '/solutions/cctv' },
-            { icon: <Monitor size={14} />, label: 'Managed Print Solution', path: '/solutions/print' },
-            { icon: <Users size={14} />, label: 'Visitor Solution', path: '/solutions/visitor' },
+            { icon: <LayoutGrid size={14} />, label: 'CCTV Camera & People Count', path: '/solutions/cctv', desc: 'Smart AI-driven surveillance and occupancy monitoring.' },
+            { icon: <Monitor size={14} />, label: 'Managed Print Solution', path: '/solutions/print', desc: 'Simplified, cost-efficient printing across all your sites.' },
+            { icon: <Users size={14} />, label: 'Visitor Solution', path: '/solutions/visitor', desc: 'Modern contactless visitor check-in and safety tracking.' },
           ]
         }
       ]

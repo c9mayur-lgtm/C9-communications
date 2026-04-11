@@ -17,12 +17,18 @@ import {
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useAudience } from "@/components/context/AudienceContext";
-import { getMegaMap, getTabs, AUDIENCE_INFO } from './NavbarDataTracks';
+import { getMegaMap, TABS } from './NavbarData';
+
+const AUDIENCE_INFO: Record<string, any> = {
+  startup:    { phone: '1800 000 299' },
+  business:   { phone: '1800 000 299' },
+  enterprise: { phone: '1300 480 905' }
+};
 
 /* ───────────────────────────────────────────── */
 const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean }) => {
-  // Use a 5-column flexible grid for the high-density layout
-  const gridTemplate = 'repeat(3, minmax(180px, 1fr)) 1.2fr minmax(300px, 320px)';
+  const colCount = data.columns ? data.columns.length : 3;
+  const gridTemplate = `repeat(${colCount}, minmax(200px, 1fr)) 1.2fr minmax(280px, 300px)`;
 
   return (
     <div 
@@ -35,7 +41,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
         pointerEvents: visible ? 'auto' : 'none',
       }}
     >
-      <div className="container mx-auto px-6 md:px-8 max-w-[1440px]">
+      <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
         <div className="bg-white border border-gray-100 border-top-0 rounded-b-[40px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] overflow-hidden">
           <div className="grid" style={{ gridTemplateColumns: gridTemplate }}>
             
@@ -52,7 +58,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                         {sec.items.map((item: any, ii: number) => (
                           <Link 
                             key={ii} 
-                            href={item.path} 
+                            href={item.path || '#'} 
                             className="group flex items-center gap-3 text-slate-500 hover:text-[#5D00D6] transition-all"
                           >
                             <div className="w-1 h-1 rounded-full bg-[#5D00D6] scale-0 group-hover:scale-100 transition-transform duration-300"></div>
@@ -66,10 +72,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
               </div>
             ))}
 
-            {/* SPACER FOR UNUSED COLUMNS TO PUSH GRID/SIDEBAR TO RIGHT */}
-            {data.columns && data.columns.length < 3 && (
-              <div className={`border-r border-gray-50 ${data.columns.length === 1 ? 'col-span-2' : ''}`}></div>
-            )}
+            {/* Spacer removed intentionally — layout now uses dynamic fr columns */}
 
             {/* VISUAL HIGHLIGHTS COLUMN (HARDWARE OR CHALLENGES) */}
             <div className="p-10 border-r border-gray-50 bg-[#FCFBFE]/30">
@@ -78,7 +81,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                   <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-8 opacity-40">Hardware Selection</h4>
                   <div className="grid grid-cols-2 gap-4">
                     {data.hardware.map((h: any, i: number) => (
-                      <Link key={i} href={h.path} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all border-b-2 border-b-transparent hover:border-b-[#5D00D6] duration-300">
+                      <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all border-b-2 border-b-transparent hover:border-b-[#5D00D6] duration-300">
                         <div className="aspect-square w-full mb-3 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-2">
                           <img src={h.img} alt={h.title} className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" />
                         </div>
@@ -134,7 +137,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                              </div>
                           </div>
                        </div>
-                       <Link href={data.sidebar.path} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] hover:translate-x-2 transition-transform py-2 group">
+                       <Link href={data.sidebar.path || '#'} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] hover:translate-x-2 transition-transform py-2 group">
                           {data.sidebar.button} 
                           <div className="p-1 rounded-full bg-[#5D00D6]/10 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                             <ChevronRight size={14} />
@@ -144,7 +147,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                   ) : (
                     <div className="flex flex-col gap-6">
                       {(data.sidebar?.items || []).map((item: any, i: number) => (
-                        <Link key={i} href={item.path} className="group flex items-center gap-4 transition-all">
+                        <Link key={i} href={item.path || '#'} className="group flex items-center gap-4 transition-all">
                           <div className="p-2.5 bg-white rounded-xl border border-gray-100 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm group-hover:shadow-md group-hover:-translate-y-0.5">
                             {item.icon || <ChevronRight size={14} />}
                           </div>
@@ -188,8 +191,8 @@ const TopUtilityBar = () => {
   const { audience, setAudience } = useAudience();
 
   const tracks = [
-    { key: 'startup', label: 'STARTUPS' },
-    { key: 'business', label: 'BUSINESS' },
+    { key: 'startup',    label: 'GREENFIELD' },
+    { key: 'business',   label: 'BUSINESS' },
     { key: 'enterprise', label: 'ENTERPRISE' }
   ];
 
@@ -201,7 +204,7 @@ const TopUtilityBar = () => {
             <button
               key={track.key}
               onClick={() => setAudience(track.key as any)}
-              className={`px-6 py-2 text-[12px] font-black tracking-[0.1em] rounded-full transition-all duration-300 ${
+              className={`px-6 py-2 text-[12px] font-bold tracking-wider rounded-full transition-all duration-300 ${
                 audience === track.key 
                   ? 'bg-[#5D00D6] text-white shadow-md' 
                   : 'text-slate-400 hover:text-slate-600'
@@ -234,7 +237,6 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
   const MEGA_MAP = getMegaMap(audience);
-  const TABS = getTabs(audience);
 
   const toggleAccordion = (key: string) => {
     setActiveAccordion(activeAccordion === key ? null : key);
@@ -271,6 +273,29 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 <button
                   key={track.key}
                   onClick={() => setAudience(track.key as any)}
+                  className={`flex-1 py-2 text-[12px] font-bold tracking-wider rounded-full transition-all duration-300 ${
+                    audience === track.key
+                      ? 'bg-[#5D00D6] text-white shadow-md'
+                      : 'text-slate-400 hover:text-slate-600'
+                  }`}
+                >
+                  {track.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Audience Switcher Pills - Mobile */}
+          <div className="px-6 py-3 border-b border-gray-100 shrink-0 bg-[#f8f9fa]">
+            <div className="flex items-center gap-1.5 p-1 bg-gray-100 rounded-full border border-gray-200/50">
+              {[
+                { key: 'startup',    label: 'Greenfield' },
+                { key: 'business',   label: 'Business' },
+                { key: 'enterprise', label: 'Enterprise' }
+              ].map((track) => (
+                <button
+                  key={track.key}
+                  onClick={() => setAudience(track.key as any)}
                   className={`flex-1 py-2 text-[12px] font-black tracking-wide rounded-full transition-all duration-300 ${
                     audience === track.key
                       ? 'bg-[#5D00D6] text-white shadow-md'
@@ -286,7 +311,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           {/* Scrollable Content */}
           <div className="flex-1 overflow-y-auto overflow-x-hidden p-6">
             <div className="flex flex-col gap-2">
-              {TABS.map(tab => {
+              {TABS.map((tab: { name: string; menuKey: string; path: string }) => {
                 const menuData: any = MEGA_MAP[tab.menuKey as keyof typeof MEGA_MAP];
                 const isActive = activeAccordion === tab.menuKey;
 
@@ -321,7 +346,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                       <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-40 leading-none">{sec.heading}</h4>
                                       {sec.action && (
                                         <Link 
-                                          href={sec.action.path} 
+                                          href={sec.action.path || '#'} 
                                           onClick={onClose}
                                           className="bg-[#1c1c1c] text-white text-[12px] font-bold px-4 py-2 rounded-full shadow-lg shadow-black/10 active:scale-95 shrink-0"
                                         >
@@ -333,7 +358,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                       {sec.items?.map((item: any, ii: number) => (
                                         <Link 
                                           key={ii} 
-                                          href={item.path} 
+                                          href={item.path || '#'} 
                                           onClick={onClose}
                                           className="flex items-center gap-3 group"
                                         >
@@ -351,7 +376,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                             {menuData?.hardware && (
                               <div className="grid grid-cols-2 gap-3 pb-4">
                                 {menuData.hardware.map((h: any, i: number) => (
-                                  <Link key={i} href={h.path} onClick={onClose} className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center">
+                                  <Link key={i} href={h.path || '#'} onClick={onClose} className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center">
                                     <img src={h.img} alt={h.title} className="w-12 h-12 object-contain mb-2" />
                                     <span className="text-[11px] font-bold text-slate-700">{h.title}</span>
                                   </Link>
@@ -448,15 +473,13 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
    MAIN NAVBAR COMPONENT
    ───────────────────────────────────────────── */
 export const Navbar = () => {
-  const pathname = usePathname();
   const { audience } = useAudience();
+  const MEGA_MAP = getMegaMap(audience);
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const MEGA_MAP = getMegaMap(audience);
-  const TABS = getTabs(audience);
 
   useEffect(() => {
     const handleScroll = () => {

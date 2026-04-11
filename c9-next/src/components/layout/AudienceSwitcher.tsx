@@ -8,7 +8,7 @@ export const AudienceSwitcher = () => {
   const { audience, setAudience } = useAudience();
 
   const options = [
-    { id: 'startup', label: 'Starting a New Business' },
+    { id: 'startup', label: 'Greenfield Business Setup' },
     { id: 'business', label: 'Existing Business / Upgrade' },
     { id: 'enterprise', label: 'Enterprise Solutions' },
   ] as const;
