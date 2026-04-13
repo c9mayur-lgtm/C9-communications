@@ -394,90 +394,74 @@ const Slider = () => {
    SECTION 3.5 — VENDOR TECHNOLOGY & INFRASTRUCTURE
    ───────────────────────────────────────────────────────── */
 const VendorTechnologyBlock = () => (
-  <section className="py-24 bg-white border-y border-slate-100 relative overflow-hidden">
+  <section className="py-32 bg-slate-50 border-y border-slate-200">
     <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      
-      <FadeIn>
-        <div className="text-center mb-16 md:mb-24">
-          <p className="c9-eyebrow mb-4">Enterprise Infrastructure</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-5 leading-tight max-w-2xl mx-auto">
-            Built with Proven, Enterprise-Grade Technology
-          </h2>
-          <p className="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto">
-            From day one, your business is powered by reliable, globally trusted systems — not guesswork.
-            Every system is selected for reliability and scale.
-          </p>
-        </div>
-      </FadeIn>
-
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
-        <FadeIn delay={0.1}>
-           <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
-              <img
-                src="/images/realistic_business_voice_poly_yealink_1776077360073.png"
-                alt="Modern Yealink VoIP communication system"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/10 via-transparent to-transparent" />
-           </div>
-        </FadeIn>
-        
-        <FadeIn delay={0.2}>
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 mb-6">
-              <Shield size={14} className="text-[#5D00D6]" />
-              <span className="text-[12px] font-bold text-slate-600 uppercase tracking-widest">Powered by Yealink</span>
-            </div>
-            
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-5 leading-tight">
-              Professional Communication Systems
-            </h3>
-            
-            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              We deploy high-quality phone systems and meeting room solutions designed for clarity, reliability, and seamless collaboration. We don’t guess your setup — we build it properly.
-            </p>
-            
-            <ul className="space-y-4">
-              {[
-                'Crystal clear voice and video',
-                'Seamless Teams and Zoom integration',
-                'Reliable day-to-day performance',
-                'Scalable across teams and locations'
-              ].map((bullet, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <CheckCircle size={22} className="text-[#5D00D6] shrink-0" />
-                  <span className="text-slate-800 font-semibold text-[16px]">{bullet}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </FadeIn>
-      </div>
-
-      <FadeIn delay={0.3}>
-        <div className="border-t border-slate-100 pt-16 mt-8">
-          <p className="text-center text-slate-500 font-bold text-[13px] uppercase tracking-widest mb-10">
-            Technology we commonly deploy
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-0">
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        {/* Left Side — 2x2 Product Grid */}
+        <FadeIn>
+          <div className="grid grid-cols-2 gap-5 md:gap-8">
             {[
-              { icon: <Monitor size={24} />, name: 'Business Devices' },
-              { icon: <Wifi size={24} />, name: 'Networking Systems' },
-              { icon: <Shield size={24} />, name: 'Security Infrastructure' },
-              { icon: <Layers size={24} />, name: 'Workplace Platforms' },
-            ].map((tech, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center gap-4 p-8 rounded-[24px] bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-100">
-                <div className="text-[#5D00D6]">{tech.icon}</div>
-                <span className="text-slate-800 font-bold text-[14px]">{tech.name}</span>
+              { img: '/images/yealink-t54w.png', label: 'Desk Phones' },
+              { img: '/images/boardroom-mtr.webp', label: 'Meeting Rooms', cover: true },
+              { img: '/images/video_collaboration_desk.jpg', label: 'Video Collaboration', cover: true },
+              { img: '/images/yealink-bh71.png', label: 'Headsets' },
+            ].map((prod, idx) => (
+              <div key={idx} className="flex flex-col gap-4 group">
+                <div className="bg-white border border-slate-200 rounded-[24px] overflow-hidden aspect-[4/3] flex items-center justify-center p-6 shadow-sm group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-[#5D00D6]/30 transition-all duration-500 relative">
+                  <img 
+                    src={prod.img} 
+                    alt={prod.label} 
+                    className={`max-w-full max-h-full transition-transform duration-700 group-hover:scale-105 ${prod.cover ? 'w-full h-full object-cover absolute inset-0' : 'object-contain drop-shadow-xl'}`}
+                  />
+                  {prod.cover && <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-500" />}
+                </div>
+                <span className="text-slate-800 font-extrabold text-[15px] text-center tracking-tight transition-colors">{prod.label}</span>
               </div>
             ))}
           </div>
-          <p className="text-center text-slate-500 mt-12 text-[16px] font-medium max-w-xl mx-auto italic">
-            "Designed for how your business will operate from day one."
-          </p>
-        </div>
-      </FadeIn>
-      
+        </FadeIn>
+
+        {/* Right Side — Content */}
+        <FadeIn delay={0.2}>
+          <div className="max-w-xl">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-slate-200 shadow-sm mb-8">
+              <img src="/images/clients/yealink.png" alt="Yealink" className="h-4 object-contain opacity-80" />
+              <div className="w-px h-4 bg-slate-200"></div>
+              <span className="text-[13px] font-extrabold text-slate-700 uppercase tracking-widest">Powered by Yealink</span>
+            </div>
+            
+            <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+              Your Communication System — Fully Set Up
+            </h3>
+            
+            <p className="text-slate-600 text-[19px] mb-12 leading-relaxed font-medium">
+              From desk phones to meeting rooms, we design and deploy a complete communication system that works seamlessly from day one.
+            </p>
+            
+            <ul className="space-y-6 mb-12">
+              {[
+                'Every desk equipped with professional business phones',
+                'Meeting rooms ready for video collaboration',
+                'Calls, conferencing, and teams fully connected',
+                'Built to scale as your team grows'
+              ].map((bullet, idx) => (
+                <li key={idx} className="flex items-start gap-4 group">
+                  <div className="mt-1.5 w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 group-hover:bg-[#5D00D6] transition-colors duration-300">
+                    <CheckCircle size={14} className="text-[#5D00D6] group-hover:text-white transition-colors" />
+                  </div>
+                  <span className="text-slate-800 font-bold text-[17px] leading-snug tracking-tight">{bullet}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="p-7 bg-[#5D00D6] rounded-3xl shadow-xl shadow-purple-900/10">
+              <p className="text-white font-bold text-[19px] tracking-tight leading-snug">
+                No guesswork. No patchwork. <br className="hidden md:block"/>Just a system that works.
+              </p>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
     </div>
   </section>
 );
