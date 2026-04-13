@@ -81,25 +81,25 @@ export const WpServices = () => {
                     <div className="relative z-10 transition-transform duration-700 group-hover/gfx:rotate-y-6 group-hover/gfx:scale-[1.02]">
                       {activeTelcoTab === 'internet' ? (
                         <img 
-                          src="/business_internet_hero_graphic_1776075662877.png" 
+                          src="/images/business_internet_hero_graphic_1776075662877.png" 
                           alt="Business Internet" 
                           className="w-full h-auto drop-shadow-2xl"
                         />
                       ) : (activeTelcoTab === 'voice' || activeTelcoTab === 'voice_ai') ? (
                         <img 
-                          src="/business_voice_system_graphic_1776075617343.png" 
+                          src="/images/business_voice_system_graphic_1776075617343.png" 
                           alt="Business Voice & AI" 
                           className="w-full h-auto drop-shadow-2xl"
                         />
                       ) : activeTelcoTab === 'network' ? (
                         <img 
-                          src="/business_networking_graphic_1776075765541.png" 
+                          src="/images/business_networking_graphic_1776075765541.png" 
                           alt="Secure Networking" 
                           className="w-full h-auto drop-shadow-2xl"
                         />
                       ) : activeTelcoTab === 'mobile' ? (
                         <img 
-                          src="/business_mobile_graphic_1776075791672.png" 
+                          src="/images/business_mobile_graphic_1776075791672.png" 
                           alt="Mobile Fleet Management" 
                           className="w-full h-auto drop-shadow-2xl"
                         />
