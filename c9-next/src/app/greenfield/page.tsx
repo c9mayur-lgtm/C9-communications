@@ -393,47 +393,94 @@ const Slider = () => {
 /* ─────────────────────────────────────────────────────────
    SECTION 3.5 — VENDOR TECHNOLOGY & INFRASTRUCTURE
    ───────────────────────────────────────────────────────── */
-const yealinkProducts = [
+// Full C9 solution hardware catalogue — phones, video, rooms, security, print
+const c9HardwareCatalogue = [
+  // ── Voice & Phones ──
   {
-    name: "MP54 Teams Edition",
-    desc: "Entry-level desk phone for office workers and common areas.",
-    badge1: "Certified for",
-    badge2: "Microsoft Teams",
-    img: "/images/yealink-t54w.png",
-    isNew: false
-  },
-  {
+    category: "Desk Phones",
     name: "SIP-T54W",
-    desc: "Premium desk phone for executives and managers needing high call volume.",
+    desc: "Premium desk phone for executives and managers with built-in wireless handset support.",
     badge1: "Certified for",
     badge2: "Microsoft Teams",
     img: "/images/yealink-t54w.png",
-    isNew: true
+    isNew: false,
+    isPhoto: false,
   },
   {
+    category: "Cordless Phones",
     name: "W73P DECT System",
-    desc: "High-performance cordless phone system for mobile staff on premises.",
+    desc: "High-performance cordless system for mobile staff who need freedom of movement on-premises.",
     badge1: "Certified for",
     badge2: "Microsoft Teams",
     img: "/images/yealink-w73p.png",
-    isNew: false
+    isNew: false,
+    isPhoto: false,
+  },
+  // ── Meeting Rooms ──
+  {
+    category: "Meeting Rooms",
+    name: "MeetingBar A20",
+    desc: "All-in-one video bar for huddle and small rooms. 20 megapixel wide-angle camera included.",
+    badge1: "Certified for",
+    badge2: "Microsoft Teams",
+    img: "/images/boardroom-mtr.webp",
+    isNew: true,
+    isPhoto: true,
   },
   {
+    category: "Video Collaboration",
+    name: "Video Collaboration Desk",
+    desc: "Standalone collaboration device for one-on-one meetings and personal video calls.",
+    badge1: "Certified for",
+    badge2: "Microsoft Teams",
+    img: "/images/video_collaboration_desk.jpg",
+    isNew: false,
+    isPhoto: true,
+  },
+  // ── Headsets ──
+  {
+    category: "Headsets",
     name: "BH71 Pro Headset",
-    desc: "Mono Bluetooth Wireless Headset with active noise cancellation.",
+    desc: "Mono Bluetooth Wireless Headset with active noise cancellation for focused work.",
     badge1: "Certified for",
     badge2: "Unified Communications",
     img: "/images/yealink-bh71.png",
-    isNew: true
+    isNew: true,
+    isPhoto: false,
   },
+  // ── Security ──
   {
-    name: "WH62 Dual UC",
-    desc: "Essential DECT Wireless Headset for uninterrupted focus.",
-    badge1: "Certified for",
-    badge2: "Unified Communications",
-    img: "/images/yealink-bh71.png",
-    isNew: false
-  }
+    category: "Security & CCTV",
+    name: "AI Workplace CCTV",
+    desc: "Smart IP security cameras with AI people-counting and motion-triggered alerts.",
+    badge1: "Enterprise",
+    badge2: "Security System",
+    img: "/images/workplace-cctv.jpg",
+    isNew: false,
+    isPhoto: true,
+  },
+  // ── Print & Scan ──
+  {
+    category: "Print & Scan",
+    name: "Managed Print Solution",
+    desc: "High-volume managed printers with toner-as-a-service and remote monitoring included.",
+    badge1: "Managed",
+    badge2: "Print & Scan",
+    img: "/images/workplace-print.jpg",
+    isNew: false,
+    isPhoto: true,
+  },
+  // ── Networking ──
+  {
+    category: "Networking",
+    name: "Business Networking Rack",
+    desc: "Structured cabling, managed switches, and enterprise-grade rack infrastructure.",
+    badge1: "Enterprise",
+    badge2: "Network Infrastructure",
+    img: "/images/realistic_business_networking_rack_1776077491291.png",
+    isNew: false,
+    isPhoto: true,
+  },
 ];
 
 const VendorTechnologyBlock = () => {
@@ -441,98 +488,104 @@ const VendorTechnologyBlock = () => {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -350 : 350;
+      const scrollAmount = direction === 'left' ? -370 : 370;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="py-24 md:py-32 bg-slate-50 border-y border-slate-200 overflow-hidden">
+    <section className="py-24 md:py-32 bg-white border-y border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1400px]">
-        
-        {/* Header container with Left/Right split */}
+
+        {/* Header — left/right split */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-12 md:mb-16">
           <FadeIn>
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-4 mb-6">
                 <img src="/images/clients/yealink.png" alt="Yealink" className="h-7 md:h-9 object-contain" />
-                <div className="w-px h-6 bg-slate-300"></div>
-                <span className="text-[12px] md:text-[14px] font-extrabold text-slate-500 uppercase tracking-[0.2em]">Global Hardware Partner</span>
+                <div className="w-px h-6 bg-slate-200"></div>
+                <span className="text-[12px] md:text-[13px] font-extrabold text-slate-400 uppercase tracking-[0.2em]">Global Hardware Partner</span>
               </div>
-              <h2 className="c9-section-heading mb-6">
-                Certified Enterprise Hardware Options
+              <h2 className="c9-section-heading mb-5">
+                The Full Technology Picture
               </h2>
               <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-xl">
-                We've partnered with Yealink to deploy a fully certified, unified communication tier. Every device is pre-provisioned and managed remotely.
+                From certified desk phones and meeting rooms to CCTV, printing, and network infrastructure — we deploy and manage the complete stack, not just phones.
               </p>
             </div>
           </FadeIn>
 
-          {/* Carousel Controls (Hidden on mobile where swiping is natural) */}
           <FadeIn delay={0.1} className="hidden md:flex">
             <div className="flex items-center gap-3 pb-2 lg:pb-6">
-              <button 
+              <button
                 onClick={() => scroll('left')}
-                className="w-14 h-14 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-500 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all hover:-translate-x-1 shadow-sm"
+                className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all hover:-translate-x-0.5 shadow-sm"
                 aria-label="Scroll left"
               >
-                <ChevronLeft size={24} />
+                <ChevronLeft size={20} />
               </button>
-              <button 
+              <button
                 onClick={() => scroll('right')}
-                className="w-14 h-14 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-500 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all hover:translate-x-1 shadow-sm"
+                className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all hover:translate-x-0.5 shadow-sm"
                 aria-label="Scroll right"
               >
-                <ChevronRight size={24} />
+                <ChevronRight size={20} />
               </button>
             </div>
           </FadeIn>
         </div>
 
-        {/* Carousel Track */}
-        <FadeIn delay={0.2}>
+        {/* Carousel */}
+        <FadeIn delay={0.15}>
           <div className="relative -mx-6 md:mx-0">
-            {/* Fade overlays for smooth edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-6 md:w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-6 md:w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
-            
-            <div 
+            {/* Edge fades */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 md:w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 md:w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+            <div
               ref={scrollRef}
-              className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar px-6 md:px-0 py-6"
+              className="flex gap-5 overflow-x-auto snap-x snap-mandatory hide-scrollbar px-6 md:px-0 py-4"
             >
-              {yealinkProducts.map((prod, idx) => (
-                <div key={idx} className="shrink-0 w-[82vw] sm:w-[320px] md:w-[340px] snap-center bg-white rounded-3xl border border-slate-100 shadow-[0_2px_10px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgb(93,0,214,0.08)] hover:border-[#5D00D6]/20 hover:-translate-y-2 transition-all duration-500 p-8 flex flex-col group relative overflow-hidden">
-                   
-                  {prod.isNew && (
-                    <div className="absolute top-6 left-6 bg-[#10b981] text-white text-[10px] font-black tracking-[0.15em] px-2.5 py-1 rounded-sm z-10">
-                      NEW
+              {c9HardwareCatalogue.map((prod, idx) => (
+                <div
+                  key={idx}
+                  className="shrink-0 w-[78vw] sm:w-[300px] md:w-[320px] snap-center rounded-2xl border border-slate-100 hover:border-[#5D00D6]/25 hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgb(93,0,214,0.09)] transition-all duration-400 flex flex-col group bg-transparent overflow-hidden"
+                >
+                  {/* Image — full bleed, no white box */}
+                  <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-2xl bg-slate-50">
+                    {prod.isNew && (
+                      <div className="absolute top-4 left-4 bg-[#10b981] text-white text-[9px] font-black tracking-[0.15em] px-2.5 py-1 rounded-sm z-10">
+                        NEW
+                      </div>
+                    )}
+                    <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm text-[10px] font-bold text-slate-500 uppercase tracking-wider px-2.5 py-1 rounded-sm z-10">
+                      {prod.category}
                     </div>
-                  )}
-                  
-                  {/* Ultra clean image area, no shadows, pure crisp transparent rendering */}
-                  <div className="relative w-full aspect-square mb-8 flex items-center justify-center">
-                    <img 
-                      src={prod.img} 
-                      alt={prod.name} 
-                      className="max-w-[75%] max-h-[75%] object-contain transition-transform duration-700 group-hover:scale-110"
+                    <img
+                      src={prod.img}
+                      alt={prod.name}
+                      className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${
+                        prod.isPhoto
+                          ? 'object-cover'
+                          : 'object-contain p-8 bg-white'
+                      }`}
                     />
                   </div>
 
-                  {/* Badges & Content */}
-                  <div className="text-center flex-1 flex flex-col items-center justify-end">
-                    
-                    {/* Official Yealink/Teams split badge style - Boxy and precise */}
-                    <div className="inline-flex flex-col border border-[#1d4ed8] bg-white mb-6 rounded-[2px] overflow-hidden transition-transform duration-300">
-                      <div className="bg-[#1d4ed8] text-white text-[9px] font-black uppercase tracking-wider px-5 py-1.5">
+                  {/* Content below image */}
+                  <div className="p-6 flex flex-col flex-1 bg-white rounded-b-2xl">
+                    {/* Badge */}
+                    <div className="inline-flex self-start flex-col border border-[#1d4ed8] rounded-[2px] overflow-hidden mb-5">
+                      <div className="bg-[#1d4ed8] text-white text-[8px] font-black uppercase tracking-widest px-3 py-1">
                         {prod.badge1}
                       </div>
-                      <div className="text-[#1d4ed8] text-[11px] font-extrabold px-5 py-1.5 bg-white">
+                      <div className="text-[#1d4ed8] text-[10px] font-extrabold px-3 py-1 bg-white">
                         {prod.badge2}
                       </div>
                     </div>
-                    
-                    <h3 className="text-[20px] font-extrabold text-slate-900 tracking-tight mb-3">{prod.name}</h3>
-                    <p className="text-[14px] font-medium text-slate-500 leading-relaxed max-w-[260px]">{prod.desc}</p>
+
+                    <h3 className="text-[17px] font-extrabold text-slate-900 tracking-tight mb-2 leading-snug">{prod.name}</h3>
+                    <p className="text-[13px] font-medium text-slate-500 leading-relaxed">{prod.desc}</p>
                   </div>
                 </div>
               ))}
