@@ -125,9 +125,9 @@ export const WpIndustryTabs = () => {
               
               <Link 
                 href={INDUSTRIES[activeTab].href}
-                className="inline-flex items-center gap-2 font-bold transition-all hover:gap-3 text-[#5D00D6] hover:text-[#4d00b3] text-[15px] uppercase tracking-[0.05em]"
+                className="inline-flex items-center gap-2 font-bold transition-all hover:gap-3 text-[#5D00D6] hover:text-[#4d00b3] text-[15px] uppercase tracking-[0.05em] whitespace-nowrap"
               >
-                Explore {INDUSTRIES[activeTab].label} Solutions <ArrowRight size={18} />
+                Explore {INDUSTRIES[activeTab].label} Solutions <ArrowRight size={18} className="shrink-0" />
               </Link>
             </motion.div>
           </AnimatePresence>

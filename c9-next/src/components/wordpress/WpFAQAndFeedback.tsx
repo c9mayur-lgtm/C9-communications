@@ -48,7 +48,7 @@ export const WpFAQAndFeedback = ({
     <>
       {/* FAQ Section */}
       {showFAQ && (
-        <section className="py-16 md:py-24 bg-[#FDFDFF] border-t border-gray-100">
+        <section className="py-12 md:py-16 bg-[#FDFDFF] border-t border-gray-100">
           <div className="container mx-auto px-6 md:px-8 max-w-4xl">
             
             <div className="flex flex-col items-center text-center mb-12">

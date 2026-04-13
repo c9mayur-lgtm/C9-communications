@@ -37,13 +37,13 @@ export const WpHero = () => {
       image: "/images/hero_business.png"
     },
     enterprise: {
-      title: "Scalable managed infrastructure for complex environments.",
-      description: "End-to-end managed services across Telco, IT, and Modern Workplace. One provider. Complete accountability. Australian-wide.",
-      cta1: "Book a Consultation",
+      title: "Running multiple sites shouldn't mean managing multiple IT vendors",
+      description: "Stop juggling multiple Telco providers and IT companies. We bring everything under one accountable system — Connectivity, Voice, and IT — across every location nationwide.",
+      cta1: "Get Enterprise Assessment",
       cta1Href: "#consultation-section",
-      cta2: "Capability Statement",
-      cta2Href: "/managed-it",
-      tags: ["Enterprise Infrastructure", "24/7 Security", "Hybrid Cloud"],
+      cta2: "Talk to an Advisor",
+      cta2Href: "tel:1800000299",
+      tags: ["20 Years Experience", "100% AU-Based Engineers", "Zero Vendor Coordination"],
       image: "/images/hero_enterprise.png"
     }
   };
@@ -117,10 +117,10 @@ export const WpHero = () => {
               </div>
             )}
 
-            {/* Trust marks */}
+            {/* Trust marks — driven by per-audience tags */}
             {!isHome && (
               <div className="flex items-center gap-5 md:gap-8 mt-10 flex-wrap">
-                {['99.99% Uptime', '24/7 AU Support', 'No Lock-In'].map((t, i) => (
+                {activeContent.tags.map((t: string, i: number) => (
                   <span key={i} className="inline-flex items-center gap-2">
                     <CheckCircle size={16} className="text-[#5D00D6] shrink-0 xl:text-[#5D00D6]" />
                     <span className="c9-eyebrow !text-white xl:!text-slate-500 tracking-widest leading-none pt-0.5 whitespace-nowrap">

@@ -50,9 +50,9 @@ export const WpITDepartmentOptions = () => {
                 <p className="c9-body mb-8 line-clamp-2">
                   {opt.desc}
                 </p>
-                <div className="flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] leading-none uppercase tracking-[0.2em]">
+                <div className="flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] leading-none uppercase tracking-[0.2em] whitespace-nowrap">
                   Explore solutions
-                  <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight size={16} className="shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
               </div>
             </Link>

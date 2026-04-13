@@ -51,7 +51,7 @@ export const WpDefenseBanner = ({
               rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
               className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-2 border-[#5D00D6]/30 text-white rounded-full font-medium text-[16px] hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300 shadow-xl shadow-purple-900/10 group/btn whitespace-nowrap"
             >
-              {buttonText} <ArrowRight size={20} className="ml-3 transition-transform group-hover/btn:translate-x-1" />
+              {buttonText} <ArrowRight size={20} className="ml-3 shrink-0 transition-transform group-hover/btn:translate-x-1" />
             </a>
           </div>
         </div>

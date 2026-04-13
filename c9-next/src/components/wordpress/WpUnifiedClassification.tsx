@@ -64,10 +64,10 @@ export const WpUnifiedClassification = ({
               <span className="text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.2em] mb-4 block">
                 EXPLORE THE C9 ECOSYSTEM
               </span>
-              <h1 className="text-[42px] md:text-[56px] font-bold text-slate-900 leading-[1.1] tracking-tight mb-6">
+              <h2 className="c9-section-heading mb-6 max-w-2xl mx-auto">
                 The right technology, <br />
                 <span className="text-[#5D00D6]">organized for you.</span>
-              </h1>
+              </h2>
               <p className="text-[18px] text-slate-600 leading-relaxed font-medium">
                 Browse our comprehensive technology stack. Whether you know the specific product you need, have a unique challenge to solve, or want industry-specific expertise, we have categorized our capabilities to simplify your search.
               </p>
@@ -165,9 +165,9 @@ export const WpUnifiedClassification = ({
                            </h3>
                            <Link 
                              href={activeData.sidebar.path || "/contact"} 
-                             className="inline-flex items-center gap-3 px-8 py-4 bg-[#5D00D6] text-white rounded-full font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group/btn"
+                             className="inline-flex items-center gap-3 px-8 py-4 bg-[#5D00D6] text-white rounded-full font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group/btn whitespace-nowrap"
                            >
-                             {activeData.sidebar.button || "Schedule consultation"} <ArrowRight size={18} className="translate-x-0 group-hover/btn:translate-x-1 transition-transform" />
+                             {activeData.sidebar.button || "Schedule consultation"} <ArrowRight size={18} className="shrink-0 translate-x-0 group-hover/btn:translate-x-1 transition-transform" />
                            </Link>
                         </div>
 

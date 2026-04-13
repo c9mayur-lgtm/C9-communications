@@ -115,7 +115,10 @@ export const WpSolutions = () => {
                   className="bg-[#0c1024] flex flex-col px-3 py-2.5 rounded-none mb-4 hover:bg-[#1C223A] transition-all group/defense"
                 >
                     <p className="c9-eyebrow !text-white !text-[8.5px] mb-0.5">Pairs with C9 Defense</p>
-                    <p className="c9-body !text-[11px] !text-white/50 !leading-snug group-hover/defense:text-white transition-colors">{s.defenseDark} →</p>
+                    <p className="c9-body !text-[11px] !text-white/50 !leading-snug group-hover/defense:text-white transition-colors flex items-center gap-1">
+                      <span className="flex-1">{s.defenseDark}</span> 
+                      <ArrowRight size={12} className="shrink-0" />
+                    </p>
                   </a>
               )}
 

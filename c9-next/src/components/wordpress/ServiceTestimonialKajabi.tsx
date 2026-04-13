@@ -104,9 +104,9 @@ export const ServiceTestimonialKajabi = ({ testimonials = DEFAULT_TESTIMONIALS }
   const realIndex = current % testimonials.length;
 
   return (
-    <section className="py-16 bg-[#000000] overflow-hidden text-white">
+    <section className="py-12 bg-[#000000] overflow-hidden text-white">
       <div className="container mx-auto max-w-full px-0">
-        <h2 className="c9-section-heading text-center mb-10 px-6" >
+        <h2 className="c9-section-heading !text-white text-center mb-10 px-6" >
           Why leaders trust C9 Communications
         </h2>
 
@@ -153,14 +153,14 @@ export const ServiceTestimonialKajabi = ({ testimonials = DEFAULT_TESTIMONIALS }
                           <Quote size={28} fill="currentColor" />
                         </div>
 
-                        <p className="text-[15px] md:text-[17px] lg:text-[19px] text-gray-300 leading-relaxed mb-6 font-normal italic" >
+                        <p className="text-[16px] md:text-[18px] lg:text-[20px] text-white leading-relaxed mb-6 font-medium italic opacity-95" >
                           "{t.content}"
                         </p>
 
                         <div className="flex items-end justify-between mt-auto border-t border-white/5 pt-6">
                           <div>
-                            <h4 className="text-[16px] md:text-[18px] font-bold mb-0.5 tracking-tight">{t.name}</h4>
-                            <p className="text-gray-500 text-[12px] font-medium uppercase tracking-wider">{t.role}</p>
+                            <h4 className="text-[16px] md:text-[18px] font-bold mb-0.5 tracking-tight text-white">{t.name}</h4>
+                            <p className="text-gray-400 text-[12px] font-medium uppercase tracking-wider">{t.role}</p>
                           </div>
                           
                           {t.metric && (
