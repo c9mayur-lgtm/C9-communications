@@ -393,74 +393,123 @@ const Slider = () => {
 /* ─────────────────────────────────────────────────────────
    SECTION 3.5 — VENDOR TECHNOLOGY & INFRASTRUCTURE
    ───────────────────────────────────────────────────────── */
+const yealinkProducts = [
+  {
+    name: "MeetingBar A20",
+    desc: "For huddle and small rooms",
+    badge: "Certified for Microsoft Teams",
+    img: "/images/boardroom-mtr.webp",
+    isNew: true
+  },
+  {
+    name: "SIP-T54W",
+    desc: "Premium desk phone for executives and managers",
+    badge: "Certified for Microsoft Teams",
+    img: "/images/yealink-t54w.png",
+    isNew: false
+  },
+  {
+    name: "W73P DECT",
+    desc: "High-performance cordless phone system",
+    badge: "Certified for Microsoft Teams",
+    img: "/images/yealink-w73p.png",
+    isNew: true
+  },
+  {
+    name: "BH71 Pro",
+    desc: "Mono Bluetooth Wireless Headset",
+    badge: "Unified Communications",
+    img: "/images/yealink-bh71.png",
+    isNew: false
+  },
+  {
+    name: "MeetingBoard 65",
+    desc: "Smart Interactive Display for Teams",
+    badge: "Certified for Microsoft Teams",
+    img: "/images/video_collaboration_desk.jpg",
+    isNew: true
+  }
+];
+
 const VendorTechnologyBlock = () => (
-  <section className="py-32 bg-slate-50 border-y border-slate-200">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        {/* Left Side — 2x2 Product Grid */}
-        <FadeIn>
-          <div className="grid grid-cols-2 gap-5 md:gap-8">
-            {[
-              { img: '/images/yealink-t54w.png', label: 'Desk Phones' },
-              { img: '/images/boardroom-mtr.webp', label: 'Meeting Rooms', cover: true },
-              { img: '/images/video_collaboration_desk.jpg', label: 'Video Collaboration', cover: true },
-              { img: '/images/yealink-bh71.png', label: 'Headsets' },
-            ].map((prod, idx) => (
-              <div key={idx} className="flex flex-col gap-4 group">
-                <div className="bg-white border border-slate-200 rounded-[24px] overflow-hidden aspect-[4/3] flex items-center justify-center p-6 shadow-sm group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-[#5D00D6]/30 transition-all duration-500 relative">
-                  <img 
-                    src={prod.img} 
-                    alt={prod.label} 
-                    className={`max-w-full max-h-full transition-transform duration-700 group-hover:scale-105 ${prod.cover ? 'w-full h-full object-cover absolute inset-0' : 'object-contain drop-shadow-xl'}`}
-                  />
-                  {prod.cover && <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-500" />}
-                </div>
-                <span className="text-slate-800 font-extrabold text-[15px] text-center tracking-tight transition-colors">{prod.label}</span>
-              </div>
-            ))}
-          </div>
-        </FadeIn>
+  <section className="py-32 bg-white border-y border-slate-100 overflow-hidden relative">
+    <div className="container mx-auto px-6 md:px-8 max-w-[1240px] text-center mb-20 relative z-20">
+      <FadeIn>
+        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 mb-6 shadow-sm">
+          <img src="/images/clients/yealink.png" alt="Yealink" className="h-4 object-contain opacity-90" />
+          <div className="w-px h-4 bg-slate-300"></div>
+          <span className="text-[13px] font-extrabold text-slate-700 tracking-widest uppercase">Hardware Partner</span>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+          Enterprise Hardware Solutions
+        </h2>
+        <p className="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
+          From premium desk phones to intelligent boardroom cameras, we deploy a complete, fully certified communication tier that works seamlessly from day one.
+        </p>
+      </FadeIn>
+    </div>
 
-        {/* Right Side — Content */}
-        <FadeIn delay={0.2}>
-          <div className="max-w-xl">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-slate-200 shadow-sm mb-8">
-              <img src="/images/clients/yealink.png" alt="Yealink" className="h-4 object-contain opacity-80" />
-              <div className="w-px h-4 bg-slate-200"></div>
-              <span className="text-[13px] font-extrabold text-slate-700 uppercase tracking-widest">Powered by Yealink</span>
-            </div>
-            
-            <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-              Your Communication System — Fully Set Up
-            </h3>
-            
-            <p className="text-slate-600 text-[19px] mb-12 leading-relaxed font-medium">
-              From desk phones to meeting rooms, we design and deploy a complete communication system that works seamlessly from day one.
-            </p>
-            
-            <ul className="space-y-6 mb-12">
-              {[
-                'Every desk equipped with professional business phones',
-                'Meeting rooms ready for video collaboration',
-                'Calls, conferencing, and teams fully connected',
-                'Built to scale as your team grows'
-              ].map((bullet, idx) => (
-                <li key={idx} className="flex items-start gap-4 group">
-                  <div className="mt-1.5 w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 group-hover:bg-[#5D00D6] transition-colors duration-300">
-                    <CheckCircle size={14} className="text-[#5D00D6] group-hover:text-white transition-colors" />
+    {/* Horizontal Ticker Wrapper */}
+    <div className="relative w-full max-w-[1800px] mx-auto pb-10 group">
+      {/* CSS based infinite scroll animation */}
+      <style dangerouslySetContent={{ __html: `
+        @keyframes ticker-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .ticker-track {
+          display: flex;
+          gap: 2rem;
+          width: max-content;
+          animation: ticker-scroll 45s linear infinite;
+        }
+        .ticker-track:hover {
+          animation-play-state: paused;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}} />
+
+      {/* Gradients to fade edges */}
+      <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
+
+      {/* Ticker Track */}
+      <div className="overflow-hidden">
+        <div className="ticker-track px-6">
+          {[...yealinkProducts, ...yealinkProducts, ...yealinkProducts].map((prod, idx) => (
+            <div key={idx} className="shrink-0 w-[280px] md:w-[320px] flex flex-col items-center">
+              <div className="w-full bg-white border border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-2xl hover:shadow-[#5D00D6]/10 rounded-3xl p-8 transition-all duration-500 aspect-square flex flex-col items-center justify-center relative mb-8 cursor-pointer group/card">
+                {prod.isNew && (
+                  <div className="absolute top-5 left-5 bg-[#10b981] text-white text-[10px] font-black tracking-widest px-2.5 py-1 rounded">
+                    NEW
                   </div>
-                  <span className="text-slate-800 font-bold text-[17px] leading-snug tracking-tight">{bullet}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="p-7 bg-[#5D00D6] rounded-3xl shadow-xl shadow-purple-900/10">
-              <p className="text-white font-bold text-[19px] tracking-tight leading-snug">
-                No guesswork. No patchwork. <br className="hidden md:block"/>Just a system that works.
-              </p>
+                )}
+                <div className="absolute top-5 right-5 opacity-0 group-hover/card:opacity-100 transition-opacity">
+                   <Monitor size={16} className="text-slate-300" />
+                </div>
+                <img 
+                  src={prod.img} 
+                  alt={prod.name} 
+                  className={`max-h-[160px] w-auto transition-transform duration-500 group-hover/card:scale-110 group-hover/card:-translate-y-2 drop-shadow-xl ${prod.img.includes('boardroom') || prod.img.includes('video_collaboration') ? 'rounded-xl object-cover' : 'object-contain'}`} 
+                />
+              </div>
+              
+              <div className="text-center px-4">
+                <div className="inline-flex items-center justify-center border border-[#4F46E5] text-[#4F46E5] bg-indigo-50/50 text-[9px] font-extrabold uppercase tracking-wider px-3 py-1 mb-4 rounded-sm">
+                  {prod.badge}
+                </div>
+                <h3 className="text-[19px] font-extrabold text-slate-900 tracking-tight mb-2">{prod.name}</h3>
+                <p className="text-[13.5px] font-medium text-slate-500 leading-relaxed min-h-[40px]">{prod.desc}</p>
+              </div>
             </div>
-          </div>
-        </FadeIn>
+          ))}
+        </div>
       </div>
     </div>
   </section>
