@@ -87,7 +87,7 @@ export const WpServices = () => {
                         />
                       ) : activeTelcoTab === 'voice_ai' ? (
                         <img 
-                          src="/images/voice_ai_realistic.jpg" 
+                          src="/images/voice_ai_realistic_dashboard.jpg" 
                           alt="Voice AI Intelligence" 
                           className="w-full h-auto drop-shadow-2xl rounded-2xl"
                         />
