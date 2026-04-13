@@ -8,12 +8,25 @@ import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
 import { WpUnifiedClassification } from "@/components/wordpress/WpUnifiedClassification";
 import { WpPromoBanner } from "@/components/wordpress/WpPromoBanner";
 import { WpSupport } from "@/components/wordpress/WpSupport";
+import { WpHighlights } from "@/components/wordpress/WpHighlights";
+import { WpHeroProducts } from "@/components/wordpress/WpHeroProducts";
+import { WpSimplifyingIT } from "@/components/wordpress/WpSimplifyingIT";
+import { WpServices } from "@/components/wordpress/WpServices";
+import { WpSolutions } from "@/components/wordpress/WpSolutions";
+import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { WpVendors } from "@/components/wordpress/WpVendors";
+import { WpCompliance } from "@/components/wordpress/WpCompliance";
+import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 
 export default function BusinessPage() {
   return (
     <main className="min-h-screen bg-white managed-it-base">
       <WpHero />
+
       <WpClientTicker />
+      <WpHighlights />
+      <WpHeroProducts />
+      <WpSimplifyingIT />
       <WpITDepartmentOptions />
       
       {/* Promo Offer — Business Voice Switch */}
@@ -27,14 +40,19 @@ export default function BusinessPage() {
         disclaimer="*Available for qualifying Australian businesses with 10+ employees."
       />
 
-      <WpSupport />
+
+      <WpServices />
+      <WpSolutions />
+      <WpDefenseBanner />
 
       {/* 7. INDUSTRY EXPERTISE — "We've solved this in your sector before" */}
       <WpIndustryTabs />
 
       {/* 8. TRUST METRICS — Hard numbers that justify switching to C9 */}
       <WpWhyPartner />
+      <WpSupport />
 
+      <WpVendors />
       {/* 9. CASE STUDIES — Real proof to eliminate last-mile doubt */}
       <WpCaseStudies 
         articles={[
@@ -61,6 +79,8 @@ export default function BusinessPage() {
           }
         ]}
       />
+      <WpCompliance />
+      <WpFAQAndFeedback />
 
       {/* 10. LEAD CAPTURE — Vendor consolidation guide as high-value offer */}
       <section id="consultation-section">
