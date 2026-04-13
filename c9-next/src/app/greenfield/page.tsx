@@ -168,7 +168,7 @@ const PrioritySolutionsBlock = () => (
       <FadeIn>
         <div className="text-center mb-14">
           <p className="c9-eyebrow mb-4">Fast & Reliable Answers</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+          <h2 className="c9-section-heading mb-4">
             Your Priorities, Solved.
           </h2>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">
@@ -272,7 +272,7 @@ const Slider = () => {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
               <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-3">Complete Coverage</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight max-w-xl">
+              <h2 className="c9-section-heading max-w-xl">
                 Everything Your Business Needs — Already Covered
               </h2>
             </div>
@@ -430,7 +430,7 @@ const VendorTechnologyBlock = () => (
             <img src="/images/clients/yealink.png" alt="Yealink" className="h-6 object-contain opacity-90" />
             <span className="text-[14px] font-bold text-slate-500 uppercase tracking-[0.2em]">Certified Hardware Alliance</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+          <h2 className="c9-section-heading mb-6">
             Yealink & Microsoft Teams Solutions
           </h2>
           <p className="text-slate-500 text-lg md:text-xl font-medium leading-relaxed">
@@ -510,7 +510,7 @@ const WhyC9 = () => (
       <FadeIn>
         <div className="text-center mb-16">
           <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-4">The C9 Difference</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+          <h2 className="c9-section-heading !text-white">
             Why Greenfield Businesses Choose C9
           </h2>
         </div>
@@ -558,7 +558,7 @@ const LeadBuilder = () => {
         <FadeIn>
           <div className="max-w-2xl mx-auto text-center mb-14">
             <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-4">Your Custom Plan</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5">
+            <h2 className="c9-section-heading mb-5">
               Tell Us What You're Setting Up
             </h2>
             <p className="text-slate-500 text-lg">
@@ -724,7 +724,7 @@ const RiskReversal = () => (
       <FadeIn>
         <div className="max-w-2xl mb-16">
           <p className="text-red-500 font-bold text-[12px] uppercase tracking-widest mb-4">Don't Learn This the Hard Way</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5">
+          <h2 className="c9-section-heading mb-5">
             What Happens If You Don't Set This Up Right?
           </h2>
           <p className="text-slate-500 text-lg">
@@ -785,7 +785,7 @@ const FinalCTA = () => (
         <FadeIn>
           <div>
             <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-5">Ready to Launch?</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-6 leading-tight">
+            <h2 className="c9-section-heading mb-6">
               Let's Get Your Business Ready — Properly.
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed mb-10 max-w-md">
