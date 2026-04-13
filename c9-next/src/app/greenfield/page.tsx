@@ -395,24 +395,40 @@ const Slider = () => {
    ───────────────────────────────────────────────────────── */
 const yealinkProducts = [
   {
-    name: "SIP-T54W",
-    desc: "Premium desk phone for executives and managers",
+    name: "MP54 Teams Edition",
+    desc: "Entry-level desk phone for office workers and common areas.",
     badge1: "Certified for",
     badge2: "Microsoft Teams",
     img: "/images/yealink-t54w.png",
     isNew: false
   },
   {
-    name: "W73P DECT",
-    desc: "High-performance cordless phone system",
+    name: "SIP-T54W",
+    desc: "Premium desk phone for executives and managers needing high call volume.",
     badge1: "Certified for",
     badge2: "Microsoft Teams",
-    img: "/images/yealink-w73p.png",
+    img: "/images/yealink-t54w.png",
     isNew: true
   },
   {
-    name: "BH71 Pro",
-    desc: "Mono Bluetooth Wireless Headset",
+    name: "W73P DECT System",
+    desc: "High-performance cordless phone system for mobile staff on premises.",
+    badge1: "Certified for",
+    badge2: "Microsoft Teams",
+    img: "/images/yealink-w73p.png",
+    isNew: false
+  },
+  {
+    name: "BH71 Pro Headset",
+    desc: "Mono Bluetooth Wireless Headset with active noise cancellation.",
+    badge1: "Certified for",
+    badge2: "Unified Communications",
+    img: "/images/yealink-bh71.png",
+    isNew: true
+  },
+  {
+    name: "WH62 Dual UC",
+    desc: "Essential DECT Wireless Headset for uninterrupted focus.",
     badge1: "Certified for",
     badge2: "Unified Communications",
     img: "/images/yealink-bh71.png",
@@ -420,68 +436,114 @@ const yealinkProducts = [
   }
 ];
 
-const VendorTechnologyBlock = () => (
-  <section className="py-24 bg-white border-y border-slate-100">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-      
-      <FadeIn>
-        <div className="text-center mb-24 max-w-3xl mx-auto">
-          <div className="inline-flex flex-col items-center gap-4 mb-8">
-            <img src="/images/clients/yealink.png" alt="Yealink" className="h-6 object-contain opacity-90" />
-            <span className="text-[14px] font-bold text-slate-500 uppercase tracking-[0.2em]">Certified Hardware Alliance</span>
-          </div>
-          <h2 className="c9-section-heading mb-6">
-            Yealink & Microsoft Teams Solutions
-          </h2>
-          <p className="text-slate-500 text-lg md:text-xl font-medium leading-relaxed">
-            From premium desk phones to intelligent headsets, we deploy a complete, fully certified communication tier that works seamlessly from day one.
-          </p>
-        </div>
-      </FadeIn>
+const VendorTechnologyBlock = () => {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
 
-      <div className="grid md:grid-cols-3 gap-8 lg:gap-16">
-        {yealinkProducts.map((prod, idx) => (
-          <FadeIn key={idx} delay={idx * 0.1}>
-            <div className="flex flex-col items-center group cursor-pointer h-full">
-              
-              {/* Product Image Area */}
-              <div className="relative w-full aspect-square mb-8 flex items-center justify-center p-8 bg-transparent">
-                {prod.isNew && (
-                  <div className="absolute top-4 left-4 bg-[#10b981] text-white text-[10px] font-black tracking-[0.15em] px-2.5 py-1 rounded-md">
-                    NEW
-                  </div>
-                )}
-                <img 
-                  src={prod.img} 
-                  alt={prod.name} 
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl saturate-[1.1]"
-                />
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'left' ? -350 : 350;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section className="py-24 md:py-32 bg-slate-50 border-y border-slate-200 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8 max-w-[1400px]">
+        
+        {/* Header container with Left/Right split */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-12 md:mb-16">
+          <FadeIn>
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-4 mb-6">
+                <img src="/images/clients/yealink.png" alt="Yealink" className="h-7 md:h-9 object-contain" />
+                <div className="w-px h-6 bg-slate-300"></div>
+                <span className="text-[12px] md:text-[14px] font-extrabold text-slate-500 uppercase tracking-[0.2em]">Global Hardware Partner</span>
               </div>
-
-              {/* Badges & Content */}
-              <div className="text-center px-4 flex-1 flex flex-col items-center">
-                
-                {/* Official Yealink/Teams split badge style */}
-                <div className="inline-flex flex-col border border-blue-600 bg-white mb-6 shadow-sm overflow-hidden rounded-sm transition-transform duration-300 group-hover:-translate-y-1">
-                  <div className="bg-blue-600 text-white text-[9px] font-bold uppercase tracking-wider px-3 py-1">
-                    {prod.badge1}
-                  </div>
-                  <div className="text-blue-600 text-[11px] font-extrabold px-3 py-1.5 bg-white">
-                    {prod.badge2}
-                  </div>
-                </div>
-                
-                <h3 className="text-[22px] font-extrabold text-slate-900 tracking-tight mb-3">{prod.name}</h3>
-                <p className="text-[15px] font-medium text-slate-500 leading-relaxed max-w-[260px]">{prod.desc}</p>
-              </div>
-
+              <h2 className="c9-section-heading mb-6">
+                Certified Enterprise Hardware Options
+              </h2>
+              <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-xl">
+                We've partnered with Yealink to deploy a fully certified, unified communication tier. Every device is pre-provisioned and managed remotely.
+              </p>
             </div>
           </FadeIn>
-        ))}
+
+          {/* Carousel Controls (Hidden on mobile where swiping is natural) */}
+          <FadeIn delay={0.1} className="hidden md:flex">
+            <div className="flex items-center gap-3 pb-2 lg:pb-6">
+              <button 
+                onClick={() => scroll('left')}
+                className="w-14 h-14 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-500 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all hover:-translate-x-1 shadow-sm"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button 
+                onClick={() => scroll('right')}
+                className="w-14 h-14 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-500 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all hover:translate-x-1 shadow-sm"
+                aria-label="Scroll right"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </FadeIn>
+        </div>
+
+        {/* Carousel Track */}
+        <FadeIn delay={0.2}>
+          <div className="relative -mx-6 md:mx-0">
+            {/* Fade overlays for smooth edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-6 md:w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-6 md:w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+            
+            <div 
+              ref={scrollRef}
+              className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar px-6 md:px-0 py-6"
+            >
+              {yealinkProducts.map((prod, idx) => (
+                <div key={idx} className="shrink-0 w-[82vw] sm:w-[320px] md:w-[340px] snap-center bg-white rounded-3xl border border-slate-100 shadow-[0_2px_10px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgb(93,0,214,0.08)] hover:border-[#5D00D6]/20 hover:-translate-y-2 transition-all duration-500 p-8 flex flex-col group relative overflow-hidden">
+                   
+                  {prod.isNew && (
+                    <div className="absolute top-6 left-6 bg-[#10b981] text-white text-[10px] font-black tracking-[0.15em] px-2.5 py-1 rounded-sm z-10">
+                      NEW
+                    </div>
+                  )}
+                  
+                  {/* Ultra clean image area, no shadows, pure crisp transparent rendering */}
+                  <div className="relative w-full aspect-square mb-8 flex items-center justify-center">
+                    <img 
+                      src={prod.img} 
+                      alt={prod.name} 
+                      className="max-w-[75%] max-h-[75%] object-contain transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
+
+                  {/* Badges & Content */}
+                  <div className="text-center flex-1 flex flex-col items-center justify-end">
+                    
+                    {/* Official Yealink/Teams split badge style - Boxy and precise */}
+                    <div className="inline-flex flex-col border border-[#1d4ed8] bg-white mb-6 rounded-[2px] overflow-hidden transition-transform duration-300">
+                      <div className="bg-[#1d4ed8] text-white text-[9px] font-black uppercase tracking-wider px-5 py-1.5">
+                        {prod.badge1}
+                      </div>
+                      <div className="text-[#1d4ed8] text-[11px] font-extrabold px-5 py-1.5 bg-white">
+                        {prod.badge2}
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-[20px] font-extrabold text-slate-900 tracking-tight mb-3">{prod.name}</h3>
+                    <p className="text-[14px] font-medium text-slate-500 leading-relaxed max-w-[260px]">{prod.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 /* ─────────────────────────────────────────────────────────
    SECTION 4 — WHY C9
