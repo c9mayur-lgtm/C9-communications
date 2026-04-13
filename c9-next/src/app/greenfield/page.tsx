@@ -395,121 +395,89 @@ const Slider = () => {
    ───────────────────────────────────────────────────────── */
 const yealinkProducts = [
   {
-    name: "MeetingBar A20",
-    desc: "For huddle and small rooms",
-    badge: "Certified for Microsoft Teams",
-    img: "/images/boardroom-mtr.webp",
-    isNew: true
-  },
-  {
     name: "SIP-T54W",
     desc: "Premium desk phone for executives and managers",
-    badge: "Certified for Microsoft Teams",
+    badge1: "Certified for",
+    badge2: "Microsoft Teams",
     img: "/images/yealink-t54w.png",
     isNew: false
   },
   {
     name: "W73P DECT",
     desc: "High-performance cordless phone system",
-    badge: "Certified for Microsoft Teams",
+    badge1: "Certified for",
+    badge2: "Microsoft Teams",
     img: "/images/yealink-w73p.png",
     isNew: true
   },
   {
     name: "BH71 Pro",
     desc: "Mono Bluetooth Wireless Headset",
-    badge: "Unified Communications",
+    badge1: "Certified for",
+    badge2: "Unified Communications",
     img: "/images/yealink-bh71.png",
     isNew: false
-  },
-  {
-    name: "MeetingBoard 65",
-    desc: "Smart Interactive Display for Teams",
-    badge: "Certified for Microsoft Teams",
-    img: "/images/video_collaboration_desk.jpg",
-    isNew: true
   }
 ];
 
 const VendorTechnologyBlock = () => (
-  <section className="py-32 bg-white border-y border-slate-100 overflow-hidden relative">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px] text-center mb-20 relative z-20">
+  <section className="py-24 bg-white border-y border-slate-100">
+    <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
+      
       <FadeIn>
-        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 mb-6 shadow-sm">
-          <img src="/images/clients/yealink.png" alt="Yealink" className="h-4 object-contain opacity-90" />
-          <div className="w-px h-4 bg-slate-300"></div>
-          <span className="text-[13px] font-extrabold text-slate-700 tracking-widest uppercase">Hardware Partner</span>
+        <div className="text-center mb-24 max-w-3xl mx-auto">
+          <div className="inline-flex flex-col items-center gap-4 mb-8">
+            <img src="/images/clients/yealink.png" alt="Yealink" className="h-6 object-contain opacity-90" />
+            <span className="text-[14px] font-bold text-slate-500 uppercase tracking-[0.2em]">Certified Hardware Alliance</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+            Yealink & Microsoft Teams Solutions
+          </h2>
+          <p className="text-slate-500 text-lg md:text-xl font-medium leading-relaxed">
+            From premium desk phones to intelligent headsets, we deploy a complete, fully certified communication tier that works seamlessly from day one.
+          </p>
         </div>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-          Enterprise Hardware Solutions
-        </h2>
-        <p className="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
-          From premium desk phones to intelligent boardroom cameras, we deploy a complete, fully certified communication tier that works seamlessly from day one.
-        </p>
       </FadeIn>
-    </div>
 
-    {/* Horizontal Ticker Wrapper */}
-    <div className="relative w-full max-w-[1800px] mx-auto pb-10 group">
-      {/* CSS based infinite scroll animation */}
-      <style dangerouslySetContent={{ __html: `
-        @keyframes ticker-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .ticker-track {
-          display: flex;
-          gap: 2rem;
-          width: max-content;
-          animation: ticker-scroll 45s linear infinite;
-        }
-        .ticker-track:hover {
-          animation-play-state: paused;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}} />
-
-      {/* Gradients to fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
-
-      {/* Ticker Track */}
-      <div className="overflow-hidden">
-        <div className="ticker-track px-6">
-          {[...yealinkProducts, ...yealinkProducts, ...yealinkProducts].map((prod, idx) => (
-            <div key={idx} className="shrink-0 w-[280px] md:w-[320px] flex flex-col items-center">
-              <div className="w-full bg-white border border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-2xl hover:shadow-[#5D00D6]/10 rounded-3xl p-8 transition-all duration-500 aspect-square flex flex-col items-center justify-center relative mb-8 cursor-pointer group/card">
+      <div className="grid md:grid-cols-3 gap-8 lg:gap-16">
+        {yealinkProducts.map((prod, idx) => (
+          <FadeIn key={idx} delay={idx * 0.1}>
+            <div className="flex flex-col items-center group cursor-pointer h-full">
+              
+              {/* Product Image Area */}
+              <div className="relative w-full aspect-square mb-8 flex items-center justify-center p-8 bg-transparent">
                 {prod.isNew && (
-                  <div className="absolute top-5 left-5 bg-[#10b981] text-white text-[10px] font-black tracking-widest px-2.5 py-1 rounded">
+                  <div className="absolute top-4 left-4 bg-[#10b981] text-white text-[10px] font-black tracking-[0.15em] px-2.5 py-1 rounded-md">
                     NEW
                   </div>
                 )}
-                <div className="absolute top-5 right-5 opacity-0 group-hover/card:opacity-100 transition-opacity">
-                   <Monitor size={16} className="text-slate-300" />
-                </div>
                 <img 
                   src={prod.img} 
                   alt={prod.name} 
-                  className={`max-h-[160px] w-auto transition-transform duration-500 group-hover/card:scale-110 group-hover/card:-translate-y-2 drop-shadow-xl ${prod.img.includes('boardroom') || prod.img.includes('video_collaboration') ? 'rounded-xl object-cover' : 'object-contain'}`} 
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl saturate-[1.1]"
                 />
               </div>
-              
-              <div className="text-center px-4">
-                <div className="inline-flex items-center justify-center border border-[#4F46E5] text-[#4F46E5] bg-indigo-50/50 text-[9px] font-extrabold uppercase tracking-wider px-3 py-1 mb-4 rounded-sm">
-                  {prod.badge}
+
+              {/* Badges & Content */}
+              <div className="text-center px-4 flex-1 flex flex-col items-center">
+                
+                {/* Official Yealink/Teams split badge style */}
+                <div className="inline-flex flex-col border border-blue-600 bg-white mb-6 shadow-sm overflow-hidden rounded-sm transition-transform duration-300 group-hover:-translate-y-1">
+                  <div className="bg-blue-600 text-white text-[9px] font-bold uppercase tracking-wider px-3 py-1">
+                    {prod.badge1}
+                  </div>
+                  <div className="text-blue-600 text-[11px] font-extrabold px-3 py-1.5 bg-white">
+                    {prod.badge2}
+                  </div>
                 </div>
-                <h3 className="text-[19px] font-extrabold text-slate-900 tracking-tight mb-2">{prod.name}</h3>
-                <p className="text-[13.5px] font-medium text-slate-500 leading-relaxed min-h-[40px]">{prod.desc}</p>
+                
+                <h3 className="text-[22px] font-extrabold text-slate-900 tracking-tight mb-3">{prod.name}</h3>
+                <p className="text-[15px] font-medium text-slate-500 leading-relaxed max-w-[260px]">{prod.desc}</p>
               </div>
+
             </div>
-          ))}
-        </div>
+          </FadeIn>
+        ))}
       </div>
     </div>
   </section>
