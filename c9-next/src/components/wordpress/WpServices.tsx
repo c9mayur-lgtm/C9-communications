@@ -85,10 +85,16 @@ export const WpServices = () => {
                           alt="Business Internet" 
                           className="w-full h-auto drop-shadow-2xl rounded-2xl"
                         />
-                      ) : (activeTelcoTab === 'voice' || activeTelcoTab === 'voice_ai') ? (
+                      ) : activeTelcoTab === 'voice_ai' ? (
+                        <img 
+                          src="/images/saas_voice_ai.png" 
+                          alt="Voice AI Intelligence" 
+                          className="w-full h-auto drop-shadow-2xl rounded-2xl border border-gray-100"
+                        />
+                      ) : activeTelcoTab === 'voice' ? (
                         <img 
                           src="/images/realistic_business_voice_poly_yealink_1776077360073.png" 
-                          alt="Business Voice & AI" 
+                          alt="Business Phone Systems" 
                           className="w-full h-auto drop-shadow-2xl rounded-2xl"
                         />
                       ) : activeTelcoTab === 'network' ? (
