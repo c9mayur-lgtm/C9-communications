@@ -163,10 +163,10 @@ const solutions = [
 ];
 
 const PrioritySolutionsBlock = () => (
-  <section className="py-24 bg-slate-50 border-y border-slate-100">
+  <section className="py-14 bg-slate-50 border-y border-slate-100">
     <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
       <FadeIn>
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <p className="c9-eyebrow mb-4">Fast & Reliable Answers</p>
           <h2 className="c9-section-heading mb-4">
             Your Priorities, Solved.
@@ -177,7 +177,7 @@ const PrioritySolutionsBlock = () => (
         </div>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
         {solutions.map((s, i) => (
           <FadeIn key={i} delay={i * 0.05}>
             <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-[#5D00D6]/30 transition-all duration-300 h-full flex flex-col group">
@@ -266,10 +266,10 @@ const Slider = () => {
   const next = () => setActive((a) => Math.min(slides.length - 1, a + 1));
 
   return (
-    <section id="slider" className="py-24 bg-white overflow-hidden">
+    <section id="slider" className="py-14 bg-white overflow-hidden">
       <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
         <FadeIn>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
             <div>
               <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-3">Complete Coverage</p>
               <h2 className="c9-section-heading max-w-xl">
@@ -396,9 +396,9 @@ const Slider = () => {
 // Full C9 solution hardware catalogue — phones, video, rooms, security, networking
 const c9HardwareCatalogue = [
   {
-    category: "Microsoft Teams Phone",
-    name: "SIP-T54W",
-    desc: "Prime Business Phone with an adjustable 4.3-inch color screen and built-in Bluetooth/WiFi.",
+    category: "Teams Phone",
+    name: "MP58 Teams Phone",
+    desc: "Microsoft Teams-native desk phone with a 7-inch IPS touch display, built-in Bluetooth 5.0 and Wi-Fi for flexible hot-desking.",
     badge1: "Certified for",
     badge2: "Microsoft Teams",
     img: "/images/yealink-t54w.png",
@@ -407,56 +407,65 @@ const c9HardwareCatalogue = [
   {
     category: "DECT Cordless",
     name: "W73P DECT System",
-    desc: "Crystal-clear voice quality with a 50m indoor range, perfect for floor staff and warehouses.",
+    desc: "Ruggedised DECT handset and base station with 50 m indoor range — ideal for retail floor staff and warehouses.",
     badge1: "Certified for",
     badge2: "Microsoft Teams",
     img: "/images/yealink-w73p.png",
     isPhoto: false,
   },
   {
-    category: "Video Conferencing",
+    category: "Video Bar",
     name: "MeetingBar A30",
-    desc: "Dual-camera system for medium rooms with AI-powered speaker tracking and auto framing.",
+    desc: "All-in-one dual-camera video bar for medium rooms with AI speaker-tracking, auto-framing, and a built-in 8-mic array.",
     badge1: "Certified for",
     badge2: "Microsoft Teams",
-    img: "/images/yealink_meetingbar_a30_1776085100730.png",
+    img: "/images/yealink-meetingbar-a30.png",
     isPhoto: false,
   },
   {
-    category: "Collaboration",
+    category: "Interactive Board",
     name: "MeetingBoard 65",
-    desc: "All-in-one interactive whiteboard, camera, and compute system for high-end boardrooms.",
+    desc: "65-inch 4K touchscreen with built-in Teams Rooms compute, camera and microphones — the complete boardroom in one device.",
     badge1: "Certified for",
     badge2: "Microsoft Teams",
     img: "/images/video_collaboration_desk.jpg",
     isPhoto: true,
   },
   {
-    category: "Professional Headsets",
+    category: "Bluetooth Headset",
     name: "BH71 Pro Headset",
-    desc: "Mono Bluetooth Wireless Headset with a portable charging case and 4-mic noise cancellation.",
+    desc: "Mono Bluetooth 5.2 headset with AI hybrid noise cancellation, a 20-hour talk time, and a portable USB-C charging case.",
     badge1: "Certified for",
     badge2: "Unified Communications",
     img: "/images/yealink-bh71.png",
     isPhoto: false,
   },
   {
-    category: "Security & CCTV",
-    name: "Enterprise AI Camera",
-    desc: "High-definition AI dome camera with night vision and smart occupancy analytics.",
-    badge1: "Enterprise",
-    badge2: "Security System",
-    img: "/images/enterprise_ai_cctv_1776085166237.png",
+    category: "Speakerphone",
+    name: "CP700 Speakerphone",
+    desc: "Portable Bluetooth speakerphone with a 360° microphone pickup, Cortana support, and a 12-hour battery — perfect for huddle rooms.",
+    badge1: "Certified for",
+    badge2: "Microsoft Teams",
+    img: "/images/yealink-t54w.png",
     isPhoto: false,
   },
   {
-    category: "Networking",
-    name: "Managed Network Rack",
-    desc: "Structured cabling, business-grade switches, and secure firewall infrastructure.",
+    category: "Conference Phone",
+    name: "CP960 Conference Phone",
+    desc: "Flagship touch-screen conference phone with an 8-metre pickup range, built-in Wi-Fi and Bluetooth, and Zoom/Teams certification.",
+    badge1: "Certified for",
+    badge2: "Zoom & Teams",
+    img: "/images/yealink-w73p.png",
+    isPhoto: false,
+  },
+  {
+    category: "4G Mobile Phone",
+    name: "W56H 4G Handset",
+    desc: "4G-enabled DECT handset with HD voice, built-in phonebook for 1,000 contacts, and up to 30 hours of standby — built for remote workers.",
     badge1: "Enterprise",
-    badge2: "Infrastructure",
+    badge2: "Mobile Solution",
     img: "/images/realistic_business_networking_rack_1776077491291.png",
-    isPhoto: true,
+    isPhoto: false,
   },
 ];
 
@@ -471,15 +480,15 @@ const VendorTechnologyBlock = () => {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-white border-y border-slate-100 overflow-hidden">
+    <section className="py-14 md:py-20 bg-white border-y border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1400px]">
 
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-10">
           <FadeIn>
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-4 mb-6">
-                <img src="/images/clients/yealink.png" alt="Yealink" className="h-6 md:h-8 object-contain" />
+                <img src="/images/clients/yealink.png" alt="Yealink" className="h-8 md:h-12 object-contain" />
                 <div className="w-px h-6 bg-slate-200"></div>
                 <span className="text-[12px] md:text-[13px] font-extrabold text-slate-400 uppercase tracking-[0.2em]">Global Hardware Partner</span>
               </div>
@@ -587,10 +596,10 @@ const differentiators = [
 ];
 
 const WhyC9 = () => (
-  <section className="py-24 bg-[#0c1024]">
+  <section className="py-14 bg-[#0c1024]">
     <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
       <FadeIn>
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-4">The C9 Difference</p>
           <h2 className="c9-section-heading !text-white">
             Why Greenfield Businesses Choose C9
@@ -635,10 +644,10 @@ const LeadBuilder = () => {
   const items = setupItems[bizType] || [];
 
   return (
-    <section id="lead-builder" className="py-24 bg-slate-50 border-y border-slate-100">
+    <section id="lead-builder" className="py-14 bg-slate-50 border-y border-slate-100">
       <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
         <FadeIn>
-          <div className="max-w-2xl mx-auto text-center mb-14">
+          <div className="max-w-2xl mx-auto text-center mb-10">
             <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-4">Your Custom Plan</p>
             <h2 className="c9-section-heading mb-5">
               Tell Us What You're Setting Up
