@@ -391,6 +391,98 @@ const Slider = () => {
 };
 
 /* ─────────────────────────────────────────────────────────
+   SECTION 3.5 — VENDOR TECHNOLOGY & INFRASTRUCTURE
+   ───────────────────────────────────────────────────────── */
+const VendorTechnologyBlock = () => (
+  <section className="py-24 bg-white border-y border-slate-100 relative overflow-hidden">
+    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
+      
+      <FadeIn>
+        <div className="text-center mb-16 md:mb-24">
+          <p className="c9-eyebrow mb-4">Enterprise Infrastructure</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-5 leading-tight max-w-2xl mx-auto">
+            Built with Proven, Enterprise-Grade Technology
+          </h2>
+          <p className="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto">
+            From day one, your business is powered by reliable, globally trusted systems — not guesswork.
+            Every system is selected for reliability and scale.
+          </p>
+        </div>
+      </FadeIn>
+
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+        <FadeIn delay={0.1}>
+           <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+              <img
+                src="/images/realistic_business_voice_poly_yealink_1776077360073.png"
+                alt="Modern Yealink VoIP communication system"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/10 via-transparent to-transparent" />
+           </div>
+        </FadeIn>
+        
+        <FadeIn delay={0.2}>
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 mb-6">
+              <Shield size={14} className="text-[#5D00D6]" />
+              <span className="text-[12px] font-bold text-slate-600 uppercase tracking-widest">Powered by Yealink</span>
+            </div>
+            
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-5 leading-tight">
+              Professional Communication Systems
+            </h3>
+            
+            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+              We deploy high-quality phone systems and meeting room solutions designed for clarity, reliability, and seamless collaboration. We don’t guess your setup — we build it properly.
+            </p>
+            
+            <ul className="space-y-4">
+              {[
+                'Crystal clear voice and video',
+                'Seamless Teams and Zoom integration',
+                'Reliable day-to-day performance',
+                'Scalable across teams and locations'
+              ].map((bullet, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <CheckCircle size={22} className="text-[#5D00D6] shrink-0" />
+                  <span className="text-slate-800 font-semibold text-[16px]">{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </FadeIn>
+      </div>
+
+      <FadeIn delay={0.3}>
+        <div className="border-t border-slate-100 pt-16 mt-8">
+          <p className="text-center text-slate-500 font-bold text-[13px] uppercase tracking-widest mb-10">
+            Technology we commonly deploy
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-0">
+            {[
+              { icon: <Monitor size={24} />, name: 'Business Devices' },
+              { icon: <Wifi size={24} />, name: 'Networking Systems' },
+              { icon: <Shield size={24} />, name: 'Security Infrastructure' },
+              { icon: <Layers size={24} />, name: 'Workplace Platforms' },
+            ].map((tech, idx) => (
+              <div key={idx} className="flex flex-col items-center text-center gap-4 p-8 rounded-[24px] bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-100">
+                <div className="text-[#5D00D6]">{tech.icon}</div>
+                <span className="text-slate-800 font-bold text-[14px]">{tech.name}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-slate-500 mt-12 text-[16px] font-medium max-w-xl mx-auto italic">
+            "Designed for how your business will operate from day one."
+          </p>
+        </div>
+      </FadeIn>
+      
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
    SECTION 4 — WHY C9
    ───────────────────────────────────────────────────────── */
 const differentiators = [
@@ -754,6 +846,7 @@ export default function GreenfieldPage() {
       <WpClientTicker />
       <PrioritySolutionsBlock />
       <Slider />
+      <VendorTechnologyBlock />
       <WhyC9 />
       <LeadBuilder />
       <RiskReversal />

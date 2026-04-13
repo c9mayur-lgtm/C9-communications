@@ -266,7 +266,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           <div className="px-6 py-3 border-b border-gray-100 shrink-0 bg-[#f8f9fa]">
             <div className="flex items-center gap-1.5 p-1 bg-gray-100 rounded-full border border-gray-200/50">
               {[
-                { key: 'startup', label: 'Startups' },
+                { key: 'startup', label: 'Greenfield Business Setup' },
                 { key: 'business', label: 'Business' },
                 { key: 'enterprise', label: 'Enterprise' }
               ].map((track) => (
@@ -289,7 +289,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           <div className="px-6 py-3 border-b border-gray-100 shrink-0 bg-[#f8f9fa]">
             <div className="flex items-center gap-1.5 p-1 bg-gray-100 rounded-full border border-gray-200/50">
               {[
-                { key: 'startup',    label: 'Greenfield' },
+                { key: 'startup',    label: 'Greenfield Business Setup' },
                 { key: 'business',   label: 'Business' },
                 { key: 'enterprise', label: 'Enterprise' }
               ].map((track) => (
