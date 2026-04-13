@@ -55,58 +55,62 @@ export const WpServices = () => {
           </div>
 
           {/* Tab Content Area */}
-          <div className="py-12">
+          <div className="py-6 md:py-10">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTelcoTab}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.2 }}
-                className="grid lg:grid-cols-2 gap-16 items-start"
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.3 }}
+                className="grid lg:grid-cols-[1fr_1.2fr] gap-8 md:gap-16 items-center"
               >
-                {/* Left side: Heading & Description */}
-                <div className="flex flex-col h-full">
-                  <div className="mb-10 lg:mb-12">
-                    <h3 className="c9-card-title mb-6 leading-tight">
+                {/* Left side: Heading, Description & Graphic */}
+                <div className="flex flex-col">
+                  <div className="mb-4 md:mb-6">
+                    <h3 className="c9-card-title !text-[28px] md:!text-[42px] mb-6 leading-tight">
                       {TELCO_SERVICES_CONTENT[activeTelcoTab].heading}
                     </h3>
-                    <p className="c9-body leading-relaxed">
+                    <p className="c9-body leading-relaxed text-gray-600">
                       {TELCO_SERVICES_CONTENT[activeTelcoTab].description}
                     </p>
                   </div>
 
-                  {/* Native Rectangle Visuals (As Provided) */}
-                  <div className="mt-auto w-full group/gfx">
-                    {activeTelcoTab === 'internet' ? (
-                      <img 
-                        src="/images/business_internet_hero.png" 
-                        alt="Business Internet" 
-                        className="w-full h-auto transition-transform duration-700 group-hover/gfx:scale-[1.02]"
-                      />
-                    ) : (activeTelcoTab === 'voice' || activeTelcoTab === 'voice_ai') ? (
-                      <img 
-                        src="/images/voice_service_graphic.png" 
-                        alt="Voice AI & Comms" 
-                        className="w-full h-auto transition-transform duration-700 group-hover/gfx:scale-[1.02]"
-                      />
-                    ) : activeTelcoTab === 'network' ? (
-                      <img 
-                        src="/images/networking_graphic.png" 
-                        alt="Business Networking" 
-                        className="w-full h-auto transition-transform duration-700 group-hover/gfx:scale-[1.02]"
-                      />
-                    ) : activeTelcoTab === 'mobile' ? (
-                      <img 
-                        src="/images/mobile_service_graphic.png" 
-                        alt="Mobile 5G Coverage" 
-                        className="w-full h-auto transition-transform duration-700 group-hover/gfx:scale-[1.02]"
-                      />
-                    ) : (
-                      <div className="w-full aspect-[16/9] flex items-center justify-center bg-gray-50 rounded-none uppercase text-[12px] font-bold tracking-widest text-gray-300">
-                        Visual for {activeTelcoTab} coming soon
-                      </div>
-                    )}
+                  {/* High-Impact Visual */}
+                  <div className="w-full relative group/gfx perspective-1000">
+                    <div className="relative z-10 transition-transform duration-700 group-hover/gfx:rotate-y-6 group-hover/gfx:scale-[1.02]">
+                      {activeTelcoTab === 'internet' ? (
+                        <img 
+                          src="/business_internet_hero_graphic_1776075662877.png" 
+                          alt="Business Internet" 
+                          className="w-full h-auto drop-shadow-2xl"
+                        />
+                      ) : (activeTelcoTab === 'voice' || activeTelcoTab === 'voice_ai') ? (
+                        <img 
+                          src="/business_voice_system_graphic_1776075617343.png" 
+                          alt="Business Voice & AI" 
+                          className="w-full h-auto drop-shadow-2xl"
+                        />
+                      ) : activeTelcoTab === 'network' ? (
+                        <img 
+                          src="/business_networking_graphic_1776075765541.png" 
+                          alt="Secure Networking" 
+                          className="w-full h-auto drop-shadow-2xl"
+                        />
+                      ) : activeTelcoTab === 'mobile' ? (
+                        <img 
+                          src="/business_mobile_graphic_1776075791672.png" 
+                          alt="Mobile Fleet Management" 
+                          className="w-full h-auto drop-shadow-2xl"
+                        />
+                      ) : (
+                        <div className="w-full aspect-[16/9] flex items-center justify-center bg-gray-50 rounded-2xl uppercase text-[12px] font-bold tracking-widest text-gray-300">
+                          Visual for {activeTelcoTab} coming soon
+                        </div>
+                      )}
+                    </div>
+                    {/* Decorative Shadow Glow */}
+                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[80%] h-12 bg-[#5D00D6]/10 blur-3xl rounded-full opacity-0 group-hover/gfx:opacity-100 transition-opacity duration-700" />
                   </div>
                 </div>
 
