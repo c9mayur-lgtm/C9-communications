@@ -81,27 +81,27 @@ export const WpServices = () => {
                     <div className="relative z-10 transition-transform duration-700 group-hover/gfx:rotate-y-6 group-hover/gfx:scale-[1.02]">
                       {activeTelcoTab === 'internet' ? (
                         <img 
-                          src="/images/business_internet_hero_graphic_1776075662877.png" 
+                          src="/images/realistic_business_internet_fiber_box_1776077417680.png" 
                           alt="Business Internet" 
-                          className="w-full h-auto drop-shadow-2xl"
+                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
                         />
                       ) : (activeTelcoTab === 'voice' || activeTelcoTab === 'voice_ai') ? (
                         <img 
-                          src="/images/business_voice_system_graphic_1776075617343.png" 
+                          src="/images/realistic_business_voice_poly_yealink_1776077360073.png" 
                           alt="Business Voice & AI" 
-                          className="w-full h-auto drop-shadow-2xl"
+                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
                         />
                       ) : activeTelcoTab === 'network' ? (
                         <img 
-                          src="/images/business_networking_graphic_1776075765541.png" 
+                          src="/images/realistic_business_networking_rack_1776077491291.png" 
                           alt="Secure Networking" 
-                          className="w-full h-auto drop-shadow-2xl"
+                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
                         />
                       ) : activeTelcoTab === 'mobile' ? (
                         <img 
-                          src="/images/business_mobile_graphic_1776075791672.png" 
+                          src="/images/mobile-feature.jpg" 
                           alt="Mobile Fleet Management" 
-                          className="w-full h-auto drop-shadow-2xl"
+                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
                         />
                       ) : (
                         <div className="w-full aspect-[16/9] flex items-center justify-center bg-gray-50 rounded-2xl uppercase text-[12px] font-bold tracking-widest text-gray-300">
