@@ -68,7 +68,7 @@ export const WpServices = () => {
                 {/* Left side: Heading, Description & Graphic */}
                 <div className="flex flex-col">
                   <div className="mb-4 md:mb-6">
-                    <h3 className="c9-card-title !text-[28px] md:!text-[42px] mb-6 leading-tight">
+                    <h3 className="c9-card-title !text-[24px] md:!text-[32px] mb-6 leading-tight">
                       {TELCO_SERVICES_CONTENT[activeTelcoTab].heading}
                     </h3>
                     <p className="c9-body leading-relaxed text-gray-600">
