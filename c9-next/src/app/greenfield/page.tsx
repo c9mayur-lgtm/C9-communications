@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
+import { HeroHighlighter } from '@/components/common/HeroHighlighter';
 
 
 /* ─────────────────────────────────────────────────────────
@@ -38,7 +39,7 @@ const FadeIn = ({
    SECTION 1 — HERO
    ───────────────────────────────────────────────────────── */
 const Hero = () => (
-  <section className="relative overflow-hidden bg-white pt-10 pb-20 lg:pt-14 lg:pb-32">
+  <section className="relative overflow-hidden bg-white pt-10 pb-12 lg:pt-14 lg:pb-16">
     {/* Subtle grid backdrop */}
     <div
       className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -391,97 +392,164 @@ const Slider = () => {
 };
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 3.5 — VENDOR TECHNOLOGY & INFRASTRUCTURE
+   SECTION 3.5 — VENDOR PRODUCT SHOWCASE
    ───────────────────────────────────────────────────────── */
-// Full C9 solution hardware catalogue — phones, video, rooms, security, networking
-const c9HardwareCatalogue = [
+const yealinkShowcaseProducts = [
   {
-    category: "Teams Phone",
-    name: "MP58 Teams Phone",
-    desc: "Microsoft Teams-native desk phone with a 7-inch IPS touch display, built-in Bluetooth 5.0 and Wi-Fi for flexible hot-desking.",
-    badge1: "Certified for",
-    badge2: "Microsoft Teams",
-    img: "/images/yealink-t54w.png",
-    isPhoto: false,
-  },
-  {
-    category: "DECT Cordless",
-    name: "W73P DECT System",
-    desc: "Ruggedised DECT handset and base station with 50 m indoor range — ideal for retail floor staff and warehouses.",
-    badge1: "Certified for",
-    badge2: "Microsoft Teams",
-    img: "/images/yealink-w73p.png",
-    isPhoto: false,
-  },
-  {
+    name: "Yealink MeetingBar A10",
     category: "Video Bar",
-    name: "MeetingBar A30",
-    desc: "All-in-one dual-camera video bar for medium rooms with AI speaker-tracking, auto-framing, and a built-in 8-mic array.",
-    badge1: "Certified for",
-    badge2: "Microsoft Teams",
-    img: "/images/yealink-meetingbar-a30.png",
-    isPhoto: false,
+    desc: "Compact all-in-one video bar for huddle spaces and home offices.",
+    tags: ["4K Camera", "AI Tracking"],
+    img: "/images/Yealink/Yealink MeetingBar A10.png"
   },
   {
-    category: "Interactive Board",
-    name: "MeetingBoard 65",
-    desc: "65-inch 4K touchscreen with built-in Teams Rooms compute, camera and microphones — the complete boardroom in one device.",
-    badge1: "Certified for",
-    badge2: "Microsoft Teams",
-    img: "/images/video_collaboration_desk.jpg",
-    isPhoto: true,
+    name: "Yealink MeetingBar A20",
+    category: "Video Bar",
+    desc: "Dedicated video bar for small rooms with 20MP AI camera.",
+    tags: ["20MP Camera", "Auto Framing"],
+    img: "/images/Yealink/Yealink MeetingBar A20.png"
   },
   {
-    category: "Bluetooth Headset",
-    name: "BH71 Pro Headset",
-    desc: "Mono Bluetooth 5.2 headset with AI hybrid noise cancellation, a 20-hour talk time, and a portable USB-C charging case.",
-    badge1: "Certified for",
-    badge2: "Unified Communications",
-    img: "/images/yealink-bh71.png",
-    isPhoto: false,
+    name: "Yealink MeetingBar A30",
+    category: "Video Bar",
+    desc: "Dual-camera video bar for medium rooms with smart tracking.",
+    tags: ["Dual Camera", "Speaker Tracking"],
+    img: "/images/Yealink/Yealink MeetingBar A30.webp"
   },
   {
-    category: "Speakerphone",
-    name: "CP700 Speakerphone",
-    desc: "Portable Bluetooth speakerphone with a 360° microphone pickup, Cortana support, and a 12-hour battery — perfect for huddle rooms.",
-    badge1: "Certified for",
-    badge2: "Microsoft Teams",
-    img: "/images/yealink-t54w.png",
-    isPhoto: false,
+    name: "Yealink MVC S40",
+    category: "Teams Room System",
+    desc: "Windows-based Teams Room system for small-to-medium rooms.",
+    tags: ["Touch Panel", "Wireless Sharing"],
+    img: "/images/Yealink/Yealink MVC S40.jpg"
   },
   {
+    name: "Yealink MVC S60",
+    category: "Teams Room System",
+    desc: "Comprehensive Teams Room solution with AI-powered camera.",
+    tags: ["AI Camera", "Touch Panel"],
+    img: "/images/Yealink/Yealink MVC S60.jpg"
+  },
+  {
+    name: "Yealink MVC S90",
+    category: "Teams Room System",
+    desc: "Pro-level Teams Room system designed for extra-large spaces.",
+    tags: ["Multi-Camera", "Pro Audio"],
+    img: "/images/Yealink/Yealink MVC S90.webp"
+  },
+  {
+    name: "Yealink MVC940",
+    category: "Teams Room System",
+    desc: "High-end AV integration system for extra-large boardrooms.",
+    tags: ["PTZ Camera", "AV Integration"],
+    img: "/images/Yealink/Yealink MVC940.jpg"
+  },
+  {
+    name: "Yealink MVC860",
+    category: "Teams Room System",
+    desc: "Premium Microsoft Teams Room system for medium and large rooms.",
+    tags: ["4K Dual-Eye", "Presenter Tracking"],
+    img: "/images/Yealink/Yealink MVC860.png"
+  },
+  {
+    name: "Yealink MVC640",
+    category: "Teams Room System",
+    desc: "Standard room system featuring a 4K AI-powered PTZ camera.",
+    tags: ["4K PTZ", "Wireless Mic Option"],
+    img: "/images/Yealink/Yealink MVC640.jpg"
+  },
+  {
+    name: "Yealink DeskVision A24",
+    category: "Desk Device",
+    desc: "24-inch collaborative desktop touch display for personal use.",
+    tags: ["24\" Touch", "Teams Display"],
+    img: "/images/Yealink/Yealink DeskVision A24.png"
+  },
+  {
+    name: "Yealink DeskVision A24 (Zoom Edition)",
+    category: "Desk Device",
+    desc: "Dedicated personal Zoom workspace with a 24-inch touch screen.",
+    tags: ["Zoom Rooms", "24\" Touch"],
+    img: "/images/Yealink/Yealink DeskVision A24 (Zoom Edition).png"
+  },
+  {
+    name: "Yealink CP965 Conference Phone",
     category: "Conference Phone",
-    name: "CP960 Conference Phone",
-    desc: "Flagship touch-screen conference phone with an 8-metre pickup range, built-in Wi-Fi and Bluetooth, and Zoom/Teams certification.",
-    badge1: "Certified for",
-    badge2: "Zoom & Teams",
-    img: "/images/yealink-w73p.png",
-    isPhoto: false,
+    desc: "Flagship IP conference phone delivering HD audio for large rooms.",
+    tags: ["Android 9.0", "13-Mic Array"],
+    img: "/images/Yealink/Yealink CP965 Conference Phone.png"
   },
   {
-    category: "4G Mobile Phone",
-    name: "W56H 4G Handset",
-    desc: "4G-enabled DECT handset with HD voice, built-in phonebook for 1,000 contacts, and up to 30 hours of standby — built for remote workers.",
-    badge1: "Enterprise",
-    badge2: "Mobile Solution",
-    img: "/images/realistic_business_networking_rack_1776077491291.png",
-    isPhoto: false,
+    name: "Yealink CP925 Conference Phone",
+    category: "Conference Phone",
+    desc: "Touch-sensitive conference phone geared for small to medium rooms.",
+    tags: ["7-Mic Array", "Bluetooth"],
+    img: "/images/Yealink/Yealink CP925 Conference Phone.png"
   },
+  {
+    name: "Yealink WH66 Wireless Headset",
+    category: "Wireless Headset",
+    desc: "Industry-leading UC workstation with DECT wireless headset.",
+    tags: ["UC Workstation", "Acoustic Shield"],
+    img: "/images/Yealink/Yealink WH66 Wireless Headset.jpg"
+  },
+  {
+    name: "Yealink WH67 Wireless Headset",
+    category: "Wireless Headset",
+    desc: "Convertible DECT wireless headset workstation for flexible wear.",
+    tags: ["Convertible", "Touch Screen"],
+    img: "/images/Yealink/Yealink WH67 Wireless Headset.jpg"
+  },
+  {
+    name: "Yealink UVC40 USB Video Bar",
+    category: "USB Video Bar",
+    desc: "All-in-one USB video bar providing premium audio and video.",
+    tags: ["20MP Camera", "8-Mic Array"],
+    img: "/images/Yealink/Yealink UVC40 USB Video Bar.webp"
+  },
+  {
+    name: "Yealink UVC84 Camera",
+    category: "PTZ Camera",
+    desc: "4K PTZ camera delivering lifelike video for medium/large rooms.",
+    tags: ["4K Resolution", "12x Optical Zoom"],
+    img: "/images/Yealink/Yealink UVC84 Camera.png"
+  },
+  {
+    name: "Yealink RoomPanel Scheduling Display",
+    category: "Scheduling Display",
+    desc: "8-inch interactive meeting room scheduling panel.",
+    tags: ["8\" Touch", "RFID / NFC"],
+    img: "/images/Yealink/Yealink RoomPanel Scheduling Display.jpg"
+  },
+  {
+    name: "Yealink WPP30 Wireless Presentation Pod",
+    category: "Presentation Pod",
+    desc: "4K wireless presentation pod for immediate content sharing.",
+    tags: ["4K Sharing", "Plug-and-Play"],
+    img: "/images/Yealink/Yealink WPP30 Wireless Presentation Pod.png"
+  },
+  {
+    name: "Yealink SmartVision 60",
+    category: "360° Camera",
+    desc: "Intelligent 360-degree panoramic camera for modern huddle rooms.",
+    tags: ["360° Panoramic", "Multi-Stream"],
+    img: "/images/Yealink/Yealink SmartVision 60.webp"
+  }
 ];
 
-const VendorTechnologyBlock = () => {
+const VendorProductShowcase = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -350 : 350;
+      const scrollAmount = direction === 'left' ? -356 : 356;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="py-14 md:py-20 bg-white border-y border-slate-100 overflow-hidden">
-      <div className="container mx-auto px-6 md:px-8 max-w-[1400px]">
+    <section className="py-14 md:py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
 
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-10">
@@ -493,10 +561,10 @@ const VendorTechnologyBlock = () => {
                 <span className="text-[12px] md:text-[13px] font-extrabold text-slate-400 uppercase tracking-[0.2em]">Global Hardware Partner</span>
               </div>
               <h2 className="c9-section-heading mb-5">
-                The Full Technology Picture
+                Enterprise-Ready Collaboration Hardware
               </h2>
               <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-xl">
-                We handle the complete infrastructure stack — from certified Yealink endpoints to enterprise-grade security and networking.
+                Deploy industry-leading Yealink devices across meeting rooms, desks, and shared spaces—fully integrated with Microsoft Teams and Zoom.
               </p>
             </div>
           </FadeIn>
@@ -505,14 +573,14 @@ const VendorTechnologyBlock = () => {
             <div className="flex items-center gap-3 pb-6">
               <button
                 onClick={() => scroll('left')}
-                className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
+                className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] shadow-sm transition-all"
                 aria-label="Scroll left"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
                 onClick={() => scroll('right')}
-                className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
+                className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] shadow-sm transition-all"
                 aria-label="Scroll right"
               >
                 <ChevronRight size={20} />
@@ -523,45 +591,40 @@ const VendorTechnologyBlock = () => {
 
         {/* Carousel */}
         <FadeIn delay={0.15}>
-          <div className="relative -mx-6 md:mx-0">
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-
+          <div className="relative">
             <div
               ref={scrollRef}
-              className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar px-6 md:px-0 py-4"
+              className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar py-4"
             >
-              {c9HardwareCatalogue.map((prod, idx) => (
+              {yealinkShowcaseProducts.map((prod, idx) => (
                 <div
                   key={idx}
-                  className="shrink-0 w-[80vw] sm:w-[320px] snap-center rounded-2xl border border-slate-100 hover:border-[#5D00D6]/20 hover:shadow-[0_20px_40px_rgba(93,0,214,0.06)] transition-all duration-500 flex flex-col group bg-white"
+                  className="shrink-0 w-[85vw] sm:w-[320px] snap-start rounded-2xl border border-slate-100 hover:border-[#5D00D6]/20 hover:shadow-[0_20px_40px_rgba(93,0,214,0.06)] transition-all duration-500 flex flex-col bg-white h-auto group"
                 >
-                  <div className="relative w-full aspect-[4/3] bg-white rounded-t-2xl overflow-hidden flex items-center justify-center">
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm border border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-wider px-2 py-1 rounded-sm z-10">
-                      {prod.category}
-                    </div>
+                  <div className="relative w-full aspect-[4/3] bg-white rounded-t-2xl overflow-hidden flex items-center justify-center p-6 border-b border-slate-50">
                     <img
                       src={prod.img}
                       alt={prod.name}
-                      className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${
-                        prod.isPhoto ? 'object-cover' : 'object-contain p-8'
-                      }`}
+                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
 
-                  <div className="p-8 flex flex-col flex-1">
-                    {/* Badge */}
-                    <div className="inline-flex flex-col border border-[#1d4ed8] rounded-[2px] overflow-hidden mb-6 self-start">
-                      <div className="bg-[#1d4ed8] text-white text-[8px] font-black uppercase tracking-widest px-4 py-1.5">
-                        {prod.badge1}
-                      </div>
-                      <div className="text-[#1d4ed8] text-[9px] font-extrabold px-4 py-1 bg-white">
-                        {prod.badge2}
-                      </div>
+                  <div className="p-7 flex flex-col flex-1">
+                    <div className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-wider mb-2">
+                      {prod.category}
                     </div>
 
-                    <h3 className="text-[18px] font-extrabold text-slate-900 tracking-tight mb-3 leading-tight">{prod.name}</h3>
-                    <p className="text-[13px] font-medium text-slate-500 leading-relaxed">{prod.desc}</p>
+                    <h3 className="text-[17px] font-extrabold text-slate-900 tracking-tight mb-2 leading-snug">{prod.name}</h3>
+                    
+                    <p className="text-[13px] font-medium text-slate-500 leading-relaxed mb-6 line-clamp-1">{prod.desc}</p>
+                    
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      {prod.tags.map((tag, i) => (
+                        <span key={i} className="text-[10px] font-bold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wide">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -569,10 +632,28 @@ const VendorTechnologyBlock = () => {
           </div>
         </FadeIn>
 
+        {/* Optional CTA */}
+        <FadeIn delay={0.2}>
+          <div className="mt-12 text-center md:text-left">
+            <a
+              href="#lead-builder"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('lead-builder')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20 group"
+            >
+              Design My Meeting Rooms <ArrowRight size={18} className="group-hover:translate-x-1" />
+            </a>
+          </div>
+        </FadeIn>
+
       </div>
     </section>
   );
 };
+
+
 
 /* ─────────────────────────────────────────────────────────
    SECTION 4 — WHY C9
@@ -935,10 +1016,12 @@ export default function GreenfieldPage() {
   return (
     <main className="min-h-screen bg-white">
       <Hero />
+      <HeroHighlighter />
       <WpClientTicker />
       <PrioritySolutionsBlock />
       <Slider />
-      <VendorTechnologyBlock />
+      <VendorProductShowcase />
+
       <WhyC9 />
       <LeadBuilder />
       <RiskReversal />
