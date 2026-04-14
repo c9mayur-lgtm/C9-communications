@@ -51,9 +51,7 @@ export const metadata = {
 export default function StrategyConsultingPage() {
   return (
     <main className="font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-      <Navbar />
-      <Breadcrumbs />
-      <Hero />
+                  <Hero />
       <Recognition />
       <WhatItMeans />
       <EngagementModel />

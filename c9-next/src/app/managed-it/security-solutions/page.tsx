@@ -52,9 +52,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
 export default function SecuritySolutionsPage() {
   return (
     <main className="font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-      <Navbar />
-      <Breadcrumbs />
-      <Hero />
+                  <Hero />
       <ThreatReality />
       <TwoLayers />
       <Baseline />

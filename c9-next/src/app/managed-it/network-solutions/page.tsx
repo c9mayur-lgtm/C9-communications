@@ -56,9 +56,7 @@ const NETWORK_FAQS = [
 export default function NetworkSolutionsPage() {
   return (
     <main className="min-h-screen bg-white font-['Proxima_Nova']">
-      <Navbar />
-      <Breadcrumbs />
-      <Hero />
+                  <Hero />
       <PrivateNetworks />
       <TechComparison />
       <SubServices />
@@ -84,7 +82,6 @@ export default function NetworkSolutionsPage() {
         />
       </section>
 
-      <WpFooter />
-    </main>
+          </main>
   )
 }

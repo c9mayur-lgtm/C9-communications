@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/components/layout/Navbar";
-import { WpFooter } from "@/components/layout/WpFooter";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
@@ -24,9 +21,7 @@ export const metadata: Metadata = {
 export default function InboundServicesPage() {
   return (
     <main className="min-h-screen bg-white managed-it-base">
-      <Navbar />
-      <Breadcrumbs />
-      
+                  
       <InboundHero />
       <WpClientTicker />
       <InboundAdvantage />
@@ -46,7 +41,6 @@ export default function InboundServicesPage() {
         />
       </div>
 
-      <WpFooter />
-    </main>
+          </main>
   );
 }

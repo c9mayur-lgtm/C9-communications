@@ -1,8 +1,5 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Navbar } from '@/components/layout/Navbar';
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
-import { WpFooter } from '@/components/layout/WpFooter';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
@@ -30,9 +27,7 @@ export const metadata: Metadata = {
 export default function FastFibrePage() {
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
-      <Breadcrumbs />
-      
+                  
       <Hero />
       <WhyFastFibre />
       <Plans />
@@ -54,7 +49,6 @@ export default function FastFibrePage() {
         />
       </div>
 
-      <WpFooter />
-    </main>
+          </main>
   );
 }

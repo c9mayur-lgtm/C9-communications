@@ -1,8 +1,5 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Navbar } from '@/components/layout/Navbar';
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
-import { WpFooter } from '@/components/layout/WpFooter';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { Testimonials } from '@/components/sections/Testimonials';
@@ -30,9 +27,7 @@ export const metadata: Metadata = {
 export default function ContactCentrePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
-      <Breadcrumbs />
-      <ContactCentreHero />
+                  <ContactCentreHero />
       <WpClientTicker />
       <OmniChannel />
       <TransformSection />
@@ -42,7 +37,6 @@ export default function ContactCentrePage() {
       <RelatedServices />
       <ContactCentreCta />
       <WpConsultationForm />
-      <WpFooter />
-    </div>
+          </div>
   );
 }

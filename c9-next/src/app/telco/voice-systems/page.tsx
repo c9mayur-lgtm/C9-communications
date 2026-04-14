@@ -1,13 +1,10 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
-import { WpFooter } from '@/components/layout/WpFooter';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 
 import { VoiceHero } from '@/components/voice-systems/VoiceHero';
-import { Navbar } from '@/components/layout/Navbar';
 import { VoiceProblems } from '@/components/voice-systems/VoiceProblems';
 import { VoiceSystemOverview } from '@/components/voice-systems/VoiceSystemOverview';
 import { VoiceDualAudience } from '@/components/voice-systems/VoiceDualAudience';
@@ -29,9 +26,7 @@ export const metadata: Metadata = {
 export default function VoiceSystemsPage() {
   return (
     <main className="min-h-screen bg-white managed-it-base">
-      <Navbar />
-      <Breadcrumbs />
-      <VoiceSmartLeadModal />
+                  <VoiceSmartLeadModal />
       {/* Hero is now just the content */}
       <VoiceHero />
 
@@ -70,7 +65,6 @@ export default function VoiceSystemsPage() {
         />
       </div>
 
-      <WpFooter />
-    </main>
+          </main>
   );
 }

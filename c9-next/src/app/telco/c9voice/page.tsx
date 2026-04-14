@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/components/layout/Navbar";
-import { WpFooter } from "@/components/layout/WpFooter";
 import { Hero } from "@/components/sections/c9-phone-system/Hero";
 import { WhatIsC9PhoneSystem } from "@/components/sections/c9-phone-system/WhatIsC9PhoneSystem";
 import { C9PhoneSystemAdvantage } from "@/components/sections/c9-phone-system/C9PhoneSystemAdvantage";
@@ -13,7 +11,6 @@ import { FinalCTA } from "@/components/sections/c9-phone-system/FinalCTA";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "C9 Voice Cloud Phone System | C9 Communications",
@@ -28,9 +25,7 @@ export const metadata: Metadata = {
 export default function C9VoicePage() {
   return (
     <main className="min-h-screen bg-white managed-it-base">
-      <Navbar />
-      <Breadcrumbs />
-      
+                  
       <Hero />
       <WpClientTicker />
       <WhatIsC9PhoneSystem />
@@ -58,7 +53,6 @@ export default function C9VoicePage() {
         />
       </div>
 
-      <WpFooter />
-    </main>
+          </main>
   );
 }

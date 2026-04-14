@@ -27,9 +27,7 @@ export const metadata = {
 export default function CloudServicesPage() {
   return (
     <main className="min-h-screen bg-white font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-      <Navbar />
-      <Breadcrumbs />
-      <Hero />
+                  <Hero />
       <DualAudience />
       {/* <CloudScope /> */}
       <BlandExplorer />

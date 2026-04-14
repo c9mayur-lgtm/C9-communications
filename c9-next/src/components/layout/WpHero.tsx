@@ -9,12 +9,12 @@ import { HeroHighlighter } from '@/components/common/HeroHighlighter';
 
 export const WpHero = () => {
   const pathname = usePathname();
-  const isHome = pathname === '/';
+  const isHome = pathname === '/' || pathname === '/business' || pathname === '/greenfield' || pathname === '/enterprise';
   const { audience } = useAudience();
 
   const paddingClass = isHome
     ? "pt-20 pb-10 md:pt-28 md:pb-12 lg:pt-32 lg:pb-14"
-    : "pt-12 pb-10 md:pt-16 md:pb-12 lg:pt-16 lg:pb-14";
+    : "pt-4 pb-10 md:pt-6 md:pb-12 lg:pt-8 lg:pb-14";
 
   const content = {
     startup: {

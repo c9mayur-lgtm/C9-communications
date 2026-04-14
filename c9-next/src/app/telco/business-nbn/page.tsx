@@ -1,6 +1,3 @@
-import { Navbar } from '@/components/layout/Navbar';
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
-import { WpFooter } from '@/components/layout/WpFooter';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { ServiceTestimonialKajabi } from '@/components/wordpress/ServiceTestimonialKajabi';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
@@ -33,9 +30,7 @@ export const metadata = {
 export default function BusinessNBNPage() {
   return (
     <main className="bg-white" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-      <Navbar />
-      <Breadcrumbs />
-      <Hero />
+                  <Hero />
       <AccreditationBar />
       <TheBusinessUpgrade />
       <PlanComparison />
@@ -84,7 +79,6 @@ export default function BusinessNBNPage() {
           formTitle="Schedule Strategy Session"
         />
       </section>
-      <WpFooter />
-    </main>
+          </main>
   );
 }

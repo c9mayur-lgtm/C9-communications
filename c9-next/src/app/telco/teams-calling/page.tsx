@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/components/layout/Navbar";
-import { WpFooter } from "@/components/layout/WpFooter";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
@@ -23,9 +20,7 @@ export const metadata: Metadata = {
 export default function TeamsCallingPage() {
   return (
     <main className="min-h-screen bg-white managed-it-base">
-      <Navbar />
-      <Breadcrumbs />
-      
+                  
       <TeamsCallingHero />
       <WpClientTicker />
       <TeamsCallingAdvantage />
@@ -44,7 +39,6 @@ export default function TeamsCallingPage() {
         />
       </div>
 
-      <WpFooter />
-    </main>
+          </main>
   );
 }

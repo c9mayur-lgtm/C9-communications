@@ -26,9 +26,7 @@ export const metadata = {
 export default function InfrastructurePage() {
   return (
     <main className="bg-white text-[#1A1A2E] font-['Proxima_Nova']">
-      <Navbar />
-      <Breadcrumbs />
-      <Hero />
+                  <Hero />
       <Credibility />
       <InfraScope />
       <HowWeWork />
@@ -47,7 +45,6 @@ export default function InfrastructurePage() {
           formTitle="Schedule Strategy Session"
         />
       </section>
-      <WpFooter />
-    </main>
+          </main>
   )
 }

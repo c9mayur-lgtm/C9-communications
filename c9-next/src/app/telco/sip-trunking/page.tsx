@@ -1,8 +1,5 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Navbar } from '@/components/layout/Navbar';
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
-import { WpFooter } from '@/components/layout/WpFooter';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { BusinessAdvisor } from '@/components/wordpress/BusinessAdvisor';
@@ -29,9 +26,7 @@ export const metadata: Metadata = {
 export default function SipTrunkingPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
-      <Breadcrumbs />
-      <SipTrunkingHero />
+                  <SipTrunkingHero />
       <WpClientTicker />
       <WhatIsSip />
       <SipTrunkingFeatures />
@@ -39,7 +34,6 @@ export default function SipTrunkingPage() {
       <SipTrunkingPlans />
       <SipTrunkingCta />
       <WpConsultationForm />
-      <WpFooter />
-    </div>
+          </div>
   );
 }

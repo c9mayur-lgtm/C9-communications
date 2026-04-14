@@ -1,7 +1,4 @@
 import { Metadata } from 'next';
-import { Navbar } from "@/components/layout/Navbar";
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { WpFooter } from "@/components/layout/WpFooter";
 import { ServiceTestimonialKajabi } from "@/components/wordpress/ServiceTestimonialKajabi";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
 import Hero from "@/components/sections/mobile-plans/Hero";
@@ -27,9 +24,7 @@ export const metadata: Metadata = {
 export default function MobilePlansPage() {
   return (
     <main className="min-h-screen bg-white" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-      <Navbar />
-      <Breadcrumbs />
-      <Hero />
+                  <Hero />
       <WhyC9Mobile />
       <Plans />
       <WhatsIncluded />
@@ -48,7 +43,6 @@ export default function MobilePlansPage() {
           formTitle="Schedule Strategy Session"
         />
       </section>
-      <WpFooter />
-    </main>
+          </main>
   );
 }

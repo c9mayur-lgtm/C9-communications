@@ -30,7 +30,7 @@ export const Hero = () => {
 
   return (
   <>
-    <section className="relative min-h-[90vh] bg-white pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-[90vh] bg-white pt-12 pb-16 overflow-hidden">
       {/* Animated Orbs */}
       <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-brand-purple/10 rounded-full blur-[100px] animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-dark-purple/5 rounded-full blur-[100px] animate-pulse delay-700" />
