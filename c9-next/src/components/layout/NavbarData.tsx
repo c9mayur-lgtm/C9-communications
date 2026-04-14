@@ -343,7 +343,7 @@ export const BUSINESS_MODERN_WORKPLACE = {
         {
           heading: 'Services',
           items: [
-            { icon: <LayoutGrid size={14} />, label: 'Productivity',               path: '#', active: true },
+            { icon: <LayoutGrid size={14} />, label: 'Productivity',               path: '/modern-workplace/productivity', active: true },
             { icon: <Monitor size={14} />,    label: 'Communication Tools',        path: '#' },
             { icon: <Shield size={14} />,     label: 'Secure Remote Work',         path: '#' },
             { icon: <Database size={14} />,   label: 'Compliance & Data',          path: '#' },
@@ -506,7 +506,7 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
         {
           heading: 'Enterprise Workplace',
           items: [
-            { icon: <LayoutGrid size={14} />, label: 'Microsoft 365 Enterprise',    path: '#' },
+            { icon: <LayoutGrid size={14} />, label: 'Microsoft 365 Enterprise',    path: '/modern-workplace/productivity' },
             { icon: <Monitor size={14} />,    label: 'Enterprise Device Management', path: '#' },
             { icon: <Shield size={14} />,     label: 'Secure Remote Work',           path: '#' },
             { icon: <Database size={14} />,   label: 'Compliance & Data Governance', path: '#' },
@@ -659,7 +659,7 @@ export const MEGA_MAP: Record<string, any> = {
 export const TABS = [
   { name: 'IT Solutions',     menuKey: 'it-solutions',     path: '/managed-it' },
   { name: 'Telco',            menuKey: 'telco',            path: '/solutions/telco' },
-  { name: 'Modern Workplace', menuKey: 'modern-workplace', path: '/solutions/modern-workplace' },
+  { name: 'Modern Workplace', menuKey: 'modern-workplace', path: '/modern-workplace/productivity' },
   { name: 'Company',          menuKey: 'company',          path: '/about' },
   { name: 'Resources',        menuKey: 'resources',        path: '/resources' },
 ];

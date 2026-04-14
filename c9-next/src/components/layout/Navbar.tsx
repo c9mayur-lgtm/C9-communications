@@ -183,9 +183,9 @@ const TopUtilityBar = () => {
   const { audience, setAudience } = useAudience();
 
   const tracks = [
-    { key: 'startup',    label: 'GREENFIELD' },
-    { key: 'business',   label: 'BUSINESS' },
-    { key: 'enterprise', label: 'ENTERPRISE' }
+    { key: 'startup',    label: 'GREENFIELD', path: '/greenfield' },
+    { key: 'business',   label: 'BUSINESS',   path: '/business' },
+    { key: 'enterprise', label: 'ENTERPRISE', path: '/enterprise' }
   ];
 
   return (
@@ -193,8 +193,9 @@ const TopUtilityBar = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px] flex items-center justify-between">
         <div className="flex items-center gap-1 p-0.5 bg-gray-100 rounded-full border border-gray-200/50">
           {tracks.map((track) => (
-            <button
-              key={track.key}
+            <Link 
+              key={track.key} 
+              href={track.path}
               onClick={() => setAudience(track.key as any)}
               className={`px-5 py-1.5 text-[11px] font-bold tracking-wider rounded-full transition-all duration-300 ${
                 audience === track.key 
@@ -203,7 +204,7 @@ const TopUtilityBar = () => {
               }`}
             >
               {track.label}
-            </button>
+            </Link>
           ))}
         </div>
         

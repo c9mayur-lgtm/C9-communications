@@ -21,7 +21,7 @@ export function ConditionalHeader() {
         {isHomepageV2 && <AudienceSwitcher />}
         <Navbar />
       </div>
-      <div className={isHomepageV2 ? "mt-[72px] lg:mt-[160px]" : "mt-[72px] lg:mt-[160px]"}>
+      <div className="mt-[70px] lg:mt-[112px]">
         <Breadcrumbs />
       </div>
     </>

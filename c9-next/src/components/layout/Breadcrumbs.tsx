@@ -50,13 +50,13 @@ const routeLabels: Record<string, string> = {
 export function Breadcrumbs() {
   const pathname = usePathname();
   
-  // Don't show on home page
-  if (pathname === '/') return null;
+  // Don't show on main landing pages as they act as home pages
+  if (pathname === '/' || pathname === '/business' || pathname === '/enterprise' || pathname === '/greenfield') return null;
 
   const pathSegments = pathname.split('/').filter(Boolean);
 
   return (
-    <div className="w-full bg-white pt-5 pb-1 c9-breadcrumbs relative z-40">
+    <div className="w-full bg-white pt-2 pb-1 c9-breadcrumbs relative z-40">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <Breadcrumb>
           <BreadcrumbList className="flex-wrap items-center">
