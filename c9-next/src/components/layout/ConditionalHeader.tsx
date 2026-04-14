@@ -6,27 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { AudienceSwitcher } from "@/components/layout/AudienceSwitcher";
 
-const pagesWithSelfNavFooter = [
-  '/managed-it/helpdesk-support',
-  '/managed-it/outsourcing',
-  '/managed-it/strategy-consulting',
-  '/managed-it/security-solutions',
-  '/managed-it/backup-disaster-recovery',
-  '/managed-it/cloud-services',
-  '/managed-it/network-solutions',
-  '/managed-it/infrastructure',
-  '/telco/business-nbn',
-  '/telco/fast-fibre',
-  '/telco/enterprise-ethernet',
-  '/telco/mobile-plans',
-  '/telco/c9-phone-system',
-  '/telco/c9voice',
-  '/telco/inbound-services',
-  '/telco/teams-calling',
-  '/telco/sip-trunking',
-  '/telco/contact-centre',
-  '/telco/voice-systems',
-];
+const pagesWithSelfNavFooter: string[] = ['/managed'];
 
 export function ConditionalHeader() {
   const pathname = usePathname();

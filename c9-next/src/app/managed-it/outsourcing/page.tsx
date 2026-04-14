@@ -1,6 +1,3 @@
-import { Navbar } from "@/components/layout/Navbar"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WpFooter as Footer } from "@/components/layout/WpFooter"
 import Hero from "@/components/sections/outsourcing/Hero"
 import SituationRecognition from "@/components/sections/outsourcing/SituationRecognition"
 import WhatYouGet from "@/components/sections/outsourcing/WhatYouGet"
@@ -48,8 +45,6 @@ export const metadata = {
 export default function ITOutsourcingPage() {
   return (
     <main className="font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-      <Navbar />
-      <Breadcrumbs />
       <Hero />
       <SituationRecognition />
       <WhatYouGet />
@@ -70,7 +65,7 @@ export default function ITOutsourcingPage() {
         formTitle="Request Outsourcing Proposal"
       />
       
-      <Footer />
+
     </main>
   )
 }

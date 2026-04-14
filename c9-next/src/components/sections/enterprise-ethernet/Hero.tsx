@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, ShieldCheck, MapPin, Search, Loader2 } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
+import { HeroHighlighter } from '@/components/common/HeroHighlighter';
 
 export default function Hero() {
   const { setInquiryMessage } = useInquiry();
@@ -31,7 +32,8 @@ export default function Hero() {
   };
 
   return (
-      <section className="relative py-8 md:py-12 bg-white overflow-hidden min-h-[70vh] flex items-center" >
+    <>
+      <section className="relative pt-8 pb-10 md:pt-12 md:pb-14 bg-white overflow-hidden min-h-[70vh]" >
         {/* Ambient background effect */}
         <div className="absolute top-0 right-[-10%] w-[60%] h-full bg-[#5D00D6]/5 blur-[120px] rounded-full pointer-events-none -z-10" />
 
@@ -209,10 +211,10 @@ export default function Hero() {
                   </div>
                </motion.div>
             </div>
-
           </div>
         </div>
       </section>
+      <HeroHighlighter />
+    </>
   );
 }
-

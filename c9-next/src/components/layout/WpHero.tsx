@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 import { useAudience } from '@/components/context/AudienceContext';
+import { HeroHighlighter } from '@/components/common/HeroHighlighter';
 
 export const WpHero = () => {
   const pathname = usePathname();
@@ -12,8 +13,8 @@ export const WpHero = () => {
   const { audience } = useAudience();
 
   const paddingClass = isHome
-    ? "pt-20 pb-14 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24"
-    : "pt-12 pb-14 md:pt-16 md:pb-20 lg:pt-16 lg:pb-24";
+    ? "pt-20 pb-10 md:pt-28 md:pb-12 lg:pt-32 lg:pb-14"
+    : "pt-12 pb-10 md:pt-16 md:pb-12 lg:pt-16 lg:pb-14";
 
   const content = {
     startup: {
@@ -37,13 +38,13 @@ export const WpHero = () => {
       image: "/images/hero_business.png"
     },
     enterprise: {
-      title: "Running multiple sites shouldn't mean managing multiple IT vendors",
-      description: "Stop juggling multiple Telco providers and IT companies. We bring everything under one accountable system — Connectivity, Voice, and IT — across every location nationwide.",
-      cta1: "Get Enterprise Assessment",
+      title: "Enterprise IT, Telco & Workplace — Controlled as One System",
+      description: "Replace fragmented vendors with a single accountable operational layer across all locations.",
+      cta1: "Book Enterprise Consultation",
       cta1Href: "#consultation-section",
-      cta2: "Talk to an Advisor",
-      cta2Href: "tel:1800000299",
-      tags: ["20 Years Experience", "100% AU-Based Engineers", "Zero Vendor Coordination"],
+      cta2: "Review Enterprise Capability",
+      cta2Href: "#capabilities-section",
+      tags: ["Single Operational Control", "Vendor Consolidation", "Multi-Site Standardization"],
       image: "/images/hero_enterprise.png"
     }
   };
@@ -59,7 +60,8 @@ export const WpHero = () => {
   };
 
   return (
-    <section className={`${paddingClass} relative overflow-hidden flex items-center min-h-[520px] lg:min-h-[600px]`}>
+  <>
+    <section className={`${paddingClass} relative overflow-hidden min-h-[520px] lg:min-h-[600px]`}>
 
       {/* ── Mobile/Tablet: full-bleed background image with overlay ── */}
       <div className="absolute inset-0 xl:hidden">
@@ -142,9 +144,10 @@ export const WpHero = () => {
             <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/60 via-transparent to-transparent opacity-60" />
           </div>
-
         </div>
       </div>
     </section>
+    <HeroHighlighter />
+  </>
   );
 };

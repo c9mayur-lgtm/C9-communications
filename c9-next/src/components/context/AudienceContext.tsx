@@ -19,7 +19,7 @@ export const AudienceProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   // Sync with URL on load and path change
   useEffect(() => {
-    if (pathname.includes('/startups')) {
+    if (pathname.includes('/startups') || pathname.includes('/greenfield')) {
       setAudienceState('startup');
     } else if (pathname.includes('/enterprise')) {
       setAudienceState('enterprise');
@@ -39,7 +39,7 @@ export const AudienceProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     localStorage.setItem('c9_audience', newAudience);
     
     // Navigate based on selection if not already on the correct path
-    const targetPath = newAudience === 'startup' ? '/startups' : 
+    const targetPath = newAudience === 'startup' ? '/greenfield' : 
                        newAudience === 'enterprise' ? '/enterprise' : '/business';
     
     if (!pathname.includes(targetPath)) {

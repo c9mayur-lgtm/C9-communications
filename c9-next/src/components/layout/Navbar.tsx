@@ -47,11 +47,11 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             
             {/* PRODUCT/SOLUTION LISTS (DYNAMIC COLUMNS) */}
             {data.columns?.map((col: any, ci: number) => (
-              <div key={ci} className="p-8 border-r border-gray-50 flex flex-col gap-10">
-                <div className="space-y-8">
+              <div key={ci} className="p-6 border-r border-gray-50 flex flex-col gap-6">
+                <div className="space-y-6">
                   {col.sections.map((sec: any, si: number) => (
                     <div key={si}>
-                      <div className="flex items-center justify-between mb-5 border-b border-gray-50 pb-2">
+                      <div className="flex items-center justify-between mb-3 border-b border-gray-50 pb-1.5">
                         <h4 className="c9-eyebrow !text-[9px] !text-[#5D00D6]/40 leading-none">{sec.heading}</h4>
                       </div>
                       <div className="flex flex-col gap-3.5">
@@ -75,10 +75,10 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             {/* Spacer removed intentionally — layout now uses dynamic fr columns */}
 
             {/* VISUAL HIGHLIGHTS COLUMN (HARDWARE OR CHALLENGES) */}
-            <div className="p-10 border-r border-gray-50 bg-[#FCFBFE]/30">
+            <div className="p-7 border-r border-gray-50 bg-[#FCFBFE]/30">
               {data.hardware ? (
                 <>
-                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-8 opacity-40">Hardware Selection</h4>
+                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">Hardware Selection</h4>
                   <div className="grid grid-cols-2 gap-4">
                     {data.hardware.map((h: any, i: number) => (
                       <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all border-b-2 border-b-transparent hover:border-b-[#5D00D6] duration-300">
@@ -92,7 +92,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                 </>
               ) : (
                 <>
-                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-8 opacity-40">
+                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">
                     {data.layout === 'solutions' ? 'Strategic Challenges' : 'Workplace Evolution'}
                   </h4>
                   <div className="grid grid-cols-2 gap-4">
@@ -113,10 +113,10 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
             </div>
 
             {/* SIDEBAR COLUMN */}
-            <div className="p-10 bg-[#FCFBFE]">
+            <div className="p-7 bg-[#FCFBFE]">
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-8 opacity-40">
+                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">
                     {data.sidebar?.heading || "Actionable Support"}
                   </h4>
                   
@@ -139,22 +139,14 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                        </div>
                        <Link href={data.sidebar.path || '#'} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] hover:translate-x-2 transition-transform py-2 group">
                           {data.sidebar.button} 
-                          <div className="p-1 rounded-full bg-[#5D00D6]/10 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
-                            <ChevronRight size={14} />
-                          </div>
                        </Link>
                     </div>
                   ) : (
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3.5">
                       {(data.sidebar?.items || []).map((item: any, i: number) => (
-                        <Link key={i} href={item.path || '#'} className="group flex items-center gap-4 transition-all">
-                          <div className="p-2.5 bg-white rounded-xl border border-gray-100 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm group-hover:shadow-md group-hover:-translate-y-0.5">
-                            {item.icon || <ChevronRight size={14} />}
-                          </div>
-                          <div className="flex flex-col">
-                            <span className="text-[12.5px] font-bold text-slate-700 group-hover:text-[#5D00D6] transition-colors leading-[1.1]">{item.label || item.title}</span>
-                            {item.desc && <p className="text-[10.5px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
-                          </div>
+                        <Link key={i} href={item.path || '#'} className="group flex flex-col transition-all">
+                          <span className="text-[13px] font-bold text-slate-700 group-hover:text-[#5D00D6] transition-colors leading-tight">{item.label || item.title}</span>
+                          {item.desc && <p className="text-[10px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
                         </Link>
                       ))}
                     </div>
@@ -162,8 +154,8 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                 </div>
 
                 {!data.sidebar?.title && (
-                  <div className="mt-8 pt-8 border-t border-gray-200/60">
-                    <Link href="/consultation" className="group flex items-center justify-between p-5 bg-[#5D00D6] rounded-2xl shadow-xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
+                  <div className="mt-6 pt-6 border-t border-gray-200/60">
+                    <Link href="/consultation" className="group flex items-center justify-between p-4 bg-[#5D00D6] rounded-2xl shadow-xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
                       <div className="flex flex-col">
                         <span className="text-white/60 text-[10px] uppercase font-bold tracking-widest mb-1">Expert Led</span>
                         <span className="text-white font-bold text-[14px]">Free Consultation</span>
@@ -197,14 +189,14 @@ const TopUtilityBar = () => {
   ];
 
   return (
-    <div className="bg-[#f8f9fa] border-b border-gray-100 py-2.5 hidden lg:block">
+    <div className="bg-[#f8f9fa] border-b border-gray-100 py-1.5 hidden lg:block">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px] flex items-center justify-between">
-        <div className="flex items-center gap-1.5 p-1 bg-gray-100 rounded-full border border-gray-200/50">
+        <div className="flex items-center gap-1 p-0.5 bg-gray-100 rounded-full border border-gray-200/50">
           {tracks.map((track) => (
             <button
               key={track.key}
               onClick={() => setAudience(track.key as any)}
-              className={`px-6 py-2 text-[12px] font-bold tracking-wider rounded-full transition-all duration-300 ${
+              className={`px-5 py-1.5 text-[11px] font-bold tracking-wider rounded-full transition-all duration-300 ${
                 audience === track.key 
                   ? 'bg-[#5D00D6] text-white shadow-md' 
                   : 'text-slate-400 hover:text-slate-600'
@@ -407,15 +399,10 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                       key={i} 
                                       href={item.path || '#'} 
                                       onClick={onClose}
-                                      className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100 shadow-sm"
+                                      className="flex flex-col gap-1 py-1"
                                     >
-                                      <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6]">
-                                        {item.icon || <ChevronRight size={14} />}
-                                      </div>
-                                      <div className="flex flex-col">
-                                        <span className="text-[14px] font-bold text-slate-700 leading-tight">{item.label || item.title}</span>
-                                        {item.desc && <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.desc}</p>}
-                                      </div>
+                                      <span className="text-[15px] font-bold text-slate-700 leading-tight">{item.label || item.title}</span>
+                                      {item.desc && <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.desc}</p>}
                                     </Link>
                                   ))}
                                 </div>
@@ -424,8 +411,8 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
                             {/* Handling Sidebar without items (like Modern Workplace) */}
                             {menuData?.sidebar && !menuData.sidebar.items && (
-                                <div className="bg-[#F8F7FF] p-6 rounded-3xl mt-2 border border-[#5D00D6]/5">
-                                    <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-4 opacity-40">
+                                <div className="bg-[#F8F7FF] p-5 rounded-3xl mt-2 border border-[#5D00D6]/5">
+                                    <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-3 opacity-40">
                                         {menuData.sidebar.heading}
                                     </h4>
                                     <div className="flex flex-col gap-4">
@@ -511,7 +498,7 @@ export const Navbar = () => {
       <TopUtilityBar />
       <nav 
         className={`transition-all duration-500 border-b bg-white/95 backdrop-blur-md ${
-          isScrolled ? 'py-2.5 shadow-sm border-gray-100' : 'py-4 border-gray-100'
+          isScrolled ? 'py-1.5 shadow-sm border-gray-100' : 'py-2.5 border-gray-100'
         }`}
         onMouseLeave={handleLeave}
       >
@@ -521,7 +508,7 @@ export const Navbar = () => {
                 <img 
                   src="/images/c9_logo_scrolled.svg" 
                   alt="C9 Communications" 
-                  className="h-[44px] w-auto object-contain" 
+                  className="h-[40px] w-auto object-contain" 
                 />
             </Link>
           </div>
@@ -573,7 +560,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-full left-0 right-0 z-50 pointer-events-none"
+            className="absolute top-full left-0 right-0 z-50 pointer-events-auto"
             onMouseEnter={() => handleEnter(openMenu)}
             onMouseLeave={handleLeave}
           >

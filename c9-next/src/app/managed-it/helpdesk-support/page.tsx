@@ -1,6 +1,3 @@
-import { Navbar } from "@/components/layout/Navbar"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WpFooter as Footer } from "@/components/layout/WpFooter"
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm"
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback"
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner"
@@ -33,8 +30,6 @@ const helpdeskFaqs = [
 export default function HelpdeskSupportPage() {
   return (
     <main className="min-h-screen bg-white font-sans" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-      <Navbar />
-      <Breadcrumbs />
       <Hero />
       <Recognition />
       <WhatsCovered />
@@ -50,7 +45,6 @@ export default function HelpdeskSupportPage() {
       <div className="-my-8"><WpFAQAndFeedback showTestimonials={false} faqItems={helpdeskFaqs} /></div>
       <Testimonials />
       <WpConsultationForm showHeader={false} eyebrow="" title="Ready to fix your helpdesk experience?" formTitle="Request a Helpdesk Proposal" />
-      <Footer />
     </main>
   )
 }
