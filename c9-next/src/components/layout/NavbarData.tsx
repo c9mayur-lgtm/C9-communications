@@ -188,7 +188,7 @@ export const GREENFIELD_MODERN_WORKPLACE = {
         {
           heading: 'Physical Security',
           items: [
-            { icon: <Video size={14} />,  label: 'CCTV & People Counting', path: '#' },
+            { icon: <Video size={14} />,  label: 'CCTV & People Count', path: '/modern-workplace/cctv-people-count' },
             { icon: <Lock size={14} />,   label: 'Access Control',          path: '#' },
             { icon: <UserPlus size={14} />, label: 'Visitor Management',    path: '#' },
           ]
@@ -354,7 +354,7 @@ export const BUSINESS_MODERN_WORKPLACE = {
         {
           heading: 'Hardware & Physical',
           items: [
-            { icon: <Video size={14} />,  label: 'CCTV & People Count',   path: '#' },
+            { icon: <Video size={14} />,  label: 'CCTV & People Count',   path: '/modern-workplace/cctv-people-count' },
             { icon: <Printer size={14} />, label: 'Managed Print',         path: '#' },
             { icon: <UserPlus size={14} />, label: 'Visitor Management',   path: '#' },
           ]
@@ -516,7 +516,7 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
         {
           heading: 'Physical Security & Ops',
           items: [
-            { icon: <Video size={14} />,   label: 'AI CCTV & People Count', path: '#' },
+            { icon: <Video size={14} />,   label: 'CCTV & People Count', path: '/modern-workplace/cctv-people-count' },
             { icon: <Lock size={14} />,    label: 'Access Control Systems',  path: '#' },
             { icon: <Printer size={14} />, label: 'Managed Print (Fleet)',    path: '#' },
           ]
