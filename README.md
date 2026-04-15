@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# C9 Communications: Enterprise Telco & IT Solutions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![C9 Communications Banner](/public/og-image.png)
 
-Currently, two official plugins are available:
+A high-performance, enterprise-grade web application for **C9 Communications**, Australia's leading provider of managed IT, business telco, and modern workplace solutions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Project Status: Next.js Elevation Completed
+The project has been successfully migrated from a Vite-based SPA to **Next.js 16 (App Router)** to ensure maximum SEO performance, superior page loads, and enterprise-grade scalability.
 
-## React Compiler
+## 🛠 Tech Stack
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS v4
+- **UI Components:** Shadcn/UI (Radix Primitives)
+- **Animations:** Framer Motion 12 (snappy, enterprise-tuned interactions)
+- **Icons:** Lucide React
+- **Deployment:** Vercel (Edge-optimized)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏗 Key Features
+- **Modern Workplace Suite:** High-fidelity landing pages for Productivity, Collaboration, and Endpoint Management.
+- **Enterprise Telco:** Solutions for Business NBN, Enterprise Ethernet, and Cloud Voice Systems.
+- **Global Design System:** Consistent brand identity across all touchpoints with a focus on "Indigo Witch" and "Royal Violet" color palettes.
+- **Performance Optimized:** Zero heavy image dependencies where CSS/SVG equivalents exist.
 
-## Expanding the ESLint configuration
+## 👨‍💻 Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Getting Started
+```bash
+# Install dependencies
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Run the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build & Production
+```bash
+# Generate optimized production build
+npm run build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start production server
+npm run start
 ```
+
+## 📄 Documentation
+For detailed architecture decisions, component inventory, and design tokens, refer to:
+- [DEVELOPMENT.md](./DEVELOPMENT.md) — Progress, ADRs, and Tech Stack.
+- [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) — Brand guidelines and CSS tokens.
+
+---
+© 2026 C9 Communications Australia. All rights reserved.

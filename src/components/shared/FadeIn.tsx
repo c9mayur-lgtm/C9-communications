@@ -1,38 +1,52 @@
-import React, { useRef, type ReactNode } from 'react';
+'use client';
+
+import React from 'react';
 import { motion } from 'framer-motion';
 
 interface FadeInProps {
-  children: ReactNode;
+  children: React.ReactNode;
   delay?: number;
-  className?: string;
-  direction?: 'up' | 'down' | 'left' | 'right' | 'none';
-  style?: React.CSSProperties;
   duration?: number;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'none';
+  distance?: number;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export const FadeIn = ({
   children,
   delay = 0,
-  className = '',
+  duration = 0.5,
   direction = 'up',
-  style,
-  duration = 0.8,
+  distance = 20,
+  className = '',
+  style = {},
 }: FadeInProps) => {
-  const ref = useRef(null);
-  
-  const initial =
-    direction === 'up' ? { opacity: 0, y: 32 } :
-    direction === 'down' ? { opacity: 0, y: -32 } :
-    direction === 'left' ? { opacity: 0, x: -32 } :
-    direction === 'right' ? { opacity: 0, x: 32 } :
-    { opacity: 0 };
+  const directions = {
+    up: { y: distance },
+    down: { y: -distance },
+    left: { x: distance },
+    right: { x: -distance },
+    none: {},
+  };
 
   return (
     <motion.div
-      ref={ref}
-      initial={initial}
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ 
+        opacity: 0, 
+        ...directions[direction] 
+      }}
+      whileInView={{ 
+        opacity: 1, 
+        x: 0, 
+        y: 0 
+      }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ 
+        duration, 
+        delay, 
+        ease: [0.21, 0.47, 0.32, 0.98] 
+      }}
       className={className}
       style={style}
     >

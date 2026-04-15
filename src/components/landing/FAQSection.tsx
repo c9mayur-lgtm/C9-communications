@@ -1,3 +1,5 @@
+'use client';
+
 import { FadeIn } from '../shared/FadeIn';
 import {
   Accordion,
