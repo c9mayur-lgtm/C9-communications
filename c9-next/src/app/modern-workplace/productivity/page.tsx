@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, Shield, Zap, Clock, Lock, ShieldCheck, Mail, Users, Settings, ChevronDown, Laptop, MessageSquare, Database, Headphones, HardDrive } from 'lucide-react';
+import { ArrowRight, Check, Shield, Zap, Clock, Lock, ShieldCheck, Mail, Users, Settings, ChevronDown, Laptop, MessageSquare, Database, Headphones, HardDrive, CheckCircle2 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import {
   P, PL, T, TM, TM2, BD,
