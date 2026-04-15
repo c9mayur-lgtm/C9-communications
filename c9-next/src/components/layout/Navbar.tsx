@@ -255,35 +255,12 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             </button>
           </div>
           
-          {/* Audience Switcher Pills */}
+          {/* Audience Switcher - Fixed Mobile View */}
           <div className="px-6 py-3 border-b border-gray-100 shrink-0 bg-[#f8f9fa]">
             <div className="flex items-center gap-1.5 p-1 bg-gray-100 rounded-full border border-gray-200/50">
               {[
-                { key: 'startup', label: 'Greenfield Business Setup' },
+                { key: 'startup', label: 'Greenfield' },
                 { key: 'business', label: 'Business' },
-                { key: 'enterprise', label: 'Enterprise' }
-              ].map((track) => (
-                <button
-                  key={track.key}
-                  onClick={() => setAudience(track.key as any)}
-                  className={`flex-1 py-2 text-[12px] font-bold tracking-wider rounded-full transition-all duration-300 ${
-                    audience === track.key
-                      ? 'bg-[#5D00D6] text-white shadow-md'
-                      : 'text-slate-400 hover:text-slate-600'
-                  }`}
-                >
-                  {track.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Audience Switcher Pills - Mobile */}
-          <div className="px-6 py-3 border-b border-gray-100 shrink-0 bg-[#f8f9fa]">
-            <div className="flex items-center gap-1.5 p-1 bg-gray-100 rounded-full border border-gray-200/50">
-              {[
-                { key: 'startup',    label: 'Greenfield Business Setup' },
-                { key: 'business',   label: 'Business' },
                 { key: 'enterprise', label: 'Enterprise' }
               ].map((track) => (
                 <button

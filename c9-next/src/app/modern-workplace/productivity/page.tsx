@@ -311,7 +311,7 @@ const ManagedScopeUI = () => {
 
   return (
     <div 
-      className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-start h-[520px]"
+      className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-stretch min-h-[600px]"
     >
       
       {/* ── LEFT SIDE: TECHNICAL GRID VISUAL ── */}
@@ -342,8 +342,8 @@ const ManagedScopeUI = () => {
       </div>
 
       {/* ── RIGHT SIDE: INTERACTIVE LIST ── */}
-      <div className="flex flex-col h-full overflow-hidden">
-        <div className="flex flex-col space-y-1 mb-4 flex-shrink-0">
+      <div className="flex flex-col h-full">
+        <div className="flex flex-col space-y-1">
           {items.map((item, i) => (
             <div key={i} className="flex flex-col border-b border-gray-50 last:border-0">
               <button 
@@ -369,42 +369,43 @@ const ManagedScopeUI = () => {
                   </>
                 )}
               </button>
+
+              <AnimatePresence>
+                {active === i && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <div className="py-6 space-y-6">
+                      <p className="text-[15px] text-gray-400 italic font-proxima leading-relaxed border-l-2 border-purple-100 pl-6">
+                        &quot;{item.quote}&quot;
+                      </p>
+
+                      <div className="bg-[#F8FAFF] rounded-3xl p-6 border border-[#5D00D6]/5 relative">
+                        <div className="absolute top-[-10px] right-6 px-3 py-0.5 bg-[#5D00D6] rounded-md text-white text-[9px] font-bold uppercase tracking-widest shadow-xl shadow-purple-500/20">
+                          THE C9 SOLUTION
+                        </div>
+                        <p className="text-[14px] text-gray-600 font-medium mb-4 leading-relaxed">
+                          {item.content}
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-x-6 gap-y-2">
+                          {item.bullets.map((b, bi) => (
+                            <div key={bi} className="flex items-start gap-2">
+                              <Check size={13} className="text-[#5D00D6] mt-0.5 shrink-0" />
+                              <span className="text-[12px] text-gray-500 font-bold">{b}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
-        </div>
-
-        <div className="relative flex-grow">
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={active}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="py-2 space-y-4"
-            >
-              <p className="text-[15px] text-gray-400 italic font-proxima leading-relaxed border-l-2 border-purple-100 pl-6">
-                &quot;{items[active].quote}&quot;
-              </p>
-
-              <div className="bg-[#F8FAFF] rounded-3xl p-6 border border-[#5D00D6]/5 relative">
-                <div className="absolute top-[-10px] right-6 px-3 py-0.5 bg-[#5D00D6] rounded-md text-white text-[9px] font-bold uppercase tracking-widest shadow-xl shadow-purple-500/20">
-                  THE C9 SOLUTION
-                </div>
-                <p className="text-[14px] text-gray-600 font-medium mb-4 leading-relaxed">
-                  {items[active].content}
-                </p>
-                <div className="grid md:grid-cols-2 gap-x-6 gap-y-2">
-                  {items[active].bullets.map((b, bi) => (
-                    <div key={bi} className="flex items-start gap-2">
-                      <Check size={13} className="text-[#5D00D6] mt-0.5 shrink-0" />
-                      <span className="text-[12px] text-gray-500 font-bold">{b}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
         </div>
       </div>
     </div>
@@ -433,107 +434,140 @@ const PainCard = ({ icon: Icon, title, body, delay }: { icon: any, title: string
   </motion.div>
 );
 
+const sectionClassName = 'py-12 md:py-16';
+const containerClassName = 'mx-auto w-full max-w-[1240px] px-6';
+const cardClassName = 'group rounded-[24px] border border-gray-100 bg-white p-6 md:p-8 hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-500 overflow-hidden relative';
+
 export default function ProductivityPage() {
   return (
-    <div className="bg-white min-h-screen pt-12 overflow-x-hidden" style={{ fontFamily: '"Proxima Nova","Inter",system-ui,sans-serif' }}>
+    <div className="bg-[#F8FAFF] min-h-screen pt-4 text-[#0C1024] overflow-x-hidden" style={{ fontFamily: '"Proxima Nova","Inter",system-ui,sans-serif' }}>
 
       {/* ══ HERO ══════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden px-6 py-10" style={{ background: '#F8FAFF' }}>
+      <section className="pt-8 pb-12 md:pt-10 md:pb-16 relative bg-gradient-to-b from-white via-[#F8FAFF]/50 to-white overflow-hidden">
+        {/* Subtle dynamic background elements */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#5D00D6]/[0.02] rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
         
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle, #5D00D625 0%, transparent 70%)', filter: 'blur(80px)' }} />
-          <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full opacity-15" style={{ background: 'radial-gradient(circle, #a855f720 0%, transparent 70%)', filter: 'blur(60px)' }} />
-        </div>
-
-        <div className="container mx-auto max-w-[1240px] relative z-10">
-          <div className="grid lg:grid-cols-[1fr_1fr] gap-16 items-center">
+        <div className={`${containerClassName} relative z-10`}>
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-8 items-center">
             
-            <div className="flex flex-col gap-8 max-w-2xl">
+            {/* Left */}
+            <div className="max-w-[700px] pt-2 md:pt-6">
               <FadeUp>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border" style={{ background: 'rgba(93,0,214,0.06)', borderColor: 'rgba(93,0,214,0.2)' }}>
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-[11px] font-bold uppercase tracking-[0.2em]" style={{ color: P }}>Managed Microsoft 365</span>
+                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#DCCDF8] bg-white px-3 py-1.5 shadow-sm">
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#5D00D6]">
+                    <div className="h-2 w-2 rounded-full bg-white animate-pulse" />
+                  </div>
+                  <span className="text-[12px] font-bold uppercase tracking-[0.15em] text-[#5D00D6] pr-1">Managed Microsoft 365</span>
                 </div>
               </FadeUp>
-
               <FadeUp delay={0.1}>
-                <h1 className="c9-hero-title !text-[44px] md:!text-[56px] !leading-[1.05] !tracking-[-0.05em] text-[#0c1024]">
-                  Microsoft 365 — <br />
-                  <span style={{ background: `linear-gradient(135deg, ${P} 0%, #a855f7 100%)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                    fully managed, secured, and optimized
-                  </span>
-                  <br />by Australian experts
+                <h1 className="c9-hero-title mb-6 !leading-[1.15]">
+                  Microsoft 365 — <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-purple-600">managed, secured, and optimized.</span>
                 </h1>
               </FadeUp>
-
               <FadeUp delay={0.2}>
-                <p className="text-[18px] md:text-[20px] leading-[1.6] text-gray-600 font-medium">
-                  M365 licensing is easy. Configuring it properly, securing it against threats, and managing it ongoing — that&apos;s where most businesses struggle. C9 handles the entire lifecycle so you get productivity without the complexity.
+                <p className="mb-10 text-[18px] md:text-[21px] leading-relaxed text-[#4C587E]">
+                  M365 licensing is easy. Configuring it properly, securing it against threats, and managing it ongoing — that&apos;s where most businesses struggle. C9 handles the entire lifecycle.
                 </p>
               </FadeUp>
 
               <FadeUp delay={0.3}>
                 <div className="flex flex-wrap items-center gap-4">
-                  <Link href="#managed-scope" className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-bold text-[16px] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl active:scale-95" style={{ background: `linear-gradient(135deg, ${P} 0%, #7B1FE8 100%)`, boxShadow: '0 4px 24px rgba(93,0,214,0.35)' }}>
-                    See What We Manage <ArrowRight size={17} />
+                  <Link href="#managed-scope" className="inline-flex items-center justify-center h-14 rounded-full bg-[#5D00D6] px-8 text-[16px] font-bold text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-xl active:scale-95">
+                    See What We Manage
                   </Link>
-                  <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-[16px] border transition-all duration-300 hover:border-[#5D00D6] hover:text-[#5D00D6]" style={{ color: TM2, borderColor: BD, background: '#fff' }}>
+                  <Link href="/contact" className="inline-flex items-center justify-center h-14 rounded-full border border-[#DCCDF8] bg-white px-8 text-[16px] font-bold text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50">
                     Book M365 Audit
                   </Link>
                 </div>
               </FadeUp>
 
               <FadeUp delay={0.4}>
-                <div className="flex flex-wrap gap-6 mt-4">
+                <div className="flex flex-wrap gap-5 mt-8">
                   {['Expert Setup', '24/7 Security', 'Onshore Support'].map(t => (
                     <div key={t} className="flex items-center gap-2">
-                      <Check size={16} className="text-green-500" />
-                      <span className="text-[13px] font-bold text-gray-500 uppercase tracking-wider">{t}</span>
+                      <div className="flex h-5 w-5 items-center justify-center rounded-full bg-green-100/50">
+                        <Check size={14} className="text-green-600" />
+                      </div>
+                      <span className="text-[12px] font-bold text-gray-500 uppercase tracking-widest">{t}</span>
                     </div>
                   ))}
                 </div>
               </FadeUp>
             </div>
 
-            <FadeUp delay={0.3} className="relative group">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-black/5 aspect-[4/3]">
-                <img 
-                  src="/images/m365-managed-dashboard.png" 
-                  alt="M365 Managed Dashboard" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
-                
-                {/* Overlay Badge */}
-                <div className="absolute top-6 left-6 p-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 flex flex-col gap-1">
-                   <div className="flex items-center gap-2">
-                     <ShieldCheck size={16} className="text-[#5D00D6]" />
-                     <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">Security Status</span>
+            {/* Right: Rich Interactive Visual */}
+            <ScaleIn delay={0.5} className="relative hidden lg:block h-[500px] w-full">
+              <div className="absolute top-10 right-0 w-[500px] h-[400px] rounded-[32px] bg-[#f0f4fa] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-200 group flex items-center justify-center relative">
+                 <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5 pointer-events-none" />
+                 
+                 {/* Dashboard UI mock inside */}
+                 <div className="w-[85%] h-[85%] bg-white rounded-[20px] shadow-2xl border border-gray-100 overflow-hidden flex flex-col z-10 transition-transform group-hover:scale-105 duration-1000">
+                   <div className="h-10 bg-gray-50 border-b border-gray-100 flex items-center px-4 justify-between shrink-0">
+                     <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Global Admin Dashboard</div>
+                     <div className="flex gap-1.5">
+                        <div className="w-2 h-2 rounded-full bg-red-400" />
+                        <div className="w-2 h-2 rounded-full bg-yellow-400" />
+                        <div className="w-2 h-2 rounded-full bg-green-400" />
+                     </div>
                    </div>
-                   <span className="text-[18px] font-bold text-[#0c1024]">Fully Compliant</span>
-                </div>
-              </div>
-              
-              {/* Floating Decorative Card */}
-              <div className="absolute -bottom-10 -right-10 hidden md:flex p-6 bg-white rounded-3xl shadow-2xl border border-gray-100 flex-col gap-3 max-w-[240px] animate-bounce-slow">
-                <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
-                   <Users size={20} className="text-[#5D00D6]" />
-                </div>
-                <div className="text-[14px] font-bold text-[#0c1024]">24/7 Monitoring</div>
-                <p className="text-[12px] text-gray-500">Your M365 environment is actively observed for threats and downtime.</p>
-              </div>
-            </FadeUp>
+                   <div className="flex-1 p-5 flex flex-col gap-4">
+                      {/* Stats Grid */}
+                      <div className="grid grid-cols-2 gap-3">
+                         <div className="p-3 rounded-xl bg-blue-50/50 border border-blue-100 flex flex-col gap-1">
+                            <div className="text-[9px] font-bold text-blue-500 uppercase">Tenant Health</div>
+                            <div className="text-[18px] font-bold text-[#0c1024]">99.9%</div>
+                         </div>
+                         <div className="p-3 rounded-xl bg-green-50/50 border border-green-100 flex flex-col gap-1">
+                            <div className="text-[9px] font-bold text-green-500 uppercase">Sec Score</div>
+                            <div className="text-[18px] font-bold text-[#0c1024]">742/800</div>
+                         </div>
+                      </div>
+                      
+                      {/* Active Threat Monitoring */}
+                      <div className="flex-1 rounded-xl border border-gray-100 p-4 relative overflow-hidden">
+                         <div className="flex items-center justify-between mb-3">
+                            <div className="text-[11px] font-bold text-[#0c1024]">Secure Sovereignty Check</div>
+                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                         </div>
+                         <div className="space-y-2">
+                            {[1, 2].map((_, i) => (
+                              <div key={i} className="h-2 w-full bg-gray-50 rounded-full overflow-hidden">
+                                <motion.div initial={{ width: 0 }} animate={{ width: i === 0 ? "100%" : "85%" }} transition={{ duration: 2, delay: 1 }} className="h-full bg-[#5D00D6]" />
+                              </div>
+                            ))}
+                         </div>
+                         <div className="mt-4 flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-full bg-[#f4f0fa] flex items-center justify-center text-[#5D00D6]">
+                               <ShieldCheck size={16} />
+                            </div>
+                            <div className="text-[10px] font-bold text-gray-400">Australian Data Center Locked</div>
+                         </div>
+                      </div>
+                   </div>
+                 </div>
 
+                 {/* Floating Element */}
+                 <motion.div animate={{ y: [-5, 5, -5] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute -top-4 -left-6 bg-white rounded-2xl shadow-xl border border-[#DCCDF8] p-4 flex gap-3 items-center z-30">
+                    <div className="w-10 h-10 rounded-xl bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center shrink-0">
+                       <CheckCircle2 size={18} />
+                    </div>
+                    <div>
+                       <div className="text-[10px] font-bold text-gray-400 uppercase">Licensing Optimization</div>
+                       <div className="text-[14px] font-bold text-[#00875A]">$12,400 Saved</div>
+                    </div>
+                 </motion.div>
+              </div>
+            </ScaleIn>
           </div>
         </div>
       </section>
 
       {/* ══ SECTION 2: SOUND FAMILIAR? ═══════════════════════════════ */}
-      <section className="py-10 bg-white relative overflow-hidden">
+      <section className={`${sectionClassName} bg-white relative overflow-hidden`}>
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50" />
         
-        <div className="container mx-auto max-w-[1240px] px-6 relative z-10">
+        <div className={`${containerClassName} relative z-10`}>
           <div className="text-center mb-12 max-w-3xl mx-auto">
             <FadeUp>
               <div className="inline-flex items-center gap-2 bg-[#5D00D6]/5 px-4 py-2 rounded-full mb-4">
@@ -542,7 +576,7 @@ export default function ProductivityPage() {
             </FadeUp>
 
             <FadeUp delay={0.1}>
-              <h2 className="c9-section-heading !text-[32px] md:!text-[46px]">
+              <h2 className="c9-section-heading font-proxima tracking-tight font-black leading-tight">
                 Why businesses struggle with <br />
                 <span className="text-[#5D00D6]">self-managed Microsoft 365.</span>
               </h2>
@@ -586,104 +620,108 @@ export default function ProductivityPage() {
       </section>
 
       {/* ══ SECTION 3: WHAT C9 ACTUALLY MANAGES ══════════════════════ */}
-      <section id="managed-scope" className="py-10" style={{ background: '#F8FAFF' }}>
+      <section id="managed-scope" className="py-20" style={{ background: '#F8FAFF' }}>
         <div className="container mx-auto max-w-[1240px] px-6">
           <FadeUp className="text-center max-w-[900px] mx-auto mb-8">
             <Eyebrow>Full Managed Scope</Eyebrow>
-            <h2 className="c9-section-heading mb-4">The full scope of C9 M365 management</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">The full scope of C9 M365 management</h2>
             <p className="text-[17px] text-gray-500 font-medium max-w-2xl mx-auto">
-              We take total accountability for your Microsoft environment. From identity and security to devices and data, we ensure every layer is optimized and secure.
+              We take total accountability for your Microsoft environment.
             </p>
           </FadeUp>
-
-          <ManagedScopeUI />
         </div>
       </section>
 
-
       {/* ══ SECTION 4: M365 PLANS WE MANAGE ══════════════════════════ */}
-      <section className="py-10" style={{ background: '#fff' }}>
-        <div className="container mx-auto max-w-[1240px] px-6">
-          <FadeUp className="text-center max-w-[700px] mx-auto mb-12">
-            <Eyebrow>Managed Plans</Eyebrow>
-            <h2 className="c9-section-heading mb-4">We manage all Microsoft 365 plans</h2>
-            <p className="text-[18px] text-gray-500 font-medium">
+      <section className={`${sectionClassName} bg-[#0B0B0F] text-white relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/5 to-transparent pointer-events-none" />
+        <div className={`${containerClassName} relative z-10`}>
+          <div className="max-w-[760px] mx-auto text-center flex flex-col items-center mb-16">
+            <span className="text-[#A266FF] text-[12px] font-extrabold uppercase tracking-[0.3em] mb-4 block">
+              Managed Plans
+            </span>
+            <h2 className="c9-section-heading !text-white mb-6 font-proxima tracking-tight font-black leading-tight">
+              We manage all Microsoft 365 plans
+            </h2>
+            <p className="text-gray-400 text-[17px] md:text-[18px] leading-relaxed font-normal">
               Whether you need basic productivity or enterprise-grade security, we provide the licenses and the expert management to back them up.
             </p>
-          </FadeUp>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { 
-                title: 'Business Basic/Standard', 
-                best: 'Small businesses (5-50 users)',
-                included: 'Email, Teams, SharePoint',
-                mgmt: 'Tenant config, security baseline, user support',
-                price: 'From $15/user/month (license + management)',
-                color: '#5D00D6'
+              {
+                title: 'Business Basic/Standard',
+                desc: "Ideal for small businesses needing professional email and collaboration without advanced security requirements. Fully managed by C9 experts.",
+                items: ['Email & mailbox migration', 'Tenant config & DNS setup', 'Standard user support desk'],
+                badge: 'M365 CORE MANAGEMENT',
+                price: 'From $15/user/month'
               },
-              { 
-                title: 'Business Premium', 
-                best: 'Growing businesses (50-200 users)',
-                included: 'Everything in Standard + Defender, Intune',
-                mgmt: 'Full security stack, device management, compliance',
-                price: 'From $30/user/month (license + management)',
-                color: '#7B1FE8',
-                highlight: true
+              {
+                title: 'Business Premium',
+                desc: 'Our recommended baseline for growing Australian businesses. Includes full Defender security and Intune device management to meet modern security needs.',
+                items: ['Full security stack (Defender)', 'Device management (Intune)', 'Conditional Access setup'],
+                badge: 'TOTAL SECURITY STACK',
+                price: 'From $30/user/month'
               },
-              { 
-                title: 'Enterprise E3/E5', 
-                best: 'Enterprise (200+ users, multi-site)',
-                included: 'Advanced security, compliance, analytics',
-                mgmt: 'Full governance, DLP, Conditional Access, vCIO',
-                price: 'Custom enterprise pricing (volume discounts)',
-                color: '#0c1024'
+              {
+                title: 'Enterprise E3/E5',
+                desc: 'Designed for larger organisations with complex compliance, data residency, and multi-site management requirements. Comprehensive governance at scale.',
+                items: ['Advanced data governance', 'Full DLP & eDiscovery', 'Strategic vCIO consulting'],
+                badge: 'FULL TENANT GOVERNANCE',
+                price: 'Custom Enterprise Pricing'
               }
-            ].map((plan, i) => (
-              <ScaleIn key={plan.title} delay={i * 0.1}>
-                <div className={`rounded-[32px] p-10 border flex flex-col h-full transition-all duration-300 ${plan.highlight ? 'shadow-2xl shadow-purple-500/10 -translate-y-2' : 'hover:-translate-y-1'}`} style={{ borderColor: plan.highlight ? P : BD, background: '#fff' }}>
-                  <h3 className="text-[22px] font-bold text-[#0c1024] mb-4">{plan.title}</h3>
-                  <div className="flex flex-col gap-6 flex-grow">
-                     <div>
-                       <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-1">Best For</div>
-                       <div className="text-[16px] font-bold text-[#0c1024]">{plan.best}</div>
-                     </div>
-                     <div>
-                       <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-1">What&apos;s Included</div>
-                       <div className="text-[15px] font-medium text-gray-600 leading-relaxed">{plan.included}</div>
-                     </div>
-                     <div>
-                       <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-1">C9 Management</div>
-                       <div className="text-[15px] font-medium text-gray-600 leading-relaxed">{plan.mgmt}</div>
-                     </div>
-                  </div>
-                  <div className="mt-10 pt-8 border-t border-gray-100">
-                    <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-1">Investment</div>
-                    <div className="text-[16px] font-bold text-[#5D00D6]">{plan.price}</div>
+            ].map((card, idx) => (
+              <div key={idx} className="bg-[#12121A] border border-white/5 rounded-[32px] p-8 md:p-10 shadow-xl flex flex-col h-full hover:bg-[#16161F] transition-all duration-300 group">
+                <div className="mb-6 flex justify-between items-start">
+                  <h3 className="text-[22px] md:text-[24px] text-white font-bold leading-tight">{card.title}</h3>
+                </div>
+                <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow">{card.desc}</p>
+                
+                <div className="flex flex-col mb-10 border-t border-white/5 pt-2">
+                  {card.items.map((item, index) => (
+                    <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
+                      <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
+                      <span className="text-[14px] md:text-[15px] font-medium text-gray-300">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-auto">
+                  <div className="text-[#A266FF] text-[18px] font-bold mb-6">{card.price}</div>
+                  <div className="flex items-center gap-4 bg-transparent border border-white/5 rounded-2xl px-5 py-4 group-hover:border-purple-500/30 transition-colors">
+                    <div className="w-9 h-9 rounded-xl bg-[#222] border border-white/10 flex items-center justify-center shrink-0">
+                      <span className="text-[11px] font-bold text-white/80">C9</span>
+                    </div>
+                    <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">{card.badge}</span>
                   </div>
                 </div>
-              </ScaleIn>
+              </div>
             ))}
           </div>
 
-          <FadeUp delay={0.4} className="text-center">
-             <div className="text-[14px] font-bold text-gray-400 uppercase tracking-[0.2em] flex items-center justify-center gap-3">
-               <div className="h-px w-10 bg-gray-100" />
-               All plans include: Australian support, monthly reporting, security monitoring
-               <div className="h-px w-10 bg-gray-100" />
-             </div>
-          </FadeUp>
+          <div className="flex justify-center mt-16">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 h-14 rounded-full bg-[#5D00D6] hover:bg-[#7116FF] text-white font-bold text-[16px] transition-all duration-300 hover:shadow-[0_0_30px_rgba(93,0,214,0.3)] group">
+              Speak to a Licensing Expert <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+
+          <div className="flex items-center justify-center gap-3 mt-8 text-gray-200 text-[14px]">
+            <div className="h-px w-10 bg-gray-100/20" />
+            All plans include: Australian support, monthly reporting, security monitoring
+            <div className="h-px w-10 bg-gray-100/20" />
+          </div>
         </div>
       </section>
 
       {/* ══ SECTION 5: MIGRATION & ONBOARDING ═══════════════════════ */}
-      <section className="py-10" style={{ background: PL }}>
+      <section className="py-20" style={{ background: PL }}>
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="grid lg:grid-cols-[1fr_2fr] gap-12">
             <div>
               <FadeUp>
                 <Eyebrow>The Process</Eyebrow>
-                <h2 className="c9-section-heading mb-4">How we migrate your team to managed M365</h2>
+                <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">How we migrate your team to managed M365</h2>
                 <p className="text-[18px] text-gray-500 font-medium mb-6">
                   Moving platforms is high-stakes. Our phased approach ensures zero data loss and zero downtime for your staff.
                 </p>
@@ -737,8 +775,8 @@ export default function ProductivityPage() {
       </section>
 
       {/* ══ SECTION 6: CLIENT SUCCESS (CASE STUDY) ════════════════════ */}
-      <section className="py-10 bg-white">
-        <div className="container mx-auto max-w-[1240px] px-6">
+      <section className={`${sectionClassName} bg-white`}>
+        <div className={containerClassName}>
           <FadeUp className="text-center mb-10">
             <span className="text-[12px] font-bold text-[#5D00D6] uppercase tracking-[0.3em] font-proxima">Client Success</span>
           </FadeUp>
@@ -780,14 +818,14 @@ export default function ProductivityPage() {
       </section>
 
       {/* ══ BENTO FEATURE SECTION ═══════════════════════════════════ */}
-      <section className="py-10" style={{ background: PL }}>
-        <div className="container mx-auto max-w-[1240px] px-6">
+      <section className={sectionClassName} style={{ background: PL }}>
+        <div className={containerClassName}>
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             
             <FadeUp>
               <div className="flex flex-col gap-8">
                 <Eyebrow>Why C9 Managed M365</Eyebrow>
-                <h2 className="c9-section-heading">More than just software. It&apos;s peace of mind.</h2>
+                <h2 className="c9-section-heading font-proxima tracking-tight font-black leading-tight">More than just software. It&apos;s peace of mind.</h2>
                 
                 <div className="flex flex-col gap-6">
                   {[
@@ -854,14 +892,14 @@ export default function ProductivityPage() {
       />
 
       {/* ══ SECTION 8: STRONG CTA ════════════════════════════════════ */}
-      <section className="py-10 bg-white border-t border-gray-50">
+      <section className="py-20 bg-white border-t border-gray-50">
         <div className="container mx-auto max-w-[1000px] px-6">
           <FadeUp className="bg-gray-50 rounded-[48px] p-12 md:p-16 text-center relative overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px]" style={{ background: 'radial-gradient(ellipse, rgba(93,0,214,0.05) 0%, transparent 70%)' }} />
             
             <div className="relative z-10">
               <Eyebrow>Take the first step</Eyebrow>
-              <h2 className="c9-section-heading !text-[32px] md:!text-[46px] !leading-[1.1] !tracking-[-0.04em] mb-6 text-[#0c1024]">
+              <h2 className="c9-section-heading !leading-[1.1] mb-6 text-[#0c1024] font-proxima tracking-tight font-black leading-tight">
                 Stop managing M365 yourself.<br />Let Australian experts handle it.
               </h2>
               

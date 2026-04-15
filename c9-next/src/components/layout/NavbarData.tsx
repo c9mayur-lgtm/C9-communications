@@ -344,11 +344,11 @@ export const BUSINESS_MODERN_WORKPLACE = {
           heading: 'Services',
           items: [
             { icon: <LayoutGrid size={14} />, label: 'Productivity',               path: '/modern-workplace/productivity', active: true },
-            { icon: <Monitor size={14} />,    label: 'Communication Tools',        path: '#' },
+            { icon: <Monitor size={14} />,    label: 'Communication Tools',        path: '/modern-workplace/communication-tools' },
             { icon: <Shield size={14} />,     label: 'Secure Remote Work',         path: '#' },
             { icon: <Database size={14} />,   label: 'Compliance & Data',          path: '#' },
-            { icon: <UserPlus size={14} />,   label: 'Collaboration',              path: '#' },
-            { icon: <Smartphone size={14} />, label: 'Device & Endpoint Mgmt',    path: '#' },
+            { icon: <UserPlus size={14} />,   label: 'Collaboration',              path: '/modern-workplace/collaboration' },
+            { icon: <Smartphone size={14} />, label: 'Device & Endpoint Mgmt',    path: '/modern-workplace/endpoint-management' },
           ]
         },
         {
@@ -507,10 +507,10 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
           heading: 'Enterprise Workplace',
           items: [
             { icon: <LayoutGrid size={14} />, label: 'Microsoft 365 Enterprise',    path: '/modern-workplace/productivity' },
-            { icon: <Monitor size={14} />,    label: 'Enterprise Device Management', path: '#' },
+            { icon: <Monitor size={14} />,    label: 'Enterprise Device Management', path: '/modern-workplace/endpoint-management' },
             { icon: <Shield size={14} />,     label: 'Secure Remote Work',           path: '#' },
             { icon: <Database size={14} />,   label: 'Compliance & Data Governance', path: '#' },
-            { icon: <UserPlus size={14} />,   label: 'Enterprise Collaboration',     path: '#' },
+            { icon: <UserPlus size={14} />,   label: 'Enterprise Collaboration',     path: '/modern-workplace/collaboration' },
           ]
         },
         {

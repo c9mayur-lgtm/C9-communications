@@ -65,7 +65,7 @@ export function Breadcrumbs() {
                 render={(props) => (
                   <Link {...props} href="/" className="flex items-center hover:text-[#5D00D6] transition-colors">
                     <Home size={14} className="mr-1.5 translate-y-[-1px]" />
-                    <span className="text-[12px] font-bold uppercase tracking-wider" style={fontStyle}>Home</span>
+                    <span className="text-[12px] font-medium uppercase tracking-wider" style={fontStyle}>Home</span>
                   </Link>
                 )}
               />
@@ -83,13 +83,13 @@ export function Breadcrumbs() {
                 <React.Fragment key={href}>
                   <BreadcrumbItem>
                     {isLast ? (
-                      <BreadcrumbPage className="text-[12px] font-extrabold uppercase tracking-wider text-[#5D00D6]" style={fontStyle}>
+                      <BreadcrumbPage className="text-[12px] font-semibold uppercase tracking-wider text-[#5D00D6]" style={fontStyle}>
                         {label}
                       </BreadcrumbPage>
                     ) : (
                       <BreadcrumbLink 
                         render={(props) => (
-                          <Link {...props} href={href} className="text-[12px] font-bold uppercase tracking-wider hover:text-[#5D00D6] transition-colors" style={fontStyle}>
+                          <Link {...props} href={href} className="text-[12px] font-medium uppercase tracking-wider hover:text-[#5D00D6] transition-colors" style={fontStyle}>
                             {label}
                           </Link>
                         )}

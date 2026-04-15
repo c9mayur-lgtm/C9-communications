@@ -600,11 +600,11 @@ const FAQS = [
   { q:'Can you manage our existing laptops and phones?', a:'We enrol existing Windows, Mac, iOS, and Android devices into Intune without new hardware. If a refresh is needed, we source, configure, and ship ready-to-use.' },
 ];
 
-export const FAQSection = () => {
+export const FAQSection = ({ items = FAQS }: { items?: { q: string; a: string }[] }) => {
   const [open, setOpen] = useState<number|null>(null);
   return (
     <div>
-      {FAQS.map((f, i) => (
+      {items.map((f, i) => (
         <FadeUp key={i} delay={i * 0.04}>
           <div className="border-b" style={{ borderColor: BD }}>
             <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-start justify-between gap-6 py-6 text-left group">
