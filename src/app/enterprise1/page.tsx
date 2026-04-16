@@ -376,7 +376,7 @@ const Trust = () => (
         <p className="c9-body text-slate-600 mb-12">
           We focus on long-term partnerships, consistent delivery, and responsive support — ensuring your operations run without disruption.
         </p>
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
               {[
                 { name: 'Microsoft', src: '/partners/microsoft-logo-svgrepo-com.svg' },
                 { name: 'Cisco', src: '/partners/ns/cisco.png' },
@@ -384,7 +384,7 @@ const Trust = () => (
                 { name: 'HP', src: '/partners/Hewlett_Packard_Enterprise_logo.svg' },
                 { name: 'Yealink', src: '/images/clients/yealink.png' }
               ].map((v, i) => (
-                <div key={i} className="bg-white border border-slate-100 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 hover:border-[#5D00D6]/25 hover:shadow-md transition-all h-44 group">
+                <div key={i} className="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:border-[#5D00D6]/25 hover:shadow-md transition-all h-36 group">
                    <img
                      src={v.src}
                      alt={v.name}
