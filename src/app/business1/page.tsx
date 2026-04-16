@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, CheckCircle, HeadphonesIcon, Layers, MonitorOff, TrendingUp, Shield, Activity, Phone, Settings } from 'lucide-react';
+import { ArrowRight, CheckCircle, HeadphonesIcon, Layers, MonitorOff, TrendingUp, Shield, Activity, Phone, Settings, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Global shared components
@@ -127,16 +127,19 @@ const PainPoints = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="c9-eyebrow mb-4 block" style={{ color: '#e11d48' }}>THE CHALLENGE</span>
+            <span className="c9-eyebrow mb-4 block" style={{ color: '#e11d48' }}>CURRENT SETUP</span>
             <h2 className="c9-section-heading">
-              Are these issues holding your business back?
+              Is Your Current Setup Holding You Back?
             </h2>
+            <p className="c9-body mt-4 max-w-2xl mx-auto">
+              Many growing businesses deal with slow support, outdated systems, and too many vendors — impacting productivity, reliability, and growth.
+            </p>
           </div>
         </FadeIn>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pains.map((p, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:border-slate-300 transition-colors h-full">
+              <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:border-[#5D00D6]/20 transition-colors h-full">
                 <div className="w-14 h-14 rounded-xl bg-slate-50 flex items-center justify-center text-slate-800 mb-6">
                   {p.icon}
                 </div>
@@ -153,11 +156,11 @@ const PainPoints = () => {
 
 const Outcomes = () => {
   const outcomesList = [
-    { text: "Reduce downtime and keep operations running", icon: <Activity size={20} className="text-[#5D00D6]" /> },
-    { text: "Get faster, more responsive support", icon: <HeadphonesIcon size={20} className="text-[#5D00D6]" /> },
-    { text: "Simplify your IT and vendor management", icon: <Settings size={20} className="text-[#5D00D6]" /> },
-    { text: "Scale systems as your business grows", icon: <TrendingUp size={20} className="text-[#5D00D6]" /> },
-    { text: "Improve reliability across your environment", icon: <Shield size={20} className="text-[#5D00D6]" /> }
+    { text: "Eliminate downtime and keep your business running", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> },
+    { text: "Get faster, more responsive support", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> },
+    { text: "Simplify your IT and vendor management", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> },
+    { text: "Scale your systems as your business grows", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> },
+    { text: "Improve reliability across your entire environment", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> }
   ];
 
   return (
@@ -165,24 +168,24 @@ const Outcomes = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <FadeIn>
-            <span className="c9-eyebrow mb-4 block">THE OUTCOME</span>
+            <span className="c9-eyebrow mb-4 block">WHAT YOU GET</span>
             <h2 className="c9-section-heading mb-6">
-              A reliable environment designed for uninterrupted work.
+              What You Get with C9
             </h2>
             <p className="c9-body mb-8 max-w-lg">
-               When you partner with C9, you stop worrying about IT infrastructure and start focusing entirely on running your business.
+               We replace technical friction with enterprise-grade reliability, tailored specifically for the needs of growing Australian businesses.
             </p>
             <ul className="space-y-4">
               {outcomesList.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
-                  <div className="mt-1 bg-[#5D00D6]/10 p-1.5 rounded-lg shrink-0">
+                  <div className="mt-1 shrink-0">
                      {item.icon}
                   </div>
                   <span className="font-semibold text-slate-800 text-[16px]">{item.text}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => {
@@ -191,18 +194,28 @@ const Outcomes = () => {
                 }}
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-lg shadow-purple-900/20 group cursor-pointer"
               >
-                Request a Setup Review
+                Book a Consultation
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#consultation-section"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-colors cursor-pointer"
+              >
+                Request a Setup Review
               </a>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-             <div className="relative rounded-[24px] overflow-hidden bg-slate-100 aspect-square lg:aspect-[4/3]">
+             <div className="relative rounded-[24px] overflow-hidden bg-slate-100 aspect-square lg:aspect-[4/3] shadow-xl">
                 <img 
-                  src="/images/greenfield_consultation.png" 
+                  src="/images/voice_ai_realistic.jpg" 
                   className="w-full h-full object-cover" 
-                  alt="Business IT professional" 
+                  alt="Outcome" 
                   onError={(e) => (e.currentTarget as HTMLImageElement).src = '/images/hero_business.png'}
                 />
              </div>
@@ -230,10 +243,30 @@ export default function Business1Page() {
       <WpServices />
       <WpSolutions />
 
-      {/* Trust Metrics */}
+      {/* Trust Metrics: Emphasise customer-first support */}
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
+           <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { icon: <Users />, title: 'Customer-First Support', desc: 'Dedicated account managers and local engineers who understand your business.' },
+                { icon: <Shield />, title: 'Service Quality', desc: 'Strict SLAs and performance guarantees that prioritise your uptime.' },
+                { icon: <Activity />, title: 'Proactive Care', desc: 'Continuous monitoring to resolve issues before they impact your operations.' }
+              ].map((item, i) => (
+                <div key={i} className="text-center group">
+                   <div className="w-16 h-16 bg-[#5D00D6]/10 text-[#5D00D6] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
+                      {item.icon}
+                   </div>
+                   <h3 className="font-bold text-slate-900 text-lg mb-3">{item.title}</h3>
+                   <p className="text-slate-600 text-[14px]">{item.desc}</p>
+                </div>
+              ))}
+           </div>
+        </div>
+      </section>
+
       <WpWhyPartner />
       
-      {/* Ecosystem & Accreditations (strengthened focus) */}
+      {/* Ecosystem & Accreditations (show partner ecosystem clearly) */}
       <WpVendors />
       <WpCompliance />
 
@@ -270,10 +303,10 @@ export default function Business1Page() {
       <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
-          eyebrow="BUSINESS setup REVIEW"
-          title="Ready to optimise your environment?"
+          eyebrow="GROWTH & OPTIMISATION"
+          title="Ready to Scale Your Business?"
           description="Book a consultation with our experts to review your current setup, identify bottlenecks, and build a tailored plan for growth."
-          formTitle="Book a Consultation"
+          formTitle="Book My Business Review"
         />
       </section>
 
