@@ -38,7 +38,7 @@ const FadeIn = ({
    SECTION 1 — HERO
    ───────────────────────────────────────────────────────── */
 const Hero = () => (
-  <section className="relative overflow-hidden bg-white pt-6 pb-16 lg:pt-10 lg:pb-24">
+  <section className="relative overflow-hidden bg-white pt-4 pb-12 lg:pt-8 lg:pb-16">
     <div
       className="pointer-events-none absolute inset-0 opacity-[0.03]"
       style={{
@@ -112,7 +112,7 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.12} className="relative hidden lg:block">
-          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/80 aspect-[4/3] group">
+          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/80 aspect-[3/2] group">
             <img
               src="/images/greenfield_consultation.png"
               alt="C9 team planning office infrastructure"

@@ -36,7 +36,7 @@ const FadeIn = ({ children, delay = 0, className = '' }: { children: React.React
    ───────────────────────────────────────────────────────── */
 
 const BusinessHero = () => (
-  <section className="pt-20 pb-10 md:pt-28 md:pb-12 lg:pt-32 lg:pb-14 relative overflow-hidden min-h-[520px] lg:min-h-[600px] bg-white">
+  <section className="relative pt-6 pb-12 lg:pt-10 lg:pb-20 overflow-hidden bg-white">
     {/* Grid backdrop */}
     <div className="absolute inset-0 z-0">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
@@ -101,7 +101,8 @@ const BusinessHero = () => (
         </div>
 
         {/* Image right */}
-        <FadeIn delay={0.2} className="hidden xl:block w-full h-[480px] relative rounded-[32px] overflow-hidden shadow-2xl shadow-purple-900/10">
+        <FadeIn delay={0.15} className="relative hidden lg:block">
+          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/60 aspect-[3/2]">
           <img
             src="/images/hero_business.png"
             alt="Business operations powered by C9"
