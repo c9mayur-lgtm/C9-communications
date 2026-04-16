@@ -106,8 +106,8 @@ const Hero = () => (
         <FadeIn delay={0.12} className="relative hidden lg:block">
           <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/80 aspect-[4/3] group">
             <img
-              src="/images/hero_enterprise.png"
-              alt="Enterprise Operations"
+              src="/images/greenfield_support.png"
+              alt="C9 operational monitoring team"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/20 via-transparent to-transparent" />
@@ -198,6 +198,12 @@ const Capabilities = () => (
       </FadeIn>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <FadeIn className="lg:row-span-2 hidden lg:block">
+           <div className="relative h-full rounded-[24px] overflow-hidden shadow-xl">
+              <img src="/images/realistic_business_networking_rack_1776077491291.png" className="w-full h-full object-cover" alt="Enterprise network infrastructure" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#5D00D6]/20 to-transparent" />
+           </div>
+        </FadeIn>
         {capabilities.map((cap, i) => (
           <FadeIn key={i} delay={i * 0.05}>
             <div className="bg-slate-50 rounded-[24px] p-8 border border-slate-100 hover:shadow-lg hover:border-[#5D00D6]/25 hover:bg-white transition-all duration-300 h-full flex flex-col group">
@@ -215,7 +221,77 @@ const Capabilities = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 4 — WHY C9
+   SECTION 4.1 — EXISTING ENVIRONMENT
+   ───────────────────────────────────────────────────────── */
+const IntegrationContent = () => (
+  <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
+    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <FadeIn>
+          <p className="c9-eyebrow mb-4">Legacy Integration</p>
+          <h2 className="c9-section-heading mb-6">We Work With Your Existing Environment — Not Against It</h2>
+          <p className="c9-body text-slate-600 mb-6">
+            Most enterprise environments already include multiple vendors, systems, and technologies.
+          </p>
+          <p className="c9-body text-slate-600 mb-6">
+            C9 integrates into your existing setup without disruption. We take ownership of coordination, support, and performance — ensuring everything works together properly.
+          </p>
+          <p className="c9-body text-slate-600 mb-0 font-semibold italic">
+            Instead of forcing change, we bring structure and control to what you already have.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+           <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square bg-slate-50 shadow-xl">
+              <img src="/images/greenfield_consultation.png" className="w-full h-full object-cover" alt="Enterprise architectural planning" />
+           </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 4.2 — SINGLE POINT OF CONTROL
+   ───────────────────────────────────────────────────────── */
+const OperationalControl = () => (
+  <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
+    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
+       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <FadeIn className="order-2 lg:order-1">
+           <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square bg-white shadow-xl">
+              <img src="/images/it_support_geek.png" className="w-full h-full object-cover" alt="C9 operational control" />
+           </div>
+        </FadeIn>
+        <FadeIn delay={0.1} className="order-1 lg:order-2">
+          <p className="c9-eyebrow mb-4">Strategic Management</p>
+          <h2 className="c9-section-heading mb-6">One Partner. Full Control.</h2>
+          <p className="c9-body text-slate-600 mb-6">
+            C9 acts as your single point of control across your entire environment.
+          </p>
+          <p className="c9-body text-slate-600 mb-8">
+            We manage your vendors, centralise support, and bring consistency across all locations — reducing complexity without disrupting operations.
+          </p>
+          <div className="space-y-4">
+             {[
+               'One point of contact for all vendors',
+               'Centralised visibility and support',
+               'Standardised systems across locations',
+               'Reduced operational complexity over time'
+             ].map((text, i) => (
+               <div key={i} className="flex items-center gap-3">
+                  <CheckCircle size={18} className="text-[#5D00D6]" />
+                  <span className="font-bold text-slate-800 text-[15px]">{text}</span>
+               </div>
+             ))}
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 5 — WHY C9
    ───────────────────────────────────────────────────────── */
 const WhyC9 = () => (
   <section id="why-c9" className="py-16 lg:py-24 bg-[#0c1024] relative overflow-hidden">
@@ -320,6 +396,36 @@ const Trust = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
+   SECTION 6.1 — HUMAN TRUST
+   ───────────────────────────────────────────────────────── */
+const HumanTrust = () => (
+  <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
+    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <FadeIn>
+           <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
+              <img src="/images/greenfield_hero.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
+           </div>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+           <p className="c9-eyebrow mb-4">Team Ownership</p>
+           <h2 className="c9-section-heading mb-6 text-[#0c1024]">Real Support. Real People.</h2>
+           <p className="c9-body text-slate-700 mb-6">
+             When something goes wrong, you’re not dealing with tickets, delays, or generic responses.
+           </p>
+           <p className="c9-body text-slate-700 mb-6">
+             You’re speaking directly with a team that understands your environment, takes ownership, and resolves issues fast.
+           </p>
+           <p className="c9-body text-slate-700 mb-0 font-bold text-[#5D00D6]">
+             We don’t just deploy systems — we support your business every day.
+           </p>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
    SECTION 7 — FINAL CTA
    ───────────────────────────────────────────────────────── */
 const FinalCTA = () => (
@@ -360,8 +466,11 @@ export default function Enterprise1Page() {
       <PainSection />
       <Capabilities />
       <WhyC9 />
+      <IntegrationContent />
+      <OperationalControl />
       <Process />
       <Trust />
+      <HumanTrust />
       <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm

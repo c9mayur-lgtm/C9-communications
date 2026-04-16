@@ -114,40 +114,45 @@ const BusinessHero = () => (
   </section>
 );
 
-const PainPoints = () => {
-  const pains = [
-    { icon: <HeadphonesIcon size={28} />, title: "Slow support", desc: "Waiting hours or days for IT issues to be resolved." },
-    { icon: <Layers size={28} />, title: "Too many vendors", desc: "Juggling multiple contracts, bills, and account managers." },
-    { icon: <MonitorOff size={28} />, title: "Outdated systems", desc: "Legacy infrastructure creating bottlenecks and risk." },
-    { icon: <TrendingUp size={28} />, title: "Growth challenges", desc: "Technology that can't scale securely as you expand." }
+const Philosophy = () => {
+  const philosophy = [
+    { icon: <HeadphonesIcon size={24} />, title: "Rapid Response", desc: "We prioritise your uptime with local engineers who act fast." },
+    { icon: <Users size={24} />, title: "Human Accountability", desc: "No ticket black holes. You get dedicated support that takes ownership." },
+    { icon: <TrendingUp size={24} />, title: "Strategic Growth", desc: "We align your technology with your business goals, not just fixing bugs." }
   ];
 
   return (
     <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-100">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-        <FadeIn>
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="c9-eyebrow mb-4 block" style={{ color: '#e11d48' }}>CURRENT SETUP</span>
-            <h2 className="c9-section-heading">
-              Is Your Current Setup Holding You Back?
-            </h2>
-            <p className="c9-body mt-4 max-w-2xl mx-auto">
-              Many growing businesses deal with slow support, outdated systems, and too many vendors — impacting productivity, reliability, and growth.
-            </p>
-          </div>
+        <FadeIn className="text-center mb-16">
+          <p className="c9-eyebrow mb-4">Customer-First Philosophy</p>
+          <h2 className="c9-section-heading mb-6">Built on Responsive, Reliable Support</h2>
+          <p className="c9-body text-slate-600 max-w-2xl mx-auto">
+            We believe in long-term relationships, not just tickets. Our team is dedicated to your success, providing proactive management and rapid response when you need it most.
+          </p>
         </FadeIn>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pains.map((p, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
-              <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:border-[#5D00D6]/20 transition-colors h-full">
-                <div className="w-14 h-14 rounded-xl bg-slate-50 flex items-center justify-center text-slate-800 mb-6">
-                  {p.icon}
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <FadeIn>
+             <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
+                <img src="/images/it_support_geek.png" className="w-full h-full object-cover" alt="Responsive C9 support engineer" />
+             </div>
+          </FadeIn>
+          <div className="space-y-6">
+            {philosophy.map((item, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className="flex gap-5 p-6 rounded-2xl bg-white border border-slate-100 group hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-[18px] font-bold text-slate-900 mb-2">{item.title}</h3>
+                    <p className="c9-body !mb-0 !text-[15px] !leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
-                <h3 className="c9-card-title mb-3 text-[#0c1024]">{p.title}</h3>
-                <p className="c9-body text-[15px]">{p.desc}</p>
-              </div>
-            </FadeIn>
-          ))}
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -155,67 +160,40 @@ const PainPoints = () => {
 };
 
 const Outcomes = () => {
-  const outcomesList = [
-    { text: "Eliminate downtime and keep your business running", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> },
-    { text: "Get faster, more responsive support", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> },
-    { text: "Simplify your IT and vendor management", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> },
-    { text: "Scale your systems as your business grows", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> },
-    { text: "Improve reliability across your entire environment", icon: <CheckCircle size={20} className="text-[#5D00D6]" /> }
-  ];
-
   return (
     <section className="py-16 md:py-24 bg-white border-t border-slate-100">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <FadeIn>
-            <span className="c9-eyebrow mb-4 block">WHAT YOU GET</span>
-            <h2 className="c9-section-heading mb-6">
-              What You Get with C9
-            </h2>
-            <p className="c9-body mb-8 max-w-lg">
-               We replace technical friction with enterprise-grade reliability, tailored specifically for the needs of growing Australian businesses.
-            </p>
-            <ul className="space-y-4">
-              {outcomesList.map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <div className="mt-1 shrink-0">
-                     {item.icon}
-                  </div>
-                  <span className="font-semibold text-slate-800 text-[16px]">{item.text}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a
-                href="#consultation-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-lg shadow-purple-900/20 group cursor-pointer"
-              >
-                Book a Consultation
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#consultation-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-colors cursor-pointer"
-              >
-                Request a Setup Review
-              </a>
+          <div>
+            <FadeIn>
+              <p className="c9-eyebrow mb-4">Our Commitment</p>
+              <h2 className="c9-section-heading mb-6">Expertise When You Need It</h2>
+              <p className="c9-body mb-8">
+                We focus on building a genuine partnership where we understand your business goals as well as your technical needs. Our team is always available to help you navigate new challenges and scale your operations.
+              </p>
+            </FadeIn>
+            <div className="space-y-4">
+               {[
+                 'Rapid response times from local experts',
+                 'Proactive management reducing downtime',
+                 'Ongoing relationship and strategy support',
+                 'Real human accountability'
+               ].map((text, i) => (
+                 <FadeIn key={i} delay={0.1 + (i * 0.05)}>
+                   <div className="flex items-center gap-3">
+                     <CheckCircle size={18} className="text-[#5D00D6]" />
+                     <span className="font-bold text-slate-800 text-[15px]">{text}</span>
+                   </div>
+                 </FadeIn>
+               ))}
             </div>
-          </FadeIn>
-
+          </div>
           <FadeIn delay={0.2}>
-             <div className="relative rounded-[24px] overflow-hidden bg-slate-100 aspect-square lg:aspect-[4/3] shadow-xl">
+             <div className="relative rounded-[32px] overflow-hidden bg-slate-100 aspect-square lg:aspect-[4/3] shadow-2xl">
                 <img 
-                  src="/images/voice_ai_realistic.jpg" 
+                  src="/images/greenfield_consultation.png" 
                   className="w-full h-full object-cover" 
-                  alt="Outcome" 
+                  alt="Long-term C9 partnership" 
                   onError={(e) => (e.currentTarget as HTMLImageElement).src = '/images/hero_business.png'}
                 />
              </div>
@@ -227,6 +205,51 @@ const Outcomes = () => {
 };
 
 /* ─────────────────────────────────────────────────────────
+   SECTION 6 — HUMAN TRUST
+   ───────────────────────────────────────────────────────── */
+const HumanTrust = () => (
+  <section className="py-16 lg:py-24 bg-white border-y border-slate-100">
+    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <FadeIn>
+          <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
+            <img src="/images/it_support_geek.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
+          </div>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+           <p className="c9-eyebrow mb-4">Direct Access</p>
+           <h2 className="c9-section-heading mb-6 text-[#0c1024]">Real Support. Real People.</h2>
+           <p className="c9-body text-slate-700 mb-6">
+             When something goes wrong, you’re not dealing with tickets, delays, or generic responses.
+           </p>
+           <p className="c9-body text-slate-700 mb-6">
+             You’re speaking directly with a team that understands your environment, takes ownership, and resolves issues fast.
+           </p>
+           <p className="c9-body text-slate-700 mb-0 font-bold text-[#5D00D6]">
+             We don’t just deploy systems — we support your business every day.
+           </p>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 7 — FINAL CTA
+   ───────────────────────────────────────────────────────── */
+const FinalCTA = () => (
+  <section id="consultation-section" className="py-20 bg-slate-900 text-white">
+    <div className="container mx-auto px-6 text-center">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Scale Your Business?</h2>
+      <p className="text-slate-400 mb-10 max-w-xl mx-auto">Book a consultation with our experts to review your current setup, identify bottlenecks, and build a tailored plan for growth.</p>
+      <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors">
+        Book My Business Review
+      </a>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
    PAGE EXPORT
    ───────────────────────────────────────────────────────── */
 export default function Business1Page() {
@@ -236,9 +259,10 @@ export default function Business1Page() {
       <HeroHighlighter />
       <WpClientTicker />
       
-      {/* Replaced generic WpSimplifyingIT and WpHighlights with targeted Pain + Outcome blocks */}
-      <PainPoints />
+      <Philosophy />
       <Outcomes />
+      <HumanTrust />
+      <FinalCTA />
 
       <WpServices />
       <WpSolutions />

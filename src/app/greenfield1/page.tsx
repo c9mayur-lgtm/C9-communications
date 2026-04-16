@@ -114,8 +114,8 @@ const Hero = () => (
         <FadeIn delay={0.12} className="relative hidden lg:block">
           <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/80 aspect-[4/3] group">
             <img
-              src="/images/greenfield_hero.png"
-              alt="New office setup"
+              src="/images/greenfield_consultation.png"
+              alt="C9 team planning office infrastructure"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/20 via-transparent to-transparent" />
@@ -312,15 +312,15 @@ const AnxietyRemoval = () => (
           <p className="c9-eyebrow text-rose-600 mb-4">Peace of Mind</p>
           <h2 className="c9-section-heading mb-6">No Delays. No Confusion. No Last-Minute Issues.</h2>
           <p className="c9-body mb-6">
-            We coordinate everything behind the scenes — so you don’t have to chase vendors, manage timelines, or deal with technical complexity.
+            We handle everything behind the scenes — so you don’t have to chase vendors, manage timelines, or deal with technical complexity.
           </p>
           <div className="p-6 bg-slate-50 border border-slate-100 rounded-2xl flex gap-4 items-start mb-6">
              <AlertCircle className="text-rose-500 mt-1 shrink-0" size={20} />
-             <p className="c9-body !text-[15px] !mb-0 font-medium">Your entire environment is tested, ready, and operational before your business opens.</p>
+             <p className="c9-body !text-[15px] !mb-0 font-medium">Your entire environment is tested and operational before your team arrives. You are safe in our hands.</p>
           </div>
           <h3 className="text-[20px] font-bold text-slate-900 mb-4">Ready Before Day One</h3>
           <p className="c9-body">
-            Our structured approach ensures your internet, phones, and systems are fully operational before your team walks in. No last-minute surprises. No downtime at launch.
+            Our structured approach ensures your internet, phones, and systems are fully operational before your team walks in. We take full ownership of the process, reducing your risk to zero.
           </p>
         </FadeIn>
       </div>
@@ -365,7 +365,37 @@ const VendorTrust = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 7 — FINAL CTA
+   SECTION 7 — HUMAN TRUST
+   ───────────────────────────────────────────────────────── */
+const HumanTrust = () => (
+  <section className="py-16 lg:py-24 bg-white border-y border-slate-100">
+    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <FadeIn>
+          <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
+            <img src="/images/it_support_geek.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
+          </div>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+           <p className="c9-eyebrow mb-4">Ownership</p>
+           <h2 className="c9-section-heading mb-6 text-[#0c1024]">Real Support. Real People.</h2>
+           <p className="c9-body text-slate-700 mb-6">
+             When something goes wrong, you’re not dealing with tickets, delays, or generic responses.
+           </p>
+           <p className="c9-body text-slate-700 mb-6">
+             You’re speaking directly with a team that understands your environment, takes ownership, and resolves issues fast.
+           </p>
+           <p className="c9-body text-slate-700 mb-0 font-bold text-[#5D00D6]">
+             We don’t just deploy systems — we support your business every day.
+           </p>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 8 — FINAL CTA
    ───────────────────────────────────────────────────────── */
 const FinalCTA = () => (
   <section className="py-16 lg:py-24 bg-[#0c1024] relative overflow-hidden">
@@ -408,6 +438,8 @@ export default function Greenfield1Page() {
       <Differentiator />
       <AnxietyRemoval />
       <VendorTrust />
+      <HumanTrust />
+      <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
