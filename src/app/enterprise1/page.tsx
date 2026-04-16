@@ -369,7 +369,7 @@ const Process = () => (
    ───────────────────────────────────────────────────────── */
 const Trust = () => (
   <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
-    <div className="container mx-auto px-6 md:px-8 text-center" style={{ maxWidth: '900px' }}>
+    <div className="container mx-auto px-6 md:px-8 text-center" style={{ maxWidth: '1240px' }}>
       <FadeIn>
         <p className="c9-eyebrow mb-4">Experience</p>
         <h2 className="c9-section-heading mb-6">Built on Reliability and Service</h2>
