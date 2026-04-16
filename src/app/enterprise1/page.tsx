@@ -388,7 +388,7 @@ const Trust = () => (
                    <img
                      src={v.src}
                      alt={v.name}
-                     className="h-20 md:h-24 w-auto max-w-[140px] object-contain opacity-85 group-hover:opacity-100 transition-all duration-300"
+                     className="h-16 w-auto max-w-[140px] object-contain opacity-85 group-hover:opacity-100 transition-all duration-300"
                    />
                 </div>
               ))}

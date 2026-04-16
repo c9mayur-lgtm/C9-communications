@@ -354,7 +354,7 @@ const VendorTrust = () => (
              <div className="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 h-36 group hover:border-[#5D00D6]/20 transition-all shadow-sm">
                 <img 
                   src={v.src} 
-                  className="h-20 md:h-24 w-auto max-w-[140px] object-contain opacity-80 group-hover:opacity-100 transition-all" 
+                  className="h-16 w-auto max-w-[140px] object-contain opacity-80 group-hover:opacity-100 transition-all" 
                   alt={v.name} 
                 />
              </div>
