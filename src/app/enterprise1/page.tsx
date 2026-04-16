@@ -163,27 +163,27 @@ const PainSection = () => (
    ───────────────────────────────────────────────────────── */
 const capabilities = [
   {
-    icon: <Globe size={24} />,
+    icon: <Globe size={20} />,
     title: 'Multi-Site Networking',
     desc: 'Standardised, high-performance networking across all locations — ensuring consistent experience for every user.',
   },
   {
-    icon: <Network size={24} />,
+    icon: <Network size={20} />,
     title: 'SD-WAN & Connectivity',
     desc: 'Optimised traffic routing and performance across distributed environments.',
   },
   {
-    icon: <Shield size={24} />,
+    icon: <Shield size={20} />,
     title: 'Security & Firewall',
     desc: 'Enterprise-grade protection across your entire infrastructure.',
   },
   {
-    icon: <Phone size={24} />,
+    icon: <Phone size={20} />,
     title: 'Voice & Collaboration',
     desc: 'Unified communication systems for teams working across multiple locations.',
   },
   {
-    icon: <Activity size={24} />,
+    icon: <Activity size={20} />,
     title: 'Managed Services',
     desc: 'Centralised monitoring, support, and management to maintain performance and reliability.',
   },
@@ -210,7 +210,7 @@ const Capabilities = () => (
           <FadeIn key={i} delay={i * 0.05}>
             <div className="bg-slate-50 rounded-[24px] p-6 border border-slate-100 hover:shadow-lg hover:border-[#5D00D6]/25 hover:bg-white transition-all duration-300 h-full flex flex-col group">
               <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center mb-5 group-hover:bg-[#5D00D6]/15 transition-all text-[#5D00D6]">
-                {React.cloneElement(cap.icon as React.ReactElement, { size: 20 })}
+                {cap.icon}
               </div>
               <h3 className="c9-card-title !text-[17px] mb-2">{cap.title}</h3>
               <p className="c9-body !text-[14px] !leading-relaxed text-slate-600">{cap.desc}</p>
