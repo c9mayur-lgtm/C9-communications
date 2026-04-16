@@ -347,7 +347,8 @@ const VendorTrust = () => (
           { name: 'Microsoft', src: '/partners/microsoft-logo-svgrepo-com.svg' },
           { name: 'Cisco', src: '/partners/ns/cisco.png' },
           { name: 'Fortinet', src: '/partners/ns/fortinet.png' },
-          { name: 'Dell Technologies', src: '/partners/Dell_Technologies_logo.svg' }
+          { name: 'HP', src: '/partners/Hewlett_Packard_Enterprise_logo.svg' },
+          { name: 'Yealink', src: '/images/clients/yealink.png' }
         ].map((v, i) => (
           <FadeIn key={i} delay={i * 0.1}>
              <div className="bg-white border border-slate-100 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 h-44 group hover:border-[#5D00D6]/20 transition-all shadow-sm">
@@ -373,7 +374,7 @@ const HumanTrust = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <FadeIn>
           <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
-            <img src="/images/it_support_geek.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
+            <img src="/images/c9_support_engineer.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
           </div>
         </FadeIn>
         <FadeIn delay={0.1}>

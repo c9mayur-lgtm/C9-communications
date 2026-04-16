@@ -259,7 +259,7 @@ const OperationalControl = () => (
        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <FadeIn className="order-2 lg:order-1">
            <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square bg-white shadow-xl">
-              <img src="/images/it_support_geek.png" className="w-full h-full object-cover" alt="C9 operational control" />
+              <img src="/images/c9_support_engineer.png" className="w-full h-full object-cover" alt="C9 operational control" />
            </div>
         </FadeIn>
         <FadeIn delay={0.1} className="order-1 lg:order-2">
@@ -379,7 +379,8 @@ const Trust = () => (
                 { name: 'Microsoft', src: '/partners/microsoft-logo-svgrepo-com.svg' },
                 { name: 'Cisco', src: '/partners/ns/cisco.png' },
                 { name: 'Fortinet', src: '/partners/ns/fortinet.png' },
-                { name: 'Dell Technologies', src: '/partners/Dell_Technologies_logo.svg' },
+                { name: 'HP', src: '/partners/Hewlett_Packard_Enterprise_logo.svg' },
+                { name: 'Yealink', src: '/images/clients/yealink.png' }
               ].map((v, i) => (
                 <div key={i} className="bg-white border border-slate-100 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 hover:border-[#5D00D6]/25 hover:shadow-md transition-all h-44 group">
                    <img
@@ -404,7 +405,7 @@ const HumanTrust = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <FadeIn>
            <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
-              <img src="/images/greenfield_hero.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
+              <img src="/images/c9_support_engineer.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
            </div>
         </FadeIn>
         <FadeIn delay={0.1}>

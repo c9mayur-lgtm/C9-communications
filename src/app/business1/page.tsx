@@ -135,7 +135,7 @@ const Philosophy = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <FadeIn>
              <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
-                <img src="/images/it_support_geek.png" className="w-full h-full object-cover" alt="Responsive C9 support engineer" />
+                <img src="/images/c9_team_collaboration.png" className="w-full h-full object-cover" alt="Responsive C9 team collaboration" />
              </div>
           </FadeIn>
           <div className="space-y-6">
@@ -213,7 +213,7 @@ const HumanTrust = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <FadeIn>
           <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
-            <img src="/images/it_support_geek.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
+            <img src="/images/c9_support_engineer.png" className="w-full h-full object-cover" alt="Real C9 support engineers" />
           </div>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -240,7 +240,7 @@ const HumanTrust = () => (
 const FinalCTA = () => (
   <section id="consultation-section" className="py-20 bg-slate-900 text-white">
     <div className="container mx-auto px-6 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Scale Your Business?</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 !text-white">Ready to Scale Your Business?</h2>
       <p className="text-slate-400 mb-10 max-w-xl mx-auto">Book a consultation with our experts to review your current setup, identify bottlenecks, and build a tailored plan for growth.</p>
       <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors">
         Book My Business Review
