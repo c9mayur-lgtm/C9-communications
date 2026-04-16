@@ -67,7 +67,7 @@ export const WpFooter = () => {
          </div>
 
           {/* Col 4: Logo & CTA Area - Grouped Together */}
-          <div className="flex flex-col items-center lg:items-end pt-2">
+          <div className="flex flex-col items-center lg:items-center pt-2">
              <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] filter brightness-0 invert mb-8" />
              
              <Button 
