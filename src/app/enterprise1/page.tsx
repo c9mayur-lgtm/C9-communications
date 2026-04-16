@@ -77,7 +77,7 @@ const Hero = () => (
               <a
                 href="#consultation-section"
                 onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
               >
                 Talk to an Enterprise Specialist
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -85,7 +85,7 @@ const Hero = () => (
               <a
                 href="#consultation-section"
                 onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap"
               >
                 Request a Tailored Proposal
               </a>
@@ -198,20 +198,22 @@ const Capabilities = () => (
       </FadeIn>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <FadeIn className="lg:row-span-2 hidden lg:block">
-           <div className="relative h-full rounded-[24px] overflow-hidden shadow-xl">
+        {/* Visual Card */}
+        <FadeIn className="hidden lg:block">
+           <div className="relative h-full aspect-[4/3] lg:aspect-auto rounded-[24px] overflow-hidden shadow-sm border border-slate-100">
               <img src="/images/realistic_business_networking_rack_1776077491291.png" className="w-full h-full object-cover" alt="Enterprise network infrastructure" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#5D00D6]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
            </div>
         </FadeIn>
+
         {capabilities.map((cap, i) => (
           <FadeIn key={i} delay={i * 0.05}>
-            <div className="bg-slate-50 rounded-[24px] p-8 border border-slate-100 hover:shadow-lg hover:border-[#5D00D6]/25 hover:bg-white transition-all duration-300 h-full flex flex-col group">
-              <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center mb-6 group-hover:bg-[#5D00D6]/15 transition-all text-[#5D00D6]">
-                {cap.icon}
+            <div className="bg-slate-50 rounded-[24px] p-6 border border-slate-100 hover:shadow-lg hover:border-[#5D00D6]/25 hover:bg-white transition-all duration-300 h-full flex flex-col group">
+              <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center mb-5 group-hover:bg-[#5D00D6]/15 transition-all text-[#5D00D6]">
+                {React.cloneElement(cap.icon as React.ReactElement, { size: 20 })}
               </div>
-              <h3 className="c9-card-title mb-3">{cap.title}</h3>
-              <p className="c9-body mt-auto !text-[15px] text-slate-600">{cap.desc}</p>
+              <h3 className="c9-card-title !text-[17px] mb-2">{cap.title}</h3>
+              <p className="c9-body !text-[14px] !leading-relaxed text-slate-600">{cap.desc}</p>
             </div>
           </FadeIn>
         ))}
