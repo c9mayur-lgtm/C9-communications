@@ -78,17 +78,17 @@ const Hero = () => (
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Opening a New Site Is Complex —{' '}
-              <span className="text-[#5D00D6]">We Make It Work From Day One</span>
+              Launch your entire business IT infrastructure{' '}
+              <span className="text-[#5D00D6]">without building an internal team</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
             <p className="c9-body mb-5 max-w-[520px]">
-              C9 Communications delivers fully procured, cabled, racked, patched, installed, and commissioned technology environments — owned end-to-end, managed long-term.
+              We design, deploy, and manage your complete technology environment from day one. Single partner. Full accountability.
             </p>
             <p className="text-[14px] text-slate-500 mb-10 max-w-[520px]">
-              From initial technical validation to site commissioning, we provide a single point of accountability for your entire greenfield rollout.
+              From initial technical validation to site commissioning, we provide a single point of accountability for your new business setup.
             </p>
           </FadeIn>
 
@@ -98,14 +98,14 @@ const Hero = () => (
                 href="#consultation"
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
-                Book a Greenfield Consultation
+                Plan My Business Setup
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="#consultation"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
-                Get My Delivery Plan
+                Get My Setup Plan
               </a>
             </div>
             <p className="text-[13px] text-slate-400 font-medium ml-1">
@@ -163,14 +163,14 @@ const SectionPain = () => (
             Most New Site Projects Break Down During Delivery
           </h2>
           <p className="c9-body mb-6">
-            Opening a new office or facility isn't just about getting internet connected.
+            Opening a new office or facility isn't just about getting internet connected. You are starting from zero.
           </p>
           <p className="c9-body mb-8">
             It involves multiple vendors, timelines, dependencies, and technical decisions — and when these aren't coordinated properly, projects get delayed, systems don't work as expected, and teams are left fixing issues after move-in.
           </p>
           <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/15 rounded-2xl p-6">
             <p className="text-slate-800 font-bold text-[16px] leading-snug">
-              C9 removes that risk by managing the entire process end-to-end — one partner, one outcome.
+              C9 removes that risk by managing the entire process end-to-end — one partner, one outcome. No internal IT team required.
             </p>
           </div>
         </FadeIn>
@@ -213,12 +213,12 @@ const SectionScenarios = () => (
           Built for Businesses Starting Fresh
         </h2>
       </FadeIn>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {[
-          { label: 'Opening a New Site', desc: 'Empty shell to operational.' },
-          { label: 'Expanding Operations', desc: 'Rapid, standard rollouts.' },
-          { label: 'Relocating Headquarters', desc: 'Zero-downtime migrations.' },
-          { label: 'Complex Commissioning', desc: 'Managed high-stakes environments.' },
+          { label: 'Starting from Zero', desc: 'Empty shell to fully operational from day one.' },
+          { label: 'Expanding Operations', desc: 'Designed for scalability from day one.' },
+          { label: 'No Internal IT Team required', desc: 'We handle everything from start to finish.' },
+          { label: 'Relocating Headquarters', desc: 'Zero-downtime infrastructure setup.' },
         ].map((s, i) => (
           <FadeIn key={i} delay={i * 0.05} className="text-center group">
             <div className="h-full bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-md">
@@ -231,6 +231,15 @@ const SectionScenarios = () => (
           </FadeIn>
         ))}
       </div>
+
+      <FadeIn delay={0.2} className="text-center">
+        <a
+          href="#consultation"
+          className="inline-flex items-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-11 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
+        >
+          Plan My Business Setup
+        </a>
+      </FadeIn>
     </div>
   </section>
 );
@@ -242,12 +251,12 @@ const SectionWhatIsInvolved = () => (
   <section className="py-16 lg:py-24 bg-white">
     <div className={C}>
       <FadeIn className="text-center mb-14">
-        <span className="c9-eyebrow mb-4">What's Actually Involved</span>
+        <span className="c9-eyebrow mb-4">Your complete IT environment, fully managed</span>
         <h2 className="c9-section-heading mb-5 max-w-2xl mx-auto">
-          A Greenfield Site Requires More Than Just Setup
+          A New Business Setup Requires More Than Just Connectivity
         </h2>
         <p className="c9-body max-w-2xl mx-auto">
-          This is not a single service — it's a coordinated delivery process that requires expertise across multiple disciplines.
+          This is a coordinated delivery process that requires expertise across multiple disciplines. Eliminates the need to manage multiple vendors.
         </p>
       </FadeIn>
 
@@ -272,10 +281,17 @@ const SectionWhatIsInvolved = () => (
 
       <FadeIn delay={0.3} className="mt-10">
         <div className="bg-[#0c1024] rounded-[28px] p-8 lg:p-10 text-center">
-          <p className="text-xl lg:text-2xl font-bold leading-snug text-white">
-            This is not a single service. It's a coordinated delivery process —{' '}
+          <p className="text-xl lg:text-2xl font-bold leading-snug text-white mb-6">
+            We design, deploy, and manage the entire delivery process —{' '}
             <span className="text-[#a56eff]">and C9 owns every part of it.</span>
           </p>
+          <a
+            href="#consultation"
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all"
+          >
+            Get My Setup Plan
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+          </a>
         </div>
       </FadeIn>
     </div>
@@ -298,12 +314,12 @@ const SectionFlow = () => (
   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-14">
-        <span className="c9-eyebrow mb-4">The Delivery Framework</span>
+        <span className="c9-eyebrow mb-4">Proven deployment approach</span>
         <h2 className="c9-section-heading mb-4">
           From Empty Site to Fully Operational Environment
         </h2>
         <p className="c9-body max-w-xl mx-auto">
-          Every greenfield deployment follows the same disciplined six-stage process — no shortcuts, no gaps.
+          Every new business setup follows the same disciplined six-stage process. Ensures your team can operate from day one without delays.
         </p>
       </FadeIn>
 
@@ -341,6 +357,16 @@ const SectionFlow = () => (
           </FadeIn>
         ))}
       </div>
+
+      <FadeIn delay={0.2} className="mt-12 text-center">
+        <a
+          href="#consultation"
+          className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+        >
+          Plan My Business Setup
+          <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+        </a>
+      </FadeIn>
     </div>
   </section>
 );
@@ -383,12 +409,12 @@ const SectionCapabilities = () => (
   <section className="py-16 lg:py-24 bg-white">
     <div className={C}>
       <FadeIn className="text-center mb-14">
-        <span className="c9-eyebrow mb-4">Core Delivery Capabilities</span>
+        <span className="c9-eyebrow mb-4">We Design, Deploy, and Manage</span>
         <h2 className="c9-section-heading mb-5">
-          Everything Delivered as One Complete Solution
+          Everything your business needs to operate from day one
         </h2>
         <p className="c9-body max-w-xl mx-auto">
-          Four disciplines. One delivery model. Zero gaps.
+          Four disciplines. One delivery model. Zero gaps. Single partner. Full accountability.
         </p>
       </FadeIn>
 
@@ -429,6 +455,16 @@ const SectionCapabilities = () => (
           </FadeIn>
         ))}
       </div>
+
+      <FadeIn delay={0.2} className="mt-12 text-center">
+        <a
+          href="#consultation"
+          className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+        >
+          Get My Setup Plan
+          <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+        </a>
+      </FadeIn>
     </div>
   </section>
 );
@@ -450,7 +486,7 @@ const SectionNationwide = () => (
             Delivered Nationwide, Coordinated Properly
           </h2>
           <p className="c9-body !text-white/65 mb-8 max-w-[500px]">
-            C9 supports greenfield deployments across metro and regional locations through a coordinated delivery model. Every site follows the same standards, processes, and accountability — regardless of location.
+            We design, deploy, and manage new business setups across metro and regional locations through a coordinated delivery approach. Every site follows the same standards — ensuring your business runs on a reliable foundation, regardless of location.
           </p>
           <ul className="space-y-4">
             {[
@@ -465,6 +501,15 @@ const SectionNationwide = () => (
               </li>
             ))}
           </ul>
+          <div className="mt-8">
+            <a
+              href="#consultation"
+              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+            >
+              Plan My Business Setup
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
         </FadeIn>
 
         <FadeIn delay={0.12} direction="right">
@@ -523,7 +568,7 @@ const SectionAccountability = () => (
             href="#consultation"
             className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
           >
-            Start Your Greenfield Project
+            Get My Setup Plan
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
         </FadeIn>
@@ -575,7 +620,7 @@ const SectionPartnerEcosystem = () => (
       <FadeIn className="text-center mb-16">
         <h2 className="c9-section-heading mb-6 max-w-2xl mx-auto">Built with the Right Technology for Each Layer</h2>
         <p className="c9-body max-w-3xl mx-auto text-slate-600">
-          We don&apos;t rely on a single vendor. C9 selects the right technology for each part of your environment — ensuring performance, compatibility, and long-term reliability.
+          We don&apos;t rely on a single vendor. C9 selects the right technology for each part of your fully operational environment — designed for scalability from day one.
         </p>
       </FadeIn>
 
@@ -624,9 +669,16 @@ const SectionPartnerEcosystem = () => (
 
       {/* Part 3: Positioning Line */}
       <FadeIn delay={0.2} className="text-center">
-        <p className="text-[18px] md:text-[22px] font-bold text-slate-900 max-w-3xl mx-auto leading-snug">
+        <p className="text-[18px] md:text-[22px] font-bold text-slate-900 max-w-3xl mx-auto leading-snug mb-8">
           We don&apos;t force a single vendor across your entire environment — <span className="text-[#5D00D6]">we design a system using the best components for each layer.</span>
         </p>
+        <a
+          href="#consultation"
+          className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+        >
+          Plan My Business Setup
+          <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+        </a>
       </FadeIn>
     </div>
   </section>
@@ -663,14 +715,23 @@ const SectionReassurance = () => (
             Your Timeline Matters. We Treat It That Way.
           </h2>
           <p className="c9-body mb-5">
-            Opening a new site comes with real pressure — timelines, budgets, and expectations that leave no room for error.
+            Starting from zero comes with real pressure — timelines, budgets, and expectations that leave no room for error.
           </p>
           <p className="c9-body mb-5">
-            C9 ensures everything is planned, delivered, and ready so your team can walk in and start operating without disruption. No scrambling. No rework. No day-one chaos.
+            We handle everything so your team can walk in and start operating without disruption. No internal IT team required. No scrambling. No rework. No day-one chaos.
           </p>
           <p className="c9-body font-bold !text-[#5D00D6]">
-            We don't just deliver technology. We deliver certainty.
+            We deliver certainty for your new business setup.
           </p>
+          <div className="mt-8">
+            <a
+              href="#consultation"
+              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+            >
+              Get My Setup Plan
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
         </FadeIn>
       </div>
     </div>
@@ -692,7 +753,7 @@ const FinalCTA = () => (
           Let&apos;s Get Your New Site Delivered Properly
         </h2>
         <p className="c9-body mb-5 max-w-xl mx-auto">
-          C9 Communications delivers fully procured, cabled, racked, patched, installed, and commissioned technology environments — designed once, built properly, and managed long‑term.
+          C9 Communications designs, deploys, and manages fully patched, installed, and commissioned technology environments — built properly, and managed long‑term.
         </p>
         <p className="text-[14px] text-slate-500 mb-10 max-w-xl mx-auto">
           One Partner. One Outcome. One Point of Accountability.
@@ -703,14 +764,14 @@ const FinalCTA = () => (
             href="#consultation"
             className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
           >
-            Book a Greenfield Consultation
+            Plan My Business Setup
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="#consultation"
             className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
           >
-            Get My Delivery Plan
+            Get My Setup Plan
           </a>
         </div>
 
@@ -842,10 +903,10 @@ export default function Greenfield2Page() {
       <section id="consultation" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
-          eyebrow="GREENFIELD DELIVERY CONSULTATION"
+          eyebrow="NEW BUSINESS SETUP"
           title="Commission your new site with confidence."
           description="Book a strategic session with our delivery specialists. We cover assessment, procurement, cabling, installation, and full project coordination — so your new site is ready from day one."
-          formTitle="Plan My Greenfield Rollout"
+          formTitle="Plan My Business Setup"
         />
       </section>
     </main>
