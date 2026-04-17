@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowRight, CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon,
-  AlertTriangle, Building2, MapPin, Zap
+  AlertTriangle, Star, Zap
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
@@ -39,7 +39,7 @@ const Hero = () => (
       }}
     />
     <div
-      className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-[0.05]"
+      className="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full opacity-[0.05]"
       style={{ background: 'radial-gradient(circle, #5D00D6 0%, transparent 70%)' }}
     />
 
@@ -48,23 +48,23 @@ const Hero = () => (
         <div>
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
-              <Building2 size={13} className="text-[#5D00D6]" />
-              <span className="c9-eyebrow !mb-0">Real Estate</span>
+              <Star size={13} className="text-[#5D00D6]" />
+              <span className="c9-eyebrow !mb-0">Hospitality</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Flexible IT for{' '}
-              <span className="text-[#5D00D6]">Fast-Moving Teams</span>
+              Consistent Connectivity for{' '}
+              <span className="text-[#5D00D6]">Better Guest Experience</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.14}>
             <p className="c9-body text-slate-600 mb-10 max-w-[530px]">
-              Real estate businesses move quickly across offices, properties, and in the field.
-              We deliver flexible, scalable IT and communications systems that keep your agents
-              and teams connected — wherever they're working from.
+              In hospitality, every guest interaction depends on your systems working seamlessly
+              behind the scenes. We deliver reliable connectivity, voice, and network infrastructure
+              so your operations run smoothly — and your guests experience nothing less than that.
             </p>
           </FadeIn>
 
@@ -92,7 +92,7 @@ const Hero = () => (
 
           <FadeIn delay={0.28}>
             <div className="flex flex-wrap gap-5">
-              {['Mobile First', 'Multi-Office', 'Scalable', 'Fast Support'].map((t) => (
+              {['Guest Wi-Fi', 'Reliable Operations', 'Always On', 'Responsive Support'].map((t) => (
                 <div key={t} className="flex items-center gap-2 text-slate-500 text-[13px] font-bold">
                   <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                 </div>
@@ -105,10 +105,10 @@ const Hero = () => (
           <div className="bg-white border border-slate-100 rounded-[32px] p-10 shadow-sm">
             <div className="grid grid-cols-2 gap-0 divide-x divide-y divide-slate-100">
               {[
-                { stat: '1', label: 'Technology partner' },
-                { stat: '100%', label: 'Agent connectivity' },
-                { stat: 'Any', label: 'Device or location' },
-                { stat: '24/7', label: 'Support & monitoring' },
+                { stat: '24/7', label: 'Guest service operations' },
+                { stat: '1', label: 'Managed IT partner' },
+                { stat: '100%', label: 'Uptime focus' },
+                { stat: '0', label: 'Guest-facing tech failures' },
               ].map((item, i) => (
                 <div key={i} className="text-center p-8">
                   <div className="text-[38px] font-extrabold text-[#5D00D6] mb-2 leading-none">
@@ -134,16 +134,16 @@ const Context = () => (
         <FadeIn>
           <p className="c9-eyebrow mb-4">The Challenge</p>
           <h2 className="c9-section-heading mb-6">
-            Real Estate Teams Can't Afford to Be Disconnected
+            Your Guest Experience Starts With Your Technology
           </h2>
           <p className="c9-body text-slate-600 mb-4">
-            Real estate operations span offices, properties, and field work — and the pace is fast.
-            Agents need to be reachable, data needs to be accessible, and your office systems need
-            to work without interruption regardless of how your team is structured.
+            Whether you're running a hotel, restaurant group, event venue, or accommodation business,
+            your guests expect everything to work. Slow Wi-Fi, dropped connections, and communication
+            failures don't just frustrate staff — they create visible problems that guests remember.
           </p>
           <p className="c9-body text-slate-600">
-            C9 delivers flexible, scalable systems that support the way real estate businesses
-            actually operate — distributed, fast-moving, and always on.
+            C9 handles the infrastructure behind the scenes — connectivity, communications, and
+            network stability — so your team can focus entirely on delivering excellent service.
           </p>
         </FadeIn>
       </div>
@@ -153,24 +153,24 @@ const Context = () => (
 
 const challenges = [
   {
-    icon: <MapPin size={20} />,
-    title: 'Agents working across multiple locations',
-    desc: 'Keeping staff connected and productive across offices, properties, and on the road requires flexible, mobile-ready systems.',
+    icon: <Wifi size={20} />,
+    title: 'Unreliable guest Wi-Fi',
+    desc: 'Poor wireless performance is one of the most common guest complaints — and one of the most preventable.',
   },
   {
-    icon: <Network size={20} />,
-    title: 'Inconsistent systems between offices',
-    desc: 'Different setups at different offices create management complexity and unpredictable performance.',
+    icon: <AlertTriangle size={20} />,
+    title: 'System outages during peak periods',
+    desc: 'Failures during busy service periods — check-in rushes, peak dining — create operational chaos and guest dissatisfaction.',
   },
   {
-    icon: <Shield size={20} />,
-    title: 'Client data security',
-    desc: 'Real estate businesses hold sensitive client financial and personal information that requires proper protection.',
+    icon: <Phone size={20} />,
+    title: 'Disconnected communications between teams',
+    desc: 'When front of house, kitchen, and management can\'t communicate reliably, operations suffer and errors increase.',
   },
   {
     icon: <Zap size={20} />,
-    title: 'Scaling fast when the business grows',
-    desc: 'New offices, new agents, and expanding teams put pressure on systems that weren\'t built to scale.',
+    title: 'Multiple vendors with no clear accountability',
+    desc: 'When something breaks, nobody takes ownership — and your team ends up chasing different suppliers for different problems.',
   },
 ];
 
@@ -179,7 +179,7 @@ const Challenges = () => (
     <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
       <FadeIn className="mb-12">
         <p className="c9-eyebrow mb-4">Common Challenges</p>
-        <h2 className="c9-section-heading max-w-2xl">What Real Estate Businesses Deal With</h2>
+        <h2 className="c9-section-heading max-w-2xl">What Gets in the Way of Seamless Operations</h2>
       </FadeIn>
 
       <div className="grid sm:grid-cols-2 gap-6">
@@ -208,19 +208,18 @@ const Solution = () => (
         <FadeIn>
           <p className="c9-eyebrow mb-4">How C9 Helps</p>
           <h2 className="c9-section-heading mb-6">
-            Systems Built for Mobility, Scale, and Speed
+            Consistent Infrastructure, Invisible to Guests
           </h2>
           <p className="c9-body text-slate-600 mb-8">
-            C9 delivers IT and communications systems designed around how real estate businesses
-            work — connecting your offices, supporting your agents in the field, and scaling
-            cleanly as your team and footprint grows.
+            C9 delivers the connectivity, voice, and network infrastructure your hospitality business
+            needs to operate without disruption. We manage the technology, you manage the experience.
           </p>
           <div className="space-y-3">
             {[
-              'Connectivity and voice systems that work across every office',
-              'Mobile-ready infrastructure for agents on the move',
-              'Security built to protect client and property data',
-              'Scalable setup — adding new offices or users is straightforward',
+              'High-performance guest and operational Wi-Fi across your property',
+              'Clear, reliable communications between all areas and teams',
+              'Proactive monitoring to catch issues before guests notice them',
+              'Single point of contact — one call when anything needs attention',
             ].map((point, i) => (
               <div key={i} className="flex items-start gap-3">
                 <CheckCircle size={17} className="text-[#5D00D6] shrink-0 mt-0.5" />
@@ -233,15 +232,15 @@ const Solution = () => (
         <FadeIn delay={0.1}>
           <div className="bg-[#5D00D6] rounded-[32px] p-10 text-white">
             <p className="text-[#C084FC] text-[11px] font-bold uppercase tracking-widest mb-6">
-              Real Estate IT Done Right
+              What This Means
             </p>
             <h3 className="text-[26px] font-bold mb-6 leading-snug">
-              Your agents stay connected. Your offices run consistently. Your data stays protected.
+              Your guests get a seamless experience. Your team gets reliability they can count on.
             </h3>
             <p className="text-white/70 text-[15px] leading-relaxed">
-              Whether you have one principal office or a growing franchise network, C9 brings
-              structure and reliability to your technology environment — so your team can focus
-              on what matters most.
+              When your technology infrastructure is well-managed and consistently maintained,
+              operations run smoother, staff are more effective, and guest satisfaction improves.
+              That's the direct impact of getting your IT right.
             </p>
           </div>
         </FadeIn>
@@ -256,11 +255,11 @@ const FinalCTA = () => (
       <FadeIn>
         <p className="c9-eyebrow mb-5">Get Started</p>
         <h2 className="c9-section-heading mb-6">
-          Let's Build the Right Setup for Your Real Estate Business
+          Let's Keep Your Hospitality Operations Running Smoothly
         </h2>
         <p className="c9-body text-slate-600 mb-10">
-          Talk to a specialist about your offices, agents, and growth plans. We'll outline a
-          technology model built for the pace your business moves at.
+          Talk to us about your venue, property, or multi-site operation. We'll outline a
+          connectivity and communications model built around uptime and guest experience.
         </p>
         <a
           href="#consultation-section"
@@ -278,7 +277,7 @@ const FinalCTA = () => (
   </section>
 );
 
-export default function RealEstatePage() {
+export default function HospitalityPage() {
   return (
     <main className="min-h-screen bg-white">
       <Hero />
@@ -289,9 +288,9 @@ export default function RealEstatePage() {
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
-          eyebrow="REAL ESTATE IT ADVISORY"
-          title="Let's Build the Right Setup for Your Real Estate Business"
-          description="Tell us about your offices, agent team, and growth plans. We'll put together a technology model that keeps your people connected and your operations moving."
+          eyebrow="HOSPITALITY IT ADVISORY"
+          title="Let's Keep Your Operations Running Smoothly"
+          description="Tell us about your venue or property portfolio. We'll build a technology plan focused on uptime, guest connectivity, and operational reliability."
           formTitle="Talk to a Specialist"
         />
       </section>

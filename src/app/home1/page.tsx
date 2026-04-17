@@ -467,7 +467,7 @@ const GreenfieldHook = () => (
         <FadeIn className="hidden lg:block">
           <div className="relative rounded-[32px] overflow-hidden aspect-[4/3] shadow-xl">
             <img
-              src="/images/greenfield_consultation.png"
+              src="/images/enterprise_office_planner.png"
               alt="C9 team planning new office setup"
               className="w-full h-full object-cover"
             />
@@ -581,7 +581,7 @@ const HumanTrust = () => (
         <FadeIn className="relative">
           <div className="relative rounded-[32px] overflow-hidden aspect-video lg:aspect-square shadow-2xl">
             <img
-              src="/images/c9_support_engineer.png"
+              src="/images/greenfield_support.png"
               className="w-full h-full object-cover"
               alt="Real C9 support engineers"
             />

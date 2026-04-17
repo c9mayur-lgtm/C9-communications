@@ -108,12 +108,14 @@ export const GREENFIELD_IT_SOLUTIONS = {
     { title: 'Growth Ready',        icon: <BarChart3 size={24} />,    color: '#5D00D6' },
   ],
   sidebar: {
-    heading: 'Quick Start',
+    heading: 'Industries We Serve',
     items: [
-      { label: 'Retail', path: '/industries/retail' },
-      { label: 'Healthcare', path: '/industries/healthcare' },
+      { label: 'Retail',                path: '/industries/retail' },
+      { label: 'Healthcare',            path: '/industries/healthcare' },
       { label: 'Professional Services', path: '/industries/professional-services' },
-      { label: 'Education', path: '/industries/education' },
+      { label: 'Real Estate',           path: '/industries/real-estate' },
+      { label: 'Hospitality',           path: '/industries/hospitality' },
+      { label: 'Education',             path: '/industries/education' },
       { label: 'View all Industries →', path: '/industries' },
     ]
   },
@@ -261,13 +263,13 @@ export const BUSINESS_IT_SOLUTIONS = {
   sidebar: {
     heading: 'Industry Focus',
     items: [
-      { label: 'Healthcare',              path: '/industries/healthcare' },
-      { label: 'Professional Services',   path: '/industries/professional-services' },
-      { label: 'Non-profit',              path: '/industries/non-profit' },
-      { label: 'Education',               path: '/industries/education' },
-      { label: 'Retail',                  path: '/industries/retail' },
-      { label: 'Real Estate',             path: '/industries/real-estate' },
-      { label: 'View all Industries →',   path: '/industries' },
+      { label: 'Retail',                path: '/industries/retail' },
+      { label: 'Healthcare',            path: '/industries/healthcare' },
+      { label: 'Professional Services', path: '/industries/professional-services' },
+      { label: 'Real Estate',           path: '/industries/real-estate' },
+      { label: 'Hospitality',           path: '/industries/hospitality' },
+      { label: 'Education',             path: '/industries/education' },
+      { label: 'View all Industries →', path: '/industries' },
     ]
   },
   ctaBanner: {
@@ -424,14 +426,15 @@ export const ENTERPRISE_IT_SOLUTIONS = {
     { title: 'Digital Transformation', icon: <Cpu size={24} /> },
   ],
   sidebar: {
-    heading: 'Enterprise Industries',
+    heading: 'Industries We Serve',
     items: [
-      { label: 'Finance & Banking',         path: '/industries' },
-      { label: 'Healthcare Enterprise',     path: '/industries/healthcare' },
-      { label: 'Government',                path: '/industries' },
-      { label: 'Manufacturing',             path: '/industries' },
-      { label: 'Professional Services',     path: '/industries/professional-services' },
-      { label: 'View all Industries →',     path: '/industries' },
+      { label: 'Retail',                path: '/industries/retail' },
+      { label: 'Healthcare',            path: '/industries/healthcare' },
+      { label: 'Professional Services', path: '/industries/professional-services' },
+      { label: 'Real Estate',           path: '/industries/real-estate' },
+      { label: 'Hospitality',           path: '/industries/hospitality' },
+      { label: 'Education',             path: '/industries/education' },
+      { label: 'View all Industries →', path: '/industries' },
     ]
   },
   ctaBanner: {

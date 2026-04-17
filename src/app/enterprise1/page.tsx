@@ -384,11 +384,11 @@ const Trust = () => (
                 { name: 'HP', src: '/partners/Hewlett_Packard_Enterprise_logo.svg' },
                 { name: 'Yealink', src: '/images/clients/yealink.png' }
               ].map((v, i) => (
-                <div key={i} className="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:border-[#5D00D6]/25 hover:shadow-md transition-all h-36 group">
+                <div key={i} className="bg-white border border-slate-100 rounded-2xl px-4 py-4 md:px-6 flex flex-col items-center justify-center gap-4 hover:border-[#5D00D6]/25 hover:shadow-md transition-all h-36 group">
                    <img
                      src={v.src}
                      alt={v.name}
-                     className="h-16 w-auto max-w-[140px] object-contain opacity-85 group-hover:opacity-100 transition-all duration-300"
+                     className="h-16 md:h-20 w-auto max-w-[160px] object-contain opacity-85 group-hover:opacity-100 transition-all duration-300"
                    />
                 </div>
               ))}

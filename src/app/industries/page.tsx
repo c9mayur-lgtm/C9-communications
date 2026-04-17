@@ -3,8 +3,13 @@ import IndustryGrid from "@/components/sections/industries/IndustryGrid"
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm"
 
 export const metadata = {
-  title: "Industry Specific IT & Telco Solutions | C9 Communications",
-  description: "Explore C9's managed IT and Telco stacks designed for Australian industries including Healthcare, Education, Retail, Real Estate, and more.",
+  title: "Industry IT & Telco Solutions | C9 Communications",
+  description: "C9 delivers reliable IT and communications solutions built for retail, healthcare, professional services, real estate, hospitality, and education environments across Australia.",
+  openGraph: {
+    title: "Industry IT & Telco Solutions | C9 Communications",
+    description: "Technology solutions built for the way your industry operates.",
+    url: "https://c9communications.com.au/industries",
+  },
 }
 
 export default function IndustriesIndexPage() {
@@ -12,14 +17,14 @@ export default function IndustriesIndexPage() {
     <main className="min-h-screen bg-white">
       <IndustriesHero />
       <IndustryGrid />
-      
+
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
-          eyebrow="READY TO TRANSFORM?"
-          title="Looking for a partner that understands your sector?"
-          description="Tell us about your organization and we'll match you with a specialist who understands your industry's unique technology requirements."
-          formTitle="Speak to an Industry Specialist"
+          eyebrow="GET IN TOUCH"
+          title="Not Sure What Fits Your Business?"
+          description="Talk to our team and we'll help map the right solution for your environment. No commitment required — just a clear conversation about what you need."
+          formTitle="Talk to an Expert"
         />
       </section>
     </main>

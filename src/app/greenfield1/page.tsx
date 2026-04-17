@@ -351,10 +351,10 @@ const VendorTrust = () => (
           { name: 'Yealink', src: '/images/clients/yealink.png' }
         ].map((v, i) => (
           <FadeIn key={i} delay={i * 0.1}>
-             <div className="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 h-36 group hover:border-[#5D00D6]/20 transition-all shadow-sm">
+             <div className="bg-white border border-slate-100 rounded-2xl px-4 py-4 md:px-6 flex flex-col items-center justify-center gap-4 h-36 group hover:border-[#5D00D6]/20 transition-all shadow-sm">
                 <img 
                   src={v.src} 
-                  className="h-16 w-auto max-w-[140px] object-contain opacity-80 group-hover:opacity-100 transition-all" 
+                  className="h-16 md:h-20 w-auto max-w-[160px] object-contain opacity-80 group-hover:opacity-100 transition-all" 
                   alt={v.name} 
                 />
              </div>
