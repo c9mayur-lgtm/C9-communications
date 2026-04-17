@@ -98,14 +98,14 @@ const Hero = () => (
                 href="#consultation"
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
-                Plan My Business Setup
+                Get My Setup Plan
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="#consultation"
+                href="#micro-nav"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
-                Get My Setup Plan
+                Explore Services →
               </a>
             </div>
             <p className="text-[13px] text-slate-400 font-medium ml-1">
@@ -169,9 +169,12 @@ const SectionPain = () => (
             It involves multiple vendors, timelines, dependencies, and technical decisions — and when these aren't coordinated properly, projects get delayed, systems don't work as expected, and teams are left fixing issues after move-in.
           </p>
           <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/15 rounded-2xl p-6">
-            <p className="text-slate-800 font-bold text-[16px] leading-snug">
+            <p className="text-slate-800 font-bold text-[16px] leading-snug mb-4">
               C9 removes that risk by managing the entire process end-to-end — one partner, one outcome. No internal IT team required.
             </p>
+            <a href="/managed-it" className="text-[14px] font-bold text-[#5D00D6] hover:underline inline-flex items-center gap-1">
+              Explore Managed IT →
+            </a>
           </div>
         </FadeIn>
 
@@ -232,12 +235,19 @@ const SectionScenarios = () => (
         ))}
       </div>
 
-      <FadeIn delay={0.2} className="text-center">
+      <FadeIn delay={0.2} className="text-center flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="#consultation"
-          className="inline-flex items-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-11 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
+          className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
         >
-          Plan My Business Setup
+          Get My Setup Plan
+          <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+        </a>
+        <a
+          href="/managed-it"
+          className="inline-flex items-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-12 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
+        >
+          Explore Managed IT →
         </a>
       </FadeIn>
     </div>
@@ -363,7 +373,7 @@ const SectionFlow = () => (
           href="#consultation"
           className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
         >
-          Plan My Business Setup
+          Get My Setup Plan
           <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
         </a>
       </FadeIn>
@@ -379,8 +389,9 @@ const capabilities = [
     icon: <ShoppingCart size={24} className="text-[#5D00D6]" />,
     tag: 'Procurement & Supply Chain',
     headline: 'Single Vendor. Full Accountability. No Surprises.',
-    desc: 'C9 manages the complete procurement lifecycle for all active tech components (networking, security) and passive materials (racks, panels, PDUs). We ensure version control, genuine hardware, and staged delivery for complex projects.',
+    desc: 'C9 manages the complete procurement lifecycle for all active tech components (networking, security) and passive materials (racks, panels, PDUs). We ensure version control, and staged delivery for complex projects.',
     image: '/images/greenfield_procurement_new_1.png',
+    link: { text: 'Explore Managed IT →', href: '/managed-it' }
   },
   {
     icon: <Users2 size={24} className="text-[#5D00D6]" />,
@@ -388,6 +399,7 @@ const capabilities = [
     headline: 'Designed Once. Delivered Properly. Governed End-to-End.',
     desc: 'Full project governance across all delivery stages. We coordinate builders, electricians, and licensed cablers to ensure technical design validation, rack layouts, and seamless integration between passive and active infrastructure.',
     image: '/images/greenfield_project_management_new_1.png',
+    link: { text: 'Explore Managed IT →', href: '/managed-it' }
   },
   {
     icon: <Network size={24} className="text-[#5D00D6]" />,
@@ -395,6 +407,7 @@ const capabilities = [
     headline: 'Standards-Based Cabling — Installed for Performance.',
     desc: 'Professional Cat6/Cat6A and fibre cabling services. Installed by licensed cablers to Australian standards, including workstation data points, Wi-Fi paths, and rack management — all tested, certified, and fully documented.',
     image: '/images/greenfield_cabling_new_1.png',
+    link: { text: 'Explore Telco →', href: '/telco' }
   },
   {
     icon: <Wrench size={24} className="text-[#5D00D6]" />,
@@ -402,6 +415,7 @@ const capabilities = [
     headline: 'Installed, Patched, Tested — Then Handed Over.',
     desc: 'End-to-end installation of all systems. We manage the transition from passive cabling to live services, including device adoption, firmware standardisation, and failover validation. Nothing is considered live until it is verified.',
     image: '/images/greenfield_commissioning_new_1.png',
+    link: { text: 'Explore Managed IT →', href: '/managed-it' }
   },
 ];
 
@@ -440,6 +454,15 @@ const SectionCapabilities = () => (
                 </div>
                 <h3 className="c9-card-title mb-3">{cap.headline}</h3>
                 <p className="text-[14px] text-slate-500 leading-relaxed mb-4">{cap.desc}</p>
+                
+                {cap.link && (
+                  <div className="mb-4">
+                    <a href={cap.link.href} className="text-[13px] font-bold text-[#5D00D6] hover:underline flex items-center gap-1">
+                      {cap.link.text}
+                    </a>
+                  </div>
+                )}
+
                 {i === 3 && (
                   <div className="space-y-2 mt-2 pt-4 border-t border-slate-100">
                     {['Data points patched & labelled', 'Network paths tested end-to-end', 'Redundancy & failover validated', 'Full documentation & diagrams'].map((item) => (
@@ -501,13 +524,19 @@ const SectionNationwide = () => (
               </li>
             ))}
           </ul>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="#consultation"
-              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group justify-center"
             >
-              Plan My Business Setup
+              Get My Setup Plan
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+            <a
+              href="/telco"
+              className="inline-flex items-center gap-2 border-2 border-white/20 text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-white/10 transition-all justify-center"
+            >
+              Explore Connectivity →
             </a>
           </div>
         </FadeIn>
@@ -676,10 +705,44 @@ const SectionPartnerEcosystem = () => (
           href="#consultation"
           className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
         >
-          Plan My Business Setup
+          Get My Setup Plan
           <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
         </a>
       </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 8.5 — MICRO NAVIGATION (EXPLORATION LAYER)
+   ───────────────────────────────────────────────────────── */
+const SectionMicroNav = () => (
+  <section id="micro-nav" className="py-12 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <div className="max-w-4xl mx-auto text-center">
+        <FadeIn>
+          <h2 className="text-[20px] font-bold text-slate-900 mb-4">Not ready to plan yet?</h2>
+          <p className="c9-body mb-8">
+            If you&apos;re still evaluating, explore each part of your business setup in detail:
+          </p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Connectivity & Network', href: '/telco' },
+              { label: 'Cybersecurity', href: '/managed-it/security-solutions' },
+              { label: 'Managed IT', href: '/managed-it' },
+              { label: 'Workplace & Devices', href: '/modern-workplace' },
+            ].map((link, i) => (
+              <a
+                key={i}
+                href={link.href}
+                className="bg-white border border-slate-100 rounded-xl p-4 text-[13px] font-bold text-slate-700 hover:border-[#5D00D6]/30 hover:text-[#5D00D6] hover:shadow-sm transition-all"
+              >
+                {link.label} →
+              </a>
+            ))}
+          </div>
+        </FadeIn>
+      </div>
     </div>
   </section>
 );
@@ -750,10 +813,10 @@ const FinalCTA = () => (
           <span className="c9-eyebrow !mb-0">Ready to Start</span>
         </div>
         <h2 className="c9-section-heading mb-5 max-w-2xl mx-auto">
-          Let&apos;s Get Your New Site Delivered Properly
+          Let&apos;s Get Your New Business Setup Properly
         </h2>
         <p className="c9-body mb-5 max-w-xl mx-auto">
-          C9 Communications designs, deploys, and manages fully patched, installed, and commissioned technology environments — built properly, and managed long‑term.
+          C9 Communications designs, deploys, and manages your complete IT environment — starting from zero, fully operational from day one.
         </p>
         <p className="text-[14px] text-slate-500 mb-10 max-w-xl mx-auto">
           One Partner. One Outcome. One Point of Accountability.
@@ -764,14 +827,14 @@ const FinalCTA = () => (
             href="#consultation"
             className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
           >
-            Plan My Business Setup
+            Get My Setup Plan
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </a>
           <a
-            href="#consultation"
+            href="#micro-nav"
             className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
           >
-            Get My Setup Plan
+            Explore Services →
           </a>
         </div>
 
@@ -816,6 +879,7 @@ export default function Greenfield2Page() {
       <SectionNationwide />
       <SectionAccountability />
       <SectionPartnerEcosystem />
+      <SectionMicroNav />
       <SectionReassurance />
       <WpCaseStudies 
         eyebrow="SUCCESSFUL DELIVERIES"
@@ -905,8 +969,8 @@ export default function Greenfield2Page() {
           showHeader={false}
           eyebrow="NEW BUSINESS SETUP"
           title="Commission your new site with confidence."
-          description="Book a strategic session with our delivery specialists. We cover assessment, procurement, cabling, installation, and full project coordination — so your new site is ready from day one."
-          formTitle="Plan My Business Setup"
+          description="Book a strategic session with our delivery specialists. We cover assessment, procurement, cabling, installation, and full project coordination — starting from zero, fully operational from day one."
+          formTitle="Get My Setup Plan"
         />
       </section>
     </main>
