@@ -15,6 +15,7 @@ import { WpVendors } from "@/components/wordpress/WpVendors";
 import { WpCompliance } from "@/components/wordpress/WpCompliance";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { HeroHighlighter } from "@/components/common/HeroHighlighter";
+import { TrustProofSystem } from "@/components/sections/TrustProofSystem";
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPER
@@ -65,7 +66,7 @@ const BusinessHero = () => (
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => {
@@ -88,6 +89,7 @@ const BusinessHero = () => (
                 Optimise My Setup
               </a>
             </div>
+            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
           <FadeIn delay={0.4}>
             <div className="flex flex-wrap gap-5">
@@ -169,7 +171,8 @@ const Outcomes = () => {
           <div>
             <FadeIn>
               <p className="c9-eyebrow mb-4">Our Commitment</p>
-              <h2 className="c9-section-heading mb-6">Expertise When You Need It</h2>
+              <h2 className="c9-section-heading mb-2">Expertise When You Need It</h2>
+              <p className="text-[14px] text-[#5D00D6] font-bold mb-6">Helping businesses stabilise and optimise their existing environments</p>
               <p className="c9-body mb-8">
                 We focus on building a genuine partnership where we understand your business goals as well as your technical needs. Our team is always available to help you navigate new challenges and scale your operations.
               </p>
@@ -244,9 +247,12 @@ const FinalCTA = () => (
     <div className="container mx-auto px-6 text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-6 !text-white">Ready to Scale Your Business?</h2>
       <p className="text-slate-400 mb-10 max-w-xl mx-auto">Book a consultation with our experts to review your current setup, identify bottlenecks, and build a tailored plan for growth.</p>
-      <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors">
-        Book My Business Review
-      </a>
+      <div className="mb-6">
+        <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors">
+          Book My Business Review
+        </a>
+      </div>
+      <p className="text-[13px] text-slate-500">No obligation. Just clear, practical advice.</p>
     </div>
   </section>
 );
@@ -325,14 +331,16 @@ export default function Business1Page() {
       
       <WpFAQAndFeedback />
 
+      <TrustProofSystem />
+
       {/* FINAL CTA */}
       <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="GROWTH & OPTIMISATION"
           title="Ready to Scale Your Business?"
-          description="Book a consultation with our experts to review your current setup, identify bottlenecks, and build a tailored plan for growth."
-          formTitle="Book My Business Review"
+          description="Book a consultation with our experts to review your current setup and build a tailored plan for growth — no obligation, just clear, practical advice."
+          formTitle="Talk to an IT Expert"
         />
       </section>
 

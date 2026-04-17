@@ -14,6 +14,7 @@ import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpVendors } from '@/components/wordpress/WpVendors';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { HeroHighlighter } from '@/components/common/HeroHighlighter';
+import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPER
@@ -75,7 +76,7 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => {
@@ -98,6 +99,7 @@ const Hero = () => (
                 Get My Setup Plan
               </a>
             </div>
+            <p className="text-[13px] text-slate-500 mb-10 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.4}>
@@ -501,7 +503,8 @@ const IndustryFocus = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <FadeIn>
           <p className="c9-eyebrow mb-4">Industry Focus</p>
-          <h2 className="c9-section-heading mb-6">Built for Real-World Industries</h2>
+          <h2 className="c9-section-heading mb-2">Built for Real-World Industries</h2>
+          <p className="text-[14px] text-[#5D00D6] font-bold mb-6">Supporting industry-specific environments with reliable, scalable systems</p>
           <p className="c9-body text-slate-600 mb-8">
             We support businesses across industries including retail, healthcare, and professional
             services — delivering solutions aligned with real operational needs.
@@ -638,7 +641,7 @@ const FinalCTA = () => (
           Whether you're starting fresh, improving your setup, or managing a complex environment, we'll
           help you move forward with clarity and confidence.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <a
             href="#consultation-section"
             onClick={(e) => {
@@ -647,7 +650,7 @@ const FinalCTA = () => (
             }}
             className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40 group whitespace-nowrap"
           >
-            Book a Consultation
+            Talk to an Expert
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
           <a
@@ -658,9 +661,10 @@ const FinalCTA = () => (
             }}
             className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-white/10 transition-all whitespace-nowrap"
           >
-            Talk to an Expert
+            Book a Consultation
           </a>
         </div>
+        <p className="text-[13px] text-white/50">No obligation. Just clear, practical advice.</p>
       </FadeIn>
     </div>
   </section>
@@ -715,6 +719,8 @@ export default function Home1Page() {
       />
 
       <WpFAQAndFeedback />
+
+      <TrustProofSystem />
 
       <FinalCTA />
 

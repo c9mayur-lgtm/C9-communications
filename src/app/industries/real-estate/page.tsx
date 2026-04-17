@@ -7,6 +7,7 @@ import {
   AlertTriangle, Building2, Clock, Smartphone
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
 /* ─── Animation Helper ─────────────────────────── */
 const FadeIn = ({
@@ -62,13 +63,14 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.14}>
-            <p className="c9-body text-slate-600 mb-10 max-w-[530px]">
+            <p className="c9-body text-slate-600 mb-2 max-w-[530px]">
               Real estate doesn't happen at a desk. We deliver mobile-first, secure, and multi-office technology that keeps your agents connected to their listings, their data, and their clients—wherever the next deal takes them.
             </p>
+            <p className="text-[14px] text-[#5D00D6] font-bold mb-10">Supporting industry-specific environments with reliable, scalable systems</p>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => {
@@ -87,6 +89,7 @@ const Hero = () => (
                 View All Industries
               </a>
             </div>
+            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
@@ -294,17 +297,20 @@ const FinalCTA = () => (
         <p className="c9-body text-slate-600 mb-10">
           We'll do a walkthrough of your current mobile access and office connectivity. No jargon, just a clear report on how to give your agents more time back and make your agency more resilient.
         </p>
-        <a
-          href="#consultation-section"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
-        >
-          Book an Agency Tech Review
-          <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-        </a>
+        <div className="flex flex-col items-center gap-4">
+          <a
+            href="#consultation-section"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+          >
+            Book an Agency Tech Review
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <p className="text-[13px] text-slate-500">No obligation. Just clear, practical advice.</p>
+        </div>
       </FadeIn>
     </div>
   </section>
@@ -319,13 +325,14 @@ export default function RealEstatePage() {
       <Challenges />
       <Impact />
       <Trust />
+      <TrustProofSystem />
       <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="REAL ESTATE IT ADVISORY"
           title="Let's stabilise your agency."
-          description="Drop your details below. We'll show you how we standardise agency networks to guarantee agent mobility, data security, and seamless multi-office collaboration."
+          description="Drop your details below. We'll show you how we standardise agency networks to guarantee agent mobility, data security, and seamless multi-office collaboration — no obligation, just clear, practical advice."
           formTitle="Talk to a Real Estate Specialist"
         />
       </section>

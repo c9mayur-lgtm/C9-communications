@@ -7,6 +7,7 @@ import {
   AlertTriangle, Activity, Lock, Clock, FileText
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
 /* ─── Animation Helper ─────────────────────────── */
 const FadeIn = ({
@@ -62,13 +63,14 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.14}>
-            <p className="c9-body text-slate-600 mb-10 max-w-[530px]">
+            <p className="c9-body text-slate-600 mb-2 max-w-[530px]">
               When a clinic is full, systems just need to work. We deliver rock-solid networks, secure patient data environments, and phone systems that never drop a booking call.
             </p>
+            <p className="text-[14px] text-[#5D00D6] font-bold mb-10">Supporting industry-specific environments with reliable, scalable systems</p>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => {
@@ -87,6 +89,7 @@ const Hero = () => (
                 View All Industries
               </a>
             </div>
+            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
@@ -294,17 +297,20 @@ const FinalCTA = () => (
         <p className="c9-body text-slate-600 mb-10">
           Tell us where your clinic experiences the most friction. We'll show you how a secure, purpose-built IT and communications platform can smooth out your operations so your team can focus entirely on patient care.
         </p>
-        <a
-          href="#consultation-section"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
-        >
-          Book a Clinical IT Review
-          <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-        </a>
+        <div className="flex flex-col items-center gap-4">
+          <a
+            href="#consultation-section"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+          >
+            Book a Clinical IT Review
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <p className="text-[13px] text-slate-500">No obligation. Just clear, practical advice.</p>
+        </div>
       </FadeIn>
     </div>
   </section>
@@ -319,13 +325,43 @@ export default function HealthcarePage() {
       <Challenges />
       <Impact />
       <Trust />
+      <TrustProofSystem 
+        testimonials={[
+          {
+            quote: "Every minute our systems are down is a minute we can't provide patient care. C9 has given us the stability we've needed for years.",
+            author: "Clinic Practice Manager"
+          },
+          {
+            quote: "Their understanding of security and compliance in the healthcare sector is a huge weight off our minds.",
+            author: "Medical Director"
+          },
+          {
+            quote: "The transition was seamless. Doctors and staff barely noticed the switch, but everyone noticed the improved performance.",
+            author: "Healthcare Network Admin"
+          }
+        ]}
+        cases={[
+          {
+            title: "Zero-Downtime Clinic Migration",
+            desc: "Managed the relocation and IT setup of a multi-modality clinic without interrupting patient services."
+          },
+          {
+            title: "Compliance-Grade Security",
+            desc: "Implemented robust data protection and network security meeting Australian healthcare standards."
+          },
+          {
+            title: "24/7 Clinical Support",
+            desc: "Deployed dedicated support channels for clinical staff to ensure help is always available during patient hours."
+          }
+        ]}
+      />
       <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="HEALTHCARE IT ADVISORY"
           title="Let's remove the friction from your clinic."
-          description="Drop your details below. We’ll show you how modernizing your IT and phones will immediately impact your team's day-to-day workflow."
+          description="Drop your details below. We’ll show you how modernizing your IT and phones will immediately impact your team's day-to-day workflow — no obligation, just clear, practical advice."
           formTitle="Talk to a Healthcare Specialist"
         />
       </section>

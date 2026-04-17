@@ -7,6 +7,7 @@ import {
   AlertTriangle, Star, Clock, Utensils
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
 /* ─── Animation Helper ─────────────────────────── */
 const FadeIn = ({
@@ -62,13 +63,14 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.14}>
-            <p className="c9-body text-slate-600 mb-10 max-w-[530px]">
+            <p className="c9-body text-slate-600 mb-2 max-w-[530px]">
               In hospitality, the best technology is the kind guests never notice. We deliver rock-solid Wi-Fi, seamless POS connectivity, and clear communications that keep your operations humming and your reviews glowing.
             </p>
+            <p className="text-[14px] text-[#5D00D6] font-bold mb-10">Supporting industry-specific environments with reliable, scalable systems</p>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => {
@@ -87,6 +89,7 @@ const Hero = () => (
                 View All Industries
               </a>
             </div>
+            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
@@ -294,17 +297,20 @@ const FinalCTA = () => (
         <p className="c9-body text-slate-600 mb-10">
           We'll conduct a comprehensive site survey to identify weak spots in your guest and operational networks. No obligation, just a clear plan to ensure your hospitality venue is always online and always fast.
         </p>
-        <a
-          href="#consultation-section"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
-        >
-          Book a Site Audit
-          <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-        </a>
+        <div className="flex flex-col items-center gap-4">
+          <a
+            href="#consultation-section"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+          >
+            Book a Site Audit
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <p className="text-[13px] text-slate-500">No obligation. Just clear, practical advice.</p>
+        </div>
       </FadeIn>
     </div>
   </section>
@@ -319,13 +325,14 @@ export default function HospitalityPage() {
       <Challenges />
       <Impact />
       <Trust />
+      <TrustProofSystem />
       <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="HOSPITALITY IT ADVISORY"
           title="Let's stabilise your venue."
-          description="Drop your details below. We'll show you how we standardise hospitality networks to guarantee uptime, fast guest Wi-Fi, and seamless team communication."
+          description="Drop your details below. We'll show you how we standardise hospitality networks to guarantee uptime, fast guest Wi-Fi, and seamless team communication — no obligation, just clear, practical advice."
           formTitle="Talk to a Hospitality Specialist"
         />
       </section>

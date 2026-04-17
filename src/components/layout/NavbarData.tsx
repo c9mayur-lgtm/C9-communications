@@ -476,6 +476,7 @@ export const ENTERPRISE_TELCO = {
             { icon: <Headphones size={14} />, label: 'Inbound 13/1300/1800',    path: '/telco/inbound-services' },
             { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { icon: <Network size={14} />,    label: 'SIP Trunking (Bulk)',      path: '/telco/sip-trunking' },
+            { icon: <Headphones size={14} />, label: 'Contact Centre',              path: '/telco/contact-centre' },
           ]
         }
       ],

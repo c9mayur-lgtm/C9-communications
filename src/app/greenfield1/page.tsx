@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
+import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPER
@@ -75,7 +76,7 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => {
@@ -84,7 +85,7 @@ const Hero = () => (
                 }}
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
-                Get My Office Setup Plan{' '}
+                Get My Setup Plan{' '}
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
@@ -95,9 +96,10 @@ const Hero = () => (
                 }}
                 className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
-                Talk to a Setup Specialist
+                Talk to an Expert
               </a>
             </div>
+            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
@@ -139,7 +141,8 @@ const ScenarioBlock = () => (
       <div className="max-w-4xl mx-auto text-center mb-16">
         <FadeIn>
           <p className="c9-eyebrow mb-4">Start Strong</p>
-          <h2 className="c9-section-heading mb-6">Built for Businesses Starting Fresh</h2>
+          <h2 className="c9-section-heading mb-2">Built for Businesses Starting Fresh</h2>
+          <p className="text-[14px] text-[#5D00D6] font-bold mb-6">Delivered complete office setups with zero operational delays</p>
           <p className="c9-body text-balance">
             Setting up a new office or location shouldn’t mean managing multiple vendors, timelines, and technical decisions. 
             C9 simplifies the entire process by handling everything — from planning and procurement to deployment and ongoing support.
@@ -404,13 +407,13 @@ const FinalCTA = () => (
     <div className="relative z-10 container mx-auto px-6 md:px-8 text-center" style={{ maxWidth: ' seasonal-content' }}>
       <FadeIn>
         <h2 className="c9-section-heading !text-white mb-6">Let&apos;s Plan Your New Office Setup</h2>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a
               href="#consultation-section"
               onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
               className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40 group"
             >
-              Book a Greenfield Consultation
+              Get My Setup Plan
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
@@ -418,9 +421,10 @@ const FinalCTA = () => (
               onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
               className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all"
             >
-              Get My Setup Plan
+              Talk to an Expert
             </a>
         </div>
+        <p className="text-[13px] text-white/50">No obligation. Just clear, practical advice.</p>
       </FadeIn>
     </div>
   </section>
@@ -440,14 +444,26 @@ export default function Greenfield1Page() {
       <AnxietyRemoval />
       <VendorTrust />
       <HumanTrust />
+      <TrustProofSystem 
+        testimonials={[
+          {
+            quote: "C9 handled our entire office setup end-to-end. We were up and running from day one without any issues.",
+            author: "Founder"
+          },
+          {
+            quote: "No delays, no confusion — everything was delivered exactly as promised.",
+            author: "Project Lead"
+          }
+        ]}
+      />
       <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="GREENFIELD OFFICE SETUP"
           title="Ready to Start Fresh?"
-          description="Book your consultation today and we'll help you plan every detail of your new office technology."
-          formTitle="Book Workspace Planning"
+          description="Book your consultation today and we'll help you plan every detail of your new office technology — no obligation, just clear, practical advice."
+          formTitle="Talk to a Setup Specialist"
         />
       </section>
     </main>

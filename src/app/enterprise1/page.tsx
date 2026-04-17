@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
+import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPER
@@ -73,7 +74,7 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -87,9 +88,10 @@ const Hero = () => (
                 onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
                 className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap"
               >
-                Request a Tailored Proposal
+                Book a Consultation
               </a>
             </div>
+            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
@@ -266,7 +268,8 @@ const OperationalControl = () => (
         </FadeIn>
         <FadeIn delay={0.1} className="order-1 lg:order-2">
           <p className="c9-eyebrow mb-4">Strategic Management</p>
-          <h2 className="c9-section-heading mb-6">One Partner. Full Control.</h2>
+          <h2 className="c9-section-heading mb-2">One Partner. Full Control.</h2>
+          <p className="text-[14px] text-[#5D00D6] font-bold mb-6">Supporting multi-site environments with centralised control and visibility</p>
           <p className="c9-body text-slate-600 mb-6">
             C9 acts as your single point of control across your entire environment.
           </p>
@@ -436,7 +439,7 @@ const FinalCTA = () => (
     <div className="relative z-10 container mx-auto px-6 md:px-8 text-center" style={{ maxWidth: '800px' }}>
       <FadeIn>
         <h2 className="c9-section-heading !text-white mb-6">Take Control of Your IT Environment</h2>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a
               href="#consultation-section"
               onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -450,9 +453,10 @@ const FinalCTA = () => (
               onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
               className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all"
             >
-              Request a Tailored Proposal
+              Book a Consultation
             </a>
         </div>
+        <p className="text-[13px] text-white/50">No obligation. Just clear, practical advice.</p>
       </FadeIn>
     </div>
   </section>
@@ -474,14 +478,26 @@ export default function Enterprise1Page() {
       <Process />
       <Trust />
       <HumanTrust />
+      <TrustProofSystem 
+        testimonials={[
+          {
+            quote: "C9 brought structure and control across our multi-site environment. We now have complete visibility.",
+            author: "IT Manager"
+          },
+          {
+            quote: "They took ownership of vendor coordination, which removed a huge operational burden for us.",
+            author: "Head of Operations"
+          }
+        ]}
+      />
       <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="ENTERPRISE STRATEGY"
           title="Ready to Scale?"
-          description="Speak with our solutions architects to discuss standardisation, multi-site rollout viability, and long-term strategic technology management."
-          formTitle="Book Strategy Call"
+          description="Speak with our solutions architects to discuss standardisation, multi-site rollout viability, and long-term strategic technology management — no obligation, just clear, practical advice."
+          formTitle="Talk to an IT Expert"
         />
       </section>
     </main>

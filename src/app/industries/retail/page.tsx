@@ -7,6 +7,7 @@ import {
   AlertTriangle, MapPin, BarChart3, Clock, TrendingUp
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
 /* ─── Animation Helper ─────────────────────────── */
 const FadeIn = ({
@@ -62,13 +63,14 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.14}>
-            <p className="c9-body text-slate-600 mb-10 max-w-[530px]">
+            <p className="c9-body text-slate-600 mb-2 max-w-[530px]">
               Every second of downtime costs money. We deliver reliable, bulletproof technology across your network of stores — ensuring POS systems stay online, teams stay connected, and customers aren't left waiting.
             </p>
+            <p className="text-[14px] text-[#5D00D6] font-bold mb-10">Supporting industry-specific environments with reliable, scalable systems</p>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
               <a
                 href="#consultation-section"
                 onClick={(e) => {
@@ -87,6 +89,7 @@ const Hero = () => (
                 View All Industries
               </a>
             </div>
+            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
@@ -294,17 +297,20 @@ const FinalCTA = () => (
         <p className="c9-body text-slate-600 mb-10">
           We don't need to replace everything on day one. Let's look at the location that drops out the most. We'll fix it, prove the model, and then roll that stability out to the rest of your fleet.
         </p>
-        <a
-          href="#consultation-section"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
-        >
-          Book a Discovery Chat
-          <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-        </a>
+        <div className="flex flex-col items-center gap-4">
+          <a
+            href="#consultation-section"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+          >
+            Book a Discovery Chat
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <p className="text-[13px] text-slate-500">No obligation. Just clear, practical advice.</p>
+        </div>
       </FadeIn>
     </div>
   </section>
@@ -319,13 +325,43 @@ export default function RetailPage() {
       <Challenges />
       <Impact />
       <Trust />
+      <TrustProofSystem 
+        testimonials={[
+          {
+            quote: "Our POS systems used to drop out every time the local internet flared up. C9's LTE failover has kept us 100% online for 12 months straight.",
+            author: "National Retail Manager"
+          },
+          {
+            quote: "Support is actually fast. We aren't stuck on hold with a generic provider while customers wait in line.",
+            author: "Operations Director"
+          },
+          {
+            quote: "Standardising our 15 stores with one IT partner has saved us countless hours of troubleshooting.",
+            author: "Retail Group Owner"
+          }
+        ]}
+        cases={[
+          {
+            title: "50-Store Failover Rollout",
+            desc: "Implemented automated 4G failover across national retail fleet to ensure zero transaction loss."
+          },
+          {
+            title: "Network Standardisation",
+            desc: "Replaced fragmented local setups with a unified, high-performance network for consistent store operations."
+          },
+          {
+            title: "Rapid POS Migration",
+            desc: "Seamlessly transitioned all stores to cloud-based POS with zero operational downtime."
+          }
+        ]}
+      />
       <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="RETAIL IT ADVISORY"
           title="Let's stabilise your stores."
-          description="Drop your details below. We’ll show you exactly how we standardise retail networks to guarantee uptime and fast support."
+          description="Drop your details below. We’ll show you exactly how we standardise retail networks to guarantee uptime and fast support — no obligation, just clear, practical advice."
           formTitle="Talk to a Retail Specialist"
         />
       </section>

@@ -1,6 +1,7 @@
 import IndustriesHero from "@/components/sections/industries/IndustriesHero"
 import IndustryGrid from "@/components/sections/industries/IndustryGrid"
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm"
+import { TrustProofSystem } from "@/components/sections/TrustProofSystem"
 
 export const metadata = {
   title: "Industry IT & Telco Solutions | C9 Communications",
@@ -18,12 +19,14 @@ export default function IndustriesIndexPage() {
       <IndustriesHero />
       <IndustryGrid />
 
+      <TrustProofSystem />
+
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="GET IN TOUCH"
           title="Not Sure What Fits Your Business?"
-          description="Talk to our team and we'll help map the right solution for your environment. No commitment required — just a clear conversation about what you need."
+          description="Talk to our team and we'll help map the right solution for your environment. No commitment required — just a clear conversation about what you need. No obligation. Just clear, practical advice."
           formTitle="Talk to an Expert"
         />
       </section>

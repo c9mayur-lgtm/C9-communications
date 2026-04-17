@@ -82,11 +82,16 @@ export const ConsultationFormCore = ({ formTitle }: ConsultationFormCoreProps) =
 
         <div className="pt-2">
           <Button size="lg" className="w-full h-14 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-[16px] font-bold shadow-2xl shadow-purple-900/30 group transition-all duration-300 flex items-center justify-center gap-3">
-            {formTitle.includes("Schedule") ? "Schedule My Strategy Session" : "Request Free Audit"} <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+             {formTitle.includes("Schedule") ? "Talk to an Expert" : "Book a Consultation"} <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
           </Button>
-          <p className="text-[11px] text-zinc-400 mt-6 font-medium text-center opacity-70 uppercase tracking-widest" >
-            Typical response: 2 business hours • No lock-in
-          </p>
+          <div className="mt-5 text-center">
+            <p className="text-[13px] text-slate-500 font-medium mb-1">
+              No obligation. Just clear, practical advice.
+            </p>
+            <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.1em] opacity-60">
+              Typical response: 2 business hours
+            </p>
+          </div>
         </div>
       </form>
     </div>
