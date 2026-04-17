@@ -4,10 +4,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowRight, CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon,
-  AlertTriangle, Star, Zap
+  AlertTriangle, Star, Clock, Utensils
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
+/* ─── Animation Helper ─────────────────────────── */
 const FadeIn = ({
   children,
   delay = 0,
@@ -28,6 +29,7 @@ const FadeIn = ({
   </motion.div>
 );
 
+/* ─── Hero ─────────────────────────────────────── */
 const Hero = () => (
   <section className="relative overflow-hidden bg-slate-50 pt-24 pb-14 md:pt-32 md:pb-20">
     <div
@@ -49,22 +51,19 @@ const Hero = () => (
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
               <Star size={13} className="text-[#5D00D6]" />
-              <span className="c9-eyebrow !mb-0">Hospitality</span>
+              <span className="c9-eyebrow !mb-0">Hospitality IT</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Consistent Connectivity for{' '}
-              <span className="text-[#5D00D6]">Better Guest Experience</span>
+              Invisible Tech for a <span className="text-[#5D00D6]">Flawless Guest Stay</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.14}>
             <p className="c9-body text-slate-600 mb-10 max-w-[530px]">
-              In hospitality, every guest interaction depends on your systems working seamlessly
-              behind the scenes. We deliver reliable connectivity, voice, and network infrastructure
-              so your operations run smoothly — and your guests experience nothing less than that.
+              In hospitality, the best technology is the kind guests never notice. We deliver rock-solid Wi-Fi, seamless POS connectivity, and clear communications that keep your operations humming and your reviews glowing.
             </p>
           </FadeIn>
 
@@ -78,7 +77,7 @@ const Hero = () => (
                 }}
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
               >
-                Talk to a Specialist
+                Talk to a Hospitality Specialist
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
@@ -92,7 +91,7 @@ const Hero = () => (
 
           <FadeIn delay={0.28}>
             <div className="flex flex-wrap gap-5">
-              {['Guest Wi-Fi', 'Reliable Operations', 'Always On', 'Responsive Support'].map((t) => (
+              {['Seamless Guest Wi-Fi', 'POS & EFTPOS Uptime', 'Unified Team Comms', '24/7 Monitoring'].map((t) => (
                 <div key={t} className="flex items-center gap-2 text-slate-500 text-[13px] font-bold">
                   <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                 </div>
@@ -101,24 +100,24 @@ const Hero = () => (
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.12} className="hidden lg:block">
-          <div className="bg-white border border-slate-100 rounded-[32px] p-10 shadow-sm">
-            <div className="grid grid-cols-2 gap-0 divide-x divide-y divide-slate-100">
-              {[
-                { stat: '24/7', label: 'Guest service operations' },
-                { stat: '1', label: 'Managed IT partner' },
-                { stat: '100%', label: 'Uptime focus' },
-                { stat: '0', label: 'Guest-facing tech failures' },
-              ].map((item, i) => (
-                <div key={i} className="text-center p-8">
-                  <div className="text-[38px] font-extrabold text-[#5D00D6] mb-2 leading-none">
-                    {item.stat}
-                  </div>
-                  <div className="text-slate-500 text-[12px] font-bold uppercase tracking-wider text-balance">
-                    {item.label}
+        {/* Visual panel */}
+        <FadeIn delay={0.12} className="relative h-full hidden lg:block">
+          <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl">
+            <img 
+              src="/hospitality_restaurant_realism_1776419336049.png" 
+              alt="Premium Restaurant Service" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/90 via-[#0c1024]/20 to-transparent flex items-end p-10">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 w-full">
+                <div className="flex items-center gap-4 text-white">
+                  <Wifi className="text-green-400" size={24} />
+                  <div>
+                    <div className="font-bold text-[15px]">Zero Guest Wi-Fi Complaints</div>
+                    <div className="text-white/70 text-[13px]">Full coverage. High-speed. Secure.</div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </FadeIn>
@@ -127,23 +126,29 @@ const Hero = () => (
   </section>
 );
 
-const Context = () => (
-  <section className="py-16 lg:py-20 bg-white border-b border-slate-100">
+/* ─── Day In The Life ───────────────────────────── */
+const DayInTheLife = () => (
+  <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
     <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <div className="max-w-3xl">
+      <div className="max-w-3xl mx-auto text-center">
         <FadeIn>
-          <p className="c9-eyebrow mb-4">The Challenge</p>
-          <h2 className="c9-section-heading mb-6">
-            Your Guest Experience Starts With Your Technology
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] mb-6">
+            <Clock size={24} />
+          </div>
+          <h2 className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 leading-tight">
+            It’s 7:00 PM on a Friday. The house is full.
           </h2>
-          <p className="c9-body text-slate-600 mb-4">
-            Whether you're running a hotel, restaurant group, event venue, or accommodation business,
-            your guests expect everything to work. Slow Wi-Fi, dropped connections, and communication
-            failures don't just frustrate staff — they create visible problems that guests remember.
+          <p className="text-[17px] text-slate-600 mb-8 leading-relaxed">
+            Your restaurant is buzzing, every table is flipped, and the kitchen is in high gear. Suddenly, the POS system lags. Then the EFTPOS terminals stop connecting.
           </p>
-          <p className="c9-body text-slate-600">
-            C9 handles the infrastructure behind the scenes — connectivity, communications, and
-            network stability — so your team can focus entirely on delivering excellent service.
+          <p className="text-[17px] text-slate-600 mb-8 leading-relaxed">
+            In hospitality, you don't have "business hours"—you have "service periods." If your tech fails when you're busiest, the chaos ripples through the whole night. Front-of-house staff get stressed, diners wait too long, and revenue is literally left on the table.
+          </p>
+          <p className="text-[18px] text-slate-900 font-bold mb-8 leading-relaxed">
+            But with C9, your infrastructure is built for pressure. Your POS runs on a dedicated, prioritised network. If your primary internet line stutters, our 4G failover kicks in before the waiter can even finish taking an order. Your team stays focused on the guests, not the router under the counter.
+          </p>
+          <p className="text-[16px] text-[#5D00D6] font-semibold">
+            We handle the background noise so you can stay in the spotlight.
           </p>
         </FadeIn>
       </div>
@@ -151,48 +156,42 @@ const Context = () => (
   </section>
 );
 
-const challenges = [
-  {
-    icon: <Wifi size={20} />,
-    title: 'Unreliable guest Wi-Fi',
-    desc: 'Poor wireless performance is one of the most common guest complaints — and one of the most preventable.',
-  },
-  {
-    icon: <AlertTriangle size={20} />,
-    title: 'System outages during peak periods',
-    desc: 'Failures during busy service periods — check-in rushes, peak dining — create operational chaos and guest dissatisfaction.',
-  },
-  {
-    icon: <Phone size={20} />,
-    title: 'Disconnected communications between teams',
-    desc: 'When front of house, kitchen, and management can\'t communicate reliably, operations suffer and errors increase.',
-  },
-  {
-    icon: <Zap size={20} />,
-    title: 'Multiple vendors with no clear accountability',
-    desc: 'When something breaks, nobody takes ownership — and your team ends up chasing different suppliers for different problems.',
-  },
-];
-
+/* ─── Challenges ────────────────────────────────── */
 const Challenges = () => (
   <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
     <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
       <FadeIn className="mb-12">
-        <p className="c9-eyebrow mb-4">Common Challenges</p>
-        <h2 className="c9-section-heading max-w-2xl">What Gets in the Way of Seamless Operations</h2>
+        <p className="c9-eyebrow mb-4">Operational Friction</p>
+        <h2 className="c9-section-heading max-w-2xl">
+          The hurdles that hurt your guest scores
+        </h2>
       </FadeIn>
 
-      <div className="grid sm:grid-cols-2 gap-6">
-        {challenges.map((item, i) => (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            icon: <Wifi size={20} />,
+            title: 'Spotty Guest Wi-Fi',
+            desc: 'Guests view fast Wi-Fi as a utility, not a luxury. If they can\'t stream or work from their room, they won\'t come back.',
+          },
+          {
+            icon: <Utensils size={20} />,
+            title: 'POS/EFTPOS Latency',
+            desc: 'Slow transaction times at the counter or tableside create bottlenecks that kill your efficiency and frustrate customers.',
+          },
+          {
+            icon: <Phone size={20} />,
+            title: 'Team Communication Gaps',
+            desc: 'If reception, housekeeping, and maintenance can\'t communicate instantly across the property, guest requests fall through the cracks.',
+          },
+        ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.07}>
-            <div className="bg-white rounded-[20px] border border-slate-100 p-7 h-full hover:shadow-lg hover:border-[#5D00D6]/20 transition-all duration-300 group flex gap-5">
-              <div className="w-11 h-11 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:bg-[#5D00D6]/15 transition-colors">
+            <div className="bg-white rounded-[20px] border border-slate-100 p-7 h-full hover:shadow-lg hover:border-[#5D00D6]/20 transition-all duration-300 group">
+              <div className="w-11 h-11 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center text-[#5D00D6] mb-5 group-hover:bg-[#5D00D6]/15 transition-colors">
                 {item.icon}
               </div>
-              <div>
-                <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-[14px] text-slate-500 leading-relaxed">{item.desc}</p>
-              </div>
+              <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
+              <p className="text-[14px] text-slate-500 leading-relaxed">{item.desc}</p>
             </div>
           </FadeIn>
         ))}
@@ -201,47 +200,44 @@ const Challenges = () => (
   </section>
 );
 
-const Solution = () => (
-  <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <FadeIn>
-          <p className="c9-eyebrow mb-4">How C9 Helps</p>
-          <h2 className="c9-section-heading mb-6">
-            Consistent Infrastructure, Invisible to Guests
-          </h2>
-          <p className="c9-body text-slate-600 mb-8">
-            C9 delivers the connectivity, voice, and network infrastructure your hospitality business
-            needs to operate without disruption. We manage the technology, you manage the experience.
-          </p>
-          <div className="space-y-3">
-            {[
-              'High-performance guest and operational Wi-Fi across your property',
-              'Clear, reliable communications between all areas and teams',
-              'Proactive monitoring to catch issues before guests notice them',
-              'Single point of contact — one call when anything needs attention',
-            ].map((point, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <CheckCircle size={17} className="text-[#5D00D6] shrink-0 mt-0.5" />
-                <span className="font-semibold text-[14px] text-slate-700">{point}</span>
-              </div>
-            ))}
-          </div>
+/* ─── Impact Layer (What This Means) ────────────── */
+const Impact = () => (
+  <section className="py-16 lg:py-24 bg-[#0c1024] relative overflow-hidden">
+    <div
+      className="pointer-events-none absolute inset-0 opacity-[0.08]"
+      style={{ background: 'radial-gradient(ellipse at 80% 50%, #5D00D6, transparent 70%)' }}
+    />
+    <div className="relative z-10 container mx-auto px-6 md:px-8 max-w-[1240px]">
+      <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <FadeIn delay={0.1} className="order-2 lg:order-1 relative rounded-[32px] overflow-hidden aspect-[4/3] hidden md:block">
+           <img 
+              src="/hospitality_hotel_lobby_realism_1776419484915.png" 
+              alt="Guest enjoying hotel lobby Wi-Fi" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-indigo-900/20 mix-blend-multiply"></div>
         </FadeIn>
 
-        <FadeIn delay={0.1}>
-          <div className="bg-[#5D00D6] rounded-[32px] p-10 text-white">
-            <p className="text-[#C084FC] text-[11px] font-bold uppercase tracking-widest mb-6">
-              What This Means
-            </p>
-            <h3 className="text-[26px] font-bold mb-6 leading-snug">
-              Your guests get a seamless experience. Your team gets reliability they can count on.
-            </h3>
-            <p className="text-white/70 text-[15px] leading-relaxed">
-              When your technology infrastructure is well-managed and consistently maintained,
-              operations run smoother, staff are more effective, and guest satisfaction improves.
-              That's the direct impact of getting your IT right.
-            </p>
+        <FadeIn className="order-1 lg:order-2">
+          <p className="c9-eyebrow !text-[#a56eff] mb-5">Business Impact</p>
+          <h2 className="c9-section-heading !text-white mb-8">
+            What this actually means for you
+          </h2>
+          <div className="space-y-6">
+            {[
+              { title: 'Better Online Reviews', desc: 'No more "Wi-Fi was terrible" comments on TripAdvisor. We ensure coverage in every room and every corner of your venue.' },
+              { title: 'Higher Table Turnover', desc: 'Snappy POS and instant EFTPOS processing means faster payments and more time for your staff to serve the next guest.' },
+              { title: 'Operational Resilience', desc: 'Dropouts shouldn\'t stop your business. Our dual-line failover keeps you taking money and bookings regardless of the provider.' },
+              { title: 'Reduced Staff Stress', desc: 'When the tech just works, your team can focus on what they do best: hospitality. No more fighting with hardware.' },
+            ].map((point, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <CheckCircle className="text-[#a56eff] shrink-0 mt-1" size={20} />
+                <div>
+                  <h4 className="text-white font-bold text-[16px] mb-1">{point.title}</h4>
+                  <p className="text-white/70 text-[14px] leading-relaxed">{point.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </FadeIn>
       </div>
@@ -249,17 +245,54 @@ const Solution = () => (
   </section>
 );
 
+/* ─── Trust / Team ──────────────────────────────── */
+const Trust = () => (
+  <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
+    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <FadeIn>
+          <p className="c9-eyebrow mb-4">Direct Support</p>
+          <h2 className="c9-section-heading mb-6">Support that respects your service times.</h2>
+          <p className="c9-body text-slate-600 mb-5">
+            Communication issues on a Tuesday afternoon are annoying. Communication issues during a Saturday night rush are a disaster. We understand the difference.
+          </p>
+          <p className="c9-body text-slate-600 mb-8">
+            Our Australian-based support team knows your venue’s floor plan and network layout. We don’t ask your floor managers to reboot switches; we monitor your systems proactively and often fix issues before your team even notices a flicker. One call, real humans, instant action.
+          </p>
+          <a
+            href="#consultation-section"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:text-indigo-900 transition-colors"
+          >
+            Meet the team backing your service <ArrowRight size={16} />
+          </a>
+        </FadeIn>
+
+        <FadeIn delay={0.1} className="relative rounded-[32px] overflow-hidden aspect-[4/3] lg:aspect-square bg-slate-50 border border-slate-100">
+          <img 
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" 
+            alt="Team meeting in a professional environment" 
+            className="w-full h-full object-cover grayscale opacity-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/40 to-transparent mix-blend-hard-light" />
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─── Final CTA ─────────────────────────────────── */
 const FinalCTA = () => (
   <section className="py-16 lg:py-20 bg-slate-50 border-b border-slate-100">
     <div className="container mx-auto px-6 md:px-8 max-w-[760px] text-center">
       <FadeIn>
-        <p className="c9-eyebrow mb-5">Get Started</p>
-        <h2 className="c9-section-heading mb-6">
-          Let's Keep Your Hospitality Operations Running Smoothly
-        </h2>
+        <p className="c9-eyebrow mb-5">Next Steps</p>
+        <h2 className="c9-section-heading mb-6">Let's eliminate your Wi-Fi dead zones.</h2>
         <p className="c9-body text-slate-600 mb-10">
-          Talk to us about your venue, property, or multi-site operation. We'll outline a
-          connectivity and communications model built around uptime and guest experience.
+          We'll conduct a comprehensive site survey to identify weak spots in your guest and operational networks. No obligation, just a clear plan to ensure your hospitality venue is always online and always fast.
         </p>
         <a
           href="#consultation-section"
@@ -269,7 +302,7 @@ const FinalCTA = () => (
           }}
           className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
         >
-          Talk to a Specialist
+          Book a Site Audit
           <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
         </a>
       </FadeIn>
@@ -277,21 +310,23 @@ const FinalCTA = () => (
   </section>
 );
 
+/* ─── Page ──────────────────────────────────────── */
 export default function HospitalityPage() {
   return (
     <main className="min-h-screen bg-white">
       <Hero />
-      <Context />
+      <DayInTheLife />
       <Challenges />
-      <Solution />
+      <Impact />
+      <Trust />
       <FinalCTA />
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="HOSPITALITY IT ADVISORY"
-          title="Let's Keep Your Operations Running Smoothly"
-          description="Tell us about your venue or property portfolio. We'll build a technology plan focused on uptime, guest connectivity, and operational reliability."
-          formTitle="Talk to a Specialist"
+          title="Let's stabilise your venue."
+          description="Drop your details below. We'll show you how we standardise hospitality networks to guarantee uptime, fast guest Wi-Fi, and seamless team communication."
+          formTitle="Talk to a Hospitality Specialist"
         />
       </section>
     </main>
