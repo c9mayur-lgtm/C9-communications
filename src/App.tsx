@@ -1,5 +1,6 @@
 import { Component, type ReactNode } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { Navigation } from './components/shared/Navigation';
 import { Footer } from './components/shared/Footer';
 import { SaaSHomepage } from './pages/SaaSHomepage';
@@ -90,6 +91,7 @@ function App() {
   return (
     <Router>
       <AppBody />
+      <Analytics />
     </Router>
   );
 }
