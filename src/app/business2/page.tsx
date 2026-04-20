@@ -74,17 +74,17 @@ const Hero = () => (
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Stop Fighting Your Technology and{' '}
-              <span className="text-[#5D00D6]">Start Growing Your Business</span>
+              Fix what’s not working in your{' '}
+              <span className="text-[#5D00D6]">business technology</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
             <p className="c9-body mb-5 max-w-[520px]">
-              Get reliable, jargon-free IT management that actually works. We handle your systems, security, and support so you can focus on what matters—your customers.
+              We take over your existing setup, fix the frustrations that slow you down, and manage everything moving forward. No more managing vendors—just technology that works.
             </p>
             <p className="text-[14px] text-slate-500 mb-10 max-w-[520px]">
-              Specialised Australian IT experts for businesses with 5–50 employees. No internal IT team required.
+              Expert takeover and optimisation for businesses with existing IT and connectivity.
             </p>
           </FadeIn>
 
@@ -94,24 +94,24 @@ const Hero = () => (
                 href="#consultation"
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
-                Get My Free IT Health Check
+                Get My Business Assessed
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="tel:1300000000"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
-                Talk to an IT Expert
+                Speak to an Expert
               </a>
             </div>
             <p className="text-[13px] text-slate-400 font-medium ml-1">
-              Fixed-rate plans. No hidden fees. Local support.
+              Reliable management. Consistent performance. Zero interruptions.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.32}>
             <div className="flex flex-wrap gap-x-7 gap-y-3 mt-10 pt-8 border-t border-slate-100">
-              {['Local AU Support', 'No Lock-in Contracts', 'Fast Response Times', 'Jargon-Free Approach'].map((t) => (
+              {['Seamless Takeover', 'Vendor Management', 'Fixed Monthly Costs', 'Local Accountability'].map((t) => (
                 <span key={t} className="inline-flex items-center gap-2 text-slate-500 text-[13px] font-semibold">
                   <CheckCircle size={14} className="text-[#5D00D6]" /> {t}
                 </span>
@@ -150,33 +150,33 @@ const SectionEmpathy = () => (
   <section className="py-16 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-12">
-        <span className="c9-eyebrow mb-4">Does your IT feel like a constant hurdle?</span>
-        <h2 className="text-[28px] md:text-[36px] font-extrabold text-slate-900 leading-tight max-w-3xl mx-auto">
-          You started your business to solve problems for customers, not to spend your day troubleshooting computer issues.
+        <span className="c9-eyebrow mb-4">The Real Cost of Unmanaged Technology</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Existing systems shouldn&apos;t be your biggest bottle neck.
         </h2>
       </FadeIn>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {[
-          { icon: <Clock className="text-[#5D00D6]" />, label: 'Waiting for Fixes', desc: 'Hours (or days) wasted waiting for a simple IT response.' },
-          { icon: <Target className="text-[#5D00D6]" />, label: 'Hidden IT Costs', desc: 'Surprise invoices and confusing monthly bills you can\'t predict.' },
-          { icon: <Lock className="text-[#5D00D6]" />, label: 'Security Worries', desc: 'Constant concern about being hacked or losing critical data.' },
-          { icon: <AlertCircle className="text-[#5D00D6]" />, label: 'Unreliable Vendors', desc: 'Feeling like your "IT person" has simply disappeared when needed.' },
+          { icon: <Zap className="text-[#5D00D6]" />, label: 'Slow Internet', desc: 'Connectivity that drops out during meetings or slows down when you need it most.' },
+          { icon: <Users className="text-[#5D00D6]" />, label: 'Poor IT Support', desc: 'Waiting days for responses while your team sits idle and frustrated.' },
+          { icon: <Monitor className="text-[#5D00D6]" />, label: 'Multiple Vendors', desc: 'Managing five different bills and contacts just to keep your office running.' },
+          { icon: <Handshake className="text-[#5D00D6]" />, label: 'No Accountability', desc: 'Vendors blaming each other while your problems remain unresolved.' },
         ].map((s, i) => (
           <FadeIn key={i} delay={i * 0.05} className="group">
             <div className="h-full bg-white border border-slate-100 rounded-2xl p-6 hover:border-[#5D00D6]/20 transition-all hover:shadow-md">
               <div className="w-10 h-10 rounded-full bg-[#5D00D6]/5 flex items-center justify-center mb-4 group-hover:bg-[#5D00D6]/10 transition-colors">
                 {s.icon}
               </div>
-              <h3 className="font-bold text-slate-900 text-[16px] mb-2">{s.label}</h3>
+              <h3 className="c9-card-title mb-2">{s.label}</h3>
               <p className="text-slate-500 text-[14px] leading-relaxed">{s.desc}</p>
             </div>
           </FadeIn>
         ))}
       </div>
       <FadeIn delay={0.2} className="text-center">
-        <p className="text-slate-600 font-medium mb-6">If any of these sound familiar, you’re not alone. We’ve helped hundreds of Aussie businesses fix this.</p>
+        <p className="text-slate-600 font-medium mb-6">If your existing setup is holding you back, it&apos;s time for a professional takeover.</p>
         <a href="#consultation" className="text-[#5D00D6] font-bold hover:underline inline-flex items-center gap-2">
-          Fix My IT Issues Now <ArrowRight size={16} />
+          Get My Business Assessed <ArrowRight size={16} />
         </a>
       </FadeIn>
     </div>
@@ -186,44 +186,44 @@ const SectionEmpathy = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 3 — PROBLEM AGITATION
    ───────────────────────────────────────────────────────── */
-const SectionAgitation = () => (
+const SectionAudit = () => (
   <section className="py-16 lg:py-24 bg-white">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <FadeIn direction="left">
-          <span className="c9-eyebrow mb-4 text-rose-600">The Risk of Inaction</span>
+          <span className="c9-eyebrow mb-4 text-[#5D00D6]">System Assessment</span>
           <h2 className="c9-section-heading mb-6">
-            The Hidden Cost of "Cheap" or "Freelance" IT
+            We start by understanding what you already have
           </h2>
           <p className="c9-body mb-8">
-            Most small businesses don't realise how much they are losing to poor IT support until it is too late. Every minute your team is offline is money out of your pocket.
+            We don’t replace everything — we fix what needs fixing. Our process begins with a comprehensive review of your current technology stack to identify exactly where the friction is.
           </p>
           <div className="space-y-6">
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-rose-50 flex items-center justify-center shrink-0">
-                <Zap size={20} className="text-rose-600" />
+              <div className="w-12 h-12 rounded-full bg-[#5D00D6]/5 flex items-center justify-center shrink-0">
+                <Search size={20} className="text-[#5D00D6]" />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 text-[17px] mb-1">Downtime = Lost Sales</h4>
-                <p className="text-slate-500 text-[14px]">When your network fails, your business stops. Can you afford to be offline for a whole afternoon?</p>
+                <h4 className="c9-card-title mb-1">Infrastructure Review</h4>
+                <p className="text-slate-500 text-[14px]">We map out your current network, security, and hardware to see what is worth keeping and what is failing.</p>
               </div>
             </div>
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-rose-50 flex items-center justify-center shrink-0">
-                <ShieldCheck size={20} className="text-rose-600" />
+              <div className="w-12 h-12 rounded-full bg-[#5D00D6]/5 flex items-center justify-center shrink-0">
+                <AlertCircle size={20} className="text-[#5D00D6]" />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 text-[17px] mb-1">Cybersecurity Threats</h4>
-                <p className="text-slate-500 text-[14px]">43% of cyberattacks target small businesses. A single breach can be enough to close your doors permanently.</p>
+                <h4 className="c9-card-title mb-1">Identify Gaps</h4>
+                <p className="text-slate-500 text-[14px]">We uncover the hidden risks in your systems, from security vulnerabilities to connectivity bottlenecks.</p>
               </div>
             </div>
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-rose-50 flex items-center justify-center shrink-0">
-                <Clock size={20} className="text-rose-600" />
+              <div className="w-12 h-12 rounded-full bg-[#5D00D6]/5 flex items-center justify-center shrink-0">
+                <CheckCircle size={20} className="text-[#5D00D6]" />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 text-[17px] mb-1">Your Time is Wasted</h4>
-                <p className="text-slate-500 text-[14px]">You didn't start a business to become a part-time IT troubleshooter. Focus on growth, not resetting passwords.</p>
+                <h4 className="c9-card-title mb-1">Recommend Improvements</h4>
+                <p className="text-slate-500 text-[14px]">You get a clear, prioritised plan to stabilise your environment without unnecessary expensive upgrades.</p>
               </div>
             </div>
           </div>
@@ -231,17 +231,17 @@ const SectionAgitation = () => (
         <FadeIn direction="right" delay={0.1}>
           <div className="bg-[#0c1024] rounded-[32px] p-8 lg:p-12 text-white relative overflow-hidden text-center">
              <div className="absolute top-0 right-0 p-8 opacity-10">
-                <AlertCircle size={160} />
+                <Search size={160} />
              </div>
-             <h3 className="text-2xl md:text-3xl font-bold mb-6">Can you afford another day of IT uncertainty?</h3>
+             <h3 className="c9-section-heading !text-white mb-6">Stop guessing and start knowing.</h3>
              <p className="text-white/70 mb-10 text-[16px] leading-relaxed">
-               Reliability isn't a luxury—it's a requirement for a modern business to survive and scale.
+               Get a definitive report on your current technology health and a roadmap to fix it.
              </p>
              <a
                 href="#consultation"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#0c1024] rounded-full h-14 px-10 font-bold text-[15px] hover:bg-slate-100 transition-all shadow-xl whitespace-nowrap"
               >
-                Book My Free Assessment
+                Get My Business Assessed
               </a>
           </div>
         </FadeIn>
@@ -257,27 +257,27 @@ const SectionSolution = () => (
   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-16">
-        <span className="c9-eyebrow mb-4">C9 Communications: Your Complete IT Partner</span>
+        <span className="c9-eyebrow mb-4">Complete Operational Takeover</span>
         <h2 className="c9-section-heading mb-6 max-w-2xl mx-auto">
-          We become your outsourced IT department
+          We take over and optimise your entire setup
         </h2>
         <p className="c9-body max-w-3xl mx-auto">
-          No jargon, no excuses, just a team of Australian experts who make sure your technology &quot;just works.&quot; We provide the enterprise-level support your business deserves at a small business price point.
+          You stop managing vendors — we handle everything. From your connectivity and security to day-to-day support, our team provides consistent management and reliable performance.
         </p>
       </FadeIn>
 
       <div className="grid md:grid-cols-3 gap-8">
         {[
-          { title: 'Local Expert Support', desc: 'Direct access to skilled technicians right here in Australia. No overseas call centres.', icon: <Users size={24} /> },
-          { title: 'Jargon-Free Clarity', desc: 'We speak in outcomes, not acronyms. You\'ll always know exactly what we\'re doing and why.', icon: <MessageSquare size={24} /> },
-          { title: 'Full Accountability', desc: 'We manage everything—from your internet and phones to your servers and security.', icon: <Handshake size={24} /> },
+          { title: 'Managed IT Support', desc: 'Fast, reliable help for your team. We know your existing setup and fix issues the first time.', icon: <Users size={24} /> },
+          { title: 'Consistent Connectivity', desc: 'Stable, high-performance internet managed by experts who own the outcome.', icon: <Zap size={24} /> },
+          { title: 'Full Accountability', desc: 'No finger-pointing. We manage your hardware, software, and external vendors so you don&apos;t have to.', icon: <Handshake size={24} /> },
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.1}>
             <div className="bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm h-full flex flex-col items-center text-center">
               <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center mb-6 text-[#5D00D6]">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+              <h3 className="c9-card-title mb-3">{item.title}</h3>
               <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
             </div>
           </FadeIn>
@@ -290,32 +290,39 @@ const SectionSolution = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 5 — VALUE / OUTCOME (TRANSFORMATION)
    ───────────────────────────────────────────────────────── */
-const SectionValue = () => (
+const SectionDecision = () => (
   <section className="py-16 lg:py-24 bg-white">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <FadeIn direction="left">
-          <span className="c9-eyebrow mb-4">The C9 Difference</span>
+          <span className="c9-eyebrow mb-4">Decision Clarity</span>
           <h2 className="c9-section-heading mb-6">
-            From Tech Anxiety to Total Peace of Mind
+            Identify the right path for your business
           </h2>
           <p className="c9-body mb-8">
-            Experience the transformation when your technology is handled by professionals who care about your success.
+            Not every setup needs a total replacement. We help you identify the most efficient way to achieve reliability.
           </p>
           <div className="space-y-6">
             <div className="p-6 rounded-2xl border border-slate-100 bg-slate-50 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all">
                <div className="flex justify-between items-center mb-4">
-                  <span className="text-[12px] font-extrabold text-slate-400 uppercase tracking-widest">Before C9</span>
-                  <div className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></div>
+                  <span className="text-[12px] font-extrabold text-slate-400 uppercase tracking-widest">Minor Issues</span>
                </div>
-               <p className="text-slate-700 italic font-medium">&ldquo;I hope the network doesn&apos;t crash today. Our IT guy doesn&apos;t answer his phone.&rdquo;</p>
+               <h4 className="c9-card-title mb-2">Optimise Existing Setup</h4>
+               <p className="text-slate-600 font-medium text-[14px]">We fix configuration errors and resolve ongoing glitches to get your current systems running at peak performance.</p>
+            </div>
+            <div className="p-6 rounded-2xl border border-slate-100 bg-slate-50 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all">
+               <div className="flex justify-between items-center mb-4">
+                  <span className="text-[12px] font-extrabold text-slate-400 uppercase tracking-widest">Frequent Issues</span>
+               </div>
+               <h4 className="c9-card-title mb-2">Upgrade Where Needed</h4>
+               <p className="text-slate-600 font-medium text-[14px]">Targeted replacement of failing hardware or outdated software that creates points of failure.</p>
             </div>
             <div className="p-6 rounded-2xl border border-[#5D00D6]/20 bg-[#5D00D6]/5 relative overflow-hidden group transition-all">
                <div className="flex justify-between items-center mb-4">
-                  <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-widest">With C9 Managed IT</span>
-                  <div className="w-2 h-2 rounded-full bg-[#5D00D6]"></div>
+                  <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-widest">Major Problems</span>
                </div>
-               <p className="text-slate-900 font-bold">&ldquo;I don&apos;t even think about the IT anymore—it just works. Help is always one call away.&rdquo;</p>
+               <h4 className="c9-card-title mb-2">Full Improvement</h4>
+               <p className="text-slate-900 font-bold text-[14px]">A complete environmental overhaul for businesses whose technology is actively causing loss of productivity.</p>
             </div>
           </div>
         </FadeIn>
@@ -329,11 +336,8 @@ const SectionValue = () => (
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-bottom p-10">
                 <div className="mt-auto">
-                  <div className="flex gap-1 mb-2">
-                    {[1,2,3,4,5].map(i => <Zap key={i} size={16} className="fill-[#5D00D6] text-[#5D00D6]" />)}
-                  </div>
-                  <p className="text-white font-bold text-xl leading-snug">
-                    Zero downtime projects. <br/>100% Australian support.
+                  <p className="c9-card-title !text-white leading-snug">
+                    Get a clear roadmap. <br/>Stop managing problems.
                   </p>
                 </div>
               </div>
@@ -348,29 +352,28 @@ const SectionValue = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 6 — SERVICES (SIMPLIFIED)
    ───────────────────────────────────────────────────────── */
-const SectionServices = () => (
+const SectionPaths = () => (
   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-16">
-        <span className="c9-eyebrow mb-4">Our Core Capabilities</span>
+        <span className="c9-eyebrow mb-4">Solution Paths</span>
         <h2 className="c9-section-heading mb-6 max-w-2xl mx-auto">
-          Everything your business needs to operate reliably
+          Tailored approach to fixing your business technology
         </h2>
       </FadeIn>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
-          { icon: <HelpCircle className="text-[#5D00D6]" />, title: 'Reliable Helpdesk', desc: 'Fast answers to your team\'s everyday IT questions from experts who know your setup.' },
-          { icon: <Lock className="text-[#5D00D6]" />, title: 'Cybersecurity', desc: 'Deep protection keeping your client data safe from hackers and scams.' },
-          { icon: <Cloud className="text-[#5D00D6]" />, title: 'Cloud & Email', desc: 'Secure Microsoft 365 or Google Workspace management tailored for your workflow.' },
-          { icon: <Monitor className="text-[#5D00D6]" />, title: 'Proactive Monitoring', desc: 'We fix problems before they cause downtime. 24/7 system health checks.' },
+          { icon: <Monitor className="text-[#5D00D6]" />, title: 'Improve Existing Setup', desc: 'No need for a full rewrite. We refine and stabilise what you already have in place.' },
+          { icon: <Zap className="text-[#5D00D6]" />, title: 'Upgrade Where Needed', desc: 'Surgical upgrades to failing components that prevent your business from running smoothly.' },
+          { icon: <ShieldCheck className="text-[#5D00D6]" />, title: 'Full Optimisation', desc: 'Ensuring every part of your technology path is consistent, reliable, and secure.' },
         ].map((s, i) => (
           <FadeIn key={i} delay={i * 0.05} className="group">
             <div className="bg-white rounded-3xl border border-slate-100 p-8 h-full hover:border-[#5D00D6]/20 transition-all hover:shadow-lg text-center">
               <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 mx-auto group-hover:bg-[#5D00D6]/5 transition-colors">
                 {s.icon}
               </div>
-              <h3 className="font-extrabold text-slate-900 text-[18px] mb-3">{s.title}</h3>
+              <h3 className="c9-card-title mb-3">{s.title}</h3>
               <p className="text-slate-500 text-[14px] leading-relaxed">{s.desc}</p>
             </div>
           </FadeIn>
@@ -380,14 +383,16 @@ const SectionServices = () => (
       <FadeIn delay={0.2} className="mt-12 text-center bg-white rounded-3xl border border-slate-100 p-10 max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8 text-left">
            <div className="w-16 h-16 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0">
-              <Zap size={32} className="text-[#5D00D6]" />
+              <Target size={32} className="text-[#5D00D6]" />
            </div>
            <div className="grow">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">The Telecom Advantage</h4>
-              <p className="text-slate-500 text-[15px]">C9 handles both your <strong>IT and your Business Internet/Phones</strong>. No more calling two different companies only for them to blame each other. We own the outcome.</p>
+              <h4 className="c9-card-title mb-2">Cross-Service Integration</h4>
+              <p className="text-slate-500 text-[15px]">Need specific help with your internet? Explore our specialised connectivity options for <strong>nbn®</strong> and <strong>Fibre</strong>.</p>
            </div>
-           <div className="shrink-0 w-full md:w-auto">
-              <a href="/telco" className="inline-flex items-center justify-center bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all w-full">Explore Telco</a>
+           <div className="shrink-0 w-full md:w-auto flex gap-4">
+              <a href="/telco/business-nbn" className="text-[#5D00D6] font-bold text-[14px] hover:underline whitespace-nowrap">nbn®</a>
+              <a href="/telco/fast-fibre" className="text-[#5D00D6] font-bold text-[14px] hover:underline whitespace-nowrap">Fibre</a>
+              <a href="/business2" className="text-[#5D00D6] font-bold text-[14px] hover:underline whitespace-nowrap">Managed IT</a>
            </div>
         </div>
       </FadeIn>
@@ -398,30 +403,31 @@ const SectionServices = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 7 — HOW IT WORKS
    ───────────────────────────────────────────────────────── */
-const SectionHowItWorks = () => (
+const SectionProcess = () => (
   <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-16">
-        <span className="c9-eyebrow mb-4">Simple Onboarding</span>
+        <span className="c9-eyebrow mb-4">Our Takeover Process</span>
         <h2 className="c9-section-heading mb-6 max-w-2xl mx-auto">
-          Getting your IT fixed is easier than you think
+          A clear path to reliable technology
         </h2>
       </FadeIn>
 
-      <div className="grid md:grid-cols-3 gap-12 relative">
-        <div className="hidden md:block absolute top-[45px] left-[15%] right-[15%] h-[2px] bg-slate-100" />
+      <div className="grid md:grid-cols-4 gap-8 relative">
+        <div className="hidden md:block absolute top-[45px] left-[10%] right-[10%] h-[2px] bg-slate-100" />
         
         {[
-          { step: '01', title: 'Free IT Assessment', desc: 'We look at your current setup, find security gaps, and identify ways to save you time and money.' },
-          { step: '02', title: 'Seamless Transition', desc: 'We move your systems to our managed platform with zero downtime for your team.' },
-          { step: '03', title: 'Total Ongoing Support', desc: 'Rest easy knowing our Australian team is monitoring and supporting your business 24/7.' },
+          { step: '01', title: 'Assess', desc: 'We audit your existing network, security, and vendors to find friction points.' },
+          { step: '02', title: 'Identify', desc: 'We pinpoint exact risks and opportunities for improvement in your current setup.' },
+          { step: '03', title: 'Optimise', desc: 'We execute targeted fixes and stabilisations with zero interruptions to your team.' },
+          { step: '04', title: 'Manage', desc: 'Our local experts provide continuous, proactive management and accountability.' },
         ].map((s, i) => (
           <FadeIn key={i} delay={i * 0.1} className="relative text-center">
             <div className="w-[90px] h-[90px] rounded-full bg-white border-2 border-[#5D00D6] flex items-center justify-center mb-6 mx-auto relative z-10 shadow-lg shadow-purple-900/10">
                <span className="text-2xl font-black text-[#5D00D6]">{s.step}</span>
             </div>
-            <h3 className="text-xl font-extrabold text-slate-900 mb-4">{s.title}</h3>
-            <p className="text-slate-500 text-[15px] leading-relaxed px-4">{s.desc}</p>
+            <h3 className="c9-card-title mb-4">{s.title}</h3>
+            <p className="text-slate-500 text-[14px] leading-relaxed px-2">{s.desc}</p>
           </FadeIn>
         ))}
       </div>
@@ -431,7 +437,7 @@ const SectionHowItWorks = () => (
             href="#consultation"
             className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group"
           >
-            Get Started with Step 01
+            Get My Business Assessed
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </a>
       </FadeIn>
@@ -463,7 +469,7 @@ const SectionObjections = () => (
         ].map((o, i) => (
           <FadeIn key={i} delay={i * 0.1}>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 transition-all">
-              <h4 className="text-lg font-bold mb-4 text-[#a56eff]">{o.q}</h4>
+              <h4 className="c9-card-title mb-4 !text-[#a56eff]">{o.q}</h4>
               <p className="text-white/70 text-[15px] leading-relaxed font-medium">{o.a}</p>
             </div>
           </FadeIn>
@@ -476,7 +482,7 @@ const SectionObjections = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 9 — DIFFERENTIATION
    ───────────────────────────────────────────────────────── */
-const SectionDifferentiation = () => (
+const SectionImpact = () => (
   <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -488,30 +494,33 @@ const SectionDifferentiation = () => (
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full border border-white/40 shadow-lg">
-                 <span className="text-[#5D00D6] font-bold text-[13px] uppercase tracking-wider">100% Australian Owned & Operated</span>
+                 <span className="text-[#5D00D6] font-bold text-[13px] uppercase tracking-wider">Business Impact</span>
               </div>
            </div>
         </FadeIn>
         <FadeIn direction="right" delay={0.1}>
-          <span className="c9-eyebrow mb-4">Why C9 Communications?</span>
+          <span className="c9-eyebrow mb-4">Operation Excellence</span>
           <h2 className="c9-section-heading mb-6">
-            Better than the average Managed Service Provider
+            Realistic outcomes for your existing operations
           </h2>
           <p className="c9-body mb-8">
-            Most IT companies only see half the picture. Because we are both a <strong>Telecom and IT provider</strong>, we control the entire technology path for your business.
+            Our goal isn&apos;t just to fix tech—it&apos;s to improve your business productivity. We ensure your systems are reliable and consistent.
           </p>
           <ul className="space-y-4 mb-10">
             {[
-              'Local AU-Based Support: Talk to someone who knows your area.',
-              'No Finger-Pointing: We own your internet AND your IT systems.',
-              'Response Time Guarantee: We don\'t leave you hanging.',
-              'Long-Term Partnership: We grow as your business grows.',
-            ].map((text, i) => (
+              { title: 'Faster Systems', desc: 'Optimised hardware and software for better performance.' },
+              { title: 'Stable Connectivity', desc: 'Consistent internet with no interruptions to your work.' },
+              { title: 'Less Downtime', desc: 'Proactive management that catches problems before they stop you.' },
+              { title: 'Better Productivity', desc: 'A team that focuses on their roles, not troubleshooting IT.' },
+            ].map((item, i) => (
               <li key={i} className="flex gap-3">
                  <div className="shrink-0 mt-1">
                     <CheckCircle size={18} className="text-[#5D00D6]" />
                  </div>
-                 <span className="text-slate-700 font-semibold leading-relaxed">{text}</span>
+                 <div>
+                    <span className="c9-card-title block !text-[16px] lg:mb-1">{item.title}</span>
+                    <span className="text-slate-500 text-[14px]">{item.desc}</span>
+                 </div>
               </li>
             ))}
           </ul>
@@ -519,7 +528,7 @@ const SectionDifferentiation = () => (
             href="tel:1300000000"
             className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[16px] hover:translate-x-1 transition-all"
           >
-            Call Us for a Quick Chat <ArrowRight size={18} />
+            Speak to an Expert <ArrowRight size={18} />
           </a>
         </FadeIn>
       </div>
@@ -536,18 +545,18 @@ const FinalCTA = () => (
      <div className="absolute inset-0 bg-[#5D00D6]/5 opacity-30"></div>
      <div className={`${C} relative z-10 text-center`}>
         <FadeIn>
-          <h2 className="text-[32px] md:text-[52px] font-black text-slate-900 leading-[1.1] mb-8 max-w-4xl mx-auto">
-            Ready to Fix Your IT Frustrations for Good?
+          <h2 className="c9-section-heading mb-8 max-w-4xl mx-auto md:!text-[46px] lg:!text-[52px]">
+            Stop managing problems — let us fix and run your setup
           </h2>
           <p className="c9-body mb-12 max-w-2xl mx-auto text-[18px]">
-            Don&apos;t wait for your next system crash. Book your free IT assessment today and see the difference a professional partner makes.
+            Ready to stop fighting your technology? Book your assessment today and see the difference a professional takeover makes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
              <a
                 href="#consultation"
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-16 px-12 font-extrabold text-[17px] hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/30 group w-full sm:w-auto"
               >
-                Book My Free Assessment
+                Get My Business Assessed
                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
               </a>
               <div className="hidden sm:block text-slate-400 font-bold px-4">OR</div>
@@ -555,10 +564,10 @@ const FinalCTA = () => (
                 href="tel:1300000000"
                 className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-16 px-12 font-extrabold text-[17px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all w-full sm:w-auto bg-white"
               >
-                1300 000 000
+                Speak to an Expert
               </a>
           </div>
-          <p className="mt-8 text-slate-400 font-medium">30-minute discovery call. No obligations.</p>
+          <p className="mt-8 text-slate-400 font-medium">Clear roadmaps. Reliable management. Expert support.</p>
         </FadeIn>
      </div>
   </section>
@@ -573,32 +582,31 @@ export default function Business2Page() {
       <Hero />
       <WpClientTicker />
       <SectionEmpathy />
-      <SectionAgitation />
+      <SectionAudit />
       <SectionSolution />
-      <SectionValue />
-      <SectionServices />
-      <SectionHowItWorks />
-      <SectionObjections />
-      <SectionDifferentiation />
+      <SectionPaths />
+      <SectionDecision />
+      <SectionImpact />
+      <SectionProcess />
       
       <WpCaseStudies 
-        eyebrow="CLIENT SUCCESS"
-        title="Small Businesses Thriving with C9"
+        eyebrow="TAKEOVER SUCCESS"
+        title="Businesses Optimised by C9"
         articles={[
           {
             tag: 'RETAIL & E-COMMERCE',
-            title: 'Securing a Growing Online Presence',
-            desc: 'We helped a boutique retail brand scale from one location to five, ensuring their POS systems and warehouse networking never skipped a beat.',
+            title: 'Stabilising a Failing POS Network',
+            desc: 'We took over a major retail group suffering from frequent outages. By optimising their existing infrastructure and managing their connectivity, we achieved zero downtime.',
             img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
-            videoText: 'Retail Case Study',
+            videoText: 'Retail Takeover',
             href: '#consultation'
           },
           {
             tag: 'PROFESSIONAL SERVICES',
-            title: 'Remote Work Security for Law Firm',
-            desc: 'Implemented a 100% secure Microsoft 365 environment for 20+ staff, allowing secure document access from courtrooms and homes.',
+            title: 'Fixing Poor IT Response Times',
+            desc: 'A prominent firm was tired of waiting days for IT help. We moved them to our managed platform, providing instant local support and consistent system performance.',
             img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
-            videoText: 'Legal IT Success',
+            videoText: 'Support Turnaround',
             href: '#consultation'
           }
         ]}
@@ -653,9 +661,9 @@ export default function Business2Page() {
         <WpConsultationForm
           showHeader={false}
           eyebrow="GET STARTED"
-          title="Claim Your Free IT Health Check"
-          description="Ready to stop fighting your IT? Book a 30-minute discovery call where we assess your current setup, identify risks, and show you exactly how to get reliable support."
-          formTitle="Claim My Health Check"
+          title="Get Your Business Assessed"
+          description="Ready to stop managing problems? Book a discovery call where we review your existing setup, identify gaps, and show you exactly how we take over and optimise your technology."
+          formTitle="Get My Assessment"
         />
       </section>
     </main>
