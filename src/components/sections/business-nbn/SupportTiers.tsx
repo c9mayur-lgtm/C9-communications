@@ -4,135 +4,72 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Shield, ShieldCheck, ShieldPlus, ChevronDown, Wifi, ArrowRight } from 'lucide-react';
 
-const tiers = [
+const supportValues = [
   {
-    title: 'C9 Standard',
-    offer: 'Free 4G Backup Included',
-    offerBg: 'bg-[#5D00D6]',
-    price: '$0',
-    priceSub: 'Included with all plans',
-    esla: '12-hour eSLA',
-    desc: 'Best for standard business operations. Backed by the nbn enhanced SLA program.',
-    features: [
-      '12-hour restoration commitment',
-      'Unified Business Support team',
-      'Standard data priority',
-      '4G LTE failover standby'
-    ],
-    recommended: false,
-    cta: 'Select Standard'
+    title: 'Australian-based support',
+    desc: 'Talk directly to our local nbn experts in Perth and Melbourne. No call centres, no scripted answers — just engineers who know your setup.',
+    icon: ShieldCheck,
+    tag: 'LOCAL EXPERTS'
   },
   {
-    title: 'C9 Essential',
-    offer: 'Priority Restore Upgrade',
-    offerBg: 'bg-[#5D00D6]',
-    price: '$29',
-    priceSub: 'per month extra',
-    esla: '8-hour eSLA',
-    desc: 'Faster fault resolution for businesses that are revenue-sensitive to internet uptime.',
-    features: [
-      '8-hour restoration commitment',
-      'Priority fault escalation',
-      'Enhanced data monitoring',
-      'Named support triage manager'
-    ],
-    recommended: true,
-    cta: 'Select Essential'
+    title: 'Fast response times',
+    desc: 'When an issue occurs, we prioritize business-grade resolution. We handle the coordination with nbn co to get you back online as fast as possible.',
+    icon: ShieldPlus,
+    tag: 'PRIORITY CARE'
   },
   {
-    title: 'C9 Ultimate',
-    offer: 'Enterprise Mission Critical',
-    offerBg: 'bg-[#1A1A2E]',
-    price: '$69',
-    priceSub: 'per month extra',
-    esla: '4-hour eSLA',
-    desc: 'The fastest response available. For organizations where internet downtime is unacceptable.',
-    features: [
-      '4-hour restoration commitment',
-      'Fastest available nbn eSLA',
-      'Real-time status notifications',
-      'Priority routing pathing'
-    ],
-    recommended: false,
-    cta: 'Select Ultimate'
+    title: 'One point of contact',
+    desc: 'Stop being bounced between departments. You get a direct point of contact who owns your issue from the first call to the final fix.',
+    icon: Shield,
+    tag: 'ACCOUNTABILITY'
+  },
+  {
+    title: 'Ongoing monitoring',
+    desc: 'We don’t wait for you to call us. We proactively monitor your connection stability and line sync to identify problems before they affect your work.',
+    icon: Wifi,
+    tag: 'PROACTIVE MONITOR'
   }
 ];
 
 export default function SupportTiers() {
   return (
-    <section className="w-full bg-[#F8F7FF] py-14 px-6 md:px-8 border-y border-gray-100" >
+    <section className="w-full bg-[#F8F7FF] py-20 px-6 md:px-8 border-y border-gray-100" >
       <div className="container mx-auto max-w-[1240px]">
         
-        {/* Telstra-inspired Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">Support & Accountability</span>
+               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">Service & Support</span>
                <h2 className="c9-section-heading">
-                 Local support that <br className="hidden md:block" /> actually cares.
+                 Support that actually <br className="hidden md:block" /> supports your business.
                </h2>
             </div>
             <p className="text-[17px] text-[#6B7280] max-w-[500px] leading-relaxed italic">
-              No call centres. No endless waiting. Just Australian-based nbn experts who know your business and your setup.
+              No call centres. Just Australian-based nbn experts who provide a single point of contact and proactive monitoring for your connection.
             </p>
         </div>
 
-        {/* Telstra Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {tiers.map((t, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {supportValues.map((v, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group flex flex-col rounded-[40px] shadow-[0_15px_40px_rgba(0,0,0,0.04)] bg-white border border-gray-100 relative"
+              className="flex flex-col p-10 rounded-[40px] shadow-[0_15px_40px_rgba(0,0,0,0.04)] bg-white border border-gray-100 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5 group"
             >
-              {/* TOP: Blue/Dark Area (The Offer) */}
-              <div className={`p-8 pb-10 rounded-t-[40px] ${t.recommended ? 'bg-[#5D00D6]' : (i === 2 ? 'bg-[#1A1A2E]' : 'bg-[#1A1A2E]/5')} ${!t.recommended && i !== 2 ? 'text-[#1A1A2E]' : 'text-white'} relative min-h-[300px] md:h-[360px] flex flex-col`}>
-                 <div className={`w-fit px-4 py-2 rounded-xl border text-[10px] font-bold tracking-[0.15em] uppercase mb-10 ${t.recommended || i === 2 ? 'bg-white/10 border-white/20 text-white' : 'bg-gray-100 border-gray-200 text-gray-500'}`}>
-                    {t.offer}
-                 </div>
-
-                 <h3 className="c9-section-heading mb-4">{t.title}</h3>
-                 <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-[52px] font-bold">{t.price}</span>
-                    <span className="text-[16px] opacity-70">/mth</span>
-                 </div>
-                  <div className="flex justify-between mt-auto">
-                     <span className="text-[12px] opacity-70">Incl. in all plans</span>
-                     <Wifi size={14} className="opacity-40" />
-                  </div>
-
-                  <button className={`absolute -bottom-7 left-8 right-8 py-4 rounded-full font-bold transition-all shadow-xl group-hover:scale-[1.02] active:scale-[0.98] z-20 flex items-center justify-center gap-2 ${t.recommended || i === 2 ? 'bg-white text-[#5D00D6] hover:bg-gray-50 shadow-purple-900/20' : 'bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-[#5D00D6]/20'}`}>
-                    {t.cta} <ArrowRight size={16} />
-                  </button>
+              <div className="mb-8 self-start">
+                <span className="px-3 py-1 rounded-full bg-[#5D00D6]/5 border border-[#5D00D6]/10 text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">
+                  {v.tag}
+                </span>
               </div>
-
-              {/* BOTTOM: White Area (The Technical Specs) */}
-              <div className="p-8 pt-14 flex-1 flex flex-col">
-                 <div className="flex items-center justify-between mb-6 group/spec cursor-pointer">
-                    <div>
-                       <p className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-wider mb-0.5">SERVICE GUARANTEE</p>
-                       <p className="text-[18px] font-bold text-[#1A1A2E]">{t.esla}</p>
-                    </div>
-                    <ChevronDown size={20} className="text-gray-300 transition-transform group-hover/spec:translate-y-0.5" />
-                 </div>
-
-                 <p className="text-[14px] text-[#6B7280] leading-relaxed mb-8">
-                    {t.desc}
-                 </p>
-
-                 <div className="flex flex-col gap-4 mt-auto">
-                    {t.features.map((f, fi) => (
-                      <div key={fi} className="flex items-start gap-3">
-                         <div className="w-5 h-5 rounded-full bg-green-50 flex items-center justify-center shrink-0 mt-0.5">
-                            <Check size={12} className="text-green-500" />
-                         </div>
-                         <span className="text-[14px] text-gray-700 font-medium">{f}</span>
-                      </div>
-                    ))}
-                 </div>
+              <div className="mb-8">
+                <v.icon size={40} strokeWidth={1.5} className="text-[#5D00D6]" />
               </div>
+              <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4 tracking-tight leading-tight">{v.title}</h3>
+              <p className="text-gray-500 text-[15px] leading-relaxed">
+                {v.desc}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -141,4 +78,3 @@ export default function SupportTiers() {
     </section>
   );
 }
-

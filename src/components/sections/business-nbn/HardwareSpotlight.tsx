@@ -7,31 +7,31 @@ import { Globe, Check, Smartphone, Cpu, Layers, Lock, Zap, Activity } from 'luci
 const hardwareSections = [
   {
     icon: Globe,
-    title: 'Step 1: Site Qualification',
-    subtitle: 'ELIBILITY CHECK',
-    desc: 'We start by qualified your business address to see which nbn technology is available (FTTP, FTTN, HFC or Enterprise Ethernet) and what speeds are possible.',
-    features: ['Service Class Check', 'Speed Tier Audit', 'Infrastructure Verified']
+    title: 'Step 1: Understand your needs',
+    subtitle: 'CONSULTATION',
+    desc: 'We start by understanding how your team uses the internet, which cloud apps you rely on, and any past issues you’ve faced.',
+    features: ['Usage Analysis', 'Team Size Check', 'Infrastructure Audit']
   },
   {
     icon: Cpu,
-    title: 'Step 2: Plan Selection',
-    subtitle: 'RIGHT-SIZING YOUR FEED',
-    desc: 'Our experts help you choose between Essential or Professional nbn tiers based on your team size, cloud application usage, and budget requirements.',
-    features: ['Usage Analysis', 'Budget Alignment', 'Scalability Planning']
+    title: 'Step 2: Check availability',
+    subtitle: 'ELIBILITY CHECK',
+    desc: 'We verify exactly which nbn technology is available at your address and confirm the maximum reliable speeds for your site.',
+    features: ['Service Class Identified', 'Site Speed Verified', 'Infrastructure Audit']
   },
   {
     icon: Zap,
-    title: 'Step 3: Fast Activation',
-    subtitle: 'HARDWARE & SYNC',
-    desc: 'We ship your pre-configured business router and manage the nbn activation process. We handle the technical heavy lifting so you can just plug and play.',
-    features: ['Plug-and-Play Hardware', 'Direct nbn Coordination', 'Downtime Mitigation']
+    title: 'Step 3: Arrange installation',
+    subtitle: 'MANAGED DEPLOYMENT',
+    desc: 'We coordinate with nbn technicians for any physical work required and pre-configure your business router for a painless switch.',
+    features: ['nnb Coordination', 'Pre-configured Hardware', 'Transition Planning']
   },
   {
     icon: Activity,
-    title: 'Step 4: Ongoing Management',
-    subtitle: '24/7 NETWORK PEACE OF MIND',
-    desc: 'Once live, our Australian engineering team monitors your connection 24/7. We proactively manage faults and ensure your internet remains stable and fast.',
-    features: ['Australian Engineering Support', 'Real-time Monitoring', 'Automatic 4G Failover']
+    title: 'Step 4: Configure and test',
+    subtitle: 'GO LIVE & SUPPORT',
+    desc: 'Once connected, we test your connection logs and local network performance to ensure everything is stable before we hand over to you.',
+    features: ['Performance Verified', '4G Failover Tested', 'Ongoing Support Active']
   }
 ];
 
@@ -188,11 +188,11 @@ export default function HardwareSpotlight() {
                 <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
                   THE SETUP PROCESS
                 </span>
-                <h2 className="c9-section-heading">
-                  Getting your business <br /> connected is simple.
+                <h2 className="c9-section-heading !text-[32px] md:!text-[40px]">
+                  Simple, managed setup
                 </h2>
                 <p className="text-[18px] text-[#6B7280] mt-8 leading-relaxed max-w-[90%]">
-                  A high-performance nbn connection shouldn't be complicated. We handle the technical details so you can focus on running your business.
+                  Getting your business connected is a painless 4-step process. We handle the technical coordination so you don’t have to.
                 </p>
             </div>
 
@@ -210,7 +210,7 @@ export default function HardwareSpotlight() {
                    </div>
                    <div>
                       <p className="text-[11px] font-bold text-[#5D00D6] tracking-[0.15em] mb-2">{section.subtitle}</p>
-                      <h3 className="c9-section-heading mb-4">{section.title}</h3>
+                      <h3 className="c9-section-heading !text-[24px] md:!text-[32px] mb-4">{section.title}</h3>
                       <p className="text-[16px] text-[#6B7280] leading-relaxed mb-6">{section.desc}</p>
                       <ul className="space-y-3">
                          {section.features.map((feat, fi) => (

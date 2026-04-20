@@ -14,15 +14,16 @@ import SpeedGuide from '@/components/sections/business-nbn/SpeedGuide';
 import AccreditationBar from '@/components/sections/business-nbn/AccreditationBar';
 import FinalCTA from '@/components/sections/business-nbn/FinalCTA';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
+import WhyBusiness from '@/components/sections/business-nbn/WhyBusiness';
 
 export const metadata = {
-  title: 'Reliable Small Business nbn Plans | C9 Communications',
+  title: 'Reliable Small Business nbn | Managed Business Internet | C9',
   description:
-    'Reliable Small Business nbn with speeds up to 1000/1000 Mbps, 4G LTE failover, enhanced SLA from 4 hours, and a dedicated account manager. nbn Accredited Business Adviser.',
+    'Stop dealing with slow speeds and dropouts. We help small businesses choose, setup, and manage the right nbn connection for reliable daily operations.',
   openGraph: {
-    title: 'Reliable Small Business nbn Plans | C9 Communications',
+    title: 'Reliable Small Business nbn | Managed Business Internet | C9',
     description:
-      'Business-grade Small Business nbn with guaranteed bandwidth, 4G LTE failover, and eSLA from 4 hours. nbn accredited partner.',
+      'Business-grade nbn that keeps your team working. Dedicated support and managed setup for Australian small businesses.',
     url: 'https://c9communications.com.au/telco/business-nbn',
   },
 };
@@ -30,55 +31,39 @@ export const metadata = {
 export default function SmallBusinessNbnPage() {
   return (
     <main className="bg-white" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
-                  <Hero />
+      <Hero />
       <AccreditationBar />
-      <TheBusinessUpgrade />
-      <PlanComparison />
-      <HardwareSpotlight />
-      <SupportTiers />
-      <WhatsIncluded />
-      <WhyC9 />
+      <WhyBusiness /> {/* Who this is for */}
+      <TheBusinessUpgrade /> {/* Problem section */}
+      <UnifiedStack /> {/* Business Impact (repurposed) */}
+      <WhyC9 /> {/* Solution section */}
+      <PlanComparison /> {/* Decision framework */}
+      <SupportTiers /> {/* Trust & Support */}
+      <HardwareSpotlight /> {/* Setup Process */}
       <WpCaseStudies 
-        title="Success Stories" 
-        eyebrow="CLIENT IMPACT"
+        title="Real outcomes for local business" 
+        eyebrow="SUCCESS STORY"
         articles={[
           {
-            tag: 'RETAIL GROUP',
-            title: 'Zero Dropouts During Peak Sale Season',
-            desc: "A growing retail group switched to C9 after their previous provider left them offline during a major sale. We moved them to a Professional nbn tier with 4G failover, ensuring 100% uptime since.",
-            img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1240&auto=format&fit=crop',
-            videoText: 'Retail Case Study'
-          },
-          {
             tag: 'PROFESSIONAL SERVICES',
-            title: 'Crystal Clear Voice for Busy Law Firm',
-            desc: 'A busy law firm struggled with jittery VoIP calls on standard nbn. C9 implemented a prioritized TC-2 connection, instantly resolving voice quality issues for their 20+ staff.',
-            img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000&auto=format&fit=crop',
-            videoText: 'Voice Quality Success'
-          },
-          {
-            tag: 'MANUFACTURING',
-            title: 'Seamless Migration for 24/7 Warehouse',
-            desc: 'We managed the entire transition for a 24/7 manufacturing site, replacing their legacy copper connection with high-speed nbn fibre without a single minute of downtime.',
-            img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop',
-            videoText: 'Migration Deep Dive'
+            title: 'Accountancy firm stops the dropouts',
+            desc: "A small accounting firm with 12 staff was experiencing slow speeds and call dropouts during tax season. C9 reviewed their setup, moved them to a better-suited nbn plan, and optimised their office network. Result: Stable performance, no call interruptions, and a significant boost in team productivity.",
+            img: 'https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=2000&auto=format&fit=crop',
+            videoText: 'Accountancy Success'
           }
         ]}
       />
-      <FutureProof />
-      <UnifiedStack />
-      <SpeedGuide />
       <FinalCTA />
       <WpFAQAndFeedback />
       <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false} 
-          eyebrow="STRATEGIC IT ADVISORY"
-          title="The IT partner your business deserves."
-          description="Book a 30-minute strategy session with our senior consultants. We'll review your current networking and connection setup — no obligation, just expert advice."
-          formTitle="Schedule Strategy Session"
+          eyebrow="GET CONNECTED"
+          title="Ready for internet that just works?"
+          description="Speak with an expert about your business needs. We'll check your address and recommend the most reliable connection for your team."
+          formTitle="Speak to an Expert"
         />
       </section>
-          </main>
+    </main>
   );
 }

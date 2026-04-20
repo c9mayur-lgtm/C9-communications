@@ -3,21 +3,20 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, Star, Wifi, Zap, Shield, Activity, Globe } from 'lucide-react';
+import { Award, Star, Wifi, Zap, Shield, Activity, Globe, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const speedTiers = [
-  { speed: '50/50',     mbps: 50,   unit: 'Mbps', tag: 'Entry',      tagBg: 'bg-blue-50',   tagText: 'text-blue-600',   barWidth: '5%',   latency: 12, uptime: 99.5  },
-  { speed: '250/250',   mbps: 250,  unit: 'Mbps', tag: 'Business',   tagBg: 'bg-green-50',  tagText: 'text-green-600',  barWidth: '25%',  latency: 8,  uptime: 99.9  },
-  { speed: '500/500',   mbps: 500,  unit: 'Mbps', tag: 'Enterprise', tagBg: 'bg-amber-50',  tagText: 'text-amber-600',  barWidth: '50%',  latency: 5,  uptime: 99.95 },
-  { speed: '1000/1000', mbps: 1000, unit: 'Mbps', tag: 'Premium',    tagBg: 'bg-purple-50', tagText: 'text-purple-600', barWidth: '100%', latency: 3,  uptime: 99.99 },
+  { speed: '50/20',     mbps: 50,   unit: 'Mbps', tag: 'Basic',      tagBg: 'bg-blue-50',   tagText: 'text-blue-600',   barWidth: '10%',   latency: 18, uptime: 99.5  },
+  { speed: '100/20',    mbps: 100,  unit: 'Mbps', tag: 'Standard',   tagBg: 'bg-green-50',  tagText: 'text-green-600',  barWidth: '20%',  latency: 14,  uptime: 99.9  },
+  { speed: '250/25',    mbps: 250,  unit: 'Mbps', tag: 'Premium',    tagBg: 'bg-amber-50',  tagText: 'text-amber-600',  barWidth: '50%',  latency: 11,  uptime: 99.95 },
+  { speed: '1000/50',   mbps: 1000, unit: 'Mbps', tag: 'Hyper',      tagBg: 'bg-purple-50', tagText: 'text-purple-600', barWidth: '100%', latency: 8,   uptime: 99.99 },
 ];
 
 const trustSignals = [
-  'nbn Accredited Adviser',
-  'Up to 1000/1000 Mbps',
+  'Small Business nbn Accredited Adviser',
+  'Speeds up to 1000/50 Mbps',
   '4G LTE failover included',
-  '4-hour eSLA available',
 ];
 
 function useSimulatedThroughput(maxMbps: number) {
@@ -120,18 +119,17 @@ export default function Hero() {
             <div className="flex items-center gap-3">
               <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full px-4 py-1.5 flex items-center gap-2">
                 <Award size={14} className="text-[#5D00D6] shrink-0" />
-                <span className="c9-eyebrow !text-[11px]">nbn Accredited Business Adviser</span>
+                <span className="c9-eyebrow !text-[11px]">Accredited Small Business nbn Adviser</span>
               </div>
             </div>
 
             <h1 className="c9-hero-title text-[#1A1A2E] mt-8">
-              Reliable business internet <br className="hidden lg:block" /> that just works —{' '}
-              <span className="text-[#5D00D6]">no downtime, <br className="hidden lg:block" /> no confusion.</span>
+              Reliable Small Business nbn <br className="hidden lg:block" /> that keeps your team working —{' '}
+              <span className="text-[#5D00D6]">without interruptions.</span>
             </h1>
 
             <p className="c9-body text-[#6B7280] max-w-[580px] mt-6 md:text-[18px]">
-              We help you choose, set up, and manage the right nbn connection for your business. 
-              Get enterprise-grade speeds and local support you can actually talk to.
+              We help you choose, set up, and manage the right nbn connection for your business — so you don’t have to deal with slow speeds or dropouts.
             </p>
 
             {/* Address Checker Input */}
@@ -142,7 +140,7 @@ export default function Hero() {
                 </div>
                 <input 
                   type="text" 
-                  placeholder="Enter address..." 
+                  placeholder="Enter your business address..." 
                   className="flex-1 bg-transparent outline-none text-[14px] md:text-[16px] font-medium text-[#1A1A2E] placeholder:text-gray-400 w-full"
                 />
                 <button 
@@ -152,19 +150,29 @@ export default function Hero() {
                   }}
                   className="bg-[#5D00D6] text-white px-6 md:px-10 font-bold text-[14px] md:text-[15px] hover:bg-[#4B00AD] transition-all whitespace-nowrap h-full"
                 >
-                  Check
+                  Check Availability
                 </button>
               </div>
 
 
             </div>
 
-            <div className="mt-10 flex items-center gap-8">
+            <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8">
               <button 
                 onClick={scrollToPlanComparison} 
+                className="bg-[#5D00D6] text-white px-8 py-4 rounded-full font-bold text-[15px] hover:bg-[#4B00AD] transition-all shadow-xl shadow-purple-900/20"
+              >
+                Get My Business Connected
+              </button>
+
+              <button 
+                onClick={() => {
+                  const el = document.getElementById('consultation-section');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="text-[15px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors cursor-pointer"
               >
-                Or, compare all plans <Zap size={16} className="text-[#5D00D6] transition-transform group-hover:scale-110" />
+                Speak to an Expert <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </button>
               
               <div className="w-px h-4 bg-gray-200" />

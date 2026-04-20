@@ -31,7 +31,7 @@ export default function FinalCTA() {
           className="rounded-full text-[11px] font-semibold uppercase tracking-wider px-4 py-1.5 mx-auto mb-6 w-fit"
           style={{ background: 'rgba(93,0,214,0.2)', color: '#A855F7' }}
         >
-          nbn Accredited Adviser
+          Small Business nbn Accredited Adviser
         </div>
 
         <h2 className="c9-section-heading !text-white">
@@ -42,20 +42,23 @@ export default function FinalCTA() {
           Tell us your address and we'll handle the rest — from site qualification to seamless setup.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-10">
           <button
             onClick={handleCheck}
-            className="inline-flex items-center justify-center h-[56px] px-10 rounded-full text-[15px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-colors duration-200"
+            className="inline-flex items-center justify-center h-[60px] px-10 rounded-full text-[16px] font-bold bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-all shadow-xl shadow-purple-900/30"
           >
-            Get My Business Connected →
+            Get My Business Connected
           </button>
-          <a
-            href="tel:1800000299"
-            className="inline-flex items-center justify-center h-[56px] px-10 rounded-full text-[15px] text-[#9CA3AF] border bg-transparent hover:border-white hover:text-white transition-all duration-200"
-            style={{ borderColor: '#4B5563', fontFamily: '"Proxima Nova", sans-serif' }}
+          <button
+            onClick={() => {
+              const el = document.getElementById('consultation-section');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center justify-center h-[60px] px-10 rounded-full text-[16px] font-bold text-white border border-white/20 bg-white/5 hover:bg-white/10 transition-all"
+            style={{ fontFamily: '"Proxima Nova", sans-serif' }}
           >
-            Call 1800 000 299
-          </a>
+            Speak to an Expert
+          </button>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-6">

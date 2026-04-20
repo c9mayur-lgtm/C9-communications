@@ -7,23 +7,23 @@ import { Network, Zap, ShieldAlert, MonitorCheck, TabletSmartphone } from 'lucid
 const reasons = [
   {
     icon: TabletSmartphone,
-    title: 'Precision Plan Selection',
-    desc: 'We don\'t just sell you a pipe. We analyze your team size, cloud usage, and growth plans to recommend the exact nbn tier your business actually needs.'
+    title: 'Selection & Advice',
+    desc: 'We recommend the right nbn plan based on your actual team usage and business apps — not just the most expensive speed tier.'
   },
   {
     icon: Zap,
-    title: 'Expert Setup & Migration',
-    desc: 'We handle the entire transition from your old provider. From hardware configuration to nbn activation, we ensure a seamless switch with zero downtime.'
-  },
-  {
-    icon: MonitorCheck,
-    title: 'Proactive 24/7 Support',
-    desc: 'Our Australian engineers monitor your connection around the clock. We often fix line sync issues before you even notice them, backed by business-grade SLAs.'
+    title: 'Managed Setup',
+    desc: 'We handle the entire setup and configuration process, from the hardware to the nbn activation, so you don’t have to.'
   },
   {
     icon: Network,
-    title: 'Smarter Network Routing',
-    desc: 'Your business traffic is prioritized on the nbn backbone. We engineer the path to minimize latency, ensuring your VoIP and cloud apps run perfectly.'
+    title: 'Performance Tuning',
+    desc: 'We optimise your connection and local office network for consistent performance, ensuring your apps run smoothly even during busy periods.'
+  },
+  {
+    icon: MonitorCheck,
+    title: 'Ongoing Support',
+    desc: 'When issues arise, you talk directly to our Australian-based support team. We monitor your connection to keep it stable around the clock.'
   }
 ];
 
@@ -33,11 +33,14 @@ export default function WhyC9() {
       <div className="container mx-auto max-w-[1240px] text-center">
         
         {/* Dark Header */}
-        <div className="flex flex-col items-center mb-20">
-           <h2 className="c9-section-heading !text-white">
-              The C9 Solution: nbn Done Right
+        <div className="flex flex-col items-center mb-20 text-center">
+           <h2 className="c9-section-heading !text-white !text-[32px] md:!text-[42px] max-w-4xl">
+              We don’t just connect your internet — we make sure it works for your business
            </h2>
-           <div className="w-20 h-1 bg-gradient-to-r from-[#5D00D6] to-[#7C3AED] mt-6 rounded-full" />
+           <p className="text-[17px] text-gray-400 mt-8 max-w-2xl leading-relaxed">
+             Getting connected is only the first step. We handle the technical heavy lifting, so you can focus on running your business without worrying about your connection.
+           </p>
+           <div className="w-20 h-1 bg-gradient-to-r from-[#5D00D6] to-[#7C3AED] mt-8 rounded-full" />
         </div>
 
         {/* Feature 4-Column Grid */}

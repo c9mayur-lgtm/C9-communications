@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { Check, Star, ShieldCheck, Zap, ArrowRight, Info, Package, Clock } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
-const bestEffortSpeeds = ['50/50', '100/100', '250/250', '500/500'];
-const committedSpeeds = ['100/100', '250/250', '500/500', '1000/1000'];
+const bestEffortSpeeds = ['50/20', '100/20', '250/25', '1000/50'];
+const committedSpeeds = ['20/20', '50/50', '100/100'];
 
 const bestEffortIncludes = [
   'Managed router included',
@@ -74,7 +74,7 @@ const SpeedBar = ({ activeCount }: { activeCount: number }) => {
 export default function PlanComparison() {
   const { setInquiryMessage } = useInquiry();
   const [bestEffortIdx, setBestEffortIdx] = useState(0);
-  const [committedIdx, setCommittedIdx] = useState(3);
+  const [committedIdx, setCommittedIdx] = useState(2);
 
   const handleSelectPlan = (tierName: string, speed: string) => {
     setInquiryMessage(`I'm interested in the Small Business nbn ${tierName} plan at ${speed} Mbps speeds.`);
@@ -100,18 +100,18 @@ export default function PlanComparison() {
       <div className="container mx-auto max-w-[1240px]">
         
         <div className="flex flex-col items-center text-center mb-20">
-           <span className="text-[11px] uppercase tracking-[0.3em] text-[#5D00D6] font-bold block mb-4">E-ETHERNET PRICING</span>
-           <h2 className="c9-section-heading max-w-3xl">
-              Simplified nbn plans. <br /> Built for Your Business.
-           </h2>
+            <h2 className="c9-section-heading !text-[32px] md:!text-[42px] max-w-3xl">
+               Choosing the right Small Business nbn plan
+            </h2>
            <p className="text-[17px] text-gray-500 mt-6 max-w-2xl leading-relaxed">
-             We've stripped away the confusion. Choose the tier that best fits your business operations and team size.
+             We've simplified the options to help you choose the best fit for your team. 
+             Actual speeds depend on location, network conditions, and office setup.
            </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
            
-           {/* THE "BEST EFFORT" CARD */}
+           {/* THE "STANDARD" CARD */}
            <motion.div 
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
@@ -120,90 +120,70 @@ export default function PlanComparison() {
            >
               <div className="flex justify-between items-start mb-8">
                  <div>
-                    <h3 className="c9-section-heading mb-2">Essential</h3>
-                    <p className="text-[14px] text-gray-500 font-medium tracking-tight uppercase">Great for small teams & basic cloud</p>
+                     <h3 className="text-[24px] md:text-[28px] font-bold text-[#1A1A2E] mb-2">Standard Small Business nbn</h3>
+                    <p className="text-[13px] text-gray-500 font-bold uppercase tracking-tight">Best for teams of 1–10 users</p>
                  </div>
                  <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-[#5D00D6]">
                     <Zap size={24} strokeWidth={1.5} />
                  </div>
               </div>
 
+              <div className="mb-10">
+                 <p className="text-[15px] text-[#6B7280] leading-relaxed">
+                    Ideal for basic office operations, email, and light cloud usage. A reliable foundation for small teams.
+                 </p>
+              </div>
+
               <div className="mb-10 bg-[#FAFAFA] rounded-3xl p-6 border border-gray-100">
                  <div className="flex justify-between items-end mb-4">
                     <div>
-                       <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Typical Speed</p>
+                       <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Typical Business Speed</p>
                        <h4 className="text-[24px] font-bold text-[#1A1A2E]">{bestEffortSpeeds[bestEffortIdx]} <span className="text-[14px] text-gray-400 font-medium">Mbps</span></h4>
-                    </div>
-                    <div className="text-right">
-                       <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">4GB FILE</p>
-                       <p className="text-[14px] font-bold text-[#5D00D6]">~ {beStats.timeStr}</p>
                     </div>
                  </div>
                  
                  <SpeedBar activeCount={beStats.barCount} />
-                 
-                 <div className="flex justify-between mt-3">
-                    <span className="text-[11px] font-extrabold text-gray-400 uppercase tracking-wider">{beStats.timeStr}</span>
-                    <span className="text-[11px] font-extrabold text-[#1A1A2E] uppercase tracking-wider">{beStats.speedLimit} MBPS</span>
-                 </div>
               </div>
 
-              <div className="mb-10">
-                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Select Speed (Mbps)</p>
-                 <div className="grid grid-cols-4 gap-2">
+              <div className="mb-10 flex-1">
+                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Select Your Plan</p>
+                 <div className="grid grid-cols-4 gap-2 mb-8">
                     {bestEffortSpeeds.map((s, i) => (
-                      <button 
-                        key={s} 
-                        onClick={() => setBestEffortIdx(i)}
-                        className={`py-3 rounded-full text-[13px] font-bold transition-all border ${bestEffortIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-lg' : 'bg-white border-gray-100 text-gray-500 hover:border-[#5D00D6]/30'}`}
-                      >
-                         {s}
-                      </button>
+                       <button 
+                         key={s} 
+                         onClick={() => setBestEffortIdx(i)}
+                         className={`py-3 rounded-full text-[13px] font-bold transition-all border ${bestEffortIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-lg' : 'bg-white border-gray-100 text-gray-500 hover:border-[#5D00D6]/30'}`}
+                       >
+                          {s}
+                       </button>
                     ))}
                  </div>
-              </div>
 
-              <div className="space-y-4 mb-10 flex-1">
-                 {bestEffortIncludes.map((item, i) => (
-                   <div key={i} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-                         <Check size={12} className="text-green-500" />
-                      </div>
-                      <span className="text-[14px] text-gray-600 font-medium">{item}</span>
-                   </div>
-                 ))}
-              </div>
-
-              <div className="mb-8 p-6 bg-[#F8F7FF] rounded-[24px] border border-[#5D00D6]/5 flex flex-col gap-4">
-                 <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-[#5D00D6] shadow-sm">
-                       <Clock size={16} />
+                 <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                       <Check size={14} className="text-green-500" />
+                       <span className="text-[14px] text-gray-600 font-medium">Australian-based support</span>
                     </div>
-                    <div>
-                       <p className="text-[12px] font-bold text-[#1A1A2E]">24 & 36 Month Terms</p>
-                       <p className="text-[11px] text-gray-500 font-medium">Flexible business contracts available.</p>
+                    <div className="flex items-center gap-3">
+                       <Check size={14} className="text-green-500" />
+                       <span className="text-[14px] text-gray-600 font-medium">Managed setup included</span>
                     </div>
-                 </div>
-                 <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-green-500 shadow-sm">
-                       <Package size={16} />
-                    </div>
-                    <div>
-                       <p className="text-[12px] font-bold text-[#1A1A2E]">Free Managed Router</p>
-                       <p className="text-[11px] text-gray-500 font-medium">Included on all 36-month plans.</p>
+                    <div className="flex items-center gap-3">
+                       <Check size={14} className="text-green-500" />
+                       <span className="text-[14px] text-gray-600 font-medium">4G LTE failover ready</span>
                     </div>
                  </div>
               </div>
 
               <button 
-                onClick={() => handleSelectPlan('Essential', bestEffortSpeeds[bestEffortIdx])}
-                className="w-full h-16 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/30 relative z-10 group/btn"
+                onClick={() => handleSelectPlan('Standard Small Business nbn', bestEffortSpeeds[bestEffortIdx])}
+                className="w-full h-16 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/30 relative z-10 group/btn mt-8"
               >
-                  Get A Standard Quote <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                  Get My Business Connected <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
               </button>
            </motion.div>
 
-           {/* THE "COMMITTED" CARD (Featured) */}
+           {/* THE "PERFORMANCE" CARD (Featured) */}
            <motion.div 
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
@@ -215,86 +195,68 @@ export default function PlanComparison() {
               <div className="flex justify-between items-start mb-8 relative z-10">
                  <div>
                     <div className="flex items-center gap-2 mb-2">
-                       <h3 className="c9-section-heading !text-white">Professional</h3>
-                       <div className="bg-[#5D00D6] text-white text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full ring-4 ring-[#5D00D6]/20">Best Value</div>
+                       <h3 className="text-[24px] md:text-[28px] font-bold text-white mb-2">Performance Small Business nbn</h3>
+                       <div className="bg-[#5D00D6] text-white text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full ring-4 ring-[#5D00D6]/20">Recommended</div>
                     </div>
-                    <p className="text-[14px] text-gray-400 font-medium tracking-tight uppercase">For growing teams & heavy cloud usage</p>
+                    <p className="text-[13px] text-gray-400 font-bold uppercase tracking-tight">Best for growing teams & video calls</p>
                  </div>
                  <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/20 border border-[#5D00D6]/30 flex items-center justify-center text-[#5D00D6]">
                     <ShieldCheck size={24} strokeWidth={1.5} />
                  </div>
               </div>
 
+              <div className="mb-10 relative z-10">
+                 <p className="text-[15px] text-gray-400 leading-relaxed">
+                    Built for cloud-heavy businesses that rely on consistent performance for video meetings and large file transfers.
+                 </p>
+              </div>
+
               <div className="mb-10 bg-white/5 rounded-3xl p-6 border border-white/10 relative z-10 backdrop-blur-md">
                  <div className="flex justify-between items-end mb-4">
                     <div>
-                       <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Guaranteed Speed</p>
+                       <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Prioritised Speed</p>
                        <h4 className="text-[24px] font-bold text-white">{committedSpeeds[committedIdx]} <span className="text-[14px] text-gray-500 font-medium">Mbps</span></h4>
-                    </div>
-                    <div className="text-right">
-                       <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">4GB FILE</p>
-                       <p className="text-[14px] font-bold text-[#A855F7]">~ {coStats.timeStr}</p>
                     </div>
                  </div>
                  
                  <SpeedBar activeCount={coStats.barCount} />
-                 
-                 <div className="flex justify-between mt-3">
-                    <span className="text-[11px] font-extrabold text-gray-500 uppercase tracking-wider">{coStats.timeStr}</span>
-                    <span className="text-[11px] font-extrabold text-[#5D00D6] uppercase tracking-wider">{coStats.speedLimit} MBPS</span>
-                 </div>
               </div>
 
-              <div className="mb-10 relative z-10">
-                 <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-4">Select Speed (Mbps)</p>
-                 <div className="grid grid-cols-4 gap-2">
+              <div className="mb-10 relative z-10 flex-1">
+                 <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-4">Select Your Plan</p>
+                 <div className="grid grid-cols-4 gap-2 mb-8">
                     {committedSpeeds.map((s, i) => (
-                      <button 
-                        key={s} 
-                        onClick={() => setCommittedIdx(i)}
-                        className={`py-3 rounded-full text-[13px] font-bold transition-all border ${committedIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-[0_10px_30px_rgba(93,0,214,0.5)]' : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/20'}`}
-                      >
-                         {s}
-                      </button>
+                       <button 
+                         key={s} 
+                         onClick={() => setCommittedIdx(i)}
+                         className={`py-3 rounded-full text-[13px] font-bold transition-all border ${committedIdx === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-[0_10px_30px_rgba(93,0,214,0.5)]' : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/20'}`}
+                       >
+                          {s}
+                       </button>
                     ))}
                  </div>
-              </div>
 
-              <div className="space-y-4 mb-10 flex-1 relative z-10">
-                 {committedIncludes.map((item, i) => (
-                   <div key={i} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-[#5D00D6]/20 flex items-center justify-center shrink-0">
-                         <Check size={12} className="text-[#5D00D6]" />
-                      </div>
-                      <span className="text-[14px] text-gray-300 font-medium">{item}</span>
-                   </div>
-                 ))}
-              </div>
-
-              <div className="mb-8 p-6 bg-white/5 rounded-[24px] border border-white/5 relative z-10 flex flex-col gap-4">
-                 <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#5D00D6] flex items-center justify-center text-white shadow-lg">
-                       <Star size={20} fill="currentColor" />
+                 <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                       <Check size={14} className="text-[#5D00D6]" />
+                       <span className="text-[14px] text-gray-300 font-medium">Prioritised for performance</span>
                     </div>
-                    <div>
-                       <p className="text-[14px] font-bold text-white tracking-tight">Enterprise Offer: 36 Months</p>
-                       <p className="text-[11px] text-purple-300 font-bold uppercase tracking-widest mt-0.5">$0 Fibre Installation (Save $2,500+)</p>
+                    <div className="flex items-center gap-3">
+                       <Check size={14} className="text-[#5D00D6]" />
+                       <span className="text-[14px] text-gray-300 font-medium">Enhanced reliability guarantee</span>
                     </div>
-                 </div>
-                 <div className="h-0.5 bg-white/10 rounded-full w-full" />
-                 <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center text-green-500">
-                       <Zap size={16} fill="currentColor" />
+                    <div className="flex items-center gap-3">
+                       <Check size={14} className="text-[#5D00D6]" />
+                       <span className="text-[14px] text-gray-300 font-medium">Dedicated account manager</span>
                     </div>
-                    <p className="text-[12px] font-medium text-gray-400"><span className="text-white font-bold">Free Cisco Managed Hardware</span> included on all 36mo tiers.</p>
                  </div>
               </div>
 
               <button 
-                onClick={() => handleSelectPlan('Committed (TC-2)', committedSpeeds[committedIdx])}
-                className="w-full h-16 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/40 relative z-10 group/btn"
+                onClick={() => handleSelectPlan('Performance Small Business nbn', committedSpeeds[committedIdx])}
+                className="w-full h-16 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/40 relative z-10 group/btn mt-8"
               >
-                  Get High-Performance Quote <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                  Get My Business Connected <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
               </button>
            </motion.div>
 

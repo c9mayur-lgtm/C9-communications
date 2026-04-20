@@ -8,27 +8,27 @@ import Link from 'next/link';
 const stackItems = [
   {
     icon: PhoneCall,
-    title: 'Business Phone Systems',
+    title: 'Business Phones',
     subtitle: 'Phones & Teams',
-    desc: 'Run your entire phone system or Microsoft Teams Calling environment over our tier-1 nbn backbone for crystal-clear voice quality.',
+    desc: 'Run your business phone system or Microsoft Teams calling over your reliable nbn backbone for crystal-clear voice quality.',
     link: '/voice/microsoft-teams-calling',
-    label: 'Explore Voice Solutions'
+    label: 'Explore Business Phones'
   },
   {
     icon: Zap,
     title: 'Managed IT Services',
     subtitle: 'IT Support & Management',
-    desc: 'Beyond internet, we handle your entire IT environment—from user support to server management and cloud migrations.',
+    desc: 'Beyond internet, we can handle your entire IT environment — from user support to secure cloud migrations.',
     link: '/managed-it/network-solutions',
-    label: 'View IT Services'
+    label: 'See Managed IT Services'
   },
   {
     icon: ShieldCheck,
-    title: 'Advanced Networking',
-    subtitle: 'Security & SD-WAN',
-    desc: 'Layer your nbn with professional SD-WAN management, next-gen firewalls, and multi-site secure VPN tunneling.',
-    link: '/managed-it/network-solutions',
-    label: 'Secure Your Network'
+    title: 'Cybersecurity Solutions',
+    subtitle: 'Protection & Security',
+    desc: 'Secure your business with managed firewalls, multi-site VPNs, and proactive threat monitoring layer on your connection.',
+    link: '/managed-it/network-solutions', // Assuming common link for now or generic cybersecurity path if exists
+    label: 'View Cybersecurity Solutions'
   }
 ];
 
@@ -40,13 +40,13 @@ export default function UnifiedStack() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
            <div className="max-w-2xl">
-              <span className="c9-eyebrow mb-4 block">THE C9 UNIFIED STACK</span>
-              <h2 className="c9-section-heading">
-                 Your internet is only <br className="hidden md:block" /> the beginning.
+              <span className="c9-eyebrow mb-4 block">C9 Small Business nbn STACK</span>
+              <h2 className="c9-section-heading !text-[32px] md:!text-[42px]">
+                 What this means <br className="hidden md:block" /> for your business.
               </h2>
            </div>
            <p className="c9-body max-w-[420px] font-medium leading-relaxed">
-              A high-performance nbn connection is the foundation. Layer on C9’s managed voice, mobile, and security services to build a truly unified communication ecosystem.
+              A reliable Small Business nbn connection is the foundation. It means stable calls, faster access to cloud apps, and a team that stays productive without interruptions.
            </p>
         </div>
 

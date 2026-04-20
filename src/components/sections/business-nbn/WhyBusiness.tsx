@@ -1,24 +1,24 @@
 import React from 'react';
-import { Gauge, Clock, UserCheck } from 'lucide-react';
+import { Cloud, PhoneCall, Laptop } from 'lucide-react';
 
 const cards = [
   {
-    icon: Gauge,
-    title: 'Growing Teams',
-    body: 'As you add more staff, your demand for bandwidth increases. A small business nbn connection ensures everyone stays productive without slowing down.',
-    tag: 'Scalable Bandwidth',
+    icon: Cloud,
+    title: 'Cloud App Users',
+    body: 'Teams relying on Microsoft 365, Xero, and other cloud applications that need a consistent, lag-free connection.',
+    tag: 'Cloud-Ready',
   },
   {
-    icon: Clock,
-    title: 'Cloud & SaaS Usage',
-    body: 'From Microsoft 365 to Xero and Zoom, your business runs on the cloud. You need a stable connection that won\'t dropout during critical tasks.',
-    tag: 'Cloud-Optimised',
+    icon: PhoneCall,
+    title: 'VoIP & Meetings',
+    body: 'Businesses that use VoIP, Microsoft Teams, or Zoom for critical client meetings and team collaboration.',
+    tag: 'No More Jitter',
   },
   {
-    icon: UserCheck,
-    title: 'Mission Critical Reliability',
-    body: 'When your internet is down, your business stops. We provide the stability and support needed to keep you online and operational 24/7.',
-    tag: 'Business Continuity',
+    icon: Laptop,
+    title: 'Multiple Devices',
+    body: 'Offices with 5 to 50+ users and devices all sharing the same connection without performance drops.',
+    tag: 'Team Capacity',
   },
 ];
 
@@ -35,10 +35,10 @@ export default function WhyBusiness() {
           WHO THIS IS FOR
         </span>
         <h2 className="c9-section-heading mt-3 max-w-3xl">
-          Is your current internet holding your business back?
+          Built for small businesses that rely on stable internet
         </h2>
         <p className="c9-body mt-3 max-w-[640px]">
-          If your team is growing, moving to the cloud, or simply cannot afford to be offline, it's time for a dedicated small business nbn connection.
+          If your team uses cloud apps, video calls, or multiple devices, your connection needs to be more than just "fast" — it needs to be reliable.
         </p>
 
         {/* Cards */}

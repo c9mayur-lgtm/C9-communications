@@ -45,64 +45,28 @@ const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) 
 
 const upgradeBlocks = [
   {
-    title: 'Frustratingly Slow Speeds',
-    desc: 'Residential nbn plans are often congested during peak hours, leading to slow load times and buffering when you need to be productive.',
+    title: 'Slow Loading During Busy Hours',
+    desc: 'Standard nbn plans are often congested during business hours. When your team needs to be productive, your connection slows down to a crawl.',
     icon: Gauge,
-    tag: 'PERFORMANCE GAP',
-    metrics: [
-      { value: '70%', label: 'congestion risk' },
-      { value: 'Peak', label: 'slowdowns' }
-    ]
+    tag: 'CONGESTION',
   },
   {
-    title: 'Frequent Connection Dropouts',
-    desc: 'Unreliable hardware and poor line quality lead to dropouts. Every time you lose connection, your team loses focus and your customers lose patience.',
+    title: 'Calls and Meetings Dropping',
+    desc: 'Unreliable hardware and poor connection quality lead to dropouts. Every time you lose your connection, you lose focus and client trust.',
     icon: RefreshCcw,
-    tag: 'RELIABILITY GAP',
-    metrics: [
-      { value: 'N/A', label: 'uptime guarantee' },
-      { value: 'Zero', label: 'failover' }
-    ]
+    tag: 'INTERRUPTIONS',
   },
   {
-    title: 'Generic Support Queues',
-    desc: "When things go wrong, you're stuck in a loop with a generic call centre. They don't know your business and haven't seen your setup before.",
-    icon: Headphones,
-    tag: 'SUPPORT GAP',
-    metrics: [
-      { value: '60m+', label: 'hold times' },
-      { value: 'Level 1', label: 'only' }
-    ]
-  },
-  {
-    title: 'Slow Upload Speeds',
-    desc: 'Standard nbn is asymmetrical, meaning your uploads are a fraction of your downloads. This makes cloud backups and video calls painful.',
-    icon: Zap,
-    tag: 'BANDWIDTH GAP',
-    metrics: [
-      { value: '10:1', label: 'download ratio' },
-      { value: 'Bottleneck', label: 'impact' }
-    ]
-  },
-  {
-    title: 'No Repair Commitments',
-    desc: 'Residential plans have no guaranteed repair times. If yours goes down, you could be offline for days with no accountability from your provider.',
-    icon: ShieldCheck,
-    tag: 'SERVICE GAP',
-    metrics: [
-      { value: 'None', label: 'repair SLA' },
-      { value: 'Risk', label: 'financial loss' }
-    ]
-  },
-  {
-    title: 'Residential Routing',
-    desc: 'Your traffic is treated the same as Netflix and gaming traffic. This higher latency can cause issues for VoIP and remote desktop applications.',
+    title: 'Shared Network Performance',
+    desc: "Standard connections share a 'neighborhood pool' with residential users. This means your business performance is affected by people around you streaming video.",
     icon: Globe,
-    tag: 'PATH GAP',
-    metrics: [
-      { value: 'High', label: 'core latency' },
-      { value: 'Shared', label: 'backbone' }
-    ]
+    tag: 'SHARED ACCESS',
+  },
+  {
+    icon: Headphones,
+    title: 'No Direct Support',
+    desc: "When the internet goes down, you're stuck in a loop with a generic call centre. No one knows your business, and no one is accountable for the fix.",
+    tag: 'SUPPORT GAP',
   }
 ];
 
@@ -112,16 +76,19 @@ export default function TheBusinessUpgrade() {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         <div className="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
-          <span className="text-rose-500 text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">Common Frustrations</span>
-          <h2 className="c9-section-heading">
-            Tired of internet that<br />lets you down?
+          <span className="text-rose-500 text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">The Problem</span>
+          <h2 className="c9-section-heading !text-[32px] md:!text-[42px]">
+            Why standard nbn setups<br />cause problems
           </h2>
           <p className="text-[17px] md:text-[19px] text-[#6B7280] mt-8 leading-relaxed">
-            Standard residential-grade connections weren't built for the demands of a modern business. If you're experiencing these issues, you're not alone.
+            Residential-grade internet wasn't built for the demands of a modern office. If your team is struggling with these issues, you're on a connection meant for home use, not business.
+          </p>
+          <p className="text-[15px] font-bold text-[#1A1A2E] mt-6">
+            This is where most small businesses struggle.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-gray-100 rounded-none overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-gray-100 rounded-none overflow-hidden">
           {upgradeBlocks.map((block, i) => (
             <div key={i} className="p-10 md:p-12 border-r border-b border-gray-100 flex flex-col group transition-all duration-300 hover:bg-[#F8F7FF]">
               <div className="mb-6 self-start">
@@ -133,26 +100,9 @@ export default function TheBusinessUpgrade() {
                 <block.icon size={32} strokeWidth={1.5} className="text-[#5D00D6]" />
               </div>
               <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4 tracking-tight">{block.title}</h3>
-              <p className="text-gray-500 text-[15px] leading-relaxed mb-10 flex-grow">
+              <p className="text-gray-500 text-[15px] leading-relaxed flex-grow">
                 {block.desc}
               </p>
-
-              {/* Metrics Row */}
-              <div className="mt-auto pt-8 border-t border-gray-100 flex items-center gap-0">
-                {block.metrics.map((m, mi) => (
-                  <React.Fragment key={mi}>
-                    <div className="flex-1">
-                      <div className="text-[26px] font-bold text-[#5D00D6] leading-none tracking-tight">
-                        <CountUp value={m.value} />
-                      </div>
-                      <div className="text-[11px] text-[#9CA3AF] mt-1.5 font-bold uppercase tracking-wider">
-                        {m.label}
-                      </div>
-                    </div>
-                    {mi === 0 && <div className="h-10 w-px bg-gray-200 mx-6"></div>}
-                  </React.Fragment>
-                ))}
-              </div>
             </div>
           ))}
         </div>
