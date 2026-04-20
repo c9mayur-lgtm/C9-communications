@@ -7,15 +7,14 @@ import { Award, Star, Wifi, Zap, Shield, Activity, Globe, ArrowRight } from 'luc
 import { Badge } from '@/components/ui/badge';
 
 const speedTiers = [
-  { speed: '50/20',     mbps: 50,   unit: 'Mbps', tag: 'Basic',      tagBg: 'bg-blue-50',   tagText: 'text-blue-600',   barWidth: '10%',   latency: 18, uptime: 99.5  },
-  { speed: '100/20',    mbps: 100,  unit: 'Mbps', tag: 'Standard',   tagBg: 'bg-green-50',  tagText: 'text-green-600',  barWidth: '20%',  latency: 14,  uptime: 99.9  },
-  { speed: '250/25',    mbps: 250,  unit: 'Mbps', tag: 'Premium',    tagBg: 'bg-amber-50',  tagText: 'text-amber-600',  barWidth: '50%',  latency: 11,  uptime: 99.95 },
-  { speed: '1000/50',   mbps: 1000, unit: 'Mbps', tag: 'Hyper',      tagBg: 'bg-purple-50', tagText: 'text-purple-600', barWidth: '100%', latency: 8,   uptime: 99.99 },
+  { speed: '50/20',     mbps: 50,   unit: 'Mbps', tag: 'Basic',      tagBg: 'bg-blue-50',   tagText: 'text-blue-600',   barWidth: '20%',   latency: 18, uptime: 99.5  },
+  { speed: '100/40',    mbps: 100,  unit: 'Mbps', tag: 'Standard',   tagBg: 'bg-green-50',  tagText: 'text-green-600',  barWidth: '40%',  latency: 14,  uptime: 99.9  },
+  { speed: '250/100',    mbps: 250,  unit: 'Mbps', tag: 'High Usage',  tagBg: 'bg-purple-50',  tagText: 'text-purple-600',  barWidth: '100%',  latency: 11,  uptime: 99.95 },
 ];
 
 const trustSignals = [
   'Small Business nbn Accredited Adviser',
-  'Speeds up to 1000/50 Mbps',
+  'Reliable business speeds',
   '4G LTE failover included',
 ];
 
@@ -87,7 +86,7 @@ function Sparkline({ data, maxVal }: { data: number[], maxVal: number }) {
 }
 
 export default function Hero() {
-  const [activeSpeed, setActiveSpeed] = useState(3);
+  const [activeSpeed, setActiveSpeed] = useState(1);
   const tier = speedTiers[activeSpeed];
   const throughput = useSimulatedThroughput(tier.mbps);
   const liveLatency = useSimulatedLatency(tier.latency);
@@ -124,12 +123,11 @@ export default function Hero() {
             </div>
 
             <h1 className="c9-hero-title text-[#1A1A2E] mt-8">
-              Reliable Small Business nbn <br className="hidden lg:block" /> that keeps your team working —{' '}
-              <span className="text-[#5D00D6]">without interruptions.</span>
+              Reliable business nbn that <br className="hidden lg:block" /> keeps your team connected
             </h1>
 
             <p className="c9-body text-[#6B7280] max-w-[580px] mt-6 md:text-[18px]">
-              We help you choose, set up, and manage the right nbn connection for your business — so you don’t have to deal with slow speeds or dropouts.
+              We help you choose, set up, and manage the right nbn connection for your business — with realistic performance and ongoing support.
             </p>
 
             {/* Address Checker Input */}
@@ -174,13 +172,6 @@ export default function Hero() {
               >
                 Speak to an Expert <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </button>
-              
-              <div className="w-px h-4 bg-gray-200" />
-              
-              <div className="flex items-center gap-2 text-[13px] text-gray-500 font-medium">
-                <Shield size={14} className="text-green-500" />
-                SLA Backed
-              </div>
             </div>
           </div>
 
@@ -228,7 +219,7 @@ export default function Hero() {
             </div>
 
             {/* Speed tier buttons — compact 2x2 grid */}
-            <div className="grid grid-cols-2 gap-1.5">
+            <div className="grid grid-cols-3 gap-1.5">
               {speedTiers.map((t, i) => (
                 <button
                   key={i}

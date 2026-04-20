@@ -7,31 +7,38 @@ import { Globe, Check, Smartphone, Cpu, Layers, Lock, Zap, Activity } from 'luci
 const hardwareSections = [
   {
     icon: Globe,
-    title: 'Step 1: Understand your needs',
-    subtitle: 'CONSULTATION',
-    desc: 'We start by understanding how your team uses the internet, which cloud apps you rely on, and any past issues you’ve faced.',
-    features: ['Usage Analysis', 'Team Size Check', 'Infrastructure Audit']
+    title: 'Assess business needs',
+    subtitle: 'Step 1: CONSULTATION',
+    desc: 'We start by understanding how your team uses the internet and which cloud tools are critical for your daily operations.',
+    features: ['Usage Analysis', 'Team Size Check', 'App Requirements']
   },
   {
     icon: Cpu,
-    title: 'Step 2: Check availability',
-    subtitle: 'ELIBILITY CHECK',
-    desc: 'We verify exactly which nbn technology is available at your address and confirm the maximum reliable speeds for your site.',
-    features: ['Service Class Identified', 'Site Speed Verified', 'Infrastructure Audit']
+    title: 'Check nbn availability',
+    subtitle: 'Step 2: ELIGIBILITY',
+    desc: 'We verify exactly which nbn technology is available at your site and confirm the realistic speeds you can expect.',
+    features: ['Address Audit', 'Technology Check', 'Speed Verification']
   },
   {
     icon: Zap,
-    title: 'Step 3: Arrange installation',
-    subtitle: 'MANAGED DEPLOYMENT',
-    desc: 'We coordinate with nbn technicians for any physical work required and pre-configure your business router for a painless switch.',
-    features: ['nnb Coordination', 'Pre-configured Hardware', 'Transition Planning']
+    title: 'Arrange installation',
+    subtitle: 'Step 3: COORDINATION',
+    desc: 'We handle all necessary coordination with nbn technicians for a smooth setup and prepare your managed hardware.',
+    features: ['nbn Coordination', 'Managed Router', 'Painless Switch']
   },
   {
     icon: Activity,
-    title: 'Step 4: Configure and test',
-    subtitle: 'GO LIVE & SUPPORT',
-    desc: 'Once connected, we test your connection logs and local network performance to ensure everything is stable before we hand over to you.',
-    features: ['Performance Verified', '4G Failover Tested', 'Ongoing Support Active']
+    title: 'Configure and test',
+    subtitle: 'Step 4: OPTIMISATION',
+    desc: 'Once connected, we properly configure and test your internal network and connection for maximum reliability.',
+    features: ['Internal Config', 'Stability Testing', 'Performance Check']
+  },
+  {
+    icon: Lock,
+    title: 'Ongoing support',
+    subtitle: 'Step 5: GO-LIVE',
+    desc: 'Your connection is live, and our team provides ongoing monitoring and support to keep your business running smoothly.',
+    features: ['Proactive Monitoring', 'Dedicated Support', 'Future Proofing']
   }
 ];
 

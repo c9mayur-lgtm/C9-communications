@@ -7,39 +7,39 @@ import { useInquiry } from '@/components/context/InquiryContext';
 const trustItems = [
   'No lock-in beyond contract term',
   'Site qualification within 1 business day',
-  'Australian team',
-  '$0 fibre install on 36-month contracts',
+  'Australian-based support team',
+  'Fully managed setup',
 ];
 
 export default function FinalCTA() {
   const { setInquiryMessage } = useInquiry();
 
   const handleCheck = () => {
-    setInquiryMessage("I'd like to check my address availability and indicative pricing for Small Business nbn.");
+    setInquiryMessage("I'm interested in getting my business connected to NBN.");
     const el = document.getElementById('consultation-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section
-      className="w-full bg-[#0F0F1A] py-20"
+      className="w-full bg-[#0F0F1A] py-20 border-t border-white/5"
       
     >
-      <div className="container mx-auto px-6 md:px-8 w-full max-w-[700px] text-center">
+      <div className="container mx-auto px-6 md:px-8 w-full max-w-[750px] text-center">
 
         <div
           className="rounded-full text-[11px] font-semibold uppercase tracking-wider px-4 py-1.5 mx-auto mb-6 w-fit"
           style={{ background: 'rgba(93,0,214,0.2)', color: '#A855F7' }}
         >
-          Small Business nbn Accredited Adviser
+          FULLY MANAGED BUSINESS NBN
         </div>
 
         <h2 className="c9-section-heading !text-white">
-          Ready to get your business connected?
+          Get the right nbn setup for your business
         </h2>
 
         <p className="text-[18px] text-[#9CA3AF] mt-4 leading-[1.7]">
-          Tell us your address and we'll handle the rest — from site qualification to seamless setup.
+          We’ll help you choose the right plan and manage everything from setup to support.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 mt-10">

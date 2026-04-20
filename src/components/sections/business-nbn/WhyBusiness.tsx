@@ -4,21 +4,21 @@ import { Cloud, PhoneCall, Laptop } from 'lucide-react';
 const cards = [
   {
     icon: Cloud,
-    title: 'Cloud App Users',
-    body: 'Teams relying on Microsoft 365, Xero, and other cloud applications that need a consistent, lag-free connection.',
+    title: 'Cloud Tools',
+    body: 'Teams using essential cloud tools like Microsoft 365, Xero, and other applications that require consistent connectivity.',
     tag: 'Cloud-Ready',
   },
   {
     icon: PhoneCall,
     title: 'VoIP & Meetings',
-    body: 'Businesses that use VoIP, Microsoft Teams, or Zoom for critical client meetings and team collaboration.',
-    tag: 'No More Jitter',
+    body: 'Businesses using VoIP, Microsoft Teams, or Zoom who need stable audio and video for every client call.',
+    tag: 'Stable Voice',
   },
   {
     icon: Laptop,
-    title: 'Multiple Devices',
-    body: 'Offices with 5 to 50+ users and devices all sharing the same connection without performance drops.',
-    tag: 'Team Capacity',
+    title: 'Multiple Users',
+    body: 'Offices with multiple users and devices that need consistent performance throughout the workday.',
+    tag: 'Office Capacity',
   },
 ];
 

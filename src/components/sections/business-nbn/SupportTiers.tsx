@@ -2,32 +2,32 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Shield, ShieldCheck, ShieldPlus, ChevronDown, Wifi, ArrowRight } from 'lucide-react';
+import { Shield, ShieldCheck, ShieldPlus, Wifi } from 'lucide-react';
 
 const supportValues = [
   {
     title: 'Australian-based support',
-    desc: 'Talk directly to our local nbn experts in Perth and Melbourne. No call centres, no scripted answers — just engineers who know your setup.',
+    desc: 'Talk directly to our local nbn experts who understand your business. No scripted call centres — just real help when you need it.',
     icon: ShieldCheck,
-    tag: 'LOCAL EXPERTS'
+    tag: 'LOCAL TEAM'
   },
   {
-    title: 'Fast response times',
-    desc: 'When an issue occurs, we prioritize business-grade resolution. We handle the coordination with nbn co to get you back online as fast as possible.',
+    title: 'Faster response times',
+    desc: 'When an issue occurs, we prioritize getting your business back online quickly, handling all coordination with nbn co directly.',
     icon: ShieldPlus,
     tag: 'PRIORITY CARE'
   },
   {
-    title: 'One point of contact',
-    desc: 'Stop being bounced between departments. You get a direct point of contact who owns your issue from the first call to the final fix.',
+    title: 'Single point of contact',
+    desc: 'Stop being bounced between departments. You get a dedicated point of contact who owns your issue from start to finish.',
     icon: Shield,
     tag: 'ACCOUNTABILITY'
   },
   {
     title: 'Ongoing monitoring',
-    desc: 'We don’t wait for you to call us. We proactively monitor your connection stability and line sync to identify problems before they affect your work.',
+    desc: 'We proactively monitor your connection to identify potential issues before they affect your work, ensuring maximum stability.',
     icon: Wifi,
-    tag: 'PROACTIVE MONITOR'
+    tag: 'PROACTIVE'
   }
 ];
 
@@ -38,13 +38,13 @@ export default function SupportTiers() {
         
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">Service & Support</span>
+               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">SERVICE & TRUST</span>
                <h2 className="c9-section-heading">
-                 Support that actually <br className="hidden md:block" /> supports your business.
+                 Support that keeps <br className="hidden md:block" /> your business running
                </h2>
             </div>
-            <p className="text-[17px] text-[#6B7280] max-w-[500px] leading-relaxed italic">
-              No call centres. Just Australian-based nbn experts who provide a single point of contact and proactive monitoring for your connection.
+            <p className="text-[17px] text-[#6B7280] max-w-[500px] leading-relaxed">
+              We provide the specialized support that businesses need to stay connected. No call centres, just Australian-based expertise.
             </p>
         </div>
 

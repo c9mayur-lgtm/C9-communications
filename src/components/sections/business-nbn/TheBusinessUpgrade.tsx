@@ -45,28 +45,28 @@ const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) 
 
 const upgradeBlocks = [
   {
-    title: 'Slow Loading During Busy Hours',
-    desc: 'Standard nbn plans are often congested during business hours. When your team needs to be productive, your connection slows down to a crawl.',
+    title: 'Peak Hour Performance',
+    desc: 'Shared networks can experience congestion during busy hours, causing speeds to fluctuate when your team needs them most.',
     icon: Gauge,
-    tag: 'CONGESTION',
+    tag: 'NETWORK CONGESTION',
   },
   {
-    title: 'Calls and Meetings Dropping',
-    desc: 'Unreliable hardware and poor connection quality lead to dropouts. Every time you lose your connection, you lose focus and client trust.',
+    title: 'Call & Meeting Disruptions',
+    desc: 'Connection instability can lead to dropouts during critical VoIP or video calls, affecting your professional image.',
     icon: RefreshCcw,
-    tag: 'INTERRUPTIONS',
+    tag: 'DROP-OUTS',
   },
   {
-    title: 'Shared Network Performance',
-    desc: "Standard connections share a 'neighborhood pool' with residential users. This means your business performance is affected by people around you streaming video.",
+    title: 'Shared Network Impact',
+    desc: 'As a shared infrastructure, NBN performance is influenced by overall network usage in your local area.',
     icon: Globe,
-    tag: 'SHARED ACCESS',
+    tag: 'SHARED NETWORK',
   },
   {
     icon: Headphones,
-    title: 'No Direct Support',
-    desc: "When the internet goes down, you're stuck in a loop with a generic call centre. No one knows your business, and no one is accountable for the fix.",
-    tag: 'SUPPORT GAP',
+    title: 'Limited Support Response',
+    desc: 'When issues occur on standard plans, support can be slow, leaving your business without a quick path to resolution.',
+    tag: 'SUPPORT DELAYS',
   }
 ];
 
@@ -76,15 +76,15 @@ export default function TheBusinessUpgrade() {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         <div className="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
-          <span className="text-rose-500 text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">The Problem</span>
+          <span className="text-rose-500 text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">THE REALITY OF NBN</span>
           <h2 className="c9-section-heading !text-[32px] md:!text-[42px]">
-            Why standard nbn setups<br />cause problems
+            Why many business nbn<br />connections fall short
           </h2>
           <p className="text-[17px] md:text-[19px] text-[#6B7280] mt-8 leading-relaxed">
-            Residential-grade internet wasn't built for the demands of a modern office. If your team is struggling with these issues, you're on a connection meant for home use, not business.
+            Without the right setup and management, nbn can affect day-to-day business operations. Performance varies, and shared networks aren't always consistent.
           </p>
           <p className="text-[15px] font-bold text-[#1A1A2E] mt-6">
-            This is where most small businesses struggle.
+            We help you navigate these challenges with a fully managed approach.
           </p>
         </div>
 

@@ -7,23 +7,23 @@ import { Network, Zap, ShieldAlert, MonitorCheck, TabletSmartphone } from 'lucid
 const reasons = [
   {
     icon: TabletSmartphone,
-    title: 'Selection & Advice',
-    desc: 'We recommend the right nbn plan based on your actual team usage and business apps — not just the most expensive speed tier.'
+    title: 'Plan Selection',
+    desc: 'We recommend the right plan based on your actual usage and number of users, ensuring you don’t overpay for unused capacity.'
   },
   {
     icon: Zap,
     title: 'Managed Setup',
-    desc: 'We handle the entire setup and configuration process, from the hardware to the nbn activation, so you don’t have to.'
+    desc: 'We handle the entire setup and configuration process properly, from hardware to activation, so you don’t have to.'
   },
   {
     icon: Network,
-    title: 'Performance Tuning',
-    desc: 'We optimise your connection and local office network for consistent performance, ensuring your apps run smoothly even during busy periods.'
+    title: 'Optimised Reliability',
+    desc: 'We optimise your connection and internal office setup to ensure maximum reliability for your critical team applications.'
   },
   {
     icon: MonitorCheck,
     title: 'Ongoing Support',
-    desc: 'When issues arise, you talk directly to our Australian-based support team. We monitor your connection to keep it stable around the clock.'
+    desc: 'We provide ongoing support and monitoring when needed, acting as your single point of contact for any connectivity issues.'
   }
 ];
 
