@@ -15,7 +15,7 @@ export default function FinalCTA() {
   const { setInquiryMessage } = useInquiry();
 
   const handleCheck = () => {
-    setInquiryMessage("I'd like to check my address availability and indicative pricing for Small Business nbn™.");
+    setInquiryMessage("I'd like to check my address availability and indicative pricing for Small Business nbn.");
     const el = document.getElementById('consultation-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -31,16 +31,15 @@ export default function FinalCTA() {
           className="rounded-full text-[11px] font-semibold uppercase tracking-wider px-4 py-1.5 mx-auto mb-6 w-fit"
           style={{ background: 'rgba(93,0,214,0.2)', color: '#A855F7' }}
         >
-          nbn™ Accredited Adviser
+          nbn Accredited Adviser
         </div>
 
         <h2 className="c9-section-heading !text-white">
-          Ready to get your business connected properly?
+          Ready to get your business connected?
         </h2>
 
         <p className="text-[18px] text-[#9CA3AF] mt-4 leading-[1.7]">
-          Tell us your address and we'll run a site qualification — confirming available technology type,
-          speeds, and indicative pricing within one business day.
+          Tell us your address and we'll handle the rest — from site qualification to seamless setup.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
@@ -48,7 +47,7 @@ export default function FinalCTA() {
             onClick={handleCheck}
             className="inline-flex items-center justify-center h-[56px] px-10 rounded-full text-[15px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-colors duration-200"
           >
-            Check Availability →
+            Get My Business Connected →
           </button>
           <a
             href="tel:1800000299"

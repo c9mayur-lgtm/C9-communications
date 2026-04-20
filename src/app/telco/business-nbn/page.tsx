@@ -16,18 +16,18 @@ import FinalCTA from '@/components/sections/business-nbn/FinalCTA';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 
 export const metadata = {
-  title: 'Small Business nbn™ Plans | C9 Communications',
+  title: 'Reliable Small Business nbn Plans | C9 Communications',
   description:
-    'Small Business nbn™ Enterprise Ethernet with speeds up to 1000/1000 Mbps, 4G LTE failover, enhanced SLA from 4 hours, and a dedicated account manager. nbn™ Accredited Business Adviser.',
+    'Reliable Small Business nbn with speeds up to 1000/1000 Mbps, 4G LTE failover, enhanced SLA from 4 hours, and a dedicated account manager. nbn Accredited Business Adviser.',
   openGraph: {
-    title: 'Small Business nbn™ Plans | C9 Communications',
+    title: 'Reliable Small Business nbn Plans | C9 Communications',
     description:
-      'Enterprise-grade Small Business nbn™ with guaranteed bandwidth, 4G LTE failover, and eSLA from 4 hours. nbn accredited partner.',
+      'Business-grade Small Business nbn with guaranteed bandwidth, 4G LTE failover, and eSLA from 4 hours. nbn accredited partner.',
     url: 'https://c9communications.com.au/telco/business-nbn',
   },
 };
 
-export default function BusinessNBNPage() {
+export default function SmallBusinessNbnPage() {
   return (
     <main className="bg-white" style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
                   <Hero />
@@ -39,29 +39,29 @@ export default function BusinessNBNPage() {
       <WhatsIncluded />
       <WhyC9 />
       <WpCaseStudies 
-        title="Technical Insights" 
-        eyebrow="nbn™ CORE CLINIC"
+        title="Success Stories" 
+        eyebrow="CLIENT IMPACT"
         articles={[
           {
-            tag: 'NETWORK ARCHITECTURE',
-            title: 'Fibre vs. Copper: The Real Business Impact',
-            desc: "Understand why symmetrical fibre (EE) outperforms standard HFC/FTTN in a professional workplace environment — focusing on latency and packet prioritization.",
-            img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1240&auto=format&fit=crop',
-            videoText: 'Technical Deep Dive'
+            tag: 'RETAIL GROUP',
+            title: 'Zero Dropouts During Peak Sale Season',
+            desc: "A growing retail group switched to C9 after their previous provider left them offline during a major sale. We moved them to a Professional nbn tier with 4G failover, ensuring 100% uptime since.",
+            img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1240&auto=format&fit=crop',
+            videoText: 'Retail Case Study'
           },
           {
-            tag: 'SERVICE GUARANTEE',
-            title: 'Understanding eSLA restoration targets',
-            desc: 'A complete breakdown of 4-hour, 8-hour, and 12-hour enhanced SLAs and why they are critical for organizations where downtime is unacceptable.',
-            img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2000&auto=format&fit=crop',
-            videoText: 'Service Level Breakdown'
+            tag: 'PROFESSIONAL SERVICES',
+            title: 'Crystal Clear Voice for Busy Law Firm',
+            desc: 'A busy law firm struggled with jittery VoIP calls on standard nbn. C9 implemented a prioritized TC-2 connection, instantly resolving voice quality issues for their 20+ staff.',
+            img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000&auto=format&fit=crop',
+            videoText: 'Voice Quality Success'
           },
           {
-            tag: 'BUSINESS CONTINUITY',
-            title: '4G Failover: How it actually works',
-            desc: 'Take a look under the hood of C9’s automatic failover architecture and how it maintains zero-handoff connectivity during primary link outages.',
-            img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop',
-            videoText: 'Redundancy Explained'
+            tag: 'MANUFACTURING',
+            title: 'Seamless Migration for 24/7 Warehouse',
+            desc: 'We managed the entire transition for a 24/7 manufacturing site, replacing their legacy copper connection with high-speed nbn fibre without a single minute of downtime.',
+            img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop',
+            videoText: 'Migration Deep Dive'
           }
         ]}
       />

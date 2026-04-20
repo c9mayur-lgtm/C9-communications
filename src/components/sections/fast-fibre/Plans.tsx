@@ -20,33 +20,33 @@ type PlanCard = {
 
 const FIBRE_400_PLANS: Record<string, PlanCard[]> = {
   '24': [
-    { id: '400-24-std', name: 'Enterprise Fibre400 Standard', contract: '24', speed: '400', price: '599', setup: '2,000', totalCost: '16,376' },
-    { id: '400-24-go', name: 'Enterprise Fibre400 GO', contract: '24', speed: '400', price: '699', setup: '0', totalCost: '16,776', badge: '$0 Setup', featured: true }
+    { id: '400-24-std', name: 'Business Fibre 400 Standard', contract: '24', speed: '400', price: '599', setup: '2,000', totalCost: '16,376' },
+    { id: '400-24-go', name: 'Business Fibre 400 GO', contract: '24', speed: '400', price: '699', setup: '0', totalCost: '16,776', badge: '$0 Setup', featured: true }
   ],
   '36': [
-    { id: '400-36-std', name: 'Enterprise Fibre400 Standard', contract: '36', speed: '400', price: '399', setup: '2,000', totalCost: '16,364' },
-    { id: '400-36-go', name: 'Enterprise Fibre400 GO', contract: '36', speed: '400', price: '499', setup: '0', totalCost: '17,964', badge: '$0 Setup', featured: true }
+    { id: '400-36-std', name: 'Business Fibre 400 Standard', contract: '36', speed: '400', price: '399', setup: '2,000', totalCost: '16,364' },
+    { id: '400-36-go', name: 'Business Fibre 400 GO', contract: '36', speed: '400', price: '499', setup: '0', totalCost: '17,964', badge: '$0 Setup', featured: true }
   ]
 };
 
 const FIBRE_1000_PLANS: Record<string, PlanCard[]> = {
   '24': [
-    { id: '1000-24-std', name: 'Enterprise Fibre1000 Standard', contract: '24', speed: '1000', price: '899', setup: '4,000', totalCost: '25,576' },
-    { id: '1000-24-go', name: 'Enterprise Fibre1000 GO', contract: '24', speed: '1000', price: '1,199', setup: '0', totalCost: '28,776', badge: '$0 Setup', featured: true }
+    { id: '1000-24-std', name: 'Business Fibre 1000 Standard', contract: '24', speed: '1000', price: '899', setup: '4,000', totalCost: '25,576' },
+    { id: '1000-24-go', name: 'Business Fibre 1000 GO', contract: '24', speed: '1000', price: '1,199', setup: '0', totalCost: '28,776', badge: '$0 Setup', featured: true }
   ],
   '36': [
-    { id: '1000-36-std', name: 'Enterprise Fibre1000 Standard', contract: '36', speed: '1000', price: '699', setup: '4,000', totalCost: '29,164' },
-    { id: '1000-36-go', name: 'Enterprise Fibre1000 GO', contract: '36', speed: '1000', price: '799', setup: '0', totalCost: '28,764', badge: '$0 Setup', featured: true }
+    { id: '1000-36-std', name: 'Business Fibre 1000 Standard', contract: '36', speed: '1000', price: '699', setup: '4,000', totalCost: '29,164' },
+    { id: '1000-36-go', name: 'Business Fibre 1000 GO', contract: '36', speed: '1000', price: '799', setup: '0', totalCost: '28,764', badge: '$0 Setup', featured: true }
   ],
   '48': [
-    { id: '1000-48-std', name: 'Enterprise Fibre1000 Extended', contract: '48', speed: '1000', price: '749', setup: '0', totalCost: '35,952', badge: '$0 Setup · Best Value', featured: true }
+    { id: '1000-48-std', name: 'Business Fibre 1000 Extended', contract: '48', speed: '1000', price: '749', setup: '0', totalCost: '35,952', badge: '$0 Setup · Best Value', featured: true }
   ]
 };
 
 const fiberIncludes = [
   'Unlimited data allowance',
   '99.95% Network Availability SLA',
-  'Managed Enterprise Router included',
+  'Managed Business Router included',
   'Dedicated account manager',
   'Australian based support'
 ];
@@ -98,7 +98,17 @@ const SpeedBar = ({ activeCount }: { activeCount: number }) => {
    );
 };
 
-export default function Plans() {
+interface PlansProps {
+  title?: string;
+  subtitle?: string;
+  eyebrow?: string;
+}
+
+export default function Plans({ 
+  title = "Choose your fast fibre plan.", 
+  subtitle = "Select your bandwidth tier and contract term. All plans feature the premium foundation with reliable guaranteed data limits.",
+  eyebrow = "FIBRE PLANS"
+}: PlansProps) {
   const { setInquiryMessage } = useInquiry();
   const [activeTier, setActiveTier] = useState<'400' | '1000'>('400');
   const [contract400, setContract400] = useState<'24' | '36'>('36');
@@ -118,12 +128,12 @@ export default function Plans() {
         
         {/* HEADER */}
         <div className="text-center max-w-[800px] mx-auto mb-12">
-          <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.3em] block mb-6">FIBRE PLANS</span>
+          <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.3em] block mb-6">{eyebrow}</span>
           <h2 className="c9-section-heading mb-8">
-            Choose your fast fibre plan.
+            {title}
           </h2>
           <p className="text-[17px] md:text-[19px] text-[#6B7280] leading-relaxed">
-            Select your bandwidth tier and contract term. All plans feature the premium Enterprise Ethernet foundation with reliable guaranteed data limits. 
+            {subtitle}
           </p>
         </div>
 

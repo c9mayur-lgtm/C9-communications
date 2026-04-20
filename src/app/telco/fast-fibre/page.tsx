@@ -14,11 +14,11 @@ import HowItWorks from '@/components/sections/fast-fibre/HowItWorks';
 import FinalCTA from '@/components/sections/fast-fibre/FinalCTA';
 
 export const metadata: Metadata = {
-  title: "Fast Fibre Internet Plans | C9 Communications",
-  description: "Enterprise fast fibre internet plans for Australian businesses — Fibre400 and Fibre1000 with unlimited data, managed router, and private cloud connectivity. Powered by AAPT, Vocus, Optus, Telstra, and Aussie Broadband.",
+  title: "Reliable Business Fibre Internet Plans | C9 Communications",
+  description: "Reliable business fibre internet plans — Fibre 400 and Fibre 1000 with unlimited data, managed router, and private cloud connectivity. Fully managed from setup to support.",
   openGraph: {
-    title: "Fast Fibre Internet Plans | C9 Communications",
-    description: "Up to 1000 Mbps fast fibre for business. Unlimited data. Managed router. Private cloud connectivity. Australian carrier network. Fibre400 from $399/month.",
+    title: "Reliable Business Fibre Internet Plans | C9 Communications",
+    description: "Up to 1000 Mbps reliable fibre for business. Unlimited data. Managed router. Private cloud connectivity. Australian carrier network. Fibre 400 from $399/month.",
     url: "https://c9communications.com.au/telco/fast-fibre",
     type: "website"
   }

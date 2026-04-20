@@ -22,7 +22,7 @@ export default function FutureProof() {
                 Future-proof your <br className="hidden md:block" /> business internet
               </h2>
               <p className="text-[15px] md:text-[17px] text-[#9CA3AF] mt-4 max-w-[400px] leading-relaxed">
-                nbn™ upgrades are rolling out nationwide. Is your office ready? Stay productive and connected with C9 managed connectivity.
+                nbn upgrades are rolling out nationwide. Is your office ready? Stay productive and connected with C9 managed connectivity.
               </p>
               
               <Link href="/contact" className="mt-8 inline-flex items-center gap-2 bg-[#5D00D6] hover:bg-[#4B00AD] text-white font-bold py-3 px-8 rounded-full transition-all group active:scale-95 shadow-xl shadow-purple-900/20 text-[14px]">

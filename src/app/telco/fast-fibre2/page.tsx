@@ -50,47 +50,46 @@ export default function FastFibrePage() {
   return (
     <main className="min-h-screen bg-white">
       
-      {/* 1. HERO - EXACT ORIGINAL UI RE-IMPLEMENTED WITH NEW COPY */}
+      {/* 1. HERO - COMPLETELY REWRITTEN */}
       <section className="relative w-full bg-white pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden">
         <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* LEFT CONTENT */}
             <div>
               <div className="inline-flex items-center gap-2 bg-[#F3EEFF] border border-[#5D00D6]/20 rounded-full px-4 py-1.5 mb-8">
                 <Zap size={14} className="text-[#5D00D6]" />
-                <span className="text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest">Telco · Fast Fibre</span>
+                <span className="text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest">Connect · Reliable Business Fibre</span>
               </div>
 
               <h1 className="text-[40px] md:text-[52px] font-bold text-[#1A1A2E] leading-tight mb-8">
-                Stop losing productivity. <br />
-                <span className="text-[#5D00D6]">Internet that never slows down.</span>
+                Dedicated fibre internet built for <br />
+                <span className="text-[#5D00D6]">businesses that cannot afford downtime</span>
               </h1>
 
               <p className="text-[#6B7280] mb-10 max-w-[580px] md:text-[18px] leading-relaxed">
-                Move past NBN limitations. Upgrade to dedicated Fast Fibre and experience guaranteed bandwidth, lightning-fast uploads, and zero peak-hour congestion.
+                Get guaranteed speed, consistent performance, and a connection your business can rely on — fully managed from setup to support.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
                 <button 
-                  onClick={scrollToForm}
+                  onClick={scrollToPlans}
                   className="w-full sm:w-auto bg-[#5D00D6] text-white px-8 py-4 rounded-full font-bold hover:bg-[#4E00AD] transition-all flex items-center justify-center gap-2 shadow-xl shadow-purple-900/20"
                 >
-                  Upgrade My Internet <ArrowRight size={18} />
+                  Get the Right Fibre Plan <ArrowRight size={18} />
                 </button>
                 <button 
-                  onClick={scrollToPlans}
+                  onClick={scrollToForm}
                   className="w-full sm:w-auto bg-white text-[#1A1A2E] border border-[#E5E7EB] px-8 py-4 rounded-full font-bold hover:bg-gray-50 hover:border-[#5D00D6] transition-all flex items-center justify-center gap-2"
                 >
-                  Check Availability
+                  Check Fibre Availability <ArrowRight size={16} />
                 </button>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  'Consistent Speeds 24/7',
+                  'Consistent Performance 24/7',
                   'Symmetrical Up & Down',
-                  'Enterprise SLA Guarantee',
-                  'Zero peak-hour dropoffs'
+                  'Business-grade SLA Guarantee',
+                  'No peak-hour slowdowns'
                 ].map((signal, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0">
@@ -102,7 +101,6 @@ export default function FastFibrePage() {
               </div>
             </div>
 
-            {/* RIGHT VISUAL MOCKUP - EXACT ORIGINAL */}
             <div className="relative flex justify-center lg:justify-end">
                <div className="relative w-full aspect-square max-w-[500px] bg-gradient-to-br from-[#F3EEFF] to-white rounded-3xl border border-[#5D00D6]/10 overflow-hidden shadow-[0_20px_50px_rgba(93,0,182,0.05)]">
                   <div className="absolute inset-0 opacity-20">
@@ -113,10 +111,10 @@ export default function FastFibrePage() {
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
                      <div className="w-full bg-white rounded-2xl p-6 border shadow-sm mb-4">
                         <div className="flex justify-between items-center mb-4">
-                           <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Network Throughput</span>
+                           <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Connection Load</span>
                            <div className="flex items-center gap-1.5">
                               <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                              <span className="text-[10px] text-green-600 font-bold">1.0 Gbps Link</span>
+                              <span className="text-[10px] text-green-600 font-bold">Dedicated 1.0 Gbps</span>
                            </div>
                         </div>
                         <div className="h-24 flex items-end gap-1">
@@ -135,8 +133,8 @@ export default function FastFibrePage() {
                      <div className="grid grid-cols-2 gap-4 w-full">
                         <div className="bg-white rounded-xl p-4 border shadow-sm">
                            <Shield className="text-[#5D00D6] mb-2" size={20} />
-                           <p className="text-[11px] text-gray-400 font-bold uppercase mb-1">Security</p>
-                           <p className="text-[16px] font-bold text-[#1A1A2E]">Active</p>
+                           <p className="text-[11px] text-gray-400 font-bold uppercase mb-1">Reliability</p>
+                           <p className="text-[16px] font-bold text-[#1A1A2E]">99.95% SLA</p>
                         </div>
                         <div className="bg-white rounded-xl p-4 border shadow-sm">
                            <Wifi className="text-[#5D00D6] mb-2" size={20} />
@@ -157,156 +155,286 @@ export default function FastFibrePage() {
         </div>
       </div>
 
-      {/* 2. WHY FAST FIBRE UI (Purple Gradient Grid) used for CORE BENEFITS */}
-      <section className="relative py-14 md:py-16 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#7D38E2] to-white z-0" />
-
-        <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
-          <div className="flex flex-col mb-16 gap-4 text-center md:text-left">
-            <span className="text-white opacity-80 text-[11px] font-bold tracking-[0.2em] uppercase mb-1">CORE BUSINESS IMPACT</span>
-            <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-white leading-tight">
-              Built to eliminate wasted hours<br />and protect your operations.
-            </h2>
-            <p className="text-white/85 max-w-[720px] text-[18px] md:text-[20px] font-medium leading-relaxed mt-2">
-              The shift to Fast Fibre isn't just about megabits—it's about removing the friction from your daily business workflows.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-               { icon: Clock, title: "Zero Afternoon Slowdowns", desc: "Your dedicated line means you completely bypass consumer network congestion. Performance is guaranteed all day." },
-               { icon: CloudUpload, title: "Lightning Fast Uploads", desc: "Symmetrical bandwidth means uploading large files to the cloud happens instantly." },
-               { icon: Phone, title: "Flawless Video Conferencing", desc: "Run dozens of simultaneous HD video meetings without a single dropped frame or audio lag." },
-               { icon: Users, title: "Better Team Productivity", desc: "Stop paying your staff to wait for loading screens. Keep operations moving at the speed of thought." },
-               { icon: Server, title: "Cloud Compatibility", desc: "Seamlessly integrate with Microsoft Azure and AWS, ensuring your cloud tools function natively." },
-               { icon: Shield, title: "Risk Mitigation", desc: "Dedicated managed hardware ensures cyber threats are managed before they reach your network." }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-6 md:p-8 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
-                <div className="mb-6"><item.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} /></div>
-                <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight">{item.title}</h3>
-                <p className="text-gray-600 text-[16px] md:text-[17px] mb-6 leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center mt-12">
-            <button
-              onClick={scrollToForm}
-              className="inline-flex items-center justify-center gap-2 shadow-2xl hover:gap-4 transition-all group bg-[#5D00D6] text-white rounded-full h-14 px-10 text-base font-bold"
-            >
-              Get Custom Quote <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. ORIGINAL PLANS COMPONENT PLACED HERE PERFECTLY */}
-      <Plans />
-
-      {/* 4. WHAT'S INCLUDED UI (Gray/White blocks) USED FOR 'WHEN NBN FAILS' & 'THE DIFFERENCE' */}
-      <section className="w-full bg-[#FAFAFA] py-16 md:py-24 border-y border-gray-100">
+      {/* 2. PROBLEM SECTION - HIGH IMPACT */}
+      <section className="w-full bg-[#FAFAFA] py-16 md:py-24 border-b border-gray-100">
          <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
             <div className="text-center max-w-[800px] mx-auto mb-16 md:mb-20">
-               <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.3em] block mb-6">WHEN NBN IS NOT ENOUGH</span>
+               <span className="text-[11px] font-bold text-rose-500 uppercase tracking-[0.3em] block mb-6">THE PROBLEM</span>
                <h2 className="text-[32px] md:text-[40px] font-bold text-[#1A1A2E] mb-8 leading-tight">
-                  Why you shouldn't run a business <br/>on shared infrastructure.
+                  Why most business internet fails
                </h2>
                <p className="text-[17px] md:text-[19px] text-[#6B7280] leading-relaxed">
-                  Standard business NBN is a shared connection. When your neighbours download, your speeds suffer. If these issues sound familiar, you've outgrown your connection.
+                  Your business relies on the internet for every operation. When your connection falls short, your productivity stops.
                </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                {[
-                  { title: "Peak Hour Slowdowns", icon: Clock, desc: "Every afternoon, performance drops and your entire team wastes time waiting for cloud apps to load or files to save." },
-                  { title: "Painfully Slow Uploads", icon: CloudUpload, desc: "Sending large files, syncing to OneDrive, or backing up data grinds your network to a halt." },
-                  { title: "Video Call Dropouts", icon: Activity, desc: "Constant freezing and audio issues during critical client meetings make your business look unprofessional." }
+                  { title: "Peak Hour Slowdowns", icon: Clock, desc: "Speeds drop when you need them most, as shared residential infrastructure becomes congested." },
+                  { title: "Unstable Connections", icon: Activity, desc: "Micro-dropouts disrupt important video calls, VoIP services, and cloud application syncs." },
+                  { title: "Shared Bandwidth", icon: Users, desc: "Your performance is limited because you're sharing capacity with everyone else in your area." },
+                  { title: "No Accountability", icon: Shield, desc: "When issues arise, residential-grade support lines leave you waiting for hours without resolution." }
                ].map((item, idx) => (
-                  <div key={idx} className="flex flex-col gap-6">
-                     <div className="w-14 h-14 rounded-2xl bg-rose-50 flex items-center justify-center p-3.5 shadow-sm border border-rose-100">
-                        <item.icon size={28} className="text-rose-500" />
+                  <div key={idx} className="flex flex-col gap-6 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                     <div className="w-12 h-12 rounded-xl bg-rose-50 flex items-center justify-center p-3">
+                        <item.icon size={24} className="text-rose-500" />
                      </div>
                      <div>
-                        <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4 leading-tight">{item.title}</h3>
-                        <p className="text-[16px] text-[#6B7280] leading-relaxed">{item.desc}</p>
+                        <h3 className="text-[18px] font-bold text-[#1A1A2E] mb-3">{item.title}</h3>
+                        <p className="text-[15px] text-[#6B7280] leading-relaxed">{item.desc}</p>
                      </div>
                   </div>
                ))}
             </div>
+            <p className="text-center text-[17px] font-medium text-gray-500 italic">"Standard connections weren't built for business-critical operations."</p>
+         </div>
+      </section>
+
+      {/* 3. SOLUTION POSITIONING */}
+      <section className="w-full bg-white py-16 md:py-24">
+         <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
+            <div className="text-center max-w-[800px] mx-auto mb-16">
+               <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.3em] block mb-6">THE SOLUTION</span>
+               <h2 className="text-[32px] md:text-[40px] font-bold text-[#1A1A2E] mb-8 leading-tight">
+                  What makes dedicated fibre different
+               </h2>
+               <p className="text-[17px] md:text-[19px] text-[#6B7280] leading-relaxed">
+                  Unlike standard connections, dedicated fibre provides a private line built for business-critical operations.
+               </p>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                <div className="bg-white border border-gray-200 shadow-sm rounded-[32px] p-10 h-full">
-                  <h3 className="text-2xl font-bold text-[#1A1A2E] mb-8">Standard NBN</h3>
+                  <h3 className="text-2xl font-bold text-[#1A1A2E] mb-8">Standard Business nbn</h3>
                   <ul className="space-y-6">
-                     <li className="flex items-start gap-4 text-gray-600"><span className="text-rose-500 font-bold text-xl leading-none">×</span> <span><strong className="text-gray-900 block">Fluctuating Speeds</strong> Performance drops based on local traffic.</span></li>
-                     <li className="flex items-start gap-4 text-gray-600"><span className="text-rose-500 font-bold text-xl leading-none">×</span> <span><strong className="text-gray-900 block">Capped Uploads</strong> Upload speeds are heavily restricted vs downloads.</span></li>
-                     <li className="flex items-start gap-4 text-gray-600"><span className="text-rose-500 font-bold text-xl leading-none">×</span> <span><strong className="text-gray-900 block">Shared Line</strong> Infrastructure is shared with residential users.</span></li>
+                     <li className="flex items-start gap-4 text-gray-600"><span className="text-rose-500 font-bold text-xl leading-none">×</span> <span><strong className="text-gray-900 block font-bold">Fluctuating performance</strong> Speeds drop based on local traffic and peak hours.</span></li>
+                     <li className="flex items-start gap-4 text-gray-600"><span className="text-rose-500 font-bold text-xl leading-none">×</span> <span><strong className="text-gray-900 block font-bold">Shared infrastructure</strong> Performance is shared with residential users.</span></li>
+                     <li className="flex items-start gap-4 text-gray-600"><span className="text-rose-500 font-bold text-xl leading-none">×</span> <span><strong className="text-gray-900 block font-bold">Limited Uploads</strong> Slower uploads make cloud apps and backups difficult.</span></li>
                   </ul>
                </div>
                <div className="bg-[#1A1A2E] text-white border border-[#5D00D6]/30 rounded-[32px] p-10 h-full relative overflow-hidden shadow-2xl">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/30 blur-[80px] rounded-full pointer-events-none" />
                   <h3 className="text-2xl font-bold text-white mb-8 relative z-10">Dedicated Fast Fibre</h3>
                   <ul className="space-y-6 relative z-10">
-                     <li className="flex items-start gap-4 text-gray-300"><div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-400" size={14}/></div> <span><strong className="text-white block">Consistent Speeds 24/7</strong> Performance never drops.</span></li>
-                     <li className="flex items-start gap-4 text-gray-300"><div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-400" size={14}/></div> <span><strong className="text-white block">Symmetrical Speeds</strong> Uploads are just as fast as downloads.</span></li>
-                     <li className="flex items-start gap-4 text-gray-300"><div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-400" size={14}/></div> <span><strong className="text-white block">Private Line</strong> A dedicated connection straight to your business.</span></li>
+                     <li className="flex items-start gap-4 text-gray-300"><div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-400" size={14}/></div> <span><strong className="text-white block font-bold">Consistent Performance</strong> Fixed, reliable speeds that never drop.</span></li>
+                     <li className="flex items-start gap-4 text-gray-300"><div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-400" size={14}/></div> <span><strong className="text-white block font-bold">Private Dedicated Line</strong> Bandwidth is yours alone, not shared.</span></li>
+                     <li className="flex items-start gap-4 text-gray-300"><div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-400" size={14}/></div> <span><strong className="text-white block font-bold">Built for Business</strong> Optimized for cloud, VoIP, and heavy loads.</span></li>
                   </ul>
                </div>
             </div>
+            <p className="text-center mt-12 text-[17px] font-bold text-[#1A1A2E]">"This is infrastructure your business can depend on."</p>
          </div>
       </section>
 
-      {/* 5. DIFFERENTIATION */}
-      <section className="bg-gradient-to-br from-[#5D00D6] to-[#3a008a] py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.4)_0%,transparent_60%)] pointer-events-none" />
+      {/* 4. DECISION FRAMEWORK */}
+      <Plans 
+        eyebrow="CHOOSE THE RIGHT PLAN"
+        title="Choosing the right fibre plan for your business"
+        subtitle="Simple options focused on your team size and operational needs. No technical overload, just consistent performance."
+      />
+
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-6 max-w-4xl grid md:grid-cols-2 gap-8">
+            <div className="bg-[#F3EEFF] p-8 rounded-2xl border border-[#5D00D6]/10">
+                <h4 className="text-xl font-bold text-[#1A1A2E] mb-4">Option 1: Fibre 400</h4>
+                <p className="text-gray-600 font-bold mb-4">Best for:</p>
+                <ul className="space-y-3">
+                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Small to mid teams</li>
+                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Daily cloud usage</li>
+                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Stable operations</li>
+                </ul>
+            </div>
+            <div className="bg-[#1A1A2E] p-8 rounded-2xl border border-white/10 text-white">
+                <h4 className="text-xl font-bold mb-4">Option 2: Fibre 1000</h4>
+                <p className="text-gray-400 font-bold mb-4">Best for:</p>
+                <ul className="space-y-3">
+                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={16} className="text-[#5D00D6]" /> High-demand environments</li>
+                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Heavy cloud, video, and VoIP</li>
+                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Growing or multi-location teams</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+
+      {/* 5. BUSINESS IMPACT SECTION */}
+      <section className="relative py-14 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#5D00D6] via-[#7D38E2] to-white z-0" />
+
+        <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
+          <div className="flex flex-col mb-16 gap-4 text-center md:text-left">
+            <span className="text-white opacity-80 text-[11px] font-bold tracking-[0.2em] uppercase mb-1">BUSINESS IMPACT</span>
+            <h2 className="text-[32px] md:text-[40px] font-bold tracking-tight text-white leading-tight">
+              What this means for your business
+            </h2>
+            <p className="text-white/85 max-w-[720px] text-[18px] md:text-[20px] font-medium leading-relaxed mt-2">
+              Replacing unstable internet with dedicated fibre transforms your team's daily experience.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+               { icon: Phone, title: "Smooth Video Calls", desc: "Interrupt-free video conferencing and crystal clear VoIP audio for every staff member." },
+               { icon: CloudUpload, title: "Faster Cloud Apps", desc: "No more spinning wheels. Microsoft 365, Xero, and CRM tools respond instantly." },
+               { icon: Clock, title: "No Peak Slowdowns", desc: "Maintain full speed even during peak afternoon hours when other connections fail." },
+               { icon: Users, title: "Better Productivity", desc: "Your team stays in the flow, completing tasks faster without network-related delays." }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-8 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
+                <div className="mb-6"><item.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} /></div>
+                <h3 className="text-[20px] font-bold mb-4 text-[#0c1024] tracking-tight leading-tight">{item.title}</h3>
+                <p className="text-gray-600 text-[15px] leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. RELIABILITY / TRUST LAYER */}
+      <section className="bg-gradient-to-br from-[#1A1A2E] to-[#0c1024] py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(93,0,214,0.15)_0%,transparent_60%)] pointer-events-none" />
         <div className="container mx-auto px-6 max-w-[1240px] relative z-10 text-center">
           <FadeUp>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-[11px] font-bold uppercase tracking-[0.2em] mb-8">THE C9 ADVANTAGE</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 max-w-3xl mx-auto tracking-tight">
-              More than just an ISP. <br/>We are your IT Partner.
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-[11px] font-bold uppercase tracking-[0.2em] mb-8">BUILT FOR RELIABILITY AND UPTIME</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 max-w-3xl mx-auto tracking-tight">
+               Consistent performance <br/>you can trust.
             </h2>
-            <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto">
-              Unlike generic telcos that disappear after installation, C9 provides true business-grade support. We monitor your connection proactively, hold direct wholesale agreements, and answer the phone locally when you need us.
-            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 text-left">
+                {[
+                    { title: "Business SLA", desc: "99.95% availability guarantee with rapid response times." },
+                    { title: "Consistent Speeds", desc: "Dedicated bandwidth ensuring you get the performance you pay for." },
+                    { title: "Failover Ready", desc: "Optional automated backup options for absolute connection security." },
+                    { title: "Managed by C9", desc: "Proactive monitoring and local Australian support whenever you need it." }
+                ].map((item, idx) => (
+                    <div key={idx} className="bg-white/5 border border-white/10 p-6 rounded-xl">
+                        <h4 className="text-white font-bold mb-3">{item.title}</h4>
+                        <p className="text-gray-400 text-[14px] leading-relaxed">{item.desc}</p>
+                    </div>
+                ))}
+            </div>
+            <p className="text-[#A855F7] font-bold text-[18px] mb-10">"Your business stays connected — even when others don’t."</p>
             <button 
-               onClick={scrollToForm}
-               className="inline-flex items-center justify-center gap-2 bg-white text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-gray-50 transition-colors shadow-xl"
+               onClick={scrollToPlans}
+               className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4E00AD] transition-colors shadow-xl"
             >
-               Talk to a Fibre Expert <ArrowRight size={18}/>
+               Get the Right Fibre Plan <ArrowRight size={18}/>
             </button>
           </FadeUp>
         </div>
       </section>
+
+      {/* 7. SETUP CLARITY */}
+      <section className="bg-white py-20 border-b border-gray-100">
+        <div className="container mx-auto px-6 max-w-[1240px]">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+                <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.3em] block mb-6">THE PROCESS</span>
+                <h2 className="text-3xl md:text-[40px] font-bold text-[#1A1A2E] mb-6">Simple, fully managed setup</h2>
+                <p className="text-gray-600 text-lg">We handle the technical complexity so you can focus on your business.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+                {[
+                    { step: "01", title: "Assess your needs", desc: "We learn how your business operates, how many staff rely on connectivity, and what applications you run daily." },
+                    { step: "02", title: "Confirm availability", desc: "We check fibre availability at your exact location and identify the right service tier for your requirements." },
+                    { step: "03", title: "Manage installation", desc: "C9 coordinates the entire installation process — no technical involvement needed from your team." },
+                    { step: "04", title: "Configure and go live", desc: "We configure your network and cut over outside business hours. Your team arrives to a faster, reliable connection." }
+                ].map((item, idx) => (
+                    <div key={idx} className="relative group">
+                        <div className="text-[60px] font-black text-[#5D00D6]/5 absolute -top-8 -left-2 select-none group-hover:text-[#5D00D6]/10 transition-colors">{item.step}</div>
+                        <div className="relative z-10">
+                            <h4 className="text-xl font-bold text-[#1A1A2E] mb-4">{item.title}</h4>
+                            <p className="text-gray-500 text-[15px] leading-relaxed">{item.desc}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+      </section>
+
+      {/* 8. REAL USE CASE */}
+      <section className="bg-slate-50 py-20">
+        <div className="container mx-auto px-6 max-w-[1240px]">
+            <div className="bg-white rounded-[40px] p-8 md:p-16 border border-gray-100 shadow-sm overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#F3EEFF] rounded-full blur-3xl -mr-32 -mt-32 opacity-50" />
+                <div className="grid md:grid-cols-5 gap-12 items-center relative z-10">
+                    <div className="md:col-span-2">
+                        <div className="inline-block px-4 py-1 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest mb-6">REAL USE CASE</div>
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#1A1A2E] leading-tight">
+                            Growing business with 20+ staff experiencing slow NBN and call dropouts.
+                        </h3>
+                    </div>
+                    <div className="md:col-span-3 grid sm:grid-cols-2 gap-8">
+                        <div>
+                            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-4">What C9 Did</p>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-3">
+                                    <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
+                                    <span className="text-[15px] text-gray-700">Migrated to dedicated fibre</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
+                                    <span className="text-[15px] text-gray-700">Optimised network setup</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-4">Outcome</p>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-3">
+                                    <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
+                                    <span className="text-[15px] text-emerald-600 font-bold">Stable Performance</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
+                                    <span className="text-[15px] text-emerald-600 font-bold">No Call Interruptions</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
+                                    <span className="text-[15px] text-emerald-600 font-bold">Improved Productivity</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      {/* 9. SERVICE LINKING */}
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-6 max-w-[1240px] flex flex-wrap justify-center gap-x-12 gap-y-6">
+            <a href="/telco/business-nbn" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">Explore Business nbn <ArrowRight size={14}/></a>
+            <a href="/telco/c9-phone-system" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">See Business Phone Systems <ArrowRight size={14}/></a>
+            <a href="/managed-it" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">View Managed IT Services <ArrowRight size={14}/></a>
+        </div>
+      </div>
 
       <WpFAQAndFeedback 
         showFAQ={true} 
         showTestimonials={false} 
         faqItems={[
             {
-               q: "Why should I upgrade if I already have NBN?",
-               a: "Business NBN is a 'best-effort' shared service, which is why performance drops in the afternoon. Dedicated Fibre gives you an exclusive connection directly to your premises, guaranteeing the speed you pay for—especially symmetrical upload speeds required for cloud operations."
+               q: "Why should I upgrade if I already have nbn?",
+               a: "Standard business nbn is a 'best-effort' shared service, which is why performance drops when others consume bandwidth. Dedicated Fibre gives you an exclusive connection directly to your premises, guaranteeing the speed you pay for — especially the symmetrical upload speeds required for modern business operations."
             },
             {
                q: "Is Dedicated Fibre expensive?",
-               a: "Pricing has scaled down significantly over the last few years. The cost difference is often drastically outweighed by the immediate recovery of lost team productivity and the removal of disruptive downtime. We can quote exact pricing during a consultation."
+               a: "While the initial investment is higher than standard nbn, the cost is often drastically outweighed by the recovery of lost team productivity and the removal of disruptive downtime. We provide exact pricing based on a site qualification at your address."
             },
             {
                q: "How long does installation take?",
-               a: "Standard installation timelines depend on the carrier infrastructure at your specific location. However, we ensure zero disruption during the build phase by leaving your existing connection active until the new fibre is completely verified."
+               a: "Timelines depend on the carrier infrastructure at your specific location. We manage the entire process and ensure zero disruption by keeping your existing connection active until the new fibre is completely verified."
             },
             {
                q: "Will the installation disrupt our operations?",
-               a: "No. The new fibre is installed in parallel to your existing internet. We only perform the final 'cut-over' to the new connection outside of business hours, meaning your staff arrive the next morning to an instantly faster network."
+               a: "No. The new fibre is installed in parallel to your existing internet. We only perform the final cut-over outside of business hours, ensuring your team has an instantly faster network when they arrive the next morning."
             }
         ]}
       />
 
       <div id="consultation-section">
         <WpConsultationForm
-          eyebrow="UPGRADE COMMAND CENTER"
-          title="Ready for a network that actually performs?"
-          description="Submit your details, and our local team will run a quick service qualification on your address to tell you exactly what speeds are available and what it will cost."
-          formTitle="Check Fibre Availability"
+          eyebrow="READY TO UPGRADE?"
+          title="Get a connection your business can rely on"
+          description="Speak with our team to find the right fibre solution based on your business needs. We'll run a site qualification to tell you exactly what's available."
+          formTitle="Get the Right Fibre Plan"
         />
       </div>
     </main>

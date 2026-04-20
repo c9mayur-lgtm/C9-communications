@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const accreditations = [
   { name: 'ACMA', src: '/partners/accreditation/Acma_logo.svg', className: 'h-10 md:h-13 w-auto' },
   { name: 'APNIC', src: '/partners/accreditation/APNIC_logo.svg', className: 'h-8 md:h-10 w-auto' },
-  { name: 'nbn Co', src: '/partners/accreditation/NBN_Co-Logo.wine.svg', className: 'h-18 md:h-28 w-auto' },
+  { name: 'nbn', src: '/partners/accreditation/NBN_Co-Logo.wine.svg', className: 'h-18 md:h-28 w-auto' },
   { name: 'TTF', src: '/partners/accreditation/TTF_Logo-01-2048x2048.png', className: 'h-18 md:h-26 w-auto' },
 ];
 

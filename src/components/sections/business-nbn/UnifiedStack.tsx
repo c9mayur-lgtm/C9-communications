@@ -8,25 +8,25 @@ import Link from 'next/link';
 const stackItems = [
   {
     icon: PhoneCall,
-    title: 'Cloud Voice & Teams',
-    subtitle: 'Unified Communication',
-    desc: 'Run your entire C9 phone system or Microsoft Teams Calling environment over our tier-1 nbn™ backbone for crystal-clear voice quality.',
+    title: 'Business Phone Systems',
+    subtitle: 'Phones & Teams',
+    desc: 'Run your entire phone system or Microsoft Teams Calling environment over our tier-1 nbn backbone for crystal-clear voice quality.',
     link: '/voice/microsoft-teams-calling',
     label: 'Explore Voice Solutions'
   },
   {
-    icon: Smartphone,
-    title: 'Business Mobile Fleet',
-    subtitle: 'On-the-go Connectivity',
-    desc: 'The perfect companion to your office nbn™. Professional 5G mobile plans and data pools for your entire team.',
-    link: '/mobile/business-plans',
-    label: 'View Mobile Plans'
+    icon: Zap,
+    title: 'Managed IT Services',
+    subtitle: 'IT Support & Management',
+    desc: 'Beyond internet, we handle your entire IT environment—from user support to server management and cloud migrations.',
+    link: '/managed-it/network-solutions',
+    label: 'View IT Services'
   },
   {
     icon: ShieldCheck,
-    title: 'Managed SD-WAN',
-    subtitle: 'Secure Networking',
-    desc: 'Layer your nbn™ with professional SD-WAN management, next-gen firewalls, and multi-site secure VPN tunneling.',
+    title: 'Advanced Networking',
+    subtitle: 'Security & SD-WAN',
+    desc: 'Layer your nbn with professional SD-WAN management, next-gen firewalls, and multi-site secure VPN tunneling.',
     link: '/managed-it/network-solutions',
     label: 'Secure Your Network'
   }
@@ -46,7 +46,7 @@ export default function UnifiedStack() {
               </h2>
            </div>
            <p className="c9-body max-w-[420px] font-medium leading-relaxed">
-              A high-performance nbn™ connection is the foundation. Layer on C9’s managed voice, mobile, and security services to build a truly unified communication ecosystem.
+              A high-performance nbn connection is the foundation. Layer on C9’s managed voice, mobile, and security services to build a truly unified communication ecosystem.
            </p>
         </div>
 

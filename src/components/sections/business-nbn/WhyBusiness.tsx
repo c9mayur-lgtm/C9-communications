@@ -4,21 +4,21 @@ import { Gauge, Clock, UserCheck } from 'lucide-react';
 const cards = [
   {
     icon: Gauge,
-    title: 'Guaranteed bandwidth available',
-    body: 'Small Business nbn™ Enterprise Ethernet offers High CoS — 100% committed, guaranteed bandwidth. Consumer plans are best-effort only. When the network is congested, your speed drops. With High CoS, it doesn\'t.',
-    tag: 'High CoS option available',
+    title: 'Growing Teams',
+    body: 'As you add more staff, your demand for bandwidth increases. A small business nbn connection ensures everyone stays productive without slowing down.',
+    tag: 'Scalable Bandwidth',
   },
   {
     icon: Clock,
-    title: 'Enhanced SLA — not a consumer helpline',
-    body: 'Small Business nbn™ Enterprise Ethernet includes a 12-hour enhanced SLA as standard — with options to upgrade to 8-hour or 4-hour restoration targets. Consumer nbn™ has no guaranteed restoration time. When your internet goes down, ours has a commitment behind it.',
-    tag: 'eSLA from 4 hours',
+    title: 'Cloud & SaaS Usage',
+    body: 'From Microsoft 365 to Xero and Zoom, your business runs on the cloud. You need a stable connection that won\'t dropout during critical tasks.',
+    tag: 'Cloud-Optimised',
   },
   {
     icon: UserCheck,
-    title: 'Dedicated engineer and account manager',
-    body: 'Every C9 Small Business nbn™ client gets a dedicated account manager who knows your environment. Not a call centre. Not a ticketing system. A named person who is accountable for your connection and picks up the phone when you call.',
-    tag: 'Named account manager',
+    title: 'Mission Critical Reliability',
+    body: 'When your internet is down, your business stops. We provide the stability and support needed to keep you online and operational 24/7.',
+    tag: 'Business Continuity',
   },
 ];
 
@@ -32,14 +32,13 @@ export default function WhyBusiness() {
 
         {/* Header */}
         <span className="c9-eyebrow block">
-          BUSINESS GRADE VS CONSUMER
+          WHO THIS IS FOR
         </span>
         <h2 className="c9-section-heading mt-3 max-w-3xl">
-          Not all nbn™ is created equal. Small Business nbn™ is different — here's how.
+          Is your current internet holding your business back?
         </h2>
         <p className="c9-body mt-3 max-w-[640px]">
-          Consumer nbn™ is designed for households. Small Business nbn™ is designed for businesses that depend on
-          their connection. These are the differences that matter.
+          If your team is growing, moving to the cloud, or simply cannot afford to be offline, it's time for a dedicated small business nbn connection.
         </p>
 
         {/* Cards */}

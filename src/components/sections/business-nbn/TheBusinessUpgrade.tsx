@@ -45,63 +45,63 @@ const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) 
 
 const upgradeBlocks = [
   {
-    title: 'Symmetrical Bandwidth',
-    desc: 'Unlike standard nbn where uploads are throttled, C9 Enterprise Ethernet provides identical upload and download speeds. Critical for cloud backups and teams.',
+    title: 'Frustratingly Slow Speeds',
+    desc: 'Residential nbn plans are often congested during peak hours, leading to slow load times and buffering when you need to be productive.',
     icon: Gauge,
-    tag: 'PERFORMANCE',
+    tag: 'PERFORMANCE GAP',
     metrics: [
-      { value: '1:1', label: 'ratio guaranteed' },
-      { value: '1000M', label: 'upload capacity' }
+      { value: '70%', label: 'congestion risk' },
+      { value: 'Peak', label: 'slowdowns' }
     ]
   },
   {
-    title: 'Financial Uptime SLA',
-    desc: "Standard nbn has no time-bound repair commitment. C9 provides a contractually backed eSLA with financial rebates if we don't meet our 4-hour target.",
-    icon: ShieldCheck,
-    tag: 'RELIABILITY',
-    metrics: [
-      { value: '4hr', label: 'restoration target' },
-      { value: '99.95%', label: 'uptime guarantee' }
-    ]
-  },
-  {
-    title: 'Priority Data Class',
-    desc: 'Your data travels on a reserved "Class 2" virtual pipe, bypassing residential congestion. No slow-downs during peak Netflix or gaming hours.',
-    icon: Zap,
-    tag: 'NETWORK CLASS',
-    metrics: [
-      { value: 'TC2', label: 'priority traffic' },
-      { value: '0%', label: 'congestion risk' }
-    ]
-  },
-  {
-    title: 'nbn™ Accredited Support',
-    desc: 'Bypass the generic call centers. Every C9 account is assigned a dedicated Network Advisor with direct access to nbn™ engineering escalations.',
-    icon: Headphones,
-    tag: 'HUMAN EXPERTISE',
-    metrics: [
-      { value: '2min', label: 'avg answer time' },
-      { value: '100%', label: 'Australian support' }
-    ]
-  },
-  {
-    title: 'Managed Edge Hardware',
-    desc: 'We provide enterprise-grade managed routers with real-time telemetry. We often find and fix line sync issues before your staff even notices.',
+    title: 'Frequent Connection Dropouts',
+    desc: 'Unreliable hardware and poor line quality lead to dropouts. Every time you lose connection, your team loses focus and your customers lose patience.',
     icon: RefreshCcw,
-    tag: 'HARDWARE',
+    tag: 'RELIABILITY GAP',
     metrics: [
-      { value: '24/7', label: 'proactive sync' },
-      { value: 'OTA', label: 'remote patches' }
+      { value: 'N/A', label: 'uptime guarantee' },
+      { value: 'Zero', label: 'failover' }
     ]
   },
   {
-    title: 'Direct Cloud Pathing',
-    desc: 'Our network is peered directly with major cloud providers (AWS, Azure, Google). Your traffic takes the shortest possible path to the data center.',
-    icon: Globe,
-    tag: 'CONNECTIVITY',
+    title: 'Generic Support Queues',
+    desc: "When things go wrong, you're stuck in a loop with a generic call centre. They don't know your business and haven't seen your setup before.",
+    icon: Headphones,
+    tag: 'SUPPORT GAP',
     metrics: [
-      { value: '4ms', label: 'core latency' },
-      { value: '0.1ms', label: 'jitter avg' }
+      { value: '60m+', label: 'hold times' },
+      { value: 'Level 1', label: 'only' }
+    ]
+  },
+  {
+    title: 'Slow Upload Speeds',
+    desc: 'Standard nbn is asymmetrical, meaning your uploads are a fraction of your downloads. This makes cloud backups and video calls painful.',
+    icon: Zap,
+    tag: 'BANDWIDTH GAP',
+    metrics: [
+      { value: '10:1', label: 'download ratio' },
+      { value: 'Bottleneck', label: 'impact' }
+    ]
+  },
+  {
+    title: 'No Repair Commitments',
+    desc: 'Residential plans have no guaranteed repair times. If yours goes down, you could be offline for days with no accountability from your provider.',
+    icon: ShieldCheck,
+    tag: 'SERVICE GAP',
+    metrics: [
+      { value: 'None', label: 'repair SLA' },
+      { value: 'Risk', label: 'financial loss' }
+    ]
+  },
+  {
+    title: 'Residential Routing',
+    desc: 'Your traffic is treated the same as Netflix and gaming traffic. This higher latency can cause issues for VoIP and remote desktop applications.',
+    icon: Globe,
+    tag: 'PATH GAP',
+    metrics: [
+      { value: 'High', label: 'core latency' },
+      { value: 'Shared', label: 'backbone' }
     ]
   }
 ];
@@ -112,12 +112,12 @@ export default function TheBusinessUpgrade() {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         <div className="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">The Enterprise Edge</span>
+          <span className="text-rose-500 text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">Common Frustrations</span>
           <h2 className="c9-section-heading">
-            The Business Upgrade.<br /> What the Pros use.
+            Tired of internet that<br />lets you down?
           </h2>
           <p className="text-[17px] md:text-[19px] text-[#6B7280] mt-8 leading-relaxed">
-            When your business scales beyond standard fibre, you need a dedicated ethernet pipe that is contractually backed, professionally managed, and built for 24/7 operations.
+            Standard residential-grade connections weren't built for the demands of a modern business. If you're experiencing these issues, you're not alone.
           </p>
         </div>
 

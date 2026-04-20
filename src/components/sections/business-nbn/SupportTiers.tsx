@@ -12,7 +12,7 @@ const tiers = [
     price: '$0',
     priceSub: 'Included with all plans',
     esla: '12-hour eSLA',
-    desc: 'Best for standard business operations. Backed by the nbn™ enhanced SLA program.',
+    desc: 'Best for standard business operations. Backed by the nbn enhanced SLA program.',
     features: [
       '12-hour restoration commitment',
       'Unified Business Support team',
@@ -49,7 +49,7 @@ const tiers = [
     desc: 'The fastest response available. For organizations where internet downtime is unacceptable.',
     features: [
       '4-hour restoration commitment',
-      'Fastest available nbn™ eSLA',
+      'Fastest available nbn eSLA',
       'Real-time status notifications',
       'Priority routing pathing'
     ],
@@ -65,16 +65,15 @@ export default function SupportTiers() {
         
         {/* Telstra-inspired Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-           <div>
-              <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">Support Packages</span>
-              <h2 className="c9-section-heading">
-                Premium support <br className="hidden md:block" /> for premium business.
-              </h2>
-           </div>
-           <p className="text-[17px] text-[#6B7280] max-w-[500px] leading-relaxed italic">
-             * Fault restoration targets (eSLA) ensure your business has a contractually backed commitment 
-             to getting you back online within hours, not days.
-           </p>
+            <div>
+               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">Support & Accountability</span>
+               <h2 className="c9-section-heading">
+                 Local support that <br className="hidden md:block" /> actually cares.
+               </h2>
+            </div>
+            <p className="text-[17px] text-[#6B7280] max-w-[500px] leading-relaxed italic">
+              No call centres. No endless waiting. Just Australian-based nbn experts who know your business and your setup.
+            </p>
         </div>
 
         {/* Telstra Card Grid */}

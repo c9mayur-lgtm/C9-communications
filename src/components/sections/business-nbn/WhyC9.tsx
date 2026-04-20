@@ -7,23 +7,23 @@ import { Network, Zap, ShieldAlert, MonitorCheck, TabletSmartphone } from 'lucid
 const reasons = [
   {
     icon: TabletSmartphone,
-    title: 'Seamless switching',
-    desc: 'With prioritised service on a range of affordable plans, we’ve made it easy to switch your business internet to a reliable high-speed network built for business needs.'
+    title: 'Precision Plan Selection',
+    desc: 'We don\'t just sell you a pipe. We analyze your team size, cloud usage, and growth plans to recommend the exact nbn tier your business actually needs.'
   },
   {
-    icon: Network,
-    title: 'Direct peering & low latency',
-    desc: 'C9 optimizes every route to ensure your traffic hits the global backbone immediately. We don’t just rent a pipe; we engineer the path for the ultimate work-day experience.'
-  },
-  {
-    icon: ShieldAlert,
-    title: 'Carrier-grade transparency',
-    desc: 'We monitor the C9 Core 24/7 with zero-contention guarantees. We don’t just rent a pipe; we provide real-time visibility into the health of your critical business infrastructure.'
+    icon: Zap,
+    title: 'Expert Setup & Migration',
+    desc: 'We handle the entire transition from your old provider. From hardware configuration to nbn activation, we ensure a seamless switch with zero downtime.'
   },
   {
     icon: MonitorCheck,
-    title: 'Business-tailored everything',
-    desc: 'Regardless of the size of your business or industry, it’s our mission to shape internet and connectivity solutions to fit your needs — backed by locally based engineering pods.'
+    title: 'Proactive 24/7 Support',
+    desc: 'Our Australian engineers monitor your connection around the clock. We often fix line sync issues before you even notice them, backed by business-grade SLAs.'
+  },
+  {
+    icon: Network,
+    title: 'Smarter Network Routing',
+    desc: 'Your business traffic is prioritized on the nbn backbone. We engineer the path to minimize latency, ensuring your VoIP and cloud apps run perfectly.'
   }
 ];
 
@@ -35,7 +35,7 @@ export default function WhyC9() {
         {/* Dark Header */}
         <div className="flex flex-col items-center mb-20">
            <h2 className="c9-section-heading !text-white">
-              Why businesses choose C9
+              The C9 Solution: nbn Done Right
            </h2>
            <div className="w-20 h-1 bg-gradient-to-r from-[#5D00D6] to-[#7C3AED] mt-6 rounded-full" />
         </div>

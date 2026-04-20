@@ -8,14 +8,14 @@ const inclusions = [
   {
     icon: Router,
     title: 'Managed Router',
-    desc: 'C9 supplies and manages a business-grade router with your nbn™ connection. Next-generation firewall and security features built in — ask us about a SD-WAN solution to extend this further.',
+    desc: 'C9 supplies and manages a business-grade router with your nbn connection. Next-generation firewall and security features built in — ask us about a SD-WAN solution to extend this further.',
     tags: ['Next-Gen Firewall', 'Hardware Included', 'Managed Support'],
     link: { label: 'Ask about SD-WAN', href: '/managed-it/network-solutions' }
   },
   {
     icon: Smartphone,
     title: '4G LTE Failover',
-    desc: 'In the rare event your nbn™ service experiences an outage, 4G LTE failover activates automatically — keeping your business online without any manual intervention required. No downtime. No disruption.',
+    desc: 'In the rare event your nbn service experiences an outage, 4G LTE failover activates automatically — keeping your business online without any manual intervention required. No downtime. No disruption.',
     tags: ['Auto-Failover', '4G LTE Backup', 'Uptime Guarantee'],
     link: null
   },
@@ -29,14 +29,14 @@ const inclusions = [
   {
     icon: Zap,
     title: 'End-to-End Fibre to Site',
-    desc: 'High bandwidth reserved and guaranteed through full end-to-end Small Business nbn™ fibre direct to your site. Lightning-fast connectivity supporting your internet, telephony, and bandwidth-intensive applications.',
+    desc: 'High bandwidth reserved and guaranteed through full end-to-end Small Business nbn fibre direct to your site. Lightning-fast connectivity supporting your internet, telephony, and bandwidth-intensive applications.',
     tags: ['Symmetrical Speeds', 'Reserved Bandwidth', 'Dedicated Fibre'],
     link: null
   },
   {
     icon: Award,
-    title: 'nbn™ Accredited Support',
-    desc: 'C9 is an nbn™ Accredited Business Adviser — meaning our team is certified to design, quote, and manage Small Business nbn™ connections. You\'re not dealing with a reseller. You\'re dealing with an accredited partner.',
+    title: 'nbn Accredited Support',
+    desc: 'C9 is an nbn Accredited Business Adviser — meaning our team is certified to design, quote, and manage Small Business nbn connections. You\'re not dealing with a reseller. You\'re dealing with an accredited partner.',
     tags: ['Accredited Partner', 'Expert Design', 'nbn Certified'],
     link: null
   },
@@ -53,7 +53,7 @@ export default function WhatsIncluded() {
   const { setInquiryMessage } = useInquiry();
 
   const handleGetStarted = () => {
-    setInquiryMessage("I'm interested in the Small Business nbn™ solutions from C9.");
+    setInquiryMessage("I'm interested in the Small Business nbn solutions from C9.");
     const el = document.getElementById('consultation-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -69,7 +69,7 @@ export default function WhatsIncluded() {
             More than just an<br />internet connection.
           </h2>
           <p className="text-white/85 text-[18px] md:text-[20px] max-w-[720px] leading-relaxed mt-2 font-medium">
-            Every C9 Small Business nbn™ plan includes infrastructure, support, and management that most ISPs charge extra for — or simply don't offer.
+            Every C9 Small Business nbn plan includes infrastructure, support, and management that most ISPs charge extra for — or simply don't offer.
           </p>
         </div>
 

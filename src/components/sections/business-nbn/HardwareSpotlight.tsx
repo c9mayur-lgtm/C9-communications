@@ -6,32 +6,32 @@ import { Globe, Check, Smartphone, Cpu, Layers, Lock, Zap, Activity } from 'luci
 
 const hardwareSections = [
   {
+    icon: Globe,
+    title: 'Step 1: Site Qualification',
+    subtitle: 'ELIBILITY CHECK',
+    desc: 'We start by qualified your business address to see which nbn technology is available (FTTP, FTTN, HFC or Enterprise Ethernet) and what speeds are possible.',
+    features: ['Service Class Check', 'Speed Tier Audit', 'Infrastructure Verified']
+  },
+  {
+    icon: Cpu,
+    title: 'Step 2: Plan Selection',
+    subtitle: 'RIGHT-SIZING YOUR FEED',
+    desc: 'Our experts help you choose between Essential or Professional nbn tiers based on your team size, cloud application usage, and budget requirements.',
+    features: ['Usage Analysis', 'Budget Alignment', 'Scalability Planning']
+  },
+  {
     icon: Zap,
-    title: 'Symmetrical Enterprise Port',
-    subtitle: '1000/1000 MBPS READY',
-    desc: 'Our managed core units feature high-concurrency LAN/WAN ports designed for zero-congestion throughput. Unlike residential routers, these units handle simultaneous 1Gbps streams without thermal throttling.',
-    features: ['Symmetrical Load Balancing', 'Gigabit RJ45/SFP+ Support', 'Low-Latency Pathing']
-  },
-  {
-    icon: Lock,
-    title: 'Integrated Next-Gen Firewall',
-    subtitle: 'ALWAYS-ON SECURITY',
-    desc: 'Every C9 managed unit comes pre-hardened with a built-in SPI hardware firewall and encrypted IPsec VPN termination. Protect your office LAN from the edge without needing expensive secondary appliances.',
-    features: ['Stateful Packet Inspection', 'Zero-Trust Edge Protocol', 'Intrusion Prevention (IPS)']
-  },
-  {
-    icon: Smartphone,
-    title: '4G LTE Hot-Swap Failover',
-    subtitle: 'ZERO-DOWNTIME CONTINUITY',
-    desc: 'The integrated 4G/5G module monitors your primary fibre link heartbeat. If a drop is detected, the core unit automatically hot-swaps to the mobile backup in <2 seconds, keeping your active sessions alive.',
-    features: ['Automatic Handoff', 'LTE Cat-12 High Speed', 'External Antenna Support']
+    title: 'Step 3: Fast Activation',
+    subtitle: 'HARDWARE & SYNC',
+    desc: 'We ship your pre-configured business router and manage the nbn activation process. We handle the technical heavy lifting so you can just plug and play.',
+    features: ['Plug-and-Play Hardware', 'Direct nbn Coordination', 'Downtime Mitigation']
   },
   {
     icon: Activity,
-    title: 'Proactive Node Monitoring',
-    subtitle: '24/7 NETWORK TELEMETRY',
-    desc: 'Our Network Engineering Pods receive real-time telemetry from your unit. We monitor latency, jitter, and hardware thermals, often identifying and fixing line issues before your staff even notice them.',
-    features: ['Real-time Latency Tracking', 'Proactive Fault Detection', 'Over-the-air (OTA) Updates']
+    title: 'Step 4: Ongoing Management',
+    subtitle: '24/7 NETWORK PEACE OF MIND',
+    desc: 'Once live, our Australian engineering team monitors your connection 24/7. We proactively manage faults and ensure your internet remains stable and fast.',
+    features: ['Australian Engineering Support', 'Real-time Monitoring', 'Automatic 4G Failover']
   }
 ];
 
@@ -46,12 +46,12 @@ export default function HardwareSpotlight() {
           <div className="lg:sticky lg:top-[160px] h-fit md:mb-0 mb-16 lg:self-start overflow-visible z-0">
              {/* Mobile-Only Header */}
              <div className="lg:hidden mb-12">
-               <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
-                 MANAGED HARDWARE KIT
-               </span>
-               <h2 className="c9-section-heading mb-4 text-center lg:text-left">
-                 Hardware designed for <br /> zero-fail business.
-               </h2>
+                <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
+                  THE SETUP PROCESS
+                </span>
+                <h2 className="c9-section-heading mb-4 text-center lg:text-left">
+                  Getting your business <br /> connected is simple.
+                </h2>
              </div>
 
              <div className="relative w-full aspect-square max-w-[540px] mx-auto overflow-visible rounded-full bg-gradient-to-br from-[#5D00D6]/[0.02] to-transparent">
@@ -185,17 +185,15 @@ export default function HardwareSpotlight() {
           {/* SCROLLABLE DETAIL COLUMN */}
           <div className="relative z-10 lg:pt-0">
             <div className="mb-12 hidden lg:block">
-              <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
-                MANAGED HARDWARE KIT
-              </span>
-              <h2 className="c9-section-heading">
-                Hardware designed for <br /> zero-fail business.
-              </h2>
-              <p className="text-[18px] text-[#6B7280] mt-8 leading-relaxed max-w-[90%]">
-                C9 nbn™ isn’t just a raw line—it’s a managed ecosystem. We engineer the path, 
-                provide the hardware, and proactively monitor the connectivity to ensure your 
-                business infrastructure remains impenetrable.
-              </p>
+                <span className="text-[11px] uppercase tracking-[0.2em] text-[#5D00D6] font-bold block mb-4">
+                  THE SETUP PROCESS
+                </span>
+                <h2 className="c9-section-heading">
+                  Getting your business <br /> connected is simple.
+                </h2>
+                <p className="text-[18px] text-[#6B7280] mt-8 leading-relaxed max-w-[90%]">
+                  A high-performance nbn connection shouldn't be complicated. We handle the technical details so you can focus on running your business.
+                </p>
             </div>
 
             <div className="flex flex-nowrap lg:flex-col overflow-x-auto lg:overflow-x-visible no-scrollbar gap-8 lg:gap-14 pb-4 lg:pb-0 snap-x snap-mandatory">
