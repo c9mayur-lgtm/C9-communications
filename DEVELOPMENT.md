@@ -8,8 +8,8 @@
 
 **Client:** C9 Communications  
 **Product:** Business telco & IT services website for the Australian market  
-**Stack:** React 19 + TypeScript + Vite + Tailwind CSS v3 + Shadcn/UI + Framer Motion  
-**Planned Migration:** Next.js 15 (App Router) for full SEO/GEO support  
+**Stack:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Shadcn/UI + Framer Motion  
+**Migration Status:** COMPLETED ✅ (Vite setup removed)  
 **Repo:** `c9mayur-lgtm/C9-communications`  
 **Primary Contact phone:** 1800 000 299  
 **Address:** Level 3, 480 Collins Street, Melbourne 3000  
@@ -23,11 +23,10 @@
 **Decision:** The homepage design built in `Wordpress1.tsx` (a pixel-faithful replica of the approved WordPress theme) is **client-approved and final**. No visual changes will be made to the homepage design.  
 **Consequence:** All future pages must derive from this design system as the source of truth.
 
-### ADR-002 — Migration to Next.js 15 (Planned)
-**Date:** March 2026  
-**Decision:** Migrate from Vite SPA → Next.js 15 App Router for production.  
-**Reason:** Current Vite setup is client-side only — invisible to search engines, no GEO targeting, no per-page metadata.  
-**Next.js benefits:**
+### ADR-002 — Migration to Next.js 16 (Completed)
+**Date:** April 2026  
+**Decision:** Migrate from Vite SPA → Next.js 16 App Router for production and remove Vite entirely.  
+**Result:**
 - SSR/SSG for SEO-ready HTML on every page
 - Built-in `generateMetadata()` per page (title, description, OG tags)
 - `middleware.ts` for GEO detection at the CDN edge (Vercel)
@@ -48,16 +47,13 @@
 
 | Layer | Technology | Version |
 |---|---|---|
-| Framework | React | 19.x |
-| Language | TypeScript | ~5.9 |
-| Build Tool | Vite | 7.x |
-| Styling | Tailwind CSS | 3.x |
+| Framework | Next.js | 16.1.x |
+| Language | TypeScript | ^5.0 |
+| Styling | Tailwind CSS | ^4.0 |
 | UI Primitives | Shadcn/UI | Latest |
 | Animation | Framer Motion | 12.x |
-| Icons | Lucide React | 0.57x |
-| Routing | React Router DOM | 7.x |
-| Hosting (current) | Local / TBD | — |
-| Hosting (planned) | Vercel | — |
+| Icons | Lucide React | Latest |
+| Hosting | Vercel | — |
 
 ---
 

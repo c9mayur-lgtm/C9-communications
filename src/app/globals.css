@@ -1,0 +1,262 @@
+@import "../components/design-system/tokens.css";
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme {
+  --font-sans: var(--font-proxima);
+  --font-syne: var(--font-syne);
+  --font-dm-sans: var(--font-dm-sans);
+  --color-primary: var(--c9-primary);
+  --color-secondary: var(--c9-secondary);
+  --color-accent: var(--c9-accent);
+  --color-hero-bg: var(--c9-hero-bg);
+  --color-brand-purple: #5D00D6;
+  --color-dark-purple: #42004D;
+  --color-light-purple-bg: #F4F0FA;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #6B7280;
+  --color-dark-surface: #0F0F1A;
+  --color-defense-accent: #A855F7;
+}
+
+:root {
+  --brand-purple: #5D00D6;
+  --dark-purple: #42004D;
+  --light-purple-bg: #F4F0FA;
+  --text-primary: #1A1A2E;
+  --text-secondary: #6B7280;
+  --dark-surface: #0F0F1A;
+  --defense-accent: #A855F7;
+}
+
+/* Design System Typography Tokens - Sleek & Minimal Hierarchy */
+.c9-hero-title {
+  font-size: clamp(40px, 8vw, 50px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  color: #1A1A2E;
+}
+
+.c9-section-heading {
+  font-size: clamp(28px, 4.5vw, 36px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #1A1A2E;
+}
+
+.c9-card-title {
+  font-size: clamp(20px, 3vw, 20px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1A1A2E;
+}
+
+.c9-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #5D00D6;
+  display: inline-block;
+}
+
+.c9-body {
+  font-size: clamp(16px, 1.8vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: #6B7280;
+}
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #0c1024;
+    --card: #FFFFFF;
+    --card-foreground: #0c1024;
+    --popover: #FFFFFF;
+    --popover-foreground: #0c1024;
+    --primary: #5D00D6;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F4F0FA;
+    --secondary-foreground: #5D00D6;
+    --muted: #F4F0FA;
+    --muted-foreground: rgba(12, 16, 36, 0.62);
+    --accent: #F4F0FA;
+    --accent-foreground: #5D00D6;
+    --destructive: #ef4444;
+    --destructive-foreground: #FFFFFF;
+    --border: rgba(93, 0, 214, 0.18);
+    --input: rgba(93, 0, 214, 0.18);
+    --ring: #5D00D6;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: #0c1024;
+    --foreground: #F8FAFC;
+    --card: #1e1b4b;
+    --card-foreground: #F8FAFC;
+    --popover: #1e1b4b;
+    --popover-foreground: #F8FAFC;
+    --primary: #8B5CF6;
+    --primary-foreground: #FFFFFF;
+    --secondary: #1e1b4b;
+    --secondary-foreground: #F8FAFC;
+    --muted: #1e1b4b;
+    --muted-foreground: rgba(248, 250, 252, 0.62);
+    --accent: #1e1b4b;
+    --accent-foreground: #F8FAFC;
+    --destructive: #7f1d1d;
+    --destructive-foreground: #F8FAFC;
+    --border: rgba(139, 92, 246, 0.2);
+    --input: rgba(139, 92, 246, 0.2);
+    --ring: #8B5CF6;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-proxima);
+  }
+
+  /* Global Typography - Standard Baseline */
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-proxima);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: clamp(40px, 8vw, 50px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    color: #1A1A2E;
+  }
+
+  h2 {
+    font-size: clamp(32px, 5vw, 42px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: #1A1A2E;
+  }
+
+  h3 {
+    font-size: clamp(20px, 3vw, 20px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #1A1A2E;
+  }
+
+  h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    font-size: clamp(16px, 1.8vw, 16px);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    color: #6B7280;
+  }
+
+  body.hide-floating-contact .wp-floating-contact-btn {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px) scale(0.9);
+  }
+}
+@layer utilities {
+  .mask-fade-v {
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  }
+
+  .mask-fade-r {
+    mask-image: linear-gradient(to right, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-custom {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee-v-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-v-down {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-v-up {
+  animation: marquee-v-up 50s linear infinite;
+}
+
+.animate-marquee-v-down {
+  animation: marquee-v-down 50s linear infinite;
+}
+
+.hover\:pause:hover {
+  animation-play-state: paused;
+}
+
+/* ── Greenfield slider utility ── */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

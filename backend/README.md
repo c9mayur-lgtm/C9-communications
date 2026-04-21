@@ -14,11 +14,7 @@ A **production-ready full-stack authentication boilerplate** with complete MERN 
 ✅ **Token Management** - Access tokens + refresh tokens with auto-refresh  
 ✅ **Role-Based Access** - SuperAdmin and User roles with protected routes  
 ✅ **Security** - Password hashing, CORS, rate limiting, helmet headers  
-✅ **Form Validation** - Zod schemas on both backend and frontend  
 ✅ **Error Handling** - Global error handler with comprehensive logging  
-✅ **State Management** - Redux Toolkit for auth state  
-✅ **Modern UI** - React + Tailwind CSS + Radix UI components  
-✅ **Responsive Design** - Mobile-first approach  
 ✅ **Vercel Ready** - Serverless deployment support  
 
 ---
@@ -35,18 +31,6 @@ A **production-ready full-stack authentication boilerplate** with complete MERN 
 - **Morgan** for HTTP request logging
 - **Helmet** for security headers
 - **Express Rate Limiter** for API protection
-
-### Frontend
-- **React** 19 with TypeScript
-- **Vite** for build tooling
-- **Redux Toolkit** for state management
-- **React Router** for navigation
-- **Axios** for HTTP requests
-- **React Hook Form** for forms
-- **Zod** for validation
-- **Tailwind CSS** for styling
-- **Radix UI** for components
-- **React Query** for data fetching
 
 ---
 
@@ -78,26 +62,6 @@ npm run dev
 ```
 
 Backend runs on: `http://localhost:5000`
-
-### Frontend Setup (5 minutes)
-
-```bash
-cd frontend
-
-# Install dependencies
-npm install
-
-# Create .env file
-cp .env.example .env
-
-# Edit .env with backend API URL
-# VITE_API_BASE_URL=http://localhost:5000/v1
-
-# Start development server
-npm run dev
-```
-
-Frontend runs on: `http://localhost:5173`
 
 ---
 
@@ -168,19 +132,6 @@ auth-boilerplate-ts-node-mongo/
 │   │   ├── app.ts           # Express setup
 │   │   └── server.ts        # Entry point
 │   └── package.json
-│
-├── frontend/                # React app
-│   ├── src/
-│   │   ├── components/      # React components
-│   │   ├── pages/           # Page components
-│   │   ├── routes/          # Route definitions
-│   │   ├── slice/           # Redux slices
-│   │   ├── api/             # API clients
-│   │   ├── types/           # TypeScript types
-│   │   ├── App.tsx
-│   │   └── main.tsx
-│   └── package.json
-│
 └── DOCUMENTATION.md         # Full documentation
 ```
 
@@ -198,11 +149,6 @@ JWT_REFRESH_TOKEN_SECRET=your_super_secret_key_min_32_chars
 JWT_ACCESS_TOKEN_EXPIRE=1h
 JWT_REFRESH_TOKEN_EXPIRE=7d
 CORS_ORIGIN=http://localhost:5173
-```
-
-### Frontend `.env`
-```env
-VITE_API_BASE_URL=http://localhost:5000/v1
 ```
 
 ---
@@ -245,13 +191,6 @@ curl http://localhost:5000/v1/health
 cd backend
 npm run build
 npm start
-```
-
-### Frontend
-```bash
-cd frontend
-npm run build
-npm run preview
 ```
 
 ---

@@ -57,20 +57,6 @@ This is a **full-stack authentication boilerplate** designed to jumpstart develo
 - **Logging**: Winston
 - **Monitoring**: Morgan for HTTP request logging
 
-### Frontend
-- **Library**: React (v19.1.1)
-- **Language**: TypeScript
-- **Build Tool**: Vite
-- **Routing**: React Router v7
-- **State Management**: Redux Toolkit
-- **HTTP Client**: Axios
-- **UI Components**: Radix UI
-- **Styling**: Tailwind CSS (v4.1.12)
-- **Form Management**: React Hook Form
-- **Form Validation**: Zod
-- **Toast Notifications**: Sonner
-- **Data Fetching**: TanStack React Query
-
 ---
 
 ## ✨ Features
@@ -102,14 +88,6 @@ This is a **full-stack authentication boilerplate** designed to jumpstart develo
 - Health check endpoint
 - Request logging with Morgan
 - Input validation with Zod schemas
-
-### Frontend Features
-- Modern, responsive UI with Tailwind CSS
-- Redux-based state management
-- Protected routes based on user roles
-- Token auto-refresh mechanism
-- Error toast notifications
-- Loading states for async operations
 
 ---
 
@@ -177,91 +155,6 @@ auth-boilerplate-ts-node-mongo/
 │   ├── vercel.json                  # Vercel deployment config
 │   └── .env.example
 │
-├── frontend/                         # React Frontend
-│   ├── src/
-│   │   ├── main.tsx                 # React entry point
-│   │   ├── App.tsx                  # Root component
-│   │   ├── Layout.tsx               # Main layout
-│   │   │
-│   │   ├── api/
-│   │   │   ├── axiosInstance.ts     # Axios configuration
-│   │   │   ├── tokenStorage.ts      # Token management
-│   │   │   └── index.ts
-│   │   │
-│   │   ├── components/
-│   │   │   ├── app-sidebar.tsx      # Sidebar component
-│   │   │   ├── NavUser.tsx          # User navigation
-│   │   │   │
-│   │   │   ├── auth/
-│   │   │   │   ├── LoginForm.tsx    # Login form component
-│   │   │   │   └── SignForm.tsx     # Registration form component
-│   │   │   │
-│   │   │   └── ui/                  # Radix UI components
-│   │   │       ├── button.tsx
-│   │   │       ├── input.tsx
-│   │   │       ├── card.tsx
-│   │   │       ├── form.tsx
-│   │   │       └── ... (other UI components)
-│   │   │
-│   │   ├── pages/
-│   │   │   ├── Auth/
-│   │   │   │   ├── AuthPage.tsx
-│   │   │   │   ├── LoginPage.tsx
-│   │   │   │   └── SignUpPage.tsx
-│   │   │   │
-│   │   │   ├── User/
-│   │   │   │   ├── UserHome.tsx     # User dashboard
-│   │   │   │   └── UserSetting.tsx
-│   │   │   │
-│   │   │   ├── SuperAdmin/
-│   │   │   │   ├── SuperAdminHome.tsx # Admin dashboard
-│   │   │   │   └── SuperAdminSetting.tsx
-│   │   │   │
-│   │   │   └── Setting/
-│   │   │       └── Setting.tsx
-│   │   │
-│   │   ├── routes/
-│   │   │   ├── AppRoute.tsx         # Main route coordinator
-│   │   │   ├── PublicRoute.tsx      # Public pages (login, signup)
-│   │   │   ├── UserRoute.tsx        # Protected user routes
-│   │   │   ├── SuperAdminRoute.tsx  # Protected admin routes
-│   │   │   └── TemRoute.tsx
-│   │   │
-│   │   ├── slice/
-│   │   │   ├── auth.slice.ts        # Redux auth state & actions
-│   │   │   ├── hook.ts              # Redux hooks
-│   │   │   └── store.ts             # Redux store configuration
-│   │   │
-│   │   ├── types/
-│   │   │   ├── auth.types.ts        # Auth type definitions
-│   │   │   ├── api.types.ts         # API response types
-│   │   │   └── user.types.ts        # User type definitions
-│   │   │
-│   │   ├── lib/
-│   │   │   └── utils.ts             # Utility functions
-│   │   │
-│   │   ├── hooks/
-│   │   │   └── use-mobile.ts        # Mobile detection hook
-│   │   │
-│   │   ├── provider/
-│   │   │   └── ThemeProvider.tsx    # Theme context provider
-│   │   │
-│   │   ├── assets/
-│   │   │   └── images/              # Static assets
-│   │   │
-│   │   ├── data/
-│   │   │   └── sidebarData.tsx      # Sidebar configuration
-│   │   │
-│   │   ├── index.css
-│   │   └── App.css
-│   │
-│   ├── public/
-│   ├── index.html
-│   ├── vite.config.ts
-│   ├── tsconfig.json
-│   ├── package.json
-│   └── .env.example
-│
 └── README.md
 
 ```
@@ -307,36 +200,6 @@ npm run build
 npm start
 ```
 
-### Frontend Setup
-
-1. **Navigate to frontend directory**
-```bash
-cd frontend
-```
-
-2. **Install dependencies**
-```bash
-npm install
-```
-
-3. **Configure environment variables**
-```bash
-cp .env.example .env
-# Configure backend API URL
-```
-
-4. **Start development server**
-```bash
-npm run dev
-```
-
-The frontend will start on `http://localhost:5173`
-
-5. **Build for production**
-```bash
-npm run build
-```
-
 ---
 
 ## 🔐 Environment Configuration
@@ -364,12 +227,6 @@ CORS_ORIGIN=http://localhost:5173
 
 # Google Generative AI (Optional)
 GOOGLE_GENAI_API_KEY=your_google_api_key_here
-```
-
-### Frontend `.env` Example
-
-```env
-VITE_API_BASE_URL=http://localhost:5000/v1
 ```
 
 ---
