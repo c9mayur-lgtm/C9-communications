@@ -193,7 +193,7 @@ const ValueProposition = () => (
             We've consolidated the tech stack for 150+ multi-site businesses across Australia. We know what works — and what doesn't.
           </p>
           <Link
-            href="/case-studies"
+            href="/about/case-studies"
             className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] uppercase tracking-[0.05em] hover:gap-3 transition-all whitespace-nowrap"
           >
             View Case Studies <ArrowRight size={18} className="shrink-0" />
@@ -659,7 +659,7 @@ const ENTERPRISE_ARTICLES = [
     desc: 'C9 Communications architected a complete managed network for nationwide expansion with zero impact to active trading hours. POS systems now maintain 100% connectivity uptime during peak periods.',
     img: '/images/case-studies/case-study-1.jpg',
     videoText: 'Foodworks Network Rollout',
-    href: '/case-studies'
+    href: '/about/case-studies'
   },
   {
     tag: 'CRITICAL INFRASTRUCTURE',
@@ -667,7 +667,7 @@ const ENTERPRISE_ARTICLES = [
     desc: 'Managing high-volume broadcast infrastructure requires partners who truly understand latency. Transitioning to C9 gave Nova an immediate 30% reduction in downtime alerts.',
     img: '/images/case-studies/case-study-2.jpg',
     videoText: 'Nova Broadcast Redundancy',
-    href: '/case-studies'
+    href: '/about/case-studies'
   },
   {
     tag: 'MULTI-SITE LOGISTICS',
@@ -675,7 +675,7 @@ const ENTERPRISE_ARTICLES = [
     desc: 'Consolidated hundreds of complex telco feeds into one pane of glass. This allowed the client to roll out unified access control safely and reliably across their entire national footprint.',
     img: '/images/case-studies/case-study-3.jpg',
     videoText: 'National Storage Consolidation',
-    href: '/case-studies'
+    href: '/about/case-studies'
   }
 ];
 

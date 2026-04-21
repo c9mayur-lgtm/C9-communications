@@ -720,23 +720,26 @@ export default function TelcoPage() {
           {
             tag: 'RETAIL',
             title: 'Multi-site office stops the dropouts',
-            desc: "A growing business with 3 sites was experiencing slow speeds and call dropouts. C9 reviewed their current connection, recommended a suitable high-performance solution, and optimised their internal setup. Result: Improved stability, better call quality, and consistent performance across the team.",
+            desc: "A growing business with 3 sites was experiencing slow speeds and call dropouts. C9 reviewed their current connection, recommended a suitable high-performance solution, and optimised their internal setup.",
             img: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2000&auto=format&fit=crop',
-            videoText: 'Stability Restored'
+            videoText: 'Stability Restored',
+            href: '/case-studies/retail-pos-stabilisation'
           },
           {
             tag: 'PROFESSIONAL SERVICES',
             title: 'Law firm slashes telco costs by 40%',
             desc: "Legacy systems were costing this 20-person firm thousands. C9 migrated their entire voice and data stack to a unified managed system. Result: $1,200 monthly savings and a phone system that works on any device.",
             img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000&auto=format&fit=crop',
-            videoText: 'Cost Efficiency Found'
+            videoText: 'Cost Efficiency Found',
+            href: '/case-studies/legal-firm-takeover'
           },
           {
-            tag: 'MANUFACTURING',
+            tag: 'NEW BUSINESS',
             title: 'High-demand site gets guaranteed uptime',
             desc: "For a factory with data-intensive operations, downtime is lost revenue. C9 deployed a managed Fibre connection with 4G failover. Result: 99.99% uptime and zero interruptions during peak hours.",
             img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop',
-            videoText: 'Operational Continuity'
+            videoText: 'Operational Continuity',
+            href: '/case-studies/greenfield-site-rollout'
           }
         ]}
       />

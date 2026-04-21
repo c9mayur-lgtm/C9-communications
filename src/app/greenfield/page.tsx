@@ -1,124 +1,146 @@
 'use client';
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import {
-  ArrowRight, CheckCircle, Wifi, Phone, Monitor, Shield,
-  ShoppingBag, HeadphonesIcon, ChevronLeft, ChevronRight,
-  Building2, Zap, Layers, AlertTriangle, TrendingDown, Clock
+  ArrowRight, CheckCircle, ShoppingCart, Users2,
+  Wrench, Network, Zap, MapPin, AlertTriangle,
+  ClipboardList, Package, HardHat, Settings, BadgeCheck,
+  PhoneCall, Search, ShieldCheck, Lock,
 } from 'lucide-react';
-import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
-import { HeroHighlighter } from '@/components/common/HeroHighlighter';
-
+import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { WpVendors } from '@/components/wordpress/WpVendors';
+import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
+import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 
 /* ─────────────────────────────────────────────────────────
-   FADE-IN ANIMATION WRAPPER
+   ANIMATION HELPERS
    ───────────────────────────────────────────────────────── */
 const FadeIn = ({
   children,
   delay = 0,
   className = '',
+  direction = 'up',
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 24 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: '-80px' }}
-    transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
+  direction?: 'up' | 'left' | 'right' | 'none';
+}) => {
+  const y = direction === 'up' ? 28 : 0;
+  const x = direction === 'left' ? -28 : direction === 'right' ? 28 : 0;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y, x }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
 
 /* ─────────────────────────────────────────────────────────
    SECTION 1 — HERO
    ───────────────────────────────────────────────────────── */
 const Hero = () => (
-  <section className="relative overflow-hidden bg-white pt-4 pb-12 lg:pt-6 lg:pb-16">
-    {/* Subtle grid backdrop */}
+  <section className="relative overflow-hidden bg-white pt-10 pb-0 lg:pt-16">
+    {/* Subtle grid */}
     <div
-      className="pointer-events-none absolute inset-0 opacity-[0.03]"
+      className="pointer-events-none absolute inset-0 opacity-[0.025]"
       style={{
         backgroundImage:
           'linear-gradient(#5D00D6 1px, transparent 1px), linear-gradient(90deg, #5D00D6 1px, transparent 1px)',
-        backgroundSize: '48px 48px',
+        backgroundSize: '52px 52px',
       }}
     />
-    <div className="relative z-10 container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        {/* Left — text */}
+    {/* Radial highlight */}
+    <div
+      className="pointer-events-none absolute -top-60 -left-60 w-[700px] h-[700px] rounded-full opacity-[0.05]"
+      style={{ background: 'radial-gradient(circle, #5D00D6 0%, transparent 70%)' }}
+    />
+
+    <div className={`${C} relative z-10`}>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center pb-14 lg:pb-20">
+        {/* LEFT — Copy */}
         <div>
           <FadeIn>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
               <Zap size={13} className="text-[#5D00D6]" />
-              <span className="c9-eyebrow !mb-0">Greenfield Business Setup</span>
+              <span className="c9-eyebrow !mb-0">Greenfield Site Delivery</span>
             </div>
           </FadeIn>
+
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Starting a New Office or Business?{' '}
-              <span className="text-[#5D00D6]">We Set Up Everything</span> — Properly.
+              Your New Site. <br/>
+              <span className="text-[#5D00D6]">Fully Operational from Day One.</span>
             </h1>
           </FadeIn>
-          <FadeIn delay={0.14}>
-            <p className="c9-body mb-10 max-w-[540px]">
-              IT, Internet, Phones, Devices, Security, and Workplace — designed, delivered, and
-              managed as one seamless system. So you can focus on your business, not your vendors.
+
+          <FadeIn delay={0.15}>
+            <p className="c9-body mb-8 max-w-[520px]">
+              Single partner for IT, Telco, and infrastructure — delivered, tested, and ready before your doors open.
             </p>
           </FadeIn>
-          <FadeIn delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4">
+
+          <FadeIn delay={0.22}>
+            <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <a
-                href="#lead-builder"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('lead-builder')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20 group"
+                href="#consultation"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
-                Plan My Setup <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                Plan My New Site
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="#slider"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('slider')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-colors"
+                href="#delivery-model"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
-                See What We Set Up
+                See How It Works
               </a>
             </div>
           </FadeIn>
-          <FadeIn delay={0.28}>
-            <div className="flex flex-wrap gap-6 mt-10">
-              {['99.99% Uptime SLA', 'Single Vendor', 'Day One Ready'].map((t) => (
-                <span key={t} className="inline-flex items-center gap-2 text-slate-500 text-[13px] font-semibold">
-                  <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
+
+          <FadeIn delay={0.32}>
+            <div className="flex flex-wrap gap-x-7 gap-y-3 mt-10 pt-8 border-t border-slate-100">
+              {[
+                { text: '12+ sites delivered across 3 states', icon: <MapPin size={14} className="text-[#5D00D6]" /> },
+                { text: 'Fully commissioned in under 6 weeks', icon: <Zap size={14} className="text-[#5D00D6]" /> },
+                { text: 'Single point of accountability', icon: <CheckCircle size={14} className="text-[#5D00D6]" /> },
+                { text: 'National rollout capability', icon: <BadgeCheck size={14} className="text-[#5D00D6]" /> }
+              ].map((item, i) => (
+                <span key={i} className="inline-flex items-center gap-2 text-slate-500 text-[13px] font-semibold">
+                  {item.icon} {item.text}
                 </span>
               ))}
             </div>
           </FadeIn>
         </div>
 
-        {/* Right — hero image */}
-        <FadeIn delay={0.1} className="relative">
-          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200/80 aspect-[4/3] group cursor-pointer">
+        {/* RIGHT — Hero image */}
+        <FadeIn delay={0.14} direction="right" className="relative hidden lg:block">
+          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
             <img
               src="/images/greenfield_hero.png"
-              alt="Modern office setup managed by C9 Communications"
+              alt="C9 team delivering a new site build"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/20 via-transparent to-transparent group-hover:from-[#0c1024]/30 transition-colors duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/30 via-transparent to-transparent" />
             {/* Floating badge */}
             <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-lg border border-white/60">
-              <div className="text-[11px] font-bold uppercase tracking-widest text-[#5D00D6] mb-1">Quick Setup</div>
-              <div className="text-[18px] font-bold text-slate-900 leading-tight">All tech. One partner.</div>
+              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5D00D6] mb-1">Site Status</div>
+              <div className="text-[17px] font-bold text-slate-900 leading-tight">Fully Commissioned ✓</div>
+            </div>
+            {/* Top badge */}
+            <div className="absolute top-6 right-6 bg-[#5D00D6] text-white rounded-2xl px-4 py-3 shadow-xl">
+              <div className="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-0.5">Delivery Model</div>
+              <div className="text-[15px] font-extrabold">End-to-End Ownership</div>
             </div>
           </div>
         </FadeIn>
@@ -128,883 +150,554 @@ const Hero = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 2 — PRIORITY SOLUTIONS (FAQ-STYLE)
+   SECTION 2 — PROBLEM (PAIN AMPLIFICATION)
    ───────────────────────────────────────────────────────── */
-const solutions = [
-  { 
-    icon: <Zap size={20} className="text-[#5D00D6]" />, 
-    q: "Need internet and phones fast?", 
-    a: "We deploy rapid 5G internet and cloud phones immediately while your permanent fixed-line services are built."
-  },
-  { 
-    icon: <Layers size={20} className="text-[#5D00D6]" />, 
-    q: "Dealing with too many vendors?", 
-    a: "We consolidate your telco, IT, and security into a single point of truth with one simple invoice." 
-  },
-  { 
-    icon: <Shield size={20} className="text-[#5D00D6]" />, 
-    q: "Worried about making the wrong tech choices?", 
-    a: "Our experts architect a scalable, future-proof solution tailored to the exact realities of your industry."
-  },
-  { 
-    icon: <Monitor size={20} className="text-[#5D00D6]" />, 
-    q: "Need your team ready to work day one?", 
-    a: "We pre-configure all devices, accounts, and networks. Your team comes in, logs on, and hits the ground running."
-  },
-  { 
-    icon: <HeadphonesIcon size={20} className="text-[#5D00D6]" />, 
-    q: "What happens when things go wrong?", 
-    a: "Our 24/7 Australian-based team treats your business-critical helpdesk issues as our absolute top priority."
-  },
-  { 
-    icon: <Building2 size={20} className="text-[#5D00D6]" />, 
-    q: "Don't have time to manage an IT rollout?", 
-    a: "We aggressively project-manage the entire end-to-end setup behind the scenes, so you can focus on launch."
-  },
-];
-
-const PrioritySolutionsBlock = () => (
-  <section className="py-14 bg-slate-50 border-y border-slate-100">
-    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
-      <FadeIn>
-        <div className="text-center mb-10">
-          <p className="c9-eyebrow mb-4">Fast & Reliable Answers</p>
-          <h2 className="c9-section-heading mb-4">
-            Your Priorities, Solved.
+const SectionPain = () => (
+  <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow mb-4">The Real Problem</span>
+          <h2 className="c9-section-heading mb-6">
+            Why Most New Site Launches Fail
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            We know starting a new site is stressful. We treat your business-critical setup with top priority, delivering rapid solutions so you don't skip a beat.
+          <p className="c9-body mb-8 text-slate-600">
+            Opening a new site shouldn&apos;t be a technical gamble. But when multiple vendors are involved without a single owner, the same patterns emerge:
           </p>
-        </div>
-      </FadeIn>
+          <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/15 rounded-2xl p-6">
+            <p className="text-slate-800 font-bold text-[18px] leading-snug mb-2">
+              &ldquo;Opening day becomes a technical risk instead of a business milestone.&rdquo;
+            </p>
+          </div>
+        </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-        {solutions.map((s, i) => (
-          <FadeIn key={i} delay={i * 0.05}>
-            <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-[#5D00D6]/30 transition-all duration-300 h-full flex flex-col group">
-              <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center mb-5 group-hover:bg-[#5D00D6]/10 transition-colors">
-                {s.icon}
+        <FadeIn delay={0.1} direction="right">
+          <div className="space-y-4">
+            {[
+              { title: 'Multiple vendors → zero accountability', desc: 'Each contractor pointing at the other when systems don\'t integrate.' },
+              { title: 'Delays in cabling, network, or telco', desc: 'Missed dependencies that push back your entire operational timeline.' },
+              { title: 'Systems not working together on launch day', desc: 'Teams arrive to find patchy Wi-Fi, non-functional phones, or offline POS.' },
+              { title: 'Unexpected costs and rework', desc: 'Emergency fixes and return visits that quickly blow out the project budget.' },
+              { title: 'No one responsible when things break', desc: 'The "it\'s not my problem" culture of multi-vendor environments.' },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.07}>
+                <div className="bg-white p-5 rounded-2xl border border-slate-100 flex items-start gap-4 shadow-sm hover:shadow-md transition-all">
+                  <div className="w-9 h-9 rounded-xl bg-rose-50 flex items-center justify-center shrink-0">
+                    <AlertTriangle size={18} className="text-rose-500" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-slate-900 text-[15px] mb-1">{item.title}</p>
+                    <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 4 — DAY ONE OPERATIONAL GUARANTEE
+   ───────────────────────────────────────────────────────── */
+const SectionGuarantee = () => (
+  <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">Our Conversion Unlock</span>
+        <h2 className="c9-section-heading mb-6">
+          Day One Operational Guarantee
+        </h2>
+        <p className="c9-body max-w-2xl mx-auto">
+          Before your site opens, we ensure every technical layer is fully operational. We don&apos;t leave until your business can run.
+        </p>
+      </FadeIn>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {[
+          { label: 'Network Deployment', desc: 'Core infrastructure fully deployed, patched, and tested for performance.' },
+          { label: 'Internet & Failover', desc: 'Primary and secondary connections live and validated with automatic failover.' },
+          { label: 'Wi-Fi Configuration', desc: 'Secure, high-density Wi-Fi for both staff and guest segments.' },
+          { label: 'Device Installation', desc: 'All workstations, tablets, and peripherals installed and operational.' },
+          { label: 'System Integration', desc: 'Cross-system communication and API integrations validated.' },
+          { label: 'Documentation', desc: 'Complete "As-Built" diagrams and handover documentation provided.' },
+        ].map((s, i) => (
+          <FadeIn key={i} delay={i * 0.05} className="group">
+            <div className="h-full bg-white border border-slate-100 rounded-2xl p-6 hover:border-[#5D00D6]/20 transition-all hover:shadow-md">
+              <div className="w-10 h-10 rounded-full bg-[#5D00D6]/5 flex items-center justify-center mb-4 group-hover:bg-[#5D00D6]/10 transition-colors">
+                <CheckCircle size={16} className="text-[#5D00D6]" />
               </div>
-              <p className="text-slate-900 font-bold text-[16px] leading-snug mb-3 pr-4">{s.q}</p>
-              <p className="text-slate-600 text-[14px] leading-relaxed mt-auto">{s.a}</p>
+              <h3 className="font-bold text-slate-900 text-[16px] mb-2">{s.label}</h3>
+              <p className="text-slate-500 text-[13px] leading-relaxed">{s.desc}</p>
             </div>
           </FadeIn>
         ))}
       </div>
-
-      <FadeIn>
-        <div className="bg-[#5D00D6] rounded-3xl px-10 py-8 text-center max-w-3xl mx-auto">
-          <p className="text-white text-2xl md:text-3xl font-bold tracking-tight">
-            Stop stressing about the tech.
-          </p>
-          <p className="text-white/75 mt-3 text-lg">
-            C9 handles everything end-to-end — your operations are our top priority.
-          </p>
-        </div>
+      <FadeIn delay={0.2} className="text-center">
+        <p className="text-slate-800 font-bold text-[18px]">
+          &ldquo;If your doors open, your systems work. No exceptions.&rdquo;
+        </p>
       </FadeIn>
     </div>
   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 3 — INTERACTIVE SLIDER
+   SECTION 5 — RETAIL / REAL-WORLD READINESS
    ───────────────────────────────────────────────────────── */
-const slides = [
-  {
-    icon: <Wifi size={28} />,
-    title: 'Internet & Network Setup',
-    hook: 'Fast, secure connectivity from day one.',
-    bullets: ['Business-grade nbn™ & Fibre', 'Secure WiFi 6 & access points', 'Network design & cable management', 'Failover & redundancy built in'],
-    img: '/images/greenfield_internet.png',
-    color: '#5D00D6',
-  },
-  {
-    icon: <Phone size={28} />,
-    title: 'Phone Systems & Communication',
-    hook: 'Professional communication that just works.',
-    bullets: ['Cloud VoIP phone systems', 'Call routing & IVR', 'Microsoft Teams & Zoom integration', '1300 / 1800 inbound numbers'],
-    img: '/images/greenfield_phones.png',
-    color: '#7B2FF7',
-  },
-  {
-    icon: <Monitor size={28} />,
-    title: 'Devices & Team Setup',
-    hook: 'Your team ready from day one.',
-    bullets: ['Laptops, desktops & monitors', 'Secure device configuration', 'User onboarding & accounts', 'Mobile devices & MDM'],
-    img: '/images/greenfield_devices.png',
-    color: '#5D00D6',
-  },
-  {
-    icon: <Shield size={28} />,
-    title: 'Security & Protection',
-    hook: 'Physical and digital security handled.',
-    bullets: ['AI CCTV & people counting', 'Access control systems', 'Next-gen firewall & antivirus', 'Compliance & data backup'],
-    img: '/images/greenfield_security.png',
-    color: '#7B2FF7',
-  },
-  {
-    icon: <ShoppingBag size={28} />,
-    title: 'Business Tools & Systems',
-    hook: 'Everything your operations need.',
-    bullets: ['POS systems for retail', 'Managed printers & scanners', 'Business software setup', 'Visitor management systems'],
-    img: '/images/greenfield_retail.png',
-    color: '#5D00D6',
-  },
-  {
-    icon: <HeadphonesIcon size={28} />,
-    title: 'Managed Support',
-    hook: "We don't disappear after setup.",
-    bullets: ['24/7 monitoring & alerts', 'AU-based helpdesk', 'Proactive maintenance', 'Quarterly optimisation reviews'],
-    img: '/images/greenfield_support.png',
-    color: '#7B2FF7',
-  },
-];
-
-const Slider = () => {
-  const [active, setActive] = useState(0);
-
-  const prev = () => setActive((a) => Math.max(0, a - 1));
-  const next = () => setActive((a) => Math.min(slides.length - 1, a + 1));
-
-  return (
-    <section id="slider" className="py-14 bg-white overflow-hidden">
-      <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
-        <FadeIn>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
-            <div>
-              <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-3">Complete Coverage</p>
-              <h2 className="c9-section-heading max-w-xl">
-                Everything Your Business Needs — Already Covered
-              </h2>
-            </div>
-            <div className="flex items-center gap-3 shrink-0">
-              <button
-                onClick={prev}
-                disabled={active === 0}
-                className="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-slate-500 hover:border-[#5D00D6] hover:text-[#5D00D6] disabled:opacity-30 transition-all"
-                aria-label="Previous"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <span className="text-[13px] font-bold text-slate-400 min-w-[40px] text-center">
-                {active + 1}/{slides.length}
-              </span>
-              <button
-                onClick={next}
-                disabled={active === slides.length - 1}
-                className="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center text-slate-500 hover:border-[#5D00D6] hover:text-[#5D00D6] disabled:opacity-30 transition-all"
-                aria-label="Next"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
+const SectionReadiness = () => (
+  <section className="py-16 lg:py-24 bg-white">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow mb-4 text-[#5D00D6]">Operational Readiness</span>
+          <h2 className="c9-section-heading mb-6">
+            Built for Real Operations — Not Just Infrastructure
+          </h2>
+          <p className="c9-body mb-8">
+            We don&apos;t just install hardware; we make your business operational. Our deployment covers the critical systems that keep your site running:
+          </p>
+          <div className="grid grid-cols-2 gap-6 mb-8">
+            {[
+              { label: 'POS & Payments', desc: 'Terminals and processing lines.' },
+              { label: 'Inventory & ERP', desc: 'Seamless system connectivity.' },
+              { label: 'Active Guest Wi-Fi', desc: 'Secure, high-bandwidth paths.' },
+              { label: 'Network Segments', desc: 'Isolated staff and guest paths.' },
+              { label: 'Back-Office', desc: 'Core systems ready for use.' },
+              { label: 'Multi-Site Sync', desc: 'Consistent operational stack.' },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <CheckCircle size={14} className="text-[#5D00D6] shrink-0 mt-1" />
+                <div>
+                   <p className="font-bold text-slate-900 text-[14px] leading-tight mb-1">{item.label}</p>
+                   <p className="text-slate-500 text-[12px]">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-slate-800 font-bold text-[16px] leading-snug">
+            &ldquo;We don&apos;t just install infrastructure — we make your business operational.&rdquo;
+          </p>
+        </FadeIn>
+        <FadeIn direction="right" delay={0.1}>
+          <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
+             <img src="/images/greenfield_commissioning_new_1.png" alt="Operational Readiness" className="w-full h-full object-cover" />
+             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-8">
+                <p className="text-white font-bold leading-tight uppercase tracking-widest text-[11px]">System Status: Fully Operational</p>
+             </div>
           </div>
         </FadeIn>
-
-        {/* Tab Pills */}
-        <div className="flex gap-2 overflow-x-auto pb-4 mb-10 hide-scrollbar">
-          {slides.map((s, i) => (
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              className={`shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full text-[13px] font-bold whitespace-nowrap transition-all duration-300 ${
-                active === i
-                  ? 'bg-[#5D00D6] text-white shadow-lg shadow-purple-900/20'
-                  : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
-              }`}
-            >
-              {s.title.split(' ')[0]}
-            </button>
-          ))}
-        </div>
-
-        {/* Slide Content */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -40 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              {/* Text side */}
-              <div>
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center text-white mb-7"
-                  style={{ backgroundColor: slides[active].color }}
-                >
-                  {slides[active].icon}
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">
-                  {slides[active].title}
-                </h3>
-                <p className="text-[#5D00D6] font-bold text-lg mb-7">{slides[active].hook}</p>
-                <ul className="space-y-4">
-                  {slides[active].bullets.map((b, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle size={20} className="text-[#5D00D6] shrink-0 mt-0.5" />
-                      <span className="text-slate-700 font-semibold text-[15px]">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="#lead-builder"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('lead-builder')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="inline-flex items-center gap-2 mt-10 bg-slate-900 text-white rounded-full h-13 px-8 font-bold text-[14px] hover:bg-[#5D00D6] transition-colors group"
-                >
-                  Include This In My Setup <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </a>
-              </div>
-
-              {/* Image side */}
-              <div className="relative rounded-[28px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3]">
-                <img
-                  src={slides[active].img}
-                  alt={slides[active].title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0c1024]/10 via-transparent to-transparent" />
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Dot indicators */}
-        <div className="flex items-center justify-center gap-2 mt-12">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              className={`rounded-full transition-all duration-300 ${
-                active === i ? 'bg-[#5D00D6] w-8 h-2' : 'bg-slate-200 w-2 h-2 hover:bg-slate-300'
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
-        </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 3.5 — VENDOR PRODUCT SHOWCASE
+   SECTION 6 — DELIVERY MODEL (SIMPLIFIED)
    ───────────────────────────────────────────────────────── */
-const yealinkShowcaseProducts = [
-  {
-    name: "Yealink MeetingBar A10",
-    category: "Video Bar",
-    desc: "Compact all-in-one video bar for huddle spaces and home offices.",
-    tags: ["4K Camera", "AI Tracking"],
-    img: "/images/Yealink/Yealink MeetingBar A10.png"
-  },
-  {
-    name: "Yealink MeetingBar A20",
-    category: "Video Bar",
-    desc: "Dedicated video bar for small rooms with 20MP AI camera.",
-    tags: ["20MP Camera", "Auto Framing"],
-    img: "/images/Yealink/Yealink MeetingBar A20.png"
-  },
-  {
-    name: "Yealink MeetingBar A30",
-    category: "Video Bar",
-    desc: "Dual-camera video bar for medium rooms with smart tracking.",
-    tags: ["Dual Camera", "Speaker Tracking"],
-    img: "/images/Yealink/Yealink MeetingBar A30.webp"
-  },
-  {
-    name: "Yealink MVC S40",
-    category: "Teams Room System",
-    desc: "Windows-based Teams Room system for small-to-medium rooms.",
-    tags: ["Touch Panel", "Wireless Sharing"],
-    img: "/images/Yealink/Yealink MVC S40.jpg"
-  },
-  {
-    name: "Yealink MVC S60",
-    category: "Teams Room System",
-    desc: "Comprehensive Teams Room solution with AI-powered camera.",
-    tags: ["AI Camera", "Touch Panel"],
-    img: "/images/Yealink/Yealink MVC S60.jpg"
-  },
-  {
-    name: "Yealink MVC S90",
-    category: "Teams Room System",
-    desc: "Pro-level Teams Room system designed for extra-large spaces.",
-    tags: ["Multi-Camera", "Pro Audio"],
-    img: "/images/Yealink/Yealink MVC S90.webp"
-  },
-  {
-    name: "Yealink MVC940",
-    category: "Teams Room System",
-    desc: "High-end AV integration system for extra-large boardrooms.",
-    tags: ["PTZ Camera", "AV Integration"],
-    img: "/images/Yealink/Yealink MVC940.jpg"
-  },
-  {
-    name: "Yealink MVC860",
-    category: "Teams Room System",
-    desc: "Premium Microsoft Teams Room system for medium and large rooms.",
-    tags: ["4K Dual-Eye", "Presenter Tracking"],
-    img: "/images/Yealink/Yealink MVC860.png"
-  },
-  {
-    name: "Yealink MVC640",
-    category: "Teams Room System",
-    desc: "Standard room system featuring a 4K AI-powered PTZ camera.",
-    tags: ["4K PTZ", "Wireless Mic Option"],
-    img: "/images/Yealink/Yealink MVC640.jpg"
-  },
-  {
-    name: "Yealink DeskVision A24",
-    category: "Desk Device",
-    desc: "24-inch collaborative desktop touch display for personal use.",
-    tags: ["24\" Touch", "Teams Display"],
-    img: "/images/Yealink/Yealink DeskVision A24.png"
-  },
-  {
-    name: "Yealink DeskVision A24 (Zoom Edition)",
-    category: "Desk Device",
-    desc: "Dedicated personal Zoom workspace with a 24-inch touch screen.",
-    tags: ["Zoom Rooms", "24\" Touch"],
-    img: "/images/Yealink/Yealink DeskVision A24 (Zoom Edition).png"
-  },
-  {
-    name: "Yealink CP965 Conference Phone",
-    category: "Conference Phone",
-    desc: "Flagship IP conference phone delivering HD audio for large rooms.",
-    tags: ["Android 9.0", "13-Mic Array"],
-    img: "/images/Yealink/Yealink CP965 Conference Phone.png"
-  },
-  {
-    name: "Yealink CP925 Conference Phone",
-    category: "Conference Phone",
-    desc: "Touch-sensitive conference phone geared for small to medium rooms.",
-    tags: ["7-Mic Array", "Bluetooth"],
-    img: "/images/Yealink/Yealink CP925 Conference Phone.png"
-  },
-  {
-    name: "Yealink WH66 Wireless Headset",
-    category: "Wireless Headset",
-    desc: "Industry-leading UC workstation with DECT wireless headset.",
-    tags: ["UC Workstation", "Acoustic Shield"],
-    img: "/images/Yealink/Yealink WH66 Wireless Headset.jpg"
-  },
-  {
-    name: "Yealink WH67 Wireless Headset",
-    category: "Wireless Headset",
-    desc: "Convertible DECT wireless headset workstation for flexible wear.",
-    tags: ["Convertible", "Touch Screen"],
-    img: "/images/Yealink/Yealink WH67 Wireless Headset.jpg"
-  },
-  {
-    name: "Yealink UVC40 USB Video Bar",
-    category: "USB Video Bar",
-    desc: "All-in-one USB video bar providing premium audio and video.",
-    tags: ["20MP Camera", "8-Mic Array"],
-    img: "/images/Yealink/Yealink UVC40 USB Video Bar.webp"
-  },
-  {
-    name: "Yealink UVC84 Camera",
-    category: "PTZ Camera",
-    desc: "4K PTZ camera delivering lifelike video for medium/large rooms.",
-    tags: ["4K Resolution", "12x Optical Zoom"],
-    img: "/images/Yealink/Yealink UVC84 Camera.png"
-  },
-  {
-    name: "Yealink RoomPanel Scheduling Display",
-    category: "Scheduling Display",
-    desc: "8-inch interactive meeting room scheduling panel.",
-    tags: ["8\" Touch", "RFID / NFC"],
-    img: "/images/Yealink/Yealink RoomPanel Scheduling Display.jpg"
-  },
-  {
-    name: "Yealink WPP30 Wireless Presentation Pod",
-    category: "Presentation Pod",
-    desc: "4K wireless presentation pod for immediate content sharing.",
-    tags: ["4K Sharing", "Plug-and-Play"],
-    img: "/images/Yealink/Yealink WPP30 Wireless Presentation Pod.png"
-  },
-  {
-    name: "Yealink SmartVision 60",
-    category: "360° Camera",
-    desc: "Intelligent 360-degree panoramic camera for modern huddle rooms.",
-    tags: ["360° Panoramic", "Multi-Stream"],
-    img: "/images/Yealink/Yealink SmartVision 60.webp"
-  }
+const steps = [
+  { icon: <Search size={24} className="text-[#5D00D6]" />, num: '1', title: 'Validate', desc: 'Define requirements, scope, and technical project risks.' },
+  { icon: <Settings size={24} className="text-[#5D00D6]" />, num: '2', title: 'Design', desc: 'Complete system architecture and infrastructure mapping.' },
+  { icon: <ShoppingCart size={24} className="text-[#5D00D6]" />, num: '3', title: 'Procure', desc: 'Source and stage all required hardware and materials.' },
+  { icon: <Wrench size={24} className="text-[#5D00D6]" />, num: '4', title: 'Deploy', desc: 'On-site installation of infrastructure and technology systems.' },
+  { icon: <BadgeCheck size={24} className="text-[#5D00D6]" />, num: '5', title: 'Commission', desc: 'End-to-end testing under real-world operational conditions.' },
+  { icon: <Zap size={24} className="text-[#5D00D6]" />, num: '6', title: 'Handover', desc: 'Fully operational handover with documentation and support.' },
 ];
 
-const VendorProductShowcase = () => {
-  const scrollRef = React.useRef<HTMLDivElement>(null);
+const SectionFlow = () => (
+  <section id="delivery-model" className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-14">
+        <span className="c9-eyebrow mb-4">Structured Delivery</span>
+        <h2 className="c9-section-heading mb-4">
+          Predictable Outcomes. Every Time.
+        </h2>
+        <p className="c9-body max-w-xl mx-auto">
+          We focus on outcomes, not process jargon. Our 6-stage delivery model ensures your site opens with total technical certainty.
+        </p>
+      </FadeIn>
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -356 : 356;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
+      {/* Desktop: horizontal flow */}
+      <div className="hidden lg:grid lg:grid-cols-6 gap-0 relative">
+        {/* Connector line */}
+        <div className="absolute top-[46px] left-[calc(100%/12)] right-[calc(100%/12)] h-[2px] bg-gradient-to-r from-[#5D00D6]/20 via-[#5D00D6]/40 to-[#5D00D6]/20" />
 
-  return (
-    <section className="py-14 md:py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
-      <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
+        {steps.map((s, i) => (
+          <FadeIn key={i} delay={i * 0.07} className="relative flex flex-col items-center text-center px-3">
+            <div className="relative z-10 w-[92px] h-[92px] rounded-full bg-white border-2 border-[#5D00D6]/20 flex flex-col items-center justify-center mb-5 shadow-md hover:border-[#5D00D6]/60 hover:shadow-purple-100 transition-all group">
+              <div className="mb-0.5">{s.icon}</div>
+              <span className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-widest">Step {s.num}</span>
+            </div>
+            <h3 className="font-bold text-slate-900 text-[16px] mb-2">{s.title}</h3>
+            <p className="text-slate-500 text-[13px] leading-relaxed">{s.desc}</p>
+          </FadeIn>
+        ))}
+      </div>
 
-        {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-10">
-          <FadeIn>
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-4 mb-6">
-                <img src="/images/clients/yealink.png" alt="Yealink" className="h-8 md:h-12 object-contain" />
-                <div className="w-px h-6 bg-slate-200"></div>
-                <span className="text-[12px] md:text-[13px] font-extrabold text-slate-400 uppercase tracking-[0.2em]">Global Hardware Partner</span>
+      {/* Mobile: vertical cards */}
+      <div className="lg:hidden space-y-4">
+        {steps.map((s, i) => (
+          <FadeIn key={i} delay={i * 0.06}>
+            <div className="bg-white rounded-2xl border border-slate-100 p-5 flex items-start gap-4 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center shrink-0">
+                {s.icon}
               </div>
-              <h2 className="c9-section-heading mb-5">
-                Enterprise-Ready Collaboration Hardware
-              </h2>
-              <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-xl">
-                Deploy industry-leading Yealink devices across meeting rooms, desks, and shared spaces—fully integrated with Microsoft Teams and Zoom.
-              </p>
+              <div>
+                <p className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-[0.18em] mb-1">Step {s.num}</p>
+                <h3 className="font-bold text-slate-900 text-[16px] mb-1">{s.title}</h3>
+                <p className="text-slate-500 text-[14px]">{s.desc}</p>
+              </div>
             </div>
           </FadeIn>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
-          <FadeIn delay={0.1} className="hidden md:flex">
-            <div className="flex items-center gap-3 pb-6">
-              <button
-                onClick={() => scroll('left')}
-                className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] shadow-sm transition-all"
-                aria-label="Scroll left"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <button
-                onClick={() => scroll('right')}
-                className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] shadow-sm transition-all"
-                aria-label="Scroll right"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
-          </FadeIn>
-        </div>
-
-        {/* Carousel */}
-        <FadeIn delay={0.15}>
-          <div className="relative">
-            <div
-              ref={scrollRef}
-              className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar py-4"
-            >
-              {yealinkShowcaseProducts.map((prod, idx) => (
-                <div
-                  key={idx}
-                  className="shrink-0 w-[85vw] sm:w-[320px] snap-start rounded-2xl border border-slate-100 hover:border-[#5D00D6]/20 hover:shadow-[0_20px_40px_rgba(93,0,214,0.06)] transition-all duration-500 flex flex-col bg-white h-auto group"
-                >
-                  <div className="relative w-full aspect-[4/3] bg-white rounded-t-2xl overflow-hidden flex items-center justify-center p-6 border-b border-slate-50">
-                    <img
-                      src={prod.img}
-                      alt={prod.name}
-                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-
-                  <div className="p-7 flex flex-col flex-1">
-                    <div className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-wider mb-2">
-                      {prod.category}
-                    </div>
-
-                    <h3 className="text-[17px] font-extrabold text-slate-900 tracking-tight mb-2 leading-snug">{prod.name}</h3>
-                    
-                    <p className="text-[13px] font-medium text-slate-500 leading-relaxed mb-6 line-clamp-1">{prod.desc}</p>
-                    
-                    <div className="flex flex-wrap gap-2 mt-auto">
-                      {prod.tags.map((tag, i) => (
-                        <span key={i} className="text-[10px] font-bold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wide">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+/* ─────────────────────────────────────────────────────────
+   SECTION 7 — PROOF (ROLLOUT CAPABILITY)
+   ───────────────────────────────────────────────────────── */
+const SectionProof = () => (
+  <section className="py-16 lg:py-24 bg-white overflow-hidden">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow mb-4">Measurable Success</span>
+          <h2 className="c9-section-heading mb-6">
+            Proven Rollout Capability
+          </h2>
+          <p className="c9-body mb-10 text-slate-600">
+            We deliver results that matter to your bottom line. Our deployment model is tested across diverse industries and complex multi-site environments.
+          </p>
+          
+          <div className="grid grid-cols-2 gap-4">
+             {[
+                { stat: '12+', label: 'Sites Delivered', sub: 'Across 3 States' },
+                { stat: '< 6wks', label: 'Rapid Deployment', sub: 'Project Average' },
+                { stat: 'Zero', label: 'Day-One Failures', sub: 'Guaranteed' },
+                { stat: '100%', label: 'Operational', sub: 'At Launch' }
+             ].map((item, i) => (
+                <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-md group">
+                   <div className="text-3xl font-black text-[#5D00D6] mb-1 group-hover:scale-105 transition-transform origin-left">{item.stat}</div>
+                   <div className="text-slate-900 font-bold text-[14px] leading-tight">{item.label}</div>
+                   <div className="text-slate-400 text-[11px] font-medium uppercase tracking-wider">{item.sub}</div>
                 </div>
-              ))}
-            </div>
+             ))}
           </div>
         </FadeIn>
 
-        {/* Optional CTA */}
-        <FadeIn delay={0.2}>
-          <div className="mt-12 text-center md:text-left">
+        <FadeIn direction="right" delay={0.1} className="relative">
+           {/* Decorative elements */}
+           <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#5D00D6]/5 rounded-full blur-3xl" />
+           <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl" />
+           
+           <div className="relative bg-white border border-slate-100 rounded-[40px] p-10 lg:p-14 shadow-xl shadow-slate-200/60">
+              <div className="text-center mb-10">
+                <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-2">Enterprise Trust</h4>
+                <p className="text-slate-900 font-bold text-lg">Trusted By Leading Brands</p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-8 place-items-center">
+                 {[
+                   { name: 'Stockdale & Leggo', logo: '/images/clients/stockdale & leggo.png' },
+                   { name: 'Arthritis Australia', logo: '/images/clients/Arthritis.png' },
+                   { name: 'Grandstream',          logo: '/images/clients/Grandstream.png' },
+                   { name: 'Cisco',                logo: '/images/clients/cisco.png' },
+                 ].map((brand, i) => (
+                    <div key={i} className="flex items-center justify-center group p-4">
+                       <img
+                         src={brand.logo}
+                         alt={brand.name}
+                         className="h-20 w-auto object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                         onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                       />
+                    </div>
+                 ))}
+              </div>
+
+              <div className="mt-12 pt-8 border-t border-slate-50 text-center">
+                 <p className="text-[13px] text-slate-500 italic">
+                   &ldquo;C9 Communications delivered our national rollout with zero downtime and total accountability.&rdquo;
+                 </p>
+              </div>
+           </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 8 — SUPPORT & SLA (TRUST BUILDER)
+   ───────────────────────────────────────────────────────── */
+const SectionSupport = () => (
+  <section className="py-16 lg:py-24 bg-[#0c1024] relative overflow-hidden">
+    <div
+      className="absolute inset-0 opacity-[0.08]"
+      style={{ background: 'radial-gradient(circle at 70% 50%, #5D00D6, transparent 60%)' }}
+    />
+    <div className={`${C} relative z-10`}>
+      <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow !text-[#a56eff] mb-5">Long-Term Accountability</span>
+          <h2 className="c9-section-heading !text-white mb-6">
+            Support That Matches Your Business Hours
+          </h2>
+          <p className="c9-body !text-white/65 mb-8 max-w-[500px]">
+            We don&apos;t disappear after deployment. We stay accountable for your environment with support that scales with your operations.
+          </p>
+          <ul className="space-y-4 mb-8">
+            {[
+              '24/7 support availability',
+              'Defined response times (SLA)',
+              'Transparent escalation paths',
+              'Remote + on-site support coverage',
+              'Nationwide delivery & local coordination'
+            ].map((p, i) => (
+              <li key={i} className="flex items-center gap-3">
+                <CheckCircle size={16} className="text-[#a56eff] shrink-0" />
+                <span className="text-white/80 text-[15px] font-medium">{p}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-[#a56eff] font-bold text-[16px]">
+            &ldquo;We don&apos;t disappear after deployment. We stay accountable.&rdquo;
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.12} direction="right">
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { icon: <PhoneCall size={28} className="text-white" />, stat: '24/7', label: 'Support Avail' },
+              { icon: <BadgeCheck size={28} className="text-white" />, stat: '99.9%', label: 'Uptime SLA' },
+              { icon: <Users2 size={28} className="text-white" />, stat: '100%', label: 'Accountable' },
+              { icon: <MapPin size={28} className="text-white" />, stat: 'National', label: 'On-site Support' },
+            ].map((s, i) => (
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/8 transition-all">
+                <div className="flex justify-center mb-3">{s.icon}</div>
+                <div className="text-2xl font-extrabold text-white mb-1">{s.stat}</div>
+                <div className="text-[11px] font-bold text-white/40 uppercase tracking-widest">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 3 — CORE DIFFERENTIATION (SINGLE OWNER MODEL)
+   ───────────────────────────────────────────────────────── */
+const SectionAccountability = () => (
+  <section className="py-16 lg:py-24 bg-white">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow mb-4">The Solution Model</span>
+          <h2 className="c9-section-heading mb-6">
+            One Partner. Total Ownership.
+          </h2>
+          <p className="c9-body mb-7">
+            We design, deliver, integrate, and support your entire IT and Telco environment. No vendor coordination. No finger-pointing. No gaps.
+          </p>
+          <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/15 rounded-2xl p-7 mb-8">
+            <p className="text-[#5D00D6] font-bold text-[17px] mb-2 text-center uppercase tracking-wider">Single Point of Accountability</p>
+            <p className="text-slate-600 text-center font-medium">We don&apos;t just install hardware — we own the operational outcome.</p>
+          </div>
+          <a
+            href="#consultation"
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+          >
+            Start Your Greenfield Project
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+          </a>
+        </FadeIn>
+
+        <FadeIn delay={0.12} direction="right">
+          {/* Comparison Cards */}
+          <div className="grid grid-cols-1 gap-6">
+             {/* Traditional Chaos */}
+             <div className="bg-slate-50 border border-slate-200 rounded-[24px] p-6 grayscale opacity-60">
+                <div className="flex items-center gap-3 mb-4">
+                   <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center">
+                      <Users2 size={18} className="text-slate-400" />
+                   </div>
+                   <h4 className="font-bold text-slate-400 uppercase tracking-widest text-[13px]">Traditional Multi-Vendor Chaos</h4>
+                </div>
+                <div className="space-y-2">
+                   {['Multiple bills', 'Vendor finger-pointing', 'Technical gaps', 'Project delays'].map(t => (
+                      <div key={t} className="flex items-center gap-2 text-slate-400 text-[14px]">
+                         <div className="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
+                         {t}
+                      </div>
+                   ))}
+                </div>
+             </div>
+
+             {/* C9 Model */}
+             <div className="bg-[#0c1024] rounded-[24px] p-8 text-white shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-8 opacity-10">
+                   <CheckCircle size={100} />
+                </div>
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="w-12 h-12 rounded-xl bg-[#5D00D6] flex items-center justify-center">
+                      <Zap size={22} className="text-white" />
+                   </div>
+                   <h4 className="font-bold text-white text-[18px]">C9 Single Ownership Model</h4>
+                </div>
+                <div className="space-y-4">
+                   {[
+                      'Single point of accountability',
+                      'Integrated system architecture',
+                      'Coordinated trade management',
+                      'Day One Operational Guarantee'
+                   ].map(t => (
+                      <div key={t} className="flex items-center gap-3 text-white/90 text-[15px] font-medium">
+                         <CheckCircle size={16} className="text-[#a56eff]" />
+                         {t}
+                      </div>
+                   ))}
+                </div>
+             </div>
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 9 — CYBERSECURITY LAYER
+   ───────────────────────────────────────────────────────── */
+const SectionSecurity = () => (
+  <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">Inherent Protection</span>
+        <h2 className="c9-section-heading mb-6">
+          Security Built Into Every Deployment
+        </h2>
+        <p className="c9-body max-w-2xl mx-auto">
+          We don&apos;t treat security as an add-on. It is integrated into the core of your new site infrastructure from day one.
+        </p>
+      </FadeIn>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { icon: <ShieldCheck size={24} />, title: 'Network Segmentation', desc: 'Isolating critical operational systems from staff and guest traffic.' },
+          { icon: <Lock size={24} />, title: 'Endpoint Protection', desc: 'Enterprise-grade security policies applied to every device on the network.' },
+          { icon: <Zap size={24} />, title: 'Monitoring & Alerts', desc: 'Real-time detection of anomalies and potential security threats.' },
+          { icon: <Users2 size={24} />, title: 'Secure Remote Access', desc: 'VPN and zero-trust access for remote staff and management.' },
+          { icon: <BadgeCheck size={24} />, title: 'Recovery Readiness', desc: 'Built-in backup and recovery protocols to ensure business continuity.' },
+          { icon: <CheckCircle size={24} />, title: 'Compliance Ready', desc: 'Infrastructure aligned with Australian security and privacy standards.' },
+        ].map((item, i) => (
+           <FadeIn key={i} delay={i * 0.05} className="bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center mb-6 text-[#5D00D6]">
+                 {item.icon}
+              </div>
+              <h3 className="font-bold text-slate-900 text-[17px] mb-3">{item.title}</h3>
+              <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
+           </FadeIn>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 11 — HUMAN REASSURANCE (OUTCOME FOCUS)
+   ───────────────────────────────────────────────────────── */
+const SectionReassurance = () => (
+  <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        {/* Image */}
+        <FadeIn direction="left" className="relative">
+          <div className="rounded-[32px] overflow-hidden shadow-xl shadow-slate-200 aspect-[4/3]">
+            <img
+              src="/images/c9_support_engineer.png"
+              alt="C9 team member on site"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Floating quote */}
+          <div className="absolute bottom-8 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl border border-white/60 max-w-[280px]">
+            <p className="text-[14px] font-semibold text-slate-800 leading-snug mb-2">
+              &ldquo;We were operational from day one. Nothing was left incomplete.&rdquo;
+            </p>
+            <p className="text-[12px] text-[#5D00D6] font-bold uppercase tracking-wider">C9 Greenfield Client</p>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.1} direction="right">
+          <span className="c9-eyebrow mb-4">We Know What&apos;s at Stake</span>
+          <h2 className="c9-section-heading mb-6">
+            Your Timeline Matters. We Treat It That Way.
+          </h2>
+          <p className="c9-body mb-5">
+            Starting from zero comes with real pressure — timelines, budgets, and expectations that leave no room for error.
+          </p>
+          <p className="c9-body mb-5">
+            We handle everything so your team can walk in and start operating without disruption. No internal IT team required. No scrambling. No rework. No day-one chaos.
+          </p>
+          <p className="c9-body font-bold !text-[#5D00D6]">
+            We deliver certainty for your new business setup.
+          </p>
+          <div className="mt-8">
             <a
-              href="#lead-builder"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('lead-builder')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20 group"
+              href="#consultation"
+              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
             >
-              Design My Meeting Rooms <ArrowRight size={18} className="group-hover:translate-x-1" />
+              Get My Setup Plan
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </a>
           </div>
         </FadeIn>
-
-      </div>
-    </section>
-  );
-};
-
-
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 4 — WHY C9
-   ───────────────────────────────────────────────────────── */
-const differentiators = [
-  {
-    icon: <Building2 size={28} className="text-[#5D00D6]" />,
-    title: 'One Partner',
-    body: "One contract. One invoice. One phone number. We coordinate every vendor, every trade, every component — so you never have to chase anyone.",
-  },
-  {
-    icon: <Layers size={28} className="text-[#5D00D6]" />,
-    title: 'Everything Connected',
-    body: "Phones talk to your internet. Security connects to access control. Devices sync to your cloud. We engineer the whole system to work as one — not a collection of isolated parts.",
-  },
-  {
-    icon: <Zap size={28} className="text-[#5D00D6]" />,
-    title: 'Built Right From Day One',
-    body: "Cutting corners in setup creates expensive problems later. We follow enterprise-grade methodologies so you build on a foundation that supports growth, not one that holds it back.",
-  },
-];
-
-const WhyC9 = () => (
-  <section className="py-14 bg-[#0c1024]">
-    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
-      <FadeIn>
-        <div className="text-center mb-10">
-          <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-4">The C9 Difference</p>
-          <h2 className="c9-section-heading !text-white">
-            Why Greenfield Businesses Choose C9
-          </h2>
-        </div>
-      </FadeIn>
-      <div className="grid md:grid-cols-3 gap-8">
-        {differentiators.map((d, i) => (
-          <FadeIn key={i} delay={i * 0.1}>
-            <div className="bg-white/5 border border-white/10 rounded-[28px] p-8 hover:bg-white/8 hover:border-[#5D00D6]/40 transition-all duration-400 group">
-              <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/10 flex items-center justify-center mb-6 group-hover:bg-[#5D00D6]/20 transition-colors">
-                {d.icon}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">{d.title}</h3>
-              <p className="text-white/60 leading-relaxed text-[15px] font-medium">{d.body}</p>
-            </div>
-          </FadeIn>
-        ))}
       </div>
     </div>
   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 5 — INTERACTIVE LEAD BUILDER
-   ───────────────────────────────────────────────────────── */
-const setupItems: Record<string, string[]> = {
-  Office: ['Business-grade internet & WiFi', 'Cloud phone system & Teams calling', 'Managed workstations & monitors', 'Next-gen firewall & cybersecurity', 'Access control & CCTV', 'M365 & cloud infrastructure'],
-  Retail: ['High-speed internet & POS connectivity', 'POS systems & barcode scanners', 'Managed printers & receipt systems', 'AI CCTV & people counting', 'Business SIM & mobile fleet', 'Visitor management & access control'],
-  Warehouse: ['Industrial WiFi & network design', 'Fleet mobile devices & MDM', 'Inventory & barcode systems', 'CCTV & perimeter security', 'VoIP phones & intercom', 'Compliance & backup solutions'],
-  'Remote Team': ['Secure cloud infrastructure', 'Virtual phone system & 1300 numbers', 'Laptop procurement & secure setup', 'VPN & endpoint security', 'Microsoft Teams & video conferencing', 'IT helpdesk & proactive monitoring'],
-};
-
-const LeadBuilder = () => {
-  const [bizType, setBizType] = useState('');
-  const [employees, setEmployees] = useState('');
-  const [location, setLocation] = useState('');
-  const [timeline, setTimeline] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const isReady = bizType && employees && location && timeline;
-  const items = setupItems[bizType] || [];
-
-  return (
-    <section id="lead-builder" className="py-14 bg-slate-50 border-y border-slate-100">
-      <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
-        <FadeIn>
-          <div className="max-w-2xl mx-auto text-center mb-10">
-            <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-4">Your Custom Plan</p>
-            <h2 className="c9-section-heading mb-5">
-              Tell Us What You're Setting Up
-            </h2>
-            <p className="text-slate-500 text-lg">
-              Answer four quick questions and we'll show you exactly what your setup will include — and how we'd approach it.
-            </p>
-          </div>
-        </FadeIn>
-
-        <div className="max-w-3xl mx-auto">
-          <FadeIn delay={0.1}>
-            <div className="bg-white rounded-[32px] border border-slate-100 shadow-xl shadow-slate-100/80 p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                {/* Business Type */}
-                <div>
-                  <label className="block text-[13px] font-bold uppercase tracking-wider text-slate-500 mb-2">Business Type</label>
-                  <select
-                    value={bizType}
-                    onChange={(e) => { setBizType(e.target.value); setSubmitted(false); }}
-                    className="w-full h-12 px-4 rounded-xl border-2 border-slate-200 text-slate-800 font-semibold text-[15px] focus:outline-none focus:border-[#5D00D6] transition-colors bg-white appearance-none cursor-pointer"
-                  >
-                    <option value="">Select your business type…</option>
-                    <option>Office</option>
-                    <option>Retail</option>
-                    <option>Warehouse</option>
-                    <option>Remote Team</option>
-                  </select>
-                </div>
-
-                {/* Number of Employees */}
-                <div>
-                  <label className="block text-[13px] font-bold uppercase tracking-wider text-slate-500 mb-2">Team Size</label>
-                  <select
-                    value={employees}
-                    onChange={(e) => setEmployees(e.target.value)}
-                    className="w-full h-12 px-4 rounded-xl border-2 border-slate-200 text-slate-800 font-semibold text-[15px] focus:outline-none focus:border-[#5D00D6] transition-colors bg-white appearance-none cursor-pointer"
-                  >
-                    <option value="">Number of employees…</option>
-                    <option>1–5</option>
-                    <option>6–15</option>
-                    <option>16–50</option>
-                    <option>50+</option>
-                  </select>
-                </div>
-
-                {/* Location */}
-                <div>
-                  <label className="block text-[13px] font-bold uppercase tracking-wider text-slate-500 mb-2">Location</label>
-                  <select
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
-                    className="w-full h-12 px-4 rounded-xl border-2 border-slate-200 text-slate-800 font-semibold text-[15px] focus:outline-none focus:border-[#5D00D6] transition-colors bg-white appearance-none cursor-pointer"
-                  >
-                    <option value="">State or city…</option>
-                    <option>Sydney, NSW</option>
-                    <option>Melbourne, VIC</option>
-                    <option>Brisbane, QLD</option>
-                    <option>Perth, WA</option>
-                    <option>Adelaide, SA</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                {/* Timeline */}
-                <div>
-                  <label className="block text-[13px] font-bold uppercase tracking-wider text-slate-500 mb-2">Timeline</label>
-                  <select
-                    value={timeline}
-                    onChange={(e) => setTimeline(e.target.value)}
-                    className="w-full h-12 px-4 rounded-xl border-2 border-slate-200 text-slate-800 font-semibold text-[15px] focus:outline-none focus:border-[#5D00D6] transition-colors bg-white appearance-none cursor-pointer"
-                  >
-                    <option value="">When do you need this?</option>
-                    <option>Within 2 weeks</option>
-                    <option>1 month</option>
-                    <option>2–3 months</option>
-                    <option>Just planning ahead</option>
-                  </select>
-                </div>
-              </div>
-
-              <button
-                disabled={!isReady}
-                onClick={() => setSubmitted(true)}
-                className="w-full h-14 rounded-full bg-[#5D00D6] text-white font-bold text-[16px] hover:bg-[#4d00b3] disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-xl shadow-purple-900/20"
-              >
-                Show Me My Setup Plan →
-              </button>
-
-              {/* Dynamic output */}
-              <AnimatePresence>
-                {submitted && isReady && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <div className="mt-8 pt-8 border-t border-slate-100">
-                      <p className="text-slate-500 text-[13px] font-bold uppercase tracking-wider mb-5">
-                        Here's what your <span className="text-[#5D00D6]">{bizType}</span> setup with{' '}
-                        <span className="text-[#5D00D6]">{employees}</span> people may include…
-                      </p>
-                      <div className="grid sm:grid-cols-2 gap-3 mb-8">
-                        {items.map((item, i) => (
-                          <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                            <CheckCircle size={16} className="text-[#5D00D6] shrink-0" />
-                            <span className="text-slate-700 font-semibold text-[14px]">{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                      <a
-                        href="#consultation-section"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                        className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20 group"
-                      >
-                        Get My Setup Plan <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                      </a>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </FadeIn>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 6 — RISK REVERSAL
-   ───────────────────────────────────────────────────────── */
-const risks = [
-  {
-    icon: <TrendingDown size={24} className="text-red-400" />,
-    title: 'Poor Performance',
-    body: 'Patched-together setups create bottlenecks — slow internet, dropped calls and frustrated teams from the day you open.',
-  },
-  {
-    icon: <Shield size={24} className="text-orange-400" />,
-    title: 'Security Gaps',
-    body: 'Without a proper security layer, a new business is an easy target. Breaches in the first year can be fatal.',
-  },
-  {
-    icon: <Clock size={24} className="text-yellow-500" />,
-    title: 'Expensive Rebuilds',
-    body: 'Undoing bad infrastructure is 3–5× the cost of getting it right first time. Every shortcut taken now is a future invoice.',
-  },
-  {
-    icon: <AlertTriangle size={24} className="text-rose-400" />,
-    title: 'Vendor Chaos',
-    body: "When things go wrong, multiple vendors point fingers at each other. You're the one left without a working business.",
-
-  },
-];
-
-const RiskReversal = () => (
-  <section className="py-24 bg-white">
-    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
-      <FadeIn>
-        <div className="max-w-2xl mb-16">
-          <p className="text-red-500 font-bold text-[12px] uppercase tracking-widest mb-4">Don't Learn This the Hard Way</p>
-          <h2 className="c9-section-heading mb-5">
-            What Happens If You Don't Set This Up Right?
-          </h2>
-          <p className="text-slate-500 text-lg">
-            Most new businesses encounter these problems within the first six months of operating. C9 eliminates them from day one.
-          </p>
-        </div>
-      </FadeIn>
-
-      <div className="grid md:grid-cols-2 gap-6 mb-14">
-        {risks.map((r, i) => (
-          <FadeIn key={i} delay={i * 0.08}>
-            <div className="flex gap-5 p-7 rounded-[24px] border border-slate-100 bg-slate-50 hover:border-red-100 hover:bg-red-50/40 transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-sm shrink-0 border border-slate-100">
-                {r.icon}
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2 tracking-tight group-hover:text-red-700 transition-colors">{r.title}</h3>
-                <p className="text-slate-500 text-[14px] leading-relaxed font-medium">{r.body}</p>
-              </div>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
-
-      <FadeIn>
-        <div className="bg-[#5D00D6] rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-2">
-              We eliminate all of these from day one.
-            </h3>
-            <p className="text-white/70 text-[15px] max-w-lg">
-              Every setup we deliver is engineered, not assembled. That's the difference between a technology foundation and a technology risk.
-            </p>
-          </div>
-          <a
-            href="#consultation-section"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="shrink-0 inline-flex items-center gap-2 bg-white text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-slate-100 transition-colors group"
-          >
-            Get It Right First Time <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
-      </FadeIn>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 7 — FINAL CTA
+   SECTION 10 — FINAL CTA (DECISION PUSH)
    ───────────────────────────────────────────────────────── */
 const FinalCTA = () => (
-  <section className="py-24 bg-slate-50 border-t border-slate-100">
-    <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <FadeIn>
-          <div>
-            <p className="text-[#5D00D6] font-bold text-[12px] uppercase tracking-widest mb-5">Ready to Launch?</p>
-            <h2 className="c9-section-heading mb-6">
-              Let's Get Your Business Ready — Properly.
-            </h2>
-            <p className="text-slate-600 text-lg leading-relaxed mb-10 max-w-md">
-              Book a free 30-minute setup strategy session with our Australian team. We'll map your internet, phones, IT, devices, and security into one clear plan — before you commit to anything.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#consultation-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20 group"
-              >
-                Book Setup Call <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
-                href="#lead-builder"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('lead-builder')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-colors"
-              >
-                Plan My Business Setup
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-6 mt-10">
-              {['No obligation', 'Australian-based team', 'One partner, everything handled'].map((t) => (
-                <span key={t} className="inline-flex items-center gap-2 text-slate-500 text-[13px] font-semibold">
-                  <CheckCircle size={15} className="text-[#5D00D6]" /> {t}
-                </span>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
-        <FadeIn delay={0.12}>
-          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group cursor-pointer">
-            <img
-              src="/images/greenfield_consultation.png"
-              alt="Business owner meeting with C9 consultant"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/20 via-transparent to-transparent group-hover:from-[#5D00D6]/30 transition-colors duration-700" />
-          </div>
-        </FadeIn>
-      </div>
+  <section className="py-16 lg:py-24 bg-white">
+    <div className={`${C} text-center`}>
+      <FadeIn>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
+          <PhoneCall size={13} className="text-[#5D00D6]" />
+          <span className="c9-eyebrow !mb-0">Secure Your Timeline</span>
+        </div>
+        <h2 className="c9-section-heading mb-5 max-w-2xl mx-auto">
+          Open Your Next Site Without the Risk
+        </h2>
+        <p className="c9-body mb-10 max-w-xl mx-auto text-slate-600">
+          Plan, deliver, and operate your new location with a single accountable partner. One partner for IT, Telco, and infrastructure.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+          <a
+            href="#consultation"
+            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+          >
+            Start Your Greenfield Project
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+          </a>
+          <a
+            href="tel:1300000000"
+            className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+          >
+            Speak to an Expert
+          </a>
+        </div>
+
+        <p className="text-[13px] text-slate-400 font-medium">
+          Zero-day operational readiness. Guaranteed.
+        </p>
+      </FadeIn>
     </div>
   </section>
 );
@@ -1016,23 +709,99 @@ export default function GreenfieldPage() {
   return (
     <main className="min-h-screen bg-white">
       <Hero />
-      <HeroHighlighter />
       <WpClientTicker />
-      <PrioritySolutionsBlock />
-      <Slider />
-      <VendorProductShowcase />
+      <SectionPain />
+      <SectionAccountability />
+      <SectionGuarantee />
+      <SectionReadiness />
+      <SectionFlow />
+      <SectionProof />
+      <SectionSupport />
+      <SectionSecurity />
+      <SectionReassurance />
+      
+      <WpCaseStudies 
+        eyebrow="SUCCESSFUL DELIVERIES"
+        title="Greenfield Success Stories"
+        articles={[
+          {
+            tag: 'MULTI-SITE ARCHITECTURE',
+            title: 'Rapid Infrastructure Rollout for National Expansion',
+            desc: 'Successfully commissioned 12 new sites across 3 states in under 6 weeks, providing unified networking and zero-day operational readiness.',
+            img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
+            videoText: 'National Site Rollout',
+            href: '/case-studies/greenfield-site-rollout'
+          },
+          {
+            tag: 'RETAIL OPERATIONS',
+            title: 'Full Technical Readiness for National Retail Launch',
+            desc: 'End-to-end delivery of POS connectivity, secure guest Wi-Fi, and back-office integration for a multi-site retail rollout.',
+            img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
+            videoText: 'Retail Rollout',
+            href: '/case-studies/retail-pos-stabilisation'
+          },
+          {
+            tag: 'INDUSTRIAL LOGISTICS',
+            title: 'High-Stakes Site Setup for Global Logistics Hub',
+            desc: 'Delivery of secure networking, enterprise Wi-Fi, and integrated IP security systems for a mission-critical 10,000sqm logistics facility.',
+            img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
+            videoText: 'Logistics Site Setup',
+            href: '/case-studies/greenfield-site-rollout'
+          }
+        ]}
+      />
 
-      <WhyC9 />
-      <LeadBuilder />
-      <RiskReversal />
+
+      <WpFAQAndFeedback 
+        faqItems={[
+          { 
+            q: 'When is the best time to engage C9 for a greenfield project?', 
+            a: 'For optimal results, engage us during the design phase, typically 3-6 months before move-in. This allows us to manage long-lead items like enterprise fibre builds (often 60-90 business days) and stage hardware procurement to bypass global supply chain volatility.' 
+          },
+          { 
+            q: 'Do you coordinate with our builder and electrical fit-out trades?', 
+            a: 'Absolutely. We act as your technical project leads, working directly with builders and sparkies to specify rack power requirements, data point placement, and containment paths. This prevents costly rework and ensures the fit-out supports the intended technology design.' 
+          },
+          { 
+            q: 'What specific cabling standards and certifications do you provide?', 
+            a: 'We exclusively use ACMA-licensed cablers installing Cat6A and Optical Fibre to AS/CA S008/S009 standards. Upon completion, we provide "As-Built" documentation including Fluke test results and site-wide patching schedules for full warranty compliance.' 
+          },
+          { 
+            q: 'How do you handle site delays or builder schedule slips?', 
+            a: 'Our delivery framework includes weekly site coordination meetings. If fit-out schedules slip, we pivot our staging and commissioning timelines. We utilize "zero-touch" staging in our lab so equipment is ready for rapid on-site deployment the moment the data room is dust-free.' 
+          },
+          { 
+            q: 'What is the "Day One Operational" guarantee?', 
+            a: 'It means your team walks in to a live environment. Internet is bonded, Wi-Fi coverage is validated via heatmaps, phone systems are patched, and security policies are active. We provide on-site support for the first 24-48 hours of site occupancy to ensure 100% confidence.' 
+          }
+        ]}
+        testimonials={[
+          {
+            name: 'David Chen',
+            role: 'Operations Director',
+            content: 'Consolidating our nationwide connectivity and IT infrastructure under C9 Communications was the best strategic move we made. Their enterprise Fibre nbn eliminated our downtime, and having a single, proactive Australian support team means zero IT headaches.',
+            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800',
+            metric: '99.99%',
+            metricLabel: 'Network Uptime'
+          },
+          {
+            name: 'Michael Ross',
+            role: 'Managing Director',
+            content: 'The strategic roadmap provided by C9 aligned our technology stack perfectly with our aggressive growth targets. They don\'t just fix issues; they engineer sophisticated, centralized infrastructure that scales dynamically. Truly unmatched.',
+            image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800',
+            metric: '4X',
+            metricLabel: 'Capacity Growth'
+          }
+        ]}
+      />
       <FinalCTA />
-      <section id="consultation-section">
+      <section id="consultation" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
-          eyebrow="GREENFIELD SETUP CONSULTATION"
-          title="Get your complete business setup — before Day One."
-          description="Book a free 30-minute strategy session with our senior consultants. We'll map your internet, phones, IT, devices, security and workplace into one seamless plan ready before you open the doors."
-          formTitle="Book My Free Setup Call"
+          eyebrow="NEW BUSINESS SETUP"
+          title="Commission your new site with confidence."
+          description="Book a strategic session with our delivery specialists. We cover assessment, procurement, cabling, installation, and full project coordination — starting from zero, fully operational from day one."
+          formTitle="Get My Setup Plan"
         />
       </section>
     </main>

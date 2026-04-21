@@ -6,28 +6,28 @@ import { ChevronRight, ChevronLeft, Play, ArrowUpRight } from 'lucide-react';
 
 const CASE_STUDIES = [
   {
-    tag: 'NON-PROFIT ORGANISATION',
-    title: 'Launch Housing Case Study',
-    desc: "Launch Housing helps hundreds of Melburnians find stable housing every single day. But their aging phone system and...",
-    img: '/images/case-studies/case-study-1.jpg',
-    videoText: 'Launch Housing Case Study',
-    href: '/case-studies'
+    tag: 'RETAIL TRANSITION',
+    title: 'National Retailer Stabilisation',
+    desc: 'Successfully reduced 4 fragmented vendors into 1 managed partner. Achieved 99.9% uptime with zero downtime.',
+    img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
+    videoText: 'Retail Stabilisation',
+    href: '/case-studies/retail-pos-stabilisation'
   },
   {
-    tag: 'RETAIL',
-    title: 'Akubra Case Study',
-    desc: 'The rural setting and old copper technology at Akubra posed significant hurdles, with a sluggish internet connection that dropped out frequently.',
-    img: '/images/case-studies/case-study-2.jpg',
-    videoText: 'Akubra Case Study',
-    href: '/case-studies'
+    tag: 'LEGAL FIRM TAKEOVER',
+    title: 'Wilson & Co Proactive Migration',
+    desc: 'Took over failing on-premise infrastructure for a high-volume law firm. Improved response time by 60%.',
+    img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
+    videoText: 'Legal Firm Takeover',
+    href: '/case-studies/legal-firm-takeover'
   },
   {
-    tag: 'MANUFACTURING',
-    title: 'Pacific Steel Case Study',
-    desc: 'Modernizing legacy PABX systems with cloud voice and fiber connectivity across multiple factory sites.',
-    img: '/images/case-studies/case-study-3.jpg',
-    videoText: 'Pacific Steel Case Study',
-    href: '/case-studies'
+    tag: 'NEW BUSINESS',
+    title: 'National Greenfield Rollout',
+    desc: 'Rapidly commissioned 12 new sites across 3 states in under 6 weeks with zero-day operational readiness.',
+    img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
+    videoText: 'Greenfield Rollout',
+    href: '/case-studies/greenfield-site-rollout'
   }
 ];
 
@@ -130,7 +130,7 @@ export const WpCaseStudies = ({
                      {cs.desc}
                    </p>
                    <a
-                     href={cs.href || '/case-studies'}
+                     href={cs.href || '/about/case-studies'}
                      className="inline-flex items-center gap-2 text-[#5D00D6] c9-eyebrow !text-[10px] hover:underline whitespace-nowrap"
                    >
                       Read full article 

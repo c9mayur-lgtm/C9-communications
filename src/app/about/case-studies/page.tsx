@@ -43,6 +43,7 @@ export default function CaseStudiesPage() {
           <div className="space-y-16">
             {[
               {
+                slug: 'retail-pos-stabilisation',
                 icon: Activity,
                 category: 'Retail & Multi-site',
                 title: 'Eliminating Downtime Across 50 Locations',
@@ -51,6 +52,7 @@ export default function CaseStudiesPage() {
                 outcome: '99.99% uptime achieved across the entire network. No payment-related downtime recorded in 12 months.'
               },
               {
+                slug: 'legal-firm-takeover',
                 icon: Shield,
                 category: 'Professional Services',
                 title: 'Securing Remote Access & Compliance',
@@ -59,8 +61,9 @@ export default function CaseStudiesPage() {
                 outcome: 'Full Essential 8 compliance achieved. Team productivity increased by 25% through seamless internal collaboration.'
               },
               {
+                slug: 'greenfield-site-rollout',
                 icon: TrendingUp,
-                category: 'Tech Startup',
+                category: 'Logistics & Infrastructure',
                 title: 'Scaling Connectivity for Rapid Growth',
                 challenge: 'Standard office internet unable to support a growing team of developers and high video-conferencing load.',
                 solution: 'Migrated to 1Gbps Dedicated Fast Fibre with symmetrical speeds and proactive monitoring.',
@@ -90,9 +93,12 @@ export default function CaseStudiesPage() {
                         </div>
                       </div>
                       
-                      <button className="flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all">
+                      <a 
+                        href={`/case-studies/${study.slug}`}
+                        className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all"
+                      >
                         Read Full Case Study <ExternalLink size={16} />
-                      </button>
+                      </a>
                     </div>
                     
                     <div className="bg-slate-50 rounded-[32px] p-10 border border-gray-200">

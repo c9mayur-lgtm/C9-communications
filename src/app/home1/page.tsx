@@ -700,6 +700,7 @@ export default function Home1Page() {
             desc: 'How we unified communications and Internet across 70+ franchise offices into a single, centrally managed network, reducing telecommunications spend by 32%.',
             img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800',
             videoText: 'Stockdale & Leggo Consolidation',
+            href: '/case-studies/retail-pos-stabilisation'
           },
           {
             tag: 'HEALTHCARE',
@@ -707,6 +708,7 @@ export default function Home1Page() {
             desc: 'Replacing end-of-life on-premise systems with a flexible cloud phone system, enabling their team to field critical calls remotely and securely.',
             img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
             videoText: 'Arthritis Foundation Voice',
+            href: '/case-studies/legal-firm-takeover'
           },
           {
             tag: 'EDUCATION',
@@ -714,6 +716,7 @@ export default function Home1Page() {
             desc: 'Delivering direct 1Gbps/1Gbps fibre connectivity to support hundreds of concurrent students and cloud-hosted learning environments without latency.',
             img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800',
             videoText: 'Baxter Institute Network',
+            href: '/case-studies/greenfield-site-rollout'
           },
         ]}
       />

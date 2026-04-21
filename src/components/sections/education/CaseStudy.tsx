@@ -37,8 +37,8 @@ export default function CaseStudy() {
           </div>
         </div>
         <div className="flex justify-center mt-12">
-          <Link href="/about/case-studies" className="inline-flex items-center gap-2 text-[#5D00D6] text-[13px] font-bold uppercase tracking-wider hover:opacity-70 transition-opacity" >
-            Read more case studies <span className="text-[16px]">→</span>
+          <Link href="/case-studies/greenfield-site-rollout" className="inline-flex items-center gap-2 text-[#5D00D6] text-[13px] font-bold uppercase tracking-wider hover:opacity-70 transition-opacity" >
+            Read full case study <span className="text-[16px]">→</span>
           </Link>
         </div>
       </div>

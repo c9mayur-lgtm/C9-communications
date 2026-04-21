@@ -810,7 +810,7 @@ export default function ProductivityPage() {
           </div>
 
           <FadeUp delay={0.3} className="text-center">
-            <Link href="/case-studies" className="inline-flex items-center gap-2 text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest hover:underline">
+            <Link href="/about/case-studies" className="inline-flex items-center gap-2 text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest hover:underline">
               Read More Case Studies <ArrowRight size={14} />
             </Link>
           </FadeUp>

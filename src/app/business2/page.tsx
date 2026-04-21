@@ -152,15 +152,15 @@ const SectionEmpathy = () => (
       <FadeIn className="text-center mb-12">
         <span className="c9-eyebrow mb-4">The Real Cost of Unmanaged Technology</span>
         <h2 className="c9-section-heading max-w-3xl mx-auto">
-          Existing systems shouldn&apos;t be your biggest bottle neck.
+          If your current setup isn’t working, it’s already costing you
         </h2>
       </FadeIn>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {[
-          { icon: <Zap className="text-[#5D00D6]" />, label: 'Slow Internet', desc: 'Connectivity that drops out during meetings or slows down when you need it most.' },
-          { icon: <Users className="text-[#5D00D6]" />, label: 'Poor IT Support', desc: 'Waiting days for responses while your team sits idle and frustrated.' },
-          { icon: <Monitor className="text-[#5D00D6]" />, label: 'Multiple Vendors', desc: 'Managing five different bills and contacts just to keep your office running.' },
-          { icon: <Handshake className="text-[#5D00D6]" />, label: 'No Accountability', desc: 'Vendors blaming each other while your problems remain unresolved.' },
+          { icon: <Zap className="text-[#5D00D6]" />, label: 'Slow Systems', desc: 'Connectivity that drops out during meetings or hardware that slows down when you need it most.' },
+          { icon: <Monitor className="text-[#5D00D6]" />, label: 'Internet Interruptions', desc: 'Unreliable internet dragging down your operations and frustrating staff.' },
+          { icon: <Users className="text-[#5D00D6]" />, label: 'Poor Support', desc: 'Waiting days for responses while your team sits idle and frustrated.' },
+          { icon: <Handshake className="text-[#5D00D6]" />, label: 'Multiple Vendors', desc: 'Managing five different bills and contacts just to keep your office running.' },
         ].map((s, i) => (
           <FadeIn key={i} delay={i * 0.05} className="group">
             <div className="h-full bg-white border border-slate-100 rounded-2xl p-6 hover:border-[#5D00D6]/20 transition-all hover:shadow-md">
@@ -174,7 +174,7 @@ const SectionEmpathy = () => (
         ))}
       </div>
       <FadeIn delay={0.2} className="text-center">
-        <p className="text-slate-600 font-medium mb-6">If your existing setup is holding you back, it&apos;s time for a professional takeover.</p>
+        <p className="text-slate-600 font-medium text-[18px] mb-6">These problems don’t stay small — they grow with your business.</p>
         <a href="#consultation" className="text-[#5D00D6] font-bold hover:underline inline-flex items-center gap-2">
           Get My Business Assessed <ArrowRight size={16} />
         </a>
@@ -193,10 +193,10 @@ const SectionAudit = () => (
         <FadeIn direction="left">
           <span className="c9-eyebrow mb-4 text-[#5D00D6]">System Assessment</span>
           <h2 className="c9-section-heading mb-6">
-            We start by understanding what you already have
+            Start with a clear assessment of your current setup
           </h2>
           <p className="c9-body mb-8">
-            We don’t replace everything — we fix what needs fixing. Our process begins with a comprehensive review of your current technology stack to identify exactly where the friction is.
+            We identify what’s working, what’s not, and what needs to change — without unnecessary replacements.
           </p>
           <div className="space-y-6">
             <div className="flex gap-4">
@@ -264,6 +264,9 @@ const SectionSolution = () => (
         <p className="c9-body max-w-3xl mx-auto">
           You stop managing vendors — we handle everything. From your connectivity and security to day-to-day support, our team provides consistent management and reliable performance.
         </p>
+        <p className="c9-body max-w-3xl mx-auto font-bold mt-4 text-[#5D00D6]">
+          You shouldn’t have to figure this out — that’s our job.
+        </p>
       </FadeIn>
 
       <div className="grid md:grid-cols-3 gap-8">
@@ -297,31 +300,31 @@ const SectionDecision = () => (
         <FadeIn direction="left">
           <span className="c9-eyebrow mb-4">Decision Clarity</span>
           <h2 className="c9-section-heading mb-6">
-            Identify the right path for your business
+            Here’s what your business likely needs
           </h2>
           <p className="c9-body mb-8">
-            Not every setup needs a total replacement. We help you identify the most efficient way to achieve reliability.
+            We help you determine this clearly — so you don’t guess.
           </p>
           <div className="space-y-6">
             <div className="p-6 rounded-2xl border border-slate-100 bg-slate-50 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all">
                <div className="flex justify-between items-center mb-4">
-                  <span className="text-[12px] font-extrabold text-slate-400 uppercase tracking-widest">Minor Issues</span>
+                  <span className="text-[12px] font-extrabold text-slate-400 uppercase tracking-widest">slow systems</span>
                </div>
-               <h4 className="c9-card-title mb-2">Optimise Existing Setup</h4>
+               <h4 className="c9-card-title mb-2">Optimisation</h4>
                <p className="text-slate-600 font-medium text-[14px]">We fix configuration errors and resolve ongoing glitches to get your current systems running at peak performance.</p>
             </div>
             <div className="p-6 rounded-2xl border border-slate-100 bg-slate-50 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all">
                <div className="flex justify-between items-center mb-4">
-                  <span className="text-[12px] font-extrabold text-slate-400 uppercase tracking-widest">Frequent Issues</span>
+                  <span className="text-[12px] font-extrabold text-slate-400 uppercase tracking-widest">frequent issues</span>
                </div>
-               <h4 className="c9-card-title mb-2">Upgrade Where Needed</h4>
+               <h4 className="c9-card-title mb-2">Upgrade</h4>
                <p className="text-slate-600 font-medium text-[14px]">Targeted replacement of failing hardware or outdated software that creates points of failure.</p>
             </div>
             <div className="p-6 rounded-2xl border border-[#5D00D6]/20 bg-[#5D00D6]/5 relative overflow-hidden group transition-all">
                <div className="flex justify-between items-center mb-4">
-                  <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-widest">Major Problems</span>
+                  <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-widest">unreliable setup</span>
                </div>
-               <h4 className="c9-card-title mb-2">Full Improvement</h4>
+               <h4 className="c9-card-title mb-2">Rebuild</h4>
                <p className="text-slate-900 font-bold text-[14px]">A complete environmental overhaul for businesses whose technology is actively causing loss of productivity.</p>
             </div>
           </div>
@@ -546,10 +549,10 @@ const FinalCTA = () => (
      <div className={`${C} relative z-10 text-center`}>
         <FadeIn>
           <h2 className="c9-section-heading mb-8 max-w-4xl mx-auto md:!text-[46px] lg:!text-[52px]">
-            Stop managing problems — let us fix and run your setup
+            Stop managing problems — get a clear plan for your business
           </h2>
           <p className="c9-body mb-12 max-w-2xl mx-auto text-[18px]">
-            Ready to stop fighting your technology? Book your assessment today and see the difference a professional takeover makes.
+            We assess your current setup and tell you exactly what needs to change.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
              <a

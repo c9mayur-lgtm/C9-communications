@@ -1,738 +1,657 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  CheckCircle2,
-  X,
-  Network,
-  Phone,
-  Shield,
-  Monitor,
-  Search,
-  Zap,
-  Building2,
-  Users,
-  TrendingUp,
-  Clock,
-  ChevronDown,
-  ShieldCheck,
-  Globe,
-  Settings,
-  MessagesSquare,
-  Lock,
-  BarChart3,
-  Layers,
-  ArrowUpRight
+  ArrowRight, CheckCircle, ShieldCheck, Zap, 
+  HelpCircle, Clock, Search, Handshake, 
+  Target, Monitor, Lock, Cloud, PhoneCall,
+  Users, MessageSquare, AlertCircle, Server,
+  Activity, Database, Shield, Globe, Cpu,
+  FileCheck, ShieldAlert, BarChart3, RefreshCw,
+  Network, Laptop, Layers
 } from 'lucide-react';
-import { WpHighlights } from '@/components/wordpress/WpHighlights';
-import { WpIndustryTabs } from '@/components/wordpress/WpIndustryTabs';
-import { WpUnifiedClassification } from '@/components/wordpress/WpUnifiedClassification';
-import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
+import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+import { 
+  Table, 
+  TableHeader, 
+  TableBody, 
+  TableHead, 
+  TableRow, 
+  TableCell 
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 
-/* ─── shared animation wrapper ─────────────────────────────────────────────── */
-const FadeUp = ({
+/* ─────────────────────────────────────────────────────────
+   ANIMATION HELPERS
+   ───────────────────────────────────────────────────────── */
+const FadeIn = ({
   children,
   delay = 0,
   className = '',
+  direction = 'up',
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.55, delay, ease: 'easeOut' }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
-
-/* ─── shared button primitives ─────────────────────────────────────────────── */
-const PrimaryBtn = ({
-  href,
-  children,
-  onClick,
-}: {
-  href: string;
-  children: React.ReactNode;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-}) => (
-  <a
-    href={href}
-    onClick={onClick}
-    className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20 group whitespace-nowrap"
-  >
-    {children}
-    <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-  </a>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 1 — HERO
-   ══════════════════════════════════════════════════════════════════════════════ */
-const HeroEnterpriseScale = () => {
+  direction?: 'up' | 'left' | 'right' | 'none';
+}) => {
+  const y = direction === 'up' ? 28 : 0;
+  const x = direction === 'left' ? -28 : direction === 'right' ? 28 : 0;
   return (
-    <div className="w-full h-full bg-white relative flex flex-col p-8 rounded-[32px] overflow-hidden shadow-[0_20px_60px_-15px_rgba(93,0,214,0.15)] border border-slate-200">
-      
-      {/* Dynamic Ambient Background - Light Theme */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <motion.div 
-          animate={{ opacity: [0.3, 0.5, 0.3], scale: [1, 1.05, 1] }} 
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} 
-          className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-purple-100 rounded-full blur-[80px]"
-        />
-        <motion.div 
-          animate={{ opacity: [0.2, 0.4, 0.2] }} 
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }} 
-          className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-50 rounded-full blur-[80px]"
-        />
-      </div>
-
-      {/* Top Header */}
-      <div className="relative z-10 flex justify-between items-start w-full mb-8">
-        <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/20 text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest rounded-full mb-3 shadow-sm">
-            <BarChart3 size={14} /> ENTERPRISE GROWTH METRICS
-          </div>
-          <h3 className="text-slate-900 text-[22px] font-bold tracking-tight">Unified Operational Scale</h3>
-        </div>
-        
-        <div className="text-right">
-          <p className="text-slate-500 text-[10px] font-bold tracking-widest uppercase mb-1">System Health</p>
-          <div className="flex items-center justify-end gap-1.5 text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 shadow-sm">
-             <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse" />
-             <span className="font-bold text-[12px] uppercase">Optimized</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Graph Area */}
-      <div className="relative flex-1 w-full flex items-end min-h-[220px]">
-        {/* Background Grid */}
-        <div className="absolute inset-0 flex flex-col justify-between pt-2 pb-2 pointer-events-none z-0">
-          {[...Array(5)].map((_, i) => (
-             <div key={i} className="w-full border-t border-slate-200 border-dashed" />
-          ))}
-        </div>
-
-        {/* Graph SVG */}
-        <div className="absolute inset-0 z-10 overflow-visible">
-          <svg className="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 100 100">
-            <defs>
-              <linearGradient id="curve-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#5D00D6" />
-                <stop offset="100%" stopColor="#A855F7" />
-              </linearGradient>
-              <linearGradient id="area-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#A855F7" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#A855F7" stopOpacity="0.0" />
-              </linearGradient>
-              <filter id="glow-light">
-                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                <feMerge>
-                  <feMergeNode in="coloredBlur"/>
-                  <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-              </filter>
-            </defs>
-
-            {/* Underperforming competitor / fragmented line */}
-            <motion.path
-               d="M0,80 Q20,70 40,85 T60,80 T100,85"
-               stroke="#94a3b8"
-               strokeWidth="1.5"
-               fill="none"
-               strokeDasharray="3 3"
-               animate={{ d: ["M0,80 Q20,70 40,85 T60,80 T100,85", "M0,75 Q20,80 40,75 T60,85 T100,80", "M0,80 Q20,70 40,85 T60,80 T100,85"] }}
-               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            />
-
-            {/* The main C9 Growth curve */}
-            <motion.path
-               d="M0,70 Q30,75 50,50 T100,10 L100,100 L0,100 Z"
-               fill="url(#area-gradient)"
-               initial={{ opacity: 0 }}
-               animate={{ opacity: 1 }}
-               transition={{ duration: 1.5, delay: 0.5 }}
-            />
-            
-            <motion.path
-               d="M0,70 Q30,75 50,50 T100,10"
-               stroke="url(#curve-gradient)"
-               strokeWidth="4"
-               fill="none"
-               strokeLinecap="round"
-               initial={{ pathLength: 0 }}
-               animate={{ pathLength: 1 }}
-               transition={{ duration: 2, ease: "easeOut" }}
-            />
-
-            {/* End Point node */}
-            <motion.circle 
-              cx="100" cy="10" r="3.5" 
-              fill="#A855F7" 
-              stroke="#fff" 
-              strokeWidth="1.5" 
-              filter="url(#glow-light)" 
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 2, duration: 0.5, type: "spring" }}
-            />
-          </svg>
-        </div>
-
-        {/* Floating Callout Boxes */}
-        <div className="absolute top-[35%] left-[5%] z-20">
-          <motion.div 
-             className="bg-white/90 border border-slate-200 rounded-xl px-4 py-3 shadow-lg backdrop-blur-md flex items-center gap-3"
-             initial={{ opacity: 0, x: -20 }}
-             animate={{ opacity: 1, x: 0 }}
-             transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
-               <Layers size={16} strokeWidth={2.5}/>
-            </div>
-            <div>
-              <p className="text-slate-400 text-[10px] font-semibold uppercase tracking-wider leading-none mb-1">Pre-Integration</p>
-              <p className="text-slate-800 text-sm font-medium leading-none">Scattered Resources</p>
-            </div>
-          </motion.div>
-        </div>
-
-        <div className="absolute top-[-10%] right-[2%] z-30">
-          <motion.div 
-             className="bg-gradient-to-br from-[#5D00D6] to-[#913be2] rounded-2xl px-6 py-5 shadow-[0_15px_35px_rgba(93,0,214,0.3)] text-white border border-white/20"
-             initial={{ opacity: 0, scale: 0.9, y: 20 }}
-             animate={{ opacity: 1, scale: 1, y: [0, -5, 0] }}
-             transition={{ 
-                opacity: { duration: 0.8, delay: 1.8 },
-                scale: { duration: 0.8, delay: 1.8, type: "spring" },
-                y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2.5 }
-             }}
-          >
-            <div className="flex items-center gap-2 mb-3 opacity-90">
-               <TrendingUp size={16} className="text-white" />
-               <p className="text-white/90 text-[10px] font-semibold uppercase tracking-wider whitespace-nowrap">Unified Output</p>
-            </div>
-            <p className="text-white text-3xl font-bold leading-none mb-1.5 tracking-tight">100%</p>
-            <p className="text-white/80 text-[13px] font-medium">Operational Control</p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Footer Metrics Row (Light Theme) */}
-      <div className="grid grid-cols-3 gap-4 mt-8 relative z-30">
-        <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 shadow-sm transition-all hover:shadow-md hover:border-slate-300">
-          <p className="text-slate-500 text-[10px] font-semibold uppercase tracking-wider mb-1.5 flex items-center gap-1.5"><TrendingUp size={12} className="text-[#5D00D6]"/> Cost Efficiency</p>
-          <p className="text-slate-900 font-bold text-xl leading-none tracking-tight">+32%</p>
-        </div>
-        <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 shadow-sm transition-all hover:shadow-md hover:border-slate-300">
-          <p className="text-slate-500 text-[10px] font-semibold uppercase tracking-wider mb-1.5 flex items-center gap-1.5"><Shield size={12} className="text-[#5D00D6]"/> Security Standard</p>
-          <p className="text-slate-900 font-bold text-xl leading-none tracking-tight">Essential 8</p>
-        </div>
-        <div className="bg-[#5D00D6]/5 rounded-2xl p-4 border border-[#5D00D6]/20 shadow-sm relative overflow-hidden group">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#5D00D6]/5 to-transparent translate-x-[-100%] group-hover:animate-[shimmer_1.5s_infinite]" />
-          <p className="text-[#5D00D6] text-[10px] font-semibold uppercase tracking-wider mb-1.5 flex items-center gap-1.5"><Lock size={12} /> Risk Profile</p>
-          <p className="text-slate-900 font-bold text-xl leading-none tracking-tight">Mitigated</p>
-        </div>
-      </div>
-
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y, x }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
   );
 };
 
+const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 1 — HERO
+   ───────────────────────────────────────────────────────── */
 const Hero = () => (
-  <section className="pt-20 pb-8 md:pt-24 md:pb-10 lg:pt-28 lg:pb-12 relative overflow-hidden min-h-[480px] lg:min-h-[540px]">
-    <div className="absolute inset-0 xl:hidden">
-      <img
-        src="/images/hero_enterprise.png"
-        alt="Enterprise IT Control"
-        className="w-full h-full object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0c1024]/80 via-[#0c1024]/70 to-[#0c1024]/90" />
-      <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
-    </div>
-    <div className="absolute inset-0 hidden xl:block bg-white" />
+  <section className="relative overflow-hidden bg-white pt-8 pb-0 lg:pt-12">
+    <div
+      className="pointer-events-none absolute inset-0 opacity-[0.025]"
+      style={{
+        backgroundImage:
+          'linear-gradient(#5D00D6 1px, transparent 1px), linear-gradient(90deg, #5D00D6 1px, transparent 1px)',
+        backgroundSize: '52px 52px',
+      }}
+    />
+    <div
+      className="pointer-events-none absolute -top-60 -left-60 w-[700px] h-[700px] rounded-full opacity-[0.05]"
+      style={{ background: 'radial-gradient(circle, #5D00D6 0%, transparent 70%)' }}
+    />
 
-    <div className="container mx-auto px-6 md:px-8 w-full relative z-10" style={{ maxWidth: '1240px' }}>
-      <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-6 xl:gap-8 items-center w-full">
-        <div className="py-4 pr-0 xl:pr-6">
-          <h1 className="c9-hero-title mb-5 whitespace-pre-line xl:text-slate-900 text-white">
-            Take control of your entire IT environment — without disrupting what’s already in place
-          </h1>
-          <p className="c9-body mb-8 max-w-[550px] whitespace-pre-line xl:text-slate-600 text-white/80">
-            C9 works across your internal teams, vendors, and systems to unify, optimise, and manage your full technology environment.
-          </p>
+    <div className={`${C} relative z-10`}>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center pb-14 lg:pb-20">
+        <div>
+          <FadeIn>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
+              <ShieldCheck size={13} className="text-[#5D00D6]" />
+              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Managed IT & Telco</span>
+            </div>
+          </FadeIn>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-            <PrimaryBtn
-              href="#consultation-section"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              Book an Enterprise Consultation
-            </PrimaryBtn>
-            <a
-              href="#capabilities-section"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white xl:border-[#5D00D6] text-white xl:text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-white/10 xl:hover:bg-[#5D00D6] xl:hover:text-white transition-colors"
-            >
-              Explore Capabilities →
-            </a>
+          <FadeIn delay={0.08}>
+            <h1 className="c9-hero-title mb-6">
+              Enterprise IT & Telco — <br/>
+              <span className="text-[#5D00D6]">Fully Managed. Fully Accountable.</span>
+            </h1>
+          </FadeIn>
+
+          <FadeIn delay={0.15}>
+            <p className="c9-body mb-8 max-w-[580px] text-slate-700">
+              Operate complex, multi-site environments with a single partner responsible for uptime, security, and performance—end to end.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.22}>
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <a
+                href="#consultation"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+              >
+                Book Enterprise Consultation
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#architecture"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+              >
+                View Architecture & SLA Model
+              </a>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.32}>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-100">
+              {[
+                { label: '120+', detail: 'Sites Managed' },
+                { label: '3,000+', detail: 'Endpoints' },
+                { label: '99.99%', detail: 'Network Uptime' },
+                { label: '24/7', detail: 'Monitoring' },
+              ].map((stat, i) => (
+                <div key={i} className="flex flex-col">
+                  <span className="text-2xl font-bold text-[#0c1024]">{stat.label}</span>
+                  <span className="text-[12px] text-slate-500 font-bold uppercase tracking-wider">{stat.detail}</span>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+
+        <FadeIn delay={0.14} direction="right" className="relative hidden lg:block">
+          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+            <img
+              src="/images/hero_enterprise.png"
+              alt="Enterprise IT Infrastructure"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
+            
+            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/60">
+              <div className="flex items-center gap-4">
+                 <div className="w-12 h-12 rounded-full bg-[#5D00D6]/10 flex items-center justify-center">
+                    <Activity className="text-[#5D00D6]" size={24} />
+                 </div>
+                 <div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-[#5D00D6] mb-0.5">System Status</div>
+                    <div className="text-[16px] font-bold text-slate-900 leading-tight">All Multi-Site Operations Active</div>
+                 </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="hidden xl:block w-full h-[480px] lg:h-[540px] relative">
-          <HeroEnterpriseScale />
-        </div>
+        </FadeIn>
       </div>
     </div>
   </section>
 );
 
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 2 — ENTERPRISE REALITY
-   ══════════════════════════════════════════════════════════════════════════════ */
-const SectionReality = () => (
-  <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-100">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <FadeUp>
-        <div className="max-w-3xl mb-10 md:mb-12">
-          <span className="c9-eyebrow mb-4 block">Complex by Design</span>
-          <h2 className="c9-section-heading">Enterprise environments are complex by design</h2>
-          <p className="c9-body mt-6 text-xl">
-            Managing global infrastructure at scale means navigating overlapping siloes that hinder operational speed and security.
-          </p>
-        </div>
-      </FadeUp>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+/* ─────────────────────────────────────────────────────────
+   SECTION 2 — PROBLEM
+   ───────────────────────────────────────────────────────── */
+const SectionProblem = () => (
+  <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">The Enterprise Reality</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Why Enterprise Environments Fail
+        </h2>
+      </FadeIn>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {[
-          {
-            icon: <Layers size={24} />,
-            title: "Multiple Vendors",
-            desc: "Telcos, hardware partners, and software vendors all operating in silos without shared accountability."
-          },
-          {
-            icon: <Zap size={24} />,
-            title: "Fragmented Systems",
-            desc: "Legacy infrastructure clashing with modern cloud adoption, creating performance gaps and visibility dark spots."
-          },
-          {
-            icon: <X size={24} />,
-            title: "Lack of Control",
-            desc: "No single pane of glass to view performance, security posture, or compliance across your entire footprint."
-          },
-          {
-            icon: <Users size={24} />,
-            title: "Internal IT Pressure",
-            desc: "Your internal teams are buried in low-level support and vendor finger-pointing instead of driving high-value projects."
-          }
+          { icon: <Users className="text-[#5D00D6]" />, title: 'Multiple vendors → no accountability', desc: 'Fragmented support from different providers leads to "finger-pointing" when critical issues arise.' },
+          { icon: <BarChart3 className="text-[#5D00D6]" />, title: 'Reactive support → unresolved issues', desc: 'Fixing symptoms instead of addressing the root cause leads to recurring downtime and lost productivity.' },
+          { icon: <Lock className="text-[#5D00D6]" />, title: 'Security gaps across endpoints', desc: 'Inconsistent policies across distributed sites create invisible vulnerabilities for attackers to exploit.' },
+          { icon: <Globe className="text-[#5D00D6]" />, title: 'No unified visibility across sites', desc: 'Lack of central monitoring means problems are often only discovered after they cause failure.' },
+          { icon: <Zap className="text-[#5D00D6]" />, title: 'Downtime during peak operations', desc: 'Unreliable connectivity and hardware failures disrupt business when performance matters most.' },
         ].map((item, i) => (
-          <FadeUp key={i} delay={i * 0.1}>
-            <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full shadow-sm hover:shadow-md transition-all">
-              <div className="w-12 h-12 bg-[#5D00D6]/5 text-[#5D00D6] rounded-2xl flex items-center justify-center mb-6">
+          <FadeIn key={i} delay={i * 0.05} className="group">
+            <div className="h-full bg-white border border-slate-100 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:shadow-xl shadow-slate-200/50">
+              <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-              <p className="text-slate-500 leading-relaxed text-[15px]">{item.desc}</p>
+              <h3 className="c9-card-title mb-4 !text-[18px]">{item.title}</h3>
+              <p className="text-slate-500 text-[15px] leading-relaxed">{item.desc}</p>
             </div>
-          </FadeUp>
+          </FadeIn>
         ))}
       </div>
 
-      <FadeUp delay={0.4}>
-        <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
-           <p className="text-2xl font-bold text-slate-900">Most providers add complexity — <span className="text-[#5D00D6]">we remove it.</span></p>
-           <PrimaryBtn href="#consultation-section">See How We Simplify</PrimaryBtn>
-        </div>
-      </FadeUp>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 3 — CORE DIFFERENTIATOR
-   ══════════════════════════════════════════════════════════════════════════════ */
-const SectionDifferentiator = () => (
-  <section className="py-12 md:py-16 bg-white overflow-hidden">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <FadeUp>
-          <span className="c9-eyebrow mb-4 block">Our Approach</span>
-          <h2 className="c9-section-heading mb-6">We don’t replace your environment — we take control of it</h2>
-          <p className="c9-body mb-8 text-lg">
-            Unlike traditional MSPs that force you to rip and replace, C9 layers a unified operational model over your existing investments. We bring order to the chaos without resetting your progress.
-          </p>
-
-          <div className="space-y-6">
-            {[
-              { title: "Work Alongside IT Teams", desc: "We act as an extension of your expertise, not a rival. We take the operational load so you can focus on strategy." },
-              { title: "Manage Across Vendors", desc: "We own the relationships and the coordination. When something impacts performance, we resolve it regardless of which vendor is at fault." },
-              { title: "Standardise Operations", desc: "Uniform governance, security, and performance standards applied across every site and user in your footprint." },
-              { title: "Create Accountability", desc: "A single point of contact for every technical outcome. We own the environment, so you own the results." }
-            ].map((point, i) => (
-              <div key={i} className="flex gap-4">
-                <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-[#5D00D6] flex items-center justify-center text-white">
-                  <CheckCircle2 size={16} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 mb-1">{point.title}</h4>
-                  <p className="text-slate-500 text-[15px]">{point.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </FadeUp>
-
-        <FadeUp delay={0.2}>
-          <div className="relative">
-            <div className="bg-slate-900 rounded-[40px] p-10 text-white shadow-2xl relative z-10">
-              <div className="mb-10">
-                <p className="text-[#A855F7] font-bold text-[12px] uppercase tracking-[0.2em] mb-4">Enterprise Governance Layer</p>
-                <h3 className="text-3xl font-bold">Unifying your technical estate</h3>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center justify-between">
-                  <span>Telco & Connectivity</span>
-                  <div className="flex items-center gap-2 text-[#A855F7]">
-                    <CheckCircle2 size={18} /> <span className="text-[11px] font-bold">CONTROLLED</span>
-                  </div>
-                </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center justify-between">
-                  <span>Cybersecurity / SOC</span>
-                  <div className="flex items-center gap-2 text-[#A855F7]">
-                    <CheckCircle2 size={18} /> <span className="text-[11px] font-bold">CONTROLLED</span>
-                  </div>
-                </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center justify-between">
-                  <span>Managed IT Operations</span>
-                  <div className="flex items-center gap-2 text-[#A855F7]">
-                    <CheckCircle2 size={18} /> <span className="text-[11px] font-bold">CONTROLLED</span>
-                  </div>
-                </div>
-                <div className="p-6 text-center text-slate-400 text-[13px] italic">
-                   "A single operational layer across all locations and users."
-                </div>
-              </div>
-            </div>
-            {/* Background decorative element */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#5D00D6]/10 blur-[120px] -z-10 rounded-full" />
-          </div>
-        </FadeUp>
-      </div>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 4 — REFRAMED SERVICES
-   ══════════════════════════════════════════════════════════════════════════════ */
-const CAPABILITIES = [
-  {
-    icon: <Network size={26} className="text-[#5D00D6]" />,
-    title: 'Connectivity & Networks',
-    body: 'Enterprise-grade control across multiple connectivity vendors. High-performance Fibre and SD-WAN unified under C9 ownership.',
-    link: '/telco'
-  },
-  {
-    icon: <Shield size={26} className="text-[#5D00D6]" />,
-    title: 'Cybersecurity (C9 Defense)',
-    body: '24/7 Governance and threat management layered over existing infrastructure. Reducing risk through structured compliance.',
-    link: '/managed-it/security-solutions'
-  },
-  {
-    icon: <Monitor size={26} className="text-[#5D00D6]" />,
-    title: 'Managed IT Operations',
-    body: 'We take ownership of your operational environment, managing the transition from fragmented silos to a unified model.',
-    link: '/managed-it'
-  },
-  {
-    icon: <MessagesSquare size={26} className="text-[#5D00D6]" />,
-    title: 'Unified Communications',
-    body: 'Consolidate voice and video into a single managed environment, ensuring consistent communication across all sites.',
-    link: '/solutions'
-  },
-];
-
-const SectionServices = () => (
-  <section id="capabilities-section" className="py-12 md:py-16 bg-slate-50 border-y border-slate-100">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <FadeUp>
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
-          <span className="c9-eyebrow mb-4 block">The Ecosystem</span>
-          <h2 className="c9-section-heading">Your environment, unified under one operating model</h2>
-        </div>
-      </FadeUp>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {CAPABILITIES.map((cap, i) => (
-          <FadeUp key={i} delay={i * 0.1}>
-            <div className="bg-white border border-slate-200 p-10 rounded-[40px] flex flex-col h-full hover:shadow-xl hover:shadow-purple-900/5 transition-all">
-              <div className="mb-6 w-14 h-14 bg-[#5D00D6]/5 text-[#5D00D6] rounded-2xl flex items-center justify-center">
-                {cap.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-4">{cap.title}</h3>
-              <p className="text-slate-500 text-[15px] leading-relaxed flex-grow mb-8">{cap.body}</p>
-              
-              <Link
-                href={cap.link}
-                className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] group"
-              >
-                Explore <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </FadeUp>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 5 — OPERATING MODEL
-   ══════════════════════════════════════════════════════════════════════════════ */
-const STEPS = [
-  { n: "01", title: "Assess", desc: "Multi-site infrastructure & vendor audit to map the current state." },
-  { n: "02", title: "Identify Gaps", desc: "Locating risk mapping & performance bottlenecks across systems." },
-  { n: "03", title: "Align Vendors", desc: "Consolidating accountability and relationship management under C9." },
-  { n: "04", title: "Implement Control", desc: "Applying full governance & operational standards nationwide." },
-  { n: "05", title: "Optimise Continuously", desc: "Ongoing strategic steering and roadmap delivery for growth." }
-];
-
-const SectionOperatingModel = () => (
-  <section className="py-12 md:py-16 bg-white">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <FadeUp>
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <span className="c9-eyebrow mb-4 block">Structured Management</span>
-          <h2 className="c9-section-heading">A structured approach to managing complex environments</h2>
-        </div>
-      </FadeUp>
-
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-        {STEPS.map((step, i) => (
-          <FadeUp key={i} delay={i * 0.1}>
-            <div className="relative group">
-              <div className="text-6xl font-black text-slate-100 mb-6 transition-colors group-hover:text-[#5D00D6]/10">{step.n}</div>
-              <h4 className="text-xl font-bold text-slate-900 mb-4">{step.title}</h4>
-              <p className="text-slate-500 text-[14px] leading-relaxed">{step.desc}</p>
-              {i < 4 && (
-                <div className="hidden md:block absolute top-[2.5rem] -right-4 text-slate-200">
-                  <ArrowRight size={24} strokeWidth={1} />
-                </div>
-              )}
-            </div>
-          </FadeUp>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 6 — ENTERPRISE SCENARIO (THE STORY)
-   ══════════════════════════════════════════════════════════════════════════════ */
-const SectionScenario = () => (
-  <section className="py-12 md:py-16 bg-[#0c1024] text-white relative overflow-hidden">
-    <div className="absolute inset-0 bg-[#5D00D6]/5 opacity-30 pointer-events-none" />
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px] relative z-10">
-      <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center">
-        <FadeUp>
-          <span className="text-[#A855F7] font-bold text-[12px] uppercase tracking-[0.2em] mb-6 block">Real World Impact</span>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">National Retailer Transition</h2>
-          <div className="space-y-8">
-            <div className="bg-white/5 border border-white/10 rounded-[32px] p-8">
-              <h4 className="text-[#A855F7] font-bold text-[13px] uppercase tracking-widest mb-4">THE CHALLENGE</h4>
-              <p className="text-slate-300 text-lg">600+ sites across Australia, managed by 12 different vendors. Chronic downtime at the store level and constant pressure on the internal IT team to triage finger-pointing vendors.</p>
-            </div>
-            <div className="bg-[#5D00D6] rounded-[32px] p-8 shadow-2xl shadow-purple-900/40">
-              <h4 className="text-white/70 font-bold text-[13px] uppercase tracking-widest mb-4">C9 ACTION</h4>
-              <p className="text-white text-lg">We implemented a unified connectivity and managed operations layer. C9 took ownership of every vendor relationship and standardised the technical estate nationwide.</p>
-            </div>
-          </div>
-        </FadeUp>
-
-        <FadeUp delay={0.2}>
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white/5 border border-white/10 rounded-[32px] p-10 flex flex-col items-center justify-center text-center">
-              <div className="text-5xl font-black text-[#A855F7] mb-4">100%</div>
-              <p className="text-slate-400 font-bold text-[13px] uppercase tracking-widest">UPTIME ACHIEVED</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-[32px] p-10 flex flex-col items-center justify-center text-center">
-              <div className="text-5xl font-black text-[#A855F7] mb-4">30%</div>
-              <p className="text-slate-400 font-bold text-[13px] uppercase tracking-widest">COST REDUCTION</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-[32px] p-10 col-span-2 text-center">
-               <div className="text-4xl font-black text-[#A855F7] mb-4">ZERO</div>
-               <p className="text-slate-400 font-bold text-[13px] uppercase tracking-widest">INTERNAL IT NOISE</p>
-               <p className="text-slate-500 mt-4 max-w-sm mx-auto">The internal IT team was freed from reactive triage to focus on strategic business technology upgrades.</p>
-            </div>
-          </div>
-        </FadeUp>
-      </div>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 7 — GOVERNANCE SECTION
-   ══════════════════════════════════════════════════════════════════════════════ */
-const SectionGovernance = () => (
-  <section className="py-12 md:py-16 bg-white">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <FadeUp>
-        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
-          <h2 className="c9-section-heading">Built for control, compliance, and scale</h2>
-        </div>
-      </FadeUp>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {[
-          { icon: <Shield size={24} />, title: "Essential 8 Alignment", desc: "Rigorous cyber hygiene standards applied across entire enterprise architectures." },
-          { icon: <Monitor size={24} />, title: "24/7 Australian SOC", desc: "Real-time threat monitoring and response managed by local security specialists." },
-          { icon: <BarChart3 size={24} />, title: "Asset Management", desc: "Complete lifecycle tracking of every device and connection in your network." },
-          { icon: <Lock size={24} />, title: "Uptime Guarantee", desc: "Contractual SLAs that reflect the critical nature of your operations." }
-        ].map((item, i) => (
-          <FadeUp key={i} delay={i * 0.1}>
-            <div className="flex gap-6 items-start">
-               <div className="w-12 h-12 bg-[#5D00D6]/5 text-[#5D00D6] rounded-xl flex items-center justify-center shrink-0">
-                 {item.icon}
-               </div>
-               <div>
-                 <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
-                 <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
-               </div>
-            </div>
-          </FadeUp>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 8 — EXPLORATION LINKS
-   ══════════════════════════════════════════════════════════════════════════════ */
-const ExplorationBlock = () => (
-  <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-100">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <FadeUp>
-        <div className="max-w-4xl">
-          <h2 className="text-[28px] font-bold text-slate-900 mb-4">Deep dive into our enterprise capabilities</h2>
-          <p className="c9-body text-[18px] mb-8">Select a specific operational layer to see how we manage it:</p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { label: "Connectivity & Networks", href: "/telco" },
-              { label: "Cybersecurity", href: "/managed-it/security-solutions" },
-              { label: "Managed IT", href: "/managed-it" },
-              { label: "Communications", href: "/solutions" },
-            ].map((link, i) => (
-              <Link 
-                key={i} 
-                href={link.href}
-                className="bg-white border border-slate-200 p-6 rounded-2xl flex items-center justify-between group hover:border-[#5D00D6] hover:shadow-md transition-all"
-              >
-                <span className="font-bold text-slate-700 group-hover:text-[#5D00D6]">{link.label}</span>
-                <ArrowUpRight size={18} className="text-slate-300 group-hover:text-[#5D00D6] transition-all" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </FadeUp>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 9 — FINAL CTA
-   ══════════════════════════════════════════════════════════════════════════════ */
-const DecisionCTA = () => (
-  <section className="bg-[#0F0F1A] py-12 md:py-16 relative overflow-hidden transition-all">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,#5D00D6_0%,transparent_55%)] opacity-10 pointer-events-none" />
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px] relative z-10 text-center">
-      <FadeUp>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 max-w-2xl mx-auto leading-tight">
-          Bring clarity and control to your IT environment
-        </h2>
-        <p className="text-[20px] text-slate-400 mb-8 max-w-xl mx-auto">
-          Scale with confidence while reducing operational risk. Speak with our enterprise team today.
+      <FadeIn delay={0.3} className="text-center mt-12">
+        <p className="text-slate-900 font-bold text-[22px]">
+          Enterprise environments fail when no one owns the system.
         </p>
-        <PrimaryBtn href="#consultation-section">Book an Enterprise Consultation</PrimaryBtn>
-      </FadeUp>
+      </FadeIn>
     </div>
   </section>
 );
 
-/* ══════════════════════════════════════════════════════════════════════════════
-   PAGE ASSEMBLY
-   ══════════════════════════════════════════════════════════════════════════════ */
+/* ─────────────────────────────────────────────────────────
+   SECTION 3 — ACCOUNTABILITY MODEL
+   ───────────────────────────────────────────────────────── */
+const SectionAccountability = () => (
+  <section className="py-12 lg:py-16 bg-white">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow mb-4">The Solution</span>
+          <h2 className="c9-section-heading mb-8">
+            One Partner. Total Ownership.
+          </h2>
+          <p className="c9-body mb-8 text-slate-600">
+            C9 operates as the **single accountable layer** across your entire technology path. We eliminate vendor overlap and provide a unified escalation path for all IT and Telco needs.
+          </p>
+          <div className="space-y-4 mb-10">
+            {[
+              'Network performance',
+              'Endpoint management',
+              'Telco & connectivity',
+              'Security posture',
+              'Monitoring & incident response'
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                <span className="text-[16px] font-bold text-slate-800">{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="p-6 bg-[#5D00D6]/5 rounded-2xl border-l-[6px] border-[#5D00D6]">
+             <p className="text-[#0c1024] font-bold text-[18px]">
+               No vendor overlap. No blame shifting. One escalation path.
+             </p>
+          </div>
+        </FadeIn>
+        
+        <FadeIn direction="right" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+           {[
+             { title: 'Single Point of Contact', icon: <PhoneCall />, desc: 'One number for everything.' },
+             { title: 'Vendor Management', icon: <Handshake />, desc: 'We manage your 3rd party providers.' },
+             { title: 'Contractual SLAs', icon: <FileCheck />, desc: 'Accountability written into law.' },
+             { title: 'Dedicated vCIO', icon: <UserCheck />, desc: 'Strategic oversight, not just support.' },
+           ].map((card, i) => (
+             <div key={i} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col items-center text-center">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 text-[#5D00D6] shadow-sm">
+                   {card.icon}
+                </div>
+                <h4 className="font-bold text-slate-900 mb-1">{card.title}</h4>
+                <p className="text-[13px] text-slate-500">{card.desc}</p>
+             </div>
+           ))}
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+const UserCheck = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 4 — ARCHITECTURE STACK
+   ───────────────────────────────────────────────────────── */
+const SectionArchitecture = () => (
+  <section id="architecture" className="py-12 lg:py-16 bg-slate-900 text-white overflow-hidden relative">
+    <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
+         style={{ backgroundImage: 'radial-gradient(circle at 20% 30%, #5D00D6 0%, transparent 60%)' }} />
+    
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4 !text-[#a56eff]">System Design</span>
+        <h2 className="c9-section-heading !text-white max-w-3xl mx-auto">
+          Enterprise Architecture Designed for Scale & Resilience
+        </h2>
+      </FadeIn>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {[
+          {
+            title: 'Network Layer',
+            icon: <Network className="text-[#a56eff]" />,
+            items: ['SD-WAN / multi-site connectivity', 'Redundant ISP failover', 'Traffic prioritisation']
+          },
+          {
+            title: 'Endpoint Layer',
+            icon: <Laptop className="text-[#a56eff]" />,
+            items: ['Device lifecycle management', 'Patch automation', 'Remote control']
+          },
+          {
+            title: 'Security Layer',
+            icon: <ShieldAlert className="text-[#a56eff]" />,
+            items: ['Endpoint Detection & Response', 'Identity & email protection', 'Firewall & Zero Trust']
+          },
+          {
+            title: 'Monitoring Layer',
+            icon: <Activity className="text-[#a56eff]" />,
+            items: ['24/7 NOC + SOC', 'Real-time alerting', 'Predictive issue detection']
+          },
+          {
+            title: 'Recovery Layer',
+            icon: <RefreshCw className="text-[#a56eff]" />,
+            items: ['Backup & disaster recovery', 'Restore testing', 'Business continuity']
+          }
+        ].map((card, i) => (
+          <FadeIn key={i} delay={i * 0.05} className="group">
+            <div className="h-full bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:bg-white/[0.08] transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
+                {card.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-6 text-white">{card.title}</h3>
+              <ul className="space-y-4">
+                {card.items.map((item, j) => (
+                  <li key={j} className="flex gap-3 text-[14px] text-slate-300 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#a56eff] shrink-0 mt-1.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 5 — SLA & SUPPORT
+   ───────────────────────────────────────────────────────── */
+const SectionSLA = () => (
+  <section className="py-12 lg:py-16 bg-white border-b border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">Service Excellence</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          SLA-Backed Enterprise Support
+        </h2>
+      </FadeIn>
+
+      <FadeIn className="max-w-4xl mx-auto shadow-2xl shadow-slate-200/50 rounded-3xl overflow-hidden border border-slate-100 mb-12">
+        <Table>
+          <TableHeader className="bg-[#0c1024]">
+            <TableRow className="hover:bg-transparent border-none">
+              <TableHead className="text-white font-bold py-6 px-10 h-auto">Priority</TableHead>
+              <TableHead className="text-white font-bold py-6 px-10 h-auto">Response Time</TableHead>
+              <TableHead className="text-white font-bold py-6 px-10 h-auto">Resolution Target</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell className="py-6 px-10 font-bold text-slate-900 h-auto">P1 (Critical)</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 15 mins</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 4 hours</TableCell>
+            </TableRow>
+            <TableRow className="bg-slate-50">
+              <TableCell className="py-6 px-10 font-bold text-slate-900 h-auto">P2 (Major)</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 30 mins</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 8 hours</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="py-6 px-10 font-bold text-slate-900 h-auto">P3 (Standard)</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 2 hours</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 24 hours</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </FadeIn>
+
+      <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto text-center mb-12">
+        {[
+          { label: '24/7 Service Desk', icon: <Users size={18} /> },
+          { label: 'Dedicated Account Manager', icon: <Handshake size={18} /> },
+          { label: 'Escalation within SLA', icon: <BarChart3 size={18} /> },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.1} className="flex items-center justify-center gap-3 text-slate-700 font-bold">
+            <span className="p-2 bg-[#5D00D6]/5 rounded-full text-[#5D00D6]">{item.icon}</span>
+            {item.label}
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn delay={0.4} className="text-center border-t border-slate-100 pt-10">
+        <p className="text-[#5D00D6] font-bold text-[20px]">
+          This is contract-backed performance—not best-effort support.
+        </p>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 6 — CYBERSECURITY
+   ───────────────────────────────────────────────────────── */
+const SectionSecurity = () => (
+  <section className="py-12 lg:py-16 bg-slate-50 border-b border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">C9 Defense</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Security Built Into Operations
+        </h2>
+      </FadeIn>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        {[
+          { title: 'Essential 8 alignment', icon: <Layers /> },
+          { title: 'Continuous monitoring', icon: <Activity /> },
+          { title: 'Threat detection', icon: <ShieldAlert /> },
+          { title: 'Vulnerability management', icon: <Search /> },
+          { title: 'Backup integrity', icon: <Database /> },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.05} className="group">
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 hover:border-[#5D00D6]/20 transition-all text-center h-full">
+              <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mx-auto mb-6 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+                {item.icon}
+              </div>
+              <h4 className="font-bold text-slate-900 leading-tight">{item.title}</h4>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn delay={0.3} className="text-center">
+        <div className="inline-block bg-[#0c1024] text-white px-8 py-4 rounded-2xl">
+           <span className="font-bold flex items-center gap-3">
+             <Shield className="text-[#5D00D6]" />
+             Security is continuously enforced—not periodically checked.
+           </span>
+        </div>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 7 — MIGRATION FRAMEWORK
+   ───────────────────────────────────────────────────────── */
+const SectionMigration = () => (
+  <section className="py-12 lg:py-16 bg-white">
+    <div className={C}>
+      <FadeIn className="text-center mb-20">
+        <span className="c9-eyebrow mb-4">Reliable Change</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Zero-Disruption Transition
+        </h2>
+      </FadeIn>
+
+      <div className="grid md:grid-cols-5 gap-8 relative">
+        <div className="hidden md:block absolute top-[45px] left-[10%] right-[10%] h-[2px] bg-slate-100" />
+        
+        {[
+          { step: '01', title: 'Audit & Discovery', desc: 'Full mapping of your current architecture and vendor contracts.' },
+          { step: '02', title: 'Risk Mapping', desc: 'Identifying single points of failure and security vulnerabilities.' },
+          { step: '03', title: 'Transition Planning', desc: 'Detailed migration timeline with rollback safety triggers.' },
+          { step: '04', title: 'Controlled Migration', desc: 'Phased rollout with zero operational downtime.' },
+          { step: '05', title: 'Stabilisation', desc: 'Post-migration monitoring and proactive performance tuning.' },
+        ].map((s, i) => (
+          <FadeIn key={i} delay={i * 0.1} className="relative text-center">
+            <div className="w-[90px] h-[90px] rounded-full bg-white border-2 border-[#5D00D6] flex items-center justify-center mb-6 mx-auto relative z-10 shadow-lg shadow-purple-900/10 transition-transform hover:scale-110 duration-500 bg-white group hover:bg-[#5D00D6] transition-colors">
+               <span className="text-2xl font-black text-[#5D00D6] group-hover:text-white">{s.step}</span>
+            </div>
+            <h3 className="c9-card-title mb-4 !text-[16px]">{s.title}</h3>
+            <p className="text-slate-500 text-[13px] leading-relaxed px-2">{s.desc}</p>
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn delay={0.6} className="mt-16 text-center">
+         <p className="text-slate-900 font-bold text-[24px]">
+           No downtime. No disruption.
+         </p>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 8 — INTEGRATIONS
+   ───────────────────────────────────────────────────────── */
+const SectionIntegrations = () => (
+  <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">Compatibility</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Works With Your Existing Systems
+        </h2>
+      </FadeIn>
+
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        {[
+          { title: 'Microsoft 365', icon: <Layers /> },
+          { title: 'Azure / AWS', icon: <Cloud /> },
+          { title: 'ERP systems', icon: <Database /> },
+          { title: 'POS platforms', icon: <Activity /> },
+          { title: 'VoIP systems', icon: <PhoneCall /> },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.05}>
+            <div className="bg-white h-32 rounded-2xl border border-slate-200 flex flex-col items-center justify-center p-4 text-center hover:shadow-md transition-all">
+                <div className="text-[#5D00D6] mb-3">{item.icon}</div>
+                <span className="font-bold text-slate-800 text-[15px]">{item.title}</span>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn className="text-center">
+         <p className="text-slate-500 font-medium">
+           We integrate into your environment—not replace it blindly.
+         </p>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 10 — OUTCOMES
+   ───────────────────────────────────────────────────────── */
+const SectionOutcomes = () => (
+  <section className="py-12 lg:py-16 bg-white border-t border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">Results Delivered</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Business Outcomes
+        </h2>
+      </FadeIn>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        {[
+          { title: 'Reduced operational risk', desc: 'Predictable systems with zero blind spots.' },
+          { title: 'Fewer outages', desc: 'Proactive maintenance before failures occur.' },
+          { title: 'Faster resolution', desc: 'Direct access to engineers who know your stack.' },
+          { title: 'Lower vendor overhead', desc: 'We take the management off your plate.' },
+          { title: 'Predictable IT costs', desc: 'Locked-in enterprise performance models.' },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.1}>
+            <div className="flex flex-col gap-4">
+              <div className="w-10 h-10 rounded-full bg-[#5D00D6] flex items-center justify-center text-white">
+                <CheckCircle size={20} />
+              </div>
+              <h4 className="font-bold text-slate-900 leading-snug">{item.title}</h4>
+              <p className="text-slate-500 text-[13px]">{item.desc}</p>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 11 — FINAL CTA
+   ───────────────────────────────────────────────────────── */
+const FinalCTA = () => (
+  <section className="py-16 lg:py-24 bg-[#0c1024] text-white relative overflow-hidden">
+     <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent"></div>
+     <div className={`${C} relative z-10 text-center`}>
+        <FadeIn>
+          <h2 className="c9-section-heading !text-white mb-8 max-w-3xl mx-auto md:!text-[46px] lg:!text-[52px]">
+            Ready to Simplify and <br/>Take Control?
+          </h2>
+          <p className="text-white/70 mb-12 max-w-2xl mx-auto text-[18px]">
+            Partner with a single accountable organization that owns your IT and Telco outcomes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+             <a
+                href="#consultation"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-16 px-12 font-extrabold text-[17px] hover:bg-[#4d00b3] transition-all shadow-2xl shadow-brand-purple/30 group w-full sm:w-auto"
+              >
+                Book Enterprise Consultation
+                <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#consultation"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-16 px-12 font-extrabold text-[17px] hover:bg-white hover:text-[#0c1024] transition-all w-full sm:w-auto bg-transparent"
+              >
+                Speak to a Solutions Architect
+              </a>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 opacity-70 text-[13px] font-bold uppercase tracking-widest text-white">
+            <span>SLA Backed</span>
+            <span>24/7 Monitoring</span>
+            <span>Australian Support</span>
+          </div>
+        </FadeIn>
+     </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   PAGE EXPORT
+   ───────────────────────────────────────────────────────── */
 export default function Enterprise2Page() {
   return (
     <main className="min-h-screen bg-white">
       <Hero />
-      <WpHighlights />
-      <SectionReality />
-      <SectionDifferentiator />
+      <WpClientTicker />
       
-      <section className="bg-white border-b border-slate-100 py-8">
-        <div className="container mx-auto px-6 max-w-[1240px]">
-          <WpClientTicker />
-        </div>
-      </section>
-
-      <SectionServices />
-      <SectionOperatingModel />
-      <SectionScenario />
-      <SectionGovernance />
+      <SectionProblem />
+      <SectionAccountability />
+      <SectionArchitecture />
+      
+      <SectionSLA />
+      <SectionSecurity />
+      <SectionMigration />
+      <SectionIntegrations />
 
       <WpCaseStudies 
-        title="Enterprise clients thriving under C9 management" 
-        eyebrow="ENTERPRISE PROOF" 
+        eyebrow="ENTERPRISE RESULTS"
+        title="Accountability in Action"
         articles={[
-           {
-             tag: 'RETAIL LOGISTICS',
-             title: 'National Network Optimization',
-             desc: 'Managed the consolidation of connectivity for 400+ hubs, reducing latency by 45% and unifying vendor management.',
-             img: '/images/case-studies/case-study-1.jpg',
-             videoText: 'Logistics Success',
-             href: '/case-studies'
-           },
-           {
-             tag: 'CRITICAL INFRA',
-             title: 'Zero-Downtime Data Center Transition',
-             desc: 'Executed a flawless migration of broadcast-grade systems with 100% uptime maintained during the cutover.',
-             img: '/images/case-studies/case-study-2.jpg',
-             videoText: 'Infrastructure Success',
-             href: '/case-studies'
-           }
+          {
+            tag: 'RETAIL',
+            title: '85 Locations Total Rollout',
+            desc: 'Successfully rolled out managed infrastructure across 85 locations nationally, achieving 99.98% network uptime.',
+            img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800',
+            videoText: '99.98% Uptime',
+            href: '#consultation'
+          },
+          {
+            tag: 'LOGISTICS',
+            title: '1,200 Endpoints Consolidated',
+            desc: 'Consolidated 6 separate vendors into a single managed path for 1,200 endpoints, resulting in a 42% reduction in operational incidents.',
+            img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=800',
+            videoText: '42% Incident Reduction',
+            href: '#consultation'
+          },
+          {
+            tag: 'COMPLIANCE-HEAVY',
+            title: 'Essential 8 Aligned Governance',
+            desc: 'Continuous enforcement of Essential 8 security controls with zero major incidents reported in over 18 months of operation.',
+            img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
+            videoText: 'Zero Incidents (18mo)',
+            href: '#consultation'
+          }
         ]}
       />
 
-      <WpIndustryTabs />
-      <WpUnifiedClassification />
+      <SectionOutcomes />
       
-      <ExplorationBlock />
-      <DecisionCTA />
+      <FinalCTA />
 
-      <section id="consultation-section">
+      <section id="consultation" className="bg-white border-t border-slate-100 pb-12">
         <WpConsultationForm
-          eyebrow="ENTERPRISE CONSULTATION"
-          title="Take Control of Your Environment"
-          description="Speak with a senior advisor to assess your infrastructure and define a structured path toward unified control — without disruption."
-          formTitle="Book My Consultation"
+          showHeader={false}
+          eyebrow="GOVERNANCE & ACCOUNTABILITY"
+          title="Speak to a Solutions Architect"
+          description="Ready to consolidate your technology path? Book a strategy session to discuss your architecture, SLA requirements, and multi-site transition plan."
+          formTitle="Request Enterprise Pack"
         />
       </section>
     </main>
