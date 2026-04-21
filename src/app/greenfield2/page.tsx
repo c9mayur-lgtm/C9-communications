@@ -891,7 +891,7 @@ export default function Greenfield2Page() {
             desc: 'Successfully commissioned 12 new sites across 3 states in under 6 weeks, providing unified networking and zero-day operational readiness.',
             img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
             videoText: 'National Site Rollout',
-            href: '#consultation'
+            href: '/case-studies/retail-pos-stabilisation'
           },
           {
             tag: 'CORPORATE HEADQUARTERS',
@@ -899,7 +899,7 @@ export default function Greenfield2Page() {
             desc: 'Managed the full procurement, cabling, and commissioning of a 1,200sqm headquarters, delivering a high-performance environment from shell to handover.',
             img: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800',
             videoText: 'Stockdale & Leggo HQ',
-            href: '#consultation'
+            href: '/case-studies/greenfield-site-rollout'
           },
           {
             tag: 'INDUSTRIAL LOGISTICS',
@@ -907,7 +907,7 @@ export default function Greenfield2Page() {
             desc: 'Delivery of secure networking, enterprise Wi-Fi, and integrated IP security systems for a mission-critical 10,000sqm logistics facility.',
             img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
             videoText: 'Logistics Site Setup',
-            href: '#consultation'
+            href: '/case-studies/greenfield-site-rollout'
           }
         ]}
       />

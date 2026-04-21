@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 export const WpSimplifyingIT = () => {
@@ -5,33 +7,34 @@ export const WpSimplifyingIT = () => {
     <section className="py-10 md:py-12 bg-white border-t border-gray-100">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="c9-eyebrow mb-4 block">PROVEN EXPERIENCE</span>
+          <span className="c9-eyebrow mb-4 block">WHY BUSINESSES CHOOSE C9</span>
           <h2 className="c9-section-heading text-[#0c1024]">
-            Simplifying IT for a complex world.
+            Why Businesses Choose C9
           </h2>
+          <p className="c9-body mt-4">We don’t just support IT—we take ownership of it.</p>
         </div>
 
         <div className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
           {[
             { 
-              title: 'Cost-effectiveness', 
-              desc: 'We offer affordable IT solutions that help you reduce costs and improve your bottom line.',
-              icon: '/images/icons/cost-effectiveness.png?v=2'
+              title: 'Single Accountability', 
+              desc: 'One partner responsible for everything—from your internet connection to your endpoint security.',
+              icon: '/images/icons/industry-expertise.png'
             },
             { 
-              title: 'Innovative Technology', 
-              desc: 'We stay up-to-date with the latest technology trends and offer innovative solutions that help you stay ahead.',
-              icon: '/images/icons/innovative-technology.png?v=2'
+              title: 'Proven Multi-Site Capability', 
+              desc: 'Consistent delivery and managed support across multiple locations, nationwide.',
+              icon: '/images/icons/scalability.png'
             },
             { 
-              title: 'Industry Expertise', 
-              desc: 'We specialize in serving specific industries, such as healthcare, finance, or manufacturing.',
-              icon: '/images/icons/industry-expertise.png?v=2'
+              title: 'Built for Reliability', 
+              desc: 'Infrastructure designed to minimise downtime and operational disruption.',
+              icon: '/images/icons/cost-effectiveness.png'
             },
             { 
-              title: 'Scalability', 
-              desc: 'Our solutions are scalable and can grow with your business, ensuring that you get the most value.',
-              icon: '/images/icons/scalability.png?v=2'
+              title: 'Integrated Systems', 
+              desc: 'IT, Telco, and Security working as one cohesive system, managed by one team.',
+              icon: '/images/icons/innovative-technology.png'
             }
           ].map((f, i) => (
             <div key={i} className={`flex flex-col items-start flex-1 ${i === 0 ? 'pb-6 lg:pb-0 lg:pr-8' : 

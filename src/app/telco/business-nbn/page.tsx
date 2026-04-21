@@ -42,7 +42,8 @@ export default function SmallBusinessNbnPage() {
             title: '15-staff office stops the dropouts',
             desc: "A small business with 15 staff was experiencing slow speeds and call dropouts. C9 reviewed their current connection, recommended a suitable nbn plan, and optimised their internal setup. Result: Improved stability, better call quality, and consistent performance across the team.",
             img: 'https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=2000&auto=format&fit=crop',
-            videoText: 'Stability Restored'
+            videoText: 'Stability Restored',
+            href: '/case-studies/retail-pos-stabilisation'
           }
         ]}
       />

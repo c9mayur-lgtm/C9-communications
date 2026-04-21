@@ -1,757 +1,659 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  CheckCircle2,
-  X,
-  Network,
-  Phone,
-  Shield,
-  Monitor,
-  Search,
-  Zap,
-  Building2,
-  Users,
-  TrendingUp,
-  Clock,
-  ChevronDown,
+  ArrowRight, CheckCircle, ShieldCheck, Zap, 
+  HelpCircle, Clock, Search, Handshake, 
+  Target, Monitor, Lock, Cloud, PhoneCall,
+  Users, MessageSquare, AlertCircle, Server,
+  Activity, Database, Shield, Globe, Cpu,
+  FileCheck, ShieldAlert, BarChart3, RefreshCw,
+  Network, Laptop, Layers
 } from 'lucide-react';
-import { WpHero } from '@/components/layout/WpHero';
-import { WpHighlights } from '@/components/wordpress/WpHighlights';
-import { WpIndustryTabs } from '@/components/wordpress/WpIndustryTabs';
-import { WpUnifiedClassification } from '@/components/wordpress/WpUnifiedClassification';
-import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { WpCustomerFeedback } from '@/components/wordpress/WpCustomerFeedback';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
+import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
-import { Card } from '@/components/ui/card';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+import { 
+  Table, 
+  TableHeader, 
+  TableBody, 
+  TableHead, 
+  TableRow, 
+  TableCell 
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 
-/* ─── shared animation wrapper ─────────────────────────────────────────────── */
-const FadeUp = ({
+/* ─────────────────────────────────────────────────────────
+   ANIMATION HELPERS
+   ───────────────────────────────────────────────────────── */
+const FadeIn = ({
   children,
   delay = 0,
   className = '',
+  direction = 'up',
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.55, delay, ease: 'easeOut' }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
-
-/* ─── shared button primitives (match WpHero exactly) ──────────────────────── */
-const PrimaryBtn = ({
-  href,
-  children,
-  onClick,
-}: {
-  href: string;
-  children: React.ReactNode;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-}) => (
-  <a
-    href={href}
-    onClick={onClick}
-    className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20 group whitespace-nowrap"
-  >
-    {children}
-    <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-  </a>
-);
-
-const OutlineBtn = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a
-    href={href}
-    className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-colors whitespace-nowrap"
-  >
-    {children}
-  </a>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 2 — ENTERPRISE REALITY CHECK
-══════════════════════════════════════════════════════════════════════════════ */
-const PAIN_CARDS = [
-  {
-    icon: <Network size={24} />,
-    title: 'The Coordination Nightmare',
-    body: "You're spending 6 hours a week just coordinating between your internet provider, phone system vendor, and IT company. When something breaks, everyone points fingers. No one owns the outcome.",
-  },
-  {
-    icon: <Clock size={24} />,
-    title: 'The Downtime Tax',
-    body: "Your Brisbane office went offline for 3 hours last month. The Telco blamed the router. The IT company blamed the connection. Meanwhile, your team lost productivity and your reputation took a hit.",
-  },
-  {
-    icon: <TrendingUp size={24} />,
-    title: 'The Growth Ceiling',
-    body: "You want to open two new locations this year, but the thought of replicating your current IT setup — with all its complexity and vendor dependencies — makes you delay the expansion.",
-  },
-];
-
-const PainPoints = () => (
-  <section className="py-12 md:py-16 bg-white">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <FadeUp>
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="c9-eyebrow mb-4 block">The Enterprise Reality</span>
-          <h2 className="c9-section-heading">
-            Managing enterprise IT at scale shouldn't feel this chaotic.
-          </h2>
-        </div>
-      </FadeUp>
-
-      {/* Unified Container Grid */}
-      <div className="bg-white border border-gray-100 rounded-[32px] overflow-hidden shadow-2xl shadow-purple-900/[0.03] relative z-20">
-        <div className="grid md:grid-cols-3">
-          {PAIN_CARDS.map((card, i) => (
-            <div 
-              key={i} 
-              className={`p-10 flex flex-col group transition-all duration-500 hover:bg-slate-50/50 
-                ${i < 2 ? 'md:border-r' : ''} 
-                border-gray-100`}
-            >
-              <div className="w-12 h-12 rounded-2xl bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center mb-6 border border-[#5D00D6]/5 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
-                {card.icon}
-              </div>
-              <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 group-hover:text-[#5D00D6] transition-colors leading-tight">
-                {card.title}
-              </h3>
-              <p className="c9-body !text-[15px] leading-relaxed">
-                {card.body}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <FadeUp delay={0.35}>
-        <div className="text-center mt-12 max-w-2xl mx-auto">
-          <p className="text-[20px] md:text-[24px] font-bold text-[#0c1024] tracking-tight leading-snug">
-            "There's a better way to run your business infrastructure. <br />
-            <span className="text-[#5D00D6]">And it's simpler than you think."</span>
-          </p>
-        </div>
-      </FadeUp>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 3 — THE C9 DIFFERENCE
-══════════════════════════════════════════════════════════════════════════════ */
-const BEFORE_AFTER = [
-  { before: '3–5 vendors', after: '1 partner' },
-  { before: '15–25 vendor contacts', after: '1 invoice' },
-  { before: 'Finger-pointing when issues happen', after: 'Clear ownership' },
-  { before: 'Reactive support (9–5 business hours)', after: 'Proactive 24/7 monitoring' },
-  { before: 'DIY vendor coordination', after: 'C9 manages everything' },
-  { before: 'Tech refresh when it breaks', after: 'Strategic IT roadmap' },
-];
-
-const ValueProposition = () => (
-  <section className="py-12 md:py-16 bg-white">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 xl:gap-16 items-start">
-
-        {/* Left 60% */}
-        <FadeUp>
-          <span className="c9-eyebrow mb-6 block">The C9 Difference</span>
-          <h2 className="c9-section-heading mb-8">
-            One partner. Complete infrastructure. Zero coordination.
-          </h2>
-          <p className="c9-body mb-8 text-[17px]">
-            We don't just provide IT services — we own the outcome. When you partner with C9, you get a single team that designs, deploys, and manages your entire technology stack across every location.
-          </p>
-          <p className="text-[16px] font-semibold text-[#1A1A2E] mb-6">Here's what that actually means:</p>
-          <ul className="space-y-4 mb-10">
-            {[
-              'One phone number for everything (not three different support lines)',
-              'One bill covering all sites and services (not vendor invoice chaos)',
-              'One Australian-based team that knows your entire environment',
-              'One strategic advisor who understands your business goals',
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <CheckCircle2 size={20} className="text-[#5D00D6] flex-shrink-0 mt-0.5" />
-                <span className="c9-body !text-[#1A1A2E]">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="c9-body mb-8">
-            We've consolidated the tech stack for 150+ multi-site businesses across Australia. We know what works — and what doesn't.
-          </p>
-          <Link
-            href="/about/case-studies"
-            className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] uppercase tracking-[0.05em] hover:gap-3 transition-all whitespace-nowrap"
-          >
-            View Case Studies <ArrowRight size={18} className="shrink-0" />
-          </Link>
-        </FadeUp>
-
-        {/* Right 40% — comparison table */}
-        <FadeUp delay={0.15}>
-          <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-lg">
-            {/* Table header */}
-            <div className="grid grid-cols-2 text-[12px] font-black uppercase tracking-[0.2em]">
-              <div className="bg-slate-100 px-6 py-4 text-slate-500 flex items-center gap-2">
-                <X size={14} className="text-rose-400" /> Before C9
-              </div>
-              <div className="bg-[#5D00D6] px-6 py-4 text-white flex items-center gap-2">
-                <CheckCircle2 size={14} className="text-emerald-300" /> With C9
-              </div>
-            </div>
-            {/* Table rows */}
-            {BEFORE_AFTER.map((row, i) => (
-              <div
-                key={i}
-                className={`grid grid-cols-2 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}
-              >
-                <div className="px-6 py-5 border-r border-slate-200 flex items-center gap-2">
-                  <span className="text-[14px] text-slate-500 font-medium leading-snug">{row.before}</span>
-                </div>
-                <div className="px-6 py-5 flex items-center gap-2">
-                  <span className="text-[14px] text-[#1A1A2E] font-semibold leading-snug">{row.after}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </FadeUp>
-      </div>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 4 — ENTERPRISE CAPABILITIES
-══════════════════════════════════════════════════════════════════════════════ */
-const CAPABILITIES = [
-  {
-    icon: <Network size={26} className="text-[#5D00D6]" />,
-    eyebrow: 'Multi-Site Connectivity',
-    title: 'Multi-Site Connectivity',
-    body: 'Connect your HQ, branches, warehouses, and remote teams on a private network with guaranteed uptime. Enterprise Ethernet, SD-WAN, MPLS and 4G failover.',
-    stat1: { value: '99.95%', label: 'Uptime SLA' },
-    stat2: { value: '500+', label: 'Sites Managed' },
-  },
-  {
-    icon: <Phone size={26} className="text-[#5D00D6]" />,
-    eyebrow: 'Unified Communications',
-    title: 'Unified Communications',
-    body: 'One phone system across all locations. Seamless voice, video, and messaging — whether staff are in-office or remote. C9 Voice, Teams Calling, Contact Centre.',
-    stat1: { value: '40+', label: 'Integrations' },
-    stat2: { value: '48hr', label: 'Go-Live' },
-  },
-  {
-    icon: <Shield size={26} className="text-[#5D00D6]" />,
-    eyebrow: 'Enterprise Security',
-    title: 'Enterprise Security',
-    body: 'Protect your infrastructure with 24/7 monitoring, Essential 8 compliance, and tested disaster recovery. C9 Defense, Endpoint Protection, SOC Monitoring.',
-    stat1: { value: '24/7', label: 'SOC Monitoring' },
-    stat2: { value: '100%', label: 'E8 Compliance' },
-  },
-  {
-    icon: <Monitor size={26} className="text-[#5D00D6]" />,
-    eyebrow: 'Full IT Management',
-    title: 'Full IT Management',
-    body: 'We become your outsourced CTO. Strategy, vendor management, helpdesk, and lifecycle planning — all handled by one Australian-based team.',
-    stat1: { value: '< 3 min', label: 'Response Time' },
-    stat2: { value: '20+', label: 'Years Experience' },
-  },
-];
-
-const Capabilities = () => (
-  <section className="py-12 md:py-16 bg-white border-t border-gray-100">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <FadeUp>
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="c9-eyebrow mb-4 block">Enterprise Capabilities</span>
-          <h2 className="c9-section-heading">
-            Everything your enterprise needs. Delivered as one integrated system.
-          </h2>
-        </div>
-      </FadeUp>
-
-      {/* 4-col border-separated grid — matches WpWhyPartner style */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-gray-200">
-        {CAPABILITIES.map((cap, i) => (
-          <FadeUp key={i} delay={i * 0.08}>
-            <div className="border-r border-b border-gray-200 p-6 md:p-8 flex flex-col h-full">
-              {/* Pill badge */}
-              <div className="inline-flex items-center self-start mb-6">
-                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#5D00D6] bg-[#5D00D6]/5 border border-[#5D00D6]/15 rounded-full px-4 py-1.5">
-                  {cap.eyebrow}
-                </span>
-              </div>
-
-              {/* Icon */}
-              <div className="mb-5">{cap.icon}</div>
-
-              {/* Title */}
-              <h3 className="c9-card-title mb-4">{cap.title}</h3>
-
-              {/* Body */}
-              <p className="c9-body text-[14px] flex-1 mb-8">{cap.body}</p>
-
-              {/* Two-stat footer */}
-              <div className="flex items-stretch gap-0 pt-6 border-t border-gray-100">
-                <div className="flex-1 pr-4">
-                  <div className="text-[22px] font-bold text-[#5D00D6] leading-none mb-1">
-                    {cap.stat1.value}
-                  </div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.18em] text-slate-400">
-                    {cap.stat1.label}
-                  </div>
-                </div>
-                <div className="w-px bg-gray-200 self-stretch" />
-                <div className="flex-1 pl-4">
-                  <div className="text-[22px] font-bold text-[#5D00D6] leading-none mb-1">
-                    {cap.stat2.value}
-                  </div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.18em] text-slate-400">
-                    {cap.stat2.label}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </FadeUp>
-        ))}
-      </div>
-
-      {/* Bottom CTA */}
-      <FadeUp delay={0.35}>
-        <div className="text-center mt-12">
-          <p className="c9-body text-[16px] mb-6">
-            Not sure what you need? Let's build a custom scope.
-          </p>
-          <PrimaryBtn
-            href="#consultation-section"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            Get Assessment
-          </PrimaryBtn>
-        </div>
-      </FadeUp>
-    </div>
-  </section>
-);
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 5 — HOW WE WORK (PROCESS / TIMELINE)
-══════════════════════════════════════════════════════════════════════════════ */
-const PHASES = [
-  {
-    n: '01',
-    phase: 'DISCOVERY',
-    timing: 'Week 1–2',
-    title: 'Discovery',
-    body: 'Your Enterprise Advisor audits your current infrastructure, documents all vendor contracts, maps your site locations, and identifies immediate risks.',
-    deliverable: 'Current state documentation + risk assessment',
-  },
-  {
-    n: '02',
-    phase: 'DESIGN',
-    timing: 'Week 3–4',
-    title: 'Design',
-    body: "We design your future-state architecture — connectivity, voice, IT, and security — with phased implementation timeline and exact pricing. No surprises.",
-    deliverable: 'Enterprise architecture blueprint + fixed-price quote',
-  },
-  {
-    n: '03',
-    phase: 'TRANSITION',
-    timing: 'Week 5–12',
-    title: 'Transition',
-    body: 'We manage the entire migration. Zero-downtime cutovers. On-site engineers at each location. Old vendors cancelled by C9.',
-    deliverable: 'Live infrastructure + staff training',
-  },
-  {
-    n: '04',
-    phase: 'OPTIMISE',
-    timing: 'Ongoing',
-    title: 'Optimise',
-    body: 'Monthly IT steering committee meetings. Quarterly roadmap reviews. Proactive infrastructure improvements. You focus on growth.',
-    deliverable: 'Strategic partnership, not transactional vendor',
-  },
-];
-
-const Process = () => {
-  const [openPhase, setOpenPhase] = useState<number | null>(null);
-
+  direction?: 'up' | 'left' | 'right' | 'none';
+}) => {
+  const y = direction === 'up' ? 28 : 0;
+  const x = direction === 'left' ? -28 : direction === 'right' ? 28 : 0;
   return (
-    <section className="py-12 md:py-16 bg-white">
-      <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-        <FadeUp>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="c9-eyebrow mb-6 block">The C9 Process</span>
-            <h2 className="c9-section-heading">
-              How we transition enterprise clients (without the chaos)
-            </h2>
-          </div>
-        </FadeUp>
-
-        {/* Desktop: Unified Container with Grid */}
-        <div className="hidden md:block relative mb-12">
-          <div className="grid grid-cols-4 bg-white border border-gray-100 rounded-[32px] overflow-hidden shadow-2xl shadow-purple-900/[0.03] relative z-20">
-            {PHASES.map((p, i) => (
-              <div 
-                key={i} 
-                className={`relative p-10 flex flex-col group transition-all duration-500 hover:bg-slate-50/50 ${i < 3 ? 'border-r border-gray-100' : ''}`}
-              >
-                {/* Step Marker */}
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 rounded-2xl bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center font-bold text-lg border border-[#5D00D6]/10 shadow-sm relative group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
-                    {p.n}
-                    {i < 3 && (
-                      <div className="absolute top-1/2 -right-12 w-10 h-[1px] bg-gray-200 hidden lg:block" />
-                    )}
-                  </div>
-                  <div>
-                    <span className="c9-eyebrow !text-[#5D00D6] block leading-none mb-1">{p.phase}</span>
-                    <span className="text-[11px] text-gray-400 font-bold uppercase tracking-wider">{p.timing}</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 group-hover:text-[#5D00D6] transition-colors">
-                  {p.title}
-                </h3>
-                <p className="c9-body !text-[15px] mb-6 flex-grow leading-relaxed">
-                  {p.body}
-                </p>
-
-                {/* Deliverable Badge */}
-                <div className="mt-auto bg-[#F8FAFC] border border-gray-100 rounded-xl px-4 py-3 group-hover:border-[#5D00D6]/20 group-hover:bg-white transition-all duration-500">
-                  <p className="text-[11px] font-bold text-[#0c1024]/80 flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                      <svg viewBox="0 0 24 24" fill="none" className="w-2.5 h-2.5 text-white" stroke="currentColor" strokeWidth="4">
-                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    {p.deliverable}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Decorative Background line */}
-          <div className="absolute top-1/2 left-10 right-10 h-[100px] -translate-y-1/2 bg-[radial-gradient(circle_at_center,rgba(93,0,214,0.02)_0%,transparent_70%)] blur-3xl z-0" />
-        </div>
-
-        {/* Mobile: Refined Accordion */}
-        <div className="md:hidden space-y-3 mb-12">
-          {PHASES.map((p, i) => (
-            <div key={i} className="bg-white border border-gray-100 rounded-[24px] overflow-hidden shadow-sm">
-              <button
-                onClick={() => setOpenPhase(openPhase === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 px-6 py-6 text-left"
-              >
-                <div className="flex items-center gap-5">
-                  <span className="w-12 h-12 rounded-2xl bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center text-[16px] font-bold flex-shrink-0 border border-[#5D00D6]/5">
-                    {p.n}
-                  </span>
-                  <div>
-                    <span className="c9-eyebrow !text-[#5D00D6] block mb-1">{p.phase}</span>
-                    <span className="text-[18px] font-bold text-[#0c1024]">{p.title}</span>
-                  </div>
-                </div>
-                <div className={`w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center transition-all ${openPhase === i ? 'bg-[#5D00D6] border-[#5D00D6] text-white' : 'text-gray-400'}`}>
-                  <ChevronDown
-                    size={16}
-                    className={`transition-transform ${openPhase === i ? 'rotate-180' : ''}`}
-                  />
-                </div>
-              </button>
-              <AnimatePresence initial={false}>
-                {openPhase === i && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-6 pb-6 pt-0">
-                      <div className="w-full h-px bg-gray-50 mb-6" />
-                      <p className="c9-body !text-[15px] mb-6 leading-relaxed">{p.body}</p>
-                      <div className="bg-[#F8FAFC] border border-gray-100 rounded-xl px-4 py-3">
-                        <p className="text-[12px] font-bold text-[#0c1024]/70 flex items-center gap-2">
-                           <span className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                            <svg viewBox="0 0 24 24" fill="none" className="w-2.5 h-2.5 text-white" stroke="currentColor" strokeWidth="4">
-                              <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                          </span>
-                          {p.deliverable}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </div>
-
-        <FadeUp delay={0.4}>
-          <div className="text-center">
-            <OutlineBtn href="/enterprise-onboarding">Get Onboarding Guide</OutlineBtn>
-          </div>
-        </FadeUp>
-      </div>
-    </section>
+    <motion.div
+      initial={{ opacity: 0, y, x }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
   );
 };
 
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 6 — CASE STUDIES + STAT BAR
-══════════════════════════════════════════════════════════════════════════════ */
-/* ══════════════════════════════════════════════════════════════════════════════
-   SECTION 9 — DARK CTA / DECISION MOMENT
-══════════════════════════════════════════════════════════════════════════════ */
-const DecisionCTA = () => (
-  <section className="bg-[#0F0F1A] py-12 md:py-20 relative overflow-hidden">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,#5D00D6_0%,transparent_55%)] opacity-10 pointer-events-none" />
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px] relative z-10">
-      <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-16 xl:gap-24 items-center">
+const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
 
-        {/* Left 60% */}
-        <FadeUp>
-          <h2 className="c9-section-heading !text-white mb-8">
-            Ready to stop juggling vendors and start scaling your business?
-          </h2>
-          <p className="text-[18px] text-slate-400 leading-relaxed mb-6 max-w-xl">
-            Every week you spend coordinating between multiple IT vendors is a week you're not focused on growth. C9 gives you back that time — and the peace of mind that comes with single-point accountability.
-          </p>
-          <p className="text-[16px] text-slate-500 leading-relaxed max-w-xl">
-            Our Enterprise Advisors work with CEOs and CTOs managing 3–50+ locations across Australia.
-          </p>
-        </FadeUp>
+/* ─────────────────────────────────────────────────────────
+   SECTION 1 — HERO
+   ───────────────────────────────────────────────────────── */
+const Hero = () => (
+  <section className="relative overflow-hidden bg-white pt-8 pb-0 lg:pt-12">
+    <div
+      className="pointer-events-none absolute inset-0 opacity-[0.025]"
+      style={{
+        backgroundImage:
+          'linear-gradient(#5D00D6 1px, transparent 1px), linear-gradient(90deg, #5D00D6 1px, transparent 1px)',
+        backgroundSize: '52px 52px',
+      }}
+    />
+    <div
+      className="pointer-events-none absolute -top-60 -left-60 w-[700px] h-[700px] rounded-full opacity-[0.05]"
+      style={{ background: 'radial-gradient(circle, #5D00D6 0%, transparent 70%)' }}
+    />
 
-        {/* Right 40% — CTA stack */}
-        <FadeUp delay={0.15}>
-          <div className="flex flex-col gap-5">
-            <div className="space-y-1.5 text-center">
+    <div className={`${C} relative z-10`}>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center pb-14 lg:pb-20">
+        <div>
+          <FadeIn>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
+              <ShieldCheck size={13} className="text-[#5D00D6]" />
+              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Managed IT & Telco</span>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.08}>
+            <h1 className="c9-hero-title mb-6">
+              Enterprise IT & Telco — <br/>
+              <span className="text-[#5D00D6]">Fully Managed. Fully Accountable.</span>
+            </h1>
+          </FadeIn>
+
+          <FadeIn delay={0.15}>
+            <p className="c9-body mb-8 max-w-[580px] text-slate-700">
+              Operate complex, multi-site environments with a single partner responsible for uptime, security, and performance—end to end.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.22}>
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
-                href="#consultation-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector('#consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#5D00D6] rounded-full h-12 md:h-14 px-8 font-bold text-[15px] hover:bg-[#F4F0FA] transition-colors group w-full"
+                href="#consultation"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
-                Book Consultation
+                Book Enterprise Consultation
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
-              <p className="text-[11px] text-slate-500 opacity-80">↳ 30-min call, no obligation</p>
-            </div>
-
-            <div className="space-y-1.5 text-center">
               <a
-                href="/downloads/c9-capability-statement.pdf"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-12 md:h-14 px-8 font-bold text-[15px] hover:border-white/50 hover:bg-white/5 transition-colors w-full"
+                href="#architecture"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
-                Get Capability Statement
+                View Architecture & SLA Model
               </a>
-              <p className="text-[11px] text-slate-500 opacity-80">↳ PDF Service Catalog</p>
             </div>
+          </FadeIn>
 
-            <div className="space-y-1.5 text-center">
-              <a
-                href="tel:1800000299"
-                className="inline-flex items-center justify-center gap-2 border border-[#5D00D6]/40 text-[#A855F7] rounded-full h-12 md:h-14 px-8 font-bold text-[15px] hover:border-[#5D00D6] hover:bg-[#5D00D6]/10 transition-colors w-full"
-              >
-                <Phone size={17} /> Call 1800 000 299
-              </a>
-              <p className="text-[11px] text-slate-500 opacity-80">↳ Speak to an advisor</p>
+          <FadeIn delay={0.32}>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-100">
+              {[
+                { label: '120+', detail: 'Sites Managed' },
+                { label: '3,000+', detail: 'Endpoints' },
+                { label: '99.99%', detail: 'Network Uptime' },
+                { label: '24/7', detail: 'Monitoring' },
+              ].map((stat, i) => (
+                <div key={i} className="flex flex-col">
+                  <span className="text-2xl font-bold text-[#0c1024]">{stat.label}</span>
+                  <span className="text-[12px] text-slate-500 font-bold uppercase tracking-wider">{stat.detail}</span>
+                </div>
+              ))}
             </div>
+          </FadeIn>
+        </div>
 
-            <p className="text-[11px] text-slate-500 text-center mt-4 leading-normal opacity-70">
-              No lock-in contracts. Australian-based advisors.<br />Typical response: 2 business hours.
-            </p>
+        <FadeIn delay={0.14} direction="right" className="relative hidden lg:block">
+          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+            <img
+              src="/images/hero_enterprise.png"
+              alt="Enterprise IT Infrastructure"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
+            
+            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/60">
+              <div className="flex items-center gap-4">
+                 <div className="w-12 h-12 rounded-full bg-[#5D00D6]/10 flex items-center justify-center">
+                    <Activity className="text-[#5D00D6]" size={24} />
+                 </div>
+                 <div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-[#5D00D6] mb-0.5">System Status</div>
+                    <div className="text-[16px] font-bold text-slate-900 leading-tight">All Multi-Site Operations Active</div>
+                 </div>
+              </div>
+            </div>
           </div>
-        </FadeUp>
+        </FadeIn>
       </div>
     </div>
   </section>
 );
 
-/* ══════════════════════════════════════════════════════════════════════════════
-   ENTERPRISE FAQ DATA
-══════════════════════════════════════════════════════════════════════════════ */
-const ENTERPRISE_FAQS = [
-  {
-    q: "What's the minimum company size you work with?",
-    a: "We work with businesses from 50+ staff and/or 3+ locations. If you're smaller but have complex multi-site requirements, we'll still assess your fit.",
-  },
-  {
-    q: "Do we have to move everything to C9 at once?",
-    a: "No. Most enterprise clients start with connectivity (because that's the foundation), then add voice, then IT services. We can phase it over 6–24 months based on your contract renewal schedule.",
-  },
-  {
-    q: "What happens to our existing vendor contracts?",
-    a: "We audit them, identify cancellation windows, and manage the transition. We take over vendor relationships so you don't have to.",
-  },
-  {
-    q: "How much does enterprise IT consolidation typically cost?",
-    a: "It depends on your site count, user count, and services. Most multi-site clients see 20–35% cost savings compared to their current multi-vendor setup. We provide fixed-price quotes — no surprises.",
-  },
-  {
-    q: "What if something goes wrong at one of our sites?",
-    a: "You call ONE number. We triage, dispatch, and resolve. No vendor finger-pointing. We own the outcome.",
-  },
-  {
-    q: "Is there a lock-in contract?",
-    a: "Enterprise agreements are typically 24–36 months (due to hardware provisioning and implementation costs), but we offer flexibility based on your business needs. No auto-renewals or surprise fees.",
-  },
-];
+/* ─────────────────────────────────────────────────────────
+   SECTION 2 — PROBLEM
+   ───────────────────────────────────────────────────────── */
+const SectionProblem = () => (
+  <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">The Enterprise Reality</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Why Enterprise Environments Fail
+        </h2>
+      </FadeIn>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {[
+          { icon: <Users className="text-[#5D00D6]" />, title: 'Multiple vendors → no accountability', desc: 'Fragmented support from different providers leads to "finger-pointing" when critical issues arise.' },
+          { icon: <BarChart3 className="text-[#5D00D6]" />, title: 'Reactive support → unresolved issues', desc: 'Fixing symptoms instead of addressing the root cause leads to recurring downtime and lost productivity.' },
+          { icon: <Lock className="text-[#5D00D6]" />, title: 'Security gaps across endpoints', desc: 'Inconsistent policies across distributed sites create invisible vulnerabilities for attackers to exploit.' },
+          { icon: <Globe className="text-[#5D00D6]" />, title: 'No unified visibility across sites', desc: 'Lack of central monitoring means problems are often only discovered after they cause failure.' },
+          { icon: <Zap className="text-[#5D00D6]" />, title: 'Downtime during peak operations', desc: 'Unreliable connectivity and hardware failures disrupt business when performance matters most.' },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.05} className="group">
+            <div className="h-full bg-white border border-slate-100 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:shadow-xl shadow-slate-200/50">
+              <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                {item.icon}
+              </div>
+              <h3 className="c9-card-title mb-4 !text-[18px]">{item.title}</h3>
+              <p className="text-slate-500 text-[15px] leading-relaxed">{item.desc}</p>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
 
-const ENTERPRISE_TESTIMONIALS = [
-  {
-    name: 'David Chen',
-    role: 'Operations Director — Foodworks',
-    content:
-      'Consolidating our nationwide connectivity and IT infrastructure under C9 Communications was the best strategic move we made. Their enterprise Fibre nbn eliminated our downtime, and having a single, proactive Australian support team means zero IT headaches.',
-    metric: '650+',
-    metricLabel: 'Stores Managed',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    name: 'Sarah Jenkins',
-    role: 'CTO — Nova Entertainment',
-    content:
-      'C9 executed a flawless migration of our staff to Microsoft 365 while completely hardening our security posture. Their zero-touch device deployment via Intune saved our IT team hundreds of setup hours and standardised our hybrid workforce seamlessly.',
-    metric: '100%',
-    metricLabel: 'Downtime-Free Migration',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    name: 'Michael Ross',
-    role: 'Managing Director — National Storage',
-    content:
-      "The strategic roadmap provided by C9 aligned our technology stack perfectly with our aggressive growth targets. They don't just fix issues; they engineer sophisticated, centralised infrastructure that scales dynamically. Truly unmatched enterprise consultancy.",
-    metric: '400+',
-    metricLabel: 'Sites Consolidated',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800'
-  },
-];
+      <FadeIn delay={0.3} className="text-center mt-12">
+        <p className="text-slate-900 font-bold text-[22px]">
+          Enterprise environments fail when no one owns the system.
+        </p>
+      </FadeIn>
+    </div>
+  </section>
+);
 
-/* ══════════════════════════════════════════════════════════════════════════════
-   REAL ENTERPRISE CASE STUDIES (OVERRIDE DEFAULT)
-══════════════════════════════════════════════════════════════════════════════ */
-const ENTERPRISE_ARTICLES = [
-  {
-    tag: 'ENTERPRISE RETAIL',
-    title: 'Foodworks: Managed Network for 650+ Stores',
-    desc: 'C9 Communications architected a complete managed network for nationwide expansion with zero impact to active trading hours. POS systems now maintain 100% connectivity uptime during peak periods.',
-    img: '/images/case-studies/case-study-1.jpg',
-    videoText: 'Foodworks Network Rollout',
-    href: '/about/case-studies'
-  },
-  {
-    tag: 'CRITICAL INFRASTRUCTURE',
-    title: 'Nova Entertainment: Broadcast-Grade Redundancy',
-    desc: 'Managing high-volume broadcast infrastructure requires partners who truly understand latency. Transitioning to C9 gave Nova an immediate 30% reduction in downtime alerts.',
-    img: '/images/case-studies/case-study-2.jpg',
-    videoText: 'Nova Broadcast Redundancy',
-    href: '/about/case-studies'
-  },
-  {
-    tag: 'MULTI-SITE LOGISTICS',
-    title: 'National Storage: 400+ Site Consolidation',
-    desc: 'Consolidated hundreds of complex telco feeds into one pane of glass. This allowed the client to roll out unified access control safely and reliably across their entire national footprint.',
-    img: '/images/case-studies/case-study-3.jpg',
-    videoText: 'National Storage Consolidation',
-    href: '/about/case-studies'
-  }
-];
+/* ─────────────────────────────────────────────────────────
+   SECTION 3 — ACCOUNTABILITY MODEL
+   ───────────────────────────────────────────────────────── */
+const SectionAccountability = () => (
+  <section className="py-12 lg:py-16 bg-white">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow mb-4">The Solution</span>
+          <h2 className="c9-section-heading mb-8">
+            One Partner. Total Ownership.
+          </h2>
+          <p className="c9-body mb-8 text-slate-600">
+            C9 operates as the **single accountable layer** across your entire technology path. We eliminate vendor overlap and provide a unified escalation path for all IT and Telco needs.
+          </p>
+          <div className="space-y-4 mb-10">
+            {[
+              'Network performance',
+              'Endpoint management',
+              'Telco & connectivity',
+              'Security posture',
+              'Monitoring & incident response'
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                <span className="text-[16px] font-bold text-slate-800">{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="p-6 bg-[#5D00D6]/5 rounded-2xl border-l-[6px] border-[#5D00D6]">
+             <p className="text-[#0c1024] font-bold text-[18px]">
+               No vendor overlap. No blame shifting. One escalation path.
+             </p>
+          </div>
+        </FadeIn>
+        
+        <FadeIn direction="right" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+           {[
+             { title: 'Single Point of Contact', icon: <PhoneCall />, desc: 'One number for everything.' },
+             { title: 'Vendor Management', icon: <Handshake />, desc: 'We manage your 3rd party providers.' },
+             { title: 'Contractual SLAs', icon: <FileCheck />, desc: 'Accountability written into law.' },
+             { title: 'Dedicated vCIO', icon: <UserCheck />, desc: 'Strategic oversight, not just support.' },
+           ].map((card, i) => (
+             <div key={i} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col items-center text-center">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 text-[#5D00D6] shadow-sm">
+                   {card.icon}
+                </div>
+                <h4 className="font-bold text-slate-900 mb-1">{card.title}</h4>
+                <p className="text-[13px] text-slate-500">{card.desc}</p>
+             </div>
+           ))}
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
 
-/* ══════════════════════════════════════════════════════════════════════════════
-   PAGE ASSEMBLY
-══════════════════════════════════════════════════════════════════════════════ */
+const UserCheck = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 4 — ARCHITECTURE STACK
+   ───────────────────────────────────────────────────────── */
+const SectionArchitecture = () => (
+  <section id="architecture" className="py-12 lg:py-16 bg-slate-900 text-white overflow-hidden relative">
+    <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
+         style={{ backgroundImage: 'radial-gradient(circle at 20% 30%, #5D00D6 0%, transparent 60%)' }} />
+    
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4 !text-[#a56eff]">System Design</span>
+        <h2 className="c9-section-heading !text-white max-w-3xl mx-auto">
+          Enterprise Architecture Designed for Scale & Resilience
+        </h2>
+      </FadeIn>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {[
+          {
+            title: 'Network Layer',
+            icon: <Network className="text-[#a56eff]" />,
+            items: ['SD-WAN / multi-site connectivity', 'Redundant ISP failover', 'Traffic prioritisation']
+          },
+          {
+            title: 'Endpoint Layer',
+            icon: <Laptop className="text-[#a56eff]" />,
+            items: ['Device lifecycle management', 'Patch automation', 'Remote control']
+          },
+          {
+            title: 'Security Layer',
+            icon: <ShieldAlert className="text-[#a56eff]" />,
+            items: ['Endpoint Detection & Response', 'Identity & email protection', 'Firewall & Zero Trust']
+          },
+          {
+            title: 'Monitoring Layer',
+            icon: <Activity className="text-[#a56eff]" />,
+            items: ['24/7 NOC + SOC', 'Real-time alerting', 'Predictive issue detection']
+          },
+          {
+            title: 'Recovery Layer',
+            icon: <RefreshCw className="text-[#a56eff]" />,
+            items: ['Backup & disaster recovery', 'Restore testing', 'Business continuity']
+          }
+        ].map((card, i) => (
+          <FadeIn key={i} delay={i * 0.05} className="group">
+            <div className="h-full bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:bg-white/[0.08] transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
+                {card.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-6 text-white">{card.title}</h3>
+              <ul className="space-y-4">
+                {card.items.map((item, j) => (
+                  <li key={j} className="flex gap-3 text-[14px] text-slate-300 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#a56eff] shrink-0 mt-1.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 5 — SLA & SUPPORT
+   ───────────────────────────────────────────────────────── */
+const SectionSLA = () => (
+  <section className="py-12 lg:py-16 bg-white border-b border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">Service Excellence</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          SLA-Backed Enterprise Support
+        </h2>
+      </FadeIn>
+
+      <FadeIn className="max-w-4xl mx-auto shadow-2xl shadow-slate-200/50 rounded-3xl overflow-hidden border border-slate-100 mb-12">
+        <Table>
+          <TableHeader className="bg-[#0c1024]">
+            <TableRow className="hover:bg-transparent border-none">
+              <TableHead className="text-white font-bold py-6 px-10 h-auto">Priority</TableHead>
+              <TableHead className="text-white font-bold py-6 px-10 h-auto">Response Time</TableHead>
+              <TableHead className="text-white font-bold py-6 px-10 h-auto">Resolution Target</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell className="py-6 px-10 font-bold text-slate-900 h-auto">P1 (Critical)</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 15 mins</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 4 hours</TableCell>
+            </TableRow>
+            <TableRow className="bg-slate-50">
+              <TableCell className="py-6 px-10 font-bold text-slate-900 h-auto">P2 (Major)</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 30 mins</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 8 hours</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="py-6 px-10 font-bold text-slate-900 h-auto">P3 (Standard)</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 2 hours</TableCell>
+              <TableCell className="py-6 px-10 text-slate-600 h-auto">&lt; 24 hours</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </FadeIn>
+
+      <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto text-center mb-12">
+        {[
+          { label: '24/7 Service Desk', icon: <Users size={18} /> },
+          { label: 'Dedicated Account Manager', icon: <Handshake size={18} /> },
+          { label: 'Escalation within SLA', icon: <BarChart3 size={18} /> },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.1} className="flex items-center justify-center gap-3 text-slate-700 font-bold">
+            <span className="p-2 bg-[#5D00D6]/5 rounded-full text-[#5D00D6]">{item.icon}</span>
+            {item.label}
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn delay={0.4} className="text-center border-t border-slate-100 pt-10">
+        <p className="text-[#5D00D6] font-bold text-[20px]">
+          This is contract-backed performance—not best-effort support.
+        </p>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 6 — CYBERSECURITY
+   ───────────────────────────────────────────────────────── */
+const SectionSecurity = () => (
+  <section className="py-12 lg:py-16 bg-slate-50 border-b border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">C9 Defense</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Security Built Into Operations
+        </h2>
+      </FadeIn>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        {[
+          { title: 'Essential 8 alignment', icon: <Layers /> },
+          { title: 'Continuous monitoring', icon: <Activity /> },
+          { title: 'Threat detection', icon: <ShieldAlert /> },
+          { title: 'Vulnerability management', icon: <Search /> },
+          { title: 'Backup integrity', icon: <Database /> },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.05} className="group">
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 hover:border-[#5D00D6]/20 transition-all text-center h-full">
+              <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mx-auto mb-6 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+                {item.icon}
+              </div>
+              <h4 className="font-bold text-slate-900 leading-tight">{item.title}</h4>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn delay={0.3} className="text-center">
+        <div className="inline-block bg-[#0c1024] text-white px-8 py-4 rounded-2xl">
+           <span className="font-bold flex items-center gap-3">
+             <Shield className="text-[#5D00D6]" />
+             Security is continuously enforced—not periodically checked.
+           </span>
+        </div>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 7 — MIGRATION FRAMEWORK
+   ───────────────────────────────────────────────────────── */
+const SectionMigration = () => (
+  <section className="py-12 lg:py-16 bg-white">
+    <div className={C}>
+      <FadeIn className="text-center mb-20">
+        <span className="c9-eyebrow mb-4">Reliable Change</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Zero-Disruption Transition
+        </h2>
+      </FadeIn>
+
+      <div className="grid md:grid-cols-5 gap-8 relative">
+        <div className="hidden md:block absolute top-[45px] left-[10%] right-[10%] h-[2px] bg-slate-100" />
+        
+        {[
+          { step: '01', title: 'Audit & Discovery', desc: 'Full mapping of your current architecture and vendor contracts.' },
+          { step: '02', title: 'Risk Mapping', desc: 'Identifying single points of failure and security vulnerabilities.' },
+          { step: '03', title: 'Transition Planning', desc: 'Detailed migration timeline with rollback safety triggers.' },
+          { step: '04', title: 'Controlled Migration', desc: 'Phased rollout with zero operational downtime.' },
+          { step: '05', title: 'Stabilisation', desc: 'Post-migration monitoring and proactive performance tuning.' },
+        ].map((s, i) => (
+          <FadeIn key={i} delay={i * 0.1} className="relative text-center">
+            <div className="w-[90px] h-[90px] rounded-full bg-white border-2 border-[#5D00D6] flex items-center justify-center mb-6 mx-auto relative z-10 shadow-lg shadow-purple-900/10 transition-transform hover:scale-110 duration-500 bg-white group hover:bg-[#5D00D6] transition-colors">
+               <span className="text-2xl font-black text-[#5D00D6] group-hover:text-white">{s.step}</span>
+            </div>
+            <h3 className="c9-card-title mb-4 !text-[16px]">{s.title}</h3>
+            <p className="text-slate-500 text-[13px] leading-relaxed px-2">{s.desc}</p>
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn delay={0.6} className="mt-16 text-center">
+         <p className="text-slate-900 font-bold text-[24px]">
+           No downtime. No disruption.
+         </p>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 8 — INTEGRATIONS
+   ───────────────────────────────────────────────────────── */
+const SectionIntegrations = () => (
+  <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">Compatibility</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Works With Your Existing Systems
+        </h2>
+      </FadeIn>
+
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        {[
+          { title: 'Microsoft 365', icon: <Layers /> },
+          { title: 'Azure / AWS', icon: <Cloud /> },
+          { title: 'ERP systems', icon: <Database /> },
+          { title: 'POS platforms', icon: <Activity /> },
+          { title: 'VoIP systems', icon: <PhoneCall /> },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.05}>
+            <div className="bg-white h-32 rounded-2xl border border-slate-200 flex flex-col items-center justify-center p-4 text-center hover:shadow-md transition-all">
+                <div className="text-[#5D00D6] mb-3">{item.icon}</div>
+                <span className="font-bold text-slate-800 text-[15px]">{item.title}</span>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn className="text-center">
+         <p className="text-slate-500 font-medium">
+           We integrate into your environment—not replace it blindly.
+         </p>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 10 — OUTCOMES
+   ───────────────────────────────────────────────────────── */
+const SectionOutcomes = () => (
+  <section className="py-12 lg:py-16 bg-white border-t border-slate-100">
+    <div className={C}>
+      <FadeIn className="text-center mb-16">
+        <span className="c9-eyebrow mb-4">Results Delivered</span>
+        <h2 className="c9-section-heading max-w-3xl mx-auto">
+          Business Outcomes
+        </h2>
+      </FadeIn>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        {[
+          { title: 'Reduced operational risk', desc: 'Predictable systems with zero blind spots.' },
+          { title: 'Fewer outages', desc: 'Proactive maintenance before failures occur.' },
+          { title: 'Faster resolution', desc: 'Direct access to engineers who know your stack.' },
+          { title: 'Lower vendor overhead', desc: 'We take the management off your plate.' },
+          { title: 'Predictable IT costs', desc: 'Locked-in enterprise performance models.' },
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.1}>
+            <div className="flex flex-col gap-4">
+              <div className="w-10 h-10 rounded-full bg-[#5D00D6] flex items-center justify-center text-white">
+                <CheckCircle size={20} />
+              </div>
+              <h4 className="font-bold text-slate-900 leading-snug">{item.title}</h4>
+              <p className="text-slate-500 text-[13px]">{item.desc}</p>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 11 — FINAL CTA
+   ───────────────────────────────────────────────────────── */
+const FinalCTA = () => (
+  <section className="py-16 lg:py-24 bg-[#0c1024] text-white relative overflow-hidden">
+     <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent"></div>
+     <div className={`${C} relative z-10 text-center`}>
+        <FadeIn>
+          <h2 className="c9-section-heading !text-white mb-8 max-w-3xl mx-auto md:!text-[46px] lg:!text-[52px]">
+            Ready to Simplify and <br/>Take Control?
+          </h2>
+          <p className="text-white/70 mb-12 max-w-2xl mx-auto text-[18px]">
+            Partner with a single accountable organization that owns your IT and Telco outcomes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+             <a
+                href="#consultation"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-16 px-12 font-extrabold text-[17px] hover:bg-[#4d00b3] transition-all shadow-2xl shadow-brand-purple/30 group w-full sm:w-auto"
+              >
+                Book Enterprise Consultation
+                <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#consultation"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-16 px-12 font-extrabold text-[17px] hover:bg-white hover:text-[#0c1024] transition-all w-full sm:w-auto bg-transparent"
+              >
+                Speak to a Solutions Architect
+              </a>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 opacity-70 text-[13px] font-bold uppercase tracking-widest text-white">
+            <span>SLA Backed</span>
+            <span>24/7 Monitoring</span>
+            <span>Australian Support</span>
+          </div>
+        </FadeIn>
+     </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   PAGE EXPORT
+   ───────────────────────────────────────────────────────── */
 export default function EnterprisePage() {
   return (
     <main className="min-h-screen bg-white">
+      <Hero />
+      <WpClientTicker />
+      
+      <SectionProblem />
+      <SectionAccountability />
+      <SectionArchitecture />
+      
+      <SectionSLA />
+      <SectionSecurity />
+      <SectionMigration />
+      <SectionIntegrations />
 
-      {/* S1 — HERO */}
-      <WpHero />
-
-      {/* Trust / highlights strip */}
-      <WpHighlights />
-
-      {/* S2 — PAIN POINTS */}
-      <PainPoints />
-
-      {/* S3 — VALUE PROPOSITION */}
-      <ValueProposition />
-
-      {/* Client ticker */}
-      <section className="bg-white border-y border-slate-100 py-8">
-        <div className="container mx-auto px-6 max-w-[1240px]">
-          <WpClientTicker />
-        </div>
-      </section>
-
-      {/* S4 — CAPABILITIES */}
-      <Capabilities />
-
-      {/* S5 — PROCESS */}
-      <Process />
-
-      {/* S6 — ENTERPRISE PROOF */}
       <WpCaseStudies 
-        title="Enterprise clients who consolidated everything with C9" 
-        eyebrow="ENTERPRISE PROOF" 
-        articles={ENTERPRISE_ARTICLES}
+        eyebrow="ENTERPRISE RESULTS"
+        title="Accountability in Action"
+        articles={[
+          {
+            tag: 'RETAIL',
+            title: '85 Locations Total Rollout',
+            desc: 'Successfully rolled out managed infrastructure across 85 locations nationally, achieving 99.98% network uptime.',
+            img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800',
+            videoText: '99.98% Uptime',
+            href: '/case-studies/retail-pos-stabilisation'
+          },
+          {
+            tag: 'LOGISTICS',
+            title: '1,200 Endpoints Consolidated',
+            desc: 'Consolidated 6 separate vendors into a single managed path for 1,200 endpoints, resulting in a 42% reduction in operational incidents.',
+            img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=800',
+            videoText: '42% Incident Reduction',
+            href: '/case-studies/greenfield-site-rollout'
+          },
+          {
+            tag: 'COMPLIANCE-HEAVY',
+            title: 'Essential 8 Aligned Governance',
+            desc: 'Continuous enforcement of Essential 8 security controls with zero major incidents reported in over 18 months of operation.',
+            img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
+            videoText: 'Zero Incidents (18mo)',
+            href: '/case-studies/legal-firm-takeover'
+          }
+        ]}
       />
 
-      {/* S7 — INDUSTRY TABS */}
-      <WpIndustryTabs />
+      <SectionOutcomes />
+      
+      <FinalCTA />
 
-      {/* S8 — EXPLORE THE C9 ECOSYSTEM (unchanged) */}
-      <WpUnifiedClassification />
-
-      {/* S9 — DECISION CTA */}
-      <DecisionCTA />
-
-      {/* S10 — TESTIMONIALS */}
-      <WpFAQAndFeedback
-        showFAQ={false}
-        showTestimonials={true}
-        testimonials={ENTERPRISE_TESTIMONIALS}
-      />
-
-      {/* S11 — FAQ */}
-      <WpFAQAndFeedback
-        showFAQ={true}
-        showTestimonials={false}
-        faqItems={ENTERPRISE_FAQS}
-        showStillQuestions={false}
-      />
-
-      {/* Final consultation form */}
-      <section id="consultation-section">
+      <section id="consultation" className="bg-white border-t border-slate-100 pb-12">
         <WpConsultationForm
-          eyebrow="ENTERPRISE CONSULTATION"
-          title="Let's Review Your Current Setup"
-          description="We'll identify gaps, risks, and opportunities across all your sites — no obligation. Speak directly with a senior Enterprise Advisor."
-          formTitle="Get Assessment"
+          showHeader={false}
+          eyebrow="GOVERNANCE & ACCOUNTABILITY"
+          title="Speak to a Solutions Architect"
+          description="Ready to consolidate your technology path? Book a strategy session to discuss your architecture, SLA requirements, and multi-site transition plan."
+          formTitle="Request Enterprise Pack"
         />
       </section>
-
     </main>
   );
 }

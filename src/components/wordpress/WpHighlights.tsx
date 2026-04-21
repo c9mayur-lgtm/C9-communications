@@ -27,10 +27,9 @@ export const WpHighlights = () => {
           {/* Metric 1 */}
           <div className="flex flex-col shrink-0">
             <div className="flex items-baseline gap-2 mb-1">
-              <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">20</span>
-              <span className="text-[14px] font-medium text-[#0c1024]">Years</span>
+              <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">120+</span>
             </div>
-            <span className="c9-eyebrow !text-[10px]">Proven Track Record</span>
+            <span className="c9-eyebrow !text-[10px]">Sites Supported</span>
           </div>
 
           <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
@@ -38,10 +37,9 @@ export const WpHighlights = () => {
           {/* Metric 2 */}
           <div className="flex flex-col shrink-0">
             <div className="flex items-baseline gap-2 mb-1">
-              <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">98</span>
-              <span className="text-[14px] font-medium text-[#0c1024]">%</span>
+              <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">3,000+</span>
             </div>
-            <span className="c9-eyebrow !text-[10px]">Customer Satisfaction</span>
+            <span className="c9-eyebrow !text-[10px]">Endpoints Managed</span>
           </div>
 
           <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
@@ -49,10 +47,9 @@ export const WpHighlights = () => {
           {/* Metric 3 */}
           <div className="flex flex-col shrink-0">
             <div className="flex items-baseline gap-2 mb-1">
-              <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">1,500</span>
-              <span className="text-[14px] font-medium text-[#0c1024]">Projects</span>
+              <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">99.99%</span>
             </div>
-            <span className="c9-eyebrow !text-[10px]">We Have Completed</span>
+            <span className="c9-eyebrow !text-[10px]">Network Uptime</span>
           </div>
 
           <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
@@ -60,10 +57,9 @@ export const WpHighlights = () => {
           {/* Metric 4 */}
           <div className="flex flex-col shrink-0">
             <div className="flex items-baseline gap-2 mb-1">
-              <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">3</span>
-              <span className="text-[14px] font-medium text-[#0c1024]">Mins</span>
+              <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">24/7</span>
             </div>
-            <span className="c9-eyebrow !text-[10px]">Average Answer Time</span>
+            <span className="c9-eyebrow !text-[10px]">Monitoring & Support</span>
           </div>
 
         </div>

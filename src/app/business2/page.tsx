@@ -602,7 +602,7 @@ export default function Business2Page() {
             desc: 'We took over a major retail group suffering from frequent outages. By optimising their existing infrastructure and managing their connectivity, we achieved zero downtime.',
             img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
             videoText: 'Retail Takeover',
-            href: '#consultation'
+            href: '/case-studies/retail-pos-stabilisation'
           },
           {
             tag: 'PROFESSIONAL SERVICES',
@@ -610,7 +610,7 @@ export default function Business2Page() {
             desc: 'A prominent firm was tired of waiting days for IT help. We moved them to our managed platform, providing instant local support and consistent system performance.',
             img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
             videoText: 'Support Turnaround',
-            href: '#consultation'
+            href: '/case-studies/legal-firm-takeover'
           }
         ]}
       />

@@ -43,7 +43,11 @@ export default function Homepage() {
 
       <WpServices />
       <WpSolutions />
-      <WpDefenseBanner />
+      <WpDefenseBanner 
+        title="Security Built Into Everything"
+        description="Protection across endpoints, networks, and users—continuously monitored and actively managed."
+        buttonText="Book a Security Review"
+      />
 
       {/* 7. INDUSTRY EXPERTISE — "We've solved this in your sector before" */}
       <WpIndustryTabs />
@@ -54,14 +58,20 @@ export default function Homepage() {
 
       <WpVendors />
       {/* 9. CASE STUDIES — Real proof to eliminate last-mile doubt */}
+      <div className="pt-20 bg-white">
+        <div className="container mx-auto px-8 max-w-[1240px]">
+          <h2 className="c9-section-heading mb-4">Proven Across Real-World Environments</h2>
+          <p className="c9-body mb-2">Multi-site rollouts completed across retail and logistics. Thousands of endpoints actively managed.</p>
+        </div>
+      </div>
       <WpCaseStudies 
         articles={[
           {
-            tag: 'REAL ESTATE',
-            title: 'Multi-Site Network Consolidation for Stockdale & Leggo',
-            desc: 'How we unified communications and Internet across 70+ franchise offices into a single, centrally managed network, reducing telecommunications spend by 32%.',
+            tag: 'RETAIL',
+            title: '85-site deployment completed with near-zero downtime',
+            desc: 'How we unified communications and Internet across a national retail footprint, reducing incidents by consolidation.',
             img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800',
-            videoText: 'Stockdale & Leggo Consolidation',
+            videoText: 'National Retail Consolidation',
             href: '/case-studies/retail-pos-stabilisation'
           },
           {
@@ -85,14 +95,15 @@ export default function Homepage() {
       <WpCompliance />
       <WpFAQAndFeedback />
 
-      {/* 10. LEAD CAPTURE — Vendor consolidation guide as high-value offer */}
+      {/* 10. LEAD CAPTURE — Final CTA */}
       <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
-          eyebrow="Vendor consolidation guide"
-          title="Stop juggling vendors. Start running your business."
-          description="Download our free Business IT & Telco Consolidation Blueprint — and book a 30-minute strategy session with our team. We'll show you exactly how to reduce costs, eliminate complexity, and move everything to a single monthly bill."
-          formTitle="Get My Free Blueprint"
+          eyebrow="Take Control of Your IT Environment"
+          title="Take Control of Your IT Environment"
+          description="Whether you're opening new locations, stabilising existing systems, or scaling enterprise operations—C9 delivers complete ownership and reliable performance."
+          ctaText="Book a Consultation"
+          formTitle="Speak to an Expert"
         />
       </section>
 
