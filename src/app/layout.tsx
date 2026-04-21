@@ -9,6 +9,7 @@ import { InquiryProvider } from "@/components/context/InquiryContext";
 import { AudienceProvider } from "@/components/context/AudienceContext";
 import { AudienceSwitcher } from "@/components/layout/AudienceSwitcher";
 import { NextStepStrip } from "@/components/layout/NextStepStrip";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -101,6 +102,7 @@ export default function RootLayout({
             <WpFloatingContact />
             <BusinessAdvisor />
             <CookieConsent />
+            <Analytics />
           </InquiryProvider>
         </AudienceProvider>
       </body>
