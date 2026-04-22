@@ -35,9 +35,9 @@ export const WpDefenseBanner = ({
             {/* Text Content */}
             <div className="text-center md:text-left">
               <h2 className="text-[20px] md:text-[22px] font-bold text-white mb-1 leading-tight tracking-tight">
-                {title}
+                {typeof title === 'string' ? title.replace('#5D00D6', '#a56eff') : title}
               </h2>
-              <p className="text-[14px] text-white/50 font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px] md:max-w-none">
+              <p className="text-[14px] text-white font-medium leading-relaxed max-w-[600px]">
                 {description}
               </p>
             </div>

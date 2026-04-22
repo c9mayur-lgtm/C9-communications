@@ -30,7 +30,7 @@ export const ScaleIn = ({ children, delay = 0, className = '' }: { children: Rea
 );
 
 export const Eyebrow = ({ children, light = false }: { children: React.ReactNode; light?: boolean }) => (
-  <div className={`text-[11px] font-bold uppercase tracking-[0.25em] mb-5 ${light ? 'text-purple-300' : ''}`} style={!light ? { color: P } : {}}>
+  <div className={`c9-eyebrow ${light ? '!text-purple-300' : ''} !mb-5`}>
     {children}
   </div>
 );
@@ -177,7 +177,7 @@ export const DeviceMockup = () => (
     <div className="px-6 py-5 border-b flex items-center justify-between bg-gray-50/50" style={{ borderColor: BD }}>
       <div className="flex items-center gap-3">
         <Laptop size={18} className="text-[#6264A7]" />
-        <span className="text-[13px] font-bold font-proxima text-[#0c1024]">Microsoft Intune Fleet</span>
+        <span className="text-[13px] font-bold text-[#0c1024]">Microsoft Intune Fleet</span>
       </div>
       <div className="flex items-center gap-1.5 px-3 py-1 bg-[#6264A715] rounded-full">
          <div className="w-1.5 h-1.5 rounded-full bg-[#6264A7] animate-pulse" />
@@ -242,18 +242,18 @@ export const ServicesAccordion = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-[17px] font-bold transition-colors font-proxima" style={{ color: isA ? '#0c1024' : 'gray' }}>{f.label}</span>
+                    <span className="text-[17px] font-bold transition-colors" style={{ color: isA ? '#0c1024' : 'gray' }}>{f.label}</span>
                     <ChevronDown size={15} className={`transition-transform duration-300 ${isA ? 'rotate-180' : ''}`} style={{ color: isA ? f.color : 'gray' }} />
                   </div>
                   <AnimatePresence>
                     {isA && (
                       <motion.div initial={{ opacity:0, height:0 }} animate={{ opacity:1, height:'auto' }} exit={{ opacity:0, height:0 }} transition={{ duration:0.3 }} className="overflow-hidden">
-                        <p className="text-[15px] leading-relaxed mt-2 mb-3 text-gray-500 font-medium font-proxima">{f.body}</p>
+                        <p className="text-[15px] leading-relaxed mt-2 mb-3 text-gray-500 font-medium">{f.body}</p>
                         <div className="grid grid-cols-2 gap-1.5">
                           {f.bullets.map(b => (
                             <div key={b} className="flex items-center gap-1.5">
                               <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: f.color }} />
-                              <span className="text-[13px] font-medium text-gray-600 font-proxima">{b}</span>
+                              <span className="text-[13px] font-medium text-gray-600">{b}</span>
                             </div>
                           ))}
                         </div>
@@ -283,106 +283,106 @@ export const ServicesAccordion = () => {
 /* ── Infra Carousel ───────────────────────────────────────────── */
 const INFRA_TABS = [
   {
-    label: 'Microsoft 365',
+    label: '1. Assess & Design',
     cards: [
       {
-        title: 'Tenant Setup & Migration',
-        body: 'Full Microsoft 365 tenant deployment — email migration, domain configuration, and user provisioning handled by C9 engineers.',
-        pointers: ['Email & mailbox migration', 'Domain & DNS configuration', 'Licence provisioning'],
-        partner: 'Microsoft 365',
-        partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
-      },
-      {
-        title: 'Licence Management',
-        body: 'Never overpay or underlicence again. C9 optimises your Microsoft 365 seat mix every quarter to match your team size.',
-        pointers: ['Seat-level optimisation', 'Plan upgrade guidance', 'Monthly usage reporting'],
-        partner: 'Microsoft',
-        partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
-      },
-      {
-        title: 'C9 L1–L3 Support',
-        body: 'From password resets to tenant-level issues — our Australian support team owns every ticket from open to close.',
-        pointers: ['< 2 hr response SLA', 'Named account manager', 'Priority escalation line'],
+        title: 'Workplace Audit',
+        body: 'We audit your current devices, users, and licensing to identify security gaps and operational bottlenecks.',
+        pointers: ['Legacy system audit', 'Security risk assessment', 'Connectivity & Telco review'],
         partner: 'C9 Communications',
+        partnerLogo: null,
+      },
+      {
+        title: 'Environment Design',
+        body: 'Architecture of your new managed environment including identity structure, access policies, and collaboration flow.',
+        pointers: ['M365 Tenant architecture', 'Security policy design', 'Device standardisation'],
+        partner: 'Modern Workplace',
+        partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
+      },
+      {
+        title: 'Migration Planning',
+        body: 'A step-by-step roadmap for moving data and users with zero disruption to your daily operations.',
+        pointers: ['Zero-downtime roadmap', 'Data protection plan', 'Stakeholder alignment'],
+        partner: 'Migration Services',
         partnerLogo: null,
       },
     ],
   },
   {
-    label: 'Security & Compliance',
+    label: '2. Configure & Secure',
     cards: [
       {
-        title: 'Endpoint Detection & Response',
-        body: 'Microsoft Defender for Business configured and monitored by C9\'s SOC. Threats detected and contained before you\'re aware of them.',
-        pointers: ['Defender for Business setup', '24/7 SOC monitoring', 'Automated threat containment'],
-        partner: 'Microsoft Defender',
+        title: 'Device Configuration',
+        body: 'We pre-configure your fleet via Microsoft Intune, ensuring every device is compliant before it reaches a user.',
+        pointers: ['Intune policy setup', 'Autopilot configuration', 'Application packaging'],
+        partner: 'Microsoft Intune',
         partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
       },
       {
-        title: 'Security Awareness Training',
-        body: 'Automated phishing simulations and microlearning campaigns that reduce human-error breaches by up to 70%.',
-        pointers: ['Phishing simulations', 'Microsoft-integrated training', 'Real-time coaching'],
-        partner: 'KnowBe4',
-        partnerLogo: 'https://logo.clearbit.com/knowbe4.com',
+        title: 'Security Implementation',
+        body: 'Deploying MFA, Conditional Access, and Defender for Business to harden your environment against threats.',
+        pointers: ['Identity protection (MFA)', 'Conditional access rules', 'Endpoint hardening'],
+        partner: 'Cybersecurity',
+        partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
       },
       {
-        title: 'Compliance & DLP',
-        body: 'Data Loss Prevention policies, sensitivity labels, and eDiscovery configured to meet Australian Privacy Act and GDPR requirements.',
-        pointers: ['DLP policy configuration', 'Sensitivity label deployment', 'eDiscovery & audit logs'],
-        partner: 'Microsoft Purview',
+        title: 'Identity Setup',
+        body: 'Centralising user management and access control to ensure the right people have the right access, always.',
+        pointers: ['Entra ID (Azure AD)', 'Single Sign-On (SSO)', 'Role-based access'],
+        partner: 'Identity Management',
         partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
       },
     ],
   },
   {
-    label: 'Device Management',
+    label: '3. Deploy & Onboard',
     cards: [
       {
-        title: 'Zero-Touch Deployment',
-        body: 'New devices arrive at your staff\'s desk pre-configured with Windows Autopilot. Plug in, sign in, start working.',
-        pointers: ['Windows Autopilot setup', 'Autopilot profile configuration', 'Device rename & tagging'],
-        partner: 'Microsoft Intune',
-        partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
+        title: 'Controlled Rollout',
+        body: 'User migration and device deployment handled in waves to ensure complete control and immediate support.',
+        pointers: ['Staged user migration', 'Device distribution', 'On-site/Remote support'],
+        partner: 'Deployment',
+        partnerLogo: null,
       },
       {
-        title: 'Cross-Platform MDM',
-        body: 'Manage Windows, macOS, iOS, and Android from a single Intune console. Compliance policies enforced automatically.',
-        pointers: ['Windows, Mac, iOS, Android', 'Compliance policy enforcement', 'Remote wipe & lock'],
-        partner: 'Microsoft Intune',
-        partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
+        title: 'Day One Readiness',
+        body: 'Ensuring every user is operational from the moment they sign in, with all apps and data ready to go.',
+        pointers: ['User onboarding docs', 'System walkthroughs', 'Welcome kits'],
+        partner: 'User Experience',
+        partnerLogo: null,
       },
       {
-        title: 'App & Patch Management',
-        body: 'Software deployed silently across your fleet. Security patches applied before vulnerabilities are exploited.',
-        pointers: ['Silent software deployment', 'Automated patch cycles', 'Update ring management'],
-        partner: 'Microsoft Endpoint',
-        partnerLogo: 'https://raw.githubusercontent.com/gilbarbara/logos/master/logos/microsoft.svg',
+        title: 'Zero-Touch Delivery',
+        body: 'Devices shipped directly to staff. They plug in, sign in, and are productive in minutes.',
+        pointers: ['Drop-ship fulfillment', 'Remote provisioning', 'Asset tracking'],
+        partner: 'Logistics',
+        partnerLogo: null,
       },
     ],
   },
   {
-    label: 'SaaS Backup',
+    label: '4. Managed Growth',
     cards: [
       {
-        title: 'Exchange & Email Backup',
-        body: 'Daily automated backups of every Exchange Online mailbox with point-in-time restore — even after accidental deletion.',
-        pointers: ['Daily automated backup', 'Point-in-time restore', 'Deleted item recovery'],
-        partner: 'Veeam',
-        partnerLogo: 'https://logo.clearbit.com/veeam.com',
+        title: '24/7 Monitoring',
+        body: 'Continuous monitoring of security health and device compliance by our Sydney-based SOC team.',
+        pointers: ['Real-time threat detection', 'Compliance reporting', 'Patch management'],
+        partner: 'C9 Managed IT',
+        partnerLogo: null,
       },
       {
-        title: 'SharePoint & Teams Backup',
-        body: 'Complete protection of SharePoint sites, OneDrive libraries, and Teams channels — including private channel data.',
-        pointers: ['SharePoint site backup', 'OneDrive file recovery', 'Teams channel protection'],
-        partner: 'Veeam',
-        partnerLogo: 'https://logo.clearbit.com/veeam.com',
+        title: 'Strategic Reviews',
+        body: 'Quarterly reviews to optimise your licensing, security posture, and workplace technology roadmap.',
+        pointers: ['Licence optimisation', 'Roadmap planning', 'Spend analysis'],
+        partner: 'Account Management',
+        partnerLogo: null,
       },
       {
-        title: 'Ransomware Recovery',
-        body: 'Immutable backups ensure you can recover clean data even if your tenant is encrypted by ransomware.',
-        pointers: ['Immutable backup storage', 'Clean restore points', 'Rapid full-tenant recovery'],
-        partner: 'Veeam',
-        partnerLogo: 'https://logo.clearbit.com/veeam.com',
+        title: 'Expert Support',
+        body: 'Direct access to L1-L3 engineers who know your environment and own the outcome of every request.',
+        pointers: ['< 2 hr response SLA', 'Sydney-based desk', 'Named engineers'],
+        partner: 'Engineering',
+        partnerLogo: null,
       },
     ],
   },
@@ -450,8 +450,8 @@ export const InfraCarousel = () => {
               style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
             >
               {/* Title + body */}
-              <h3 className="text-[20px] font-bold text-white mb-3 font-proxima leading-snug">{card.title}</h3>
-              <p className="text-[14px] leading-[1.65] mb-6 font-proxima" style={{ color: 'rgba(255,255,255,0.55)' }}>{card.body}</p>
+              <h3 className="c9-card-title !text-white mb-3">{card.title}</h3>
+              <p className="c9-body !text-white/60 mb-6">{card.body}</p>
 
               {/* Pointer list */}
               <div className="flex flex-col flex-grow">
@@ -459,7 +459,7 @@ export const InfraCarousel = () => {
                   <div key={pt}>
                     <div className="py-3 flex items-center gap-3">
                       <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: '#7C3AED' }} />
-                      <span className="text-[13px] font-medium font-proxima" style={{ color: 'rgba(255,255,255,0.75)' }}>{pt}</span>
+                      <span className="c9-body !text-white/80 !text-[13px]">{pt}</span>
                     </div>
                     {pi < card.pointers.length - 1 && (
                       <div style={{ height: '1px', background: 'rgba(255,255,255,0.06)' }} />
@@ -488,7 +488,6 @@ export const InfraCarousel = () => {
 };
 
 
-/* ── Other Solutions ──────────────────────────────────────────── */
 /* ── Other Solutions ──────────────────────────────────────────── */
 const OTHER = [
   { 
@@ -548,16 +547,18 @@ export const OtherSolutions = () => {
                   
                   {/* Title */}
                   <div className="pt-2.5">
-                    <h3 className={`text-[20px] font-bold tracking-tight transition-all duration-500 ${isActive ? 'text-[#0c1024]' : 'text-gray-400'}`} style={{ fontFamily: '"Proxima Nova", sans-serif' }}>
+                    <h3 className={`c9-card-title !text-[20px] transition-all duration-500 ${isActive ? '!text-[#0c1024]' : '!text-gray-400'}`}>
                       {item.title}
                     </h3>
-                    <p className={`text-[15px] leading-relaxed mt-2 max-w-[360px] transition-all duration-500 overflow-hidden ${isActive ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'}`} style={{ color: 'rgba(0,0,0,0.5)', fontFamily: '"Proxima Nova", sans-serif' }}>{item.body}</p>
+                    <p className={`c9-body !text-[15px] mt-2 max-w-[360px] transition-all duration-500 overflow-hidden ${isActive ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'}`}>
+                      {item.body}
+                    </p>
                   </div>
 
                   {/* Metric */}
                   <div className="text-right flex flex-col items-end">
-                    <div className={`text-[36px] font-bold leading-none tracking-tight transition-all duration-500 ${isActive ? '' : 'text-gray-300'}`} style={{ color: isActive ? '#0c1024' : undefined, fontFamily: '"Proxima Nova", sans-serif' }}>{item.metric}</div>
-                    <div className={`text-[13px] font-medium mt-1.5 transition-all duration-500 ${isActive ? 'text-gray-500' : 'text-gray-300'}`} style={{ fontFamily: '"Proxima Nova", sans-serif' }}>{item.metricLabel}</div>
+                    <div className={`text-[36px] font-bold leading-none tracking-tight transition-all duration-500 ${isActive ? '!text-[#0c1024]' : '!text-gray-300'}`}>{item.metric}</div>
+                    <div className={`c9-body !text-[13px] !text-gray-500 mt-1.5 transition-all duration-500 ${isActive ? 'opacity-100' : 'opacity-40'}`}>{item.metricLabel}</div>
                     <div className={`mt-4 transition-all duration-500 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
                        <ArrowRight size={20} style={{ color: item.color }} />
                     </div>
@@ -608,13 +609,13 @@ export const FAQSection = ({ items = FAQS }: { items?: { q: string; a: string }[
         <FadeUp key={i} delay={i * 0.04}>
           <div className="border-b" style={{ borderColor: BD }}>
             <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-start justify-between gap-6 py-6 text-left group">
-              <span className="text-[18px] md:text-[20px] font-bold leading-snug transition-colors font-proxima" style={{ color: open===i ? P : '#0c1024' }}>{f.q}</span>
+              <span className={`c9-card-title !text-[18px] md:!text-[20px] transition-colors ${open===i ? '!text-[#5D00D6]' : '!text-[#0c1024]'}`}>{f.q}</span>
               <ChevronDown size={20} className={`shrink-0 mt-0.5 transition-transform duration-300 ${open===i?'rotate-180':''}`} style={{ color: open===i ? P : 'gray' }} />
             </button>
             <AnimatePresence>
               {open===i && (
                 <motion.div initial={{ opacity:0, height:0 }} animate={{ opacity:1, height:'auto' }} exit={{ opacity:0, height:0 }} transition={{ duration:0.3 }} className="overflow-hidden">
-                  <p className="text-[17px] leading-[1.65] pb-7 max-w-[680px] text-gray-600 font-medium font-proxima">{f.a}</p>
+                   <p className="c9-body pb-7 max-w-[680px]">{f.a}</p>
                 </motion.div>
               )}
             </AnimatePresence>

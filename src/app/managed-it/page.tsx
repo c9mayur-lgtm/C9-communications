@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight, CheckCircle, ShieldCheck, Zap, 
   Monitor, Lock, Cloud, PhoneCall,
-  Users, ShieldAlert, Activity, Database, Server
+  Users, ShieldAlert, Activity, Database, Server, Building, Network, Wrench
 } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
@@ -60,349 +60,455 @@ const Hero = () => (
         <div>
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
-              <Activity size={13} className="text-[#5D00D6]" />
-              <span className="c9-eyebrow !mb-0">Managed IT Services</span>
+               <ShieldCheck size={13} className="text-[#5D00D6]" />
+               <span className="c9-eyebrow !mb-0">Fully Accountable</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
-            <h1 className="c9-hero-title mb-6">
-              Take Full Control of Your IT — <span className="text-[#5D00D6]">Without Disrupting</span> Your Business
-            </h1>
+             <h1 className="c9-hero-title mb-6">
+                Managed IT — Fully Owned. <span className="text-[#5D00D6]">Fully Accountable.</span>
+             </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <p className="c9-body mb-8 max-w-[580px]">
-              We take over your existing IT systems, vendors, and infrastructure — and turn them into one fully managed, accountable environment.
-            </p>
+             <p className="c9-body mb-8 max-w-[580px]">
+                We manage your entire IT environment—ensuring systems run reliably, securely, and without disruption across every location.
+             </p>
           </FadeIn>
 
           <FadeIn delay={0.22}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10">
-              {[
-                'No-disruption transition approach',
-                'One partner. Full accountability',
-                '24/7 monitoring and support',
-                'Built for growing, multi-site businesses'
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
-                  <span className="text-slate-700 font-bold text-[14px]">{item}</span>
-                </div>
-              ))}
-            </div>
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10">
+                {[
+                   'One accountable partner',
+                   'Proactive monitoring',
+                   'Security built-in',
+                   'Designed for scalability'
+                ].map((item) => (
+                   <div key={item} className="flex items-center gap-3">
+                      <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                      <span className="text-slate-700 font-bold text-[16px]">{item}</span>
+                   </div>
+                ))}
+             </div>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#consultation"
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
-              >
-                Book a Transition Assessment
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#takeover-process"
-                className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-9 font-bold text-[15px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
-              >
-                See How We Take Over Your IT
-              </a>
-            </div>
+             <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                   href="#consultation"
+                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                >
+                   Book a Consultation
+                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                </a>
+                <a
+                   href="#takeover-process"
+                   className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-9 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                >
+                   Assess Your Current Setup
+                </a>
+             </div>
           </FadeIn>
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-          <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group border-8 border-slate-50">
-            <img
-              src="/images/hero_business.png"
-              alt="Safe IT infrastructure takeover"
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
-            
-            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-5 border border-white/60 shadow-xl">
-               <div className="flex items-center justify-between mb-3 pb-3 border-b border-slate-100">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Operational Takeover</span>
-                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 font-bold text-[10px] uppercase tracking-wider">
-                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Live Support
-                  </span>
+           <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group border-8 border-slate-50">
+              <img
+                 src="https://images.openai.com/static-rsc-4/pAudOpKduXbwaJefDA-ty43Cj-QDIxHOJgn3hPeWkl5wv5V3EE4uGRNfiiWROXkbdL3TPRFkgOni1EHE1upOorzlSCDZ2h7psbaRq-f3_WGFPgbJSo-GLM_1lYqxpbGfyMedEH-gFjrr9ZCXIJBI2Wn-GMakrQr-N2BCHYGXP2VFpVhWD85t1FGt3DGtjaZj?purpose=fullsize"
+                 alt="Operational IT Takeover"
+                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
+              
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-5 border border-white/60 shadow-xl">
+                 <div className="flex items-center justify-between mb-3 pb-3 border-b border-slate-100">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Environment Status</span>
+                    <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 font-bold text-[10px] uppercase tracking-wider">
+                       <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Optimised
+                    </span>
+                 </div>
+                 <div className="grid grid-cols-2 gap-4">
+                    <div>
+                       <div className="text-[11px] font-bold text-slate-500 mb-0.5 uppercase tracking-widest">Ownership</div>
+                       <div className="text-[16px] font-extrabold text-slate-900 leading-none">Single Partner ✓</div>
+                    </div>
+                    <div>
+                       <div className="text-[11px] font-bold text-slate-500 mb-0.5 uppercase tracking-widest">Accountability</div>
+                       <div className="text-[16px] font-extrabold text-slate-900 leading-none">End-to-End</div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 2 — PROBLEM
+   ───────────────────────────────────────────────────────── */
+const SectionProblem = () => (
+   <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
+      <div className={C}>
+         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <FadeIn direction="left" className="order-2 lg:order-1">
+               <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square max-w-md mx-auto lg:max-w-none border-8 border-white">
+                  <img src="https://images.openai.com/static-rsc-4/D3kvXiS3zu9m7xquT8-CVxzFv59w1qEmFcT35AEHNAzkA8N-lahrO3yL92F1yUXZ1jsivUWP1PlLJ8fYTgqwW_jVgghi6wxg2ay2fX7wy7daAXIi-DF9ho4KmQRXSDpcuessj44iGEtELLFt71YVmFdUGnFwUY4TtCtVI1K5R3hfkg5j9emS8HJv45Dme_jG?purpose=fullsize" alt="IT Complexity" className="w-full h-full object-cover" />
                </div>
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                     <div className="text-[11px] font-bold text-slate-500 mb-0.5 uppercase tracking-widest">Ownership</div>
-                     <div className="text-[14px] font-extrabold text-slate-900 leading-none">Single Partner ✓</div>
-                  </div>
-                  <div>
-                     <div className="text-[11px] font-bold text-slate-500 mb-0.5 uppercase tracking-widest">Complexity</div>
-                     <div className="text-[14px] font-extrabold text-slate-900 leading-none">Optimised</div>
-                  </div>
-               </div>
-            </div>
-          </div>
-        </FadeIn>
-      </div>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 2 — CURRENT STATE
-   ───────────────────────────────────────────────────────── */
-const SectionCurrentState = () => (
-  <section className="py-20 lg:py-24 bg-slate-50 border-y border-slate-100">
-    <div className={C}>
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <FadeIn direction="left">
-          <span className="c9-eyebrow mb-4">Your Current State</span>
-          <h2 className="c9-section-heading mb-6">
-            Most Growing Businesses Don’t Have an IT Problem — They Have a Control Problem
-          </h2>
-          <div className="bg-[#5D00D6]/5 border-l-4 border-[#5D00D6] p-6 rounded-r-2xl">
-            <p className="text-[#0c1024] font-bold text-[18px]">
-              &ldquo;This isn’t just inefficient — it’s operational risk.&rdquo;
-            </p>
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={0.1} direction="right" className="space-y-4">
-          {[
-            { title: 'Multiple vendors with no ownership', desc: 'Connectivity drops? Telco blame IT. Software fails? IT blame the ISP.' },
-            { title: 'Systems that don’t integrate properly', desc: 'Manual workarounds and siloed data slowing down your team\'s output.' },
-            { title: 'Reactive support when things break', desc: 'Waiting for something to fail before anyone takes action.' },
-            { title: 'Rising costs with no visibility', desc: 'Surprise invoices from different vendors with no overall ROI.' },
-            { title: 'Constant risk of downtime', desc: 'Unmonitored systems leading to critical business interruptions.' },
-          ].map((item, i) => (
-            <div key={i} className="bg-white p-5 rounded-2xl border border-slate-200 flex gap-4 shadow-sm group hover:border-[#5D00D6]/20 transition-all">
-              <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center shrink-0">
-                <ShieldAlert size={20} className="text-rose-500" />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-[15px] mb-1">{item.title}</h4>
-                <p className="text-slate-500 text-[13px] leading-relaxed">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </FadeIn>
-      </div>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 3 — THE SOLUTION
-   ───────────────────────────────────────────────────────── */
-const SectionSolution = () => (
-  <section className="py-20 lg:py-24 bg-white">
-    <div className={C}>
-      <FadeIn className="text-center mb-16">
-        <span className="c9-eyebrow mb-4">The Solution</span>
-        <h2 className="c9-section-heading mb-4">One Partner. Total Ownership of Your IT Environment.</h2>
-      </FadeIn>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[
-          { icon: <Server />, title: 'Managed IT Infrastructure', desc: 'We manage your entire IT environment — servers, networks, systems, and performance.' },
-          { icon: <Users />, title: 'End-User & Device Management', desc: 'From desktops to mobile devices, everything is monitored, secured, and supported.' },
-          { icon: <Cloud />, title: 'Cloud & Workplace Systems', desc: 'We manage your business applications, cloud platforms, and collaboration tools.' },
-          { icon: <Lock />, title: 'Integrated Security Layer', desc: 'Security is built into everything — not added later.' },
-          { icon: <ShieldCheck />, title: '24/7 Monitoring & Support', desc: 'Issues are identified and resolved before they impact your business.' },
-        ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.05} className="bg-slate-50 border border-slate-100 p-8 rounded-[32px] hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all group">
-            <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 transform group-hover:scale-110 transition-transform">
-              {item.icon}
-            </div>
-            <h3 className="c9-card-title mb-3">{item.title}</h3>
-            <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
-          </FadeIn>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 4 — CORE DIFFERENTIATOR
-   ───────────────────────────────────────────────────────── */
-const SectionProcess = () => (
-  <section id="takeover-process" className="py-20 lg:py-24 bg-[#0c1024] text-white relative overflow-hidden">
-    <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
-    <div className={C}>
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <FadeIn direction="left">
-          <span className="c9-eyebrow !text-[#a56eff] mb-4">Core Differentiator</span>
-          <h2 className="c9-section-heading !text-white mb-6">
-            How We Take Over Your Existing IT — Without Breaking Anything
-          </h2>
-          <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
-             <div className="w-10 h-10 rounded-full bg-[#5D00D6] flex items-center justify-center shrink-0">
-                <CheckCircle size={20} className="text-white" />
-             </div>
-             <p className="text-[14px] font-bold">100% Transition Accountability — No Downtime</p>
-          </div>
-        </FadeIn>
-
-        <div className="relative space-y-8">
-          <div className="absolute top-0 left-8 md:left-[36px] bottom-0 w-1 bg-white/5" />
-          {[
-            { step: '01', title: 'Audit & Discovery', desc: 'We map your entire environment — systems, vendors, risks, and dependencies.' },
-            { step: '02', title: 'Stabilisation', desc: 'We fix critical vulnerabilities before making any major changes.' },
-            { step: '03', title: 'Parallel Transition', desc: 'New systems are implemented alongside your existing setup to avoid disruption.' },
-            { step: '04', title: 'Controlled Takeover', desc: 'We transition control in a structured, low-risk manner.' },
-            { step: '05', title: 'Ongoing Optimisation', desc: 'We continuously improve performance, cost efficiency, and security.' },
-          ].map((s, i) => (
-            <FadeIn key={i} delay={i * 0.1} direction="right" className="relative pl-20 md:pl-[100px]">
-              <div className="absolute left-0 top-0 w-[56px] h-[56px] md:w-[72px] md:h-[72px] rounded-[20px] bg-[#5D00D6] text-white flex items-center justify-center text-xl md:text-2xl font-black shadow-lg shadow-purple-900/50 z-10 border-4 border-[#0c1024]">
-                {s.step}
-              </div>
-              <h4 className="c9-card-title !text-white mb-2">{s.title}</h4>
-              <p className="text-white/50 text-[14px] leading-relaxed">{s.desc}</p>
             </FadeIn>
-          ))}
-        </div>
+
+            <FadeIn direction="right" className="order-1 lg:order-2">
+               <span className="c9-eyebrow mb-4">The Real IT Problem</span>
+               <h2 className="c9-section-heading mb-6">
+                  Fragmented IT Environments Add Hidden Risk to Your Business
+               </h2>
+               <div className="space-y-6 mb-8">
+                  {[
+                     { title: 'Multiple vendors, no accountability', desc: 'When something goes wrong, pointing fingers takes priority over solving the problem.' },
+                     { title: 'Constant IT issues disrupting operations', desc: 'Your team is spending time dealing with technical friction instead of focusing on their work.' },
+                     { title: 'Lack of visibility and control', desc: 'You don\'t know exactly what systems you have, how secure they are, or what they cost.' },
+                     { title: 'Security risks across systems', desc: 'Gaps between different vendor systems create vulnerabilities.' }
+                  ].map((item, i) => (
+                     <div key={i} className="flex gap-4">
+                        <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center shrink-0 mt-0.5">
+                           <span className="w-2 h-2 rounded-full bg-rose-500" />
+                        </div>
+                        <div>
+                           <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.title}</h4>
+                           <p className="text-slate-500 text-[16px] leading-relaxed">{item.desc}</p>
+                        </div>
+                     </div>
+                  ))}
+               </div>
+               <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm mb-6">
+                  <p className="text-slate-900 font-bold text-[18px]">
+                     Most IT environments fail because no one owns the outcome.
+                  </p>
+               </div>
+               <a href="#consultation" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-3 transition-all group">
+                  Get clarity on your current setup <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+               </a>
+            </FadeIn>
+         </div>
       </div>
-    </div>
-  </section>
+   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 6 — RISK REVERSAL
+   SECTION 3 — THE C9 MODEL
    ───────────────────────────────────────────────────────── */
-const SectionSafety = () => (
-   <section className="py-20 lg:py-24 bg-white border-t border-slate-100 overflow-hidden">
+const SectionModel = () => (
+   <section id="takeover-process" className="py-16 lg:py-20 bg-[#0c1024] text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
+      <div className={C}>
+         <div className="grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 items-center">
+            <FadeIn direction="left">
+               <span className="c9-eyebrow !text-[#a56eff] mb-4">The C9 Model</span>
+               <h2 className="c9-section-heading !text-white mb-6">
+                  Total Environment Ownership
+               </h2>
+               <p className="c9-body text-white/80 mb-10 max-w-lg">
+                  We don't just provide a service. We take full responsibility for the performance, security, and reliability of your entire technological footprint.
+               </p>
+               
+               <div className="space-y-4 mb-10">
+                  {[
+                     { title: 'Single accountable partner', desc: 'One point of contact for every technical issue.' },
+                     { title: 'IT, Telco, Security unified', desc: 'A cohesive environment where every layer works together seamlessly.' },
+                     { title: 'No vendor overlap', desc: 'We eliminate redundancy and close the gaps between systems.' }
+                  ].map((item, i) => (
+                     <div key={i} className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                        <CheckCircle size={24} className="text-[#a56eff] shrink-0" />
+                        <div>
+                           <h4 className="font-bold text-[16px] text-white">{item.title}</h4>
+                           <p className="text-[13px] text-white/60">{item.desc}</p>
+                        </div>
+                     </div>
+                  ))}
+               </div>
+               
+               <div className="inline-flex items-center gap-3 bg-[#5D00D6] px-6 py-4 rounded-2xl shadow-xl shadow-purple-900/40 mb-8">
+                  <p className="text-[16px] font-bold text-white">One partner responsible. No blame shifting.</p>
+               </div>
+               <div className="block">
+                  <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-white text-[#0c1024] rounded-full h-12 px-8 font-bold text-[14px] hover:bg-slate-100 transition-all">
+                     Speak to a specialist
+                  </a>
+               </div>
+            </FadeIn>
+
+            <FadeIn direction="right" className="relative">
+               <div className="relative rounded-[32px] overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-[600px] border-4 border-white/10 shadow-2xl">
+                  <img src="https://images.openai.com/static-rsc-4/sJiOQgzSIcd_ByrfMRbRRGc4aukJXXbveYxPiQt8se6oGj0L3Hslv94wOzKtSWJ2GQEsm-4E8mE1hQ3CWJSfuV2U_DAQtohH4DBYm_Rk_xTO4CNkiSH_i4q5Vfuhy10559nMsoA5KopbK_Fob2S6mnkmOYTboSzNrTTXqbe_G9wuDcjf-3Ghl-bHcs1CcP_F?purpose=fullsize" alt="C9 Model Accountability" className="w-full h-full object-cover" />
+               </div>
+            </FadeIn>
+         </div>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 4 — WHAT WE MANAGE
+   ───────────────────────────────────────────────────────── */
+const SectionManage = () => (
+   <section className="py-16 lg:py-20 bg-white">
+      <div className={C}>
+         <FadeIn className="text-center mb-16">
+            <span className="c9-eyebrow mb-4">Complete Coverage</span>
+            <h2 className="c9-section-heading">Everything Managed. Everything Accounted For.</h2>
+         </FadeIn>
+
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            {[
+               { icon: <Server />, title: 'Infrastructure', desc: 'Servers and core systems running at peak performance.' },
+               { icon: <Monitor />, title: 'Devices', desc: 'Hardware lifecycle managed seamlessly for every user.' },
+               { icon: <Network />, title: 'Networks', desc: 'Fast, secure connectivity across all your locations.' },
+               { icon: <ShieldCheck />, title: 'Security', desc: 'Proactive protection embedded into every layer.' },
+               { icon: <PhoneCall />, title: 'Support', desc: 'Expert assistance ensuring zero operational friction.' },
+            ].map((item, i) => (
+               <FadeIn key={i} delay={i * 0.05} className="bg-slate-50 border border-slate-100 p-8 rounded-3xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all group text-center flex flex-col items-center">
+                  <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-5 transform group-hover:scale-110 transition-transform">
+                     {item.icon}
+                  </div>
+                  <h3 className="c9-card-title mb-2 text-[18px]">{item.title}</h3>
+                  <p className="text-slate-500 text-[13px] leading-relaxed">{item.desc}</p>
+               </FadeIn>
+            ))}
+         </div>
+         <FadeIn className="mt-12 text-center" delay={0.3}>
+            <a href="#consultation" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-3 transition-all group">
+               See how this applies to your environment <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+         </FadeIn>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 5 — HOW IT WORKS
+   ───────────────────────────────────────────────────────── */
+const SectionHowItWorks = () => (
+   <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+         <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeIn>
+               <span className="c9-eyebrow mb-4">The Process</span>
+               <h2 className="c9-section-heading mb-6">Structured Delivery. Predictable Outcomes.</h2>
+               <p className="c9-body text-slate-600">We don't guess. We follow a rigorous methodology to ensure successful transition and ongoing operational excellence.</p>
+            </FadeIn>
+         </div>
+
+         <div className="grid md:grid-cols-4 gap-6">
+            {[
+               { step: '01', title: 'Assess', desc: 'Deep-dive audit into your current environment, unearthing hidden risks.' },
+               { step: '02', title: 'Design', desc: 'Architecting a target state that aligns perfectly with business goals.' },
+               { step: '03', title: 'Deploy', desc: 'Controlled rollout of new systems with zero unplanned downtime.' },
+               { step: '04', title: 'Manage', desc: 'Continuous optimisation, monitoring, and proactive support.' },
+            ].map((s, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
+                     {s.step}
+                  </div>
+                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
+                     {parseInt(s.step)}
+                  </div>
+                  <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
+                  <p className="text-slate-500 text-[16px] leading-relaxed relative z-10">{s.desc}</p>
+               </FadeIn>
+            ))}
+         </div>
+         <FadeIn className="mt-12 text-center" delay={0.4}>
+            <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group">
+               Get a tailored plan <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            </a>
+         </FadeIn>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 6 — OPERATIONS
+   ───────────────────────────────────────────────────────── */
+const SectionOperations = () => (
+   <section className="py-16 lg:py-20 bg-white">
+      <div className={C}>
+         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <FadeIn direction="left" className="relative">
+               <div className="relative rounded-[32px] overflow-hidden aspect-square border-8 border-slate-50 shadow-2xl">
+                  <img src="https://images.openai.com/static-rsc-4/gILYUm_KgMD_--xVhl18VRiCxjUgWKLM05BT5Kvt-TqGyFjIwUaPkr-EipBQXruRmwdtP46R1BW3KVhlKpJeDKJ8ssE3CCWx0DWm7M5L4JbeiLH1KipEdy73AwBYcgD2ZJLQffe8SlnZubHMhXdJEMNRD2MuVigDwaHPNtiJ30VuGR8IlT_ofl4miTOASHVK?purpose=fullsize" alt="Operations and Support" className="w-full h-full object-cover" />
+               </div>
+               <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden md:block">
+                  <div className="flex items-center gap-4">
+                     <div className="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center">
+                        <Activity size={24} className="text-emerald-500" />
+                     </div>
+                     <div>
+                        <p className="font-bold text-slate-900">24/7 Monitoring</p>
+                        <p className="text-sm text-slate-500">Always Active</p>
+                     </div>
+                  </div>
+               </div>
+            </FadeIn>
+
+            <FadeIn direction="right">
+               <span className="c9-eyebrow mb-4">Operations & Support</span>
+               <h2 className="c9-section-heading mb-6">Built to Prevent Friction</h2>
+               <div className="space-y-6 mb-8">
+                  <p className="text-slate-600 text-[16px] leading-relaxed">
+                     Your team shouldn't have to submit a ticket for a system that’s already down. We combine advanced system oversight with dedicated human expertise.
+                  </p>
+                  <ul className="space-y-5">
+                     {[
+                        { title: '24/7 Monitoring', desc: 'Real-time visibility into every component of your environment.' },
+                        { title: 'Proactive Issue Resolution', desc: 'We act on anomalies before they escalate into outages.' },
+                        { title: 'Continuous System Oversight', desc: 'Ensuring your infrastructure scales smoothly alongside your business.' }
+                     ].map((item, i) => (
+                        <li key={i} className="flex gap-4">
+                           <div className="mt-1"><Zap size={20} className="text-[#5D00D6]" /></div>
+                           <div>
+                              <strong className="block text-slate-900 text-[16px]">{item.title}</strong>
+                              <span className="text-slate-500 text-[16px]">{item.desc}</span>
+                           </div>
+                        </li>
+                     ))}
+                  </ul>
+               </div>
+               <div className="bg-[#5D00D6]/5 border-l-4 border-[#5D00D6] p-5 rounded-r-xl mb-8">
+                  <p className="text-slate-900 font-bold text-[16px]">Issues are resolved before they impact operations.</p>
+               </div>
+               <a href="#consultation" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-3 transition-all group">
+                  Talk to an expert <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+               </a>
+            </FadeIn>
+         </div>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 7 — SECURITY
+   ───────────────────────────────────────────────────────── */
+const SectionSecurity = () => (
+   <section className="py-16 lg:py-20 bg-[#0c1024] text-white overflow-hidden relative">
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6] opacity-10 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none" />
+      <div className={C}>
+         <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeIn>
+               <span className="c9-eyebrow !text-[#a56eff] mb-4">Security Layer</span>
+               <h2 className="c9-section-heading !text-white mb-6">Security Embedded, Not Bolted On</h2>
+               <p className="c9-body text-white/70">
+                  Security is built into operations—not added later. We protect your data, devices, and network simultaneously.
+               </p>
+            </FadeIn>
+         </div>
+         
+         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+               { icon: <Lock size={32} />, title: 'Endpoint Protection', desc: 'Securing every device your team uses, anywhere they work.' },
+               { icon: <ShieldCheck size={32} />, title: 'Network Security', desc: 'Enterprise-grade firewalls and secure traffic routing.' },
+               { icon: <Activity size={32} />, title: 'Active Monitoring', desc: 'Threat detection analyzing behavior to stop breaches.' }
+            ].map((s, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="bg-white/5 border border-white/10 p-8 rounded-[32px] hover:bg-white/10 transition-colors text-center">
+                  <div className="text-[#a56eff] mb-6 flex justify-center">{s.icon}</div>
+                  <h4 className="text-xl font-bold mb-3">{s.title}</h4>
+                  <p className="text-white/60 text-[16px] leading-relaxed">{s.desc}</p>
+               </FadeIn>
+            ))}
+         </div>
+         <FadeIn className="mt-12 text-center" delay={0.3}>
+            <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-white text-[#0c1024] rounded-full h-12 px-8 font-bold text-[14px] hover:bg-slate-100 transition-all">
+               Understand your risk exposure
+            </a>
+         </FadeIn>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 8 — PERSONAS
+   ───────────────────────────────────────────────────────── */
+const SectionPersonas = () => (
+   <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+         <FadeIn className="text-center mb-16">
+            <h2 className="c9-section-heading">Designed For Your Scale</h2>
+         </FadeIn>
+         
+         <div className="grid md:grid-cols-3 gap-6">
+            <FadeIn className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow">
+               <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
+                  <Building size={24} />
+               </div>
+               <h3 className="text-xl font-bold mb-4">New Locations</h3>
+               <p className="text-slate-600 text-[16px] leading-relaxed">
+                  Ready from day one. We ensure your new sites launch with perfect infrastructure and connectivity.
+               </p>
+            </FadeIn>
+
+            <FadeIn delay={0.1} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow">
+               <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
+                  <Wrench size={24} />
+               </div>
+               <h3 className="text-xl font-bold mb-4">Existing Businesses</h3>
+               <p className="text-slate-600 text-[16px] leading-relaxed">
+                  Simplified and stabilised. We untangle complex environments and bring them under unified control.
+               </p>
+            </FadeIn>
+
+            <FadeIn delay={0.2} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow">
+               <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
+                  <Network size={24} />
+               </div>
+               <h3 className="text-xl font-bold mb-4">Multi-Site Operations</h3>
+               <p className="text-slate-600 text-[16px] leading-relaxed">
+                  Scalable and controlled. Centralised IT governance across all branches, ensuring absolute consistency.
+               </p>
+            </FadeIn>
+         </div>
+         <FadeIn className="mt-12 text-center" delay={0.3}>
+            <a href="#consultation" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-3 transition-all group">
+               Find the right approach for your business <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+         </FadeIn>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 9 — OUTCOMES
+   ───────────────────────────────────────────────────────── */
+const SectionOutcomes = () => (
+   <section className="py-16 lg:py-20 bg-white">
       <div className={C}>
          <div className="bg-[#5D00D6] rounded-[48px] p-10 lg:p-20 relative overflow-hidden shadow-2xl shadow-purple-900/40">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-[0.05] rounded-full blur-[100px] -mr-64 -mt-64" />
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white opacity-[0.05] rounded-full blur-[80px] -ml-32 -mb-32" />
             
-            <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center text-white">
-               <div>
-                  <span className="c9-eyebrow !text-white mb-4">Risk Reversal</span>
-                  <h2 className="c9-section-heading !text-white mb-6">Designed to Reduce Risk — Not Add to It</h2>
-                  <div className="flex items-center gap-4 pt-6 border-t border-white/20 mt-8">
-                     <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center">
-                        <Lock size={20} className="text-white" />
-                     </div>
-                     <div>
-                        <p className="font-bold text-[16px] text-white">No-disruption transition methodology</p>
-                     </div>
-                  </div>
-               </div>
-               
-               <div className="grid grid-cols-1 gap-4">
-                  {[
-                     { title: 'Full visibility during every stage', desc: 'You are kept informed at every step of the transition.' },
-                     { title: 'Defined ownership and escalation paths', desc: 'Clear lines of accountability for every system.' },
-                     { title: 'Proactive monitoring to prevent issues', desc: 'Identifying problems before they cause downtime.' },
-                     { title: 'Structured delivery framework', desc: 'Proven process that eliminates guesswork.' },
-                  ].map((p, i) => (
-                     <FadeIn key={i} delay={i * 0.08} direction="right" className="bg-white/10 backdrop-blur-sm border border-white/20 p-5 rounded-2xl flex items-center gap-4">
-                        <CheckCircle size={24} className="text-white shrink-0" />
-                        <div>
-                           <p className="font-bold text-[16px] text-white">{p.title}</p>
-                           <p className="text-white/80 text-[13px]">{p.desc}</p>
-                        </div>
-                     </FadeIn>
-                  ))}
-               </div>
+            <div className="relative z-10 text-center mb-12">
+               <span className="c9-eyebrow !text-white/80 mb-4">The Result</span>
+               <h2 className="c9-section-heading !text-white mb-6">What True Ownership Looks Like</h2>
             </div>
-         </div>
-      </div>
-   </section>
-);
+            
+            <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+               {[
+                  { title: 'Reduced Downtime', icon: <Activity size={32} /> },
+                  { title: 'Better Performance', icon: <Zap size={32} /> },
+                  { title: 'Centralised Control', icon: <Monitor size={32} /> },
+                  { title: 'Lower Operational Risk', icon: <ShieldCheck size={32} /> }
+               ].map((item, i) => (
+                  <FadeIn key={i} delay={i * 0.1} className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-[32px] text-center flex flex-col items-center">
+                     <div className="text-white mb-4 opacity-80">{item.icon}</div>
+                     <p className="font-bold text-[18px] text-white">{item.title}</p>
+                  </FadeIn>
+               ))}
+            </div>
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 7 — BEFORE VS AFTER
-   ───────────────────────────────────────────────────────── */
-const SectionComparison = () => (
-  <section className="py-20 lg:py-24 bg-slate-50 border-y border-slate-100">
-    <div className={C}>
-      <FadeIn className="text-center mb-16">
-        <h2 className="c9-section-heading">From IT Chaos to Complete Control</h2>
-      </FadeIn>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-[40px] overflow-hidden shadow-2xl border border-slate-200">
-        <div className="bg-white p-10 lg:p-14 border-b lg:border-b-0 lg:border-r border-slate-100 relative">
-          <div className="absolute top-8 right-8 text-rose-500 opacity-20"><ShieldAlert size={64} /></div>
-          <h3 className="text-2xl font-black text-slate-900 mb-10 flex items-center gap-3 uppercase tracking-tighter">
-             <span className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-500 text-[14px]">X</span>
-             Before
-          </h3>
-          <ul className="space-y-8">
-            {[
-              'Multiple vendors',
-              'No clear accountability',
-              'Reactive support',
-              'Unpredictable costs',
-              'Security gaps',
-            ].map((p, i) => (
-              <li key={i} className="flex gap-4">
-                <div className="mt-1"><ArrowRight size={16} className="text-slate-400" /></div>
-                <p className="font-bold text-slate-900 text-[17px] mb-1">{p}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="bg-[#0c1024] p-10 lg:p-14 relative">
-          <div className="absolute top-8 right-8 text-[#5D00D6] opacity-30"><CheckCircle size={64} /></div>
-          <h3 className="text-2xl font-black text-white mb-10 flex items-center gap-3 uppercase tracking-tighter">
-             <span className="w-9 h-9 rounded-full bg-[#5D00D6] flex items-center justify-center text-white text-[14px]">✓</span>
-             After
-          </h3>
-          <ul className="space-y-8 text-white">
-            {[
-              'Single partner',
-              'Full ownership',
-              'Proactive management',
-              'Predictable costs',
-              'Integrated security',
-            ].map((p, i) => (
-              <li key={i} className="flex gap-4">
-                <div className="mt-1"><ArrowRight size={16} className="text-[#a56eff]" /></div>
-                <p className="font-bold text-white text-[17px] mb-1">{p}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 8 — SUPPORT & SLA
-   ───────────────────────────────────────────────────────── */
-const SectionSupportSLA = () => (
-   <section className="py-20 lg:py-24 bg-white">
-      <div className={C}>
-         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
-            <FadeIn direction="left">
-               <h2 className="c9-section-heading mb-6">24/7 Support with Defined Accountability</h2>
-               <div className="space-y-4 mb-10">
-                  {[
-                     'Continuous monitoring across all systems',
-                     'Rapid response to critical issues',
-                     'Structured escalation process',
-                     'Dedicated support model',
-                  ].map((item) => (
-                     <div key={item} className="flex items-center gap-3">
-                        <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
-                        <span className="text-slate-900 font-bold text-[15px]">{item}</span>
-                     </div>
-                  ))}
-               </div>
-            </FadeIn>
-            <FadeIn direction="right" delay={0.1}>
-               <div className="relative rounded-[40px] overflow-hidden shadow-2xl">
-                  <img src="/images/c9_support_engineer.png" alt="C9 Support Team" className="w-full h-full object-cover aspect-[4/5]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent flex items-bottom p-10">
-                     <div className="mt-auto">
-                        <div className="text-[#a56eff] font-black text-4xl mb-2">24/7</div>
-                        <p className="text-white font-bold text-xl leading-snug">Accountable support whenever you need it.</p>
-                     </div>
-                  </div>
-               </div>
+            <FadeIn className="relative z-10 mt-12 text-center" delay={0.4}>
+               <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-white text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[14px] hover:bg-slate-50 transition-all shadow-xl group">
+                  Start with a consultation <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+               </a>
             </FadeIn>
          </div>
       </div>
@@ -410,83 +516,39 @@ const SectionSupportSLA = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 9 — SECURITY
-   ───────────────────────────────────────────────────────── */
-const SectionCybersecurity = () => (
-   <section className="py-20 lg:py-24 bg-slate-50 border-y border-slate-100">
-      <div className={C}>
-         <div className="max-w-3xl mx-auto text-center mb-16">
-            <FadeIn>
-               <h2 className="c9-section-heading">Security Embedded Across Your Entire IT Environment</h2>
-            </FadeIn>
-         </div>
-         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-               { icon: <Lock />, title: 'Endpoint Protection' },
-               { icon: <Activity />, title: 'Network-Level Security' },
-               { icon: <Cloud />, title: 'Continuous Monitoring' },
-               { icon: <Database />, title: 'Backup & Recovery Readiness' },
-            ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm text-center group hover:border-[#5D00D6]/40 transition-all">
-                  <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mx-auto mb-6 group-hover:scale-110 transition-transform">{s.icon}</div>
-                  <h4 className="c9-card-title mb-0">{s.title}</h4>
-               </FadeIn>
-            ))}
-         </div>
-         <FadeIn className="mt-12 text-center" delay={0.4}>
-            <p className="text-slate-900 font-bold text-[18px]">Designed to ensure complete business continuity.</p>
-         </FadeIn>
-      </div>
-   </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 10 — PERSONA BLOCKS
-   ───────────────────────────────────────────────────────── */
-const SectionPersonas = () => (
-   <section className="py-20 lg:py-24 bg-white">
-      <div className={C}>
-         <div className="grid lg:grid-cols-2 gap-8">
-            <FadeIn className="bg-slate-50 border border-slate-100 p-10 rounded-[32px]">
-               <h3 className="text-xl font-bold mb-4">For New Sites</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed">
-                  We design and deploy complete IT environments for new locations — ready from day one.
-               </p>
-            </FadeIn>
-            <FadeIn delay={0.1} className="bg-slate-50 border border-slate-100 p-10 rounded-[32px]">
-               <h3 className="text-xl font-bold mb-4">For Multi-Site / Enterprise</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed">
-                  We centralise and standardise IT across multiple locations with full visibility and control.
-               </p>
-            </FadeIn>
-         </div>
-      </div>
-   </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 11 — FINAL CTA
+   SECTION 10 — FINAL CTA
    ───────────────────────────────────────────────────────── */
 const SectionFinalCTA = () => (
-   <section className="py-20 xl:py-32 bg-slate-50 border-t border-slate-100">
-      <div className={`${C} text-center`}>
-         <FadeIn>
-            <h2 className="c9-section-heading mb-8 md:!text-5xl lg:!text-6xl max-w-4xl mx-auto">
-               Let’s Take Control of Your IT — Safely
-            </h2>
-            <p className="c9-body mb-12 max-w-2xl mx-auto text-lg md:text-xl">
-               We’ll assess your current environment and show you exactly how we would take over — step-by-step, without disruption.
-            </p>
-            <div className="flex justify-center items-center">
-               <a
-                  href="#consultation"
-                  className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-16 px-12 font-extrabold text-[17px] hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/30 group w-full sm:w-auto"
-               >
-                  Book Your Transition Assessment
-                  <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-               </a>
-            </div>
-         </FadeIn>
+   <section className="py-16 lg:py-20 bg-slate-50 border-t border-slate-100 overflow-hidden relative">
+      <div className={C}>
+         <div className="grid lg:grid-cols-[1fr_0.8fr] gap-12 lg:gap-20 items-center">
+            <FadeIn>
+               <h2 className="c9-section-heading mb-6">Take Control of Your IT Environment</h2>
+               <p className="c9-body mb-8 text-slate-600">
+                  Stop managing vendors and start focusing on growth. Let us show you what fully accountable IT looks like.
+               </p>
+               <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                     href="#consultation"
+                     className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                  >
+                     Book a Consultation
+                     <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  </a>
+                  <a
+                     href="#consultation"
+                     className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-9 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                  >
+                     Speak to a Specialist
+                  </a>
+               </div>
+            </FadeIn>
+            <FadeIn direction="right" className="hidden lg:block">
+               <div className="relative rounded-[24px] overflow-hidden aspect-[4/3] shadow-2xl border-[8px] border-white">
+                  <img src="https://images.openai.com/static-rsc-4/nPopDG4flZokVLS5pY29kxfW_YLeJ6M6NIm_dbWHF8ZjjOr9W3BQRsg8rkC3-0OxTJxkMoKEfTZCs3S2rmbs7Knc4nommIWzmAh8nm04IpvbyA3rVG7CexSy26qDEZ2r-dWithS1SCMNZqm8pjBN5hw80uUgie8e2PQcY2wL16cMAp1P7cUFM9QtoEcCNu_J?purpose=fullsize" alt="Human Support" className="w-full h-full object-cover" />
+               </div>
+            </FadeIn>
+         </div>
       </div>
    </section>
 );
@@ -499,39 +561,38 @@ export default function ManagedITPage() {
     <main className="min-h-screen bg-white">
       <Hero />
       <WpClientTicker />
-      <SectionCurrentState />
-      <SectionSolution />
-      <SectionProcess />
+      <SectionProblem />
+      <SectionModel />
+      <SectionManage />
+      <SectionHowItWorks />
       
-      {/* SECTION 5: PROOF */}
       <WpCaseStudies 
         eyebrow="PROVEN RESULTS"
-        title="Proven Results for Businesses Like Yours"
+        title="Predictable Outcomes in Action"
         articles={[
           {
             tag: 'VENDOR CONSOLIDATION',
-            title: '4+ Vendors Consolidated into One',
+            title: 'Complete Environment Takeover',
             videoText: 'Vendor Consolidation',
-            desc: 'Consolidated 4+ vendors into a single managed partner. Delivered zero downtime during transition.',
+            desc: 'Consolidated complex legacy systems into a single managed environment with zero downtime.',
             img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
             href: '#'
           },
           {
-            tag: 'UPTIME & RESPONSE',
-            title: 'Increased System Uptime to 99.9%',
-            videoText: 'Uptime & Response',
-            desc: 'Improved response times by over 60% and increased overall system uptime to 99.9% for a growing multi-site business.',
+            tag: 'OPERATIONAL CONTROL',
+            title: 'Unified Multi-Site Management',
+            videoText: 'Operational Control',
+            desc: 'Standardised IT and connectivity across multiple locations, dramatically reducing operational friction.',
             img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
             href: '#'
           }
         ]}
       />
 
-      <SectionSafety />
-      <SectionComparison />
-      <SectionSupportSLA />
-      <SectionCybersecurity />
+      <SectionOperations />
+      <SectionSecurity />
       <SectionPersonas />
+      <SectionOutcomes />
       <SectionFinalCTA />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

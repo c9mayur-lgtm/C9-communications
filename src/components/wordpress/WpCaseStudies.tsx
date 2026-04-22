@@ -131,10 +131,10 @@ export const WpCaseStudies = ({
                    </p>
                    <a
                      href={cs.href || '/about/case-studies'}
-                     className="inline-flex items-center gap-2 text-[#5D00D6] c9-eyebrow !text-[10px] hover:underline whitespace-nowrap"
+                     className="flex items-center gap-2 text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.15em] hover:underline whitespace-nowrap group/cta"
                    >
                       Read full article 
-                      <ArrowUpRight size={14} className="shrink-0 transition-transform" />
+                      <ArrowUpRight size={14} className="shrink-0 transition-transform group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
                    </a>
                 </div>
               </div>

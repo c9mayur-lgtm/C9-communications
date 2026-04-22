@@ -9,7 +9,7 @@ interface TypographyProps {
 
 export const H1 = ({ children, className, as: Component = 'h1' }: TypographyProps) => (
   <Component className={cn(
-    "c9-section-heading",
+    "c9-hero-title",
     className
   )}>
     {children}
