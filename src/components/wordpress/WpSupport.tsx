@@ -50,8 +50,8 @@ export const WpSupport = () => {
               <p className="c9-body mb-6 line-clamp-3">
                 {card.desc}
               </p>
-              <div className="flex items-center gap-2 c9-eyebrow !text-[#5D00D6] !text-[10px] group-hover:underline">
-                {card.link} <ArrowRight size={14} strokeWidth={2.5} />
+              <div className="inline-flex items-center gap-2 text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.2em] group-hover:underline">
+                {card.link} <ArrowRight size={14} strokeWidth={2.5} className="shrink-0" />
               </div>
             </div>
           ))}
