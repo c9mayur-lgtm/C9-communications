@@ -8,34 +8,34 @@ export const WpSupport = () => {
     <section className="py-12 md:py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="mb-16 text-center">
-          <span className="c9-eyebrow mb-4 block">SUPPORT</span>
+          <span className="c9-eyebrow mb-4 block">ALWAYS SUPPORTED</span>
           <h2 className="c9-section-heading text-[#0c1024] mb-6">
-            World-Class Support Delivered by <br className="hidden md:block" />Fully Trained Australian Experts
+            Proactive Monitoring. <br className="hidden md:block" /> Rapid Response.
           </h2>
           <p className="c9-body max-w-3xl mx-auto">
-            At C9 Communications, support isn't just a service — it's a promise. Our fully trained, nationally deployed team is dedicated to providing human-centred support backed by genuine accountability.
+            24/7 monitoring and responsive support ensure issues are detected and resolved before they impact operations. We don’t just fix problems—we prevent them.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {[
             {
-              title: "100% Australian Support",
-              desc: "Every technician and coordinator is based in Australia. You get local experts who understand the Aussie way of doing business — available 7 days a week.",
+              title: "Rapid Response for Critical Issues",
+              desc: "Our Priority 1 Support Team ensures critical issues are escalated and resolved instantly, minimisng impact on your operations.",
               img: "/images/support/specialist.png",
-              link: "SEE MORE"
+              link: "VIEW SLA"
             },
             {
-              title: "Safeguarding Your Business",
-              desc: "Our Priority 1 Support Team ensures critical issues are escalated instantly. We monitor our network 24/7 to safeguard your business connectivity.",
+              title: "Ongoing System Monitoring",
+              desc: "We monitor your network and endpoints 24/7, detecting and neutralising threats or performance bottlenecks before you even notice them.",
               img: "/images/support/safeguarding-support.jpg",
-              link: "SEE MORE"
+              link: "SEE MONITORING"
             },
             {
-              title: "Manage Services On-The-Go",
-              desc: "Whether you're in the office or remote, our national support network ensures consistent, high‑quality service wherever your business operates.",
+              title: "Dedicated Support Structure",
+              desc: "You have direct access to a dedicated accounting and engineering team that understands your unique environment and takes ownership.",
               img: "/images/support/remote.png",
-              link: "SEE MORE"
+              link: "MEET THE TEAM"
             }
           ].map((card, idx) => (
             <div key={idx} className="group cursor-pointer">
@@ -50,8 +50,8 @@ export const WpSupport = () => {
               <p className="c9-body mb-6 line-clamp-3">
                 {card.desc}
               </p>
-              <div className="flex items-center gap-2 c9-eyebrow !text-[#5D00D6] !text-[10px] group-hover:underline">
-                {card.link} <ArrowRight size={14} strokeWidth={2.5} />
+              <div className="inline-flex items-center gap-2 text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.2em] group-hover:underline">
+                {card.link} <ArrowRight size={14} strokeWidth={2.5} className="shrink-0" />
               </div>
             </div>
           ))}

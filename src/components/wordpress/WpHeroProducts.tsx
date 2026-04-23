@@ -4,13 +4,13 @@ import React from 'react';
 import { Shield, Lock, Globe, Phone, Monitor, Cloud, Headphones, Printer, Wifi, Fingerprint, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const PRODUCTS = [
-  { label: 'Managed IT Support', icon: Shield },
-  { label: 'Cyber Security', icon: Lock },
-  { label: 'Fibre & SD-WAN', icon: Globe },
-  { label: 'Cloud Voice & Mobiles', icon: Phone },
-  { label: 'M365 & Hardware', icon: Monitor },
+  { label: 'Managed IT Services', icon: Shield },
+  { label: 'Telco & Connectivity', icon: Wifi },
+  { label: 'Cybersecurity', icon: Lock },
+  { label: 'Infrastructure & Devices', icon: Monitor },
   { label: 'Cloud Infrastructure', icon: Cloud },
   { label: '24/7 Service Desk', icon: Headphones },
+  { label: 'Strategy & Consulting', icon: Globe },
   { label: 'nbn & Starlink', icon: Wifi },
   { label: 'Print Solutions', icon: Printer },
   { label: 'Compliance & E8', icon: Fingerprint },
@@ -35,12 +35,12 @@ export const WpHeroProducts = () => {
         {/* Header Area following the Page's "Regular Pattern" */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
-            <span className="c9-eyebrow mb-6 block">OUR PRODUCTS</span>
+            <span className="c9-eyebrow mb-6 block">SERVICES / WHAT WE DO</span>
             <h2 className="c9-section-heading mb-8">
-              Strategic solutions tailored to your unique challenges.
+              End-to-end IT, Telco, and Security—designed, delivered, and managed as one system.
             </h2>
             <p className="c9-body mb-8 max-w-[640px]">
-              Explore our core service pillars — built to scale, secured by design, and managed by our Australian expert team.
+              Everything works together. One provider. No gaps.
             </p>
           </div>
 

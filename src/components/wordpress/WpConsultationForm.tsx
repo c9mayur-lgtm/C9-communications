@@ -22,13 +22,15 @@ export interface WpConsultationFormProps {
   title?: string;
   description?: string;
   formTitle?: string;
+  ctaText?: string;
 }
 
 export const WpConsultationForm = ({ 
   eyebrow = "STRATEGIC IT ADVISORY",
   title = "The IT partner your business deserves.",
   description = "Book a 30-minute strategy session with our senior consultants. We'll review your current infrastructure and security posture — no obligation, just expert advice.",
-  formTitle = "Schedule Strategy Session"
+  formTitle = "Schedule Strategy Session",
+  ctaText
 }: WpConsultationFormProps) => {
   return (
     <section 
@@ -84,7 +86,7 @@ export const WpConsultationForm = ({
 
           {/* Right Column (The consistent Form Core) */}
           <FadeIn delay={0.2}>
-            <ConsultationFormCore formTitle={formTitle} />
+            <ConsultationFormCore formTitle={formTitle} ctaText={ctaText} />
           </FadeIn>
         </div>
       </div>

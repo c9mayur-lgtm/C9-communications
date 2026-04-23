@@ -7,36 +7,36 @@ import { ArrowRight, CheckCircle, Store, Building2, Briefcase } from 'lucide-rea
 const slides = [
   {
     id: 'greenfield',
-    eyebrow: 'New Business & Site Setups',
-    title: 'Starting from Zero?\nZero Day-One Failures.',
-    desc: 'Focus on opening your doors. We handle the complete IT, Telco and infrastructure setup—fully operational from the moment you open.',
-    cta: 'Plan My New Site',
-    href: '/greenfield',
+    eyebrow: 'Greenfield — New Sites',
+    title: 'Managed IT & Telco — One Partner.\nTotal Accountability.',
+    desc: 'From new site rollouts to complex multi-location environments, C9 delivers fully managed IT, connectivity, and security—ensuring your business runs without disruption.',
+    cta: 'Plan Site Setup',
+    href: '#consultation-section',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
     icon: <Store size={18} />,
-    tags: ['Network Readiness', 'Procurement', 'Day 1 Guarantee']
+    tags: ['120+ Sites Supported', '3,000+ Endpoints Managed', '99.99% Network Uptime', '24/7 Monitoring & Support']
   },
   {
     id: 'small-business',
-    eyebrow: 'Managed IT & Connectivity',
-    title: 'Upgrade Your Operations.\nEliminate Juggling.',
-    desc: 'Stop managing multiple vendors. Consolidate your Managed IT, Business nbn® and Voice into a single, high-performance operational layer.',
-    cta: 'Optimize My Business',
-    href: '/business2',
+    eyebrow: 'SMB / Brownfield — Existing Systems',
+    title: 'Simplify and Take Control of\nExisting Systems.',
+    desc: 'Replace fragmented vendors with one accountable partner who stabilises, secures, and manages your entire environment. Less downtime. Less complexity. Full control.',
+    cta: 'Secure My Business',
+    href: '#consultation-section',
     image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200',
     icon: <Briefcase size={18} />,
-    tags: ['Managed IT', 'nbn® Fast Fiber', 'Cloud Voice']
+    tags: ['Managed IT', 'nbn® Fast Fiber', 'Cybersecurity', '24/7 Monitoring & Support']
   },
   {
     id: 'enterprise',
-    eyebrow: 'Multi-Site & Strategic IT',
-    title: 'Unified Control for\nMulti-Site Operations.',
-    desc: 'Scalable infrastructure and total vendor consolidation across every location. Enterprise-grade IT that actually moves as fast as you do.',
-    cta: 'Explore Enterprise IT',
-    href: '/enterprise',
+    eyebrow: 'Enterprise — Multi-Site & Complex',
+    title: 'Operate Complex Environments\nwith Confidence.',
+    desc: 'Manage multi-site infrastructure with SLA-backed support, integrated systems, and enterprise-grade security. Scalable, secure, and predictable operations.',
+    cta: 'Scale Operations',
+    href: '#consultation-section',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200',
     icon: <Building2 size={18} />,
-    tags: ['Vendor Consolidation', 'SDA/SD-WAN', 'SLA Managed']
+    tags: ['SLA Managed', 'Multi-Site Rollouts', 'Integrated Systems', '24/7 Monitoring & Support']
   }
 ];
 
@@ -91,10 +91,10 @@ export const HomeSlidingHero = () => {
                     <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                   </a>
                   <a
-                    href="/contact"
+                    href="#solutions"
                     className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-10 font-bold text-[15px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
                   >
-                    Talk to an Expert
+                    Explore Solutions
                   </a>
                 </div>
 

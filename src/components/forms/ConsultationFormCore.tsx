@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button";
 
 interface ConsultationFormCoreProps {
   formTitle: string;
+  ctaText?: string;
 }
 
-export const ConsultationFormCore = ({ formTitle }: ConsultationFormCoreProps) => {
+export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCoreProps) => {
   const { inquiryMessage } = useInquiry();
   const [message, setMessage] = React.useState('');
 
@@ -82,7 +83,7 @@ export const ConsultationFormCore = ({ formTitle }: ConsultationFormCoreProps) =
 
         <div className="pt-2">
           <Button size="lg" className="w-full h-14 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-[16px] font-bold shadow-2xl shadow-purple-900/30 group transition-all duration-300 flex items-center justify-center gap-3">
-             {formTitle.includes("Schedule") ? "Talk to an Expert" : "Book a Consultation"} <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+             {ctaText || (formTitle.includes("Schedule") ? "Talk to an Expert" : "Book a Consultation")} <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
           </Button>
           <div className="mt-5 text-center">
             <p className="text-[13px] text-slate-500 font-medium mb-1">
