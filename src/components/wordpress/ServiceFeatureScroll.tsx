@@ -45,7 +45,7 @@ export const ServiceFeatureScroll = ({
                   <h4 className="text-[20px] md:text-[22px] font-bold text-[#0c1024]" >
                     {feature.title}
                   </h4>
-                  <p className="text-gray-500 text-[14px] md:text-[15px] leading-relaxed max-w-[400px]">
+                  <p className="text-gray-500 text-[14px] md:text-[14px] leading-relaxed max-w-[400px]">
                     {feature.description}
                   </p>
                 </div>

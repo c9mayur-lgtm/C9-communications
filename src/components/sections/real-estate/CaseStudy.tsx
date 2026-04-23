@@ -30,14 +30,14 @@ export default function CaseStudy() {
                 </div>
                 <span className="text-white text-[16px] font-bold tracking-tight" >REAL ESTATE AGENCY CLIENT</span>
               </div>
-              <div className="text-white/80 text-[14px] md:text-[15px] font-medium tracking-wide" >
+              <div className="text-white/80 text-[14px] md:text-[14px] font-medium tracking-wide" >
                 Principal — National Real Estate Network
               </div>
             </div>
           </div>
         </div>
         <div className="flex justify-center mt-12">
-          <Link href="/case-studies/retail-pos-stabilisation" className="inline-flex items-center gap-2 text-[#5D00D6] text-[13px] font-bold uppercase tracking-wider hover:opacity-70 transition-opacity" >
+          <Link href="/case-studies/multi-site-retail-stabilisation" className="inline-flex items-center gap-2 text-[#5D00D6] text-[14px] font-bold uppercase tracking-wider hover:opacity-70 transition-opacity" >
             Read full case study <span className="text-[16px]">→</span>
           </Link>
         </div>

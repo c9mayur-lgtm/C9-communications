@@ -80,7 +80,7 @@ export const TeamsMockup = () => (
     <div className="flex items-center justify-between px-5 py-4 border-b border-white/5 bg-white/5 backdrop-blur-md">
        <div className="flex items-center gap-3">
          <img src="https://img.icons8.com/color/144/microsoft-teams.png" className="w-5 h-5 object-contain" alt="Teams" />
-         <span className="text-[13px] font-bold text-white/90">Customer Success Sync</span>
+         <span className="text-[14px] font-bold text-white/90">Customer Success Sync</span>
        </div>
        <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
@@ -131,7 +131,7 @@ export const SecurityMockup = () => (
             <Shield size={20} className="text-[#00875A]" />
           </div>
           <div>
-            <span className="block text-[13px] font-bold text-[#0c1024]">Security Health</span>
+            <span className="block text-[14px] font-bold text-[#0c1024]">Security Health</span>
             <span className="block text-[10px] font-bold text-[#00875A] uppercase tracking-wider">Monitored by C9 SOC</span>
           </div>
         </div>
@@ -177,7 +177,7 @@ export const DeviceMockup = () => (
     <div className="px-6 py-5 border-b flex items-center justify-between bg-gray-50/50" style={{ borderColor: BD }}>
       <div className="flex items-center gap-3">
         <Laptop size={18} className="text-[#6264A7]" />
-        <span className="text-[13px] font-bold text-[#0c1024]">Microsoft Intune Fleet</span>
+        <span className="text-[14px] font-bold text-[#0c1024]">Microsoft Intune Fleet</span>
       </div>
       <div className="flex items-center gap-1.5 px-3 py-1 bg-[#6264A715] rounded-full">
          <div className="w-1.5 h-1.5 rounded-full bg-[#6264A7] animate-pulse" />
@@ -195,7 +195,7 @@ export const DeviceMockup = () => (
              <img src={i} className="w-full h-full object-contain" alt="" />
           </div>
           <div className="flex-1">
-             <div className="text-[13px] font-bold text-[#0c1024]">{n}</div>
+             <div className="text-[14px] font-bold text-[#0c1024]">{n}</div>
              <div className="flex items-center gap-1.5 mt-0.5">
                <CheckCircle2 size={12} className="text-green-500" />
                <span className="text-[10px] font-bold text-green-600 uppercase tracking-widest">{s}</span>
@@ -248,12 +248,12 @@ export const ServicesAccordion = () => {
                   <AnimatePresence>
                     {isA && (
                       <motion.div initial={{ opacity:0, height:0 }} animate={{ opacity:1, height:'auto' }} exit={{ opacity:0, height:0 }} transition={{ duration:0.3 }} className="overflow-hidden">
-                        <p className="text-[15px] leading-relaxed mt-2 mb-3 text-gray-500 font-medium">{f.body}</p>
+                        <p className="text-[14px] leading-relaxed mt-2 mb-3 text-gray-500 font-medium">{f.body}</p>
                         <div className="grid grid-cols-2 gap-1.5">
                           {f.bullets.map(b => (
                             <div key={b} className="flex items-center gap-1.5">
                               <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: f.color }} />
-                              <span className="text-[13px] font-medium text-gray-600">{b}</span>
+                              <span className="text-[14px] font-medium text-gray-600">{b}</span>
                             </div>
                           ))}
                         </div>
@@ -400,7 +400,7 @@ export const InfraCarousel = () => {
             <button
               key={tab.label}
               onClick={() => setActiveTab(i)}
-              className="px-4 py-2 rounded-full text-[13px] font-semibold transition-all duration-300 whitespace-nowrap"
+              className="px-4 py-2 rounded-full text-[14px] font-semibold transition-all duration-300 whitespace-nowrap"
               style={
                 activeTab === i
                   ? { background: '#7C3AED', color: '#fff' }
@@ -459,7 +459,7 @@ export const InfraCarousel = () => {
                   <div key={pt}>
                     <div className="py-3 flex items-center gap-3">
                       <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: '#7C3AED' }} />
-                      <span className="c9-body !text-white/80 !text-[13px]">{pt}</span>
+                      <span className="c9-body !text-white/80 !text-[14px]">{pt}</span>
                     </div>
                     {pi < card.pointers.length - 1 && (
                       <div style={{ height: '1px', background: 'rgba(255,255,255,0.06)' }} />
@@ -550,7 +550,7 @@ export const OtherSolutions = () => {
                     <h3 className={`c9-card-title !text-[20px] transition-all duration-500 ${isActive ? '!text-[#0c1024]' : '!text-gray-400'}`}>
                       {item.title}
                     </h3>
-                    <p className={`c9-body !text-[15px] mt-2 max-w-[360px] transition-all duration-500 overflow-hidden ${isActive ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'}`}>
+                    <p className={`c9-body !text-[14px] mt-2 max-w-[360px] transition-all duration-500 overflow-hidden ${isActive ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'}`}>
                       {item.body}
                     </p>
                   </div>
@@ -558,7 +558,7 @@ export const OtherSolutions = () => {
                   {/* Metric */}
                   <div className="text-right flex flex-col items-end">
                     <div className={`text-[36px] font-bold leading-none tracking-tight transition-all duration-500 ${isActive ? '!text-[#0c1024]' : '!text-gray-300'}`}>{item.metric}</div>
-                    <div className={`c9-body !text-[13px] !text-gray-500 mt-1.5 transition-all duration-500 ${isActive ? 'opacity-100' : 'opacity-40'}`}>{item.metricLabel}</div>
+                    <div className={`c9-body !text-[14px] !text-gray-500 mt-1.5 transition-all duration-500 ${isActive ? 'opacity-100' : 'opacity-40'}`}>{item.metricLabel}</div>
                     <div className={`mt-4 transition-all duration-500 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
                        <ArrowRight size={20} style={{ color: item.color }} />
                     </div>
@@ -775,7 +775,7 @@ export const InteractiveHeroDashboard = () => {
                      <Zap size={20} className="text-[#5D00D6]" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-[15px] font-bold text-[#0c1024] leading-tight">
+                    <div className="text-[14px] font-bold text-[#0c1024] leading-tight">
                       {step === 0 && "System initialized. Polling remote tenants..."}
                       {step === 1 && "Onboarding 24 employees to Microsoft 365..."}
                       {step === 2 && "Hardening endpoints with Microsoft Defender SOC."}
@@ -804,7 +804,7 @@ export const InteractiveHeroDashboard = () => {
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
                  <Shield size={20} className="text-green-400" />
               </div>
-              <span className="text-[15px] font-bold tracking-tight pr-4">{showToast}</span>
+              <span className="text-[14px] font-bold tracking-tight pr-4">{showToast}</span>
             </motion.div>
           )}
         </AnimatePresence>

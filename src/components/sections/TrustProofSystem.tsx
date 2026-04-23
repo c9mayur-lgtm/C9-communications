@@ -63,11 +63,11 @@ export const TrustProofSystem = ({
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full relative group hover:shadow-md transition-shadow">
                   <Quote size={32} className="text-[#5D00D6]/10 absolute top-6 right-8" />
-                  <p className="text-slate-600 italic mb-6 text-[15px] leading-relaxed relative z-10">
+                  <p className="text-slate-600 italic mb-6 text-[14px] leading-relaxed relative z-10">
                     "{t.quote}"
                   </p>
                   <div className="mt-auto">
-                    <p className="text-[#5D00D6] font-bold text-[13px] uppercase tracking-wider">— {t.author}</p>
+                    <p className="text-[#5D00D6] font-bold text-[14px] uppercase tracking-wider">— {t.author}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -93,7 +93,7 @@ export const TrustProofSystem = ({
                 <div className="flex items-start gap-4 p-6 rounded-xl bg-slate-50/50 border border-slate-100 hover:border-[#5D00D6]/20 transition-colors">
                   <CheckCircle size={20} className="text-[#5D00D6] mt-1 shrink-0" />
                   <div>
-                    <h4 className="font-bold text-slate-900 text-[15px] mb-1">{item.title}</h4>
+                    <h4 className="font-bold text-slate-900 text-[14px] mb-1">{item.title}</h4>
                     <p className="text-slate-600 text-[14px] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export const TrustProofSystem = ({
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-[32px] relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#5D00D6]/20 blur-3xl rounded-full -mr-16 -mt-16" />
                 <h3 className="text-[20px] font-bold mb-4 text-white">Accountability is our core product.</h3>
-                <p className="text-white/70 text-[15px] leading-relaxed">
+                <p className="text-white/70 text-[14px] leading-relaxed">
                   We bridge the gap between your internet connection and your business outcomes. When you partner with C9, you get an engineering-first team that takes responsibility for your entire tech stack.
                 </p>
               </div>

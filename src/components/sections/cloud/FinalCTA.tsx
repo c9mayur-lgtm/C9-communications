@@ -46,7 +46,7 @@ export default function FinalCTA() {
         </div>
 
         <div className="mt-8">
-          <p className="text-[13px] text-slate-500 font-medium uppercase tracking-tight" style={FONT_FAMILY}>
+          <p className="text-[14px] text-slate-500 font-medium uppercase tracking-tight" style={FONT_FAMILY}>
             Australian team · Responds within 1 business day · Data stays in Australia
           </p>
         </div>

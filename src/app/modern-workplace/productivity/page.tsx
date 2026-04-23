@@ -79,7 +79,7 @@ const TeamsVisual = () => (
             <MessageSquare size={20} />
           </div>
           <div>
-            <div className="text-[13px] font-bold text-gray-900">Teams Voice</div>
+            <div className="text-[14px] font-bold text-gray-900">Teams Voice</div>
             <div className="text-[10px] text-gray-400 font-bold uppercase">C9 Managed SBC</div>
           </div>
         </div>
@@ -186,7 +186,7 @@ const SupportVisual = () => (
           <Headphones size={20} />
         </div>
         <div className="flex flex-col">
-          <div className="text-[13px] font-bold text-gray-900">Live Human Support</div>
+          <div className="text-[14px] font-bold text-gray-900">Live Human Support</div>
           <div className="text-[10px] text-emerald-500 font-bold uppercase">Average Queue: 82s</div>
         </div>
       </div>
@@ -380,7 +380,7 @@ const ManagedScopeUI = () => {
                     className="overflow-hidden"
                   >
                     <div className="py-6 space-y-6">
-                      <p className="text-[15px] text-gray-400 italic font-proxima leading-relaxed border-l-2 border-purple-100 pl-6">
+                      <p className="text-[14px] text-gray-400 italic font-proxima leading-relaxed border-l-2 border-purple-100 pl-6">
                         &quot;{item.quote}&quot;
                       </p>
 
@@ -427,7 +427,7 @@ const PainCard = ({ icon: Icon, title, body, delay }: { icon: any, title: string
     <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 leading-tight tracking-tight group-hover:text-[#5D00D6] transition-colors duration-300">
       {title}
     </h3>
-    <p className="text-gray-500 text-[15px] leading-relaxed font-normal">
+    <p className="text-gray-500 text-[14px] leading-relaxed font-normal">
       {body}
     </p>
     <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent w-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-[24px]" />
@@ -676,13 +676,13 @@ export default function ProductivityPage() {
                 <div className="mb-6 flex justify-between items-start">
                   <h3 className="text-[22px] md:text-[24px] text-white font-bold leading-tight">{card.title}</h3>
                 </div>
-                <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow">{card.desc}</p>
+                <p className="text-[14px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow">{card.desc}</p>
                 
                 <div className="flex flex-col mb-10 border-t border-white/5 pt-2">
                   {card.items.map((item, index) => (
                     <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
                       <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
-                      <span className="text-[14px] md:text-[15px] font-medium text-gray-300">{item}</span>
+                      <span className="text-[14px] md:text-[14px] font-medium text-gray-300">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -804,7 +804,7 @@ export default function ProductivityPage() {
                     </div>
                     <span className="text-[11px] font-bold uppercase tracking-widest text-white/50">Professional Services Client</span>
                  </div>
-                 <div className="text-[13px] font-medium text-white/30">Partner — Management Consulting Firm</div>
+                 <div className="text-[14px] font-medium text-white/30">Partner — Management Consulting Firm</div>
                </div>
             </FadeUp>
           </div>
@@ -839,7 +839,7 @@ export default function ProductivityPage() {
                       </div>
                       <div>
                         <div className="text-[18px] font-bold text-[#0c1024] mb-1">{f.t}</div>
-                        <p className="text-[15px] text-gray-600 font-medium">{f.d}</p>
+                        <p className="text-[14px] text-gray-600 font-medium">{f.d}</p>
                       </div>
                     </div>
                   ))}

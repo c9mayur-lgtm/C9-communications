@@ -30,34 +30,34 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1.5">
             <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]" >FIRST NAME</label>
-            <input type="text" placeholder="John" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[15px] font-semibold placeholder:text-slate-300"  />
+            <input type="text" placeholder="John" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300"  />
           </div>
           <div className="flex flex-col gap-1.5">
             <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]" >LAST NAME</label>
-            <input type="text" placeholder="Doe" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[15px] font-semibold placeholder:text-slate-300"  />
+            <input type="text" placeholder="Doe" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300"  />
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1.5">
             <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]" >COMPANY</label>
-            <input type="text" placeholder="Acme Pty Ltd" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[15px] font-semibold placeholder:text-slate-300"  />
+            <input type="text" placeholder="Acme Pty Ltd" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300"  />
           </div>
           <div className="flex flex-col gap-1.5">
             <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]" >PHONE</label>
-            <input type="tel" placeholder="1800 000 299" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[15px] font-semibold placeholder:text-slate-300"  />
+            <input type="tel" placeholder="1800 000 299" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300"  />
           </div>
         </div>
 
         <div className="flex flex-col gap-1.5">
           <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]" >WORK EMAIL</label>
-          <input type="email" placeholder="john@company.com" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[15px] font-semibold placeholder:text-slate-300"  />
+          <input type="email" placeholder="john@company.com" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300"  />
         </div>
 
         <div className="flex flex-col gap-1.5">
           <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]" >CURRENT PROVIDER</label>
           <div className="relative">
-            <select className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[15px] font-semibold cursor-pointer appearance-none text-slate-800" >
+            <select className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold cursor-pointer appearance-none text-slate-800" >
               <option className="text-slate-400">Select provider...</option>
               <option>Telstra</option>
               <option>Optus</option>
@@ -76,17 +76,17 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             placeholder="Briefly describe your requirements..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[15px] font-semibold min-h-[90px] resize-none placeholder:text-slate-300"
+            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold min-h-[90px] resize-none placeholder:text-slate-300"
             
           />
         </div>
 
         <div className="pt-2">
-          <Button size="lg" className="w-full h-14 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-[16px] font-bold shadow-2xl shadow-purple-900/30 group transition-all duration-300 flex items-center justify-center gap-3">
+          <Button size="lg" className="w-full h-14 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] c9-button-label shadow-2xl shadow-purple-900/30 group transition-all duration-300 flex items-center justify-center gap-3">
              {ctaText || (formTitle.includes("Schedule") ? "Talk to an Expert" : "Book a Consultation")} <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
           </Button>
           <div className="mt-5 text-center">
-            <p className="text-[13px] text-slate-500 font-medium mb-1">
+            <p className="text-[14px] text-slate-500 font-medium mb-1">
               No obligation. Just clear, practical advice.
             </p>
             <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.1em] opacity-60">

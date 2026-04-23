@@ -42,7 +42,7 @@ export default function Hero() {
               ].map((text, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <div className="w-[6px] h-[6px] rounded-full bg-[#7B2FBE]" />
-                  <span className="text-[13px] text-[#6B7280]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <span className="text-[14px] text-[#6B7280]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     {text}
                   </span>
                 </div>

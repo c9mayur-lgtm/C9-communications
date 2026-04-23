@@ -44,17 +44,17 @@ export default function RTOExplainer() {
               </div>
               <h3 className="c9-section-heading mt-4" style={{ fontFamily: F }}>{card.title}</h3>
               <p className="text-[14px] font-bold mt-1" style={{ fontFamily: F, color: '#5D00D6' }}>{card.subtitle}</p>
-              <p className="text-[15px] text-[#6B7280] leading-[1.7] mt-4" style={{ fontFamily: F }}>{card.body}</p>
+              <p className="text-[14px] text-[#6B7280] leading-[1.7] mt-4" style={{ fontFamily: F }}>{card.body}</p>
               <div className="rounded-xl p-4 mt-6" style={{ backgroundColor: '#F3EEFF' }}>
                 <span className="text-[11px] font-bold uppercase tracking-wider block mb-2" style={{ fontFamily: F, color: '#5D00D6' }}>EXAMPLE</span>
-                <p className="text-[13px] text-[#0c1024] leading-[1.5]" style={{ fontFamily: F }}>{card.example}</p>
+                <p className="text-[14px] text-[#0c1024] leading-[1.5]" style={{ fontFamily: F }}>{card.example}</p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="bg-white rounded-none p-5 text-center border mt-6" style={{ borderColor: 'rgba(93,0,214,0.15)' }}>
-          <p className="text-[15px] font-bold text-[#0c1024]" style={{ fontFamily: F }}>
+          <p className="text-[14px] font-bold text-[#0c1024]" style={{ fontFamily: F }}>
             C9 defines your RTO and RPO in your agreement — and tests against them on a scheduled basis. Not estimates. <span className="text-[#5D00D6]">Commitments.</span>
           </p>
         </div>

@@ -179,7 +179,7 @@ export const WpUnifiedClassification = ({
                                       {item.icon || <Monitor size={18} strokeWidth={2} />}
                                    </div>
                                    <div>
-                                      <p className="text-[15px] font-bold text-slate-900 mb-0.5">{item.title || item.label}</p>
+                                      <p className="text-[14px] font-bold text-slate-900 mb-0.5">{item.title || item.label}</p>
                                       {item.desc && <p className="text-[12px] text-slate-500 leading-tight font-medium">{item.desc}</p>}
                                    </div>
                                 </Link>

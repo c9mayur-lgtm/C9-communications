@@ -117,7 +117,7 @@ const LiveChatVisual = () => {
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="mx-6 mb-4 flex items-center gap-3 bg-emerald-50 border border-emerald-100 rounded-2xl px-5 py-3">
             <CheckCircle size={18} className="text-emerald-600 shrink-0" />
             <div>
-              <p className="text-[13px] font-bold text-emerald-800">Issue resolved in under 10 minutes</p>
+              <p className="text-[14px] font-bold text-emerald-800">Issue resolved in under 10 minutes</p>
               <p className="text-[11px] text-emerald-600 font-medium">Sarah is back online before her client call.</p>
             </div>
           </motion.div>
@@ -126,7 +126,7 @@ const LiveChatVisual = () => {
 
       <div className="px-6 pb-6">
         <div className="flex items-center gap-3 bg-slate-50 rounded-full border border-slate-200 px-5 py-3">
-          <span className="flex-1 text-[13px] text-slate-400 font-medium">Message C9 Helpdesk…</span>
+          <span className="flex-1 text-[14px] text-slate-400 font-medium">Message C9 Helpdesk…</span>
           <div className="w-8 h-8 rounded-full bg-[#5D00D6] flex items-center justify-center shadow-md">
             <ArrowRight size={14} className="text-white" />
           </div>
@@ -206,7 +206,7 @@ const Hero = () => (
                 </div>
                 <a
                    href="#consultation"
-                   className="inline-flex items-center gap-1.5 text-slate-400 text-[13px] font-medium hover:text-[#5D00D6] transition-colors group whitespace-nowrap"
+                   className="inline-flex items-center gap-1.5 text-slate-400 text-[14px] font-medium hover:text-[#5D00D6] transition-colors group whitespace-nowrap"
                 >
                    Or talk to a support architect
                    <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
@@ -245,12 +245,12 @@ const SectionPersonas = () => (
                   <Zap size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Greenfield</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Support ready from day one. We ensure your new site launches are operational and supported the moment they go live, eliminating technical friction from your expansion.
                </p>
                <ul className="space-y-3">
                   {['Day-1 Readiness', 'New Site Launches', 'Rapid Setup'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -263,12 +263,12 @@ const SectionPersonas = () => (
                   <Activity size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Brownfield</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Consolidate fragmented IT. We take over complex, existing environments, removing vendor blame and stabilizing your operations under one accountable model.
                </p>
                <ul className="space-y-3">
                   {['Vendor Consolidation', 'Stability Roadmap', 'Legacy Audit'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -281,12 +281,12 @@ const SectionPersonas = () => (
                   <ShieldCheck size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Enterprise IT</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   SLA-driven, structured support. We provide Tier 1-3 overflow with full visibility and escalation paths designed to extend your internal IT capacity.
                </p>
                <ul className="space-y-3">
                   {['SLA Alignment', 'Full Visibility', 'L1-L3 Support'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -353,17 +353,17 @@ const SectionSupportModel = () => (
    SECTION 5 — HOW SUPPORT WORKS (PROCESS)
    ───────────────────────────────────────────────────────── */
 const SectionProcess = () => (
-   <section className="py-12 lg:py-16 bg-slate-50">
+   <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100">
       <div className={C}>
-         <div className="max-w-3xl mx-auto text-center mb-10">
+         <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
                <span className="c9-eyebrow mb-4">The Process</span>
                <h2 className="c9-section-heading mb-6">How Your Support Operates</h2>
+               <p className="c9-body text-slate-600">We utilize a structured classification model to ensure every incident triggers a specific operational workflow.</p>
             </FadeIn>
          </div>
 
-         <div className="grid md:grid-cols-5 gap-4 relative">
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-slate-200 -z-10" />
+         <div className="grid md:grid-cols-5 gap-6">
             {[
                { step: '01', title: 'Issue Logged', desc: 'Ticket created via phone, email, or portal.' },
                { step: '02', title: 'Ticket Triaged', desc: 'Categorized by priority and scope.' },
@@ -371,12 +371,15 @@ const SectionProcess = () => (
                { step: '04', title: 'Resolved', desc: 'Issue fixed or escalated to senior leads.' },
                { step: '05', title: 'Reported', desc: 'Closure confirmed and root cause logged.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-6 rounded-3xl border border-slate-200 text-center relative shadow-sm">
-                  <div className="w-8 h-8 rounded-full bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[12px] mx-auto mb-4">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
-                  <h4 className="font-bold text-slate-900 text-[14px] mb-2">{s.title}</h4>
-                  <p className="text-slate-500 text-[13px] leading-relaxed">{s.desc}</p>
+                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
+                     {i + 1}
+                  </div>
+                  <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
+                  <p className="text-slate-500 text-[15px] leading-relaxed relative z-10">{s.desc}</p>
                </FadeIn>
             ))}
          </div>
@@ -398,25 +401,25 @@ const SectionOutcomes = () => (
                <div className="grid grid-cols-2 gap-6 mb-10">
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-bold text-[#a56eff] mb-1">98.2%</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Ticket Resolution</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Ticket Resolution</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-bold text-[#a56eff] mb-1">&lt;2m</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Avg Phone Answer</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Avg Phone Answer</div>
                   </div>
                </div>
                <div className="space-y-6 mb-8">
                   <div className="flex gap-4">
                      <div className="mt-1"><CheckCircle size={18} className="text-[#a56eff]" /></div>
                      <div>
-                        <p className="font-bold text-white text-[15px]">Retail site outage resolved in 18 minutes.</p>
+                        <p className="font-bold text-white text-[14px]">Retail site outage resolved in 18 minutes.</p>
                         <p className="text-white/60 text-sm">Critical network failure at flagship location restored during peak hours.</p>
                      </div>
                   </div>
                   <div className="flex gap-4">
                      <div className="mt-1"><CheckCircle size={18} className="text-[#a56eff]" /></div>
                      <div>
-                        <p className="font-bold text-white text-[15px]">Centralized support for 45+ locations.</p>
+                        <p className="font-bold text-white text-[14px]">Centralized support for 45+ locations.</p>
                         <p className="text-white/60 text-sm">Consolidated multi-state site support into one accountable dashboard.</p>
                      </div>
                   </div>

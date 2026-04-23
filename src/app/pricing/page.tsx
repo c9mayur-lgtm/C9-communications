@@ -153,7 +153,7 @@ export default function PricingPage() {
                       <div className="w-5 h-5 rounded-full bg-[#F4F0FA] flex items-center justify-center shrink-0">
                         <Check size={12} className="text-[#5D00D6]" strokeWidth={3} />
                       </div>
-                      <span className="text-[15px]">{f}</span>
+                      <span className="text-[14px]">{f}</span>
                     </li>
                   ))}
                 </ul>

@@ -24,7 +24,7 @@ export const WpCompliance = () => {
                 <div className="w-12 h-12 rounded-xl bg-[#5D00D6] flex items-center justify-center mb-5 shrink-0 shadow-lg shadow-purple-900/20">
                   <ShieldCheck className="text-white" size={24} strokeWidth={2} />
                 </div>
-                <p className="text-[#CBD5E1] text-[15px] leading-relaxed font-medium pr-4">
+                <p className="text-[#CBD5E1] text-[14px] leading-relaxed font-medium pr-4">
                   TCP Code, Privacy Act, Spam Act, Financial Hardship Standard compliant.
                 </p>
               </div>
@@ -33,7 +33,7 @@ export const WpCompliance = () => {
                 <div className="w-12 h-12 rounded-xl bg-[#5D00D6] flex items-center justify-center mb-5 shrink-0 shadow-lg shadow-purple-900/20">
                   <Database className="text-white" size={24} strokeWidth={2} />
                 </div>
-                <p className="text-[#CBD5E1] text-[15px] leading-relaxed font-medium pr-4">
+                <p className="text-[#CBD5E1] text-[14px] leading-relaxed font-medium pr-4">
                   All customer data stored exclusively in Australian data centres.
                 </p>
               </div>

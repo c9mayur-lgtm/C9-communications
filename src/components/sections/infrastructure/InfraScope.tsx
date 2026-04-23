@@ -363,7 +363,7 @@ export default function InfraScope() {
                   handleClick(idx);
                 }}
                 className={cn(
-                  "flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold transition-all duration-300 border",
+                  "flex items-center gap-2 px-4 py-2 rounded-full text-[14px] font-semibold transition-all duration-300 border",
                   isActive
                     ? "bg-[#5D00D6] text-white border-[#5D00D6] shadow-sm shadow-[#5D00D6]/20"
                     : "bg-white text-[#6B7280] border-gray-200 hover:border-[#5D00D6] hover:text-[#5D00D6]"

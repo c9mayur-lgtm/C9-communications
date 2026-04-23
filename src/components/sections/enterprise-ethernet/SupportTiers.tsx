@@ -83,7 +83,7 @@ export default function SupportTiers() {
               </h2>
            </div>
            <div className="max-w-[400px]">
-              <p className="text-[15px] md:text-[16px] text-[#6B7280] leading-relaxed italic border-l-2 border-[#5D00D6]/20 pl-6">
+              <p className="text-[14px] md:text-[16px] text-[#6B7280] leading-relaxed italic border-l-2 border-[#5D00D6]/20 pl-6">
                  * Restoration targets (eSLA) ensure your business has a contractually backed commitment 
                  to service uptime on the nbn™ enterprise backbone.
               </p>
@@ -117,7 +117,7 @@ export default function SupportTiers() {
                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${t.recommended || i === 2 ? 'bg-white/10' : 'bg-white shadow-sm'}`}>
                         <Timer size={16} className={t.recommended || i === 2 ? 'text-white' : 'text-[#5D00D6]'} />
                      </div>
-                     <span className="text-[13px] font-bold opacity-80">{t.priceSub}</span>
+                     <span className="text-[14px] font-bold opacity-80">{t.priceSub}</span>
                   </div>
 
                   <button 
@@ -138,7 +138,7 @@ export default function SupportTiers() {
                     {/* Icon removed from side */}
                  </div>
 
-                 <p className="text-[15px] text-[#6B7280] leading-relaxed mb-8 font-normal">
+                 <p className="text-[14px] text-[#6B7280] leading-relaxed mb-8 font-normal">
                     {t.desc}
                  </p>
 

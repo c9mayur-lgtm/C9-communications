@@ -92,19 +92,19 @@ const Hero = () => (
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <a
                 href="#consultation"
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
                 Get My Business Assessed
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="tel:1300000000"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
                 Speak to an Expert
               </a>
             </div>
-            <p className="text-[13px] text-slate-400 font-medium ml-1">
+            <p className="text-[14px] text-slate-400 font-medium ml-1">
               Reliable management. Consistent performance. Zero interruptions.
             </p>
           </FadeIn>
@@ -112,7 +112,7 @@ const Hero = () => (
           <FadeIn delay={0.32}>
             <div className="flex flex-wrap gap-x-7 gap-y-3 mt-10 pt-8 border-t border-slate-100">
               {['Seamless Takeover', 'Vendor Management', 'Fixed Monthly Costs', 'Local Accountability'].map((t) => (
-                <span key={t} className="inline-flex items-center gap-2 text-slate-500 text-[13px] font-semibold">
+                <span key={t} className="inline-flex items-center gap-2 text-slate-500 text-[14px] font-semibold">
                   <CheckCircle size={14} className="text-[#5D00D6]" /> {t}
                 </span>
               ))}
@@ -134,7 +134,7 @@ const Hero = () => (
             </div>
             <div className="absolute top-6 right-6 bg-[#5D00D6] text-white rounded-2xl px-4 py-3 shadow-xl">
               <div className="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-0.5">Support Level</div>
-              <div className="text-[15px] font-extrabold">24/7 Managed</div>
+              <div className="text-[14px] font-extrabold">24/7 Managed</div>
             </div>
           </div>
         </FadeIn>
@@ -239,7 +239,7 @@ const SectionAudit = () => (
              </p>
              <a
                 href="#consultation"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#0c1024] rounded-full h-14 px-10 font-bold text-[15px] hover:bg-slate-100 transition-all shadow-xl whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0c1024] rounded-full h-14 px-10 font-bold text-[14px] hover:bg-slate-100 transition-all shadow-xl whitespace-nowrap"
               >
                 Get My Business Assessed
               </a>
@@ -390,7 +390,7 @@ const SectionPaths = () => (
            </div>
            <div className="grow">
               <h4 className="c9-card-title mb-2">Cross-Service Integration</h4>
-              <p className="text-slate-500 text-[15px]">Need specific help with your internet? Explore our specialised connectivity options for <strong>nbn®</strong> and <strong>Fibre</strong>.</p>
+              <p className="text-slate-500 text-[14px]">Need specific help with your internet? Explore our specialised connectivity options for <strong>nbn®</strong> and <strong>Fibre</strong>.</p>
            </div>
            <div className="shrink-0 w-full md:w-auto flex gap-4">
               <a href="/telco/business-nbn" className="text-[#5D00D6] font-bold text-[14px] hover:underline whitespace-nowrap">nbn®</a>
@@ -407,45 +407,37 @@ const SectionPaths = () => (
    SECTION 7 — HOW IT WORKS
    ───────────────────────────────────────────────────────── */
 const SectionProcess = () => (
-  <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
-    <div className={C}>
-      <FadeIn className="text-center mb-16">
-        <span className="c9-eyebrow mb-4">Our Takeover Process</span>
-        <h2 className="c9-section-heading mb-6 max-w-2xl mx-auto">
-          A clear path to reliable technology
-        </h2>
-      </FadeIn>
+   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+         <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeIn>
+               <span className="c9-eyebrow mb-4">Our Takeover Process</span>
+               <h2 className="c9-section-heading mb-6">A Clear Path to Reliable Technology</h2>
+               <p className="c9-body text-slate-600">We utilize a structured takeover model to ensure every site triggers a specific operational workflow.</p>
+            </FadeIn>
+         </div>
 
-      <div className="grid md:grid-cols-4 gap-8 relative">
-        <div className="hidden md:block absolute top-[45px] left-[10%] right-[10%] h-[2px] bg-slate-100" />
-        
-        {[
-          { step: '01', title: 'Assess', desc: 'We audit your existing network, security, and vendors to find friction points.' },
-          { step: '02', title: 'Identify', desc: 'We pinpoint exact risks and opportunities for improvement in your current setup.' },
-          { step: '03', title: 'Optimise', desc: 'We execute targeted fixes and stabilisations with zero interruptions to your team.' },
-          { step: '04', title: 'Manage', desc: 'Our local experts provide continuous, proactive management and accountability.' },
-        ].map((s, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="relative text-center">
-            <div className="w-[90px] h-[90px] rounded-full bg-white border-2 border-[#5D00D6] flex items-center justify-center mb-6 mx-auto relative z-10 shadow-lg shadow-purple-900/10">
-               <span className="text-2xl font-black text-[#5D00D6]">{s.step}</span>
-            </div>
-            <h3 className="c9-card-title mb-4">{s.title}</h3>
-            <p className="text-slate-500 text-[14px] leading-relaxed px-2">{s.desc}</p>
-          </FadeIn>
-        ))}
+         <div className="grid md:grid-cols-4 gap-6">
+            {[
+               { step: '01', title: 'Assess', desc: 'We audit your existing network, security, and vendors to find friction points.' },
+               { step: '02', title: 'Identify', desc: 'We pinpoint exact risks and opportunities for improvement in your current setup.' },
+               { step: '03', title: 'Optimise', desc: 'We execute targeted fixes and stabilisations with zero interruptions to your team.' },
+               { step: '04', title: 'Manage', desc: 'Our local experts provide continuous, proactive management and accountability.' },
+            ].map((s, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
+                     {s.step}
+                  </div>
+                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
+                     {i + 1}
+                  </div>
+                  <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
+                  <p className="text-slate-500 text-[15px] leading-relaxed relative z-10">{s.desc}</p>
+               </FadeIn>
+            ))}
+         </div>
       </div>
-      
-      <FadeIn delay={0.4} className="mt-16 text-center">
-         <a
-            href="#consultation"
-            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group"
-          >
-            Get My Business Assessed
-            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-          </a>
-      </FadeIn>
-    </div>
-  </section>
+   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
@@ -473,7 +465,7 @@ const SectionObjections = () => (
           <FadeIn key={i} delay={i * 0.1}>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 transition-all">
               <h4 className="c9-card-title mb-4 !text-[#a56eff]">{o.q}</h4>
-              <p className="text-white/70 text-[15px] leading-relaxed font-medium">{o.a}</p>
+              <p className="text-white/70 text-[14px] leading-relaxed font-medium">{o.a}</p>
             </div>
           </FadeIn>
         ))}
@@ -497,7 +489,7 @@ const SectionImpact = () => (
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full border border-white/40 shadow-lg">
-                 <span className="text-[#5D00D6] font-bold text-[13px] uppercase tracking-wider">Business Impact</span>
+                 <span className="text-[#5D00D6] font-bold text-[14px] uppercase tracking-wider">Business Impact</span>
               </div>
            </div>
         </FadeIn>
@@ -602,7 +594,7 @@ export default function Business2Page() {
             desc: 'We took over a major retail group suffering from frequent outages. By optimising their existing infrastructure and managing their connectivity, we achieved zero downtime.',
             img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
             videoText: 'Retail Takeover',
-            href: '/case-studies/retail-pos-stabilisation'
+            href: '/case-studies/multi-site-retail-stabilisation'
           },
           {
             tag: 'PROFESSIONAL SERVICES',
@@ -610,7 +602,7 @@ export default function Business2Page() {
             desc: 'A prominent firm was tired of waiting days for IT help. We moved them to our managed platform, providing instant local support and consistent system performance.',
             img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
             videoText: 'Support Turnaround',
-            href: '/case-studies/legal-firm-takeover'
+            href: '/case-studies/financial-vendor-consolidation'
           }
         ]}
       />

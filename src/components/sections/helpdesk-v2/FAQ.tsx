@@ -78,7 +78,7 @@ export default function FAQ() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" 
+            className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.3em] mb-4 block" 
           >
             COMMON QUESTIONS
           </motion.span>

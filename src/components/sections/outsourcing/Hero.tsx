@@ -193,7 +193,7 @@ export default function Hero() {
                     <Activity className="w-5 h-5 text-green-500 animate-pulse" />
                   </div>
                   <div>
-                    <div className="text-[13px] font-bold text-[#0c1024]">Service Status: Active</div>
+                    <div className="text-[14px] font-bold text-[#0c1024]">Service Status: Active</div>
                     <div className="text-[11px] text-slate-500 font-normal tracking-tight">Australian Support Team Standby</div>
                   </div>
                 </div>

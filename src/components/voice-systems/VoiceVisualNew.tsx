@@ -64,7 +64,7 @@ export default function VoiceVisualNew() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -4 }}
                   transition={{ duration: 0.2 }}
-                  className="text-[13px] font-bold text-[#0c1024] leading-none truncate"
+                  className="text-[14px] font-bold text-[#0c1024] leading-none truncate"
                 >
                   {call.from}
                 </motion.p>

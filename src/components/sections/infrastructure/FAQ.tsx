@@ -61,7 +61,7 @@ export default function FAQ() {
                 </span>
               </AccordionTrigger>
               <AccordionContent className="pb-8">
-                <p className="font-['Proxima_Nova'] text-[15px] text-[#6B7280] leading-[1.7] max-w-[95%]">
+                <p className="font-['Proxima_Nova'] text-[14px] text-[#6B7280] leading-[1.7] max-w-[95%]">
                   {faq.answer}
                 </p>
               </AccordionContent>

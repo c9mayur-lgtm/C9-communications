@@ -194,7 +194,7 @@ export default function MigrationPath() {
                     <div className="w-6 h-6 rounded-md bg-light-purple-bg flex items-center justify-center flex-shrink-0">
                       <CheckCircle size={12} className="text-brand-purple" />
                     </div>
-                    <span className="text-[15px] font-semibold text-text-primary leading-snug" style={FONT_FAMILY}>{item}</span>
+                    <span className="text-[14px] font-semibold text-text-primary leading-snug" style={FONT_FAMILY}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -202,7 +202,7 @@ export default function MigrationPath() {
               {/* Outcome */}
               <div className="flex items-center gap-4 mt-auto pt-8 border-t border-brand-purple/5">
                 <div className="w-2.5 h-2.5 rounded-full bg-brand-purple flex-shrink-0 animate-pulse" />
-                <span className="text-[15px] font-bold text-brand-purple" style={FONT_FAMILY}>{p.outcome}</span>
+                <span className="text-[14px] font-bold text-brand-purple" style={FONT_FAMILY}>{p.outcome}</span>
               </div>
             </div>
 
@@ -234,7 +234,7 @@ export default function MigrationPath() {
                     {m.val}
                   </p>
                   <p className={cn(
-                    'text-[13px] font-normal leading-tight',
+                    'text-[14px] font-normal leading-tight',
                     m.hi ? 'text-brand-purple/70' : 'text-slate-400'
                   )} style={FONT_FAMILY}>
                     {m.sub}

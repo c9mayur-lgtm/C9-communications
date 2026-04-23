@@ -66,7 +66,7 @@ export default function CareersPage() {
                     <item.icon size={32} />
                   </div>
                   <h3 className="text-xl font-bold text-[#1A1A2E] mb-4">{item.title}</h3>
-                  <p className="text-gray-500 leading-relaxed text-[15px]">{item.desc}</p>
+                  <p className="text-gray-500 leading-relaxed text-[14px]">{item.desc}</p>
                 </div>
               </FadeUp>
             ))}

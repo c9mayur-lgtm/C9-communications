@@ -69,7 +69,7 @@ export default function Hero() {
                           placeholder="Check your site availability..." 
                           value={address}
                           onChange={(e) => setAddress(e.target.value)}
-                          className="w-full h-12 bg-transparent border-none outline-none text-[#1A1A2E] font-bold text-[15px] placeholder:text-slate-400 placeholder:font-medium"
+                          className="w-full h-12 bg-transparent border-none outline-none text-[#1A1A2E] font-bold text-[14px] placeholder:text-slate-400 placeholder:font-medium"
                        />
                     </div>
                     <Button 
@@ -92,7 +92,7 @@ export default function Hero() {
                 </Button>
                 <div className="flex items-center gap-2 px-6">
                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                   <span className="text-[13px] font-bold text-slate-400 tracking-tight uppercase">Special: $0 Fibre Build Offer</span>
+                   <span className="text-[14px] font-bold text-slate-400 tracking-tight uppercase">Special: $0 Fibre Build Offer</span>
                 </div>
               </div>
 

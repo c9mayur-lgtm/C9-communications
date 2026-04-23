@@ -46,7 +46,7 @@ export const WpClientTicker = () => {
 
       {/* Heading */}
       <p
-        className="text-center font-bold tracking-[0.1em] md:tracking-[0.3em] uppercase text-[#5D00D6] text-[11px] md:text-[13px] mb-4 md:mb-6 px-4 font-sans"
+        className="text-center font-bold tracking-[0.1em] md:tracking-[0.3em] uppercase text-[#5D00D6] text-[11px] md:text-[14px] mb-4 md:mb-6 px-4 font-sans"
         >
         Trusted by leading Australian businesses
       </p>

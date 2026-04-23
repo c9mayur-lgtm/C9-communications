@@ -74,7 +74,7 @@ const LiveChatVisual = () => {
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="mx-6 mb-4 flex items-center gap-3 bg-emerald-50 border border-emerald-100 rounded-2xl px-5 py-3">
             <CheckCircle size={18} className="text-emerald-600 shrink-0" />
             <div>
-              <p className="text-[13px] font-bold text-emerald-800">Issue resolved in under 10 minutes</p>
+              <p className="text-[14px] font-bold text-emerald-800">Issue resolved in under 10 minutes</p>
               <p className="text-[11px] text-emerald-600 font-medium">Sarah is back online before her client call.</p>
             </div>
           </motion.div>
@@ -83,7 +83,7 @@ const LiveChatVisual = () => {
 
       <div className="px-6 pb-6">
         <div className="flex items-center gap-3 bg-slate-50 rounded-full border border-slate-200 px-5 py-3">
-          <span className="flex-1 text-[13px] text-slate-400 font-medium">Message C9 Helpdesk…</span>
+          <span className="flex-1 text-[14px] text-slate-400 font-medium">Message C9 Helpdesk…</span>
           <div className="w-8 h-8 rounded-full bg-[#5D00D6] flex items-center justify-center shadow-md">
             <ArrowRight size={14} className="text-white" />
           </div>
@@ -129,7 +129,7 @@ export default function Hero() {
                 <Button 
                   onClick={handleProposalRequest}
                   size="lg" 
-                  className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none text-[15px]" 
+                  className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none text-[14px]" 
                   
                 >
                   Get a Helpdesk Proposal <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
@@ -138,7 +138,7 @@ export default function Hero() {
                   onClick={handleSlaScroll}
                   variant="outline" 
                    size="lg" 
-                  className="w-full sm:w-auto border-gray-200 text-[#0c1024] font-bold h-14 px-8 rounded-full hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white transition-colors text-[15px]" 
+                  className="w-full sm:w-auto border-gray-200 text-[#0c1024] font-bold h-14 px-8 rounded-full hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white transition-colors text-[14px]" 
                   
                 >
                   See Our Response Times

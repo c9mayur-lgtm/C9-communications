@@ -29,7 +29,7 @@ export default function DefenseBridge() {
             <h2 className="c9-section-heading !text-white mb-3" >
               Strategic roadmap meets enterprise cybersecurity
             </h2>
-            <p className="text-[15px] md:text-[16px] text-white/50 leading-relaxed max-w-[700px] font-normal font-sans" >
+            <p className="text-[14px] md:text-[16px] text-white/50 leading-relaxed max-w-[700px] font-normal font-sans" >
               Every strategic IT engagement includes a security posture review. For organisations with compliance obligations — <strong>C9 Defense</strong> provides Essential 8 implementation and continuous monitoring as a formal program alongside your strategy.
             </p>
           </div>

@@ -29,21 +29,21 @@ export default function FinalCTA() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             onClick={handleAssessmentRequest}
-            className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[15px] shadow-lg shadow-purple-900/30 flex items-center gap-2 border-none"
+            className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[14px] shadow-lg shadow-purple-900/30 flex items-center gap-2 border-none"
             style={{ fontFamily: F }}
           >
             Assess My Backup Environment <ArrowRight size={16} />
           </Button>
           <a
             href="tel:1800000299"
-            className="flex items-center gap-2 text-[#9CA3AF] hover:text-white font-bold text-[15px] transition-colors no-underline"
+            className="flex items-center gap-2 text-[#9CA3AF] hover:text-white font-bold text-[14px] transition-colors no-underline"
             style={{ fontFamily: F }}
           >
             <Phone size={16} /> Call 1800 000 299
           </a>
         </div>
 
-        <p className="text-[13px] text-[#6B7280] mt-8 font-normal tracking-wide uppercase font-bold" style={{ fontFamily: F }}>
+        <p className="text-[14px] text-[#6B7280] mt-8 font-normal tracking-wide uppercase font-bold" style={{ fontFamily: F }}>
           Australian team · Responds within 1 business day · No lock-in consultations
         </p>
       </div>

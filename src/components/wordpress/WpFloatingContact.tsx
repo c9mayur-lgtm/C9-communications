@@ -159,13 +159,13 @@ export const WpFloatingContact = () => {
               <div className="flex border-b border-gray-100 shrink-0 bg-white">
                 <button
                   onClick={() => setActiveTab('contact')}
-                  className={`flex-1 py-3.5 text-[13px] font-bold transition-colors cursor-pointer ${activeTab === 'contact' ? 'text-[#5D00D6] border-b-2 border-[#5D00D6]' : 'text-gray-400 hover:text-gray-600'}`}
+                  className={`flex-1 py-3.5 text-[14px] font-bold transition-colors cursor-pointer ${activeTab === 'contact' ? 'text-[#5D00D6] border-b-2 border-[#5D00D6]' : 'text-gray-400 hover:text-gray-600'}`}
                 >
                   Contact Options
                 </button>
                 <button
                   onClick={() => setActiveTab('chat')}
-                  className={`flex-1 py-3.5 text-[13px] font-bold transition-colors cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === 'chat' ? 'text-[#5D00D6] border-b-2 border-[#5D00D6]' : 'text-gray-400 hover:text-gray-600'}`}
+                  className={`flex-1 py-3.5 text-[14px] font-bold transition-colors cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === 'chat' ? 'text-[#5D00D6] border-b-2 border-[#5D00D6]' : 'text-gray-400 hover:text-gray-600'}`}
                 >
                   <Bot size={14} /> Setup Assistant
                 </button>
@@ -209,7 +209,7 @@ export const WpFloatingContact = () => {
                     </a>
 
                     <Button
-                      className="w-full py-6 text-[15px] font-bold rounded-2xl shadow-xl shadow-purple-900/20 mt-1"
+                      className="w-full py-6 text-[14px] font-bold rounded-2xl shadow-xl shadow-purple-900/20 mt-1"
                       onClick={() => {
                         setIsOpen(false);
                         document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -235,7 +235,7 @@ export const WpFloatingContact = () => {
                     <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-[#f9f8ff]" style={{ minHeight: '200px', maxHeight: '300px' }}>
                       {messages.map((msg, i) => (
                         <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
-                          <div className={`max-w-[82%] px-4 py-3 rounded-2xl text-[13px] leading-relaxed whitespace-pre-line ${msg.from === 'bot' ? 'bg-white text-[#0c1024] rounded-tl-none shadow-sm border border-gray-100' : 'bg-[#5D00D6] text-white rounded-tr-none'}`}>
+                          <div className={`max-w-[82%] px-4 py-3 rounded-2xl text-[14px] leading-relaxed whitespace-pre-line ${msg.from === 'bot' ? 'bg-white text-[#0c1024] rounded-tl-none shadow-sm border border-gray-100' : 'bg-[#5D00D6] text-white rounded-tr-none'}`}>
                             {msg.text}
                           </div>
                         </div>
@@ -248,21 +248,21 @@ export const WpFloatingContact = () => {
                       {submitted ? (
                         <div className="flex items-center gap-3 py-2 text-[#5D00D6]">
                           <CheckCircle size={20} />
-                          <span className="font-bold text-[13px]">We'll be in touch shortly!</span>
+                          <span className="font-bold text-[14px]">We'll be in touch shortly!</span>
                         </div>
                       ) : currentFlow?.isForm ? (
                         <form onSubmit={handleFormSubmit} className="space-y-2">
-                          <input required type="text" placeholder="Your name" value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[13px] outline-none focus:border-[#5D00D6] transition-colors" />
-                          <input required type="email" placeholder="Work email" value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[13px] outline-none focus:border-[#5D00D6] transition-colors" />
-                          <input required type="tel" placeholder="Phone number" value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[13px] outline-none focus:border-[#5D00D6] transition-colors" />
-                          <button type="submit" className="w-full py-3 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold rounded-xl text-[13px] flex items-center justify-center gap-2 transition-colors cursor-pointer">
+                          <input required type="text" placeholder="Your name" value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors" />
+                          <input required type="email" placeholder="Work email" value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors" />
+                          <input required type="tel" placeholder="Phone number" value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors" />
+                          <button type="submit" className="w-full py-3 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold rounded-xl text-[14px] flex items-center justify-center gap-2 transition-colors cursor-pointer">
                             <Send size={15} /> Send my details
                           </button>
                         </form>
                       ) : (
                         <div className="space-y-2">
                           {currentFlow?.options.map((opt, i) => (
-                            <button key={i} onClick={() => handleOption(opt.label, opt.next)} className="w-full text-left px-4 py-3 rounded-xl border border-gray-200 hover:border-[#5D00D6]/50 hover:bg-[#f4f0fa] text-[13px] font-medium text-[#0c1024] transition-all cursor-pointer">
+                            <button key={i} onClick={() => handleOption(opt.label, opt.next)} className="w-full text-left px-4 py-3 rounded-xl border border-gray-200 hover:border-[#5D00D6]/50 hover:bg-[#f4f0fa] text-[14px] font-medium text-[#0c1024] transition-all cursor-pointer">
                               {opt.label}
                             </button>
                           ))}
@@ -287,7 +287,7 @@ export const WpFloatingContact = () => {
               className="bg-white rounded-2xl shadow-2xl shadow-purple-900/10 border border-gray-100 p-4 max-w-[220px] cursor-pointer relative mb-1"
               onClick={() => { setShowBubble(false); setIsOpen(true); setActiveTab('chat'); }}
             >
-              <p className="text-[13px] text-[#0c1024] font-semibold leading-snug">
+              <p className="text-[14px] text-[#0c1024] font-semibold leading-snug">
                 👋 Setting up a new office or relocating?
               </p>
               <p className="text-[12px] text-[#5D00D6] font-bold mt-1.5">Let us plan it from Day 1 →</p>

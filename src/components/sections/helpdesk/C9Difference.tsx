@@ -42,7 +42,7 @@ export default function C9Difference() {
               ].map((text, i) => (
                 <div key={i} className="flex items-start gap-2">
                   <CheckCircle size={18} className="text-[#7B2FBE] shrink-0 mt-[2px]" />
-                  <span className="text-[15px] text-[#1A1A2E]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>{text}</span>
+                  <span className="text-[14px] text-[#1A1A2E]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>{text}</span>
                 </div>
               ))}
             </div>
@@ -53,10 +53,10 @@ export default function C9Difference() {
             <div className="grid grid-cols-[3fr_3.5fr_3.5fr]">
               <div className="bg-white p-3.5" />
               <div className="bg-[#F9FAFB] p-3.5 text-center flex items-center justify-center">
-                <span className="text-[13px] font-semibold uppercase text-[#6B7280]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>Generic helpdesk</span>
+                <span className="text-[14px] font-semibold uppercase text-[#6B7280]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>Generic helpdesk</span>
               </div>
               <div className="bg-[#F3EEFF] p-3.5 text-center flex items-center justify-center">
-                <span className="text-[13px] font-semibold uppercase text-[#7B2FBE]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>C9 Helpdesk</span>
+                <span className="text-[14px] font-semibold uppercase text-[#7B2FBE]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>C9 Helpdesk</span>
               </div>
             </div>
 

@@ -42,12 +42,12 @@ export default function ComplianceBlock() {
           ].map((card, idx) => (
             <div key={idx} className="bg-[#12121A] border border-white/5 rounded-[24px] p-8 md:p-10 shadow-lg flex flex-col h-full hover:bg-[#16161F] transition-colors">
               <h3 className="text-[20px] md:text-[22px] text-white font-bold mb-3" >{card.title}</h3>
-              <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >{card.desc}</p>
+              <p className="text-[14px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >{card.desc}</p>
               <div className="flex flex-col mb-10 border-t border-white/5 pt-2">
                 {card.items.map((item, index) => (
                   <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
                     <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
-                    <span className="text-[14px] md:text-[15px] font-medium text-gray-300" >{item}</span>
+                    <span className="text-[14px] md:text-[14px] font-medium text-gray-300" >{item}</span>
                   </div>
                 ))}
               </div>

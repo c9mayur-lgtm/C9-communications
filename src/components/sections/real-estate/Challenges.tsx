@@ -9,7 +9,7 @@ export default function Challenges() {
     <section className="py-12 md:py-16 bg-white border-y border-gray-100">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" style={fontStyle}>
+          <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.3em] mb-4 block" style={fontStyle}>
             CHALLENGES WE SOLVE
           </span>
           <h2 className="c9-section-heading" style={fontStyle}>
@@ -51,7 +51,7 @@ export default function Challenges() {
                 </div>
               </div>
               <h3 className="text-[20px] font-bold mb-4 text-[#0c1024] tracking-tight leading-snug" style={fontStyle}>{f.title}</h3>
-              <p className="text-gray-600 text-[15px] md:text-[16px] leading-relaxed font-normal mb-6" style={fontStyle}>{f.desc}</p>
+              <p className="text-gray-600 text-[14px] md:text-[16px] leading-relaxed font-normal mb-6" style={fontStyle}>{f.desc}</p>
               {f.link && (
                 <div className="mt-auto pt-2 border-t-[1px] border-gray-100 w-full">
                   <Link href={f.link.href} className="inline-flex items-center gap-2 text-[12px] font-black text-[#5D00D6] uppercase tracking-[0.12em] hover:opacity-80 transition-opacity mt-4" style={fontStyle}>

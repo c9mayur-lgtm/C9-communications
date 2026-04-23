@@ -99,7 +99,7 @@ export const ManagedIT = () => {
                       <div className="p-3 bg-[#5D00D6]/5 rounded-xl w-fit mb-4 group-hover:scale-110 transition-transform">
                         <item.icon className="text-[#5D00D6] w-6 h-6" />
                       </div>
-                      <h4 className="c9-card-title !text-[15px] mb-1">{item.title}</h4>
+                      <h4 className="c9-card-title !text-[14px] mb-1">{item.title}</h4>
                       <p className="c9-body !text-[12px] leading-tight">{item.desc}</p>
                     </Card>
                   ))}

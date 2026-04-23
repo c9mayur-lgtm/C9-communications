@@ -127,7 +127,7 @@ const Hero = () => (
                ].map((trust, i) => (
                  <div key={i} className="flex items-center gap-2.5">
                     <div className="text-[#5D00D6]">{trust.icon}</div>
-                    <span className="text-[13px] font-bold text-slate-900 uppercase tracking-wider">{trust.label}</span>
+                    <span className="text-[14px] font-bold text-slate-900 uppercase tracking-wider">{trust.label}</span>
                  </div>
                ))}
             </div>
@@ -320,7 +320,7 @@ const SectionModelDetail = () => (
                      {card.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">{card.title}</h3>
-                  <p className="text-slate-500 text-[15px] leading-relaxed">{card.desc}</p>
+                  <p className="text-slate-500 text-[14px] leading-relaxed">{card.desc}</p>
                </div>
             </FadeIn>
           ))}
@@ -353,7 +353,7 @@ const SectionSLA = () => (
                      <CheckCircle size={20} className="text-emerald-500 shrink-0" />
                      <div>
                         <h4 className="font-bold text-slate-900 text-sm mb-0.5">{item.title}</h4>
-                        <p className="text-[13px] text-slate-500">{item.desc}</p>
+                        <p className="text-[14px] text-slate-500">{item.desc}</p>
                      </div>
                   </div>
                 ))}
@@ -426,7 +426,7 @@ const SectionScalability = () => (
                      <div className="text-[#5D00D6] mt-1"><CheckCircle size={18} /></div>
                      <div>
                         <h4 className="font-bold text-slate-900 text-sm mb-1">{item.title}</h4>
-                        <p className="text-[13px] text-slate-500">{item.desc}</p>
+                        <p className="text-[14px] text-slate-500">{item.desc}</p>
                      </div>
                   </div>
                 ))}
@@ -565,7 +565,7 @@ const SectionProof = () => (
                <div className="bg-slate-50 p-10 rounded-[40px] border border-slate-200 hover:shadow-xl transition-all duration-500 h-full">
                   <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-4 block">{caseStudy.tag}</span>
                   <h3 className="text-xl font-bold text-slate-900 mb-6">{caseStudy.title}</h3>
-                  <p className="text-slate-600 text-[15px] leading-relaxed mb-10">{caseStudy.desc}</p>
+                  <p className="text-slate-600 text-[14px] leading-relaxed mb-10">{caseStudy.desc}</p>
                   <div className="flex items-center gap-4">
                      <div className="text-4xl font-black text-slate-900">{caseStudy.metric}</div>
                      <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{caseStudy.metricLabel}</div>
@@ -647,7 +647,7 @@ const SectionEcosystem = () => (
                   <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 text-[#5D00D6] group-hover:scale-110 transition-transform">
                      {item.icon}
                   </div>
-                  <span className="text-[13px] font-bold text-slate-900 group-hover:text-white transition-colors uppercase tracking-widest">{item.label}</span>
+                  <span className="text-[14px] font-bold text-slate-900 group-hover:text-white transition-colors uppercase tracking-widest">{item.label}</span>
                </div>
             </FadeIn>
           ))}

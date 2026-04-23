@@ -11,7 +11,7 @@ export default function DefenseBridge() {
           
           <div className="flex flex-row items-start gap-4 flex-1">
             <Shield size={20} className="text-[#7B2FBE] shrink-0 mt-1" />
-            <p className="text-[15px] text-[#1A1A2E] leading-[1.6]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p className="text-[14px] text-[#1A1A2E] leading-[1.6]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
               Security incidents need more than helpdesk. When your team is facing a potential breach, ransomware, or active threat — C9 Defense provides continuous monitoring and incident response so helpdesk is never your only line of defence.
             </p>
           </div>

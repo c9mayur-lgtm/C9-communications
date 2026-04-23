@@ -95,7 +95,7 @@ export const VoiceSmartLeadModal = () => {
                       <h2 className="c9-section-heading mb-3">
                         What can we help you solve?
                       </h2>
-                      <p className="text-slate-500 text-[15px] mb-8">
+                      <p className="text-slate-500 text-[14px] mb-8">
                         Select an option below and we'll route you to the right specialist immediately.
                       </p>
 
@@ -112,8 +112,8 @@ export const VoiceSmartLeadModal = () => {
                             className="flex items-center justify-between p-5 rounded-2xl border border-gray-100 bg-white hover:border-[#5D00D6]/40 hover:shadow-md transition-all text-left group"
                           >
                             <div>
-                              <p className="text-[15px] font-bold text-[#0c1024] mb-1 group-hover:text-[#5D00D6] transition-colors">{opt.title}</p>
-                              <p className="text-[13px] text-slate-500">{opt.desc}</p>
+                              <p className="text-[14px] font-bold text-[#0c1024] mb-1 group-hover:text-[#5D00D6] transition-colors">{opt.title}</p>
+                              <p className="text-[14px] text-slate-500">{opt.desc}</p>
                             </div>
                             <ChevronRight size={18} className="text-slate-300 group-hover:text-[#5D00D6] group-hover:translate-x-1 transition-all" />
                           </button>
@@ -139,7 +139,7 @@ export const VoiceSmartLeadModal = () => {
                       <h2 className="c9-section-heading mb-3">
                         Let's get that sorted.
                       </h2>
-                      <p className="text-slate-500 text-[15px] mb-8">
+                      <p className="text-slate-500 text-[14px] mb-8">
                         You selected: <span className="font-bold text-[#0c1024]">{intent}</span>. Drop your details below and we'll lock it in.
                       </p>
 
@@ -149,14 +149,14 @@ export const VoiceSmartLeadModal = () => {
                             <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest pl-1">Name</span>
                             <div className="relative">
                               <User size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" />
-                              <input required type="text" placeholder="John Doe" className="w-full bg-slate-50 border border-gray-200 rounded-xl h-12 pl-11 pr-4 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                              <input required type="text" placeholder="John Doe" className="w-full bg-slate-50 border border-gray-200 rounded-xl h-12 pl-11 pr-4 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                             </div>
                           </label>
                           <label className="flex flex-col gap-2">
                             <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest pl-1">Company</span>
                             <div className="relative">
                               <Building2 size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" />
-                              <input required type="text" placeholder="Acme Inc" className="w-full bg-slate-50 border border-gray-200 rounded-xl h-12 pl-11 pr-4 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                              <input required type="text" placeholder="Acme Inc" className="w-full bg-slate-50 border border-gray-200 rounded-xl h-12 pl-11 pr-4 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                             </div>
                           </label>
                         </div>
@@ -165,7 +165,7 @@ export const VoiceSmartLeadModal = () => {
                           <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest pl-1">Work Email</span>
                           <div className="relative">
                             <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" />
-                            <input required type="email" placeholder="john@company.com" className="w-full bg-slate-50 border border-gray-200 rounded-xl h-12 pl-11 pr-4 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                            <input required type="email" placeholder="john@company.com" className="w-full bg-slate-50 border border-gray-200 rounded-xl h-12 pl-11 pr-4 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                           </div>
                         </label>
 
@@ -173,7 +173,7 @@ export const VoiceSmartLeadModal = () => {
                           <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest pl-1">Phone Number</span>
                           <div className="relative">
                             <Phone size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" />
-                            <input required type="tel" placeholder="0400 000 000" className="w-full bg-slate-50 border border-gray-200 rounded-xl h-12 pl-11 pr-4 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                            <input required type="tel" placeholder="0400 000 000" className="w-full bg-slate-50 border border-gray-200 rounded-xl h-12 pl-11 pr-4 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                           </div>
                         </label>
 
@@ -206,7 +206,7 @@ export const VoiceSmartLeadModal = () => {
                       <h2 className="c9-section-heading mb-3">
                         We're on it.
                       </h2>
-                      <p className="text-slate-500 text-[15px] mb-8 max-w-[300px]">
+                      <p className="text-slate-500 text-[14px] mb-8 max-w-[300px]">
                         Thanks for reaching out! A C9 Voice engineer has been notified and will be in touch shortly to assist you.
                       </p>
                       <button 

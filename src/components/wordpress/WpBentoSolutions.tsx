@@ -129,7 +129,7 @@ export const WpBentoSolutions = () => {
                               <MonitorPlay size={28} />
                           </motion.div>
                           <div className="flex flex-col items-center gap-1 relative z-10">
-                              <div className="text-white text-[13px] font-medium tracking-tight">Active Mode</div>
+                              <div className="text-white text-[14px] font-medium tracking-tight">Active Mode</div>
                               <div className="c9-eyebrow !text-white/30 !text-[8.5px]">C9 Managed</div>
                           </div>
                         </div>

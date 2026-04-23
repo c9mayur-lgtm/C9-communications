@@ -11,7 +11,7 @@ const CASE_STUDIES = [
     desc: 'Successfully reduced 4 fragmented vendors into 1 managed partner. Achieved 99.9% uptime with zero downtime.',
     img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
     videoText: 'Retail Stabilisation',
-    href: '/case-studies/retail-pos-stabilisation'
+    href: '/case-studies/multi-site-retail-stabilisation'
   },
   {
     tag: 'LEGAL FIRM TAKEOVER',
@@ -19,7 +19,7 @@ const CASE_STUDIES = [
     desc: 'Took over failing on-premise infrastructure for a high-volume law firm. Improved response time by 60%.',
     img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
     videoText: 'Legal Firm Takeover',
-    href: '/case-studies/legal-firm-takeover'
+    href: '/case-studies/financial-vendor-consolidation'
   },
   {
     tag: 'NEW BUSINESS',
@@ -27,7 +27,7 @@ const CASE_STUDIES = [
     desc: 'Rapidly commissioned 12 new sites across 3 states in under 6 weeks with zero-day operational readiness.',
     img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
     videoText: 'Greenfield Rollout',
-    href: '/case-studies/greenfield-site-rollout'
+    href: '/case-studies/enterprise-migration-success'
   }
 ];
 

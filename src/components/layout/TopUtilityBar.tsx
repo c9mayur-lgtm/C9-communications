@@ -16,7 +16,7 @@ export const TopUtilityBar = () => {
           <button
             onClick={() => setAudience('business')}
             className={cn(
-              "px-5 py-2 rounded-full text-[13px] font-bold transition-all duration-300",
+              "px-5 py-2 rounded-full text-[14px] font-bold transition-all duration-300",
               audience === 'business' 
                 ? "bg-[#5D00D6] text-white shadow-md" 
                 : "text-slate-500 hover:text-slate-800"
@@ -27,7 +27,7 @@ export const TopUtilityBar = () => {
           <button
             onClick={() => setAudience('enterprise')}
             className={cn(
-              "px-5 py-2 rounded-full text-[13px] font-bold transition-all duration-300",
+              "px-5 py-2 rounded-full text-[14px] font-bold transition-all duration-300",
               audience === 'enterprise' 
                 ? "bg-[#5D00D6] text-white shadow-md" 
                 : "text-slate-500 hover:text-slate-800"

@@ -113,7 +113,7 @@ export const KeyFeatures = () => {
             className="mt-16 text-center"
         >
             <div className="inline-flex items-center gap-4 p-1 pl-6 pr-1 bg-white/5 border border-white/10 rounded-full hover:bg-white/[0.08] transition-all cursor-pointer group">
-                <span className="text-white/80 text-[13px] font-medium">Explore all 82 enterprise-grade features</span>
+                <span className="text-white/80 text-[14px] font-medium">Explore all 82 enterprise-grade features</span>
                 <div className="w-10 h-10 rounded-full bg-[#5D00D6] flex items-center justify-center text-white shadow-lg shadow-purple-900/30 group-hover:rotate-45 transition-transform">
                     <Link2 size={16} />
                 </div>

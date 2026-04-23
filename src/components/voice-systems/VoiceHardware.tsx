@@ -69,7 +69,7 @@ export const VoiceHardware = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               onClick={() => window.dispatchEvent(new CustomEvent('c9-open-lead-modal', { detail: { interest: ' hardware & systems' } }))}
-              className="text-[#5D00D6] font-bold text-[15px] flex items-center gap-2 hover:gap-3 transition-all"
+              className="text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 hover:gap-3 transition-all"
             >
               View hardware specs <ArrowRight size={16} />
             </motion.button>
@@ -96,7 +96,7 @@ export const VoiceHardware = () => {
                 <div className="mt-6 text-center w-full border-t border-gray-100 pt-5">
                   <p className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-1">Yealink SIP-T54W</p>
                   <p className="text-[16px] font-bold text-[#0c1024]">Prime Business Phone</p>
-                  <p className="text-[13px] text-slate-400 mt-1">10-line, 4.3" colour display, Wi-Fi & Bluetooth</p>
+                  <p className="text-[14px] text-slate-400 mt-1">10-line, 4.3" colour display, Wi-Fi & Bluetooth</p>
                 </div>
               </motion.div>
 

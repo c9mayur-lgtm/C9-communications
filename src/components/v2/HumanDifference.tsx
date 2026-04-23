@@ -36,7 +36,7 @@ export const HumanDifference = () => {
     <section className="py-20 md:py-32 bg-[#FDFDFF]">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" >THE C9 DIFFERENCE</span>
+          <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.25em] mb-6 block" >THE C9 DIFFERENCE</span>
           <h2 className="c9-section-heading mb-6" >
             Technology is the tool. People are the point.
           </h2>

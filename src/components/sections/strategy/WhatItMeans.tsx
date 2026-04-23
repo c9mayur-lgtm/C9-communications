@@ -76,7 +76,7 @@ export default function WhatItMeans() {
                 {s.title}
               </h3>
 
-              <p className="c9-body mb-6 flex-grow !text-[15px]">
+              <p className="c9-body mb-6 flex-grow !text-[14px]">
                 {s.body}
               </p>
 

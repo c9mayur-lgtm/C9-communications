@@ -53,7 +53,7 @@ const MonitoringVisual = () => (
               <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/20 flex items-center justify-center text-[#5D00D6]">
                 <Activity size={14} />
               </div>
-              <span className="text-[13px] font-bold text-white group-hover/node:text-[#5D00D6] transition-colors">{node.label}</span>
+              <span className="text-[14px] font-bold text-white group-hover/node:text-[#5D00D6] transition-colors">{node.label}</span>
             </div>
             <div className="flex items-center gap-4">
               <span className="text-[11px] font-medium text-slate-500">{node.time}</span>
@@ -142,7 +142,7 @@ export default function MonitoringBlock() {
                     </div>
                     <div>
                        <h5 className="text-[16px] font-bold text-white mb-0.5 tracking-tight group-hover:text-purple-300 transition-colors">Config history & audits</h5>
-                       <p className="text-[13px] text-slate-500 font-medium">Automatic change detection logs</p>
+                       <p className="text-[14px] text-slate-500 font-medium">Automatic change detection logs</p>
                     </div>
                   </div>
                   <CheckCircle className="text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity" size={20} />

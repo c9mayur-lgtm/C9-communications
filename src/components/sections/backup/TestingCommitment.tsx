@@ -45,7 +45,7 @@ export default function TestingCommitment() {
                 {features.map((f, i) => (
                   <div key={i} className="flex gap-3 items-start">
                     <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: '#5D00D6' }} />
-                    <span className="text-[15px] text-[#0c1024] font-normal leading-relaxed" style={{ fontFamily: F }}>{f}</span>
+                    <span className="text-[14px] text-[#0c1024] font-normal leading-relaxed" style={{ fontFamily: F }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -60,12 +60,12 @@ export default function TestingCommitment() {
                 {reportItems.map((item, i) => (
                   <div key={i} className="flex gap-3 items-start">
                     <ChevronRight size={14} className="shrink-0 mt-0.5" style={{ color: '#5D00D6' }} />
-                    <span className="text-[13px] text-white leading-[1.5] font-normal" style={{ fontFamily: F }}>{item}</span>
+                    <span className="text-[14px] text-white leading-[1.5] font-normal" style={{ fontFamily: F }}>{item}</span>
                   </div>
                 ))}
               </div>
               <div className="mt-4 pt-4 border-t" style={{ borderColor: '#374151' }}>
-                <p className="text-[13px] text-[#9CA3AF]" style={{ fontFamily: F }}>
+                <p className="text-[14px] text-[#9CA3AF]" style={{ fontFamily: F }}>
                   Reports retained for audit and compliance evidence
                 </p>
               </div>

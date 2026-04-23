@@ -77,7 +77,7 @@ export default function SipTrunkingHero() {
             >
                 <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    <p className="text-[13px] text-white/60 font-medium">
+                    <p className="text-[14px] text-white/60 font-medium">
                         Basic from <strong className="text-white">$20/month per line</strong> · Ultimate with free local & mobile from <strong className="text-white">$45/month per line</strong>
                     </p>
                 </div>
@@ -112,7 +112,7 @@ export default function SipTrunkingHero() {
                                 <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] transition-colors">
                                     <item.icon size={20} />
                                 </div>
-                                <span className="text-white/80 font-medium text-[15px]">{item.title}</span>
+                                <span className="text-white/80 font-medium text-[14px]">{item.title}</span>
                             </li>
                         ))}
                     </ul>

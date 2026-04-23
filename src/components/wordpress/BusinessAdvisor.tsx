@@ -373,7 +373,7 @@ export const BusinessAdvisor = () => {
                   <div className="w-7 h-7 rounded-lg bg-[#5D00D6] flex items-center justify-center shrink-0">
                     <Sparkles size={13} className="text-white" />
                   </div>
-                  <span className="text-[15px] font-medium text-[#0c1024] tracking-tight">C9 Advisor</span>
+                  <span className="text-[14px] font-medium text-[#0c1024] tracking-tight">C9 Advisor</span>
                   <span className="hidden sm:inline text-[11px] text-gray-400">— powered by C9 content</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -422,7 +422,7 @@ export const BusinessAdvisor = () => {
                                 <Icon size={18} strokeWidth={1.8} />
                               </div>
                               <div>
-                                <div className="text-[13px] font-medium text-[#0c1024] leading-tight">{ind.label}</div>
+                                <div className="text-[14px] font-medium text-[#0c1024] leading-tight">{ind.label}</div>
                                 <div className={`inline-flex items-center mt-1 px-1.5 py-0.5 rounded-md text-[9px] font-medium border ${ind.color}`}>{ind.tag}</div>
                               </div>
                             </motion.button>
@@ -444,7 +444,7 @@ export const BusinessAdvisor = () => {
                         <h4 className="c9-card-title !text-[18px] text-[#0c1024] mb-1">
                           Best for <span className="text-[#5D00D6]">{selected.label}</span>
                         </h4>
-                        <p className="c9-body !text-[13px] !text-gray-400 mb-4">{selected.benefit}</p>
+                        <p className="c9-body !text-[14px] !text-gray-400 mb-4">{selected.benefit}</p>
                         <div className="flex flex-col gap-2">
                           {selected.recommend.map(rec => (
                             <Link key={rec.name} href={rec.href} onClick={() => setIsOpen(false)}
@@ -466,7 +466,7 @@ export const BusinessAdvisor = () => {
                           <h5 className="text-[14px] font-medium text-white mb-1 leading-snug">Talk to an Engineer</h5>
                           <p className="text-[12px] text-gray-400 leading-relaxed">15-min free call tailored to {selected.label}.</p>
                         </div>
-                        <Link href="/contact" className="mt-4 block w-full py-2.5 text-center rounded-xl bg-[#5D00D6] text-white font-medium text-[13px] hover:bg-[#4c00b0] transition-colors">
+                        <Link href="/contact" className="mt-4 block w-full py-2.5 text-center rounded-xl bg-[#5D00D6] text-white font-medium text-[14px] hover:bg-[#4c00b0] transition-colors">
                           Book Free Session →
                         </Link>
                       </div>

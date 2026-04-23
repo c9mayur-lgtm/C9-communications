@@ -97,7 +97,7 @@ export const InboundPlans = () => {
                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${t.recommended ? 'bg-white/10' : 'bg-white shadow-sm'}`}>
                         <Zap size={16} className={t.recommended ? 'text-white' : 'text-[#5D00D6]'} />
                      </div>
-                     <span className="text-[13px] font-bold opacity-80">{t.priceSub}</span>
+                     <span className="text-[14px] font-bold opacity-80">{t.priceSub}</span>
                   </div>
 
                   <button 

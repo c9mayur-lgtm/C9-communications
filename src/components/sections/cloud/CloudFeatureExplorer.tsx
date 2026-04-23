@@ -142,7 +142,7 @@ export default function CloudFeatureExplorer() {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px] w-full">
         
         <div className="mb-16">
-          <span className="text-brand-purple text-[13px] font-bold uppercase tracking-[0.2em] mb-4 block">EXPLORE THE PLATFORM</span>
+          <span className="text-brand-purple text-[14px] font-bold uppercase tracking-[0.2em] mb-4 block">EXPLORE THE PLATFORM</span>
           <h2 className="c9-section-heading text-text-primary">
             Managed cloud, simplified.
           </h2>
@@ -226,7 +226,7 @@ export default function CloudFeatureExplorer() {
                         className="overflow-hidden"
                       >
                         <div className="pt-2 space-y-6">
-                          <p className="text-[15px] text-text-secondary leading-relaxed">
+                          <p className="text-[14px] text-text-secondary leading-relaxed">
                             {feature.description}
                           </p>
                           <div className="space-y-4">
@@ -237,14 +237,14 @@ export default function CloudFeatureExplorer() {
                                 </div>
                                 <div>
                                   <p className="text-[14px] font-bold text-text-primary">{item.label}</p>
-                                  <p className="text-[13px] text-text-secondary leading-relaxed mt-0.5">{item.desc}</p>
+                                  <p className="text-[14px] text-text-secondary leading-relaxed mt-0.5">{item.desc}</p>
                                 </div>
                               </div>
                             ))}
                           </div>
                           
                           <div className="pt-4">
-                            <button className="flex items-center gap-2 text-[13px] font-bold text-brand-purple uppercase tracking-wider hover:gap-3 transition-all">
+                            <button className="flex items-center gap-2 text-[14px] font-bold text-brand-purple uppercase tracking-wider hover:gap-3 transition-all">
                               Learn more about {feature.id.replace('-', ' ')} <ArrowRight size={14} />
                             </button>
                           </div>

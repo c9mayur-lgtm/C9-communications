@@ -44,7 +44,7 @@ const VisualOne = () => (
                  <span className="text-[9px] font-semibold text-red-600 bg-red-50 border border-red-100 px-1.5 py-0.5 rounded uppercase tracking-wider">P1 Critical</span>
                  <span className="text-[9px] text-slate-500 font-semibold tracking-widest uppercase">00:03m ago</span>
               </div>
-              <div className="text-[13px] font-medium text-[#0c1024] leading-tight">Server Outage at Main Office affecting 50+ staff members.</div>
+              <div className="text-[14px] font-medium text-[#0c1024] leading-tight">Server Outage at Main Office affecting 50+ staff members.</div>
            </motion.div>
            
            {/* C9 Response */}
@@ -66,7 +66,7 @@ const VisualOne = () => (
                  <span className="text-[9px] font-semibold text-white bg-white/20 border border-white/10 px-1.5 py-0.5 rounded flex items-center gap-1.5 uppercase tracking-widest shadow-sm"><Users size={10}/> Pod Alpha Engineer</span>
                  <span className="text-[9px] text-[#e0ccff] font-semibold tracking-widest uppercase">Just Now</span>
               </div>
-              <div className="text-[13px] font-medium leading-snug relative z-10 text-white">We've received the alert and are rebooting the cluster remotely. Estimated downtime remaining: 4 minutes. No action required on your end.</div>
+              <div className="text-[14px] font-medium leading-snug relative z-10 text-white">We've received the alert and are rebooting the cluster remotely. Estimated downtime remaining: 4 minutes. No action required on your end.</div>
            </motion.div>
         </div>
      </motion.div>
@@ -108,7 +108,7 @@ const VisualTwo = () => (
                      <span className="font-semibold text-xs uppercase tracking-widest">JD</span>
                   </div>
                   <div className="flex flex-col">
-                     <div className="text-[13px] font-semibold text-[#0c1024] leading-tight">John Doe</div>
+                     <div className="text-[14px] font-semibold text-[#0c1024] leading-tight">John Doe</div>
                      <div className="flex items-center gap-1 mt-0.5">
                        <Activity size={8} className="text-emerald-500" />
                        <div className="text-[8px] text-emerald-600 font-semibold tracking-widest uppercase truncate">Incoming Call...</div>
@@ -391,7 +391,7 @@ export default function Recognition() {
                                   <div className="bg-[#F8FAFC] border border-gray-100 rounded-xl p-5 relative mt-3 shadow-sm">
                                      <div className="absolute top-0 right-6 -translate-y-1/2 bg-[#5D00D6] text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded shadow-sm">The C9 Solution</div>
                                      {/* Softened body text */}
-                                     <p className="text-[15px] leading-relaxed text-slate-600 font-medium" style={fontStyle}>
+                                     <p className="text-[14px] leading-relaxed text-slate-600 font-medium" style={fontStyle}>
                                        {tab.c9Way}
                                      </p>
                                   </div>

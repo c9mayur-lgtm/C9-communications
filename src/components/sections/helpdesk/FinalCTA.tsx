@@ -25,7 +25,7 @@ export default function FinalCTA() {
           </a>
         </div>
 
-        <p className="text-[13px] text-[#6B7280] text-center mt-5" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+        <p className="text-[14px] text-[#6B7280] text-center mt-5" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
           Australian team · Responds within 1 business day · No lock-in consultations
         </p>
       </div>

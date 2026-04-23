@@ -66,7 +66,7 @@ export default function VoiceVisual() {
             <Phone size={18} className="text-white" />
           </div>
           <div>
-            <p className="text-[15px] font-bold text-[#0c1024] leading-none mb-1">C9 Voice System</p>
+            <p className="text-[14px] font-bold text-[#0c1024] leading-none mb-1">C9 Voice System</p>
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">Managed Cloud PBX</p>
           </div>
         </div>

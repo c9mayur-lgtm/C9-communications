@@ -5,62 +5,76 @@ import { ArrowRight } from 'lucide-react';
 
 export const DualAudienceLadder = () => {
   return (
-    <section className="py-20 md:py-32 bg-white border-b border-gray-100">
+    <section className="py-16 md:py-24 bg-white border-b border-gray-100 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-0 items-stretch relative">
           
-          {/* Left Column — SMB lane */}
-          <div className="flex flex-col pr-0 md:pr-16 lg:pr-24">
-            <span className="bg-[#F4F0FA] text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full w-max mb-8">
-              FOR GROWING BUSINESSES
-            </span>
-            <h2 className="c9-section-heading mb-6" >
-              IT that works like it should — without the IT team.
-            </h2>
-            <p className="c9-body mb-10">
-              You didn't start a business to manage passwords, fix printers, or troubleshoot internet dropouts. We take complete ownership of your technology—from robust cloud phone systems to secure networks—so you can get back to what you're actually good at.
-            </p>
-            <div className="mt-auto">
-              <div className="rounded-[16px] overflow-hidden aspect-[4/3] mb-8 shadow-2xl relative group">
-                <img 
-                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Small business owner at desk" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          {/* Vertical Divider (Desktop Only) */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gray-100 -translate-x-1/2 z-0" />
+          
+          {/* Left Column — No IT Team */}
+          <div className="flex flex-col pr-0 md:pr-14 lg:pr-24 z-10">
+            <div className="min-h-[280px] md:min-h-[320px] flex flex-col">
+              <div className="mb-6 h-8 flex items-center">
+                <span className="bg-[#F4F0FA] text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full w-max">
+                  NO INTERNAL IT TEAM
+                </span>
               </div>
-              <a href="#smb-guide" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] hover:gap-3 transition-all duration-300 bg-[#F4F0FA] px-5 py-3 rounded-full hover:bg-[#5D00D6]/10">
-                Download the Managed IT Blueprint <ArrowRight size={18} />
-              </a>
+              <h2 className="c9-section-heading mb-6 !text-[28px] md:!text-[38px] leading-[1.1] min-h-[2.2em] flex items-center" >
+                Stop managing IT issues and start running your business.
+              </h2>
+              <p className="c9-body text-slate-600 leading-relaxed text-[16px] max-w-[480px]">
+                Tired of troubleshooting internet dropouts and vendor silos? We act as your complete, single-owner IT department—handling everything from voice systems to security with absolute accountability.
+              </p>
+            </div>
+            
+            <div className="group/card mt-8 flex-grow flex flex-col">
+              <div className="rounded-[28px] overflow-hidden aspect-[16/10] mb-8 shadow-2xl shadow-purple-900/5 relative bg-slate-100 border border-gray-100">
+                <img 
+                  src="/images/frustrated_worker.png" 
+                  alt="Frustrated worker managing IT issues" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover/card:scale-105" 
+                />
+                <div className="absolute inset-0 bg-[#5D00D6]/5 opacity-60 group-hover/card:opacity-0 transition-opacity duration-700" />
+              </div>
+              <div className="mt-auto">
+                <a href="/greenfield" className="inline-flex items-center justify-center gap-3 text-white bg-[#5D00D6] px-10 h-14 rounded-full hover:bg-[#4d00b3] transition-all duration-300 c9-button-label shadow-xl shadow-purple-900/20 w-full md:w-auto">
+                  Request Managed IT Setup <ArrowRight size={18} />
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Right Column — Enterprise lane */}
-          <div className="flex flex-col pl-0 md:pl-16 lg:pl-24 relative">
-            {/* Divider between columns: 1px vertical line #E5E7EB on desktop only */}
-            <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[1px] bg-[#E5E7EB]" />
-            
-            <span className="bg-[#1D1D1D] text-white text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full w-max mb-8">
-              FOR ENTERPRISE & MULTI-SITE
-            </span>
-            <h2 className="c9-section-heading mb-6" >
-              One managed partner. Every site. Every system.
-            </h2>
-            <p className="c9-body mb-10">
-              Multi-site SD-WAN networks, Microsoft 365 at scale, and comprehensive threat monitoring. C9 operates as your embedded IT and Telco engineering team across every location, delivering sophisticated, fully managed architecture with SLAs that mean something.
-            </p>
-            <div className="mt-auto">
-              <div className="rounded-[16px] overflow-hidden aspect-[4/3] mb-8 shadow-2xl relative group">
-                <img 
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Modern office enterprise environment" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-black/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          {/* Right Column — Internal IT Team */}
+          <div className="flex flex-col pl-0 md:pl-14 lg:pl-24 z-10 mt-16 md:mt-0">
+            <div className="min-h-[280px] md:min-h-[320px] flex flex-col">
+              <div className="mb-6 h-8 flex items-center">
+                <span className="bg-[#1D1D1D] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full w-max">
+                  INTERNAL IT TEAM? PARTNER WITH US
+                </span>
               </div>
-              <a href="#enterprise-guide" className="inline-flex items-center gap-2 text-[#1D1D1D] font-bold text-[14px] hover:gap-3 transition-all duration-300 bg-gray-100 px-5 py-3 rounded-full hover:bg-gray-200">
-                Read the Enterprise Architecture Guide <ArrowRight size={18} />
-              </a>
+              <h2 className="c9-section-heading mb-6 !text-[28px] md:!text-[38px] leading-[1.1] min-h-[2.2em] flex items-center" >
+                A command layer for IT managers and senior engineers.
+              </h2>
+              <p className="c9-body text-slate-600 leading-relaxed text-[16px] max-w-[480px]">
+                We bridge the gaps in your infrastructure. C9 provides the escalation support, multi-site network orchestration, and visibility tools your team needs to stabilize operations across complex footprints.
+              </p>
+            </div>
+            
+            <div className="group/card mt-8 flex-grow flex flex-col">
+              <div className="rounded-[28px] overflow-hidden aspect-[16/10] mb-8 shadow-2xl shadow-purple-900/5 relative bg-slate-100 border border-gray-100">
+                <img 
+                  src="/images/c9_support_engineer.png" 
+                  alt="C9 Support Engineer in control" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover/card:scale-105" 
+                />
+                <div className="absolute inset-0 bg-[#5D00D6]/5 opacity-60 group-hover/card:opacity-0 transition-opacity duration-700" />
+              </div>
+              <div className="mt-auto">
+                <a href="/managed-it" className="inline-flex items-center justify-center gap-3 text-[#5D00D6] border-2 border-[#5D00D6] px-10 h-14 rounded-full hover:bg-[#5D00D6] hover:text-white transition-all duration-300 c9-button-label w-full md:w-auto">
+                  Explore Co-Management Model <ArrowRight size={18} />
+                </a>
+              </div>
             </div>
           </div>
 

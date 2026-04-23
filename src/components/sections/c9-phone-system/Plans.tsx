@@ -62,7 +62,7 @@ export const Plans = () => {
               </h2>
            </div>
            <div className="max-w-[500px]">
-              <p className="c9-body !text-[15px] !text-[#6B7280] italic opacity-80">
+              <p className="c9-body !text-[14px] !text-[#6B7280] italic opacity-80">
                  * Per line (channel) pricing / ex GST. Scale your capacity up or down instantly as your business grows. No hidden lock-ins.
               </p>
            </div>
@@ -95,7 +95,7 @@ export const Plans = () => {
                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${t.recommended ? 'bg-white/10' : 'bg-white shadow-sm'}`}>
                         <Zap size={16} className={t.recommended ? 'text-white' : 'text-[#5D00D6]'} />
                      </div>
-                     <span className="text-[13px] font-bold opacity-80">{t.priceSub}</span>
+                     <span className="text-[14px] font-bold opacity-80">{t.priceSub}</span>
                   </div>
 
                   <button 
@@ -116,7 +116,7 @@ export const Plans = () => {
                     <Package size={20} className="text-gray-100" />
                  </div>
 
-                 <p className="c9-body !text-[15px] !text-[#6B7280] mb-8">
+                 <p className="c9-body !text-[14px] !text-[#6B7280] mb-8">
                     {t.desc}
                  </p>
 

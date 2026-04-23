@@ -78,7 +78,7 @@ export const WpIndustryGrid = () => {
     <section className="py-14 md:py-20 bg-white">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center mb-16 max-w-3xl mx-auto px-6">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" >WHY PARTNER WITH US</span>
+          <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.25em] mb-6 block" >WHY PARTNER WITH US</span>
           <h2 className="c9-section-heading" >
             Solving IT challenges in every industry, every day.
           </h2>

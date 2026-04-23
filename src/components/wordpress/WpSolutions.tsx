@@ -103,7 +103,7 @@ export const WpSolutions = () => {
 
               {/* Optional italic note */}
               {s.note && (
-                <p className="text-[13px] text-gray-400 italic mb-4">{s.note}</p>
+                <p className="text-[14px] text-gray-400 italic mb-4">{s.note}</p>
               )}
 
               {/* Defense callout - ultra-compact stacked style */}

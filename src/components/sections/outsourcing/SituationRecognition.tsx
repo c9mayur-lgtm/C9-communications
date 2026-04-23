@@ -43,7 +43,7 @@ export default function SituationRecognition() {
         {/* Header Block (Text Only, matching page content) */}
         <div className="mb-20">
           <div className="max-w-[800px]">
-            <p className="text-[#a855f7] text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block">
+            <p className="text-[#a855f7] text-[14px] font-bold uppercase tracking-[0.25em] mb-6 block">
               WE'VE HEARD THIS BEFORE
             </p>
             <h2 className="c9-section-heading !text-white mb-8">

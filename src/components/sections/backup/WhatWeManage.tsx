@@ -35,7 +35,7 @@ export default function WhatWeManage() {
                 <svc.icon size={20} style={{ color: '#5D00D6' }} />
               </div>
               <h3 className="text-[18px] font-bold text-[#0c1024] tracking-tight leading-tight" style={{ fontFamily: F }}>{svc.title}</h3>
-              <p className="text-[15px] text-[#6B7280] leading-[1.7] font-normal" style={{ fontFamily: F }}>{svc.body}</p>
+              <p className="text-[14px] text-[#6B7280] leading-[1.7] font-normal" style={{ fontFamily: F }}>{svc.body}</p>
             </div>
           ))}
         </div>

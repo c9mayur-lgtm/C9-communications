@@ -24,7 +24,7 @@ export default function StayInControl() {
           
           {/* LEFT COLUMN */}
           <div>
-            <span className="text-[13px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block font-sans">
+            <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block font-sans">
               TRANSPARENCY
             </span>
             <h2 className="c9-section-heading font-sans">
@@ -41,7 +41,7 @@ export default function StayInControl() {
               {features.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <CheckCircle className="w-[18px] h-[18px] text-[#5D00D6] shrink-0 mt-0.5 font-sans" />
-                  <span className="text-[15px] text-[#0c1024] font-normal  leading-tight font-sans">
+                  <span className="text-[14px] text-[#0c1024] font-normal  leading-tight font-sans">
                     {item}
                   </span>
                 </div>

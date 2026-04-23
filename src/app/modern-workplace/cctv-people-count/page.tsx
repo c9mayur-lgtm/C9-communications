@@ -227,7 +227,7 @@ export default function CCTVPeopleCountPage() {
                 <div className="absolute bottom-5 left-5 right-5 z-20 grid grid-cols-2 gap-3">
                   <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-lg transition-transform hover:-translate-y-1">
                     <div className="text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-1">Current Occupancy</div>
-                    <div className="text-[28px] font-bold text-white leading-none">42 <span className="text-[13px] text-green-400 font-medium ml-1 bg-green-400/20 px-2 py-0.5 rounded-full border border-green-400/30">Stable</span></div>
+                    <div className="text-[28px] font-bold text-white leading-none">42 <span className="text-[14px] text-green-400 font-medium ml-1 bg-green-400/20 px-2 py-0.5 rounded-full border border-green-400/30">Stable</span></div>
                   </div>
                   <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-lg transition-transform hover:-translate-y-1">
                     <div className="text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-1">Threat Detect</div>
@@ -304,7 +304,7 @@ export default function CCTVPeopleCountPage() {
               <div className="flex items-center gap-2">
                 <div className="flex flex-col leading-none">
                    <span className="text-[11px] font-bold text-gray-400">AXIS</span>
-                   <span className="text-[15px] font-black tracking-wider text-gray-900">COMMUNICATIONS</span>
+                   <span className="text-[14px] font-black tracking-wider text-gray-900">COMMUNICATIONS</span>
                 </div>
               </div>
             </div>
@@ -329,7 +329,7 @@ export default function CCTVPeopleCountPage() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{problem.title}</h3>
-                    <p className="text-[15px] leading-relaxed text-gray-500">{problem.description}</p>
+                    <p className="text-[14px] leading-relaxed text-gray-500">{problem.description}</p>
                     <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                   </article>
                 </ScaleIn>
@@ -357,7 +357,7 @@ export default function CCTVPeopleCountPage() {
                       <Maximize className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3">{solutions[0].title}</h3>
-                    <p className="mb-6 text-[15px] leading-relaxed text-gray-500">{solutions[0].description}</p>
+                    <p className="mb-6 text-[14px] leading-relaxed text-gray-500">{solutions[0].description}</p>
                     <ul className="space-y-3 mt-auto">
                       {solutions[0].bullets.map((bullet) => (
                         <li key={bullet} className="text-[14px] font-medium text-gray-600 flex items-start gap-2.5">
@@ -421,7 +421,7 @@ export default function CCTVPeopleCountPage() {
                   <Users className="h-6 w-6" />
                 </div>
                 <h3 className="c9-card-title mb-3">{solutions[1].title}</h3>
-                <p className="mb-6 text-[15px] leading-relaxed text-gray-500 flex-grow">{solutions[1].description}</p>
+                <p className="mb-6 text-[14px] leading-relaxed text-gray-500 flex-grow">{solutions[1].description}</p>
                 
                 {/* BENTO VISUAL: Chart */}
                 <div className="mt-auto h-[140px] border-b border-[#F4F0FA] flex items-end justify-between px-2 pb-4 pt-10 relative">
@@ -445,7 +445,7 @@ export default function CCTVPeopleCountPage() {
                   <HardDrive className="h-6 w-6" />
                 </div>
                 <h3 className="c9-card-title mb-3">{solutions[2].title}</h3>
-                <p className="mb-6 text-[15px] leading-relaxed text-gray-500 flex-grow">{solutions[2].description}</p>
+                <p className="mb-6 text-[14px] leading-relaxed text-gray-500 flex-grow">{solutions[2].description}</p>
                 
                 {/* BENTO VISUAL: Dashboard UI Wireframe */}
                 <div className="mt-auto h-[160px] bg-[#f0f4fa] rounded-2xl border border-gray-200 relative overflow-hidden flex flex-col shadow-inner">
@@ -526,7 +526,7 @@ export default function CCTVPeopleCountPage() {
                       <FileCheck className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3">{solutions[3].title}</h3>
-                    <p className="mb-6 text-[15px] leading-relaxed text-gray-500">{solutions[3].description}</p>
+                    <p className="mb-6 text-[14px] leading-relaxed text-gray-500">{solutions[3].description}</p>
                     <ul className="space-y-3 mt-auto">
                       {solutions[3].bullets.map((bullet) => (
                         <li key={bullet} className="text-[14px] font-medium text-gray-600 flex items-start gap-2.5">
@@ -553,7 +553,7 @@ export default function CCTVPeopleCountPage() {
                       ].map((log, i) => (
                          <div key={i} className="flex gap-4 items-center bg-gray-50 p-3 rounded-lg border border-gray-100">
                            <span className="text-[11px] text-gray-400 font-mono w-16">{log.time}</span>
-                           <span className="text-[13px] text-gray-700 font-medium">{log.evt}</span>
+                           <span className="text-[14px] text-gray-700 font-medium">{log.evt}</span>
                            <CheckCircle2 className="w-3.5 h-3.5 text-green-500 ml-auto" />
                          </div>
                       ))}
@@ -586,7 +586,7 @@ export default function CCTVPeopleCountPage() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 !text-white">{seg.title}</h3>
-                    <p className="text-[15px] leading-relaxed text-white/60 group-hover:text-white/80 transition-colors">{seg.description}</p>
+                    <p className="text-[14px] leading-relaxed text-white/60 group-hover:text-white/80 transition-colors">{seg.description}</p>
                   </article>
                 </ScaleIn>
               );
@@ -612,7 +612,7 @@ export default function CCTVPeopleCountPage() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-[#5D00D6] shrink-0" />
-                    <span className="text-[15px] font-bold text-[#0c1024]">{item}</span>
+                    <span className="text-[14px] font-bold text-[#0c1024]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -660,7 +660,7 @@ export default function CCTVPeopleCountPage() {
                       <Icon className="h-6 w-6 text-[#5D00D6]" />
                       <h3 className="text-[18px] font-bold text-[#0c1024]">{useCase.title}</h3>
                     </div>
-                    <p className="text-[15px] leading-relaxed text-gray-600">{useCase.description}</p>
+                    <p className="text-[14px] leading-relaxed text-gray-600">{useCase.description}</p>
                   </article>
                 </ScaleIn>
               );

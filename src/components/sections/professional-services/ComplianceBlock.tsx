@@ -23,14 +23,14 @@ export default function ComplianceBlock() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[#12121A] border border-white/5 rounded-[24px] p-8 md:p-10 shadow-lg flex flex-col h-full hover:bg-[#16161F] transition-colors">
             <h3 className="text-[20px] md:text-[22px] text-white font-bold mb-3" >Essential 8 Implementation</h3>
-            <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
+            <p className="text-[14px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
               We map your firm's IT environment against the ACSC baseline, identify gaps, and deliver a structured remediation roadmap tailored to a professional services context.
             </p>
             <div className="flex flex-col mb-10 border-t border-white/5 pt-2">
               {['Essential 8 implementation and gap assessment', 'Client data access controls and audit logging', 'Compliance documentation for professional body audits'].map((item, index) => (
                 <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
                   <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
-                  <span className="text-[14px] md:text-[15px] font-medium text-gray-300" >{item}</span>
+                  <span className="text-[14px] md:text-[14px] font-medium text-gray-300" >{item}</span>
                 </div>
               ))}
             </div>
@@ -44,14 +44,14 @@ export default function ComplianceBlock() {
 
           <div className="bg-[#12121A] border border-white/5 rounded-[24px] p-8 md:p-10 shadow-lg flex flex-col h-full hover:bg-[#16161F] transition-colors">
             <h3 className="text-[20px] md:text-[22px] text-white font-bold mb-3" >Threat Monitoring</h3>
-            <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
+            <p className="text-[14px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
               Continuous security monitoring across your entire environment — detecting ransomware, phishing, and unauthorized access before they become incidents affecting your clients.
             </p>
             <div className="flex flex-col mb-10 border-t border-white/5 pt-2">
               {['Continuous threat monitoring and incident response', '24/7 SOC monitoring', 'Privileged access governance'].map((item, index) => (
                 <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
                   <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
-                  <span className="text-[14px] md:text-[15px] font-medium text-gray-300" >{item}</span>
+                  <span className="text-[14px] md:text-[14px] font-medium text-gray-300" >{item}</span>
                 </div>
               ))}
             </div>
@@ -65,14 +65,14 @@ export default function ComplianceBlock() {
 
           <div className="bg-[#12121A] border border-white/5 rounded-[24px] p-8 md:p-10 shadow-lg flex flex-col h-full hover:bg-[#16161F] transition-colors">
             <h3 className="text-[20px] md:text-[22px] text-white font-bold mb-3" >Recovery Assurance</h3>
-            <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
+            <p className="text-[14px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
               Immutable backups and tested disaster recovery protocols that protect your client files and practice data — with documented RTO/RPO targets you can present to clients.
             </p>
             <div className="flex flex-col mb-10 border-t border-white/5 pt-2">
               {['Immutable, air-gapped backups', 'Routine restoration testing', 'Documented disaster recovery'].map((item, index) => (
                 <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
                   <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
-                  <span className="text-[14px] md:text-[15px] font-medium text-gray-300" >{item}</span>
+                  <span className="text-[14px] md:text-[14px] font-medium text-gray-300" >{item}</span>
                 </div>
               ))}
             </div>

@@ -27,7 +27,7 @@ export const LegalLayout = ({ title, effectiveDate, links, toc, children }: Lega
           className="mb-16"
         >
           {effectiveDate && (
-            <p className="text-[13px] text-gray-400 font-medium mb-4">
+            <p className="text-[14px] text-gray-400 font-medium mb-4">
               Effective Date: <span className="text-slate-900 font-bold">{effectiveDate}</span>
             </p>
           )}
@@ -71,7 +71,7 @@ export const LegalLayout = ({ title, effectiveDate, links, toc, children }: Lega
                   className="group flex items-start gap-4 text-left transition-all duration-300 relative pl-4"
                 >
                   <div className={`absolute left-[-2.5px] top-2.5 w-1 h-1 rounded-full shrink-0 transition-all duration-300 group-hover:scale-150 group-hover:bg-[#5D00D6] ${i === 0 ? 'bg-[#5D00D6] scale-[2.5] shadow-[0_0_8px_rgba(93,0,214,0.4)]' : 'bg-gray-200'}`} />
-                  <span className={`text-[15px] leading-snug transition-colors ${i === 0 ? 'text-[#0c1024] font-bold' : 'text-gray-400 font-medium group-hover:text-[#0c1024]'}`}>
+                  <span className={`text-[14px] leading-snug transition-colors ${i === 0 ? 'text-[#0c1024] font-bold' : 'text-gray-400 font-medium group-hover:text-[#0c1024]'}`}>
                     {item.label}
                   </span>
                 </button>

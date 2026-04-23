@@ -104,12 +104,12 @@ export default function IndustryGrid() {
                 <h3 className="text-[20px] font-bold text-slate-900 mb-3 leading-tight">
                   {industry.title}
                 </h3>
-                <p className="text-[15px] text-slate-500 leading-relaxed flex-1 mb-6">
+                <p className="text-[14px] text-slate-500 leading-relaxed flex-1 mb-6">
                   {industry.desc}
                 </p>
 
                 {/* CTA */}
-                <span className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] uppercase tracking-widest group-hover:gap-3 transition-all duration-300">
+                <span className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] uppercase tracking-widest group-hover:gap-3 transition-all duration-300">
                   Explore {industry.title}
                   <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
                 </span>

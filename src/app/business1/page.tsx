@@ -73,7 +73,7 @@ const BusinessHero = () => (
                   e.preventDefault();
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-lg shadow-purple-900/20 group cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-colors shadow-lg shadow-purple-900/20 group cursor-pointer"
               >
                 Talk to an Expert
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -84,17 +84,17 @@ const BusinessHero = () => (
                   e.preventDefault();
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-colors cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-colors cursor-pointer"
               >
                 Optimise My Setup
               </a>
             </div>
-            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
+            <p className="text-[14px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
           <FadeIn delay={0.4}>
             <div className="flex flex-wrap gap-5">
               {['End-to-end management', 'Proactive support', 'Transparent billing'].map((t, i) => (
-                <div key={i} className="flex items-center gap-2 text-slate-600 text-[13px] font-bold">
+                <div key={i} className="flex items-center gap-2 text-slate-600 text-[14px] font-bold">
                   <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                 </div>
               ))}
@@ -151,7 +151,7 @@ const Philosophy = () => {
                   </div>
                   <div>
                     <h3 className="text-[18px] font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="c9-body !mb-0 !text-[15px] !leading-relaxed">{item.desc}</p>
+                    <p className="c9-body !mb-0 !text-[14px] !leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -187,7 +187,7 @@ const Outcomes = () => {
                  <FadeIn key={i} delay={0.1 + (i * 0.05)}>
                    <div className="flex items-center gap-3">
                      <CheckCircle size={18} className="text-[#5D00D6]" />
-                     <span className="font-bold text-slate-800 text-[15px]">{text}</span>
+                     <span className="font-bold text-slate-800 text-[14px]">{text}</span>
                    </div>
                  </FadeIn>
                ))}
@@ -248,11 +248,11 @@ const FinalCTA = () => (
       <h2 className="text-3xl md:text-4xl font-bold mb-6 !text-white">Ready to Scale Your Business?</h2>
       <p className="text-slate-400 mb-10 max-w-xl mx-auto">Book a consultation with our experts to review your current setup, identify bottlenecks, and build a tailored plan for growth.</p>
       <div className="mb-6">
-        <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors">
+        <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-colors">
           Book My Business Review
         </a>
       </div>
-      <p className="text-[13px] text-slate-500">No obligation. Just clear, practical advice.</p>
+      <p className="text-[14px] text-slate-500">No obligation. Just clear, practical advice.</p>
     </div>
   </section>
 );
@@ -311,7 +311,7 @@ export default function Business1Page() {
             desc: 'How we unified communications and Internet across 70+ franchise offices into a single, centrally managed network, reducing telecommunications spend by 32%.',
             img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800',
             videoText: 'Stockdale & Leggo Consolidation',
-            href: '/case-studies/retail-pos-stabilisation'
+            href: '/case-studies/multi-site-retail-stabilisation'
           },
           {
             tag: 'HEALTHCARE',
@@ -319,7 +319,7 @@ export default function Business1Page() {
             desc: 'Replacing end-of-life on-premise systems with a flexible cloud phone system, enabling their team to field critical calls remotely and securely.',
             img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
             videoText: 'Arthritis Foundation Voice',
-            href: '/case-studies/legal-firm-takeover'
+            href: '/case-studies/healthcare-uptime-stabilisation'
           },
           {
             tag: 'EDUCATION',
@@ -327,7 +327,7 @@ export default function Business1Page() {
             desc: 'Delivering direct 1Gbps/1Gbps fibre connectivity to support hundreds of concurrent students and cloud-hosted learning environments without latency.',
             img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800',
             videoText: 'Baxter Institute Network',
-            href: '/case-studies/greenfield-site-rollout'
+            href: '/case-studies/enterprise-migration-success'
           }
         ]}
       />

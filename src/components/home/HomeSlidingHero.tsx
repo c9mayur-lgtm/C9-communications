@@ -6,37 +6,37 @@ import { ArrowRight, CheckCircle, Store, Building2, Briefcase } from 'lucide-rea
 
 const slides = [
   {
-    id: 'greenfield',
-    eyebrow: 'Greenfield — New Sites',
-    title: 'Managed IT & Telco — One Partner.\nTotal Accountability.',
-    desc: 'From new site rollouts to complex multi-location environments, C9 delivers fully managed IT, connectivity, and security—ensuring your business runs without disruption.',
-    cta: 'Plan Site Setup',
+    id: 'fragmented-it',
+    eyebrow: 'OPERATIONAL CONTROL',
+    title: 'Stop managing fragmented IT and\ntelco across multiple vendors.',
+    desc: 'We consolidate and operate complex infrastructure into a single accountable model — reducing operational risk, stabilizing uptime, and centralising control.',
+    cta: 'Find My IT Operating Model',
     href: '#consultation-section',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
-    icon: <Store size={18} />,
-    tags: ['120+ Sites Supported', '3,000+ Endpoints Managed', '99.99% Network Uptime', '24/7 Monitoring & Support']
+    icon: <Briefcase size={18} />,
+    tags: ['Consolidated Operations', 'Single Accountability', 'Reduced Risk', 'Stabilised Uptime']
   },
   {
-    id: 'small-business',
-    eyebrow: 'SMB / Brownfield — Existing Systems',
-    title: 'Simplify and Take Control of\nExisting Systems.',
-    desc: 'Replace fragmented vendors with one accountable partner who stabilises, secures, and manages your entire environment. Less downtime. Less complexity. Full control.',
-    cta: 'Secure My Business',
+    id: 'brownfield-risk',
+    eyebrow: 'BROWNFIELD STABILISATION',
+    title: 'Regain control of existing\ncomplex environments.',
+    desc: 'If your business depends on multiple IT and telco providers, you are already exposed to fragmentation risk. We help you consolidate before it becomes downtime.',
+    cta: 'View Infrastructure Control Approach',
     href: '#consultation-section',
     image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200',
-    icon: <Briefcase size={18} />,
-    tags: ['Managed IT', 'nbn® Fast Fiber', 'Cybersecurity', '24/7 Monitoring & Support']
+    icon: <Store size={18} />,
+    tags: ['Vendor Consolidation', 'Visibility Mapping', 'No Transition Disruption', '24/7 Monitoring']
   },
   {
-    id: 'enterprise',
-    eyebrow: 'Enterprise — Multi-Site & Complex',
-    title: 'Operate Complex Environments\nwith Confidence.',
-    desc: 'Manage multi-site infrastructure with SLA-backed support, integrated systems, and enterprise-grade security. Scalable, secure, and predictable operations.',
-    cta: 'Scale Operations',
+    id: 'enterprise-scale',
+    eyebrow: 'ENTERPRISE OPERATIONS',
+    title: 'Scale distributed infrastructure\nwith total accountability.',
+    desc: 'C9 operates your entire environment as a single system. One operational owner. One escalation path. No vendor blame shifting. Just predictable performance.',
+    cta: 'Review Enterprise Model',
     href: '#consultation-section',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200',
     icon: <Building2 size={18} />,
-    tags: ['SLA Managed', 'Multi-Site Rollouts', 'Integrated Systems', '24/7 Monitoring & Support']
+    tags: ['SLA-Backed Performance', 'Governance Compliance', 'Root-Cause Ownership', 'Multi-Site Stability']
   }
 ];
 
@@ -85,14 +85,14 @@ export const HomeSlidingHero = () => {
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <a
                     href={slide.href}
-                    className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group"
+                    className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-14 px-10 c9-button-label hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group"
                   >
                     {slide.cta}
                     <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                   </a>
                   <a
                     href="#solutions"
-                    className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-10 font-bold text-[15px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
+                    className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-10 c9-button-label hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
                   >
                     Explore Solutions
                   </a>
@@ -100,7 +100,7 @@ export const HomeSlidingHero = () => {
 
                 <div className="flex flex-wrap gap-x-8 gap-y-4">
                   {slide.tags.map((tag, i) => (
-                    <div key={i} className="flex items-center gap-2 text-slate-500 font-bold text-[13px] uppercase tracking-wider">
+                    <div key={i} className="flex items-center gap-2 text-slate-500 font-bold text-[14px] uppercase tracking-wider">
                       <CheckCircle size={16} className="text-[#5D00D6]" />
                       {tag}
                     </div>

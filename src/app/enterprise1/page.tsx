@@ -78,7 +78,7 @@ const Hero = () => (
               <a
                 href="#consultation-section"
                 onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
               >
                 Talk to an Enterprise Specialist
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -86,18 +86,18 @@ const Hero = () => (
               <a
                 href="#consultation-section"
                 onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap"
               >
                 Book a Consultation
               </a>
             </div>
-            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
+            <p className="text-[14px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
             <div className="flex flex-wrap gap-6">
               {['Multi-Site Specialists', 'Carrier Neutral', 'Operational Control', '24/7 Support'].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-slate-500 text-[13px] font-bold">
+                <div key={t} className="flex items-center gap-2 text-slate-500 text-[14px] font-bold">
                   <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                 </div>
               ))}
@@ -285,7 +285,7 @@ const OperationalControl = () => (
              ].map((text, i) => (
                <div key={i} className="flex items-center gap-3">
                   <CheckCircle size={18} className="text-[#5D00D6]" />
-                  <span className="font-bold text-slate-800 text-[15px]">{text}</span>
+                  <span className="font-bold text-slate-800 text-[14px]">{text}</span>
                </div>
              ))}
           </div>
@@ -443,7 +443,7 @@ const FinalCTA = () => (
             <a
               href="#consultation-section"
               onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40 group"
+              className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40 group"
             >
               Talk to an Enterprise Specialist
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -451,12 +451,12 @@ const FinalCTA = () => (
             <a
               href="#consultation-section"
               onClick={(e) => { e.preventDefault(); document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all"
             >
               Book a Consultation
             </a>
         </div>
-        <p className="text-[13px] text-white/50">No obligation. Just clear, practical advice.</p>
+        <p className="text-[14px] text-white/50">No obligation. Just clear, practical advice.</p>
       </FadeIn>
     </div>
   </section>

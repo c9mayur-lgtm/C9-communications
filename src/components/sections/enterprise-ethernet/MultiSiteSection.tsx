@@ -13,8 +13,8 @@ const RelatedService = ({ title, body, link, href }: any) => (
           <LinkIcon size={16} />
        </div>
     </div>
-    <p className="text-[14px] md:text-[15px] text-slate-500 font-normal leading-relaxed">{body}</p>
-    <div className="flex items-center gap-2 text-[#5D00D6] text-[13px] font-black uppercase tracking-widest mt-auto">
+    <p className="text-[14px] md:text-[14px] text-slate-500 font-normal leading-relaxed">{body}</p>
+    <div className="flex items-center gap-2 text-[#5D00D6] text-[14px] font-black uppercase tracking-widest mt-auto">
        {link} <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
     </div>
   </Link>
@@ -59,7 +59,7 @@ export default function MultiSiteSection() {
                      <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0">
                         <Plus size={12} strokeWidth={4} />
                      </div>
-                     <span className="text-[15px] md:text-[17px] font-bold text-slate-600 tracking-tight">{item}</span>
+                     <span className="text-[14px] md:text-[17px] font-bold text-slate-600 tracking-tight">{item}</span>
                   </div>
                ))}
             </div>

@@ -66,7 +66,7 @@ export default function StickySubNav() {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={`px-4 py-2 rounded-full text-[13px] font-bold transition-all whitespace-nowrap ${activeTab === item.id ? 'bg-[#5D00D6]/10 text-[#5D00D6]' : 'text-slate-500 hover:text-[#5D00D6]'}`}
+                    className={`px-4 py-2 rounded-full text-[14px] font-bold transition-all whitespace-nowrap ${activeTab === item.id ? 'bg-[#5D00D6]/10 text-[#5D00D6]' : 'text-slate-500 hover:text-[#5D00D6]'}`}
                   >
                     {item.label}
                   </button>
@@ -74,10 +74,10 @@ export default function StickySubNav() {
             </div>
 
             <div className="hidden lg:flex items-center gap-4">
-               <a href="tel:1800000299" className="text-[13px] font-bold text-[#1A1A2E] no-underline hover:text-[#5D00D6] transition-colors">Call 1800 000 299</a>
+               <a href="tel:1800000299" className="text-[14px] font-bold text-[#1A1A2E] no-underline hover:text-[#5D00D6] transition-colors">Call 1800 000 299</a>
                <Button 
                   onClick={() => scrollToSection('consultation-section')}
-                  className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-10 px-6 rounded-full text-[13px] shadow-lg shadow-[#5D00D6]/20 border-none"
+                  className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-10 px-6 rounded-full text-[14px] shadow-lg shadow-[#5D00D6]/20 border-none"
                >
                   Get Quote <ArrowRight className="ml-1 w-4 h-4" />
                </Button>

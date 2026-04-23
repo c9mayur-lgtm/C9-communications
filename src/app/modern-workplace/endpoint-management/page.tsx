@@ -289,7 +289,7 @@ export default function EndpointManagementPage() {
                   <div className="w-10 h-10 rounded-full bg-[#f4f0fa] text-[#5D00D6] flex items-center justify-center"><Download size={16} /></div>
                   <div>
                     <div className="text-[10px] uppercase font-bold text-gray-400">Zero-Touch</div>
-                    <div className="text-[13px] font-bold text-[#0c1024]">Pre-configured</div>
+                    <div className="text-[14px] font-bold text-[#0c1024]">Pre-configured</div>
                   </div>
                  </motion.div>
               </div>
@@ -315,7 +315,7 @@ export default function EndpointManagementPage() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{problem.title}</h3>
-                    <p className="text-[15px] leading-relaxed text-gray-500">{problem.description}</p>
+                    <p className="text-[14px] leading-relaxed text-gray-500">{problem.description}</p>
                     <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                   </article>
                 </ScaleIn>
@@ -341,7 +341,7 @@ export default function EndpointManagementPage() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
-                    <p className="mb-6 text-[15px] leading-relaxed text-gray-500 flex-grow">{item.description}</p>
+                    <p className="mb-6 text-[14px] leading-relaxed text-gray-500 flex-grow">{item.description}</p>
                     
                     <ul className="space-y-3 border-t border-gray-100 pt-5 mt-auto">
                       {item.bullets.map((bullet) => (
@@ -375,7 +375,7 @@ export default function EndpointManagementPage() {
                   <div className="mb-3 h-3 w-3 rounded-full bg-[#5D00D6] group-hover/timeline:scale-150 transition-transform duration-300" />
                   <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#5D00D6]">{event.label}</p>
                   <h3 className="mb-1 text-[16px] font-bold">{event.title}</h3>
-                  <p className="text-[13px] leading-relaxed text-gray-500">{event.detail}</p>
+                  <p className="text-[14px] leading-relaxed text-gray-500">{event.detail}</p>
                 </div>
               ))}
             </div>
@@ -432,7 +432,7 @@ export default function EndpointManagementPage() {
             <h2 className="c9-section-heading mb-4 !text-white font-proxima tracking-tight font-black leading-tight">Endpoint management + C9 Defense = complete security</h2>
             <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-2">
               {['Automated patching', 'Endpoint detection and response', '24/7 SOC monitoring', 'Essential 8 compliance'].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-[15px] text-white/85">
+                <div key={item} className="flex items-center gap-2 text-[14px] text-white/85">
                   <CheckCircle2 className="h-4 w-4 text-[#BFA2EE]" />
                   {item}
                 </div>
@@ -454,11 +454,11 @@ export default function EndpointManagementPage() {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-[#E9E2F7] bg-[#FBFAFE] p-4">
                 <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#5D00D6]">Setup time</p>
-                <p className="text-[15px] text-[#2E3855]">6 hours per device &rarr; 30 minutes per device</p>
+                <p className="text-[14px] text-[#2E3855]">6 hours per device &rarr; 30 minutes per device</p>
               </div>
               <div className="rounded-2xl border border-[#E9E2F7] bg-[#FBFAFE] p-4">
                 <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#5D00D6]">Annual impact</p>
-                <p className="text-[15px] text-[#2E3855]">300+ IT hours saved annually through automated lifecycle workflows</p>
+                <p className="text-[14px] text-[#2E3855]">300+ IT hours saved annually through automated lifecycle workflows</p>
               </div>
             </div>
           </article>
@@ -489,19 +489,19 @@ export default function EndpointManagementPage() {
             <div className="mb-8 flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[15px] font-bold text-white transition hover:bg-[#7116FF]"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[14px] font-bold text-white transition hover:bg-[#7116FF]"
               >
                 Request Audit
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[15px] font-bold text-white transition hover:border-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
               >
                 See Demo
               </Link>
               <a
                 href="tel:1800000299"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[15px] font-bold text-white transition hover:border-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
               >
                 Call 1800 000 299
               </a>

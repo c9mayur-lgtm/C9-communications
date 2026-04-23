@@ -139,7 +139,7 @@ const MockupFlex = () => (
       ].map((row, i) => (
         <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
           <div>
-            <p className="text-[13px] font-semibold text-text-primary">{row.env}</p>
+            <p className="text-[14px] font-semibold text-text-primary">{row.env}</p>
             <p className="text-[11px] text-text-secondary font-medium">{row.nodes} nodes active</p>
           </div>
           <div className="flex flex-col items-end gap-1">
@@ -407,7 +407,7 @@ const MockupPrivateCloud = () => (
           <span className="absolute inset-0 flex items-center justify-center text-[16px] font-bold text-[#5D00D6]">90%</span>
         </div>
         <div>
-          <p className="text-[13px] font-bold text-text-primary">Security Posture</p>
+          <p className="text-[14px] font-bold text-text-primary">Security Posture</p>
           <p className="text-[11px] text-text-secondary">8/8 controls assessed</p>
           <p className="text-[11px] font-semibold text-emerald-600 mt-1">↑ Maturity Level 3</p>
         </div>
@@ -463,7 +463,7 @@ const MockupPublic = () => (
         ].map((m, i) => (
           <div key={i} className="flex justify-between items-center py-2 border-b border-gray-100">
             <span className="text-[12px] text-text-secondary">{m.label}</span>
-            <span className="text-[13px] font-bold text-text-primary">{m.value}</span>
+            <span className="text-[14px] font-bold text-text-primary">{m.value}</span>
           </div>
         ))}
       </div>
@@ -673,7 +673,7 @@ export default function BlandExplorer() {
                   handleClick(idx);
                 }}
                 className={cn(
-                  "flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold transition-all duration-300 border",
+                  "flex items-center gap-2 px-4 py-2 rounded-full text-[14px] font-semibold transition-all duration-300 border",
                   isActive
                     ? "bg-[#5D00D6] text-white border-[#5D00D6] shadow-sm shadow-[#5D00D6]/20"
                     : "bg-white text-text-secondary border-gray-200 hover:border-[#5D00D6] hover:text-[#5D00D6]"

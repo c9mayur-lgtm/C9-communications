@@ -96,19 +96,19 @@ const Hero = () => (
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <a
                 href="#consultation"
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
                 Get My Setup Plan
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="#micro-nav"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
                 Explore Services →
               </a>
             </div>
-            <p className="text-[13px] text-slate-400 font-medium ml-1">
+            <p className="text-[14px] text-slate-400 font-medium ml-1">
               No obligation. Just clear, practical guidance.
             </p>
           </FadeIn>
@@ -116,7 +116,7 @@ const Hero = () => (
           <FadeIn delay={0.32}>
             <div className="flex flex-wrap gap-x-7 gap-y-3 mt-10 pt-8 border-t border-slate-100">
               {['End-to-End Ownership', 'Day One Operational', 'Single Point of Contact', 'Nationwide Delivery'].map((t) => (
-                <span key={t} className="inline-flex items-center gap-2 text-slate-500 text-[13px] font-semibold">
+                <span key={t} className="inline-flex items-center gap-2 text-slate-500 text-[14px] font-semibold">
                   <CheckCircle size={14} className="text-[#5D00D6]" /> {t}
                 </span>
               ))}
@@ -141,7 +141,7 @@ const Hero = () => (
             {/* Top badge */}
             <div className="absolute top-6 right-6 bg-[#5D00D6] text-white rounded-2xl px-4 py-3 shadow-xl">
               <div className="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-0.5">Delivery Model</div>
-              <div className="text-[15px] font-extrabold">End-to-End</div>
+              <div className="text-[14px] font-extrabold">End-to-End</div>
             </div>
           </div>
         </FadeIn>
@@ -192,7 +192,7 @@ const SectionPain = () => (
                     {item.icon}
                   </div>
                   <div>
-                    <p className="font-bold text-slate-900 text-[15px] mb-1">{item.title}</p>
+                    <p className="font-bold text-slate-900 text-[14px] mb-1">{item.title}</p>
                     <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -228,8 +228,8 @@ const SectionScenarios = () => (
               <div className="w-10 h-10 rounded-full bg-[#5D00D6]/5 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#5D00D6]/10 transition-colors">
                 <CheckCircle size={16} className="text-[#5D00D6]" />
               </div>
-              <h3 className="font-bold text-slate-900 text-[15px] mb-2">{s.label}</h3>
-              <p className="text-slate-500 text-[13px] leading-relaxed">{s.desc}</p>
+              <h3 className="font-bold text-slate-900 text-[14px] mb-2">{s.label}</h3>
+              <p className="text-slate-500 text-[14px] leading-relaxed">{s.desc}</p>
             </div>
           </FadeIn>
         ))}
@@ -345,7 +345,7 @@ const SectionFlow = () => (
               <span className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-widest">Step {s.num}</span>
             </div>
             <h3 className="font-bold text-slate-900 text-[16px] mb-2">{s.title}</h3>
-            <p className="text-slate-500 text-[13px] leading-relaxed">{s.desc}</p>
+            <p className="text-slate-500 text-[14px] leading-relaxed">{s.desc}</p>
           </FadeIn>
         ))}
       </div>
@@ -457,7 +457,7 @@ const SectionCapabilities = () => (
                 
                 {cap.link && (
                   <div className="mb-4">
-                    <a href={cap.link.href} className="text-[13px] font-bold text-[#5D00D6] hover:underline flex items-center gap-1">
+                    <a href={cap.link.href} className="text-[14px] font-bold text-[#5D00D6] hover:underline flex items-center gap-1">
                       {cap.link.text}
                     </a>
                   </div>
@@ -520,7 +520,7 @@ const SectionNationwide = () => (
             ].map((p, i) => (
               <li key={i} className="flex items-center gap-3">
                 <CheckCircle size={16} className="text-[#a56eff] shrink-0" />
-                <span className="text-white/80 text-[15px] font-medium">{p}</span>
+                <span className="text-white/80 text-[14px] font-medium">{p}</span>
               </li>
             ))}
           </ul>
@@ -587,8 +587,8 @@ const SectionAccountability = () => (
               <div key={i} className="flex items-start gap-3">
                 <CheckCircle size={18} className="text-[#5D00D6] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-slate-900 font-bold text-[15px] block leading-tight mb-0.5">{p.t || p.stat}</span>
-                  <span className="text-slate-500 text-[13px]">{p.d}</span>
+                  <span className="text-slate-900 font-bold text-[14px] block leading-tight mb-0.5">{p.t || p.stat}</span>
+                  <span className="text-slate-500 text-[14px]">{p.d}</span>
                 </div>
               </div>
             ))}
@@ -689,7 +689,7 @@ const SectionPartnerEcosystem = () => (
             ].map((text, i) => (
               <div key={i} className="flex items-start gap-4">
                 <CheckCircle size={18} className="text-[#5D00D6] shrink-0 mt-0.5" />
-                <span className="text-slate-600 text-[15px] font-medium leading-relaxed">{text}</span>
+                <span className="text-slate-600 text-[14px] font-medium leading-relaxed">{text}</span>
               </div>
             ))}
           </div>
@@ -735,7 +735,7 @@ const SectionMicroNav = () => (
               <a
                 key={i}
                 href={link.href}
-                className="bg-white border border-slate-100 rounded-xl p-4 text-[13px] font-bold text-slate-700 hover:border-[#5D00D6]/30 hover:text-[#5D00D6] hover:shadow-sm transition-all"
+                className="bg-white border border-slate-100 rounded-xl p-4 text-[14px] font-bold text-slate-700 hover:border-[#5D00D6]/30 hover:text-[#5D00D6] hover:shadow-sm transition-all"
               >
                 {link.label} →
               </a>
@@ -825,20 +825,20 @@ const FinalCTA = () => (
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
           <a
             href="#consultation"
-            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
           >
             Get My Setup Plan
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="#micro-nav"
-            className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
           >
             Explore Services →
           </a>
         </div>
 
-        <p className="text-[13px] text-slate-400 font-medium">
+        <p className="text-[14px] text-slate-400 font-medium">
           No obligation. No sales pressure. Just clear, practical guidance.
         </p>
       </FadeIn>
@@ -891,7 +891,7 @@ export default function Greenfield2Page() {
             desc: 'Successfully commissioned 12 new sites across 3 states in under 6 weeks, providing unified networking and zero-day operational readiness.',
             img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
             videoText: 'National Site Rollout',
-            href: '/case-studies/retail-pos-stabilisation'
+            href: '/case-studies/multi-site-retail-stabilisation'
           },
           {
             tag: 'CORPORATE HEADQUARTERS',
@@ -899,7 +899,7 @@ export default function Greenfield2Page() {
             desc: 'Managed the full procurement, cabling, and commissioning of a 1,200sqm headquarters, delivering a high-performance environment from shell to handover.',
             img: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800',
             videoText: 'Stockdale & Leggo HQ',
-            href: '/case-studies/greenfield-site-rollout'
+            href: '/case-studies/enterprise-migration-success'
           },
           {
             tag: 'INDUSTRIAL LOGISTICS',
@@ -907,7 +907,7 @@ export default function Greenfield2Page() {
             desc: 'Delivery of secure networking, enterprise Wi-Fi, and integrated IP security systems for a mission-critical 10,000sqm logistics facility.',
             img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
             videoText: 'Logistics Site Setup',
-            href: '/case-studies/greenfield-site-rollout'
+            href: '/case-studies/enterprise-migration-success'
           }
         ]}
       />

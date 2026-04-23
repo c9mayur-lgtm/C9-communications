@@ -29,7 +29,7 @@ export const WpHighlights = () => {
             <div className="flex items-baseline gap-2 mb-1">
               <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">120+</span>
             </div>
-            <span className="c9-eyebrow !text-[10px]">Sites Supported</span>
+            <span className="c9-eyebrow !text-[10px]">Vendor Consolidation</span>
           </div>
 
           <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
@@ -39,7 +39,7 @@ export const WpHighlights = () => {
             <div className="flex items-baseline gap-2 mb-1">
               <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">3,000+</span>
             </div>
-            <span className="c9-eyebrow !text-[10px]">Endpoints Managed</span>
+            <span className="c9-eyebrow !text-[10px]">Lower Downtime Risk</span>
           </div>
 
           <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
@@ -49,7 +49,7 @@ export const WpHighlights = () => {
             <div className="flex items-baseline gap-2 mb-1">
               <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">99.99%</span>
             </div>
-            <span className="c9-eyebrow !text-[10px]">Network Uptime</span>
+            <span className="c9-eyebrow !text-[10px]">System Visibility</span>
           </div>
 
           <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
@@ -59,7 +59,7 @@ export const WpHighlights = () => {
             <div className="flex items-baseline gap-2 mb-1">
               <span className="text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">24/7</span>
             </div>
-            <span className="c9-eyebrow !text-[10px]">Monitoring & Support</span>
+            <span className="c9-eyebrow !text-[10px]">Predictable Behaviour</span>
           </div>
 
         </div>

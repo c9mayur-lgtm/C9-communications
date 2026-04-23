@@ -60,7 +60,7 @@ export const WpClientTickerV2 = () => {
       <div className="container mx-auto px-6 max-w-[1240px]">
         {/* Carousel 1 — Trusted by Australian businesses */}
         <div className="mb-12">
-          <p className="font-bold tracking-[0.2em] uppercase text-[#5D00D6] text-[11px] md:text-[13px] mb-8 text-center"
+          <p className="font-bold tracking-[0.2em] uppercase text-[#5D00D6] text-[11px] md:text-[14px] mb-8 text-center"
             >
             Trusted by Australian businesses
           </p>
@@ -90,7 +90,7 @@ export const WpClientTickerV2 = () => {
 
         {/* Carousel 2 — Powered by world-class technology partners */}
         <div>
-          <p className="font-bold tracking-[0.2em] uppercase text-[#5D00D6] text-[11px] md:text-[13px] mb-8 text-center"
+          <p className="font-bold tracking-[0.2em] uppercase text-[#5D00D6] text-[11px] md:text-[14px] mb-8 text-center"
             >
             Powered by world-class technology partners
           </p>

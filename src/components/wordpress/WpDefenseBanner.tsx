@@ -12,10 +12,10 @@ export interface WpDefenseBannerProps {
 }
 
 export const WpDefenseBanner = ({
-  title = <>Protecting Australian organisations <br className="hidden lg:block" /> with enterprise cybersecurity</>,
-  description = "Essential 8 compliance, continuous defence, and tested recovery.",
-  buttonText = "Discover C9 Defense",
-  href = "https://c9defense.com.au/"
+  title = <>Security is embedded in operations <br className="hidden lg:block" /> — not a separate service</>,
+  description = "Continuous monitoring, threat visibility, and structured incident response with compliance-aligned logging.",
+  buttonText = "View Security Model",
+  href = "/managed-it"
 }: WpDefenseBannerProps) => {
   return (
     <section className="py-8 bg-white">
@@ -49,7 +49,7 @@ export const WpDefenseBanner = ({
               href={href} 
               target={href.startsWith('http') ? "_blank" : undefined}
               rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-              className="inline-flex items-center justify-center px-7 py-3 bg-[#5D00D6]/10 border border-[#5D00D6]/30 text-white rounded-full font-bold text-[14px] hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300 group/btn whitespace-nowrap"
+              className="inline-flex items-center justify-center px-7 py-3 bg-[#5D00D6]/10 border border-[#5D00D6]/30 text-white rounded-full c9-button-label hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300 group/btn whitespace-nowrap"
             >
               {buttonText} <ArrowRight size={16} className="ml-2.5 shrink-0 transition-transform group-hover/btn:translate-x-1" />
             </a>

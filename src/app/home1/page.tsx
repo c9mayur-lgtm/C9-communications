@@ -83,7 +83,7 @@ const Hero = () => (
                   e.preventDefault();
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-lg shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-colors shadow-lg shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
               >
                 Talk to an Expert
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -94,18 +94,18 @@ const Hero = () => (
                   e.preventDefault();
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-colors cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-colors cursor-pointer whitespace-nowrap"
               >
                 Get My Setup Plan
               </a>
             </div>
-            <p className="text-[13px] text-slate-500 mb-10 ml-1">No obligation. Just clear, practical advice.</p>
+            <p className="text-[14px] text-slate-500 mb-10 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.4}>
             <div className="flex flex-wrap gap-5">
               {['One Partner', 'Day One Ready', 'Multi-Site Expertise', '24/7 Support'].map((t, i) => (
-                <div key={i} className="flex items-center gap-2 text-slate-600 text-[13px] font-bold">
+                <div key={i} className="flex items-center gap-2 text-slate-600 text-[14px] font-bold">
                   <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                 </div>
               ))}
@@ -199,7 +199,7 @@ const PersonaRouting = () => (
                 </div>
                 <h3 className="text-[20px] font-bold text-slate-900 mb-2 leading-tight">{card.title}</h3>
                 <p className="text-[14px] text-slate-600 leading-relaxed mb-5 flex-1">{card.desc}</p>
-                <span className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] group-hover:gap-3 transition-all">
                   {card.cta}
                   <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
                 </span>
@@ -516,7 +516,7 @@ const IndustryFocus = () => (
                 className="flex items-center gap-3 bg-white rounded-2xl px-4 py-3 border border-slate-100 text-slate-700 hover:border-[#5D00D6]/20 hover:shadow-sm transition-all"
               >
                 <span className="text-[#5D00D6]">{ind.icon}</span>
-                <span className="font-semibold text-[13px]">{ind.label}</span>
+                <span className="font-semibold text-[14px]">{ind.label}</span>
               </div>
             ))}
           </div>
@@ -648,7 +648,7 @@ const FinalCTA = () => (
               e.preventDefault();
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40 group whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40 group whitespace-nowrap"
           >
             Talk to an Expert
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -659,12 +659,12 @@ const FinalCTA = () => (
               e.preventDefault();
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-white/10 transition-all whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-white/10 transition-all whitespace-nowrap"
           >
             Book a Consultation
           </a>
         </div>
-        <p className="text-[13px] text-white/50">No obligation. Just clear, practical advice.</p>
+        <p className="text-[14px] text-white/50">No obligation. Just clear, practical advice.</p>
       </FadeIn>
     </div>
   </section>

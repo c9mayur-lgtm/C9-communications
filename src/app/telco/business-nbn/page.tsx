@@ -52,13 +52,13 @@ export default function SmallBusinessNbnPage() {
       <section className="py-12 bg-gray-50 border-y border-gray-100 px-6">
         <div className="container mx-auto max-w-[1240px]">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-            <a href="/voice/microsoft-teams-calling" className="text-[15px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors">
+            <a href="/voice/microsoft-teams-calling" className="text-[14px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors">
               Explore Business Phones <ArrowRight size={16} className="transition-transform group-hover:translate-x-1 text-[#5D00D6]" />
             </a>
-            <a href="/managed-it/network-solutions" className="text-[15px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors">
+            <a href="/managed-it/network-solutions" className="text-[14px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors">
               See Managed IT Services <ArrowRight size={16} className="transition-transform group-hover:translate-x-1 text-[#5D00D6]" />
             </a>
-            <a href="/managed-it/network-solutions" className="text-[15px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors">
+            <a href="/managed-it/network-solutions" className="text-[14px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors">
               View Cybersecurity <ArrowRight size={16} className="transition-transform group-hover:translate-x-1 text-[#5D00D6]" />
             </a>
           </div>

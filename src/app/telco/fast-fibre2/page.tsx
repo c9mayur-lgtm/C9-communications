@@ -181,7 +181,7 @@ export default function FastFibrePage() {
                      </div>
                      <div>
                         <h3 className="text-[18px] font-bold text-[#1A1A2E] mb-3">{item.title}</h3>
-                        <p className="text-[15px] text-[#6B7280] leading-relaxed">{item.desc}</p>
+                        <p className="text-[14px] text-[#6B7280] leading-relaxed">{item.desc}</p>
                      </div>
                   </div>
                ))}
@@ -281,7 +281,7 @@ export default function FastFibrePage() {
               <div key={i} className="bg-white p-8 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
                 <div className="mb-6"><item.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} /></div>
                 <h3 className="text-[20px] font-bold mb-4 text-[#0c1024] tracking-tight leading-tight">{item.title}</h3>
-                <p className="text-gray-600 text-[15px] leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
+                <p className="text-gray-600 text-[14px] leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -313,7 +313,7 @@ export default function FastFibrePage() {
             <p className="text-[#A855F7] font-bold text-[18px] mb-10">"This is a connection your business can depend on."</p>
             <button 
                onClick={scrollToPlans}
-               className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4E00AD] transition-colors shadow-xl"
+               className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4E00AD] transition-colors shadow-xl"
             >
                Get the Right Fibre Plan <ArrowRight size={18}/>
             </button>
@@ -340,7 +340,7 @@ export default function FastFibrePage() {
                         <div className="text-[60px] font-black text-[#5D00D6]/5 absolute -top-8 -left-2 select-none group-hover:text-[#5D00D6]/10 transition-colors">{item.step}</div>
                         <div className="relative z-10">
                             <h4 className="text-xl font-bold text-[#1A1A2E] mb-4">{item.title}</h4>
-                            <p className="text-gray-500 text-[15px] leading-relaxed">{item.desc}</p>
+                            <p className="text-gray-500 text-[14px] leading-relaxed">{item.desc}</p>
                         </div>
                     </div>
                 ))}
@@ -366,11 +366,11 @@ export default function FastFibrePage() {
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
                                     <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
-                                    <span className="text-[15px] text-gray-700">Migrated to dedicated fibre</span>
+                                    <span className="text-[14px] text-gray-700">Migrated to dedicated fibre</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
-                                    <span className="text-[15px] text-gray-700">Optimised network setup</span>
+                                    <span className="text-[14px] text-gray-700">Optimised network setup</span>
                                 </li>
                             </ul>
                         </div>
@@ -379,15 +379,15 @@ export default function FastFibrePage() {
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
                                     <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
-                                    <span className="text-[15px] text-emerald-600 font-bold">Stable Performance</span>
+                                    <span className="text-[14px] text-emerald-600 font-bold">Stable Performance</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
-                                    <span className="text-[15px] text-emerald-600 font-bold">No Call Interruptions</span>
+                                    <span className="text-[14px] text-emerald-600 font-bold">No Call Interruptions</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 mt-0.5"><Check className="text-emerald-500" size={12} /></div>
-                                    <span className="text-[15px] text-emerald-600 font-bold">Improved Productivity</span>
+                                    <span className="text-[14px] text-emerald-600 font-bold">Improved Productivity</span>
                                 </li>
                             </ul>
                         </div>

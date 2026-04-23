@@ -43,7 +43,7 @@ export const WpPromoBanner = ({
                     document.querySelector(ctaHref)?.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="inline-flex items-center justify-center px-10 py-4 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold rounded-lg transition-colors text-[16px]"
+                className="inline-flex items-center justify-center px-10 py-4 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-lg transition-colors c9-button-label"
               >
                 {ctaText}
               </a>

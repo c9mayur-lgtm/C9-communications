@@ -100,7 +100,7 @@ export default function AboutPage() {
              
              <div>
                 <FadeUp>
-                    <span className="text-[#5D00D6] font-bold uppercase tracking-widest text-[13px] mb-6 block">OUR DNA</span>
+                    <span className="text-[#5D00D6] font-bold uppercase tracking-widest text-[14px] mb-6 block">OUR DNA</span>
                     <h2 className="text-[36px] md:text-[52px] font-bold text-[#1A1A2E] mb-10 leading-tight">
                         Born in Sydney. <br className="hidden md:block"/>
                         Engineered for Australia.

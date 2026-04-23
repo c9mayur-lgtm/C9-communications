@@ -2,71 +2,64 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Search, Map, ShieldCheck, RefreshCw, Users, Wifi, AlertTriangle, Lock, FileText, Activity, Phone, Shield, Layers, CheckCircle } from 'lucide-react';
 
-const INDUSTRIES = [
+const OPERATING_MODEL = [
   {
-    id: 'healthcare',
-    label: 'Healthcare',
-    headline: 'Healthcare IT & Compliance',
-    description: 'Customer experience matters, but patient data security is critical. Secure patient data, HIPAA-compliant infrastructure, and 24/7 uptime for clinics and hospitals — so your staff focuses on care, not IT tickets.',
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200',
+    id: 'discovery',
+    label: '1. Discovery',
+    headline: 'Infrastructure Discovery',
+    description: 'We map your entire environment to identify every system, vendor, and hidden dependency before making a single change.',
+    image: '/images/c9_discovery_human.png',
     color: '#5D00D6',
-    href: '/industries/healthcare'
+    href: '/managed-it/infrastructure',
+    options: [
+      { title: "System Audit", desc: "Full inventory of hardware and software.", icon: <Search size={20} /> },
+      { title: "Vendor Audit", desc: "Identifying all active contracts.", icon: <Users size={20} /> },
+      { title: "Connectivity Review", desc: "Mapping all circuits and links.", icon: <Wifi size={20} /> }
+    ]
   },
   {
-    id: 'banking',
-    label: 'Banking & Finance',
-    headline: 'IT for Law, Finance & Consulting',
-    description: "Reliable internet, secure cloud storage, and Microsoft 365 management for firms that can't afford downtime — or a data breach. We ensure 100% Australian data sovereignty and 4-hour SLA response times.",
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200',
+    id: 'risk_map',
+    label: '2. Risk Mapping',
+    headline: 'Operational Risk Mapping',
+    description: 'Identifying single points of failure, security exposures, and vendor accountability gaps that threaten your uptime.',
+    image: '/images/c9_risk_team.png',
     color: '#5D00D6',
-    href: '/industries/professional-services'
+    href: '/managed-it/infrastructure',
+    options: [
+      { title: "Failure Analysis", desc: "Pinpointing cascading outage risks.", icon: <AlertTriangle size={20} /> },
+      { title: "Security Posture", desc: "Benchmarking against industry standards.", icon: <Lock size={20} /> },
+      { title: "Accountability Map", desc: "Defining owners for each stack layer.", icon: <FileText size={20} /> }
+    ]
   },
   {
-    id: 'education',
-    label: 'Education',
-    headline: 'Connected Classrooms & Campuses',
-    description: 'We scale high-density Wi-Fi and safe internet environments for schools and universities. Keeping thousands of concurrent devices connected while adhering to strict child-safety filtering.',
-    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1200',
+    id: 'stabilisation',
+    label: '3. Stabilisation',
+    headline: 'The Stabilisation Layer',
+    description: 'Before any migration or change, we install monitoring and incident control to stabilise critical systems first.',
+    image: '/images/c9_stabilisation_human.png',
     color: '#5D00D6',
-    href: '/industries/education'
+    href: '/managed-it/infrastructure',
+    options: [
+      { title: "Unified Monitoring", desc: "Real-time visibility across all vendors.", icon: <Activity size={20} /> },
+      { title: "Incident Control", desc: "Single escalation path for all issues.", icon: <Phone size={20} /> },
+      { title: "Patch Management", desc: "Closing immediate security gaps.", icon: <Shield size={20} /> }
+    ]
   },
   {
-    id: 'retail',
-    label: 'Retail',
-    headline: 'IT That Keeps Your Stores Running',
-    description: 'Customer experience is everything in retail, and reliable communication can make or break a sale. C9 helps retailers manage high customer demand, streamline order inquiries, and provide fast EFTPOS-ready connectivity — enhancing the shopping experience both online and in-store.',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200',
+    id: 'transition',
+    label: '4. Transition',
+    headline: 'Controlled Transition',
+    description: 'Methodical execution with parallel validation and rollback-ready planning. No blind migration events.',
+    image: '/images/c9_transition_human.png',
     color: '#5D00D6',
-    href: '/industries/retail'
-  },
-  {
-    id: 'government',
-    label: 'Government',
-    headline: 'Mission-Critical Architecture',
-    description: 'Providing secure SD-WAN and highly-available unified communications for local and state government entities. Compliant with strict regulatory postures including Essential 8 reporting.',
-    image: 'https://images.unsplash.com/photo-1523292562811-8fa7962ba7fa?auto=format&fit=crop&q=80&w=1200',
-    color: '#5D00D6',
-    href: '/enterprise'
-  },
-  {
-    id: 'real-estate',
-    label: 'Real Estate',
-    headline: 'Fast IT for Fast-Moving Agencies',
-    description: 'Always-on mobility and cloud communications so agents never miss a listing. Integrated with standard prop-tech CRMs and offering zero downtime during agency expansions.',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200',
-    color: '#5D00D6',
-    href: '/industries/real-estate'
-  },
-  {
-    id: 'professional-services',
-    label: 'Professional Services',
-    headline: 'Data-driven Operational Efficiency',
-    description: 'From accounting firms to architecture studios, we provide high-bandwidth storage networks and uncompromised Teams calling solutions so your professionals can bill more hours with less friction.',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1200',
-    color: '#5D00D6',
-    href: '/industries/professional-services'
+    href: '/managed-it/infrastructure',
+    options: [
+      { title: "Phased Migration", desc: "Moving systems in logical blocks.", icon: <Layers size={20} /> },
+      { title: "Parallel Validation", desc: "Running systems concurrently for testing.", icon: <CheckCircle size={20} /> },
+      { title: "Rollback Readiness", desc: "Pre-defined plans to revert instantly.", icon: <RefreshCw size={20} /> }
+    ]
   }
 ];
 
@@ -74,23 +67,27 @@ export const WpIndustryTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="py-12 md:py-16 bg-[#FCFBFE] overflow-hidden border-t border-gray-100">
+    <section className="py-12 md:py-24 bg-[#FCFBFE] overflow-hidden border-t border-gray-100">
       <div className="container mx-auto max-w-6xl px-6 relative z-10">
         
         {/* Header Area */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="c9-section-heading mb-4">
-            C9 has earned the trust of Australian SMBs and Enterprises across diverse industries for over 15 years
+          <span className="c9-eyebrow mb-6 block">HOW C9 OPERATES</span>
+          <h2 className="c9-section-heading mb-6">
+            We operate your infrastructure as a single controlled system.
           </h2>
+          <p className="c9-body">
+            Our operating model is designed to eliminate vendor silos and establish a single point of accountability for your entire environment.
+          </p>
         </div>
 
         {/* Tab Navigation Container */}
         <div className="flex flex-wrap border-b border-gray-200 mb-12 justify-center lg:justify-between px-2 gap-y-4 relative">
-          {INDUSTRIES.map((tab, i) => (
+          {OPERATING_MODEL.map((tab, i) => (
             <button 
               key={tab.id}
               onClick={() => setActiveTab(i)}
-              className={`relative px-4 py-4 text-[14px] md:text-[15px] transition-colors whitespace-nowrap cursor-pointer ${activeTab === i ? 'text-[#0c1024] font-bold' : 'text-gray-500 hover:text-[#0c1024] font-medium'}`}
+              className={`relative px-4 py-4 text-[14px] md:text-[14px] transition-colors whitespace-nowrap cursor-pointer ${activeTab === i ? 'text-[#0c1024] font-bold' : 'text-gray-500 hover:text-[#0c1024] font-medium'}`}
             >
                {tab.label}
                {activeTab === i && (
@@ -105,29 +102,44 @@ export const WpIndustryTabs = () => {
         </div>
 
         {/* Content Area */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={`text-${activeTab}`}
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.3 }}
-              className="relative max-w-lg"
+              className="relative"
             >
-              <h3 className="text-[20px] font-bold text-[#0c1024] mb-4">
-                {INDUSTRIES[activeTab].headline}
+              <h3 className="text-[28px] md:text-[36px] font-bold text-[#0c1024] mb-6 leading-tight">
+                {OPERATING_MODEL[activeTab].headline}
               </h3>
-              <p className="text-[16px] text-[#0c1024]/70 font-normal leading-relaxed mb-8">
-                {INDUSTRIES[activeTab].description}
+              <p className="text-[17px] text-[#0c1024]/70 font-normal leading-relaxed mb-10">
+                {OPERATING_MODEL[activeTab].description}
               </p>
+
+              {/* Sub-options grid */}
+              <div className="grid grid-cols-1 gap-4 mb-10">
+                {OPERATING_MODEL[activeTab].options.map((opt, idx) => (
+                  <div key={idx} className="flex items-center gap-4 p-4 bg-white border border-gray-100 rounded-xl">
+                    <div className="text-[#5D00D6] shrink-0">
+                      {opt.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-[14px] font-bold text-[#0c1024]">{opt.title}</h4>
+                      <p className="text-[14px] text-gray-500">{opt.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
               
               <Link 
-                href={INDUSTRIES[activeTab].href}
-                className="inline-flex items-center gap-2 font-bold transition-all hover:gap-3 text-[#5D00D6] hover:text-[#4d00b3] text-[15px] uppercase tracking-[0.05em] whitespace-nowrap"
+                href={OPERATING_MODEL[activeTab].href}
+                className="inline-flex items-center gap-2 c9-button-label transition-all hover:gap-3 text-[#5D00D6] hover:text-[#4d00b3] uppercase whitespace-nowrap"
               >
-                Explore {INDUSTRIES[activeTab].label} Solutions <ArrowRight size={18} className="shrink-0" />
+                Learn More About Our Approach <ArrowRight size={18} className="shrink-0" />
               </Link>
             </motion.div>
           </AnimatePresence>
@@ -139,19 +151,19 @@ export const WpIndustryTabs = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.4 }}
-              className="relative overflow-hidden rounded-[24px] aspect-[4/3] w-full shadow-lg"
+              className="relative overflow-hidden rounded-[32px] aspect-[4/4] w-full shadow-2xl"
             >
               <img 
-                src={INDUSTRIES[activeTab].image} 
-                alt={INDUSTRIES[activeTab].label}
+                src={OPERATING_MODEL[activeTab].image} 
+                alt={OPERATING_MODEL[activeTab].label}
                 className="absolute inset-0 w-full h-full object-cover" 
               />
               
-              {/* Soft Gradient Overlay (The C9 shade) */}
+              {/* Soft Gradient Overlay */}
               <div 
                  className="absolute inset-0 z-10"
                  style={{ 
-                   background: 'linear-gradient(to right, rgba(93, 0, 214, 0.7) 0%, rgba(93, 0, 214, 0.2) 50%, transparent 100%)' 
+                   background: 'linear-gradient(to right, rgba(12, 16, 36, 0.4) 0%, transparent 100%)' 
                  }}
               />
             </motion.div>

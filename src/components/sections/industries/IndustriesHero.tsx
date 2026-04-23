@@ -72,12 +72,12 @@ export default function IndustriesHero() {
                 e.preventDefault();
                 document.getElementById('industry-grid')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
             >
               Explore Industries
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <p className="text-[13px] text-slate-500">No obligation. Just clear, practical advice.</p>
+            <p className="text-[14px] text-slate-500">No obligation. Just clear, practical advice.</p>
           </div>
         </FadeIn>
       </div>

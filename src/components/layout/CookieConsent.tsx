@@ -60,7 +60,7 @@ export const CookieConsent = () => {
                   </div>
                   <div>
                     <h3 className="text-[16px] font-bold mb-1">Your Privacy</h3>
-                    <p className="text-[13px] text-white/60 leading-relaxed">
+                    <p className="text-[14px] text-white/60 leading-relaxed">
                       We use cookies to improve your browsing experience, analyze site traffic, and personalize content.
                     </p>
                   </div>
@@ -91,7 +91,7 @@ export const CookieConsent = () => {
                 <div className="flex items-center justify-between pb-4 border-b border-white/10">
                   <div className="flex items-center gap-2">
                     <Shield size={18} className="text-[#5D00D6]" />
-                    <h3 className="font-bold text-[15px]">Cookie Preferences</h3>
+                    <h3 className="font-bold text-[14px]">Cookie Preferences</h3>
                   </div>
                   <button onClick={() => setShowSettings(false)} className="text-white/40 hover:text-white transition-colors">
                     <X size={18} />

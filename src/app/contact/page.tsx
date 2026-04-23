@@ -27,17 +27,17 @@ export default function ContactPage() {
       {/* ── HERO ── */}
       <Section className="text-center" bg="none">
         <FadeIn>
-          <Label>Contact Us</Label>
+          <Label>Infrastructure Assessment</Label>
         </FadeIn>
         <FadeIn delay={0.1}>
           <H1 className="mb-6">
-            Let's talk about<br />
-            <span className="text-[#5D00D6]">your connectivity.</span>
+            Request Your<br />
+            <span className="text-[#5D00D6]">Infrastructure Assessment.</span>
           </H1>
         </FadeIn>
         <FadeIn delay={0.2}>
           <Body className="max-w-xl mx-auto">
-            Whether you're looking for an audit, a quote, or technical support, our Australian-based team is ready to help.
+            We review your current environment, map your vendor exposure, and identify where operational risk is sitting. No obligation. No sales pitch. A structured conversation with a senior engineer.
           </Body>
         </FadeIn>
       </Section>
@@ -48,31 +48,31 @@ export default function ContactPage() {
           {/* ── FORM ── */}
           <FadeIn delay={0.3}>
             <div className="bg-gray-50/50 border border-gray-100 rounded-[32px] p-8 md:p-12 relative overflow-hidden">
-              <H3 className="mb-10 text-3xl tracking-tight">Send us a message</H3>
+              <H3 className="mb-10 text-3xl tracking-tight">Describe Your Environment</H3>
               
               <form onSubmit={e => e.preventDefault()} className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Full Name</label>
-                  <input type="text" placeholder="John Doe" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                  <input type="text" placeholder="Your name" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                 </div>
                 <div>
                   <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Work Email</label>
-                  <input type="email" placeholder="john@company.com" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                  <input type="email" placeholder="you@company.com.au" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Company Name</label>
-                  <input type="text" placeholder="Acme Corp" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                  <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Organisation Name</label>
+                  <input type="text" placeholder="Company or business name" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Message</label>
-                  <textarea placeholder="How can we help your business?" rows={5} className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all resize-none" />
+                  <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Current Environment</label>
+                  <textarea placeholder="Briefly describe your setup — number of sites, vendors you manage, the main pain points, and what you'd like assessed. The more context you give, the more useful the conversation." rows={5} className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all resize-none" />
                 </div>
                 <div className="sm:col-span-2 mt-4 text-center">
                   <C9Button className="w-full py-5 text-lg">
-                    Send Inquiry <Send size={18} className="ml-2" />
+                    Request Infrastructure Assessment <Send size={18} className="ml-2" />
                   </C9Button>
                   <p className="text-gray-400 text-sm mt-6 font-medium">
-                    We typically respond to business inquiries within 2 business hours.
+                    A senior engineer reviews every request. You'll hear back within 2 business hours.
                   </p>
                 </div>
               </form>
@@ -86,8 +86,8 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shadow-sm">
                   <Phone size={22} />
                 </div>
-                <H3 className="text-xl mb-2">Call Support</H3>
-                <Body className="text-sm mb-4">Available 24/7 for critical faults.</Body>
+                <H3 className="text-xl mb-2">Speak Directly</H3>
+                <Body className="text-sm mb-4">Critical fault or urgent escalation? Our team answers 24/7.</Body>
                 <a href="tel:1800000299" className="text-xl font-black text-[#5D00D6] hover:underline tracking-tight">1800 000 299</a>
               </div>
             </FadeIn>
@@ -97,8 +97,8 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shadow-sm">
                   <Mail size={22} />
                 </div>
-                <H3 className="text-xl mb-2">Email Us</H3>
-                <Body className="text-sm mb-4">For general sales and quotes.</Body>
+                <H3 className="text-xl mb-2">Send Directly</H3>
+                <Body className="text-sm mb-4">Prefer email? Reach our infrastructure team directly.</Body>
                 <a href="mailto:hello@c9communications.com.au" className="text-[17px] font-black text-[#5D00D6] hover:underline tracking-tight">hello@c9comms.com.au</a>
               </div>
             </FadeIn>
@@ -119,16 +119,16 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      {/* ── QUICK LINKS ── */}
+      {/* ── WHAT HAPPENS NEXT ── */}
       <Section className="pb-32" bg="gray">
         <div className="text-center mb-16">
-          <H2 className="text-3xl">Quick Support</H2>
+          <H2 className="text-3xl">What Happens After You Submit</H2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
            {[
-             { icon: MessageSquare, title: "Live Chat", text: "Talk to an engineer instantly via our portal." },
-             { icon: Clock, title: "Support Times", text: "Phone support is live 24/7/365 for critical issues." },
-             { icon: Zap, title: "Service Status", text: "Check up-to-the-minute status of our core networks." }
+             { icon: MessageSquare, title: "Engineer Reviews Your Request", text: "A senior infrastructure engineer reads your submission and maps it against known risk patterns in your sector. No junior handoffs." },
+             { icon: Clock, title: "Structured Discovery Call", text: "We schedule a focused 30-minute call. You describe your environment. We identify fragmentation, vendor gaps, and uptime exposure." },
+             { icon: Zap, title: "Assessment Summary Delivered", text: "You receive a clear written summary of findings, risk areas, and a recommended path forward. No lock-in. No obligation to proceed." }
            ].map((item, i) => (
              <FadeIn key={i} delay={i * 0.1}>
                <div className="p-8 rounded-2xl bg-white border border-gray-100 hover:border-[#5D00D6]/20 transition-all text-center group">

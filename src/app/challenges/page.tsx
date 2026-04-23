@@ -118,7 +118,7 @@ function ChallengesContent() {
                     }`}>
                       {item.title}
                     </span>
-                    <span className={`text-[13px] leading-snug transition-colors ${
+                    <span className={`text-[14px] leading-snug transition-colors ${
                       activeTab === item.id ? 'text-slate-600' : 'text-slate-400'
                     }`}>
                       {item.subtitle}
@@ -170,7 +170,7 @@ function ChallengesContent() {
                           {activeData.bullets.map((bullet, idx) => (
                             <div key={idx} className="flex items-center gap-3 text-white">
                               <CheckCircle2 size={18} className="text-[#00FF66]" />
-                              <span className="text-[15px] font-medium">{bullet}</span>
+                              <span className="text-[14px] font-medium">{bullet}</span>
                             </div>
                           ))}
                         </div>

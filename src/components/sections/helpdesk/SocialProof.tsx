@@ -58,7 +58,7 @@ export default function SocialProof() {
                   <div className="text-[14px] font-medium text-[#1A1A2E]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     {review.name}
                   </div>
-                  <div className="text-[13px] text-[#6B7280]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <div className="text-[14px] text-[#6B7280]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     {review.company}
                   </div>
                   <Badge variant="outline" className="mt-2 text-[11px] bg-[#F3EEFF] text-[#7B2FBE] border-[#7B2FBE] hover:bg-[#F3EEFF]">

@@ -61,8 +61,8 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                             href={item.path || '#'} 
                             className="group flex items-center gap-3 text-slate-500 hover:text-[#5D00D6] transition-all"
                           >
-                            <div className="w-1 h-1 rounded-full bg-[#5D00D6] scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                            <span className="text-[13.5px] font-semibold tracking-tight transition-transform group-hover:translate-x-1">{item.label}</span>
+                            <div className="w-1 h-1 rounded-full bg-[#5D00D6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <span className="text-[13.5px] font-semibold transition-colors">{item.label}</span>
                           </Link>
                         ))}
                       </div>
@@ -81,7 +81,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                   <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">Hardware Selection</h4>
                   <div className="grid grid-cols-2 gap-4">
                     {data.hardware.map((h: any, i: number) => (
-                      <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all border-b-2 border-b-transparent hover:border-b-[#5D00D6] duration-300">
+                      <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-start justify-center text-left hover:shadow-lg transition-all border-b-2 border-b-transparent hover:border-b-[#5D00D6] duration-300">
                         <div className="aspect-square w-full mb-3 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-2">
                           <img src={h.img} alt={h.title} className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" />
                         </div>
@@ -97,7 +97,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                   </h4>
                   <div className="grid grid-cols-2 gap-4">
                     {(data.challenges || data.modernization)?.map((c: any, i: number) => (
-                      <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden leading-tight aspect-square">
+                      <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-start justify-center text-left hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden leading-tight aspect-square">
                         <div className="mb-4 p-4 rounded-2xl bg-purple-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500">
                           {c.icon}
                         </div>
@@ -137,7 +137,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                              </div>
                           </div>
                        </div>
-                       <Link href={data.sidebar.path || '#'} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] hover:translate-x-2 transition-transform py-2 group">
+                       <Link href={data.sidebar.path || '#'} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] hover:translate-x-2 transition-transform py-2 group">
                           {data.sidebar.button} 
                        </Link>
                     </div>
@@ -145,7 +145,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                     <div className="flex flex-col gap-3.5">
                       {(data.sidebar?.items || []).map((item: any, i: number) => (
                         <Link key={i} href={item.path || '#'} className="group flex flex-col transition-all">
-                          <span className="text-[13px] font-bold text-slate-700 group-hover:text-[#5D00D6] transition-colors leading-tight">{item.label || item.title}</span>
+                          <span className="text-[14px] font-bold text-slate-700 group-hover:text-[#5D00D6] transition-colors leading-tight">{item.label || item.title}</span>
                           {item.desc && <p className="text-[10px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
                         </Link>
                       ))}
@@ -157,7 +157,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                   <div className="mt-6 pt-6 border-t border-gray-200/60">
                     <Link href="/consultation" className="group flex items-center justify-between p-4 bg-[#5D00D6] rounded-2xl shadow-xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
                       <div className="flex flex-col">
-                        <span className="text-white/60 text-[10px] uppercase font-bold tracking-widest mb-1">Expert Led</span>
+                        <span className="text-white/60 text-[10px] uppercase font-bold  mb-1">Expert Led</span>
                         <span className="text-white font-bold text-[14px]">Free Consultation</span>
                       </div>
                       <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center transition-all group-hover:bg-white/20 group-hover:scale-110">
@@ -197,7 +197,7 @@ const TopUtilityBar = () => {
               key={track.key} 
               href={track.path}
               onClick={() => setAudience(track.key as any)}
-              className={`px-5 py-1.5 text-[11px] font-bold tracking-wider rounded-full transition-all duration-300 ${
+              className={`px-5 py-1.5 text-[11px] font-bold  rounded-full transition-all duration-300 ${
                 audience === track.key 
                   ? 'bg-[#5D00D6] text-white shadow-md' 
                   : 'text-slate-400 hover:text-slate-600'
@@ -212,9 +212,9 @@ const TopUtilityBar = () => {
           <div className="flex items-center gap-6">
             <a href={`tel:${AUDIENCE_INFO[audience].phone}`} className="flex items-center gap-2 text-slate-500 hover:text-[#5D00D6] transition-colors border-r pr-6 border-gray-200">
                <PhoneCall size={12} strokeWidth={3} />
-               <span className="text-[11px] font-black tracking-wider">{AUDIENCE_INFO[audience].phone}</span>
+               <span className="text-[11px] font-black ">{AUDIENCE_INFO[audience].phone}</span>
             </a>
-            <Link href="/login" className="text-[10px] font-black uppercase tracking-wider text-slate-400 hover:text-slate-800 transition-colors">Portal Login</Link>
+            <Link href="/login" className="text-[10px] font-black uppercase  text-slate-400 hover:text-slate-800 transition-colors">Portal Login</Link>
           </div>
         </div>
       </div>
@@ -266,7 +266,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 <button
                   key={track.key}
                   onClick={() => setAudience(track.key as any)}
-                  className={`flex-1 py-2 text-[12px] font-black tracking-wide rounded-full transition-all duration-300 ${
+                  className={`flex-1 py-2 text-[12px] font-black  rounded-full transition-all duration-300 ${
                     audience === track.key
                       ? 'bg-[#5D00D6] text-white shadow-md'
                       : 'text-slate-400 hover:text-slate-600'
@@ -291,7 +291,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                       onClick={() => toggleAccordion(tab.menuKey)}
                       className="flex items-center justify-between w-full py-4 text-left group"
                     >
-                      <span className={`text-[18px] font-bold tracking-tight transition-colors ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}>
+                      <span className={`text-[18px] font-bold  transition-colors ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}>
                         {tab.name}
                       </span>
                       <ChevronDown size={20} className={`text-slate-400 transition-transform duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
@@ -379,7 +379,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                       onClick={onClose}
                                       className="flex flex-col gap-1 py-1"
                                     >
-                                      <span className="text-[15px] font-bold text-slate-700 leading-tight">{item.label || item.title}</span>
+                                      <span className="text-[14px] font-bold text-slate-700 leading-tight">{item.label || item.title}</span>
                                       {item.desc && <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.desc}</p>}
                                     </Link>
                                   ))}
@@ -496,7 +496,7 @@ export const Navbar = () => {
             const isOpen = openMenu === tab.menuKey;
             return (
               <div key={tab.name} className="relative h-full flex items-center" onMouseEnter={() => handleEnter(tab.menuKey)}>
-                <button className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[13px] font-medium tracking-tight transition-all duration-300 ${
+                <button className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[14px] font-medium  transition-all duration-300 ${
                   isOpen ? 'text-[#5D00D6] bg-purple-50/80 shadow-sm' : (isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]')
                 }`}>
                   {tab.name}
@@ -510,14 +510,14 @@ export const Navbar = () => {
         <div className="flex items-center gap-4 md:gap-7">
           <div className={`hidden lg:flex flex-col items-end border-r pr-7 mr-1 ${isScrolled ? 'border-gray-200' : 'border-gray-300'}`}>
             <span className="c9-eyebrow !text-[9px] !text-slate-400 mb-1 leading-none">Priority Support</span>
-            <a href={`tel:${AUDIENCE_INFO[audience].phone}`} className={`text-[14px] font-medium tracking-tight hover:text-[#5D00D6] transition-colors leading-none font-dm-sans ${isScrolled ? 'text-slate-600' : 'text-slate-800'}`}>
+            <a href={`tel:${AUDIENCE_INFO[audience].phone}`} className={`text-[14px] font-medium  hover:text-[#5D00D6] transition-colors leading-none font-dm-sans ${isScrolled ? 'text-slate-600' : 'text-slate-800'}`}>
               {AUDIENCE_INFO[audience].phone}
             </a>
           </div>
           
           <Button 
             size="sm"
-            className="hidden sm:flex transition-all bg-[#0c1024] text-white hover:bg-black font-bold tracking-tight px-6 rounded-full text-[11px] h-10 border-none shadow-lg shadow-black/5"
+            className="hidden sm:flex transition-all bg-[#0c1024] text-white hover:bg-black font-bold  px-6 rounded-full text-[11px] h-10 border-none shadow-lg shadow-black/5"
           >
             C9 defense
           </Button>

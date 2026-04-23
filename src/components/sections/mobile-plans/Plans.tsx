@@ -155,7 +155,7 @@ const PlanCard = ({ plan, index, isRecommended }: { plan: any; index: number; is
          <div className="flex items-baseline gap-2 mb-2">
             <span className="text-[48px] font-bold tracking-tighter">{plan.price}</span>
             <div className={`flex flex-col leading-none ${isRecommended || plan.isDark ? 'text-white/60' : 'text-slate-400'}`}>
-               <span className="text-[13px] font-bold uppercase tracking-widest">/mth</span>
+               <span className="text-[14px] font-bold uppercase tracking-widest">/mth</span>
                <span className="text-[9px] font-bold uppercase tracking-widest">Ex. GST</span>
             </div>
          </div>
@@ -251,7 +251,7 @@ export default function Plans() {
             </h2>
           </div>
           <div className="max-w-[400px]">
-              <p className="text-[15px] md:text-[16px] text-slate-500 leading-relaxed italic border-l-2 border-[#5D00D6]/20 pl-6">
+              <p className="text-[14px] md:text-[16px] text-slate-500 leading-relaxed italic border-l-2 border-[#5D00D6]/20 pl-6">
                  Choose the network speed and data volume that fits your team. We don't believe in excess data fees or multi-year lock-ins.
               </p>
           </div>

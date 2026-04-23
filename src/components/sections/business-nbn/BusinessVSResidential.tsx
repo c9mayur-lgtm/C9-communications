@@ -107,7 +107,7 @@ export default function BusinessVSResidential() {
                   <Check size={14} className="text-[#5D00D6] mt-1 shrink-0" />
                   <div>
                     <p className="text-[10px] font-extrabold text-[#5D00D6] uppercase tracking-widest mb-0.5">BUSINESS UPGRADE</p>
-                    <p className="text-[13px] text-[#1A1A2E] font-bold leading-tight">{f.biz}</p>
+                    <p className="text-[14px] text-[#1A1A2E] font-bold leading-tight">{f.biz}</p>
                   </div>
                 </div>
               </div>

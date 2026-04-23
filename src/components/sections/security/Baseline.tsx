@@ -68,7 +68,7 @@ export default function Baseline() {
               </h3>
 
               {/* Description */}
-              <p className="c9-body mb-6 flex-grow !text-[15px] md:!text-[16px]">
+              <p className="c9-body mb-6 flex-grow !text-[14px] md:!text-[16px]">
                 {card.body}
               </p>
 

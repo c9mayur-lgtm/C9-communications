@@ -114,7 +114,7 @@ const Hero = () => (
                 </div>
                 <a
                    href="#consultation"
-                   className="inline-flex items-center gap-1.5 text-slate-400 text-[13px] font-medium hover:text-[#5D00D6] transition-colors group whitespace-nowrap"
+                   className="inline-flex items-center gap-1.5 text-slate-400 text-[14px] font-medium hover:text-[#5D00D6] transition-colors group whitespace-nowrap"
                 >
                    Or speak with a cloud architect
                    <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
@@ -182,7 +182,7 @@ const SectionProblems = () => (
                      {item.icon}
                   </div>
                   <h4 className="font-bold text-slate-900 text-sm mb-2">{item.title}</h4>
-                  <p className="text-[13px] text-slate-500 leading-relaxed">{item.desc}</p>
+                  <p className="text-[14px] text-slate-500 leading-relaxed">{item.desc}</p>
                </FadeIn>
             ))}
          </div>
@@ -214,12 +214,12 @@ const SectionPersonas = () => (
                   <Zap size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4 text-slate-900">Greenfield</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Day-one readiness. We design and deploy cloud environments that are fully operational before your physical sites even open their doors.
                </p>
                <ul className="space-y-3">
                   {['Instant Deployment', 'Scalable Day 1', 'Zero Hardware Management'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -232,12 +232,12 @@ const SectionPersonas = () => (
                   <RefreshCw size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4 text-slate-900">Brownfield</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Structured migration. We transition legacy systems to the cloud using a phased approach that minimizes disruption and eliminates technical debt.
                </p>
                <ul className="space-y-3">
                   {['Seamless Migration', 'Legacy Consolidation', 'Phased Rollouts'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -250,12 +250,12 @@ const SectionPersonas = () => (
                   <Layout size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4 text-slate-900">Enterprise IT</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Architecture and control. We provide highly secure, scalable architectures with full visibility, governance, and SLA-backed management.
                </p>
                <ul className="space-y-3">
                   {['Governance Frameworks', 'Predictable Costs', 'Enterprise SLA'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -368,7 +368,7 @@ const SectionMigration = () => (
                         </div>
                         <div>
                            <h4 className="font-bold text-slate-900 text-sm mb-1">{item.title}</h4>
-                           <p className="text-slate-500 text-[13px] leading-relaxed">{item.desc}</p>
+                           <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
                         </div>
                      </div>
                   ))}
@@ -383,31 +383,34 @@ const SectionMigration = () => (
    SECTION 6 — HOW IT WORKS (PROCESS)
    ───────────────────────────────────────────────────────── */
 const SectionProcess = () => (
-   <section className="py-12 lg:py-16 bg-slate-50">
+   <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100">
       <div className={C}>
-         <div className="max-w-3xl mx-auto text-center mb-10">
+         <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
                <span className="c9-eyebrow mb-4">The Process</span>
                <h2 className="c9-section-heading mb-6">Structured Cloud Transformation</h2>
+               <p className="c9-body text-slate-600">A rigorous approach to building cloud environments that never stop.</p>
             </FadeIn>
          </div>
 
-         <div className="grid md:grid-cols-6 gap-4 relative">
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-slate-200 -z-10" />
+         <div className="grid md:grid-cols-6 gap-5">
             {[
-               { icon: <Search size={18} />, title: 'Assessment', desc: 'Workload & readiness audit.' },
-               { icon: <Layout size={18} />, title: 'Architecture', desc: 'Custom cloud design.' },
-               { icon: <RefreshCw size={18} />, title: 'Planning', desc: 'Phased roadmap.' },
-               { icon: <Zap size={18} />, title: 'Deployment', desc: 'Environment build-out.' },
-               { icon: <Monitor size={18} />, title: 'Optimization', desc: 'Tuning for performance.' },
-               { icon: <Users size={18} />, title: 'Management', desc: '24/7 ongoing support.' },
+               { step: '01', title: 'Assessment', desc: 'Workload & readiness audit.' },
+               { step: '02', title: 'Architecture', desc: 'Custom cloud design.' },
+               { step: '03', title: 'Planning', desc: 'Phased roadmap.' },
+               { step: '04', title: 'Deployment', desc: 'Environment build-out.' },
+               { step: '05', title: 'Optimization', desc: 'Tuning for performance.' },
+               { step: '06', title: 'Management', desc: '24/7 ongoing support.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-6 rounded-3xl border border-slate-200 text-center relative shadow-sm">
-                  <div className="w-10 h-10 rounded-full bg-[#5D00D6] text-white flex items-center justify-center mx-auto mb-4">
-                     {s.icon}
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-6 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+                  <div className="text-[32px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-4 right-4 leading-none">
+                     {s.step}
                   </div>
-                  <h4 className="font-bold text-slate-900 text-[14px] mb-2">{s.title}</h4>
-                  <p className="text-slate-500 text-[11px] leading-relaxed">{s.desc}</p>
+                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
+                     {i + 1}
+                  </div>
+                  <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
+                  <p className="text-slate-500 text-[13px] leading-relaxed relative z-10">{s.desc}</p>
                </FadeIn>
             ))}
          </div>

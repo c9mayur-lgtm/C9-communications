@@ -87,7 +87,7 @@ export default function EngagementModel() {
       <div className="container mx-auto max-w-[1240px]">
 
         {/* Header */}
-        <p className="text-[13px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block" >
+        <p className="text-[14px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 block" >
           THE ENGAGEMENT MODEL
         </p>
         <h2 className="c9-section-heading mb-6 max-w-2xl" >
@@ -134,7 +134,7 @@ export default function EngagementModel() {
                 </div>
                 <span className="text-[11px] font-bold text-slate-400 mt-3 uppercase tracking-wider">{step.week}</span>
                 <span className={cn(
-                  'text-[13px] font-bold mt-1 text-center max-w-[100px] leading-snug transition-colors',
+                  'text-[14px] font-bold mt-1 text-center max-w-[100px] leading-snug transition-colors',
                   isActive ? 'text-[#5D00D6]' : 'text-slate-500'
                 )}>
                   {step.label}
@@ -170,7 +170,7 @@ export default function EngagementModel() {
                     <div className="w-6 h-6 rounded-none bg-[#F4F0FA] flex items-center justify-center flex-shrink-0">
                       <CheckCircle size={12} className="text-[#5D00D6]" />
                     </div>
-                    <span className="text-[15px] font-semibold text-[#0c1024] leading-snug">{item}</span>
+                    <span className="text-[14px] font-semibold text-[#0c1024] leading-snug">{item}</span>
                   </div>
                 ))}
               </div>
@@ -178,7 +178,7 @@ export default function EngagementModel() {
               {/* Outcome */}
               <div className="flex items-center gap-4 mt-auto pt-8 border-t border-purple-50">
                 <div className="w-2.5 h-2.5 rounded-none bg-[#5D00D6] flex-shrink-0 animate-pulse" />
-                <span className="text-[15px] font-bold text-[#5D00D6]">{s.outcome}</span>
+                <span className="text-[14px] font-bold text-[#5D00D6]">{s.outcome}</span>
               </div>
             </div>
 
@@ -210,7 +210,7 @@ export default function EngagementModel() {
                     {m.val}
                   </p>
                   <p className={cn(
-                    'text-[13px] font-normal leading-tight',
+                    'text-[14px] font-normal leading-tight',
                     m.hi ? 'text-purple-400' : 'text-slate-400'
                   )}>
                     {m.sub}

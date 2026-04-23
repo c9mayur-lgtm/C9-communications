@@ -213,7 +213,7 @@ export const WpVendorsV2 = () => {
                 <button
                   key={cat.id}
                   onClick={() => setCategoryIndex(idx)}
-                  className={`px-5 py-2.5 rounded-full text-[12px] md:text-[13px] font-bold transition-all duration-300 border whitespace-nowrap ${
+                  className={`px-5 py-2.5 rounded-full text-[12px] md:text-[14px] font-bold transition-all duration-300 border whitespace-nowrap ${
                     categoryIndex === idx 
                       ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-xl shadow-purple-900/40' 
                       : 'bg-white/5 border-white/10 text-white/60 hover:border-white/30 hover:bg-white/10'

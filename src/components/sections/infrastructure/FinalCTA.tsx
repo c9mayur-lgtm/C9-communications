@@ -32,7 +32,7 @@ export default function FinalCTA() {
             onClick={handleAssessmentRequest}
             className={cn(
               buttonVariants({ variant: "default" }),
-              "bg-[#5D00D6] text-white font-['Proxima_Nova'] font-bold text-[15px] h-[52px] px-10 rounded-full hover:bg-[#4c00b0] shadow-xl shadow-purple-900/10 transition-all border-none flex items-center gap-2"
+              "bg-[#5D00D6] text-white font-['Proxima_Nova'] font-bold text-[14px] h-[52px] px-10 rounded-full hover:bg-[#4c00b0] shadow-xl shadow-purple-900/10 transition-all border-none flex items-center gap-2"
             )}
           >
             Get an Infrastructure Assessment <ArrowRight className="w-4 h-4 ml-1" />
@@ -42,7 +42,7 @@ export default function FinalCTA() {
             href="tel:1800000299" 
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "border-[rgba(93,0,214,0.2)] text-[#1A1A2E] font-['Proxima_Nova'] font-bold text-[15px] h-[52px] px-10 rounded-full hover:bg-[#5D00D6] hover:text-white transition-all flex items-center gap-2 no-underline bg-white"
+              "border-[rgba(93,0,214,0.2)] text-[#1A1A2E] font-['Proxima_Nova'] font-bold text-[14px] h-[52px] px-10 rounded-full hover:bg-[#5D00D6] hover:text-white transition-all flex items-center gap-2 no-underline bg-white"
             )}
           >
             <Phone className="w-4 h-4 mr-1" /> Call 1800 000 299
@@ -50,9 +50,9 @@ export default function FinalCTA() {
         </div>
         
         <div className="mt-8 flex justify-center flex-wrap gap-y-2 divide-x divide-slate-200">
-          <span className="font-['Proxima_Nova'] text-[13px] text-[#6B7280] px-4 font-bold uppercase tracking-tight">Australian team</span>
-          <span className="font-['Proxima_Nova'] text-[13px] text-[#6B7280] px-4 font-bold uppercase tracking-tight">Responds within 1 business day</span>
-          <span className="font-['Proxima_Nova'] text-[13px] text-[#5D00D6] px-4 font-bold uppercase tracking-tight">No lock-in consultations</span>
+          <span className="font-['Proxima_Nova'] text-[14px] text-[#6B7280] px-4 font-bold uppercase tracking-tight">Australian team</span>
+          <span className="font-['Proxima_Nova'] text-[14px] text-[#6B7280] px-4 font-bold uppercase tracking-tight">Responds within 1 business day</span>
+          <span className="font-['Proxima_Nova'] text-[14px] text-[#5D00D6] px-4 font-bold uppercase tracking-tight">No lock-in consultations</span>
         </div>
       </div>
     </section>

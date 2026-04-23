@@ -131,7 +131,7 @@ export default function CloudStackExplorer() {
               
               {/* STICKY HEADING */}
               <div className="lg:sticky lg:top-32 h-auto flex flex-col items-start pt-4">
-                <span className="text-brand-purple font-bold text-[13px] tracking-[0.2em] mb-4">■ {section.num}</span>
+                <span className="text-brand-purple font-bold text-[14px] tracking-[0.2em] mb-4">■ {section.num}</span>
                 <h2 className="c9-section-heading mb-8">
                   {section.title}
                 </h2>

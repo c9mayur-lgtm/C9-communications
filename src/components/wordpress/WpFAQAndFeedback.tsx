@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { ServiceTestimonialKajabi } from './ServiceTestimonialKajabi';
 
 const FAQS = [
-  { q: 'How does C9 handle emergency support?', a: 'We provide 24/7 dedicated local support with priority resolution for infrastructure issues. Our local engineers are always on standby to assist with critical failures.' },
-  { q: 'What connectivity options do you provide?', a: 'We offer a full range of business-grade connectivity including nbn™ Enterprise Ethernet, high-speed Fibre (up to 10Gbps), and secure SD-WAN solutions.' },
-  { q: 'Do you manage existing IT infrastructure?', a: 'Yes, we specialize in managed services and can take over management of your existing endpoints, servers, and cloud environments while improving security.' },
-  { q: 'How secure is my business data with C9?', a: 'All data is stored exclusively in Australian-based data centres, adhering strictly to Australian privacy laws and data sovereignty requirements.' },
-  { q: 'Can I scale my services as we grow?', a: 'Absolutely. Our solutions are designed for agility, allowing you to add users, bandwidth, or new office locations seamlessly as your requirements evolve.' }
+  { q: 'Is C9 the right fit for every organisation?', a: 'No. We are not a fit if you only require break-fix IT support, if you are not ready to consolidate multiple vendors, or if you expect advisory-only services without operational change.' },
+  { q: 'What is a "single accountable model"?', a: 'It means C9 takes full responsibility for the uptime and performance of your integrated systems. We own the root cause of issues, coordinate across all vendors, and provide a single escalation path for your entire environment.' },
+  { q: 'Does this model require changing our existing vendors?', a: 'Not necessarily. While we help consolidate where possible to reduce risk, we can take over the management and coordination of your existing third-party IT, cloud, and telco contracts to establish control.' },
+  { q: 'How do you handle migrations without downtime?', a: 'We use a controlled transition model involving infrastructure discovery, parallel validation, and rollback-ready execution. We stabilize your critical systems first before making any structural changes.' },
+  { q: 'Who owns the responsibility when a third-party vendor fails?', a: 'C9 does. We manage the incident response and vendor coordination on your behalf. You have one operational owner to hold accountable, regardless of which component of the stack is fluctuating.' }
 ];
 
 export interface TestimonialData {
@@ -48,10 +48,10 @@ export const WpFAQAndFeedback = ({
     <>
       {/* FAQ Section */}
       {showFAQ && (
-        <section className="py-12 md:py-16 bg-[#FDFDFF] border-t border-gray-100">
-          <div className="container mx-auto px-6 md:px-8 max-w-4xl">
+        <section className="py-16 md:py-24 bg-[#FDFDFF] border-t border-gray-100">
+          <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
             
-            <div className="flex flex-col items-center text-center mb-12">
+            <div className="flex flex-col items-start mb-12">
               <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-none border border-[#5D00D6]/10 mb-6 cursor-default">
                 <HelpCircle className="text-[#5D00D6]" size={16} />
                 <span className="c9-eyebrow !text-[11px] leading-none mt-0.5">Quick Answers</span>
@@ -62,7 +62,7 @@ export const WpFAQAndFeedback = ({
             </div>
 
             {/* Accordion Container */}
-            <div className="flex flex-col w-full max-w-[800px] mx-auto">
+            <div className="flex flex-col w-full">
               {faqItems.map((item, i) => {
                 const isOpen = openIdx === i;
                 return (
@@ -72,7 +72,7 @@ export const WpFAQAndFeedback = ({
                       className="w-full flex items-start justify-between gap-6 py-6 md:py-8 text-left group"
                     >
                       <span 
-                        className={`text-[19px] font-medium leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} 
+                        className={`text-[19px] md:text-[22px] font-medium leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} 
                       >
                         {item.q}
                       </span>
@@ -88,7 +88,7 @@ export const WpFAQAndFeedback = ({
                           className="overflow-hidden"
                         >
                           <div className="pb-8 pt-0 pr-8">
-                            <p className="c9-body max-w-[680px]">
+                            <p className="c9-body max-w-[840px]">
                               {item.a}
                             </p>
                           </div>

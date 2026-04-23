@@ -31,7 +31,7 @@ export default function SocialProof() {
     <section className="w-full bg-[#fcfaff] py-12 md:py-20">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="mb-16">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
+          <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.3em] mb-4 block" >
             WHAT OUR CLIENTS SAY
           </span>
           <h2 className="c9-section-heading font-medium mt-4 max-w-[700px]" >
@@ -51,7 +51,7 @@ export default function SocialProof() {
                 ))}
               </div>
               
-              <p className="text-[15px] md:text-[16px] text-[#0c1024] font-medium leading-relaxed italic mb-10 flex-grow" >
+              <p className="text-[14px] md:text-[16px] text-[#0c1024] font-medium leading-relaxed italic mb-10 flex-grow" >
                 "{review.quote}"
               </p>
 
@@ -63,7 +63,7 @@ export default function SocialProof() {
                   <div className="text-[16px] font-medium text-[#0c1024] tracking-tight" >
                     {review.name}
                   </div>
-                  <div className="text-[13px] text-slate-500 font-medium" >
+                  <div className="text-[14px] text-slate-500 font-medium" >
                     {review.company} · {review.badge}
                   </div>
                 </div>

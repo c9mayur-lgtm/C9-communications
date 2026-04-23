@@ -29,7 +29,7 @@ export default function DefenseBridge() {
             <h2 className="c9-section-heading !text-white mb-3">
               Protecting Australian organisations with enterprise cybersecurity
             </h2>
-            <p className="text-[15px] md:text-[16px] text-white/50 leading-relaxed max-w-[700px] font-normal font-sans">
+            <p className="text-[14px] md:text-[16px] text-white/50 leading-relaxed max-w-[700px] font-normal font-sans">
               "C9 Defense sits alongside your Managed IT agreement — adding Essential 8 compliance, continuous 24/7 threat monitoring, and tested recovery to your outsourced IT environment."
             </p>
           </div>

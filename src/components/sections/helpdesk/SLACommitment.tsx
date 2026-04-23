@@ -79,7 +79,7 @@ export default function SLACommitment() {
               </table>
             </div>
             
-            <p className="text-[13px] text-[#6B7280] italic mt-3" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p className="text-[14px] text-[#6B7280] italic mt-3" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
               Standard SLAs apply during business hours. 24/7 coverage available on select plans.
             </p>
           </div>
@@ -91,7 +91,7 @@ export default function SLACommitment() {
                 <h3 className="text-[22px] font-semibold text-white" style={{ fontFamily: "var(--font-syne), sans-serif" }}>
                   Monthly reporting included
                 </h3>
-                <p className="text-[15px] text-[#9CA3AF] leading-[1.6] mt-3" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p className="text-[14px] text-[#9CA3AF] leading-[1.6] mt-3" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                   Every month C9 provides a helpdesk performance report showing:
                 </p>
                 
@@ -113,7 +113,7 @@ export default function SLACommitment() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-[#374151]">
-                  <span className="text-[13px] text-[#6B7280]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <span className="text-[14px] text-[#6B7280]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     No extra charge. Built into every engagement.
                   </span>
                 </div>

@@ -59,7 +59,7 @@ export const VoiceHero = () => {
                 </button>
                 <button
                   onClick={() => window.dispatchEvent(new CustomEvent('c9-open-lead-modal', { detail: { intent: 'Book a Full System Demo' } }))}
-                  className="text-[#5D00D6] font-bold text-[15px] flex items-center gap-2 hover:gap-3 transition-all"
+                  className="text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   See what's included <ArrowRight size={16} />
                 </button>

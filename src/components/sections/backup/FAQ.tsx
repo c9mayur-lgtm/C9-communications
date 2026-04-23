@@ -63,7 +63,7 @@ export default function FAQ() {
                 />
               </button>
               {open === i && (
-                <p className="text-[15px] text-[#6B7280] leading-[1.75] mt-3 font-normal" style={{ fontFamily: F }}>
+                <p className="text-[14px] text-[#6B7280] leading-[1.75] mt-3 font-normal" style={{ fontFamily: F }}>
                   {faq.a}
                 </p>
               )}

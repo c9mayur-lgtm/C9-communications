@@ -45,18 +45,18 @@ export const VoiceLeadCapture = () => {
               <input
                 type="text"
                 placeholder="Your name"
-                className="w-full bg-white/10 text-white placeholder:text-white/30 rounded-xl px-5 h-14 text-[15px] outline-none focus:ring-2 focus:ring-[#5D00D6] border border-white/10 font-medium transition-colors"
+                className="w-full bg-white/10 text-white placeholder:text-white/30 rounded-xl px-5 h-14 text-[14px] outline-none focus:ring-2 focus:ring-[#5D00D6] border border-white/10 font-medium transition-colors"
                 required
               />
               <input
                 type="tel"
                 placeholder="Best phone number"
-                className="w-full bg-white/10 text-white placeholder:text-white/30 rounded-xl px-5 h-14 text-[15px] outline-none focus:ring-2 focus:ring-[#5D00D6] border border-white/10 font-medium transition-colors"
+                className="w-full bg-white/10 text-white placeholder:text-white/30 rounded-xl px-5 h-14 text-[14px] outline-none focus:ring-2 focus:ring-[#5D00D6] border border-white/10 font-medium transition-colors"
                 required
               />
               <div className="relative">
                 <select
-                  className="w-full bg-white/10 text-white/70 rounded-xl px-5 h-14 text-[15px] outline-none focus:ring-2 focus:ring-[#5D00D6] border border-white/10 font-medium appearance-none transition-colors"
+                  className="w-full bg-white/10 text-white/70 rounded-xl px-5 h-14 text-[14px] outline-none focus:ring-2 focus:ring-[#5D00D6] border border-white/10 font-medium appearance-none transition-colors"
                   required
                   defaultValue=""
                 >

@@ -47,7 +47,7 @@ export default function Challenges() {
                 </div>
               </div>
               <h3 className="c9-card-title mb-4 !text-[20px]">{f.title}</h3>
-              <p className="c9-body !text-[15px] md:!text-[16px] mb-6">{f.desc}</p>
+              <p className="c9-body !text-[14px] md:!text-[16px] mb-6">{f.desc}</p>
               {f.link && (
                 <div className="mt-auto pt-2 border-t-[1px] border-gray-100 w-full">
                   <Link href={f.link.href} className="inline-flex items-center gap-2 c9-eyebrow !text-[12px] hover:opacity-80 transition-opacity mt-4">

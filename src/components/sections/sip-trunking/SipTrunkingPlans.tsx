@@ -34,9 +34,9 @@ const PlanCard = ({ title, price, features, isPopular, link }: { title: string, 
         <div key={i} className="flex items-center justify-between py-2 border-b border-gray-200/20 last:border-0">
           <div className="flex items-center gap-3">
               <CheckCircle2 size={18} className={isPopular ? 'text-purple-400' : 'text-[#5D00D6]'} />
-              <span className="c9-body !text-[15px] font-medium">{feature.name}</span>
+              <span className="c9-body !text-[14px] font-medium">{feature.name}</span>
           </div>
-          <span className={`c9-body !text-[15px] font-bold ${isPopular ? 'text-white' : 'text-[#0c1024]'}`}>{feature.value}</span>
+          <span className={`c9-body !text-[14px] font-bold ${isPopular ? 'text-white' : 'text-[#0c1024]'}`}>{feature.value}</span>
         </div>
       ))}
     </div>

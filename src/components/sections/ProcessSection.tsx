@@ -50,7 +50,7 @@ export const ProcessSection = () => {
               <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">
                 {step.title}
               </h3>
-              <p className="text-slate-600 text-[15px] leading-relaxed font-dm-sans">
+              <p className="text-slate-600 text-[14px] leading-relaxed font-dm-sans">
                 {step.description}
               </p>
             </div>

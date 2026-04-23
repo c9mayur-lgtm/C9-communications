@@ -31,11 +31,11 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
               <Button 
                 onClick={handleAssessmentRequest}
-                className="flex-1 sm:flex-none bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[15px] shadow-lg shadow-purple-900/20"
+                className="flex-1 sm:flex-none bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[14px] shadow-lg shadow-purple-900/20"
               >
                 Get a Security Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Link href="/c9-defense" className="flex-1 justify-center sm:flex-none flex items-center text-[#1A1A2E] border border-[#5D00D6]/20 hover:bg-slate-50 px-8 h-14 rounded-full font-bold transition-all text-[15px]">
+              <Link href="/c9-defense" className="flex-1 justify-center sm:flex-none flex items-center text-[#1A1A2E] border border-[#5D00D6]/20 hover:bg-slate-50 px-8 h-14 rounded-full font-bold transition-all text-[14px]">
                 Explore C9 Defense <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>

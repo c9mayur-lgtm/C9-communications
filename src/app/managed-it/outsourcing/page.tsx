@@ -176,12 +176,12 @@ const SectionPersonas = () => (
                   <Building size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Greenfield CEO</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Building something new? Don't waste capital on IT hires. We architect and manage your entire IT stack from the ground up, ensuring scale-ready foundations.
                </p>
                <ul className="space-y-3">
                   {['Architecture Design', 'Vendor Setup', 'Day-1 Operations'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -194,12 +194,12 @@ const SectionPersonas = () => (
                   <Activity size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Brownfield CEO</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Stop the bleeding. We replace fragmented, unreliable legacy setups with a unified, professional department that actually supports your business objectives.
                </p>
                <ul className="space-y-3">
                   {['Vendor Consolidation', 'System Overhaul', 'Governance Setup'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -212,12 +212,12 @@ const SectionPersonas = () => (
                   <Users size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Head of IT</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Scale without friction. We provide the operational muscle—handling the day-to-day—so your internal team can focus on high-level strategic transformation.
                </p>
                <ul className="space-y-3">
                   {['Operational Burst', 'Asset Management', 'SLA Performance'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -232,7 +232,7 @@ const SectionPersonas = () => (
    SECTION 3 — EXECUTION MODEL (HOW IT WORKS)
    ───────────────────────────────────────────────────────── */
 const SectionHowItWorks = () => (
-   <section className="py-16 lg:py-24 bg-white">
+   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
       <div className={C}>
          <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
@@ -249,15 +249,15 @@ const SectionHowItWorks = () => (
                { step: '03', title: 'Operational Rigour', desc: 'Implementation of patching, monitoring, and helpdesk workflows.' },
                { step: '04', title: 'vCIO Governance', desc: 'Quarterly reviews to ensure IT remains a strategic asset, not a cost centre.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-slate-50 p-8 rounded-3xl border border-slate-100 group hover:bg-white hover:border-[#5D00D6]/30 hover:shadow-xl transition-all">
-                  <div className="text-[40px] font-black text-slate-200 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
                   <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
-                     {parseInt(s.step)}
+                     {i + 1}
                   </div>
                   <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
-                  <p className="text-slate-500 text-[14px] leading-relaxed relative z-10">{s.desc}</p>
+                  <p className="text-slate-500 text-[15px] leading-relaxed relative z-10">{s.desc}</p>
                </FadeIn>
             ))}
          </div>
@@ -279,19 +279,19 @@ const SectionOutcomes = () => (
                <div className="grid grid-cols-2 gap-6 mb-10">
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">30%</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Reduction in OpEx</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Reduction in OpEx</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">0h</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Unplanned Downtime</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Unplanned Downtime</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">10+</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Site Multi-Scaling</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Site Multi-Scaling</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">500+</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Managed Endpoints</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Managed Endpoints</div>
                   </div>
                </div>
                <p className="c9-body text-white/80 mb-8">

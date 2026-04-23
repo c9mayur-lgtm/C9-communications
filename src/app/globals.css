@@ -72,6 +72,12 @@
   color: #6B7280;
 }
 
+.c9-button-label {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
 @layer base {
   :root {
     --background: #FFFFFF;
@@ -259,4 +265,4 @@
 }
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-}
+}

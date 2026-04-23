@@ -176,12 +176,12 @@ const SectionPersonas = () => (
                   <LineChart size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Greenfield CEO</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Strategic planning for rapid scale. We architect your future-state environment before you spend a cent on hardware, ensuring your technology never slows your growth.
                </p>
                <ul className="space-y-3">
                   {['Scalable Architecture', 'Budget Forecasting', 'Growth-Ready IT'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -194,12 +194,12 @@ const SectionPersonas = () => (
                   <Activity size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Brownfield CEO</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Roadmap recovery. We audit failed projects and stagnant technology, realigning your IT spend with business goals to eliminate waste and restore performance.
                </p>
                <ul className="space-y-3">
                   {['Technical Debt Audit', 'Project Realignment', 'ROI Recovery'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -212,12 +212,12 @@ const SectionPersonas = () => (
                   <ShieldCheck size={24} />
                </div>
                <h3 className="text-xl font-bold mb-4">Head of IT</h3>
-               <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
+               <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Board-level reporting and governance. We provide the vCIO expertise to handle complex vendor management, risk assessments, and multi-year budget forecasting.
                </p>
                <ul className="space-y-3">
                   {['vCIO Governance', 'Risk & Compliance', 'Board Reporting'].map(item => (
-                     <li key={item} className="flex items-center gap-2 text-[13px] font-bold text-slate-900">
+                     <li key={item} className="flex items-center gap-2 text-[14px] font-bold text-slate-900">
                         <CheckCircle size={14} className="text-[#5D00D6]" /> {item}
                      </li>
                   ))}
@@ -232,7 +232,7 @@ const SectionPersonas = () => (
    SECTION 3 — EXECUTION MODEL (HOW IT WORKS)
    ───────────────────────────────────────────────────────── */
 const SectionHowItWorks = () => (
-   <section className="py-16 lg:py-24 bg-white">
+   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
       <div className={C}>
          <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
@@ -249,15 +249,15 @@ const SectionHowItWorks = () => (
                { step: '03', title: 'Roadmap Development', desc: 'Prioritised execution plan with clear ROI milestones and budget requirements.' },
                { step: '04', title: 'Ongoing Governance', desc: 'Monthly reviews to ensure execution stays on track and roadmaps evolve with your business.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-slate-50 p-8 rounded-3xl border border-slate-100 group hover:bg-white hover:border-[#5D00D6]/30 hover:shadow-xl transition-all">
-                  <div className="text-[40px] font-black text-slate-200 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
                   <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
-                     {parseInt(s.step)}
+                     {i + 1}
                   </div>
                   <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
-                  <p className="text-slate-500 text-[14px] leading-relaxed relative z-10">{s.desc}</p>
+                  <p className="text-slate-500 text-[15px] leading-relaxed relative z-10">{s.desc}</p>
                </FadeIn>
             ))}
          </div>
@@ -279,19 +279,19 @@ const SectionOutcomes = () => (
                <div className="grid grid-cols-2 gap-6 mb-10">
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">20%</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Growth Alignment</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Growth Alignment</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">15+</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Vendors Consolidated</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Vendors Consolidated</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">$2M+</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Budget Managed</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Budget Managed</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">100%</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Objective Execution</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Objective Execution</div>
                   </div>
                </div>
                <p className="c9-body text-white/80 mb-8">

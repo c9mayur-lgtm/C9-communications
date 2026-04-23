@@ -25,7 +25,7 @@ export default function DefenseBridge() {
                 <span className="text-[#5D00D6] !text-[inherit]">than standard management.</span>
               </h3>
             </div>
-            <p className="text-[15px] font-medium text-white/50 leading-relaxed font-sans max-w-[700px]">
+            <p className="text-[14px] font-medium text-white/50 leading-relaxed font-sans max-w-[700px]">
               Cloud environments without proper security governance are one of the most common attack surfaces for Australian businesses. C9 Defense extends cloud security to include Essential 8 compliance, continuous monitoring of your cloud environment, and tested recovery for cloud-hosted workloads.
             </p>
           </div>

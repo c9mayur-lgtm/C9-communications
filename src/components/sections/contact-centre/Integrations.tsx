@@ -59,7 +59,7 @@ export default function Integrations() {
                         className="flex items-center gap-3 bg-white hover:bg-slate-50 border border-gray-200 px-6 py-4 rounded-xl transition-all shadow-sm"
                     >
                         <Cable size={18} className="text-[#5D00D6]" />
-                        <span className="text-[#0c1024] font-bold text-[15px]">{item}</span>
+                        <span className="text-[#0c1024] font-bold text-[14px]">{item}</span>
                     </motion.div>
                 ))}
             </div>

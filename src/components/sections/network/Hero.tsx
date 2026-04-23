@@ -45,10 +45,10 @@ export default function Hero() {
               C9 designs and delivers private network architectures for Australian businesses — from single sites to geographically distributed multi-location enterprises. We unify your infrastructure into a single, high-performance ecosystem.
             </p>
             <div className="flex flex-wrap gap-4 mb-14">
-              <Button onClick={scrollToAssessment} className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-['Proxima_Nova'] font-bold h-15 px-10 rounded-full flex items-center gap-2 shadow-2xl shadow-purple-900/40 relative group overflow-hidden border-none text-[15px]">
+              <Button onClick={scrollToAssessment} className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-['Proxima_Nova'] font-bold h-15 px-10 rounded-full flex items-center gap-2 shadow-2xl shadow-purple-900/40 relative group overflow-hidden border-none text-[14px]">
                 Get a Network Assessment <ArrowRight className="w-4 h-4 ml-1 relative z-10 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" onClick={scrollToComparison} className="border-gray-200 text-[#1A1A2E] font-['Proxima_Nova'] font-bold h-15 px-10 rounded-full bg-white hover:bg-slate-50 transition-all border-2 text-[15px]">
+              <Button variant="outline" onClick={scrollToComparison} className="border-gray-200 text-[#1A1A2E] font-['Proxima_Nova'] font-bold h-15 px-10 rounded-full bg-white hover:bg-slate-50 transition-all border-2 text-[14px]">
                 Technical Options
               </Button>
             </div>

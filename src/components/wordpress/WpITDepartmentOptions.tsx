@@ -6,28 +6,28 @@ import { ArrowUpRight } from 'lucide-react';
 
 const OPTIONS = [
   {
+    tag: 'CO-MANAGED',
+    title: "Internal IT Team",
+    desc: "We integrate with your existing IT team and strengthen operational control across infrastructure, vendors, and uptime management.\n\n• Infrastructure Visibility\n• Escalation Support\n• System Accountability",
+    img: "/images/hero_enterprise.png",
+    href: "/managed-it",
+    btnText: "Partner With Us"
+  },
+  {
+    tag: 'BROWNFIELD',
+    title: "Multi-Vendor Reliance",
+    desc: "We consolidate fragmented vendor environments into a single accountable model—removing coordination gaps and reducing operational risk.\n\n• Vendor Consolidation\n• SLA Standardisation\n• Unified Support Structure",
+    img: "/images/hero_business.png",
+    href: "/managed-it/infrastructure",
+    btnText: "Consolidate Control"
+  },
+  {
     tag: 'GREENFIELD',
-    title: "Open New Sites Without IT Delays",
-    desc: "Launch fully operational locations with IT, connectivity, and devices ready from day one—without coordinating multiple vendors. Outcome: Your business opens on time. Everything works.",
+    title: "No Dedicated IT Team",
+    desc: "We design, deploy, and operate your entire infrastructure environment as a managed operation with full end-to-end accountability.\n\n• Day-Zero Readiness\n• End-to-End Ownership\n• Operational Stability",
     img: "/images/greenfield_hero.png",
     href: "/greenfield",
-    btnText: "Plan My Launch"
-  },
-  {
-    tag: 'SMB / BROWNFIELD',
-    title: "Simplify and Take Control of Existing Systems",
-    desc: "Replace fragmented vendors with one accountable partner who stabilises, secures, and manages your entire environment. Outcome: Less downtime. Less complexity. Full control.",
-    img: "/images/hero_business.png",
-    href: "/business2",
-    btnText: "Get Full Control"
-  },
-  {
-    tag: 'ENTERPRISE',
-    title: "Operate Complex Environments with Confidence",
-    desc: "Manage multi-site infrastructure with SLA-backed support, integrated systems, and enterprise-grade security. Outcome: Scalable, secure, and predictable operations.",
-    img: "/images/hero_enterprise.png",
-    href: "/enterprise",
-    btnText: "Scale My Operations"
+    btnText: "Deploy Managed Model"
   }
 ];
 
@@ -57,10 +57,10 @@ export const WpITDepartmentOptions = () => {
                   {opt.title}
                 </h3>
                 <div className="h-[1px] w-full bg-gray-100 mb-6" />
-                <p className="c9-body mb-8">
+                <p className="c9-body mb-8 whitespace-pre-line">
                   {opt.desc}
                 </p>
-                <div className="flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] leading-none uppercase tracking-[0.2em] whitespace-nowrap">
+                <div className="flex items-center gap-2 text-[#5D00D6] c9-button-label leading-none uppercase whitespace-nowrap">
                   {opt.btnText}
                   <ArrowUpRight size={16} className="shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>

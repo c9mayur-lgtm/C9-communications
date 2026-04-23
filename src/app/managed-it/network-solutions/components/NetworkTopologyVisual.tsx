@@ -92,7 +92,7 @@ export const NetworkTopologyVisual = () => {
                   opacity: [0, 1, 0]
                 }}
                 transition={{ 
-                  duration: 2 + Math.random() * 2, 
+                  duration: 2 + (i % 4) * 0.5, 
                   repeat: Infinity, 
                   delay: i * 0.5,
                   ease: "easeInOut"

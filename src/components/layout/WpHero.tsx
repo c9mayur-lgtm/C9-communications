@@ -94,14 +94,14 @@ export const WpHero = () => {
               <a
                 href={activeContent.cta1Href}
                 onClick={handlePrimaryCta}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/30 group"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/30 group"
               >
                 {activeContent.cta1}
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href={activeContent.cta2Href}
-                className="inline-flex items-center justify-center gap-2 border-2 border-white xl:border-[#5D00D6] text-white xl:text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-white/10 xl:hover:bg-[#5D00D6] xl:hover:text-white transition-colors"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white xl:border-[#5D00D6] text-white xl:text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-white/10 xl:hover:bg-[#5D00D6] xl:hover:text-white transition-colors"
               >
                 {activeContent.cta2}
               </a>
@@ -111,7 +111,7 @@ export const WpHero = () => {
             {isHome && (
               <div className="flex flex-wrap gap-3 mt-8">
                 {activeContent.tags.map((tag: string, i: number) => (
-                  <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 xl:bg-slate-50 border border-white/20 xl:border-slate-100 text-white xl:text-slate-600 text-[13px] font-bold">
+                  <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 xl:bg-slate-50 border border-white/20 xl:border-slate-100 text-white xl:text-slate-600 text-[14px] font-bold">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
                     {tag}
                   </div>

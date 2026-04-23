@@ -53,7 +53,7 @@ export default function FinalCTA() {
             ].map((item, i) => (
                <div key={i} className="flex items-center justify-start gap-3">
                   <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
-                  <span className="text-[14px] md:text-[15px] font-bold text-slate-500 tracking-tight leading-tight">{item}</span>
+                  <span className="text-[14px] md:text-[14px] font-bold text-slate-500 tracking-tight leading-tight">{item}</span>
                </div>
             ))}
           </div>

@@ -61,7 +61,7 @@ export default function Partners() {
         <div className="mt-16 text-center">
            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-3">
               <Info size={16} className="text-[#5D00D6]" />
-              <p className="text-[13px] md:text-[14px] text-gray-300 font-medium">
+              <p className="text-[14px] md:text-[14px] text-gray-300 font-medium">
                  Don't see a particular service? Ask us — there are many private connectivity options available.
               </p>
            </div>

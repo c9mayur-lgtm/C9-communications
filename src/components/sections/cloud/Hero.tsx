@@ -52,7 +52,7 @@ const CloudMonitorVisual = () => {
                 <Globe size={40} className="text-slate-400" />
                 <motion.div animate={{ scale: [1, 1.5], opacity: [1, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="absolute inset-0 border-2 border-[#5D00D6] rounded-full" />
               </div>
-              <p className="mt-4 text-[13px] font-bold text-slate-500 uppercase tracking-widest">Auditing Infrastructure</p>
+              <p className="mt-4 text-[14px] font-bold text-slate-500 uppercase tracking-widest">Auditing Infrastructure</p>
             </motion.div>
           )}
 
@@ -73,7 +73,7 @@ const CloudMonitorVisual = () => {
                   className="absolute top-0 w-20 h-full bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent" 
                 />
               </div>
-              <p className="text-center mt-6 text-[13px] font-bold text-[#5D00D6] uppercase tracking-widest">Migrating Workloads</p>
+              <p className="text-center mt-6 text-[14px] font-bold text-[#5D00D6] uppercase tracking-widest">Migrating Workloads</p>
             </motion.div>
           )}
 
@@ -93,7 +93,7 @@ const CloudMonitorVisual = () => {
                     />
                   ))}
                </div>
-               <p className="mt-4 text-[13px] font-bold text-emerald-600 uppercase tracking-widest flex items-center gap-2">
+               <p className="mt-4 text-[14px] font-bold text-emerald-600 uppercase tracking-widest flex items-center gap-2">
                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                  Managed & Optimized
                </p>

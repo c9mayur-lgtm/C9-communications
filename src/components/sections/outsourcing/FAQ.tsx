@@ -58,7 +58,7 @@ export default function FAQ() {
               <AccordionTrigger className="text-[16px] font-normal text-[#0c1024] hover:text-[#5D00D6] hover:no-underline transition-colors  text-left font-sans">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-[15px] text-slate-600 leading-[1.7] pb-4  font-sans">
+              <AccordionContent className="text-[14px] text-slate-600 leading-[1.7] pb-4  font-sans">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>

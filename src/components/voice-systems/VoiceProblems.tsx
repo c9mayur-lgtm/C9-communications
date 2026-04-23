@@ -18,7 +18,7 @@ const PainCard = ({ icon: Icon, title, body, delay }: { icon: any, title: string
     <h3 className="text-[20px] font-bold text-[#0c1024] mb-4 leading-tight tracking-tight group-hover:text-[#5D00D6] transition-colors duration-300">
       {title}
     </h3>
-    <p className="text-gray-500 text-[15px] leading-relaxed font-normal">
+    <p className="text-gray-500 text-[14px] leading-relaxed font-normal">
       {body}
     </p>
     <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent w-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-[24px]" />

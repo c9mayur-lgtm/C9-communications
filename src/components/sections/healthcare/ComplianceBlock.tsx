@@ -30,7 +30,7 @@ export default function ComplianceBlock() {
               Essential 8 Implementation
             </h3>
             
-            <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
+            <p className="text-[14px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
               We map your existing IT environment against the ACSC baseline, highlighting vulnerabilities and delivering a structured roadmap to your target maturity level.
             </p>
 
@@ -42,7 +42,7 @@ export default function ComplianceBlock() {
               ].map((item, index) => (
                 <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
                   <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
-                  <span className="text-[14px] md:text-[15px] font-medium text-gray-300" >
+                  <span className="text-[14px] md:text-[14px] font-medium text-gray-300" >
                     {item}
                   </span>
                 </div>
@@ -65,7 +65,7 @@ export default function ComplianceBlock() {
               Threat Monitoring
             </h3>
             
-            <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
+            <p className="text-[14px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
               Continuous security logging and endpoint behavioral analysis to ensure ransomware, phishing, and unauthorized access attempts are caught instantly.
             </p>
 
@@ -77,7 +77,7 @@ export default function ComplianceBlock() {
               ].map((item, index) => (
                 <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
                   <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
-                  <span className="text-[14px] md:text-[15px] font-medium text-gray-300" >
+                  <span className="text-[14px] md:text-[14px] font-medium text-gray-300" >
                     {item}
                   </span>
                 </div>
@@ -100,7 +100,7 @@ export default function ComplianceBlock() {
               Recovery Assurance
             </h3>
             
-            <p className="text-[15px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
+            <p className="text-[14px] md:text-[16px] text-gray-400 mb-8 leading-relaxed font-normal flex-grow" >
               Immutable backups and rigorously tested disaster recovery protocols designed specifically to protect clinical databases and patient records.
             </p>
 
@@ -112,7 +112,7 @@ export default function ComplianceBlock() {
               ].map((item, index) => (
                 <div key={index} className="flex flex-row items-center gap-4 py-4 border-b border-white/5 px-2">
                   <div className="w-[5px] h-[5px] rounded-full bg-[#A266FF] flex-shrink-0" />
-                  <span className="text-[14px] md:text-[15px] font-medium text-gray-300" >
+                  <span className="text-[14px] md:text-[14px] font-medium text-gray-300" >
                     {item}
                   </span>
                 </div>

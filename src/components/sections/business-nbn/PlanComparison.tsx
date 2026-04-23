@@ -142,7 +142,7 @@ export default function PlanComparison() {
                 </div>
 
                 <div className="mb-10 relative z-10 flex-1">
-                   <p className={`text-[15px] leading-relaxed ${plan.featured ? 'text-gray-400' : 'text-[#6B7280]'}`}>
+                   <p className={`text-[14px] leading-relaxed ${plan.featured ? 'text-gray-400' : 'text-[#6B7280]'}`}>
                       {plan.desc}
                    </p>
                 </div>
@@ -169,7 +169,7 @@ export default function PlanComparison() {
         </div>
 
         <div className="mt-16 text-center">
-           <p className="text-[13px] text-gray-400 italic">
+           <p className="text-[14px] text-gray-400 italic">
               Actual speeds vary based on location, connection type, and network conditions.
            </p>
         </div>

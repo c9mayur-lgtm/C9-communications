@@ -55,7 +55,7 @@ export default function WhatYouGet() {
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
         <div className="flex flex-col mb-16 gap-4 font-sans">
-          <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-6 block" >
+          <span className="text-white text-[14px] font-bold uppercase tracking-[0.25em] mb-6 block" >
             SCOPE OF SERVICE
           </span>
           <h2 className="c9-section-heading !text-white" >
@@ -91,7 +91,7 @@ export default function WhatYouGet() {
 
               <div className="w-full h-[1px] bg-gray-100 mt-auto mb-5"></div>
               
-              <div className="flex items-center text-[13px] font-bold text-[#5D00D6] group-hover:underline uppercase tracking-wider font-sans">
+              <div className="flex items-center text-[14px] font-bold text-[#5D00D6] group-hover:underline uppercase tracking-wider font-sans">
                 {s.link ? 'Learn more' : 'Full Scope Details'}
                 <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </div>

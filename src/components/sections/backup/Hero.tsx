@@ -37,16 +37,16 @@ export default function Hero() {
               C9 manages backup, disaster recovery, and business continuity for Australian businesses — with tested recovery procedures, defined RTOs, and a team that owns the outcome if something goes wrong.
             </p>
             <div className="flex flex-wrap items-center gap-4 mt-8 w-full sm:w-auto">
-              <Button onClick={handleAssessmentRequest} className="flex-1 sm:flex-none bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[15px] shadow-lg shadow-purple-900/20 border-none" style={{ fontFamily: F }}>
+              <Button onClick={handleAssessmentRequest} className="flex-1 sm:flex-none bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[14px] shadow-lg shadow-purple-900/20 border-none" style={{ fontFamily: F }}>
                 Assess My Backup Environment <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <button onClick={scrollToRTO} className="flex-1 sm:flex-none flex items-center justify-center text-[#1A1A2E] border border-[#5D00D6]/20 hover:bg-slate-50 px-8 h-14 rounded-full font-bold transition-all text-[15px]" style={{ fontFamily: F }}>
+              <button onClick={scrollToRTO} className="flex-1 sm:flex-none flex items-center justify-center text-[#1A1A2E] border border-[#5D00D6]/20 hover:bg-slate-50 px-8 h-14 rounded-full font-bold transition-all text-[14px]" style={{ fontFamily: F }}>
                 What is RTO and RPO? <ArrowRight className="ml-2 w-4 h-4" />
               </button>
             </div>
             <div className="flex flex-col gap-2 border-l-2 border-[#5D00D6]/20 pl-4 mt-6">
               {['Tested recovery — not assumed', 'Defined RTO in your agreement', 'Ransomware-resistant storage'].map((t, i) => (
-                <p key={i} className="text-[13px] font-bold text-[#1A1A2E] tracking-tight" style={{ fontFamily: F }}>· {t}</p>
+                <p key={i} className="text-[14px] font-bold text-[#1A1A2E] tracking-tight" style={{ fontFamily: F }}>· {t}</p>
               ))}
             </div>
           </div>

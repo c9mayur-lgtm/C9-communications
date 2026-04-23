@@ -1,19 +1,35 @@
 'use client';
 
 import React from 'react';
-import { Shield, Lock, Globe, Phone, Monitor, Cloud, Headphones, Printer, Wifi, Fingerprint, ChevronLeft, ChevronRight } from 'lucide-react';
+import { 
+  Shield, 
+  Globe, 
+  Phone, 
+  Monitor, 
+  Cloud, 
+  Headphones, 
+  Printer, 
+  Wifi, 
+  Fingerprint, 
+  ChevronLeft, 
+  ChevronRight,
+  Server,
+  Network,
+  FileText,
+  Laptop
+} from 'lucide-react';
 
 const PRODUCTS = [
-  { label: 'Managed IT Services', icon: Shield },
-  { label: 'Telco & Connectivity', icon: Wifi },
-  { label: 'Cybersecurity', icon: Lock },
-  { label: 'Infrastructure & Devices', icon: Monitor },
-  { label: 'Cloud Infrastructure', icon: Cloud },
-  { label: '24/7 Service Desk', icon: Headphones },
-  { label: 'Strategy & Consulting', icon: Globe },
-  { label: 'nbn & Starlink', icon: Wifi },
-  { label: 'Print Solutions', icon: Printer },
-  { label: 'Compliance & E8', icon: Fingerprint },
+  { label: 'Managed Infrastructure', icon: Server },
+  { label: 'Enterprise Fibre', icon: Wifi },
+  { label: 'Managed Cyber Security', icon: Shield },
+  { label: 'Microsoft 365 Ops', icon: Laptop },
+  { label: 'Teams Calling & Voice', icon: Phone },
+  { label: 'Public & Hybrid Cloud', icon: Cloud },
+  { label: 'SD-WAN & Network Ops', icon: Network },
+  { label: 'Managed Service Desk', icon: Headphones },
+  { label: 'Strategic IT Advisory', icon: FileText },
+  { label: 'Asset & Device Lifecycle', icon: Monitor },
 ];
 
 export const WpHeroProducts = () => {
@@ -35,12 +51,12 @@ export const WpHeroProducts = () => {
         {/* Header Area following the Page's "Regular Pattern" */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
-            <span className="c9-eyebrow mb-6 block">SERVICES / WHAT WE DO</span>
+            <span className="c9-eyebrow mb-6 block">INFRASTRUCTURE OPERATIONS</span>
             <h2 className="c9-section-heading mb-8">
-              End-to-end IT, Telco, and Security—designed, delivered, and managed as one system.
+              End-to-end IT, Telco, and Security—operated as a single controlled system.
             </h2>
             <p className="c9-body mb-8 max-w-[640px]">
-              Everything works together. One provider. No gaps.
+              We eliminate vendor silos. No gaps. No blame shifting.
             </p>
           </div>
 

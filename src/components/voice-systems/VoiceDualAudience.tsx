@@ -62,18 +62,18 @@ export const VoiceDualAudience = () => {
                 Simple, reliable phones for your whole team —{' '}
                 <span className="text-[#5D00D6]">set up in days, not weeks.</span>
               </h3>
-              <p className="text-gray-500 text-[15px] leading-relaxed mb-8">
+              <p className="text-gray-500 text-[14px] leading-relaxed mb-8">
                 You tell us how many people, what numbers you want to keep, and where your team works. We set up everything, port your numbers, and hand you a system that just works. You call us if anything needs changing.
               </p>
               <ul className="space-y-3 mb-10">
                 {['Keep your existing numbers', 'Works on desk phones and mobiles', 'One monthly bill, no surprises', 'Australian support team included'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[#0c1024] font-medium text-[15px]">
+                  <li key={i} className="flex items-center gap-3 text-[#0c1024] font-medium text-[14px]">
                     <CheckCircle2 size={18} className="text-[#5D00D6] shrink-0" strokeWidth={2.5} />
                     {item}
                   </li>
                 ))}
               </ul>
-              <Link href="#voice-lead" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[15px] hover:gap-3 transition-all">
+              <Link href="#voice-lead" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] hover:gap-3 transition-all">
                 Get a simple quote <ArrowRight size={16} />
               </Link>
             </div>
@@ -104,18 +104,18 @@ export const VoiceDualAudience = () => {
                 Multi-site. Microsoft Teams integrated.{' '}
                 <span className="text-[#5D00D6]">Contact centre ready.</span>
               </h3>
-              <p className="text-slate-400 text-[15px] leading-relaxed mb-8">
+              <p className="text-slate-400 text-[14px] leading-relaxed mb-8">
                 C9 Voice scales across every office, every country, every device. SLAs with teeth, 99.95% uptime guarantee, full Teams Direct Routing, and a dedicated account manager who knows your infrastructure.
               </p>
               <ul className="space-y-3 mb-10">
                 {['Multi-site & multi-country', 'Microsoft Teams Direct Routing', 'Contact centre layer available', 'Dedicated account manager', 'SLA-backed uptime guarantee'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-300 font-medium text-[15px]">
+                  <li key={i} className="flex items-center gap-3 text-slate-300 font-medium text-[14px]">
                     <CheckCircle2 size={18} className="text-[#5D00D6] shrink-0" strokeWidth={2.5} />
                     {item}
                   </li>
                 ))}
               </ul>
-              <Link href="#voice-lead" className="inline-flex items-center gap-2 text-white font-bold text-[15px] hover:gap-3 transition-all group/link">
+              <Link href="#voice-lead" className="inline-flex items-center gap-2 text-white font-bold text-[14px] hover:gap-3 transition-all group/link">
                 Talk to an enterprise specialist <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>

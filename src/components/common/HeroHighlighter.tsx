@@ -45,7 +45,7 @@ export const HeroHighlighter = () => {
               <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center group-hover:bg-[#5D00D6]/10 transition-colors">
                 {React.cloneElement(point.icon as React.ReactElement<{ className?: string }>, { className: "w-6 h-6 text-[#5D00D6]" })}
               </div>
-              <p className="text-slate-900 text-[13px] font-bold leading-tight max-w-[200px] tracking-tight">
+              <p className="text-slate-900 text-[14px] font-bold leading-tight max-w-[200px] tracking-tight">
                 {point.text}
               </p>
             </div>

@@ -152,7 +152,7 @@ export const WpTechTabs = () => {
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
                     <h3 className="text-[20px] font-bold text-[#0c1024] mb-3">{card.title}</h3>
-                    <p className="text-gray-500 text-[15px] leading-relaxed mb-8 flex-grow">
+                    <p className="text-gray-500 text-[14px] leading-relaxed mb-8 flex-grow">
                       {card.desc}
                     </p>
                     <Link 

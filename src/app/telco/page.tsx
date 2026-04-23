@@ -314,7 +314,7 @@ const SectionResilience = () => (
                    ].map((item, i) => (
                      <div key={i} className="flex items-center justify-between">
                         <div>
-                           <div className="text-[13px] font-bold text-white mb-0.5">{item.label}</div>
+                           <div className="text-[14px] font-bold text-white mb-0.5">{item.label}</div>
                            <div className="text-[11px] text-white/40 uppercase tracking-widest">{item.val}</div>
                         </div>
                         <div className={`text-[12px] font-black uppercase tracking-widest ${item.color}`}>
@@ -345,39 +345,37 @@ const SectionResilience = () => (
    SECTION 6 — HOW IT WORKS (EXECUTION)
    ───────────────────────────────────────────────────────── */
 const SectionProcess = () => (
-  <section className="py-16 lg:py-20 bg-white">
-    <div className={C}>
-      <div className="max-w-3xl mx-auto text-center mb-16">
-        <FadeIn>
-          <span className="c9-eyebrow mb-4">The Execution Model</span>
-          <h2 className="c9-section-heading">Structured Deployment. No Disruption.</h2>
-        </FadeIn>
-      </div>
+   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+         <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeIn>
+               <span className="c9-eyebrow mb-4">The Execution Model</span>
+               <h2 className="c9-section-heading mb-6">Structured Deployment. No Disruption.</h2>
+               <p className="c9-body text-slate-600">We utilize a structured deployment model to ensure every link triggers a specific operational workflow.</p>
+            </FadeIn>
+         </div>
 
-      <div className="grid md:grid-cols-4 gap-8 relative">
-        {/* Connector Line */}
-        <div className="hidden lg:block absolute top-12 left-0 w-full h-px bg-slate-100 -z-10" />
-        
-        {[
-          { icon: <Search size={20} />, title: "Assess", desc: "We audit your current environment and identify risks." },
-          { icon: <GitBranch size={20} />, title: "Design", desc: "Engineering a resilient, fail-safe network architecture." },
-          { icon: <Settings size={20} />, title: "Deploy", desc: "Rapid rollout with zero operational downtime." },
-          { icon: <Monitor size={20} />, title: "Monitor", desc: "24/7 management to ensure continuous uptime." }
-        ].map((step, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="text-center">
-            <div className="w-20 h-20 bg-white border-2 border-slate-100 rounded-full flex items-center justify-center text-[#5D00D6] mx-auto mb-6 shadow-sm relative bg-white">
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold border-4 border-white">
-                {i + 1}
-              </div>
-              {step.icon}
-            </div>
-            <h4 className="font-extrabold text-slate-900 mb-2">{step.title}</h4>
-            <p className="text-[13px] text-slate-500 leading-relaxed px-4">{step.desc}</p>
-          </FadeIn>
-        ))}
+         <div className="grid md:grid-cols-4 gap-6 relative">
+            {[
+               { step: '01', title: "Assess", desc: "We audit your current environment and identify risks." },
+               { step: '02', title: "Design", desc: "Engineering a resilient, fail-safe network architecture." },
+               { step: '03', title: "Deploy", desc: "Rapid rollout with zero operational downtime." },
+               { step: '04', title: "Monitor", desc: "24/7 management to ensure continuous uptime." }
+            ].map((s, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
+                     {s.step}
+                  </div>
+                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
+                     {i + 1}
+                  </div>
+                  <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
+                  <p className="text-slate-500 text-[15px] leading-relaxed relative z-10">{s.desc}</p>
+               </FadeIn>
+            ))}
+         </div>
       </div>
-    </div>
-  </section>
+   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
@@ -498,7 +496,7 @@ const SectionOutcomes = () => (
                 <p className="c9-body text-slate-600 mb-10">
                    When connectivity is a given, your leadership team can stop worrying about outages and start focusing on scale.
                 </p>
-                <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all">
+                <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all">
                    Start with a consultation
                 </a>
              </FadeIn>

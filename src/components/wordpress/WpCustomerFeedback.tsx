@@ -54,7 +54,7 @@ export const WpCustomerFeedback = () => {
               <h3 className="text-[18px] font-bold text-[#0c1024] mb-4 text-center md:text-left tracking-wide">
                 {item.company}
               </h3>
-              <p className="text-gray-500 text-[15px] leading-relaxed italic mb-4 text-center md:text-left">
+              <p className="text-gray-500 text-[14px] leading-relaxed italic mb-4 text-center md:text-left">
                 {item.quote}
               </p>
               <p className="text-[#0c1024] font-bold text-center md:text-left text-[14px]">

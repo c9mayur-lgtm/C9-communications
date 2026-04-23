@@ -67,7 +67,7 @@ export default function SupportTiers() {
                 <v.icon size={40} strokeWidth={1.5} className="text-[#5D00D6]" />
               </div>
               <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4 tracking-tight leading-tight">{v.title}</h3>
-              <p className="text-gray-500 text-[15px] leading-relaxed">
+              <p className="text-gray-500 text-[14px] leading-relaxed">
                 {v.desc}
               </p>
             </motion.div>

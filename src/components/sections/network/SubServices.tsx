@@ -141,7 +141,7 @@ const IPTransitVisual = () => (
         transition={{ duration: 4, repeat: Infinity }}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-20 bg-white border-2 border-[#5D00D6]/40 rounded-2xl flex flex-col items-center justify-center shadow-lg z-10"
       >
-        <span className="font-['Proxima_Nova'] text-[13px] font-bold text-[#5D00D6]">C9 Core</span>
+        <span className="font-['Proxima_Nova'] text-[14px] font-bold text-[#5D00D6]">C9 Core</span>
         <span className="font-['Proxima_Nova'] text-[10px] font-medium text-slate-500">BGP Router</span>
         <span className="font-['Proxima_Nova'] text-[8.5px] font-medium text-[#5D00D6]/60 mt-0.5 tracking-tight">Full Routing</span>
       </motion.div>

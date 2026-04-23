@@ -106,7 +106,7 @@ export default function ContactCentreHero() {
                                 <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/10 border border-[#5D00D6]/20 flex items-center justify-center text-[#5D00D6] shrink-0">
                                     <item.icon size={20} />
                                 </div>
-                                <span className="text-white/80 font-medium text-[15px] pt-3 leading-tight">{item.title}</span>
+                                <span className="text-white/80 font-medium text-[14px] pt-3 leading-tight">{item.title}</span>
                             </li>
                         ))}
                     </ul>

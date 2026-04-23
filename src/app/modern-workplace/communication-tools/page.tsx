@@ -263,7 +263,7 @@ export default function CommunicationToolsPage() {
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Caller" className="w-full h-full object-cover" />
                      </div>
                      <h3 className="font-bold text-[#0c1024] text-[18px] z-10">Sarah Jenkins</h3>
-                     <p className="text-gray-500 text-[13px] z-10 mb-8 font-mono">00:04:22</p>
+                     <p className="text-gray-500 text-[14px] z-10 mb-8 font-mono">00:04:22</p>
 
                      {/* Call controls */}
                      <div className="flex gap-4 z-10">
@@ -310,7 +310,7 @@ export default function CommunicationToolsPage() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
-                    <p className="mb-5 text-[15px] leading-relaxed text-gray-500">{item.description}</p>
+                    <p className="mb-5 text-[14px] leading-relaxed text-gray-500">{item.description}</p>
                     <ul className="space-y-2">
                       {item.bullets.map((bullet) => (
                         <li key={bullet} className="text-[14px] font-medium text-gray-600 flex items-start gap-2">
@@ -342,7 +342,7 @@ export default function CommunicationToolsPage() {
                 <article className={cardClassName}>
                   <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.15em] text-[#5D00D6]">{item.subtitle}</p>
                   <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
-                  <p className="mb-5 text-[15px] leading-relaxed text-gray-500">{item.description}</p>
+                  <p className="mb-5 text-[14px] leading-relaxed text-gray-500">{item.description}</p>
                   <ul className="space-y-2">
                     {item.outcomes.map((outcome) => (
                       <li key={outcome} className="text-[14px] font-medium text-gray-600 flex items-start gap-2">
@@ -369,7 +369,7 @@ export default function CommunicationToolsPage() {
 
           <FadeUp delay={0.2} className="overflow-hidden rounded-[24px] border border-gray-100 bg-white">
             <div className="grid grid-cols-1 bg-gray-50/50 lg:grid-cols-3">
-              <div className="border-b border-gray-100 p-6 text-[13px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] lg:border-b-0 lg:border-r">
+              <div className="border-b border-gray-100 p-6 text-[14px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] lg:border-b-0 lg:border-r">
                 Comparison area
               </div>
               <div className="border-b border-gray-100 p-6 text-[20px] font-bold lg:border-b-0 lg:border-r">Teams Calling</div>
@@ -378,13 +378,13 @@ export default function CommunicationToolsPage() {
 
             {comparisonRows.map((row) => (
               <div key={row.label} className="grid grid-cols-1 border-t border-gray-100 lg:grid-cols-3 hover:bg-gray-50/50 transition-colors">
-                <div className="border-b border-gray-100 p-6 text-[13px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] lg:border-b-0 lg:border-r">
+                <div className="border-b border-gray-100 p-6 text-[14px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] lg:border-b-0 lg:border-r">
                   {row.label}
                 </div>
-                <div className="border-b border-gray-100 p-6 text-[15px] leading-relaxed text-gray-600 lg:border-b-0 lg:border-r">
+                <div className="border-b border-gray-100 p-6 text-[14px] leading-relaxed text-gray-600 lg:border-b-0 lg:border-r">
                   {row.teamsCalling}
                 </div>
-                <div className="p-6 text-[15px] leading-relaxed text-gray-600">{row.c9Voice}</div>
+                <div className="p-6 text-[14px] leading-relaxed text-gray-600">{row.c9Voice}</div>
               </div>
             ))}
           </FadeUp>
@@ -448,12 +448,12 @@ export default function CommunicationToolsPage() {
                          <ModelIcon size={24} />
                       </div>
                       <h3 className="text-[22px] font-bold text-white mb-4 tracking-tight">{model}</h3>
-                      <p className="text-white/40 text-[15px] leading-relaxed mb-6">
+                      <p className="text-white/40 text-[14px] leading-relaxed mb-6">
                         {activeTab.id === 'desk-phones' && 'Premium desk phone with HD audio and busy lamp support for power users.'}
                         {activeTab.id === 'meeting-rooms' && 'All-in-one meeting bar with AI tracking and one-touch join capabilities.'}
                         {activeTab.id === 'mobile-dect' && 'Ruggedized mobile handset for teams that require constant workplace mobility.'}
                       </p>
-                      <div className="flex items-center gap-2 text-[#5D00D6] text-[13px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="flex items-center gap-2 text-[#5D00D6] text-[14px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                          Details <ArrowRight size={14} />
                       </div>
                       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#5D00D6]/20 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
@@ -468,7 +468,7 @@ export default function CommunicationToolsPage() {
                  <div className="w-8 h-8 rounded-full bg-[#5D00D6]/20 flex items-center justify-center text-[#5D00D6]">
                    <PackageCheck size={16} />
                  </div>
-                 <span className="text-white/80 text-[15px] font-bold">{activeTab.headline}</span>
+                 <span className="text-white/80 text-[14px] font-bold">{activeTab.headline}</span>
                </div>
                <div className="text-white/40 text-[14px]">
                  <span className="text-[#5D00D6] font-bold mr-2">// FIT:</span>
@@ -494,7 +494,7 @@ export default function CommunicationToolsPage() {
                 <article className={cardClassName}>
                   <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] bg-[#5D00D6]/5 inline-flex px-3 py-1 rounded-full">{item.step}</p>
                   <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
-                  <p className="text-[15px] leading-relaxed text-gray-500">{item.detail}</p>
+                  <p className="text-[14px] leading-relaxed text-gray-500">{item.detail}</p>
                   <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                 </article>
               </FadeUp>
@@ -516,19 +516,19 @@ export default function CommunicationToolsPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[15px] font-bold text-white transition hover:bg-[#7116FF]"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[14px] font-bold text-white transition hover:bg-[#7116FF]"
               >
                 Request Proposal
               </Link>
               <Link
                 href="/resources"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[15px] font-bold text-white transition hover:border-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
               >
                 Download Guide
               </Link>
               <a
                 href="tel:1800000299"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[15px] font-bold text-white transition hover:border-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
               >
                 Call 1800 000 299
               </a>

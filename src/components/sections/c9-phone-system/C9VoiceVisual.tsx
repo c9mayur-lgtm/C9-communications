@@ -99,7 +99,7 @@ export const C9VoiceVisual = () => {
         className="absolute bottom-10 right-20 w-[240px] bg-white rounded-[32px] border-2 border-dashed border-[#5D00D6]/10 p-6 shadow-sm z-10"
       >
         <div className="flex flex-col items-center gap-3">
-          <span className="text-[13px] font-bold text-[#0c1024]">C9 Voice IP Telephony</span>
+          <span className="text-[14px] font-bold text-[#0c1024]">C9 Voice IP Telephony</span>
           <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] relative">
             <Cloud size={24} />
             <div className="absolute inset-0 bg-[#5D00D6]/10 rounded-2xl animate-ping opacity-20" />

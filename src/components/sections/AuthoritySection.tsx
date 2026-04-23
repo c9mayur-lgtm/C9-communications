@@ -61,7 +61,7 @@ export const AuthoritySection = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">{point.title}</h3>
-                    <p className="text-slate-400 text-[15px] leading-relaxed font-dm-sans">
+                    <p className="text-slate-400 text-[14px] leading-relaxed font-dm-sans">
                       {point.description}
                     </p>
                   </div>

@@ -81,7 +81,7 @@ export default function Services() {
                 <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
               </div>
               <h3 className="c9-card-title mb-4 !text-[20px]">{s.title}</h3>
-              <p className="c9-body !text-[15px] mb-8 flex-grow">{s.desc}</p>
+              <p className="c9-body !text-[14px] mb-8 flex-grow">{s.desc}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {s.tags.map((tag, ti) => (
                   <span key={ti} className="c9-eyebrow !text-[10px] !text-[#5D00D6] bg-[#5D00D6]/10 px-3 py-1.5 rounded-full">

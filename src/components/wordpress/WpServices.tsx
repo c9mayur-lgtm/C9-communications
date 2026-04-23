@@ -13,9 +13,9 @@ export const WpServices = () => {
       {/* Telco Services Section (Matching Reference Image) */}
       <section className="py-10 md:py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <div className="mb-14">
-            <span className="c9-eyebrow mb-6 block">C9 TELCO & CONNECTIVITY</span>
-            <h2 className="c9-section-heading mb-8">
+          <div className="mb-8">
+            <span className="c9-eyebrow mb-4 block">C9 TELCO & CONNECTIVITY</span>
+            <h2 className="c9-section-heading mb-6">
               One provider for every connection your business needs.
             </h2>
             
@@ -33,7 +33,7 @@ export const WpServices = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTelcoTab(tab.id)}
-                    className={`flex items-center gap-2 md:gap-3 px-4 md:px-8 py-4 md:py-5 text-[14px] md:text-[15px] font-bold transition-all border-b-2 relative shrink-0 ${
+                    className={`flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 md:py-4 text-[14px] font-bold transition-all border-b-2 relative shrink-0 ${
                       isActive 
                         ? 'text-[#5D00D6] border-[#5D00D6] bg-[#F4F0FA]' 
                         : 'text-gray-500 border-transparent hover:text-gray-700 hover:bg-gray-50'
@@ -55,7 +55,7 @@ export const WpServices = () => {
           </div>
 
           {/* Tab Content Area */}
-          <div className="py-6 md:py-10">
+          <div className="py-4 md:py-6">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTelcoTab}
@@ -125,15 +125,15 @@ export const WpServices = () => {
                   {TELCO_SERVICES_CONTENT[activeTelcoTab].options.map((option: any, idx: number) => (
                     <div 
                       key={idx} 
-                      className="group flex items-start justify-between p-6 bg-white border border-gray-100 rounded-xl hover:border-[#5D00D6] hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all cursor-pointer"
+                      className="group flex items-start justify-between p-4 md:p-5 bg-white border border-gray-100 rounded-xl hover:border-[#5D00D6] hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all cursor-pointer"
                     >
                       <div className="flex items-start gap-5">
-                        <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0 overflow-hidden mt-1">
+                        <div className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0 overflow-hidden mt-1">
                           {option.icon}
                         </div>
                         <div>
-                          <h4 className="c9-card-title !text-[18px] md:!text-[24px] mb-1 leading-tight">{option.title}</h4>
-                          <p className="c9-body !text-[14px] md:!text-[18px] font-normal leading-relaxed">{option.desc}</p>
+                          <h4 className="c9-card-title !text-[18px] md:!text-[22px] mb-1 leading-tight">{option.title}</h4>
+                          <p className="c9-body !text-[14px] md:!text-[16px] font-normal leading-relaxed">{option.desc}</p>
                         </div>
                       </div>
                     </div>

@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 md:px-8 w-full max-w-[1240px]">
         <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-6 items-center relative z-10 w-full">
           <div className="py-4 pr-0 xl:pr-6">
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
+            <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.3em] mb-4 block" >
               NON-PROFIT
             </span>
             <h1 className="text-[38px] sm:text-[48px] md:text-[52px] lg:text-[62px] font-bold tracking-tight mb-6 text-[#0c1024] leading-[1.08]" >

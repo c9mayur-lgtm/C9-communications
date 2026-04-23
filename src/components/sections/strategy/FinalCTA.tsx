@@ -27,7 +27,7 @@ export default function FinalCTA() {
           </a>
         </div>
 
-        <div className="text-[13px] text-slate-600 text-center mt-8  opacity-80 uppercase tracking-widest font-bold font-sans">
+        <div className="text-[14px] text-slate-600 text-center mt-8  opacity-80 uppercase tracking-widest font-bold font-sans">
           Australian team · Responds within 1 business day · No lock-in consultations
         </div>
       </div>

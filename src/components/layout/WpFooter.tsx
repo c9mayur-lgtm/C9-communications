@@ -54,7 +54,7 @@ export const WpFooter = () => {
             <div className="flex flex-col gap-4 pt-4 border-t border-white/5">
                 <p className="text-[11px] text-gray-500 font-bold uppercase tracking-widest leading-none">Stay in the loop</p>
                 <div className="bg-transparent rounded-lg border border-[#333] flex items-center overflow-hidden focus-within:border-[#5D00D6] transition-colors">
-                  <input type="email" placeholder="Email" className="bg-transparent px-4 py-3 w-full text-[13px] outline-none text-white placeholder-gray-600" />
+                  <input type="email" placeholder="Email" className="bg-transparent px-4 py-3 w-full text-[14px] outline-none text-white placeholder-gray-600" />
                   <button className="bg-[#5D00D6] p-3 hover:bg-[#4d00b3] transition-colors">
                     <ArrowRight size={16} />
                   </button>
@@ -100,7 +100,7 @@ export const WpFooter = () => {
             <div className="hidden lg:block w-[1px] h-14 bg-gray-200"></div>
 
             {/* Address Section - Narrow Stack */}
-            <div className="text-[13px] text-gray-600 leading-[1.6] text-center lg:text-left max-w-[120px]">
+            <div className="text-[14px] text-gray-600 leading-[1.6] text-center lg:text-left max-w-[120px]">
               level 3 480 Collins Street Melbourne 3000
             </div>
 
@@ -143,14 +143,14 @@ export const WpFooter = () => {
           <div className="w-full h-px bg-gray-100 mb-2"></div>
 
           {/* Legal Links Row */}
-          <div className="flex justify-center items-center gap-8 mb-2 text-[13px] font-semibold text-[#5D00D6]">
+          <div className="flex justify-center items-center gap-8 mb-2 text-[14px] font-semibold text-[#5D00D6]">
             <a href="/terms" className="hover:underline">Terms of Use</a>
             <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
           </div>
 
           {/* Acknowledgement of Country */}
           <div className="max-w-4xl mx-auto text-center border-t border-gray-50 pt-4">
-            <p className="text-[13px] md:text-[15px] text-gray-400 italic leading-[1.8] font-medium opacity-80">
+            <p className="text-[14px] md:text-[14px] text-gray-400 italic leading-[1.8] font-medium opacity-80">
               We acknowledge the Traditional Owners on whose lands we work. We pay our respects to their elders past and present and recognise their continuing connection to this land.
             </p>
           </div>

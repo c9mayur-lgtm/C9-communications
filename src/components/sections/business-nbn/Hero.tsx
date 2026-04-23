@@ -146,7 +146,7 @@ export default function Hero() {
                     const el = document.getElementById('consultation-section');
                     if (el) el.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="bg-[#5D00D6] text-white px-6 md:px-10 font-bold text-[14px] md:text-[15px] hover:bg-[#4B00AD] transition-all whitespace-nowrap h-full"
+                  className="bg-[#5D00D6] text-white px-6 md:px-10 font-bold text-[14px] md:text-[14px] hover:bg-[#4B00AD] transition-all whitespace-nowrap h-full"
                 >
                   Check Availability
                 </button>
@@ -158,7 +158,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8">
               <button 
                 onClick={scrollToPlanComparison} 
-                className="bg-[#5D00D6] text-white px-8 py-4 rounded-full font-bold text-[15px] hover:bg-[#4B00AD] transition-all shadow-xl shadow-purple-900/20"
+                className="bg-[#5D00D6] text-white px-8 py-4 rounded-full font-bold text-[14px] hover:bg-[#4B00AD] transition-all shadow-xl shadow-purple-900/20"
               >
                 Get My Business Connected
               </button>
@@ -168,7 +168,7 @@ export default function Hero() {
                   const el = document.getElementById('consultation-section');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-[15px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors cursor-pointer"
+                className="text-[14px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors cursor-pointer"
               >
                 Speak to an Expert <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </button>
@@ -274,7 +274,7 @@ export default function Hero() {
                   <Wifi size={10} className={failoverActive ? 'text-[#5D00D6]' : 'text-[#9CA3AF]'} />
                   <span className="text-[9px] text-[#9CA3AF] uppercase tracking-wider">Failover</span>
                 </div>
-                <span className={`text-[13px] font-bold leading-none ${failoverActive ? 'text-[#5D00D6]' : 'text-green-600'}`}>
+                <span className={`text-[14px] font-bold leading-none ${failoverActive ? 'text-[#5D00D6]' : 'text-green-600'}`}>
                   {failoverActive ? '4G LTE' : 'Ready'}
                 </span>
               </div>

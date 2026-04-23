@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, notFound } from 'next/navigation';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Share2, Linkedin, Twitter, Mail, ArrowLeft, ArrowRight, ChevronRight, TrendingUp, Zap, Target, CheckCircle, BarChart3, Activity } from 'lucide-react';
+import { Share2, Linkedin, Twitter, Mail, ArrowLeft, ArrowRight, ChevronRight, TrendingUp, Zap, Target, CheckCircle, CheckCircle2, BarChart3, Activity } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -41,203 +41,226 @@ const ShieldAlert = ({ size, className }: { size: number; className: string }) =
    REPRESENTATIVE CASE STUDY DATA
    ───────────────────────────────────────────────────────── */
 const CASE_STUDIES: Record<string, any> = {
-  'retail-pos-stabilisation': {
-    eyebrow: 'Retail & E-commerce',
-    title: 'Stabilising a Failing POS Network for National Logistics',
-    summary: 'How we took over a major retail group suffering from frequent outages and achieved zero downtime in 3 weeks.',
+  'multi-site-retail-stabilisation': {
+    eyebrow: 'Multi-Site Environment',
+    title: 'Consolidating National Retail Operations: 142 Sites Stabilised',
+    summary: 'Eliminating 40+ hours of monthly downtime through vendor consolidation and SD-WAN deployment.',
     author: 'David Peterson',
     role: 'Head of Infrastructure @ C9',
     time: '6 Min Read',
     img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200',
     sections: [
-      { id: 'challenge', label: 'The Technical Debt' },
-      { id: 'solution', label: 'The Transition Model' },
-      { id: 'outcomes', label: 'Operational Impact' }
+      { id: 'situation', label: 'Fragmented Environment' },
+      { id: 'risk', label: 'Operational Exposure' },
+      { id: 'implementation', label: 'Consolidation Layer' },
+      { id: 'outcomes', label: 'Measurable Impact' }
     ],
     content: (
       <>
         <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
-          When this national logistics partner approached C9, their biggest risk wasn&apos;t their competitors—it was their POS network. With 5 regional sites frequently losing connectivity during peak hours, the business was losing thousands in revenue every week.
+          A national retail distribution group was suffering from systemic revenue leakage caused by fragmented vendor management across 142 locations.
         </p>
 
-        <h2 id="challenge" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">The Technical Debt</h2>
+        <h2 id="situation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Fragmented Environment</h2>
         <p>
-          The client was managing five different ISPs across five different sites. There was zero network standardisation, and their previous IT provider was purely reactive. When a site went offline, the coordination between the ISP and the IT vendor usually took days, not hours.
+          The client was managing over 9 different ISP and MSP contracts. This fragmentation led to 40+ hours of monthly aggregate downtime, with zero visibility into store-level latency. Support was entirely reactive, relying on store managers to report outages manually.
         </p>
-        <ul>
-          <li><strong>Fragmented ISP Management:</strong> Multiple bills, multiple support queues, and zero accountability.</li>
-          <li><strong>Outdated Hardware:</strong> Core switches were over 6 years old and lacked proper failover capabilities.</li>
-          <li><strong>No Monitoring:</strong> Issues were only identified once a manager called to complain about a "blackout."</li>
-        </ul>
+
+        <h2 id="risk" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Operational Exposure</h2>
+        <p>
+          Audit identified a single point of failure in the legacy MPLS backbone. Unpatched edge devices at store locations created critical security vulnerabilities, and there was a high probability of a site-wide POS blackout during peak seasonal trading.
+        </p>
 
         <div className="my-12 bg-slate-50 border-l-4 border-[#5D00D6] p-6 lg:p-8 rounded-r-2xl">
           <h4 className="flex items-center gap-2 text-[#5D00D6] font-extrabold text-[12px] uppercase tracking-widest mb-3">
-            <ShieldAlert size={14} className="text-rose-500" /> Critical Risk Identified
+            <Activity size={14} className="text-rose-500" /> Critical Risk Identified
           </h4>
           <p className="text-slate-800 text-[17px] font-semibold leading-relaxed m-0">
-            The primary site had no failover internet line. A single fiber cut would have halted 40% of the company&apos;s transaction volume instantly.
+            Site-wide POS dependency on a single unmanaged link was identified as the primary risk to Q4 revenue targets.
           </p>
         </div>
 
-        <h2 id="solution" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">The Transition Model</h2>
+        <h2 id="implementation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Consolidation Layer</h2>
         <p>
-          C9 implemented our <strong>Parallel Transition Model</strong>. We didn&apos;t rip out their old network on day one. Instead, we built the new C9-managed core alongside their existing setup, validating every connection before migrating traffic.
-        </p>
-        <p>
-          We consolidated all sites under a single SD-WAN architecture with automated 4G/5G failover. This meant that even if the primary fiber line failed, the POS system would stay online without the staff even noticing a flicker.
+          C9 implemented a centralised SD-WAN overlay, consolidating all 142 sites under a single management plane. We integrated 4G failover at every location and established a proactive monitoring layer that alerts engineers before a site goes offline.
         </p>
 
-        <figure className="my-14">
-          <img 
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200" 
-            alt="Engineers monitoring network health" 
-            className="w-full h-auto rounded-[24px] object-cover aspect-[16/9] shadow-lg shadow-slate-200"
-          />
-          <figcaption className="text-center text-[13px] font-medium text-slate-400 mt-4">
-            Monitoring the live migration of the Melbourne logistics hub.
-          </figcaption>
-        </figure>
-
-        <h2 id="outcomes" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Operational Impact</h2>
-        <p>
-          The result was an immediate stabilisation of business operations. In the 12 months since the takeover, the client has experienced <strong>zero outages</strong> across all 5 sites.
-        </p>
-
-        <div className="grid grid-cols-2 gap-6 my-10">
+        <h2 id="outcomes" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Measurable Impact</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-10">
           <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 p-6 rounded-2xl text-center">
-            <div className="text-[36px] font-black text-[#5D00D6] mb-1">100%</div>
-            <div className="text-[13px] font-bold text-slate-600">Site Uptime</div>
+            <div className="text-[28px] font-black text-[#5D00D6] mb-1">99.99%</div>
+            <div className="text-[11px] font-bold text-slate-600 uppercase">Uptime</div>
           </div>
           <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 p-6 rounded-2xl text-center">
-            <div className="text-[36px] font-black text-[#5D00D6] mb-1">32%</div>
-            <div className="text-[13px] font-bold text-slate-600">Cost Reduction</div>
+            <div className="text-[28px] font-black text-[#5D00D6] mb-1">70%</div>
+            <div className="text-[11px] font-bold text-slate-600 uppercase">MTTR Reduction</div>
+          </div>
+          <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 p-6 rounded-2xl text-center">
+            <div className="text-[28px] font-black text-[#5D00D6] mb-1">9 → 1</div>
+            <div className="text-[11px] font-bold text-slate-600 uppercase">Vendors</div>
+          </div>
+          <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 p-6 rounded-2xl text-center">
+            <div className="text-[28px] font-black text-[#5D00D6] mb-1">85%</div>
+            <div className="text-[11px] font-bold text-slate-600 uppercase">Incidents ↓</div>
           </div>
         </div>
       </>
     )
   },
-  'legal-firm-takeover': {
-    eyebrow: 'Professional Services',
-    title: 'Fixing Poor IT Response Times for Wilson & Co Legal',
-    summary: 'How a prominent firm achieved 60% faster resolution and secure hybrid work for 40+ staff.',
+  'financial-vendor-consolidation': {
+    eyebrow: 'Vendor Consolidation',
+    title: 'Financial Services: Reducing OpEx by 35% through Consolidation',
+    summary: 'Moving from 12 uncoordinated vendors to a single accountable partner for core infrastructure.',
     author: 'James Wilson',
-    role: 'Director @ Wilson & Co',
+    role: 'Infrastructure Strategist @ C9',
     time: '5 Min Read',
-    img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200',
+    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
     sections: [
-      { id: 'situation', label: 'The Bottleneck' },
-      { id: 'action', label: 'Moving to Managed IT' },
-      { id: 'results', label: 'Executive Metrics' }
+      { id: 'situation', label: 'Billing Fragmentation' },
+      { id: 'risk', label: 'Security Gaps' },
+      { id: 'implementation', label: 'Unified Stack' },
+      { id: 'results', label: 'Financial Outcomes' }
     ],
     content: (
       <>
         <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
-          For a high-volume law firm, time isn&apos;t just money—it&apos;s reputation. Wilson & Co were losing hundreds of billable hours every month due to "minor" IT glitches that took days to resolve.
+          A mid-market financial services firm was managing 12 different telco and IT invoices, leading to massive administrative overhead and critical support delays.
         </p>
 
-        <h2 id="situation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">The Bottleneck</h2>
+        <h2 id="situation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Billing Fragmentation</h2>
         <p>
-          Their previous provider was a one-man shop that was overwhelmed. Simple password resets or printer issues were taking over 24 hours. Critical server errors were met with silence.
-        </p>
-        <p>
-          Furthermore, the firm had no secure way for partners to work from home, leading to risky workarounds like emailing sensitive client files to personal Gmail accounts.
+          Internal IT staff were spending 15+ hours weekly just on invoice reconciliation and chasing vendors for status updates on cross-platform issues. There was no single point of accountability for system-wide failures.
         </p>
 
-        <h2 id="action" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Moving to Managed IT</h2>
+        <h2 id="risk" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Security Gaps</h2>
         <p>
-          C9 took over the environment on a Friday evening. Over the weekend, we deployed our managed endpoint protection across all 45 workstations and implemented a secure, encrypted VPN for hybrid work.
-        </p>
-        <p>
-          We moved their on-premise document management system to a secure managed cloud environment, ensuring that files were accessible, backed up, and compliant with legal data regulations.
+          Audit revealed overlapping security tools that were not communicating. This created blind spots in the threat detection layer, posing a significant risk to the firm&apos;s compliance posture and client data integrity.
         </p>
 
-        <div className="my-12 bg-[#0c1024] text-white p-8 lg:p-12 rounded-[32px] relative overflow-hidden">
-           <div className="absolute top-0 right-0 p-8 opacity-10"><Zap size={120} /></div>
-           <h4 className="text-[#a56eff] font-black text-[12px] uppercase tracking-widest mb-4">The C9 Difference</h4>
-           <p className="text-white text-[20px] font-bold leading-relaxed m-0 relative z-10">
-              &ldquo;We didn&apos;t just fix their printers; we secured their billable hours. By moving to a managed model, the firm gained an entire IT department for less than the cost of one junior hire.&rdquo;
-           </p>
-        </div>
+        <h2 id="implementation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Unified Stack</h2>
+        <p>
+          C9 executed a full infrastructure takeover, consolidating all vendor contracts into a single managed agreement. We unified the security stack under a centralised SOC and stabilised core connectivity links with a primary-secondary failover model.
+        </p>
 
-        <h2 id="results" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Executive Metrics</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+        <div className="my-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-            <div className="text-2xl font-black text-[#5D00D6] mb-1">60s</div>
-            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Support Answer</div>
+            <div className="text-2xl font-black text-[#5D00D6] mb-1">35%</div>
+            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">OpEx Reduction</div>
           </div>
           <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
             <div className="text-2xl font-black text-[#5D00D6] mb-1">100%</div>
-            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Remote Security</div>
+            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Visibility</div>
           </div>
           <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-            <div className="text-2xl font-black text-[#5D00D6] mb-1">Zero</div>
-            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Data Loss Events</div>
+            <div className="text-2xl font-black text-[#5D00D6] mb-1">50%</div>
+            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Faster Resolution</div>
           </div>
         </div>
       </>
     )
   },
-  'greenfield-site-rollout': {
-    eyebrow: 'New Business Build',
-    title: 'Rapid 12-Site Infrastructure Rollout for National Expansion',
-    summary: 'How we delivered unified networking and operational readiness for 12 new sites in under 6 weeks.',
+  'enterprise-migration-success': {
+    eyebrow: 'Infrastructure Migration',
+    title: 'Zero-Disruption Migration for Industrial Manufacturing',
+    summary: 'Migrating legacy on-prem servers to Hybrid Cloud with zero minutes of production downtime.',
     author: 'David Peterson',
     role: 'Head of Infrastructure @ C9',
     time: '7 Min Read',
-    img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200',
+    img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200',
     sections: [
-      { id: 'planning', label: 'Zero-Day Planning' },
-      { id: 'execution', label: 'Rapid Deployment' },
-      { id: 'outcomes', label: 'Operational Readiness' }
+      { id: 'planning', label: 'Technical Debt Audit' },
+      { id: 'execution', label: 'Staged Migration' },
+      { id: 'outcomes', label: 'Operational Control' }
     ],
     content: (
       <>
         <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
-          Launching a new business location is stressful. Launching 12 simultaneously across 3 states is a logistical nightmare. For this national expansion, C9 was engaged to ensure that on day one, every site was technically ready for business.
+          An industrial manufacturer with multi-state operations needed to migrate from end-of-life hardware without halting production lines.
         </p>
 
-        <h2 id="planning" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Zero-Day Planning</h2>
+        <h2 id="planning" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Technical Debt Audit</h2>
         <p>
-          The challenge was the timeline. The client had 6 weeks from site handover to grand opening. Traditional telco lead times for fiber are often 60-90 days. We had to think differently.
-        </p>
-        <p>
-          We utilized a "Hybrid Connectivity" approach, deploying high-speed enterprise 5G fixed wireless as a bridge while the permanent fiber builds were being completed. This allowed the internal fit-out and POS testing to begin weeks ahead of schedule.
+          The client was operating on unstable legacy servers with no viable disaster recovery path. The primary risk was a catastrophic hardware failure that could stop manufacturing for days.
         </p>
 
-        <h2 id="execution" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Rapid Deployment</h2>
+        <h2 id="execution" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Staged Migration</h2>
         <p>
-          Standardisation was our secret weapon. We used a "Site-in-a-Box" strategy. Every site received an identical rack configuration, pre-staged and tested in our Melbourne lab.
+          C9 developed a phased migration plan using parallel-run environments. We stabilised the legacy infrastructure first to de-risk the move, then migrated workloads in waves. We established a cloud-hosted DR site before the final cutover.
         </p>
-        <ul>
-          <li><strong>Zero-Touch Provisioning:</strong> Equipment was shipped to site and simply plugged in by local contractors. Our engineers then configured the remaining details remotely.</li>
-          <li><strong>Unified Security:</strong> Every site was protected by a central cloud-managed firewall policy, ensuring data compliance across the entire national footprint.</li>
-        </ul>
 
         <div className="my-12 bg-emerald-50 border-emerald-200 border p-8 rounded-3xl">
            <div className="flex items-center gap-3 text-emerald-600 font-bold mb-4">
-              <Activity size={20} />
-              <span>Project Milestone</span>
+              <CheckCircle2 size={20} />
+              <span>Migration Milestone</span>
            </div>
            <p className="text-emerald-900 text-[18px] font-medium leading-relaxed m-0">
-              All 12 sites were online and fully operational 10 days before the public grand opening, allowing for extensive staff training and systems validation.
+              Migration was completed with 0 minutes of induced downtime, maintaining 100% data integrity across all manufacturing systems.
            </p>
         </div>
 
-        <h2 id="outcomes" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Operational Readiness</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+        <div className="grid grid-cols-2 gap-8 my-10">
           <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-             <div className="text-[#5D00D6] font-black text-4xl mb-2">6 Weeks</div>
-             <div className="text-slate-500 font-bold text-[13px] uppercase tracking-widest">Total Delivery Time</div>
+             <div className="text-[#5D00D6] font-black text-4xl mb-2">60% ↑</div>
+             <div className="text-slate-500 font-bold text-[13px] uppercase tracking-widest">Visibility Gain</div>
           </div>
           <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-             <div className="text-[#5D00D6] font-black text-4xl mb-2">10/10</div>
-             <div className="text-slate-500 font-bold text-[13px] uppercase tracking-widest">Site Readiness Score</div>
+             <div className="text-[#5D00D6] font-black text-4xl mb-2">24/7</div>
+             <div className="text-slate-500 font-bold text-[13px] uppercase tracking-widest">Control Layer</div>
+          </div>
+        </div>
+      </>
+    )
+  },
+  'healthcare-uptime-stabilisation': {
+    eyebrow: 'Stability & Uptime',
+    title: 'Healthcare Provider: Achieving 100% Uptime for Life-Critical Apps',
+    summary: 'Hardening hybrid cloud infrastructure to protect patient data access and operational continuity.',
+    author: 'James Wilson',
+    role: 'Infrastructure Strategist @ C9',
+    time: '5 Min Read',
+    img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200',
+    sections: [
+      { id: 'situation', label: 'Network Instability' },
+      { id: 'risk', label: 'Life-Critical Gaps' },
+      { id: 'action', label: 'Hardening & Redundancy' },
+      { id: 'outcomes', label: 'Stability Metrics' }
+    ],
+    content: (
+      <>
+        <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
+          A critical healthcare provider was experiencing frequent network instability, impacting patient data access during peak medical hours.
+        </p>
+
+        <h2 id="situation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Network Instability</h2>
+        <p>
+          Frequent dropouts and high latency were causing patient records to be unavailable when needed most. The lack of visibility into application performance made troubleshooting a manual, slow process.
+        </p>
+
+        <h2 id="risk" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Life-Critical Gaps</h2>
+        <p>
+          Audit identified that data unavailability posed a direct risk to patient care and compliance. There was no redundancy for the primary cloud link, leaving the provider exposed to ISP-level failures.
+        </p>
+
+        <h2 id="action" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Hardening & Redundancy</h2>
+        <p>
+          C9 deployed redundant connectivity links and implemented real-time application telemetry. We hardened the infrastructure to prioritise life-critical data traffic and established a 15-minute response SLA.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+          <div className="bg-[#1A1A2E] p-8 rounded-3xl text-white">
+            <div className="text-3xl font-black text-[#A855F7] mb-2">100%</div>
+            <div className="text-[12px] font-bold text-gray-400 uppercase tracking-widest">Uptime over 18m</div>
+          </div>
+          <div className="bg-[#1A1A2E] p-8 rounded-3xl text-white">
+            <div className="text-3xl font-black text-[#A855F7] mb-2">90% ↓</div>
+            <div className="text-[12px] font-bold text-gray-400 uppercase tracking-widest">Critical Incidents</div>
           </div>
         </div>
       </>
     )
   }
 };
+
 
 export default function CaseStudyPage() {
   const params = useParams();

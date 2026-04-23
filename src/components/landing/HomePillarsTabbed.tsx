@@ -113,7 +113,7 @@ export const HomePillarsTabbed = () => {
                     {TABS[activeTab].description}
                   </p>
                   
-                  <Link href={TABS[activeTab].link} className="inline-flex items-center gap-2 font-bold transition-colors hover:gap-3 text-[15px] uppercase tracking-wider" style={{ color: TABS[activeTab].color }}>
+                  <Link href={TABS[activeTab].link} className="inline-flex items-center gap-2 font-bold transition-colors hover:gap-3 text-[14px] uppercase tracking-wider" style={{ color: TABS[activeTab].color }}>
                     Explore Details <ArrowRight size={18} />
                   </Link>
                 </div>

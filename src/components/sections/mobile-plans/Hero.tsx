@@ -230,13 +230,13 @@ export default function Hero() {
             >
               <Button
                 onClick={handleQuoteClick}
-                className="bg-[#5D00D6] text-white hover:bg-[#4c00b0] font-bold h-14 px-10 rounded-full text-[15px] shadow-xl shadow-purple-900/20 flex items-center gap-2 hover:-translate-y-0.5 transition-all"
+                className="bg-[#5D00D6] text-white hover:bg-[#4c00b0] font-bold h-14 px-10 rounded-full text-[14px] shadow-xl shadow-purple-900/20 flex items-center gap-2 hover:-translate-y-0.5 transition-all"
               >
                 Build My Mobile Fleet <ArrowRight size={18} />
               </Button>
               <Button
                 variant="outline"
-                className="border-2 border-slate-200 bg-white text-[#1A1A2E] hover:bg-[#5D00D6]/5 hover:border-[#5D00D6] hover:text-[#5D00D6] font-bold h-14 px-10 rounded-full text-[15px] flex items-center gap-2 hover:-translate-y-0.5 transition-all group"
+                className="border-2 border-slate-200 bg-white text-[#1A1A2E] hover:bg-[#5D00D6]/5 hover:border-[#5D00D6] hover:text-[#5D00D6] font-bold h-14 px-10 rounded-full text-[14px] flex items-center gap-2 hover:-translate-y-0.5 transition-all group"
               >
                 <FileDown size={17} className="text-[#5D00D6] group-hover:text-[#5D00D6] transition-colors" /> Download Fleet Guide
               </Button>
@@ -293,7 +293,7 @@ export default function Hero() {
                   >
                     <Wifi size={15} className="text-white" strokeWidth={2} />
                   </motion.div>
-                  <span className="text-[13px] font-bold text-[#1A1A2E]">C9 Fleet Dashboard</span>
+                  <span className="text-[14px] font-bold text-[#1A1A2E]">C9 Fleet Dashboard</span>
                 </div>
                 <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full">
                   <motion.div

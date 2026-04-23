@@ -28,7 +28,7 @@ export default function FinalCTA() {
                  <h2 className="c9-section-heading !text-white mb-4">
                      Ready to future-proof your business connectivity?
                  </h2>
-                 <p className="text-[14px] md:text-[15px] text-white/80 leading-relaxed mb-6 max-w-[560px]">
+                 <p className="text-[14px] md:text-[14px] text-white/80 leading-relaxed mb-6 max-w-[560px]">
                      Tell us your address and bandwidth requirements — C9 will qualify your site and respond within one business day. No obligation.
                   </p>
                  
@@ -57,7 +57,7 @@ export default function FinalCTA() {
                         <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-all shrink-0">
                            <sig.icon size={15} className="text-white" />
                         </div>
-                        <span className="text-[13px] font-semibold text-white">{sig.text}</span>
+                        <span className="text-[14px] font-semibold text-white">{sig.text}</span>
                      </div>
                  ))}
               </div>

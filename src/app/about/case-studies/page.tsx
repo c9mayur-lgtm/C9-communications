@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Target, TrendingUp, Shield, Activity, ArrowRight, ExternalLink } from 'lucide-react';
+import { Target, TrendingUp, Shield, Activity, ArrowRight, ExternalLink, Network, Zap, CheckCircle2, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
@@ -17,63 +17,149 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 );
 
 export default function CaseStudiesPage() {
+  const caseStudies = [
+    {
+      slug: 'multi-site-retail-stabilisation',
+      icon: Network,
+      category: 'Multi-Site Environment',
+      title: 'Consolidating National Retail Operations',
+      environment: {
+        industry: 'National Retail Distribution',
+        locations: '142 locations',
+        type: 'Hybrid (On-prem Edge + Azure Core)',
+        complexity: 'High (9+ ISP/MSP contracts)'
+      },
+      situation: 'Fragmented vendor management across states led to 40+ hours of monthly aggregate downtime. Zero visibility into store-level latency and a reactive support model caused significant revenue leakage.',
+      risk: 'Single point of failure in legacy MPLS backbone. High probability of site-wide POS blackout. Unpatched edge devices created massive security vulnerabilities.',
+      implementation: 'Deployed SD-WAN overlay for vendor consolidation, centralised proactive monitoring, integrated 4G failover, and established a single-point-of-contact SLA structure.',
+      metrics: [
+        { label: 'Uptime Improvement', value: '99.99%', sub: 'from 94%' },
+        { label: 'MTTR Reduction', value: '70%', sub: 'Mean Time to Repair' },
+        { label: 'Vendor Reduction', value: '9 → 1', sub: 'Consolidated to C9' },
+        { label: 'Incident Reduction', value: '85%', sub: 'Proactive resolution' }
+      ]
+    },
+    {
+      slug: 'financial-vendor-consolidation',
+      icon: Zap,
+      category: 'Vendor Consolidation',
+      title: 'Simplifying Mid-Market Infrastructure',
+      environment: {
+        industry: 'Financial Services',
+        locations: 'Head Office + Distributed Remote',
+        type: 'Cloud-Native (SaaS Heavy)',
+        complexity: 'Extreme (12+ billing entities)'
+      },
+      situation: 'Internal IT was managing 12 different telco and IT invoices. Overlapping security tools and a lack of ownership on cross-vendor issues resulted in inconsistent uptime and support delays.',
+      risk: 'Hidden costs in redundant licensing. Critical security gaps between uncoordinated vendor stacks. Business impact from delayed troubleshooting in a regulated environment.',
+      implementation: 'Conducted full infrastructure audit, consolidated vendor contracts into a single managed agreement, unified the security stack, and stabilised core connectivity links.',
+      metrics: [
+        { label: 'OpEx Reduction', value: '35%', sub: 'Licensing & Management' },
+        { label: 'Accountability', value: '1 Vendor', sub: 'Single point of contact' },
+        { label: 'Security Visibility', value: '100%', sub: 'Unified posture' },
+        { label: 'Resolution Speed', value: '50% Faster', sub: 'Incident handling' }
+      ]
+    },
+    {
+      slug: 'enterprise-migration-success',
+      icon: TrendingUp,
+      category: 'Infrastructure Migration',
+      title: 'Zero-Disruption Enterprise Migration',
+      environment: {
+        industry: 'Industrial Manufacturing',
+        locations: 'Multi-state Operations',
+        type: 'Legacy On-prem to Hybrid Cloud',
+        complexity: 'High (Production critical)'
+      },
+      situation: 'Operating on end-of-life hardware with unstable legacy servers. High risk of data loss during migration and no viable disaster recovery path for production-line applications.',
+      risk: 'Catastrophic hardware failure was imminent. Migration disruption could halt manufacturing lines. Significant operational gaps in remote site connectivity.',
+      implementation: 'Staged migration plan with parallel run environments. Infrastructure stabilisation prior to cutover. Cloud-hosted disaster recovery and ongoing operational control layer.',
+      metrics: [
+        { label: 'Migration Downtime', value: '0 Mins', sub: 'Zero disruption' },
+        { label: 'Data Integrity', value: '100%', sub: 'Maintained throughout' },
+        { label: 'Operational Visibility', value: '60% ↑', sub: 'Real-time telemetry' },
+        { label: 'Monitoring Coverage', value: '24/7', sub: 'Proactive alerting' }
+      ]
+    },
+    {
+      slug: 'healthcare-uptime-stabilisation',
+      icon: Shield,
+      category: 'Stability & Uptime',
+      title: 'Protecting Life-Critical Connectivity',
+      environment: {
+        industry: 'Critical Healthcare Provider',
+        locations: '24/7 Medical Centres',
+        type: 'Hybrid Cloud',
+        complexity: 'Medium (High availability required)'
+      },
+      situation: 'Frequent network instability impacting patient data access. Lack of visibility into application performance. High risk of downtime during peak operational hours.',
+      risk: 'Life-critical data unavailability. Potential for compliance breaches. Business impact of operational paralysis during medical emergencies.',
+      implementation: 'Infrastructure hardening and link redundancy deployment. Real-time performance monitoring and 15-minute response SLA activation.',
+      metrics: [
+        { label: 'System Uptime', value: '100%', sub: 'Over 18 months' },
+        { label: 'Critical Incidents', value: '90% ↓', sub: 'Proactive mitigation' },
+        { label: 'App Latency Visibility', value: 'Full', sub: 'End-to-end tracking' },
+        { label: 'Response SLA', value: '15 Mins', sub: 'Guaranteed activation' }
+      ]
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-32 overflow-hidden bg-[#1A1A2E] text-white">
-        <div className="container mx-auto px-6 max-w-[1240px] relative z-10 text-center">
+      {/* Hero Section — Proof Positioning */}
+      <section className="relative pt-32 pb-24 overflow-hidden bg-white">
+        {/* Subtle grid backdrop */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'linear-gradient(#5D00D6 1px, transparent 1px), linear-gradient(90deg, #5D00D6 1px, transparent 1px)',
+            backgroundSize: '40px 40px',
+          }}
+        />
+        {/* Purple glow */}
+        <div className="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#5D00D6] opacity-[0.05] blur-[100px]" />
+
+        <div className="container mx-auto px-6 max-w-[1240px] relative z-10">
           <FadeUp>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest mb-8 border border-white/20">
-              RESULTS DELIVERED
-            </span>
-            <h1 className="text-[40px] md:text-[64px] font-bold leading-tight mb-8">
-              Real Impact for <br />
-              <span className="text-[#A855F7]">Real Businesses.</span>
-            </h1>
-            <p className="text-gray-400 text-[18px] md:text-[22px] leading-relaxed max-w-2xl mx-auto mb-12">
-              Explore how we've helped Australian organisations solve complex connectivity challenges, secure their operations, and scale with confidence.
-            </p>
+            <div className="max-w-3xl">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#5D00D6]/8 text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest mb-8 border border-[#5D00D6]/20">
+                OPERATIONAL PROOF
+              </span>
+              <h1 className="text-[40px] md:text-[64px] font-bold leading-tight mb-8 text-[#0c1024]">
+                Infrastructure Control & <br />
+                <span className="text-[#5D00D6]">Migration Success.</span>
+              </h1>
+              <p className="text-slate-500 text-[18px] md:text-[20px] leading-relaxed mb-12 max-w-2xl">
+                Factual breakdowns of real-world environment stabilisations, vendor consolidations, and risk-mitigated migrations. No marketing narratives—just measurable outcomes.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#consultation-section"
+                  className="px-8 py-4 bg-[#5D00D6] text-white font-bold rounded-full hover:bg-[#4A00AB] transition-all text-center min-w-[240px] shadow-xl shadow-purple-900/20"
+                >
+                  Request Infrastructure Assessment
+                </a>
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-slate-700 font-bold rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all border-2 border-slate-200 text-center min-w-[240px]"
+                >
+                  Discuss Your Environment
+                </a>
+              </div>
+            </div>
           </FadeUp>
         </div>
       </section>
 
-      {/* Featured Case Studies */}
-      <section className="py-24 md:py-32">
+      {/* Case Study List (Card Format) */}
+      <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-6 max-w-[1240px]">
-          <div className="space-y-16">
-            {[
-              {
-                slug: 'retail-pos-stabilisation',
-                icon: Activity,
-                category: 'Retail & Multi-site',
-                title: 'Eliminating Downtime Across 50 Locations',
-                challenge: 'Frequent dropouts at store locations causing payment processing failures and lost revenue.',
-                solution: 'Deployed redundant Business NBN links with 4G failover, managed through a centralised SD-WAN controller.',
-                outcome: '99.99% uptime achieved across the entire network. No payment-related downtime recorded in 12 months.'
-              },
-              {
-                slug: 'legal-firm-takeover',
-                icon: Shield,
-                category: 'Professional Services',
-                title: 'Securing Remote Access & Compliance',
-                challenge: 'Insecure remote working setup with no VPN encryption and outdated server infrastructure.',
-                solution: 'Implemented a Zero Trust network architecture with Microsoft Teams integration and cloud-hosted servers.',
-                outcome: 'Full Essential 8 compliance achieved. Team productivity increased by 25% through seamless internal collaboration.'
-              },
-              {
-                slug: 'greenfield-site-rollout',
-                icon: TrendingUp,
-                category: 'Logistics & Infrastructure',
-                title: 'Scaling Connectivity for Rapid Growth',
-                challenge: 'Standard office internet unable to support a growing team of developers and high video-conferencing load.',
-                solution: 'Migrated to 1Gbps Dedicated Fast Fibre with symmetrical speeds and proactive monitoring.',
-                outcome: 'Zero peak-hour slowdowns. Bandwidth to support 10x growth without further infrastructure changes.'
-              }
-            ].map((study, idx) => (
+          <div className="space-y-20">
+            {caseStudies.map((study, idx) => (
               <FadeUp key={idx}>
-                <div className="group bg-white rounded-[48px] border border-gray-100 p-8 md:p-12 shadow-sm hover:shadow-2xl hover:shadow-purple-900/5 transition-all">
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
+                <div className="group bg-white rounded-[48px] border border-gray-100 p-8 md:p-12 shadow-sm hover:shadow-2xl hover:shadow-purple-900/5 transition-all overflow-hidden relative">
+                  <div className="grid lg:grid-cols-12 gap-12 items-start">
+                    <div className="lg:col-span-7">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6]">
                           <study.icon size={20} />
@@ -82,33 +168,88 @@ export default function CaseStudiesPage() {
                       </div>
                       <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A2E] mb-8 leading-tight">{study.title}</h3>
                       
-                      <div className="space-y-6 mb-10">
-                        <div>
-                          <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2">Challenge</p>
-                          <p className="text-gray-600 text-lg">{study.challenge}</p>
+                      <div className="space-y-8 mb-10">
+                        <div className="grid grid-cols-2 gap-4 p-6 bg-gray-50 rounded-2xl">
+                          <div>
+                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Industry</p>
+                            <p className="text-[#1A1A2E] font-medium">{study.environment.industry}</p>
+                          </div>
+                          <div>
+                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Scale</p>
+                            <p className="text-[#1A1A2E] font-medium">{study.environment.locations}</p>
+                          </div>
+                          <div>
+                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Infra Type</p>
+                            <p className="text-[#1A1A2E] font-medium">{study.environment.type}</p>
+                          </div>
+                          <div>
+                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Complexity</p>
+                            <p className="text-[#1A1A2E] font-medium">{study.environment.complexity}</p>
+                          </div>
                         </div>
+
                         <div>
-                          <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2">Solution</p>
-                          <p className="text-gray-600 text-lg">{study.solution}</p>
+                          <div className="flex items-center gap-2 mb-2">
+                            <AlertCircle size={14} className="text-red-500" />
+                            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Starting Situation</p>
+                          </div>
+                          <p className="text-gray-600 text-lg leading-relaxed">{study.situation}</p>
+                        </div>
+
+                        <div>
+                          <div className="flex items-center gap-2 mb-2">
+                            <Shield size={14} className="text-amber-500" />
+                            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Risk Identified</p>
+                          </div>
+                          <p className="text-gray-600 text-lg leading-relaxed">{study.risk}</p>
+                        </div>
+
+                        <div>
+                          <div className="flex items-center gap-2 mb-2">
+                            <CheckCircle2 size={14} className="text-green-500" />
+                            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">What C9 Implemented</p>
+                          </div>
+                          <p className="text-gray-600 text-lg leading-relaxed">{study.implementation}</p>
                         </div>
                       </div>
                       
-                      <a 
-                        href={`/case-studies/${study.slug}`}
-                        className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all"
-                      >
-                        Read Full Case Study <ExternalLink size={16} />
-                      </a>
+                      <div className="flex items-center gap-6 pt-4 border-t border-gray-100">
+                        <a 
+                          href={`/case-studies/${study.slug}`}
+                          className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all"
+                        >
+                          Read Full Case Study <ArrowRight size={16} />
+                        </a>
+                        <div className="flex gap-4">
+                          <a href="/managed-it" className="text-gray-400 text-xs hover:text-[#5D00D6] transition-colors uppercase font-bold tracking-wider">Operating Model</a>
+                          <a href="/business" className="text-gray-400 text-xs hover:text-[#5D00D6] transition-colors uppercase font-bold tracking-wider">Migration</a>
+                        </div>
+                      </div>
                     </div>
                     
-                    <div className="bg-slate-50 rounded-[32px] p-10 border border-gray-200">
-                      <div className="flex items-center gap-2 mb-8">
-                        <Target size={24} className="text-[#5D00D6]" />
-                        <span className="font-bold text-[#1A1A2E] uppercase tracking-widest text-[13px]">Key Outcome</span>
+                    <div className="lg:col-span-5 h-full">
+                      <div className="bg-[#1A1A2E] rounded-[32px] p-8 md:p-10 text-white h-full flex flex-col">
+                        <div className="flex items-center gap-2 mb-10">
+                          <Activity size={24} className="text-[#A855F7]" />
+                          <span className="font-bold uppercase tracking-widest text-[14px]">Operational Outcomes</span>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-auto">
+                          {study.metrics.map((metric, midx) => (
+                            <div key={midx} className="border-l-2 border-white/10 pl-6">
+                              <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2">{metric.label}</p>
+                              <p className="text-3xl font-bold text-white mb-1">{metric.value}</p>
+                              <p className="text-xs text-gray-400">{metric.sub}</p>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10">
+                          <p className="text-sm text-gray-300 italic">
+                            "The consolidation solved the finger-pointing between vendors. We now have a single source of truth for our entire infrastructure performance."
+                          </p>
+                        </div>
                       </div>
-                      <p className="text-2xl md:text-3xl font-medium text-[#1A1A2E] leading-tight mb-6">
-                        "{study.outcome}"
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -118,13 +259,103 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Pattern Recognition Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-[1240px]">
+          <FadeUp>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A2E] mb-6">Common Patterns Across Environments</h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                While every business is unique, infrastructure risks follow consistent patterns. Recognising these is the first step toward control.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  title: 'Fragmentation is Common',
+                  desc: 'Most brownfield environments manage too many uncoordinated vendors, creating accountability gaps.'
+                },
+                {
+                  title: 'Lack of Visibility is Universal',
+                  desc: 'Stakeholders rarely have a real-time, consolidated view of infrastructure health across all sites.'
+                },
+                {
+                  title: 'Risk is Often Hidden',
+                  desc: 'Technical debt and single points of failure go unnoticed until a critical system collapse occurs.'
+                },
+                {
+                  title: 'Control Improves Outcomes',
+                  desc: 'Moving from reactive to proactive management consistently stabilises uptime and reduces OpEx.'
+                }
+              ].map((pattern, pidx) => (
+                <div key={pidx} className="p-8 rounded-3xl bg-gray-50 border border-gray-100">
+                  <h4 className="text-xl font-bold text-[#1A1A2E] mb-4">{pattern.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{pattern.desc}</p>
+                </div>
+              ))}
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Trust Reinforcement Block */}
+      <section className="py-24 bg-[#F8FAFC]">
+        <div className="container mx-auto px-6 max-w-[1240px]">
+          <div className="bg-[#1A1A2E] rounded-[48px] p-12 md:p-20 text-white relative overflow-hidden">
+            <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl md:text-5xl font-bold mb-8">Predictable Results through Structured Operations</h2>
+                <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+                  We don't rely on generic promises. Our ability to handle extreme complexity comes from a repeatable, structured approach to infrastructure management.
+                </p>
+                <div className="space-y-6">
+                  {[
+                    'Repeatability of outcomes through templated operational processes.',
+                    'Structured approach across environments: Audit → Stabilise → Manage.',
+                    'Specialisation in consolidating fragmented, high-risk brownfield environments.'
+                  ].map((item, iidx) => (
+                    <div key={iidx} className="flex items-start gap-4">
+                      <div className="mt-1.5 w-5 h-5 rounded-full bg-[#A855F7] flex-shrink-0 flex items-center justify-center">
+                        <CheckCircle2 size={12} className="text-white" />
+                      </div>
+                      <p className="text-gray-200">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-white/5 rounded-3xl p-8 border border-white/10">
+                  <p className="text-4xl font-bold text-white mb-2">100%</p>
+                  <p className="text-gray-400 text-sm uppercase tracking-widest font-bold">Migration Success</p>
+                </div>
+                <div className="bg-white/5 rounded-3xl p-8 border border-white/10">
+                  <p className="text-4xl font-bold text-white mb-2">99.9%</p>
+                  <p className="text-gray-400 text-sm uppercase tracking-widest font-bold">Target Uptime</p>
+                </div>
+                <div className="bg-white/5 rounded-3xl p-8 border border-white/10">
+                  <p className="text-4xl font-bold text-white mb-2">15m</p>
+                  <p className="text-gray-400 text-sm uppercase tracking-widest font-bold">Response SLA</p>
+                </div>
+                <div className="bg-white/5 rounded-3xl p-8 border border-white/10">
+                  <p className="text-4xl font-bold text-white mb-2">24/7</p>
+                  <p className="text-gray-400 text-sm uppercase tracking-widest font-bold">Control Layer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section (High Intent) */}
       <WpConsultationForm
-        eyebrow="SEE THE RESULTS FOR YOURSELF"
-        title="Ready to transform your operations?"
-        description="Let's build your success story together. Speak with an engineer about your specific business challenges."
-        formTitle="Get a Custom Strategy"
+        eyebrow="REDUCE INFRASTRUCTURE EXPOSURE"
+        title="Is your environment looking similar?"
+        description="If you recognise these fragmentation patterns in your own business, risk already exists. Delaying action increases exposure to downtime and security breaches."
+        ctaText="Request Infrastructure Assessment"
+        formTitle="Schedule Risk Audit"
       />
     </main>
   );
 }
+

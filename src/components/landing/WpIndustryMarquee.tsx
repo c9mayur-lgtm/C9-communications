@@ -109,7 +109,7 @@ export const WpIndustryMarquee = () => {
     <section className="py-12 md:py-16 bg-[#f8f7fc] border-t border-gray-100 overflow-hidden">
       <div className="container mx-auto px-8 max-w-[1240px]">
         <div className="text-center mb-10">
-          <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >What we do</span>
+          <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.3em] mb-4 block" >What we do</span>
           <h2 className="c9-section-heading mb-8">
             Solving IT challenges in every industry, every day.
           </h2>

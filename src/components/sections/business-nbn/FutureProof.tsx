@@ -21,7 +21,7 @@ export default function FutureProof() {
               <h2 className="c9-section-heading !text-white">
                 Future-proof your <br className="hidden md:block" /> business internet
               </h2>
-              <p className="text-[15px] md:text-[17px] text-[#9CA3AF] mt-4 max-w-[400px] leading-relaxed">
+              <p className="text-[14px] md:text-[17px] text-[#9CA3AF] mt-4 max-w-[400px] leading-relaxed">
                 nbn upgrades are rolling out nationwide. Is your office ready? Stay productive and connected with C9 managed connectivity.
               </p>
               

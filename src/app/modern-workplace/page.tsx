@@ -81,7 +81,7 @@ export default function ModernWorkplacePage() {
           </FadeUp>
 
           <FadeUp delay={0.28}>
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] font-semibold" style={{ color: TM }}>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[14px] font-semibold" style={{ color: TM }}>
               {['Built for growing and multi-site businesses','No lock-in contracts','Australian support team','Security-first management'].map(t => (
                 <span key={t} className="flex items-center gap-1.5"><Check size={13} strokeWidth={3} style={{ color: P }} />{t}</span>
               ))}
@@ -326,7 +326,7 @@ export default function ModernWorkplacePage() {
                   <Monitor size={24} className="text-white" />
                 </div>
                 <h3 className="text-[20px] font-bold text-white leading-snug mb-3 tracking-tight">Workforce Ready.<br />From Day One.</h3>
-                <p className="text-[15px] leading-[1.6] text-white/80 flex-grow">Devices ready, users onboarded, and systems operational. We ensure every new hire is productive from the moment they sign in.</p>
+                <p className="text-[14px] leading-[1.6] text-white/80 flex-grow">Devices ready, users onboarded, and systems operational. We ensure every new hire is productive from the moment they sign in.</p>
                 <div className="mt-8 pt-6 border-t border-white/20">
                   <div className="text-[28px] font-bold text-white tracking-tight">Day One Readiness</div>
                   <div className="c9-eyebrow !text-white/70 !mb-0">Integrated with Telco & Security</div>
@@ -348,7 +348,7 @@ export default function ModernWorkplacePage() {
                     <Icon size={22} strokeWidth={2.5} />
                   </div>
                   <h3 className="c9-card-title mb-2.5">{title}</h3>
-                  <p className="c9-body !text-[15px]">{body}</p>
+                  <p className="c9-body !text-[14px]">{body}</p>
                 </motion.div>
               </ScaleIn>
             ))}
@@ -375,13 +375,13 @@ export default function ModernWorkplacePage() {
                   <p className="c9-body mb-6" style={{ color: plan.highlight ? 'rgba(255,255,255,0.7)' : 'gray' }}>{plan.desc}</p>
                   <div className="flex items-baseline gap-1 mb-8">
                     <span className="text-[52px] font-bold leading-none" style={{ color: plan.highlight ? '#fff' : P }}>{plan.price}</span>
-                    <span className="text-[13px]" style={{ color: plan.highlight ? 'rgba(255,255,255,0.5)' : TM }}>{plan.period}</span>
+                    <span className="text-[14px]" style={{ color: plan.highlight ? 'rgba(255,255,255,0.5)' : TM }}>{plan.period}</span>
                   </div>
                   <div className="flex flex-col gap-3 mb-8 flex-grow">
                     {plan.features.map(f => (
                       <div key={f} className="flex items-center gap-3">
                         <CheckCircle2 size={15} className="shrink-0" style={{ color: plan.highlight ? 'rgba(255,255,255,0.75)' : P }} />
-                        <span className="text-[13px]" style={{ color: plan.highlight ? 'rgba(255,255,255,0.85)' : TM2 }}>{f}</span>
+                        <span className="text-[14px]" style={{ color: plan.highlight ? 'rgba(255,255,255,0.85)' : TM2 }}>{f}</span>
                       </div>
                     ))}
                   </div>

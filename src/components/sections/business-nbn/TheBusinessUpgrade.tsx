@@ -76,14 +76,14 @@ export default function TheBusinessUpgrade() {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         
         <div className="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
-          <span className="text-rose-500 text-[13px] font-bold uppercase tracking-[0.4em] mb-6 block">THE REALITY OF NBN</span>
+          <span className="text-rose-500 text-[14px] font-bold uppercase tracking-[0.4em] mb-6 block">THE REALITY OF NBN</span>
           <h2 className="c9-section-heading !text-[32px] md:!text-[42px]">
             Why many business nbn<br />connections fall short
           </h2>
           <p className="text-[17px] md:text-[19px] text-[#6B7280] mt-8 leading-relaxed">
             Without the right setup and management, nbn can affect day-to-day business operations. Performance varies, and shared networks aren't always consistent.
           </p>
-          <p className="text-[15px] font-bold text-[#1A1A2E] mt-6">
+          <p className="text-[14px] font-bold text-[#1A1A2E] mt-6">
             We help you navigate these challenges with a fully managed approach.
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function TheBusinessUpgrade() {
                 <block.icon size={32} strokeWidth={1.5} className="text-[#5D00D6]" />
               </div>
               <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4 tracking-tight">{block.title}</h3>
-              <p className="text-gray-500 text-[15px] leading-relaxed flex-grow">
+              <p className="text-gray-500 text-[14px] leading-relaxed flex-grow">
                 {block.desc}
               </p>
             </div>

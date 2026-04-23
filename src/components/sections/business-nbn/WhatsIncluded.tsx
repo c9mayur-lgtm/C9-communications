@@ -64,7 +64,7 @@ export default function WhatsIncluded() {
 
       <div className="container mx-auto px-8 max-w-[1240px] relative z-10">
         <div className="flex flex-col mb-16 gap-4">
-          <span className="text-white text-[13px] font-bold uppercase tracking-[0.25em] mb-4 block">WHAT'S INCLUDED</span>
+          <span className="text-white text-[14px] font-bold uppercase tracking-[0.25em] mb-4 block">WHAT'S INCLUDED</span>
           <h2 className="c9-section-heading !text-white">
             More than just an<br />internet connection.
           </h2>

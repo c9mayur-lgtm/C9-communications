@@ -20,7 +20,7 @@ const AdvantageItem = ({ title, description, metric, isLast }: { title: string, 
     </h3>
 
     {/* 3. DESCRIPTION */}
-    <p className="text-gray-500 text-[15px] leading-relaxed font-normal mb-auto max-w-[280px]">
+    <p className="text-gray-500 text-[14px] leading-relaxed font-normal mb-auto max-w-[280px]">
       {description}
     </p>
 

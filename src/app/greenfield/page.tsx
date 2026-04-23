@@ -93,14 +93,14 @@ const Hero = () => (
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <a
                 href="#consultation"
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
               >
                 Plan My New Site
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="#delivery-model"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
               >
                 See How It Works
               </a>
@@ -115,7 +115,7 @@ const Hero = () => (
                 { text: 'Single point of accountability', icon: <CheckCircle size={14} className="text-[#5D00D6]" /> },
                 { text: 'National rollout capability', icon: <BadgeCheck size={14} className="text-[#5D00D6]" /> }
               ].map((item, i) => (
-                <span key={i} className="inline-flex items-center gap-2 text-slate-500 text-[13px] font-semibold">
+                <span key={i} className="inline-flex items-center gap-2 text-slate-500 text-[14px] font-semibold">
                   {item.icon} {item.text}
                 </span>
               ))}
@@ -140,7 +140,7 @@ const Hero = () => (
             {/* Top badge */}
             <div className="absolute top-6 right-6 bg-[#5D00D6] text-white rounded-2xl px-4 py-3 shadow-xl">
               <div className="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-0.5">Delivery Model</div>
-              <div className="text-[15px] font-extrabold">End-to-End Ownership</div>
+              <div className="text-[14px] font-extrabold">End-to-End Ownership</div>
             </div>
           </div>
         </FadeIn>
@@ -186,7 +186,7 @@ const SectionPain = () => (
                     <AlertTriangle size={18} className="text-rose-500" />
                   </div>
                   <div>
-                    <p className="font-bold text-slate-900 text-[15px] mb-1">{item.title}</p>
+                    <p className="font-bold text-slate-900 text-[14px] mb-1">{item.title}</p>
                     <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ const SectionGuarantee = () => (
                 <CheckCircle size={16} className="text-[#5D00D6]" />
               </div>
               <h3 className="font-bold text-slate-900 text-[16px] mb-2">{s.label}</h3>
-              <p className="text-slate-500 text-[13px] leading-relaxed">{s.desc}</p>
+              <p className="text-slate-500 text-[14px] leading-relaxed">{s.desc}</p>
             </div>
           </FadeIn>
         ))}
@@ -330,7 +330,7 @@ const SectionFlow = () => (
               <span className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-widest">Step {s.num}</span>
             </div>
             <h3 className="font-bold text-slate-900 text-[16px] mb-2">{s.title}</h3>
-            <p className="text-slate-500 text-[13px] leading-relaxed">{s.desc}</p>
+            <p className="text-slate-500 text-[14px] leading-relaxed">{s.desc}</p>
           </FadeIn>
         ))}
       </div>
@@ -418,7 +418,7 @@ const SectionProof = () => (
               </div>
 
               <div className="mt-12 pt-8 border-t border-slate-50 text-center">
-                 <p className="text-[13px] text-slate-500 italic">
+                 <p className="text-[14px] text-slate-500 italic">
                    &ldquo;C9 Communications delivered our national rollout with zero downtime and total accountability.&rdquo;
                  </p>
               </div>
@@ -458,7 +458,7 @@ const SectionSupport = () => (
             ].map((p, i) => (
               <li key={i} className="flex items-center gap-3">
                 <CheckCircle size={16} className="text-[#a56eff] shrink-0" />
-                <span className="text-white/80 text-[15px] font-medium">{p}</span>
+                <span className="text-white/80 text-[14px] font-medium">{p}</span>
               </li>
             ))}
           </ul>
@@ -525,7 +525,7 @@ const SectionAccountability = () => (
                    <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center">
                       <Users2 size={18} className="text-slate-400" />
                    </div>
-                   <h4 className="font-bold text-slate-400 uppercase tracking-widest text-[13px]">Traditional Multi-Vendor Chaos</h4>
+                   <h4 className="font-bold text-slate-400 uppercase tracking-widest text-[14px]">Traditional Multi-Vendor Chaos</h4>
                 </div>
                 <div className="space-y-2">
                    {['Multiple bills', 'Vendor finger-pointing', 'Technical gaps', 'Project delays'].map(t => (
@@ -555,7 +555,7 @@ const SectionAccountability = () => (
                       'Coordinated trade management',
                       'Day One Operational Guarantee'
                    ].map(t => (
-                      <div key={t} className="flex items-center gap-3 text-white/90 text-[15px] font-medium">
+                      <div key={t} className="flex items-center gap-3 text-white/90 text-[14px] font-medium">
                          <CheckCircle size={16} className="text-[#a56eff]" />
                          {t}
                       </div>
@@ -681,20 +681,20 @@ const FinalCTA = () => (
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
           <a
             href="#consultation"
-            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
           >
             Start Your Greenfield Project
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="tel:1300000000"
-            className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
           >
             Speak to an Expert
           </a>
         </div>
 
-        <p className="text-[13px] text-slate-400 font-medium">
+        <p className="text-[14px] text-slate-400 font-medium">
           Zero-day operational readiness. Guaranteed.
         </p>
       </FadeIn>
@@ -730,7 +730,7 @@ export default function GreenfieldPage() {
             desc: 'Successfully commissioned 12 new sites across 3 states in under 6 weeks, providing unified networking and zero-day operational readiness.',
             img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
             videoText: 'National Site Rollout',
-            href: '/case-studies/greenfield-site-rollout'
+            href: '/case-studies/enterprise-migration-success'
           },
           {
             tag: 'RETAIL OPERATIONS',
@@ -738,7 +738,7 @@ export default function GreenfieldPage() {
             desc: 'End-to-end delivery of POS connectivity, secure guest Wi-Fi, and back-office integration for a multi-site retail rollout.',
             img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
             videoText: 'Retail Rollout',
-            href: '/case-studies/retail-pos-stabilisation'
+            href: '/case-studies/multi-site-retail-stabilisation'
           },
           {
             tag: 'INDUSTRIAL LOGISTICS',
@@ -746,7 +746,7 @@ export default function GreenfieldPage() {
             desc: 'Delivery of secure networking, enterprise Wi-Fi, and integrated IP security systems for a mission-critical 10,000sqm logistics facility.',
             img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
             videoText: 'Logistics Site Setup',
-            href: '/case-studies/greenfield-site-rollout'
+            href: '/case-studies/enterprise-migration-success'
           }
         ]}
       />

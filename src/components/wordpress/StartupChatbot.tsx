@@ -171,7 +171,7 @@ export const StartupChatbot = () => {
             className="fixed bottom-24 right-6 z-[998] bg-white rounded-2xl shadow-xl p-4 max-w-[240px] border border-gray-100 cursor-pointer"
             onClick={() => { setIsOpen(true); setShowBubble(false); }}
           >
-            <p className="text-[13px] text-[#0c1024] font-medium leading-snug">
+            <p className="text-[14px] text-[#0c1024] font-medium leading-snug">
               👋 Starting a new office or store?<br/>
               <span className="text-[#5D00D6] font-bold">Let us set up everything from Day 1.</span>
             </p>
@@ -218,7 +218,7 @@ export const StartupChatbot = () => {
               <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-[#f9f8ff]">
                 {messages.map((msg, i) => (
                   <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`max-w-[80%] px-4 py-3 rounded-2xl text-[13px] leading-relaxed whitespace-pre-line ${
+                    <div className={`max-w-[80%] px-4 py-3 rounded-2xl text-[14px] leading-relaxed whitespace-pre-line ${
                       msg.from === 'bot' 
                         ? 'bg-white text-[#0c1024] rounded-tl-none shadow-sm border border-gray-100' 
                         : 'bg-[#5D00D6] text-white rounded-tr-none'
@@ -245,7 +245,7 @@ export const StartupChatbot = () => {
                       placeholder="Your name"
                       value={formData.name}
                       onChange={e => setFormData(p => ({ ...p, name: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[13px] outline-none focus:border-[#5D00D6] transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors"
                     />
                     <input
                       required
@@ -253,7 +253,7 @@ export const StartupChatbot = () => {
                       placeholder="Work email"
                       value={formData.email}
                       onChange={e => setFormData(p => ({ ...p, email: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[13px] outline-none focus:border-[#5D00D6] transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors"
                     />
                     <input
                       required
@@ -261,7 +261,7 @@ export const StartupChatbot = () => {
                       placeholder="Phone number"
                       value={formData.phone}
                       onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[13px] outline-none focus:border-[#5D00D6] transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors"
                     />
                     <button
                       type="submit"
@@ -276,7 +276,7 @@ export const StartupChatbot = () => {
                       <button
                         key={i}
                         onClick={() => handleOption(opt.label, opt.next as FlowKey)}
-                        className="w-full text-left px-4 py-3 rounded-xl border border-gray-200 hover:border-[#5D00D6]/50 hover:bg-[#f4f0fa] text-[13px] font-medium text-[#0c1024] transition-all cursor-pointer"
+                        className="w-full text-left px-4 py-3 rounded-xl border border-gray-200 hover:border-[#5D00D6]/50 hover:bg-[#f4f0fa] text-[14px] font-medium text-[#0c1024] transition-all cursor-pointer"
                       >
                         {opt.label}
                       </button>

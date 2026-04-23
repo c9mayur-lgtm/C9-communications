@@ -17,7 +17,7 @@ export default function DefenseBridge() {
                 <h3 className="c9-section-heading font-medium !text-white mb-4" >
                     Security incidents need more <span className="text-[#5D00D6]">than helpdesk.</span>
                 </h3>
-                <p className="text-[15px] md:text-[16px] text-slate-300 leading-relaxed font-normal" >
+                <p className="text-[14px] md:text-[16px] text-slate-300 leading-relaxed font-normal" >
                     When your team is facing a potential breach, ransomware, or active threat — C9 Defense provides continuous monitoring and incident response so helpdesk is never your only line of defence.
                 </p>
             </div>

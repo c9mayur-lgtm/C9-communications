@@ -74,7 +74,7 @@ const TabCard = ({
                 <div className="w-5 h-5 rounded-md bg-[#5D00D6]/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#5D00D6] transition-colors">
                    <ChevronRight size={14} className="text-[#5D00D6] group-hover:text-white transition-transform group-hover:translate-x-0.5" />
                 </div>
-                <span className="font-['Proxima_Nova'] text-[15px] text-[#E5E7EB] font-bold leading-[1.4] tracking-tight">{item}</span>
+                <span className="font-['Proxima_Nova'] text-[14px] text-[#E5E7EB] font-bold leading-[1.4] tracking-tight">{item}</span>
               </div>
             ))}
           </div>
@@ -91,7 +91,7 @@ const TabCard = ({
                 <div className="w-5 h-5 rounded-md bg-red-500/10 flex items-center justify-center shrink-0 mt-0.5">
                    <XCircle size={14} className="text-[#EF4444]" />
                 </div>
-                <span className="font-['Proxima_Nova'] text-[15px] text-[#9CA3AF] font-bold leading-[1.4] tracking-tight">{item}</span>
+                <span className="font-['Proxima_Nova'] text-[14px] text-[#9CA3AF] font-bold leading-[1.4] tracking-tight">{item}</span>
               </div>
             ))}
           </div>
@@ -125,19 +125,19 @@ export default function TechComparison() {
             <TabsList className="bg-transparent p-0 h-auto border-0 flex flex-wrap justify-center gap-3 md:gap-4 relative z-10">
               <TabsTrigger 
                 value="mpls" 
-                className="rounded-full px-8 md:px-10 py-3 md:py-3.5 font-bold text-[15px] md:text-[16px] text-[#4B5563] bg-white border border-slate-200 shadow-sm data-[state=active]:bg-[#5D00D6] data-[state=active]:text-white data-[state=active]:border-[#5D00D6] data-[state=active]:shadow-lg data-[state=active]:shadow-purple-900/20 hover:text-[#1A1A2E] transition-all duration-300"
+                className="rounded-full px-8 md:px-10 py-3 md:py-3.5 font-bold text-[14px] md:text-[16px] text-[#4B5563] bg-white border border-slate-200 shadow-sm data-[state=active]:bg-[#5D00D6] data-[state=active]:text-white data-[state=active]:border-[#5D00D6] data-[state=active]:shadow-lg data-[state=active]:shadow-purple-900/20 hover:text-[#1A1A2E] transition-all duration-300"
               >
                 MPLS
               </TabsTrigger>
               <TabsTrigger 
                 value="sd-wan" 
-                className="rounded-full px-8 md:px-10 py-3 md:py-3.5 font-bold text-[15px] md:text-[16px] text-[#4B5563] bg-white border border-slate-200 shadow-sm data-[state=active]:bg-[#5D00D6] data-[state=active]:text-white data-[state=active]:border-[#5D00D6] data-[state=active]:shadow-lg data-[state=active]:shadow-purple-900/20 hover:text-[#1A1A2E] transition-all duration-300"
+                className="rounded-full px-8 md:px-10 py-3 md:py-3.5 font-bold text-[14px] md:text-[16px] text-[#4B5563] bg-white border border-slate-200 shadow-sm data-[state=active]:bg-[#5D00D6] data-[state=active]:text-white data-[state=active]:border-[#5D00D6] data-[state=active]:shadow-lg data-[state=active]:shadow-purple-900/20 hover:text-[#1A1A2E] transition-all duration-300"
               >
                 SD-WAN
               </TabsTrigger>
               <TabsTrigger 
                 value="hybrid" 
-                className="rounded-full px-8 md:px-10 py-3 md:py-3.5 font-bold text-[15px] md:text-[16px] text-[#4B5563] bg-white border border-slate-200 shadow-sm data-[state=active]:bg-[#5D00D6] data-[state=active]:text-white data-[state=active]:border-[#5D00D6] data-[state=active]:shadow-lg data-[state=active]:shadow-purple-900/20 hover:text-[#1A1A2E] transition-all duration-300"
+                className="rounded-full px-8 md:px-10 py-3 md:py-3.5 font-bold text-[14px] md:text-[16px] text-[#4B5563] bg-white border border-slate-200 shadow-sm data-[state=active]:bg-[#5D00D6] data-[state=active]:text-white data-[state=active]:border-[#5D00D6] data-[state=active]:shadow-lg data-[state=active]:shadow-purple-900/20 hover:text-[#1A1A2E] transition-all duration-300"
               >
                 Hybrid
               </TabsTrigger>

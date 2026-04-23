@@ -121,7 +121,7 @@ export const C9PhoneSystemAdvantage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             onClick={handleGetStarted}
-            className="group inline-flex items-center justify-center gap-2 bg-white text-[#5D00D6] rounded-full h-14 px-10 text-[15px] font-medium shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 active:scale-95"
+            className="group inline-flex items-center justify-center gap-2 bg-white text-[#5D00D6] rounded-full h-14 px-10 text-[14px] font-medium shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 active:scale-95"
           >
             Upgrade Your Phone System <ArrowRight size={20} className="transition-transform group-hover:translate-x-2" />
           </motion.button>

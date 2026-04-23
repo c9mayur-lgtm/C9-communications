@@ -89,7 +89,7 @@ const MobileMockup = () => {
                  <h5 className="font-['Proxima_Nova'] text-[17px] text-[#1A1A2E] font-bold leading-tight tracking-tight mb-2">
                    {features[currentIndex].text}
                  </h5>
-                 <p className="text-[13px] text-slate-500 font-medium leading-relaxed">
+                 <p className="text-[14px] text-slate-500 font-medium leading-relaxed">
                    {features[currentIndex].desc}
                  </p>
                </div>

@@ -20,7 +20,7 @@ const ServiceCard = ({ icon, title, body, href, badge }: CardProps) => (
       </div>
     </div>
     <h3 className="font-['Proxima_Nova'] font-bold text-[20px] text-[#1A1A2E] mb-3">{title}</h3>
-    <p className="font-['Proxima_Nova'] text-[15px] text-[#6B7280] leading-relaxed mb-6 flex-grow">{body}</p>
+    <p className="font-['Proxima_Nova'] text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">{body}</p>
     
     {badge && (
       <Link href={href || "#"} className="mt-4 pt-4 border-t border-[rgba(93,0,214,0.1)] flex items-center gap-2 text-[color:var(--brand-purple)] group-hover:opacity-80 transition-opacity text-left">

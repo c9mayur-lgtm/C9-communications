@@ -30,7 +30,7 @@ export default function TeamsCallingVisual() {
               </svg>
             </div>
             <div>
-              <p className="text-white text-[13px] font-bold leading-none">Microsoft Teams</p>
+              <p className="text-white text-[14px] font-bold leading-none">Microsoft Teams</p>
               <p className="text-white/60 text-[10px] font-medium mt-0.5">Calls — Direct Routing via C9</p>
             </div>
           </div>

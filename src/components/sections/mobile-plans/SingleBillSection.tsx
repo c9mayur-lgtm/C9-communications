@@ -76,7 +76,7 @@ export default function SingleBillSection() {
             <div className="pt-4">
                <Button 
                 onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-[#5D00D6] text-white hover:bg-[#4c00b0] font-medium h-[56px] px-10 rounded-full transition-all text-[15px] shadow-xl shadow-[#5D00D6]/20 flex items-center gap-2 transform hover:-translate-y-0.5"
+                className="bg-[#5D00D6] text-white hover:bg-[#4c00b0] font-medium h-[56px] px-10 rounded-full transition-all text-[14px] shadow-xl shadow-[#5D00D6]/20 flex items-center gap-2 transform hover:-translate-y-0.5"
               >
                 Bundle My Quote <ArrowRight size={18} />
               </Button>

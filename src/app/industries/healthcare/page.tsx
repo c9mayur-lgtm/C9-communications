@@ -77,25 +77,25 @@ const Hero = () => (
                   e.preventDefault();
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
               >
                 Talk to a Clinic Specialist
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="/industries"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[15px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap"
               >
                 View All Industries
               </a>
             </div>
-            <p className="text-[13px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
+            <p className="text-[14px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
             <div className="flex flex-wrap gap-5">
               {['Secure Practice Management', 'Zero-Drop Phones', 'Urgent Support', 'Compliance Ready'].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-slate-500 text-[13px] font-bold">
+                <div key={t} className="flex items-center gap-2 text-slate-500 text-[14px] font-bold">
                   <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                 </div>
               ))}
@@ -116,8 +116,8 @@ const Hero = () => (
                 <div className="flex items-center gap-4 text-white">
                   <Lock className="text-blue-400" size={24} />
                   <div>
-                    <div className="font-bold text-[15px]">Data Environment Secured</div>
-                    <div className="text-white/70 text-[13px]">Full compliance with AU healthcare data standards.</div>
+                    <div className="font-bold text-[14px]">Data Environment Secured</div>
+                    <div className="text-white/70 text-[14px]">Full compliance with AU healthcare data standards.</div>
                   </div>
                 </div>
               </div>
@@ -304,12 +304,12 @@ const FinalCTA = () => (
               e.preventDefault();
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[15px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
           >
             Book a Clinical IT Review
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
-          <p className="text-[13px] text-slate-500">No obligation. Just clear, practical advice.</p>
+          <p className="text-[14px] text-slate-500">No obligation. Just clear, practical advice.</p>
         </div>
       </FadeIn>
     </div>

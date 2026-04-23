@@ -1,5 +1,6 @@
 import { HomeSlidingHero } from "@/components/home/HomeSlidingHero";
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
+import { DualAudienceLadder } from "@/components/v2/DualAudienceLadder";
 import { WpITDepartmentOptions } from "@/components/wordpress/WpITDepartmentOptions";
 import { WpIndustryTabs } from "@/components/wordpress/WpIndustryTabs";
 import { WpWhyPartner } from "@/components/wordpress/WpWhyPartner";
@@ -27,17 +28,17 @@ export default function Homepage() {
       <WpHighlights />
       <WpHeroProducts />
       <WpSimplifyingIT />
-      <WpITDepartmentOptions />
+      <DualAudienceLadder />
       
       {/* Promo Offer — Business Voice Switch */}
       <WpPromoBanner 
-        eyebrow="BUSINESS EXCLUSIVE"
-        title="Get a Free IT & Telco Cost Analysis"
-        description="Stop paying for inefficient setups and disjointed vendors. Let our senior engineers map out a consolidated infrastructure plan that cuts costs and boosts productivity."
-        ctaText="Book a Strategy Session"
+        eyebrow="ENTERPRISE RISK MANAGEMENT"
+        title="Migration Readiness Review"
+        description="Planning a transition from multiple legacy vendors? Our senior engineers perform a deep-dive audit of your system dependencies to ensure zero-disruption cutover."
+        ctaText="Request Readiness Review"
         ctaHref="#consultation-section"
         imageSrc="/images/promo_business_audit.png"
-        disclaimer="*Available for qualifying Australian businesses with 10+ employees."
+        disclaimer="*Available for qualifying Australian businesses with 10+ locations."
       />
 
 
@@ -60,8 +61,8 @@ export default function Homepage() {
       {/* 9. CASE STUDIES — Real proof to eliminate last-mile doubt */}
       <div className="pt-20 bg-white">
         <div className="container mx-auto px-8 max-w-[1240px]">
-          <h2 className="c9-section-heading mb-4">Proven Across Real-World Environments</h2>
-          <p className="c9-body mb-2">Multi-site rollouts completed across retail and logistics. Thousands of endpoints actively managed.</p>
+          <h2 className="c9-section-heading mb-4">Operational Proof Across Complex Environments</h2>
+          <p className="c9-body mb-2">Multi-site rollouts and infrastructure consolidations completed for national footprints. Thousands of endpoints under single-owner control.</p>
         </div>
       </div>
       <WpCaseStudies 
@@ -72,7 +73,7 @@ export default function Homepage() {
             desc: 'How we unified communications and Internet across a national retail footprint, reducing incidents by consolidation.',
             img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800',
             videoText: 'National Retail Consolidation',
-            href: '/case-studies/retail-pos-stabilisation'
+            href: '/case-studies/multi-site-retail-stabilisation'
           },
           {
             tag: 'HEALTHCARE',
@@ -80,7 +81,7 @@ export default function Homepage() {
             desc: 'Replacing end-of-life on-premise systems with a flexible cloud phone system, enabling their team to field critical calls remotely and securely.',
             img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
             videoText: 'Arthritis Foundation Voice',
-            href: '/case-studies/legal-firm-takeover'
+            href: '/case-studies/healthcare-uptime-stabilisation'
           },
           {
             tag: 'EDUCATION',
@@ -88,7 +89,7 @@ export default function Homepage() {
             desc: 'Delivering direct 1Gbps/1Gbps fibre connectivity to support hundreds of concurrent students and cloud-hosted learning environments without latency.',
             img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800',
             videoText: 'Baxter Institute Network',
-            href: '/case-studies/greenfield-site-rollout'
+            href: '/case-studies/enterprise-migration-success'
           }
         ]}
       />
@@ -99,11 +100,11 @@ export default function Homepage() {
       <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
-          eyebrow="Take Control of Your IT Environment"
-          title="Take Control of Your IT Environment"
-          description="Whether you're opening new locations, stabilising existing systems, or scaling enterprise operations—C9 delivers complete ownership and reliable performance."
-          ctaText="Book a Consultation"
-          formTitle="Speak to an Expert"
+          eyebrow="CONSOLIDATE CONTROL"
+          title="Request Infrastructure Assessment"
+          description="If your infrastructure depends on multiple vendors, your operational risk is already distributed. We help you consolidate control before failure becomes visible."
+          ctaText="Request My Assessment"
+          formTitle="Schedule Risk Audit"
         />
       </section>
 

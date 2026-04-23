@@ -172,14 +172,14 @@ export default function HowWeWork() {
                     <div className="w-6 h-6 rounded-full bg-[#F3EEFF] flex items-center justify-center flex-shrink-0">
                       <CheckCircle className="w-3.5 h-3.5 text-[color:var(--brand-purple)]" />
                     </div>
-                    <span className="font-['Proxima_Nova'] text-[15px] font-medium text-[#1A1A2E] leading-snug">{item}</span>
+                    <span className="font-['Proxima_Nova'] text-[14px] font-medium text-[#1A1A2E] leading-snug">{item}</span>
                   </div>
                 ))}
               </div>
 
               <div className="pt-8 border-t border-purple-50 flex items-center gap-4">
                 <div className="w-2.5 h-2.5 rounded-full bg-[color:var(--brand-purple)] animate-pulse" />
-                <span className="font-['Proxima_Nova'] text-[15px] font-bold text-[color:var(--brand-purple)]">Outcome: {currentPhase.outcome}</span>
+                <span className="font-['Proxima_Nova'] text-[14px] font-bold text-[color:var(--brand-purple)]">Outcome: {currentPhase.outcome}</span>
               </div>
             </div>
 
@@ -202,7 +202,7 @@ export default function HowWeWork() {
                     "font-['Proxima_Nova'] text-[17px] font-bold mb-0.5",
                     m.hi ? "text-[color:var(--brand-purple)]" : "text-[#1A1A2E]"
                   )}>{m.val}</p>
-                  <p className="font-['Proxima_Nova'] text-[13px] text-[#6B7280] leading-tight">{m.sub}</p>
+                  <p className="font-['Proxima_Nova'] text-[14px] text-[#6B7280] leading-tight">{m.sub}</p>
                 </div>
               ))}
             </div>

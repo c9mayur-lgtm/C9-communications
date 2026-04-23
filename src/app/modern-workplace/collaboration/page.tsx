@@ -293,7 +293,7 @@ export default function CollaborationPage() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{problem.title}</h3>
-                    <p className="text-[15px] leading-relaxed text-gray-500">{problem.description}</p>
+                    <p className="text-[14px] leading-relaxed text-gray-500">{problem.description}</p>
                     <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                   </article>
                 </ScaleIn>
@@ -349,8 +349,8 @@ export default function CollaborationPage() {
                   <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.14em] text-[#5D00D6]">{room.size}</p>
                   <h3 className="c9-card-title mb-2 group-hover:text-[#5D00D6] transition-colors">{room.name}</h3>
                   <p className="mb-4 text-[28px] font-bold text-[#5D00D6]">{room.price}</p>
-                  <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#556087]">Recommended hardware</p>
-                  <p className="mb-4 text-[15px] font-medium text-gray-700">{room.hardware}</p>
+                  <p className="mb-3 text-[14px] font-bold uppercase tracking-[0.12em] text-[#556087]">Recommended hardware</p>
+                  <p className="mb-4 text-[14px] font-medium text-gray-700">{room.hardware}</p>
                   <p className="text-[14px] leading-relaxed text-gray-500">{room.fit}</p>
                   <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                 </article>
@@ -371,7 +371,7 @@ export default function CollaborationPage() {
 
           <FadeUp delay={0.2} className="overflow-hidden rounded-[24px] border border-gray-100 bg-white">
             <div className="grid grid-cols-1 bg-gray-50/50 lg:grid-cols-3">
-              <div className="border-b border-gray-100 p-6 text-[13px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] lg:border-b-0 lg:border-r">
+              <div className="border-b border-gray-100 p-6 text-[14px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] lg:border-b-0 lg:border-r">
                 Comparison area
               </div>
               <div className="border-b border-gray-100 p-6 text-[20px] font-bold lg:border-b-0 lg:border-r">Microsoft Teams Rooms</div>
@@ -380,13 +380,13 @@ export default function CollaborationPage() {
 
             {platformComparison.map((item) => (
               <div key={item.label} className="grid grid-cols-1 border-t border-gray-100 lg:grid-cols-3 hover:bg-gray-50/50 transition-colors">
-                <div className="border-b border-gray-100 p-6 text-[13px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] lg:border-b-0 lg:border-r">
+                <div className="border-b border-gray-100 p-6 text-[14px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] lg:border-b-0 lg:border-r">
                   {item.label}
                 </div>
-                <div className="border-b border-gray-100 p-6 text-[15px] leading-relaxed text-gray-600 lg:border-b-0 lg:border-r">
+                <div className="border-b border-gray-100 p-6 text-[14px] leading-relaxed text-gray-600 lg:border-b-0 lg:border-r">
                   {item.teamsRooms}
                 </div>
-                <div className="p-6 text-[15px] leading-relaxed text-gray-600">{item.zoomRooms}</div>
+                <div className="p-6 text-[14px] leading-relaxed text-gray-600">{item.zoomRooms}</div>
               </div>
             ))}
           </FadeUp>
@@ -404,13 +404,13 @@ export default function CollaborationPage() {
               </p>
               <div className="mb-4 rounded-2xl border border-[#E9E2F7] bg-[#FBFAFE] p-4">
                 <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#5D00D6]">Solution</p>
-                <p className="text-[15px] leading-relaxed text-[#2E3855]">
+                <p className="text-[14px] leading-relaxed text-[#2E3855]">
                   Standardized Teams Rooms across all locations with consistent hardware profiles, central management, and one deployment framework.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E9E2F7] bg-[#FBFAFE] p-4">
                 <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#5D00D6]">Outcome</p>
-                <p className="text-[15px] leading-relaxed text-[#2E3855]">
+                <p className="text-[14px] leading-relaxed text-[#2E3855]">
                   Consistent meeting experience, single support number for all sites, and bulk pricing efficiencies.
                 </p>
               </div>
@@ -421,12 +421,12 @@ export default function CollaborationPage() {
               <h3 className="c9-section-heading mb-3 !text-white !text-[30px]">Launch Housing</h3>
               <p className="mb-4 text-[16px] text-white/80">7 Melbourne offices modernized with standardized room technology.</p>
               <div className="mb-4 rounded-2xl border border-white/20 bg-white/5 p-4">
-                <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#C7B1F0]">Result</p>
-                <p className="mt-1 text-[15px] text-white/85">Meeting start time improved from 10 minutes to 30 seconds.</p>
+                <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#C7B1F0]">Result</p>
+                <p className="mt-1 text-[14px] text-white/85">Meeting start time improved from 10 minutes to 30 seconds.</p>
               </div>
               <div className="rounded-2xl border border-white/20 bg-white/5 p-4">
-                <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#C7B1F0]">Business impact</p>
-                <p className="mt-1 text-[15px] text-white/85">Remote meeting attendance increased by 40% across distributed teams.</p>
+                <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#C7B1F0]">Business impact</p>
+                <p className="mt-1 text-[14px] text-white/85">Remote meeting attendance increased by 40% across distributed teams.</p>
               </div>
             </article>
           </div>
@@ -443,19 +443,19 @@ export default function CollaborationPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[15px] font-bold text-white transition hover:bg-[#7116FF]"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[14px] font-bold text-white transition hover:bg-[#7116FF]"
               >
                 Book Room Design
               </Link>
               <Link
                 href="/resources"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[15px] font-bold text-white transition hover:border-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
               >
                 Download Guide
               </Link>
               <a
                 href="tel:1800000299"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[15px] font-bold text-white transition hover:border-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
               >
                 Call 1800 000 299
               </a>

@@ -329,12 +329,12 @@ export default function Plans() {
         </div>
 
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
-           <div className="flex items-center gap-2 text-gray-400 text-[13px] font-medium">
+           <div className="flex items-center gap-2 text-gray-400 text-[14px] font-medium">
               <Info size={16} className="text-[#5D00D6]" />
               <span>Quotes provided reflect 36-month enterprise commitments. All sites subject to qualification.</span>
            </div>
            <div className="w-px h-4 bg-gray-200 hidden md:block" />
-           <p className="text-[13px] text-[#5D00D6] font-bold uppercase tracking-[0.2em]">
+           <p className="text-[14px] text-[#5D00D6] font-bold uppercase tracking-[0.2em]">
               VERIFY SITE ELIGIBILITY: 1800 000 299
            </p>
         </div>

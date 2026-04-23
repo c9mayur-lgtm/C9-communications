@@ -71,7 +71,7 @@ export const WpHeroV2 = () => {
             </p>
           </div>
           
-          <div className="hidden md:flex items-center gap-4 text-[13px] text-[#6B7280] font-medium" >
+          <div className="hidden md:flex items-center gap-4 text-[14px] text-[#6B7280] font-medium" >
             <span>20 years in business</span>
             <span className="opacity-30">·</span>
             <span>100% AU-based support</span>

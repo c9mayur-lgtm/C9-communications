@@ -353,7 +353,7 @@ export default function WhatsCovered() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-gray-500 text-[15px] md:text-[16px] leading-relaxed font-medium max-w-xl" style={fontStyle}
+            className="text-gray-500 text-[14px] md:text-[16px] leading-relaxed font-medium max-w-xl" style={fontStyle}
           >
             One agreement. One number to call. Every IT hurdle your team faces — handled by experts who know your environment as well as you do.
           </motion.p>
@@ -381,7 +381,7 @@ export default function WhatsCovered() {
                   {item.title}
                 </h3>
                 
-                <p className="text-gray-500 text-[15px] md:text-[16px] leading-relaxed font-medium mb-6 max-w-[95%]" style={fontStyle}>
+                <p className="text-gray-500 text-[14px] md:text-[16px] leading-relaxed font-medium mb-6 max-w-[95%]" style={fontStyle}>
                   {item.body}
                 </p>
 

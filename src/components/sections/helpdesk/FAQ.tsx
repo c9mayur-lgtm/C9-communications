@@ -58,7 +58,7 @@ export default function FAQ() {
               <AccordionTrigger className="text-left text-[16px] font-medium text-[#1A1A2E] hover:text-[#7B2FBE] hover:no-underline transition-colors" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-[15px] text-[#6B7280] leading-[1.7] pb-4" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              <AccordionContent className="text-[14px] text-[#6B7280] leading-[1.7] pb-4" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                 {faq.a}
               </AccordionContent>
             </AccordionItem>

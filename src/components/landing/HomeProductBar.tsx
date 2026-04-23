@@ -15,7 +15,7 @@ export const HomeProductBar = () => {
     <section className="py-16 md:py-24 bg-white font-sans">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex flex-col items-center text-center mb-8">
-          <div className="inline-block bg-[#5D00D6] text-white px-4 py-1.5 rounded-full text-[13px] font-bold tracking-wide mb-6 shadow-md shadow-purple-900/20">
+          <div className="inline-block bg-[#5D00D6] text-white px-4 py-1.5 rounded-full text-[14px] font-bold tracking-wide mb-6 shadow-md shadow-purple-900/20">
             Our products
           </div>
           <h2 className="c9-section-heading font-black uppercase" >

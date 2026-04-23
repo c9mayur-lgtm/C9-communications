@@ -70,7 +70,7 @@ export default function HowItWorks() {
                 {/* Step number */}
                 <div className="shrink-0 pt-0.5">
                   <span
-                    className="text-[13px] font-bold text-white/25 tracking-widest"
+                    className="text-[14px] font-bold text-white/25 tracking-widest"
                     style={fontStyle}
                   >
                     {step.num}
@@ -91,7 +91,7 @@ export default function HowItWorks() {
                     </Badge>
                   </div>
                   <p
-                    className="text-[15px] text-slate-400 leading-relaxed font-normal"
+                    className="text-[14px] text-slate-400 leading-relaxed font-normal"
                     style={fontStyle}
                   >
                     {step.body}
@@ -157,7 +157,7 @@ export default function HowItWorks() {
                 <p className="text-[16px] font-semibold text-white mb-0.5" style={fontStyle}>
                   Download our Guide
                 </p>
-                <p className="text-[13px] text-white/60 font-normal" style={fontStyle}>
+                <p className="text-[14px] text-white/60 font-normal" style={fontStyle}>
                   Helpdesk Performance Playbook
                 </p>
               </div>

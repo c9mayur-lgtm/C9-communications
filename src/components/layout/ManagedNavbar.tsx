@@ -236,7 +236,7 @@ export const ManagedNavbar = () => {
         <div className="flex items-center gap-4">
           <div className="hidden lg:flex flex-col items-end border-r pr-6 mr-1 border-gray-200">
             <span className="text-[10px] font-semibold text-text-secondary uppercase tracking-[0.2em] mb-0.5 font-dm-sans leading-none">Client Support</span>
-            <a href="tel:1800000299" className="text-[15px] font-bold tracking-tight text-text-primary hover:text-brand-purple transition-colors font-dm-sans">1800 000 299</a>
+            <a href="tel:1800000299" className="text-[14px] font-bold tracking-tight text-text-primary hover:text-brand-purple transition-colors font-dm-sans">1800 000 299</a>
           </div>
           
           <Button 

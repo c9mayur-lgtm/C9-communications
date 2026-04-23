@@ -57,7 +57,7 @@ export default function SocialProof() {
                 <span className="text-[14px] font-bold text-[#0c1024]  uppercase tracking-[0.02em] font-sans">
                   {t.name}
                 </span>
-                <span className="text-[13px] text-slate-600  leading-none opacity-80 font-sans">
+                <span className="text-[14px] text-slate-600  leading-none opacity-80 font-sans">
                   {t.company}
                 </span>
                 <Badge variant="outline" className="mt-3 w-fit bg-[#F3EEFF] text-[#7B2FBE] border-[#7B2FBE] text-[11px] font-bold px-3 py-0.5 font-sans">

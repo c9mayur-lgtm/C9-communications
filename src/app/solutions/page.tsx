@@ -102,14 +102,14 @@ export default function SolutionsPage() {
                     {sol.features.map(f => (
                       <div key={f} className="flex items-center gap-2 group/feat">
                         <CheckCircle size={14} className="text-[#5D00D6]" strokeWidth={3} />
-                        <span className="text-[13px] font-bold text-gray-500 group-hover/feat:text-[#5D00D6] transition-colors">{f}</span>
+                        <span className="text-[14px] font-bold text-gray-500 group-hover/feat:text-[#5D00D6] transition-colors">{f}</span>
                       </div>
                     ))}
                   </div>
 
                   <Link 
                     href="/contact" 
-                    className="inline-flex items-center gap-2 text-[#5D00D6] font-semibold text-[15px] group-hover:underline uppercase tracking-wide"
+                    className="inline-flex items-center gap-2 text-[#5D00D6] font-semibold text-[14px] group-hover:underline uppercase tracking-wide"
                   >
                     Learn More <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                   </Link>

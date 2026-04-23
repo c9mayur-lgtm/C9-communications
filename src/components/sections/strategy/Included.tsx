@@ -62,7 +62,7 @@ export default function Included() {
                 {item.title}
               </h3>
               
-              <p className="text-[15px] text-[#6B7280] leading-[1.65] font-dm-sans opacity-95">
+              <p className="text-[14px] text-[#6B7280] leading-[1.65] font-dm-sans opacity-95">
                 {item.body}
               </p>
             </div>

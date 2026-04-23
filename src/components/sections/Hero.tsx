@@ -69,7 +69,7 @@ export const Hero = () => {
             {/* Quick Tags */}
             <div className="flex flex-wrap gap-3 mt-4">
               {content.tags.map((tag, i) => (
-                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 border border-gray-100 text-slate-600 text-[13px] font-bold font-dm-sans">
+                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 border border-gray-100 text-slate-600 text-[14px] font-bold font-dm-sans">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
                   {tag}
                 </div>

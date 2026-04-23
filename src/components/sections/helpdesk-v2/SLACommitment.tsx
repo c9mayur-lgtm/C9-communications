@@ -42,13 +42,13 @@ export default function SLACommitment() {
           
           {/* LEFT COLUMN */}
           <div>
-            <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block" >
+            <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.3em] mb-4 block" >
               RESPONSE SLAs
             </span>
             <h2 className="c9-section-heading mt-4" >
               Defined response times. <br /><span className="text-[#5D00D6]">Not estimates.</span>
             </h2>
-            <p className="text-[15px] md:text-[16px] text-slate-600 leading-relaxed mt-6 max-w-[560px] font-normal" >
+            <p className="text-[14px] md:text-[16px] text-slate-600 leading-relaxed mt-6 max-w-[560px] font-normal" >
               Every ticket C9 receives is assigned a priority level based on business impact. Response and resolution targets are defined in your agreement — and we report against them monthly so you always know if we're hitting them.
             </p>
 
@@ -65,7 +65,7 @@ export default function SLACommitment() {
                         {row.priority}
                       </Badge>
                     </div>
-                    <h4 className="text-[15px] md:text-[16px] font-normal text-slate-600 leading-[1.5] tracking-tight">
+                    <h4 className="text-[14px] md:text-[16px] font-normal text-slate-600 leading-[1.5] tracking-tight">
                       {row.what}
                     </h4>
                   </div>
@@ -76,7 +76,7 @@ export default function SLACommitment() {
                         <div className="w-1 h-1 rounded-full bg-[#5D00D6]" />
                         Response
                       </div>
-                      <div className="text-[14px] md:text-[15px] font-semibold text-[#5D00D6] whitespace-nowrap">
+                      <div className="text-[14px] md:text-[14px] font-semibold text-[#5D00D6] whitespace-nowrap">
                         {row.response}
                       </div>
                     </div>
@@ -85,7 +85,7 @@ export default function SLACommitment() {
                         <div className="w-1 h-1 rounded-full bg-slate-300" />
                         Resolution
                       </div>
-                      <div className="text-[14px] md:text-[15px] font-semibold text-slate-500 whitespace-nowrap">
+                      <div className="text-[14px] md:text-[14px] font-semibold text-slate-500 whitespace-nowrap">
                         {row.resolution}
                       </div>
                     </div>
@@ -126,7 +126,7 @@ export default function SLACommitment() {
                       <div className="w-5 h-5 rounded-full bg-[#5D00D6] flex items-center justify-center shrink-0 mt-1 shadow-lg shadow-[#5D00D6]/30">
                         <CheckCircle size={12} className="text-white" strokeWidth={3} />
                       </div>
-                      <span className="text-[15px] text-slate-200 leading-snug font-medium" >
+                      <span className="text-[14px] text-slate-200 leading-snug font-medium" >
                         {item}
                       </span>
                     </div>
@@ -134,7 +134,7 @@ export default function SLACommitment() {
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-white/10">
-                  <span className="text-[#5D00D6] text-[13px] font-bold uppercase tracking-[0.2em]" >
+                  <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.2em]" >
                     Zero Extra Charge. Built-in Accountability.
                   </span>
                 </div>

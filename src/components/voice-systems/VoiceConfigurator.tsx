@@ -85,7 +85,7 @@ export const VoiceConfigurator = () => {
                   onChange={(e) => setUsers(parseInt(e.target.value))}
                   className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#5D00D6]"
                 />
-                <div className="flex justify-between mt-4 text-[13px] font-bold text-slate-400 uppercase tracking-widest">
+                <div className="flex justify-between mt-4 text-[14px] font-bold text-slate-400 uppercase tracking-widest">
                   <span>5 Staff</span>
                   <span className="text-[#5D00D6] bg-purple-50 px-3 py-1 rounded-full">{users} Staff Members</span>
                   <span>100+ Staff</span>
@@ -155,7 +155,7 @@ export const VoiceConfigurator = () => {
                       <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${features.includes(feat.id) ? 'bg-[#5D00D6] text-white' : 'bg-slate-50 text-slate-400'}`}>
                         <Icon size={20} />
                       </div>
-                      <span className="text-[13px] font-bold text-[#0c1024] text-left leading-tight">{feat.name}</span>
+                      <span className="text-[14px] font-bold text-[#0c1024] text-left leading-tight">{feat.name}</span>
                     </button>
                   );
                 })}
@@ -195,7 +195,7 @@ export const VoiceConfigurator = () => {
                 )}
 
                 <div className="flex justify-between items-center text-[#5D00D6]">
-                  <p className="text-[13px] font-bold uppercase tracking-widest">Est. Monthly Total</p>
+                  <p className="text-[14px] font-bold uppercase tracking-widest">Est. Monthly Total</p>
                   <p className="text-[32px] font-bold text-white tracking-tighter">${totalPerMonth.toLocaleString()}</p>
                 </div>
               </div>

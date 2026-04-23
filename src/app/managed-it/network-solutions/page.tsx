@@ -181,7 +181,7 @@ const SectionProblemFraming = () => (
          <FadeIn delay={0.4} className="mt-12 flex justify-center">
             <div className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-[#0c1024] text-white">
                <ShieldCheck className="text-emerald-400" size={24} />
-               <span className="font-bold text-[15px]">Position: C9 eliminates network-driven business continuity risk.</span>
+               <span className="font-bold text-[14px]">Position: C9 eliminates network-driven business continuity risk.</span>
             </div>
          </FadeIn>
       </div>
@@ -219,7 +219,7 @@ const SectionTelcoIntegration = () => (
                </div>
 
                <div className="p-6 rounded-3xl bg-slate-50 border border-slate-100">
-                  <p className="text-slate-600 italic text-[15px]">
+                  <p className="text-slate-600 italic text-[14px]">
                      "By owning both the IT and Telco layers, C9 eliminates the finger-pointing that typically delays network recovery."
                   </p>
                </div>
@@ -317,7 +317,7 @@ const SectionArchitecture = () => (
                      {item.icon}
                   </div>
                   <h4 className={`text-2xl font-bold mb-4 tracking-tight ${item.color === 'bg-[#5D00D6]' ? 'text-white' : 'text-slate-900'}`}>{item.title}</h4>
-                  <p className={`text-[15px] leading-relaxed mb-8 flex-grow ${item.color === 'bg-[#5D00D6]' ? 'text-white/80' : 'text-slate-500'}`}>{item.desc}</p>
+                  <p className={`text-[14px] leading-relaxed mb-8 flex-grow ${item.color === 'bg-[#5D00D6]' ? 'text-white/80' : 'text-slate-500'}`}>{item.desc}</p>
                   
                   <div className={`pt-8 border-t ${item.color === 'bg-[#5D00D6]' ? 'border-white/10' : 'border-slate-50'}`}>
                      <ul className="space-y-4">
@@ -441,7 +441,7 @@ const SectionMultiSite = () => (
                         ].map((row, i) => (
                            <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                               <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-1">{row.label}</div>
-                              <div className="font-bold text-slate-900 text-[15px]">{row.value}</div>
+                              <div className="font-bold text-slate-900 text-[14px]">{row.value}</div>
                            </div>
                         ))}
                      </div>
@@ -583,9 +583,9 @@ const SectionMonitoring = () => (
    SECTION 8 — HOW IT WORKS (PROCESS)
    ───────────────────────────────────────────────────────── */
 const SectionHowItWorks = () => (
-   <section className="py-16 lg:py-24 bg-white">
+   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
       <div className={C}>
-         <div className="max-w-3xl mx-auto text-center mb-12">
+         <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
                <span className="c9-eyebrow mb-4">Our Methodology</span>
                <h2 className="c9-section-heading mb-6">From Assessment to 24/7 Oversight</h2>
@@ -601,12 +601,15 @@ const SectionHowItWorks = () => (
                { step: '04', title: 'Optimization', desc: 'Tuning traffic flow for business-critical apps.' },
                { step: '05', title: 'Monitoring & Support', desc: 'Active 24/7 oversight and proactive resolution.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-slate-50 p-8 rounded-3xl border border-slate-100 group hover:bg-white hover:border-[#5D00D6]/30 hover:shadow-xl transition-all">
-                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 shadow-md">
-                     {parseInt(s.step)}
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
+                     {s.step}
                   </div>
-                  <h4 className="font-bold text-slate-900 text-[15px] mb-3">{s.title}</h4>
-                  <p className="text-slate-500 text-[13px] leading-relaxed">{s.desc}</p>
+                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
+                     {i + 1}
+                  </div>
+                  <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
+                  <p className="text-slate-500 text-[15px] leading-relaxed relative z-10">{s.desc}</p>
                </FadeIn>
             ))}
          </div>
@@ -627,11 +630,11 @@ const SectionOutcomes = () => (
                <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-bold text-[#a56eff] mb-1">99.9%</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Guaranteed Uptime</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Guaranteed Uptime</div>
                   </div>
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-bold text-[#a56eff] mb-1">10ms</div>
-                     <div className="text-[13px] text-white/60 uppercase tracking-widest font-bold">Inter-Site Latency</div>
+                     <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Inter-Site Latency</div>
                   </div>
                </div>
                <p className="c9-body text-white/80 mb-6 italic">
@@ -711,7 +714,7 @@ const SectionIntegration = () => (
                   { name: 'Helpdesk & Support', href: '/managed-it/helpdesk-support' },
                   { name: 'Cybersecurity', href: '/c9-defense' }
                ].map(link => (
-                  <a key={link.name} href={link.href} className="px-6 py-3 rounded-full border border-white/20 bg-white/5 hover:bg-white hover:text-[#0c1024] transition-all text-[13px] font-bold">
+                  <a key={link.name} href={link.href} className="px-6 py-3 rounded-full border border-white/20 bg-white/5 hover:bg-white hover:text-[#0c1024] transition-all text-[14px] font-bold">
                      {link.name}
                   </a>
                ))}

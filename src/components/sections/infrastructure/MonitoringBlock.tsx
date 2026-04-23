@@ -38,7 +38,7 @@ export default function MonitoringBlock() {
             {features.map((feature, idx) => (
               <div key={idx} className="flex gap-3 items-center">
                 <CheckCircle className="w-4 h-4 text-[color:var(--brand-purple)] flex-shrink-0" />
-                <span className="font-['Proxima_Nova'] text-[15px] text-white font-medium">{feature}</span>
+                <span className="font-['Proxima_Nova'] text-[14px] text-white font-medium">{feature}</span>
               </div>
             ))}
           </div>
