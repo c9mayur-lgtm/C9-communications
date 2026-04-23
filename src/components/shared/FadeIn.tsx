@@ -11,6 +11,7 @@ interface FadeInProps {
   distance?: number;
   className?: string;
   style?: React.CSSProperties;
+  id?: string;
 }
 
 export const FadeIn = ({
@@ -21,6 +22,7 @@ export const FadeIn = ({
   distance = 20,
   className = '',
   style = {},
+  id,
 }: FadeInProps) => {
   const directions = {
     up: { y: distance },
@@ -49,6 +51,7 @@ export const FadeIn = ({
       }}
       className={className}
       style={style}
+      id={id}
     >
       {children}
     </motion.div>

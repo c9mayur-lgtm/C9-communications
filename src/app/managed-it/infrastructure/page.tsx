@@ -21,11 +21,13 @@ const FadeIn = ({
   delay = 0,
   className = '',
   direction = 'up',
+  id,
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
   direction?: 'up' | 'left' | 'right' | 'none';
+  id?: string;
 }) => {
   const y = direction === 'up' ? 24 : 0;
   const x = direction === 'left' ? -24 : direction === 'right' ? 24 : 0;
@@ -36,6 +38,7 @@ const FadeIn = ({
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
+      id={id}
     >
       {children}
     </motion.div>

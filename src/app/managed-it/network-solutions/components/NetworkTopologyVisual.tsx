@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Zap, Globe, Server, Activity, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
 const P = '#5D00D6';
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 interface Node {
   id: number;
