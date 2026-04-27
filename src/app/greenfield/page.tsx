@@ -153,7 +153,7 @@ const Hero = () => (
    SECTION 2 — PROBLEM (PAIN AMPLIFICATION)
    ───────────────────────────────────────────────────────── */
 const SectionPain = () => (
-  <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+  <section className="py-10 lg:py-16 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <FadeIn direction="left">
@@ -203,7 +203,7 @@ const SectionPain = () => (
    SECTION 4 — DAY ONE OPERATIONAL GUARANTEE
    ───────────────────────────────────────────────────────── */
 const SectionGuarantee = () => (
-  <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+  <section className="py-10 lg:py-16 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-16">
         <span className="c9-eyebrow mb-4">Our Conversion Unlock</span>
@@ -247,7 +247,7 @@ const SectionGuarantee = () => (
    SECTION 5 — RETAIL / REAL-WORLD READINESS
    ───────────────────────────────────────────────────────── */
 const SectionReadiness = () => (
-  <section className="py-16 lg:py-24 bg-white">
+  <section className="py-10 lg:py-16 bg-white">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <FadeIn direction="left">
@@ -306,7 +306,7 @@ const steps = [
 ];
 
 const SectionFlow = () => (
-  <section id="delivery-model" className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+  <section id="delivery-model" className="py-10 lg:py-16 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-14">
         <span className="c9-eyebrow mb-4">Structured Delivery</span>
@@ -360,7 +360,7 @@ const SectionFlow = () => (
    SECTION 7 — PROOF (ROLLOUT CAPABILITY)
    ───────────────────────────────────────────────────────── */
 const SectionProof = () => (
-  <section className="py-16 lg:py-24 bg-white overflow-hidden">
+  <section className="py-10 lg:py-16 bg-white overflow-hidden">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         <FadeIn direction="left">
@@ -433,7 +433,7 @@ const SectionProof = () => (
    SECTION 8 — SUPPORT & SLA (TRUST BUILDER)
    ───────────────────────────────────────────────────────── */
 const SectionSupport = () => (
-  <section className="py-16 lg:py-24 bg-[#0c1024] relative overflow-hidden">
+  <section className="py-10 lg:py-16 bg-[#0c1024] relative overflow-hidden">
     <div
       className="absolute inset-0 opacity-[0.08]"
       style={{ background: 'radial-gradient(circle at 70% 50%, #5D00D6, transparent 60%)' }}
@@ -492,7 +492,7 @@ const SectionSupport = () => (
    SECTION 3 — CORE DIFFERENTIATION (SINGLE OWNER MODEL)
    ───────────────────────────────────────────────────────── */
 const SectionAccountability = () => (
-  <section className="py-16 lg:py-24 bg-white">
+  <section className="py-10 lg:py-16 bg-white">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <FadeIn direction="left">
@@ -573,7 +573,7 @@ const SectionAccountability = () => (
    SECTION 9 — CYBERSECURITY LAYER
    ───────────────────────────────────────────────────────── */
 const SectionSecurity = () => (
-  <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+  <section className="py-10 lg:py-16 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-16">
         <span className="c9-eyebrow mb-4">Inherent Protection</span>
@@ -664,7 +664,7 @@ const SectionReassurance = () => (
    SECTION 10 — FINAL CTA (DECISION PUSH)
    ───────────────────────────────────────────────────────── */
 const FinalCTA = () => (
-  <section className="py-16 lg:py-24 bg-white">
+  <section className="py-10 lg:py-16 bg-white">
     <div className={`${C} text-center`}>
       <FadeIn>
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
@@ -728,7 +728,7 @@ export default function GreenfieldPage() {
             tag: 'MULTI-SITE ARCHITECTURE',
             title: 'Rapid Infrastructure Rollout for National Expansion',
             desc: 'Successfully commissioned 12 new sites across 3 states in under 6 weeks, providing unified networking and zero-day operational readiness.',
-            img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
+            img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800',
             videoText: 'National Site Rollout',
             href: '/case-studies/enterprise-migration-success'
           },

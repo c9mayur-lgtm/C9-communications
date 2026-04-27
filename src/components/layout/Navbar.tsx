@@ -28,7 +28,10 @@ const AUDIENCE_INFO: Record<string, any> = {
 /* ───────────────────────────────────────────── */
 const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean }) => {
   const colCount = data.columns ? data.columns.length : 3;
-  const gridTemplate = `repeat(${colCount}, minmax(200px, 1fr)) 1.2fr minmax(280px, 300px)`;
+  const hasMiddle = data.hardware || data.challenges || data.modernization || data.partners;
+  const gridTemplate = hasMiddle 
+    ? `repeat(${colCount}, minmax(200px, 1fr)) 1.2fr minmax(280px, 300px)`
+    : `repeat(${colCount}, minmax(200px, 1fr)) minmax(280px, 300px)`;
 
   return (
     <div 
@@ -41,7 +44,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
         pointerEvents: visible ? 'auto' : 'none',
       }}
     >
-      <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: '1240px' }}>
+      <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: data.maxWidth || '1240px' }}>
         <div className="bg-white border border-gray-100 border-top-0 rounded-b-[40px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] overflow-hidden">
           <div className="grid" style={{ gridTemplateColumns: gridTemplate }}>
             
@@ -74,46 +77,62 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
             {/* Spacer removed intentionally — layout now uses dynamic fr columns */}
 
-            {/* VISUAL HIGHLIGHTS COLUMN (HARDWARE OR CHALLENGES) */}
-            <div className="p-7 border-r border-gray-50 bg-[#FCFBFE]/30">
-              {data.hardware ? (
-                <>
-                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">Hardware Selection</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {data.hardware.map((h: any, i: number) => (
-                      <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-start justify-center text-left hover:shadow-lg transition-all border-b-2 border-b-transparent hover:border-b-[#5D00D6] duration-300">
-                        <div className="aspect-square w-full mb-3 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-2">
-                          <img src={h.img} alt={h.title} className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+            {/* VISUAL HIGHLIGHTS COLUMN (HARDWARE OR CHALLENGES OR PARTNERS) */}
+            {hasMiddle && (
+              <div className="p-7 border-r border-gray-50 bg-[#FCFBFE]/30">
+                {data.hardware ? (
+                  <>
+                    <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">Hardware Selection</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      {data.hardware.map((h: any, i: number) => (
+                        <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-start justify-center text-left hover:shadow-lg transition-all border-b-2 border-b-transparent hover:border-b-[#5D00D6] duration-300">
+                          <div className="aspect-square w-full mb-3 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-2">
+                            <img src={h.img} alt={h.title} className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                          </div>
+                          <span className="text-[11px] font-bold text-slate-700">{h.title}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                ) : data.partners ? (
+                  <>
+                    <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">Strategic Partners</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      {data.partners.map((p: any, i: number) => (
+                        <div key={i} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all h-24">
+                          <img src={p.logo} alt={p.title} className="max-h-8 max-w-[80%] object-contain group-hover:scale-110 transition-transform duration-500" />
+                          <span className="text-[9px] font-bold text-slate-400 mt-2 uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">{p.title}</span>
                         </div>
-                        <span className="text-[11px] font-bold text-slate-700">{h.title}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <>
-                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">
-                    {data.layout === 'solutions' ? 'Strategic Challenges' : 'Workplace Evolution'}
-                  </h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {(data.challenges || data.modernization)?.map((c: any, i: number) => (
-                      <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-start justify-center text-left hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden leading-tight aspect-square">
-                        <div className="mb-4 p-4 rounded-2xl bg-purple-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500">
-                          {c.icon}
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">
+                      {data.layout === 'solutions' ? 'Strategic Challenges' : 
+                       data.layout === 'modern-workplace' ? 'Workplace Evolution' : 
+                       data.layout === 'company' ? 'Our Values' : 'Growth & Expertise'}
+                    </h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      {(data.challenges || data.modernization)?.map((c: any, i: number) => (
+                        <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-start justify-center text-left hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden leading-tight aspect-square">
+                          <div className="mb-4 p-4 rounded-2xl bg-purple-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500">
+                            {c.icon}
+                          </div>
+                          <span className="text-[11px] font-bold text-slate-700 px-1">{c.title}</span>
+                          <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                             <ArrowRight size={12} className="text-[#5D00D6]" />
+                          </div>
                         </div>
-                        <span className="text-[11px] font-bold text-slate-700 px-1">{c.title}</span>
-                        <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                           <ArrowRight size={12} className="text-[#5D00D6]" />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
 
             {/* SIDEBAR COLUMN */}
-            <div className="p-7 bg-[#FCFBFE]">
+            <div className="p-7 bg-white">
               <div className="flex flex-col h-full justify-between">
                 <div>
                   <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">
@@ -142,18 +161,32 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                        </Link>
                     </div>
                   ) : (
-                    <div className="flex flex-col gap-3.5">
+                    <div className={data.sidebar?.heading === 'Strategic Partners' ? "grid grid-cols-2 gap-4" : "flex flex-col gap-5"}>
                       {(data.sidebar?.items || []).map((item: any, i: number) => (
-                        <Link key={i} href={item.path || '#'} className="group flex flex-col transition-all">
-                          <span className="text-[14px] font-bold text-slate-700 group-hover:text-[#5D00D6] transition-colors leading-tight">{item.label || item.title}</span>
-                          {item.desc && <p className="text-[10px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
+                        <Link 
+                          key={i} 
+                          href={item.path || '#'} 
+                          className={`group flex transition-all ${data.sidebar?.heading === 'Strategic Partners' ? 'flex-col items-center justify-center p-3 border border-gray-50 rounded-2xl hover:border-[#5D00D6]/20 hover:shadow-lg hover:shadow-purple-900/5' : 'items-center gap-4 py-1'}`}
+                        >
+                          {item.icon && <div className="text-[#5D00D6] opacity-40 group-hover:opacity-100 transition-opacity mt-0.5">{item.icon}</div>}
+                          {item.logo && (
+                            <div className={`${data.sidebar?.heading === 'Strategic Partners' ? 'w-full h-8 mb-2' : 'w-12 h-10'} flex items-center justify-center transition-all group-hover:scale-105`}>
+                              <img src={item.logo} alt={item.title} className="max-w-full max-h-full object-contain" />
+                            </div>
+                          )}
+                          <div className={`flex flex-col ${data.sidebar?.heading === 'Strategic Partners' ? 'items-center text-center' : ''}`}>
+                            <span className={`${data.sidebar?.heading === 'Strategic Partners' ? 'text-[9px] uppercase tracking-tight text-slate-400 font-bold' : 'text-[14px] font-bold text-slate-700 group-hover:text-[#5D00D6]'} transition-colors leading-tight`}>
+                              {item.label || item.title}
+                            </span>
+                            {item.desc && <p className="text-[10px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
+                          </div>
                         </Link>
                       ))}
                     </div>
                   )}
                 </div>
 
-                {!data.sidebar?.title && (
+                {!data.sidebar?.title && !data.sidebar?.hideCTA && (
                   <div className="mt-6 pt-6 border-t border-gray-200/60">
                     <Link href="/consultation" className="group flex items-center justify-between p-4 bg-[#5D00D6] rounded-2xl shadow-xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
                       <div className="flex flex-col">

@@ -28,7 +28,7 @@ export const Section = ({
     <section 
       id={id}
       className={cn(
-        "py-14 md:py-20 overflow-hidden",
+        "py-10 md:py-14 overflow-hidden",
         bgStyles[bg],
         className
       )}

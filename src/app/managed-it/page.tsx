@@ -150,7 +150,7 @@ const Hero = () => (
    SECTION 2 — PROBLEM
    ───────────────────────────────────────────────────────── */
 const SectionProblem = () => (
-   <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
+   <section className="py-10 lg:py-14 bg-slate-50 border-y border-slate-100 overflow-hidden">
       <div className={C}>
          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left" className="order-2 lg:order-1">
@@ -200,7 +200,7 @@ const SectionProblem = () => (
    SECTION 3 — THE C9 MODEL
    ───────────────────────────────────────────────────────── */
 const SectionModel = () => (
-   <section id="takeover-process" className="py-16 lg:py-20 bg-[#0c1024] text-white relative overflow-hidden">
+   <section id="takeover-process" className="py-10 lg:py-14 bg-[#0c1024] text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
       <div className={C}>
          <div className="grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 items-center">
@@ -253,7 +253,7 @@ const SectionModel = () => (
    SECTION 4 — WHAT WE MANAGE
    ───────────────────────────────────────────────────────── */
 const SectionManage = () => (
-   <section className="py-16 lg:py-20 bg-white">
+   <section className="py-10 lg:py-14 bg-white">
       <div className={C}>
          <FadeIn className="text-center mb-16">
             <span className="c9-eyebrow mb-4">Operational Accountability</span>
@@ -290,7 +290,7 @@ const SectionManage = () => (
    SECTION 5 — HOW IT WORKS
    ───────────────────────────────────────────────────────── */
 const SectionHowItWorks = () => (
-   <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100">
+   <section className="py-10 lg:py-14 bg-slate-50 border-y border-slate-100">
       <div className={C}>
          <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
@@ -332,7 +332,7 @@ const SectionHowItWorks = () => (
    SECTION 6 — OPERATIONS
    ───────────────────────────────────────────────────────── */
 const SectionOperations = () => (
-   <section className="py-16 lg:py-20 bg-white">
+   <section className="py-10 lg:py-14 bg-white">
       <div className={C}>
          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left" className="relative">
@@ -391,7 +391,7 @@ const SectionOperations = () => (
    SECTION 7 — SECURITY
    ───────────────────────────────────────────────────────── */
 const SectionSecurity = () => (
-   <section className="py-16 lg:py-20 bg-[#0c1024] text-white overflow-hidden relative">
+   <section className="py-10 lg:py-14 bg-[#0c1024] text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6] opacity-10 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none" />
       <div className={C}>
          <div className="max-w-3xl mx-auto text-center mb-16">
@@ -430,7 +430,7 @@ const SectionSecurity = () => (
    SECTION 8 — PERSONAS
    ───────────────────────────────────────────────────────── */
 const SectionPersonas = () => (
-   <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100">
+   <section className="py-10 lg:py-14 bg-slate-50 border-y border-slate-100">
       <div className={C}>
          <FadeIn className="text-center mb-16">
             <h2 className="c9-section-heading">Model Qualification: What C9 Is Not</h2>
@@ -480,7 +480,7 @@ const SectionPersonas = () => (
    SECTION 9 — OUTCOMES
    ───────────────────────────────────────────────────────── */
 const SectionOutcomes = () => (
-   <section className="py-16 lg:py-20 bg-white">
+   <section className="py-10 lg:py-14 bg-white">
       <div className={C}>
          <div className="bg-[#5D00D6] rounded-[48px] p-10 lg:p-20 relative overflow-hidden shadow-2xl shadow-purple-900/40">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-[0.05] rounded-full blur-[100px] -mr-64 -mt-64" />

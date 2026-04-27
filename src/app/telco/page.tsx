@@ -121,7 +121,7 @@ const SectionProblems = () => (
               </div>
             ))}
           </div>
-          <a href="#consultation" className="text-[#5D00D6] font-extrabold flex items-center gap-2 group text-lg">
+          <a href="#consultation" className="text-[#5D00D6] font-bold flex items-center gap-2 group text-lg">
             Assess your current setup <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
           </a>
         </FadeIn>
@@ -155,13 +155,13 @@ const SectionApproach = () => (
                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" alt="Telco Hardware" />
                 </div>
                 <div className="bg-[#5D00D6] p-8 rounded-[32px] text-white">
-                   <div className="text-4xl font-black mb-2">One</div>
+                   <div className="text-4xl font-bold mb-2">One</div>
                    <div className="text-sm font-bold uppercase tracking-widest opacity-80">Partner Responsible for Uptime</div>
                 </div>
              </div>
              <div className="space-y-6 pt-12">
                 <div className="bg-slate-900 p-8 rounded-[32px] text-white">
-                   <div className="text-4xl font-black mb-2">Zero</div>
+                   <div className="text-4xl font-bold mb-2">Zero</div>
                    <div className="text-sm font-bold uppercase tracking-widest opacity-80">Vendor Blame Games</div>
                 </div>
                 <div className="aspect-square rounded-[32px] overflow-hidden shadow-xl border border-slate-100">
@@ -317,7 +317,7 @@ const SectionResilience = () => (
                            <div className="text-[14px] font-bold text-white mb-0.5">{item.label}</div>
                            <div className="text-[11px] text-white/40 uppercase tracking-widest">{item.val}</div>
                         </div>
-                        <div className={`text-[12px] font-black uppercase tracking-widest ${item.color}`}>
+                        <div className={`text-[12px] font-bold uppercase tracking-widest ${item.color}`}>
                            {item.status}
                         </div>
                      </div>
@@ -326,11 +326,11 @@ const SectionResilience = () => (
                 <div className="mt-8 pt-8 border-t border-white/10 grid grid-cols-2 gap-4">
                    <div className="bg-white/5 p-4 rounded-2xl">
                       <div className="text-[10px] text-white/40 font-bold uppercase mb-1">Avg Response</div>
-                      <div className="text-xl font-black text-white">12ms</div>
+                      <div className="text-xl font-bold text-white">12ms</div>
                    </div>
                    <div className="bg-white/5 p-4 rounded-2xl">
                       <div className="text-[10px] text-white/40 font-bold uppercase mb-1">Packet Loss</div>
-                      <div className="text-xl font-black text-white">0.00%</div>
+                      <div className="text-xl font-bold text-white">0.00%</div>
                    </div>
                 </div>
              </div>
@@ -363,7 +363,7 @@ const SectionProcess = () => (
                { step: '04', title: "Monitor", desc: "24/7 management to ensure continuous uptime." }
             ].map((s, i) => (
                <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
-                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
+                  <div className="text-[40px] font-bold text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
                   <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
@@ -426,7 +426,7 @@ const SectionMonitoring = () => (
                 </div>
                 {/* Floating Stats */}
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-[32px] shadow-2xl max-w-[200px]">
-                   <div className="text-3xl font-black text-[#5D00D6] mb-1">24/7</div>
+                   <div className="text-3xl font-bold text-[#5D00D6] mb-1">24/7</div>
                    <div className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Active Monitoring</div>
                 </div>
              </div>
@@ -509,7 +509,7 @@ const SectionOutcomes = () => (
                   { val: "Fast", label: "Rollouts for new sites and office moves" }
                 ].map((stat, i) => (
                   <div key={i} className="bg-white p-6 rounded-3xl border border-slate-200 flex items-center gap-6 shadow-sm">
-                     <div className="text-2xl font-black text-[#5D00D6] shrink-0">{stat.val}</div>
+                     <div className="text-2xl font-bold text-[#5D00D6] shrink-0">{stat.val}</div>
                      <div className="text-sm font-bold text-slate-600 leading-tight">{stat.label}</div>
                   </div>
                 ))}

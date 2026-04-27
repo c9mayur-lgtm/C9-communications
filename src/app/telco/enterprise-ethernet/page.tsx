@@ -1,62 +1,525 @@
-import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
-import { WpConsultationForm as ContactSection } from "@/components/wordpress/WpConsultationForm";
-import Hero from "@/components/sections/enterprise-ethernet/Hero";
-import WhatIsEnterpriseEthernet from "@/components/sections/enterprise-ethernet/WhatIsEnterpriseEthernet";
-import Features from "@/components/sections/enterprise-ethernet/Features";
-import Plans from "@/components/sections/enterprise-ethernet/Plans";
-import SupportTiers from "@/components/sections/enterprise-ethernet/SupportTiers";
-import MultiSiteSection from "@/components/sections/enterprise-ethernet/MultiSiteSection";
-import AccreditationBar from "@/components/sections/enterprise-ethernet/AccreditationBar";
-import FinalCTA from "@/components/sections/enterprise-ethernet/FinalCTA";
+'use client';
 
-export const metadata = {
-  title: "nbn™ Enterprise Ethernet | C9 Communications",
-  description: "nbn™ Enterprise Ethernet for Australian businesses — symmetrical speeds from 50/50 to 1000/1000 Mbps, guaranteed bandwidth, 4G LTE failover, and eSLA from 4 hours. nbn™ Accredited Adviser.",
-  openGraph: {
-    title: "nbn™ Enterprise Ethernet | C9 Communications",
-    description: "Dedicated enterprise nbn™ connectivity with symmetrical speeds, guaranteed bandwidth, and multi-site architecture. nbn™ Accredited Adviser. eSLA from 4 hours.",
-    url: "https://c9communications.com.au/telco/enterprise-ethernet",
-  },
-}
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  ShieldCheck, Activity, Users, ArrowRight, CheckCircle2, 
+  Clock, Layers, Building2, TrendingUp,
+  Server, PhoneCall, Monitor, CheckCircle, BarChart3, Globe,
+  Network, Lock, Zap, FileSearch, HardDrive, RefreshCcw, ShieldAlert
+} from 'lucide-react';
+import { Section } from '@/components/design-system/Section';
+import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
+import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
+import { C9Button } from '@/components/design-system/C9Button';
+import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
+
+const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
+  children: React.ReactNode; 
+  delay?: number; 
+  className?: string;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'none'
+}) => {
+  const y = direction === 'up' ? 24 : direction === 'down' ? -24 : 0;
+  const x = direction === 'left' ? -24 : direction === 'right' ? 24 : 0;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y, x }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
 
 export default function EnterpriseEthernetPage() {
   return (
-    <main className="min-h-screen bg-white font-['Proxima_Nova']">
-                  
-      <div id="ee-overview">
-        <Hero />
-        <WhatIsEnterpriseEthernet />
-      </div>
-
-      <div id="ee-features">
-        <Features />
-      </div>
-
-      <div id="ee-plans">
-        <Plans />
-      </div>
-
-      <div id="ee-support">
-        <SupportTiers />
-      </div>
-
-      <div id="ee-multi-site">
-        <MultiSiteSection />
-      </div>
-
-      <FinalCTA />
+    <main className="min-h-screen bg-white">
       
-      <WpFAQAndFeedback />
+      {/* ══ 1. HERO ══════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden bg-white pt-12 pb-0 lg:pt-20 border-b border-slate-50">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-50 rounded-full blur-[120px] -mr-64 -mt-64 opacity-50" />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'linear-gradient(#5D00D6 1px, transparent 1px), linear-gradient(90deg, #5D00D6 1px, transparent 1px)',
+            backgroundSize: '40px 40px',
+          }}
+        />
+        
+        <div className={`${C} relative z-10`}>
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center pb-16 lg:pb-24">
+            <div>
+              <FadeIn>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
+                   <ShieldCheck size={13} className="text-[#5D00D6]" />
+                   <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Decision Tier</span>
+                </div>
+              </FadeIn>
 
-      <section id="consultation-section">
-        <ContactSection 
+              <FadeIn delay={0.08}>
+                 <h1 className="c9-hero-title mb-6 !leading-[1.1]">
+                    Guaranteed Performance. Dedicated Infrastructure. <span className="text-[#5D00D6]">Full Accountability.</span>
+                 </h1>
+              </FadeIn>
+
+              <FadeIn delay={0.15}>
+                 <p className="c9-body mb-8 max-w-[620px] text-lg">
+                    Business-critical operations cannot run on shared or unstable networks. Downtime creates immediate operational and financial exposure. C9 delivers dedicated connectivity with SLA-backed accountability and enterprise support.
+                 </p>
+              </FadeIn>
+
+              <FadeIn delay={0.22}>
+                 <div className="flex flex-col sm:flex-row gap-4">
+                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
+                      <Link href="#consultation">Book an Enterprise Network Review</Link>
+                    </C9Button>
+                    <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
+                      <Link href="#consultation">Speak to a Network Specialist</Link>
+                    </C9Button>
+                 </div>
+              </FadeIn>
+
+              <FadeIn delay={0.3} className="mt-10">
+                <div className="flex flex-wrap gap-x-10 gap-y-3">
+                   {['eSLA from 4 Hours', '1:1 Guaranteed Bandwidth', 'Dedicated Port Architecture', 'Proactive Incident Ownership'].map((item) => (
+                      <div key={item} className="flex items-center gap-2 text-slate-400 font-bold text-[11px] uppercase tracking-widest">
+                         <CheckCircle size={14} className="text-[#5D00D6]" />
+                         {item}
+                      </div>
+                   ))}
+                </div>
+              </FadeIn>
+            </div>
+
+            <FadeIn delay={0.2} direction="right" className="relative">
+               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square group">
+                  <img
+                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop"
+                     alt="Enterprise technical lead analyzing network infrastructure data"
+                     className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
+                  
+                  <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md rounded-[32px] p-8 border border-white/60 shadow-xl">
+                     <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-100">
+                        <div className="w-12 h-12 rounded-2xl bg-[#5D00D6] flex items-center justify-center text-white shadow-lg">
+                           <ShieldCheck size={24} />
+                        </div>
+                        <div>
+                           <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 leading-none mb-1">Infrastructure Governance</div>
+                           <div className="text-[18px] font-bold text-slate-900 leading-none">High-Trust Architecture</div>
+                        </div>
+                     </div>
+                     <div className="grid grid-cols-2 gap-8">
+                        <div>
+                           <div className="text-[11px] font-bold text-slate-500 mb-1 uppercase tracking-widest">Contention</div>
+                           <div className="text-[20px] font-bold text-[#5D00D6] leading-none tracking-tight">1:1 Dedicated</div>
+                        </div>
+                        <div>
+                           <div className="text-[11px] font-bold text-slate-500 mb-1 uppercase tracking-widest">Recovery</div>
+                           <div className="text-[20px] font-bold text-[#5D00D6] leading-none tracking-tight">&lt; 4 Hours</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      <WpClientTicker />
+
+      {/* ══ 2. WHEN DOWNTIME IS NOT AN OPTION ════════════════════════ */}
+      <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 overflow-hidden">
+        <div className={C}>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <FadeIn direction="left">
+               <span className="c9-eyebrow mb-4 text-rose-600">Decision Framing</span>
+               <h2 className="c9-section-heading mb-6">When Downtime is Not an Option.</h2>
+               <p className="c9-body text-lg mb-8">
+                  Operational downtime directly impacts revenue. If your connectivity relies on shared infrastructure or fragmented support, you are managing a hidden commercial liability.
+               </p>
+               <C9Button variant="outline" className="rounded-full h-12 px-8 border-slate-200 text-[#5D00D6] hover:border-[#5D00D6]" asChild>
+                  <Link href="#consultation">Request a Risk Assessment</Link>
+               </C9Button>
+            </FadeIn>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { icon: <ShieldAlert />, title: "Revenue Exposure", text: "Operational downtime costs immediate revenue." },
+                { icon: <Activity />, title: "Network Congestion", text: "Shared bandwidth creates instability." },
+                { icon: <Users />, title: "Accountability Failure", text: "Fragmented providers delay business recovery." },
+                { icon: <Clock />, title: "Escalation Lag", text: "Poor escalation creates IT risk." }
+              ].map((item, i) => (
+                <FadeIn key={i} delay={i * 0.1} className="bg-white p-6 rounded-[28px] border border-slate-200 shadow-sm">
+                   <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-rose-600 mb-4">
+                      {item.icon}
+                   </div>
+                   <h4 className="font-bold text-slate-900 text-[15px] mb-2">{item.title}</h4>
+                   <p className="text-slate-500 text-[13px] leading-relaxed">{item.text}</p>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 3. WHY ENTERPRISE BUSINESSES CHOOSE C9 ═══════════════════ */}
+      <section className="py-12 lg:py-16 bg-white overflow-hidden">
+        <div className={C}>
+          <FadeIn className="text-center mb-16">
+            <span className="c9-eyebrow mb-4">The C9 Advantage</span>
+            <h2 className="c9-section-heading">Why Leaders Choose C9 Over <br/>Standard Providers.</h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { 
+                icon: <Zap />, 
+                title: "Guaranteed Performance", 
+                desc: "1:1 dedicated bandwidth ensures peak-hour stability for ERP and logistics systems." 
+              },
+              { 
+                icon: <ShieldCheck />, 
+                title: "Single Accountability", 
+                desc: "One accountable partner across both implementation and 24/7 senior engineering support." 
+              },
+              { 
+                icon: <Activity />, 
+                title: "Proactive Response", 
+                desc: "Real-time monitoring detects and resolves anomalies before they impact your site operations." 
+              },
+              { 
+                icon: <Globe />, 
+                title: "Multi-Site Governance", 
+                desc: "Consistent infrastructure and unified billing across your entire national location portfolio." 
+              }
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.1} className="bg-slate-50/50 p-8 rounded-[32px] border border-slate-100 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-xl group">
+                <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                  {item.icon}
+                </div>
+                <h3 className="c9-card-title mb-3 text-[17px]">{item.title}</h3>
+                <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 4. SLA-BACKED OPERATIONAL CONFIDENCE ════════════════════ */}
+      <section className="py-12 lg:py-16 bg-[#0c1024] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
+        <div className={C}>
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <FadeIn direction="left">
+               <span className="c9-eyebrow !text-[#a56eff] mb-4">Operational Confidence</span>
+               <h2 className="c9-section-heading !text-white mb-6">
+                  Absolute SLA Ownership. No Finger-Pointing.
+               </h2>
+               <p className="c9-body text-white/70 mb-10 text-lg">
+                  Enterprise buyers need certainty, not vague promises. C9 provides a rigorous governance framework for response, escalation, and restoration.
+               </p>
+               
+               <div className="space-y-8">
+                  {[
+                    { icon: <Monitor />, title: "Response Ownership", text: "Direct access to senior Australian engineers. No call centers, no offshore script-readers." },
+                    { icon: <Zap />, title: "Escalation Structure", text: "Verified escalation paths that ensure carrier compliance with your eSLA from the first minute." },
+                    { icon: <ShieldCheck />, title: "Visibility & Reporting", text: "Comprehensive performance analytics and incident reporting for executive-level oversight." }
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-6">
+                       <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] shrink-0 mt-1">
+                          {item.icon}
+                       </div>
+                       <div>
+                          <h4 className="font-bold text-white text-[18px] mb-2">{item.title}</h4>
+                          <p className="text-white/60 text-[15px] leading-relaxed">{item.text}</p>
+                       </div>
+                    </div>
+                  ))}
+               </div>
+            </FadeIn>
+
+            <FadeIn direction="right" delay={0.2} className="relative">
+               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[48px] p-10 lg:p-16">
+                  <div className="flex items-center gap-4 mb-10">
+                     <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
+                     <span className="text-[12px] font-bold text-emerald-500 uppercase tracking-widest">Active Governance Tier 1</span>
+                  </div>
+                  <div className="space-y-8">
+                     {[
+                       { label: "Restoration SLA", val: "4-Hour Guaranteed", color: "#5D00D6" },
+                       { label: "Packet Loss Threshold", val: "< 0.1% Priority", color: "#5D00D6" },
+                       { label: "Availability Target", val: "99.95% Annualized", color: "#5D00D6" }
+                     ].map((m, i) => (
+                       <div key={i}>
+                          <div className="flex justify-between mb-2">
+                             <span className="text-[11px] font-bold text-white/40 uppercase tracking-widest">{m.label}</span>
+                             <span className="text-[11px] font-bold text-white">{m.val}</span>
+                          </div>
+                          <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                             <motion.div 
+                               initial={{ width: 0 }}
+                               whileInView={{ width: '100%' }}
+                               viewport={{ once: true }}
+                               transition={{ duration: 1, delay: 0.5 + (i * 0.1) }}
+                               className="h-full bg-[#5D00D6]" 
+                             />
+                          </div>
+                       </div>
+                     ))}
+                  </div>
+                  <div className="mt-12 p-6 bg-white/5 rounded-3xl border border-white/10">
+                     <p className="text-white/60 text-[13px] leading-relaxed italic">
+                        &ldquo;We own the escalation with carriers so your IT team doesn&apos;t have to. Absolute accountability is our standard.&rdquo;
+                     </p>
+                  </div>
+               </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 5. MULTI-SITE AND CRITICAL INFRASTRUCTURE SUPPORT ═══════ */}
+      <section className="py-12 lg:py-16 bg-white overflow-hidden">
+        <div className={C}>
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 lg:gap-24 items-center">
+            <FadeIn direction="left">
+               <span className="c9-eyebrow mb-4">Enterprise Capability</span>
+               <h2 className="c9-section-heading mb-6">Infrastructure Readiness for <br/>Distributed Location Portfolios.</h2>
+               <p className="c9-body mb-10 text-lg">
+                  Enterprise Ethernet provides the consistent backbone required for high-density multi-site operations. We ensure your core systems remain protected across every site.
+               </p>
+               
+               <div className="grid sm:grid-cols-2 gap-8">
+                  {[
+                    { title: "Offices & HQ", text: "Symmetrical bandwidth for high-density video and cloud collaboration." },
+                    { title: "Warehousing", text: "Zero-latency paths for inventory management and logistics platforms." },
+                    { title: "Retail Groups", text: "Guaranteed POS availability and real-time transaction security." },
+                    { title: "Healthcare Ops", text: "Compliance-ready connectivity for patient data and record syncing." }
+                  ].map((item, i) => (
+                    <div key={i}>
+                       <h4 className="font-bold text-slate-900 text-[16px] mb-2">{item.title}</h4>
+                       <p className="text-slate-500 text-[14px] leading-relaxed">{item.text}</p>
+                    </div>
+                  ))}
+               </div>
+            </FadeIn>
+
+            <FadeIn direction="right" delay={0.2} className="relative">
+               <div className="bg-slate-50 rounded-[48px] p-10 lg:p-16 border border-slate-100">
+                  <h3 className="text-xl font-bold text-slate-900 mb-8">Systems Protected</h3>
+                  <div className="space-y-4">
+                     {['ERP & CRM Cloud Instances', 'Real-Time Financial Systems', 'Critical VOIP & Video QoS', 'Multi-Site VLAN Infrastructure'].map(t => (
+                       <div key={t} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                          <CheckCircle2 size={18} className="text-[#5D00D6]" />
+                          <span className="text-[14px] font-bold text-slate-800">{t}</span>
+                       </div>
+                     ))}
+                  </div>
+               </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 6. MIGRATION WITHOUT BUSINESS DISRUPTION ═══════════════ */}
+      <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+        <div className={C}>
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <FadeIn direction="left" className="order-2 lg:order-1">
+               <div className="relative aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl">
+                  <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000" alt="Seamless Migration" className="w-full h-full object-cover object-center" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#5D00D6]/40 to-transparent" />
+               </div>
+            </FadeIn>
+
+            <FadeIn direction="right" delay={0.2} className="order-1 lg:order-2">
+               <span className="c9-eyebrow mb-4">Brownfield Transition</span>
+               <h2 className="c9-section-heading mb-6">Transition Without Business Disruption.</h2>
+               <p className="c9-body mb-10">
+                  Replacing legacy infrastructure creates fear of downtime. C9 manages the entire migration process with a risk-managed approach that ensures continuity from the first day.
+               </p>
+               
+               <div className="space-y-6">
+                  {[
+                    { icon: <FileSearch />, title: "Transition Planning", text: "Detailed audit of legacy environments and technical requirements." },
+                    { icon: <RefreshCcw />, title: "Risk-Managed Implement", text: "Phased deployment with validated fallback paths for zero-disruption." },
+                    { icon: <Users />, title: "Vendor Consolidation", text: "Removing fragmented management and simplifying your vendor landscape." }
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-5">
+                       <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1 shadow-sm">
+                          {item.icon}
+                       </div>
+                       <div>
+                          <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.title}</h4>
+                          <p className="text-slate-500 text-[14px] leading-relaxed">{item.text}</p>
+                       </div>
+                    </div>
+                  ))}
+               </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 7. COMMERCIAL OUTCOMES ══════════════════════════════════ */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className={C}>
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
+             <FadeIn direction="left">
+                <span className="c9-eyebrow mb-4">Strategic Proof</span>
+                <h2 className="c9-section-heading mb-6">Measured Commercial Outcomes.</h2>
+                <p className="c9-body mb-10 text-slate-600">
+                   Outcome-driven connectivity for the modern enterprise. Shift from managing outages to managing business growth.
+                </p>
+
+                <div className="grid grid-cols-2 gap-4">
+                   {[
+                     { label: "Downtime Reduction", val: "90%+", icon: <TrendingUp size={20} /> },
+                     { label: "SLA Adherence", val: "99.95%", icon: <ShieldCheck size={20} /> },
+                     { label: "Incident Ownership", val: "Absolute", icon: <Zap size={20} /> },
+                     { label: "Operational Risk", val: "Minimized", icon: <ShieldAlert size={20} /> }
+                   ].map((stat, i) => (
+                     <div key={i} className="bg-slate-50 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10 group">
+                        <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight">{stat.val}</div>
+                        <div className="text-slate-500 font-bold text-[12px] uppercase tracking-widest leading-tight">{stat.label}</div>
+                     </div>
+                   ))}
+                </div>
+             </FadeIn>
+
+             <FadeIn direction="right" delay={0.1}>
+               <div className="bg-white p-6 rounded-[48px] border border-slate-100 shadow-xl shadow-slate-200/50">
+                 <WpCaseStudies 
+                    articles={[
+                      {
+                        tag: 'ENTERPRISE MIGRATION',
+                        title: 'National Distribution Centre Takeover',
+                        desc: "A logistics leader faced constant syncing lag with standard nbn™. C9 migrated 4 sites to symmetrical 1000/1000 Ethernet. Result: Zero lost orders and 60% faster syncing.",
+                        img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
+                        videoText: 'Stability Restored',
+                        href: '#'
+                      },
+                      {
+                        tag: 'HEALTHCARE NETWORK',
+                        title: 'Multi-Site Patient Data Syncing',
+                        desc: "A healthcare group required 99.95% availability for critical patient data records. C9 deployed private Ethernet architecture with eSLA ownership. Result: Full compliance and zero downtime.",
+                        img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop',
+                        videoText: 'Zero Downtime',
+                        href: '#'
+                      },
+                      {
+                        tag: 'PROFESSIONAL SERVICES',
+                        title: 'Law Firm Infrastructure Governance',
+                        desc: "An enterprise law firm faced critical delays during massive data transfers. C9 implemented symmetrical 1000/1000 Ethernet. Result: Productivity up by 40% across all branches.",
+                        img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop',
+                        videoText: 'Efficiency Optimized',
+                        href: '#'
+                      }
+                    ]}
+                  />
+               </div>
+             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 8. MID-PAGE CTA ══════════════════════════════════════════ */}
+      <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+        <div className={C}>
+           <div className="max-w-4xl mx-auto text-center">
+              <FadeIn>
+                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6">
+                  If your business depends on uptime, standard connectivity is already a risk.
+                </h3>
+                <p className="c9-body mb-10 text-lg">
+                  Let&apos;s review whether your current network is protecting operations or exposing them.
+                </p>
+                <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
+                  <Link href="#consultation">Request an Enterprise Connectivity Review</Link>
+                </C9Button>
+              </FadeIn>
+           </div>
+        </div>
+      </section>
+
+      {/* ══ 9. FINAL CTA ═════════════════════════════════════════════ */}
+      <section className="py-12 lg:py-16 bg-white border-t border-slate-100">
+        <div className={C}>
+           <div className="bg-[#5D00D6] rounded-[48px] p-10 lg:p-20 relative overflow-hidden shadow-2xl shadow-purple-900/40 text-center">
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-[0.05] rounded-full blur-[100px] -mr-64 -mt-64" />
+              <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white opacity-[0.05] rounded-full blur-[80px] -ml-32 -mb-32" />
+              
+              <div className="relative z-10">
+                <span className="c9-eyebrow !text-white/80 mb-4">Infrastructure Strategy</span>
+                <h2 className="c9-section-heading !text-white mb-6">Performance + Accountability + Operational Certainty</h2>
+                <p className="c9-body !text-white/70 mb-10 max-w-2xl mx-auto text-lg">
+                   Stop settling for generic infrastructure. Talk to C9 about Enterprise Connectivity built for business continuity and long-term growth.
+                </p>
+                <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
+                  <Link href="#consultation">Talk to C9 About Enterprise Connectivity</Link>
+                </C9Button>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      {/* ══ 10. CONTINUITY / FUNNEL NAVIGATION ══════════════════════ */}
+      <section className="py-10 bg-slate-50 border-t border-slate-100">
+        <div className={C}>
+          <div className="flex flex-col items-center">
+            <span className="c9-eyebrow mb-8 text-slate-400">Explore Further Strategic Decisions</span>
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
+              {[
+                { label: "Managed IT Infrastructure", href: "/managed-it/infrastructure", icon: <Server size={16} /> },
+                { label: "Cybersecurity", href: "/managed-it/cyber-security", icon: <ShieldCheck size={16} /> },
+                { label: "Microsoft Teams Calling", href: "/telco/teams-calling", icon: <PhoneCall size={16} /> },
+                { label: "Contact Centre", href: "/telco/contact-centre", icon: <Users size={16} /> }
+              ].map((link, i) => (
+                <Link 
+                  key={i} 
+                  href={link.href} 
+                  className="flex items-center gap-3 text-[13px] font-bold text-[#0c1024] hover:text-[#5D00D6] transition-all group uppercase tracking-widest"
+                >
+                  <div className="w-9 h-9 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm">
+                     {link.icon}
+                  </div>
+                  {link.label}
+                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1 text-[#5D00D6]" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="consultation" className="bg-white border-t border-slate-100">
+        <WpConsultationForm 
           showHeader={false} 
-          eyebrow="STRATEGIC IT ADVISORY"
-          title="The IT partner your business deserves."
-          description="Book a 30-minute strategy session with our senior consultants. We'll review your current infrastructure and security posture — no obligation, just expert advice."
-          formTitle="Schedule Strategy Session"
+          eyebrow="ENTERPRISE INFRASTRUCTURE AUDIT"
+          title="Ready to remove network risk from your operations?"
+          description="Book an executive strategy session with our senior network architects to review your national infrastructure and SLA governance requirements."
+          formTitle="Get an Enterprise Connectivity Audit"
         />
       </section>
-          </main>
+
+      <WpFAQAndFeedback 
+        faqItems={[
+          { q: "How does C9 ensure zero-disruption migration?", a: "We manage migrations through a risk-managed, phased approach. We conduct a deep-dive audit of legacy systems, architect validated fallback paths, and coordinate all onsite trades to ensure your operational continuity remains protected throughout the transition." },
+          { q: "What defines C9's 'Senior Engineering' support?", a: "Our support model removes call centers and script-readers. Enterprise clients have direct access to Australian-based senior engineers who own the incident from detection to resolution, managing all carrier liaisons on your behalf." },
+          { q: "How is Enterprise Ethernet commercially different from business nbn™?", a: "Enterprise Ethernet is a dedicated, private fibre path with a 1:1 contention ratio and professional eSLA (from 4 hours). It is designed specifically for operations where network instability creates significant financial risk, providing guaranteed performance that nbn™ cannot match." }
+        ]}
+      />
+    </main>
   );
 }

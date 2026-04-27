@@ -63,7 +63,7 @@ export const WpCaseStudies = ({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const maxIdx = CASE_STUDIES.length - cardsPerView;
+  const maxIdx = Math.max(0, articles.length - cardsPerView);
 
   return (
     <section className="py-12 md:py-16 bg-white overflow-hidden relative border-t border-gray-100">
@@ -76,23 +76,25 @@ export const WpCaseStudies = ({
             </h2>
           </div>
           
-          {/* Nav Arrows */}
-          <div className="flex gap-4">
-            <button 
-              onClick={() => setCaseStudyIdx(prev => Math.max(0, prev - 1))}
-              disabled={caseStudyIdx === 0}
-              className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all ${caseStudyIdx === 0 ? 'bg-gray-100 text-gray-300' : 'bg-white border border-gray-100 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white shadow-xl shadow-purple-900/10'}`}
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button 
-              onClick={() => setCaseStudyIdx(prev => Math.min(maxIdx, prev + 1))}
-              disabled={caseStudyIdx >= maxIdx}
-              className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-xl shadow-purple-900/20 ${caseStudyIdx >= maxIdx ? 'opacity-50 cursor-not-allowed' : ''}`}
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
+          {/* Nav Arrows - Only show if there are more articles than visible cards */}
+          {articles.length > cardsPerView && (
+            <div className="flex gap-4">
+              <button 
+                onClick={() => setCaseStudyIdx(prev => Math.max(0, prev - 1))}
+                disabled={caseStudyIdx === 0}
+                className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all ${caseStudyIdx === 0 ? 'bg-gray-100 text-gray-300' : 'bg-white border border-gray-100 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white shadow-xl shadow-purple-900/10'}`}
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button 
+                onClick={() => setCaseStudyIdx(prev => Math.min(maxIdx, prev + 1))}
+                disabled={caseStudyIdx >= maxIdx}
+                className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-xl shadow-purple-900/20 ${caseStudyIdx >= maxIdx ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          )}
         </div>
 
         <div className="relative">
@@ -103,7 +105,7 @@ export const WpCaseStudies = ({
           >
             {articles.map((cs, idx) => (
               <div key={idx} className="w-full lg:w-[calc(50%-16px)] shrink-0 group cursor-pointer">
-                <div className="relative aspect-[16/10] rounded-none overflow-hidden mb-10 shadow-2xl shadow-purple-900/10 bg-slate-100">
+                <div className="relative aspect-[16/10] rounded-[32px] overflow-hidden mb-10 shadow-2xl shadow-purple-900/10 bg-slate-100">
                   <img src={cs.img} alt={cs.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                   
                   {/* Brand Tint Overlays */}

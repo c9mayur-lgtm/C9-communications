@@ -116,11 +116,11 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-          <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group border-8 border-slate-50">
+          <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
             <img
-              src="/images/frustrated_worker.png"
-              alt="Frustrated worker managing IT issues"
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000&auto=format&fit=crop"
+              alt="Professional managing complex business infrastructure issues"
+              className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
             
@@ -153,7 +153,7 @@ const Hero = () => (
    SECTION 2 — THE PROBLEM
    ───────────────────────────────────────────────────────── */
 const SectionProblem = () => (
-  <section className="py-20 lg:py-24 bg-slate-50 border-y border-slate-100">
+  <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         <FadeIn direction="left">
@@ -199,7 +199,7 @@ const SectionProblem = () => (
    SECTION 3 — THE SOLUTION
    ───────────────────────────────────────────────────────── */
 const SectionSolution = () => (
-  <section className="py-20 lg:py-24 bg-white">
+  <section className="py-12 lg:py-16 bg-white">
     <div className={C}>
       <FadeIn className="text-center mb-16">
         <span className="c9-eyebrow mb-4">The Solution Model</span>
@@ -235,7 +235,7 @@ const SectionSolution = () => (
    SECTION 4 — MIGRATION CONTROL
    ───────────────────────────────────────────────────────── */
 const SectionProcess = () => (
-   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+   <section className="py-10 lg:py-16 bg-slate-50 border-y border-slate-100">
       <div className={C}>
          <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
@@ -273,7 +273,7 @@ const SectionProcess = () => (
    SECTION 5 — OUTCOMES
    ───────────────────────────────────────────────────────── */
 const SectionProof = () => (
-  <section className="py-20 lg:py-24 bg-white">
+  <section className="py-12 lg:py-16 bg-white">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <FadeIn direction="left">
@@ -312,7 +312,7 @@ const SectionProof = () => (
    SECTION 6 — SECURITY + CONTINUITY
    ───────────────────────────────────────────────────────── */
 const SectionSafety = () => (
-   <section className="py-20 lg:py-24 bg-white border-t border-slate-100 overflow-hidden">
+   <section className="py-12 lg:py-16 bg-white border-t border-slate-100 overflow-hidden">
       <div className={C}>
          <div className="bg-[#5D00D6] rounded-[48px] p-10 lg:p-20 relative overflow-hidden shadow-2xl shadow-purple-900/40">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-[0.05] rounded-full blur-[100px] -mr-64 -mt-64" />
@@ -362,7 +362,7 @@ const SectionSafety = () => (
    SECTION 7 — BEFORE VS AFTER
    ───────────────────────────────────────────────────────── */
 const SectionComparison = () => (
-  <section className="py-20 lg:py-24 bg-slate-50 border-y border-slate-100">
+  <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <FadeIn className="text-center mb-16">
         <span className="c9-eyebrow mb-4">Control Transformation</span>
@@ -428,7 +428,7 @@ const SectionComparison = () => (
    SECTION 8 — SUPPORT & SLA
    ───────────────────────────────────────────────────────── */
 const SectionSupportSLA = () => (
-  <section className="py-20 lg:py-24 bg-white">
+  <section className="py-12 lg:py-16 bg-white">
     <div className={C}>
       <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
         <FadeIn direction="left">
@@ -453,7 +453,7 @@ const SectionSupportSLA = () => (
         </FadeIn>
         <FadeIn direction="right" delay={0.1}>
            <div className="relative rounded-[40px] overflow-hidden shadow-2xl">
-              <img src="/images/c9_support_engineer.png" alt="C9 Support Team" className="w-full h-full object-cover aspect-[4/5]" />
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200" alt="C9 Support Specialist" className="w-full h-full object-cover aspect-[4/5] object-top" />
            </div>
         </FadeIn>
       </div>
@@ -465,7 +465,7 @@ const SectionSupportSLA = () => (
    SECTION 8 — WHEN THIS IS NOT A FIT
    ───────────────────────────────────────────────────────── */
 const SectionNotFit = () => (
-   <section className="py-20 lg:py-24 bg-white">
+   <section className="py-12 lg:py-16 bg-white">
       <div className={C}>
          <div className="max-w-4xl mx-auto">
             <FadeIn className="text-center mb-12">
@@ -524,7 +524,7 @@ const SectionNotFit = () => (
    SECTION 9 — FINAL CTA
    ───────────────────────────────────────────────────────── */
 const SectionFinalCTA = () => (
-   <section className="py-20 xl:py-32 bg-white">
+   <section className="py-12 xl:py-16 bg-white">
       <div className={`${C} text-center`}>
          <FadeIn>
             <span className="c9-eyebrow mb-6">Take Control</span>

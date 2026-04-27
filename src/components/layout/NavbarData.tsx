@@ -305,7 +305,6 @@ export const BUSINESS_TELCO = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />,      label: 'Voice Systems — Overview',    path: '/telco/voice-systems' },
             { icon: <Phone size={14} />,      label: 'C9 Voice Cloud Phone',        path: '/telco/c9-phone-system' },
             { icon: <Headphones size={14} />, label: 'Inbound Services',            path: '/telco/inbound-services' },
             { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling',     path: '/telco/teams-calling' },
@@ -329,10 +328,10 @@ export const BUSINESS_TELCO = {
   sidebar: {
     heading: 'I Need Help With',
     items: [
-      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Setting Up My New Office or Relocation', desc: 'C9 Communications can take the headache out of it for you so that you can focus on business as usual.' },
-      { icon: <Wifi className="text-purple-400" size={18} />, title: 'Fast & Secure Internet For My Business', desc: "We've got super-fast, epically reliable broadband solutions for your business." },
-      { icon: <Volume2 className="text-purple-400" size={18} />, title: 'Setting Up Ad On-hold', desc: 'Take your customer experience to the next level with professionally recorded messages.' },
-      { icon: <Wifi className="text-purple-400" size={18} />, title: 'Improving & Securing My WiFi', desc: 'We tailor network solutions to you from the design stage through to migration and beyond.' }
+      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Setting Up My New Office or Relocation', desc: 'C9 Communications can take the headache out of it for you so that you can focus on business as usual.', path: '/help/new-office-setup' },
+      { icon: <Wifi className="text-purple-400" size={18} />, title: 'Fast & Secure Internet For My Business', desc: "We've got super-fast, epically reliable broadband solutions for your business.", path: '/help/fast-secure-internet' },
+      { icon: <Volume2 className="text-purple-400" size={18} />, title: 'Setting Up Ad On-hold', desc: 'Take your customer experience to the next level with professionally recorded messages.', path: '/help/ad-on-hold' },
+      { icon: <Wifi className="text-purple-400" size={18} />, title: 'Improving & Securing My WiFi', desc: 'We tailor network solutions to you from the design stage through to migration and beyond.', path: '/help/secure-wifi' }
     ]
   }
 };
@@ -547,6 +546,7 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
 // ─────────────────────────────────────────────────────────────
 export const COMPANY_MENU = {
   layout: 'company',
+  maxWidth: '800px',
   heading: 'Simplifying IT for a complex world.',
   columns: [
     {
@@ -565,25 +565,28 @@ export const COMPANY_MENU = {
       ]
     }
   ],
-  challenges: [
-    { title: 'Innovation',   icon: <Cpu size={24} /> },
-    { title: 'Reliability',  icon: <Shield size={24} /> },
-    { title: 'AU Support',   icon: <Globe size={24} /> },
-    { title: 'Scalability',  icon: <Layers size={24} /> },
-  ],
+  // partners removed from middle column
   sidebar: {
-    heading: 'Platform Partnerships',
+    heading: 'Strategic Partners',
+    hideCTA: true, 
     items: [
-      { icon: <Cloud size={14} />,    title: 'AWS Partner' },
-      { icon: <Cloud size={14} />,    title: 'Google Cloud Partner' },
-      { icon: <Monitor size={14} />,  title: 'Microsoft Solution Partner' },
-      { icon: <Smartphone size={14} />, title: 'Salesforce Partner' },
+      { logo: '/partners/microsoft-logo-svgrepo-com.svg', title: 'Microsoft' },
+      { logo: '/partners/Amazon_Web_Services_Logo.svg', title: 'AWS' },
+      { logo: '/partners/Google_Cloud_logo.svg', title: 'Google Cloud' },
+      { logo: '/partners/cisco.png', title: 'Cisco' },
+      { logo: '/partners/fortinet.png', title: 'Fortinet' },
+      { logo: '/partners/Dell_Technologies_logo.svg', title: 'Dell Tech' },
+      { logo: '/partners/Hewlett_Packard_Enterprise_logo.svg', title: 'HPE' },
+      { logo: '/partners/Veeam_logo.svg', title: 'Veeam' },
+      { logo: '/partners/juniper.png', title: 'Juniper' },
+      { logo: '/images/clients/yealink.png', title: 'Yealink' },
     ]
   }
 };
 
 export const RESOURCES_MENU = {
   layout: 'resources',
+  maxWidth: '800px',
   heading: 'Industry Expertise & Growth',
   columns: [
     {
@@ -601,18 +604,14 @@ export const RESOURCES_MENU = {
       ]
     }
   ],
-  challenges: [
-    { title: 'Strategy Guides', icon: <BarChart3 size={24} /> },
-    { title: 'Video Demos',     icon: <Monitor size={24} /> },
-    { title: 'Whitepapers',     icon: <Database size={24} /> },
-    { title: 'Infographics',    icon: <LayoutGrid size={24} /> },
-  ],
+  // challenges removed (Workplace Evolution)
   sidebar: {
-    heading: 'How to Build',
+    heading: 'Industry Insights',
+    hideCTA: true,
     items: [
-      { icon: <Building2 size={18} />, title: 'Set Up New Office',  desc: 'Seamlessly transition your business tech.' },
-      { icon: <Wifi size={18} />,       title: 'Secure Business WiFi', desc: 'Fast, secure, enterprise-grade connectivity.' },
-      { icon: <Phone size={18} />,      title: 'Modernize Voice',    desc: 'Cloud phone systems for the modern team.' },
+      { icon: <Building2 size={18} />, title: 'Enterprise Governance',  desc: 'Multi-site infrastructure control models.', path: '/insights/enterprise-governance' },
+      { icon: <Wifi size={18} />,       title: 'Security Frameworks',    desc: 'Protecting distributed retail footprints.', path: '/insights/security-frameworks' },
+      { icon: <Phone size={18} />,      title: 'Cloud Transformation',   desc: 'Migrating legacy voice to modern UC.', path: '/insights/cloud-transformation' },
     ]
   }
 };

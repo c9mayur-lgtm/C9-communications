@@ -889,7 +889,7 @@ export default function Greenfield2Page() {
             tag: 'MULTI-SITE ARCHITECTURE',
             title: 'Rapid Infrastructure Rollout for National Expansion',
             desc: 'Successfully commissioned 12 new sites across 3 states in under 6 weeks, providing unified networking and zero-day operational readiness.',
-            img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
+            img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800',
             videoText: 'National Site Rollout',
             href: '/case-studies/multi-site-retail-stabilisation'
           },

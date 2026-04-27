@@ -74,11 +74,11 @@ export const HomeSlidingHero = () => {
                   <span className="c9-eyebrow">{slide.eyebrow}</span>
                 </div>
                 
-                <h1 className="c9-hero-title mb-4 whitespace-pre-line text-slate-900">
+                <h1 className="c9-hero-title mb-4 whitespace-pre-line">
                   {slide.title}
                 </h1>
                 
-                <p className="c9-body mb-8 max-w-[550px] text-slate-500">
+                <p className="c9-body mb-8 max-w-[550px]">
                   {slide.desc}
                 </p>
 

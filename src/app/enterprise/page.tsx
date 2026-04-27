@@ -24,9 +24,9 @@ import {
   TableCell 
 } from "@/components/ui/table";
 
-/* ─────────────────────────────────────────────────────────
+/* 
    ANIMATION HELPERS
-   ───────────────────────────────────────────────────────── */
+    */
 const FadeIn = ({
   children,
   delay = 0,
@@ -55,9 +55,9 @@ const FadeIn = ({
 
 const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 1 — HERO (AUTHORITY + RELIABILITY)
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 1  HERO (AUTHORITY + RELIABILITY)
+    */
 const Hero = () => (
   <section className="relative overflow-hidden bg-white pt-4 pb-0 lg:pt-8">
     <div
@@ -68,10 +68,6 @@ const Hero = () => (
         backgroundSize: '52px 52px',
       }}
     />
-    <div
-      className="pointer-events-none absolute -top-60 -left-60 w-[700px] h-[700px] rounded-full opacity-[0.05]"
-      style={{ background: 'radial-gradient(circle, #5D00D6 0%, transparent 70%)' }}
-    />
 
     <div className={`${C} relative z-10`}>
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center pb-14 lg:pb-20">
@@ -79,81 +75,78 @@ const Hero = () => (
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
               <ShieldCheck size={13} className="text-[#5D00D6]" />
-              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Operations</span>
+              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Infrastructure Governance</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Enterprise IT & Network <br/>
-              Operations <span className="text-[#5D00D6]">Without Complexity or Risk</span>
+              Multi-Site Infrastructure <br/>
+              <span className="text-[#5D00D6]">Control & Governance Clarity.</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
             <p className="c9-body mb-8 max-w-[580px] text-slate-700">
-              C9 manages multi-site IT, cloud, network, and security environments with clear ownership, SLA-backed performance, and full operational visibility.
+              Centralise governance across complex distributed environments. We provide the monitoring layer and execution framework required to enforce SLA standards and absolute accountability for multi-site IT operations.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.22}>
-            <div className="flex flex-col gap-4 mb-10">
-              <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="#consultation"
-                  className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-7 font-bold text-[13px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group whitespace-nowrap"
                 >
-                  Discuss Your Enterprise Environment
+                  Request Infrastructure Assessment
                 </a>
                 <a
                   href="#architecture"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-12 px-7 font-bold text-[13px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
                 >
-                  Review Your IT Architecture
+                  Review Operating Model
                 </a>
               </div>
-              <a href="#consultation" className="text-[#5D00D6] font-bold text-sm flex items-center gap-2 group ml-2">
-                Or speak directly with an enterprise solutions lead <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </a>
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.32}>
-            <div className="flex flex-wrap gap-x-10 gap-y-6 pt-8 border-t border-slate-100">
-               {[
-                 { icon: <Globe size={18} />, label: 'Multi-site environments' },
-                 { icon: <Clock size={18} />, label: '24/7 support' },
-                 { icon: <ShieldCheck size={18} />, label: 'SLA-backed operations' },
-               ].map((trust, i) => (
-                 <div key={i} className="flex items-center gap-2.5">
-                    <div className="text-[#5D00D6]">{trust.icon}</div>
-                    <span className="text-[14px] font-bold text-slate-900 uppercase tracking-wider">{trust.label}</span>
-                 </div>
-               ))}
-            </div>
+          <FadeIn delay={0.3}>
+             <div className="flex flex-wrap gap-x-6 gap-y-3">
+                {[
+                  { label: 'SLA Enforced', icon: <CheckCircle className="text-[#5D00D6]" size={14} /> },
+                  { label: 'Governance Clarity', icon: <CheckCircle className="text-[#5D00D6]" size={14} /> },
+                  { label: 'Operational Ownership', icon: <CheckCircle className="text-[#5D00D6]" size={14} /> }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    {item.icon}
+                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{item.label}</span>
+                  </div>
+                ))}
+             </div>
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.14} direction="right" className="relative hidden lg:block">
-          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+        <FadeIn delay={0.4} direction="right" className="relative hidden lg:block">
+          <div className="relative z-10 rounded-[32px] overflow-hidden shadow-2xl max-w-[90%] ml-auto">
             <img
-              src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1200"
-              alt="Enterprise Operations Center"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
+              alt="Enterprise Control Center"
+              className="w-full aspect-[4/3] object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
-            
-            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/60">
-              <div className="flex items-center gap-4">
-                 <div className="w-12 h-12 rounded-full bg-[#5D00D6]/10 flex items-center justify-center">
-                    <Activity className="text-[#5D00D6]" size={24} />
-                 </div>
-                 <div>
-                    <div className="text-[10px] font-bold uppercase tracking-widest text-[#5D00D6] mb-0.5">Global Infrastructure</div>
-                    <div className="text-[14px] font-bold text-slate-900 leading-tight">100% Core Network Availability</div>
-                 </div>
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/60 to-transparent" />
+          </div>
+          
+          <div className="absolute -bottom-4 -left-2 bg-white p-5 rounded-2xl shadow-xl border border-slate-100 z-20">
+             <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6]">
+                   <Activity size={20} />
+                </div>
+                <div>
+                   <div className="text-xl font-black text-slate-900 leading-none">99.99%</div>
+                   <div className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">SLA Uptime Target</div>
+                </div>
+             </div>
           </div>
         </FadeIn>
       </div>
@@ -161,37 +154,37 @@ const Hero = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 2 — PROBLEM FRAMING (HIGH IMPACT)
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 2  PROBLEM FRAMING (HIGH IMPACT)
+    */
 const SectionProblem = () => (
-  <section className="py-12 bg-slate-50 border-y border-slate-100">
+  <section className="py-10 bg-slate-50 border-y border-slate-100">
     <div className={C}>
-      <div className="max-w-3xl mb-16">
+      <div className="max-w-3xl mb-10">
         <FadeIn>
-          <span className="c9-eyebrow mb-4">The Enterprise Reality</span>
+          <span className="c9-eyebrow mb-4">Operational Risk & Governance Gaps</span>
           <h2 className="c9-section-heading">
-            Complexity is the Primary Threat to Enterprise Stability
+            The Enterprise Reality
           </h2>
           <p className="c9-body text-slate-600 mt-6 text-lg">
-            As enterprises scale, the technology stack often fragments. When no one owns the end-to-end outcome, the business absorbs the risk.
+            In multi-site environments, operational risk scales with complexity. Fragmented vendor ownership creates accountability vacuums that lead to systemic instability and prolonged disruption.
           </p>
         </FadeIn>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
-          { title: 'Vendor Fragmentation', desc: 'Managing separate providers for IT, Telco, and Cloud creates accountability gaps and "finger-pointing" during outages.' },
-          { title: 'Operational Blind Spots', desc: 'Distributed sites often lack centralized monitoring, meaning performance issues are only discovered after failure.' },
-          { title: 'Stretched IT Capacity', desc: 'Internal IT teams are forced to manage routine maintenance instead of driving high-value strategic architecture.' },
-          { title: 'Inconsistent Security', desc: 'Disparate security policies across different locations create invisible vulnerabilities in your defensive perimeter.' },
-          { title: 'Downtime Liability', desc: 'Without automatic failover and proactive monitoring, every minute of network downtime impacts multi-site revenue.' },
-          { title: 'Lack of Scalability', desc: 'Legacy infrastructure rollouts are too slow and inconsistent to support rapid business expansion or office moves.' }
+          { icon: <Handshake size={24} />, title: 'Ownership Deadlocks', desc: 'Incidents are disputed between telco, IT, and cloud vendors instead of being resolved. No single entity owns the recovery outcome.' },
+          { icon: <RefreshCw size={24} />, title: 'Operational Drift', desc: 'Inconsistent configurations across locations create systemic vulnerabilities and prevent standard security enforcement.' },
+          { icon: <Monitor size={24} />, title: 'Visibility Deficits', desc: 'Gaps in centralised monitoring mean failures are often reported by staff before internal systems detect the outage.' },
+          { icon: <Users size={24} />, title: 'Resource Misalignment', desc: 'Strategic internal IT leadership is consumed by low-level vendor coordination and reactive troubleshooting.' },
+          { icon: <ShieldCheck size={24} />, title: 'Accountability Voids', desc: 'Standard MSP promises lack the operational depth and contractual rigor required for enterprise-grade uptime.' },
+          { icon: <Globe size={24} />, title: 'Expansion Lag', desc: 'The absence of standardised infrastructure blueprints prevents rapid site rollouts and consistent performance at scale.' }
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.05}>
             <div className="bg-white p-8 rounded-3xl border border-slate-200 h-full shadow-sm hover:border-[#5D00D6]/30 transition-all group">
-               <div className="text-[#5D00D6] mb-4 group-hover:scale-110 transition-transform">
-                  <ShieldAlert size={24} />
+               <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform origin-left">
+                  {item.icon}
                </div>
                <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
@@ -199,47 +192,44 @@ const SectionProblem = () => (
           </FadeIn>
         ))}
       </div>
-
-      <FadeIn delay={0.4} className="mt-16 text-center">
-         <div>
-            <p className="text-slate-900 font-bold text-xl">
-               Enterprise environments fail when accountability is divided.
-            </p>
-         </div>
-      </FadeIn>
     </div>
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 3 — HOW C9 OPERATES (CORE DIFFERENTIATOR)
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 3  HOW C9 OPERATES (CORE DIFFERENTIATOR)
+    */
 const SectionHowItWorks = () => (
-  <section className="py-16 bg-white overflow-hidden">
+  <section className="py-12 bg-white overflow-hidden">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-20 items-center">
         <FadeIn direction="left">
-           <span className="c9-eyebrow mb-4">Our Operating Model</span>
-           <h2 className="c9-section-heading mb-6">Built to Operate, Not Just Support</h2>
+           <span className="c9-eyebrow mb-4">Multi-Site Operating Model</span>
+           <h2 className="c9-section-heading mb-6">Centralised Control. Distributed Execution.</h2>
            <p className="c9-body text-slate-600 mb-10 leading-relaxed">
-             C9 doesn't function as a "ticket-based" vendor. We operate as a strategic partner that owns the performance outcomes of your environment.
+             Our operating model provides unified visibility across the entire enterprise footprint while maintaining high-execution capacity at every location.
            </p>
            <div className="space-y-8">
               {[
                 { 
-                  title: 'Single Accountable Partner', 
+                  title: 'Centralised Monitoring Layer', 
+                  icon: <Monitor />, 
+                  desc: 'A single monitoring plane tracks circuit performance, network health, and security status across all sites simultaneously.' 
+                },
+                { 
+                  title: 'Distributed Execution Framework', 
+                  icon: <Layers />, 
+                  desc: 'Localised technical response managed through a consistent operational framework to ensure resolution speed.' 
+                },
+                { 
+                  title: 'Unified Operational Visibility', 
                   icon: <Target />, 
-                  desc: 'We eliminate the gap between IT, Network, and Support by owning the entire path.' 
+                  desc: 'Direct access to operational dashboards, incident status, and SLA tracking for CIO/CTO leadership.' 
                 },
-                { 
-                  title: 'Strategic Collaboration', 
-                  icon: <Users />, 
-                  desc: 'We work alongside internal IT teams as a high-capacity tier, or provide full-stack management.' 
-                },
-                { 
-                  title: 'Integration by Design', 
-                  icon: <Share2 />, 
-                  desc: 'Our solutions are architected to integrate seamlessly with your existing ERP, POS, and SaaS systems.' 
+                {
+                  title: 'Consistent Operational Standards',
+                  icon: <CheckCircle />,
+                  desc: 'Uniform SLA enforcement and hardware standards applied across all sites to eliminate configuration drift.'
                 }
               ].map((item, i) => (
                 <div key={i} className="flex gap-5">
@@ -258,23 +248,20 @@ const SectionHowItWorks = () => (
         <FadeIn direction="right" className="relative">
            <div className="bg-slate-900 rounded-[40px] p-12 text-white shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/10 blur-3xl rounded-full" />
-              <h3 className="text-2xl font-bold mb-8">The Accountability Difference</h3>
+              <h3 className="text-2xl font-bold mb-8">Operating Responsibility Matrix</h3>
               <div className="space-y-6">
                  {[
-                   { label: 'Carrier Management', val: 'C9 Owned' },
-                   { label: 'Network Infrastructure', val: 'C9 Owned' },
-                   { label: 'Endpoint Security', val: 'C9 Owned' },
-                   { label: 'Operational Uptime', val: 'SLA Guaranteed' },
-                   { label: 'Internal IT Focus', val: 'Strategic / High-Value' }
+                   { label: 'Carrier & Circuit Governance', val: 'C9 Accountable' },
+                   { label: 'Network Infrastructure Ops', val: 'C9 Accountable' },
+                   { label: 'Security Enforcement (SOC)', val: 'C9 Accountable' },
+                   { label: 'SLA Performance Tracking', val: 'C9 Accountable' },
+                   { label: 'Enterprise IT Strategy', val: 'Internal IT Led' }
                  ].map((row, i) => (
-                   <div key={i} className="flex items-center justify-between pb-4 border-b border-white/10 last:border-0 last:pb-0">
-                      <span className="text-white/60 text-sm font-medium">{row.label}</span>
-                      <span className="text-[#a56eff] font-bold text-sm tracking-wide">{row.val}</span>
+                   <div key={i} className="flex items-center justify-between pb-4 border-b border-white/10 last:border-0">
+                      <span className="text-sm font-medium text-white/60">{row.label}</span>
+                      <span className={`text-xs font-bold px-3 py-1 rounded-full ${row.val.includes('C9') ? 'bg-[#5D00D6] text-white' : 'bg-white/10 text-white'}`}>{row.val}</span>
                    </div>
                  ))}
-              </div>
-              <div className="mt-10 p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
-                 <p className="text-sm italic text-white/80">"We don't hand off problems. We resolve them."</p>
               </div>
            </div>
         </FadeIn>
@@ -283,44 +270,49 @@ const SectionHowItWorks = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 4 — OPERATING MODEL (CRITICAL)
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 4  GOVERNANCE DETAIL
+    */
 const SectionModelDetail = () => (
-  <section className="py-16 bg-slate-50 border-y border-slate-100">
+  <section className="py-12 bg-slate-50 relative overflow-hidden">
     <div className={C}>
-       <div className="max-w-3xl mx-auto text-center mb-16">
+       <div className="max-w-3xl mx-auto text-center mb-10">
           <FadeIn>
-             <span className="c9-eyebrow mb-4">Governance & Flow</span>
-             <h2 className="c9-section-heading">Structured For Enterprise Clarity</h2>
+             <span className="c9-eyebrow mb-4">Governance & Accountability Structure</span>
+             <h2 className="c9-section-heading">Accountability Is Defined Before Deployment</h2>
           </FadeIn>
        </div>
 
-       <div className="grid md:grid-cols-3 gap-8">
+       <div className="grid md:grid-cols-4 gap-6">
           {[
             { 
-              title: 'Ownership Boundaries', 
+              title: 'Single Ownership Model', 
               icon: <Layers />, 
-              desc: 'Explicit definition of what C9 manages vs. what internal teams own, ensuring zero confusion during critical incidents.' 
+              desc: 'We eliminate resolution deadlocks by assigning absolute ownership for every infrastructure layer. One accountable partner for all estate layers.' 
             },
             { 
-              title: 'Escalation Intelligence', 
+              title: 'Escalation Hierarchy', 
               icon: <RefreshCw />, 
-              desc: 'Multi-tiered escalation paths designed for speed, ensuring the right engineer is always on the right issue.' 
+              desc: 'P1 through P4 escalation paths are hard-coded into our operations. Incident ownership is triggered automatically based on classification.' 
             },
             { 
-              title: 'Reporting & Visibility', 
-              icon: <Monitor />, 
-              desc: 'Live dashboards and monthly governance reporting that translate technical data into operational insight.' 
+              title: 'Incident Ownership Clarity', 
+              icon: <Target />, 
+              desc: 'We own the outcome, not just the ticket. Full lifecycle management of incidents from detection through to root cause elimination.' 
+            },
+            {
+              title: 'Reporting & Tracking',
+              icon: <Monitor />,
+              desc: 'Monthly governance reviews provide transparent data on uptime, incident volume, and SLA performance across every location.'
             }
           ].map((card, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-white p-10 rounded-[32px] border border-slate-200 h-full flex flex-col items-center text-center">
-                  <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8">
+               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full flex flex-col items-center text-center shadow-sm hover:border-[#5D00D6]/20 transition-all group">
+                  <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                      {card.icon}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">{card.title}</h3>
-                  <p className="text-slate-500 text-[14px] leading-relaxed">{card.desc}</p>
+                  <p className="text-slate-500 text-sm leading-relaxed">{card.desc}</p>
                </div>
             </FadeIn>
           ))}
@@ -329,28 +321,28 @@ const SectionModelDetail = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 5 — SLA & SUPPORT STRUCTURE
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 5  SLA & SUPPORT STRUCTURE
+    */
 const SectionSLA = () => (
-  <section className="py-16 bg-white">
+  <section className="py-14 bg-white">
     <div className={C}>
        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <FadeIn direction="left">
-             <span className="c9-eyebrow mb-4">Service Reliability</span>
-             <h2 className="c9-section-heading mb-6">SLA Confidence That Scales</h2>
+             <span className="c9-eyebrow mb-4">SLA Enforcement at Scale</span>
+             <h2 className="c9-section-heading mb-6">Contractual Rigor. Live Operational Enforcement.</h2>
              <p className="c9-body text-slate-600 mb-8">
-               Our Service Level Agreements aren't just targets; they are contractual guarantees of operational performance.
+               Our SLAs are not marketing promises—they are live operational triggers. We provide real-time visibility into response times, resolution ownership, and escalation triggers.
              </p>
-             <div className="space-y-6">
+             <div className="grid sm:grid-cols-2 gap-6">
                 {[
-                  { title: 'Tiered Response Times', desc: 'Defined priorities from P1 (Critical) to P4 (Scheduled).' },
-                  { title: 'Resolution Commitments', desc: 'Time-to-resolve targets backed by operational tracking.' },
-                  { title: 'Priority Handling', desc: 'Enterprise clients receive immediate priority in our service desk queues.' },
-                  { title: 'Escalation Ownership', desc: 'Direct access to level 3 network and systems engineers.' }
+                  { icon: <Clock />, title: 'Response Time Tiers', desc: 'Guaranteed response windows based on site criticality and incident severity.' },
+                  { icon: <CheckCircle />, title: 'Resolution Ownership', desc: 'We own the outcome through to final resolution, including multi-vendor coordination.' },
+                  { icon: <Zap />, title: 'Escalation Triggers', desc: 'Automated breach alerts and senior architect intervention for high-priority incidents.' },
+                  { icon: <BarChart3 />, title: 'SLA Tracking', desc: 'Transparent, real-time dashboarding of current operational performance at scale.' }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                     <CheckCircle size={20} className="text-emerald-500 shrink-0" />
+                  <div key={i} className="flex gap-3">
+                     <div className="text-[#5D00D6] shrink-0 mt-1">{item.icon}</div>
                      <div>
                         <h4 className="font-bold text-slate-900 text-sm mb-0.5">{item.title}</h4>
                         <p className="text-[14px] text-slate-500">{item.desc}</p>
@@ -391,42 +383,44 @@ const SectionSLA = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 6 — MULTI-SITE & SCALABILITY
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 6  MULTI-SITE & SCALABILITY
+    */
 const SectionScalability = () => (
-  <section className="py-16 bg-slate-50 border-y border-slate-100">
+  <section className="py-12 bg-slate-50 border-y border-slate-100">
     <div className={C}>
        <div className="grid lg:grid-cols-2 gap-20 items-center">
           <FadeIn direction="right" className="order-2 lg:order-1">
              <div className="relative">
-                <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
-                   <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200" alt="Multi-site management" className="w-full h-full object-cover" />
+                <div className="rounded-[40px] overflow-hidden shadow-2xl">
+                   <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200" alt="Multi-site management" className="w-full h-full object-cover object-center" />
                 </div>
                 <div className="absolute -bottom-8 -right-8 bg-[#5D00D6] text-white p-10 rounded-[32px] shadow-2xl">
-                   <div className="text-4xl font-black mb-1">100%</div>
-                   <div className="text-xs font-bold uppercase tracking-widest opacity-80">Site Consistency</div>
+                   <div className="text-4xl font-black mb-1">99.99%</div>
+                   <div className="text-xs font-bold uppercase tracking-widest opacity-80">Site Stability</div>
                 </div>
              </div>
           </FadeIn>
 
           <FadeIn direction="left" className="order-1 lg:order-2">
-             <span className="c9-eyebrow mb-4">Multi-Site Capability</span>
-             <h2 className="c9-section-heading mb-6">Standardization is the Key to Scalability</h2>
+             <span className="c9-eyebrow mb-4">Performance & Stability at Scale</span>
+             <h2 className="c9-section-heading mb-6">Uptime & System-Wide Consistency</h2>
              <p className="c9-body text-slate-600 mb-8">
-               Managing 10 locations should be as simple as managing one. We deploy standardized infrastructure blueprints that eliminate site-specific technical debt.
+               We achieve enterprise stability by eliminating the root causes of infrastructure failure. Our framework ensures that every site operates at peak performance through proactive issue detection and root-cause elimination.
              </p>
-             <div className="grid gap-6">
+             <div className="space-y-6">
                 {[
-                  { title: 'Rapid Site Rollouts', desc: 'Pre-configured blueprints for new site openings or acquisitions.' },
-                  { title: 'Centralized Monitoring', desc: 'Every location managed through a single pane of glass.' },
-                  { title: 'Standardized Stacks', desc: 'Consistent hardware and security baselines across every site.' }
+                  { title: 'Proactive Issue Detection', desc: 'Identifying and solving infrastructure bottlenecks before they impact operational continuity.' },
+                  { title: 'Recurring Issue Elimination', desc: 'Hardened root-cause analysis to permanently remove systemic technical debt from the environment.' },
+                  { title: 'System-Wide Consistency', desc: 'Standardised hardware and software stacks that ensure identical performance across all enterprise locations.' }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4 p-5 bg-white rounded-2xl border border-slate-200">
-                     <div className="text-[#5D00D6] mt-1"><CheckCircle size={18} /></div>
+                  <div key={i} className="flex gap-4">
+                     <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1">
+                        <Check size={14} />
+                     </div>
                      <div>
-                        <h4 className="font-bold text-slate-900 text-sm mb-1">{item.title}</h4>
-                        <p className="text-[14px] text-slate-500">{item.desc}</p>
+                        <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
+                        <p className="text-sm text-slate-500">{item.desc}</p>
                      </div>
                   </div>
                 ))}
@@ -437,28 +431,28 @@ const SectionScalability = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 7 — SECURITY & COMPLIANCE (C9 DEFENSE)
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 7  SECURITY
+    */
 const SectionSecurity = () => (
-  <section className="py-16 bg-white overflow-hidden">
+  <section className="py-12 bg-white overflow-hidden">
     <div className={C}>
-       <div className="max-w-3xl mx-auto text-center mb-16">
+       <div className="max-w-3xl mx-auto text-center mb-10">
           <FadeIn>
-             <span className="c9-eyebrow mb-4">C9 Defense Integration</span>
-             <h2 className="c9-section-heading">Operational Security That Never Sleeps</h2>
+             <span className="c9-eyebrow mb-4">Security & Compliance Operations</span>
+             <h2 className="c9-section-heading">Continuous Security Governance & Response</h2>
           </FadeIn>
        </div>
 
        <div className="grid md:grid-cols-4 gap-6">
           {[
-            { icon: <Activity />, title: 'Continuous Monitoring', desc: 'Real-time surveillance of network traffic and endpoint behavior.' },
-            { icon: <ShieldAlert />, title: 'Threat Response', desc: 'Automated isolation of compromised nodes with rapid human intervention.' },
-            { icon: <Lock />, title: 'Identity Protection', desc: 'Hardened MFA and Zero-Trust access protocols across the enterprise.' },
-            { icon: <ClipboardCheck />, title: 'Compliance Alignment', desc: 'Continuous enforcement of Essential 8 and ISO-aligned controls.' }
+            { icon: <Activity />, title: 'Continuous Monitoring', desc: '24/7 surveillance of network traffic and endpoint behavior for anomaly detection.' },
+            { icon: <Lock />, title: 'Access Control Structure', desc: 'Rigorous enforcement of Zero-Trust protocols and MFA across all enterprise sites.' },
+            { icon: <ShieldAlert />, title: 'Incident Response', desc: 'Hardened protocols for rapid containment and mitigation of identified security threats.' },
+            { icon: <ClipboardCheck />, title: 'Audit Readiness', desc: 'Continuous logging and audit readiness aligned with ISO and Essential 8 standards.' }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full hover:border-[#5D00D6]/20 transition-all group">
+               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full hover:border-[#5D00D6]/20 transition-all group shadow-sm">
                   <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center mb-6 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                      {item.icon}
                   </div>
@@ -472,26 +466,26 @@ const SectionSecurity = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 8 — ARCHITECTURE & INTEGRATION
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 8  ARCHITECTURE & INTEGRATION
+    */
 const SectionArchitecture = () => (
-  <section id="architecture" className="py-16 bg-slate-50 border-y border-slate-100">
+  <section id="architecture" className="py-12 bg-slate-50 border-y border-slate-100">
     <div className={C}>
        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <FadeIn direction="right">
-             <span className="c9-eyebrow mb-4">Architecture First</span>
-             <h2 className="c9-section-heading mb-6">Built for Integration & Interoperability</h2>
+             <span className="c9-eyebrow mb-4">System Integration</span>
+             <h2 className="c9-section-heading mb-6">Integration with Existing Environments</h2>
              <p className="c9-body text-slate-600 mb-8">
-               We don't build isolated systems. Our architecture is designed to integrate seamlessly with your core business applications.
+               We govern your multi-site infrastructure without disrupting current operations. Our architecture integrates deeply with your established enterprise systems.
              </p>
              <div className="space-y-4">
                 {[
-                  { icon: <Database size={18} />, title: 'ERP & POS Integration', desc: 'Zero-latency connectivity for core transaction systems.' },
-                  { icon: <Cloud size={18} />, title: 'Hybrid Cloud Alignment', desc: 'Seamless management across Azure, AWS, and private clouds.' },
-                  { icon: <Share2 size={18} />, title: 'SaaS Connectivity', desc: 'Optimized routing for Microsoft 365, Salesforce, and beyond.' }
+                  { icon: <Database size={18} />, title: 'ERP & POS Systems', desc: 'Direct integration with core business platforms to ensure transaction continuity across all sites.' },
+                  { icon: <Cloud size={18} />, title: 'Cloud & Hybrid Platforms', desc: 'Unified control of Azure, AWS, and legacy infrastructure without disrupting existing workflows.' },
+                  { icon: <Server size={18} />, title: 'Legacy Infrastructure Governance', desc: 'Bringing brownfield environments into a modern governance model without service disruption.' }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-200">
+                  <div key={i} className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
                      <div className="text-[#5D00D6] shrink-0 mt-1">{item.icon}</div>
                      <div>
                         <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
@@ -503,24 +497,29 @@ const SectionArchitecture = () => (
           </FadeIn>
 
           <FadeIn direction="left">
-             <div className="bg-white p-12 rounded-[48px] shadow-2xl border border-slate-100 text-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-full -mr-16 -mt-16" />
-                <div className="relative z-10">
-                   <div className="w-16 h-16 bg-[#5D00D6]/5 rounded-2xl flex items-center justify-center text-[#5D00D6] mx-auto mb-8">
-                      <Cpu size={32} />
-                   </div>
-                   <h3 className="text-2xl font-bold mb-6 text-slate-900">The Modern Workplace Engine</h3>
-                   <p className="text-slate-500 text-sm leading-relaxed mb-10 max-w-sm mx-auto">
-                     A unified architecture that connects your users, devices, and data wherever they operate.
-                   </p>
-                   <div className="grid grid-cols-2 gap-4">
-                      <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                         <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Latency</div>
-                         <div className="text-xl font-black text-[#5D00D6]">Sub-10ms</div>
-                      </div>
-                      <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                         <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">SLA Target</div>
-                         <div className="text-xl font-black text-[#5D00D6]">99.99%</div>
+             <div className="relative">
+                <div className="bg-[#0c1024] p-10 rounded-[40px] shadow-2xl relative overflow-hidden">
+                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#5D00D6]/20 to-transparent" />
+                   <div className="relative z-10">
+                      <h3 className="text-white text-2xl font-bold mb-6">Integration Architecture</h3>
+                      <div className="space-y-4">
+                         <div className="p-5 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
+                            <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white"><Share2 size={20} /></div>
+                            <div>
+                               <div className="text-white font-bold text-sm">Unified Control Plane</div>
+                               <div className="text-white/40 text-[11px] uppercase tracking-widest mt-0.5">Centralised Logic</div>
+                            </div>
+                         </div>
+                         <div className="grid grid-cols-2 gap-4">
+                            <div className="p-5 bg-white/5 border border-white/10 rounded-2xl text-center">
+                               <div className="text-white/60 text-[10px] uppercase font-bold mb-2">Cloud Layer</div>
+                               <div className="text-white font-bold text-sm">Azure/AWS</div>
+                            </div>
+                            <div className="p-5 bg-white/5 border border-white/10 rounded-2xl text-center">
+                               <div className="text-white/60 text-[10px] uppercase font-bold mb-2">On-Prem</div>
+                               <div className="text-white font-bold text-sm">Legacy ERP</div>
+                            </div>
+                         </div>
                       </div>
                    </div>
                 </div>
@@ -531,43 +530,46 @@ const SectionArchitecture = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 9 — PROOF & REALITY
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 9  PROOF & REALITY
+    */
 const SectionProof = () => (
-  <section className="py-16 bg-white">
+  <section className="py-12 bg-white">
     <div className={C}>
-       <div className="max-w-3xl mx-auto text-center mb-16">
+       <div className="max-w-3xl mx-auto text-center mb-10">
           <FadeIn>
              <span className="c9-eyebrow mb-4">Accountability in Action</span>
-             <h2 className="c9-section-heading">Operational Proof Across the Enterprise</h2>
+             <h2 className="c9-section-heading">Operational Governance & Control Proof</h2>
+             <p className="c9-body text-slate-600 mt-6">
+               Stability proven through complex multi-site operations across Australia.
+             </p>
           </FadeIn>
        </div>
 
-       <div className="grid md:grid-cols-2 gap-8 mb-16">
+       <div className="grid md:grid-cols-2 gap-8">
           {[
             { 
               tag: 'RETAIL GROUP', 
               title: '85-Location Consolidation', 
-              desc: 'Successfully consolidated 4 separate vendors into a single accountable path. Resulted in 99.98% network uptime across all sites.',
-              metric: '99.98%',
+              desc: 'Consolidated 4 separate vendors into a single accountable path. Established a unified governance model with 99.99% core network uptime.',
+              metric: '99.99%',
               metricLabel: 'Network Uptime'
             },
             { 
               tag: 'LOGISTICS', 
-              title: '1,200 Endpoint Rollout', 
-              desc: 'Seamless migration of 1,200 distributed endpoints with zero operational downtime. Incident volume reduced by 42% in first 90 days.',
+              title: '1,200 Endpoint Governance', 
+              desc: 'Seamless migration of 1,200 distributed endpoints with zero operational downtime. Incident volume reduced through standardised infrastructure.',
               metric: '42%',
               metricLabel: 'Incident Reduction'
             }
           ].map((caseStudy, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-slate-50 p-10 rounded-[40px] border border-slate-200 hover:shadow-xl transition-all duration-500 h-full">
+               <div className="bg-slate-50 p-10 rounded-[40px] border border-slate-200 hover:shadow-xl transition-all duration-500 h-full group">
                   <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-4 block">{caseStudy.tag}</span>
                   <h3 className="text-xl font-bold text-slate-900 mb-6">{caseStudy.title}</h3>
                   <p className="text-slate-600 text-[14px] leading-relaxed mb-10">{caseStudy.desc}</p>
                   <div className="flex items-center gap-4">
-                     <div className="text-4xl font-black text-slate-900">{caseStudy.metric}</div>
+                     <div className="text-4xl font-black text-slate-900 group-hover:text-[#5D00D6] transition-colors">{caseStudy.metric}</div>
                      <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{caseStudy.metricLabel}</div>
                   </div>
                </div>
@@ -578,30 +580,40 @@ const SectionProof = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 10 — COMMERCIAL IMPACT
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 10  WORKING WITH INTERNAL IT
+    */
 const SectionCommercial = () => (
-  <section className="py-16 bg-slate-900 text-white overflow-hidden relative">
+  <section className="py-14 bg-slate-900 text-white overflow-hidden relative">
     <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
     <div className={C}>
        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <FadeIn direction="right">
-             <h2 className="c9-section-heading !text-white !text-left mb-8">Technology Transformed <br/>Into Commercial Value</h2>
-             <p className="c9-body text-white/60 mb-12 max-w-lg">
-               Our goal is to remove the "IT headache" so your leadership team can focus entirely on growth and operational performance.
+             <span className="c9-eyebrow mb-4 !text-white/60">Co-Managed Infrastructure</span>
+             <h2 className="c9-section-heading !text-white !text-left mb-8">Working with Internal IT Teams</h2>
+             <p className="c9-body text-white/60 mb-12 max-w-lg leading-relaxed">
+               We empower internal IT departments by removing the operational burden of multi-site infrastructure management. Our model is built on role clarity, not replacement.
              </p>
+             <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white">
+                   <Handshake size={24} />
+                </div>
+                <div>
+                   <h4 className="text-white font-bold mb-1 text-lg">Role Clarity Framework</h4>
+                   <p className="text-white/40 text-sm">Defined division of operational responsibility.</p>
+                </div>
+             </div>
           </FadeIn>
 
           <FadeIn direction="left">
              <div className="grid gap-4">
                 {[
-                  { title: 'Reduced Operational Risk', desc: 'Predictable systems with zero blind spots.' },
-                  { title: 'Lower Vendor Overhead', desc: 'One accountable partner instead of multiple vendors.' },
-                  { title: 'Predictable IT Costs', desc: 'Consistent, fixed-fee enterprise performance models.' },
-                  { title: 'Faster Time-to-Market', desc: 'Blueprinted site rollouts that happen in days, not weeks.' }
+                  { title: 'Operational Offload', desc: 'Internal teams retain high-level strategy; C9 owns operational execution across all sites.' },
+                  { title: 'Collaborative Governance', desc: 'Unified visibility through shared dashboards and real-time incident tracking.' },
+                  { title: 'Knowledge Sharing', desc: 'Full access to technical documentation and configuration blueprints for your internal team.' },
+                  { title: 'Strategic Alignment', desc: 'Acting as an operational extension of your internal IT department protocols.' }
                 ].map((item, i) => (
-                  <div key={i} className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-[#5D00D6]/20 transition-all flex items-center gap-6 group">
+                  <div key={i} className="p-6 bg-white/5 border border-white/10 rounded-3xl hover:bg-[#5D00D6]/20 transition-all flex items-center gap-6 group">
                      <div className="w-10 h-10 rounded-full bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] group-hover:bg-white group-hover:text-[#5D00D6] transition-colors">
                         <Check size={20} />
                      </div>
@@ -618,18 +630,63 @@ const SectionCommercial = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 11 — SERVICE ECOSYSTEM CONNECTION
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 11  ENGAGEMENT QUALIFICATION
+    */
 const SectionEcosystem = () => (
-  <section className="py-16 bg-white">
+  <section className="py-14 bg-white">
     <div className={C}>
-       <div className="max-w-3xl mx-auto text-center mb-16">
+       <div className="max-w-3xl mx-auto text-center mb-10">
           <FadeIn>
-             <span className="c9-eyebrow mb-4">The Unified System</span>
-             <h2 className="c9-section-heading">Integrated Architecture. No Silos.</h2>
+             <span className="c9-eyebrow mb-4">Qualification Protocol</span>
+             <h2 className="c9-section-heading">When C9 Governance Is Not a Fit</h2>
              <p className="c9-body text-slate-600 mt-6">
-               Enterprise performance requires every layer of the stack to work in harmony. C9 connects these services into a single, managed ecosystem.
+               To maintain our standards of operational control and SLA enforcement, we focus exclusively on environments where structured governance can be effectively implemented.
+             </p>
+          </FadeIn>
+       </div>
+
+       <div className="grid md:grid-cols-4 gap-8 mb-14">
+          {[
+            { 
+              label: 'Small Business', 
+              desc: 'Environments with fewer than 50 seats that do not require multi-site governance or enterprise-scale control logic.',
+              icon: <Users />
+            },
+            { 
+              label: 'Break-Fix Expectations', 
+              desc: 'Organisations seeking reactive troubleshooting rather than a structured, governed infrastructure operating model.',
+              icon: <Zap />
+            },
+            { 
+              label: 'Non-Structured Ops', 
+              desc: 'Environments where leadership does not support the standardisation of infrastructure and hardware across sites.',
+              icon: <Layers />
+            },
+            { 
+              label: 'Short-Term Work', 
+              icon: <Clock />,
+              desc: 'Project-based engagements that lack the long-term operational commitment required for true SLA enforcement.'
+            }
+          ].map((item, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+               <div className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 text-center opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 group h-full">
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm">
+                     {item.icon}
+                  </div>
+                  <h4 className="text-[14px] font-bold text-slate-900 uppercase tracking-widest mb-3">{item.label}</h4>
+                  <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
+               </div>
+            </FadeIn>
+          ))}
+       </div>
+
+       <div className="max-w-3xl mx-auto text-center mb-10 pt-10 border-t border-slate-100">
+          <FadeIn>
+             <span className="c9-eyebrow mb-4">Integrated Architecture</span>
+             <h2 className="c9-section-heading">The Unified Operating System</h2>
+             <p className="c9-body text-slate-600 mt-6">
+               Enterprise performance requires every layer of the stack to work in harmony. C9 connects these services into a single, governed ecosystem.
              </p>
           </FadeIn>
        </div>
@@ -639,8 +696,8 @@ const SectionEcosystem = () => (
             { label: 'Cloud Services', icon: <Cloud /> },
             { label: 'Network Solutions', icon: <Network /> },
             { label: 'Infrastructure', icon: <Server /> },
-            { label: 'Helpdesk', icon: <MessageSquare /> },
-            { label: 'Cybersecurity', icon: <Shield /> }
+            { label: 'Helpdesk Support', icon: <MessageSquare /> },
+            { label: 'Security Ops', icon: <Shield /> }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.05} className="group">
                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center hover:bg-[#5D00D6] transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col justify-center">
@@ -656,29 +713,29 @@ const SectionEcosystem = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 12 — FINAL CTA SECTION
-   ───────────────────────────────────────────────────────── */
+/* 
+   SECTION 12  FINAL CTA SECTION
+    */
 const FinalCTA = () => (
-  <section className="py-16 bg-[#0c1024] text-white relative overflow-hidden">
+  <section className="py-12 bg-[#0c1024] text-white relative overflow-hidden">
      <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/30 to-transparent opacity-50" />
      <div className={C + " relative z-10 text-center"}>
         <FadeIn>
-           <h2 className="c9-section-heading !text-white mb-8 !text-4xl lg:!text-5xl">Ensure Your Business <br/>Stays Connected</h2>
+           <h2 className="c9-section-heading !text-white mb-8 !text-4xl lg:!text-5xl">Establish Infrastructure Governance. <br/>Enforce Your SLA.</h2>
            <p className="text-white/70 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
-             Stop accepting technical debt as a cost of doing business. Partner with an accountable operational leader who owns the outcome.
+             Fragmented environments create hidden operational risks. Establish a structured operating model and regain control across your entire multi-site estate.
            </p>
            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-16 px-12 font-extrabold text-[14px] hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/40 group">
-                 Discuss Your Enterprise IT Strategy
+                 Request Enterprise Infrastructure Assessment
               </a>
               <a href="#consultation" className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-16 px-12 font-extrabold text-[14px] hover:bg-white hover:text-[#0c1024] transition-all">
-                 Assess Your Current Environment
+                 Talk to an Infrastructure Architect
               </a>
            </div>
            <div className="mt-8">
-              <a href="#consultation" className="text-white/60 font-bold hover:text-white transition-colors text-sm">
-                Or plan your multi-site infrastructure today &rarr;
+              <a href="#architecture" className="text-white/60 font-bold hover:text-white transition-colors text-sm">
+                Review Multi-Site Architecture &rarr;
               </a>
            </div>
         </FadeIn>
@@ -686,9 +743,9 @@ const FinalCTA = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
+/* 
    PAGE EXPORT
-   ───────────────────────────────────────────────────────── */
+    */
 export default function EnterprisePage() {
   return (
     <main className="min-h-screen bg-white">
@@ -706,7 +763,7 @@ export default function EnterprisePage() {
       <SectionEcosystem />
       <FinalCTA />
 
-      <section id="consultation" className="bg-slate-50 py-16">
+      <section id="consultation" className="bg-slate-50 py-12">
         <WpConsultationForm
           showHeader={false}
           eyebrow="STRATEGIC GOVERNANCE"
@@ -718,3 +775,4 @@ export default function EnterprisePage() {
     </main>
   );
 }
+

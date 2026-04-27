@@ -59,7 +59,7 @@ export default function Homepage() {
 
       <WpVendors />
       {/* 9. CASE STUDIES — Real proof to eliminate last-mile doubt */}
-      <div className="pt-20 bg-white">
+      <div className="pt-12 bg-white">
         <div className="container mx-auto px-8 max-w-[1240px]">
           <h2 className="c9-section-heading mb-4">Operational Proof Across Complex Environments</h2>
           <p className="c9-body mb-2">Multi-site rollouts and infrastructure consolidations completed for national footprints. Thousands of endpoints under single-owner control.</p>

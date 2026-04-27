@@ -337,7 +337,7 @@ export default function FastFibrePage() {
                     { step: "04", title: "Configure and test", desc: "We configure your connection and perform rigorous testing. Provide ongoing support to ensure your operation stays online." }
                 ].map((item, idx) => (
                     <div key={idx} className="relative group">
-                        <div className="text-[60px] font-black text-[#5D00D6]/5 absolute -top-8 -left-2 select-none group-hover:text-[#5D00D6]/10 transition-colors">{item.step}</div>
+                        <div className="text-[60px] font-bold text-[#5D00D6]/5 absolute -top-8 -left-2 select-none group-hover:text-[#5D00D6]/10 transition-colors">{item.step}</div>
                         <div className="relative z-10">
                             <h4 className="text-xl font-bold text-[#1A1A2E] mb-4">{item.title}</h4>
                             <p className="text-gray-500 text-[14px] leading-relaxed">{item.desc}</p>
