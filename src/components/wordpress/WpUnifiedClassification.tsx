@@ -132,7 +132,7 @@ export const WpUnifiedClassification = ({
                               >
                                 {item.icon && (
                                   <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 flex items-center justify-center mb-5 group-hover:bg-[#5D00D6]/10 group-hover:text-[#5D00D6] transition-all duration-500">
-                                    {React.cloneElement(item.icon, { size: 20, strokeWidth: 1.5 })}
+                                    {React.cloneElement(item.icon as React.ReactElement<any>, { size: 20, strokeWidth: 1.5 })}
                                   </div>
                                 )}
                                 <h4 className="text-[15.5px] font-bold text-slate-900 mb-2 group-hover:text-[#5D00D6] transition-colors leading-tight tracking-tight">

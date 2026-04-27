@@ -209,7 +209,7 @@ export default function SolutionsPage() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-40 rounded-full blur-3xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-1000" />
               <div className="relative z-10">
                 <div className={cn("w-16 h-16 rounded-[24px] flex items-center justify-center mb-8", item.color)}>
-                  {React.cloneElement(item.icon as React.ReactElement, { size: 32 })}
+                  {React.cloneElement(item.icon as React.ReactElement<any>, { size: 32 })}
                 </div>
                 <H3 className="mb-6 text-2xl text-slate-900 leading-tight">{item.title}</H3>
                 <p className="c9-body mb-8 text-[16px] leading-relaxed text-slate-500">
