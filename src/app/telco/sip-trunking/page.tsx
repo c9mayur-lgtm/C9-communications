@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { 
   Users, ShieldCheck, Activity, ArrowRight, CheckCircle2, 
   Layers, Building2, TrendingUp, Monitor, RefreshCcw, 
-  ShieldAlert, PhoneCall, AlertTriangle, PhoneOff, Scale, ServerCog
+  ShieldAlert, PhoneCall, AlertTriangle, PhoneOff, Scale, ServerCog, BarChart3
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
