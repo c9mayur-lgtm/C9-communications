@@ -193,28 +193,40 @@ export default function MobilePlansPage() {
       </section>
 
       {/* ══ 3. HUMAN TRUST BREAK 1 ═══════════════════════════════════════ */}
-      <section className="relative py-24 bg-[#0c1024] overflow-hidden">
+      <section className="relative py-32 lg:py-40 bg-[#0c1024] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=2000" 
-            className="w-full h-full object-cover object-top opacity-50"
-            alt="Corporate professionals discussing operations"
+            src="/mobile_workforce_executive_control.png" 
+            className="w-full h-full object-cover object-center opacity-40 scale-105"
+            alt="Corporate executive with mobile device"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0c1024] via-[#0c1024]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024] via-transparent to-transparent opacity-60" />
         </div>
         
+        {/* Subtle Decorative Elements */}
+        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#5D00D6] rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px]" />
+        </div>
+
         <div className={`${C} relative z-10`}>
-          <div className="max-w-[700px]">
+          <div className="max-w-[800px]">
              <FadeIn>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 text-white/80 text-[10px] font-bold uppercase tracking-widest mb-6">
-                   <ShieldCheck size={12} /> Executive Control
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white/90 text-[11px] font-bold uppercase tracking-widest mb-8">
+                   <div className="w-2 h-2 rounded-full bg-[#5D00D6] shadow-[0_0_8px_#5D00D6]" />
+                   <ShieldCheck size={14} className="text-[#5D00D6]" /> 
+                   <span>Executive Governance</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6 tracking-tight">
-                  Your workforce does not stop at the office. Neither should your support.
+                <h2 className="text-4xl md:text-6xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
+                  Your workforce does not stop at the office. <span className="text-white/60 font-medium">Neither should your support.</span>
                 </h2>
-                <p className="text-[18px] text-slate-300 leading-relaxed font-medium">
-                  Business mobility should create absolute control—not administrative complexity. When your team is in the field, you need a system that ensures continuous connection without unpredictable costs.
-                </p>
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-[2px] bg-[#5D00D6] mt-4 shrink-0 hidden sm:block" />
+                  <p className="text-[20px] md:text-[22px] text-slate-300 leading-relaxed font-medium max-w-[640px]">
+                    Business mobility should create absolute control—not administrative complexity. When your team is in the field, you need a system that ensures continuous connection without unpredictable costs.
+                  </p>
+                </div>
              </FadeIn>
           </div>
         </div>
