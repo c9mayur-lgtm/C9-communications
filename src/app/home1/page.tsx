@@ -157,7 +157,7 @@ const PersonaRouting = () => (
             title: 'Opening a New Office',
             desc: 'We design and deliver your entire IT and telco setup — ready from day one.',
             cta: 'Explore Greenfield',
-            href: '/greenfield1',
+            href: '/greenfield',
             img: '/images/greenfield_consultation.png',
             icon: <Building2 size={20} />,
           },
@@ -166,7 +166,7 @@ const PersonaRouting = () => (
             title: 'Running a Business',
             desc: 'We optimise, support, and scale your existing setup so your business runs smoothly.',
             cta: 'Explore Business',
-            href: '/business1',
+            href: '/business',
             img: '/images/hero_business.png',
             icon: <TrendingUpIcon />,
           },
@@ -175,7 +175,7 @@ const PersonaRouting = () => (
             title: 'Managing Multiple Locations',
             desc: 'We bring control, consistency, and performance across your entire environment.',
             cta: 'Explore Enterprise',
-            href: '/enterprise1',
+            href: '/enterprise',
             img: '/images/realistic_business_networking_rack_1776077491291.png',
             icon: <Globe size={20} />,
           },
@@ -391,7 +391,7 @@ const EnterpriseControl = () => (
             You stay focused on your business. We take responsibility for keeping everything running.
           </p>
           <a
-            href="/enterprise1"
+            href="/enterprise"
             className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all group whitespace-nowrap"
           >
             Explore Enterprise Solutions
@@ -458,7 +458,7 @@ const GreenfieldHook = () => (
             ))}
           </div>
           <a
-            href="/greenfield1"
+            href="/greenfield"
             className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all group whitespace-nowrap"
           >
             Plan My Office Setup

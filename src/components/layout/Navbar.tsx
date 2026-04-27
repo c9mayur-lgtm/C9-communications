@@ -29,9 +29,6 @@ const AUDIENCE_INFO: Record<string, any> = {
 const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean }) => {
   const colCount = data.columns ? data.columns.length : 3;
   const hasMiddle = data.hardware || data.challenges || data.modernization || data.partners;
-  const gridTemplate = hasMiddle 
-    ? `repeat(${colCount}, minmax(200px, 1fr)) 1.2fr minmax(280px, 300px)`
-    : `repeat(${colCount}, minmax(200px, 1fr)) minmax(280px, 300px)`;
 
   return (
     <div 
@@ -46,154 +43,171 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
     >
       <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: data.maxWidth || '1240px' }}>
         <div className="bg-white border border-gray-100 border-top-0 rounded-b-[40px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] overflow-hidden">
-          <div className="grid" style={{ gridTemplateColumns: gridTemplate }}>
+          <div className="flex">
             
             {/* PRODUCT/SOLUTION LISTS (DYNAMIC COLUMNS) */}
-            {data.columns?.map((col: any, ci: number) => (
-              <div key={ci} className="p-6 border-r border-gray-50 flex flex-col gap-6">
-                <div className="space-y-6">
-                  {col.sections.map((sec: any, si: number) => (
-                    <div key={si}>
-                      <div className="flex items-center justify-between mb-3 border-b border-gray-50 pb-1.5">
-                        <h4 className="c9-eyebrow !text-[9px] !text-[#5D00D6]/40 leading-none">{sec.heading}</h4>
-                      </div>
-                      <div className="flex flex-col gap-3.5">
-                        {sec.items.map((item: any, ii: number) => (
-                          <Link 
-                            key={ii} 
-                            href={item.path || '#'} 
-                            className="group flex items-center gap-3 text-slate-500 hover:text-[#5D00D6] transition-all"
-                          >
-                            <div className="w-1 h-1 rounded-full bg-[#5D00D6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <span className="text-[13.5px] font-semibold transition-colors">{item.label}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-
-            {/* Spacer removed intentionally — layout now uses dynamic fr columns */}
-
-            {/* VISUAL HIGHLIGHTS COLUMN (HARDWARE OR CHALLENGES OR PARTNERS) */}
-            {hasMiddle && (
-              <div className="p-7 border-r border-gray-50 bg-[#FCFBFE]/30">
-                {data.hardware ? (
-                  <>
-                    <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">Hardware Selection</h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      {data.hardware.map((h: any, i: number) => (
-                        <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-start justify-center text-left hover:shadow-lg transition-all border-b-2 border-b-transparent hover:border-b-[#5D00D6] duration-300">
-                          <div className="aspect-square w-full mb-3 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-2">
-                            <img src={h.img} alt={h.title} className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" />
-                          </div>
-                          <span className="text-[11px] font-bold text-slate-700">{h.title}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                ) : data.partners ? (
-                  <>
-                    <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">Strategic Partners</h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      {data.partners.map((p: any, i: number) => (
-                        <div key={i} className="group bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all h-24">
-                          <img src={p.logo} alt={p.title} className="max-h-8 max-w-[80%] object-contain group-hover:scale-110 transition-transform duration-500" />
-                          <span className="text-[9px] font-bold text-slate-400 mt-2 uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">{p.title}</span>
+            <div className="flex-1 grid" style={{ gridTemplateColumns: `repeat(${colCount}, minmax(200px, 1fr)) ${hasMiddle ? '1.2fr' : ''}` }}>
+              {data.columns?.map((col: any, ci: number) => (
+                <div key={ci} className="p-5 border-r border-gray-50 flex flex-col gap-6">
+                  <div className="space-y-5">
+                    {col.sections.map((sec: any, si: number) => (
+                      <div key={si}>
+                        <div className="flex items-center justify-between mb-2 border-b border-gray-50 pb-1.5">
+                          <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-60 leading-none">{sec.heading}</h4>
                         </div>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">
-                      {data.layout === 'solutions' ? 'Strategic Challenges' : 
-                       data.layout === 'modern-workplace' ? 'Workplace Evolution' : 
-                       data.layout === 'company' ? 'Our Values' : 'Growth & Expertise'}
-                    </h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      {(data.challenges || data.modernization)?.map((c: any, i: number) => (
-                        <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-start justify-center text-left hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden leading-tight aspect-square">
-                          <div className="mb-4 p-4 rounded-2xl bg-purple-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500">
-                            {c.icon}
-                          </div>
-                          <span className="text-[11px] font-bold text-slate-700 px-1">{c.title}</span>
-                          <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                             <ArrowRight size={12} className="text-[#5D00D6]" />
-                          </div>
+                        <div className="flex flex-col gap-1.5">
+                          {sec.items.map((item: any, ii: number) => (
+                            <Link 
+                              key={ii} 
+                              href={item.path || '#'} 
+                              className="group flex items-center gap-3 text-slate-500 hover:text-[#5D00D6] transition-all"
+                            >
+                              <span className="text-[14px] font-medium transition-colors" style={{ color: item.color || 'inherit' }}>{item.label}</span>
+                            </Link>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
-            )}
+                      </div>
+                    ))}
+                  </div>
 
-            {/* SIDEBAR COLUMN */}
-            <div className="p-7 bg-white">
-              <div className="flex flex-col h-full justify-between">
-                <div>
-                  <h4 className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#5D00D6] mb-6 opacity-40">
-                    {data.sidebar?.heading || "Actionable Support"}
-                  </h4>
-                  
-                  {data.sidebar?.title ? (
-                    <div className="space-y-6">
-                       <div className="aspect-[4/3] w-full rounded-2xl bg-[#5D00D6] overflow-hidden relative group cursor-pointer shadow-lg shadow-purple-900/10">
-                          <img 
-                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800" 
-                            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50 group-hover:scale-110 transition-transform duration-1000"
-                            alt="Smart Workplace"
-                          />
-                          <div className="absolute inset-x-0 bottom-0 p-6 pt-10 bg-gradient-to-t from-[#0c1024] to-transparent">
-                             <span className="text-white font-bold text-[18px] leading-tight block mb-3">{data.sidebar.title}</span>
-                             <div className="flex gap-2">
-                                <div className="w-8 h-1 rounded-full bg-white opacity-100"></div>
-                                <div className="w-2 h-1 rounded-full bg-white opacity-30"></div>
-                                <div className="w-2 h-1 rounded-full bg-white opacity-30"></div>
-                             </div>
-                          </div>
-                       </div>
-                       <Link href={data.sidebar.path || '#'} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] hover:translate-x-2 transition-transform py-2 group">
-                          {data.sidebar.button} 
-                       </Link>
+                  {col.footerLogo && (
+                    <div className="mt-auto pt-6">
+                       <img src={col.footerLogo} alt="Logo" className="h-10 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all border border-gray-100 rounded-xl p-2 inline-block" />
                     </div>
-                  ) : (
-                    <div className={data.sidebar?.heading === 'Strategic Partners' ? "grid grid-cols-2 gap-4" : "flex flex-col gap-5"}>
-                      {(data.sidebar?.items || []).map((item: any, i: number) => (
-                        <Link 
-                          key={i} 
-                          href={item.path || '#'} 
-                          className={`group flex transition-all ${data.sidebar?.heading === 'Strategic Partners' ? 'flex-col items-center justify-center p-3 border border-gray-50 rounded-2xl hover:border-[#5D00D6]/20 hover:shadow-lg hover:shadow-purple-900/5' : 'items-center gap-4 py-1'}`}
-                        >
-                          {item.icon && <div className="text-[#5D00D6] opacity-40 group-hover:opacity-100 transition-opacity mt-0.5">{item.icon}</div>}
-                          {item.logo && (
-                            <div className={`${data.sidebar?.heading === 'Strategic Partners' ? 'w-full h-8 mb-2' : 'w-12 h-10'} flex items-center justify-center transition-all group-hover:scale-105`}>
-                              <img src={item.logo} alt={item.title} className="max-w-full max-h-full object-contain" />
-                            </div>
-                          )}
-                          <div className={`flex flex-col ${data.sidebar?.heading === 'Strategic Partners' ? 'items-center text-center' : ''}`}>
-                            <span className={`${data.sidebar?.heading === 'Strategic Partners' ? 'text-[9px] uppercase tracking-tight text-slate-400 font-bold' : 'text-[14px] font-bold text-slate-700 group-hover:text-[#5D00D6]'} transition-colors leading-tight`}>
-                              {item.label || item.title}
-                            </span>
-                            {item.desc && <p className="text-[10px] text-slate-400 leading-tight mt-1 line-clamp-2">{item.desc}</p>}
-                          </div>
+                  )}
+
+                  {col.promoCard && (
+                    <div className="mt-6 p-6 bg-[#F8F9FB] rounded-[32px] border border-gray-100 relative overflow-hidden group">
+                      <div className="relative z-10">
+                        <p className="text-[12px] font-medium text-slate-800 leading-tight mb-4 pr-12">{col.promoCard.title}</p>
+                        <Link href={col.promoCard.path || '#'} className="inline-flex items-center justify-center px-6 py-2.5 bg-[#5D00D6] text-white text-[11px] font-bold rounded-xl hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/10">
+                          {col.promoCard.button}
                         </Link>
-                      ))}
+                      </div>
+                      {/* Geometric background pattern */}
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-gray-200/20 translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl" />
                     </div>
                   )}
                 </div>
+              ))}
 
-                {!data.sidebar?.title && !data.sidebar?.hideCTA && (
-                  <div className="mt-6 pt-6 border-t border-gray-200/60">
-                    <Link href="/consultation" className="group flex items-center justify-between p-4 bg-[#5D00D6] rounded-2xl shadow-xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
-                      <div className="flex flex-col">
-                        <span className="text-white/60 text-[10px] uppercase font-bold  mb-1">Expert Led</span>
-                        <span className="text-white font-bold text-[14px]">Free Consultation</span>
+              {/* VISUAL HIGHLIGHTS COLUMN (HARDWARE OR CHALLENGES OR PARTNERS) */}
+              {hasMiddle && (
+                <div className="p-5 border-r border-gray-50">
+                  {data.hardware ? (
+                    <>
+                      <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-60 mb-6">Hardware</h4>
+                      <div className="grid grid-cols-2 gap-4">
+                        {data.hardware.map((h: any, i: number) => (
+                          <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center justify-center text-center hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500">
+                            <div className="aspect-[1.5/1] w-full mb-2 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-2">
+                              <img src={h.img} alt={h.title} className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                            </div>
+                            <span className="text-[12px] font-semibold text-slate-700">{h.title}</span>
+                          </Link>
+                        ))}
                       </div>
-                      <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center transition-all group-hover:bg-white/20 group-hover:scale-110">
+                    </>
+                  ) : (
+                    <>
+                      <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-60 mb-6">
+                        {data.layout === 'modern-workplace' ? 'Workplace Modernization' : 'Business Challenges'}
+                      </h4>
+                      <div className="grid grid-cols-2 gap-4">
+                        {(data.challenges || data.modernization)?.map((c: any, i: number) => (
+                          <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden aspect-square">
+                            <div className="mb-4 p-4 rounded-2xl bg-purple-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
+                              {c.icon}
+                            </div>
+                            <span className="text-[12px] font-semibold text-slate-800 leading-tight px-1">{c.title}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* SIDEBAR COLUMN */}
+            <div className={`w-[300px] p-5 transition-colors ${data.sidebar?.variant === 'purple' ? 'bg-[#F9F8FF]' : 'bg-white'}`}>
+              <div className="flex flex-col h-full justify-between">
+                <div>
+                  <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-60 mb-8">
+                    {data.sidebar?.heading || "Actionable Support"}
+                  </h4>
+                  
+                  {data.sidebar?.slider ? (
+                    <div className="space-y-6">
+                       {data.sidebar.slider.map((slide: any, i: number) => (
+                         <div key={i} className="space-y-6">
+                           <div className="aspect-[1.8/1] w-full rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl shadow-purple-900/5">
+                              <img 
+                                src={slide.img} 
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                alt={slide.title}
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/90 via-transparent to-transparent opacity-80" />
+                              <div className="absolute inset-x-0 bottom-0 p-6">
+                                 <span className="text-white font-semibold text-[18px] leading-tight block">{slide.title}</span>
+                              </div>
+                           </div>
+                           <div className="flex items-center gap-1.5 justify-center">
+                              <div className="w-6 h-1.5 rounded-full bg-[#5D00D6]" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-slate-200" />
+                           </div>
+                         </div>
+                       ))}
+                    </div>
+                  ) : (
+                    <div className="flex flex-col gap-8">
+                      {/* Check if items are logos (e.g. Strategic Partners) */}
+                      {data.sidebar?.items && data.sidebar.items[0]?.logo ? (
+                        <div className="grid grid-cols-2 gap-x-6 gap-y-8 mt-2">
+                          {data.sidebar.items.map((item: any, i: number) => (
+                            <div key={i} className="flex flex-col items-center gap-2 group cursor-default">
+                              <div className="h-10 w-full flex items-center justify-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
+                                <img src={item.logo} alt={item.title} className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                              </div>
+                              <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-slate-600 transition-colors">{item.title}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        (data.sidebar?.items || []).map((item: any, i: number) => (
+                          <Link 
+                            key={i} 
+                            href={item.path || '#'} 
+                            className="group flex flex-col gap-1 transition-all"
+                          >
+                            <div className="flex items-center gap-3">
+                              {item.icon && <div className="text-[#5D00D6] group-hover:scale-110 transition-transform shrink-0">{item.icon}</div>}
+                              <span className="text-[14px] font-semibold text-slate-800 group-hover:text-[#5D00D6] transition-colors leading-tight">
+                                {item.label || item.title}
+                              </span>
+                            </div>
+                            {item.desc && <p className="text-[11px] text-slate-400 leading-normal mt-1.5 line-clamp-2">{item.desc}</p>}
+                          </Link>
+                        ))
+                      )}
+                    </div>
+                  )}
+
+                  {data.sidebar?.viewAllPath && (
+                    <Link href={data.sidebar.viewAllPath} className="inline-block mt-8 text-[#5D00D6] font-bold text-[12px] hover:underline">
+                      View all
+                    </Link>
+                  )}
+                </div>
+
+                {!data.sidebar?.hideCTA && !data.sidebar?.variant && (
+                  <div className="mt-8 pt-8 border-t border-gray-200/60">
+                    <Link href="/consultation" className="group flex items-center justify-between p-5 bg-[#5D00D6] rounded-[24px] shadow-2xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
+                      <div className="flex flex-col">
+                        <span className="text-white/60 text-[10px] uppercase font-bold mb-1 tracking-wider">Expert Led</span>
+                        <span className="text-white font-bold text-[15px]">Free Consultation</span>
+                      </div>
+                      <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center transition-all group-hover:bg-white/20">
                         <ArrowRight size={20} className="text-white" />
                       </div>
                     </Link>
@@ -201,8 +215,27 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                 )}
               </div>
             </div>
-
           </div>
+
+          {/* FULL WIDTH CTA BANNER (e.g. IT Solutions) */}
+          {data.ctaBanner && (
+            <div className="px-7 pb-7">
+              <div className="bg-[#5D00D6] rounded-2xl p-6 lg:p-7 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 group">
+                <div className="relative z-10 max-w-2xl">
+                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-1.5">{data.ctaBanner.title}</h3>
+                  <p className="text-white/70 text-[13px] lg:text-[14px] font-medium leading-relaxed">{data.ctaBanner.body}</p>
+                </div>
+                <Link 
+                  href={data.ctaBanner.path || '#'} 
+                  className="relative z-10 px-10 py-4 bg-white text-[#5D00D6] font-bold rounded-2xl hover:bg-slate-50 transition-all shadow-xl shadow-black/20 shrink-0"
+                >
+                  {data.ctaBanner.button}
+                </Link>
+                {/* Background decorative element */}
+                <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-white opacity-[0.03] rounded-full blur-[80px] translate-x-1/2 translate-y-1/2" />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -299,7 +332,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 <button
                   key={track.key}
                   onClick={() => setAudience(track.key as any)}
-                  className={`flex-1 py-2 text-[12px] font-black  rounded-full transition-all duration-300 ${
+                  className={`flex-1 py-2 text-[12px] font-bold  rounded-full transition-all duration-300 ${
                     audience === track.key
                       ? 'bg-[#5D00D6] text-white shadow-md'
                       : 'text-slate-400 hover:text-slate-600'
@@ -324,7 +357,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                       onClick={() => toggleAccordion(tab.menuKey)}
                       className="flex items-center justify-between w-full py-4 text-left group"
                     >
-                      <span className={`text-[18px] font-bold  transition-colors ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}>
+                      <span className={`text-[18px] font-semibold  transition-colors ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}>
                         {tab.name}
                       </span>
                       <ChevronDown size={20} className={`text-slate-400 transition-transform duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
@@ -357,7 +390,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                         </Link>
                                       )}
                                     </div>
-                                    <div className="flex flex-col gap-4">
+                                    <div className="flex flex-col gap-1.5">
                                       {sec.items?.map((item: any, ii: number) => (
                                         <Link 
                                           key={ii} 
@@ -366,7 +399,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                           className="flex items-center gap-3 group"
                                         >
                                           <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                          <span className="text-[16px] font-semibold text-slate-600 group-hover:text-[#5D00D6] transition-colors">{item.label}</span>
+                                      <span className="text-[16px] font-medium text-slate-600 group-hover:text-[#5D00D6] transition-colors">{item.label}</span>
                                         </Link>
                                       ))}
                                     </div>
@@ -404,37 +437,70 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                 <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-6">
                                   {menuData.sidebar.heading}
                                 </h4>
-                                <div className="grid grid-cols-1 gap-4">
-                                  {menuData.sidebar.items.map((item: any, i: number) => (
-                                    <Link 
-                                      key={i} 
-                                      href={item.path || '#'} 
-                                      onClick={onClose}
-                                      className="flex flex-col gap-1 py-1"
-                                    >
-                                      <span className="text-[14px] font-bold text-slate-700 leading-tight">{item.label || item.title}</span>
-                                      {item.desc && <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.desc}</p>}
-                                    </Link>
-                                  ))}
-                                </div>
+                                
+                                {menuData.sidebar.items[0]?.logo ? (
+                                  <div className="grid grid-cols-2 gap-x-4 gap-y-6">
+                                    {menuData.sidebar.items.map((item: any, i: number) => (
+                                      <div key={i} className="flex flex-col items-center gap-2">
+                                        <div className="h-8 w-full flex items-center justify-center">
+                                          <img src={item.logo} alt={item.title} className="max-h-full max-w-full object-contain grayscale opacity-60" />
+                                        </div>
+                                        <span className="text-[8px] font-bold uppercase tracking-wider text-slate-400">{item.title}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <div className="grid grid-cols-1 gap-6">
+                                    {menuData.sidebar.items.map((item: any, i: number) => (
+                                      <Link 
+                                        key={i} 
+                                        href={item.path || '#'} 
+                                        onClick={onClose}
+                                        className="flex flex-col gap-1 py-1"
+                                      >
+                                        <span className="text-[14px] font-semibold text-slate-700 leading-tight">{item.label || item.title}</span>
+                                        {item.desc && <p className="text-[11px] text-slate-400 mt-1 line-clamp-2">{item.desc}</p>}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+
+                                {menuData.sidebar.viewAllPath && (
+                                  <Link 
+                                    href={menuData.sidebar.viewAllPath} 
+                                    onClick={onClose}
+                                    className="inline-block mt-6 text-[#5D00D6] font-bold text-[12px] hover:underline"
+                                  >
+                                    View all
+                                  </Link>
+                                )}
                               </div>
                             )}
 
-                            {/* Handling Sidebar without items (like Modern Workplace) */}
+                            {/* Handling Slider/Sidebar without items */}
                             {menuData?.sidebar && !menuData.sidebar.items && (
                                 <div className="bg-[#F8F7FF] p-5 rounded-3xl mt-2 border border-[#5D00D6]/5">
-                                    <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-3 opacity-40">
+                                    <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-4 opacity-40">
                                         {menuData.sidebar.heading}
                                     </h4>
-                                    <div className="flex flex-col gap-4">
-                                        {menuData.sidebar.title && <p className="text-[16px] font-bold text-slate-800 leading-snug">{menuData.sidebar.title}</p>}
-                                        <Link 
-                                            href="/contact" 
+                                    <div className="flex flex-col gap-1.5">
+                                        {menuData.sidebar.slider && menuData.sidebar.slider[0] && (
+                                          <div className="space-y-4">
+                                            <div className="aspect-[1.6/1] w-full rounded-2xl overflow-hidden relative">
+                                              <img src={menuData.sidebar.slider[0].img} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                                            </div>
+                                            <p className="text-[16px] font-bold text-slate-800 leading-snug">{menuData.sidebar.slider[0].title}</p>
+                                          </div>
+                                        )}
+                                        {menuData.sidebar.viewAllPath && (
+                                          <Link 
+                                            href={menuData.sidebar.viewAllPath} 
                                             onClick={onClose}
-                                            className="inline-flex items-center justify-center py-3 bg-[#5D00D6] text-white rounded-xl font-bold text-[14px] hover:bg-[#4d00b3] transition-colors"
-                                        >
-                                            {(menuData.sidebar as any).button || 'Learn More'}
-                                        </Link>
+                                            className="text-[#5D00D6] font-bold text-[12px] hover:underline"
+                                          >
+                                            View all
+                                          </Link>
+                                        )}
                                     </div>
                                 </div>
                             )}

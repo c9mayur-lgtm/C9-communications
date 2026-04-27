@@ -6,7 +6,7 @@ import {
   Infinity as InfinityIcon, BarChart3, Building2, 
   Volume2, GraduationCap, ShieldAlert, Layers,
   Users, Star, Layout, MessageSquare, Calendar, Briefcase,
-  Printer, Video, Lock, Zap, RefreshCcw
+  Printer, Video, Lock, Zap, RefreshCcw, Handshake, TrendingUp
 } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────
@@ -55,7 +55,7 @@ export const TELCO_SERVICES_CONTENT: Record<string, any> = {
     options: [
       { title: 'Inbound Services', desc: 'Secure 13, 1300, and 1800 numbers with advanced call routing and intelligent analytics.', icon: <Headphones size={20} />, path: '/telco/inbound-services' },
       { title: 'Microsoft Teams Calling', desc: 'Make and receive business calls directly inside Teams — C9 handles all provisioning.', icon: <Phone size={20} />, path: '/telco/teams-calling' },
-      { title: 'C9 Voice Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording.', icon: <Phone size={20} />, path: '/telco/c9-phone-system' },
+      { title: 'C9 Voice Cloud Phone System', desc: 'A fully managed cloud PBX with enterprise call features, auto-attendants, and call recording.', icon: <Phone size={20} />, path: '/telco/phone-system' },
       { title: 'SIP Trunking', desc: 'Retain your existing phone hardware while connecting to the C9 voice network.', icon: <Database size={20} />, path: '/telco/sip-trunking' },
       { title: 'Contact Centre', desc: 'Omni Channel Contact Centre — voice, chat, social, and app interactions in one platform.', icon: <LayoutGrid size={20} />, path: '/telco/contact-centre' }
     ]
@@ -67,17 +67,24 @@ export const TELCO_SERVICES_CONTENT: Record<string, any> = {
 //  Focus: Starting from scratch — internet, phones, devices,
 //         security, and basic managed IT for a new site
 // ─────────────────────────────────────────────────────────────
-export const GREENFIELD_IT_SOLUTIONS = {
+export const IT_SOLUTIONS_FIXED = {
   layout: 'it-solutions',
   columns: [
     {
       sections: [
         {
-          heading: 'Day-One IT Setup',
+          heading: 'Managed IT Service',
           items: [
-            { icon: <Headphones size={14} />, label: 'IT Helpdesk Support', path: '/managed-it/helpdesk-support' },
-            { icon: <UserPlus size={14} />,   label: 'IT Outsourcing',      path: '/managed-it/outsourcing' },
-            { icon: <HardDrive size={14} />,  label: 'IT Infrastructure',   path: '/managed-it/infrastructure' },
+            { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+            { label: 'Outsourcing', path: '/managed-it/outsourcing' },
+            { label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting' },
+          ]
+        },
+        {
+          heading: 'Cybersecurity',
+          items: [
+            { label: 'Security Solutions', path: '/managed-it/security-solutions' },
+            { label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
           ]
         }
       ]
@@ -85,130 +92,147 @@ export const GREENFIELD_IT_SOLUTIONS = {
     {
       sections: [
         {
-          heading: 'Security Essentials',
+          heading: 'Infrastructure',
           items: [
-            { icon: <Shield size={14} />,   label: 'Security Solutions',        path: '/managed-it/security-solutions' },
-            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
-          ]
-        },
-        {
-          heading: 'Cloud & Software',
-          items: [
-            { icon: <Cloud size={14} />,   label: 'Cloud Services',      path: '/managed-it/cloud-services' },
-            { icon: <Network size={14} />, label: 'Network Solutions',   path: '/managed-it/network-solutions' },
+            { label: 'IT Infrastructure Services', path: '/managed-it/infrastructure' },
+            { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+            { label: 'Cloud Services', path: '/managed-it/cloud-services' },
+            { label: 'Software Solutions', path: '/managed-it/cloud-services' },
           ]
         }
-      ]
+      ],
+      footerLogo: '/images/clients/9defense.png' // Adjust path as needed
     }
   ],
   challenges: [
-    { title: 'First IT Setup',      icon: <Zap size={24} />,          color: '#5D00D6' },
-    { title: 'Security',            icon: <ShieldCheck size={24} />,  color: '#5D00D6' },
-    { title: 'Business Continuity', icon: <InfinityIcon size={24} />, color: '#5D00D6' },
-    { title: 'Growth Ready',        icon: <BarChart3 size={24} />,    color: '#5D00D6' },
+    { title: 'Digital Transformation', icon: <Cpu size={24} /> },
+    { title: 'Security',               icon: <Shield size={24} /> },
+    { title: 'Business Continuity',    icon: <Handshake size={24} /> },
+    { title: 'Growth',                 icon: <TrendingUp size={24} /> },
   ],
   sidebar: {
-    heading: 'Industries We Serve',
+    heading: 'Industry Focus',
+    variant: 'purple',
     items: [
-      { label: 'Retail',                path: '/industries/retail' },
-      { label: 'Healthcare',            path: '/industries/healthcare' },
-      { label: 'Professional Services', path: '/industries/professional-services' },
-      { label: 'Real Estate',           path: '/industries/real-estate' },
-      { label: 'Hospitality',           path: '/industries/hospitality' },
-      { label: 'Education',             path: '/industries/education' },
-      { label: 'View all Industries →', path: '/industries' },
-    ]
+      { label: 'Industry Manufacturing', path: '/industries/manufacturing' },
+      { label: 'Transportation Logistics', path: '/industries/logistics' },
+      { label: 'Healthcare', path: '/industries/healthcare' },
+      { label: 'Banks & Insurance', path: '/industries/finance' },
+      { label: 'Consulting Providers', path: '/industries/consulting' },
+      { label: 'Non Profit', path: '/industries/non-profit' },
+    ],
+    viewAllPath: '/industries'
   },
   ctaBanner: {
-    title: 'Start Right. Stay Strong.',
-    body: 'From your first cable to your first hire — we set up everything so you can focus on building your business.',
-    button: 'Plan My Setup'
+    title: 'Smarter IT, Stronger Business',
+    body: 'End-to-end IT services designed to secure, support, and scale your business from helpdesk to cloud and beyond.',
+    button: 'Partner Up Now',
+    path: '/consultation'
   }
 };
 
-export const GREENFIELD_TELCO = {
+export const TELCO_FIXED = {
   layout: 'telco',
   columns: [
     {
       sections: [
         {
-          heading: 'Internet & Connectivity',
+          heading: 'Internet',
           items: [
-            { icon: <Wifi size={14} />,    label: 'Small Business nbn™',   path: '/telco/business-nbn', active: true },
-            { icon: <Zap size={14} />,     label: 'Fast Fibre',             path: '/telco/fast-fibre' },
-            { icon: <Smartphone size={14} />, label: 'Business Mobile Plans', path: '/telco/mobile-plans' },
+            { label: 'Business NBN™', path: '/telco/business-nbn', color: '#5D00D6' },
+            { label: 'Fast Fibre', path: '/telco/fast-fibre' },
+            { label: 'NBN™ Enterprise Ethernet', path: '/telco/enterprise-ethernet' },
+          ]
+        },
+        {
+          heading: 'Mobile',
+          items: [
+            { label: 'Mobile Plans', path: '/telco/mobile-plans' },
           ]
         }
-      ]
+      ],
+      promoCard: {
+        title: 'Upgrade To The Latest Small Business Phone System Technology And Save Up To 70% Off Your Calls',
+        button: 'Start Now',
+        path: '/consultation'
+      }
     },
     {
       sections: [
         {
-          heading: 'Business Phone System',
+          heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />,      label: 'C9 Cloud Phone System',   path: '/telco/c9-phone-system' },
-            { icon: <Headphones size={14} />, label: 'Inbound 1300 / 1800',     path: '/telco/inbound-services' },
-            { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
+            { label: 'C9 Phone System', path: '/telco/phone-system' },
+            { label: 'Inbound Services', path: '/telco/inbound-services' },
+            { label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
+            { label: 'SIP Trunking', path: '/telco/sip-trunking' },
+            { label: 'Unified Communications', path: '/telco/phone-system' },
+            { label: 'Contact Centre', path: '/telco/contact-centre' },
           ]
         }
-      ],
-      promo: {
-        title: 'Get your phones live before Day One. Cloud VoIP from $19/user/month.',
-        button: 'See Phone Plans'
-      }
+      ]
     }
   ],
-  challenges: [
-    { title: 'Fast Internet', icon: <Wifi size={24} /> },
-    { title: 'Cloud Phones',  icon: <Phone size={24} /> },
-    { title: 'Mobile Fleet',  icon: <Smartphone size={24} /> },
-    { title: 'WiFi Design',   icon: <Network size={24} /> },
+  hardware: [
+    { title: 'Handsets', img: '/images/hardware/yealink-t54w.png', path: '/telco/hardware/handsets' },
+    { title: 'Headsets', img: '/images/hardware/wireless-headset.png', path: '/telco/hardware/headsets' },
+    { title: 'Routers & Switches', img: '/images/hardware/switch-48-port.png', path: '/telco/hardware/routers' },
+    { title: 'Access Points', img: '/images/hardware/unifi-ap.png', path: '/telco/hardware/access-points' },
   ],
   sidebar: {
-    heading: 'Setting Up Your Office?',
+    heading: 'I Need Help With',
+    variant: 'purple',
     items: [
-      { icon: <Building2 className="text-purple-400" size={18} />, title: 'New Office or Relocation Setup', desc: 'C9 maps, delivers, and manages your entire tech stack before you open.' },
-      { icon: <Wifi className="text-purple-400" size={18} />, title: 'Fast Business Internet', desc: "Business-grade nbn™ and fibre connections built for uptime, not price." },
-      { icon: <Phone className="text-purple-400" size={18} />, title: 'Cloud Phone System', desc: 'Professional phone system up and running before Day One — no hardware required.' },
-    ]
+      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Setting Up My New Office or Relocation', desc: 'C9 Communications can take the headache out of it for you so that you can focus on business as usual.', path: '/help/office-setup' },
+      { icon: <Network className="text-purple-400" size={18} />, title: 'Fast & Secure Internet For My Business', desc: "We've got super-fast, epically reliable broadband solutions you've been looking for your business.", path: '/help/business-internet' },
+      { icon: <Volume2 className="text-purple-400" size={18} />, title: 'Setting Up Ad On-hold', desc: 'Take your customer experience to the next level by combining a smart, memorable number with professionally recorded messages and on-hold advertising.', path: '/help/ad-on-hold' },
+      { icon: <Wifi className="text-purple-400" size={18} />, title: 'Improving & Securing My WiFi', desc: 'We tailor network solutions to you from the design stage through to migration and beyond.', path: '/help/secure-wifi' }
+    ],
+    viewAllPath: '/help'
   }
 };
 
-export const GREENFIELD_MODERN_WORKPLACE = {
+export const MODERN_WORKPLACE_FIXED = {
   layout: 'modern-workplace',
   columns: [
     {
       sections: [
         {
-          heading: 'Devices & Hardware',
+          heading: 'Services',
           items: [
-            { icon: <Monitor size={14} />,   label: 'Monitors & Workstations',      path: '#' },
-            { icon: <Printer size={14} />,   label: 'Managed Print Solutions',       path: '#' },
-            { icon: <Smartphone size={14} />, label: 'Device & Endpoint Management', path: '#' },
+            { label: 'Productivity', path: '/modern-workplace/productivity', color: '#5D00D6' },
+            { label: 'Communication Tools', path: '/modern-workplace/communication-tools' },
+            { label: 'Secure Remote Work', path: '/modern-workplace/endpoint-management' },
+            { label: 'Compliance & Data Protection', path: '/modern-workplace/endpoint-management' },
+            { label: 'Collaboration', path: '/modern-workplace/collaboration' },
+            { label: 'Device & Endpoint Management', path: '/modern-workplace/endpoint-management' },
           ]
         },
         {
-          heading: 'Physical Security',
+          heading: 'Other',
           items: [
-            { icon: <Video size={14} />,  label: 'CCTV & People Count', path: '/modern-workplace/cctv-people-count' },
-            { icon: <Lock size={14} />,   label: 'Access Control',          path: '#' },
-            { icon: <UserPlus size={14} />, label: 'Visitor Management',    path: '#' },
+            { label: 'CCTV Camera & People Count', path: '/modern-workplace/cctv-people-count' },
+            { label: 'Managed Print Solution', path: '/modern-workplace/productivity' },
+            { label: 'Visitor Solution', path: '/modern-workplace/productivity' },
           ]
         }
       ]
     }
   ],
   modernization: [
-    { title: 'Microsoft 365 Setup',        icon: <LayoutGrid size={24} /> },
-    { title: 'Team Onboarding',            icon: <Users size={24} /> },
-    { title: 'Endpoint Protection',        icon: <ShieldAlert size={24} /> },
-    { title: 'Smart Meeting Rooms',        icon: <Monitor size={24} /> },
+    { title: 'Microsoft 365 Solutions',           icon: <LayoutGrid size={24} /> },
+    { title: 'Security Awareness Training',       icon: <GraduationCap size={24} /> },
+    { title: 'SaaS Backup',                       icon: <Cloud size={24} /> },
+    { title: 'Endpoint Detection & Response (EDR)', icon: <ShieldAlert size={24} /> },
   ],
   sidebar: {
-    heading: 'Build Your Workplace',
-    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=400',
-    title: 'Devices, security, and workplace tools — all configured before your first team member arrives.',
-    button: 'Plan My Workplace'
+    heading: 'Build a Smart Workplace',
+    variant: 'purple',
+    slider: [
+      { title: 'Premium Wireless Audio Solutions for Enterprise', img: '/images/hardware/wireless-headset.png', path: '/modern-workplace/communication-tools' },
+      { title: 'Transform your workplace with Smart Board Solution', img: '/images/solutions/boardroom-meeting.jpg', path: '/solutions/smart-board' }
+    ],
+    viewAllPath: '/solutions'
   }
 };
 
@@ -305,7 +329,7 @@ export const BUSINESS_TELCO = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />,      label: 'C9 Voice Cloud Phone',        path: '/telco/c9-phone-system' },
+            { icon: <Phone size={14} />,      label: 'C9 Voice Cloud Phone',        path: '/telco/phone-system' },
             { icon: <Headphones size={14} />, label: 'Inbound Services',            path: '/telco/inbound-services' },
             { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling',     path: '/telco/teams-calling' },
             { icon: <Network size={14} />,    label: 'SIP Trunking',                path: '/telco/sip-trunking' },
@@ -471,7 +495,7 @@ export const ENTERPRISE_TELCO = {
           heading: 'Voice & Contact Centre',
           items: [
             { icon: <LayoutGrid size={14} />, label: 'Contact Centre (CCaaS)',  path: '/telco/contact-centre' },
-            { icon: <Phone size={14} />,      label: 'C9 Voice Cloud Phone',    path: '/telco/c9-phone-system' },
+            { icon: <Phone size={14} />,      label: 'C9 Voice Cloud Phone',    path: '/telco/phone-system' },
             { icon: <Headphones size={14} />, label: 'Inbound 13/1300/1800',    path: '/telco/inbound-services' },
             { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { icon: <Network size={14} />,    label: 'SIP Trunking (Bulk)',      path: '/telco/sip-trunking' },
@@ -571,15 +595,9 @@ export const COMPANY_MENU = {
     hideCTA: true, 
     items: [
       { logo: '/partners/microsoft-logo-svgrepo-com.svg', title: 'Microsoft' },
-      { logo: '/partners/Amazon_Web_Services_Logo.svg', title: 'AWS' },
       { logo: '/partners/Google_Cloud_logo.svg', title: 'Google Cloud' },
-      { logo: '/partners/cisco.png', title: 'Cisco' },
-      { logo: '/partners/fortinet.png', title: 'Fortinet' },
-      { logo: '/partners/Dell_Technologies_logo.svg', title: 'Dell Tech' },
-      { logo: '/partners/Hewlett_Packard_Enterprise_logo.svg', title: 'HPE' },
-      { logo: '/partners/Veeam_logo.svg', title: 'Veeam' },
-      { logo: '/partners/juniper.png', title: 'Juniper' },
-      { logo: '/images/clients/yealink.png', title: 'Yealink' },
+      { logo: '/partners/Amazon_Web_Services_Logo.svg', title: 'AWS' },
+      { logo: '/partners/salesforce.svg', title: 'Salesforce' },
     ]
   }
 };
@@ -620,41 +638,23 @@ export const RESOURCES_MENU = {
 //  AUDIENCE-SPECIFIC MEGA_MAP FACTORY
 // ─────────────────────────────────────────────────────────────
 export function getMegaMap(audience: string): Record<string, any> {
-  switch (audience) {
-    case 'startup':
-      return {
-        'it-solutions':     GREENFIELD_IT_SOLUTIONS,
-        'telco':            GREENFIELD_TELCO,
-        'modern-workplace': GREENFIELD_MODERN_WORKPLACE,
-        'company':          COMPANY_MENU,
-        'resources':        RESOURCES_MENU,
-      };
-    case 'enterprise':
-      return {
-        'it-solutions':     ENTERPRISE_IT_SOLUTIONS,
-        'telco':            ENTERPRISE_TELCO,
-        'modern-workplace': ENTERPRISE_MODERN_WORKPLACE,
-        'company':          COMPANY_MENU,
-        'resources':        RESOURCES_MENU,
-      };
-    default: // 'business'
-      return {
-        'it-solutions':     BUSINESS_IT_SOLUTIONS,
-        'telco':            BUSINESS_TELCO,
-        'modern-workplace': BUSINESS_MODERN_WORKPLACE,
-        'company':          COMPANY_MENU,
-        'resources':        RESOURCES_MENU,
-      };
-  }
+  // As per user request, we use the fixed menu for the entire website
+  return {
+    'it-solutions':     IT_SOLUTIONS_FIXED,
+    'telco':            TELCO_FIXED,
+    'modern-workplace': MODERN_WORKPLACE_FIXED,
+    'company':          COMPANY_MENU,
+    'resources':        RESOURCES_MENU,
+  };
 }
 
 // ─────────────────────────────────────────────────────────────
 //  STATIC FALLBACK (used when no audience context available)
 // ─────────────────────────────────────────────────────────────
 export const MEGA_MAP: Record<string, any> = {
-  'it-solutions':     BUSINESS_IT_SOLUTIONS,
-  'telco':            BUSINESS_TELCO,
-  'modern-workplace': BUSINESS_MODERN_WORKPLACE,
+  'it-solutions':     IT_SOLUTIONS_FIXED,
+  'telco':            TELCO_FIXED,
+  'modern-workplace': MODERN_WORKPLACE_FIXED,
   'company':          COMPANY_MENU,
   'resources':        RESOURCES_MENU,
 };

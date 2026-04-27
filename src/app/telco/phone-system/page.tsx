@@ -16,6 +16,7 @@ import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { C9Button } from '@/components/design-system/C9Button';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
   children: React.ReactNode; 
@@ -104,7 +105,7 @@ export default function C9PhoneSystemPage() {
             <FadeIn delay={0.2} direction="right" className="relative">
                <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
                   <img
-                     src="/images/voice-hero.png"
+                     src="/images/yealink-phone-1.jpg"
                      alt="Professional using a modern business phone system"
                      className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
                   />
@@ -155,7 +156,7 @@ export default function C9PhoneSystemPage() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left" className="order-2 lg:order-1 relative">
                <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3]">
-                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2000&auto=format&fit=crop" alt="Executive connected via mobile communication" className="w-full h-full object-cover object-top" />
+                  <img src="/images/yealink-phone-4.jpg" alt="Executive connected via mobile communication" className="w-full h-full object-cover object-top" />
                </div>
                <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-[#5D00D6]/10 rounded-full blur-3xl" />
             </FadeIn>
@@ -283,7 +284,7 @@ export default function C9PhoneSystemPage() {
             
             <FadeIn direction="right" delay={0.2}>
                <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3]">
-                  <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=2000" alt="C9 team managing a smooth system migration" className="w-full h-full object-cover object-center" />
+                  <img src="/images/yealink-phone-2.jpg" alt="C9 team managing a smooth system migration" className="w-full h-full object-cover object-center" />
                </div>
             </FadeIn>
           </div>
@@ -409,7 +410,7 @@ export default function C9PhoneSystemPage() {
             <FadeIn direction="left" className="order-2 lg:order-1 relative">
                <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3] group">
                   <img 
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2000" 
+                    src="/images/yealink-phone-3.jpg" 
                     alt="Stable business communication infrastructure" 
                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" 
                   />
@@ -514,33 +515,17 @@ export default function C9PhoneSystemPage() {
         </div>
       </section>
 
-      <section className="py-10 bg-slate-50 border-y border-slate-100">
-        <div className={C}>
-          <div className="flex flex-col items-center">
-            <span className="c9-eyebrow mb-8 text-slate-400 uppercase tracking-[0.2em]">Strategic Continuity</span>
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
-              {[
-                { label: "Microsoft Teams Calling", href: "/telco/teams-calling", icon: <Monitor size={16} /> },
-                { label: "Contact Centre", href: "/telco/contact-centre", icon: <Headphones size={16} /> },
-                { label: "SIP Trunking", href: "/telco/sip-trunking", icon: <Signal size={16} /> },
-                { label: "Inbound Services", href: "/telco/inbound-services", icon: <Globe size={16} /> }
-              ].map((link, i) => (
-                <Link 
-                  key={i} 
-                  href={link.href} 
-                  className="flex items-center gap-3 text-[13px] font-bold text-[#0c1024] hover:text-[#5D00D6] transition-all group uppercase tracking-widest"
-                >
-                  <div className="w-9 h-9 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm">
-                     {link.icon}
-                  </div>
-                  {link.label}
-                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1 text-[#5D00D6]" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ══ 11. RELATED SOLUTIONS ═══════════════════════════════════════ */}
+      <ContinueJourney 
+        title="Voice Is One Piece. See the Full Stack."
+        description="Unified communication requires reliable infrastructure underneath it. Explore the connected services that complete the picture."
+        links={[
+          { label: "Microsoft Teams Calling", path: "/telco/teams-calling" },
+          { label: "Contact Centre", path: "/telco/contact-centre" },
+          { label: "SIP Trunking", path: "/telco/sip-trunking" },
+          { label: "Inbound Services", path: "/telco/inbound-services" }
+        ]}
+      />
 
       <section id="consultation" className="bg-white">
         <WpConsultationForm 

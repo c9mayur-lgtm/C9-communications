@@ -401,7 +401,7 @@ export default function FastFibrePage() {
       <div className="bg-white py-12">
         <div className="container mx-auto px-6 max-w-[1240px] flex flex-wrap justify-center gap-x-12 gap-y-6">
             <a href="/telco/business-nbn" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">Explore Business NBN <ArrowRight size={14}/></a>
-            <a href="/telco/c9-phone-system" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">See Business Phone Systems <ArrowRight size={14}/></a>
+            <a href="/telco/phone-system" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">See Business Phone Systems <ArrowRight size={14}/></a>
             <a href="/managed-it" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">View Managed IT Services <ArrowRight size={14}/></a>
         </div>
       </div>

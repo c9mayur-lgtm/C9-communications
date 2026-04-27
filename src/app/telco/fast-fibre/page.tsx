@@ -14,6 +14,7 @@ import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { C9Button } from '@/components/design-system/C9Button';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
   children: React.ReactNode; 
@@ -493,33 +494,17 @@ export default function FastFibrePage() {
         </div>
       </section>
 
-      {/* ══ 9. CONTINUITY / FUNNEL NAVIGATION ═══════════════════════ */}
-      <section className="py-10 bg-slate-50 border-t border-slate-100">
-        <div className={C}>
-          <div className="flex flex-col items-center">
-            <span className="c9-eyebrow mb-8 text-slate-400">Explore More Strategic Solutions</span>
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
-              {[
-                { label: "Business nbn™", href: "/telco/business-nbn", icon: <Globe size={16} /> },
-                { label: "Enterprise Ethernet", href: "/telco/enterprise-ethernet", icon: <Server size={16} /> },
-                { label: "Managed IT Infrastructure", href: "/managed-it/infrastructure", icon: <Monitor size={16} /> }
-              ].map((link, i) => (
-                <Link 
-                  key={i} 
-                  href={link.href} 
-                  className="flex items-center gap-3 text-[13px] font-bold text-[#0c1024] hover:text-[#5D00D6] transition-all group uppercase tracking-widest"
-                >
-                  <div className="w-9 h-9 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm">
-                     {link.icon}
-                  </div>
-                  {link.label}
-                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1 text-[#5D00D6]" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ══ 9. RELATED SOLUTIONS ═══════════════════════ */}
+      <ContinueJourney 
+        title="Speed Is Step One. Here's What Runs on It."
+        description="Fibre is the foundation. Businesses that lock in their connectivity usually secure their wider environment next."
+        links={[
+          { label: "Business nbn™", path: "/telco/business-nbn" },
+          { label: "Enterprise Ethernet", path: "/telco/enterprise-ethernet" },
+          { label: "Managed IT Infrastructure", path: "/managed-it/infrastructure" },
+          { label: "Cloud Contact Centre", path: "/telco/contact-centre" }
+        ]}
+      />
 
       <section id="consultation" className="bg-white border-t border-slate-100">
         <WpConsultationForm 

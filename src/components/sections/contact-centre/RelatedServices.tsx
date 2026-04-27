@@ -10,7 +10,7 @@ const services = [
     title: "C9 phone system Cloud Phone System",
     description: "The voice engine powering your contact centre.",
     linkText: "View C9 phone system",
-    href: "/telco/c9-phone-system",
+    href: "/telco/phone-system",
     icon: Phone
   },
   {

@@ -42,7 +42,7 @@ export const STARTUP_TELCO_MENU = {
         {
           heading: 'Voice & Comms',
           items: [
-            { icon: <Phone size={14} />, label: 'C9 Voice Cloud Phone', path: '/telco/c9-phone-system' },
+            { icon: <Phone size={14} />, label: 'C9 Voice Cloud Phone', path: '/telco/phone-system' },
             { icon: <Headphones size={14} />, label: '1300/1800 Numbers', path: '/telco/inbound-services' },
             { icon: <Phone size={14} />, label: 'Instant Virtual Numbers', path: '/telco/virtual-numbers' },
           ]
@@ -133,7 +133,7 @@ export const BUSINESS_TELCO_MENU = {
           heading: 'Unified Comms',
           items: [
             { icon: <Phone size={14} />, label: 'Teams Calling (Direct Routing)', path: '/telco/teams-calling' },
-            { icon: <Phone size={14} />, label: 'Managed Cloud PBX', path: '/telco/c9-phone-system' },
+            { icon: <Phone size={14} />, label: 'Managed Cloud PBX', path: '/telco/phone-system' },
             { icon: <Headphones size={14} />, label: 'Inbound Services (1300/1800)', path: '/telco/inbound-services' },
             { icon: <Phone size={14} />, label: 'Advanced Call Routing', path: '/telco/routing' },
           ]
@@ -314,7 +314,7 @@ export const PRODUCTS_MENU = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />, label: 'C9 phone system', path: '/telco/c9-phone-system', desc: 'Our flagship cloud voice solution with 100+ Enterprise features.' },
+            { icon: <Phone size={14} />, label: 'C9 phone system', path: '/telco/phone-system', desc: 'Our flagship cloud voice solution with 100+ Enterprise features.' },
             { icon: <Headphones size={14} />, label: 'Inbound Services', path: '/telco/inbound-services', desc: '1300, 1800, and local numbers for professional presence.' },
             { icon: <MessageSquare size={14} />, label: 'Microsoft Teams Calling', path: '/telco/teams-calling', desc: 'Direct routing to make and receive calls inside Microsoft Teams.' },
             { icon: <Link2 size={14} />, label: 'SIP Trunking', path: '/enterprise/sip', desc: 'Connect your legacy PBX to our high-grade voice network.' },
@@ -329,20 +329,20 @@ export const PRODUCTS_MENU = {
         {
           heading: 'Services',
           items: [
-            { icon: <Zap size={14} />, label: 'Productivity', path: '/solutions/productivity', desc: 'Streamline workflows with integrated business productivity tools.' },
-            { icon: <MessageSquare size={14} />, label: 'Communication Tools', path: '/solutions/comms', desc: 'Secure internal messaging and collaboration for modern teams.' },
-            { icon: <Laptop size={14} />, label: 'Secure Remote Work', path: '/solutions/remote-work', desc: 'VPN and cloud access solutions for a distributed workforce.' },
-            { icon: <Shield size={14} />, label: 'Compliance & Data Protection', path: '/solutions/compliance', desc: 'Regulatory-grade security and backup for sensitive sectors.' },
-            { icon: <Users size={14} />, label: 'Collaboration', path: '/solutions/collaboration', desc: 'Joint workspaces and digital boardrooms for better teamwork.' },
-            { icon: <Monitor size={14} />, label: 'Device & Endpoint Management', path: '/solutions/endpoints', desc: 'Manage your entire hardware fleet from a single dashboard.' },
+            { icon: <Zap size={14} />, label: 'Productivity', path: '/modern-workplace/productivity', desc: 'Streamline workflows with integrated business productivity tools.' },
+            { icon: <MessageSquare size={14} />, label: 'Communication Tools', path: '/modern-workplace/communication-tools', desc: 'Secure internal messaging and collaboration for modern teams.' },
+            { icon: <Laptop size={14} />, label: 'Secure Remote Work', path: '/modern-workplace/endpoint-management', desc: 'VPN and cloud access solutions for a distributed workforce.' },
+            { icon: <Shield size={14} />, label: 'Compliance & Data Protection', path: '/modern-workplace/endpoint-management', desc: 'Regulatory-grade security and backup for sensitive sectors.' },
+            { icon: <Users size={14} />, label: 'Collaboration', path: '/modern-workplace/collaboration', desc: 'Joint workspaces and digital boardrooms for better teamwork.' },
+            { icon: <Monitor size={14} />, label: 'Device & Endpoint Management', path: '/modern-workplace/endpoint-management', desc: 'Manage your entire hardware fleet from a single dashboard.' },
           ]
         },
         {
           heading: 'Other',
           items: [
-            { icon: <LayoutGrid size={14} />, label: 'CCTV Camera & People Count', path: '/solutions/cctv', desc: 'Smart AI-driven surveillance and occupancy monitoring.' },
-            { icon: <Monitor size={14} />, label: 'Managed Print Solution', path: '/solutions/print', desc: 'Simplified, cost-efficient printing across all your sites.' },
-            { icon: <Users size={14} />, label: 'Visitor Solution', path: '/solutions/visitor', desc: 'Modern contactless visitor check-in and safety tracking.' },
+            { icon: <LayoutGrid size={14} />, label: 'CCTV Camera & People Count', path: '/modern-workplace/cctv-people-count', desc: 'Smart AI-driven surveillance and occupancy monitoring.' },
+            { icon: <Monitor size={14} />, label: 'Managed Print Solution', path: '/modern-workplace/productivity', desc: 'Simplified, cost-efficient printing across all your sites.' },
+            { icon: <Users size={14} />, label: 'Visitor Solution', path: '/modern-workplace/productivity', desc: 'Modern contactless visitor check-in and safety tracking.' },
           ]
         }
       ]

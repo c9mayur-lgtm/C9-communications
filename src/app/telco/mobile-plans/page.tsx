@@ -549,8 +549,10 @@ export default function MobilePlansPage() {
         />
       </section>
 
-      {/* ══ 13. FUNNEL NAVIGATION ════════════════════════════════════════ */}
+      {/* ══ 13. RELATED SOLUTIONS ════════════════════════════════════════ */}
       <ContinueJourney 
+        title="Mobile Is One Layer. Here's the Connected Stack."
+        description="Businesses with a managed mobile fleet often consolidate voice, connectivity, and IT under one partner next. These are the services that build a complete, accountable environment."
         links={[
           { label: "Microsoft Teams Calling", path: "/telco/teams-calling" },
           { label: "Business nbn™", path: "/telco/business-nbn" },

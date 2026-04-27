@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "C9 Voice Cloud Phone System | C9 Communications",
     description: "Save up to 70% on business calls with C9 Voice — Australia's next generation in cloud-based phone systems.",
-    url: "https://c9communications.com.au/telco/c9-phone-system",
+    url: "https://c9communications.com.au/telco/phone-system",
   }
 };
 

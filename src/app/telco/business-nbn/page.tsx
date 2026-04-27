@@ -398,8 +398,10 @@ export default function BusinessNbnPage() {
         </div>
       </section>
 
-      {/* ══ 8. CONTINUITY / FUNNEL NAVIGATION ═══════════════════════ */}
+      {/* ══ 8. RELATED SOLUTIONS ═════════════════════════════════════ */}
       <ContinueJourney 
+        title="Connectivity Is the Foundation. Here's What Runs on Top."
+        description="Businesses that lock in reliable nbn™ typically consolidate their voice, mobile, and IT infrastructure next. These are the services that complete a resilient business stack."
         links={[
           { label: "Microsoft Teams Calling", path: "/telco/teams-calling" },
           { label: "Business Mobile Fleet", path: "/telco/mobile-plans" },
