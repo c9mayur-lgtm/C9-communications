@@ -12,9 +12,10 @@ export interface C9ButtonProps
 export const C9Button = React.forwardRef<HTMLButtonElement, C9ButtonProps>(
   ({ className, variant, size, asChild, ...props }, ref) => {
     if (asChild && React.isValidElement(props.children)) {
-      return React.cloneElement(props.children as React.ReactElement<any>, {
+      const child = props.children as React.ReactElement<{ className?: string }>;
+      return React.cloneElement(child, {
         ...props,
-        className: cn(buttonVariants({ variant, size, className }), props.children.props.className),
+        className: cn(buttonVariants({ variant, size, className }), child.props.className),
         // @ts-ignore
         ref,
       });
