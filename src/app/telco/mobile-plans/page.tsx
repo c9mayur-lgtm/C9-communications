@@ -398,7 +398,7 @@ export default function MobilePlansPage() {
             <p className="text-[19px] text-white/80 font-medium mb-10">
               Let’s review it.
             </p>
-            <C9Button size="xl" className="bg-white text-[#5D00D6] hover:bg-gray-50 border-none px-10 rounded-full shadow-2xl" asChild>
+            <C9Button size="lg" className="bg-white text-[#5D00D6] hover:bg-gray-50 border-none px-10 rounded-full shadow-2xl" asChild>
               <Link href="#consultation-section">Book a Mobility Review</Link>
             </C9Button>
           </FadeIn>
