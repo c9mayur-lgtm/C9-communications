@@ -146,7 +146,7 @@ export const WpFooter = () => {
           <div className="flex justify-center items-center gap-8 mb-2 text-[14px] font-semibold text-[#5D00D6]">
             <a href="/terms" className="hover:underline">Terms of Use</a>
             <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
-            <a href="/sitemap" className="hover:underline">Sitemap</a>
+            <a href="/site-map" className="hover:underline">Sitemap</a>
           </div>
 
           {/* Acknowledgement of Country */}
