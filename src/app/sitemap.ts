@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy-policy',
     '/terms',
     '/site-map',
+    '/greenfield',
+    '/business',
     '/why-c9',
     '/partners',
     '/careers',

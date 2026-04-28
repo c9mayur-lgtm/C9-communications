@@ -89,6 +89,15 @@ export default function SitemapPage() {
       ]
     },
     {
+      title: "Strategic Entry Points",
+      icon: Globe,
+      links: [
+        { label: "Greenfield Infrastructure", path: "/greenfield" },
+        { label: "Business Transformation", path: "/business" },
+        { label: "Enterprise Operations", path: "/enterprise" },
+      ]
+    },
+    {
       title: "Company & Legal",
       icon: Briefcase,
       links: [
