@@ -3,99 +3,74 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://c9-communications.vercel.app';
   
-  const mainPages = [
+  const routes = [
     '',
-    '/telco',
-    '/managed-it',
-    '/enterprise',
-    '/industries',
-    '/case-studies',
-    '/contact',
     '/about',
     '/blog',
-    '/privacy-policy',
-    '/terms',
-    '/site-map',
-    '/greenfield',
     '/business',
-    '/why-c9',
-    '/partners',
-    '/careers',
-    '/team',
-    '/reviews',
-    '/support',
-    '/pricing',
-    '/solutions',
+    '/case-studies',
+    '/challenges',
+    '/contact',
+    '/enterprise',
+    '/greenfield',
+    '/help',
+    '/industries',
+    '/industries/education',
+    '/industries/healthcare',
+    '/industries/hospitality',
+    '/industries/non-profit',
+    '/industries/professional-services',
+    '/industries/real-estate',
+    '/industries/retail',
     '/insights',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: route === '' ? 1.0 : 0.8,
-  }));
-
-  const telcoPages = [
-    '/telco/phone-system',
-    '/telco/contact-centre',
-    '/telco/sip-trunking',
-    '/telco/teams-calling',
-    '/telco/fast-fibre',
-    '/telco/business-nbn',
-    '/telco/mobile-plans',
-    '/telco/inbound-services',
-    '/telco/enterprise-ethernet',
-    '/telco/voice-systems',
-    '/telco/c9voice',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }));
-
-  const managedItPages = [
-    '/managed-it/infrastructure',
-    '/managed-it/security-solutions',
+    '/managed',
+    '/managed-it',
     '/managed-it/backup-disaster-recovery',
     '/managed-it/cloud-services',
     '/managed-it/helpdesk-support',
+    '/managed-it/infrastructure',
     '/managed-it/network-solutions',
     '/managed-it/outsourcing',
+    '/managed-it/security-solutions',
     '/managed-it/strategy-consulting',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }));
-
-  const industryPages = [
-    '/industries/retail',
-    '/industries/healthcare',
-    '/industries/hospitality',
-    '/industries/education',
-    '/industries/professional-services',
-    '/industries/real-estate',
-    '/industries/non-profit',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.6,
-  }));
-
-  const solutionPages = [
+    '/modern-workplace',
+    '/pricing',
+    '/privacy-policy',
+    '/saas-experiment',
+    '/site-map',
+    '/solutions',
     '/solutions/cctv-people-count',
     '/solutions/collaboration',
     '/solutions/communication-tools',
     '/solutions/endpoint-management',
     '/solutions/productivity',
-  ].map((route) => ({
+    '/startups',
+    '/support',
+    '/telco',
+    '/telco/business-nbn',
+    '/telco/c9voice',
+    '/telco/contact-centre',
+    '/telco/enterprise-ethernet',
+    '/telco/fast-fibre',
+    '/telco/inbound-services',
+    '/telco/mobile-plans',
+    '/telco/phone-system',
+    '/telco/sip-trunking',
+    '/telco/teams-calling',
+    '/telco/voice-systems',
+    '/telco-solutions',
+    '/terms',
+    '/why-c9',
+    '/partners',
+    '/careers',
+    '/team',
+    '/reviews',
+  ];
+
+  return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.5,
+    changeFrequency: route === '' ? 'daily' : 'weekly',
+    priority: route === '' ? 1.0 : route.split('/').length <= 2 ? 0.8 : 0.6,
   }));
-
-  return [...mainPages, ...telcoPages, ...managedItPages, ...industryPages, ...solutionPages];
 }

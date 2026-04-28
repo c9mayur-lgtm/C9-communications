@@ -8,7 +8,8 @@ import {
   Building2, Users, Layers, Zap, ArrowRight,
   Headphones, BarChart3, Cloud, Network,
   Lock, HardDrive, HelpCircle, Briefcase,
-  MapPin, Mail, Phone, ExternalLink
+  MapPin, Mail, Phone, ExternalLink,
+  Rocket, Lightbulb, Scale
 } from 'lucide-react';
 
 const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
@@ -39,79 +40,92 @@ const Section = ({ title, links, icon: Icon }: { title: string, links: { label: 
 export default function SitemapPage() {
   const sections = [
     {
-      title: "Core Infrastructure",
+      title: "Core Infrastructure & Managed IT",
       icon: Layers,
       links: [
-        { label: "Managed IT Services", path: "/managed-it" },
-        { label: "Managed Infrastructure", path: "/managed-it/infrastructure" },
-        { label: "Cloud Services", path: "/managed-it/cloud-services" },
-        { label: "Network Solutions", path: "/managed-it/network-solutions" },
-        { label: "Cyber Security Solutions", path: "/managed-it/security-solutions" },
+        { label: "Managed IT Services Overview", path: "/managed-it" },
+        { label: "Infrastructure Governance", path: "/managed-it/infrastructure" },
+        { label: "Cyber Security & Protection", path: "/managed-it/security-solutions" },
+        { label: "Cloud Systems & Migration", path: "/managed-it/cloud-services" },
+        { label: "Network Connectivity", path: "/managed-it/network-solutions" },
+        { label: "Helpdesk & Engineering Support", path: "/managed-it/helpdesk-support" },
         { label: "Backup & Disaster Recovery", path: "/managed-it/backup-disaster-recovery" },
+        { label: "Strategic IT Outsourcing", path: "/managed-it/outsourcing" },
+        { label: "IT Strategy & Consulting", path: "/managed-it/strategy-consulting" },
       ]
     },
     {
-      title: "Telecoms & Connectivity",
+      title: "Telecoms & Global Connectivity",
       icon: PhoneCall,
       links: [
-        { label: "Telco Solutions", path: "/telco" },
-        { label: "C9 Phone System", path: "/telco/phone-system" },
-        { label: "Contact Centre Solutions", path: "/telco/contact-centre" },
-        { label: "SIP Trunking", path: "/telco/sip-trunking" },
+        { label: "Telco Solutions Hub", path: "/telco" },
+        { label: "Unified Phone Systems", path: "/telco/phone-system" },
+        { label: "Contact Centre Operations", path: "/telco/contact-centre" },
+        { label: "SIP Trunking & Voice", path: "/telco/sip-trunking" },
         { label: "Microsoft Teams Calling", path: "/telco/teams-calling" },
-        { label: "Business nbn™", path: "/telco/business-nbn" },
+        { label: "Business nbn™ Fiber", path: "/telco/business-nbn" },
         { label: "Enterprise Ethernet", path: "/telco/enterprise-ethernet" },
-        { label: "Fast Fibre", path: "/telco/fast-fibre" },
+        { label: "Ultra-Fast Fibre", path: "/telco/fast-fibre" },
+        { label: "Inbound & 1300 Services", path: "/telco/inbound-services" },
+        { label: "Business Mobile Plans", path: "/telco/mobile-plans" },
+        { label: "C9 Voice Specialized", path: "/telco/c9voice" },
       ]
     },
     {
-      title: "Industry Expertise",
+      title: "Industry Verticals",
       icon: Building2,
       links: [
         { label: "Industries Overview", path: "/industries" },
-        { label: "Retail & Commerce", path: "/industries/retail" },
-        { label: "Healthcare & Medical", path: "/industries/healthcare" },
-        { label: "Hospitality & Tourism", path: "/industries/hospitality" },
-        { label: "Education & Learning", path: "/industries/education" },
-        { label: "Professional Services", path: "/industries/professional-services" },
-        { label: "Real Estate & Construction", path: "/industries/real-estate" },
+        { label: "Retail & Multi-site Commerce", path: "/industries/retail" },
+        { label: "Healthcare & Critical Systems", path: "/industries/healthcare" },
+        { label: "Hospitality & Guest Networks", path: "/industries/hospitality" },
+        { label: "Education & Campus IT", path: "/industries/education" },
+        { label: "Professional Service Firms", path: "/industries/professional-services" },
+        { label: "Real Estate & Property Tech", path: "/industries/real-estate" },
+        { label: "Non-Profit & Social Impact", path: "/industries/non-profit" },
       ]
     },
     {
-      title: "Specialised Solutions",
+      title: "Specialized Business Solutions",
       icon: Zap,
       links: [
-        { label: "CCTV & People Counting", path: "/solutions/cctv-people-count" },
-        { label: "Team Collaboration Tools", path: "/solutions/collaboration" },
-        { label: "Communication Infrastructure", path: "/solutions/communication-tools" },
-        { label: "Endpoint Management", path: "/solutions/endpoint-management" },
-        { label: "Business Productivity", path: "/solutions/productivity" },
+        { label: "Solutions Overview", path: "/solutions" },
+        { label: "CCTV & People Count Intelligence", path: "/solutions/cctv-people-count" },
+        { label: "Unified Collaboration", path: "/solutions/collaboration" },
+        { label: "Communication Workflows", path: "/solutions/communication-tools" },
+        { label: "Modern Endpoint Management", path: "/solutions/endpoint-management" },
+        { label: "Workplace Productivity", path: "/solutions/productivity" },
+        { label: "Modern Workplace Hybrid", path: "/modern-workplace" },
+        { label: "SaaS Experimentation", path: "/saas-experiment" },
       ]
     },
     {
-      title: "Strategic Entry Points",
+      title: "Strategic Access Points",
       icon: Globe,
       links: [
-        { label: "Greenfield Infrastructure", path: "/greenfield" },
+        { label: "Greenfield Deployment", path: "/greenfield" },
         { label: "Business Transformation", path: "/business" },
-        { label: "Enterprise Operations", path: "/enterprise" },
+        { label: "Enterprise Infrastructure", path: "/enterprise" },
+        { label: "Startup Scaling Model", path: "/startups" },
+        { label: "Pricing & Models", path: "/pricing" },
+        { label: "Business Insights Hub", path: "/insights" },
       ]
     },
     {
-      title: "Company & Legal",
+      title: "Company, Legal & Support",
       icon: Briefcase,
       links: [
         { label: "About C9 Communications", path: "/about" },
+        { label: "Case Study Portfolio", path: "/case-studies" },
         { label: "Why Partner with C9", path: "/why-c9" },
-        { label: "Case Studies & Proof", path: "/case-studies" },
-        { label: "C9 Partners", path: "/partners" },
-        { label: "Careers", path: "/careers" },
-        { label: "Meet the Team", path: "/team" },
-        { label: "Client Reviews", path: "/reviews" },
-        { label: "Technical Support", path: "/support" },
+        { label: "Strategic Partners", path: "/partners" },
+        { label: "Engineering Careers", path: "/careers" },
+        { label: "Executive & Support Team", path: "/team" },
+        { label: "Client Success Reviews", path: "/reviews" },
+        { label: "24/7 Technical Support", path: "/support" },
         { label: "Contact Us", path: "/contact" },
         { label: "Privacy Policy", path: "/privacy-policy" },
-        { label: "Terms of Use", path: "/terms" },
+        { label: "Terms of Service", path: "/terms" },
       ]
     }
   ];
@@ -122,9 +136,9 @@ export default function SitemapPage() {
         <div className={C}>
           <div className="max-w-3xl">
             <span className="c9-eyebrow mb-4">Structural Directory</span>
-            <h1 className="c9-hero-title !text-5xl lg:!text-6xl mb-6">Website Sitemap.</h1>
+            <h1 className="c9-hero-title !text-5xl lg:!text-6xl mb-6">Master Sitemap.</h1>
             <p className="c9-body text-lg">
-              A comprehensive directory of all services, solutions, and infrastructure governance paths within the C9 Communications digital environment.
+              A complete and exhaustive directory of every unique functional path within the C9 Communications infrastructure.
             </p>
           </div>
         </div>
@@ -142,15 +156,15 @@ export default function SitemapPage() {
 
       <div className="bg-[#0c1024] py-16 text-white text-center">
         <div className={C}>
-          <h2 className="text-2xl font-bold mb-4">Need help finding something?</h2>
+          <h2 className="text-2xl font-bold mb-4">Can't find what you're looking for?</h2>
           <p className="text-white/60 mb-8 max-w-xl mx-auto">
-            Our team is available 24/7 to discuss your infrastructure requirements or technical support needs.
+            Our engineering team is available 24/7 to discuss your specific infrastructure requirements.
           </p>
           <Link 
             href="/contact" 
             className="inline-flex items-center gap-2 bg-[#5D00D6] px-8 py-4 rounded-full font-bold hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40"
           >
-            Contact Engineering Team <ArrowRight size={18} />
+            Contact Engineering <ArrowRight size={18} />
           </Link>
         </div>
       </div>
