@@ -35,7 +35,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://c9communications.com.au'),
+  metadataBase: new URL('https://c9-communications.vercel.app'),
   title: {
     default: "C9 Communications | Small Business nbn™, Cloud Voice & Managed IT",
     template: "%s | C9 Communications Australia"
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://c9-communications.vercel.app',
   },
   verification: {
     google: 'verification_token_here', // User can replace this later
