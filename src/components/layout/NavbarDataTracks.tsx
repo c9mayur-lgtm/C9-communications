@@ -357,10 +357,10 @@ export const PRODUCTS_MENU = {
   sidebar: {
     heading: 'I Need Help With',
     items: [
-      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Setting Up My New Office or Relocation', desc: 'C9 Communications can take the headache out of it for you.', path: '/challenges?tab=office' },
-      { icon: <Zap className="text-purple-400" size={18} />, title: 'Fast & Secure Internet For My Business', desc: 'We have got super-fast, epically reliable broadband solutions.', path: '/challenges?tab=internet' },
-      { icon: <Volume2 className="text-purple-400" size={18} />, title: 'Setting Up Ad On-hold', desc: 'Take your customer experience to the next level with professional messaging.', path: '/challenges?tab=ad-on-hold' },
-      { icon: <Wifi className="text-purple-400" size={18} />, title: 'Improving & Securing My WiFi', desc: 'We tailor network solutions from design to migration and beyond.', path: '/challenges?tab=wifi' },
+      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Setting Up My New Office or Relocation', desc: 'C9 Communications can take the headache out of it for you.', path: '/help/new-office-setup' },
+      { icon: <Zap className="text-purple-400" size={18} />, title: 'Fast & Secure Internet For My Business', desc: 'We have got super-fast, epically reliable broadband solutions.', path: '/help/fast-secure-internet' },
+      { icon: <Volume2 className="text-purple-400" size={18} />, title: 'Setting Up Ad On-hold', desc: 'Take your customer experience to the next level with professional messaging.', path: '/help/ad-on-hold' },
+      { icon: <Wifi className="text-purple-400" size={18} />, title: 'Improving & Securing My WiFi', desc: 'We tailor network solutions from design to migration and beyond.', path: '/help/secure-wifi' },
     ]
   }
 };

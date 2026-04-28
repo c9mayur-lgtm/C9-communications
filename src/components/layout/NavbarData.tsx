@@ -183,8 +183,8 @@ export const TELCO_FIXED = {
     heading: 'I Need Help With',
     variant: 'purple',
     items: [
-      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Setting Up My New Office or Relocation', desc: 'C9 Communications can take the headache out of it for you so that you can focus on business as usual.', path: '/help/office-setup' },
-      { icon: <Network className="text-purple-400" size={18} />, title: 'Fast & Secure Internet For My Business', desc: "We've got super-fast, epically reliable broadband solutions you've been looking for your business.", path: '/help/business-internet' },
+      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Setting Up My New Office or Relocation', desc: 'C9 Communications can take the headache out of it for you so that you can focus on business as usual.', path: '/help/new-office-setup' },
+      { icon: <Network className="text-purple-400" size={18} />, title: 'Fast & Secure Internet For My Business', desc: "We've got super-fast, epically reliable broadband solutions you've been looking for your business.", path: '/help/fast-secure-internet' },
       { icon: <Volume2 className="text-purple-400" size={18} />, title: 'Setting Up Ad On-hold', desc: 'Take your customer experience to the next level by combining a smart, memorable number with professionally recorded messages and on-hold advertising.', path: '/help/ad-on-hold' },
       { icon: <Wifi className="text-purple-400" size={18} />, title: 'Improving & Securing My WiFi', desc: 'We tailor network solutions to you from the design stage through to migration and beyond.', path: '/help/secure-wifi' }
     ],
