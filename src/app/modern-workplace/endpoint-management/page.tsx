@@ -3,8 +3,32 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FadeUp, ScaleIn, Eyebrow, FAQSection } from '../components';
-import { ArrowRight, CheckCircle2, ChevronDown, ClipboardCheck, Laptop, LifeBuoy, PackageCheck, Shield, ShieldAlert, Smartphone, Wrench, Download } from 'lucide-react';
+import { 
+  FadeUp, 
+  ScaleIn, 
+  Eyebrow,
+  FAQSection,
+  FullStackSection
+} from '../components';
+import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { 
+  ArrowRight, 
+  CheckCircle2, 
+  ChevronDown, 
+  ClipboardCheck, 
+  Laptop, 
+  LifeBuoy, 
+  PackageCheck, 
+  Shield, 
+  ShieldAlert, 
+  Smartphone, 
+  Wrench, 
+  Download, 
+  Users as UsersIcon, 
+  Target,
+  Monitor,
+  Check
+} from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 type Problem = {
@@ -38,6 +62,21 @@ type FaqItem = {
   question: string;
   answer: string;
 };
+
+const METRICS = [
+  { label: 'Onboarding Time', value: '< 15m', desc: 'Zero-touch user self-setup.' },
+  { label: 'Security Score', value: '96/100', desc: 'Average managed fleet health.' },
+  { label: 'Patch Compliance', value: '100%', desc: 'Automated policy enforcement.' },
+  { label: 'Support SLA', value: 'Instant', desc: '24/7 Australian operational help.' },
+];
+
+const FAQS = [
+  { q: 'What is zero-touch deployment?', a: 'We use Windows Autopilot and Apple Business Manager. Devices are shipped from the factory direct to your staff. Once they login with their C9 credentials, the device automatically configures itself with all required apps and security policies.' },
+  { q: 'Can we manage Macs and iPhones too?', a: 'Yes. We provide unified management via Microsoft Intune for Windows, macOS, iOS, and Android—ensuring a consistent security posture across your entire mobile fleet.' },
+  { q: 'What happens if a device is lost or stolen?', a: 'We can trigger an immediate remote wipe or lock from our central dashboard. If the device is found, we can restore it; if not, the data remains encrypted and inaccessible.' },
+  { q: 'Do you handle the hardware procurement?', a: 'Yes. We manage the entire lifecycle—from selecting the right hardware profiles for your staff to procurement, deployment, and eventual secure decommissioning.' },
+  { q: 'How do you handle OS updates?', a: 'We manage update rings. We test updates on a small group of devices first to ensure compatibility before rolling them out across your entire organization, preventing widespread disruption.' }
+];
 
 const problems: Problem[] = [
   {
@@ -184,117 +223,84 @@ export default function EndpointManagementPage() {
   return (
     <div className="bg-[#F8FAFF] min-h-screen pt-4 text-[#0C1024] overflow-x-hidden" style={{ fontFamily: '"Proxima Nova","Inter",system-ui,sans-serif' }}>
       
-      {/* 1. HERO SECTION */}
-      <section className="pt-8 pb-12 md:pt-10 md:pb-16 relative bg-gradient-to-b from-white via-[#F8FAFF]/50 to-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#5D00D6]/[0.02] rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
-        
-        <div className={`${containerClassName} relative z-10`}>
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-8 items-center">
-            
-            {/* Left */}
-            <div className="max-w-[700px] pt-2 md:pt-6">
+      {/* 1. HERO SECTION (Standardized 2-Column) */}
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F9FBFF] -z-10 hidden lg:block" />
+        <div className="c9-container relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div>
               <FadeUp>
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#DCCDF8] bg-white px-3 py-1.5 shadow-sm">
-                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#5D00D6]">
-                    <div className="h-2 w-2 rounded-full bg-white animate-pulse" />
-                  </div>
-                  <span className="text-[12px] font-bold uppercase tracking-[0.15em] text-[#5D00D6] pr-1">Endpoint Management</span>
-                </div>
-              </FadeUp>
-              <FadeUp delay={0.1}>
-                <h1 className="c9-hero-title mb-6 !leading-[1.15]">
-                  Zero-touch deployment. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-[#00875A]">Secure endpoints.</span>
+                <Eyebrow>Operational Infrastructure Governance</Eyebrow>
+                <h1 className="c9-hero-title mb-8 !leading-[1.1] font-bold">
+                  Endpoint Authority. <br />
+                  <span className="text-[#5D00D6]">Fleet Control.</span>
                 </h1>
-              </FadeUp>
-              <FadeUp delay={0.2}>
-                <p className="mb-10 text-[18px] md:text-[21px] leading-relaxed text-[#4C587E]">
-                  Managing laptops, tablets, and mobiles shouldn't consume your IT team's time. C9 delivers complete endpoint lifecycle management and security via Microsoft Intune.
+                <p className="c9-body text-slate-600 mb-10 text-xl max-w-2xl leading-relaxed">
+                  Managing a mobile fleet shouldn&apos;t be a manual task. C9 delivers carrier-grade endpoint governance via Microsoft Intune—enabling zero-touch deployment, absolute security, and 100% visibility for your entire device estate.
                 </p>
-              </FadeUp>
-
-              <FadeUp delay={0.3}>
-                <div className="mb-8 flex flex-wrap gap-4">
-                  <Link
-                    href="#endpoint-solutions"
-                    className="inline-flex h-14 items-center justify-center rounded-full bg-[#5D00D6] px-8 text-[16px] font-bold text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(93,0,214,0.3)]"
-                  >
-                    See Endpoint Solutions
+                <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                  <Link href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
+                    Request Fleet Audit <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                   </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex h-14 items-center justify-center rounded-full border border-[#DCCDF8] bg-white px-8 text-[16px] font-bold text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50"
-                  >
-                    Request a Demo
+                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                    View Managed Hardware
                   </Link>
                 </div>
-
-                <div className="flex flex-wrap gap-3">
-                  <span className="rounded-full border border-gray-100 bg-white px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-gray-500">
-                    100% Australian Support
-                  </span>
-                  <span className="rounded-full border border-gray-100 bg-white px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-gray-500">
-                    Microsoft Partner
-                  </span>
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">AU Engineering Active</span>
+                  </div>
+                  <div className="h-4 w-px bg-black/10" />
+                  <div className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Intune Managed</div>
                 </div>
               </FadeUp>
             </div>
-
-            {/* Right: Rich Interactive Visual */}
-            <ScaleIn delay={0.4} className="relative hidden lg:block h-[560px] w-full">
-              <div className="absolute top-8 right-0 w-[500px] h-[460px] rounded-[32px] bg-[#f0f4fa] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-200 group flex items-center justify-center relative">
-                 
-                 {/* Internal Tech Grid */}
-                 <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5 pointer-events-none" />
-
-                 {/* Dashboard UI mock inside */}
-                 <div className="w-[85%] h-[85%] bg-white rounded-[20px] shadow-2xl border border-gray-200 overflow-hidden flex flex-col z-10 transition-transform group-hover:scale-105 duration-1000">
-                   <div className="h-12 bg-gray-50 border-b border-gray-100 flex items-center px-4 justify-between shrink-0">
-                     <div className="text-[12px] font-bold text-[#0c1024]">Intune Device Manager</div>
-                     <div className="w-6 h-6 rounded-full bg-[#5D00D6] text-white flex items-center justify-center text-[10px] font-bold">C9</div>
-                   </div>
-                   <div className="flex-1 p-4 bg-white relative">
-                      <div className="grid grid-cols-2 gap-3 mb-4">
-                        <div className="border border-gray-100 rounded-xl p-3 flex flex-col gap-1 items-start bg-green-50/50">
-                          <CheckCircle2 size={16} className="text-green-500" />
-                          <div className="text-[18px] font-bold text-[#0c1024] mt-1">1,240</div>
-                          <div className="text-[10px] font-bold text-gray-400 uppercase">Compliant</div>
-                        </div>
-                        <div className="border border-gray-100 rounded-xl p-3 flex flex-col gap-1 items-start bg-red-50/50">
-                          <ShieldAlert size={16} className="text-red-500" />
-                          <div className="text-[18px] font-bold text-[#0c1024] mt-1">3</div>
-                          <div className="text-[10px] font-bold text-gray-400 uppercase">Action Needed</div>
-                        </div>
-                      </div>
-                      
-                      {/* Enrolling Animation */}
-                      <div className="mt-6 border border-[#5D00D6]/20 bg-[#f8fbff] rounded-xl p-3 flex items-center gap-3">
-                         <div className="w-10 h-10 rounded-full bg-white border border-[#5D00D6]/20 flex items-center justify-center text-[#5D00D6] relative shrink-0">
-                           <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} className="absolute inset-0 rounded-full border-2 border-dashed border-[#5D00D6]/40" />
-                           <Laptop size={16} />
-                         </div>
-                         <div className="min-w-0">
-                           <div className="text-[11px] font-bold text-[#0c1024] truncate">Configuring Device...</div>
-                           <div className="text-[10px] text-gray-500 truncate">AutoPilot: Standard User</div>
-                         </div>
-                         <div className="ml-auto text-[11px] font-bold text-[#5D00D6]">68%</div>
-                      </div>
-                      <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mt-2">
-                        <motion.div initial={{ width: "0%" }} animate={{ width: "68%" }} transition={{ duration: 10, ease: "easeOut" }} className="h-full bg-[#5D00D6]" />
-                      </div>
-                   </div>
-                 </div>
-
-                 {/* Floating Element */}
-                 <motion.div animate={{ y: [-5, 5, -5] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute top-10 -left-6 bg-white rounded-xl shadow-xl border border-gray-100 p-3 flex gap-3 items-center z-30">
-                  <div className="w-10 h-10 rounded-full bg-[#f4f0fa] text-[#5D00D6] flex items-center justify-center"><Download size={16} /></div>
-                  <div>
-                    <div className="text-[10px] uppercase font-bold text-gray-400">Zero-Touch</div>
-                    <div className="text-[14px] font-bold text-[#0c1024]">Pre-configured</div>
+            
+            <div className="relative">
+              <ScaleIn>
+                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50">
+                  <img 
+                    src="/managed_print_hero_v2_1777400688745.png" 
+                    alt="Endpoint Management Infrastructure"
+                    className="w-full h-full object-cover aspect-[4/3]"
+                  />
+                </div>
+                <div className="absolute -top-12 -right-12 w-64 h-64 bg-purple-100 rounded-full blur-3xl -z-10 opacity-60" />
+                <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100 rounded-full blur-3xl -z-10 opacity-60" />
+                
+                {/* Floating trust card */}
+                <motion.div 
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden md:block"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
+                      <Laptop className="text-[#5D00D6]" size={20} />
+                    </div>
+                    <span className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Security Score</span>
                   </div>
-                 </motion.div>
-              </div>
-            </ScaleIn>
+                  <div className="text-[24px] font-bold text-[#0c1024] mb-1">96%</div>
+                  <div className="text-[13px] font-medium text-gray-500">Fleet Security Baseline Verified</div>
+                </motion.div>
+              </ScaleIn>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* 1.5 TRUST METRICS STRIP */}
+      <section className="bg-white border-y border-gray-100">
+        <div className="c9-container py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            {METRICS.map((m, i) => (
+              <FadeUp key={m.label} delay={i * 0.1} className="text-center md:text-left">
+                <div className="text-[32px] md:text-[42px] font-bold leading-none tracking-tight mb-3 text-[#5D00D6]">{m.value}</div>
+                <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400">{m.label}</div>
+                <p className="text-[12px] text-gray-400 font-medium mt-1">{m.desc}</p>
+              </FadeUp>
+            ))}
           </div>
         </div>
       </section>
@@ -302,7 +308,7 @@ export default function EndpointManagementPage() {
       <section className={`${sectionClassName} bg-white`}>
         <div className={containerClassName}>
           <FadeUp className="mb-12 max-w-[720px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Why DIY device management breaks at scale</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Why DIY device management breaks at scale</h2>
             <p className="text-[18px] text-gray-500 font-medium">Manual workflows create wasted effort, support inconsistency, and avoidable security exposure.</p>
           </FadeUp>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -328,7 +334,7 @@ export default function EndpointManagementPage() {
       <section id="endpoint-solutions" className={sectionClassName}>
         <div className={containerClassName}>
           <FadeUp className="mb-10 max-w-[760px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">C9 endpoint management scope</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">C9 endpoint management scope</h2>
             <p className="text-[18px] text-gray-500 font-medium">From procurement through support, each capability is structured for automation and measurable outcomes.</p>
           </FadeUp>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -363,7 +369,7 @@ export default function EndpointManagementPage() {
       <section className={`${sectionClassName} bg-white`}>
         <div className={containerClassName}>
           <FadeUp className="mb-10 max-w-[760px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Device lifecycle timeline</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Device lifecycle timeline</h2>
             <p className="text-[18px] text-gray-500 font-medium">A clear operational sequence from order to retirement with automation at every stage.</p>
           </FadeUp>
 
@@ -397,7 +403,7 @@ export default function EndpointManagementPage() {
       <section className={sectionClassName}>
         <div className={containerClassName}>
           <FadeUp className="mb-12 max-w-[760px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Device management plans</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Device management plans</h2>
             <p className="text-[18px] text-gray-500 font-medium">Choose the support depth that matches your fleet maturity and procurement model.</p>
           </FadeUp>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -429,7 +435,7 @@ export default function EndpointManagementPage() {
         <div className={containerClassName}>
           <article className="rounded-3xl border border-[#DCCDF8] bg-[#0C1024] p-8 text-white md:p-10">
             <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.14em] text-[#C7B1F0]">Security integration</p>
-            <h2 className="c9-section-heading mb-4 !text-white font-proxima tracking-tight font-black leading-tight">Endpoint management + C9 Defense = complete security</h2>
+            <h2 className="c9-section-heading mb-4 !text-white font-proxima tracking-tight font-bold leading-tight">Endpoint management + C9 Defense = complete security</h2>
             <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-2">
               {['Automated patching', 'Endpoint detection and response', '24/7 SOC monitoring', 'Essential 8 compliance'].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-[14px] text-white/85">
@@ -449,7 +455,7 @@ export default function EndpointManagementPage() {
         <div className={containerClassName}>
           <article className={cardClassName}>
             <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.14em] text-[#5D00D6]">Case study</p>
-            <h2 className="c9-section-heading mb-3 !text-[30px] font-proxima tracking-tight font-black leading-tight">Sarah Jenkins, CTO - 4 locations, 80 staff</h2>
+            <h2 className="c9-section-heading mb-3 !text-[30px] font-proxima tracking-tight font-bold leading-tight">Sarah Jenkins, CTO - 4 locations, 80 staff</h2>
             <p className="mb-4 text-[16px] leading-relaxed text-[#4C587E]">C9 standardized endpoint provisioning with Intune automation across offices and remote users.</p>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-[#E9E2F7] bg-[#FBFAFE] p-4">
@@ -465,57 +471,110 @@ export default function EndpointManagementPage() {
         </div>
       </section>
 
-      <section className={`${sectionClassName} bg-white`}>
+      {/* 8. PROTOCOLS (CEO PERSONA ALIGNMENT) */}
+      <section className={`${sectionClassName} bg-[#0C1024]`}>
         <div className={containerClassName}>
-          <div className="mx-auto mb-10 max-w-[760px] text-center">
-            <h2 className="c9-section-heading mb-4 mx-auto font-proxima tracking-tight font-black leading-tight">Frequently asked questions</h2>
-            <p className="mx-auto text-[17px] text-[#4C587E]">Clear answers for procurement, support, and remote workforce requirements.</p>
-          </div>
-          <div className="mx-auto max-w-[900px]">
-            <FAQSection items={faqs.map(faq => ({ q: faq.question, a: faq.answer }))} />
+          <div className="mt-16 grid lg:grid-cols-2 gap-12 lg:gap-20 text-left">
+            <div className="text-left">
+              <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+              </div>
+              <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-white">
+                The C9 Managed <br />
+                <span className="text-[#5D00D6]">Endpoint Takeover.</span>
+              </h2>
+              <p className="text-[17px] text-slate-300 mb-10 leading-relaxed font-medium">
+                Transitioning unmanaged fleets shouldn&apos;t be a risk. We utilize a structured takeover protocol to audit, secure, and enroll your devices into one unified Intune environment.
+              </p>
+              <div className="space-y-6">
+                {[
+                  { t: 'Fleet Audit & Enrollment', d: 'Full map of existing assets and current compliance state.' },
+                  { t: 'Intune Unification', d: 'Bridging disparate builds into a single security and app baseline.' },
+                  { t: 'SLA-Backed Support', d: 'Transitioning endpoint monitoring to C9&apos;s 24/7 Australian operations.' }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-[#5D00D6]/20 flex items-center justify-center shrink-0 mt-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white text-[16px] mb-1">{item.t}</h4>
+                      <p className="text-slate-400 text-[14px] leading-relaxed">{item.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-left">
+              <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Greenfield Guarantee</span>
+              </div>
+              <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-white">
+                Operational <br />
+                <span className="text-[#5D00D6]">Day One Device Readiness.</span>
+              </h2>
+              <p className="text-[17px] text-slate-300 mb-10 leading-relaxed font-medium">
+                For new sites, staff readiness is mandatory from the first hour. We guarantee fully-configured, secure devices on your first day of operation.
+              </p>
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/10 rounded-bl-full" />
+                <div className="space-y-6 relative z-10">
+                  <div className="flex items-center gap-4">
+                    <ShieldAlert size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[17px] text-white">Guaranteed Asset Security</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Target size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[17px] text-white">Autopilot Policy Calibrated</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <UsersIcon size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[17px] text-white">Full User Readiness</span>
+                  </div>
+                </div>
+                <div className="mt-10 pt-6 border-t border-white/5">
+                  <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Lifecycle Protocol 6.4 • Managed Endpoint Ops</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className={`${sectionClassName} bg-[#0C1024]`}>
-        <div className={containerClassName}>
-          <div className="rounded-3xl border border-white/15 bg-white/5 p-8 md:p-12">
-            <h2 className="c9-section-heading mb-4 max-w-[960px] !text-white font-proxima tracking-tight font-black leading-tight">
-              Stop manually configuring devices. Automate with Australian-managed Intune.
-            </h2>
-            <p className="mb-8 max-w-[860px] text-[17px] leading-relaxed text-white/75">
-              Move from reactive endpoint setup to a repeatable lifecycle model with local support and measurable time savings.
-            </p>
-            <div className="mb-8 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[14px] font-bold text-white transition hover:bg-[#7116FF]"
-              >
-                Request Audit
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
-              >
-                See Demo
-              </Link>
-              <a
-                href="tel:1800000299"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
-              >
-                Call 1800 000 299
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <span className="rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white/85">
-                100% Australian support
-              </span>
-              <span className="rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white/85">
-                Microsoft Partner
-              </span>
-            </div>
+      {/* 9. FAQ SECTION */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="c9-container">
+          <div className="text-center max-w-[700px] mx-auto mb-16">
+            <Eyebrow>Operational Readiness</Eyebrow>
+            <h2 className="c9-section-heading">Endpoint Management FAQ.</h2>
+          </div>
+          <div className="max-w-[900px] mx-auto">
+            <FAQSection items={FAQS} />
           </div>
         </div>
+      </section>
+
+      {/* 10. CROSS-PAGE NAVIGATION */}
+      <FullStackSection 
+        title="Fleet Control Is One Piece. See the Full Stack."
+        description="Unified endpoint management requires robust identity and security governance. Explore the connected services that complete your operational infrastructure."
+        services={[
+          { title: 'Managed Microsoft 365', href: '/modern-workplace/productivity' },
+          { title: 'Secure Remote Work', href: '/modern-workplace/secure-remote-work' },
+          { title: 'Compliance & Data Protection', href: '/modern-workplace/compliance-data-protection' },
+          { title: 'Managed Print Solution', href: '/modern-workplace/managed-print' },
+        ]}
+      />
+
+      {/* 11. FINAL CONSULTATION FORM */}
+      <section id="consultation">
+        <WpConsultationForm 
+          showHeader={false}
+          eyebrow="Fleet Audit"
+          title="Eliminate Manual Provisioning & Security Risks"
+          description="Book a 30-minute review with an Australian Intune engineering lead. We'll audit your current device lifecycle and design a zero-touch deployment architecture that works for your entire fleet."
+          formTitle="Request Fleet Audit"
+        />
       </section>
     </div>
   );

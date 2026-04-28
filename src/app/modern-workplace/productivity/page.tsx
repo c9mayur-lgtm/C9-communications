@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, Shield, Zap, Clock, Lock, ShieldCheck, Mail, Users, Settings, ChevronDown, Laptop, MessageSquare, Database, Headphones, HardDrive, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Check, Shield, Zap, Clock, Lock, ShieldCheck, Mail, Users as UsersIcon, Settings, ChevronDown, Laptop, MessageSquare, Database, Headphones, HardDrive, CheckCircle2 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import {
   P, PL, T, TM, TM2, BD,
@@ -213,201 +213,96 @@ const SupportVisual = () => (
 );
 
 const ManagedScopeUI = () => {
-  const [active, setActive] = React.useState(0);
-  
   const items = [
     {
-      title: 'Tenant Configuration & Governance',
+      title: 'Governance & Sovereignty',
       icon: Settings,
-      quote: "Our previous provider just gave us accounts. They never checked our DNS, Australian data compliance, or license costs.",
-      content: 'We take total accountability for your tenant health, ensuring DNS is optimized, licensing is right-sized, and data residency meets Australian legal requirements.',
+      content: 'We take total accountability for your tenant health, enforcing Australian data residency and Essential Eight security baselines as standard.',
       bullets: [
-        'Domain setup and DNS configuration',
-        'User licensing optimization',
-        'Security defaults and baseline policies',
-        'Data residency (Australian data centers)',
-        'Backup and retention policies'
-      ],
-      visual: <TenantVisual />
+        'ACSC Essential Eight alignment',
+        'Australian Data Residency',
+        'Tenant health hardening',
+        'Licensing rightsizing'
+      ]
     },
     {
-      title: 'Microsoft Teams Deployment',
+      title: 'Unified Communication',
       icon: MessageSquare,
-      quote: "Teams was just a chat app for us. C9 showed us how to use it for calling and structured collaboration.",
-      content: 'We transform Teams from a simple chat tool into your primary operational hub, configuring secure calling, guest access, and automated meeting policies.',
+      content: 'We transform Teams into a high-availability voice platform, replacing legacy phone systems with integrated, secure cloud calling.',
       bullets: [
-        'Team and channel structure design',
-        'Teams voice (calling plans)',
-        'Meeting policies and recording',
-        'Guest access controls',
-        'Third-party app integration'
-      ],
-      visual: <TeamsVisual />
+        'Secure Teams Voice',
+        'Structured channel governance',
+        'Meeting security policies',
+        'Managed guest access'
+      ]
     },
     {
-      title: 'SharePoint & OneDrive',
+      title: 'Secure File Infrastructure',
       icon: Database,
-      quote: "Our files were a mess. No one knew where to save things or who had access to what.",
-      content: 'We design a logical SharePoint architecture that mirrors your internal workflows, backed by iron-clad external sharing governance.',
+      content: 'We engineer SharePoint and OneDrive architectures to mirror your operational workflows, with zero-trust permission models.',
       bullets: [
-        'SharePoint site architecture',
-        'Permission and sharing policies',
-        'OneDrive for Business deployment',
+        'Workflow-aligned architecture',
+        'Zero-trust permissions',
         'External sharing governance',
-        'Data lifecycle and retention'
-      ],
-      visual: <SharePointVisual />
+        'Audit logging'
+      ]
     },
     {
-      title: 'Security & Compliance',
+      title: 'Defensive Posture',
       icon: ShieldCheck,
-      quote: "We had MFA, but it wasn't enforced. One phishing email almost cost us everything.",
-      content: 'We deploy specialized Defender and Conditional Access policies that go far beyond default settings to provide true enterprise-grade protection.',
+      content: 'We deploy enforced Conditional Access and Defender for Endpoint, ensuring only healthy, managed devices can touch your data.',
       bullets: [
-        'MFA enforcement baselines',
-        'Conditional Access (Device-based)',
-        'Data Loss Prevention (DLP) rules',
-        'Anti-phishing and Safe Links',
-        'Information Rights Management'
-      ],
-      visual: <SecurityVisual />
+        'Enforced Conditional Access',
+        'Defender for Business',
+        'Managed Anti-Phishing',
+        'Data Loss Prevention'
+      ]
     },
     {
-      title: 'Device Management (Intune)',
+      title: 'Zero-Touch Deployment',
       icon: Laptop,
-      quote: "Setting up new laptops was a manual nightmare. Now, we ship hardware straight to staff and C9 does the rest.",
-      content: 'Through Intune and Autopilot, we enable zero-touch deployment. Any Windows, Mac, or Mobile device is automatically configured as soon as it powers on.',
+      content: 'Through Windows Autopilot and Intune, we enable "Day One" readiness. New hardware is productive within minutes of unboxing.',
       bullets: [
-        'Intune enrollment and Autopilot',
-        'Device compliance policies',
-        'Automated app deployment',
-        'Remote lock and wipe capability',
-        'Unified endpoint management'
-      ],
-      visual: <IntuneVisual />
+        'Windows Autopilot',
+        'Enforced device compliance',
+        'Automated application stack',
+        'Remote lock/wipe'
+      ]
     },
     {
-      title: 'Ongoing Support & Optimization',
+      title: 'Operational Stewardship',
       icon: Headphones,
-      quote: "Most MSPs wait for us to call. C9 calls us first when they see a health issue or a way to save license cost.",
-      content: 'Management isn\'t static. We provide proactive health reporting and monthly license audits to ensure your environment stays secure and cost-efficient.',
+      content: 'We provide continuous operational stewardship, ensuring your environment evolves with security standards and business growth.',
       bullets: [
-        'Onshore Australian helpdesk',
-        'Monthly tenant health reports',
-        'License optimization reviews',
-        'Proactive security monitoring',
-        'Quarterly strategic reviews'
-      ],
-      visual: <SupportVisual />
+        'Onshore SOC & Helpdesk',
+        'Continuous monitoring',
+        'Monthly ROI & License audits',
+        'Strategic vCIO alignment'
+      ]
     }
   ];
 
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % items.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [items.length]);
-
   return (
-    <div 
-      className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-stretch min-h-[600px]"
-    >
-      
-      {/* ── LEFT SIDE: TECHNICAL GRID VISUAL ── */}
-      <div className="relative rounded-[40px] overflow-hidden bg-[#F9FAFB] border border-gray-100 hidden lg:block h-full">
-        {/* Technical Grid Background */}
-        <div 
-          className="absolute inset-0 opacity-[0.4]" 
-          style={{ 
-            backgroundImage: 'linear-gradient(#f1f5f9 1px, transparent 1px), linear-gradient(90deg, #f1f5f9 1px, transparent 1px)', 
-            backgroundSize: '40px 40px' 
-          }} 
-        />
-        
-        <div className="relative z-10 w-full h-full p-8 flex flex-col items-center justify-center">
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={active}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full h-full flex items-center justify-center"
-            >
-              {items[active].visual}
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </div>
-
-      {/* ── RIGHT SIDE: INTERACTIVE LIST ── */}
-      <div className="flex flex-col h-full">
-        <div className="flex flex-col space-y-1">
-          {items.map((item, i) => (
-            <div key={i} className="flex flex-col border-b border-gray-50 last:border-0">
-              <button 
-                onClick={() => setActive(i)}
-                className={`w-full text-left py-3 px-2 transition-all duration-300 relative group flex items-center gap-4`}
-              >
-                <span className={`text-[17px] md:text-[19px] font-bold transition-colors duration-300 ${active === i ? 'text-[#0c1024]' : 'text-gray-400 group-hover:text-gray-600'}`}>
-                  {item.title}
-                </span>
-                {active === i && (
-                  <>
-                    <div className="absolute bottom-0 left-0 h-[3px] bg-[#5D00D6]/10 w-full rounded-full" />
-                    <motion.div 
-                      className="absolute bottom-0 left-0 h-[3px] bg-[#5D00D6] rounded-full z-10" 
-                      initial={{ width: "0%" }}
-                      animate={{ width: "100%" }}
-                      transition={{ 
-                        duration: 6, 
-                        ease: "linear" 
-                      }}
-                      key={`timer-${active}`}
-                    />
-                  </>
-                )}
-              </button>
-
-              <AnimatePresence>
-                {active === i && (
-                  <motion.div 
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <div className="py-6 space-y-6">
-                      <p className="text-[14px] text-gray-400 italic font-proxima leading-relaxed border-l-2 border-purple-100 pl-6">
-                        &quot;{item.quote}&quot;
-                      </p>
-
-                      <div className="bg-[#F8FAFF] rounded-3xl p-6 border border-[#5D00D6]/5 relative">
-                        <div className="absolute top-[-10px] right-6 px-3 py-0.5 bg-[#5D00D6] rounded-md text-white text-[9px] font-bold uppercase tracking-widest shadow-xl shadow-purple-500/20">
-                          THE C9 SOLUTION
-                        </div>
-                        <p className="text-[14px] text-gray-600 font-medium mb-4 leading-relaxed">
-                          {item.content}
-                        </p>
-                        <div className="grid md:grid-cols-2 gap-x-6 gap-y-2">
-                          {item.bullets.map((b, bi) => (
-                            <div key={bi} className="flex items-start gap-2">
-                              <Check size={13} className="text-[#5D00D6] mt-0.5 shrink-0" />
-                              <span className="text-[12px] text-gray-500 font-bold">{b}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {items.map((item, i) => (
+        <FadeUp key={i} delay={i * 0.05} className="bg-white rounded-[32px] p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 flex flex-col group">
+          <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+            <item.icon size={22} />
+          </div>
+          <h3 className="text-[20px] font-bold text-[#0c1024] mb-4">{item.title}</h3>
+          <p className="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow">
+            {item.content}
+          </p>
+          <div className="pt-6 border-t border-gray-50 space-y-3">
+            {item.bullets.map((bullet, bi) => (
+              <div key={bi} className="flex items-center gap-3">
+                <Check size={14} className="text-emerald-500 shrink-0" />
+                <span className="text-[12px] font-bold text-gray-600">{bullet}</span>
+              </div>
+            ))}
+          </div>
+        </FadeUp>
+      ))}
     </div>
   );
 };
@@ -462,12 +357,12 @@ export default function ProductivityPage() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <h1 className="c9-hero-title mb-6 !leading-[1.15]">
-                  Microsoft 365 — <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-purple-600">managed, secured, and optimized.</span>
+                  Managed M365 — <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-purple-600">Infrastructure as a Managed Utility.</span>
                 </h1>
               </FadeUp>
               <FadeUp delay={0.2}>
                 <p className="mb-10 text-[18px] md:text-[21px] leading-relaxed text-[#4C587E]">
-                  M365 licensing is easy. Configuring it properly, securing it against threats, and managing it ongoing — that&apos;s where most businesses struggle. C9 handles the entire lifecycle.
+                  Stop treating Microsoft 365 as a license. We operate your productivity stack as a critical operational utility—ensuring zero downtime, absolute data sovereignty, and enforced security baselines.
                 </p>
               </FadeUp>
 
@@ -576,9 +471,9 @@ export default function ProductivityPage() {
             </FadeUp>
 
             <FadeUp delay={0.1}>
-              <h2 className="c9-section-heading font-proxima tracking-tight font-black leading-tight">
-                Why businesses struggle with <br />
-                <span className="text-[#5D00D6]">self-managed Microsoft 365.</span>
+              <h2 className="c9-section-heading font-proxima tracking-tight font-bold leading-tight">
+                The cost of <br />
+                <span className="text-[#5D00D6]">unmanaged infrastructure.</span>
               </h2>
             </FadeUp>
           </div>
@@ -587,18 +482,18 @@ export default function ProductivityPage() {
             {[
               { 
                 icon: Shield,
-                title: 'Poor Security Posture', 
-                body: 'Default M365 leaves you exposed. No MFA enforcement, no Conditional Access, basic antivirus only. One compromised account = entire tenant at risk.' 
+                title: 'Security Non-Compliance', 
+                body: 'Default M365 fails Essential Eight requirements. Without enforced Conditional Access and hardened baselines, your tenant is an open door for lateral movement.' 
               },
               { 
                 icon: Clock,
-                title: 'No Lifecycle Management', 
-                body: 'New hire? Someone manually creates accounts, assigns licenses, configures devices. Leaver? Hope someone remembered to offboard them properly.' 
+                title: 'Operational Friction', 
+                body: 'Manual onboarding and ghost accounts create security holes and technical debt. Without an automated lifecycle, your operational risk grows with every hire.' 
               },
               { 
                 icon: Zap,
-                title: 'Wasted Licensing', 
-                body: "You're paying for E3 licenses but only using 30% of features. Or you're on E1 when you need E3 security features. No one's optimizing." 
+                title: 'Technical Waste', 
+                body: "Paying for E5 features you don't use, or lacking the E3 security features you need. Unmanaged licensing is a silent drain on your operational budget." 
               }
             ].map((point, i) => (
               <PainCard 
@@ -619,16 +514,86 @@ export default function ProductivityPage() {
         </div>
       </section>
 
-      {/* ══ SECTION 3: WHAT C9 ACTUALLY MANAGES ══════════════════════ */}
       <section id="managed-scope" className="py-20" style={{ background: '#F8FAFF' }}>
         <div className="container mx-auto max-w-[1240px] px-6">
-          <FadeUp className="text-center max-w-[900px] mx-auto mb-8">
+          <FadeUp className="text-center max-w-[900px] mx-auto mb-16">
             <Eyebrow>Full Managed Scope</Eyebrow>
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">The full scope of C9 M365 management</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Total Accountability for Your Productivity Stack</h2>
             <p className="text-[17px] text-gray-500 font-medium max-w-2xl mx-auto">
-              We take total accountability for your Microsoft environment.
+              We move beyond simple support to act as the primary operational owner of your Microsoft environment.
             </p>
           </FadeUp>
+          <ManagedScopeUI />
+        </div>
+      </section>
+
+      {/* ══ SECTION 3.5: PROTOCOLS (CEO PERSONA ALIGNMENT) ════════════ */}
+      <section className="py-16 md:py-24 bg-white border-y border-gray-100">
+        <div className={containerClassName}>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            <FadeUp>
+              <div className="inline-flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full mb-6">
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+              </div>
+              <h2 className="text-[32px] md:text-[42px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-[#0c1024]">
+                The C9 Managed <br />
+                <span className="text-[#5D00D6]">MSP Takeover Protocol.</span>
+              </h2>
+              <p className="text-[18px] text-gray-600 mb-10 leading-relaxed font-medium">
+                Transitioning from a failing provider shouldn't be a risk. We utilize a structured takeover protocol to audit, secure, and stabilize your environment without operational disruption.
+              </p>
+              <div className="space-y-6">
+                {[
+                  { t: 'Phase 1: Deep Audit', d: 'Comprehensive scan of technical debt, ghost accounts, and security holes.' },
+                  { t: 'Phase 2: Baseline Hardening', d: 'Enforcing MFA, Conditional Access, and Essential Eight standards.' },
+                  { t: 'Phase 3: Operational Stabilisation', d: 'Restoring uptime and performance while eliminating recurring issues.' }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#0c1024] text-[16px] mb-1">{item.t}</h4>
+                      <p className="text-gray-500 text-[14px] leading-relaxed">{item.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeUp>
+
+            <FadeUp delay={0.2}>
+              <div className="inline-flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full mb-6">
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Greenfield Guarantee</span>
+              </div>
+              <h2 className="text-[32px] md:text-[42px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-[#0c1024]">
+                The Mandatory <br />
+                <span className="text-[#5D00D6]">Day One Guarantee.</span>
+              </h2>
+              <p className="text-[18px] text-gray-600 mb-10 leading-relaxed font-medium">
+                For new sites and startups, "good enough" is not an option. We guarantee a fully-operational, secure M365 environment on your first day of operation.
+              </p>
+              <div className="bg-[#0B0B0F] border border-white/5 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all shadow-2xl">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/5 rounded-bl-full group-hover:bg-[#5D00D6]/10 transition-all" />
+                <div className="space-y-6 relative z-10">
+                  <div className="flex items-center gap-4">
+                    <ShieldCheck size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[18px] text-white">Guaranteed Operational Uptime</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Lock size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[18px] text-white">Security Baseline Enforced</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <UsersIcon size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[18px] text-white">Full Staff Readiness</span>
+                  </div>
+                </div>
+                <div className="mt-10 pt-6 border-t border-white/10">
+                  <p className="text-[11px] font-bold text-white/40 uppercase tracking-widest">Protocol Version 4.2 • Onshore Deployment Team</p>
+                </div>
+              </div>
+            </FadeUp>
+          </div>
         </div>
       </section>
 
@@ -640,7 +605,7 @@ export default function ProductivityPage() {
             <span className="text-[#A266FF] text-[12px] font-extrabold uppercase tracking-[0.3em] mb-4 block">
               Managed Plans
             </span>
-            <h2 className="c9-section-heading !text-white mb-6 font-proxima tracking-tight font-black leading-tight">
+            <h2 className="c9-section-heading !text-white mb-6 font-proxima tracking-tight font-bold leading-tight">
               We manage all Microsoft 365 plans
             </h2>
             <p className="text-gray-400 text-[17px] md:text-[18px] leading-relaxed font-normal">
@@ -651,25 +616,25 @@ export default function ProductivityPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Business Basic/Standard',
-                desc: "Ideal for small businesses needing professional email and collaboration without advanced security requirements. Fully managed by C9 experts.",
-                items: ['Email & mailbox migration', 'Tenant config & DNS setup', 'Standard user support desk'],
-                badge: 'M365 CORE MANAGEMENT',
-                price: 'From $15/user/month'
+                title: 'M365 Core (Startup)',
+                desc: "Enterprise-grade email and collaboration for businesses requiring professional presence without complex device management. Fully managed operational stability.",
+                items: ['Zero-downtime mailbox migration', 'Managed tenant governance', 'Standard security baselines', 'Onshore Australian support'],
+                badge: 'STARTUP READINESS',
+                price: '$15 / user / mo'
               },
               {
-                title: 'Business Premium',
-                desc: 'Our recommended baseline for growing Australian businesses. Includes full Defender security and Intune device management to meet modern security needs.',
-                items: ['Full security stack (Defender)', 'Device management (Intune)', 'Conditional Access setup'],
-                badge: 'TOTAL SECURITY STACK',
-                price: 'From $30/user/month'
+                title: 'M365 Advanced (Growth)',
+                desc: 'Our recommended operational baseline. Includes full Defender protection and Intune device management to meet Essential Eight requirements.',
+                items: ['Full Defender Security Stack', 'Intune Device Management', 'ACSC Essential Eight Alignment', 'Conditional Access Enforcement'],
+                badge: 'GROWTH & STABILISATION',
+                price: '$30 / user / mo'
               },
               {
-                title: 'Enterprise E3/E5',
-                desc: 'Designed for larger organisations with complex compliance, data residency, and multi-site management requirements. Comprehensive governance at scale.',
-                items: ['Advanced data governance', 'Full DLP & eDiscovery', 'Strategic vCIO consulting'],
-                badge: 'FULL TENANT GOVERNANCE',
-                price: 'Custom Enterprise Pricing'
+                title: 'M365 Managed (Enterprise)',
+                desc: 'Designed for organisations requiring advanced data governance, complex compliance auditing, and board-level strategic vCIO reporting.',
+                items: ['Advanced Data Governance', 'Full DLP & eDiscovery', 'Strategic vCIO Consulting', 'Board-Level Compliance Audit'],
+                badge: 'ENTERPRISE GOVERNANCE',
+                price: 'Custom Managed Pricing'
               }
             ].map((card, idx) => (
               <div key={idx} className="bg-[#12121A] border border-white/5 rounded-[32px] p-8 md:p-10 shadow-xl flex flex-col h-full hover:bg-[#16161F] transition-all duration-300 group">
@@ -721,7 +686,7 @@ export default function ProductivityPage() {
             <div>
               <FadeUp>
                 <Eyebrow>The Process</Eyebrow>
-                <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">How we migrate your team to managed M365</h2>
+                <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">How we migrate your team to managed M365</h2>
                 <p className="text-[18px] text-gray-500 font-medium mb-6">
                   Moving platforms is high-stakes. Our phased approach ensures zero data loss and zero downtime for your staff.
                 </p>
@@ -825,7 +790,7 @@ export default function ProductivityPage() {
             <FadeUp>
               <div className="flex flex-col gap-8">
                 <Eyebrow>Why C9 Managed M365</Eyebrow>
-                <h2 className="c9-section-heading font-proxima tracking-tight font-black leading-tight">More than just software. It&apos;s peace of mind.</h2>
+                <h2 className="c9-section-heading font-proxima tracking-tight font-bold leading-tight">More than just software. It&apos;s peace of mind.</h2>
                 
                 <div className="flex flex-col gap-6">
                   {[
@@ -899,7 +864,7 @@ export default function ProductivityPage() {
             
             <div className="relative z-10">
               <Eyebrow>Take the first step</Eyebrow>
-              <h2 className="c9-section-heading !leading-[1.1] mb-6 text-[#0c1024] font-proxima tracking-tight font-black leading-tight">
+              <h2 className="c9-section-heading !leading-[1.1] mb-6 text-[#0c1024] font-proxima tracking-tight font-bold leading-tight">
                 Stop managing M365 yourself.<br />Let Australian experts handle it.
               </h2>
               

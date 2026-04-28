@@ -50,12 +50,12 @@ export const ManagedFooter = () => {
               <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans opacity-40">Modern Workplace</h4>
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
                  {[
-                   { label: 'M365', path: '/modern-workplace/productivity' },
-                   { label: 'Secure Remote Work', path: '/modern-workplace/endpoint-management' },
-                   { label: 'EDR', path: '/modern-workplace/endpoint-management' },
-                   { label: 'Smart Board', path: '/modern-workplace/productivity' },
-                   { label: 'SaaS Backup', path: '/modern-workplace/endpoint-management' },
-                   { label: 'Compliance', path: '/modern-workplace/endpoint-management' }
+                   { label: 'Managed Productivity', path: '/modern-workplace/productivity' },
+                   { label: 'Secure Remote Work', path: '/modern-workplace/secure-remote-work' },
+                   { label: 'Endpoint Management', path: '/modern-workplace/endpoint-management' },
+                   { label: 'Managed Print', path: '/modern-workplace/managed-print' },
+                   { label: 'Visitor Solution', path: '/modern-workplace/visitor-solution' },
+                   { label: 'Compliance & Data', path: '/modern-workplace/compliance-data-protection' }
                  ].map(item => (
                    <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
                  ))}

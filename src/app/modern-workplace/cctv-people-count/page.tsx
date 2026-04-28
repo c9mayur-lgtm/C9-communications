@@ -2,22 +2,33 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FadeUp, ScaleIn, Eyebrow } from '../components';
-import {
-  ArrowRight,
-  CheckCircle2,
-  ShieldAlert,
-  BarChart3,
-  Maximize,
-  FileCheck,
-  Target,
-  RefreshCw,
-  Building2,
-  Search,
-  Users,
-  Store,
-  LineChart,
-  HardDrive
+import { 
+  FadeUp, 
+  ScaleIn, 
+  Eyebrow,
+  FAQSection,
+  FullStackSection
+} from '../components';
+import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { 
+  ArrowRight, 
+  CheckCircle2, 
+  ShieldAlert, 
+  BarChart3, 
+  Maximize, 
+  FileCheck, 
+  Target, 
+  RefreshCw, 
+  Building2, 
+  Search, 
+  Users as UsersIcon, 
+  Store, 
+  LineChart, 
+  HardDrive,
+  Shield,
+  Activity,
+  Video,
+  Camera
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
@@ -45,6 +56,21 @@ type UseCase = {
   description: string;
   icon: LucideIcon;
 };
+
+const METRICS = [
+  { label: 'Detection Latency', value: '< 200ms', desc: 'Real-time AI threat analysis.' },
+  { label: 'Data Sovereignty', value: '100%', desc: 'Sovereign Australian cloud storage.' },
+  { label: 'Counting Accuracy', value: '98%+', desc: 'High-precision occupancy metrics.' },
+  { label: 'Uptime SLA', value: '99.9%', desc: 'Carrier-grade monitoring reliability.' },
+];
+
+const FAQS = [
+  { q: 'Can we use our existing cameras?', a: 'Yes. Our "Brownfield Protocol" allows us to integrate most IP-based cameras into our centralized AI dashboard, extending their life with smart analytics.' },
+  { q: 'How does the people counting work?', a: 'We use AI computer vision to identify and track human silhouettes. This provides accurate foot-traffic data without storing personal identifiable information (PII).' },
+  { q: 'Is the footage stored in the cloud or on-site?', a: 'We offer hybrid storage. Critical footage is cached on-site for instant access and backed up to secure Australian-based cloud storage for long-term retention and audit.' },
+  { q: 'Can we set up alerts for specific zones?', a: 'Absolutely. You can define "Digital Fences" in the dashboard. If a person enters a restricted zone after hours, your security team receives an instant alert with a live video clip.' },
+  { q: 'Does the system require a constant high-speed internet connection?', a: 'The system is designed for resilience. If internet is lost, cameras continue to record to local storage and sync to the cloud once the connection is restored.' }
+];
 
 const problems: Problem[] = [
   {
@@ -75,7 +101,7 @@ const solutions: CardItem[] = [
     title: 'People Counting Analytics',
     description: 'Transform passive footage into actionable occupancy insights and foot-traffic intelligence.',
     bullets: ['Accurate population tracking', 'Heatmaps & zone analysis', 'Peak hour insights'],
-    icon: Users,
+    icon: UsersIcon,
   },
   {
     title: 'Centralised Dashboard',
@@ -155,7 +181,7 @@ export default function CCTVPeopleCountPage() {
                 </div>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <h1 className="c9-hero-title mb-6 !leading-[1.15]">
+                <h1 className="c9-hero-title mb-6 !leading-[1.15] font-bold">
                   See More Than Just Footage. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-[#00875A]">Understand Your Spaces.</span>
                 </h1>
               </FadeUp>
@@ -291,7 +317,7 @@ export default function CCTVPeopleCountPage() {
                 <div className="w-5 h-5 bg-[#D60000] rounded-sm transform rotate-45 flex items-center justify-center overflow-hidden">
                    <div className="w-2.5 h-2.5 bg-white rounded-full translate-x-1.5 translate-y-1.5" />
                 </div>
-                <span className="text-[18px] font-black tracking-tighter text-gray-900">VERKADA</span>
+                <span className="text-[18px] font-bold tracking-tighter text-gray-900">VERKADA</span>
               </div>
               {/* Rhombus SVG */}
               <div className="flex items-center gap-1.5">
@@ -304,7 +330,7 @@ export default function CCTVPeopleCountPage() {
               <div className="flex items-center gap-2">
                 <div className="flex flex-col leading-none">
                    <span className="text-[11px] font-bold text-gray-400">AXIS</span>
-                   <span className="text-[14px] font-black tracking-wider text-gray-900">COMMUNICATIONS</span>
+                   <span className="text-[14px] font-bold tracking-wider text-gray-900">COMMUNICATIONS</span>
                 </div>
               </div>
             </div>
@@ -316,7 +342,7 @@ export default function CCTVPeopleCountPage() {
       <section className={`${sectionClassName} bg-[#F8FAFF]`}>
         <div className={containerClassName}>
           <FadeUp className="mb-10 max-w-[720px]">
-            <h2 className="c9-section-heading mb-3 font-proxima tracking-tight font-black leading-tight">The challenge with traditional surveillance</h2>
+            <h2 className="c9-section-heading mb-3 font-proxima tracking-tight font-bold leading-tight">The challenge with traditional surveillance</h2>
             <p className="text-[17px] text-gray-500 font-medium">Standard cameras restrict growth by holding data hostage to local servers and disjointed networks.</p>
           </FadeUp>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -343,7 +369,7 @@ export default function CCTVPeopleCountPage() {
       <section className={`${sectionClassName} bg-white`}>
         <div className={containerClassName}>
           <FadeUp className="mb-8 max-w-[760px]">
-            <h2 className="c9-section-heading mb-3 font-proxima tracking-tight font-black leading-tight">A unified intelligence ecosystem</h2>
+            <h2 className="c9-section-heading mb-3 font-proxima tracking-tight font-bold leading-tight">A unified intelligence ecosystem</h2>
             <p className="text-[17px] text-gray-500 font-medium">Not just cameras. Visibility, compliance, and spatial intelligence tied seamlessly into one cloud-based architecture.</p>
           </FadeUp>
           
@@ -418,7 +444,7 @@ export default function CCTVPeopleCountPage() {
             <ScaleIn delay={0.2} className="md:col-span-1 lg:col-span-1">
               <article className={`${cardClassName} flex flex-col h-full bg-white`}>
                 <div className="mb-5 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] transition-colors duration-500">
-                  <Users className="h-6 w-6" />
+                  <UsersIcon className="h-6 w-6" />
                 </div>
                 <h3 className="c9-card-title mb-3">{solutions[1].title}</h3>
                 <p className="mb-6 text-[14px] leading-relaxed text-gray-500 flex-grow">{solutions[1].description}</p>
@@ -573,7 +599,7 @@ export default function CCTVPeopleCountPage() {
       <section className={`${sectionClassName} bg-[#0C1024] text-white`}>
         <div className={containerClassName}>
           <FadeUp className="mb-8 max-w-[760px]">
-            <h2 className="c9-section-heading mb-3 !text-white font-proxima tracking-tight font-black leading-tight">Delivered for any environment</h2>
+            <h2 className="c9-section-heading mb-3 !text-white font-proxima tracking-tight font-bold leading-tight">Delivered for any environment</h2>
             <p className="text-[17px] text-white/70 font-medium">From custom grounds-up deployments to integrating sprawling multi-site systems.</p>
           </FadeUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -600,7 +626,7 @@ export default function CCTVPeopleCountPage() {
         <div className={containerClassName}>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeUp>
-              <h2 className="c9-section-heading mb-4">End-to-end ownership. One partner. No vendor chaos.</h2>
+              <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">End-to-end ownership. One partner. No vendor chaos.</h2>
               <p className="mb-8 text-[18px] leading-relaxed text-gray-500">
                 You get complete coverage handled by C9. We integrate smart cameras seamlessly into your Managed IT ecosystem, serving as the single point of accountability.
               </p>
@@ -666,6 +692,72 @@ export default function CCTVPeopleCountPage() {
               );
             })}
           </div>
+
+          {/* ══ PROTOCOLS (CEO PERSONA ALIGNMENT) ════════════ */}
+          <div className="mt-24 pt-16 border-t border-gray-100 grid lg:grid-cols-2 gap-12 lg:gap-20">
+            <div className="text-left">
+              <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+              </div>
+              <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-[#0C1024]">
+                The C9 Managed <br />
+                <span className="text-[#5D00D6]">Surveillance Takeover.</span>
+              </h2>
+              <p className="text-[17px] text-gray-500 mb-10 leading-relaxed font-medium">
+                Transitioning fragmented legacy CCTV systems shouldn&apos;t be a risk. We utilize a structured takeover protocol to audit, secure, and unify your physical security under one cloud platform.
+              </p>
+              <div className="space-y-6">
+                {[
+                  { t: 'Site Audit & Recovery', d: 'Full map of existing camera infrastructure and cable integrity.' },
+                  { t: 'Cloud Unification', d: 'Bridging legacy hardware into a single management pane.' },
+                  { t: 'SLA-Backed Monitoring', d: 'Transitioning support to C9&apos;s 24/7 Australian operations.' }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#0C1024] text-[16px] mb-1">{item.t}</h4>
+                      <p className="text-gray-500 text-[14px] leading-relaxed">{item.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-left">
+              <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Greenfield Guarantee</span>
+              </div>
+              <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-[#0C1024]">
+                Operational <br />
+                <span className="text-[#5D00D6]">Day One Visibility.</span>
+              </h2>
+              <p className="text-[17px] text-gray-500 mb-10 leading-relaxed font-medium">
+                For new sites, visibility is mandatory from the first hour. We guarantee a fully-operational, AI-powered surveillance environment on your first day of operation.
+              </p>
+              <div className="bg-white border border-gray-100 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl shadow-[#5D00D6]/5">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/5 rounded-bl-full" />
+                <div className="space-y-6 relative z-10">
+                  <div className="flex items-center gap-4">
+                    <ShieldAlert size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[17px] text-[#0C1024]">Guaranteed Feed Uptime</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Target size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[17px] text-[#0C1024]">AI Analytics Calibrated</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <UsersIcon size={28} className="text-[#5D00D6]" />
+                    <span className="font-bold text-[17px] text-[#0C1024]">Total Site Readiness</span>
+                  </div>
+                </div>
+                <div className="mt-10 pt-6 border-t border-gray-100">
+                  <p className="text-[11px] font-bold text-gray-300 uppercase tracking-widest">Surveillance Protocol 4.2 • Managed Physical Ops</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -677,8 +769,8 @@ export default function CCTVPeopleCountPage() {
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#2E006A] rounded-full blur-[80px] pointer-events-none" />
             
             <div className="relative z-10 max-w-3xl mx-auto">
-              <h2 className="c9-section-heading !text-white mb-6 font-proxima tracking-tight font-black leading-tight">Why C9 for surveillance?</h2>
-              <p className="text-[18px] text-white/80 leading-relaxed mb-10">
+              <h2 className="c9-section-heading !text-white mb-6 font-proxima tracking-tight font-bold leading-tight">Why C9 for surveillance?</h2>
+              <p className="text-[18px] text-white leading-relaxed mb-10">
                 We are <strong>vendor-agnostic</strong>, ensuring you extract the absolute best technology for your specific layout. Because we fold surveillance into our comprehensive Managed IT ecosystem, we handle all network integration, compliance controls, and 24/7 monitoring. <strong>Single point of accountability.</strong>
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-white/10 pt-10 text-left">
@@ -689,7 +781,7 @@ export default function CCTVPeopleCountPage() {
                 ].map((reason, i) => (
                   <div key={i} className="flex flex-col gap-2">
                     <span className="font-bold text-[16px] text-white flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#CDBAF1]" /> {reason.title}</span>
-                    <span className="text-[14px] text-white/70">{reason.msg}</span>
+                    <span className="text-[14px] text-slate-200">{reason.msg}</span>
                   </div>
                 ))}
               </div>
@@ -698,34 +790,40 @@ export default function CCTVPeopleCountPage() {
         </div>
       </section>
 
-      {/* 9. FINAL CTA */}
-      <section className={`${sectionClassName} bg-[#0C1024]`}>
-        <div className={containerClassName}>
-          <div className="rounded-3xl border border-white/15 bg-white/5 p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="max-w-2xl">
-              <h2 className="c9-section-heading mb-4 !text-white !text-[32px] md:!text-[36px] font-proxima tracking-tight font-black leading-tight">
-                Turn Surveillance into Business Intelligence
-              </h2>
-              <p className="text-[18px] leading-relaxed text-white/70">
-                Contact C9 today to design a smart surveillance architecture that actively protects and understands your spaces.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <Link
-                href="/contact"
-                className="inline-flex h-14 items-center justify-center rounded-full bg-[#5D00D6] px-8 text-[16px] font-bold text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-xl"
-              >
-                Book a Consultation
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex h-14 items-center justify-center rounded-full border border-white/30 px-8 text-[16px] font-bold text-white transition-all hover:border-white hover:bg-white/5"
-              >
-                Request Solution Design
-              </Link>
-            </div>
+      {/* 9. FAQ SECTION */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="c9-container">
+          <div className="text-center max-w-[700px] mx-auto mb-16">
+            <Eyebrow>Operational Readiness</Eyebrow>
+            <h2 className="c9-section-heading mb-8 font-proxima tracking-tight font-bold leading-tight text-[#0C1024]">CCTV & People Count FAQ.</h2>
+          </div>
+          <div className="max-w-[900px] mx-auto">
+            <FAQSection items={FAQS} />
           </div>
         </div>
+      </section>
+
+      {/* 10. CROSS-PAGE NAVIGATION */}
+      <FullStackSection 
+        title="Physical Security Is One Piece. See the Full Stack."
+        description="Smart surveillance requires reliable network and identity governance. Explore the connected workplace services that complete your operational intelligence."
+        services={[
+          { title: 'Visitor Solution', href: '/modern-workplace/visitor-solution' },
+          { title: 'Endpoint Management', href: '/modern-workplace/endpoint-management' },
+          { title: 'Compliance & Data Protection', href: '/modern-workplace/compliance-data-protection' },
+          { title: 'Managed Microsoft 365', href: '/modern-workplace/productivity' },
+        ]}
+      />
+
+      {/* 11. FINAL CONSULTATION FORM */}
+      <section id="consultation">
+        <WpConsultationForm 
+          showHeader={false}
+          eyebrow="Surveillance Audit"
+          title="Turn Footage into Operational Intelligence"
+          description="Book a 30-minute review with an Australian security lead. We'll audit your current site layout and design a smart surveillance architecture that protects your people and your data."
+          formTitle="Request Site Audit"
+        />
       </section>
 
     </div>

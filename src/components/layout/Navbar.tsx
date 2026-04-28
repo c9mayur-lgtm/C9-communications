@@ -31,16 +31,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
   const hasMiddle = data.hardware || data.challenges || data.modernization || data.partners;
 
   return (
-    <div 
-      className="absolute top-full left-0 right-0 z-[100]"
-      style={{
-        opacity: visible ? 1 : 0,
-        visibility: visible ? 'visible' : 'hidden',
-        transform: visible ? 'translateY(0)' : 'translateY(-8px)',
-        transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-        pointerEvents: visible ? 'auto' : 'none',
-      }}
-    >
+    <div className="w-full">
       <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: data.maxWidth || '1240px' }}>
         <div className="bg-white border border-gray-100 border-top-0 rounded-b-[40px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] overflow-hidden">
           <div className="flex">
@@ -571,7 +562,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       <TopUtilityBar />
       <nav 
         className={`transition-all duration-500 border-b bg-white/95 backdrop-blur-md ${
@@ -637,7 +628,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-full left-0 right-0 z-50 pointer-events-auto"
+            className="absolute top-full left-0 right-0 z-[110] pointer-events-auto"
             onMouseEnter={() => handleEnter(openMenu)}
             onMouseLeave={handleLeave}
           >

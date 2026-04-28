@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FadeUp, ScaleIn, Eyebrow } from '../components';
-import { Phone, MessageCircle, Video, CircleUserRound, Mic, Smartphone, Users, Cloud, ArrowRight, PackageCheck } from 'lucide-react';
+import { Phone, MessageCircle, Video, CircleUserRound, Mic, Smartphone, Users as UsersIcon, Cloud, ArrowRight, PackageCheck, Target, ShieldAlert } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 type StackItem = {
@@ -47,7 +47,7 @@ const stackItems: StackItem[] = [
     title: 'Microsoft Teams',
     description: 'Chat, calling, meetings, and shared files in one secure Microsoft experience.',
     bullets: ['Persistent team chat', 'HD video meetings', 'File collaboration in channels'],
-    icon: Users,
+    icon: UsersIcon,
   },
   {
     title: 'Cloud Voice',
@@ -205,7 +205,7 @@ export default function CommunicationToolsPage() {
                 </div>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <h1 className="c9-hero-title mb-6 !leading-[1.15]">
+                <h1 className="c9-hero-title mb-6 !leading-[1.15] font-bold">
                   One unified system. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-[#00875A]">From desk phone to Teams chat.</span>
                 </h1>
               </FadeUp>
@@ -294,7 +294,7 @@ export default function CommunicationToolsPage() {
       <section id="communication-stack" className={`${sectionClassName} bg-white`}>
         <div className={containerClassName}>
           <FadeUp className="mb-12 max-w-[680px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Your communication stack, managed end-to-end</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Your communication stack, managed end-to-end</h2>
             <p className="text-[18px] text-gray-500 font-medium">
               C9 combines collaboration, voice, hardware, and mobility into one platform your team can adopt quickly.
             </p>
@@ -330,7 +330,7 @@ export default function CommunicationToolsPage() {
       <section className={sectionClassName}>
         <div className={containerClassName}>
           <FadeUp className="mb-12 max-w-[680px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Built for greenfield, brownfield, and enterprise teams</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Built for greenfield, brownfield, and enterprise teams</h2>
             <p className="text-[18px] text-gray-500 font-medium">
               Whether you are launching from scratch or replacing legacy systems, we design communications around operational outcomes.
             </p>
@@ -361,7 +361,7 @@ export default function CommunicationToolsPage() {
       <section className={`${sectionClassName} bg-white`}>
         <div className={containerClassName}>
           <FadeUp className="mb-10 max-w-[760px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Teams Calling vs C9 Voice</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Teams Calling vs C9 Voice</h2>
             <p className="text-[18px] text-gray-500 font-medium">
               Both paths can deliver modern calling. We recommend the right fit based on workflow complexity, support expectations, and growth plans.
             </p>
@@ -403,7 +403,7 @@ export default function CommunicationToolsPage() {
                 <div className="w-2 h-2 rounded-full bg-[#5D00D6] animate-pulse" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">Hardware Ecosystem</span>
               </div>
-              <h2 className="text-[30px] md:text-[38px] font-black text-white leading-[1.1] tracking-tight font-proxima">
+              <h2 className="text-[30px] md:text-[38px] font-bold text-white leading-[1.1] tracking-tight font-proxima">
                 Yealink <span className="text-[#5D00D6]">hardware options</span>
               </h2>
             </FadeUp>
@@ -482,7 +482,7 @@ export default function CommunicationToolsPage() {
       <section className={`${sectionClassName} bg-white`}>
         <div className={containerClassName}>
           <div className="mb-10 max-w-[720px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Migration process</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Migration process</h2>
             <p className="text-[17px] text-[#4C587E]">
               Our rollout framework reduces disruption and gives your team confidence before go-live.
             </p>
@@ -506,12 +506,78 @@ export default function CommunicationToolsPage() {
       <section className={`${sectionClassName} bg-[#0C1024]`}>
         <div className={containerClassName}>
           <div className="rounded-3xl border border-white/15 bg-white/5 p-8 md:p-12">
-            <h2 className="c9-section-heading mb-4 max-w-[900px] !text-white font-proxima tracking-tight font-black leading-tight">
+            <h2 className="c9-section-heading mb-4 max-w-[900px] !text-white font-proxima tracking-tight font-bold leading-tight">
               Unify your team&apos;s communication. Australian support included.
             </h2>
             <p className="mb-8 max-w-[820px] text-[17px] leading-relaxed text-white/75">
               Move to a communication platform that scales from startup growth to enterprise multi-site operations, backed by local specialists.
             </p>
+
+            {/* ══ PROTOCOLS (CEO PERSONA ALIGNMENT) ════════════ */}
+            <div className="mt-16 pt-12 border-t border-white/10 grid lg:grid-cols-2 gap-12 lg:gap-20 mb-12">
+              <div className="text-left">
+                <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
+                  <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+                </div>
+                <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-white">
+                  The C9 Managed <br />
+                  <span className="text-[#5D00D6]">Voice Takeover.</span>
+                </h2>
+                <p className="text-[17px] text-white/60 mb-10 leading-relaxed font-medium">
+                  Transitioning legacy PBX systems shouldn&apos;t be a risk. We utilize a structured takeover protocol to audit, secure, and port your numbers into one unified cloud platform.
+                </p>
+                <div className="space-y-6">
+                  {[
+                    { t: 'Comms Audit & Recovery', d: 'Full map of existing call flows and number registration.' },
+                    { t: 'Cloud Unification', d: 'Bridging disparate voice systems into a single Teams or C9 Voice pane.' },
+                    { t: 'SLA-Backed Support', d: 'Transitioning support to C9&apos;s 24/7 Australian operations.' }
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#5D00D6]/20 flex items-center justify-center shrink-0 mt-1">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-white text-[16px] mb-1">{item.t}</h4>
+                        <p className="text-white/40 text-[14px] leading-relaxed">{item.d}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="text-left">
+                <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
+                  <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Greenfield Guarantee</span>
+                </div>
+                <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-white">
+                  Operational <br />
+                  <span className="text-[#5D00D6]">Day One Voice.</span>
+                </h2>
+                <p className="text-[17px] text-white/60 mb-10 leading-relaxed font-medium">
+                  For new sites, communications are mandatory from the first hour. We guarantee fully-operational, high-fidelity voice and chat on your first day of operation.
+                </p>
+                <div className="bg-white/5 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/10 rounded-bl-full" />
+                  <div className="space-y-6 relative z-10">
+                    <div className="flex items-center gap-4">
+                      <ShieldAlert size={28} className="text-[#5D00D6]" />
+                      <span className="font-bold text-[17px] text-white">Guaranteed Call Uptime</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <Target size={28} className="text-[#5D00D6]" />
+                      <span className="font-bold text-[17px] text-white">QoS Network Calibrated</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <UsersIcon size={28} className="text-[#5D00D6]" />
+                      <span className="font-bold text-[17px] text-white">Full Staff Readiness</span>
+                    </div>
+                  </div>
+                  <div className="mt-10 pt-6 border-t border-white/5">
+                    <p className="text-[11px] font-bold text-white/30 uppercase tracking-widest">Comms Protocol 3.8 • Managed Voice Ops</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="flex flex-wrap gap-4">
               <Link

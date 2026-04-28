@@ -498,7 +498,8 @@ const OTHER = [
     metricLabel: 'Occupancy Accuracy',
     body: 'Cloud-managed CCTV with AI people counting and real-time occupancy analytics.', 
     color: '#7C3AED', 
-    img: '/images/workplace-cctv.jpg' 
+    img: '/unifi_cctv_people_count_dashboard_1777366989122.png',
+    href: '/modern-workplace/cctv-people-count'
   },
   { 
     icon: 'https://img.icons8.com/color/144/print.png', 
@@ -508,7 +509,8 @@ const OTHER = [
     metricLabel: 'Cost Reduction',
     body: 'Hardware, toner, and maintenance included in one predictable monthly cost.', 
     color: '#0369A1', 
-    img: '/images/workplace-print.jpg' 
+    img: '/modern_workplace_managed_print_solution_1777367941424.png',
+    href: '/modern-workplace/managed-print'
   },
   { 
     icon: 'https://img.icons8.com/color/144/identification-documents.png', 
@@ -518,7 +520,19 @@ const OTHER = [
     metricLabel: 'Compliance Rate',
     body: 'Digital sign-in, NDA capture, and automatic host notification — replacing paper forever.', 
     color: '#059669', 
-    img: '/images/workplace-visitor.jpg' 
+    img: '/modern_workplace_visitor_management_kiosk_1777367997443.png',
+    href: '/modern-workplace/visitor-solution'
+  },
+  { 
+    icon: 'https://img.icons8.com/color/144/security-configuration.png', 
+    tag: 'GOVERNANCE', 
+    title: 'Compliance & Data Protection', 
+    metric: 'Essential 8',
+    metricLabel: 'Alignment Guarantee',
+    body: 'Enterprise-grade data sovereignty, Essential Eight alignment, and Zero Trust governance.', 
+    color: '#5D00D6', 
+    img: '/modern_workplace_compliance_dashboard_1777368050122.png',
+    href: '/modern-workplace/compliance-data-protection'
   },
 ];
 
@@ -532,10 +546,11 @@ export const OtherSolutions = () => {
         {OTHER.map((item, i) => {
           const isActive = active === i;
           return (
-            <div 
+            <Link 
               key={item.title}
+              href={item.href}
               onMouseEnter={() => setActive(i)}
-              className="relative group cursor-pointer"
+              className="relative group cursor-pointer block"
             >
               {i > 0 && <div className="absolute top-0 left-0 right-0 h-px bg-black/[0.06]" />}
               <div className={`py-10 transition-colors duration-500 ${isActive ? 'translate-x-2' : ''}`}>
@@ -565,7 +580,7 @@ export const OtherSolutions = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
         <div className="h-px bg-black/[0.06]" />
@@ -809,24 +824,51 @@ export const InteractiveHeroDashboard = () => {
           )}
         </AnimatePresence>
 
-        {/* Simulated Cursor - The "Ghost" Guide */}
-        <motion.div
-          animate={{ 
-            left: cursorPositions[step].x, 
-            top: cursorPositions[step].y,
-            scale: showToast ? 0.9 : 1
-          }}
-          transition={{ 
-            duration: 1.2, 
-            ease: [0.22, 1, 0.36, 1]
-          }}
-          className="absolute z-[100] pointer-events-none drop-shadow-2xl"
-        >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.65376 12.3822L15.4226 21.0478C15.7404 21.3344 16.2308 21.1031 16.1952 20.6726L15.3677 10.5113L21.3533 11.2335C21.7826 11.2855 22.0421 10.7483 21.7317 10.4554L3.63571 3.03688C3.25304 3.1234 3.03713 3.56385 3.19323 3.91107L10.0381 19.3303C10.2038 19.7047 10.7161 19.7431 10.9328 19.3905L12.9806 16.0357L16.1035 18.0673L17.2035 16.0673L14.0806 14.0357" fill="#0c1024" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
-          </svg>
-        </motion.div>
       </div>
     </div>
   );
 };
+
+/* ── Full Stack Connected Services ─────────────────────────────── */
+const DEFAULT_SERVICES = [
+  { title: 'Microsoft Teams Calling', href: '/telco/microsoft-teams-calling' },
+  { title: 'Contact Centre', href: '/telco/contact-centre' },
+  { title: 'SIP Trunking', href: '/telco/sip-trunking' },
+  { title: 'Inbound Services', href: '/telco/inbound-services' },
+];
+
+export const FullStackSection = ({ 
+  title = "Voice Is One Piece. See the Full Stack.",
+  description = "Unified communication requires reliable infrastructure underneath it. Explore the connected services that complete the picture.",
+  services = DEFAULT_SERVICES 
+}: { 
+  title?: string, 
+  description?: string, 
+  services?: { title: string, href: string }[] 
+}) => (
+  <section className="py-24 bg-[#F8FAFF]">
+    <div className="c9-container">
+      <div className="mb-12">
+        <div className="text-[12px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-4">C9 Communications</div>
+        <h2 className="text-[32px] md:text-[42px] font-bold text-[#0c1024] mb-6 tracking-tight">{title}</h2>
+        <p className="text-[17px] text-gray-500 max-w-2xl leading-relaxed font-medium">
+          {description}
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {services.map((s) => (
+          <Link 
+            key={s.title} 
+            href={s.href}
+            className="group flex items-center justify-between p-7 bg-white rounded-2xl border border-gray-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-300"
+          >
+            <span className="text-[15px] font-bold text-[#0c1024] tracking-tight">{s.title}</span>
+            <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center transition-all group-hover:bg-[#5D00D6] group-hover:text-white">
+              <ArrowRight size={16} />
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  </section>
+);

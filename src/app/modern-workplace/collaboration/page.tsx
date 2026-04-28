@@ -2,8 +2,34 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FadeUp, ScaleIn, Eyebrow } from '../components';
-import { Building2, Cable, CheckCircle2, GraduationCap, Headphones, LayoutGrid, Mic, MonitorUp, Network, Settings2, Wrench } from 'lucide-react';
+import { 
+  FadeUp, 
+  ScaleIn, 
+  Eyebrow,
+  FAQSection,
+  FullStackSection
+} from '../components';
+import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { 
+  Building2, 
+  Cable, 
+  CheckCircle2, 
+  GraduationCap, 
+  Headphones, 
+  LayoutGrid, 
+  Mic, 
+  MonitorUp, 
+  Network, 
+  Settings2, 
+  Wrench, 
+  Users as UsersIcon, 
+  Target, 
+  ShieldAlert,
+  ArrowRight,
+  Monitor,
+  Video,
+  MessagesSquare
+} from 'lucide-react';
 
 type Problem = {
   title: string;
@@ -31,6 +57,21 @@ type ComparisonItem = {
   teamsRooms: string;
   zoomRooms: string;
 };
+
+const METRICS = [
+  { label: 'Meeting Start Time', value: '< 10s', desc: 'One-touch join reliability.' },
+  { label: 'Audio Coverage', value: '100%', desc: 'Beamforming mic precision.' },
+  { label: 'Uptime Guarantee', value: '99.9%', desc: 'Managed room availability.' },
+  { label: 'Support Origin', value: 'AU', desc: 'Onshore AV engineering.' },
+];
+
+const FAQS = [
+  { q: 'Teams Rooms vs Zoom Rooms?', a: 'We support both. However, for organizations already heavily invested in the Microsoft 365 ecosystem, Teams Rooms offer superior integration with Outlook, OneDrive, and specialized hardware features like Front Row.' },
+  { q: 'Can we use our existing displays?', a: 'Usually, yes. If your displays support HDMI input and have sufficient resolution (4K preferred), we can integrate them into a managed Teams or Zoom Room environment.' },
+  { q: 'Do you provide the hardware?', a: 'Yes. C9 is a certified partner for Yealink, Poly, and Logitech. We provide complete hardware procurement, professional mounting, and cabling as a turn-key solution.' },
+  { q: 'What is "One-Touch Join"?', a: 'It means your meeting room console shows a calendar of scheduled meetings. Users simply walk in and tap "Join" on the touch panel. No cables, no laptop required, no setup time.' },
+  { q: 'How do you handle audio in large rooms?', a: 'For larger boardrooms, we use specialized "Beamforming" microphone arrays and distributed speakers to ensure every person in the room is heard clearly without echo or background noise.' }
+];
 
 const problems: Problem[] = [
   {
@@ -145,139 +186,93 @@ export default function CollaborationPage() {
   return (
     <div className="bg-[#F8FAFF] min-h-screen pt-4 text-[#0C1024] overflow-x-hidden" style={{ fontFamily: '"Proxima Nova","Inter",system-ui,sans-serif' }}>
       
-      {/* 1. HERO SECTION */}
-      <section className="pt-8 pb-12 md:pt-10 md:pb-16 relative bg-gradient-to-b from-white via-[#F8FAFF]/50 to-white overflow-hidden">
-        {/* Subtle dynamic background elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#5D00D6]/[0.02] rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
-        
-        <div className={`${containerClassName} relative z-10`}>
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-8 items-center">
-            
-            {/* Left */}
-            <div className="max-w-[700px] pt-2 md:pt-6">
+      {/* 1. HERO SECTION (Standardized 2-Column) */}
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F9FBFF] -z-10 hidden lg:block" />
+        <div className="c9-container relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div>
               <FadeUp>
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#DCCDF8] bg-white px-3 py-1.5 shadow-sm">
-                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#5D00D6]">
-                    <div className="h-2 w-2 rounded-full bg-white animate-pulse" />
-                  </div>
-                  <span className="text-[12px] font-bold uppercase tracking-[0.15em] text-[#5D00D6] pr-1">Collaboration & AV</span>
-                </div>
-              </FadeUp>
-              <FadeUp delay={0.1}>
-                <h1 className="c9-hero-title mb-6 !leading-[1.15]">
-                  Modern meeting rooms <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-purple-600">that actually work.</span>
+                <Eyebrow>Operational Infrastructure Governance</Eyebrow>
+                <h1 className="c9-hero-title mb-8 !leading-[1.1] font-bold">
+                  Boardroom Intelligence. <br />
+                  <span className="text-[#5D00D6]">Frictionless Presence.</span>
                 </h1>
-              </FadeUp>
-              <FadeUp delay={0.2}>
-                <p className="mb-10 text-[18px] md:text-[21px] leading-relaxed text-[#4C587E]">
-                  Your boardroom shouldn't require an IT degree to operate. Teams Rooms and Zoom Rooms deployed seamlessly by Australian AV experts.
+                <p className="c9-body text-slate-600 mb-10 text-xl max-w-2xl leading-relaxed">
+                  Your meeting space should be an asset, not a support burden. C9 delivers carrier-grade Microsoft Teams Rooms and Zoom Rooms—engineered for one-touch operation, absolute audio clarity, and 100% reliability.
                 </p>
-              </FadeUp>
-
-              <FadeUp delay={0.3}>
-                <div className="mb-8 flex flex-wrap gap-4">
-                  <Link
-                    href="#room-solutions"
-                    className="inline-flex h-14 items-center justify-center rounded-full bg-[#5D00D6] px-8 text-[16px] font-bold text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-xl"
-                  >
-                    See Teams Room Solutions
+                <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                  <Link href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
+                    Book Room Design <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                   </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex h-14 items-center justify-center rounded-full border border-[#DCCDF8] bg-white px-8 text-[16px] font-bold text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50"
-                  >
-                    Book Room Design
+                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                    View Hardware Options
                   </Link>
                 </div>
-
-                <div className="flex flex-wrap gap-3">
-                  <span className="rounded-full border border-gray-100 bg-white px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-gray-500">
-                    C9 Certified Engineers
-                  </span>
-                  <span className="rounded-full border border-gray-100 bg-white px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-gray-500">
-                    Australian Support
-                  </span>
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">AU AV Support Active</span>
+                  </div>
+                  <div className="h-4 w-px bg-black/10" />
+                  <div className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Certified Integrator</div>
                 </div>
               </FadeUp>
             </div>
-
-            {/* Right: Rich Interactive Visual */}
-            <ScaleIn delay={0.4} className="relative hidden lg:flex h-[560px] w-full items-center justify-center">
-              <div className="absolute top-10 right-0 w-[540px] aspect-[4/3] rounded-[32px] bg-[#f0f4fa] shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden border border-gray-200 group">
+            
+            <div className="relative">
+              <ScaleIn>
+                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50">
+                  <img 
+                    src="https://www.yealink.com/website-service/attachment/solution/other/20250721/202507210331444737bc0.webp" 
+                    alt="High-end Boardroom Integrations"
+                    className="w-full h-full object-cover aspect-[4/3]"
+                  />
+                </div>
+                <div className="absolute -top-12 -right-12 w-64 h-64 bg-purple-100 rounded-full blur-3xl -z-10 opacity-60" />
+                <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100 rounded-full blur-3xl -z-10 opacity-60" />
                 
-                {/* Meeting Room Image */}
-                <div className="absolute inset-0">
-                  <img src="https://www.yealink.com/website-service/attachment/solution/other/20250721/202507210331444737bc0.webp" alt="High-end Boardroom Integrations" className="w-full h-full object-cover opacity-90 transition-transform duration-[3000ms] group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-[#0c1024]/20 to-transparent" />
-                </div>
-
-                {/* Technical Overlay Badges */}
-                <div className="absolute top-4 left-4 flex gap-2">
-                  <div className="bg-black/50 backdrop-blur-md rounded border border-white/20 px-2 py-1 flex items-center gap-1.5">
-                     <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                     <span className="text-white text-[8px] font-bold uppercase tracking-widest">Yealink Certified</span>
-                  </div>
-                </div>
-
-                {/* Hotspot 1: Front of Room Camera/Soundbar (MeetingBar A30) */}
-                <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1 }} className="absolute top-[39%] left-[50%] -translate-x-1/2 flex flex-col items-center group/spot cursor-pointer z-20">
-                  <div className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-md border border-white/50 flex items-center justify-center shadow-lg relative mb-1.5 hover:scale-110 transition-transform">
-                    <div className="absolute inset-0 rounded-full border border-white animate-ping opacity-30" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-white" />
-                  </div>
-                  <div className="bg-white/95 backdrop-blur shadow-xl rounded-lg px-2.5 py-1.5 border border-white opacity-0 group-hover/spot:opacity-100 transition-opacity whitespace-nowrap translate-y-2 group-hover/spot:translate-y-0 duration-300">
-                    <div className="text-[10px] uppercase font-bold text-[#5D00D6]">MeetingBar A30</div>
-                    <div className="text-[11px] font-bold text-[#0c1024]">Dual-Camera AI Tracking</div>
-                  </div>
-                </motion.div>
-
-                {/* Hotspot 2: Table Console (CTP18 Touch Panel) */}
-                <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.2 }} className="absolute bottom-[24%] left-[46%] flex flex-col items-center group/spot cursor-pointer z-20">
-                  <div className="bg-white/95 backdrop-blur shadow-xl rounded-lg px-2.5 py-1.5 border border-white opacity-0 group-hover/spot:opacity-100 transition-opacity whitespace-nowrap -translate-y-2 group-hover/spot:translate-y-0 duration-300 mb-1.5">
-                    <div className="text-[10px] uppercase font-bold text-[#5D00D6]">CTP18 Touch Panel</div>
-                    <div className="text-[11px] font-bold text-[#0c1024]">One-Touch Meeting Join</div>
-                  </div>
-                  <div className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-md border border-white/50 flex items-center justify-center shadow-lg relative hover:scale-110 transition-transform">
-                    <div className="absolute inset-0 rounded-full border border-white animate-ping opacity-30" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-white" />
-                  </div>
-                </motion.div>
-
-                {/* Mock UI Overlay on Bottom left indicating active meeting */}
-                <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end z-10 pointer-events-none">
-                  <div className="bg-white/10 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl p-4 w-[220px]">
-                    <div className="flex justify-between items-center mb-3">
-                      <div className="text-white text-[12px] font-bold">Teams Room Sync</div>
-                      <MonitorUp size={14} className="text-green-400" />
+                {/* Floating trust card */}
+                <motion.div 
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden md:block"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
+                      <Monitor className="text-[#5D00D6]" size={20} />
                     </div>
-                    <div className="space-y-2">
-                       <div className="flex justify-between items-center text-[10px]">
-                         <span className="text-white/60">Display 1</span>
-                         <span className="text-white font-bold">Active</span>
-                       </div>
-                       <div className="flex justify-between items-center text-[10px]">
-                         <span className="text-white/60">Wireless Audio</span>
-                         <span className="text-white font-bold">Bridged</span>
-                       </div>
-                       <div className="flex justify-between items-center text-[10px]">
-                         <span className="text-white/60">Network</span>
-                         <span className="text-white font-bold text-green-400">Stable</span>
-                       </div>
-                    </div>
+                    <span className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Join Reliability</span>
                   </div>
-                </div>
-
-              </div>
-            </ScaleIn>
-
+                  <div className="text-[24px] font-bold text-[#0c1024] mb-1">99.9%</div>
+                  <div className="text-[13px] font-medium text-gray-500">Managed Room Availability</div>
+                </motion.div>
+              </ScaleIn>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* 1.5 TRUST METRICS STRIP */}
+      <section className="bg-white border-y border-gray-100">
+        <div className="c9-container py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            {METRICS.map((m, i) => (
+              <FadeUp key={m.label} delay={i * 0.1} className="text-center md:text-left">
+                <div className="text-[32px] md:text-[42px] font-bold leading-none tracking-tight mb-3 text-[#5D00D6]">{m.value}</div>
+                <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400">{m.label}</div>
+                <p className="text-[12px] text-gray-400 font-medium mt-1">{m.desc}</p>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       <section className={`${sectionClassName} bg-white`}>
         <div className={containerClassName}>
           <FadeUp className="mb-12 max-w-[720px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Why most meeting rooms fail in practice</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Why most meeting rooms fail in practice</h2>
             <p className="text-[18px] text-gray-500 font-medium">
               We solve the common issues that stop teams from adopting room technology consistently.
             </p>
@@ -306,7 +301,7 @@ export default function CollaborationPage() {
       <section className={sectionClassName}>
         <div className={containerClassName}>
           <FadeUp className="mb-12 max-w-[760px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">C9 deployment process</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">C9 deployment process</h2>
             <p className="text-[18px] text-gray-500 font-medium">
               A structured five-phase rollout from site survey through to support, tailored for greenfield, brownfield, and enterprise rollouts.
             </p>
@@ -336,7 +331,7 @@ export default function CollaborationPage() {
       <section id="room-solutions" className={`${sectionClassName} bg-white`}>
         <div className={containerClassName}>
           <FadeUp className="mb-12 max-w-[760px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Teams Room solutions by room size</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Teams Room solutions by room size</h2>
             <p className="text-[18px] text-gray-500 font-medium">
               Standard packages give you predictable outcomes, while still allowing room-specific customization where needed.
             </p>
@@ -363,7 +358,7 @@ export default function CollaborationPage() {
       <section className={sectionClassName}>
         <div className={containerClassName}>
           <FadeUp className="mb-10 max-w-[760px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-black leading-tight">Teams Rooms vs Zoom Rooms</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Teams Rooms vs Zoom Rooms</h2>
             <p className="text-[18px] text-gray-500 font-medium">
               We implement both. The right decision depends on your collaboration stack, user habits, and external meeting patterns.
             </p>
@@ -433,49 +428,54 @@ export default function CollaborationPage() {
         </div>
       </section>
 
-      <section className={`${sectionClassName} bg-[#0C1024]`}>
-        <div className={containerClassName}>
-          <div className="rounded-3xl border border-white/15 bg-white/5 p-8 md:p-12">
-            <h2 className="c9-section-heading mb-4 !text-white font-proxima tracking-tight font-black leading-tight">Ready to modernize your meeting rooms?</h2>
-            <p className="mb-8 max-w-[860px] text-[17px] leading-relaxed text-white/75">
-              Engage C9 for room strategy, Yealink hardware rollout, and professional Australian installation that delivers reliable meeting outcomes.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[14px] font-bold text-white transition hover:bg-[#7116FF]"
-              >
-                Book Room Design
-              </Link>
-              <Link
-                href="/resources"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
-              >
-                Download Guide
-              </Link>
-              <a
-                href="tel:1800000299"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
-              >
-                Call 1800 000 299
-              </a>
-            </div>
+      {/* 9. FAQ SECTION */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="c9-container">
+          <div className="text-center max-w-[700px] mx-auto mb-16">
+            <Eyebrow>Operational Readiness</Eyebrow>
+            <h2 className="c9-section-heading">Collaboration FAQ.</h2>
+          </div>
+          <div className="max-w-[900px] mx-auto">
+            <FAQSection items={FAQS} />
           </div>
         </div>
+      </section>
+
+      {/* 10. CROSS-PAGE NAVIGATION */}
+      <FullStackSection 
+        title="Collaboration Is One Piece. See the Full Stack."
+        description="Unified meeting rooms require reliable voice and infrastructure. Explore the connected services that complete your collaboration ecosystem."
+        services={[
+          { title: 'Microsoft Teams Calling', href: '/telco/microsoft-teams-calling' },
+          { title: 'Contact Centre', href: '/telco/contact-centre' },
+          { title: 'Communication Tools', href: '/modern-workplace/communication-tools' },
+          { title: 'Endpoint Management', href: '/modern-workplace/endpoint-management' },
+        ]}
+      />
+
+      {/* 11. FINAL CONSULTATION FORM */}
+      <section id="consultation">
+        <WpConsultationForm 
+          showHeader={false}
+          eyebrow="Collaboration Design"
+          title="Eliminate Meeting Friction & AV complexity"
+          description="Book a 30-minute review with an Australian AV engineering lead. We'll audit your current room layouts and design a professional Teams or Zoom Room architecture that works every time."
+          formTitle="Request Room Design"
+        />
       </section>
 
       <section className="bg-[#0C1024] pb-16">
         <div className={containerClassName}>
           <div className="flex flex-wrap gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white/80">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
               <CheckCircle2 className="h-4 w-4 text-[#BFA2EE]" />
               C9 certified engineers
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white/80">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
               <CheckCircle2 className="h-4 w-4 text-[#BFA2EE]" />
               Australian support
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white/80">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
               <CheckCircle2 className="h-4 w-4 text-[#BFA2EE]" />
               Yealink-certified deployments
             </span>

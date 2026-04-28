@@ -139,9 +139,9 @@ export const TELCO_FIXED = {
         {
           heading: 'Internet',
           items: [
-            { label: 'Business NBN™', path: '/telco/business-nbn', color: '#5D00D6' },
+            { label: 'Business nbn™', path: '/telco/business-nbn', color: '#5D00D6' },
             { label: 'Fast Fibre', path: '/telco/fast-fibre' },
-            { label: 'NBN™ Enterprise Ethernet', path: '/telco/enterprise-ethernet' },
+            { label: 'nbn™ Enterprise Ethernet', path: '/telco/enterprise-ethernet' },
           ]
         },
         {
@@ -202,8 +202,8 @@ export const MODERN_WORKPLACE_FIXED = {
           items: [
             { label: 'Productivity', path: '/modern-workplace/productivity', color: '#5D00D6' },
             { label: 'Communication Tools', path: '/modern-workplace/communication-tools' },
-            { label: 'Secure Remote Work', path: '/modern-workplace/endpoint-management' },
-            { label: 'Compliance & Data Protection', path: '/modern-workplace/endpoint-management' },
+            { label: 'Secure Remote Work', path: '/modern-workplace/secure-remote-work' },
+            { label: 'Compliance & Data Protection', path: '/modern-workplace/compliance-data-protection' },
             { label: 'Collaboration', path: '/modern-workplace/collaboration' },
             { label: 'Device & Endpoint Management', path: '/modern-workplace/endpoint-management' },
           ]
@@ -212,8 +212,8 @@ export const MODERN_WORKPLACE_FIXED = {
           heading: 'Other',
           items: [
             { label: 'CCTV Camera & People Count', path: '/modern-workplace/cctv-people-count' },
-            { label: 'Managed Print Solution', path: '/modern-workplace/productivity' },
-            { label: 'Visitor Solution', path: '/modern-workplace/productivity' },
+            { label: 'Managed Print Solution', path: '/modern-workplace/managed-print' },
+            { label: 'Visitor Solution', path: '/modern-workplace/visitor-solution' },
           ]
         }
       ]
@@ -370,8 +370,8 @@ export const BUSINESS_MODERN_WORKPLACE = {
           items: [
             { icon: <LayoutGrid size={14} />, label: 'Productivity',               path: '/modern-workplace/productivity', active: true },
             { icon: <Monitor size={14} />,    label: 'Communication Tools',        path: '/modern-workplace/communication-tools' },
-            { icon: <Shield size={14} />,     label: 'Secure Remote Work',         path: '/modern-workplace/endpoint-management' },
-            { icon: <Database size={14} />,   label: 'Compliance & Data',          path: '/modern-workplace/endpoint-management' },
+            { icon: <Shield size={14} />,     label: 'Secure Remote Work',         path: '/modern-workplace/secure-remote-work' },
+            { icon: <Database size={14} />,   label: 'Compliance & Data',          path: '/modern-workplace/compliance-data-protection' },
             { icon: <UserPlus size={14} />,   label: 'Collaboration',              path: '/modern-workplace/collaboration' },
             { icon: <Smartphone size={14} />, label: 'Device & Endpoint Mgmt',    path: '/modern-workplace/endpoint-management' },
           ]
@@ -380,8 +380,8 @@ export const BUSINESS_MODERN_WORKPLACE = {
           heading: 'Hardware & Physical',
           items: [
             { icon: <Video size={14} />,  label: 'CCTV & People Count',   path: '/modern-workplace/cctv-people-count' },
-            { icon: <Printer size={14} />, label: 'Managed Print',         path: '/modern-workplace/productivity' },
-            { icon: <UserPlus size={14} />, label: 'Visitor Management',   path: '/modern-workplace/productivity' },
+            { icon: <Printer size={14} />, label: 'Managed Print',         path: '/modern-workplace/managed-print' },
+            { icon: <UserPlus size={14} />, label: 'Visitor Management',   path: '/modern-workplace/visitor-solution' },
           ]
         }
       ]
@@ -535,8 +535,8 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
           items: [
             { icon: <LayoutGrid size={14} />, label: 'Microsoft 365 Enterprise',    path: '/modern-workplace/productivity' },
             { icon: <Monitor size={14} />,    label: 'Enterprise Device Management', path: '/modern-workplace/endpoint-management' },
-            { icon: <Shield size={14} />,     label: 'Secure Remote Work',           path: '/modern-workplace/endpoint-management' },
-            { icon: <Database size={14} />,   label: 'Compliance & Data Governance', path: '/modern-workplace/endpoint-management' },
+            { icon: <Shield size={14} />,     label: 'Secure Remote Work',           path: '/modern-workplace/secure-remote-work' },
+            { icon: <Database size={14} />,   label: 'Compliance & Data Governance', path: '/modern-workplace/compliance-data-protection' },
             { icon: <UserPlus size={14} />,   label: 'Enterprise Collaboration',     path: '/modern-workplace/collaboration' },
           ]
         },
@@ -545,7 +545,7 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
           items: [
             { icon: <Video size={14} />,   label: 'CCTV & People Count', path: '/modern-workplace/cctv-people-count' },
             { icon: <Lock size={14} />,    label: 'Access Control Systems',  path: '/modern-workplace/cctv-people-count' },
-            { icon: <Printer size={14} />, label: 'Managed Print (Fleet)',    path: '/modern-workplace/productivity' },
+            { icon: <Printer size={14} />, label: 'Managed Print (Fleet)',    path: '/modern-workplace/managed-print' },
           ]
         }
       ]
