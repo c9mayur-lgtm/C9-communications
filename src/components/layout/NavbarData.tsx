@@ -612,10 +612,10 @@ export const RESOURCES_MENU = {
         {
           heading: 'Learning Center',
           items: [
-            { icon: <Layout size={14} />,        label: 'Case Studies',              path: '/about/case-studies' },
-            { icon: <MessageSquare size={14} />, label: 'Blog',                      path: '/resources/blog' },
-            { icon: <Calendar size={14} />,      label: 'Events',                    path: '/resources/blog' },
-            { icon: <Headphones size={14} />,    label: 'FAQ',                       path: '/support/faq' },
+            { icon: <Layout size={14} />,        label: 'Case Studies',              path: '/case-studies' },
+            { icon: <MessageSquare size={14} />, label: 'Blog',                      path: '/blog' },
+            { icon: <Calendar size={14} />,      label: 'Events',                    path: '/blog' },
+            { icon: <Headphones size={14} />,    label: 'FAQ',                       path: '/support' },
             { icon: <Phone size={14} />,         label: 'Schedule a Consultation',   path: '#consultation-section' },
           ]
         }

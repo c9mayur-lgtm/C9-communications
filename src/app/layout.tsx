@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: "%s | C9 Communications Australia"
   },
   description: "Australia's trusted partner for Small Business nbn™®, C9 phone system cloud phone systems, and enterprise managed IT services. 99.99% uptime SLA with 24/7 local engineering support.",
-  keywords: ["Small Business nbn™", "Cloud Phone System", "Managed IT Services", "C9 phone system", "Australian Telco"],
+  keywords: ["Small Business nbn™", "Cloud Phone System", "Managed IT Services", "C9 phone system", "Australian Telco", "Business Connectivity", "IT Governance"],
   authors: [{ name: "C9 Communications" }],
   creator: "C9 Communications",
   publisher: "C9 Communications",
@@ -49,6 +49,17 @@ export const metadata: Metadata = {
     email: false,
     address: false,
     telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
+  verification: {
+    google: 'verification_token_here', // User can replace this later
+    yandex: 'yandex',
+    yahoo: 'yahoo',
+    other: {
+      me: ['support@c9communications.com.au'],
+    },
   },
   openGraph: {
     type: "website",
@@ -75,6 +86,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -89,6 +107,45 @@ export default function RootLayout({
   return (
     <html lang="en-AU">
       <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "C9 Communications",
+              "url": "https://c9communications.com.au",
+              "logo": "https://c9communications.com.au/next.svg",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+61-1300-999-999",
+                "contactType": "customer service",
+                "areaServed": "AU",
+                "availableLanguage": "en"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/c9-communications",
+                "https://twitter.com/c9communications"
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "C9 Communications",
+              "url": "https://c9communications.com.au",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://c9communications.com.au/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
         <AudienceProvider>
           <InquiryProvider>
             <div className="flex flex-col min-h-screen">

@@ -1,12 +1,17 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "SIP Trunking | C9 Communications",
-  description: "Australia's best SIP Trunking — connect your existing PBX to the cloud via public internet or private IP. Fully owned network. Basic from $20/month per line.",
+  title: "SIP Trunking & Business Calling Infrastructure",
+  description: "Enterprise-grade SIP Trunking for Australian businesses. Replace legacy ISDN with reliable, scalable voice infrastructure. 99.99% uptime SLA with local engineering support.",
+  keywords: ["SIP Trunking Australia", "Business VoIP", "ISDN Replacement", "Voice Infrastructure", "C9 Communications"],
+  alternates: {
+    canonical: 'https://c9communications.com.au/telco/sip-trunking',
+  },
   openGraph: {
     url: "https://c9communications.com.au/telco/sip-trunking",
-    title: "SIP Trunking | C9 Communications",
-    description: "Australia's best SIP Trunking — connect your existing PBX to the cloud via public internet or private IP.",
+    title: "SIP Trunking & Business Calling Infrastructure | C9 Communications",
+    description: "Enterprise-grade SIP Trunking for Australian businesses. Replace legacy ISDN with reliable, scalable voice infrastructure.",
+    images: [{ url: '/og-image.png' }]
   }
 };
 
