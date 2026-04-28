@@ -87,8 +87,8 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Cybersecurity</h4>
                          <ul className="flex flex-col gap-2">
-                           <ListItem href="#" title="Security Solutions">Enterprise threat monitoring.</ListItem>
-                           <ListItem href="#" title="Backup & DR">Verified recovery assurance.</ListItem>
+                            <ListItem href="/managed-it/security-solutions" title="Security Solutions">Enterprise threat monitoring.</ListItem>
+                            <ListItem href="/managed-it/backup-disaster-recovery" title="Backup & DR">Verified recovery assurance.</ListItem>
                          </ul>
                        </div>
                     </div>
@@ -97,10 +97,10 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Infrastructure</h4>
                          <ul className="flex flex-col gap-2">
-                           <ListItem href="#" title="IT Infrastructure">Hardware and server management.</ListItem>
-                           <ListItem href="#" title="Network">Fast and secure local connectivity.</ListItem>
-                           <ListItem href="#" title="Cloud">Private and hybrid migrations.</ListItem>
-                           <ListItem href="#" title="Software">Custom business tools.</ListItem>
+                            <ListItem href="/managed-it/infrastructure" title="IT Infrastructure">Hardware and server management.</ListItem>
+                            <ListItem href="/managed-it/network-solutions" title="Network">Fast and secure local connectivity.</ListItem>
+                            <ListItem href="/managed-it/cloud-services" title="Cloud">Private and hybrid migrations.</ListItem>
+                            <ListItem href="/managed-it/cloud-services" title="Software">Custom business tools.</ListItem>
                          </ul>
                        </div>
                     </div>
@@ -134,15 +134,15 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Internet</h4>
                          <ul className="flex flex-col gap-2">
-                           <ListItem href="#" title="Small Business nbn™">Fast, reliable local internet.</ListItem>
-                           <ListItem href="#" title="Fast Fibre">Ultrafast dedicated connections.</ListItem>
-                           <ListItem href="#" title="Enterprise Ethernet">Symmetrical high-speed fibre.</ListItem>
+                            <ListItem href="/telco/business-nbn" title="Small Business nbn™">Fast, reliable local internet.</ListItem>
+                            <ListItem href="/telco/fast-fibre" title="Fast Fibre">Ultrafast dedicated connections.</ListItem>
+                            <ListItem href="/telco/enterprise-ethernet" title="Enterprise Ethernet">Symmetrical high-speed fibre.</ListItem>
                          </ul>
                        </div>
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Mobile</h4>
                          <ul className="flex flex-col gap-2">
-                           <ListItem href="#" title="Mobile Plans" />
+                            <ListItem href="/telco/mobile-plans" title="Mobile Plans" />
                          </ul>
                        </div>
                     </div>
@@ -151,11 +151,11 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Voice</h4>
                          <ul className="flex flex-col gap-2">
-                           <ListItem href="#" title="C9 phone system Cloud Voice">Smart phone systems.</ListItem>
-                           <ListItem href="#" title="Inbound Services" />
-                           <ListItem href="#" title="Microsoft Teams Calling" />
-                           <ListItem href="#" title="SIP Trunking" />
-                           <ListItem href="#" title="Unified Communications" />
+                            <ListItem href="/telco/phone-system" title="C9 Phone System">Smart phone systems.</ListItem>
+                            <ListItem href="/telco/inbound-services" title="Inbound Services" />
+                            <ListItem href="/telco/teams-calling" title="Microsoft Teams Calling" />
+                            <ListItem href="/telco/sip-trunking" title="SIP Trunking" />
+                            <ListItem href="/telco/contact-centre" title="Contact Centre" />
                          </ul>
                        </div>
                     </div>
@@ -189,12 +189,12 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Services</h4>
                          <div className="grid grid-cols-2 gap-4">
-                           <ListItem href="#" title="Productivity" />
-                           <ListItem href="#" title="Secure Remote Work" />
-                           <ListItem href="#" title="Communication Tools" />
-                           <ListItem href="#" title="Collaboration" />
-                           <ListItem href="#" title="Compliance" />
-                           <ListItem href="#" title="Device Mgmt" />
+                            <ListItem href="/modern-workplace/productivity" title="Productivity" />
+                            <ListItem href="/modern-workplace/endpoint-management" title="Secure Remote Work" />
+                            <ListItem href="/modern-workplace/communication-tools" title="Communication Tools" />
+                            <ListItem href="/modern-workplace/collaboration" title="Collaboration" />
+                            <ListItem href="/modern-workplace/endpoint-management" title="Compliance" />
+                            <ListItem href="/modern-workplace/endpoint-management" title="Device Mgmt" />
                          </div>
                        </div>
                     </div>
@@ -215,14 +215,14 @@ export const ManagedNavbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="#" legacyBehavior passHref>
+                <Link href="/about" legacyBehavior passHref>
                   <NavigationMenuLink className="bg-transparent hover:bg-gray-50 text-text-primary font-bold text-sm tracking-tight px-4 py-2 rounded-xl transition-all block h-auto">
                     Company
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#" legacyBehavior passHref>
+                <Link href="/resources/blog" legacyBehavior passHref>
                   <NavigationMenuLink className="bg-transparent hover:bg-gray-50 text-text-primary font-bold text-sm tracking-tight px-4 py-2 rounded-xl transition-all block h-auto">
                     Resources
                   </NavigationMenuLink>
@@ -269,7 +269,7 @@ export const ManagedNavbar = () => {
                            <h4 className="text-xs font-bold uppercase tracking-widest text-brand-purple opacity-40">{item}</h4>
                            <div className="flex flex-col gap-4 pl-2">
                               {/* Simple list for brevity here */}
-                              <Link href="#" className="font-bold text-text-primary text-lg">Explore {item}</Link>
+                              <Link href="/managed" className="font-bold text-text-primary text-lg">Explore {item}</Link>
                            </div>
                         </div>
                      ))}

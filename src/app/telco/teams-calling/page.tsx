@@ -462,7 +462,7 @@ export default function TeamsCallingPage() {
         title="Teams Calling Is One Piece. Here's the Full Stack."
         description="Most businesses that move to Teams Calling also consolidate their broader communication infrastructure. These are the services that complete the picture."
         links={[
-            { label: "C9 Cloud Phone System", path: "/telco/cloud-phone-system" },
+            { label: "C9 Phone System", path: "/telco/phone-system" },
             { label: "SIP Trunking Solutions", path: "/telco/sip-trunking" },
             { label: "Cloud Contact Centre", path: "/telco/contact-centre" },
             { label: "Managed IT Infrastructure", path: "/managed-it/infrastructure" }

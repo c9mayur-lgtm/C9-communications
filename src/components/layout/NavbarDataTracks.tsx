@@ -24,15 +24,15 @@ export const STARTUP_TELCO_MENU = {
           heading: 'Fast Launch Internet',
           items: [
             { icon: <Wifi size={14} />, label: 'Standard Small Business nbn™', path: '/telco/business-nbn' },
-            { icon: <Zap size={14} />, label: '5G Business Backup', path: '/telco/5g-internet' },
-            { icon: <Wifi size={14} />, label: 'Quick-Setup Fixed Wireless', path: '/telco/fixed-wireless' },
+            { icon: <Zap size={14} />, label: '5G Business Backup', path: '/telco/business-nbn' },
+            { icon: <Wifi size={14} />, label: 'Quick-Setup Fixed Wireless', path: '/telco/business-nbn' },
           ]
         },
         {
           heading: 'Team Connectivity',
           items: [
             { icon: <Smartphone size={14} />, label: 'Startup Mobile Plans', path: '/telco/mobile-plans' },
-            { icon: <Smartphone size={14} />, label: 'Device Procurement', path: '/telco/devices' },
+            { icon: <Smartphone size={14} />, label: 'Device Procurement', path: '/telco/mobile-plans' },
           ]
         }
       ],
@@ -44,7 +44,7 @@ export const STARTUP_TELCO_MENU = {
           items: [
             { icon: <Phone size={14} />, label: 'C9 Voice Cloud Phone', path: '/telco/phone-system' },
             { icon: <Headphones size={14} />, label: '1300/1800 Numbers', path: '/telco/inbound-services' },
-            { icon: <Phone size={14} />, label: 'Instant Virtual Numbers', path: '/telco/virtual-numbers' },
+            { icon: <Phone size={14} />, label: 'Instant Virtual Numbers', path: '/telco/inbound-services' },
           ]
         }
       ],
@@ -53,7 +53,7 @@ export const STARTUP_TELCO_MENU = {
   sidebar: {
     heading: 'New Office Setup',
     items: [
-      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Startup Office Setup', desc: 'Seamlessly transition your business tech from day one.', path: '/enterprise/it' },
+      { icon: <Building2 className="text-purple-400" size={18} />, title: 'Startup Office Setup', desc: 'Seamlessly transition your business tech from day one.', path: '/managed-it/infrastructure' },
       { icon: <Wifi className="text-purple-400" size={18} />, title: 'Plug-and-Play WiFi', desc: 'Secure, fast connectivity that moves as fast as you do.', path: '/telco/business-nbn' }
     ]
   }
@@ -67,15 +67,15 @@ export const STARTUP_IT_MENU = {
         {
           heading: 'Core Support',
           items: [
-            { icon: <Headphones size={14} />, label: 'On-Demand Helpdesk', path: '/managed-it/helpdesk' },
-            { icon: <UserPlus size={14} />, label: 'End-User Support', path: '/managed-it/desktop' },
+            { icon: <Headphones size={14} />, label: 'On-Demand Helpdesk', path: '/managed-it/helpdesk-support' },
+            { icon: <UserPlus size={14} />, label: 'End-User Support', path: '/managed-it/helpdesk-support' },
           ]
         },
         {
           heading: 'Workplace Ready',
           items: [
-            { icon: <LayoutGrid size={14} />, label: 'M365 Setup', path: '/solutions/m365' },
-            { icon: <Cloud size={14} />, label: 'Cloud Storage Setup', path: '/solutions/cloud' },
+            { icon: <LayoutGrid size={14} />, label: 'M365 Setup', path: '/modern-workplace/productivity' },
+            { icon: <Cloud size={14} />, label: 'Cloud Storage Setup', path: '/managed-it/cloud-services' },
           ]
         }
       ]
@@ -85,8 +85,8 @@ export const STARTUP_IT_MENU = {
         {
           heading: 'Essential Security',
           items: [
-            { icon: <Shield size={14} />, label: 'Antivirus & Firewall', path: '/managed-it/security' },
-            { icon: <ShieldCheck size={14} />, label: 'SaaS Backup', path: '/managed-it/backup' },
+            { icon: <Shield size={14} />, label: 'Antivirus & Firewall', path: '/managed-it/security-solutions' },
+            { icon: <ShieldCheck size={14} />, label: 'SaaS Backup', path: '/managed-it/backup-disaster-recovery' },
           ]
         }
       ]
@@ -115,14 +115,14 @@ export const BUSINESS_TELCO_MENU = {
           items: [
             { icon: <Wifi size={14} />, label: 'Small Business nbn™ High-Speed', path: '/telco/business-nbn' },
             { icon: <Network size={14} />, label: 'Fast Office Fibre', path: '/telco/fast-fibre' },
-            { icon: <Activity size={14} />, label: 'Network Redundancy', path: '/telco/redundancy' },
+            { icon: <Activity size={14} />, label: 'Network Redundancy', path: '/telco/business-nbn' },
           ]
         },
         {
           heading: 'Fleet Management',
           items: [
             { icon: <Smartphone size={14} />, label: 'Business Mobile Fleet', path: '/telco/mobile-plans' },
-            { icon: <Truck size={14} />, label: 'Asset Tracking (IoT)', path: '/telco/iot' },
+            { icon: <Truck size={14} />, label: 'Asset Tracking (IoT)', path: '/telco/mobile-plans' },
           ]
         }
       ],
@@ -135,7 +135,7 @@ export const BUSINESS_TELCO_MENU = {
             { icon: <Phone size={14} />, label: 'Teams Calling (Direct Routing)', path: '/telco/teams-calling' },
             { icon: <Phone size={14} />, label: 'Managed Cloud PBX', path: '/telco/phone-system' },
             { icon: <Headphones size={14} />, label: 'Inbound Services (1300/1800)', path: '/telco/inbound-services' },
-            { icon: <Phone size={14} />, label: 'Advanced Call Routing', path: '/telco/routing' },
+            { icon: <Phone size={14} />, label: 'Advanced Call Routing', path: '/telco/phone-system' },
           ]
         }
       ],
@@ -144,7 +144,7 @@ export const BUSINESS_TELCO_MENU = {
   sidebar: {
     heading: 'Business Growth',
     items: [
-      { icon: <Activity className="text-purple-400" size={18} />, title: 'Optimization Audit', desc: "Let's review your existing tech and find efficiencies.", path: '/managed-it/consulting' },
+      { icon: <Activity className="text-purple-400" size={18} />, title: 'Optimization Audit', desc: "Let's review your existing tech and find efficiencies.", path: '/managed-it/strategy-consulting' },
       { icon: <Volume2 className="text-purple-400" size={18} />, title: 'Ad On-Hold Systems', desc: 'Elevate your brand with professional voice messaging.', path: '/telco/inbound-services' }
     ]
   }
@@ -158,8 +158,8 @@ export const BUSINESS_IT_MENU = {
         {
           heading: 'Managed IT',
           items: [
-            { icon: <Headphones size={14} />, label: '24/7 Managed Helpdesk', path: '/managed-it/helpdesk' },
-            { icon: <Globe size={14} />, label: 'IT Strategy & Consulting', path: '/managed-it/consulting' },
+            { icon: <Headphones size={14} />, label: '24/7 Managed Helpdesk', path: '/managed-it/helpdesk-support' },
+            { icon: <Globe size={14} />, label: 'IT Strategy & Consulting', path: '/managed-it/strategy-consulting' },
             { icon: <UserPlus size={14} />, label: 'Managed IT Outsourcing', path: '/managed-it/outsourcing' },
           ]
         }
@@ -170,9 +170,9 @@ export const BUSINESS_IT_MENU = {
         {
           heading: 'Business Resilience',
           items: [
-            { icon: <Shield size={14} />, label: 'Cybersecurity Solutions', path: '/managed-it/security' },
-            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup' },
-            { icon: <Cloud size={14} />, label: 'Cloud Migration Services', path: '/managed-it/cloud' },
+            { icon: <Shield size={14} />, label: 'Cybersecurity Solutions', path: '/managed-it/security-solutions' },
+            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
+            { icon: <Cloud size={14} />, label: 'Cloud Migration Services', path: '/managed-it/cloud-services' },
           ]
         }
       ]
@@ -200,10 +200,10 @@ export const ENTERPRISE_TELCO_MENU = {
         {
           heading: 'Dedicated Connectivity',
           items: [
-            { icon: <Network size={14} />, label: 'nbn™ Enterprise Ethernet (99.95% SLA)', path: '/enterprise/ethernet' },
-            { icon: <Activity size={14} />, label: 'Fiber-to-the-Premise (FTTP) High SLA', path: '/enterprise/fttp' },
-            { icon: <Database size={14} />, label: 'Dark Fiber & Private Networking', path: '/enterprise/dark-fiber' },
-            { icon: <Globe size={14} />, label: 'Global SD-WAN Solutions', path: '/enterprise/sd-wan' },
+            { icon: <Network size={14} />, label: 'nbn™ Enterprise Ethernet (99.95% SLA)', path: '/telco/enterprise-ethernet' },
+            { icon: <Activity size={14} />, label: 'Fiber-to-the-Premise (FTTP) High SLA', path: '/telco/fast-fibre' },
+            { icon: <Database size={14} />, label: 'Dark Fiber & Private Networking', path: '/telco/fast-fibre' },
+            { icon: <Globe size={14} />, label: 'Global SD-WAN Solutions', path: '/telco/enterprise-ethernet' },
           ]
         }
       ],
@@ -213,10 +213,10 @@ export const ENTERPRISE_TELCO_MENU = {
         {
           heading: 'Enterprise Comms',
           items: [
-            { icon: <Headphones size={14} />, label: 'C9 phone system Omni-Channel Contact Center', path: '/enterprise/contact-center' },
-            { icon: <Network size={14} />, label: 'SIP Trunking (Cisco/Avaya/Microsoft)', path: '/enterprise/sip' },
-            { icon: <Cpu size={14} />, label: 'AI Voice & Automation', path: '/enterprise/voice-ai' },
-            { icon: <Smartphone size={14} />, label: 'Enterprise Mobility Management', path: '/enterprise/mobility' },
+            { icon: <Headphones size={14} />, label: 'C9 Phone System Omni-Channel Contact Center', path: '/telco/contact-centre' },
+            { icon: <Network size={14} />, label: 'SIP Trunking (Cisco/Avaya/Microsoft)', path: '/telco/sip-trunking' },
+            { icon: <Cpu size={14} />, label: 'AI Voice & Automation', path: '/telco/phone-system' },
+            { icon: <Smartphone size={14} />, label: 'Enterprise Mobility Management', path: '/telco/mobile-plans' },
           ]
         }
       ],
@@ -226,7 +226,7 @@ export const ENTERPRISE_TELCO_MENU = {
     heading: 'Enterprise Compliance',
     items: [
       { icon: <ShieldCheck className="text-purple-400" size={18} />, title: 'Mission Critical 24/7', desc: 'Redundant infrastructure with guaranteed response times.', path: '/managed-it/security' },
-      { icon: <Activity className="text-purple-400" size={18} />, title: 'High-Scale Performance', desc: 'Connectivity designed for 10Gbps+ environments.', path: '/enterprise/ethernet' }
+      { icon: <Activity className="text-purple-400" size={18} />, title: 'High-Scale Performance', desc: 'Connectivity designed for 10Gbps+ environments.', path: '/telco/enterprise-ethernet' }
     ]
   }
 };
@@ -240,16 +240,16 @@ export const SOLUTIONS_MENU = {
         {
           heading: 'Managed IT Service',
           items: [
-            { icon: <Headphones size={14} />, label: 'Helpdesk Support', path: '/managed-it/helpdesk', desc: 'Australian-based 24/7 technical support for your entire team.' },
+            { icon: <Headphones size={14} />, label: 'Helpdesk Support', path: '/managed-it/helpdesk-support', desc: 'Australian-based 24/7 technical support for your entire team.' },
             { icon: <Users size={14} />, label: 'Outsourcing', path: '/managed-it/outsourcing', desc: 'Strategic IT staffing and expertise to augment your internal capability.' },
-            { icon: <Globe size={14} />, label: 'Strategy & Consulting', path: '/managed-it/consulting', desc: 'Expert IT roadmaps aligned with your business growth and budget.' },
+            { icon: <Globe size={14} />, label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting', desc: 'Expert IT roadmaps aligned with your business growth and budget.' },
           ]
         },
         {
           heading: 'Cybersecurity',
           items: [
-            { icon: <Shield size={14} />, label: 'Security Solutions', path: '/managed-it/security', desc: 'Multi-layer defense against sophisticated ransomware and phishing.' },
-            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup', desc: 'Guaranteed business continuity with automated cloud-based backups.' },
+            { icon: <Shield size={14} />, label: 'Security Solutions', path: '/managed-it/security-solutions', desc: 'Multi-layer defense against sophisticated ransomware and phishing.' },
+            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery', desc: 'Guaranteed business continuity with automated cloud-based backups.' },
           ]
         }
       ]
@@ -259,10 +259,10 @@ export const SOLUTIONS_MENU = {
         {
           heading: 'Infrastructure',
           items: [
-            { icon: <Server size={14} />, label: 'IT Infrastructure Services', path: '/enterprise/it', desc: 'Secure, high-availability server and compute environments.' },
-            { icon: <Network size={14} />, label: 'Network Solutions', path: '/managed-it/network', desc: 'Robust SD-WAN and LAN architectures for multi-site companies.' },
-            { icon: <Cloud size={14} />, label: 'Cloud Services', path: '/solutions/cloud', desc: 'Seamless migration and management for Azure and AWS cloud stacks.' },
-            { icon: <Layers size={14} />, label: 'Software Solutions', path: '/solutions/software', desc: 'Tailored software licensing and custom integration services.' },
+            { icon: <Server size={14} />, label: 'IT Infrastructure Services', path: '/managed-it/infrastructure', desc: 'Secure, high-availability server and compute environments.' },
+            { icon: <Network size={14} />, label: 'Network Solutions', path: '/managed-it/network-solutions', desc: 'Robust SD-WAN and LAN architectures for multi-site companies.' },
+            { icon: <Cloud size={14} />, label: 'Cloud Services', path: '/managed-it/cloud-services', desc: 'Seamless migration and management for Azure and AWS cloud stacks.' },
+            { icon: <Layers size={14} />, label: 'Software Solutions', path: '/managed-it/cloud-services', desc: 'Tailored software licensing and custom integration services.' },
           ]
         }
       ]
@@ -298,7 +298,7 @@ export const PRODUCTS_MENU = {
           items: [
             { icon: <Wifi size={14} />, label: 'Business nbn™', path: '/telco/business-nbn', desc: 'Enterprise-grade speed and reliability for your main office.' },
             { icon: <Zap size={14} />, label: 'Fast Fibre', path: '/telco/fast-fibre', desc: 'Ultra-low latency connectivity for high-performance teams.' },
-            { icon: <Network size={14} />, label: 'nbn™ Enterprise Ethernet', path: '/enterprise/ethernet', desc: 'Dedicated 1:1 bandwidth with a premium 99.95% uptime SLA.' },
+            { icon: <Network size={14} />, label: 'nbn™ Enterprise Ethernet', path: '/telco/enterprise-ethernet', desc: 'Dedicated 1:1 bandwidth with a premium 99.95% uptime SLA.' },
           ]
         },
         {
@@ -314,12 +314,12 @@ export const PRODUCTS_MENU = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />, label: 'C9 phone system', path: '/telco/phone-system', desc: 'Our flagship cloud voice solution with 100+ Enterprise features.' },
+            { icon: <Phone size={14} />, label: 'C9 Phone System', path: '/telco/phone-system', desc: 'Our flagship cloud voice solution with 100+ Enterprise features.' },
             { icon: <Headphones size={14} />, label: 'Inbound Services', path: '/telco/inbound-services', desc: '1300, 1800, and local numbers for professional presence.' },
             { icon: <MessageSquare size={14} />, label: 'Microsoft Teams Calling', path: '/telco/teams-calling', desc: 'Direct routing to make and receive calls inside Microsoft Teams.' },
-            { icon: <Link2 size={14} />, label: 'SIP Trunking', path: '/enterprise/sip', desc: 'Connect your legacy PBX to our high-grade voice network.' },
-            { icon: <InfinityIcon size={14} />, label: 'Unified Communications', path: '/telco/voice', desc: 'Sync phone, chat, and video across all your office hardware.' },
-            { icon: <Users size={14} />, label: 'Contact Centre', path: '/enterprise/contact-center', desc: 'Cloud-based omni-channel support for high-volume teams.' },
+            { icon: <Link2 size={14} />, label: 'SIP Trunking', path: '/telco/sip-trunking', desc: 'Connect your legacy PBX to our high-grade voice network.' },
+            { icon: <InfinityIcon size={14} />, label: 'Unified Communications', path: '/telco/phone-system', desc: 'Sync phone, chat, and video across all your office hardware.' },
+            { icon: <Users size={14} />, label: 'Contact Centre', path: '/telco/contact-centre', desc: 'Cloud-based omni-channel support for high-volume teams.' },
           ]
         }
       ]
@@ -349,10 +349,10 @@ export const PRODUCTS_MENU = {
     }
   ],
   hardware: [
-    { title: 'Handsets', img: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=200', path: '/telco/hardware' },
-    { title: 'Headsets', img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=200', path: '/telco/hardware' },
-    { title: 'Routers & Switches', img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=200', path: '/telco/hardware' },
-    { title: 'Access Points', img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=200', path: '/telco/hardware' },
+    { title: 'Handsets', img: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=200', path: '/telco' },
+    { title: 'Headsets', img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=200', path: '/telco' },
+    { title: 'Routers & Switches', img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=200', path: '/telco' },
+    { title: 'Access Points', img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=200', path: '/telco' },
   ],
   sidebar: {
     heading: 'I Need Help With',

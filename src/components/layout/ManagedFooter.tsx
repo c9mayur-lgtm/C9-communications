@@ -32,8 +32,15 @@ export const ManagedFooter = () => {
            <div className="flex flex-col gap-8">
               <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans opacity-40">Managed IT</h4>
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
-                 {['Helpdesk', 'Outsourcing', 'Infrastructure', 'Cloud', 'Cybersecurity', 'Backup & DR'].map(item => (
-                    <li key={item}><a href="#" className="hover:text-brand-purple transition-colors">{item}</a></li>
+                 {[
+                   { label: 'Helpdesk', path: '/managed-it/helpdesk-support' },
+                   { label: 'Outsourcing', path: '/managed-it/outsourcing' },
+                   { label: 'Infrastructure', path: '/managed-it/infrastructure' },
+                   { label: 'Cloud', path: '/managed-it/cloud-services' },
+                   { label: 'Cybersecurity', path: '/managed-it/security-solutions' },
+                   { label: 'Backup & DR', path: '/managed-it/backup-disaster-recovery' }
+                 ].map(item => (
+                    <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
                  ))}
               </ul>
            </div>
@@ -42,8 +49,15 @@ export const ManagedFooter = () => {
            <div className="flex flex-col gap-8">
               <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans opacity-40">Modern Workplace</h4>
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
-                 {['M365', 'Secure Remote Work', 'EDR', 'Smart Board', 'SaaS Backup', 'Compliance'].map(item => (
-                   <li key={item}><a href="#" className="hover:text-brand-purple transition-colors">{item}</a></li>
+                 {[
+                   { label: 'M365', path: '/modern-workplace/productivity' },
+                   { label: 'Secure Remote Work', path: '/modern-workplace/endpoint-management' },
+                   { label: 'EDR', path: '/modern-workplace/endpoint-management' },
+                   { label: 'Smart Board', path: '/modern-workplace/productivity' },
+                   { label: 'SaaS Backup', path: '/modern-workplace/endpoint-management' },
+                   { label: 'Compliance', path: '/modern-workplace/endpoint-management' }
+                 ].map(item => (
+                   <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
                  ))}
               </ul>
            </div>
@@ -52,8 +66,15 @@ export const ManagedFooter = () => {
            <div className="flex flex-col gap-8">
               <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans opacity-40">Telco</h4>
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
-                 {['Internet', 'Voice (C9 phone system)', 'Mobile', 'Hardware', 'Contact Centre', 'Network'].map(item => (
-                   <li key={item}><a href="#" className="hover:text-brand-purple transition-colors">{item}</a></li>
+                 {[
+                   { label: 'Internet', path: '/telco/business-nbn' },
+                   { label: 'C9 Phone System', path: '/telco/phone-system' },
+                   { label: 'Mobile', path: '/telco/mobile-plans' },
+                   { label: 'Hardware', path: '/telco' },
+                   { label: 'Contact Centre', path: '/telco/contact-centre' },
+                   { label: 'Network', path: '/managed-it/network-solutions' }
+                 ].map(item => (
+                   <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
                  ))}
               </ul>
            </div>
@@ -62,8 +83,13 @@ export const ManagedFooter = () => {
            <div className="flex flex-col gap-8">
               <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans opacity-40">C9 Defense</h4>
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
-                 {['Essential 8', 'Continuous Defence', 'Recovery Assurance', 'Assess My Org'].map(item => (
-                   <li key={item}><a href="#" className="hover:text-brand-purple transition-colors">{item}</a></li>
+                 {[
+                   { label: 'Essential 8', path: '/managed-it/security-solutions' },
+                   { label: 'Continuous Defence', path: '/managed-it/security-solutions' },
+                   { label: 'Recovery Assurance', path: '/managed-it/backup-disaster-recovery' },
+                   { label: 'Assess My Org', path: '/managed-it/security-solutions' }
+                 ].map(item => (
+                   <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
                  ))}
               </ul>
            </div>
@@ -72,8 +98,15 @@ export const ManagedFooter = () => {
            <div className="flex flex-col gap-8">
               <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans opacity-40">Company</h4>
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
-                 {['About', 'Case Studies', 'Blog', 'Careers', 'Support', 'Partners'].map(item => (
-                   <li key={item}><a href="#" className="hover:text-brand-purple transition-colors">{item}</a></li>
+                 {[
+                   { label: 'About', path: '/about' },
+                   { label: 'Case Studies', path: '/about/case-studies' },
+                   { label: 'Blog', path: '/resources/blog' },
+                   { label: 'Careers', path: '/about/careers' },
+                   { label: 'Support', path: '/support/faq' },
+                   { label: 'Partners', path: '/about/partners' }
+                 ].map(item => (
+                   <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
                  ))}
               </ul>
            </div>

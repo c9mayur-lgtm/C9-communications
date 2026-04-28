@@ -166,7 +166,7 @@ export const TELCO_FIXED = {
             { label: 'Inbound Services', path: '/telco/inbound-services' },
             { label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { label: 'SIP Trunking', path: '/telco/sip-trunking' },
-            { label: 'Unified Communications', path: '/telco/phone-system' },
+            { label: 'Voice Systems', path: '/telco/voice-systems' },
             { label: 'Contact Centre', path: '/telco/contact-centre' },
           ]
         }
@@ -230,9 +230,9 @@ export const MODERN_WORKPLACE_FIXED = {
     variant: 'purple',
     slider: [
       { title: 'Premium Wireless Audio Solutions for Enterprise', img: '/images/hardware/wireless-headset.png', path: '/modern-workplace/communication-tools' },
-      { title: 'Transform your workplace with Smart Board Solution', img: '/images/solutions/boardroom-meeting.jpg', path: '/solutions/smart-board' }
+      { title: 'Transform your workplace with Smart Board Solution', img: '/images/solutions/boardroom-meeting.jpg', path: '/modern-workplace/productivity' }
     ],
-    viewAllPath: '/solutions'
+    viewAllPath: '/modern-workplace'
   }
 };
 
@@ -264,7 +264,7 @@ export const BUSINESS_IT_SOLUTIONS = {
             { icon: <Server size={14} />,    label: 'IT Infrastructure Services', path: '/managed-it/infrastructure' },
             { icon: <Network size={14} />,   label: 'Network Solutions',           path: '/managed-it/network-solutions' },
             { icon: <Cloud size={14} />,     label: 'Cloud Services',              path: '/managed-it/cloud-services' },
-            { icon: <HardDrive size={14} />, label: 'Software Solutions',          path: '#' },
+            { icon: <HardDrive size={14} />, label: 'Software Solutions',          path: '/managed-it/cloud-services' },
           ]
         },
         {
@@ -329,7 +329,7 @@ export const BUSINESS_TELCO = {
         {
           heading: 'Voice',
           items: [
-            { icon: <Phone size={14} />,      label: 'C9 Voice Cloud Phone',        path: '/telco/phone-system' },
+            { icon: <Phone size={14} />,      label: 'C9 Phone System',             path: '/telco/phone-system' },
             { icon: <Headphones size={14} />, label: 'Inbound Services',            path: '/telco/inbound-services' },
             { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling',     path: '/telco/teams-calling' },
             { icon: <Network size={14} />,    label: 'SIP Trunking',                path: '/telco/sip-trunking' },
@@ -370,8 +370,8 @@ export const BUSINESS_MODERN_WORKPLACE = {
           items: [
             { icon: <LayoutGrid size={14} />, label: 'Productivity',               path: '/modern-workplace/productivity', active: true },
             { icon: <Monitor size={14} />,    label: 'Communication Tools',        path: '/modern-workplace/communication-tools' },
-            { icon: <Shield size={14} />,     label: 'Secure Remote Work',         path: '#' },
-            { icon: <Database size={14} />,   label: 'Compliance & Data',          path: '#' },
+            { icon: <Shield size={14} />,     label: 'Secure Remote Work',         path: '/modern-workplace/endpoint-management' },
+            { icon: <Database size={14} />,   label: 'Compliance & Data',          path: '/modern-workplace/endpoint-management' },
             { icon: <UserPlus size={14} />,   label: 'Collaboration',              path: '/modern-workplace/collaboration' },
             { icon: <Smartphone size={14} />, label: 'Device & Endpoint Mgmt',    path: '/modern-workplace/endpoint-management' },
           ]
@@ -380,8 +380,8 @@ export const BUSINESS_MODERN_WORKPLACE = {
           heading: 'Hardware & Physical',
           items: [
             { icon: <Video size={14} />,  label: 'CCTV & People Count',   path: '/modern-workplace/cctv-people-count' },
-            { icon: <Printer size={14} />, label: 'Managed Print',         path: '#' },
-            { icon: <UserPlus size={14} />, label: 'Visitor Management',   path: '#' },
+            { icon: <Printer size={14} />, label: 'Managed Print',         path: '/modern-workplace/productivity' },
+            { icon: <UserPlus size={14} />, label: 'Visitor Management',   path: '/modern-workplace/productivity' },
           ]
         }
       ]
@@ -432,11 +432,11 @@ export const ENTERPRISE_IT_SOLUTIONS = {
         },
         {
           heading: 'Enterprise Security',
-          action: { label: 'C9 defense →', path: '/c9-defense' },
+          action: { label: 'C9 defense →', path: '/managed-it/security-solutions' },
           items: [
-            { icon: <ShieldCheck size={14} />, label: 'Security & Compliance',     path: '/managed-it/security-solutions' },
-            { icon: <Database size={14} />,    label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
-            { icon: <ShieldAlert size={14} />, label: 'SIEM & Threat Intelligence', path: '#' },
+              { icon: <ShieldCheck size={14} />, label: 'Security & Compliance',     path: '/managed-it/security-solutions' },
+              { icon: <Database size={14} />,    label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
+              { icon: <ShieldAlert size={14} />, label: 'SIEM & Threat Intelligence', path: '/managed-it/security-solutions' },
           ]
         }
       ]
@@ -477,14 +477,14 @@ export const ENTERPRISE_TELCO = {
           items: [
             { icon: <Network size={14} />, label: 'Enterprise Ethernet',     path: '/telco/enterprise-ethernet' },
             { icon: <Wifi size={14} />,    label: 'Fast Fibre (Dark Fibre)', path: '/telco/fast-fibre' },
-            { icon: <Globe size={14} />,   label: 'SD-WAN & Private IP',     path: '#' },
+            { icon: <Globe size={14} />,   label: 'SD-WAN & Private IP',     path: '/telco/enterprise-ethernet' },
           ]
         },
         {
           heading: 'Mobile Fleet',
           items: [
             { icon: <Smartphone size={14} />, label: 'Enterprise Mobile Plans',    path: '/telco/mobile-plans' },
-            { icon: <Truck size={14} />,       label: 'Mobile Fleet Management',    path: '#' },
+            { icon: <Truck size={14} />,       label: 'Mobile Fleet Management',    path: '/telco/mobile-plans' },
           ]
         }
       ],
@@ -495,7 +495,7 @@ export const ENTERPRISE_TELCO = {
           heading: 'Voice & Contact Centre',
           items: [
             { icon: <LayoutGrid size={14} />, label: 'Contact Centre (CCaaS)',  path: '/telco/contact-centre' },
-            { icon: <Phone size={14} />,      label: 'C9 Voice Cloud Phone',    path: '/telco/phone-system' },
+            { icon: <Phone size={14} />,      label: 'C9 Phone System',         path: '/telco/phone-system' },
             { icon: <Headphones size={14} />, label: 'Inbound 13/1300/1800',    path: '/telco/inbound-services' },
             { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { icon: <Network size={14} />,    label: 'SIP Trunking (Bulk)',      path: '/telco/sip-trunking' },
@@ -535,8 +535,8 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
           items: [
             { icon: <LayoutGrid size={14} />, label: 'Microsoft 365 Enterprise',    path: '/modern-workplace/productivity' },
             { icon: <Monitor size={14} />,    label: 'Enterprise Device Management', path: '/modern-workplace/endpoint-management' },
-            { icon: <Shield size={14} />,     label: 'Secure Remote Work',           path: '#' },
-            { icon: <Database size={14} />,   label: 'Compliance & Data Governance', path: '#' },
+            { icon: <Shield size={14} />,     label: 'Secure Remote Work',           path: '/modern-workplace/endpoint-management' },
+            { icon: <Database size={14} />,   label: 'Compliance & Data Governance', path: '/modern-workplace/endpoint-management' },
             { icon: <UserPlus size={14} />,   label: 'Enterprise Collaboration',     path: '/modern-workplace/collaboration' },
           ]
         },
@@ -544,8 +544,8 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
           heading: 'Physical Security & Ops',
           items: [
             { icon: <Video size={14} />,   label: 'CCTV & People Count', path: '/modern-workplace/cctv-people-count' },
-            { icon: <Lock size={14} />,    label: 'Access Control Systems',  path: '#' },
-            { icon: <Printer size={14} />, label: 'Managed Print (Fleet)',    path: '#' },
+            { icon: <Lock size={14} />,    label: 'Access Control Systems',  path: '/modern-workplace/cctv-people-count' },
+            { icon: <Printer size={14} />, label: 'Managed Print (Fleet)',    path: '/modern-workplace/productivity' },
           ]
         }
       ]
@@ -614,7 +614,7 @@ export const RESOURCES_MENU = {
           items: [
             { icon: <Layout size={14} />,        label: 'Case Studies',              path: '/about/case-studies' },
             { icon: <MessageSquare size={14} />, label: 'Blog',                      path: '/resources/blog' },
-            { icon: <Calendar size={14} />,      label: 'Events',                    path: '#' },
+            { icon: <Calendar size={14} />,      label: 'Events',                    path: '/resources/blog' },
             { icon: <Headphones size={14} />,    label: 'FAQ',                       path: '/support/faq' },
             { icon: <Phone size={14} />,         label: 'Schedule a Consultation',   path: '#consultation-section' },
           ]
@@ -661,7 +661,7 @@ export const MEGA_MAP: Record<string, any> = {
 
 export const TABS = [
   { name: 'IT Solutions',     menuKey: 'it-solutions',     path: '/managed-it' },
-  { name: 'Telco',            menuKey: 'telco',            path: '/solutions/telco' },
+  { name: 'Telco',            menuKey: 'telco',            path: '/telco' },
   { name: 'Modern Workplace', menuKey: 'modern-workplace', path: '/modern-workplace/productivity' },
   { name: 'Company',          menuKey: 'company',          path: '/about' },
   { name: 'Resources',        menuKey: 'resources',        path: '/resources' },
