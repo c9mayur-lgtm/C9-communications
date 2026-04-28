@@ -86,43 +86,43 @@ export default function SitemapPage() {
       ]
     },
     {
-      title: "Specialized Business Solutions",
+      title: "Modern Workplace Solutions",
       icon: Zap,
       links: [
-        { label: "Solutions Overview", path: "/solutions" },
-        { label: "CCTV & People Count Intelligence", path: "/solutions/cctv-people-count" },
-        { label: "Unified Collaboration", path: "/solutions/collaboration" },
-        { label: "Communication Workflows", path: "/solutions/communication-tools" },
-        { label: "Modern Endpoint Management", path: "/solutions/endpoint-management" },
-        { label: "Workplace Productivity", path: "/solutions/productivity" },
-        { label: "Modern Workplace Hybrid", path: "/modern-workplace" },
-        { label: "SaaS Experimentation", path: "/saas-experiment" },
+        { label: "Modern Workplace Overview", path: "/modern-workplace" },
+        { label: "Business Productivity", path: "/modern-workplace/productivity" },
+        { label: "Team Collaboration Tools", path: "/modern-workplace/collaboration" },
+        { label: "Communication Infrastructure", path: "/modern-workplace/communication-tools" },
+        { label: "Modern Endpoint Management", path: "/modern-workplace/endpoint-management" },
+        { label: "CCTV & People Count Intelligence", path: "/modern-workplace/cctv-people-count" },
+        { label: "Visitor & Print Solutions", path: "/modern-workplace/productivity" },
       ]
     },
     {
-      title: "Strategic Access Points",
+      title: "Strategic Entry Points",
       icon: Globe,
       links: [
-        { label: "Greenfield Deployment", path: "/greenfield" },
+        { label: "Greenfield Infrastructure", path: "/greenfield" },
         { label: "Business Transformation", path: "/business" },
-        { label: "Enterprise Infrastructure", path: "/enterprise" },
+        { label: "Enterprise Operations", path: "/enterprise" },
         { label: "Startup Scaling Model", path: "/startups" },
         { label: "Pricing & Models", path: "/pricing" },
-        { label: "Business Insights Hub", path: "/insights" },
+        { label: "New Office Setup", path: "/help/new-office-setup" },
+        { label: "Secure WiFi Deployment", path: "/help/secure-wifi" },
       ]
     },
     {
-      title: "Company, Legal & Support",
+      title: "Company & Support",
       icon: Briefcase,
       links: [
         { label: "About C9 Communications", path: "/about" },
+        { label: "Why Partner with C9", path: "/about/why-c9" },
         { label: "Case Study Portfolio", path: "/case-studies" },
-        { label: "Why Partner with C9", path: "/why-c9" },
-        { label: "Strategic Partners", path: "/partners" },
-        { label: "Engineering Careers", path: "/careers" },
-        { label: "Executive & Support Team", path: "/team" },
-        { label: "Client Success Reviews", path: "/reviews" },
-        { label: "24/7 Technical Support", path: "/support" },
+        { label: "Strategic Partners", path: "/about/partners" },
+        { label: "Engineering Careers", path: "/about/careers" },
+        { label: "Executive & Support Team", path: "/about/team" },
+        { label: "Client Success Reviews", path: "/about/reviews" },
+        { label: "Technical Support", path: "/support" },
         { label: "Contact Us", path: "/contact" },
         { label: "Privacy Policy", path: "/privacy-policy" },
         { label: "Terms of Service", path: "/terms" },
@@ -138,7 +138,7 @@ export default function SitemapPage() {
             <span className="c9-eyebrow mb-4">Structural Directory</span>
             <h1 className="c9-hero-title !text-5xl lg:!text-6xl mb-6">Master Sitemap.</h1>
             <p className="c9-body text-lg">
-              A complete and exhaustive directory of every unique functional path within the C9 Communications infrastructure.
+              A verified directory of every active functional path within the C9 Communications infrastructure.
             </p>
           </div>
         </div>
