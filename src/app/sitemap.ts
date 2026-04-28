@@ -16,6 +16,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy-policy',
     '/terms',
     '/site-map',
+    '/why-c9',
+    '/partners',
+    '/careers',
+    '/team',
+    '/reviews',
+    '/support',
+    '/pricing',
+    '/solutions',
+    '/insights',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -34,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/telco/inbound-services',
     '/telco/enterprise-ethernet',
     '/telco/voice-systems',
+    '/telco/c9voice',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -72,5 +82,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...mainPages, ...telcoPages, ...managedItPages, ...industryPages];
+  const solutionPages = [
+    '/solutions/cctv-people-count',
+    '/solutions/collaboration',
+    '/solutions/communication-tools',
+    '/solutions/endpoint-management',
+    '/solutions/productivity',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }));
+
+  return [...mainPages, ...telcoPages, ...managedItPages, ...industryPages, ...solutionPages];
 }

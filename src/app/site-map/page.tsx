@@ -78,12 +78,28 @@ export default function SitemapPage() {
       ]
     },
     {
+      title: "Specialised Solutions",
+      icon: Zap,
+      links: [
+        { label: "CCTV & People Counting", path: "/solutions/cctv-people-count" },
+        { label: "Team Collaboration Tools", path: "/solutions/collaboration" },
+        { label: "Communication Infrastructure", path: "/solutions/communication-tools" },
+        { label: "Endpoint Management", path: "/solutions/endpoint-management" },
+        { label: "Business Productivity", path: "/solutions/productivity" },
+      ]
+    },
+    {
       title: "Company & Legal",
       icon: Briefcase,
       links: [
         { label: "About C9 Communications", path: "/about" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Why Choose C9", path: "/why-c9" },
+        { label: "Why Partner with C9", path: "/why-c9" },
+        { label: "Case Studies & Proof", path: "/case-studies" },
+        { label: "C9 Partners", path: "/partners" },
+        { label: "Careers", path: "/careers" },
+        { label: "Meet the Team", path: "/team" },
+        { label: "Client Reviews", path: "/reviews" },
+        { label: "Technical Support", path: "/support" },
         { label: "Contact Us", path: "/contact" },
         { label: "Privacy Policy", path: "/privacy-policy" },
         { label: "Terms of Use", path: "/terms" },
