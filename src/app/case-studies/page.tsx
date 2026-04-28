@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Target, TrendingUp, Shield, Activity, ArrowRight, ExternalLink, Network, Zap, CheckCircle2, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
