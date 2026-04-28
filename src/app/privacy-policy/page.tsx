@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
           <strong>Email:</strong> <a href="mailto:office@c9communications.com.au">office@c9communications.com.au</a>
         </p>
         <p>
-          <strong>Website:</strong> <a href="https://www.c9communications.com.au">www.c9communications.com.au</a>
+          <strong>Website:</strong> <a href="https://www.c9-communications.vercel.app">www.c9-communications.vercel.app</a>
         </p>
 
         <div className="h-8" />

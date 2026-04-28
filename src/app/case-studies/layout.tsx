@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: "Real-world infrastructure stabilisations, vendor consolidations, and risk-mitigated migrations. Measurable outcomes for Australian enterprise environments.",
   keywords: ["IT Case Studies", "Infrastructure Migration Success", "Vendor Consolidation Proof", "C9 Communications Australia"],
   alternates: {
-    canonical: 'https://c9communications.com.au/case-studies',
+    canonical: 'https://c9-communications.vercel.app/case-studies',
   },
   openGraph: {
-    url: "https://c9communications.com.au/case-studies",
+    url: "https://c9-communications.vercel.app/case-studies",
     title: "Case Studies | Operational Proof & Success Stories | C9 Communications",
     description: "Real-world infrastructure stabilisations and measurable outcomes for Australian enterprise environments.",
     images: [{ url: '/og-image.png' }]

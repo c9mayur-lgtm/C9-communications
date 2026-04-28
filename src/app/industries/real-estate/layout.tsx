@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IT & Telco for Real Estate | C9 Communications',
     description: 'Flexible, scalable systems built for distributed teams and fast-moving operations.',
-    url: 'https://c9communications.com.au/industries/real-estate',
+    url: 'https://c9-communications.vercel.app/industries/real-estate',
   },
 };
 

@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: "https://c9communications.com.au",
+    url: "https://c9-communications.vercel.app",
     siteName: "C9 Communications",
     title: "C9 Communications | Modern Telco & IT Solutions",
     description: "Secure, fast, and reliable business connectivity and IT services powered by Australian experts.",
@@ -114,8 +114,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "C9 Communications",
-              "url": "https://c9communications.com.au",
-              "logo": "https://c9communications.com.au/next.svg",
+              "url": "https://c9-communications.vercel.app",
+              "logo": "https://c9-communications.vercel.app/next.svg",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+61-1300-999-999",
@@ -137,10 +137,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "C9 Communications",
-              "url": "https://c9communications.com.au",
+              "url": "https://c9-communications.vercel.app",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://c9communications.com.au/search?q={search_term_string}",
+                "target": "https://c9-communications.vercel.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

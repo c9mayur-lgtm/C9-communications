@@ -702,7 +702,7 @@ export const InteractiveHeroDashboard = () => {
       <div className="flex items-center gap-2 px-6 py-4 border-b" style={{ background: '#F8FAFF', borderColor: BD }}>
         {['#FF5F57','#FEBC2E','#28C840'].map(c => <div key={c} className="w-3 h-3 rounded-full shadow-sm" style={{ background: c }} />)}
         <div className="flex-1 mx-4 rounded-full px-4 py-1.5 text-[11px] font-bold text-center border bg-white shadow-inner" style={{ borderColor: BD, color: TM }}>
-          portal.c9communications.com.au — <span className="text-[#5D00D6]">Live Managed Workspace</span>
+          portal.c9-communications.vercel.app — <span className="text-[#5D00D6]">Live Managed Workspace</span>
         </div>
       </div>
 

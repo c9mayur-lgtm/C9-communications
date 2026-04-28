@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IT & Telco for Professional Services | C9 Communications',
     description: 'High-performance environments that support productivity, communication, and growth.',
-    url: 'https://c9communications.com.au/industries/professional-services',
+    url: 'https://c9-communications.vercel.app/industries/professional-services',
   },
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IT & Telco for Education | C9 Communications',
     description: 'Reliable infrastructure that supports learning, administration, and access at scale.',
-    url: 'https://c9communications.com.au/industries/education',
+    url: 'https://c9-communications.vercel.app/industries/education',
   },
 };
 

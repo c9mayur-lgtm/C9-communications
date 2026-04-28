@@ -48,7 +48,7 @@ export const metadata = {
     title: 'Backup & Disaster Recovery | C9 Communications',
     description:
       'Managed backup with tested recovery. Defined RTO and RPO. Ransomware-resistant storage. Australian team.',
-    url: 'https://c9communications.com.au/managed-it/backup-disaster-recovery',
+    url: 'https://c9-communications.vercel.app/managed-it/backup-disaster-recovery',
   },
 }
 

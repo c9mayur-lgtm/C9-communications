@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IT & Telco for Multi-Site Retail | C9 Communications',
     description: 'Reliable, multi-site infrastructure designed to keep every store connected and operational.',
-    url: 'https://c9communications.com.au/industries/retail',
+    url: 'https://c9-communications.vercel.app/industries/retail',
   },
 };
 

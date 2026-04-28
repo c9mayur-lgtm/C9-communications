@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: "High-authority infrastructure control for enterprise organizations. SLA enforcement, multi-site governance, and accountable IT management for CIOs and CTOs.",
   keywords: ["Enterprise IT Governance", "SLA Enforcement", "Multi-site IT Management", "Infrastructure Control", "C9 Communications"],
   alternates: {
-    canonical: 'https://c9communications.com.au/enterprise',
+    canonical: 'https://c9-communications.vercel.app/enterprise',
   },
   openGraph: {
-    url: "https://c9communications.com.au/enterprise",
+    url: "https://c9-communications.vercel.app/enterprise",
     title: "Enterprise Infrastructure Governance | SLA Enforcement | C9 Communications",
     description: "High-authority infrastructure control for enterprise organizations. SLA enforcement and multi-site governance.",
     images: [{ url: '/og-image.png' }]

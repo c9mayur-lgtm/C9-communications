@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Voice Systems | Managed Communication Solutions | C9 Communications',
     description: 'C9 Voice gives your business a complete communication system. Cloud calling, smart routing, mobile, Microsoft Teams, and Australian support.',
-    url: 'https://c9communications.com.au/telco/voice-systems',
+    url: 'https://c9-communications.vercel.app/telco/voice-systems',
   }
 };
 

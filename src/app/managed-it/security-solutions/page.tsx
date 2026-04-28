@@ -43,7 +43,7 @@ export const metadata = {
   openGraph: {
     title: "Security Solutions | C9 Communications",
     description: "Managed IT security baseline and C9 Defense enterprise cybersecurity for Australian organisations.",
-    url: "https://c9communications.com.au/managed-it/security-solutions",
+    url: "https://c9-communications.vercel.app/managed-it/security-solutions",
   },
 }
 

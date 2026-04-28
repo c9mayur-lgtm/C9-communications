@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IT & Telco for Healthcare | C9 Communications',
     description: 'Secure, stable systems that support patient care and operational continuity.',
-    url: 'https://c9communications.com.au/industries/healthcare',
+    url: 'https://c9-communications.vercel.app/industries/healthcare',
   },
 };
 

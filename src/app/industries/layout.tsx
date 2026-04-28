@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: "Specialized infrastructure and communication solutions for Healthcare, Retail, Education, and Professional Services across Australia.",
   keywords: ["Industry IT Solutions", "Retail Technology Australia", "Healthcare IT Support", "Education Networking", "C9 Communications"],
   alternates: {
-    canonical: 'https://c9communications.com.au/industries',
+    canonical: 'https://c9-communications.vercel.app/industries',
   },
   openGraph: {
-    url: "https://c9communications.com.au/industries",
+    url: "https://c9-communications.vercel.app/industries",
     title: "Industry Expertise | Specialized IT & Telco Solutions | C9 Communications",
     description: "Specialized infrastructure and communication solutions for Healthcare, Retail, Education, and Professional Services.",
     images: [{ url: '/og-image.png' }]

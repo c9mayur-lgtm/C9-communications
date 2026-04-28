@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Industry IT & Telco Solutions | C9 Communications",
     description: "Technology solutions built for the way your industry operates.",
-    url: "https://c9communications.com.au/industries",
+    url: "https://c9-communications.vercel.app/industries",
   },
 }
 

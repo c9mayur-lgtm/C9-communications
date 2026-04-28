@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IT & Telco for Hospitality | C9 Communications',
     description: 'Consistent connectivity and communications for better guest experience.',
-    url: 'https://c9communications.com.au/industries/hospitality',
+    url: 'https://c9-communications.vercel.app/industries/hospitality',
   },
 };
 
