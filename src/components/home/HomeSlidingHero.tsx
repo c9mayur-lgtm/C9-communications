@@ -139,15 +139,39 @@ export const HomeSlidingHero = () => {
       </div>
 
       {/* Navigation Indicators */}
-      <div className="absolute bottom-10 left-6 md:left-[50%] md:-translate-x-1/2 flex gap-3 z-30">
-        {slides.map((_, i) => (
+      <div className="absolute bottom-6 left-6 md:left-[max(24px,calc(50%-620px))] flex items-center gap-4 z-30">
+        {slides.map((s, i) => (
           <button
             key={i}
-            onClick={() => setCurrent(i)}
-            className={`h-1.5 transition-all rounded-full border-[8px] border-transparent bg-clip-padding ${
-              i === current ? 'w-10 bg-[#5D00D6]' : 'w-4 bg-slate-200 hover:bg-slate-300'
-            }`}
-          />
+            onClick={() => { setCurrent(i); setDirection(i > current ? 1 : -1); }}
+            className="flex flex-col items-start gap-1.5 group"
+            aria-label={`Go to slide ${i + 1}: ${s.eyebrow}`}
+          >
+            {/* Slide label */}
+            <span className={`text-[9px] font-black uppercase tracking-[0.2em] leading-none transition-colors duration-300 ${
+              i === current ? 'text-[#5D00D6]' : 'text-slate-300 group-hover:text-slate-400'
+            }`}>
+              {s.eyebrow}
+            </span>
+            {/* Progress bar track */}
+            <div className={`h-[3px] rounded-full transition-all duration-300 overflow-hidden ${
+              i === current ? 'w-16 bg-slate-200' : 'w-8 bg-slate-100 group-hover:bg-slate-200'
+            }`}>
+              {i === current && (
+                <motion.div
+                  key={current}
+                  className="h-full rounded-full"
+                  style={{ backgroundColor: s.dotColor }}
+                  initial={{ width: '0%' }}
+                  animate={{ width: '100%' }}
+                  transition={{ duration: 8, ease: 'linear' }}
+                />
+              )}
+              {i !== current && (
+                <div className="h-full w-full rounded-full" style={{ backgroundColor: s.dotColor, opacity: 0.3 }} />
+              )}
+            </div>
+          </button>
         ))}
       </div>
 
