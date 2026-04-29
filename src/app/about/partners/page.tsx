@@ -77,7 +77,7 @@ export default function PartnersPage() {
                   <ul className="space-y-4">
                     {partner.points.map((pt, i) => (
                       <li key={i} className="flex items-center gap-3 text-[#1A1A2E] font-medium">
-                        <CheckCircle2 size={18} className="text-[#5D00D6]" /> {pt}
+                        <CheckCircle2 size={12} className="text-[#5D00D6]" /> {pt}
                       </li>
                     ))}
                   </ul>

@@ -247,7 +247,7 @@ export const WpFloatingContact = () => {
                     <div className="shrink-0 p-4 bg-white border-t border-gray-100">
                       {submitted ? (
                         <div className="flex items-center gap-3 py-2 text-[#5D00D6]">
-                          <CheckCircle size={20} />
+                          <CheckCircle size={12} />
                           <span className="font-bold text-[14px]">We'll be in touch shortly!</span>
                         </div>
                       ) : currentFlow?.isForm ? (

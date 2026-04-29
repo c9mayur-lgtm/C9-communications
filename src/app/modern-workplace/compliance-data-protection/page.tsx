@@ -310,7 +310,7 @@ export default function CompliancePage() {
                     <td className="p-8 text-gray-500 font-medium">{row.s}</td>
                     <td className="p-8">
                       <span className="inline-flex items-center gap-2 text-[#00875A] font-bold">
-                        <CheckCircle2 size={16} /> {row.o}
+                        <CheckCircle2 size={12} /> {row.o}
                       </span>
                     </td>
                   </tr>

@@ -82,7 +82,7 @@ export default function MobilePlansPage() {
                        'Priority Australian Support'
                     ].map((item) => (
                        <div key={item} className="flex items-center gap-3">
-                          <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                          <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                           <span className="text-slate-700 font-bold text-[14px]">{item}</span>
                        </div>
                     ))}
@@ -431,7 +431,7 @@ export default function MobilePlansPage() {
                      <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
                      <div className="absolute bottom-8 left-8 text-white">
                         <div className="flex items-center gap-2 mb-2">
-                           <CheckCircle2 size={18} className="text-emerald-400" />
+                           <CheckCircle2 size={12} className="text-emerald-400" />
                            <span className="text-[12px] font-bold uppercase tracking-widest">Environment Tested</span>
                         </div>
                         <h4 className="text-[24px] font-bold">Industrial & Field Ready</h4>

@@ -74,7 +74,7 @@ export const WpSupport = () => {
               ].map((item, i) => (
                 <div key={i} className="flex gap-5">
                   <div className="w-8 h-8 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-1">
-                    <CheckCircle size={16} className="text-[#5D00D6]" strokeWidth={2} />
+                    <CheckCircle size={12} className="text-[#5D00D6]" strokeWidth={2} />
                   </div>
                   <div>
                     <h4 className="c9-card-title !text-[18px] text-[#0c1024] mb-1">{item.title}</h4>

@@ -190,7 +190,7 @@ const CASE_STUDIES: Record<string, any> = {
 
         <div className="my-12 bg-emerald-50 border-emerald-200 border p-8 rounded-3xl">
            <div className="flex items-center gap-3 text-emerald-600 font-bold mb-4">
-              <CheckCircle2 size={20} />
+              <CheckCircle2 size={12} />
               <span>Migration Milestone</span>
            </div>
            <p className="text-emerald-900 text-[18px] font-medium leading-relaxed m-0">
@@ -368,7 +368,7 @@ export default function CaseStudyPage() {
                 {/* Visual Anchor Block */}
                 <div className="mt-12 p-6 rounded-2xl bg-white border border-slate-200 text-center shadow-lg shadow-[#5D00D6]/5">
                   <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle size={20} />
+                    <CheckCircle size={12} />
                   </div>
                   <h5 className="font-bold text-slate-900 text-[15px] mb-2">Verified Result</h5>
                   <p className="text-slate-500 text-[13px] mb-5">This case study represents actual operational outcomes achieved by C9.</p>

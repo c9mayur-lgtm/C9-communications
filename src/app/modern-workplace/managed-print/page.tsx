@@ -309,7 +309,7 @@ export default function ManagedPrintPage() {
                     <td className="p-8 text-gray-500 font-medium">{row.o}</td>
                     <td className="p-8">
                       <span className="inline-flex items-center gap-2 text-[#5D00D6] font-bold">
-                        <CheckCircle2 size={16} /> {row.c}
+                        <CheckCircle2 size={12} /> {row.c}
                       </span>
                     </td>
                   </tr>

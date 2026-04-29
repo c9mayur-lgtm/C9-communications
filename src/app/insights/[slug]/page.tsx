@@ -161,7 +161,7 @@ const INSIGHTS: Record<string, any> = {
 
         <div className="my-12 bg-emerald-50 border-emerald-200 border p-8 rounded-3xl">
            <div className="flex items-center gap-3 text-emerald-600 font-bold mb-4">
-              <CheckCircle size={20} />
+              <CheckCircle size={12} />
               <span>Unified Workflow</span>
            </div>
            <p className="text-emerald-900 text-[18px] font-medium leading-relaxed m-0">

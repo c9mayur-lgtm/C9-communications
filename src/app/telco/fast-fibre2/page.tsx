@@ -239,18 +239,18 @@ export default function FastFibrePage() {
                 <h4 className="text-xl font-bold text-[#1A1A2E] mb-4">Option 1: Fibre 400</h4>
                 <p className="text-gray-600 font-bold mb-4">Best for:</p>
                 <ul className="space-y-3">
-                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Small to mid teams</li>
-                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Daily cloud usage</li>
-                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Stable operations</li>
+                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={12} className="text-[#5D00D6]" /> Small to mid teams</li>
+                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={12} className="text-[#5D00D6]" /> Daily cloud usage</li>
+                    <li className="flex items-center gap-2 text-gray-700"><CheckCircle2 size={12} className="text-[#5D00D6]" /> Stable operations</li>
                 </ul>
             </div>
             <div className="bg-[#1A1A2E] p-8 rounded-2xl border border-white/10 text-white">
                 <h4 className="text-xl font-bold mb-4">Option 2: Fibre 1000</h4>
                 <p className="text-gray-400 font-bold mb-4">Best for:</p>
                 <ul className="space-y-3">
-                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={16} className="text-[#5D00D6]" /> High-demand environments</li>
-                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Heavy cloud, video, and VoIP</li>
-                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={16} className="text-[#5D00D6]" /> Growing or multi-location teams</li>
+                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={12} className="text-[#5D00D6]" /> High-demand environments</li>
+                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={12} className="text-[#5D00D6]" /> Heavy cloud, video, and VoIP</li>
+                    <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 size={12} className="text-[#5D00D6]" /> Growing or multi-location teams</li>
                 </ul>
             </div>
         </div>

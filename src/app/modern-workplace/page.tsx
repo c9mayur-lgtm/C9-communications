@@ -446,7 +446,7 @@ export default function ModernWorkplacePage() {
                   <div className="flex flex-col gap-3 mb-8 flex-grow">
                     {plan.features.map(f => (
                       <div key={f} className="flex items-center gap-3">
-                        <CheckCircle2 size={15} className="shrink-0" style={{ color: plan.highlight ? 'rgba(255,255,255,0.75)' : P }} />
+                        <CheckCircle2 size={12} className="shrink-0" style={{ color: plan.highlight ? 'rgba(255,255,255,0.75)' : P }} />
                         <span className="text-[14px]" style={{ color: plan.highlight ? 'rgba(255,255,255,0.85)' : TM2 }}>{f}</span>
                       </div>
                     ))}

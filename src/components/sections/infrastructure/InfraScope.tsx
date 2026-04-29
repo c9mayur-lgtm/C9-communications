@@ -276,7 +276,7 @@ const MockupBackup = () => (
               <p className="text-[12px] font-semibold text-text-primary">{job.name}</p>
               <p className="text-[10px] text-text-secondary">{job.size} · {job.time}</p>
             </div>
-            <CheckCircle2 size={16} className="text-emerald-500" />
+            <CheckCircle2 size={12} className="text-emerald-500" />
           </div>
         ))}
       </div>

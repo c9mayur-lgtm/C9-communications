@@ -75,7 +75,7 @@ export default function InboundVisual() {
                   <p className="text-[11px] text-green-500 font-bold uppercase tracking-widest">Available</p>
                </div>
                <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                  <CheckCircle size={16} className="text-green-500" />
+                  <CheckCircle size={12} className="text-green-500" />
                </div>
             </motion.div>
 

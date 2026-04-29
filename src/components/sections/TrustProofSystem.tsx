@@ -91,7 +91,7 @@ export const TrustProofSystem = ({
             {cases.map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="flex items-start gap-4 p-6 rounded-xl bg-slate-50/50 border border-slate-100 hover:border-[#5D00D6]/20 transition-colors">
-                  <CheckCircle size={20} className="text-[#5D00D6] mt-1 shrink-0" />
+                  <CheckCircle size={12} className="text-[#5D00D6] mt-1 shrink-0" />
                   <div>
                     <h4 className="font-bold text-slate-900 text-[14px] mb-1">{item.title}</h4>
                     <p className="text-slate-600 text-[14px] leading-relaxed">{item.desc}</p>
@@ -123,7 +123,7 @@ export const TrustProofSystem = ({
                   { label: "One partner across IT and communications", icon: <Users size={18} /> },
                   { label: "Reduced vendor complexity", icon: <ShieldCheck size={18} /> },
                   { label: "Consistent systems across locations", icon: <Zap size={18} /> },
-                  { label: "Real support from people who understand", icon: <CheckCircle size={18} /> }
+                  { label: "Real support from people who understand", icon: <CheckCircle size={12} /> }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3">
                     <div className="text-[#a56eff] shrink-0">{item.icon}</div>

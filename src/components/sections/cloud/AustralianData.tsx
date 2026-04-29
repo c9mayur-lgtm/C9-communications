@@ -35,7 +35,7 @@ export default function AustralianData() {
                 "Relevant for healthcare, finance, government, and legal"
               ].map((feature, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <CheckCircle size={18} className="text-brand-purple shrink-0" />
+                  <CheckCircle size={12} className="text-brand-purple shrink-0" />
                   <span className="text-[14px] text-white font-medium" style={FONT_FAMILY}>{feature}</span>
                 </div>
               ))}

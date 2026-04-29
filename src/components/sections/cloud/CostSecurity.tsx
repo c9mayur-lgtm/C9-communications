@@ -36,7 +36,7 @@ export default function CostSecurity() {
                 "Budget alerts and anomaly detection"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <CheckCircle size={16} className="text-brand-purple shrink-0" />
+                  <CheckCircle size={12} className="text-brand-purple shrink-0" />
                   <span className="text-[14px] text-text-primary font-semibold" style={FONT_FAMILY}>{item}</span>
                 </div>
               ))}
@@ -70,7 +70,7 @@ export default function CostSecurity() {
                 "Privileged identity management"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <CheckCircle size={16} className="text-brand-purple shrink-0" />
+                  <CheckCircle size={12} className="text-brand-purple shrink-0" />
                   <span className="text-[14px] text-text-primary font-semibold" style={FONT_FAMILY}>{item}</span>
                 </div>
               ))}

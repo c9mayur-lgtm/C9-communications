@@ -128,7 +128,7 @@ export default function EngagementModel() {
                   )}
                 >
                   {isDone
-                    ? <CheckCircle size={18} className="text-[#5D00D6]" />
+                    ? <CheckCircle size={12} className="text-[#5D00D6]" />
                     : <StepIcon size={18} className={isActive ? 'text-white' : 'text-[#5D00D6]'} />
                   }
                 </div>

@@ -44,7 +44,7 @@ export default function TestingCommitment() {
               <div className="flex flex-col gap-3 mt-6">
                 {features.map((f, i) => (
                   <div key={i} className="flex gap-3 items-start">
-                    <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: '#5D00D6' }} />
+                    <CheckCircle size={12} className="shrink-0 mt-0.5" style={{ color: '#5D00D6' }} />
                     <span className="text-[14px] text-[#0c1024] font-normal leading-relaxed" style={{ fontFamily: F }}>{f}</span>
                   </div>
                 ))}

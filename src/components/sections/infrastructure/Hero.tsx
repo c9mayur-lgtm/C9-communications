@@ -125,7 +125,7 @@ export default function Hero() {
               <div className="flex flex-wrap gap-5 md:gap-8 mt-10 md:mt-12 pb-4">
                 {[ "Design, deploy and manage", "Australian-based team", "HP, Dell and Microsoft partners" ].map((text, i) => (
                   <span key={i} className="flex flex-row items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
-                    <CheckCircle size={16} className="text-[#5D00D6]" /> {text}
+                    <CheckCircle size={12} className="text-[#5D00D6]" /> {text}
                   </span>
                 ))}
               </div>

@@ -124,7 +124,7 @@ export const WpHero = () => {
               <div className="flex items-center gap-5 md:gap-8 mt-10 flex-wrap">
                 {activeContent.tags.map((t: string, i: number) => (
                   <span key={i} className="inline-flex items-center gap-2">
-                    <CheckCircle size={16} className="text-[#5D00D6] shrink-0 xl:text-[#5D00D6]" />
+                    <CheckCircle size={12} className="text-[#5D00D6] shrink-0 xl:text-[#5D00D6]" />
                     <span className="c9-eyebrow !text-white xl:!text-slate-500 tracking-widest leading-none pt-0.5 whitespace-nowrap">
                       {t}
                     </span>

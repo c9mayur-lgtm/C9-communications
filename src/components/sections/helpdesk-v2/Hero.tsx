@@ -72,7 +72,7 @@ const LiveChatVisual = () => {
       <AnimatePresence>
         {visible >= MESSAGES.length && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="mx-6 mb-4 flex items-center gap-3 bg-emerald-50 border border-emerald-100 rounded-2xl px-5 py-3">
-            <CheckCircle size={18} className="text-emerald-600 shrink-0" />
+            <CheckCircle size={12} className="text-emerald-600 shrink-0" />
             <div>
               <p className="text-[14px] font-bold text-emerald-800">Issue resolved in under 10 minutes</p>
               <p className="text-[11px] text-emerald-600 font-medium">Sarah is back online before her client call.</p>
@@ -150,7 +150,7 @@ export default function Hero() {
               <div className="flex flex-wrap gap-5 md:gap-8 mt-10 md:mt-12 pb-4">
                 {[ "Australian-based team", "Remote + on-site support", "Dedicated account manager" ].map((text, i) => (
                   <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
-                    <CheckCircle size={16} className="text-[#5D00D6]" /> {text}
+                    <CheckCircle size={12} className="text-[#5D00D6]" /> {text}
                   </span>
                 ))}
               </div>

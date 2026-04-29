@@ -209,7 +209,7 @@ const SectionTelcoIntegration = () => (
                      { title: "Performance Control", desc: "End-to-end management allows us to optimize traffic flow from the device to the data center." }
                   ].map((item, i) => (
                      <div key={i} className="flex gap-4">
-                        <div className="mt-1 flex-shrink-0"><CheckCircle size={20} className="text-[#5D00D6]" /></div>
+                        <div className="mt-1 flex-shrink-0"><CheckCircle size={12} className="text-[#5D00D6]" /></div>
                         <div>
                            <h4 className="font-bold text-slate-900 text-[16px]">{item.title}</h4>
                            <p className="text-slate-500 text-[14px]">{item.desc}</p>

@@ -445,7 +445,7 @@ export default function ProductivityPage() {
                  {/* Floating Element */}
                  <motion.div animate={{ y: [-5, 5, -5] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute -top-4 -left-6 bg-white rounded-2xl shadow-xl border border-[#DCCDF8] p-4 flex gap-3 items-center z-30">
                     <div className="w-10 h-10 rounded-xl bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center shrink-0">
-                       <CheckCircle2 size={18} />
+                       <CheckCircle2 size={12} />
                     </div>
                     <div>
                        <div className="text-[10px] font-bold text-gray-400 uppercase">Licensing Optimization</div>

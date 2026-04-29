@@ -68,7 +68,7 @@ export const VoiceDualAudience = () => {
               <ul className="space-y-3 mb-10">
                 {['Keep your existing numbers', 'Works on desk phones and mobiles', 'One monthly bill, no surprises', 'Australian support team included'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-[#0c1024] font-medium text-[14px]">
-                    <CheckCircle2 size={18} className="text-[#5D00D6] shrink-0" strokeWidth={2.5} />
+                    <CheckCircle2 size={12} className="text-[#5D00D6] shrink-0" strokeWidth={2.5} />
                     {item}
                   </li>
                 ))}
@@ -110,7 +110,7 @@ export const VoiceDualAudience = () => {
               <ul className="space-y-3 mb-10">
                 {['Multi-site & multi-country', 'Microsoft Teams Direct Routing', 'Contact centre layer available', 'Dedicated account manager', 'SLA-backed uptime guarantee'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-slate-300 font-medium text-[14px]">
-                    <CheckCircle2 size={18} className="text-[#5D00D6] shrink-0" strokeWidth={2.5} />
+                    <CheckCircle2 size={12} className="text-[#5D00D6] shrink-0" strokeWidth={2.5} />
                     {item}
                   </li>
                 ))}

@@ -186,7 +186,7 @@ export default function Hero() {
                   "Migration + ongoing management"
                 ].map((text, i) => (
                   <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
-                    <CheckCircle size={16} className="text-[#5D00D6]" /> {text}
+                    <CheckCircle size={12} className="text-[#5D00D6]" /> {text}
                   </span>
                 ))}
               </div>

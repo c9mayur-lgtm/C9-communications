@@ -43,7 +43,7 @@ const TabCard = ({
           {features.map((feat, i) => (
             <div key={i} className="flex gap-4 items-start group">
               <div className="w-6 h-6 rounded-full bg-purple-50 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#5D00D6] transition-colors duration-300">
-                 <CheckCircle size={15} className="text-[#5D00D6] group-hover:text-white transition-colors" />
+                 <CheckCircle size={12} className="text-[#5D00D6] group-hover:text-white transition-colors" />
               </div>
               <span className="font-['Proxima_Nova'] text-[16px] text-[#1A1A2E] font-bold leading-tight tracking-tight">{feat}</span>
             </div>

@@ -258,7 +258,7 @@ export default function VisitorSolutionPage() {
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-10 h-10 rounded-xl bg-[#F4F0FA] flex items-center justify-center shrink-0 text-[#5D00D6]">
-                      <CheckCircle2 size={20} />
+                      <CheckCircle2 size={12} />
                     </div>
                     <div>
                       <h4 className="font-bold text-[#0C1024] mb-1">{item.t}</h4>
@@ -363,7 +363,7 @@ export default function VisitorSolutionPage() {
                     <td className="p-8 text-gray-500 font-medium">{row.p}</td>
                     <td className="p-8">
                       <span className="inline-flex items-center gap-2 text-[#00875A] font-bold">
-                        <CheckCircle2 size={16} /> {row.o}
+                        <CheckCircle2 size={12} /> {row.o}
                       </span>
                     </td>
                   </tr>

@@ -62,7 +62,7 @@ export default function TransformSection() {
                     transition={{ delay: idx * 0.05 }}
                     className="flex items-center gap-3 bg-white/5 hover:bg-[#5D00D6]/20 border border-white/10 hover:border-[#5D00D6]/50 px-6 py-4 rounded-full transition-all cursor-default shadow-lg"
                 >
-                    <CheckCircle2 size={16} className="text-[#5D00D6]" />
+                    <CheckCircle2 size={12} className="text-[#5D00D6]" />
                     <span className="text-white font-medium text-[14px]">{item}</span>
                 </motion.div>
             ))}

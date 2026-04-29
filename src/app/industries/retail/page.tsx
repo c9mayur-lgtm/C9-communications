@@ -96,7 +96,7 @@ const Hero = () => (
             <div className="flex flex-wrap gap-5">
               {['Multi-Site Standardisation', 'Holiday Trading Resilience', '24/7 NOC Overlay', 'POS Continuity'].map((t) => (
                 <div key={t} className="flex items-center gap-2 text-slate-500 text-[14px] font-bold">
-                  <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
+                  <CheckCircle size={12} className="text-[#5D00D6]" /> {t}
                 </div>
               ))}
             </div>

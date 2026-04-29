@@ -117,7 +117,7 @@ export default function MonitoringBlock() {
                   "Monthly network health report"
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 items-center group">
-                    <CheckCircle size={16} className="text-[#5D00D6] shrink-0" />
+                    <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                     <span className="font-['Proxima_Nova'] text-[15.5px] text-white/90 font-bold leading-tight tracking-tight group-hover:text-white group-hover:translate-x-1 duration-300 transition-all">{item}</span>
                   </div>
                 ))}

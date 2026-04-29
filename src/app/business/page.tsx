@@ -89,7 +89,7 @@ const Hero = () => (
                 '24/7 managed stability'
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                  <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                   <span className="text-slate-700 font-bold text-[14px]">{item}</span>
                 </div>
               ))}
@@ -344,7 +344,7 @@ const SectionSafety = () => (
                      { title: 'Compliance-Aligned Ops', desc: 'Standardised security controls across every system.' },
                   ].map((p, i) => (
                      <FadeIn key={i} delay={i * 0.08} direction="right" className="bg-white/10 backdrop-blur-sm border border-white/20 p-5 rounded-2xl flex items-center gap-4">
-                        <CheckCircle size={24} className="text-white shrink-0" />
+                        <CheckCircle size={12} className="text-white shrink-0" />
                         <div>
                            <p className="font-bold text-[16px] text-white">{p.title}</p>
                            <p className="text-white/80 text-[14px]">{p.desc}</p>
@@ -445,7 +445,7 @@ const SectionSupportSLA = () => (
                  'Dedicated support relationship model',
               ].map((item) => (
                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                    <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                     <span className="text-slate-900 font-bold text-[14px]">{item}</span>
                  </div>
               ))}

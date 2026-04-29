@@ -41,7 +41,7 @@ export default function C9Difference() {
                 "Australian-based team, no offshore routing"
               ].map((text, i) => (
                 <div key={i} className="flex items-start gap-2">
-                  <CheckCircle size={18} className="text-[#7B2FBE] shrink-0 mt-[2px]" />
+                  <CheckCircle size={12} className="text-[#7B2FBE] shrink-0 mt-[2px]" />
                   <span className="text-[14px] text-[#1A1A2E]" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>{text}</span>
                 </div>
               ))}

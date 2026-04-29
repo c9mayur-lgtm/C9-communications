@@ -52,7 +52,7 @@ export default function FinalCTA() {
               "Australian-based technical team"
             ].map((item, i) => (
                <div key={i} className="flex items-center justify-start gap-3">
-                  <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                  <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                   <span className="text-[14px] md:text-[14px] font-bold text-slate-500 tracking-tight leading-tight">{item}</span>
                </div>
             ))}

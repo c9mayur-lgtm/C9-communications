@@ -90,7 +90,7 @@ const Hero = () => (
                    'Board-Level Reporting'
                 ].map((item) => (
                    <div key={item} className="flex items-center gap-3">
-                      <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                      <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                       <span className="text-slate-700 font-bold text-[14px]">{item}</span>
                    </div>
                 ))}

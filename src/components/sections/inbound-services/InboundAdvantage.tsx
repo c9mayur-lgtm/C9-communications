@@ -10,7 +10,7 @@ const AdvantageItem = ({ title, description, metric, isLast }: { title: string, 
     {/* 1. SMALL CHECKMARK AT TOP */}
     <div className="mb-6">
         <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6]/10 group-hover:text-[#5D00D6] transition-colors duration-300">
-            <CheckCircle2 size={18} strokeWidth={2.5} />
+            <CheckCircle2 size={12} strokeWidth={2.5} />
         </div>
     </div>
 

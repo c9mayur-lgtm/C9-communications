@@ -74,7 +74,7 @@ export const FinalCTA = () => {
           >
             {trustItems.map((item, i) => (
               <div key={i} className="flex items-center gap-2.5">
-                <CheckCircle2 size={16} className="text-[#5D00D6]" />
+                <CheckCircle2 size={12} className="text-[#5D00D6]" />
                 <span className="c9-eyebrow !text-slate-500 !text-[11px] !tracking-wider normal-case">{item}</span>
               </div>
             ))}

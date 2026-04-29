@@ -93,7 +93,7 @@ const Hero = () => (
                    'Multi-Vendor Orchestration'
                 ].map((item) => (
                    <div key={item} className="flex items-center gap-3">
-                      <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                      <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                       <span className="text-slate-700 font-bold text-[14px]">{item}</span>
                    </div>
                 ))}
@@ -324,7 +324,7 @@ const SectionAccountability = () => (
                         { title: 'Unified Control System', desc: 'Coordinated governance across IT, Cloud, and Telco providers into one reporting layer.' }
                      ].map((item, i) => (
                         <div key={i} className="flex gap-4">
-                           <div className="mt-1"><CheckCircle size={20} className="text-[#5D00D6]" /></div>
+                           <div className="mt-1"><CheckCircle size={12} className="text-[#5D00D6]" /></div>
                            <div>
                               <strong className="block text-slate-900 text-[16px] font-bold">{item.title}</strong>
                               <span className="text-slate-500 text-[14px]">{item.desc}</span>

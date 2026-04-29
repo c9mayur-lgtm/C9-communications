@@ -71,7 +71,7 @@ export default function Analytics() {
             >
                 {analyticsCapabilities.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 size={18} className="text-[#5D00D6] shrink-0 mt-0.5" />
+                        <CheckCircle2 size={12} className="text-[#5D00D6] shrink-0 mt-0.5" />
                         <span className="text-[14px] text-[#0c1024] font-medium leading-snug">{item}</span>
                     </li>
                 ))}

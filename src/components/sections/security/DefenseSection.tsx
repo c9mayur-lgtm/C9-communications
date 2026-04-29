@@ -75,7 +75,7 @@ export default function DefenseSection() {
                 "Board-ready security posture reports"
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
-                  <CheckCircle size={20} className="text-[#946CE2] shrink-0 mt-0.5" />
+                  <CheckCircle size={12} className="text-[#946CE2] shrink-0 mt-0.5" />
                   <span className="text-[16px] text-white font-medium leading-relaxed">{item}</span>
                 </div>
               ))}

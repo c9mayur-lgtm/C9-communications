@@ -115,7 +115,7 @@ const LiveChatVisual = () => {
       <AnimatePresence>
         {visible >= MESSAGES.length && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="mx-6 mb-4 flex items-center gap-3 bg-emerald-50 border border-emerald-100 rounded-2xl px-5 py-3">
-            <CheckCircle size={18} className="text-emerald-600 shrink-0" />
+            <CheckCircle size={12} className="text-emerald-600 shrink-0" />
             <div>
               <p className="text-[14px] font-bold text-emerald-800">Issue resolved in under 10 minutes</p>
               <p className="text-[11px] text-emerald-600 font-medium">Sarah is back online before her client call.</p>
@@ -180,7 +180,7 @@ const Hero = () => (
                    'Single Point of Accountability'
                 ].map((item) => (
                    <div key={item} className="flex items-center gap-3">
-                      <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                      <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                       <span className="text-slate-700 font-bold text-[14px]">{item}</span>
                    </div>
                 ))}
@@ -410,14 +410,14 @@ const SectionOutcomes = () => (
                </div>
                <div className="space-y-6 mb-8">
                   <div className="flex gap-4">
-                     <div className="mt-1"><CheckCircle size={18} className="text-[#a56eff]" /></div>
+                     <div className="mt-1"><CheckCircle size={12} className="text-[#a56eff]" /></div>
                      <div>
                         <p className="font-bold text-white text-[14px]">Retail site outage resolved in 18 minutes.</p>
                         <p className="text-white/60 text-sm">Critical network failure at flagship location restored during peak hours.</p>
                      </div>
                   </div>
                   <div className="flex gap-4">
-                     <div className="mt-1"><CheckCircle size={18} className="text-[#a56eff]" /></div>
+                     <div className="mt-1"><CheckCircle size={12} className="text-[#a56eff]" /></div>
                      <div>
                         <p className="font-bold text-white text-[14px]">Centralized support for 45+ locations.</p>
                         <p className="text-white/60 text-sm">Consolidated multi-state site support into one accountable dashboard.</p>

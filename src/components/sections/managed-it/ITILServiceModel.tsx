@@ -73,7 +73,7 @@ export default function ITILServiceModel() {
                   'Standardised Documentation Framework'
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4">
-                    <CheckCircle size={18} className="text-[#5D00D6]" />
+                    <CheckCircle size={12} className="text-[#5D00D6]" />
                     <span className="text-[15px] font-bold text-slate-700">{item}</span>
                   </div>
                 ))}

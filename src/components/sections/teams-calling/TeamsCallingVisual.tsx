@@ -172,7 +172,7 @@ export default function TeamsCallingVisual() {
       >
         <div className="bg-white border border-gray-100 shadow-xl rounded-2xl px-4 py-3 flex items-center gap-3">
           <div className="w-8 h-8 rounded-full bg-[#5D00D6] flex items-center justify-center">
-            <CheckCircle2 size={16} className="text-white" />
+            <CheckCircle2 size={12} className="text-white" />
           </div>
           <div>
             <p className="text-[12px] font-bold text-[#0c1024] leading-none mb-0.5">Microsoft Certified</p>

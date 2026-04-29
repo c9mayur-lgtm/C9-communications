@@ -104,7 +104,7 @@ export default function SLACommitment() {
                     "Open items and pending actions"
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle size={18} className="text-[#7B2FBE] shrink-0" />
+                      <CheckCircle size={12} className="text-[#7B2FBE] shrink-0" />
                       <span className="text-[14px] text-white leading-snug" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                         {item}
                       </span>

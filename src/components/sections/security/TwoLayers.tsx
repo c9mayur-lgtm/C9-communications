@@ -44,7 +44,7 @@ export default function TwoLayers() {
                 "Security awareness basics"
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
-                  <CheckCircle size={18} className="text-[#5D00D6] shrink-0 mt-0.5" />
+                  <CheckCircle size={12} className="text-[#5D00D6] shrink-0 mt-0.5" />
                   <span className="text-[16px] text-[#1A1A2E] font-medium leading-snug">{item}</span>
                 </div>
               ))}
@@ -79,7 +79,7 @@ export default function TwoLayers() {
                 "Board-ready security posture reporting"
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
-                  <CheckCircle size={18} className="text-[#946CE2] shrink-0 mt-0.5" />
+                  <CheckCircle size={12} className="text-[#946CE2] shrink-0 mt-0.5" />
                   <span className="text-[16px] text-white font-medium leading-snug">{item}</span>
                 </div>
               ))}

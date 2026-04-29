@@ -240,7 +240,7 @@ export default function CaseStudiesPage() {
                                <p className="c9-eyebrow !text-[#A855F7] !text-[9px] mb-1">AUDIT STATUS</p>
                                <p className="text-[13px] font-bold text-white/90">Verified Operations Proof</p>
                              </div>
-                             <CheckCircle2 size={24} className="text-[#A855F7]/40 group-hover/audit:text-[#A855F7] transition-colors" />
+                             <CheckCircle2 size={12} className="text-[#A855F7]/40 group-hover/audit:text-[#A855F7] transition-colors" />
                           </div>
                         </div>
                       </div>

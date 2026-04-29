@@ -335,7 +335,7 @@ export default function SipTrunkingPage() {
                 ].map((item, i) => (
                    <li key={i} className="flex gap-4">
                      <div className="shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-0.5">
-                       <CheckCircle2 size={16} className="text-emerald-600" />
+                       <CheckCircle2 size={12} className="text-emerald-600" />
                      </div>
                      <div>
                        <div className="text-[16px] font-bold text-slate-900 mb-1">{item.t}</div>

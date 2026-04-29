@@ -95,7 +95,7 @@ const Hero = () => (
                    'SLA-Backed Accountability'
                 ].map((item) => (
                    <div key={item} className="flex items-center gap-3">
-                      <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                      <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                       <span className="text-slate-700 font-bold text-[16px]">{item}</span>
                    </div>
                 ))}
@@ -211,7 +211,7 @@ const SectionOutcomes = () => (
                   ].map((item, i) => (
                     <div key={i} className="flex gap-6 p-6 bg-white/5 rounded-3xl border border-white/10 hover:bg-[#5D00D6]/20 transition-all">
                        <div className="w-10 h-10 rounded-full bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] shrink-0">
-                          <CheckCircle size={20} />
+                          <CheckCircle size={12} />
                        </div>
                        <div>
                           <h4 className="font-bold text-white/90 mb-1">{item.title}</h4>

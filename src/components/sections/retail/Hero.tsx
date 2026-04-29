@@ -32,7 +32,7 @@ export default function Hero() {
             <div className="flex items-center gap-5 md:gap-8 mt-10 md:mt-12 flex-wrap pb-4">
               {['Multi-site retail experience', 'POS and payment system support', 'Failover connectivity standard'].map((t, i) => (
                 <span key={i} className="flex items-center gap-2 c9-body !text-[14px] !font-bold !text-slate-500">
-                  <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
+                  <CheckCircle size={12} className="text-[#5D00D6]" /> {t}
                 </span>
               ))}
             </div>

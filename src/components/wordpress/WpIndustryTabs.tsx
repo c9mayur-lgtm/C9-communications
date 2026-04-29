@@ -57,7 +57,7 @@ const OPERATING_MODEL = [
     href: '/managed-it/infrastructure',
     options: [
       { title: "Phased Migration", desc: "Moving systems in logical blocks.", icon: <Layers size={20} /> },
-      { title: "Parallel Validation", desc: "Running systems concurrently for testing.", icon: <CheckCircle size={20} /> },
+      { title: "Parallel Validation", desc: "Running systems concurrently for testing.", icon: <CheckCircle size={12} /> },
       { title: "Rollback Readiness", desc: "Pre-defined plans to revert instantly.", icon: <RefreshCw size={20} /> }
     ]
   }

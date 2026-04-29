@@ -33,7 +33,7 @@ export default function Hero() {
             <div className="flex items-center gap-5 md:gap-8 mt-10 md:mt-12 flex-wrap pb-4">
               {['HIPAA-aligned infrastructure', 'Multi-site network management', 'Essential 8 compliance ready'].map((t, i) => (
                 <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
-                  <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
+                  <CheckCircle size={12} className="text-[#5D00D6]" /> {t}
                 </span>
               ))}
             </div>

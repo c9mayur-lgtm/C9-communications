@@ -226,7 +226,7 @@ const SectionGuarantee = () => (
           <FadeIn key={i} delay={i * 0.05} className="group">
             <div className="h-full bg-white border border-slate-100 rounded-2xl p-6 hover:border-[#5D00D6]/20 transition-all hover:shadow-md">
               <div className="w-10 h-10 rounded-full bg-[#5D00D6]/5 flex items-center justify-center mb-4 group-hover:bg-[#5D00D6]/10 transition-colors">
-                <CheckCircle size={16} className="text-[#5D00D6]" />
+                <CheckCircle size={12} className="text-[#5D00D6]" />
               </div>
               <h3 className="font-bold text-slate-900 text-[16px] mb-2">{s.label}</h3>
               <p className="text-slate-500 text-[14px] leading-relaxed">{s.desc}</p>
@@ -457,7 +457,7 @@ const SectionSupport = () => (
               'Nationwide delivery & local coordination'
             ].map((p, i) => (
               <li key={i} className="flex items-center gap-3">
-                <CheckCircle size={16} className="text-[#a56eff] shrink-0" />
+                <CheckCircle size={12} className="text-[#a56eff] shrink-0" />
                 <span className="text-white/80 text-[14px] font-medium">{p}</span>
               </li>
             ))}
@@ -556,7 +556,7 @@ const SectionAccountability = () => (
                       'Day One Operational Guarantee'
                    ].map(t => (
                       <div key={t} className="flex items-center gap-3 text-white/90 text-[14px] font-medium">
-                         <CheckCircle size={16} className="text-[#a56eff]" />
+                         <CheckCircle size={12} className="text-[#a56eff]" />
                          {t}
                       </div>
                    ))}
@@ -591,7 +591,7 @@ const SectionSecurity = () => (
           { icon: <Zap size={24} />, title: 'Monitoring & Alerts', desc: 'Real-time detection of anomalies and potential security threats.' },
           { icon: <Users2 size={24} />, title: 'Secure Remote Access', desc: 'VPN and zero-trust access for remote staff and management.' },
           { icon: <BadgeCheck size={24} />, title: 'Recovery Readiness', desc: 'Built-in backup and recovery protocols to ensure business continuity.' },
-          { icon: <CheckCircle size={24} />, title: 'Compliance Ready', desc: 'Infrastructure aligned with Australian security and privacy standards.' },
+          { icon: <CheckCircle size={12} />, title: 'Compliance Ready', desc: 'Infrastructure aligned with Australian security and privacy standards.' },
         ].map((item, i) => (
            <FadeIn key={i} delay={i * 0.05} className="bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm">
               <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center mb-6 text-[#5D00D6]">

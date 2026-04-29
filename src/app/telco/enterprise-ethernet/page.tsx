@@ -322,7 +322,7 @@ export default function EnterpriseEthernetPage() {
                   <div className="space-y-4">
                      {['ERP & CRM Cloud Instances', 'Real-Time Financial Systems', 'Critical VOIP & Video QoS', 'Multi-Site VLAN Infrastructure'].map(t => (
                        <div key={t} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                          <CheckCircle2 size={18} className="text-[#5D00D6]" />
+                          <CheckCircle2 size={12} className="text-[#5D00D6]" />
                           <span className="text-[14px] font-bold text-slate-800">{t}</span>
                        </div>
                      ))}

@@ -88,7 +88,7 @@ const Hero = () => (
                    'Azure & AWS Certified Architects'
                 ].map((item) => (
                    <div key={item} className="flex items-center gap-3">
-                      <CheckCircle size={18} className="text-[#5D00D6] shrink-0" />
+                      <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
                       <span className="text-slate-700 font-bold text-[14px]">{item}</span>
                    </div>
                 ))}
@@ -287,7 +287,7 @@ const SectionArchitecture = () => (
                      { icon: <ShieldCheck />, title: 'Redundancy & Failover', desc: 'Built-in business continuity with automated failover across multiple zones.' }
                   ].map((item, i) => (
                      <div key={i} className="flex gap-4">
-                        <div className="mt-1 text-[#a56eff]"><CheckCircle size={20} /></div>
+                        <div className="mt-1 text-[#a56eff]"><CheckCircle size={12} /></div>
                         <div>
                            <h4 className="font-bold text-[14px] text-white">{item.title}</h4>
                            <p className="text-white/60 text-sm">{item.desc}</p>

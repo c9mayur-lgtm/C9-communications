@@ -188,7 +188,7 @@ export default function FastFibrePage() {
           <FadeIn delay={0.4} className="mt-12 bg-white border border-slate-200 p-8 rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex gap-4 items-center">
               <div className="w-14 h-14 rounded-full bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0">
-                <CheckCircle2 size={24} />
+                <CheckCircle2 size={12} />
               </div>
               <p className="text-slate-900 font-bold text-lg leading-snug">
                 Shift your thinking from &ldquo;faster internet&rdquo; toward &ldquo;business resilience.&rdquo;
