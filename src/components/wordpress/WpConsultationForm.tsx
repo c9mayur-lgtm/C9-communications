@@ -56,7 +56,7 @@ export const WpConsultationForm = ({
               </p>
               
               <div className="mb-12">
-                <p className="c9-card-title !text-[24px] md:!text-[28px] text-[#0c1024]">
+                <p className="c9-card-title !text-[20px] sm:!text-[24px] md:!text-[28px] text-[#0c1024]">
                   Call us today: <a href="tel:1800000299" className="text-[#5D00D6] hover:text-[#4c00b0] transition-colors decoration-[#5D00D6]/20 underline underline-offset-8">1800 000 299</a>
                 </p>
               </div>

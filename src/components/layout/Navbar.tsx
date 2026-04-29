@@ -299,7 +299,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-100 shrink-0">
             <Link href="/" onClick={onClose}>
-              <img src="/images/c9_logo_scrolled.svg" alt="C9" className="h-[36px]" />
+              <img src="/images/c9_logo_scrolled.svg" alt="C9" className="h-[44px]" />
             </Link>
             <button onClick={onClose} className="p-2 text-slate-900 hover:bg-slate-50 rounded-lg">
               <X size={24} />
@@ -571,7 +571,7 @@ export const Navbar = () => {
       <TopUtilityBar />
       <nav 
         className={`transition-all duration-500 border-b bg-white/95 backdrop-blur-md ${
-          isScrolled ? 'py-1 shadow-sm border-gray-100' : 'py-1.5 border-gray-100'
+          isScrolled ? 'py-2.5 shadow-sm border-gray-100' : 'py-4 border-gray-100'
         }`}
         onMouseLeave={handleLeave}
       >
@@ -581,7 +581,7 @@ export const Navbar = () => {
                 <img 
                   src="/images/c9_logo_scrolled.svg" 
                   alt="C9 Communications" 
-                  className="h-[34px] w-auto object-contain" 
+                  className="h-[44px] w-auto object-contain" 
                 />
             </Link>
           </div>

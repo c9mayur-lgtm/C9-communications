@@ -58,9 +58,9 @@ export const HomeSlidingHero = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative h-[550px] lg:h-[600px] bg-white overflow-hidden border-b border-slate-100">
+    <section className="relative min-h-[600px] sm:h-[550px] lg:h-[600px] bg-white overflow-hidden border-b border-slate-100 flex items-center">
       <div className="container mx-auto px-6 md:px-8 h-full relative z-10" style={{ maxWidth: '1240px' }}>
-        <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center h-full pt-2 md:pt-4">
+        <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center h-full pt-8 pb-20 md:pt-4 md:pb-4">
           
           {/* Content Area */}
           <div className="relative z-20">
@@ -77,7 +77,7 @@ export const HomeSlidingHero = () => {
                   <span className="c9-eyebrow !text-slate-600">{slide.eyebrow}</span>
                 </div>
                 
-                <h1 className="c9-hero-title mb-4 whitespace-pre-line">
+                <h1 className="c9-hero-title mb-4 whitespace-normal sm:whitespace-pre-line">
                   {slide.title}
                 </h1>
                 
@@ -139,7 +139,7 @@ export const HomeSlidingHero = () => {
       </div>
 
       {/* Navigation Indicators */}
-      <div className="absolute bottom-6 left-6 md:left-[max(24px,calc(50%-620px))] flex items-center gap-4 z-30">
+      <div className="absolute bottom-8 left-6 md:left-[max(24px,calc(50%-620px))] flex items-center gap-4 z-30">
         {slides.map((s, i) => (
           <button
             key={i}

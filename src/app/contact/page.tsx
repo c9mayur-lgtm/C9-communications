@@ -108,14 +108,14 @@ export default function ContactPage() {
         </FadeIn>
       </Section>
 
-      <Section bg="white" className="pb-24 pt-0">
-        <div className="grid lg:grid-cols-[1fr_380px] gap-12">
+      <Section bg="white" className="pb-16 md:pb-24 pt-0">
+        <div className="grid lg:grid-cols-[1fr_380px] gap-8 md:gap-12">
           
           {/* ── CONVERSION ENGINE ── */}
           <div className="space-y-12">
             {/* Path Selection */}
             <FadeIn delay={0.3}>
-              <div className="grid sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {paths.map((path) => (
                   <ConversionOption 
                     key={path.id}
@@ -131,13 +131,13 @@ export default function ContactPage() {
 
             {/* FORM ── */}
             <FadeIn delay={0.4}>
-              <div className="bg-gray-50/50 border border-gray-100 rounded-[32px] p-8 md:p-12 relative overflow-hidden shadow-sm">
-                <div className="flex items-center gap-4 mb-10">
+              <div className="bg-gray-50/50 border border-gray-100 rounded-[32px] p-6 md:p-12 relative overflow-hidden shadow-sm">
+                <div className="flex items-center gap-4 mb-8 md:mb-10">
                   <div className="w-1.5 h-8 bg-[#5D00D6] rounded-full" />
-                  <H3 className="text-3xl tracking-tight">Requirement Details</H3>
+                  <H3 className="text-2xl md:text-3xl tracking-tight">Requirement Details</H3>
                 </div>
                 
-                <form onSubmit={e => e.preventDefault()} className="grid sm:grid-cols-2 gap-6">
+                <form onSubmit={e => e.preventDefault()} className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
                   <div>
                     <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Full Name</label>
                     <input type="text" placeholder="Your name" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
@@ -168,10 +168,10 @@ export default function ContactPage() {
                     <C9Button className="w-full py-5 text-lg shadow-lg shadow-purple-900/10">
                       {currentPath.buttonText} <ArrowRight size={18} className="ml-2" />
                     </C9Button>
-                    <div className="flex items-center justify-center gap-6 mt-8 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
-                      <span className="flex items-center gap-1.5"><Shield size={12} className="text-[#5D00D6]" /> Senior Engineer Review</span>
-                      <span className="flex items-center gap-1.5"><Clock size={12} className="text-[#5D00D6]" /> 2-Hour Response</span>
-                      <span className="flex items-center gap-1.5"><Zap size={12} className="text-[#5D00D6]" /> No Sales Fluff</span>
+                    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 mt-8 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+                      <span className="flex items-center gap-1.5 whitespace-nowrap"><Shield size={12} className="text-[#5D00D6]" /> Senior Engineer Review</span>
+                      <span className="flex items-center gap-1.5 whitespace-nowrap"><Clock size={12} className="text-[#5D00D6]" /> 2-Hour Response</span>
+                      <span className="flex items-center gap-1.5 whitespace-nowrap"><Zap size={12} className="text-[#5D00D6]" /> No Sales Fluff</span>
                     </div>
                   </div>
                 </form>

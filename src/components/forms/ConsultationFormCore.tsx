@@ -133,11 +133,11 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
              {ctaText || currentPath.btn} <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
           </Button>
           <div className="mt-8 flex flex-col items-center gap-4">
-            <div className="flex items-center gap-4 text-slate-400 text-[10px] font-bold uppercase tracking-widest opacity-80">
-              <span className="flex items-center gap-1.5"><Shield size={12} className="text-[#5D00D6]" /> Engineer Review</span>
-              <span className="flex items-center gap-1.5"><Clock size={12} className="text-[#5D00D6]" /> 2H Response</span>
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-slate-400 text-[10px] font-bold uppercase tracking-widest opacity-80">
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><Shield size={12} className="text-[#5D00D6]" /> Engineer Review</span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><Clock size={12} className="text-[#5D00D6]" /> 2H Response</span>
             </div>
-            <p className="text-[12px] text-slate-400 font-medium">Direct Engineer Response. No Sales Pressure.</p>
+            <p className="text-[12px] text-slate-400 font-medium text-center">Direct Engineer Response. No Sales Pressure.</p>
           </div>
         </div>
       </form>
