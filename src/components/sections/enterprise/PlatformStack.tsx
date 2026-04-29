@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layout, Database, Cloud, ArrowRight, CheckCircle, MonitorCheck, ShieldAlert, History } from 'lucide-react';
+import { CheckCircle, MonitorCheck, ShieldAlert, History } from 'lucide-react';
 
-
+const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };
 
 const FadeIn = ({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) => (
   <motion.div
