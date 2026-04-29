@@ -24,9 +24,11 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
-              <Button className="bg-[#7B2FBE] hover:bg-[#64249c] text-white">
-                Get a Helpdesk Proposal →
-              </Button>
+              <Link href="/contact" passHref>
+                <Button className="bg-[#7B2FBE] hover:bg-[#64249c] text-white">
+                  Get a Helpdesk Proposal →
+                </Button>
+              </Link>
               <Link href="#sla-section" passHref>
                 <Button variant="outline" className="border-gray-200 hover:bg-gray-50 text-[#1A1A2E]">
                   See Our Response Times →

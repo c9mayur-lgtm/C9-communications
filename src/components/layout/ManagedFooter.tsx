@@ -17,8 +17,12 @@ export const ManagedFooter = () => {
            </Link>
            
            <div className="flex gap-10">
-              {[Linkedin, Facebook, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="h-12 w-12 rounded-full border border-gray-200 flex items-center justify-center text-text-secondary hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300">
+              {[
+                { Icon: Linkedin, url: 'https://linkedin.com/company/c9communications' },
+                { Icon: Facebook, url: 'https://facebook.com/c9communications' },
+                { Icon: Instagram, url: 'https://instagram.com/c9communications' }
+              ].map(({ Icon, url }, i) => (
+                <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="h-12 w-12 rounded-full border border-gray-200 flex items-center justify-center text-text-secondary hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300">
                   <Icon size={20} />
                 </a>
               ))}
@@ -117,8 +121,12 @@ export const ManagedFooter = () => {
         <div className="flex flex-wrap items-center gap-10 py-10 border-t border-gray-100">
            <span className="text-xs font-bold text-gray-400 uppercase tracking-widest font-dm-sans">Part of the C9 Group:</span>
            <div className="flex gap-8">
-              {['C9 Teams', 'C9 Lumina', 'C9 Digital'].map(brand => (
-                <a key={brand} href="#" className="text-sm font-bold font-syne text-text-secondary hover:text-brand-purple transition-colors">{brand}</a>
+              {[
+                { name: 'C9 Teams', url: '/contact' },
+                { name: 'C9 Lumina', url: '/contact' },
+                { name: 'C9 Digital', url: '/contact' }
+              ].map(brand => (
+                <a key={brand.name} href={brand.url} className="text-sm font-bold font-syne text-text-secondary hover:text-brand-purple transition-colors">{brand.name}</a>
               ))}
            </div>
         </div>
@@ -140,9 +148,9 @@ export const ManagedFooter = () => {
            </div>
            
            <div className="flex gap-8 text-[11px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans">
-              <a href="#" className="hover:text-dark-purple">Cookie Policy</a>
-              <a href="#" className="hover:text-dark-purple">Terms</a>
-              <a href="#" className="hover:text-dark-purple">Privacy</a>
+              <a href="/privacy-policy" className="hover:text-dark-purple">Cookie Policy</a>
+              <a href="/terms" className="hover:text-dark-purple">Terms</a>
+              <a href="/privacy-policy" className="hover:text-dark-purple">Privacy</a>
            </div>
         </div>
         

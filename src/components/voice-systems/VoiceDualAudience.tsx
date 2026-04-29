@@ -73,7 +73,7 @@ export const VoiceDualAudience = () => {
                   </li>
                 ))}
               </ul>
-              <Link href="#voice-lead" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] hover:gap-3 transition-all">
+              <Link href="/contact" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] hover:gap-3 transition-all">
                 Get a simple quote <ArrowRight size={16} />
               </Link>
             </div>
@@ -115,7 +115,7 @@ export const VoiceDualAudience = () => {
                   </li>
                 ))}
               </ul>
-              <Link href="#voice-lead" className="inline-flex items-center gap-2 text-white font-bold text-[14px] hover:gap-3 transition-all group/link">
+              <Link href="/telco/phone-system" className="inline-flex items-center gap-2 text-white font-bold text-[14px] hover:gap-3 transition-all group/link">
                 Talk to an enterprise specialist <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>

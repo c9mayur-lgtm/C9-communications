@@ -150,7 +150,7 @@ export default function HowItWorks() {
 
             {/* Download Guide CTA */}
             <a
-              href="#"
+              href="/contact"
               className="group flex items-center justify-between gap-4 p-6 rounded-[24px] bg-[#5D00D6] hover:bg-[#6D10E6] transition-all duration-300 shadow-xl shadow-[#5D00D6]/20"
             >
               <div>

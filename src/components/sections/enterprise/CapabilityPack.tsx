@@ -61,8 +61,8 @@ export default function CapabilityPack() {
 
               <FadeIn delay={0.3}>
                 <a 
-                  href="#" 
-                  className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-16 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer c9-button-label"
+                  href="/contact" 
+                  className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer c9-button-label"
                 >
                   Download Capability Pack (PDF)
                   <Download size={20} className="transition-transform group-hover:translate-y-0.5" />

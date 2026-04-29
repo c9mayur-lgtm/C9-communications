@@ -39,10 +39,10 @@ export const AudienceSwitcher = () => {
           <a href="tel:1300000299" className="text-[11px] font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors">
             Support
           </a>
-          <a href="#" className="text-[11px] font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors">
+          <a href="https://webmail.c9communications.com.au" target="_blank" rel="noopener noreferrer" className="text-[11px] font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors">
             Webmail
           </a>
-          <a href="#" className="flex items-center gap-2 bg-[#5D00D6] px-4 py-1 rounded text-[11px] font-bold uppercase tracking-widest hover:bg-[#4d00b3] transition-colors">
+          <a href="/contact" className="flex items-center gap-2 bg-[#5D00D6] px-4 py-1 rounded text-[11px] font-bold uppercase tracking-widest hover:bg-[#4d00b3] transition-colors">
             My C9
           </a>
         </div>

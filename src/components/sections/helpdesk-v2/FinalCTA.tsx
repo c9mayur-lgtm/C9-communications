@@ -23,7 +23,7 @@ export default function FinalCTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-auto">
-              <Link href="#proposal" className="w-full sm:w-auto" passHref>
+              <Link href="/contact" className="w-full sm:w-auto" passHref>
                 <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-6 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-16 px-10 rounded-full border-none text-[17px]" >
                   Request a Proposal <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
                 </Button>

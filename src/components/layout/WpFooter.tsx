@@ -13,14 +13,14 @@ export const WpFooter = () => {
          <div className="flex flex-col">
             <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Solutions</h4>
             <ul className="space-y-3 text-[14px]">
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Managed Services</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">IT Consulting & Advisory</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Cyber Security</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Web Development</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Mobile Development</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Cloud Services</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Network Connectivity</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">ERP Solutions</a></li>
+                <li><a href="/managed-it" className="!text-white hover:text-[#5D00D6] transition-colors block">Managed Services</a></li>
+                <li><a href="/managed-it/strategy-consulting" className="!text-white hover:text-[#5D00D6] transition-colors block">IT Consulting & Advisory</a></li>
+                <li><a href="/managed-it/security-solutions" className="!text-white hover:text-[#5D00D6] transition-colors block">Cyber Security</a></li>
+                <li><a href="/contact" className="!text-white hover:text-[#5D00D6] transition-colors block">Web Development</a></li>
+                <li><a href="/contact" className="!text-white hover:text-[#5D00D6] transition-colors block">Mobile Development</a></li>
+                <li><a href="/managed-it/cloud-services" className="!text-white hover:text-[#5D00D6] transition-colors block">Cloud Services</a></li>
+                <li><a href="/managed-it/network-solutions" className="!text-white hover:text-[#5D00D6] transition-colors block">Network Connectivity</a></li>
+                <li><a href="/contact" className="!text-white hover:text-[#5D00D6] transition-colors block">ERP Solutions</a></li>
             </ul>
          </div>
 
@@ -28,14 +28,14 @@ export const WpFooter = () => {
          <div className="flex flex-col">
             <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Company</h4>
             <ul className="space-y-3 text-[14px]">
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">About us</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Why us</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Team</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Careers</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Partners & Certifications</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Reviews & Awards</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Blog</a></li>
-                <li><a href="#" className="!text-white hover:text-[#5D00D6] transition-colors block">Case studies</a></li>
+                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">About us</a></li>
+                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">Why us</a></li>
+                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">Team</a></li>
+                <li><a href="/about/careers" className="!text-white hover:text-[#5D00D6] transition-colors block">Careers</a></li>
+                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">Partners & Certifications</a></li>
+                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">Reviews & Awards</a></li>
+                <li><a href="/insights" className="!text-white hover:text-[#5D00D6] transition-colors block">Blog</a></li>
+                <li><a href="/case-studies" className="!text-white hover:text-[#5D00D6] transition-colors block">Case studies</a></li>
             </ul>
          </div>
 
@@ -44,10 +44,10 @@ export const WpFooter = () => {
             <div className="mb-10">
                <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Also from the C9 Group:</h4>
                <ul className="space-y-3 text-[14px]">
-                 <li><a href="#" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Teams</a></li>
-                 <li><a href="#" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Defense</a></li>
-                 <li><a href="#" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Digital</a></li>
-                 <li><a href="#" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Lumina</a></li>
+                 <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Teams</a></li>
+                 <li><a href="/managed-it/security-solutions" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Defense</a></li>
+                 <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Digital</a></li>
+                 <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Lumina</a></li>
                </ul>
             </div>
             
@@ -125,13 +125,13 @@ export const WpFooter = () => {
             {/* Social Links Section */}
             <div className="flex gap-10 lg:pl-4">
               {[
-                { label: 'LINKEDIN', icon: Linkedin },
-                { label: 'GITHUB', icon: Github },
-                { label: 'TWITTER', icon: Twitter },
-                { label: 'FACEBOOK', icon: Facebook },
-                { label: 'YOUTUBE', icon: Play }
+                { label: 'LINKEDIN', icon: Linkedin, url: 'https://linkedin.com/company/c9communications' },
+                { label: 'GITHUB', icon: Github, url: 'https://github.com/c9mayur-lgtm' },
+                { label: 'TWITTER', icon: Twitter, url: 'https://twitter.com/c9comms' },
+                { label: 'FACEBOOK', icon: Facebook, url: 'https://facebook.com/c9communications' },
+                { label: 'YOUTUBE', icon: Play, url: 'https://youtube.com/@c9communications' }
               ].map((social) => (
-                <a key={social.label} href="#" className="flex flex-col items-center gap-2 group">
+                <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
                   <div className="h-6 flex items-center justify-center text-slate-700 opacity-80 group-hover:opacity-100 transition-opacity">
                     <social.icon size={20} strokeWidth={2.5} />
                   </div>
