@@ -116,32 +116,15 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-          <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+          <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[3/4] group">
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000&auto=format&fit=crop"
+              src="/images/hero/brownfield-hero.png"
               alt="Professional managing complex business infrastructure issues"
               className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
             
-            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-5 border border-white/60 shadow-xl">
-               <div className="flex items-center justify-between mb-3 pb-3 border-b border-slate-100">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Current Risk Mapping</span>
-                  <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 font-bold text-[10px] uppercase tracking-wider">
-                     <div className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" /> Fragmented State
-                  </span>
-               </div>
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                     <div className="text-[11px] font-bold text-slate-500 mb-0.5 uppercase tracking-widest">Visibility</div>
-                     <div className="text-[14px] font-bold text-slate-900 leading-none">Restricted</div>
-                  </div>
-                  <div>
-                     <div className="text-[11px] font-bold text-slate-500 mb-0.5 uppercase tracking-widest">Responsibility</div>
-                     <div className="text-[14px] font-bold text-slate-900 leading-none">Unclear</div>
-                  </div>
-               </div>
-            </div>
+
           </div>
         </FadeIn>
       </div>

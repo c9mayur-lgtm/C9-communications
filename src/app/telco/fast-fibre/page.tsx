@@ -427,24 +427,21 @@ export default function FastFibrePage() {
                         title: 'High-Traffic Office Transformation',
                         desc: "A national distribution centre was plagued by nbn™ congestion. C9 deployed dedicated Fast Fibre with a 99.95% SLA. Result: Operational friction eliminated.",
                         img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Performance Restored',
-                        href: '#'
+                        videoText: 'Performance Restored'
                       },
                       {
                         tag: 'ENTERPRISE SCALE',
                         title: 'Multi-Site Warehouse Connectivity',
                         desc: "A logistics leader required symmetric speeds across 4 sites. C9 architected a private fibre network with unified governance. Result: 60% faster data syncing.",
                         img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Symmetric Performance',
-                        href: '#'
+                        videoText: 'Symmetric Performance'
                       },
                       {
                         tag: 'GREENFIELD SITE',
                         title: 'Day-One Readiness for Retail',
                         desc: "A new retail flagship needed operational internet before opening. C9 managed the fibre build and commissioning in record time. Result: Live for launch.",
                         img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Operational Readiness',
-                        href: '#'
+                        videoText: 'Operational Readiness'
                       }
                     ]}
                   />

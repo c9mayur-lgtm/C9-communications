@@ -458,16 +458,14 @@ export default function ContactCentrePage() {
                         title: 'National Retail Network',
                         desc: "Disjointed branch numbers caused high abandonment. C9 deployed a unified contact centre with skill-based routing. Result: 60% faster resolution times.",
                         img: 'https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Performance Restored',
-                        href: '#'
+                        videoText: 'Performance Restored'
                       },
                       {
                         tag: 'HEALTHCARE CONTINUITY',
                         title: 'Medical Booking Call Centre',
                         desc: "High morning call volumes overwhelmed reception staff. C9 implemented smart queueing and callback logic. Result: Abandonment dropped by 90%.",
                         img: 'https://images.unsplash.com/photo-1576091160550-2173ff9e5eb8?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Patient Care Secured',
-                        href: '#'
+                        videoText: 'Patient Care Secured'
                       }
                     ]}
                   />

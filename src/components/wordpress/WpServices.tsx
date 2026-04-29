@@ -77,37 +77,37 @@ export const WpServices = () => {
                   </div>
 
                   {/* High-Impact Visual */}
-                  <div className="w-full relative group/gfx perspective-1000">
+                  <div className="w-full relative group/gfx perspective-1000 mt-4">
                     <div className="relative z-10 transition-transform duration-700 group-hover/gfx:rotate-y-6 group-hover/gfx:scale-[1.02]">
                       {activeTelcoTab === 'internet' ? (
                         <img 
                           src="/images/realistic_business_internet_fiber_box_1776077417680.png" 
                           alt="Business Internet" 
-                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
+                          className="w-full h-[240px] md:h-[280px] object-cover object-center drop-shadow-2xl rounded-2xl"
                         />
                       ) : activeTelcoTab === 'voice_ai' ? (
                         <img 
                           src="/images/voice_ai_realistic_dashboard.jpg" 
                           alt="Voice AI Intelligence" 
-                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
+                          className="w-full h-[240px] md:h-[280px] object-cover object-center drop-shadow-2xl rounded-2xl"
                         />
                       ) : activeTelcoTab === 'voice' ? (
                         <img 
                           src="/images/realistic_business_voice_poly_yealink_1776077360073.png" 
                           alt="Business Phone Systems" 
-                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
+                          className="w-full h-[240px] md:h-[280px] object-cover object-center drop-shadow-2xl rounded-2xl"
                         />
                       ) : activeTelcoTab === 'network' ? (
                         <img 
                           src="/images/realistic_business_networking_rack_1776077491291.png" 
                           alt="Secure Networking" 
-                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
+                          className="w-full h-[240px] md:h-[280px] object-cover object-center drop-shadow-2xl rounded-2xl"
                         />
                       ) : activeTelcoTab === 'mobile' ? (
                         <img 
                           src="/images/mobile-feature.jpg" 
                           alt="Mobile Fleet Management" 
-                          className="w-full h-auto drop-shadow-2xl rounded-2xl"
+                          className="w-full h-[240px] md:h-[280px] object-cover object-center drop-shadow-2xl rounded-2xl"
                         />
                       ) : (
                         <div className="w-full aspect-[16/9] flex items-center justify-center bg-gray-50 rounded-2xl uppercase text-[12px] font-bold tracking-widest text-gray-300">

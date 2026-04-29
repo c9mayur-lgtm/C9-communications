@@ -5,11 +5,7 @@ import { LegalLayout } from '@/components/layout/LegalLayout';
 
 const LEGAL_LINKS = [
   { label: 'Terms of Use', href: '/terms' },
-  { label: 'Privacy Policy', href: '/privacy-policy' },
-  { label: 'Enterprise Terms', href: '#' },
-  { label: 'Subprocessors', href: '#' },
-  { label: 'DPA', href: '#' },
-  { label: 'Trust Site', href: '#' },
+  { label: 'Privacy Policy', href: '/privacy-policy' }
 ];
 
 const PRIVACY_TOC = [

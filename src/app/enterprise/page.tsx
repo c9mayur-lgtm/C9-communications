@@ -250,7 +250,7 @@ const SectionHowItWorks = () => (
         <FadeIn direction="right" className="relative">
            <div className="bg-slate-900 rounded-[40px] p-12 text-white shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/10 blur-3xl rounded-full" />
-              <h3 className="text-2xl font-bold mb-8">Operating Responsibility Matrix</h3>
+              <h3 className="text-2xl font-bold mb-8 text-white">Operating Responsibility Matrix</h3>
               <div className="space-y-6">
                  {[
                    { label: 'Carrier & Circuit Governance', val: 'C9 Accountable' },

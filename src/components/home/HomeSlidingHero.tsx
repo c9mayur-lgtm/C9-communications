@@ -12,7 +12,7 @@ const slides = [
     title: 'Managed IT & Network Readiness for\nNew Site Rollouts',
     desc: 'Ensure every new site opens with fully operational connectivity, infrastructure, devices, and support—without vendor delays or deployment risk.',
     cta: 'View Rollout Approach',
-    href: '#consultation-section',
+    href: '/greenfield',
     image: '/images/hero/greenfield.png',
     icon: <Briefcase size={18} />,
     tags: ['Zero-Delay Deployment', 'Standardised Infrastructure', 'On-Site Integration', 'Ready-to-Trade Delivery']
@@ -24,7 +24,7 @@ const slides = [
     title: 'Consolidate IT, Telco, and Support\ninto One Accountable Model',
     desc: 'Reduce vendor fragmentation, improve operational visibility, and stabilise business-critical systems without disrupting day-to-day operations.',
     cta: 'View Stabilisation Model',
-    href: '#consultation-section',
+    href: '/business',
     image: '/images/hero/brownfield.png',
     icon: <Store size={18} />,
     tags: ['Vendor Consolidation', 'Visibility Mapping', 'No Transition Disruption', '24/7 Monitoring']
@@ -36,7 +36,7 @@ const slides = [
     title: 'Enterprise Infrastructure Operations\nfor Multi-Site Organisations',
     desc: 'C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations, SLA-driven support, and proven large-scale deployments.',
     cta: 'Review Enterprise Operations',
-    href: '#consultation-section',
+    href: '/enterprise',
     image: '/images/hero/enterprise.png',
     icon: <Building2 size={18} />,
     tags: ['SLA-Backed Performance', 'Governance Compliance', 'Root-Cause Ownership', 'Multi-Site Stability']
@@ -94,10 +94,10 @@ export const HomeSlidingHero = () => {
                     <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                   </a>
                   <a
-                    href="#solutions"
+                    href="/managed-it"
                     className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-10 c9-button-label hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
                   >
-                    Explore Solutions
+                    Explore Services
                   </a>
                 </div>
 

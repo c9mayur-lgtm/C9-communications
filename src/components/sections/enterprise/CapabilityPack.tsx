@@ -76,7 +76,11 @@ export default function CapabilityPack() {
                 <div className="aspect-[3/4] bg-slate-900 rounded-3xl p-10 text-white relative overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent" />
                   <FileText size={48} className="text-[#a56eff] mb-8" />
-                  <h3 className="text-3xl font-black mb-4 leading-tight">C9 <br/>Capability <br/>Catalogue</h3>
+                  <h3 className="text-3xl font-black mb-4 leading-tight text-white">
+                    C9 <br/>
+                    Capability <br/>
+                    Catalogue
+                  </h3>
                   <div className="w-12 h-1 bg-[#5D00D6] mb-8" />
                   <div className="space-y-4 opacity-60">
                     <div className="h-2 bg-white/20 rounded w-full" />

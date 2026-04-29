@@ -408,24 +408,21 @@ export default function EnterpriseEthernetPage() {
                         title: 'National Distribution Centre Takeover',
                         desc: "A logistics leader faced constant syncing lag with standard nbn™. C9 migrated 4 sites to symmetrical 1000/1000 Ethernet. Result: Zero lost orders and 60% faster syncing.",
                         img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Stability Restored',
-                        href: '#'
+                        videoText: 'Stability Restored'
                       },
                       {
                         tag: 'HEALTHCARE NETWORK',
                         title: 'Multi-Site Patient Data Syncing',
                         desc: "A healthcare group required 99.95% availability for critical patient data records. C9 deployed private Ethernet architecture with eSLA ownership. Result: Full compliance and zero downtime.",
                         img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Zero Downtime',
-                        href: '#'
+                        videoText: 'Zero Downtime'
                       },
                       {
                         tag: 'PROFESSIONAL SERVICES',
                         title: 'Law Firm Infrastructure Governance',
                         desc: "An enterprise law firm faced critical delays during massive data transfers. C9 implemented symmetrical 1000/1000 Ethernet. Result: Productivity up by 40% across all branches.",
                         img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Efficiency Optimized',
-                        href: '#'
+                        videoText: 'Efficiency Optimized'
                       }
                     ]}
                   />

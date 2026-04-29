@@ -466,16 +466,14 @@ export default function C9PhoneSystemPage() {
                         title: 'National Retail Distribution',
                         desc: "Fragmented systems meant warehouse teams couldn't reach office staff easily. C9 consolidated 8 sites onto a unified cloud platform. Result: Internal response time improved by 50%.",
                         img: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Operations Restored',
-                        href: '#'
+                        videoText: 'Operations Restored'
                       },
                       {
                         tag: 'HEALTHCARE CONTINUITY',
                         title: 'Medical Practice Reachability',
                         desc: "A multi-site medical group was losing patients due to abandoned calls during morning peaks. C9 implemented intelligent queueing and failover. Result: Abandonment rate dropped by 85%.",
                         img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Care Continuity',
-                        href: '#'
+                        videoText: 'Care Continuity'
                       }
                     ]}
                   />

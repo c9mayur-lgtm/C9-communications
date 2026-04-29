@@ -16,11 +16,11 @@ export const WpFooter = () => {
                 <li><a href="/managed-it" className="!text-white hover:text-[#5D00D6] transition-colors block">Managed Services</a></li>
                 <li><a href="/managed-it/strategy-consulting" className="!text-white hover:text-[#5D00D6] transition-colors block">IT Consulting & Advisory</a></li>
                 <li><a href="/managed-it/security-solutions" className="!text-white hover:text-[#5D00D6] transition-colors block">Cyber Security</a></li>
-                <li><a href="/contact" className="!text-white hover:text-[#5D00D6] transition-colors block">Web Development</a></li>
-                <li><a href="/contact" className="!text-white hover:text-[#5D00D6] transition-colors block">Mobile Development</a></li>
+                <li><a href="/modern-workplace" className="!text-white hover:text-[#5D00D6] transition-colors block">Modern Workplace</a></li>
+                <li><a href="/modern-workplace/secure-remote-work" className="!text-white hover:text-[#5D00D6] transition-colors block">Secure Remote Work</a></li>
                 <li><a href="/managed-it/cloud-services" className="!text-white hover:text-[#5D00D6] transition-colors block">Cloud Services</a></li>
                 <li><a href="/managed-it/network-solutions" className="!text-white hover:text-[#5D00D6] transition-colors block">Network Connectivity</a></li>
-                <li><a href="/contact" className="!text-white hover:text-[#5D00D6] transition-colors block">ERP Solutions</a></li>
+                <li><a href="/telco/phone-system" className="!text-white hover:text-[#5D00D6] transition-colors block">C9 Phone System</a></li>
             </ul>
          </div>
 
@@ -29,11 +29,11 @@ export const WpFooter = () => {
             <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Company</h4>
             <ul className="space-y-3 text-[14px]">
                 <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">About us</a></li>
-                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">Why us</a></li>
-                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">Team</a></li>
+                <li><a href="/about/why-c9" className="!text-white hover:text-[#5D00D6] transition-colors block">Why us</a></li>
+                <li><a href="/about/team" className="!text-white hover:text-[#5D00D6] transition-colors block">Team</a></li>
                 <li><a href="/about/careers" className="!text-white hover:text-[#5D00D6] transition-colors block">Careers</a></li>
-                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">Partners & Certifications</a></li>
-                <li><a href="/about" className="!text-white hover:text-[#5D00D6] transition-colors block">Reviews & Awards</a></li>
+                <li><a href="/about/partners" className="!text-white hover:text-[#5D00D6] transition-colors block">Partners & Certifications</a></li>
+                <li><a href="/about/reviews" className="!text-white hover:text-[#5D00D6] transition-colors block">Reviews & Awards</a></li>
                 <li><a href="/insights" className="!text-white hover:text-[#5D00D6] transition-colors block">Blog</a></li>
                 <li><a href="/case-studies" className="!text-white hover:text-[#5D00D6] transition-colors block">Case studies</a></li>
             </ul>

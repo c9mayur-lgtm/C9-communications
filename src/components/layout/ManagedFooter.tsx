@@ -10,7 +10,7 @@ export const ManagedFooter = () => {
         
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 mb-20 pb-16 border-b border-gray-100">
-           <Link href="/managed" className="flex items-center gap-1 shrink-0 group">
+           <Link href="/" className="flex items-center gap-1 shrink-0 group">
               <span className="text-3xl font-black text-text-primary tracking-tighter transition-transform group-hover:scale-105">
                 <span className="text-brand-purple">9</span>communications
               </span>
@@ -104,10 +104,10 @@ export const ManagedFooter = () => {
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
                  {[
                    { label: 'About', path: '/about' },
-                   { label: 'Case Studies', path: '/about/case-studies' },
-                   { label: 'Blog', path: '/resources/blog' },
+                   { label: 'Case Studies', path: '/case-studies' },
+                   { label: 'Blog', path: '/insights' },
                    { label: 'Careers', path: '/about/careers' },
-                   { label: 'Support', path: '/support/faq' },
+                   { label: 'Support', path: '/support' },
                    { label: 'Partners', path: '/about/partners' }
                  ].map(item => (
                    <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
@@ -144,7 +144,7 @@ export const ManagedFooter = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-gray-100">
            <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest font-dm-sans">
-             © 2026 C9 Communications. All rights reserved.
+             © {new Date().getFullYear()} C9 Communications. All rights reserved.
            </div>
            
            <div className="flex gap-8 text-[11px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans">

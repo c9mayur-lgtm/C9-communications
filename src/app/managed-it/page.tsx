@@ -260,16 +260,14 @@ export default function ManagedITPage() {
             title: '85-Location Environment Takeover',
             videoText: 'Consolidation Result',
             desc: 'Consolidated 4 separate vendors into a single accountable path with 99.99% uptime.',
-            img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
-            href: '#'
+            img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800'
           },
           {
             tag: 'LOGISTICS',
             title: '1,200 Endpoint Governance',
             videoText: 'Operational Control',
             desc: 'Migration of 1,200 distributed endpoints with zero operational downtime.',
-            img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
-            href: '#'
+            img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800'
           }
         ]}
       />

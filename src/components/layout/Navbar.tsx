@@ -45,6 +45,14 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                       <div key={si}>
                         <div className="flex items-center justify-between mb-2 border-b border-gray-50 pb-1.5">
                           <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-60 leading-none">{sec.heading}</h4>
+                          {sec.action && (
+                            <Link 
+                              href={sec.action.path || '#'} 
+                              className="bg-[#1c1c1c] text-white text-[10px] font-bold px-3 py-1.5 rounded-full hover:bg-black transition-all active:scale-95 shrink-0"
+                            >
+                              {sec.action.label}
+                            </Link>
+                          )}
                         </div>
                         <div className="flex flex-col gap-1.5">
                           {sec.items.map((item: any, ii: number) => (
@@ -193,7 +201,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
                 {!data.sidebar?.hideCTA && !data.sidebar?.variant && (
                   <div className="mt-8 pt-8 border-t border-gray-200/60">
-                    <Link href="/consultation" className="group flex items-center justify-between p-5 bg-[#5D00D6] rounded-[24px] shadow-2xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
+                    <Link href="/contact" className="group flex items-center justify-between p-5 bg-[#5D00D6] rounded-[24px] shadow-2xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
                       <div className="flex flex-col">
                         <span className="text-white/60 text-[10px] uppercase font-bold mb-1 tracking-wider">Expert Led</span>
                         <span className="text-white font-bold text-[15px]">Free Consultation</span>
@@ -234,45 +242,31 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 };
 
 /* ─────────────────────────────────────────────
-   TOP UTILITY BAR (ICP SWITCHER)
+   TOP UTILITY BAR
    ───────────────────────────────────────────── */
 const TopUtilityBar = () => {
-  const { audience, setAudience } = useAudience();
-
-  const tracks = [
-    { key: 'startup',    label: 'GREENFIELD', path: '/greenfield' },
-    { key: 'business',   label: 'BUSINESS',   path: '/business' },
-    { key: 'enterprise', label: 'ENTERPRISE', path: '/enterprise' }
-  ];
+  const { audience } = useAudience();
 
   return (
-    <div className="bg-[#f8f9fa] border-b border-gray-100 py-1.5 hidden lg:block">
-      <div className="container mx-auto px-6 md:px-8 max-w-[1240px] flex items-center justify-between">
-        <div className="flex items-center gap-1 p-0.5 bg-gray-100 rounded-full border border-gray-200/50">
-          {tracks.map((track) => (
-            <Link 
-              key={track.key} 
-              href={track.path}
-              onClick={() => setAudience(track.key as any)}
-              className={`px-5 py-1.5 text-[11px] font-bold  rounded-full transition-all duration-300 ${
-                audience === track.key 
-                  ? 'bg-[#5D00D6] text-white shadow-md' 
-                  : 'text-slate-400 hover:text-slate-600'
-              }`}
-            >
-              {track.label}
-            </Link>
-          ))}
-        </div>
-        
-        <div className="flex items-center gap-8">
-          <div className="flex items-center gap-6">
-            <a href={`tel:${AUDIENCE_INFO[audience].phone}`} className="flex items-center gap-2.5 transition-colors border-r pr-6 border-gray-200 group">
-              <span className="text-[11px] font-semibold uppercase text-slate-500 group-hover:text-[#5D00D6] transition-colors">Priority Support</span>
-              <span className="text-[13px] font-bold text-slate-800 group-hover:text-[#5D00D6] transition-colors">{AUDIENCE_INFO[audience].phone}</span>
-            </a>
-            <Link href="/login" className="text-[10px] font-black uppercase text-slate-400 hover:text-slate-800 transition-colors">Portal Login</Link>
-          </div>
+    <div className="bg-[#f8f9fa] border-b border-gray-100 py-3.5 hidden lg:block">
+      <div className="container mx-auto px-6 md:px-8 max-w-[1240px] flex items-center justify-end">
+        <div className="flex items-center gap-6 divide-x divide-gray-200">
+          <a
+            href={`tel:${AUDIENCE_INFO[audience].phone}`}
+            className="flex items-center gap-2.5 group pr-6"
+          >
+            <span className="text-[12px] font-semibold uppercase text-slate-500 group-hover:text-[#5D00D6] transition-colors tracking-wide">Priority Support</span>
+            <span className="text-[13px] font-black text-slate-800 group-hover:text-[#5D00D6] transition-colors">{AUDIENCE_INFO[audience].phone}</span>
+          </a>
+          <Link href="/contact" className="text-[12px] font-bold uppercase text-slate-600 hover:text-[#5D00D6] transition-colors pl-6 tracking-wide">
+            Contact Us
+          </Link>
+          <Link href="/defense" className="text-[12px] font-bold uppercase text-slate-600 hover:text-[#5D00D6] transition-colors pl-6 tracking-wide">
+            C9 Defense
+          </Link>
+          <Link href="/login" className="text-[12px] font-bold uppercase text-slate-500 hover:text-slate-900 transition-colors pl-6 tracking-wide">
+            Portal Login
+          </Link>
         </div>
       </div>
     </div>
@@ -522,7 +516,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
               <a href={`tel:${AUDIENCE_INFO[audience].phone}`} className="flex items-center justify-center gap-3 w-full py-4 bg-gray-50 rounded-2xl font-bold text-slate-800 hover:bg-gray-100 transition-colors">
                 <PhoneCall size={18} className="text-[#5D00D6]" /> {AUDIENCE_INFO[audience].phone}
               </a>
-              <Link href="/consultation" onClick={onClose} className="w-full">
+              <Link href="/contact" onClick={onClose} className="w-full">
                 <Button size="lg" className="w-full py-7 text-[16px] font-bold rounded-2xl shadow-xl shadow-purple-900/20 bg-[#5D00D6] border-none text-white transition-transform active:scale-95">
                   Get Free Consultation
                 </Button>
@@ -539,7 +533,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
    MAIN NAVBAR COMPONENT
    ───────────────────────────────────────────── */
 export const Navbar = () => {
-  const { audience } = useAudience();
+  const { audience, setAudience } = useAudience();
   const MEGA_MAP = getMegaMap(audience);
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -577,7 +571,7 @@ export const Navbar = () => {
       <TopUtilityBar />
       <nav 
         className={`transition-all duration-500 border-b bg-white/95 backdrop-blur-md ${
-          isScrolled ? 'py-1.5 shadow-sm border-gray-100' : 'py-2.5 border-gray-100'
+          isScrolled ? 'py-1 shadow-sm border-gray-100' : 'py-1.5 border-gray-100'
         }`}
         onMouseLeave={handleLeave}
       >
@@ -587,41 +581,64 @@ export const Navbar = () => {
                 <img 
                   src="/images/c9_logo_scrolled.svg" 
                   alt="C9 Communications" 
-                  className="h-[40px] w-auto object-contain" 
+                  className="h-[34px] w-auto object-contain" 
                 />
             </Link>
           </div>
         
-        <div className="hidden lg:flex gap-1.5 items-center">
+        <div className="hidden lg:flex gap-1 items-center">
+          {/* Homepage Link */}
+          <Link
+            href="/"
+            className={`px-3 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 ${
+              pathname === '/'
+                ? 'bg-[#5D00D6]/10 text-[#5D00D6]'
+                : 'text-slate-400 hover:text-[#5D00D6] hover:bg-[#5D00D6]/5'
+            }`}
+          >
+            Homepage
+          </Link>
+
+          {/* Audience Persona Pills */}
+          {[
+            { key: 'startup',    label: 'Greenfield',    path: '/greenfield' },
+            { key: 'business',   label: 'Small Business', path: '/business' },
+            { key: 'enterprise', label: 'Enterprise',     path: '/enterprise' },
+          ].map((track) => (
+            <Link
+              key={track.key}
+              href={track.path}
+              onClick={() => setAudience(track.key as any)}
+              className={`px-3 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 ${
+                pathname === track.path
+                  ? 'bg-[#5D00D6]/10 text-[#5D00D6]'
+                  : 'text-slate-400 hover:text-[#5D00D6] hover:bg-[#5D00D6]/5'
+              }`}
+            >
+              {track.label}
+            </Link>
+          ))}
+
+          {/* Divider */}
+          <div className="w-px h-4 bg-gray-200 mx-1" />
+
+          {/* Main Nav Tabs */}
           {TABS.map(tab => {
             const isOpen = openMenu === tab.menuKey;
             return (
               <div key={tab.name} className="relative h-full flex items-center" onMouseEnter={() => handleEnter(tab.menuKey)}>
-                <button className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[14px] font-medium  transition-all duration-300 ${
+                <button className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-[13px] font-medium transition-all duration-300 ${
                   isOpen ? 'text-[#5D00D6] bg-purple-50/80 shadow-sm' : (isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]')
                 }`}>
                   {tab.name}
-                  <ChevronDown size={14} className={`transition-transform duration-300 opacity-40 ${isOpen ? 'rotate-180 text-[#5D00D6] opacity-100' : ''}`} />
+                  <ChevronDown size={13} className={`transition-transform duration-300 opacity-40 ${isOpen ? 'rotate-180 text-[#5D00D6] opacity-100' : ''}`} />
                 </button>
               </div>
             );
           })}
-          <div className="relative h-full flex items-center">
-            <Link href="/contact" className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[14px] font-medium transition-all duration-300 ${isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]'}`}>
-              Contact Us
-            </Link>
-          </div>
         </div>
         
         <div className="flex items-center gap-4 md:gap-7">
-          
-          <Button 
-            size="sm"
-            className="hidden sm:flex transition-all bg-[#0c1024] text-white hover:bg-black font-bold  px-6 rounded-full text-[11px] h-10 border-none shadow-lg shadow-black/5"
-          >
-            C9 defense
-          </Button>
-          
           <button 
             className="lg:hidden p-2.5 rounded-xl transition-colors text-[#0c1024] hover:bg-gray-50 border border-gray-100"
             onClick={() => setIsMobileMenuOpen(true)}

@@ -358,16 +358,14 @@ export default function BusinessNbnPage() {
                         title: 'Warehouse Operations Restored',
                         desc: "A regional warehouse had fragmented internet across 3 buildings. C9 consolidated the infrastructure with managed nbn™ and 4G failover. Result: Zero lost orders.",
                         img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Zero Lost Orders',
-                        href: '#'
+                        videoText: 'Zero Lost Orders'
                       },
                       {
                         tag: 'PROFESSIONAL SERVICES',
                         title: 'Law Firm Infrastructure Takeover',
                         desc: "A mid-tier law firm was plagued by inconsistent speeds. C9 took over the management and optimized the nbn™ path. Result: Fast, consistent file syncing.",
                         img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Consistent Syncing',
-                        href: '#'
+                        videoText: 'Consistent Syncing'
                       }
                     ]}
                   />

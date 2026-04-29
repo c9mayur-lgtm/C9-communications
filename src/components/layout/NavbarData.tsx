@@ -82,6 +82,7 @@ export const IT_SOLUTIONS_FIXED = {
         },
         {
           heading: 'Cybersecurity',
+          action: { label: 'C9 defense →', path: '/c9-defense' },
           items: [
             { label: 'Security Solutions', path: '/managed-it/security-solutions' },
             { label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
@@ -100,8 +101,7 @@ export const IT_SOLUTIONS_FIXED = {
             { label: 'Software Solutions', path: '/managed-it/cloud-services' },
           ]
         }
-      ],
-      footerLogo: '/images/clients/9defense.png' // Adjust path as needed
+      ]
     }
   ],
   challenges: [
@@ -127,7 +127,7 @@ export const IT_SOLUTIONS_FIXED = {
     title: 'Smarter IT, Stronger Business',
     body: "Operational detail for IT services designed to secure, support, and scale your business from helpdesk to cloud and beyond.",
     button: 'Partner Up Now',
-    path: '/consultation'
+    path: '/contact'
   }
 };
 
@@ -154,7 +154,7 @@ export const TELCO_FIXED = {
       promoCard: {
         title: 'Upgrade To The Latest Small Business Phone System Technology And Save Up To 70% Off Your Calls',
         button: 'Start Now',
-        path: '/consultation'
+        path: '/contact'
       }
     },
     {

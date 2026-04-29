@@ -13,7 +13,7 @@ export const Hero = () => {
   const businessContent = {
     headline: "Simplify Your Business IT, Telco & Workplace",
     subheadline: "Complete technology setups for growing Australian businesses. One partner for your nbn, phone systems, and managed IT.",
-    cta1: { label: "Get Your Business Setup Plan", href: "/consultation" },
+    cta1: { label: "Get Your Business Setup Plan", href: "/contact" },
     cta2: { label: "View Business Broadband", href: "/telco/business-nbn" },
     tags: ["Fast nbn™ Connectivity", "Cloud Phone Systems", "On-site IT Support"]
   };
@@ -21,7 +21,7 @@ export const Hero = () => {
   const enterpriseContent = {
     headline: "Mission-Critical Enterprise Connectivity & Managed IT",
     subheadline: "High-SLA networking, dedicated fibre, and managed cyber defense for large-scale Australian organizations and government.",
-    cta1: { label: "Partner with C9 Enterprise", href: "/consultation" },
+    cta1: { label: "Partner with C9 Enterprise", href: "/contact" },
     cta2: { label: "Explore Fiber Solutions", href: "/enterprise/ethernet" },
     tags: ["99.99% Uptime SLAs", "Dedicated Fiber up to 10Gbps", "Managed SIEM / SOC"]
   };

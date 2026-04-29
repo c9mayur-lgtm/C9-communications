@@ -48,6 +48,7 @@ export default function Homepage() {
         title="Security Built Into Everything"
         description="Protection across endpoints, networks, and users—continuously monitored and actively managed."
         buttonText="Book a Security Review"
+        href="/managed-it/security-solutions"
       />
 
       {/* 7. INDUSTRY EXPERTISE — "We've solved this in your sector before" */}

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { 
   Shield, 
   Globe, 
@@ -20,16 +21,16 @@ import {
 } from 'lucide-react';
 
 const PRODUCTS = [
-  { label: 'Managed Infrastructure', icon: Server },
-  { label: 'Enterprise Fibre', icon: Wifi },
-  { label: 'Managed Cyber Security', icon: Shield },
-  { label: 'Microsoft 365 Ops', icon: Laptop },
-  { label: 'Teams Calling & Voice', icon: Phone },
-  { label: 'Public & Hybrid Cloud', icon: Cloud },
-  { label: 'SD-WAN & Network Ops', icon: Network },
-  { label: 'Managed Service Desk', icon: Headphones },
-  { label: 'Strategic IT Advisory', icon: FileText },
-  { label: 'Asset & Device Lifecycle', icon: Monitor },
+  { label: 'Managed Infrastructure', icon: Server, url: '/managed-it/infrastructure' },
+  { label: 'Enterprise Fibre', icon: Wifi, url: '/telco/enterprise-ethernet' },
+  { label: 'Managed Cyber Security', icon: Shield, url: '/managed-it/security-solutions' },
+  { label: 'Microsoft 365 Ops', icon: Laptop, url: '/modern-workplace/productivity' },
+  { label: 'Teams Calling & Voice', icon: Phone, url: '/telco/phone-system' },
+  { label: 'Public & Hybrid Cloud', icon: Cloud, url: '/managed-it/cloud-services' },
+  { label: 'SD-WAN & Network Ops', icon: Network, url: '/managed-it/network-solutions' },
+  { label: 'Managed Service Desk', icon: Headphones, url: '/managed-it/helpdesk-support' },
+  { label: 'Strategic IT Advisory', icon: FileText, url: '/managed-it/strategy-consulting' },
+  { label: 'Asset & Device Lifecycle', icon: Monitor, url: '/modern-workplace/endpoint-management' },
 ];
 
 export const WpHeroProducts = () => {
@@ -84,9 +85,10 @@ export const WpHeroProducts = () => {
             className="flex gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4"
           >
             {PRODUCTS.map((product, idx) => (
-              <div 
+              <Link 
+                href={product.url}
                 key={idx} 
-                className="flex flex-col items-center gap-6 group cursor-pointer text-center min-w-[200px] md:min-w-[220px] snap-start bg-white border border-gray-100/60 rounded-[28px] p-8 hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500"
+                className="flex flex-col items-center justify-center gap-6 group cursor-pointer text-center min-w-[200px] md:min-w-[220px] snap-start bg-white border border-gray-100/60 rounded-[28px] p-8 hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500"
               >
                 {/* Icon Container (Homepage Style) */}
                 <div className="text-[#5D00D6] transition-transform duration-300 group-hover:-translate-y-1.5 opacity-90">
@@ -97,7 +99,7 @@ export const WpHeroProducts = () => {
                 <span className="c9-card-title !text-[14px] md:!text-[16px] transition-colors group-hover:text-[#5D00D6]">
                   {product.label}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
 

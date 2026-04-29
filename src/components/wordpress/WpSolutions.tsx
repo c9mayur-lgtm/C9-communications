@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, MonitorPlay, Monitor, Camera, LayoutGrid, ShieldCheck, BadgeCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
@@ -13,6 +13,7 @@ const cards = [
     note: null,
     defense: null,
     defenseDark: null,
+    url: '/modern-workplace/collaboration',
   },
   {
     icon: Monitor,
@@ -22,6 +23,7 @@ const cards = [
     note: 'Large-format display solutions available via C9 Lumina →',
     defense: null,
     defenseDark: null,
+    url: null,
   },
   {
     icon: Camera,
@@ -31,6 +33,7 @@ const cards = [
     note: null,
     defense: null,
     defenseDark: 'For high-fidelity physical + cyber security coverage across your workplace.',
+    url: '/modern-workplace/cctv-people-count',
   },
   {
     icon: LayoutGrid,
@@ -40,6 +43,7 @@ const cards = [
     note: null,
     defense: null,
     defenseDark: null,
+    url: '/modern-workplace/productivity',
   },
   {
     icon: ShieldCheck,
@@ -49,6 +53,7 @@ const cards = [
     note: null,
     defense: null,
     defenseDark: 'For Essential 8 compliance and continuous threat monitoring across your endpoint fleet.',
+    url: '/modern-workplace/endpoint-management',
   },
   {
     icon: BadgeCheck,
@@ -58,6 +63,7 @@ const cards = [
     note: null,
     defense: null,
     defenseDark: null,
+    url: '/modern-workplace/visitor-solution',
   },
 ];
 
@@ -80,31 +86,37 @@ export const WpSolutions = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((s, i) => (
-            <div key={i} className="bg-white p-6 md:p-10 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
-              {/* Icon */}
-              <div className="mb-6">
-                <s.icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />
-              </div>
-
-              {/* Title */}
-              <h3 className="c9-card-title mb-3 text-[#0c1024] group-hover:text-[#5D00D6] transition-colors">{s.title}</h3>
-
-              {/* Description */}
-              <p className="c9-body mb-6 flex-grow">{s.desc}</p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {s.tags.map((tag, ti) => (
-                  <span key={ti} className="c9-eyebrow !text-[#5D00D6] !text-[9px] bg-[#5D00D6]/5 px-3 py-1 rounded-full border border-[#5D00D6]/10">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              {/* Optional italic note */}
-              {s.note && (
-                <p className="text-[14px] text-gray-400 italic mb-4">{s.note}</p>
+            <div key={i} className="bg-white p-6 md:p-10 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full relative border border-transparent hover:border-gray-100 focus-within:ring-2 focus-within:ring-[#5D00D6]">
+              {s.url && (
+                <Link href={s.url} className="absolute inset-0 z-0" aria-label={`View details about ${s.title}`} />
               )}
+              
+              <div className="relative z-10 flex flex-col flex-grow pointer-events-none">
+                {/* Icon */}
+                <div className="mb-6">
+                  <s.icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />
+                </div>
+
+                {/* Title */}
+                <h3 className="c9-card-title mb-3 text-[#0c1024] group-hover:text-[#5D00D6] transition-colors">{s.title}</h3>
+
+                {/* Description */}
+                <p className="c9-body mb-6 flex-grow text-slate-600">{s.desc}</p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-6 pointer-events-auto">
+                  {s.tags.map((tag, ti) => (
+                    <span key={ti} className="c9-eyebrow !text-[#5D00D6] !text-[9px] bg-[#5D00D6]/5 px-3 py-1 rounded-full border border-[#5D00D6]/10">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Optional italic note */}
+                {s.note && (
+                  <p className="text-[14px] text-gray-400 italic mb-4">{s.note}</p>
+                )}
+              </div>
 
               {/* Defense callout - ultra-compact stacked style */}
               {s.defenseDark && (
@@ -112,7 +124,7 @@ export const WpSolutions = () => {
                   href="https://c9defense.com.au/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-[#0c1024] flex flex-col px-3 py-2.5 rounded-none mb-4 hover:bg-[#1C223A] transition-all group/defense"
+                  className="bg-[#0c1024] flex flex-col px-3 py-2.5 rounded-none mb-4 hover:bg-[#1C223A] transition-all group/defense relative z-20 pointer-events-auto"
                 >
                     <p className="c9-eyebrow !text-white !text-[8.5px] mb-0.5">Pairs with C9 Defense</p>
                     <p className="c9-body !text-[11px] !text-white/50 !leading-snug group-hover/defense:text-white transition-colors flex items-center gap-1">
@@ -122,10 +134,14 @@ export const WpSolutions = () => {
                   </a>
               )}
 
-              <div className="w-full h-[1px] bg-gray-100 mt-auto mb-6"></div>
-              <div className="flex items-center c9-eyebrow !text-[#5D00D6] !text-[10px] group-hover:underline">
-                Learn more
-              </div>
+              {s.url && (
+                <div className="mt-auto relative z-10 pointer-events-none">
+                  <div className="w-full h-[1px] bg-gray-100 mb-6"></div>
+                  <div className="flex items-center c9-eyebrow !text-[#5D00D6] !text-[10px] group-hover:underline">
+                    Learn more
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

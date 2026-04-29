@@ -355,7 +355,7 @@ export const BusinessAdvisor = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-full px-4 pointer-events-none flex flex-col items-center">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-full px-4 pointer-events-none flex-col items-center hidden sm:flex">
       <div className="pointer-events-auto flex flex-col items-center w-full max-w-2xl">
         
         <AnimatePresence>
@@ -597,8 +597,7 @@ export const BusinessAdvisor = () => {
                 className="advisor-pill flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-[#5D00D6]/20 group hover:scale-[0.985] transition-transform"
               >
                 <span className="text-[14px] font-medium text-gray-600 tracking-tight group-hover:text-[#5D00D6] transition-colors whitespace-nowrap">
-                  <span className="hidden sm:inline">What type of business are you building?</span>
-                  <span className="sm:hidden">C9 AI Advisor</span>
+                  What type of business are you building?
                 </span>
                 <div className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 bg-[#5D00D6] text-white group-hover:scale-105">
                   <ArrowRight size={13} className="stroke-[2.5px]" />
