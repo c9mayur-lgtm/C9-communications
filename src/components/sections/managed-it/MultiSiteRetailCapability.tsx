@@ -85,7 +85,7 @@ export default function MultiSiteRetailCapability() {
             ))}
           </div>
 
-          <FadeIn delay={0.3} direction="right">
+          <FadeIn delay={0.3}>
             <div className="bg-[#0c1024] rounded-[48px] p-10 lg:p-16 text-white relative overflow-hidden shadow-2xl shadow-purple-900/10">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/20 blur-3xl rounded-full" />
               
