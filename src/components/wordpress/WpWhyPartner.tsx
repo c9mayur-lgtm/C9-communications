@@ -161,9 +161,9 @@ export const WpWhyPartner = () => {
             }}
             className="inline-flex items-center gap-3 px-10 py-4 bg-[#5D00D6] text-white rounded-full c9-button-label hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20"
           >
-            Start with a free consultation →
+            Request Infrastructure Assessment →
           </a>
-          <p className="text-[12px] text-slate-400 mt-4 font-medium">No lock-in contracts. Australian-based engineers.</p>
+          <p className="text-[12px] text-slate-400 mt-4 font-medium">Direct Engineer Audit. Operational Control Layer.</p>
         </div>
       </div>
     </section>

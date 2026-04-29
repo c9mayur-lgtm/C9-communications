@@ -95,6 +95,15 @@ export default function Homepage() {
       />
       <WpCompliance />
       <WpFAQAndFeedback />
+      
+      {/* 10. POSITIONING — Site-wide final statement */}
+      <section className="py-20 bg-[#0c1024] text-white">
+        <div className="container mx-auto px-8 max-w-[1240px] text-center">
+          <p className="c9-body !text-white/80 max-w-4xl mx-auto text-xl md:text-2xl leading-relaxed">
+            C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations, SLA-driven support, and proven large-scale deployments.
+          </p>
+        </div>
+      </section>
 
       {/* 10. LEAD CAPTURE — Final CTA */}
       <section id="consultation-section">

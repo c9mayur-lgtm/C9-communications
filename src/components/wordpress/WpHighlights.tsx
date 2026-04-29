@@ -6,7 +6,7 @@ export const WpHighlights = () => {
   return (
     <section className="bg-white border-y border-gray-100 py-12 lg:py-16 relative z-20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-10" style={{ maxWidth: '1240px' }}>
-        <div className="flex flex-nowrap md:flex-wrap lg:flex-nowrap overflow-x-auto lg:overflow-visible gap-8 md:gap-y-10 items-center justify-between no-scrollbar pb-4 md:pb-0">
+        <div className="flex flex-wrap lg:flex-nowrap gap-8 md:gap-y-10 items-center justify-center lg:justify-between pb-4 md:pb-0">
           
           {/* Google review Rating */}
           <div className="flex items-center gap-5 shrink-0">
@@ -22,7 +22,7 @@ export const WpHighlights = () => {
             </div>
           </div>
 
-          <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
+          <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
 
           {/* Metric 1 */}
           <div className="flex flex-col shrink-0">
@@ -32,7 +32,7 @@ export const WpHighlights = () => {
             <span className="c9-eyebrow !text-[10px]">Vendor Consolidation</span>
           </div>
 
-          <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
+          <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
 
           {/* Metric 2 */}
           <div className="flex flex-col shrink-0">
@@ -42,7 +42,7 @@ export const WpHighlights = () => {
             <span className="c9-eyebrow !text-[10px]">Lower Downtime Risk</span>
           </div>
 
-          <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
+          <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
 
           {/* Metric 3 */}
           <div className="flex flex-col shrink-0">
@@ -52,7 +52,7 @@ export const WpHighlights = () => {
             <span className="c9-eyebrow !text-[10px]">System Visibility</span>
           </div>
 
-          <div className="h-10 w-[1px] bg-gray-200 shrink-0"></div>
+          <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
 
           {/* Metric 4 */}
           <div className="flex flex-col shrink-0">

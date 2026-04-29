@@ -68,7 +68,10 @@ export const WpFooter = () => {
 
           {/* Col 4: Logo & CTA Area - Grouped Together */}
           <div className="flex flex-col items-center lg:items-center pt-2">
-             <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] filter brightness-0 invert mb-8" />
+             <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] filter brightness-0 invert mb-6" />
+             <p className="text-[14px] text-gray-400 mb-8 leading-relaxed max-w-[280px]">
+               C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations and SLA-driven support.
+             </p>
              
              <Button 
                size="lg" 

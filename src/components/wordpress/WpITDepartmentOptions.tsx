@@ -24,7 +24,7 @@ const OPTIONS = [
   {
     tag: 'GREENFIELD',
     title: "No Dedicated IT Team",
-    desc: "We design, deploy, and operate your entire infrastructure environment as a managed operation with full end-to-end accountability.\n\n• Day-Zero Readiness\n• End-to-End Ownership\n• Operational Stability",
+    desc: "We design, deploy, and operate your entire infrastructure environment as a managed operation with full operational detail in accountability.\n\n• Day-Zero Readiness\n• Operational Detail in Ownership\n• Operational Stability",
     img: "/images/greenfield_hero.png",
     href: "/greenfield",
     btnText: "Deploy Managed Model"

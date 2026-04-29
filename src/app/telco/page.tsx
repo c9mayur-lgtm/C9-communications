@@ -173,7 +173,7 @@ const SectionApproach = () => (
 
         <FadeIn direction="left" className="order-1 lg:order-2">
           <span className="c9-eyebrow mb-4">The Accountability Layer</span>
-          <h2 className="c9-section-heading mb-6">One Accountable Partner. End-to-End Ownership.</h2>
+          <h2 className="c9-section-heading mb-6">One Accountable Partner. Operational Detail in Ownership.</h2>
           <p className="c9-body text-slate-600 mb-8 leading-relaxed">
             Stop juggling multiple carriers and infrastructure vendors. We act as your single point of contact, taking full responsibility for the performance and stability of your entire connectivity stack.
           </p>
@@ -192,7 +192,7 @@ const SectionApproach = () => (
                 <Layers size={24} />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 mb-1">End-to-End Ownership</h4>
+                <h4 className="font-bold text-slate-900 mb-1">Operational Detail in Ownership</h4>
                 <p className="text-sm text-slate-500">From the street to the desk, we manage every segment of the link.</p>
               </div>
             </div>

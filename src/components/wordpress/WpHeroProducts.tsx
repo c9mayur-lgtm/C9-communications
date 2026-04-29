@@ -53,7 +53,7 @@ export const WpHeroProducts = () => {
           <div className="max-w-2xl">
             <span className="c9-eyebrow mb-6 block">INFRASTRUCTURE OPERATIONS</span>
             <h2 className="c9-section-heading mb-8">
-              End-to-end IT, Telco, and Security—operated as a single controlled system.
+              Operational detail for IT, Telco, and Security—operated as a single controlled system.
             </h2>
             <p className="c9-body mb-8 max-w-[640px]">
               We eliminate vendor silos. No gaps. No blame shifting.

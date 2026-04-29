@@ -131,7 +131,7 @@ export const WpFloatingContact = () => {
   return (
     <>
       {/* Single FAB Button */}
-      <div className="fixed bottom-8 right-8 z-[200] flex flex-col items-end gap-3">
+      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[200] flex flex-col items-end gap-3">
 
         {/* Panel */}
         <AnimatePresence>
@@ -307,7 +307,7 @@ export const WpFloatingContact = () => {
         {/* FAB Button */}
         <button
           onClick={() => { setIsOpen(prev => !prev); setShowBubble(false); }}
-          className="w-[58px] h-[58px] rounded-full bg-[#5D00D6] text-white shadow-xl hover:shadow-[0_8px_30px_rgba(93,0,214,0.45)] hover:scale-105 transition-all duration-200 flex items-center justify-center cursor-pointer"
+          className="wp-floating-contact-btn w-[54px] h-[54px] md:w-[58px] md:h-[58px] rounded-full bg-[#5D00D6] text-white shadow-xl hover:shadow-[0_8px_30px_rgba(93,0,214,0.45)] hover:scale-105 transition-all duration-200 flex items-center justify-center cursor-pointer"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.div

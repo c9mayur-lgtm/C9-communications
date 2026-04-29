@@ -151,7 +151,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                        ))}
                     </div>
                   ) : (
-                    <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-4">
                       {/* Check if items are logos (e.g. Strategic Partners) */}
                       {data.sidebar?.items && data.sidebar.items[0]?.logo ? (
                         <div className="grid grid-cols-2 gap-x-6 gap-y-8 mt-2">
@@ -267,11 +267,11 @@ const TopUtilityBar = () => {
         
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-6">
-            <a href={`tel:${AUDIENCE_INFO[audience].phone}`} className="flex items-center gap-2 text-slate-500 hover:text-[#5D00D6] transition-colors border-r pr-6 border-gray-200">
-               <PhoneCall size={12} strokeWidth={3} />
-               <span className="text-[11px] font-black ">{AUDIENCE_INFO[audience].phone}</span>
+            <a href={`tel:${AUDIENCE_INFO[audience].phone}`} className="flex items-center gap-2.5 transition-colors border-r pr-6 border-gray-200 group">
+              <span className="text-[11px] font-semibold uppercase text-slate-500 group-hover:text-[#5D00D6] transition-colors">Priority Support</span>
+              <span className="text-[13px] font-bold text-slate-800 group-hover:text-[#5D00D6] transition-colors">{AUDIENCE_INFO[audience].phone}</span>
             </a>
-            <Link href="/login" className="text-[10px] font-black uppercase  text-slate-400 hover:text-slate-800 transition-colors">Portal Login</Link>
+            <Link href="/login" className="text-[10px] font-black uppercase text-slate-400 hover:text-slate-800 transition-colors">Portal Login</Link>
           </div>
         </div>
       </div>
@@ -441,7 +441,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                     ))}
                                   </div>
                                 ) : (
-                                  <div className="grid grid-cols-1 gap-6">
+                                  <div className="grid grid-cols-1 gap-3">
                                     {menuData.sidebar.items.map((item: any, i: number) => (
                                       <Link 
                                         key={i} 
@@ -502,6 +502,17 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                   </div>
                 );
               })}
+              <div className="border-b border-gray-50 last:border-none pb-2">
+                <Link 
+                  href="/contact"
+                  onClick={onClose}
+                  className="flex items-center justify-between w-full py-4 text-left group"
+                >
+                  <span className="text-[18px] font-semibold text-slate-800 transition-colors">
+                    Contact Us
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -595,15 +606,14 @@ export const Navbar = () => {
               </div>
             );
           })}
+          <div className="relative h-full flex items-center">
+            <Link href="/contact" className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[14px] font-medium transition-all duration-300 ${isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]'}`}>
+              Contact Us
+            </Link>
+          </div>
         </div>
         
         <div className="flex items-center gap-4 md:gap-7">
-          <div className={`hidden lg:flex flex-col items-end border-r pr-7 mr-1 ${isScrolled ? 'border-gray-200' : 'border-gray-300'}`}>
-            <span className="c9-eyebrow !text-[9px] !text-slate-400 mb-1 leading-none">Priority Support</span>
-            <a href={`tel:${AUDIENCE_INFO[audience].phone}`} className={`text-[14px] font-medium  hover:text-[#5D00D6] transition-colors leading-none font-dm-sans ${isScrolled ? 'text-slate-600' : 'text-slate-800'}`}>
-              {AUDIENCE_INFO[audience].phone}
-            </a>
-          </div>
           
           <Button 
             size="sm"

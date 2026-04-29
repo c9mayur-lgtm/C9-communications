@@ -33,7 +33,7 @@ export const TELCO_SERVICES_CONTENT: Record<string, any> = {
   },
   mobile: {
     heading: 'Business Mobile',
-    description: "C9 manages your mobile fleet end-to-end — from SIM provisioning and plan management to device procurement and a single consolidated bill.",
+    description: "C9 provides full operational detail for your mobile fleet — from SIM provisioning and plan management to device procurement and a single consolidated bill.",
     options: [
       { title: 'Business SIM Plans', desc: "High-data SIM plans on Australia's leading networks, managed through your C9 account.", icon: <Smartphone size={20} /> },
       { title: 'Mobile Fleet Management', desc: 'Centralised visibility and control over every device and SIM in your business.', icon: <Truck size={20} /> },
@@ -114,18 +114,18 @@ export const IT_SOLUTIONS_FIXED = {
     heading: 'Industry Focus',
     variant: 'purple',
     items: [
-      { label: 'Industry Manufacturing', path: '/industries/manufacturing' },
-      { label: 'Transportation Logistics', path: '/industries/logistics' },
+      { label: 'Retail', path: '/industries/retail' },
       { label: 'Healthcare', path: '/industries/healthcare' },
-      { label: 'Banks & Insurance', path: '/industries/finance' },
-      { label: 'Consulting Providers', path: '/industries/consulting' },
-      { label: 'Non Profit', path: '/industries/non-profit' },
+      { label: 'Professional Services', path: '/industries/professional-services' },
+      { label: 'Real Estate', path: '/industries/real-estate' },
+      { label: 'Hospitality', path: '/industries/hospitality' },
+      { label: 'Education', path: '/industries/education' },
     ],
     viewAllPath: '/industries'
   },
   ctaBanner: {
     title: 'Smarter IT, Stronger Business',
-    body: 'End-to-end IT services designed to secure, support, and scale your business from helpdesk to cloud and beyond.',
+    body: "Operational detail for IT services designed to secure, support, and scale your business from helpdesk to cloud and beyond.",
     button: 'Partner Up Now',
     path: '/consultation'
   }
@@ -287,18 +287,17 @@ export const BUSINESS_IT_SOLUTIONS = {
   sidebar: {
     heading: 'Industry Focus',
     items: [
-      { label: 'Retail',                path: '/industries/retail' },
-      { label: 'Healthcare',            path: '/industries/healthcare' },
+      { label: 'Retail', path: '/industries/retail' },
+      { label: 'Healthcare', path: '/industries/healthcare' },
       { label: 'Professional Services', path: '/industries/professional-services' },
-      { label: 'Real Estate',           path: '/industries/real-estate' },
-      { label: 'Hospitality',           path: '/industries/hospitality' },
-      { label: 'Education',             path: '/industries/education' },
-      { label: 'View all Industries →', path: '/industries' },
+      { label: 'Real Estate', path: '/industries/real-estate' },
+      { label: 'Hospitality', path: '/industries/hospitality' },
+      { label: 'Education', path: '/industries/education' },
     ]
   },
   ctaBanner: {
     title: 'Smarter IT, Stronger Business',
-    body: 'End-to-end IT services designed to secure, support, and scale your business.',
+    body: 'Operational detail for IT services designed to secure, support, and scale your business.',
     button: 'Partner Up Now'
   }
 };
@@ -451,13 +450,12 @@ export const ENTERPRISE_IT_SOLUTIONS = {
   sidebar: {
     heading: 'Industries We Serve',
     items: [
-      { label: 'Retail',                path: '/industries/retail' },
-      { label: 'Healthcare',            path: '/industries/healthcare' },
+      { label: 'Retail', path: '/industries/retail' },
+      { label: 'Healthcare', path: '/industries/healthcare' },
       { label: 'Professional Services', path: '/industries/professional-services' },
-      { label: 'Real Estate',           path: '/industries/real-estate' },
-      { label: 'Hospitality',           path: '/industries/hospitality' },
-      { label: 'Education',             path: '/industries/education' },
-      { label: 'View all Industries →', path: '/industries' },
+      { label: 'Real Estate', path: '/industries/real-estate' },
+      { label: 'Hospitality', path: '/industries/hospitality' },
+      { label: 'Education', path: '/industries/education' },
     ]
   },
   ctaBanner: {

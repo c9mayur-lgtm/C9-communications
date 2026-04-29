@@ -6,35 +6,38 @@ import { ArrowRight, CheckCircle, Store, Building2, Briefcase } from 'lucide-rea
 
 const slides = [
   {
-    id: 'fragmented-it',
-    eyebrow: 'OPERATIONAL CONTROL',
-    title: 'Stop managing fragmented IT and\ntelco across multiple vendors.',
-    desc: 'We consolidate and operate complex infrastructure into a single accountable model — reducing operational risk, stabilizing uptime, and centralising control.',
-    cta: 'Find My IT Operating Model',
+    id: 'greenfield',
+    eyebrow: 'GREENFIELD',
+    dotColor: '#10b981',
+    title: 'Managed IT & Network Readiness for\nNew Site Rollouts',
+    desc: 'Ensure every new site opens with fully operational connectivity, infrastructure, devices, and support—without vendor delays or deployment risk.',
+    cta: 'View Rollout Approach',
     href: '#consultation-section',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
+    image: '/images/hero/greenfield.png',
     icon: <Briefcase size={18} />,
-    tags: ['Consolidated Operations', 'Single Accountability', 'Reduced Risk', 'Stabilised Uptime']
+    tags: ['Zero-Delay Deployment', 'Standardised Infrastructure', 'On-Site Integration', 'Ready-to-Trade Delivery']
   },
   {
-    id: 'brownfield-risk',
-    eyebrow: 'BROWNFIELD STABILISATION',
-    title: 'Regain control of existing\ncomplex environments.',
-    desc: 'If your business depends on multiple IT and telco providers, you are already exposed to fragmentation risk. We help you consolidate before it becomes downtime.',
-    cta: 'View Infrastructure Control Approach',
+    id: 'brownfield',
+    eyebrow: 'BROWNFIELD',
+    dotColor: '#f59e0b',
+    title: 'Consolidate IT, Telco, and Support\ninto One Accountable Model',
+    desc: 'Reduce vendor fragmentation, improve operational visibility, and stabilise business-critical systems without disrupting day-to-day operations.',
+    cta: 'View Stabilisation Model',
     href: '#consultation-section',
-    image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200',
+    image: '/images/hero/brownfield.png',
     icon: <Store size={18} />,
     tags: ['Vendor Consolidation', 'Visibility Mapping', 'No Transition Disruption', '24/7 Monitoring']
   },
   {
-    id: 'enterprise-scale',
-    eyebrow: 'ENTERPRISE OPERATIONS',
-    title: 'Scale distributed infrastructure\nwith total accountability.',
-    desc: 'C9 operates your entire environment as a single system. One operational owner. One escalation path. No vendor blame shifting. Just predictable performance.',
-    cta: 'Review Enterprise Model',
+    id: 'enterprise',
+    eyebrow: 'ENTERPRISE',
+    dotColor: '#3b82f6',
+    title: 'Enterprise Infrastructure Operations\nfor Multi-Site Organisations',
+    desc: 'C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations, SLA-driven support, and proven large-scale deployments.',
+    cta: 'Review Enterprise Operations',
     href: '#consultation-section',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200',
+    image: '/images/hero/enterprise.png',
     icon: <Building2 size={18} />,
     tags: ['SLA-Backed Performance', 'Governance Compliance', 'Root-Cause Ownership', 'Multi-Site Stability']
   }
@@ -69,9 +72,9 @@ export const HomeSlidingHero = () => {
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               >
-                <div className="inline-flex items-center gap-2 mb-4">
-                  <div className="text-[#5D00D6]">{slide.icon}</div>
-                  <span className="c9-eyebrow">{slide.eyebrow}</span>
+                <div className="inline-flex items-center gap-2 mb-4 bg-slate-50 px-3 py-1 rounded-full border border-slate-100">
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: slide.dotColor }} />
+                  <span className="c9-eyebrow !text-slate-600">{slide.eyebrow}</span>
                 </div>
                 
                 <h1 className="c9-hero-title mb-4 whitespace-pre-line">
@@ -98,10 +101,10 @@ export const HomeSlidingHero = () => {
                   </a>
                 </div>
 
-                <div className="flex flex-wrap gap-x-8 gap-y-4">
+                <div className="flex flex-wrap gap-x-6 gap-y-4">
                   {slide.tags.map((tag, i) => (
-                    <div key={i} className="flex items-center gap-2 text-slate-500 font-bold text-[14px] uppercase tracking-wider">
-                      <CheckCircle size={16} className="text-[#5D00D6]" />
+                    <div key={i} className="flex items-center gap-2 text-slate-500 font-bold text-[11px] uppercase tracking-wider">
+                      <CheckCircle size={14} className="text-[#5D00D6]" />
                       {tag}
                     </div>
                   ))}
@@ -141,7 +144,7 @@ export const HomeSlidingHero = () => {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-1.5 transition-all rounded-full ${
+            className={`h-1.5 transition-all rounded-full border-[8px] border-transparent bg-clip-padding ${
               i === current ? 'w-10 bg-[#5D00D6]' : 'w-4 bg-slate-200 hover:bg-slate-300'
             }`}
           />
@@ -160,10 +163,10 @@ export const HomeSlidingHero = () => {
                 : 'bg-slate-50/80 border-transparent text-slate-400 hover:bg-white hover:border-slate-100'
             }`}
           >
-            <div className={`flex items-center gap-3 mb-1 ${i === current ? 'text-[#5D00D6]' : 'text-slate-400'}`}>
-              {s.icon}
+            <div className={`flex items-center gap-3 mb-1 ${i === current ? 'text-slate-900' : 'text-slate-400'}`}>
+              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: s.dotColor }} />
               <span className="text-[10px] font-black uppercase tracking-widest leading-none">
-                {s.id.split('-').join(' ')}
+                {s.eyebrow}
               </span>
             </div>
             <p className={`font-bold text-[14px] leading-tight ${i === current ? 'text-slate-900' : 'text-slate-400 group-hover:text-slate-600'}`}>

@@ -17,6 +17,6 @@ export default function robots(): MetadataRoute.Robots {
         '/wordpress1'
       ],
     },
-    sitemap: 'https://c9-communications.vercel.app/site-map.xml',
+    sitemap: 'https://c9-communications.vercel.app/sitemap.xml',
   };
 }

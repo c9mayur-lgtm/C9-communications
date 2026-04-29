@@ -166,7 +166,7 @@ export default function CaseStudiesPage() {
                         </div>
                         <span className="text-[#5D00D6] font-bold uppercase tracking-widest text-[11px]">{study.category}</span>
                       </div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A2E] mb-8 leading-tight">{study.title}</h3>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A2E] mb-8 leading-tight">{study.title}</h3>
                       
                       <div className="space-y-8 mb-10">
                         <div className="grid grid-cols-2 gap-4 p-6 bg-gray-50 rounded-2xl">
@@ -238,7 +238,7 @@ export default function CaseStudiesPage() {
                           {study.metrics.map((metric, midx) => (
                             <div key={midx} className="border-l-2 border-white/10 pl-6">
                               <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2">{metric.label}</p>
-                              <p className="text-3xl font-bold text-white mb-1">{metric.value}</p>
+                              <p className="text-2xl sm:text-3xl font-bold text-white mb-1">{metric.value}</p>
                               <p className="text-xs text-gray-400">{metric.sub}</p>
                             </div>
                           ))}

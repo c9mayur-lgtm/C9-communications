@@ -15,6 +15,8 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
+import PlatformStack from '@/components/sections/enterprise/PlatformStack';
+import CapabilityPack from '@/components/sections/enterprise/CapabilityPack';
 import { 
   Table, 
   TableHeader, 
@@ -102,7 +104,7 @@ const Hero = () => (
                   Request Infrastructure Assessment
                 </a>
                 <a
-                  href="#architecture"
+                  href="#platform"
                   className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-12 px-7 font-bold text-[13px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
                 >
                   Review Operating Model
@@ -130,7 +132,7 @@ const Hero = () => (
         <FadeIn delay={0.4} direction="right" className="relative hidden lg:block">
           <div className="relative z-10 rounded-[32px] overflow-hidden shadow-2xl max-w-[90%] ml-auto">
             <img
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
+              src="/images/hero/enterprise.png"
               alt="Enterprise Control Center"
               className="w-full aspect-[4/3] object-cover"
             />
@@ -271,7 +273,16 @@ const SectionHowItWorks = () => (
 );
 
 /* 
-   SECTION 4  GOVERNANCE DETAIL
+   SECTION 4  PLATFORM STACK
+    */
+const SectionPlatform = () => (
+  <div id="platform">
+    <PlatformStack />
+  </div>
+);
+
+/* 
+   SECTION 5  GOVERNANCE DETAIL
     */
 const SectionModelDetail = () => (
   <section className="py-12 bg-slate-50 relative overflow-hidden">
@@ -307,7 +318,7 @@ const SectionModelDetail = () => (
             }
           ].map((card, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full flex flex-col items-center text-center shadow-sm hover:border-[#5D00D6]/20 transition-all group">
+               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full shadow-sm hover:border-[#5D00D6]/20 transition-all group">
                   <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                      {card.icon}
                   </div>
@@ -322,7 +333,7 @@ const SectionModelDetail = () => (
 );
 
 /* 
-   SECTION 5  SLA & SUPPORT STRUCTURE
+   SECTION 6  SLA & SUPPORT STRUCTURE
     */
 const SectionSLA = () => (
   <section className="py-14 bg-white">
@@ -384,7 +395,7 @@ const SectionSLA = () => (
 );
 
 /* 
-   SECTION 6  MULTI-SITE & SCALABILITY
+   SECTION 7  MULTI-SITE & SCALABILITY
     */
 const SectionScalability = () => (
   <section className="py-12 bg-slate-50 border-y border-slate-100">
@@ -432,7 +443,7 @@ const SectionScalability = () => (
 );
 
 /* 
-   SECTION 7  SECURITY
+   SECTION 8  SECURITY
     */
 const SectionSecurity = () => (
   <section className="py-12 bg-white overflow-hidden">
@@ -467,7 +478,14 @@ const SectionSecurity = () => (
 );
 
 /* 
-   SECTION 8  ARCHITECTURE & INTEGRATION
+   SECTION 9  CAPABILITY PACK
+    */
+const SectionCapabilityPack = () => (
+  <CapabilityPack />
+);
+
+/* 
+   SECTION 10  ARCHITECTURE & INTEGRATION
     */
 const SectionArchitecture = () => (
   <section id="architecture" className="py-12 bg-slate-50 border-y border-slate-100">
@@ -531,7 +549,7 @@ const SectionArchitecture = () => (
 );
 
 /* 
-   SECTION 9  PROOF & REALITY
+   SECTION 11  PROOF & REALITY
     */
 const SectionProof = () => (
   <section className="py-12 bg-white">
@@ -581,7 +599,7 @@ const SectionProof = () => (
 );
 
 /* 
-   SECTION 10  WORKING WITH INTERNAL IT
+   SECTION 12  WORKING WITH INTERNAL IT
     */
 const SectionCommercial = () => (
   <section className="py-14 bg-slate-900 text-white overflow-hidden relative">
@@ -631,7 +649,7 @@ const SectionCommercial = () => (
 );
 
 /* 
-   SECTION 11  ENGAGEMENT QUALIFICATION
+   SECTION 13  ENGAGEMENT QUALIFICATION
     */
 const SectionEcosystem = () => (
   <section className="py-14 bg-white">
@@ -714,7 +732,7 @@ const SectionEcosystem = () => (
 );
 
 /* 
-   SECTION 12  FINAL CTA SECTION
+   SECTION 14  FINAL CTA SECTION
     */
 const FinalCTA = () => (
   <section className="py-12 bg-[#0c1024] text-white relative overflow-hidden">
@@ -753,10 +771,12 @@ export default function EnterprisePage() {
       <WpClientTicker />
       <SectionProblem />
       <SectionHowItWorks />
+      <SectionPlatform />
       <SectionModelDetail />
       <SectionSLA />
       <SectionScalability />
       <SectionSecurity />
+      <SectionCapabilityPack />
       <SectionArchitecture />
       <SectionProof />
       <SectionCommercial />
@@ -775,4 +795,5 @@ export default function EnterprisePage() {
     </main>
   );
 }
+
 

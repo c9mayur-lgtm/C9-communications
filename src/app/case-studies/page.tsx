@@ -99,7 +99,7 @@ export default function CaseStudiesPage() {
       metrics: [
         { label: 'System Uptime', value: '100%', sub: 'Over 18 months' },
         { label: 'Critical Incidents', value: '90% ↓', sub: 'Proactive mitigation' },
-        { label: 'App Latency Visibility', value: 'Full', sub: 'End-to-end tracking' },
+        { label: 'App Latency Visibility', value: 'Full', sub: 'Operational detail tracking' },
         { label: 'Response SLA', value: '15 Mins', sub: 'Guaranteed activation' }
       ]
     }
@@ -107,7 +107,7 @@ export default function CaseStudiesPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="relative pt-32 pb-24 overflow-hidden bg-white">
+      <section className="relative pt-32 pb-20 overflow-hidden bg-white">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.03]"
           style={{
@@ -120,26 +120,26 @@ export default function CaseStudiesPage() {
         <div className="container mx-auto px-6 max-w-[1240px] relative z-10">
           <FadeUp>
             <div className="max-w-3xl">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[#5D00D6]/8 text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest mb-8 border border-[#5D00D6]/20">
-                OPERATIONAL PROOF
+              <span className="c9-eyebrow mb-8">
+                THE PROOF ENGINE
               </span>
-              <h1 className="text-[40px] md:text-[64px] font-bold leading-tight mb-8 text-[#0c1024]">
-                Infrastructure Control & <br />
-                <span className="text-[#5D00D6]">Migration Success.</span>
+              <h1 className="c9-hero-title mb-8">
+                Factual Evidence of <br />
+                <span className="text-[#5D00D6]">Operational Success.</span>
               </h1>
-              <p className="text-slate-500 text-[18px] md:text-[20px] leading-relaxed mb-12 max-w-2xl">
-                Factual breakdowns of real-world environment stabilisations, vendor consolidations, and risk-mitigated migrations. No marketing narratives—just measurable outcomes.
+              <p className="c9-body mb-12 !text-[18px] md:!text-[20px]">
+                Factual breakdowns of real-world environment stabilisations, vendor consolidations, and risk-mitigated migrations. No marketing narratives—just measurable technical outcomes.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#consultation-section"
-                  className="px-8 py-4 bg-[#5D00D6] text-white font-bold rounded-full hover:bg-[#4A00AB] transition-all text-center min-w-[240px] shadow-xl shadow-purple-900/20"
+                  className="px-8 py-4 bg-[#5D00D6] text-white font-bold rounded-full hover:bg-[#4A00AB] transition-all text-center min-w-[240px] shadow-xl shadow-purple-900/20 c9-button-label"
                 >
                   Request Infrastructure Assessment
                 </a>
                 <a
                   href="/contact"
-                  className="px-8 py-4 bg-white text-slate-700 font-bold rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all border-2 border-slate-200 text-center min-w-[240px]"
+                  className="px-8 py-4 bg-white text-slate-700 font-bold rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all border-2 border-slate-200 text-center min-w-[240px] c9-button-label"
                 >
                   Discuss Your Environment
                 </a>
@@ -149,98 +149,99 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 bg-gray-50">
+      <section className="py-16 lg:py-20 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-6 max-w-[1240px]">
-          <div className="space-y-20">
+          <div className="space-y-16">
             {caseStudies.map((study, idx) => (
               <FadeUp key={idx}>
                 <div className="group bg-white rounded-[48px] border border-gray-100 p-8 md:p-12 shadow-sm hover:shadow-2xl hover:shadow-purple-900/5 transition-all overflow-hidden relative">
-                  <div className="grid lg:grid-cols-12 gap-12 items-start">
-                    <div className="lg:col-span-7">
+                  <div className="grid lg:grid-cols-12 gap-12 items-stretch">
+                    <div className="lg:col-span-7 flex flex-col">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6]">
                           <study.icon size={20} />
                         </div>
-                        <span className="text-[#5D00D6] font-bold uppercase tracking-widest text-[11px]">{study.category}</span>
+                        <span className="c9-eyebrow !text-[#5D00D6] !text-[10px]">{study.category}</span>
                       </div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A2E] mb-8 leading-tight">{study.title}</h3>
+                      <h3 className="c9-card-title !text-3xl md:!text-4xl mb-8 leading-tight">{study.title}</h3>
                       
-                      <div className="space-y-8 mb-10">
-                        <div className="grid grid-cols-2 gap-4 p-6 bg-gray-50 rounded-2xl">
+                      <div className="space-y-8 mb-10 flex-1">
+                        <div className="grid grid-cols-2 gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
                           <div>
-                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Industry</p>
-                            <p className="text-[#1A1A2E] font-medium">{study.environment.industry}</p>
+                            <p className="c9-eyebrow !text-slate-400 !text-[9px] mb-1">CLIENT TYPE</p>
+                            <p className="text-[#1A1A2E] font-bold text-[14px]">{study.environment.industry}</p>
                           </div>
                           <div>
-                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Scale</p>
-                            <p className="text-[#1A1A2E] font-medium">{study.environment.locations}</p>
+                            <p className="c9-eyebrow !text-slate-400 !text-[9px] mb-1">SCALE</p>
+                            <p className="text-[#1A1A2E] font-bold text-[14px]">{study.environment.locations}</p>
                           </div>
                           <div>
-                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Infra Type</p>
-                            <p className="text-[#1A1A2E] font-medium">{study.environment.type}</p>
+                            <p className="c9-eyebrow !text-slate-400 !text-[9px] mb-1">SYSTEM TYPE</p>
+                            <p className="text-[#1A1A2E] font-bold text-[14px]">{study.environment.type}</p>
                           </div>
                           <div>
-                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Complexity</p>
-                            <p className="text-[#1A1A2E] font-medium">{study.environment.complexity}</p>
+                            <p className="c9-eyebrow !text-slate-400 !text-[9px] mb-1">COMPLEXITY</p>
+                            <p className="text-[#1A1A2E] font-bold text-[14px]">{study.environment.complexity}</p>
                           </div>
                         </div>
 
                         <div>
                           <div className="flex items-center gap-2 mb-2">
                             <AlertCircle size={14} className="text-red-500" />
-                            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Starting Situation</p>
+                            <p className="c9-eyebrow !text-red-500/60 !text-[10px]">THE PROBLEM</p>
                           </div>
-                          <p className="text-gray-600 text-lg leading-relaxed">{study.situation}</p>
+                          <p className="c9-body !text-slate-600 !text-[16px]">{study.situation}</p>
                         </div>
 
                         <div>
                           <div className="flex items-center gap-2 mb-2">
-                            <Shield size={14} className="text-amber-500" />
-                            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Risk Identified</p>
+                            <CheckCircle2 size={14} className="text-[#5D00D6]" />
+                            <p className="c9-eyebrow !text-[#5D00D6]/60 !text-[10px]">THE SOLUTION</p>
                           </div>
-                          <p className="text-gray-600 text-lg leading-relaxed">{study.risk}</p>
-                        </div>
-
-                        <div>
-                          <div className="flex items-center gap-2 mb-2">
-                            <CheckCircle2 size={14} className="text-green-500" />
-                            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">What C9 Implemented</p>
-                          </div>
-                          <p className="text-gray-600 text-lg leading-relaxed">{study.implementation}</p>
+                          <p className="c9-body !text-slate-600 !text-[16px]">{study.implementation}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-center gap-6 pt-4 border-t border-gray-100">
+                      <div className="flex items-center gap-6 pt-6 border-t border-slate-100 mt-auto">
                         <Link 
                           href={`/case-studies/${study.slug}`}
-                          className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all"
+                          className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all c9-button-label"
                         >
-                          Read Full Case Study <ArrowRight size={16} />
+                          Access Full Technical Review <ArrowRight size={16} />
                         </Link>
                       </div>
                     </div>
                     
-                    <div className="lg:col-span-5 h-full">
-                      <div className="bg-[#1A1A2E] rounded-[32px] p-8 md:p-10 text-white h-full flex flex-col">
-                        <div className="flex items-center gap-2 mb-10">
-                          <Activity size={24} className="text-[#A855F7]" />
-                          <span className="font-bold uppercase tracking-widest text-[14px]">Operational Outcomes</span>
-                        </div>
+                    <div className="lg:col-span-5">
+                      <div className="bg-[#1A1A2E] rounded-[32px] p-8 md:p-10 text-white h-full flex flex-col relative overflow-hidden">
+                        {/* Decorative Background Accent */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#A855F7]/10 blur-3xl rounded-full" />
                         
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-auto">
-                          {study.metrics.map((metric, midx) => (
-                            <div key={midx} className="border-l-2 border-white/10 pl-6">
-                              <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2">{metric.label}</p>
-                              <p className="text-3xl font-bold text-white mb-1">{metric.value}</p>
-                              <p className="text-xs text-gray-400">{metric.sub}</p>
-                            </div>
-                          ))}
-                        </div>
+                        <div className="relative z-10 flex flex-col h-full">
+                          <div className="flex items-center gap-2 mb-10">
+                            <Activity size={24} className="text-[#A855F7]" />
+                            <span className="c9-eyebrow !text-white !text-[12px]">MEASURABLE OUTCOMES</span>
+                          </div>
+                          
+                          <div className="grid grid-cols-1 gap-8 mb-auto">
+                            {study.metrics.map((metric, midx) => (
+                              <div key={midx} className="border-l-2 border-[#A855F7]/30 pl-6 group/metric">
+                                <p className="c9-eyebrow !text-white/40 !text-[9px] mb-2">{metric.label}</p>
+                                <div className="flex items-baseline gap-2">
+                                  <p className="text-4xl font-black text-white group-hover/metric:text-[#A855F7] transition-colors">{metric.value}</p>
+                                  <p className="text-[11px] font-bold text-white/30 uppercase tracking-widest">{metric.sub}</p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
 
-                        <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10">
-                          <p className="text-sm text-gray-300 italic">
-                            "The consolidation solved the finger-pointing between vendors. We now have a single source of truth for our entire infrastructure performance."
-                          </p>
+                          <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between group/audit">
+                             <div>
+                               <p className="c9-eyebrow !text-[#A855F7] !text-[9px] mb-1">AUDIT STATUS</p>
+                               <p className="text-[13px] font-bold text-white/90">Verified Operations Proof</p>
+                             </div>
+                             <CheckCircle2 size={24} className="text-[#A855F7]/40 group-hover/audit:text-[#A855F7] transition-colors" />
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -34,7 +34,7 @@ const INDUSTRIES = [
   {
     tag: 'NON-PROFIT',
     title: 'Affordable IT for Good Causes',
-    desc: 'We stretch every dollar with tailored IT packages, nbn, and Microsoft nonprofit licensing — so more of your budget goes to the mission, not infrastructure.',
+    desc: 'We stretch every dollar with specific capabilities for IT packages, nbn, and Microsoft nonprofit licensing — so more of your budget goes to the mission, not infrastructure.',
     metrics: [
       { label: 'avg cost savings', value: '40%' },
       { label: 'Setup fees', value: '0$' }

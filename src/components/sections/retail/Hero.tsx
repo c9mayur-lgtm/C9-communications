@@ -15,7 +15,7 @@ export default function Hero() {
               Managed IT and Telco built for Australian <span className="text-[#5D00D6]">retail businesses.</span>
             </h1>
             <p className="c9-body mb-8 max-w-[560px]">
-              From the POS terminal to the back office — C9 manages your IT and connectivity so your stores stay open, your systems stay on, and your team stays focused on customers.
+              From the POS terminal to the back office — C9 manages your IT and connectivity so your stores stay open, your systems stay on, and your team stays focused on measurable outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-8">
               <Link href="/contact" passHref>

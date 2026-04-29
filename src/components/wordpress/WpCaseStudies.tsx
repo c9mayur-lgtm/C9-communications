@@ -118,7 +118,7 @@ export const WpCaseStudies = ({
                       <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]"></div>
                       {cs.tag}
                     </div>
-                    <div className="text-white text-[24px] md:text-[28px] font-medium leading-[1.1] mb-2 tracking-tight">
+                    <div className="text-white text-[20px] sm:text-[24px] md:text-[28px] font-medium leading-[1.1] mb-2 tracking-tight">
                        {cs.videoText}
                     </div>
                   </div>

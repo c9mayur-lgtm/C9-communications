@@ -8,7 +8,7 @@ const cards = [
   {
     icon: MonitorPlay,
     title: 'Microsoft Teams Meeting Rooms',
-    desc: 'End-to-end deployment and ongoing managed support for Teams-certified meeting room hardware — cameras, audio bars, touch panels, and displays. One-touch join, always ready, always supported.',
+    desc: 'Operational detail for deployment and ongoing managed support for Teams-certified meeting room hardware — cameras, audio bars, touch panels, and displays. One-touch join, always ready, always supported.',
     tags: ['Certified Hardware', 'Room Scheduling', '24/7 Support'],
     note: null,
     defense: null,

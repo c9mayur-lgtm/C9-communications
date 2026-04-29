@@ -197,7 +197,7 @@ export default function CCTVPeopleCountPage() {
                     href="/contact"
                     className="inline-flex h-14 items-center justify-center rounded-full bg-[#5D00D6] px-8 text-[16px] font-bold text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(93,0,214,0.3)]"
                   >
-                    Get a Tailored Solution
+                    Get Measurable Outcomes
                   </Link>
                   <Link
                     href="/contact"

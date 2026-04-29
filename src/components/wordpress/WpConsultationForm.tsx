@@ -27,8 +27,8 @@ export interface WpConsultationFormProps {
 
 export const WpConsultationForm = ({ 
   eyebrow = "STRATEGIC IT ADVISORY",
-  title = "The IT partner your business deserves.",
-  description = "Book a 30-minute strategy session with our senior consultants. We'll review your current infrastructure and security posture — no obligation, just expert advice.",
+  title = "High-Authority Infrastructure Control.",
+  description = "Schedule a technical review with our senior engineers. We'll audit your current environment, identify exposure gaps, and define a roadmap for operational stability.",
   formTitle = "Schedule Strategy Session",
   ctaText
 }: WpConsultationFormProps) => {

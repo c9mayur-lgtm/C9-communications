@@ -4,10 +4,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowRight, CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon,
-  AlertTriangle, MapPin, BarChart3, Clock, TrendingUp
+  AlertTriangle, MapPin, BarChart3, Clock, TrendingUp, Zap, Activity, Building2
 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
+import RetailArchitecture from '@/components/sections/industries/RetailArchitecture';
 
 /* ─── Animation Helper ─────────────────────────── */
 const FadeIn = ({
@@ -51,22 +52,22 @@ const Hero = () => (
         <div>
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
-              <MapPin size={13} className="text-[#5D00D6]" />
-              <span className="c9-eyebrow !mb-0">Retail Operations</span>
+              <Building2 size={13} className="text-[#5D00D6]" />
+              <span className="c9-eyebrow !mb-0">Primary Enterprise Use Case</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              IT Built to Keep Your <span className="text-[#5D00D6]">Registers Ringing</span>
+              Enterprise Infrastructure for <span className="text-[#5D00D6]">Multi-Site Retail</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.14}>
             <p className="c9-body text-slate-600 mb-2 max-w-[530px]">
-              Every second of downtime costs money. We deliver reliable, bulletproof technology across your network of stores — ensuring POS systems stay online, teams stay connected, and customers aren't left waiting.
+              We deliver bulletproof, multi-site architecture designed for the unique demands of high-volume retail. From POS reliability to holiday trading resilience, we ensure your entire footprint stays operational.
             </p>
-            <p className="text-[14px] text-[#5D00D6] font-bold mb-10">Supporting industry-specific environments with reliable, scalable systems</p>
+            <p className="text-[14px] text-[#5D00D6] font-bold mb-10">Accountable IT & Network operations for distributed retail environments.</p>
           </FadeIn>
 
           <FadeIn delay={0.2}>
@@ -79,7 +80,7 @@ const Hero = () => (
                 }}
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
               >
-                Talk to a Retail Specialist
+                Request Retail Brief
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
@@ -89,12 +90,11 @@ const Hero = () => (
                 View All Industries
               </a>
             </div>
-            <p className="text-[14px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
             <div className="flex flex-wrap gap-5">
-              {['Multi-Site Standardisation', 'Failover Connectivity', 'Fast Support', 'POS Reliability'].map((t) => (
+              {['Multi-Site Standardisation', 'Holiday Trading Resilience', '24/7 NOC Overlay', 'POS Continuity'].map((t) => (
                 <div key={t} className="flex items-center gap-2 text-slate-500 text-[14px] font-bold">
                   <CheckCircle size={16} className="text-[#5D00D6]" /> {t}
                 </div>
@@ -108,16 +108,16 @@ const Hero = () => (
           <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl">
             <img 
               src="/images/greenfield_retail.png" 
-              alt="Retail POS Interaction" 
+              alt="Retail Enterprise Infrastructure" 
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/90 via-[#0c1024]/20 to-transparent flex items-end p-10">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 w-full">
                 <div className="flex items-center gap-4 text-white">
-                  <Wifi className="text-green-400" size={24} />
+                  <Activity className="text-green-400" size={24} />
                   <div>
-                    <div className="font-bold text-[14px]">Primary & LTE Failover Active</div>
-                    <div className="text-white/70 text-[14px]">100% store uptime guaranteed.</div>
+                    <div className="font-bold text-[14px]">NOC Overlay Active</div>
+                    <div className="text-white/70 text-[14px]">Proactive store monitoring across 150+ sites.</div>
                   </div>
                 </div>
               </div>
@@ -129,158 +129,49 @@ const Hero = () => (
   </section>
 );
 
-/* ─── Day In The Life ───────────────────────────── */
-const DayInTheLife = () => (
-  <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
+/* ─── Operational Focus ─────────────────────────── */
+const OperationalFocus = () => (
+  <section className="py-20 lg:py-28 bg-white border-b border-slate-100">
     <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-24">
         <FadeIn>
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] mb-6">
-            <Clock size={24} />
-          </div>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 leading-tight">
-            It’s Saturday morning. The line is out the door.
-          </h2>
-          <p className="text-[17px] text-slate-600 mb-8 leading-relaxed">
-            Your flagship store is packed during the biggest sale of the quarter. Suddenly, the local internet connection drops.
+          <p className="c9-eyebrow mb-5">Enterprise Resilience</p>
+          <h2 className="c9-section-heading mb-6">Built for Holiday Trading <span className="text-[#5D00D6]">Resilience</span></h2>
+          <p className="c9-body text-slate-600 mb-8 leading-relaxed">
+            Black Friday, Christmas, and peak trading periods are when your infrastructure is tested most. A single network failure during these peaks doesn't just cost sales; it damages brand trust.
           </p>
-          <p className="text-[17px] text-slate-600 mb-8 leading-relaxed">
-            If you don't have the right IT setup, panic sets in. Staff pull out manual credit card slips. Customers get frustrated and leave. Store managers spend hours fighting with phone support while revenue walks out the door.
-          </p>
-          <p className="text-[18px] text-slate-900 font-bold mb-8 leading-relaxed">
-            But with C9, the store's 4G failover kicks in instantly. The POS systems barely blink. The music keeps playing. Transactions keep processing. Your staff doesn’t even know there was a network issue until they see our automated resolution ticket later that day.
-          </p>
-          <p className="text-[16px] text-[#5D00D6] font-semibold">
-            That’s the difference between treating IT as an overhead cost—and treating it as the backbone of your revenue.
-          </p>
-        </FadeIn>
-      </div>
-    </div>
-  </section>
-);
-
-/* ─── Challenges ────────────────────────────────── */
-const Challenges = () => (
-  <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <FadeIn className="mb-12">
-        <p className="c9-eyebrow mb-4">The Real Friction</p>
-        <h2 className="c9-section-heading max-w-2xl">
-          What store managers struggle with daily
-        </h2>
-      </FadeIn>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[
-          {
-            icon: <AlertTriangle size={20} />,
-            title: 'Downtime killing sales',
-            desc: 'When EFTPOS terminals can’t connect or POS software hangs, you literally cannot take money. Every minute hurts.',
-          },
-          {
-            icon: <Network size={20} />,
-            title: 'Frankenstein store setups',
-            desc: 'Store 1 runs on NBN, Store 2 relies on a dodgy 4G dongle, and Store 3 uses a different firewall. Fixing issues is a nightmare.',
-          },
-          {
-            icon: <BarChart3 size={20} />,
-            title: 'Vendor finger-pointing',
-            desc: 'The internet provider says it’s the POS system. The POS vendor says it’s the network. Meanwhile, your store is offline.',
-          },
-        ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.07}>
-            <div className="bg-white rounded-[20px] border border-slate-100 p-7 h-full hover:shadow-lg hover:border-[#5D00D6]/20 transition-all duration-300 group">
-              <div className="w-11 h-11 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center text-[#5D00D6] mb-5 group-hover:bg-[#5D00D6]/15 transition-colors">
-                {item.icon}
-              </div>
-              <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
-              <p className="text-[14px] text-slate-500 leading-relaxed">{item.desc}</p>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-/* ─── Impact Layer (What This Means) ────────────── */
-const Impact = () => (
-  <section className="py-16 lg:py-24 bg-[#0c1024] relative overflow-hidden">
-    <div
-      className="pointer-events-none absolute inset-0 opacity-[0.08]"
-      style={{ background: 'radial-gradient(ellipse at 80% 50%, #5D00D6, transparent 70%)' }}
-    />
-    <div className="relative z-10 container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-        <FadeIn delay={0.1} className="order-2 lg:order-1 relative rounded-[32px] overflow-hidden aspect-[4/3] hidden md:block">
-           <img 
-              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop" 
-              alt="Modern Retail Environment" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-indigo-900/20 mix-blend-multiply"></div>
-        </FadeIn>
-
-        <FadeIn className="order-1 lg:order-2">
-          <p className="c9-eyebrow !text-[#a56eff] mb-5">Business Impact</p>
-          <h2 className="c9-section-heading !text-white mb-8">
-            What this actually means for you
-          </h2>
           <div className="space-y-6">
             {[
-              { title: 'Zero Vendor Blame', desc: 'We supply the internet, the network, and the support. If something drops, you call one number. We fix it.' },
-              { title: 'Cookie-Cutter Rollouts', desc: 'Opening a new store? We drop in a pre-configured rack. Plug it in, turn it on, and you’re instantly connected to head office.' },
-              { title: 'Unbreakable Connectivity', desc: 'Enterprise-grade 4G/5G backup is standard. Dropouts happen, but your transactions won’t.' },
-              { title: 'Focus on Retail, Not IT', desc: 'Your store managers are hired to sell and lead teams, not to crawl under desks resetting routers.' },
-            ].map((point, i) => (
-              <div key={i} className="flex items-start gap-4">
-                <CheckCircle className="text-[#a56eff] shrink-0 mt-1" size={20} />
+              { title: 'POS Continuity', desc: 'Local cache and LTE failover ensure your registers keep ringing even during local exchange outages.' },
+              { title: 'POS Reliability', desc: 'Bulletproof POS networking with dedicated VLANs and prioritised traffic to ensure zero latency at checkout.' },
+              { title: 'Remote Support Model', desc: 'Australian-based NOC that understands retail logic. We don’t troubleshoot routers; we fix store operations.' },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0">
+                  <Zap size={18} className="text-[#5D00D6]" />
+                </div>
                 <div>
-                  <h4 className="text-white font-bold text-[16px] mb-1">{point.title}</h4>
-                  <p className="text-white/70 text-[14px] leading-relaxed">{point.desc}</p>
+                  <h4 className="text-[17px] font-bold text-slate-900 mb-1">{item.title}</h4>
+                  <p className="text-[14px] text-slate-500 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </FadeIn>
-      </div>
-    </div>
-  </section>
-);
-
-/* ─── Trust / Team ──────────────────────────────── */
-const Trust = () => (
-  <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
-    <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <FadeIn>
-          <p className="c9-eyebrow mb-4">Direct Support</p>
-          <h2 className="c9-section-heading mb-6">Humans who actually answer the phone.</h2>
-          <p className="c9-body text-slate-600 mb-5">
-            When a store is offline, submitting an email ticket into a black hole isn't good enough. You need help instantly.
-          </p>
-          <p className="c9-body text-slate-600 mb-8">
-            Our Australian-based support team knows your exact network layout. They see a store drop offline before you do. We don’t ask your managers to troubleshoot firewall logs; we handle the technical heavy lifting so they can get back to the floor.
-          </p>
-          <a
-            href="#consultation-section"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:text-indigo-900 transition-colors"
-          >
-            Meet the team backing you <ArrowRight size={16} />
-          </a>
-        </FadeIn>
-
-        <FadeIn delay={0.1} className="relative rounded-[32px] overflow-hidden aspect-[4/3] lg:aspect-square bg-slate-50 border border-slate-100">
+        <FadeIn delay={0.1} className="relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl border border-slate-100">
           <img 
-            src="/images/support/specialist.png" 
-            alt="C9 Support specialist diagnosing a problem" 
-            className="w-full h-full object-cover grayscale opacity-80"
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop" 
+            alt="Retail Store Operations" 
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/40 to-transparent mix-blend-hard-light" />
+          <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-xl border border-white/20 max-w-[240px]">
+             <div className="flex items-center gap-3 mb-3">
+               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+               <span className="text-[11px] font-bold text-slate-900 uppercase tracking-widest">Active Store Health</span>
+             </div>
+             <div className="text-[24px] font-bold text-[#5D00D6] mb-1 leading-none">99.99%</div>
+             <div className="text-[11px] text-slate-500 font-medium">Uptime maintained across national fleet during peak trading.</div>
+          </div>
         </FadeIn>
       </div>
     </div>
@@ -292,10 +183,10 @@ const FinalCTA = () => (
   <section className="py-16 lg:py-20 bg-slate-50 border-b border-slate-100">
     <div className="container mx-auto px-6 md:px-8 max-w-[760px] text-center">
       <FadeIn>
-        <p className="c9-eyebrow mb-5">Next Steps</p>
-        <h2 className="c9-section-heading mb-6">Let's audit your worst-performing store.</h2>
+        <p className="c9-eyebrow mb-5">Retail Audit</p>
+        <h2 className="c9-section-heading mb-6">Is your network ready for the next peak?</h2>
         <p className="c9-body text-slate-600 mb-10">
-          We don't need to replace everything on day one. Let's look at the location that drops out the most. We'll fix it, prove the model, and then roll that stability out to the rest of your fleet.
+          We offer a comprehensive Infrastructure Audit for multi-site retailers. We'll identify failure points in your current store architecture and show you exactly how to stabilise your operations.
         </p>
         <div className="flex flex-col items-center gap-4">
           <a
@@ -306,10 +197,10 @@ const FinalCTA = () => (
             }}
             className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
           >
-            Book a Discovery Chat
+            Get a Retail Infrastructure Audit
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
-          <p className="text-[14px] text-slate-500">No obligation. Just clear, practical advice.</p>
+          <p className="text-[14px] text-slate-500">No obligation. Just clear, operational insight.</p>
         </div>
       </FadeIn>
     </div>
@@ -321,10 +212,8 @@ export default function RetailPage() {
   return (
     <main className="min-h-screen bg-white">
       <Hero />
-      <DayInTheLife />
-      <Challenges />
-      <Impact />
-      <Trust />
+      <OperationalFocus />
+      <RetailArchitecture />
       <TrustProofSystem 
         testimonials={[
           {
@@ -359,9 +248,9 @@ export default function RetailPage() {
       <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
-          eyebrow="RETAIL IT ADVISORY"
-          title="Let's stabilise your stores."
-          description="Drop your details below. We’ll show you exactly how we standardise retail networks to guarantee uptime and fast support — no obligation, just clear, practical advice."
+          eyebrow="RETAIL ENTERPRISE ADVISORY"
+          title="Stabilise your retail fleet."
+          description="Drop your details below for a direct conversation about your multi-site infrastructure. We'll show you how we guarantee uptime and fast support across your entire footprint."
           formTitle="Talk to a Retail Specialist"
         />
       </section>

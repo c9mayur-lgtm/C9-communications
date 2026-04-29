@@ -92,7 +92,7 @@ function getResponse(query: string): ChatResponse {
   const q = query.toLowerCase();
 
   if (q.match(/hello|hi|hey|g'day|good/)) {
-    return { text: "G'day! I'm the C9 Advisor — happy to help you find the right IT or telco solution for your business. You can ask me about Managed IT, internet, voice, Microsoft 365, cybersecurity, mobile, or which solution suits your industry." };
+    return { text: "G'day! I'm the C9 Advisor — happy to help you find the measurable outcomes for your business through IT or telco. You can ask me about Managed IT, internet, voice, Microsoft 365, cybersecurity, mobile, or which solution suits your industry." };
   }
   if (q.match(/nbn|business.?nbn/)) {
     return { 
@@ -210,7 +210,7 @@ function getResponse(query: string): ChatResponse {
   }
   if (q.match(/nonprofit|charity|NFP/)) {
     return { 
-      text: "We offer discounted Microsoft nonprofit licensing and tailored IT packages to help NFPs stretch their budget further towards their mission.", 
+      text: "We offer discounted Microsoft nonprofit licensing and specific capabilities within IT packages to help NFPs stretch their budget further towards their mission.", 
       links: [{ label: 'Non-profit IT', href: '/industries/non-profit' }]
     };
   }
@@ -464,7 +464,7 @@ export const BusinessAdvisor = () => {
                             <PhoneCall size={16} className="text-white" />
                           </div>
                           <h5 className="text-[14px] font-medium text-white mb-1 leading-snug">Talk to an Engineer</h5>
-                          <p className="text-[12px] text-gray-400 leading-relaxed">15-min free call tailored to {selected.label}.</p>
+                          <p className="text-[12px] text-gray-400 leading-relaxed">15-min free call focused on specific capabilities for {selected.label}.</p>
                         </div>
                         <Link href="/contact" className="mt-4 block w-full py-2.5 text-center rounded-xl bg-[#5D00D6] text-white font-medium text-[14px] hover:bg-[#4c00b0] transition-colors">
                           Book Free Session →

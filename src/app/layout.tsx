@@ -40,8 +40,11 @@ export const metadata: Metadata = {
     default: "C9 Communications | Small Business nbn™, Cloud Voice & Managed IT",
     template: "%s | C9 Communications Australia"
   },
-  description: "Australia's trusted partner for Small Business nbn™®, C9 phone system cloud phone systems, and enterprise managed IT services. 99.99% uptime SLA with 24/7 local engineering support.",
+  description: "C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations, SLA-driven support, and proven large-scale deployments.",
   keywords: ["Small Business nbn™", "Cloud Phone System", "Managed IT Services", "C9 phone system", "Australian Telco", "Business Connectivity", "IT Governance"],
+  icons: {
+    icon: '/favicon.ico',
+  },
   authors: [{ name: "C9 Communications" }],
   creator: "C9 Communications",
   publisher: "C9 Communications",
@@ -67,7 +70,7 @@ export const metadata: Metadata = {
     url: "https://c9-communications.vercel.app",
     siteName: "C9 Communications",
     title: "C9 Communications | Modern Telco & IT Solutions",
-    description: "Secure, fast, and reliable business connectivity and IT services powered by Australian experts.",
+    description: "C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia.",
     images: [
       {
         url: "/og-image.png",
@@ -80,7 +83,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "C9 Communications | Modern Telco & IT Solutions",
-    description: "Secure, fast, and reliable business connectivity and IT services.",
+    description: "Enterprise-grade managed IT, network, and security services for multi-site organisations across Australia.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -115,7 +118,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "C9 Communications",
               "url": "https://c9-communications.vercel.app",
-              "logo": "https://c9-communications.vercel.app/next.svg",
+              "logo": "https://c9-communications.vercel.app/images/c9_logo.svg",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+61-1300-999-999",
