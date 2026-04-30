@@ -32,7 +32,7 @@ export default function ModernWorkplacePage() {
     <div className="bg-white min-h-screen overflow-x-hidden">
 
       {/* ══ HERO (Standardized Light 2-Column) ════════ */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white">
+      <section className="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-white">
         {/* Subtle background element */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F9FBFF] -z-10 hidden lg:block" />
         

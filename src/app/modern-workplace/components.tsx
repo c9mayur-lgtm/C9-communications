@@ -850,8 +850,8 @@ export const FullStackSection = ({
     <div className="c9-container">
       <div className="mb-12">
         <div className="text-[12px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-4">C9 Communications</div>
-        <h2 className="text-[32px] md:text-[42px] font-bold text-[#0c1024] mb-6 tracking-tight">{title}</h2>
-        <p className="text-[17px] text-gray-500 max-w-2xl leading-relaxed font-medium">
+        <h2 className="text-[32px] md:text-[42px] font-medium text-[#0c1024] mb-6 tracking-tight">{title}</h2>
+        <p className="text-[17px] text-gray-500 max-w-2xl leading-relaxed font-normal">
           {description}
         </p>
       </div>
@@ -862,7 +862,7 @@ export const FullStackSection = ({
             href={s.href}
             className="group flex items-center justify-between p-7 bg-white rounded-2xl border border-gray-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-300"
           >
-            <span className="text-[15px] font-bold text-[#0c1024] tracking-tight">{s.title}</span>
+            <span className="text-[15px] font-medium text-[#0c1024] tracking-tight">{s.title}</span>
             <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center transition-all group-hover:bg-[#5D00D6] group-hover:text-white">
               <ArrowRight size={16} />
             </div>

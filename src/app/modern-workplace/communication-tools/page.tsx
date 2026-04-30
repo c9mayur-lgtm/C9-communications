@@ -206,7 +206,7 @@ export default function CommunicationToolsPage() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <h1 className="c9-hero-title mb-6 !leading-[1.15] font-bold">
-                  One unified system. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-[#00875A]">From desk phone to Teams chat.</span>
+                  One unified system. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-purple-600">From desk phone to Teams chat.</span>
                 </h1>
               </FadeUp>
               <FadeUp delay={0.2}>
@@ -242,49 +242,44 @@ export default function CommunicationToolsPage() {
               </FadeUp>
             </div>
 
-            {/* Right: Rich Interactive Visual */}
-            <ScaleIn delay={0.4} className="relative hidden lg:block h-[560px] w-full">
-              <div className="absolute top-8 right-0 w-[500px] h-[460px] rounded-[32px] bg-[#f8fbff] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-200 group flex items-center justify-center">
-                {/* Simulated Softphone / Teams Client Mockup */}
-                <div className="w-[85%] h-[85%] bg-white rounded-2xl shadow-xl border border-gray-100 flex overflow-hidden relative">
-                  {/* Sidebar */}
-                  <div className="w-16 bg-[#0c1024] flex flex-col items-center py-4 gap-6 shrink-0 z-10 text-gray-400">
-                     <div className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 flex items-center justify-center"><CircleUserRound size={16} /></div>
-                     <MessageCircle size={18} />
-                     <Phone size={18} className="text-white" /> {/* Active */}
-                     <Video size={18} />
+            {/* Right: Realistic Communication Visual */}
+            <ScaleIn delay={0.4} className="relative hidden lg:block">
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 group">
+                <img 
+                  src="/modern_communication_collaboration.png" 
+                  alt="Modern Team Collaborating with Unified Communications" 
+                  className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/10 to-transparent mix-blend-overlay" />
+              </div>
+
+              {/* Floating Meta-Info Card (Half-Overlap) */}
+              <motion.div 
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1, duration: 0.8 }}
+                className="absolute -bottom-10 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-[32px] border border-slate-100 shadow-[0_20px_50px_rgba(93,0,214,0.15)] z-30"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-2xl bg-[#5D00D6] text-white flex items-center justify-center shadow-lg shadow-purple-900/20">
+                      <UsersIcon size={24} />
+                    </div>
+                    <div>
+                      <div className="text-[14px] font-bold text-slate-900">Active Communication Sync</div>
+                      <div className="text-[10px] text-[#5D00D6] font-bold uppercase tracking-widest">Global Voice Shield Active</div>
+                    </div>
                   </div>
-                  {/* Active Call State */}
-                  <div className="flex-1 flex flex-col pt-6 pb-4 px-6 items-center justify-center relative overflow-hidden">
-                     {/* Background blur */}
-                     <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white" />
-                     
-                     <div className="w-24 h-24 rounded-full bg-gray-100 border-4 border-white shadow-md z-10 overflow-hidden mb-4">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Caller" className="w-full h-full object-cover" />
-                     </div>
-                     <h3 className="font-bold text-[#0c1024] text-[18px] z-10">Sarah Jenkins</h3>
-                     <p className="text-gray-500 text-[14px] z-10 mb-8 font-mono">00:04:22</p>
-
-                     {/* Call controls */}
-                     <div className="flex gap-4 z-10">
-                       <div className="w-12 h-12 rounded-full bg-white shadow border border-gray-100 flex items-center justify-center text-gray-700 cursor-pointer hover:bg-gray-50 hover:-translate-y-0.5 transition-all"><Mic size={18} /></div>
-                       <div className="w-12 h-12 rounded-full bg-red-500 shadow-md border border-red-600 flex items-center justify-center text-white cursor-pointer hover:bg-red-600 hover:-translate-y-0.5 transition-all"><Phone size={18} className="rotate-[135deg]" /></div>
-                     </div>
-
-                     {/* Expanding call circles animation */}
-                     <motion.div animate={{ scale: [1, 2], opacity: [0.1, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute w-32 h-32 rounded-full bg-[#5D00D6] top-1/2 -translate-y-[calc(50%+4rem)] pointer-events-none" />
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Verified QoS 99.9%</span>
                   </div>
                 </div>
+              </motion.div>
 
-                {/* Floating Missed Call bubble */}
-                <motion.div animate={{ y: [-5, 5, -5] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute top-10 right-10 bg-white rounded-xl shadow-lg border border-gray-100 p-3 flex gap-3 items-center z-30">
-                  <div className="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center"><Phone size={12} className="rotate-[135deg]" /></div>
-                  <div>
-                    <div className="text-[10px] uppercase font-bold text-gray-400">Missed Call</div>
-                    <div className="text-[12px] font-bold text-[#0c1024]">Ext. 403</div>
-                  </div>
-                </motion.div>
-              </div>
+              {/* Decorative Background Elements */}
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50 -z-10" />
+              <div className="absolute -bottom-20 -left-10 w-64 h-64 bg-slate-100 rounded-full blur-3xl opacity-50 -z-10" />
             </ScaleIn>
 
           </div>

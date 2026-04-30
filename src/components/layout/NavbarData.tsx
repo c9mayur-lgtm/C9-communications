@@ -85,6 +85,7 @@ export const IT_SOLUTIONS_FIXED = {
           action: { label: 'C9 defense →', path: 'https://c9defense.com.au/' },
           items: [
             { label: 'Security Solutions', path: 'https://c9defense.com.au/' },
+            { label: 'Endpoint Detection & Response', path: '/managed-it/edr' },
             { label: 'Backup & Disaster Recovery', path: 'https://c9defense.com.au/' },
           ]
         }
@@ -105,7 +106,7 @@ export const IT_SOLUTIONS_FIXED = {
     }
   ],
   challenges: [
-    { title: 'Digital Transformation', icon: <Cpu size={24} />, path: '/managed-it/digital-transformation' },
+    { title: 'Systems Modernisation', icon: <Cpu size={24} />, path: '/managed-it/systems-modernisation' },
     { title: 'Security',               icon: <Shield size={24} />, path: 'https://c9defense.com.au/' },
     { title: 'Business Continuity',    icon: <Handshake size={24} />, path: '/managed-it/business-continuity' },
     { title: 'Growth',                 icon: <TrendingUp size={24} />, path: '/managed-it/business-growth' },
@@ -223,7 +224,7 @@ export const MODERN_WORKPLACE_FIXED = {
     { title: 'Microsoft 365 Solutions',           icon: <LayoutGrid size={24} />, path: '/modern-workplace/microsoft-365-solutions' },
     { title: 'Security Awareness Training',       icon: <GraduationCap size={24} />, path: '/managed-it/security-awareness-training' },
     { title: 'SaaS Backup',                       icon: <Cloud size={24} />, path: '/modern-workplace/saas-backup' },
-    { title: 'Endpoint Detection & Response (EDR)', icon: <ShieldAlert size={24} />, path: '/managed-it/endpoint-management' },
+    { title: 'Endpoint Detection & Response (EDR)', icon: <ShieldAlert size={24} />, path: '/managed-it/edr' },
   ],
   sidebar: {
     heading: 'Build a Smart Workplace',
@@ -279,7 +280,7 @@ export const BUSINESS_IT_SOLUTIONS = {
     }
   ],
   challenges: [
-    { title: 'Digital Transformation', icon: <Cpu size={24} />, path: '/managed-it/digital-transformation' },
+    { title: 'Systems Modernisation', icon: <Cpu size={24} />, path: '/managed-it/systems-modernisation' },
     { title: 'Security',               icon: <ShieldCheck size={24} />, path: 'https://c9defense.com.au/' },
     { title: 'Business Continuity',    icon: <InfinityIcon size={24} />, path: '/managed-it/business-continuity' },
     { title: 'Growth',                 icon: <BarChart3 size={24} />, path: '/managed-it/business-growth' },
@@ -445,7 +446,7 @@ export const ENTERPRISE_IT_SOLUTIONS = {
     { title: 'Scale & Governance',  icon: <Layers size={24} />, path: '/managed-it/business-growth' },
     { title: 'Compliance',          icon: <ShieldCheck size={24} />, path: 'https://c9defense.com.au/' },
     { title: 'Business Continuity', icon: <InfinityIcon size={24} />, path: '/managed-it/business-continuity' },
-    { title: 'Digital Transformation', icon: <Cpu size={24} />, path: '/managed-it/digital-transformation' },
+    { title: 'Systems Modernisation', icon: <Cpu size={24} />, path: '/managed-it/systems-modernisation' },
   ],
   sidebar: {
     heading: 'Industries We Serve',
@@ -553,7 +554,7 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
     { title: 'Microsoft 365 Enterprise',         icon: <LayoutGrid size={24} />, path: '/modern-workplace/microsoft-365-solutions' },
     { title: 'Zero Trust Security',              icon: <ShieldCheck size={24} />, path: 'https://c9defense.com.au/' },
     { title: 'Enterprise SaaS Backup',           icon: <Cloud size={24} />, path: '/modern-workplace/saas-backup' },
-    { title: 'EDR & XDR',                        icon: <ShieldAlert size={24} />, path: '/managed-it/endpoint-management' },
+    { title: 'EDR & XDR',                        icon: <ShieldAlert size={24} />, path: '/managed-it/edr' },
   ],
   sidebar: {
     heading: 'Enterprise Workplace',
@@ -611,7 +612,7 @@ export const RESOURCES_MENU = {
           heading: 'Learning Center',
           items: [
             { icon: <Layout size={14} />,        label: 'Case Studies',              path: '/case-studies' },
-            { icon: <MessageSquare size={14} />, label: 'Blog',                      path: '/blog' },
+            { icon: <MessageSquare size={14} />, label: 'Blog',                      path: '/insights' },
             { icon: <Calendar size={14} />,      label: 'Events',                    path: '/blog' },
             { icon: <Headphones size={14} />,    label: 'FAQ',                       path: '/support' },
             { icon: <Phone size={14} />,         label: 'Schedule a Consultation',   path: '#consultation-section' },

@@ -391,68 +391,44 @@ export default function ProductivityPage() {
               </FadeUp>
             </div>
 
-            {/* Right: Rich Interactive Visual */}
-            <ScaleIn delay={0.5} className="relative hidden lg:block h-[500px] w-full">
-              <div className="absolute top-10 right-0 w-[500px] h-[400px] rounded-[32px] bg-[#f0f4fa] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-200 group flex items-center justify-center relative">
-                 <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5 pointer-events-none" />
-                 
-                 {/* Dashboard UI mock inside */}
-                 <div className="w-[85%] h-[85%] bg-white rounded-[20px] shadow-2xl border border-gray-100 overflow-hidden flex flex-col z-10 transition-transform group-hover:scale-105 duration-1000">
-                   <div className="h-10 bg-gray-50 border-b border-gray-100 flex items-center px-4 justify-between shrink-0">
-                     <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Global Admin Dashboard</div>
-                     <div className="flex gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-red-400" />
-                        <div className="w-2 h-2 rounded-full bg-yellow-400" />
-                        <div className="w-2 h-2 rounded-full bg-green-400" />
-                     </div>
-                   </div>
-                   <div className="flex-1 p-5 flex flex-col gap-4">
-                      {/* Stats Grid */}
-                      <div className="grid grid-cols-2 gap-3">
-                         <div className="p-3 rounded-xl bg-blue-50/50 border border-blue-100 flex flex-col gap-1">
-                            <div className="text-[9px] font-bold text-blue-500 uppercase">Tenant Health</div>
-                            <div className="text-[18px] font-bold text-[#0c1024]">99.9%</div>
-                         </div>
-                         <div className="p-3 rounded-xl bg-green-50/50 border border-green-100 flex flex-col gap-1">
-                            <div className="text-[9px] font-bold text-green-500 uppercase">Sec Score</div>
-                            <div className="text-[18px] font-bold text-[#0c1024]">742/800</div>
-                         </div>
-                      </div>
-                      
-                      {/* Active Threat Monitoring */}
-                      <div className="flex-1 rounded-xl border border-gray-100 p-4 relative overflow-hidden">
-                         <div className="flex items-center justify-between mb-3">
-                            <div className="text-[11px] font-bold text-[#0c1024]">Secure Sovereignty Check</div>
-                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                         </div>
-                         <div className="space-y-2">
-                            {[1, 2].map((_, i) => (
-                              <div key={i} className="h-2 w-full bg-gray-50 rounded-full overflow-hidden">
-                                <motion.div initial={{ width: 0 }} animate={{ width: i === 0 ? "100%" : "85%" }} transition={{ duration: 2, delay: 1 }} className="h-full bg-[#5D00D6]" />
-                              </div>
-                            ))}
-                         </div>
-                         <div className="mt-4 flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-full bg-[#f4f0fa] flex items-center justify-center text-[#5D00D6]">
-                               <ShieldCheck size={16} />
-                            </div>
-                            <div className="text-[10px] font-bold text-gray-400">Australian Data Center Locked</div>
-                         </div>
-                      </div>
-                   </div>
-                 </div>
+            {/* Right: Realistic Engagement Visual */}
+            <ScaleIn delay={0.5} className="relative hidden lg:block">
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 group">
+                <img 
+                  src="/modern_m365_office_collaboration.png" 
+                  alt="Modern Office Team Collaborating with Microsoft 365" 
+                  className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/10 to-transparent mix-blend-overlay" />
+              </div>
 
-                 {/* Floating Element */}
-                 <motion.div animate={{ y: [-5, 5, -5] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute -top-4 -left-6 bg-white rounded-2xl shadow-xl border border-[#DCCDF8] p-4 flex gap-3 items-center z-30">
-                    <div className="w-10 h-10 rounded-xl bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center shrink-0">
-                       <CheckCircle2 size={12} />
+              {/* Floating Meta-Info Card (Half-Overlap) */}
+              <motion.div 
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1, duration: 0.8 }}
+                className="absolute -bottom-10 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-[32px] border border-slate-100 shadow-[0_20px_50px_rgba(93,0,214,0.15)] z-30"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-2xl bg-[#5D00D6] text-white flex items-center justify-center shadow-lg shadow-purple-900/20">
+                      <UsersIcon size={24} />
                     </div>
                     <div>
-                       <div className="text-[10px] font-bold text-gray-400 uppercase">Licensing Optimization</div>
-                       <div className="text-[14px] font-bold text-[#00875A]">$12,400 Saved</div>
+                      <div className="text-[14px] font-bold text-slate-900">Active Operational Sync</div>
+                      <div className="text-[10px] text-[#5D00D6] font-bold uppercase tracking-widest">Environment Shield Active</div>
                     </div>
-                 </motion.div>
-              </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Verified 99.9%</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Decorative Background Elements */}
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50 -z-10" />
+              <div className="absolute -bottom-20 -left-10 w-64 h-64 bg-slate-100 rounded-full blur-3xl opacity-50 -z-10" />
             </ScaleIn>
           </div>
         </div>

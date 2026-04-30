@@ -187,7 +187,7 @@ export default function CollaborationPage() {
     <div className="bg-[#F8FAFF] min-h-screen pt-4 text-[#0C1024] overflow-x-hidden" style={{ fontFamily: '"Proxima Nova","Inter",system-ui,sans-serif' }}>
       
       {/* 1. HERO SECTION (Standardized 2-Column) */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white">
+      <section className="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-white">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F9FBFF] -z-10 hidden lg:block" />
         <div className="c9-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -236,7 +236,7 @@ export default function CollaborationPage() {
                 <motion.div 
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden md:block"
+                  className="absolute z-20 -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden md:block"
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
@@ -307,23 +307,24 @@ export default function CollaborationPage() {
             </p>
           </FadeUp>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-5">
-            {deploymentPhases.map((phase, idx) => {
-              const Icon = phase.icon;
-              return (
-                <ScaleIn key={phase.phase} delay={idx * 0.1}>
-                  <article className={cardClassName}>
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[#5D00D6]">{phase.phase}</p>
-                    <h3 className="c9-card-title mb-2 group-hover:text-[#5D00D6] transition-colors">{phase.title}</h3>
-                    <p className="text-[14px] leading-relaxed text-gray-500">{phase.detail}</p>
-                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                  </article>
-                </ScaleIn>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative mt-16">
+            {/* Connecting Line (Desktop) */}
+            <div className="hidden md:block absolute top-[40px] left-[10%] right-[10%] h-[1px] bg-slate-200 z-0" />
+
+            {deploymentPhases.map((phase, idx) => (
+              <ScaleIn key={phase.phase} delay={idx * 0.1} className="relative z-10 flex flex-col items-center text-center px-2">
+                <div className="w-20 h-20 rounded-full bg-white border border-slate-200 flex items-center justify-center text-[#5D00D6] font-bold text-2xl shadow-sm mb-6 transition-all hover:border-[#5D00D6] hover:bg-[#5D00D6] hover:text-white duration-500">
+                  {`0${idx + 1}`}
+                </div>
+                <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[#5D00D6]">{phase.phase}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
+                  {phase.title}
+                </h3>
+                <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
+                  {phase.detail}
+                </p>
+              </ScaleIn>
+            ))}
           </div>
         </div>
       </section>
@@ -435,7 +436,7 @@ export default function CollaborationPage() {
             <Eyebrow>Operational Readiness</Eyebrow>
             <h2 className="c9-section-heading">Collaboration FAQ.</h2>
           </div>
-          <div className="max-w-[900px] mx-auto">
+          <div className="w-full">
             <FAQSection items={FAQS} />
           </div>
         </div>
@@ -464,24 +465,7 @@ export default function CollaborationPage() {
         />
       </section>
 
-      <section className="bg-[#0C1024] pb-16">
-        <div className={containerClassName}>
-          <div className="flex flex-wrap gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
-              <CheckCircle2 className="h-4 w-4 text-[#BFA2EE]" />
-              C9 certified engineers
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
-              <CheckCircle2 className="h-4 w-4 text-[#BFA2EE]" />
-              Australian support
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
-              <CheckCircle2 className="h-4 w-4 text-[#BFA2EE]" />
-              Yealink-certified deployments
-            </span>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }

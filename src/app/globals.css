@@ -36,7 +36,7 @@
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.05em;
-  color: #1A1A2E;
+  color: inherit;
 }
 
 .c9-section-heading {
@@ -44,7 +44,7 @@
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: #1A1A2E;
+  color: inherit;
 }
 
 .c9-card-title {
@@ -52,7 +52,7 @@
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: #1A1A2E;
+  color: inherit;
 }
 
 .c9-eyebrow {
@@ -152,7 +152,7 @@
     font-weight: 500;
     line-height: 1.05;
     letter-spacing: -0.05em;
-    color: #1A1A2E;
+    color: inherit;
   }
 
   h2 {
@@ -160,7 +160,7 @@
     font-weight: 500;
     line-height: 1.05;
     letter-spacing: -0.04em;
-    color: #1A1A2E;
+    color: inherit;
   }
 
   h3 {
@@ -168,7 +168,7 @@
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    color: #1A1A2E;
+    color: inherit;
   }
 
   h4, h5, h6 {

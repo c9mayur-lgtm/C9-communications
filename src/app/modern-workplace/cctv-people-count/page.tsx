@@ -181,8 +181,8 @@ export default function CCTVPeopleCountPage() {
                 </div>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <h1 className="c9-hero-title mb-6 !leading-[1.15] font-bold">
-                  See More Than Just Footage. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5D00D6] to-[#00875A]">Understand Your Spaces.</span>
+                <h1 className="c9-hero-title mb-6 !leading-[1.15] font-bold text-[#0C1024]">
+                  Surveillance Intelligence. <span className="text-[#5D00D6]">Operational Control.</span>
                 </h1>
               </FadeUp>
               <FadeUp delay={0.2}>
@@ -218,81 +218,16 @@ export default function CCTVPeopleCountPage() {
               </FadeUp>
             </div>
 
-            {/* Right: Rich Interactive Visual */}
+            {/* Right: Realistic Visual */}
             <ScaleIn delay={0.4} className="relative hidden lg:block h-[560px] w-full">
-              {/* Main Video/Camera Mockup Container */}
-              <div className="absolute top-8 right-0 w-[500px] aspect-[4/3] rounded-[32px] bg-[#0c1024] shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden border border-gray-200 group">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024] via-transparent to-transparent z-10 opacity-90" />
-                
-                {/* Simulated Camera Feed */}
+              <div className="absolute top-8 right-0 w-[500px] aspect-[4/3] rounded-[40px] bg-white shadow-[0_20px_50px_rgba(93,0,214,0.1)] overflow-hidden border-8 border-white group">
                 <img 
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Office Camera Feed Dashboard" 
-                  className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-80 group-hover:scale-105 transition-all duration-[2000ms] ease-out" 
+                  src="/cctv_ai_dashboard_hero_1777562131092.png" 
+                  alt="Surveillance Intelligence Dashboard" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
                 />
-                 
-                {/* UI Overlay Top */}
-                <div className="absolute top-5 left-5 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 shadow-sm">
-                  <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                  <span className="text-[10px] font-bold text-white uppercase tracking-[0.15em]">Live Feed / Cam 4</span>
-                </div>
-                 
-                {/* Tracking Bounding Box */}
-                <motion.div 
-                  initial={{ x: 60, y: 30, opacity: 0 }}
-                  animate={{ x: [60, 140, 100, 60], y: [30, 45, 20, 30], opacity: 1 }} 
-                  transition={{ repeat: Infinity, duration: 12, ease: "linear" }} 
-                  className="absolute top-1/4 left-1/4 z-20 w-[140px] h-[220px] border-2 border-[#00875A] bg-[#00875A]/10 rounded-lg backdrop-blur-[1px]"
-                >
-                  <div className="absolute -top-6 left-[-2px] bg-[#00875A] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-sm tracking-wider shadow-sm">
-                    PERSON 99%
-                  </div>
-                </motion.div>
-
-                {/* Dashboard Stats Overlay Bottom */}
-                <div className="absolute bottom-5 left-5 right-5 z-20 grid grid-cols-2 gap-3">
-                  <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-lg transition-transform hover:-translate-y-1">
-                    <div className="text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-1">Current Occupancy</div>
-                    <div className="text-[28px] font-bold text-white leading-none">42 <span className="text-[14px] text-green-400 font-medium ml-1 bg-green-400/20 px-2 py-0.5 rounded-full border border-green-400/30">Stable</span></div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-lg transition-transform hover:-translate-y-1">
-                    <div className="text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-1">Threat Detect</div>
-                    <div className="text-[28px] font-bold text-white leading-none flex items-center justify-between">
-                      <span>0</span> <ShieldAlert className="w-5 h-5 text-white/30" />
-                    </div>
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/20 via-transparent to-transparent pointer-events-none" />
               </div>
-               
-              {/* Floating Graph Element */}
-              <motion.div 
-                animate={{ y: [-10, 10, -10] }} 
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }} 
-                className="absolute -bottom-2 -left-8 bg-white rounded-[24px] p-6 shadow-[0_20px_50px_rgba(93,0,214,0.15)] border border-[#E9E2F7] z-30 w-[260px]"
-              >
-                 <div className="flex items-center gap-4 mb-5">
-                   <div className="w-12 h-12 rounded-2xl bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center shrink-0">
-                     <BarChart3 size={20} />
-                   </div>
-                   <div>
-                     <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Peak Traffic</div>
-                     <div className="text-[18px] font-bold text-[#0c1024] leading-tight">11:00 AM</div>
-                   </div>
-                 </div>
-                 
-                 {/* Mini Bar Chart */}
-                 <div className="flex items-end gap-1.5 h-14">
-                   {[40, 60, 45, 80, 100, 65, 45, 30].map((h, i) => (
-                     <motion.div 
-                       key={i} 
-                       className="w-full bg-gradient-to-t from-[#5D00D6] to-[#A471F7] rounded-sm shadow-sm" 
-                       initial={{ height: 0 }} 
-                       animate={{ height: `${h}%` }} 
-                       transition={{ delay: 0.8 + (i * 0.1), duration: 0.8, ease: "easeOut" }} 
-                     />
-                   ))}
-                 </div>
-              </motion.div>
             </ScaleIn>
 
           </div>
@@ -399,7 +334,7 @@ export default function CCTVPeopleCountPage() {
                     
                     {/* Cam 1: Main Entrance (Live Tracking) */}
                     <div className="col-span-2 row-span-1 relative overflow-hidden bg-black group">
-                      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-1000 group-hover:scale-105" alt="Office Entrance" />
+                      <img src="/modern_office_entrance_cctv_1777562149739.png" className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-1000 group-hover:scale-105" alt="Office Entrance" />
                       <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-sm text-[9px] font-bold text-white uppercase tracking-widest border border-white/10 z-20">
                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" /> ENTRANCE 1
                       </div>
@@ -414,7 +349,7 @@ export default function CCTVPeopleCountPage() {
                     {/* Cam 2: Lobby (Night Vision/IR Simulation) */}
                     <div className="relative overflow-hidden bg-black group">
                       <div className="absolute inset-0 bg-[#0c1b33]/60 mix-blend-color z-10 pointer-events-none" />
-                      <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover opacity-90 contrast-125 filter grayscale group-hover:scale-105 transition-all duration-1000" alt="Lobby" />
+                      <img src="/corporate_lobby_security_1777562244237.png" className="w-full h-full object-cover opacity-90 contrast-125 filter grayscale group-hover:scale-105 transition-all duration-1000" alt="Lobby" />
                       <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-sm text-[9px] font-bold text-[#b8d8be] uppercase tracking-widest border border-[#b8d8be]/20 z-20">
                          <div className="w-1.5 h-1.5 rounded-full bg-yellow-500" /> LOBBY IR
                       </div>
@@ -422,7 +357,7 @@ export default function CCTVPeopleCountPage() {
 
                     {/* Cam 3: Corridor (Facial Detect Simulation) */}
                     <div className="relative overflow-hidden bg-black group">
-                      <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover opacity-50 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-1000 group-hover:scale-105" alt="Hallway" />
+                      <img src="/office_corridor_smart_camera_1777562386872.png" className="w-full h-full object-cover opacity-50 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-1000 group-hover:scale-105" alt="Hallway" />
                       <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-sm text-[9px] font-bold text-white uppercase tracking-widest border border-white/10 z-20">
                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" /> CORRIDOR
                       </div>
@@ -797,7 +732,7 @@ export default function CCTVPeopleCountPage() {
             <Eyebrow>Operational Readiness</Eyebrow>
             <h2 className="c9-section-heading mb-8 font-proxima tracking-tight font-bold leading-tight text-[#0C1024]">CCTV & People Count FAQ.</h2>
           </div>
-          <div className="max-w-[900px] mx-auto">
+          <div className="w-full">
             <FAQSection items={FAQS} />
           </div>
         </div>

@@ -270,7 +270,7 @@ export const SOLUTIONS_MENU = {
   ],
   challenges: [
     { title: 'Digital Transformation', icon: <Cpu size={24} /> },
-    { title: 'Security', icon: <ShieldCheck size={24} /> },
+    { title: 'Security', icon: <ShieldCheck size={24} />, path: '/managed-it/edr' },
     { title: 'Business Continuity', icon: <Activity size={24} /> },
     { title: 'Growth', icon: <TrendingUp size={24} /> },
   ],
@@ -402,7 +402,7 @@ export const INDUSTRIES_MENU = {
     { title: 'Microsoft 365 Solutions', icon: <Layout size={24} /> },
     { title: 'Security Awareness Training', icon: <ShieldAlert size={24} /> },
     { title: 'SaaS Backup', icon: <Database size={24} /> },
-    { title: 'Endpoint Detection & Response (EDR)', icon: <ShieldCheck size={24} /> },
+    { title: 'Endpoint Detection & Response (EDR)', icon: <ShieldCheck size={24} />, path: '/managed-it/edr' },
   ],
   sidebar: {
     heading: 'Build a Smart Workplace',

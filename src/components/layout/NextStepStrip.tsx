@@ -36,7 +36,7 @@ export const NextStepStrip = () => {
       <div className="container mx-auto px-6 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8 max-w-[1240px]">
         {/* Left: Dynamic Text */}
         <div className="text-center md:text-left">
-          <h3 className="c9-section-heading text-2xl md:">
+          <h3 className="text-xl md:text-[22px] font-bold text-slate-900 leading-tight">
             {getDynamicText()}
           </h3>
           <p className="text-gray-500 mt-2 font-normal">

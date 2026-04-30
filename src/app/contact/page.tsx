@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Section } from '@/components/design-system/Section';
 import { H1, H2, H3, Body, Label } from '@/components/design-system/Typography';
 import { C9Button } from '@/components/design-system/C9Button';
+import CapabilityPack from '@/components/sections/enterprise/CapabilityPack';
 import { cn } from '@/lib/utils';
 
 const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -241,6 +242,9 @@ export default function ContactPage() {
            ))}
         </div>
       </Section>
+
+      {/* ── ENTERPRISE RESOURCES ── */}
+      <CapabilityPack />
     </div>
   );
 }

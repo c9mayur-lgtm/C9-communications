@@ -69,7 +69,7 @@ export default function ManagedPrintPage() {
     <div className="bg-[#F8FAFF] min-h-screen pt-4 text-[#0C1024] overflow-x-hidden" style={{ fontFamily: '"Proxima Nova","Inter",system-ui,sans-serif' }}>
       
       {/* 1. HERO SECTION (Standardized 2-Column) */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white">
+      <section className="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-white">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F9FBFF] -z-10 hidden lg:block" />
         <div className="c9-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -367,7 +367,7 @@ export default function ManagedPrintPage() {
             <Eyebrow>Operational Readiness</Eyebrow>
             <h2 className="c9-section-heading">Print Management FAQ.</h2>
           </div>
-          <div className="max-w-[900px] mx-auto">
+          <div className="w-full">
             <FAQSection items={FAQS} />
           </div>
         </div>

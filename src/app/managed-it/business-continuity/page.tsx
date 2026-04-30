@@ -259,26 +259,26 @@ export default function BusinessContinuityPage() {
             {[
               {
                 title: "Defined Workflows",
-                icon: <Command />,
+                icon: Command,
                 tag: "RESPONSE STRUCTURE",
                 desc: "Tested procedures for every disruption level, from single-site outages to total regional failures."
               },
               {
                 title: "Tiered Prioritisation",
-                icon: <Target />,
+                icon: Target,
                 tag: "IMPACT MANAGEMENT",
                 desc: "Categorising systems into Critical, Operational, and Secondary to ensure resource allocation follows business impact."
               },
               {
                 title: "System Coordination",
-                icon: <Radio />,
+                icon: Radio,
                 tag: "COMMAND LAYER",
                 desc: "Aligning IT, Network, and Support teams under one command structure to eliminate communication gaps."
               }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1} className="relative p-10 rounded-[40px] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all duration-500">
                 <div className="w-16 h-16 rounded-2xl bg-[#5D00D6] flex items-center justify-center text-white mb-8 shadow-lg shadow-purple-900/20">
-                  {React.cloneElement(item.icon as React.ReactElement, { size: 32 })}
+                  <item.icon size={32} />
                 </div>
                 <div className="mb-4">
                   <span className="text-[11px] font-bold text-purple-600 uppercase tracking-widest">{item.tag}</span>

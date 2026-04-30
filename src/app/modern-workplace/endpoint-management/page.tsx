@@ -224,7 +224,7 @@ export default function EndpointManagementPage() {
     <div className="bg-[#F8FAFF] min-h-screen pt-4 text-[#0C1024] overflow-x-hidden" style={{ fontFamily: '"Proxima Nova","Inter",system-ui,sans-serif' }}>
       
       {/* 1. HERO SECTION (Standardized 2-Column) */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white">
+      <section className="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-white">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F9FBFF] -z-10 hidden lg:block" />
         <div className="c9-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -258,31 +258,40 @@ export default function EndpointManagementPage() {
             </div>
             
             <div className="relative">
-              <ScaleIn>
-                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50">
+              <ScaleIn className="relative hidden lg:block">
+                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50 group">
                   <img 
-                    src="/managed_print_hero_v2_1777400688745.png" 
-                    alt="Endpoint Management Infrastructure"
-                    className="w-full h-full object-cover aspect-[4/3]"
+                    src="/endpoint_management_hero_v2.png" 
+                    alt="Endpoint Management Operations Center"
+                    className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-1000"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/10 to-transparent mix-blend-overlay" />
                 </div>
                 <div className="absolute -top-12 -right-12 w-64 h-64 bg-purple-100 rounded-full blur-3xl -z-10 opacity-60" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100 rounded-full blur-3xl -z-10 opacity-60" />
                 
-                {/* Floating trust card */}
+                {/* Floating Meta-Info Card (Half-Overlap) */}
                 <motion.div 
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden md:block"
+                  initial={{ y: 40, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 1, duration: 0.8 }}
+                  className="absolute -bottom-10 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-[32px] border border-slate-100 shadow-[0_20px_50px_rgba(93,0,214,0.15)] z-30"
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
-                      <Laptop className="text-[#5D00D6]" size={20} />
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-2xl bg-[#5D00D6] text-white flex items-center justify-center shadow-lg shadow-purple-900/20">
+                        <Laptop size={24} />
+                      </div>
+                      <div>
+                        <div className="text-[14px] font-bold text-slate-900">Fleet Security Score</div>
+                        <div className="text-[10px] text-[#5D00D6] font-bold uppercase tracking-widest">Baseline Verified: 96%</div>
+                      </div>
                     </div>
-                    <span className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Security Score</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Zero Trust Compliant</span>
+                    </div>
                   </div>
-                  <div className="text-[24px] font-bold text-[#0c1024] mb-1">96%</div>
-                  <div className="text-[13px] font-medium text-gray-500">Fleet Security Baseline Verified</div>
                 </motion.div>
               </ScaleIn>
             </div>
@@ -373,29 +382,40 @@ export default function EndpointManagementPage() {
             <p className="text-[18px] text-gray-500 font-medium">A clear operational sequence from order to retirement with automation at every stage.</p>
           </FadeUp>
 
-          <FadeUp delay={0.2} className="hidden rounded-[24px] border border-gray-100 bg-gray-50/50 p-8 lg:block">
-            <div className="grid grid-cols-6 gap-4">
+          <div className="relative mt-12 max-w-4xl mx-auto">
+            {/* Vertical Line */}
+            <div className="absolute left-[39px] top-4 bottom-4 w-[2px] bg-gray-100 hidden md:block" />
+            
+            <div className="space-y-6">
               {timelineEvents.map((event, idx) => (
-                <div key={event.label} className="relative group/timeline transition-all hover:-translate-y-1">
-                  {idx < timelineEvents.length - 1 && <div className="absolute left-[calc(100%-6px)] top-4 h-[2px] w-[calc(100%+8px)] bg-gray-200" />}
-                  <div className="mb-3 h-3 w-3 rounded-full bg-[#5D00D6] group-hover/timeline:scale-150 transition-transform duration-300" />
-                  <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#5D00D6]">{event.label}</p>
-                  <h3 className="mb-1 text-[16px] font-bold">{event.title}</h3>
-                  <p className="text-[14px] leading-relaxed text-gray-500">{event.detail}</p>
-                </div>
+                <ScaleIn key={event.label} delay={idx * 0.1} className="relative flex flex-col md:flex-row gap-6 md:gap-12 group">
+                  {/* Timeline Node */}
+                  <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-full border-4 border-white bg-[#F4F0FA] text-[#5D00D6] shadow-sm z-10 transition-colors duration-500 group-hover:bg-[#5D00D6] group-hover:text-white hidden md:flex">
+                    <span className="font-bold text-xl">{`0${idx + 1}`}</span>
+                  </div>
+                  
+                  {/* Content Card */}
+                  <div className="flex-grow bg-white border border-gray-100 rounded-[24px] p-6 md:p-8 hover:shadow-[0_20px_40px_-15px_rgba(93,0,214,0.1)] hover:border-[#5D00D6]/20 transition-all duration-500 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#5D00D6]/5 to-transparent rounded-bl-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="md:hidden w-12 h-12 rounded-full bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center font-bold mb-4">
+                      {`0${idx + 1}`}
+                    </div>
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                      <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                        {event.title}
+                      </h3>
+                      <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-[#5D00D6]/5 text-[#5D00D6] text-[11px] font-bold uppercase tracking-[0.14em] border border-[#5D00D6]/10">
+                        {event.label}
+                      </span>
+                    </div>
+                    <p className="text-slate-600 text-[15px] leading-relaxed">
+                      {event.detail}
+                    </p>
+                  </div>
+                </ScaleIn>
               ))}
             </div>
-          </FadeUp>
-
-          <div className="space-y-4 lg:hidden">
-            {timelineEvents.map((event, idx) => (
-              <article key={event.label} className="relative rounded-3xl border border-[#E9E2F7] bg-white p-6 shadow-sm">
-                {idx < timelineEvents.length - 1 && <div className="absolute bottom-[-16px] left-8 h-4 w-[2px] bg-[#DCCDF8]" />}
-                <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#5D00D6]">{event.label}</p>
-                <h3 className="mb-2 text-[20px] font-bold">{event.title}</h3>
-                <p className="text-[14px] leading-relaxed text-[#4C587E]">{event.detail}</p>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -548,7 +568,7 @@ export default function EndpointManagementPage() {
             <Eyebrow>Operational Readiness</Eyebrow>
             <h2 className="c9-section-heading">Endpoint Management FAQ.</h2>
           </div>
-          <div className="max-w-[900px] mx-auto">
+          <div className="w-full">
             <FAQSection items={FAQS} />
           </div>
         </div>

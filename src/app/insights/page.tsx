@@ -39,17 +39,26 @@ const FadeIn = ({ children, delay = 0, className, direction = 'up' }: {
   );
 };
 
-const CATEGORIES = ['All', 'Articles', 'Case Studies', 'Blogs'];
+const CATEGORIES = ['All', 'Articles', 'Blogs'];
 
 const INSIGHTS_DATA = [
   {
-    type: 'Case Study',
-    title: 'Multi-Site Network Transformation for National Retailer',
-    excerpt: 'How we consolidated 45 locations into a single managed SD-WAN architecture with 99.99% uptime.',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
-    date: 'Apr 12, 2026',
+    type: 'Article',
+    title: 'State of Australian IT: Transitioning to Managed Cloud',
+    excerpt: 'The ongoing costs of self-managed hardware are eclipsing the benefits. Here is why Australian mid-market firms are shifting to fully managed infrastructure.',
+    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800',
+    date: 'Apr 30, 2026',
     readTime: '8 min read',
-    slug: 'national-retailer-sdwan'
+    slug: 'state-of-australian-it-2026'
+  },
+  {
+    type: 'Article',
+    title: 'Scaling Your Network Architecture for 2026',
+    excerpt: 'How multi-site organizations are solving the lag and security challenges of distributed workforces.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=800',
+    date: 'Apr 25, 2026',
+    readTime: '6 min read',
+    slug: 'scaling-network-architecture'
   },
   {
     type: 'Article',
@@ -68,15 +77,6 @@ const INSIGHTS_DATA = [
     date: 'Mar 28, 2026',
     readTime: '5 min read',
     slug: 'onshore-soc-benefits'
-  },
-  {
-    type: 'Case Study',
-    title: 'Zero-Downtime Infrastructure Migration',
-    excerpt: 'Migrating a legacy healthcare provider to a hybrid cloud environment without impacting patient services.',
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800',
-    date: 'Mar 15, 2026',
-    readTime: '10 min read',
-    slug: 'healthcare-migration'
   },
   {
     type: 'Article',
@@ -103,14 +103,13 @@ export default function InsightsPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredData = INSIGHTS_DATA.filter(item => {
-    const matchesCategory = activeCategory === 'All' || item.type.replace(' ', '') === activeCategory.replace(' ', '').slice(0, -1) || (activeCategory === 'Case Studies' && item.type === 'Case Study');
-    // Simple plural/singular mapping for filtering
-    const normalizedType = item.type === 'Case Study' ? 'Case Studies' : item.type + 's';
-    const matchesCategoryFinal = activeCategory === 'All' || normalizedType === activeCategory;
+    // Exact match for "All", or match pluralized type ("Article" -> "Articles", "Blog" -> "Blogs")
+    const normalizedType = item.type + 's';
+    const matchesCategory = activeCategory === 'All' || normalizedType === activeCategory;
     
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategoryFinal && matchesSearch;
+    return matchesCategory && matchesSearch;
   });
 
   return (
@@ -122,11 +121,11 @@ export default function InsightsPage() {
             <FadeIn>
               <span className="c9-eyebrow mb-6 uppercase tracking-[0.2em]">KNOWLEDGE HUB</span>
               <h1 className="c9-hero-title mb-8">
-                Insights & Operational <br />
+                Blog & Operational <br />
                 <span className="text-[#5D00D6]">Intelligence</span>
               </h1>
               <p className="c9-body mb-10 text-xl leading-relaxed">
-                Technical strategies, operational reports, and enterprise case studies designed to provide absolute clarity on infrastructure control.
+                Deep dives into network architecture, security governance, and the operational shifts driving business performance.
               </p>
             </FadeIn>
           </div>
@@ -159,7 +158,7 @@ export default function InsightsPage() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
               <input 
                 type="text" 
-                placeholder="Search insights..."
+                placeholder="Search articles and blogs..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-gray-100 border-none rounded-xl text-sm font-medium focus:ring-2 focus:ring-[#5D00D6]/20 transition-all outline-none"
@@ -183,7 +182,7 @@ export default function InsightsPage() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
                 >
-                  <Link href={`/insights/${item.slug}`} className="group flex flex-col h-full bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-purple-900/10 transition-all duration-500">
+                  <Link href={`/blog/${item.slug}`} className="group flex flex-col h-full bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-purple-900/10 transition-all duration-500">
                     {/* Thumbnail */}
                     <div className="aspect-[16/10] overflow-hidden relative">
                       <img 
@@ -193,7 +192,6 @@ export default function InsightsPage() {
                       />
                       <div className="absolute top-4 left-4">
                         <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-white shadow-lg ${
-                          item.type === 'Case Study' ? 'bg-emerald-500' : 
                           item.type === 'Article' ? 'bg-[#5D00D6]' : 'bg-slate-900'
                         }`}>
                           {item.type}
@@ -223,7 +221,7 @@ export default function InsightsPage() {
 
                       <div className="mt-auto pt-6 border-t border-gray-50 flex items-center justify-between">
                         <span className="text-[11px] font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
-                          Read Full {item.type} <ArrowRight size={16} className="text-[#5D00D6]" />
+                          Read {item.type} <ArrowRight size={16} className="text-[#5D00D6]" />
                         </span>
                       </div>
                     </div>
@@ -238,7 +236,7 @@ export default function InsightsPage() {
                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Search size={32} className="text-slate-300" />
                </div>
-               <h3 className="text-2xl font-bold text-slate-900 mb-2">No insights found.</h3>
+               <h3 className="text-2xl font-bold text-slate-900 mb-2">No articles found.</h3>
                <p className="text-slate-500">Try adjusting your search or filters to find what you're looking for.</p>
                <Button 
                 variant="outline" 

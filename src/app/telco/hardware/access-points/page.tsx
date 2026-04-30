@@ -3,11 +3,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
-  Monitor, Activity, Users, 
-  Network, Wifi, Radio, Lock,
-  AlertTriangle, RefreshCw, BarChart3,
-  LayoutGrid, Layers, Database
+  ArrowRight, AlertTriangle, Radio, Users, 
+  Activity, CheckCircle, Network, Maximize,
+  Server, BarChart3
 } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
@@ -46,10 +44,10 @@ const FadeIn = ({
 const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 1 — HERO
+   1. HERO (OUTCOME-DRIVEN)
    ───────────────────────────────────────────────────────── */
 const Hero = () => (
-  <section className="relative overflow-hidden bg-white pt-12 pb-0 lg:pt-20">
+  <section className="relative overflow-hidden bg-white pt-12 pb-0 lg:pt-20 border-b border-slate-100">
     <div
       className="pointer-events-none absolute inset-0 opacity-[0.03]"
       style={{
@@ -63,40 +61,38 @@ const Hero = () => (
         <div>
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
-               <Wifi size={13} className="text-[#5D00D6]" />
-               <span className="c9-eyebrow !mb-0">Managed Wireless Operations</span>
+               <Network size={13} className="text-[#5D00D6]" />
+               <span className="c9-eyebrow !mb-0">Controlled Wireless Infrastructure</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
              <h1 className="c9-hero-title mb-6">
-                Pervasive Wireless <span className="text-[#5D00D6]">Across Your Enterprise.</span>
+                Reliable Wireless Performance <br/><span className="text-[#5D00D6]">Across Every Location.</span>
              </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
              <p className="c9-body mb-8 max-w-[620px]">
-                Wireless is no longer a convenience—it is the primary connection for your workforce. C9 provides high-density, secure, and managed wireless infrastructure that ensures seamless roaming and absolute reliability.
+                Wireless connectivity is an operational requirement. We build and manage structured wireless environments for stores, offices, and warehouses. Coverage is consistent. Performance is reliable.
              </p>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-             <div className="flex flex-col items-start gap-6">
-                <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-                   <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
-                   >
-                      Request Wireless Assessment
-                      <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-                   </a>
-                   <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
-                   >
-                      Review Network Design
-                   </a>
-                </div>
+             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                <a
+                   href="#consultation"
+                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                >
+                   Request Network Assessment
+                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                </a>
+                <a
+                   href="#consultation"
+                   className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                >
+                   Review Wireless Setup
+                </a>
              </div>
           </FadeIn>
         </div>
@@ -110,50 +106,103 @@ const Hero = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 2 — OPERATIONAL RISK
+   2. OPERATIONAL RISK
    ───────────────────────────────────────────────────────── */
 const SectionOperationalRisk = () => (
-   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
+   <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
       <div className={C}>
-         <div className="max-w-3xl mx-auto text-center mb-12">
+         <div className="max-w-3xl mb-12">
             <FadeIn>
-               <span className="c9-eyebrow mb-4">Wireless Stability</span>
-               <h2 className="c9-section-heading">When Wireless Fails, Productivity Halts</h2>
+               <h2 className="c9-section-heading">When Wireless Infrastructure Is Not Properly Managed</h2>
                <p className="c9-body text-slate-600 mt-4">
-                  Dead zones, dropped calls, and slow speeds are not just annoyances—they are operational failures. We eliminate the volatility of unmanaged wireless environments.
+                  Unmanaged wireless systems fail under load. Inconsistent coverage and dropped connections disrupt operations, slow workflows, and impact customer experience.
+               </p>
+            </FadeIn>
+         </div>
+
+         <div className="grid md:grid-cols-2 gap-6">
+            {[
+               { icon: <AlertTriangle className="text-red-500" />, title: 'Inconsistent Coverage', desc: 'Dead zones across the floor disrupt active sessions and delay operational tasks.' },
+               { title: 'Dropped Connections', desc: 'Staff lose connection when moving. Voice and video sessions drop instantly.', icon: <Activity className="text-amber-500" /> },
+               { title: 'Poor Performance Under Load', desc: 'Congestion slows down applications. Systems freeze during peak operational hours.', icon: <Users className="text-[#5D00D6]" /> },
+               { title: 'User Frustration', desc: 'Continuous connectivity issues damage staff morale and delay customer service.', icon: <Radio className="text-emerald-500" /> }
+            ].map((item, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm flex items-start gap-6">
+                  <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center shrink-0">
+                     {item.icon}
+                  </div>
+                  <div>
+                     <h4 className="c9-card-title mb-2">{item.title}</h4>
+                     <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+               </FadeIn>
+            ))}
+         </div>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   3. WHERE WIRELESS FAILS
+   ───────────────────────────────────────────────────────── */
+const SectionWhereWirelessFails = () => (
+   <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
+      <div className={C}>
+         <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeIn>
+               <span className="c9-eyebrow mb-4">Real-World Challenges</span>
+               <h2 className="c9-section-heading">Where Wireless Fails</h2>
+               <p className="c9-body text-slate-600 mt-4">
+                  Generic setups fail in complex environments. Poor placement, interference, and lack of monitoring create systemic unreliability.
+               </p>
+            </FadeIn>
+         </div>
+         
+         <div className="grid md:grid-cols-3 gap-6">
+            {[
+               { title: 'Retail Floors', desc: 'High device density overloads basic systems. POS terminals disconnect. Customers cannot access digital services.' },
+               { title: 'Warehouses', desc: 'Large coverage areas and physical interference cause dead zones. Scanners drop connections. Operations stall.' },
+               { title: 'Offices & Multi-Site', desc: 'Hybrid work environments demand reliable voice and video. Multi-site deployments suffer from inconsistent configurations.' }
+            ].map((item, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="p-8 bg-slate-50 rounded-[32px] border border-slate-100">
+                  <h4 className="text-[18px] font-bold text-slate-900 mb-3">{item.title}</h4>
+                  <p className="text-slate-600 text-[14px] leading-relaxed">{item.desc}</p>
+               </FadeIn>
+            ))}
+         </div>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   4. HOW C9 OPERATES WIRELESS ENVIRONMENTS
+   ───────────────────────────────────────────────────────── */
+const SectionHowWeOperate = () => (
+   <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
+      <div className={C}>
+         <div className="max-w-3xl mb-16">
+            <FadeIn>
+               <span className="c9-eyebrow mb-4">Core Capability</span>
+               <h2 className="c9-section-heading">How C9 Operates Wireless Environments</h2>
+               <p className="c9-body text-slate-600 mt-4">
+                  This is a controlled wireless system, not a device setup. We implement structured designs that coordinate across all locations.
                </p>
             </FadeIn>
          </div>
 
          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-               {
-                  icon: <AlertTriangle className="text-red-500" />,
-                  title: "Dropped Connections",
-                  desc: "Failed handoffs between access points that disrupt voice calls and video meetings."
-               },
-               {
-                  icon: <Radio className="text-amber-500" />,
-                  title: "RF Interference",
-                  desc: "Unoptimized radio environments that cause data packet loss and slow application performance."
-               },
-               {
-                  icon: <Users className="text-[#5D00D6]" />,
-                  title: "High Density Failure",
-                  desc: "Wireless saturation in common areas or meeting rooms that prevents staff from transacting."
-               },
-               {
-                  icon: <Lock className="text-emerald-500" />,
-                  title: "Security Gaps",
-                  desc: "Unmanaged guest networks and weak encryption that create entry points for lateral threats."
-               }
-            ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all">
-                  <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center mb-6">
-                     {item.icon}
+               { title: 'Structured Design', desc: 'Engineered for the physical space. Placement mitigates interference.' },
+               { title: 'Strategic Placement', desc: 'Access points positioned for maximum efficiency and seamless handoffs.' },
+               { title: 'Continuous Monitoring', desc: 'Performance is tracked continuously to maintain baseline standards.' },
+               { title: 'Proactive Resolution', desc: 'Issues are identified and resolved before they impact operations.' },
+            ].map((s, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/10 text-[#5D00D6] flex items-center justify-center font-bold text-[16px] mb-6">
+                     0{i + 1}
                   </div>
-                  <h4 className="c9-card-title mb-3">{item.title}</h4>
-                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                  <h4 className="font-bold text-slate-900 mb-3">{s.title}</h4>
+                  <p className="text-slate-500 text-[14px] leading-relaxed">{s.desc}</p>
                </FadeIn>
             ))}
          </div>
@@ -162,68 +211,110 @@ const SectionOperationalRisk = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 4 — HOW C9 OPERATES THIS LAYER
+   5. COVERAGE & PERFORMANCE MODEL
    ───────────────────────────────────────────────────────── */
-const SectionHowWeOperate = () => (
+const SectionCoverageModel = () => (
    <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
       <div className={C}>
-         <div className="max-w-3xl mx-auto text-center mb-16">
+         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             <FadeIn>
-               <span className="c9-eyebrow mb-4">Operational Excellence</span>
-               <h2 className="c9-section-heading">How C9 Manages the Wireless Layer</h2>
-               <p className="c9-body text-slate-600">
-                  We don't just hang access points. We operate a coordinated wireless fabric that optimizes itself in real-time to meet user demand.
+               <span className="c9-eyebrow mb-4">Precision Engineering</span>
+               <h2 className="c9-section-heading">Coverage & Performance Model</h2>
+               <p className="c9-body text-slate-600 mb-6">
+                  Coverage planning dictates reliability. Without control, performance degrades rapidly under load. We model your physical environment to ensure consistent signal penetration.
                </p>
+               <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                     <CheckCircle className="text-[#5D00D6] shrink-0 mt-1" size={18} />
+                     <span className="text-slate-700 font-medium">Heat-mapping validates coverage density.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                     <CheckCircle className="text-[#5D00D6] shrink-0 mt-1" size={18} />
+                     <span className="text-slate-700 font-medium">Spectrum analysis identifies and avoids interference.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                     <CheckCircle className="text-[#5D00D6] shrink-0 mt-1" size={18} />
+                     <span className="text-slate-700 font-medium">Standardized configuration across all organizational sites.</span>
+                  </li>
+               </ul>
             </FadeIn>
-         </div>
-
-         <div className="grid md:grid-cols-4 gap-5">
-            {[
-               { title: 'Predictive Design', desc: 'Heat-mapping and spectrum analysis to ensure 100% coverage.' },
-               { title: 'Radio Optimization', desc: 'Automatic channel and power tuning to eliminate interference.' },
-               { title: 'Secure Isolation', desc: 'Segmented traffic for guests, staff, and IoT devices.' },
-               { title: 'Performance Oversight', desc: '24/7 monitoring of throughput and client health.' },
-            ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
-                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
-                     {i + 1}
-                  </div>
-                  <h4 className="font-bold text-slate-900 mb-3 relative z-10">{s.title}</h4>
-                  <p className="text-slate-500 text-[13px] leading-relaxed relative z-10">{s.desc}</p>
-               </FadeIn>
-            ))}
+            <FadeIn delay={0.2} direction="left">
+               <div className="bg-slate-50 p-8 md:p-12 rounded-[40px] border border-slate-200">
+                  <Maximize className="text-[#5D00D6] w-12 h-12 mb-6" />
+                  <h3 className="text-[24px] font-bold text-slate-900 mb-4">Consistency Across Sites</h3>
+                  <p className="text-slate-600 text-[16px] leading-relaxed">
+                     A unified performance model guarantees that a user in a regional branch experiences the exact same reliability as a user at headquarters.
+                  </p>
+               </div>
+            </FadeIn>
          </div>
       </div>
    </section>
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 8 — BUSINESS IMPACT
+   6 & 7. INTEGRATION + VISIBILITY & CONTROL
+   ───────────────────────────────────────────────────────── */
+const SectionIntegrationAndControl = () => (
+   <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
+      <div className={C}>
+         <div className="grid lg:grid-cols-2 gap-8">
+            <FadeIn className="bg-white p-10 md:p-12 rounded-[40px] border border-slate-200">
+               <Server className="w-10 h-10 text-[#5D00D6] mb-6" />
+               <h3 className="text-[24px] font-bold text-slate-900 mb-4">Integration with Network Infrastructure</h3>
+               <p className="text-slate-600 text-[16px] leading-relaxed mb-6">
+                  Wireless is an extension of the wired network. We align wireless access with core routing and switching architecture.
+               </p>
+               <ul className="space-y-3">
+                  <li className="flex items-center gap-3 text-slate-700 font-medium"><div className="w-1.5 h-1.5 bg-[#5D00D6] rounded-full" /> Full support for existing environments.</li>
+                  <li className="flex items-center gap-3 text-slate-700 font-medium"><div className="w-1.5 h-1.5 bg-[#5D00D6] rounded-full" /> Seamless integration into broader systems.</li>
+               </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.2} className="bg-[#0c1024] p-10 md:p-12 rounded-[40px] border border-white/10 text-white">
+               <BarChart3 className="w-10 h-10 text-[#a56eff] mb-6" />
+               <h3 className="text-[24px] font-bold text-white mb-4">Visibility & Control</h3>
+               <p className="text-white/70 text-[16px] leading-relaxed mb-6">
+                  You cannot fix what you cannot see. We maintain absolute visibility over the wireless network.
+               </p>
+               <ul className="space-y-3">
+                  <li className="flex items-center gap-3 text-white/90 font-medium"><div className="w-1.5 h-1.5 bg-[#a56eff] rounded-full" /> Active monitoring of performance thresholds.</li>
+                  <li className="flex items-center gap-3 text-white/90 font-medium"><div className="w-1.5 h-1.5 bg-[#a56eff] rounded-full" /> Immediate detection of degraded signals.</li>
+                  <li className="flex items-center gap-3 text-white/90 font-medium"><div className="w-1.5 h-1.5 bg-[#a56eff] rounded-full" /> Centralised control enforcing global policy.</li>
+               </ul>
+            </FadeIn>
+         </div>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   8. BUSINESS IMPACT
    ───────────────────────────────────────────────────────── */
 const SectionBusinessImpact = () => (
-   <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
+   <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
       <div className={C}>
          <div className="max-w-3xl mx-auto text-center mb-12">
             <FadeIn>
                <span className="c9-eyebrow mb-4">Commercial Outcome</span>
-               <h2 className="c9-section-heading">The ROI of Pervasive Wireless</h2>
+               <h2 className="c9-section-heading">Business Impact</h2>
                <p className="c9-body text-slate-600 mt-4">
-                  Reliable wireless is the foundation of the modern mobile workforce. When it works perfectly, your business moves faster.
+                  Controlled wireless infrastructure protects output. Reliable systems drive efficiency.
                </p>
             </FadeIn>
          </div>
-         <div className="grid md:grid-cols-3 gap-6">
+         <div className="grid md:grid-cols-4 gap-6 text-center">
             {[
-               { title: 'Workforce Mobility', desc: 'Staff can transition seamlessly between meeting rooms and desks without losing connection.', icon: <Users /> },
-               { title: 'Operational Speed', desc: 'Eliminating the latency that slows down cloud applications and communication tools.', icon: <Zap /> },
-               { title: 'Security Confidence', desc: 'Enforcing enterprise-grade encryption and access control across all wireless touchpoints.', icon: <ShieldCheck /> }
+               { title: 'Staff Productivity', desc: 'No lost time searching for signals.' },
+               { title: 'System Reliability', desc: 'Critical tools stay connected.' },
+               { title: 'Customer Experience', desc: 'Transactions process immediately.' },
+               { title: 'Operational Efficiency', desc: 'Workflows remain unbroken.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="p-8 bg-white rounded-[32px] border border-slate-200 shadow-sm text-center">
-                  <div className="w-12 h-12 bg-[#5D00D6]/5 rounded-xl flex items-center justify-center text-[#5D00D6] mx-auto mb-6">
-                     {item.icon}
+               <FadeIn key={i} delay={i * 0.1}>
+                  <div className="p-8 bg-slate-50 rounded-[24px] h-full border border-slate-100">
+                     <h4 className="text-[18px] font-bold mb-3 text-slate-900">{item.title}</h4>
+                     <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
                   </div>
-                  <h4 className="text-[16px] font-bold mb-3 text-slate-900">{item.title}</h4>
-                  <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
                </FadeIn>
             ))}
          </div>
@@ -232,41 +323,29 @@ const SectionBusinessImpact = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 9 — WHY THIS MATTERS
+   9. WHY THIS MATTERS
    ───────────────────────────────────────────────────────── */
 const SectionWhyItMatters = () => (
-   <section className="py-12 lg:py-16 bg-[#0c1024] text-white relative overflow-hidden">
+   <section className="py-16 lg:py-24 bg-[#0c1024] text-white relative overflow-hidden">
       <div className={C}>
-         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
+         <div className="max-w-3xl">
             <FadeIn direction="left">
-               <h2 className="c9-section-heading !text-white mb-6">Why Wireless Control Matters</h2>
-               <div className="space-y-6">
-                  {[
-                     { title: "Connectivity is Non-Negotiable", desc: "Every dropped connection is a moment of lost productivity and frustration." },
-                     { title: "Unmanaged Radio Creates Risk", desc: "Interference and congestion are the silent killers of enterprise performance." },
-                     { title: "Managed Fabric Creates Stability", desc: "A coordinated wireless system is the only way to support a modern mobile workforce." }
-                  ].map((item, i) => (
-                     <div key={i} className="flex gap-4">
-                        <div className="mt-1 flex-shrink-0"><ShieldCheck className="text-[#a56eff]" size={20} /></div>
-                        <div>
-                           <h4 className="font-bold text-white text-[18px]">{item.title}</h4>
-                           <p className="text-white/60 text-[14px]">{item.desc}</p>
-                        </div>
-                     </div>
-                  ))}
-               </div>
-            </FadeIn>
-            <FadeIn direction="right">
-               <div className="p-10 rounded-[48px] bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <p className="text-xl font-medium leading-relaxed italic text-white/90 mb-8">
-                     "We don't just provide Wi-Fi. We provide the pervasive connectivity that allows your staff to work anywhere, on any device, with absolute confidence."
-                  </p>
-                  <div className="flex items-center gap-4">
-                     <div className="w-12 h-12 rounded-full bg-slate-800 border border-white/10" />
-                     <div>
-                        <div className="font-bold text-white">Head of Wireless Ops</div>
-                        <div className="text-xs text-white/40">C9 Communications</div>
-                     </div>
+               <h2 className="c9-section-heading !text-white mb-6">Poor Wireless Performance Disrupts Daily Operations</h2>
+               <p className="text-white/80 text-[18px] leading-relaxed mb-8">
+                  Wireless issues are frequent and costly. Unmanaged environments create systemic inconsistency. Controlled systems ensure reliability across every square foot of your operation.
+               </p>
+               <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                     <CheckCircle className="text-[#a56eff]" size={20} />
+                     <span className="text-white font-medium">Standardize performance metrics.</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                     <CheckCircle className="text-[#a56eff]" size={20} />
+                     <span className="text-white font-medium">Eliminate shadow zones.</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                     <CheckCircle className="text-[#a56eff]" size={20} />
+                     <span className="text-white font-medium">Protect active sessions.</span>
                   </div>
                </div>
             </FadeIn>
@@ -284,24 +363,27 @@ export default function AccessPointsPage() {
       <Hero />
       <WpClientTicker />
       <SectionOperationalRisk />
+      <SectionWhereWirelessFails />
       <SectionHowWeOperate />
+      <SectionCoverageModel />
+      <SectionIntegrationAndControl />
       <SectionBusinessImpact />
       <SectionWhyItMatters />
 
       <WpDefenseBanner 
-        title={<>Seamless <span className="text-[#a56eff]">Connectivity.</span></>}
-        description="Wireless is only as good as the network behind it. We integrate your wireless layer with core infrastructure for end-to-end stability."
-        buttonText="View Routing & Switching"
+        title={<>Network <span className="text-[#a56eff]">Foundation.</span></>}
+        description="Wireless is only as robust as the wired network behind it. Ensure total stability."
+        buttonText="View Routers & Switches"
         href="/telco/hardware/routers"
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
-          eyebrow="Eliminate Dead Zones and Drops"
-          title="Request Wireless Assessment"
-          description="Talk to a network architect to review your current wireless environment and optimize for performance."
-          formTitle="Request Wireless Assessment"
+          eyebrow="TAKE CONTROL"
+          title="Improve Wireless Performance Before It Impacts Operations"
+          description="Talk to an Infrastructure Specialist to review your current setup."
+          formTitle="Request Network Assessment"
         />
       </section>
     </main>

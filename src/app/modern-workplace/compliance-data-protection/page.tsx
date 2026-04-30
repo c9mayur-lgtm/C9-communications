@@ -71,7 +71,7 @@ export default function CompliancePage() {
       
       {/* 1. HERO SECTION */}
       {/* 1. HERO SECTION (Standardized 2-Column) */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white">
+      <section className="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-white">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F9FBFF] -z-10 hidden lg:block" />
         <div className="c9-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -105,31 +105,40 @@ export default function CompliancePage() {
             </div>
             
             <div className="relative">
-              <ScaleIn>
-                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50">
+              <ScaleIn className="relative hidden lg:block">
+                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50 group">
                   <img 
-                    src="/compliance_hero_v2_1777400729835.png" 
-                    alt="Compliance & Data Protection Dashboard"
-                    className="w-full h-full object-cover aspect-[4/3]"
+                    src="/compliance_data_protection_hero.png" 
+                    alt="Modern Cybersecurity Operations Center"
+                    className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-1000"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/10 to-transparent mix-blend-overlay" />
                 </div>
                 <div className="absolute -top-12 -right-12 w-64 h-64 bg-purple-100 rounded-full blur-3xl -z-10 opacity-60" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100 rounded-full blur-3xl -z-10 opacity-60" />
                 
-                {/* Floating trust card */}
+                {/* Floating Meta-Info Card (Half-Overlap) */}
                 <motion.div 
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden md:block"
+                  initial={{ y: 40, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 1, duration: 0.8 }}
+                  className="absolute -bottom-10 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-[32px] border border-slate-100 shadow-[0_20px_50px_rgba(93,0,214,0.15)] z-30"
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
-                      <ShieldCheck className="text-[#5D00D6]" size={20} />
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-2xl bg-[#5D00D6] text-white flex items-center justify-center shadow-lg shadow-purple-900/20">
+                        <ShieldCheck size={24} />
+                      </div>
+                      <div>
+                        <div className="text-[14px] font-bold text-slate-900">Active Security Posture</div>
+                        <div className="text-[10px] text-[#5D00D6] font-bold uppercase tracking-widest">Fleet Security Health: 94/100</div>
+                      </div>
                     </div>
-                    <span className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Security Score</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Zero Trust Verified</span>
+                    </div>
                   </div>
-                  <div className="text-[24px] font-bold text-[#0c1024] mb-1">94/100</div>
-                  <div className="text-[13px] font-medium text-gray-500">Fleet Security Health</div>
                 </motion.div>
               </ScaleIn>
             </div>
@@ -359,7 +368,7 @@ export default function CompliancePage() {
             <Eyebrow>Enterprise Readiness</Eyebrow>
             <h2 className="c9-section-heading mb-8 font-proxima tracking-tight font-bold leading-tight">Security & Compliance FAQ.</h2>
           </div>
-          <div className="max-w-[900px] mx-auto">
+          <div className="w-full">
             <FAQSection items={FAQS} />
           </div>
         </div>
