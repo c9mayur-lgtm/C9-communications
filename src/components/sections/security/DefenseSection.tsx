@@ -81,7 +81,7 @@ export default function DefenseSection() {
               ))}
             </div>
 
-            <Link href="/c9-defense" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white text-[16px] font-bold h-14 rounded-full mt-10 transition-all shadow-xl shadow-purple-900/40 flex items-center justify-center gap-2 relative z-10 group px-0">
+            <Link href="https://c9defense.com.au/" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white text-[16px] font-bold h-14 rounded-full mt-10 transition-all shadow-xl shadow-purple-900/40 flex items-center justify-center gap-2 relative z-10 group px-0">
                 Assess My Organisation with C9 Defense <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             

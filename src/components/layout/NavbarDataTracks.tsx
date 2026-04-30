@@ -85,8 +85,8 @@ export const STARTUP_IT_MENU = {
         {
           heading: 'Essential Security',
           items: [
-            { icon: <Shield size={14} />, label: 'Antivirus & Firewall', path: '/managed-it/security-solutions' },
-            { icon: <ShieldCheck size={14} />, label: 'SaaS Backup', path: '/managed-it/backup-disaster-recovery' },
+            { icon: <Shield size={14} />, label: 'Antivirus & Firewall', path: 'https://c9defense.com.au/' },
+            { icon: <ShieldCheck size={14} />, label: 'SaaS Backup', path: 'https://c9defense.com.au/' },
           ]
         }
       ]
@@ -170,8 +170,8 @@ export const BUSINESS_IT_MENU = {
         {
           heading: 'Business Resilience',
           items: [
-            { icon: <Shield size={14} />, label: 'Cybersecurity Solutions', path: '/managed-it/security-solutions' },
-            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
+            { icon: <Shield size={14} />, label: 'Cybersecurity Solutions', path: 'https://c9defense.com.au/' },
+            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: 'https://c9defense.com.au/' },
             { icon: <Cloud size={14} />, label: 'Cloud Migration Services', path: '/managed-it/cloud-services' },
           ]
         }
@@ -248,8 +248,8 @@ export const SOLUTIONS_MENU = {
         {
           heading: 'Cybersecurity',
           items: [
-            { icon: <Shield size={14} />, label: 'Security Solutions', path: '/managed-it/security-solutions', desc: 'Multi-layer defense against sophisticated ransomware and phishing.' },
-            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery', desc: 'Guaranteed business continuity with automated cloud-based backups.' },
+            { icon: <Shield size={14} />, label: 'Security Solutions', path: 'https://c9defense.com.au/', desc: 'Multi-layer defense against sophisticated ransomware and phishing.' },
+            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: 'https://c9defense.com.au/', desc: 'Guaranteed business continuity with automated cloud-based backups.' },
           ]
         }
       ]

@@ -15,7 +15,7 @@ export const WpFooter = () => {
             <ul className="space-y-3 text-[14px]">
                 <li><a href="/managed-it" className="!text-white hover:text-[#5D00D6] transition-colors block">Managed Services</a></li>
                 <li><a href="/managed-it/strategy-consulting" className="!text-white hover:text-[#5D00D6] transition-colors block">IT Consulting & Advisory</a></li>
-                <li><a href="/managed-it/security-solutions" className="!text-white hover:text-[#5D00D6] transition-colors block">Cyber Security</a></li>
+                <li><a href="https://c9defense.com.au/" className="!text-white hover:text-[#5D00D6] transition-colors block">Cyber Security</a></li>
                 <li><a href="/modern-workplace" className="!text-white hover:text-[#5D00D6] transition-colors block">Modern Workplace</a></li>
                 <li><a href="/modern-workplace/secure-remote-work" className="!text-white hover:text-[#5D00D6] transition-colors block">Secure Remote Work</a></li>
                 <li><a href="/managed-it/cloud-services" className="!text-white hover:text-[#5D00D6] transition-colors block">Cloud Services</a></li>
@@ -45,7 +45,7 @@ export const WpFooter = () => {
                <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Also from the C9 Group:</h4>
                <ul className="space-y-3 text-[14px]">
                  <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Teams</a></li>
-                 <li><a href="/managed-it/security-solutions" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Defense</a></li>
+                 <li><a href="https://c9defense.com.au/" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Defense</a></li>
                  <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Digital</a></li>
                  <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Lumina</a></li>
                </ul>

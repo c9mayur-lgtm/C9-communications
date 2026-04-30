@@ -85,7 +85,7 @@ export default function TwoLayers() {
               ))}
             </div>
 
-            <Link href="/c9-defense" className="w-full mt-10 relative z-10">
+            <Link href="https://c9defense.com.au/" className="w-full mt-10 relative z-10">
               <button className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white text-[16px] font-bold h-14 rounded-full transition-all shadow-xl shadow-purple-900/30 flex items-center justify-center gap-2 group">
                 Learn About C9 Defense <span className="group-hover:translate-x-1 transition-transform">→</span>
               </button>

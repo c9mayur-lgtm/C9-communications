@@ -515,7 +515,7 @@ const SectionIntegration = () => (
                {[
                   { name: 'Network Solutions', href: '/managed-it/network-solutions' },
                   { name: 'Cloud Services', href: '/managed-it/cloud-services' },
-                  { name: 'Cybersecurity', href: '/c9-defense' },
+                  { name: 'Cybersecurity', href: 'https://c9defense.com.au/' },
                   { name: 'Infrastructure', href: '/managed-it/infrastructure' }
                ].map(link => (
                   <a key={link.name} href={link.href} className="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-[#0c1024] transition-all text-xs font-bold uppercase tracking-wider">
@@ -642,7 +642,7 @@ export default function HelpdeskSupportPage() {
         title={<>Security incidents need more <span className="text-[#a56eff]">than helpdesk.</span></>}
         description="When your team is facing a potential breach, ransomware, or active threat — C9 Defense provides continuous monitoring and incident response so helpdesk is never your only line of defence."
         buttonText="Learn About C9 Defense"
-        href="/c9-defense"
+        href="https://c9defense.com.au/"
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

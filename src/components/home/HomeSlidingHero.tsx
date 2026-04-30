@@ -58,12 +58,34 @@ export const HomeSlidingHero = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative min-h-[600px] sm:h-[550px] lg:h-[600px] bg-white overflow-hidden border-b border-slate-100 flex items-center">
+    <section className="relative h-auto pt-0 pb-12 xl:py-0 xl:h-[600px] bg-white overflow-hidden border-b border-slate-100 flex items-center">
       <div className="container mx-auto px-6 md:px-8 h-full relative z-10" style={{ maxWidth: '1240px' }}>
-        <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-12 items-center h-full pt-8 pb-20 md:pt-4 md:pb-4">
+        <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-12 items-center h-full pt-0 xl:pt-8 pb-20 md:pt-4 md:pb-4">
           
-          {/* Content Area */}
-          <div className="relative z-20">
+          {/* Image Area - Responsive (Comes first on mobile/tablet) */}
+          <div className="order-1 xl:order-2 relative h-[250px] sm:h-[350px] xl:h-[420px] rounded-[24px] xl:rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 mb-4 xl:mb-0">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="absolute inset-0"
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-[#5D00D6]/5 mix-blend-overlay" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/10 to-transparent" />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Content Area - Responsive (Comes second on mobile/tablet) */}
+          <div className="order-2 xl:order-1 relative z-20">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
@@ -72,9 +94,8 @@ export const HomeSlidingHero = () => {
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               >
-                <div className="inline-flex items-center gap-2 mb-4 bg-slate-50 px-3 py-1 rounded-full border border-slate-100">
-                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: slide.dotColor }} />
-                  <span className="c9-eyebrow !text-slate-600">{slide.eyebrow}</span>
+                <div className="mb-4">
+                  <span className="c9-eyebrow !text-[#5D00D6] uppercase tracking-[0.2em]">{slide.eyebrow}</span>
                 </div>
                 
                 <h1 className="c9-hero-title mb-4 whitespace-normal sm:whitespace-pre-line">
@@ -113,90 +134,20 @@ export const HomeSlidingHero = () => {
             </AnimatePresence>
           </div>
 
-          {/* Image Area - Desktop Only */}
-          <div className="hidden xl:block h-[420px] relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={current}
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="absolute inset-0"
-              >
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-[#5D00D6]/5 mix-blend-overlay" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/10 to-transparent" />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
         </div>
       </div>
 
       {/* Navigation Indicators */}
-      <div className="absolute bottom-8 left-6 md:left-[max(24px,calc(50%-620px))] flex items-center gap-4 z-30">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30">
         {slides.map((s, i) => (
           <button
             key={i}
             onClick={() => { setCurrent(i); setDirection(i > current ? 1 : -1); }}
-            className="flex flex-col items-start gap-1.5 group"
-            aria-label={`Go to slide ${i + 1}: ${s.eyebrow}`}
-          >
-            {/* Slide label */}
-            <span className={`text-[9px] font-black uppercase tracking-[0.2em] leading-none transition-colors duration-300 ${
-              i === current ? 'text-[#5D00D6]' : 'text-slate-300 group-hover:text-slate-400'
-            }`}>
-              {s.eyebrow}
-            </span>
-            {/* Progress bar track */}
-            <div className={`h-[3px] rounded-full transition-all duration-300 overflow-hidden ${
-              i === current ? 'w-16 bg-slate-200' : 'w-8 bg-slate-100 group-hover:bg-slate-200'
-            }`}>
-              {i === current && (
-                <motion.div
-                  key={current}
-                  className="h-full rounded-full"
-                  style={{ backgroundColor: s.dotColor }}
-                  initial={{ width: '0%' }}
-                  animate={{ width: '100%' }}
-                  transition={{ duration: 8, ease: 'linear' }}
-                />
-              )}
-              {i !== current && (
-                <div className="h-full w-full rounded-full" style={{ backgroundColor: s.dotColor, opacity: 0.3 }} />
-              )}
-            </div>
-          </button>
-        ))}
-      </div>
-
-      {/* Selector Tabs - Desktop Overlay */}
-      <div className="absolute right-8 bottom-1/2 translate-y-1/2 hidden 2xl:flex flex-col gap-3 z-30">
-        {slides.map((s, i) => (
-          <button
-            key={s.id}
-            onClick={() => setCurrent(i)}
-            className={`w-[300px] text-left p-6 rounded-2xl transition-all border group ${
-              i === current 
-                ? 'bg-white border-[#5D00D6]/20 shadow-xl shadow-slate-200 ring-2 ring-[#5D00D6]/10 translate-x-[-10px]' 
-                : 'bg-slate-50/80 border-transparent text-slate-400 hover:bg-white hover:border-slate-100'
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              i === current ? 'w-10 bg-[#5D00D6]' : 'w-2 bg-slate-200 hover:bg-slate-300'
             }`}
-          >
-            <div className={`flex items-center gap-3 mb-1 ${i === current ? 'text-slate-900' : 'text-slate-400'}`}>
-              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: s.dotColor }} />
-              <span className="text-[10px] font-black uppercase tracking-widest leading-none">
-                {s.eyebrow}
-              </span>
-            </div>
-            <p className={`font-bold text-[14px] leading-tight ${i === current ? 'text-slate-900' : 'text-slate-400 group-hover:text-slate-600'}`}>
-              {s.title.split('\n').join(' ')}
-            </p>
-          </button>
+            aria-label={`Go to slide ${i + 1}`}
+          />
         ))}
       </div>
 

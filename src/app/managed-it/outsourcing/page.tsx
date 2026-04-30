@@ -395,7 +395,7 @@ const SectionIntegration = () => (
                   { name: 'Helpdesk', href: '/managed-it/helpdesk-support' },
                   { name: 'Network', href: '/managed-it/network-solutions' },
                   { name: 'Cloud', href: '/managed-it/cloud-services' },
-                  { name: 'Security', href: '/c9-defense' }
+                  { name: 'Security', href: 'https://c9defense.com.au/' }
                ].map(link => (
                   <a key={link.name} href={link.href} className="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-[#0c1024] transition-all text-xs font-bold uppercase tracking-wider">
                      {link.name}
@@ -520,7 +520,7 @@ export default function ITOutsourcingPage() {
         title={<>Managed IT is not <span className="text-[#5D00D6]">Managed Security.</span></>}
         description="Don't assume your outsourcing provider is actively hunting threats. C9 Defense adds a dedicated security layer to your outsourced IT department."
         buttonText="Learn About C9 Defense"
-        href="/c9-defense"
+        href="https://c9defense.com.au/"
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

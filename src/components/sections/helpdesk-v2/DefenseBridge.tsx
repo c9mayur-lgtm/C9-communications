@@ -23,7 +23,7 @@ export default function DefenseBridge() {
             </div>
           </div>
 
-          <Link href="/c9-defense" className="shrink-0 relative z-10 w-full lg:w-auto" passHref>
+          <Link href="https://c9defense.com.au/" className="shrink-0 relative z-10 w-full lg:w-auto" passHref>
             <Button className="w-full lg:w-auto shadow-2xl hover:gap-6 group bg-white hover:bg-slate-100 text-[#0c1024] font-bold h-14 px-8 rounded-full transition-all duration-300" >
               Learn About C9 Defense <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2 text-[#5D00D6]" />
             </Button>

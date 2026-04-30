@@ -82,10 +82,10 @@ export const IT_SOLUTIONS_FIXED = {
         },
         {
           heading: 'Cybersecurity',
-          action: { label: 'C9 defense →', path: '/c9-defense' },
+          action: { label: 'C9 defense →', path: 'https://c9defense.com.au/' },
           items: [
-            { label: 'Security Solutions', path: '/managed-it/security-solutions' },
-            { label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
+            { label: 'Security Solutions', path: 'https://c9defense.com.au/' },
+            { label: 'Backup & Disaster Recovery', path: 'https://c9defense.com.au/' },
           ]
         }
       ]
@@ -105,10 +105,10 @@ export const IT_SOLUTIONS_FIXED = {
     }
   ],
   challenges: [
-    { title: 'Digital Transformation', icon: <Cpu size={24} /> },
-    { title: 'Security',               icon: <Shield size={24} /> },
-    { title: 'Business Continuity',    icon: <Handshake size={24} /> },
-    { title: 'Growth',                 icon: <TrendingUp size={24} /> },
+    { title: 'Digital Transformation', icon: <Cpu size={24} />, path: '/managed-it/digital-transformation' },
+    { title: 'Security',               icon: <Shield size={24} />, path: 'https://c9defense.com.au/' },
+    { title: 'Business Continuity',    icon: <Handshake size={24} />, path: '/managed-it/business-continuity' },
+    { title: 'Growth',                 icon: <TrendingUp size={24} />, path: '/managed-it/business-growth' },
   ],
   sidebar: {
     heading: 'Industry Focus',
@@ -220,10 +220,10 @@ export const MODERN_WORKPLACE_FIXED = {
     }
   ],
   modernization: [
-    { title: 'Microsoft 365 Solutions',           icon: <LayoutGrid size={24} /> },
-    { title: 'Security Awareness Training',       icon: <GraduationCap size={24} /> },
-    { title: 'SaaS Backup',                       icon: <Cloud size={24} /> },
-    { title: 'Endpoint Detection & Response (EDR)', icon: <ShieldAlert size={24} /> },
+    { title: 'Microsoft 365 Solutions',           icon: <LayoutGrid size={24} />, path: '/modern-workplace/microsoft-365-solutions' },
+    { title: 'Security Awareness Training',       icon: <GraduationCap size={24} />, path: '/managed-it/security-awareness-training' },
+    { title: 'SaaS Backup',                       icon: <Cloud size={24} />, path: '/modern-workplace/saas-backup' },
+    { title: 'Endpoint Detection & Response (EDR)', icon: <ShieldAlert size={24} />, path: '/managed-it/endpoint-management' },
   ],
   sidebar: {
     heading: 'Build a Smart Workplace',
@@ -269,20 +269,20 @@ export const BUSINESS_IT_SOLUTIONS = {
         },
         {
           heading: 'Cybersecurity',
-          action: { label: 'C9 defense →', path: '/c9-defense' },
+          action: { label: 'C9 defense →', path: 'https://c9defense.com.au/' },
           items: [
-            { icon: <Shield size={14} />,   label: 'Security Solutions',        path: '/managed-it/security-solutions' },
-            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
+            { icon: <Shield size={14} />,   label: 'Security Solutions',        path: 'https://c9defense.com.au/' },
+            { icon: <Database size={14} />, label: 'Backup & Disaster Recovery', path: 'https://c9defense.com.au/' },
           ]
         }
       ]
     }
   ],
   challenges: [
-    { title: 'Digital Transformation', icon: <Cpu size={24} /> },
-    { title: 'Security',               icon: <ShieldCheck size={24} /> },
-    { title: 'Business Continuity',    icon: <InfinityIcon size={24} /> },
-    { title: 'Growth',                 icon: <BarChart3 size={24} /> },
+    { title: 'Digital Transformation', icon: <Cpu size={24} />, path: '/managed-it/digital-transformation' },
+    { title: 'Security',               icon: <ShieldCheck size={24} />, path: 'https://c9defense.com.au/' },
+    { title: 'Business Continuity',    icon: <InfinityIcon size={24} />, path: '/managed-it/business-continuity' },
+    { title: 'Growth',                 icon: <BarChart3 size={24} />, path: '/managed-it/business-growth' },
   ],
   sidebar: {
     heading: 'Industry Focus',
@@ -343,10 +343,10 @@ export const BUSINESS_TELCO = {
     }
   ],
   challenges: [
-    { title: 'Cloud Communication', icon: <Phone size={24} /> },
-    { title: 'Fast Connectivity',   icon: <Wifi size={24} /> },
-    { title: 'Secure Networking',   icon: <Network size={24} /> },
-    { title: 'Global Reach',        icon: <Globe size={24} /> },
+    { title: 'Cloud Communication', icon: <Phone size={24} />, path: '/telco/phone-system' },
+    { title: 'Fast Connectivity',   icon: <Wifi size={24} />, path: '/telco/fast-fibre' },
+    { title: 'Secure Networking',   icon: <Network size={24} />, path: '/telco/enterprise-ethernet' },
+    { title: 'Global Reach',        icon: <Globe size={24} />, path: '/telco/enterprise-ethernet' },
   ],
   sidebar: {
     heading: 'I Need Help With',
@@ -387,10 +387,10 @@ export const BUSINESS_MODERN_WORKPLACE = {
     }
   ],
   modernization: [
-    { title: 'Microsoft 365 Solutions',           icon: <LayoutGrid size={24} /> },
-    { title: 'Security Awareness Training',       icon: <GraduationCap size={24} /> },
-    { title: 'SaaS Backup',                       icon: <Cloud size={24} /> },
-    { title: 'Endpoint Detection & Response',     icon: <ShieldAlert size={24} /> },
+    { title: 'Microsoft 365 Solutions',           icon: <LayoutGrid size={24} />, path: '/modern-workplace/microsoft-365-solutions' },
+    { title: 'Security Awareness Training',       icon: <GraduationCap size={24} />, path: '/managed-it/security-awareness-training' },
+    { title: 'SaaS Backup',                       icon: <Cloud size={24} />, path: '/modern-workplace/saas-backup' },
+    { title: 'Endpoint Detection & Response',     icon: <ShieldAlert size={24} />, path: '/managed-it/endpoint-management' },
   ],
   sidebar: {
     heading: 'Build a Smart Workplace',
@@ -431,21 +431,21 @@ export const ENTERPRISE_IT_SOLUTIONS = {
         },
         {
           heading: 'Enterprise Security',
-          action: { label: 'C9 defense →', path: '/managed-it/security-solutions' },
+          action: { label: 'C9 defense →', path: 'https://c9defense.com.au/' },
           items: [
-              { icon: <ShieldCheck size={14} />, label: 'Security & Compliance',     path: '/managed-it/security-solutions' },
-              { icon: <Database size={14} />,    label: 'Backup & Disaster Recovery', path: '/managed-it/backup-disaster-recovery' },
-              { icon: <ShieldAlert size={14} />, label: 'SIEM & Threat Intelligence', path: '/managed-it/security-solutions' },
+              { icon: <ShieldCheck size={14} />, label: 'Security & Compliance',     path: 'https://c9defense.com.au/' },
+              { icon: <Database size={14} />,    label: 'Backup & Disaster Recovery', path: 'https://c9defense.com.au/' },
+              { icon: <ShieldAlert size={14} />, label: 'SIEM & Threat Intelligence', path: 'https://c9defense.com.au/' },
           ]
         }
       ]
     }
   ],
   challenges: [
-    { title: 'Scale & Governance',  icon: <Layers size={24} /> },
-    { title: 'Compliance',          icon: <ShieldCheck size={24} /> },
-    { title: 'Business Continuity', icon: <InfinityIcon size={24} /> },
-    { title: 'Digital Transformation', icon: <Cpu size={24} /> },
+    { title: 'Scale & Governance',  icon: <Layers size={24} />, path: '/managed-it/business-growth' },
+    { title: 'Compliance',          icon: <ShieldCheck size={24} />, path: 'https://c9defense.com.au/' },
+    { title: 'Business Continuity', icon: <InfinityIcon size={24} />, path: '/managed-it/business-continuity' },
+    { title: 'Digital Transformation', icon: <Cpu size={24} />, path: '/managed-it/digital-transformation' },
   ],
   sidebar: {
     heading: 'Industries We Serve',
@@ -508,10 +508,10 @@ export const ENTERPRISE_TELCO = {
     }
   ],
   challenges: [
-    { title: 'Multi-site WAN',       icon: <Network size={24} /> },
-    { title: 'UC & Contact Centre',  icon: <Headphones size={24} /> },
-    { title: 'Mobile Fleet',         icon: <Smartphone size={24} /> },
-    { title: 'Uptime SLA',           icon: <InfinityIcon size={24} /> },
+    { title: 'Multi-site WAN',       icon: <Network size={24} />, path: '/telco/enterprise-ethernet' },
+    { title: 'UC & Contact Centre',  icon: <Headphones size={24} />, path: '/telco/contact-centre' },
+    { title: 'Mobile Fleet',         icon: <Smartphone size={24} />, path: '/telco/mobile-plans' },
+    { title: 'Uptime SLA',           icon: <InfinityIcon size={24} />, path: '/telco/enterprise-ethernet' },
   ],
   sidebar: {
     heading: 'Enterprise Solutions',
@@ -531,7 +531,7 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
         {
           heading: 'Enterprise Workplace',
           items: [
-            { icon: <LayoutGrid size={14} />, label: 'Microsoft 365 Enterprise',    path: '/modern-workplace/productivity' },
+            { icon: <LayoutGrid size={14} />, label: 'Microsoft 365 Enterprise',    path: '/modern-workplace/microsoft-365-solutions' },
             { icon: <Monitor size={14} />,    label: 'Enterprise Device Management', path: '/modern-workplace/endpoint-management' },
             { icon: <Shield size={14} />,     label: 'Secure Remote Work',           path: '/modern-workplace/secure-remote-work' },
             { icon: <Database size={14} />,   label: 'Compliance & Data Governance', path: '/modern-workplace/compliance-data-protection' },
@@ -550,10 +550,10 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
     }
   ],
   modernization: [
-    { title: 'Microsoft 365 Enterprise',         icon: <LayoutGrid size={24} /> },
-    { title: 'Zero Trust Security',              icon: <ShieldCheck size={24} /> },
-    { title: 'Enterprise SaaS Backup',           icon: <Cloud size={24} /> },
-    { title: 'EDR & XDR',                        icon: <ShieldAlert size={24} /> },
+    { title: 'Microsoft 365 Enterprise',         icon: <LayoutGrid size={24} />, path: '/modern-workplace/microsoft-365-solutions' },
+    { title: 'Zero Trust Security',              icon: <ShieldCheck size={24} />, path: 'https://c9defense.com.au/' },
+    { title: 'Enterprise SaaS Backup',           icon: <Cloud size={24} />, path: '/modern-workplace/saas-backup' },
+    { title: 'EDR & XDR',                        icon: <ShieldAlert size={24} />, path: '/managed-it/endpoint-management' },
   ],
   sidebar: {
     heading: 'Enterprise Workplace',

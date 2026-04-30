@@ -99,8 +99,8 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                       <div className="grid grid-cols-2 gap-4">
                         {data.hardware.map((h: any, i: number) => (
                           <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center justify-center text-center hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500">
-                            <div className="aspect-[1.5/1] w-full mb-2 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-2">
-                              <img src={h.img} alt={h.title} className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                            <div className="aspect-[1.5/1] w-full mb-2 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-0">
+                              <img src={h.img} alt={h.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                             </div>
                             <span className="text-[12px] font-semibold text-slate-700">{h.title}</span>
                           </Link>
@@ -114,12 +114,16 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                       </h4>
                       <div className="grid grid-cols-2 gap-4">
                         {(data.challenges || data.modernization)?.map((c: any, i: number) => (
-                          <div key={i} className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden aspect-square">
+                          <Link 
+                            key={i} 
+                            href={c.path || '#'}
+                            className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden aspect-square"
+                          >
                             <div className="mb-4 p-4 rounded-2xl bg-purple-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
                               {c.icon}
                             </div>
                             <span className="text-[12px] font-semibold text-slate-800 leading-tight px-1">{c.title}</span>
-                          </div>
+                          </Link>
                         ))}
                       </div>
                     </>
@@ -278,6 +282,7 @@ const TopUtilityBar = () => {
    ───────────────────────────────────────────── */
 const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   const { audience, setAudience } = useAudience();
+  const pathname = usePathname();
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
   const MEGA_MAP = getMegaMap(audience);
@@ -306,32 +311,36 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             </button>
           </div>
           
-          {/* Audience Switcher - Fixed Mobile View */}
-          <div className="px-6 py-3 border-b border-gray-100 shrink-0 bg-[#f8f9fa]">
-            <div className="flex items-center gap-1.5 p-1 bg-gray-100 rounded-full border border-gray-200/50">
-              {[
-                { key: 'startup', label: 'Greenfield' },
-                { key: 'business', label: 'Business' },
-                { key: 'enterprise', label: 'Enterprise' }
-              ].map((track) => (
-                <button
-                  key={track.key}
-                  onClick={() => setAudience(track.key as any)}
-                  className={`flex-1 py-2 text-[12px] font-bold  rounded-full transition-all duration-300 ${
-                    audience === track.key
-                      ? 'bg-[#5D00D6] text-white shadow-md'
-                      : 'text-slate-400 hover:text-slate-600'
-                  }`}
-                >
-                  {track.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Scrollable Content */}
           <div className="flex-1 overflow-y-auto overflow-x-hidden p-6">
             <div className="flex flex-col gap-2">
+              {/* Primary Navigation Tracks */}
+              {[
+                { key: 'home', label: 'Homepage', path: '/' },
+                { key: 'startup', label: 'Greenfield', path: '/greenfield' },
+                { key: 'business', label: 'Small Business', path: '/business' },
+                { key: 'enterprise', label: 'Enterprise', path: '/enterprise' }
+              ].map((track) => (
+                <div key={track.key} className="border-b border-gray-50 pb-2">
+                  <Link
+                    href={track.path}
+                    onClick={() => {
+                      if (track.key !== 'home') setAudience(track.key as any);
+                      onClose();
+                    }}
+                    className={`flex items-center justify-between w-full py-4 text-left transition-colors ${
+                      pathname === track.path
+                        ? 'text-[#5D00D6]'
+                        : 'text-slate-800'
+                    }`}
+                  >
+                    <span className="text-[18px] font-semibold">{track.label}</span>
+                  </Link>
+                </div>
+              ))}
+              {/* Service Accordions */}
+
+              {/* Service Accordions */}
               {TABS.map((tab: { name: string; menuKey: string; path: string }) => {
                 const menuData: any = MEGA_MAP[tab.menuKey as keyof typeof MEGA_MAP];
                 const isActive = activeAccordion === tab.menuKey;
@@ -398,7 +407,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                               <div className="grid grid-cols-2 gap-3 pb-4">
                                 {menuData.hardware.map((h: any, i: number) => (
                                   <Link key={i} href={h.path || '#'} onClick={onClose} className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-                                    <img src={h.img} alt={h.title} className="w-12 h-12 object-contain mb-2" />
+                                    <img src={h.img} alt={h.title} className="w-20 h-20 object-contain mb-2" />
                                     <span className="text-[11px] font-bold text-slate-700">{h.title}</span>
                                   </Link>
                                 ))}
@@ -408,10 +417,10 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                             {(menuData?.challenges || menuData?.modernization) && (
                               <div className="grid grid-cols-2 gap-3 pb-4">
                                 {(menuData.challenges || menuData.modernization).map((c: any, i: number) => (
-                                  <div key={i} className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center aspect-square">
-                                    <div className="mb-2 text-[#5D00D6]">{c.icon}</div>
+                                  <Link key={i} href={c.path || '#'} onClick={onClose} className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center aspect-square hover:border-[#5D00D6]/20 hover:shadow-lg transition-all group">
+                                    <div className="mb-2 text-[#5D00D6] group-hover:scale-110 transition-transform">{c.icon}</div>
                                     <span className="text-[11px] font-bold text-slate-700">{c.title}</span>
-                                  </div>
+                                  </Link>
                                 ))}
                               </div>
                             )}
@@ -590,16 +599,16 @@ export const Navbar = () => {
           {/* Homepage Link */}
           <Link
             href="/"
-            className={`px-3 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 ${
+            className={`px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ${
               pathname === '/'
-                ? 'bg-[#5D00D6]/10 text-[#5D00D6]'
-                : 'text-slate-400 hover:text-[#5D00D6] hover:bg-[#5D00D6]/5'
+                ? 'text-[#5D00D6]'
+                : 'text-slate-400 hover:text-[#5D00D6]'
             }`}
           >
             Homepage
           </Link>
 
-          {/* Audience Persona Pills */}
+          {/* Audience Persona Links (No Pills) */}
           {[
             { key: 'startup',    label: 'Greenfield',    path: '/greenfield' },
             { key: 'business',   label: 'Small Business', path: '/business' },
@@ -609,10 +618,10 @@ export const Navbar = () => {
               key={track.key}
               href={track.path}
               onClick={() => setAudience(track.key as any)}
-              className={`px-3 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 ${
+              className={`px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ${
                 pathname === track.path
-                  ? 'bg-[#5D00D6]/10 text-[#5D00D6]'
-                  : 'text-slate-400 hover:text-[#5D00D6] hover:bg-[#5D00D6]/5'
+                  ? 'text-[#5D00D6]'
+                  : 'text-slate-400 hover:text-[#5D00D6]'
               }`}
             >
               {track.label}
@@ -621,6 +630,7 @@ export const Navbar = () => {
 
           {/* Divider */}
           <div className="w-px h-4 bg-gray-200 mx-1" />
+
 
           {/* Main Nav Tabs */}
           {TABS.map(tab => {

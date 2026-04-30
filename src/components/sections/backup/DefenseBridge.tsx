@@ -26,7 +26,7 @@ export default function DefenseBridge() {
             </div>
             <div className="shrink-0">
               <Link
-                href="/c9-defense"
+                href="https://c9defense.com.au/"
                 className="inline-flex items-center gap-2 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold px-8 h-14 rounded-full transition-all shadow-xl shadow-purple-900/40 text-[14px] group whitespace-nowrap"
                 style={{ fontFamily: F }}
               >

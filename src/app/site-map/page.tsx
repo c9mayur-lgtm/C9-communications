@@ -45,11 +45,11 @@ export default function SitemapPage() {
       links: [
         { label: "Managed IT Services Overview", path: "/managed-it" },
         { label: "Infrastructure Governance", path: "/managed-it/infrastructure" },
-        { label: "Cyber Security & Protection", path: "/managed-it/security-solutions" },
+        { label: "Cyber Security & Protection", path: "https://c9defense.com.au/" },
         { label: "Cloud Systems & Migration", path: "/managed-it/cloud-services" },
         { label: "Network Connectivity", path: "/managed-it/network-solutions" },
         { label: "Helpdesk & Engineering Support", path: "/managed-it/helpdesk-support" },
-        { label: "Backup & Disaster Recovery", path: "/managed-it/backup-disaster-recovery" },
+        { label: "Backup & Disaster Recovery", path: "https://c9defense.com.au/" },
         { label: "Strategic IT Outsourcing", path: "/managed-it/outsourcing" },
         { label: "IT Strategy & Consulting", path: "/managed-it/strategy-consulting" },
       ]

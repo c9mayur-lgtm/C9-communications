@@ -87,8 +87,8 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Cybersecurity</h4>
                          <ul className="flex flex-col gap-2">
-                            <ListItem href="/managed-it/security-solutions" title="Security Solutions">Enterprise threat monitoring.</ListItem>
-                            <ListItem href="/managed-it/backup-disaster-recovery" title="Backup & DR">Verified recovery assurance.</ListItem>
+                            <ListItem href="https://c9defense.com.au/" title="Security Solutions">Enterprise threat monitoring.</ListItem>
+                            <ListItem href="https://c9defense.com.au/" title="Backup & DR">Verified recovery assurance.</ListItem>
                          </ul>
                        </div>
                     </div>

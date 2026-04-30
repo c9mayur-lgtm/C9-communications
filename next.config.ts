@@ -15,6 +15,16 @@ const nextConfig: NextConfig = {
         destination: '/contact',
         permanent: true,
       },
+      {
+        source: '/managed-it/security-solutions',
+        destination: 'https://c9defense.com.au/',
+        permanent: true,
+      },
+      {
+        source: '/managed-it/backup-disaster-recovery',
+        destination: 'https://c9defense.com.au/',
+        permanent: true,
+      },
     ];
   },
 };

@@ -15,7 +15,7 @@ const INDUSTRIES = [
     id: 'medical', icon: Stethoscope, label: 'Medical & Healthcare', tag: 'Healthcare',
     color: 'bg-blue-50 text-blue-600 border-blue-100', iconBg: 'bg-blue-50 text-blue-500',
     recommend: [
-      { name: 'C9 Defense Security', href: '/c9-defense' },
+      { name: 'C9 Defense Security', href: 'https://c9defense.com.au/' },
       { name: 'Managed IT Support', href: '/managed-it/helpdesk-support' }
     ],
     benefit: 'HIPAA/Privacy Act-compliant IT with zero-touch device setup and 24/7 monitoring.'
@@ -24,7 +24,7 @@ const INDUSTRIES = [
     id: 'legal', icon: Scale, label: 'Legal & Finance', tag: 'Professional',
     color: 'bg-amber-50 text-amber-700 border-amber-100', iconBg: 'bg-amber-50 text-amber-600',
     recommend: [
-      { name: 'SaaS Backup & DR', href: '/managed-it/backup-disaster-recovery' },
+      { name: 'SaaS Backup & DR', href: 'https://c9defense.com.au/' },
       { name: 'Legal IT Strategy', href: '/managed-it/strategy-consulting' }
     ],
     benefit: 'Unlimited cloud backup and rapid engineering support for uninterrupted billing.'
@@ -151,13 +151,13 @@ function getResponse(query: string): ChatResponse {
   if (q.match(/security|cyber|threat|ransomware|breach|c9.?defense|defence/)) {
     return { 
       text: "C9 Defense is our dedicated security solution — 24/7 threat detection, endpoint protection, and managed firewall. We help businesses achieve 'Essential 8' compliance and protect against modern cyber threats.", 
-      links: [{ label: 'C9 Defense', href: '/c9-defense' }, { label: 'Security Solutions', href: '/managed-it/security-solutions' }]
+      links: [{ label: 'C9 Defense', href: 'https://c9defense.com.au/' }, { label: 'Security Solutions', href: 'https://c9defense.com.au/' }]
     };
   }
   if (q.match(/backup|disaster.?recovery|dr|data.?loss/)) {
     return { 
       text: "Never lose sleep over data loss again. C9 provides automated SaaS backup for Microsoft 365 and full disaster recovery plans for your critical infrastructure with guaranteed recovery time objectives.", 
-      links: [{ label: 'Backup & Recovery', href: '/managed-it/backup-disaster-recovery' }]
+      links: [{ label: 'Backup & Recovery', href: 'https://c9defense.com.au/' }]
     };
   }
   if (q.match(/microsoft.?365|m365|teams|sharepoint/)) {
@@ -355,7 +355,7 @@ export const BusinessAdvisor = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-full px-4 pointer-events-none flex-col items-center hidden sm:flex">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-full px-4 pointer-events-none flex flex-col items-center">
       <div className="pointer-events-auto flex flex-col items-center w-full max-w-2xl">
         
         <AnimatePresence>
@@ -597,7 +597,8 @@ export const BusinessAdvisor = () => {
                 className="advisor-pill flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-[#5D00D6]/20 group hover:scale-[0.985] transition-transform"
               >
                 <span className="text-[14px] font-medium text-gray-600 tracking-tight group-hover:text-[#5D00D6] transition-colors whitespace-nowrap">
-                  What type of business are you building?
+                  <span className="inline sm:hidden">Ask C9 Advisor</span>
+                  <span className="hidden sm:inline">What type of business are you building?</span>
                 </span>
                 <div className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 bg-[#5D00D6] text-white group-hover:scale-105">
                   <ArrowRight size={13} className="stroke-[2.5px]" />

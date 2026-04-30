@@ -71,13 +71,13 @@ const Hero = () => (
 
           <FadeIn delay={0.08}>
              <h1 className="c9-hero-title mb-6">
-                Network Infrastructure That Keeps Your Business <span className="text-[#5D00D6]">Online—Without Interruption.</span>
+                Network Infrastructure That Keeps Your Business <span className="text-[#5D00D6]">Running</span>
              </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
              <p className="c9-body mb-8 max-w-[620px]">
-                C9 designs, deploys, and manages high-performance network environments across locations, ensuring uptime, redundancy, and full control over connectivity.
+                Your network is the critical foundation of your business. C9 manages complex, multi-site environments to ensure absolute uptime and operational reliability.
              </p>
           </FadeIn>
 
@@ -103,14 +103,14 @@ const Hero = () => (
                       href="#consultation"
                       className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
                    >
-                      Assess Your Network Stability
+                      Request Infrastructure Assessment
                       <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                    </a>
                    <a
                       href="#consultation"
                       className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
                    >
-                      Plan Multi-Site Connectivity
+                       Review Your Network Setup
                    </a>
                 </div>
                 <a href="#consultation" className="text-slate-500 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors group whitespace-nowrap">
@@ -137,10 +137,10 @@ const SectionProblemFraming = () => (
       <div className={C}>
          <div className="max-w-3xl mx-auto text-center mb-12">
             <FadeIn>
-               <span className="c9-eyebrow mb-4">Risk Assessment</span>
-               <h2 className="c9-section-heading">When Your Network Fails, Your Business Stops</h2>
+               <span className="c9-eyebrow mb-4">Capabilities</span>
+               <h2 className="c9-section-heading">Complete Network Management</h2>
                <p className="c9-body text-slate-600 mt-4">
-                  Connectivity is no longer just a utility—it's a critical business risk. Unstable infrastructure leads to direct operational losses.
+                  C9 provides full-lifecycle management of your network environment, from initial site connectivity to ongoing support.
                </p>
             </FadeIn>
          </div>
@@ -148,24 +148,24 @@ const SectionProblemFraming = () => (
          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
                {
-                  icon: <AlertTriangle className="text-red-500" />,
-                  title: "Operational Disruption",
-                  desc: "Network outages that halt production, disconnect staff, and stop sales in their tracks."
+                  icon: <Globe className="text-[#5D00D6]" />,
+                  title: "Site Connectivity (WAN)",
+                  desc: "High-speed connectivity linking your locations with consistent, reliable performance."
                },
                {
-                  icon: <Wifi className="text-amber-500" />,
-                  title: "Fragmented Connectivity",
-                  desc: "Slow or inconsistent performance across multiple sites, creating an uneven staff experience."
+                  icon: <Network className="text-[#5D00D6]" />,
+                  title: "Internal Networks",
+                  desc: "Management of the internal switching and cabling that forms your local infrastructure."
                },
                {
-                  icon: <Users className="text-[#5D00D6]" />,
-                  title: "The Blame Game",
-                  desc: "Multiple vendors pointing fingers while your business remains offline and frustrated."
+                  icon: <Wifi className="text-[#5D00D6]" />,
+                  title: "Wireless Environments",
+                  desc: "Enterprise-grade Wi-Fi solutions that provide seamless coverage across your entire site."
                },
                {
-                  icon: <BarChart3 className="text-emerald-500" />,
-                  title: "Zero Visibility",
-                  desc: "Flying blind without real-time data on network performance, bottlenecks, or security threats."
+                  icon: <CheckCircle className="text-[#5D00D6]" />,
+                  title: "Device Standardisation",
+                  desc: "Consistent hardware configurations across all locations to simplify support and scaling."
                }
             ].map((item, i) => (
                <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all">
@@ -180,8 +180,8 @@ const SectionProblemFraming = () => (
 
          <FadeIn delay={0.4} className="mt-12 flex justify-center">
             <div className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-[#0c1024] text-white">
-               <ShieldCheck className="text-emerald-400" size={24} />
-               <span className="font-bold text-[14px]">Position: C9 eliminates network-driven business continuity risk.</span>
+               <Activity className="text-emerald-400" size={24} />
+               <span className="font-bold text-[14px]">Ongoing Support: C9 provides 24/7 oversight to ensure network stability.</span>
             </div>
          </FadeIn>
       </div>
@@ -196,17 +196,17 @@ const SectionTelcoIntegration = () => (
       <div className={C}>
          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">The C9 Advantage</span>
-               <h2 className="c9-section-heading mb-6">Unified Ownership: Telco + IT Integration</h2>
+               <span className="c9-eyebrow mb-4">Strategic Value</span>
+               <h2 className="c9-section-heading mb-6">Network Performance Drives Business Results</h2>
                <p className="c9-body mb-6">
-                  The gap between your internet provider and your IT support is where most connectivity issues live. C9 closes that gap by managing both layers.
+                  Reliable connectivity is directly linked to your revenue, system performance, and daily operations.
                </p>
                
                <div className="space-y-5 mb-8">
                   {[
-                     { title: "No Vendor Gaps", desc: "We manage both the infrastructure and the telco providers. One number to call, one party responsible." },
-                     { title: "Faster Issue Resolution", desc: "We don't wait for carrier tickets. Our team has direct visibility into the circuits and hardware." },
-                     { title: "Performance Control", desc: "End-to-end management allows us to optimize traffic flow from the device to the data center." }
+                     { title: "POS Reliability", desc: "Ensuring your point-of-sale systems never lose connection during peak trade." },
+                     { title: "Cloud Performance", desc: "Optimising access to critical business applications and cloud-hosted data." },
+                     { title: "Inter-Site Communication", desc: "Seamless, high-speed data transfer between your office and branch locations." }
                   ].map((item, i) => (
                      <div key={i} className="flex gap-4">
                         <div className="mt-1 flex-shrink-0"><CheckCircle size={12} className="text-[#5D00D6]" /></div>
@@ -220,7 +220,7 @@ const SectionTelcoIntegration = () => (
 
                <div className="p-6 rounded-3xl bg-slate-50 border border-slate-100">
                   <p className="text-slate-600 italic text-[14px]">
-                     "By owning both the IT and Telco layers, C9 eliminates the finger-pointing that typically delays network recovery."
+                     "Stable network infrastructure is the difference between operational flow and costly downtime."
                   </p>
                </div>
             </FadeIn>
@@ -280,10 +280,10 @@ const SectionArchitecture = () => (
       <div className={C}>
          <div className="max-w-3xl mx-auto text-center mb-12">
             <FadeIn>
-               <span className="c9-eyebrow mb-4">Strategic Design</span>
-               <h2 className="c9-section-heading">Engineered for Performance & Growth</h2>
+               <span className="c9-eyebrow mb-4">24/7 Support</span>
+               <h2 className="c9-section-heading">High-Level Network Support & Oversight</h2>
                <p className="c9-body text-slate-600 mt-4">
-                  We don't just plug in routers. We architect intelligent networks that prioritize your business-critical applications and scale as you do.
+                  We provide the continuous monitoring and proactive maintenance required to keep your infrastructure stable.
                </p>
             </FadeIn>
          </div>
@@ -291,24 +291,24 @@ const SectionArchitecture = () => (
          <div className="grid md:grid-cols-3 gap-6">
             {[
                {
-                  icon: <Zap className="text-white" size={28} />,
-                  title: "Performance Optimization",
-                  desc: "Intelligent traffic shaping and path selection ensuring low latency for ERP, Voice, and Video.",
-                  features: ["QoS Management", "Latency Minimization", "App-Aware Routing"],
+                  icon: <Monitor className="text-white" size={28} />,
+                  title: "Monitoring",
+                  desc: "24/7 oversight of circuit health and hardware performance across all locations.",
+                  features: ["Circuit Health", "Uptime Monitoring", "Performance Tracking"],
                   color: "bg-[#5D00D6]"
                },
                {
-                  icon: <Share2 className="text-[#5D00D6]" size={28} />,
-                  title: "Secure Scalability",
-                  desc: "Flexible architectures that allow you to add sites, users, and applications without re-engineering.",
-                  features: ["Cloud Integration", "Zero-Touch Provisioning", "Elastic Bandwidth"],
+                  icon: <Activity className="text-[#5D00D6]" size={28} />,
+                  title: "Proactive Detection",
+                  desc: "Identifying potential failures and performance bottlenecks before they impact operations.",
+                  features: ["Latency Alerts", "Threat Detection", "Anomaly Identification"],
                   color: "bg-white"
                },
                {
-                  icon: <Globe className="text-[#5D00D6]" size={28} />,
-                  title: "Hybrid Network Models",
-                  desc: "The best of MPLS reliability and SD-WAN flexibility tailored to your specific connectivity needs.",
-                  features: ["Centralized Policy", "Direct Cloud Access", "Edge Intelligence"],
+                  icon: <Users className="text-[#5D00D6]" size={28} />,
+                  title: "Support & Maintenance",
+                  desc: "Rapid incident resolution and regular configuration tuning to maintain peak performance.",
+                  features: ["Engineer Access", "Firmware Updates", "Patch Management"],
                   color: "bg-white"
                }
             ].map((item, i) => (
@@ -385,28 +385,28 @@ const SectionRedundancy = () => (
                         
                         <div className="space-y-6">
                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                 <div className="w-2 h-2 rounded-full bg-red-500" />
-                                 <span className="font-bold text-sm">Primary Fiber</span>
-                              </div>
-                              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Offline</span>
-                           </div>
-                           
-                           <div className="flex items-center justify-center">
-                              <ArrowRight className="text-slate-300 rotate-90" />
-                           </div>
+                               <div className="flex items-center gap-3">
+                                  <div className="w-2 h-2 rounded-full bg-red-500" />
+                                  <span className="font-bold text-sm">Primary Fiber</span>
+                               </div>
+                               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Offline</span>
+                            </div>
+                            
+                            <div className="flex items-center justify-center">
+                               <ArrowRight className="text-slate-300 rotate-90" />
+                            </div>
 
-                           <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                                 <span className="font-bold text-sm">Secondary 5G</span>
-                              </div>
-                              <span className="text-[11px] font-bold text-emerald-500 uppercase tracking-widest">Active</span>
-                           </div>
+                            <div className="flex items-center justify-between">
+                               <div className="flex items-center gap-3">
+                                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                                  <span className="font-bold text-sm">Secondary 5G</span>
+                               </div>
+                               <span className="text-[11px] font-bold text-emerald-500 uppercase tracking-widest">Active</span>
+                            </div>
 
-                           <div className="pt-4 border-t border-slate-100 text-center">
-                              <span className="font-bold text-[10px] text-slate-400 uppercase tracking-[0.3em]">Operational Uptime: 100%</span>
-                           </div>
+                            <div className="pt-4 border-t border-slate-100 text-center">
+                               <span className="font-bold text-[10px] text-slate-400 uppercase tracking-[0.3em]">Operational Uptime: 100%</span>
+                            </div>
                         </div>
                      </div>
                   </div>
@@ -434,10 +434,10 @@ const SectionMultiSite = () => (
                      
                      <div className="space-y-3">
                         {[
-                           { label: "Site Standardization", value: "Identical Performance Across All Locations" },
-                           { label: "Centralized Policy", value: "Push Security Updates Globally in Seconds" },
-                           { label: "Inter-Site Latency", value: "Optimized Traffic via Private Backbones" },
-                           { label: "Zero-Touch Setup", value: "New Sites Online Without IT Travel" }
+                           { label: "Managing multiple locations", value: "Identical Performance Across All Locations" },
+                           { label: "Consistent configurations", value: "Push Security Updates Globally in Seconds" },
+                           { label: "Centralised visibility", value: "Optimized Traffic via Private Backbones" },
+                           { label: "Scalability for new sites", value: "New Sites Online Without IT Travel" }
                         ].map((row, i) => (
                            <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                               <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-1">{row.label}</div>
@@ -451,9 +451,9 @@ const SectionMultiSite = () => (
 
             <FadeIn direction="right">
                <span className="c9-eyebrow mb-4">Location Continuity</span>
-               <h2 className="c9-section-heading mb-6">One Network. Every Location. Same Experience.</h2>
+               <h2 className="c9-section-heading mb-6">Optimised for Multi-Site Operations</h2>
                <p className="c9-body mb-8">
-                  Whether you have 5 sites or 50, C9 unifies them into a single, high-performance ecosystem. We standardize your connectivity so your team works seamlessly, regardless of where they are.
+                  C9 specialises in managing network infrastructure across multiple sites, ensuring consistency and centralised visibility for your entire organisation.
                </p>
                
                <div className="grid gap-5">
@@ -702,17 +702,17 @@ const SectionIntegration = () => (
          <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#0c1024] p-10 md:p-16 rounded-[48px] text-white relative overflow-hidden">
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
             <div className="max-w-md relative z-10">
-               <h3 className="text-3xl font-bold mb-6 text-white">Full-Stack Connectivity</h3>
+               <h3 className="text-3xl font-bold mb-6 text-white">Specialised Management</h3>
                <p className="text-white/70 text-lg">
-                  Network infrastructure is the backbone. We integrate it perfectly with your cloud, security, and support ecosystem.
+                  Each part of your network requires specific management. Explore our deeper capabilities to understand how we support your infrastructure.
                </p>
             </div>
             <div className="flex flex-wrap gap-3 relative z-10">
                {[
-                  { name: 'Cloud Services', href: '/managed-it/cloud-services' },
-                  { name: 'Infrastructure', href: '/managed-it/infrastructure' },
-                  { name: 'Helpdesk & Support', href: '/managed-it/helpdesk-support' },
-                  { name: 'Cybersecurity', href: '/c9-defense' }
+                  { name: 'Routing & Switching', href: '/telco/hardware/routers' },
+                  { name: 'Wireless Infrastructure', href: '/telco/hardware/access-points' },
+                  { name: 'Connectivity', href: '/telco' },
+                  { name: 'Managed IT', href: '/managed-it' }
                ].map(link => (
                   <a key={link.name} href={link.href} className="px-6 py-3 rounded-full border border-white/20 bg-white/5 hover:bg-white hover:text-[#0c1024] transition-all text-[14px] font-bold">
                      {link.name}
@@ -747,16 +747,16 @@ export default function NetworkSolutionsPage() {
         title={<>Network-Level <span className="text-[#5D00D6]">Protection.</span></>}
         description="Every connection is a potential entry point. We embed security directly into your network fabric with active threat monitoring and secure access."
         buttonText="View Security Solutions"
-        href="/c9-defense"
+        href="https://c9defense.com.au/"
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
-          eyebrow="READY FOR RELIABLE CONNECTIVITY?"
-          title="Assess Your Network Environment"
-          description="Schedule a consultation with a network architect to plan your high-availability connectivity strategy."
-          formTitle="Request Network Assessment"
+          eyebrow="READY FOR STABLE INFRASTRUCTURE?"
+          title="Get Clarity on Your Network Before Issues Impact Operations"
+          description="Schedule an assessment to identify gaps in your current setup and plan for a more reliable future."
+          formTitle="Request Infrastructure Assessment"
         />
       </section>
     </main>

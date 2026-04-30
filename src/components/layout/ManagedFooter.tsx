@@ -41,8 +41,8 @@ export const ManagedFooter = () => {
                    { label: 'Outsourcing', path: '/managed-it/outsourcing' },
                    { label: 'Infrastructure', path: '/managed-it/infrastructure' },
                    { label: 'Cloud', path: '/managed-it/cloud-services' },
-                   { label: 'Cybersecurity', path: '/managed-it/security-solutions' },
-                   { label: 'Backup & DR', path: '/managed-it/backup-disaster-recovery' }
+                   { label: 'Cybersecurity', path: 'https://c9defense.com.au/' },
+                   { label: 'Backup & DR', path: 'https://c9defense.com.au/' }
                  ].map(item => (
                     <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
                  ))}
@@ -88,10 +88,10 @@ export const ManagedFooter = () => {
               <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans opacity-40">C9 Defense</h4>
               <ul className="flex flex-col gap-4 text-sm font-bold font-syne tracking-tight">
                  {[
-                   { label: 'Essential 8', path: '/managed-it/security-solutions' },
-                   { label: 'Continuous Defence', path: '/managed-it/security-solutions' },
-                   { label: 'Recovery Assurance', path: '/managed-it/backup-disaster-recovery' },
-                   { label: 'Assess My Org', path: '/managed-it/security-solutions' }
+                   { label: 'Essential 8', path: 'https://c9defense.com.au/' },
+                   { label: 'Continuous Defence', path: 'https://c9defense.com.au/' },
+                   { label: 'Recovery Assurance', path: 'https://c9defense.com.au/' },
+                   { label: 'Assess My Org', path: 'https://c9defense.com.au/' }
                  ].map(item => (
                    <li key={item.label}><Link href={item.path} className="hover:text-brand-purple transition-colors">{item.label}</Link></li>
                  ))}

@@ -16,7 +16,7 @@ export default function DefenseBridge() {
             </p>
           </div>
 
-          <Link href="/c9-defense" className="shrink-0" passHref>
+          <Link href="https://c9defense.com.au/" className="shrink-0" passHref>
             <Button variant="ghost" className="text-[#7B2FBE] border border-[#7B2FBE] hover:bg-[#7B2FBE]/5 whitespace-nowrap">
               Learn About C9 Defense →
             </Button>

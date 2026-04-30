@@ -25,43 +25,43 @@ export const WpHighlights = () => {
           <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
 
           {/* Metrics Grid */}
-          <div className="grid grid-cols-2 lg:flex lg:flex-nowrap gap-x-10 md:gap-x-16 gap-y-10 lg:gap-8 w-full lg:w-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-nowrap gap-x-10 md:gap-x-16 gap-y-12 lg:gap-8 w-full lg:w-auto">
             {/* Metric 1 */}
             <div className="flex flex-col items-center lg:items-start shrink-0">
-              <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-[28px] md:text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">120+</span>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">120+</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] text-center lg:text-left">Vendor Consolidation</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Vendor Consolidation</span>
             </div>
 
             <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
 
             {/* Metric 2 */}
             <div className="flex flex-col items-center lg:items-start shrink-0">
-              <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-[28px] md:text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">3,000+</span>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">3,000+</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] text-center lg:text-left">Lower Downtime Risk</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Lower Downtime Risk</span>
             </div>
 
             <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
 
             {/* Metric 3 */}
             <div className="flex flex-col items-center lg:items-start shrink-0">
-              <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-[28px] md:text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">99.99%</span>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">99.99%</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] text-center lg:text-left">System Visibility</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">System Visibility</span>
             </div>
 
             <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
 
             {/* Metric 4 */}
             <div className="flex flex-col items-center lg:items-start shrink-0">
-              <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-[28px] md:text-[32px] font-medium text-[#0c1024] leading-none tracking-tight">24/7</span>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">24/7</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] text-center lg:text-left">Predictable Behaviour</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Predictable Behaviour</span>
             </div>
           </div>
 

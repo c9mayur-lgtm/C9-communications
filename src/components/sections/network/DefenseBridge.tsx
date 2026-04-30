@@ -53,7 +53,7 @@ export default function DefenseBridge() {
           {/* Button */}
           <div className="shrink-0 z-10 w-full md:w-auto flex justify-center md:justify-end">
             <Link 
-              href="/c9-defense" 
+              href="https://c9defense.com.au/" 
               className="group/btn flex items-center justify-center gap-3 border-[1.5px] border-[#5D00D6]/60 bg-[#5D00D6]/10 hover:bg-[#5D00D6] text-white font-['Proxima_Nova'] font-bold text-[14px] h-[56px] px-8 rounded-full transition-all w-full md:w-auto shadow-2xl shadow-purple-900/20 active:scale-95"
             >
               Explore C9 Defense 

@@ -33,7 +33,7 @@ export default function DefenseBridge() {
           {/* Button */}
           <div className="shrink-0 z-10 mt-2 md:mt-0">
             <a 
-              href="/c9-defense"
+              href="https://c9defense.com.au/"
               className="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-[#5D00D6]/40 text-white rounded-full font-bold text-[14px] hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300"
             >
               Learn About C9 Defense <ArrowRight size={16} className="ml-2" />

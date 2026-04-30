@@ -23,7 +23,7 @@ import {
 const PRODUCTS = [
   { label: 'Managed Infrastructure', icon: Server, url: '/managed-it/infrastructure' },
   { label: 'Enterprise Fibre', icon: Wifi, url: '/telco/enterprise-ethernet' },
-  { label: 'Managed Cyber Security', icon: Shield, url: '/managed-it/security-solutions' },
+  { label: 'Managed Cyber Security', icon: Shield, url: 'https://c9defense.com.au/' },
   { label: 'Microsoft 365 Ops', icon: Laptop, url: '/modern-workplace/productivity' },
   { label: 'Teams Calling & Voice', icon: Phone, url: '/telco/phone-system' },
   { label: 'Public & Hybrid Cloud', icon: Cloud, url: '/managed-it/cloud-services' },

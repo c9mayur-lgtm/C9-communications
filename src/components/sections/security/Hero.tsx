@@ -35,7 +35,7 @@ export default function Hero() {
               >
                 Get a Security Assessment <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Link href="/c9-defense" className="flex-1 justify-center sm:flex-none flex items-center text-[#1A1A2E] border border-[#5D00D6]/20 hover:bg-slate-50 px-8 h-14 rounded-full font-bold transition-all text-[14px]">
+              <Link href="https://c9defense.com.au/" className="flex-1 justify-center sm:flex-none flex items-center text-[#1A1A2E] border border-[#5D00D6]/20 hover:bg-slate-50 px-8 h-14 rounded-full font-bold transition-all text-[14px]">
                 Explore C9 Defense <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
