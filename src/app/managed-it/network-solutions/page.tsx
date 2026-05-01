@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
+  ArrowRight, CheckCircle, ShieldCheck, Shield, Zap, 
   Monitor, Lock, Activity, Users, 
   Network, Wifi, Globe, Share2, Server,
   AlertTriangle, RefreshCw, BarChart3, Radio
@@ -71,22 +71,22 @@ const Hero = () => (
 
           <FadeIn delay={0.08}>
              <h1 className="c9-hero-title mb-6">
-                We Don't Just Provide Internet — We Manage Your <span className="text-[#5D00D6]">Entire Network Environment</span>
+                We Don't Just Provide Connectivity — We Design and Manage Your <span className="text-[#5D00D6]">Entire Network Environment</span>
              </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
              <p className="c9-body mb-8 max-w-[620px]">
-                Stop managing connectivity gaps and vendor finger-pointing. C9 takes absolute ownership of your network fabric—from carrier links and SD-WAN to internal switching, wireless, and security.
+                Stop managing connectivity gaps and hardware fragments. C9 owns your entire network architecture—from carrier-grade links and firewall security layers to internal switching and endpoint visibility.
              </p>
           </FadeIn>
 
           <FadeIn delay={0.22}>
              <div className="flex flex-wrap gap-y-3 gap-x-8 mb-10">
                 {[
-                   'Full-Stack Ownership',
-                   'Zero-Gap Accountability',
-                   'Operational Resilience'
+                   'Architecture Design',
+                   'Operational Ownership',
+                   'Integrated Security'
                 ].map((item) => (
                    <div key={item} className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
@@ -103,18 +103,18 @@ const Hero = () => (
                       href="#consultation"
                       className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
                    >
-                      Request Environment Assessment
+                      Request Architecture Review
                       <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                    </a>
                    <a
                       href="#consultation"
                       className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
                    >
-                       Review Network Operations
+                       Audit Your Environment
                    </a>
                 </div>
                 <a href="#consultation" className="text-slate-500 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors group whitespace-nowrap">
-                   Or speak with a principal network architect
+                   Speak with a principal network architect
                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </a>
              </div>
@@ -139,8 +139,8 @@ const SectionManagedStack = () => (
             <FadeIn>
                <span className="c9-eyebrow mb-4">The Complete Environment</span>
                <h2 className="c9-section-heading mb-6">Everything Your Network Needs — Fully Managed</h2>
-               <p className="c9-body text-slate-600">
-                  We don't just provide internet — we manage your entire network environment. From the carrier link to the wireless endpoint, C9 ensures every layer of the stack is governed, secure, and operational.
+               <p className="c9-body text-slate-600 mb-6">
+                  We don’t just provide connectivity — we design and manage your entire network environment. Built on enterprise-grade platforms including Ubiquiti and Fortinet, and fully governed by C9 operations.
                </p>
             </FadeIn>
          </div>
@@ -204,7 +204,94 @@ const SectionManagedStack = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 3 — SYSTEM OWNERSHIP
+   SECTION 3 — ARCHITECTURE FLOW
+   ───────────────────────────────────────────────────────── */
+const SectionArchitectureFlow = () => (
+   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
+            <FadeIn direction="left">
+               <span className="c9-eyebrow mb-4">The Integrated System</span>
+               <h2 className="c9-section-heading mb-8">How Your Network Works — End to End</h2>
+               
+               <div className="space-y-10">
+                  {[
+                     { 
+                        title: "1. Connectivity & Security Layer", 
+                        desc: "External traffic enters via encrypted carrier links. Every packet is instantly inspected by Fortinet-grade security policies before reaching your internal stack." 
+                     },
+                     { 
+                        title: "2. LAN & Switching Fabric", 
+                        desc: "Data is routed through high-performance switching environments, segmented into VLANs to ensure critical business systems have dedicated, zero-latency pathways." 
+                     },
+                     { 
+                        title: "3. Wireless & Endpoint Access", 
+                        desc: "Ubiquiti-managed wireless fabrics provide seamless coverage, dynamically balancing user density and ensuring endpoints connect securely from any location." 
+                     },
+                     { 
+                        title: "4. Continuous Monitoring & Oversight", 
+                        desc: "The entire environment is mapped and monitored in real-time. C9 identifies performance dips or circuit issues before they escalate into user-facing problems." 
+                     }
+                  ].map((item, i) => (
+                     <div key={i} className="relative pl-10 border-l-2 border-slate-200">
+                        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-2 border-[#5D00D6]" />
+                        <h4 className="font-bold text-slate-900 text-[18px] mb-2">{item.title}</h4>
+                        <p className="text-slate-500 text-[15px] leading-relaxed">{item.desc}</p>
+                     </div>
+                  ))}
+               </div>
+            </FadeIn>
+
+            <FadeIn direction="right" className="relative">
+               <div className="bg-[#0c1024] rounded-none p-10 lg:p-12 text-white relative overflow-hidden shadow-2xl min-h-[500px] flex flex-col justify-center">
+                  <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
+                  
+                  <div className="relative z-10 space-y-8">
+                     <div className="flex flex-col items-center text-center p-6 bg-white/5 border border-white/10 rounded-none group hover:bg-white/10 transition-all">
+                        <Globe className="text-[#a56eff] mb-4" size={32} />
+                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 mb-1">Entry</span>
+                        <h5 className="font-bold">Encrypted External Links</h5>
+                     </div>
+                     
+                     <div className="flex justify-center">
+                        <ArrowRight className="rotate-90 text-white/20" size={24} />
+                     </div>
+
+                     <div className="flex flex-col items-center text-center p-6 bg-[#5D00D6]/20 border border-[#5D00D6]/40 rounded-none shadow-xl shadow-purple-900/40">
+                        <Shield className="text-[#a56eff] mb-4" size={32} />
+                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-1">Active Filter</span>
+                        <h5 className="font-bold">Managed Security Layer</h5>
+                     </div>
+
+                     <div className="flex justify-center">
+                        <ArrowRight className="rotate-90 text-white/20" size={24} />
+                     </div>
+
+                     <div className="grid grid-cols-2 gap-4">
+                        <div className="flex flex-col items-center text-center p-4 bg-white/5 border border-white/10 rounded-none">
+                           <Network className="text-[#a56eff] mb-3" size={24} />
+                           <h6 className="text-[12px] font-bold">Switching Fabric</h6>
+                        </div>
+                        <div className="flex flex-col items-center text-center p-4 bg-white/5 border border-white/10 rounded-none">
+                           <Wifi className="text-[#a56eff] mb-3" size={24} />
+                           <h6 className="text-[12px] font-bold">Wireless Core</h6>
+                        </div>
+                     </div>
+
+                     <div className="pt-6 border-t border-white/10 flex items-center justify-center gap-4">
+                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                        <span className="text-[11px] font-black uppercase tracking-[0.3em] text-white/40">Real-time C9 Monitoring Active</span>
+                     </div>
+                  </div>
+               </div>
+            </FadeIn>
+         </div>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 4 — SYSTEM OWNERSHIP
    ───────────────────────────────────────────────────────── */
 const SectionSystemOwnership = () => (
    <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
@@ -799,6 +886,53 @@ const SectionIntegration = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
+   SECTION 12 — SERVICE INTERCONNECT
+   ───────────────────────────────────────────────────────── */
+const SectionServiceInterconnect = () => (
+   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+         <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeIn>
+               <span className="c9-eyebrow mb-4">The Integrated Foundation</span>
+               <h2 className="c9-section-heading mb-6">The Network Connects Everything</h2>
+               <p className="c9-body text-slate-600">
+                  Your network environment is the bridge between your security, your infrastructure, and your digital workplace. We manage the interconnectivity to ensure zero friction.
+               </p>
+            </FadeIn>
+         </div>
+
+         <div className="grid md:grid-cols-3 gap-8">
+            {[
+               {
+                  title: "Cybersecurity",
+                  desc: "The network is your first line of defense. We embed traffic inspection and access control directly into the hardware layer.",
+                  link: "https://c9defense.com.au/"
+               },
+               {
+                  title: "Managed Infrastructure",
+                  desc: "Whether cloud or on-prem, server performance is limited by network speed. We design pathways that eliminate latency.",
+                  link: "/managed-it"
+               },
+               {
+                  title: "Modern Workplace",
+                  desc: "Collaboration and voice tools depend on quality of service. We prioritise unified communications at the packet level.",
+                  link: "/modern-workplace"
+               }
+            ].map((item, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 border border-slate-200 rounded-none flex flex-col h-full shadow-sm hover:shadow-xl transition-all group">
+                  <h4 className="text-xl font-bold mb-4 text-[#0c1024]">{item.title}</h4>
+                  <p className="text-slate-500 text-[15px] leading-relaxed mb-8 flex-grow">{item.desc}</p>
+                  <a href={item.link} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] uppercase tracking-widest group-hover:gap-3 transition-all">
+                     Explore Integration <ArrowRight size={16} />
+                  </a>
+               </FadeIn>
+            ))}
+         </div>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
    PAGE EXPORT
    ───────────────────────────────────────────────────────── */
 export default function NetworkSolutionsPage() {
@@ -806,7 +940,9 @@ export default function NetworkSolutionsPage() {
     <main className="min-h-screen bg-white">
       <Hero />
       <WpClientTicker />
+      <SectionArchitectureFlow />
       <SectionManagedStack />
+      <SectionServiceInterconnect />
       <SectionSystemOwnership />
       <SectionStrategicControl />
       <SectionArchitecture />
