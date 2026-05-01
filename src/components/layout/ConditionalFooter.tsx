@@ -4,13 +4,13 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import { WpFooter } from "@/components/layout/WpFooter";
 
-const pagesWithSelfNavFooter: string[] = ['/managed'];
+const pagesWithSelfNavFooter: string[] = ['/managed', '/defense', '/lumina'];
 
 export function ConditionalFooter() {
   const pathname = usePathname();
-  const hasSelfNavFooter = pagesWithSelfNavFooter.includes(pathname);
+  const isExcluded = pagesWithSelfNavFooter.some(p => pathname?.startsWith(p));
 
-  if (hasSelfNavFooter) return null;
+  if (isExcluded) return null;
 
   return <WpFooter />;
 }

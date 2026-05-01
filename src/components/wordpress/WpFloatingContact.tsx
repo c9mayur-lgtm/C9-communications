@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, X, Phone, Mail, Send, CheckCircle, ArrowRight, Bot } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -75,6 +76,10 @@ interface Message { from: 'bot' | 'user'; text: string }
 
 // ─── Component ────────────────────────────────────────────────────────────────
 export const WpFloatingContact = () => {
+  const pathname = usePathname();
+  const def = pathname?.startsWith('/defense');
+  const lum = pathname?.startsWith('/lumina');
+  
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'contact' | 'chat'>('contact');
   const [showBubble, setShowBubble] = useState(false);
@@ -141,137 +146,61 @@ export const WpFloatingContact = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.92, y: 20 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="w-[360px] max-w-[calc(100vw-4rem)] bg-white rounded-[28px] shadow-2xl overflow-hidden border border-gray-100 flex flex-col"
+              className={`w-[360px] max-w-[calc(100vw-4rem)] shadow-2xl overflow-hidden flex flex-col border ${def ? 'bg-[#0d0d0d] border-[#252525]' : 'bg-white rounded-[28px] border-gray-100'}`}
               style={{ maxHeight: '560px' }}
             >
               {/* Header */}
-              <div className="bg-[#0c1024] px-6 py-5 flex items-center justify-between shrink-0">
+              <div className={`px-6 py-5 flex items-center justify-between shrink-0 ${lum ? 'bg-[#BF2F70]' : def ? 'bg-[#151515]' : 'bg-[#0c1024]'}`}>
                 <div>
-                  <h3 className="text-white font-bold text-[16px]">How can we help?</h3>
-                  <p className="text-white/50 text-[12px] mt-0.5">Our experts are ready to assist you.</p>
+                  <h3 className="text-white font-bold text-[16px]">{lum ? 'Lumina Virtual Agent' : def ? 'Security Support' : 'C9 Assistant'}</h3>
+                  <p className="text-white/50 text-[12px] mt-0.5">Online & ready to assist.</p>
                 </div>
                 <button onClick={() => setIsOpen(false)} className="text-white/40 hover:text-white transition-colors cursor-pointer">
                   <X size={20} />
                 </button>
               </div>
 
-              {/* Tabs */}
-              <div className="flex border-b border-gray-100 shrink-0 bg-white">
-                <button
-                  onClick={() => setActiveTab('contact')}
-                  className={`flex-1 py-3.5 text-[14px] font-bold transition-colors cursor-pointer ${activeTab === 'contact' ? 'text-[#5D00D6] border-b-2 border-[#5D00D6]' : 'text-gray-400 hover:text-gray-600'}`}
-                >
-                  Contact Options
-                </button>
-                <button
-                  onClick={() => setActiveTab('chat')}
-                  className={`flex-1 py-3.5 text-[14px] font-bold transition-colors cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === 'chat' ? 'text-[#5D00D6] border-b-2 border-[#5D00D6]' : 'text-gray-400 hover:text-gray-600'}`}
-                >
-                  <Bot size={14} /> Setup Assistant
-                </button>
-              </div>
-
-              {/* Tab Content */}
-              <AnimatePresence mode="wait" initial={false}>
-                {activeTab === 'contact' ? (
-                  <motion.div
-                    key="contact"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.15 }}
-                    className="p-5 flex flex-col gap-3"
-                  >
-                    <a href="tel:1300293332" className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-gray-100 group hover:border-[#5D00D6] hover:bg-[#F4F0FA] transition-all">
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#5D00D6] shadow-sm">
-                          <Phone size={18} />
-                        </div>
-                        <div>
-                          <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">CALL US</div>
-                          <div className="text-[16px] font-bold text-[#0c1024]">1300 293 332</div>
-                        </div>
+              {/* Chat Content */}
+              <div className="flex flex-col flex-1 overflow-hidden">
+                {/* Messages */}
+                <div className={`flex-1 overflow-y-auto p-4 space-y-3 ${def || lum ? 'bg-[#080808]' : 'bg-[#f9f8ff]'}`} style={{ minHeight: '300px', maxHeight: '400px' }}>
+                  {messages.map((msg, i) => (
+                    <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`max-w-[82%] px-4 py-3 text-[14px] leading-relaxed whitespace-pre-line ${def || lum ? '' : 'rounded-2xl'} ${msg.from === 'bot' ? (def || lum ? 'bg-[#151515] text-[#C0C0C0] border border-[#252525]' : 'bg-white text-[#0c1024] rounded-tl-none shadow-sm border border-gray-100') : (def || lum ? (lum ? 'bg-[#BF2F70] text-white' : 'bg-[#252525] text-white') : 'bg-[#5D00D6] text-white rounded-tr-none')}`}>
+                        {msg.text}
                       </div>
-                      <ArrowRight size={18} className="text-gray-300 group-hover:text-[#5D00D6] group-hover:translate-x-1 transition-all" />
-                    </a>
-
-                    <a href="mailto:office@c9communications.com.au" className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-gray-100 group hover:border-[#5D00D6] hover:bg-[#F4F0FA] transition-all">
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#5D00D6] shadow-sm">
-                          <Mail size={18} />
-                        </div>
-                        <div>
-                          <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">EMAIL US</div>
-                          <div className="text-[16px] font-bold text-[#0c1024]">Send a message</div>
-                        </div>
-                      </div>
-                      <ArrowRight size={18} className="text-gray-300 group-hover:text-[#5D00D6] group-hover:translate-x-1 transition-all" />
-                    </a>
-
-                    <Button
-                      className="w-full py-6 text-[14px] font-bold rounded-2xl shadow-xl shadow-purple-900/20 mt-1"
-                      onClick={() => {
-                        setIsOpen(false);
-                        document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                    >
-                      Book a consultation
-                    </Button>
-
-                    <div className="pt-1 text-center">
-                      <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Available 24/7 for critical support</span>
                     </div>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="chat"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.15 }}
-                    className="flex flex-col flex-1 overflow-hidden"
-                  >
-                    {/* Messages */}
-                    <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-[#f9f8ff]" style={{ minHeight: '200px', maxHeight: '300px' }}>
-                      {messages.map((msg, i) => (
-                        <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
-                          <div className={`max-w-[82%] px-4 py-3 rounded-2xl text-[14px] leading-relaxed whitespace-pre-line ${msg.from === 'bot' ? 'bg-white text-[#0c1024] rounded-tl-none shadow-sm border border-gray-100' : 'bg-[#5D00D6] text-white rounded-tr-none'}`}>
-                            {msg.text}
-                          </div>
-                        </div>
+                  ))}
+                  <div ref={bottomRef} />
+                </div>
+
+                {/* Input Area */}
+                <div className={`shrink-0 p-4 border-t ${def || lum ? 'bg-[#0d0d0d] border-[#202020]' : 'bg-white border-gray-100'}`}>
+                  {submitted ? (
+                    <div className={`flex items-center gap-3 py-2 ${lum ? 'text-[#BF2F70]' : 'text-[#5D00D6]'}`}>
+                      <CheckCircle size={12} />
+                      <span className="font-bold text-[14px]">Thank you! We'll be in touch shortly.</span>
+                    </div>
+                  ) : currentFlow?.isForm ? (
+                    <form onSubmit={handleFormSubmit} className="space-y-2">
+                      <input required type="text" placeholder="Your name" value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
+                      <input required type="email" placeholder="Work email" value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
+                      <input required type="tel" placeholder="Phone number" value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
+                      <button type="submit" className={`w-full py-3 text-white font-bold text-[14px] flex items-center justify-center gap-2 transition-colors cursor-pointer ${lum ? 'bg-[#BF2F70] hover:bg-[#A32469]' : def ? 'bg-white text-black hover:bg-[#C0C0C0]' : 'bg-[#5D00D6] rounded-xl hover:bg-[#4d00b3]'}`}>
+                        <Send size={15} /> Send my details
+                      </button>
+                    </form>
+                  ) : (
+                    <div className="space-y-2">
+                      {currentFlow?.options.map((opt, i) => (
+                        <button key={i} onClick={() => handleOption(opt.label, opt.next)} className={`w-full text-left px-4 py-3 border text-[14px] font-medium transition-all cursor-pointer ${def || lum ? 'bg-[#111111] border-[#252525] text-[#808080] hover:text-white hover:border-[#BF2F70]/50' : 'bg-white rounded-xl border-gray-200 hover:border-[#5D00D6]/50 hover:bg-[#f4f0fa] text-[#0c1024]'}`}>
+                          {opt.label}
+                        </button>
                       ))}
-                      <div ref={bottomRef} />
                     </div>
-
-                    {/* Input Area */}
-                    <div className="shrink-0 p-4 bg-white border-t border-gray-100">
-                      {submitted ? (
-                        <div className="flex items-center gap-3 py-2 text-[#5D00D6]">
-                          <CheckCircle size={12} />
-                          <span className="font-bold text-[14px]">We'll be in touch shortly!</span>
-                        </div>
-                      ) : currentFlow?.isForm ? (
-                        <form onSubmit={handleFormSubmit} className="space-y-2">
-                          <input required type="text" placeholder="Your name" value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors" />
-                          <input required type="email" placeholder="Work email" value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors" />
-                          <input required type="tel" placeholder="Phone number" value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] outline-none focus:border-[#5D00D6] transition-colors" />
-                          <button type="submit" className="w-full py-3 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold rounded-xl text-[14px] flex items-center justify-center gap-2 transition-colors cursor-pointer">
-                            <Send size={15} /> Send my details
-                          </button>
-                        </form>
-                      ) : (
-                        <div className="space-y-2">
-                          {currentFlow?.options.map((opt, i) => (
-                            <button key={i} onClick={() => handleOption(opt.label, opt.next)} className="w-full text-left px-4 py-3 rounded-xl border border-gray-200 hover:border-[#5D00D6]/50 hover:bg-[#f4f0fa] text-[14px] font-medium text-[#0c1024] transition-all cursor-pointer">
-                              {opt.label}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  )}
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -307,7 +236,11 @@ export const WpFloatingContact = () => {
         {/* FAB Button */}
         <button
           onClick={() => { setIsOpen(prev => !prev); setShowBubble(false); }}
-          className="wp-floating-contact-btn w-[54px] h-[54px] md:w-[58px] md:h-[58px] rounded-full bg-[#5D00D6] text-white shadow-xl hover:shadow-[0_8px_30px_rgba(93,0,214,0.45)] hover:scale-105 transition-all duration-200 flex items-center justify-center cursor-pointer"
+          className={`wp-floating-contact-btn w-[54px] h-[54px] md:w-[58px] md:h-[58px] shadow-xl hover:scale-105 transition-all duration-200 flex items-center justify-center cursor-pointer active:scale-95 ${
+            lum ? 'bg-[#BF2F70] text-white hover:bg-[#A32469] hover:shadow-[0_8px_30px_rgba(191,47,112,0.45)]' :
+            def ? 'bg-white text-black hover:bg-[#C0C0C0] hover:shadow-[0_8px_30px_rgba(255,255,255,0.15)]' : 
+            'rounded-full bg-[#5D00D6] text-white hover:shadow-[0_8px_30px_rgba(93,0,214,0.45)]'
+          } ${!def && !lum ? 'rounded-full' : ''}`}
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.div

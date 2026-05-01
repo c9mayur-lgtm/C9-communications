@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { 
   Stethoscope, ShoppingBag, HardHat, ArrowRight, X, 
   CheckCircle2, PhoneCall, Scale, GraduationCap, Briefcase,
@@ -316,6 +317,12 @@ const SUGGESTIONS = [
 
 /* ─── MAIN COMPONENT ────────────────────────────────────────── */
 export const BusinessAdvisor = () => {
+  const pathname = usePathname();
+  const def = pathname?.startsWith('/defense');
+  const lum = pathname?.startsWith('/lumina');
+  
+  if (def || lum) return null;
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'industry' | 'chat'>('industry');
   const [selected, setSelected] = useState<typeof INDUSTRIES[0] | null>(null);
@@ -365,38 +372,37 @@ export const BusinessAdvisor = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.97 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-4 w-full bg-white rounded-[24px] shadow-[0_24px_80px_rgba(12,16,36,0.14)] border border-gray-100 overflow-hidden"
+              className={`mb-4 w-full overflow-hidden shadow-[0_24px_80px_rgba(12,16,36,0.14)] ${lum ? 'bg-[#0d0d0d] border border-[#BF2F70]/20' : def ? 'bg-[#0d0d0d] border border-[#252525]' : 'bg-white rounded-[24px] border border-gray-100'}`}
             >
               {/* Header */}
-              <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-50">
+              <div className={`flex items-center justify-between px-5 py-3.5 border-b ${def ? 'border-[#1a1a1a]' : 'border-gray-50'}`}>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-lg bg-[#5D00D6] flex items-center justify-center shrink-0">
-                    <Sparkles size={13} className="text-white" />
+                  <div className={`w-7 h-7 flex items-center justify-center shrink-0 ${def ? 'border border-[#303030]' : 'rounded-lg bg-[#5D00D6]'}`}>
+                    <Sparkles size={13} className={def ? 'text-[#808080]' : 'text-white'} />
                   </div>
-                  <span className="text-[14px] font-medium text-[#0c1024] tracking-tight">C9 Advisor</span>
-                  <span className="hidden sm:inline text-[11px] text-gray-400">— powered by C9 content</span>
+                  <span className={`text-[14px] font-medium tracking-tight ${def ? 'text-white' : 'text-[#0c1024]'}`}>C9 Advisor</span>
+                  <span className={`hidden sm:inline text-[11px] ${def ? 'text-[#404040]' : 'text-gray-400'}`}>— powered by C9 content</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  {/* Tab switcher */}
-                  <div className="flex bg-gray-50 rounded-full p-0.5 gap-0.5">
+                  <div className={`flex p-0.5 gap-0.5 ${def ? 'bg-[#1a1a1a]' : 'bg-gray-50 rounded-full'}`}>
                     <button
                       onClick={() => setActiveTab('industry')}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium transition-all ${activeTab === 'industry' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium transition-all ${activeTab === 'industry' ? (def ? 'bg-[#2a2a2a] text-white' : 'bg-white text-[#5D00D6] shadow-sm rounded-full') : (def ? 'text-[#606060] hover:text-[#C0C0C0]' : 'text-gray-400 hover:text-gray-600 rounded-full')}`}
                     >
                       <Building2 size={12} /> Industry
                     </button>
                     <button
                       onClick={() => { setActiveTab('chat'); setTimeout(() => inputRef.current?.focus(), 100); }}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium transition-all ${activeTab === 'chat' ? 'bg-white text-[#5D00D6] shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium transition-all ${activeTab === 'chat' ? (def ? 'bg-[#2a2a2a] text-white' : 'bg-white text-[#5D00D6] shadow-sm rounded-full') : (def ? 'text-[#606060] hover:text-[#C0C0C0]' : 'text-gray-400 hover:text-gray-600 rounded-full')}`}
                     >
                       <MessageSquare size={12} /> Ask AI
                     </button>
                   </div>
-                  <button 
+                  <button
                     onClick={() => { setIsOpen(false); setSelected(null); }}
-                    className="w-7 h-7 flex items-center justify-center rounded-full bg-gray-50 hover:bg-gray-100 transition-colors ml-1"
+                    className={`w-7 h-7 flex items-center justify-center transition-colors ml-1 ${def ? 'border border-[#303030] text-[#606060] hover:text-white hover:border-[#606060]' : 'rounded-full bg-gray-50 hover:bg-gray-100'}`}
                   >
-                    <X size={14} className="text-gray-400" />
+                    <X size={14} className={def ? '' : 'text-gray-400'} />
                   </button>
                 </div>
               </div>
@@ -487,9 +493,11 @@ export const BusinessAdvisor = () => {
                             <Bot size={14} className="text-white" />
                           </div>
                         )}
-                        <div className={`max-w-[85%] rounded-2xl px-4 py-3 ${msg.role === 'user' 
-                          ? 'bg-[#5D00D6] text-white rounded-br-sm' 
-                          : 'bg-gray-50 border border-gray-100 rounded-bl-sm'}`}
+                        <div className={`max-w-[85%] px-4 py-3 ${
+                          msg.role === 'user'
+                            ? def ? 'bg-[#252525] text-white' : 'bg-[#5D00D6] text-white rounded-br-sm rounded-2xl'
+                            : def ? 'border border-[#252525] bg-[#151515] rounded-bl-sm' : 'bg-gray-50 border border-gray-100 rounded-bl-sm rounded-2xl'
+                        }`}
                         >
                           {msg.role === 'user' ? (
                             <p className="c9-body !text-[13.5px] !text-white !leading-relaxed">{msg.text}</p>
@@ -564,7 +572,7 @@ export const BusinessAdvisor = () => {
                     <button
                       onClick={() => sendMessage()}
                       disabled={!input.trim() || isTyping}
-                      className="w-8 h-8 rounded-full bg-[#5D00D6] flex items-center justify-center disabled:opacity-30 hover:bg-[#4c00b0] transition-colors shrink-0"
+                      className={`w-8 h-8 flex items-center justify-center disabled:opacity-30 transition-all duration-200 active:scale-95 shrink-0 ${def ? 'bg-white text-black hover:bg-[#C0C0C0]' : 'rounded-full bg-[#5D00D6] hover:bg-[#4c00b0]'}`}
                     >
                       <Send size={14} className="text-white" />
                     </button>
@@ -586,21 +594,29 @@ export const BusinessAdvisor = () => {
               className="w-full flex justify-center"
             >
               <style>{`
+                @keyframes def-pulse {
+                  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.0), 0 4px 20px rgba(0,0,0,0.4); border-color: rgba(255,255,255,0.1); }
+                  50% { box-shadow: 0 0 0 3px rgba(255,255,255,0.06), 0 4px 20px rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); }
+                }
+                @keyframes lum-pulse {
+                  0%, 100% { box-shadow: 0 0 0 0 rgba(191,47,112,0.0), 0 4px 20px rgba(0,0,0,0.4); border-color: rgba(191,47,112,0.1); }
+                  50% { box-shadow: 0 0 0 3px rgba(191,47,112,0.06), 0 4px 20px rgba(191,47,112,0.08); border-color: rgba(191,47,112,0.25); }
+                }
                 @keyframes glow-pulse {
                   0%, 100% { box-shadow: 0 0 0 0 rgba(93,0,214,0.0), 0 8px 30px rgba(12,16,36,0.08); border-color: rgba(93,0,214,0.15); }
                   50% { box-shadow: 0 0 0 4px rgba(93,0,214,0.10), 0 8px 30px rgba(93,0,214,0.15); border-color: rgba(93,0,214,0.4); }
                 }
-                .advisor-pill { animation: glow-pulse 2.8s ease-in-out infinite; }
+                .advisor-pill { animation: ${lum ? 'lum-pulse' : def ? 'def-pulse' : 'glow-pulse'} 2.8s ease-in-out infinite; }
               `}</style>
               <button
                 onClick={() => setIsOpen(true)}
-                className="advisor-pill flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-[#5D00D6]/20 group hover:scale-[0.985] transition-transform"
+                className={`advisor-pill flex items-center gap-3 px-5 py-3 border group hover:scale-[0.985] transition-transform ${lum ? 'bg-[#111111] border-[#BF2F70]/20' : def ? 'bg-[#111111] border-white/10' : 'bg-white rounded-full border-[#5D00D6]/20'}`}
               >
-                <span className="text-[14px] font-medium text-gray-600 tracking-tight group-hover:text-[#5D00D6] transition-colors whitespace-nowrap">
-                  <span className="inline sm:hidden">Ask C9 Advisor</span>
-                  <span className="hidden sm:inline">What type of business are you building?</span>
+                <span className={`text-[14px] font-medium tracking-tight whitespace-nowrap transition-colors ${lum ? 'text-[#ED9EA2] group-hover:text-white' : def ? 'text-[#808080] group-hover:text-white' : 'text-gray-600 group-hover:text-[#5D00D6]'}`}>
+                  <span className="inline sm:hidden">{lum ? 'Ask Lumina Advisor' : def ? 'Ask Security Advisor' : 'Ask C9 Advisor'}</span>
+                  <span className="hidden sm:inline">{lum ? 'What digital signage challenge is your business facing?' : def ? 'What security challenge is your business facing?' : 'What type of business are you building?'}</span>
                 </span>
-                <div className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 bg-[#5D00D6] text-white group-hover:scale-105">
+                <div className={`w-7 h-7 flex items-center justify-center transition-all duration-300 shrink-0 group-hover:scale-105 ${lum ? 'border border-[#BF2F70] text-[#BF2F70] group-hover:bg-[#BF2F70] group-hover:text-white' : def ? 'border border-[#404040] text-[#808080] group-hover:border-white group-hover:text-white' : 'rounded-full bg-[#5D00D6] text-white'}`}>
                   <ArrowRight size={13} className="stroke-[2.5px]" />
                 </div>
               </button>

@@ -284,6 +284,122 @@ export default function BusinessNbnPage() {
         </div>
       </section>
 
+      {/* ══ 4.5. SMALL BUSINESS NBN PLANS ════════════════════════════ */}
+      <section className="py-16 lg:py-24 bg-white border-y border-slate-100">
+        <div className={C}>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <FadeIn>
+              <span className="c9-eyebrow mb-4">Connectivity Options</span>
+              <h2 className="c9-section-heading mb-6">Small Business NBN Plans</h2>
+              <p className="c9-body text-lg mb-8 text-slate-600">
+                Flexible connectivity options designed for business environments — fully managed, supported, and optimised by C9.
+              </p>
+              <div className="inline-block bg-[#5D00D6]/5 border border-[#5D00D6]/20 px-6 py-4 rounded-2xl text-left shadow-sm">
+                <p className="text-[15px] leading-relaxed text-[#5D00D6] font-medium m-0">
+                  <span className="font-bold">Connectivity is only one part of your network.</span><br/>
+                  C9 ensures your NBN service is configured, monitored, and supported as part of your complete IT environment.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+            {[
+              { name: "Essential", speed: "50/20", typical: "50 Mbps", price: "79" },
+              { name: "Ultimate", speed: "100/40", typical: "99 Mbps", price: "99", popular: true },
+              { name: "Advanced", speed: "250/100", typical: "248 Mbps", price: "149" },
+              { name: "Superfast", speed: "500/200", typical: "300 Mbps", price: "POA" },
+              { name: "Ultrafast", speed: "1000/400", typical: "600 Mbps", price: "POA" }
+            ].map((plan, i) => (
+              <FadeIn key={i} delay={i * 0.1} className={`bg-white border rounded-[24px] p-8 transition-all relative flex flex-col ${plan.popular ? 'border-[#5D00D6] shadow-xl shadow-purple-900/10 ring-1 ring-[#5D00D6]' : 'border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-xl'}`}>
+                {plan.popular && (
+                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#5D00D6] text-white text-[10px] font-bold px-4 py-1.5 uppercase tracking-widest whitespace-nowrap rounded-full">
+                      Most Popular
+                   </div>
+                )}
+                
+                <div className="text-[#5D00D6] font-bold uppercase tracking-widest text-[11px] mb-2">{plan.name}</div>
+                <h3 className="text-[28px] font-bold text-slate-900 mb-6 leading-none tracking-tight">{plan.speed}</h3>
+                
+                <div className="flex items-baseline gap-1 mb-8 pb-8 border-b border-slate-100">
+                   {plan.price !== 'POA' && <span className="text-slate-400 font-bold">$</span>}
+                   <span className="text-[32px] font-bold text-slate-900 tracking-tight leading-none">{plan.price}</span>
+                   {plan.price !== 'POA' && <span className="text-[13px] font-bold text-slate-400 uppercase tracking-widest ml-1">/mo</span>}
+                </div>
+                
+                <div className="flex-1 space-y-4 mb-8">
+                  {[
+                    "Unlimited Data",
+                    "Included Static IP",
+                    `Typical: ${plan.typical}`,
+                    "Australian Support"
+                  ].map((feat, j) => (
+                    <div key={j} className="flex items-start gap-3 text-[14px] text-slate-600 font-medium">
+                      <CheckCircle2 size={16} className="text-[#5D00D6] shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <C9Button variant={plan.popular ? "default" : "outline"} className={`w-full justify-center rounded-full h-12 ${plan.popular ? 'bg-[#5D00D6] hover:bg-[#4d00b3] text-white border-transparent' : 'bg-white border-slate-200 text-slate-700 hover:border-[#5D00D6] hover:text-[#5D00D6]'}`} asChild>
+                  <Link href="#consultation">Select Plan</Link>
+                </C9Button>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn className="text-center mb-20">
+             <p className="text-[13px] font-bold text-slate-500 tracking-widest uppercase">
+                All plans are delivered with C9 management, monitoring, and support — ensuring performance, reliability, and fast issue resolution.
+             </p>
+          </FadeIn>
+
+          {/* ── SUPPORT SECTION (AFTER PLANS) ── */}
+          <FadeIn className="bg-[#0c1024] rounded-[40px] p-10 lg:p-16 text-white text-center max-w-5xl mx-auto shadow-2xl relative overflow-hidden mb-16">
+             <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
+             <div className="relative z-10">
+                <span className="c9-eyebrow !text-[#a56eff] mb-4">Operational Support</span>
+                <h3 className="c9-section-heading !text-white mb-10">More Than Just Connectivity</h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                   <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors">
+                      <Activity className="text-[#a56eff] mb-4" size={24} />
+                      <div className="font-bold text-white mb-2 text-[16px]">Proactive Monitoring</div>
+                      <p className="text-white/60 text-[14px] leading-relaxed">We track line health 24/7 to detect packet loss or latency before they affect operations.</p>
+                   </div>
+                   <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors">
+                      <ShieldAlert className="text-[#a56eff] mb-4" size={24} />
+                      <div className="font-bold text-white mb-2 text-[16px]">Fault Resolution</div>
+                      <p className="text-white/60 text-[14px] leading-relaxed">No waiting on hold with carriers. We own the fault resolution end-to-end.</p>
+                   </div>
+                   <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors">
+                      <PhoneCall className="text-[#a56eff] mb-4" size={24} />
+                      <div className="font-bold text-white mb-2 text-[16px]">Escalation Handling</div>
+                      <p className="text-white/60 text-[14px] leading-relaxed">Direct access to senior Australian engineers who understand your exact deployment.</p>
+                   </div>
+                   <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors">
+                      <Server className="text-[#a56eff] mb-4" size={24} />
+                      <div className="font-bold text-white mb-2 text-[16px]">Network Integration</div>
+                      <p className="text-white/60 text-[14px] leading-relaxed">Seamlessly integrated into your firewall, SD-WAN, and broader IT environment.</p>
+                   </div>
+                </div>
+             </div>
+          </FadeIn>
+
+          {/* ── CTA AFTER PLANS ── */}
+          <div className="text-center max-w-2xl mx-auto">
+             <FadeIn>
+                <h3 className="c9-section-heading mb-4">Not Sure Which Plan Fits Your Business?</h3>
+                <p className="c9-body text-slate-600 mb-8">
+                   We’ll assess your requirements and recommend the right connectivity option based on your usage, locations, and operational needs.
+                </p>
+                <C9Button className="px-10 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-full shadow-xl shadow-purple-900/20" asChild>
+                   <Link href="#consultation">Get a Recommendation</Link>
+                </C9Button>
+             </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* ══ 5. WHEN THINGS GO WRONG ══════════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-[#0c1024] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />

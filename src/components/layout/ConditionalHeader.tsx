@@ -6,14 +6,14 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { AudienceSwitcher } from "@/components/layout/AudienceSwitcher";
 
-const pagesWithSelfNavFooter: string[] = ['/managed'];
+const pagesWithSelfNavFooter: string[] = ['/managed', '/defense', '/lumina'];
 
 export function ConditionalHeader() {
   const pathname = usePathname();
-  const hasSelfNavFooter = pagesWithSelfNavFooter.includes(pathname);
+  const isExcluded = pagesWithSelfNavFooter.some(p => pathname?.startsWith(p));
   const isHomepageV2 = pathname === '/homepage-v2';
 
-  if (hasSelfNavFooter) return null;
+  if (isExcluded) return null;
 
   return (
     <>

@@ -60,35 +60,25 @@ export const WpClientTicker = () => {
       <div className="ticker-wrapper overflow-hidden py-2 md:py-4">
         <div className="ticker-row-left" style={{ animationDuration: '60s' }}>
           {[
-            { name: 'Arthritis',        logo: '/images/clients/Arthritis.png' },
-            { name: 'Baxter Institute', logo: '/images/clients/Baxter Institute.png' },
-            { name: 'Fanvii',           logo: '/images/clients/Fanvii.png' },
-            { name: 'Gigaset',          logo: '/images/clients/Gigaset.png' },
-            { name: 'Grandstream',      logo: '/images/clients/Grandstream.png' },
-            { name: 'Cisco',            logo: '/images/clients/cisco.png' },
-            { name: 'HTek',               logo: '/images/clients/htek.png' },
-            { name: 'Poly',               logo: '/images/clients/poly.png' },
-            { name: 'Snom',               logo: '/images/clients/snom.png' },
+            { name: 'Arthritis',          logo: '/images/clients/Arthritis.png' },
+            { name: 'Baxter Institute',   logo: '/images/clients/Baxter Institute.png' },
             { name: 'Stockdale & Leggo',  logo: '/images/clients/stockdale & leggo.png' },
-            { name: 'Yealink',            logo: '/images/clients/yealink.png' },
+            { name: 'Norris',             logo: '/images/clients/norris_trimmed.png', className: 'h-[40px] md:h-[55px] lg:h-[75px]' },
+            { name: 'Novo',               logo: '/images/clients/novo.webp' },
+            { name: 'Chobani',            logo: '/images/clients/chobani.png', className: 'h-[25px] md:h-[35px] lg:h-[45px]' },
             // Duplicates for seamless loop
-            { name: 'Arthritis',        logo: '/images/clients/Arthritis.png' },
-            { name: 'Baxter Institute', logo: '/images/clients/Baxter Institute.png' },
-            { name: 'Fanvii',           logo: '/images/clients/Fanvii.png' },
-            { name: 'Gigaset',          logo: '/images/clients/Gigaset.png' },
-            { name: 'Grandstream',      logo: '/images/clients/Grandstream.png' },
-            { name: 'Cisco',            logo: '/images/clients/cisco.png' },
-            { name: 'HTek',               logo: '/images/clients/htek.png' },
-            { name: 'Poly',               logo: '/images/clients/poly.png' },
-            { name: 'Snom',               logo: '/images/clients/snom.png' },
+            { name: 'Arthritis',          logo: '/images/clients/Arthritis.png' },
+            { name: 'Baxter Institute',   logo: '/images/clients/Baxter Institute.png' },
             { name: 'Stockdale & Leggo',  logo: '/images/clients/stockdale & leggo.png' },
-            { name: 'Yealink',            logo: '/images/clients/yealink.png' },
+            { name: 'Norris',             logo: '/images/clients/norris_trimmed.png', className: 'h-[40px] md:h-[55px] lg:h-[75px]' },
+            { name: 'Novo',               logo: '/images/clients/novo.webp' },
+            { name: 'Chobani',            logo: '/images/clients/chobani.png', className: 'h-[25px] md:h-[35px] lg:h-[45px]' },
           ].map((c, i) => (
             <div key={i} className="ticker-pill group px-[20px] md:px-[40px]">
               <img
                 src={c.logo}
                 alt={c.name}
-                className="h-[60px] md:h-[80px] lg:h-[110px] w-auto object-contain transition-all duration-500 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                className={`w-auto object-contain transition-all duration-500 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 ${c.className || 'h-[60px] md:h-[80px] lg:h-[110px]'}`}
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
               />
             </div>

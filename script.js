@@ -1,0 +1,1 @@
+const sharp = require('sharp'); sharp('public/images/clients/norris.png').trim({ threshold: 10 }).toFile('public/images/clients/norris_trimmed.png').then(() => console.log('Trimmed Norris')).catch(err => console.error(err));

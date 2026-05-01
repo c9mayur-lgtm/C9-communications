@@ -11,6 +11,9 @@ export const NextStepStrip = () => {
   const pathname = usePathname();
   const { audience } = useAudience();
 
+  // Hide on pages with their own nav/footer
+  if (pathname.startsWith('/defense') || pathname.startsWith('/lumina')) return null;
+
   const getDynamicText = () => {
     // Audience-based defaults
     const audienceDefaults = {
