@@ -5,15 +5,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   PhoneCall, Users, ShieldCheck, Activity, ArrowRight, CheckCircle2, 
-  Clock, Layers, Building2, TrendingUp,
-  Monitor, CheckCircle, BarChart3, Globe,
-  MessageSquare, Zap, RefreshCcw, ShieldAlert, Headphones,
-  Settings, Layout, Signal, HeartHandshake, UserCheck
+  Building2, TrendingUp, Layout, Settings, Zap, RefreshCcw, ShieldAlert
 } from 'lucide-react';
 import { Section } from '@/components/design-system/Section';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
-import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { C9Button } from '@/components/design-system/C9Button';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
@@ -64,42 +60,31 @@ export default function C9PhoneSystemPage() {
               <FadeIn>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
                    <PhoneCall size={13} className="text-[#5D00D6]" />
-                   <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Operational Excellence</span>
+                   <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Business Communication Infrastructure</span>
                 </div>
               </FadeIn>
 
               <FadeIn delay={0.08}>
                  <h1 className="c9-hero-title mb-6 !leading-[1.1]">
-                    When Communication Fails, <br/>Your Revenue <span className="text-[#5D00D6]">Stops.</span>
+                    If Your Phones Don’t Work, Your Business <span className="text-[#5D00D6]">Doesn’t Either.</span>
                  </h1>
               </FadeIn>
 
               <FadeIn delay={0.15}>
                  <p className="c9-body mb-8 max-w-[620px] text-lg">
-                    Communication isn&apos;t a utility—it&apos;s critical infrastructure. C9 deploys high-authority communication systems that eliminate missed-call risk and enforce absolute operational continuity.
+                    C9 delivers fully managed business communication systems that ensure every call is received, routed, and handled without failure. No missed opportunities, no confusion, no downtime impacting your operations.
                  </p>
               </FadeIn>
 
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
-                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                      <Link href="#consultation">Enforce System Reliability</Link>
+                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full text-white" asChild>
+                      <Link href="#consultation">Speak to a Specialist</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#consultation">Audit Your Infrastructure</Link>
+                      <Link href="#consultation">Review Your Current Setup</Link>
                     </C9Button>
                  </div>
-              </FadeIn>
-
-              <FadeIn delay={0.3} className="mt-10">
-                <div className="flex flex-wrap gap-x-10 gap-y-3">
-                   {['Revenue Protection', 'Operational Continuity', 'System Accountability', 'Precision Routing'].map((item) => (
-                      <div key={item} className="flex items-center gap-2 text-slate-400 font-bold text-[11px] uppercase tracking-widest">
-                         <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
-                         {item}
-                      </div>
-                   ))}
-                </div>
               </FadeIn>
             </div>
 
@@ -110,7 +95,6 @@ export default function C9PhoneSystemPage() {
                      alt="Professional using a modern business phone system"
                      className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
                   />
-
                </div>
             </FadeIn>
           </div>
@@ -119,25 +103,25 @@ export default function C9PhoneSystemPage() {
 
       <WpClientTicker />
 
-       {/* ══ 2. THE CONSEQUENCES OF SYSTEM FAILURE ══════════════════ */}
+       {/* ══ 2. CATEGORY DEFINITION ════════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
         <div className={C}>
           <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
-              <span className="c9-eyebrow mb-4 text-rose-600">Operational Consequence</span>
-              <h2 className="c9-section-heading">The Direct Cost of <br/>Communication Failure.</h2>
+              <span className="c9-eyebrow mb-4 text-[#5D00D6]">The Reality</span>
+              <h2 className="c9-section-heading">This Is Not Just a <br/>Phone System.</h2>
               <p className="c9-body text-lg mt-6">
-                When your communication system fails, the damage is immediate. We eliminate the vulnerabilities that cost your business revenue and reputation.
+                A modern business phone system is not just about making and receiving calls. It controls how your business communicates — how calls are routed, how customers reach the right team, how quickly responses happen, and how consistently your operations run.
               </p>
             </FadeIn>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: <TrendingUp />, title: "Revenue Exposure", text: "Every missed call is a lost lead. A fragmented system allows revenue to leak out of your business silently." },
-              { icon: <Users />, title: "CX Degradation", text: "Poor routing and wait times destroy customer trust. Clients don't complain; they simply call your competitor." },
-              { icon: <Activity />, title: "Operational Blackouts", text: "System downtime stops your team from performing. Unreliable infrastructure creates total business paralysis." },
-              { icon: <ShieldAlert />, title: "Accountability Gaps", text: "Managing multiple vendors leads to support dead-ends. C9 removes the blame cycles by owning the entire stack." }
+              { icon: <TrendingUp />, title: "Lost Revenue", text: "Without a properly structured system, calls go unanswered." },
+              { icon: <Users />, title: "Customer Frustration", text: "Without a properly structured system, customers are misrouted." },
+              { icon: <Activity />, title: "Operational Blind Spots", text: "Without a properly structured system, teams lose visibility." },
+              { icon: <ShieldAlert />, title: "Missed Opportunities", text: "Without a properly structured system, revenue opportunities are missed." }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm">
                  <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-600 mb-6">
@@ -148,69 +132,80 @@ export default function C9PhoneSystemPage() {
               </FadeIn>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* ══ 2.5 PRODUCT VISUAL STRIP ═══════════════════════════════ */}
-      <section className="pt-16 pb-0 bg-white overflow-hidden border-b border-slate-100">
-        <div className={C}>
-           <FadeIn className="text-center mb-4 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Precision Hardware Endpoints</h3>
-              <p className="c9-body text-lg text-slate-600">
-                We design, deploy, and manage your entire communication fleet end-to-end. From the high-availability cloud core to the physical endpoints on your desks, C9 owns the hardware, the implementation, and the ongoing support—eliminating vendor fragmentation and enforcing absolute accountability.
-              </p>
-           </FadeIn>
-           <FadeIn delay={0.1} className="-mb-10 -mt-6">
-             <div className="w-full rounded-[48px] overflow-hidden bg-white flex items-center justify-center">
-                <img 
-                  src="/images/phone-system-fleet.png" 
-                  alt="Complete Managed Hardware Ecosystem" 
-                  className="w-full max-w-7xl h-auto object-contain mix-blend-multiply scale-110" 
-                />
-             </div>
-           </FadeIn>
-        </div>
-      </section>
-
-      {/* ══ 3. TRUST BREAK 1 ═══════════════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-white overflow-hidden">
-        <div className={C}>
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <FadeIn direction="left" className="order-2 lg:order-1 relative">
-               <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3]">
-                  <img src="/images/yealink-phone-4.jpg" alt="Executive connected via mobile communication" className="w-full h-full object-cover object-top" />
-               </div>
-               <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-[#5D00D6]/10 rounded-full blur-3xl" />
-            </FadeIn>
-            
-            <FadeIn direction="right" delay={0.2} className="order-1 lg:order-2">
-               <span className="c9-eyebrow mb-4">Strategic Positioning</span>
-               <h2 className="c9-section-heading mb-6">We don’t just provide phones — we manage your entire communication system.</h2>
-               <p className="c9-body text-xl text-slate-600 italic">
-                  &ldquo;A handset on a desk is just hardware. A C9 communication system is a managed environment designed for absolute reliability and professional customer engagement.&rdquo;
-               </p>
+          <div className="mt-16 text-center">
+            <FadeIn delay={0.4}>
+              <div className="inline-flex items-center gap-4 px-6 py-4 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] border border-[#5D00D6]/20">
+                 <CheckCircle2 size={24} />
+                 <span className="font-bold text-[15px]">C9 delivers a complete communication system that ensures every call is handled the way your business expects.</span>
+              </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* ══ 4. WHY BUSINESSES REPLACE SYSTEMS ═══════════════════════ */}
-      <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+      {/* ══ 3. SYSTEM STRUCTURE ═══════════════════════════════════ */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className={C}>
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <FadeIn className="max-w-3xl mb-16 mx-auto text-center">
+            <span className="c9-eyebrow mb-4">Core Architecture</span>
+            <h2 className="c9-section-heading mb-6">Your Complete Communication System</h2>
+            <p className="c9-body text-lg">
+               Every part of your phone system is designed and managed as a connected environment — not separate tools.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              { icon: <PhoneCall />, title: "Calling Infrastructure", desc: "All inbound and outbound calling is configured, controlled, and managed to ensure consistent performance across your business." },
+              { icon: <Settings />, title: "Call Routing & Control", desc: "Calls are automatically directed through structured flows — including IVR, queues, and department routing — ensuring the right person handles the call every time." },
+              { icon: <Layout />, title: "Devices & User Access", desc: "Your team can operate from desk phones, mobile devices, or desktop applications — with a consistent experience across all environments." },
+              { icon: <Zap />, title: "Continuity & Failover", desc: "If something fails, calls are automatically redirected to backup paths, ensuring your business remains reachable at all times." },
+              { icon: <Activity />, title: "Monitoring & Visibility", desc: "Every call is tracked, measured, and visible — giving you full control over performance, response times, and usage." },
+              { icon: <RefreshCcw />, title: "Integration with Business Systems", desc: "Your phone system connects with your internal tools — ensuring communication is aligned with your operations, not isolated from them." }
+            ].map((item, i) => (
+              <div key={i} className="flex gap-6 group">
+                <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
+                  {item.icon}
+                </div>
+                <div>
+                  <h4 className="font-bold text-slate-900 text-[18px] mb-2">{item.title}</h4>
+                  <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <FadeIn delay={0.5}>
+            <div className="bg-[#0c1024] rounded-[32px] p-10 text-center border border-white/10 shadow-2xl relative overflow-hidden">
+               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
+               <p className="text-2xl font-bold text-white relative z-10 max-w-3xl mx-auto">
+                  <span className="text-[#a56eff]">We don’t provide phones</span> — we take responsibility for how your business communicates.
+               </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ══ 4. CALL FLOW ════════════════════════════════════════════ */}
+      <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+        <div className={C}>
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Disciplined Operations</span>
-               <h2 className="c9-section-heading mb-6">Call Flow Architecture: How Your Voice Moves.</h2>
+               <span className="c9-eyebrow mb-4">Operational Clarity</span>
+               <h2 className="c9-section-heading mb-6">How Your Communication System Works</h2>
                <p className="c9-body mb-10 text-lg">
-                  Communication shouldn&apos;t be random. We architect disciplined call flows that move every interaction through a managed path from entry to resolution.
+                  Every call follows a structured path — ensuring consistency, speed, and accountability. From the moment a call enters your system, it is controlled, directed, and tracked — ensuring no gaps, no confusion, and no lost communication.
                </p>
                
                <div className="space-y-6">
                   {[
-                    { title: "1. Intelligent Entry", text: "Calls enter our high-availability voice core via premium SIP trunking or ported national numbers." },
-                    { title: "2. Logic-Based Routing", text: "Automated IVRs and time-of-day logic determine the optimal path for the caller immediately." },
-                    { title: "3. Seamless Handover", text: "Calls are delivered to desk phones, softphones, or mobile apps with zero packet loss or delay." },
-                    { title: "4. Managed Continuity", text: "If a destination is unavailable, pre-configured failover paths engage to keep the caller connected." }
+                    { title: "Incoming Call", text: "Entry into the managed network." },
+                    { title: "Call Routing (IVR / Queue)", text: "Automated logic to define the path." },
+                    { title: "Assigned Team or User", text: "Delivered to the specific destination." },
+                    { title: "Device (Desk / Mobile / Application)", text: "Received on the preferred endpoint." },
+                    { title: "Monitoring & Reporting", text: "Tracked for performance visibility." },
+                    { title: "Ongoing Support & Optimisation", text: "Continuously improved by C9." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-5">
                        <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1 shadow-sm">
@@ -226,198 +221,224 @@ export default function C9PhoneSystemPage() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2} className="relative">
-               <div className="bg-[#0c1024] rounded-[48px] p-10 lg:p-16 border border-white/5 relative overflow-hidden text-white shadow-2xl">
-                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
-                  <div className="relative z-10">
-                     <h3 className="text-2xl font-bold mb-8 text-center">Unified Visibility</h3>
-                     <div className="grid grid-cols-2 gap-4">
-                        {[
-                          { label: "Call Handover", val: "Instant", icon: <Globe size={18}/> },
-                          { label: "Availability", val: "Verified", icon: <UserCheck size={18}/> },
-                          { label: "Support Path", val: "Direct", icon: <Headphones size={18}/> },
-                          { label: "Compliance", val: "Active", icon: <ShieldCheck size={18}/> }
-                        ].map((item, i) => (
-                          <div key={i} className="p-5 rounded-2xl bg-white/5 border border-white/10 text-center">
-                             <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] mx-auto mb-3">
-                                {item.icon}
-                             </div>
-                             <div className="text-[18px] font-bold text-white mb-1 leading-none">{item.val}</div>
-                             <div className="text-[10px] text-white/40 uppercase tracking-widest font-bold">{item.label}</div>
-                          </div>
-                        ))}
-                     </div>
-                     <div className="mt-10 text-center">
-                        <p className="text-white/40 text-[12px] leading-relaxed italic">
-                           &ldquo;We consolidated 14 locations into a single unified platform. Accountability improved overnight.&rdquo;
-                        </p>
-                     </div>
-                  </div>
-               </div>
+               <C9VoiceNetworkDiagram />
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* ══ 5. WHY BUSINESSES CHOOSE C9 ═════════════════════════════ */}
-      <section className="py-12 lg:py-16 bg-white">
+      {/* ══ 4.5. COMMUNICATION LAYER ════════════════════════════════ */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className={C}>
-          <FadeIn className="max-w-3xl mb-16">
-            <span className="c9-eyebrow mb-4">Operational Accountability</span>
-            <h2 className="c9-section-heading mb-6">When things go wrong, who owns it?</h2>
-            <p className="c9-body text-lg">
-               That is the real buying question. C9 provides a single accountable partner for delivery, support, and long-term business continuity.
+          <FadeIn className="max-w-3xl mb-16 mx-auto text-center">
+            <span className="c9-eyebrow mb-4">The Communication Layer</span>
+            <h2 className="c9-section-heading mb-6">Every Conversation Flows Through Your System</h2>
+            <p className="c9-body text-lg text-slate-600">
+               Your voice infrastructure is the central nervous system of your business. It is the invisible layer that connects your customers to your team, coordinates your internal operations, and provides executives with measurable visibility.
             </p>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              { icon: <Layers />, title: "Voice Core Cluster", desc: "Enterprise-grade high-availability core ensuring crystal clear audio and 99.99% system uptime." },
-              { icon: <Settings />, title: "Engineered Routing", desc: "Precision call handling logic and queueing protocols to enforce immediate customer engagement." },
-              { icon: <Monitor />, title: "Managed Endpoints", desc: "Fully integrated handsets and wireless hardware managed as part of your unified communication stack." },
-              { icon: <Zap />, title: "Redundancy Protocols", desc: "Automatic site-level failover paths to keep operations active during local internet or power failures." },
-              { icon: <Activity />, title: "Operational Intelligence", desc: "Real-time visibility into system health and call metrics via enterprise-grade management dashboards." },
-              { icon: <RefreshCcw />, title: "Infrastructure Sync", desc: "Seamless integration with CRM and productivity tools to unify your business communication environment." }
+              { 
+                icon: <PhoneCall />, 
+                title: "Customer Communication", 
+                desc: "The frontline experience. Every inbound call is instantly routed, queued, and delivered to the correct team member without friction or delay." 
+              },
+              { 
+                icon: <Users />, 
+                title: "Internal Coordination", 
+                desc: "Seamless connectivity across sites and departments. Teams transfer calls, manage presence, and collaborate as if they are in the same room." 
+              },
+              { 
+                icon: <Activity />, 
+                title: "Visibility & Control", 
+                desc: "Total operational oversight. Call volumes, response times, and system health are tracked and presented in clear executive dashboards." 
+              }
             ].map((item, i) => (
-              <div key={i} className="flex gap-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
-                  {item.icon}
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-[18px] mb-2">{item.title}</h4>
-                  <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
+              <FadeIn key={i} delay={i * 0.1} className="bg-slate-50 p-8 lg:p-10 rounded-[32px] border border-slate-100 shadow-sm text-center hover:border-[#5D00D6]/20 transition-all hover:bg-white hover:shadow-xl">
+                 <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-[#5D00D6] mx-auto mb-6 shadow-sm">
+                    {item.icon}
+                 </div>
+                 <h4 className="font-bold text-slate-900 text-[18px] mb-3">{item.title}</h4>
+                 <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
+              </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay={0.4} className="text-center">
+             <div className="inline-block px-8 py-5 bg-slate-900 rounded-full border border-slate-800 shadow-xl">
+                <p className="text-[17px] font-bold text-white tracking-wide">
+                   This is how your business communicates, responds, and operates.
+                </p>
+             </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* ══ 6. TRUST BREAK 2 ═══════════════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100 overflow-hidden">
+      {/* ══ 5. BUSINESS IMPACT ══════════════════════════════════════ */}
+      <section className="py-16 lg:py-24 bg-white overflow-hidden">
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Migration Trust</span>
-               <h2 className="c9-section-heading mb-6">Replacing your phone system should reduce risk — not create it.</h2>
-               <p className="c9-body text-xl text-slate-600 italic">
-                  &ldquo;Migration should feel controlled, not dangerous. Our technical architects manage the complexity so your business stays online from day one.&rdquo;
-               </p>
+            <FadeIn direction="left" className="order-2 lg:order-1 relative">
+               <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3] group">
+                  <img src="/images/yealink-phone-4.jpg" alt="Business Impact of Systems" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
+               </div>
             </FadeIn>
             
-            <FadeIn direction="right" delay={0.2}>
-               <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3]">
-                  <img src="/images/yealink-phone-2.jpg" alt="C9 team managing a smooth system migration" className="w-full h-full object-cover object-center" />
-               </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 7. MIGRATION WITHOUT DISRUPTION ════════════════════════ */}
-      <section className="py-12 lg:py-16 bg-white overflow-hidden">
-        <div className={C}>
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <FadeIn direction="left" className="order-2 lg:order-1">
-               <div className="grid sm:grid-cols-2 gap-6">
-                  {[
-                    { label: "Internal Dialling", val: "Across Sites", icon: <Building2 /> },
-                    { label: "Presence", val: "Global Visibility", icon: <UserCheck /> },
-                    { label: "Management", val: "Centralised", icon: <Layout /> },
-                    { label: "Reliability", val: "Multi-Node", icon: <Signal /> }
-                  ].map((stat, i) => (
-                    <div key={i} className="bg-slate-50 border border-slate-100 rounded-3xl p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-2xl group">
-                        <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-4">
-                           {stat.icon}
-                        </div>
-                        <div className="text-2xl font-bold text-slate-900 mb-1 leading-none tracking-tight">{stat.val}</div>
-                        <div className="text-slate-500 font-bold text-[11px] uppercase tracking-widest leading-tight">{stat.label}</div>
-                    </div>
-                  ))}
-               </div>
-            </FadeIn>
-
             <FadeIn direction="right" delay={0.2} className="order-1 lg:order-2">
-               <span className="c9-eyebrow mb-4">Scale Architecture</span>
-               <h2 className="c9-section-heading mb-6">Multi-Site Capability & Unified Governance.</h2>
-               <p className="c9-body mb-10 text-lg">
-                  Stop managing 10 different phone systems. C9 unifies your national footprint into a single, high-authority communication environment.
+               <span className="c9-eyebrow mb-4 text-rose-600">The Real Impact</span>
+               <h2 className="c9-section-heading mb-6">When Your Phone System Fails, It Affects Everything.</h2>
+               <p className="c9-body text-lg text-slate-600 mb-8">
+                  Your phone system is not just a communication tool — it directly impacts how your business performs.
                </p>
-               <ul className="space-y-5">
+               
+               <ul className="space-y-5 mb-10">
                   {[
-                    { t: 'Unified National Numbering', d: 'Consistent internal extensions and dialling across every office and retail site.' },
-                    { t: 'Centralised Call Management', d: 'Control routing and IVRs for every location from a single operational dashboard.' },
-                    { t: 'Cross-Site Call Handover', d: 'Seamlessly transfer calls between departments and locations without friction.' }
+                    "Missed calls lead to lost revenue.",
+                    "Poor routing creates customer frustration.",
+                    "Delays reduce team efficiency.",
+                    "Downtime disrupts operations."
                   ].map((item, i) => (
-                    <li key={i} className="flex gap-4">
-                      <div className="shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center mt-1">
-                        <CheckCircle size={14} className="text-white" />
+                    <li key={i} className="flex gap-4 items-center">
+                      <div className="shrink-0 w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center">
+                        <span className="text-rose-600 text-[14px] font-bold">!</span>
                       </div>
-                      <div>
-                        <div className="text-[15px] font-bold text-slate-900 mb-1">{item.t}</div>
-                        <div className="text-[13px] text-slate-500 leading-relaxed">{item.d}</div>
-                      </div>
+                      <div className="text-[16px] font-bold text-slate-900">{item}</div>
                     </li>
                   ))}
                </ul>
+
+               <div className="p-6 bg-slate-50 border-l-4 border-rose-600 rounded-r-2xl">
+                 <p className="text-xl font-bold text-slate-900 italic">
+                   "If your communication system is not reliable, your business isn’t either."
+                 </p>
+               </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-       {/* ══ 8. EXECUTIVE GOVERNANCE ═══════════════════════════════ */}
+      {/* ══ 6. MULTI-SITE & SCALABILITY ════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Executive Governance</span>
-               <h2 className="c9-section-heading mb-6">Total Control Over Communication Infrastructure.</h2>
+               <span className="c9-eyebrow mb-4">Enterprise Scale</span>
+               <h2 className="c9-section-heading mb-6">Built for Multi-Site and Growing Businesses.</h2>
                <p className="c9-body mb-10 text-lg">
-                  Operations and IT leaders require absolute visibility. C9 provides the governance tools to enforce accountability across your entire customer experience and team reachability.
+                  Your communication system operates as a single, unified environment across all locations. Whether you operate from one location or many, your system works the same way — without complexity.
                </p>
-               
-               <div className="grid sm:grid-cols-2 gap-8">
+               <ul className="space-y-5">
                   {[
-                    { icon: <Monitor />, title: "Operational Visibility", desc: "Live dashboards tracking system performance and team availability metrics." },
-                    { icon: <Settings />, title: "Infrastructure Control", desc: "Immediate management of routing logic, user permissions, and IVR paths." },
-                    { icon: <ShieldCheck />, title: "Engineer Accountability", desc: "Direct access to senior Australian engineers who own every incident." },
-                    { icon: <Zap />, title: "Continuity Protocols", desc: "Pre-configured failover paths to ensure 100% operational uptime." }
+                    { t: 'Consistent call handling across sites', icon: <Building2 /> },
+                    { t: 'Centralised control and configuration', icon: <Layout /> },
+                    { t: 'Seamless expansion as your business grows', icon: <TrendingUp /> }
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-5">
-                       <div className="text-[#5D00D6] shrink-0 mt-1">
-                          {item.icon}
-                       </div>
-                       <div>
-                          <h4 className="font-bold text-slate-900 text-[17px] mb-2">{item.title}</h4>
-                          <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
-                       </div>
-                    </div>
+                    <li key={i} className="flex items-center gap-4">
+                      <div className="shrink-0 w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-slate-200 text-[#5D00D6]">
+                        {item.icon}
+                      </div>
+                      <div className="text-[16px] font-bold text-slate-900">{item.t}</div>
+                    </li>
                   ))}
-               </div>
+               </ul>
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2} className="relative">
-               <div className="bg-white rounded-[48px] p-10 lg:p-16 border border-slate-100 shadow-xl shadow-slate-200/50">
-                  <div className="flex items-center justify-between mb-10 pb-6 border-b border-slate-100">
-                     <h3 className="text-xl font-bold text-slate-900">Performance Status</h3>
-                     <div className="flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                        System Active
-                     </div>
+               <div className="grid sm:grid-cols-2 gap-6">
+                 {[
+                   { label: "Internal Dialling", val: "Across Sites" },
+                   { label: "Presence", val: "Global Visibility" },
+                   { label: "Management", val: "Centralised" },
+                   { label: "Reliability", val: "Multi-Node" }
+                 ].map((stat, i) => (
+                   <div key={i} className="bg-white border border-slate-100 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:shadow-2xl group shadow-sm">
+                       <div className="text-2xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight">{stat.val}</div>
+                       <div className="text-slate-500 font-bold text-[11px] uppercase tracking-widest leading-tight mt-2">{stat.label}</div>
+                   </div>
+                 ))}
+               </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 7. DEVICE ECOSYSTEM ════════════════════════════════════ */}
+      <section className="pt-16 pb-0 bg-white overflow-hidden border-b border-slate-100">
+        <div className={C}>
+           <FadeIn className="text-center mb-0 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Built on Enterprise-Grade Communication Devices</h3>
+              <p className="c9-body text-lg text-slate-600 mb-8">
+                Your communication system includes reliable, enterprise-grade devices across all working environments. Devices are fully configured, integrated, and managed as part of your system — not deployed separately.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {[
+                  "Desk phones for office teams",
+                  "Conference devices for collaboration",
+                  "Wireless and mobile access for flexibility",
+                  "Application-based calling for remote work"
+                ].map((item, i) => (
+                  <div key={i} className="px-5 py-2.5 bg-slate-50 border border-slate-100 rounded-full text-[14px] font-bold text-slate-700 shadow-sm">
+                    {item}
                   </div>
-                  <div className="space-y-6">
-                     {[
-                       { label: 'Network Availability', val: '99.99%', sub: 'Cloud Core Cluster' },
-                       { label: 'Voice Packet Delay', val: '< 15ms', sub: 'Low Latency Routing' },
-                       { label: 'Customer Abandonment', val: '- 85%', sub: 'After Implementation' }
-                     ].map((item, i) => (
-                        <div key={i} className="flex justify-between items-center p-4 rounded-2xl border border-slate-50 bg-slate-50/30">
-                           <div>
-                              <div className="text-[13px] font-bold text-slate-800">{item.label}</div>
-                              <div className="text-[11px] text-slate-400 font-medium">{item.sub}</div>
-                           </div>
-                           <div className="text-2xl font-bold text-[#5D00D6] tracking-tighter">{item.val}</div>
-                        </div>
-                     ))}
+                ))}
+              </div>
+           </FadeIn>
+           <FadeIn delay={0.1} className="-mb-10 -mt-6">
+             <div className="w-full rounded-[48px] overflow-hidden bg-white flex items-center justify-center">
+                <img 
+                  src="/images/phone-system-fleet.png" 
+                  alt="Complete Managed Hardware Ecosystem" 
+                  className="w-full max-w-7xl h-auto object-contain mix-blend-multiply scale-110" 
+                />
+             </div>
+           </FadeIn>
+        </div>
+      </section>
+
+      {/* ══ 8. ACCOUNTABILITY ══════════════════════════════════════ */}
+      <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+        <div className={C}>
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <FadeIn direction="left">
+               <span className="c9-eyebrow mb-4">Total System Ownership</span>
+               <h2 className="c9-section-heading mb-6">One Partner Responsible for Your Communication System.</h2>
+               <p className="c9-body mb-6 text-lg">
+                  Most businesses deal with multiple vendors for telephony, devices, and support. When issues occur, responsibility becomes unclear.
+               </p>
+               <p className="c9-body mb-10 text-lg font-bold text-[#5D00D6]">
+                  C9 removes that risk.
+               </p>
+               
+               <ul className="space-y-5 mb-10">
+                  {[
+                    "One provider managing the entire system",
+                    "Clear ownership of performance and uptime",
+                    "No vendor confusion during incidents"
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-4 items-center">
+                      <div className="shrink-0 w-6 h-6 rounded-full bg-[#5D00D6] flex items-center justify-center text-white">
+                        <CheckCircle2 size={14} />
+                      </div>
+                      <div className="text-[16px] font-bold text-slate-900">{item}</div>
+                    </li>
+                  ))}
+               </ul>
+            </FadeIn>
+
+            <FadeIn direction="right" delay={0.2} className="relative">
+               <div className="bg-[#0c1024] rounded-[48px] p-10 lg:p-16 relative overflow-hidden shadow-2xl">
+                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
+                  <div className="relative z-10 text-center">
+                     <div className="w-20 h-20 rounded-3xl bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] mx-auto mb-8 border border-[#5D00D6]/40">
+                        <ShieldCheck size={40} />
+                     </div>
+                     <h3 className="text-2xl font-bold text-white mb-6 leading-tight">
+                        Every call, every system, every issue — fully owned and managed by C9.
+                     </h3>
                   </div>
                </div>
             </FadeIn>
@@ -425,7 +446,7 @@ export default function C9PhoneSystemPage() {
         </div>
       </section>
 
-      {/* ══ 9. TRUST BREAK 3 ═══════════════════════════════════════ */}
+      {/* ══ 9. WHY BUSINESSES CHOOSE C9 ════════════════════════════ */}
       <section className="py-16 lg:py-24 bg-white overflow-hidden">
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -436,101 +457,54 @@ export default function C9PhoneSystemPage() {
                     alt="Stable business communication infrastructure" 
                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" 
                   />
-                             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
                </div>
             </FadeIn>
             
             <FadeIn direction="right" delay={0.2} className="order-1 lg:order-2">
-               <div className="max-w-xl">
-                  <span className="c9-eyebrow mb-4">Final Confidence</span>
-                  <h2 className="c9-section-heading mb-6">Bad communication systems quietly cost businesses every day.</h2>
-                  <p className="c9-body text-xl text-slate-600 italic border-l-4 border-[#5D00D6] pl-6 py-2">
-                    &ldquo;The best systems are the ones your customers never notice — because everything simply works. We provide the stability that lets your team focus on growth, not technical troubleshooting.&rdquo;
-                  </p>
+               <span className="c9-eyebrow mb-4">The Standard</span>
+               <h2 className="c9-section-heading mb-6">Why Businesses Choose C9 for Their Phone Systems.</h2>
+               
+               <ul className="space-y-5 mb-10">
+                  {[
+                    "Structured and reliable communication systems",
+                    "Clear call routing and control",
+                    "Built-in continuity and failover",
+                    "Full system visibility and reporting",
+                    "Single point of accountability"
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-4 items-center">
+                      <div className="shrink-0 w-2 h-2 rounded-full bg-[#5D00D6]"></div>
+                      <div className="text-[16px] font-bold text-slate-900">{item}</div>
+                    </li>
+                  ))}
+               </ul>
+
+               <div className="p-6 bg-[#5D00D6]/5 border-l-4 border-[#5D00D6] rounded-r-2xl">
+                 <p className="c9-body text-lg font-bold text-[#5D00D6]">
+                   Your communication system is too critical to be treated as a basic service.
+                 </p>
                </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* ══ 10. COMMERCIAL OUTCOMES ═════════════════════════════════ */}
-      <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+      {/* ══ 10. FINAL CTA ═══════════════════════════════════════════ */}
+      <section className="py-12 lg:py-16 bg-[#0c1024] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5D00D6] opacity-[0.1] rounded-full blur-[100px] -mr-64 -mt-64" />
         <div className={C}>
-          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
-             <FadeIn direction="left">
-                <span className="c9-eyebrow mb-4">Measured Results</span>
-                <h2 className="c9-section-heading mb-6">Operational Outcomes for Modern Infrastructure.</h2>
-                <p className="c9-body mb-10 text-slate-600">
-                   Deploying C9 Managed Voice delivers immediate, observable impact across your entire business operations.
-                </p>
-
-                <div className="grid grid-cols-2 gap-4">
-                   {[
-                     { label: "Missed Call Reduction", val: "95%+", icon: <TrendingUp size={20} /> },
-                     { label: "Response Speed", val: "40% Higher", icon: <Clock size={20} /> },
-                     { label: "Team Reachability", val: "100%", icon: <Users size={20} /> },
-                     { label: "Vendor Overhead", val: "Minimized", icon: <Headphones size={20} /> }
-                   ].map((stat, i) => (
-                     <div key={i} className="bg-white border border-slate-100 rounded-[32px] p-8 hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10 group">
-                        <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight">{stat.val}</div>
-                        <div className="text-slate-500 font-bold text-[12px] uppercase tracking-widest leading-tight">{stat.label}</div>
-                     </div>
-                   ))}
-                </div>
-             </FadeIn>
-
-             <FadeIn direction="right" delay={0.1}>
-               <div className="bg-white p-6 rounded-[48px] border border-slate-100 shadow-xl shadow-slate-200/50">
-                 <WpCaseStudies 
-                    articles={[
-                      {
-                        tag: 'CX OPTIMISATION',
-                        title: 'National Retail Distribution',
-                        desc: "Fragmented systems meant warehouse teams couldn't reach office staff easily. C9 consolidated 8 sites onto a unified cloud platform. Result: Internal response time improved by 50%.",
-                        img: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Operations Restored'
-                      },
-                      {
-                        tag: 'HEALTHCARE CONTINUITY',
-                        title: 'Medical Practice Reachability',
-                        desc: "A multi-site medical group was losing patients due to abandoned calls during morning peaks. C9 implemented intelligent queueing and failover. Result: Abandonment rate dropped by 85%.",
-                        img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Care Continuity'
-                      }
-                    ]}
-                  />
-               </div>
-             </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 11. CTAs & FUNNEL ═══════════════════════════════════════ */}
-      <section className="py-12 lg:py-16 bg-white border-t border-slate-100">
-        <div className={C}>
-           <div className="max-w-4xl mx-auto text-center mb-16">
+           <div className="max-w-4xl mx-auto text-center relative z-10">
               <FadeIn>
-                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6">
-                  If your communication system isn&apos;t managed, it&apos;s a liability.
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                  Not Sure If Your Phone System Is Working As It Should?
                 </h3>
-                <p className="c9-body mb-10 text-lg">
-                  Stop tolerating missed-call risks and support dead-ends. Deploy a communication system designed for high-authority business operations.
+                <p className="text-white/80 mb-10 text-xl max-w-2xl mx-auto">
+                  We’ll review your current setup and identify where calls are being missed, delayed, or impacting your operations.
                 </p>
                 <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Enforce System Reliability</Link>
+                  <Link href="#consultation">Request a System Review</Link>
                 </C9Button>
               </FadeIn>
-           </div>
-
-           <div className="bg-[#5D00D6] rounded-[48px] p-10 lg:p-20 relative overflow-hidden shadow-2xl shadow-purple-900/40 text-center">
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-[0.05] rounded-full blur-[100px] -mr-64 -mt-64" />
-              <div className="relative z-10">
-                <span className="c9-eyebrow !text-white/80 mb-4">Infrastructure Strategy</span>
-                <h2 className="c9-section-heading !text-white mb-6">Reliability + Accountability + Control</h2>
-                <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Talk to C9 About Managed Systems</Link>
-                </C9Button>
-              </div>
            </div>
         </div>
       </section>
@@ -564,11 +538,6 @@ export default function C9PhoneSystemPage() {
           { q: "Can the C9 System integrate with our operational tools?", a: "Yes. C9 Voice supports deep integration with leading CRM and productivity platforms, synchronising customer data and activity logs in real-time to remove team friction and improve data accuracy." }
         ]}
       />
-
-      {/* ══ 12. HIDDEN ARCHIVE ═══════════════════════════════════════ */}
-      <div className="hidden pointer-events-none opacity-0 h-0 overflow-hidden" aria-hidden="true">
-         <C9VoiceNetworkDiagram />
-      </div>
     </main>
   );
 }

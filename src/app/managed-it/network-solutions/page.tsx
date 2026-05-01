@@ -292,7 +292,7 @@ const SectionArchitectureFlow = () => (
                         <ArrowRight className="rotate-90 text-white/20" size={24} />
                      </div>
 
-                     <div className="grid grid-cols-2 gap-4">
+                     <div className="grid sm:grid-cols-2 gap-4">
                         <div className="flex flex-col items-center text-center p-4 bg-white/5 border border-white/10 rounded-none">
                            <Network className="text-[#a56eff] mb-3" size={24} />
                            <h6 className="text-[12px] font-bold">Switching Fabric</h6>
@@ -717,7 +717,7 @@ const SectionMonitoring = () => (
                   </div>
                   
                   <div className="space-y-8">
-                     <div className="grid grid-cols-2 gap-4">
+                     <div className="grid sm:grid-cols-2 gap-4">
                         <div className="p-4 bg-white/5 rounded-2xl border border-white/10">
                            <div className="text-[10px] text-white/40 uppercase tracking-widest mb-1">Latency</div>
                            <div className="text-xl font-bold">12ms <span className="text-[10px] text-emerald-400">Stable</span></div>
@@ -813,7 +813,7 @@ const SectionOutcomes = () => (
             <FadeIn direction="left">
                <span className="c9-eyebrow !text-[#a56eff] mb-4">Measured Stability</span>
                <h2 className="c9-section-heading !text-white mb-6">Reliability That Scales</h2>
-               <div className="grid grid-cols-2 gap-6 mb-8">
+               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                   <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                      <div className="text-[32px] font-bold text-[#a56eff] mb-1">99.9%</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Guaranteed Uptime</div>
