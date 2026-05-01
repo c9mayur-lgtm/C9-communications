@@ -204,6 +204,31 @@ const SectionManagedStack = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
+   SECTION 2.5 — NETWORK HARDWARE
+   ───────────────────────────────────────────────────────── */
+const SectionNetworkHardware = () => (
+   <section className="pt-8 pb-0 bg-white overflow-hidden border-b border-slate-100">
+      <div className={C}>
+         <FadeIn className="text-center mb-0 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">Enterprise-Grade Network Infrastructure</h3>
+            <p className="c9-body text-lg text-slate-600">
+              We design, deploy, and manage your entire network fleet end-to-end. From carrier-grade firewalls and core switching to high-density wireless access points, C9 owns the hardware, the implementation, and the ongoing support—eliminating vendor fragmentation.
+            </p>
+         </FadeIn>
+         <FadeIn delay={0.1} className="-mb-16 -mt-10">
+           <div className="w-full rounded-[48px] overflow-hidden bg-white flex items-center justify-center">
+              <img 
+                src="/images/network-system-fleet.png" 
+                alt="Complete Managed Network Ecosystem" 
+                className="w-full max-w-7xl h-auto object-contain mix-blend-multiply scale-110" 
+              />
+           </div>
+         </FadeIn>
+      </div>
+   </section>
+);
+
+/* ─────────────────────────────────────────────────────────
    SECTION 3 — ARCHITECTURE FLOW
    ───────────────────────────────────────────────────────── */
 const SectionArchitectureFlow = () => (
@@ -940,6 +965,7 @@ export default function NetworkSolutionsPage() {
     <main className="min-h-screen bg-white">
       <Hero />
       <WpClientTicker />
+      <SectionNetworkHardware />
       <SectionArchitectureFlow />
       <SectionManagedStack />
       <SectionServiceInterconnect />

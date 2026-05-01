@@ -70,30 +70,30 @@ export default function C9PhoneSystemPage() {
 
               <FadeIn delay={0.08}>
                  <h1 className="c9-hero-title mb-6 !leading-[1.1]">
-                    Every Missed Call Costs <br/>More Than You <span className="text-[#5D00D6]">Think.</span>
+                    When Communication Fails, <br/>Your Revenue <span className="text-[#5D00D6]">Stops.</span>
                  </h1>
               </FadeIn>
 
               <FadeIn delay={0.15}>
                  <p className="c9-body mb-8 max-w-[620px] text-lg">
-                    Missed calls cost revenue and damage customer trust. C9 provides reliable business communication with full accountability and support ownership, keeping your teams reachable and your customers connected.
+                    Communication isn&apos;t a utility—it&apos;s critical infrastructure. C9 deploys high-authority communication systems that eliminate missed-call risk and enforce absolute operational continuity.
                  </p>
               </FadeIn>
 
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
                     <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                      <Link href="#consultation">Review Your Current Phone Setup</Link>
+                      <Link href="#consultation">Enforce System Reliability</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#consultation">Talk to a Communication Specialist</Link>
+                      <Link href="#consultation">Audit Your Infrastructure</Link>
                     </C9Button>
                  </div>
               </FadeIn>
 
               <FadeIn delay={0.3} className="mt-10">
                 <div className="flex flex-wrap gap-x-10 gap-y-3">
-                   {['Missed-Call Prevention', 'Zero-Disruption Porting', 'CRM Integration', '24/7 Managed Ownership'].map((item) => (
+                   {['Revenue Protection', 'Operational Continuity', 'System Accountability', 'Precision Routing'].map((item) => (
                       <div key={item} className="flex items-center gap-2 text-slate-400 font-bold text-[11px] uppercase tracking-widest">
                          <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
                          {item}
@@ -119,25 +119,25 @@ export default function C9PhoneSystemPage() {
 
       <WpClientTicker />
 
-      {/* ══ 2. THE COST OF POOR CALL HANDLING ═══════════════════════ */}
+       {/* ══ 2. THE CONSEQUENCES OF SYSTEM FAILURE ══════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
         <div className={C}>
           <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
-              <span className="c9-eyebrow mb-4 text-rose-600">Business Urgency</span>
-              <h2 className="c9-section-heading">The Silent Cost of <br/>Poor Communication.</h2>
+              <span className="c9-eyebrow mb-4 text-rose-600">Operational Consequence</span>
+              <h2 className="c9-section-heading">The Direct Cost of <br/>Communication Failure.</h2>
               <p className="c9-body text-lg mt-6">
-                Customers rarely complain about the calls you never answered. They simply call someone else. If your system is failing, it is already hurting your business.
+                When your communication system fails, the damage is immediate. We eliminate the vulnerabilities that cost your business revenue and reputation.
               </p>
             </FadeIn>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: <ShieldAlert />, title: "Revenue Exposure", text: "Every missed call is a missed customer opportunity. Lost leads equal lost revenue." },
-              { icon: <Users />, title: "Customer Attrition", text: "Poor routing and wait times damage trust immediately. Customers want response, not delays." },
-              { icon: <TrendingUp />, title: "Productivity Gaps", text: "Disconnected teams and fragmented systems slow down operations and reduce total output." },
-              { icon: <Monitor />, title: "Hidden Operational Costs", text: "Unreliable systems create constant support friction and maintenance overhead for IT teams." }
+              { icon: <TrendingUp />, title: "Revenue Exposure", text: "Every missed call is a lost lead. A fragmented system allows revenue to leak out of your business silently." },
+              { icon: <Users />, title: "CX Degradation", text: "Poor routing and wait times destroy customer trust. Clients don't complain; they simply call your competitor." },
+              { icon: <Activity />, title: "Operational Blackouts", text: "System downtime stops your team from performing. Unreliable infrastructure creates total business paralysis." },
+              { icon: <ShieldAlert />, title: "Accountability Gaps", text: "Managing multiple vendors leads to support dead-ends. C9 removes the blame cycles by owning the entire stack." }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm">
                  <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-600 mb-6">
@@ -148,6 +148,27 @@ export default function C9PhoneSystemPage() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ══ 2.5 PRODUCT VISUAL STRIP ═══════════════════════════════ */}
+      <section className="pt-16 pb-0 bg-white overflow-hidden border-b border-slate-100">
+        <div className={C}>
+           <FadeIn className="text-center mb-4 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Precision Hardware Endpoints</h3>
+              <p className="c9-body text-lg text-slate-600">
+                We design, deploy, and manage your entire communication fleet end-to-end. From the high-availability cloud core to the physical endpoints on your desks, C9 owns the hardware, the implementation, and the ongoing support—eliminating vendor fragmentation and enforcing absolute accountability.
+              </p>
+           </FadeIn>
+           <FadeIn delay={0.1} className="-mb-10 -mt-6">
+             <div className="w-full rounded-[48px] overflow-hidden bg-white flex items-center justify-center">
+                <img 
+                  src="/images/phone-system-fleet.png" 
+                  alt="Complete Managed Hardware Ecosystem" 
+                  className="w-full max-w-7xl h-auto object-contain mix-blend-multiply scale-110" 
+                />
+             </div>
+           </FadeIn>
         </div>
       </section>
 
@@ -163,10 +184,10 @@ export default function C9PhoneSystemPage() {
             </FadeIn>
             
             <FadeIn direction="right" delay={0.2} className="order-1 lg:order-2">
-               <span className="c9-eyebrow mb-4">Strategic Empathy</span>
-               <h2 className="c9-section-heading mb-6">Your phone system should protect customer relationships — not quietly damage them.</h2>
+               <span className="c9-eyebrow mb-4">Strategic Positioning</span>
+               <h2 className="c9-section-heading mb-6">We don’t just provide phones — we manage your entire communication system.</h2>
                <p className="c9-body text-xl text-slate-600 italic">
-                  &ldquo;If your team cannot be reached, your business cannot perform. Communication isn&apos;t just a utility; it&apos;s the backbone of your customer experience.&rdquo;
+                  &ldquo;A handset on a desk is just hardware. A C9 communication system is a managed environment designed for absolute reliability and professional customer engagement.&rdquo;
                </p>
             </FadeIn>
           </div>
@@ -178,18 +199,18 @@ export default function C9PhoneSystemPage() {
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Brownfield Transformation</span>
-               <h2 className="c9-section-heading mb-6">Why Businesses Replace Their Outdated Systems.</h2>
+               <span className="c9-eyebrow mb-4">Disciplined Operations</span>
+               <h2 className="c9-section-heading mb-6">Call Flow Architecture: How Your Voice Moves.</h2>
                <p className="c9-body mb-10 text-lg">
-                  Legacy systems and multiple vendors create support chaos and operational blind spots. We help businesses move from fragmentation to unified, accountable infrastructure.
+                  Communication shouldn&apos;t be random. We architect disciplined call flows that move every interaction through a managed path from entry to resolution.
                </p>
                
                <div className="space-y-6">
                   {[
-                    { title: "Legacy Support Chaos", text: "On-premise hardware or unstable cloud providers creating frequent downtime and support dead-ends." },
-                    { title: "Multiple Vendor Fragmentation", text: "Managing different providers for lines, internet, and handsets leads to constant blame cycles." },
-                    { title: "Remote Work Blind Spots", text: "Inability to bridge office, mobile, and home environments seamlessly without complex workarounds." },
-                    { title: "Reporting and Visibility Gaps", text: "Lack of insight into call volumes and wait times prevents operations from optimizing team performance." }
+                    { title: "1. Intelligent Entry", text: "Calls enter our high-availability voice core via premium SIP trunking or ported national numbers." },
+                    { title: "2. Logic-Based Routing", text: "Automated IVRs and time-of-day logic determine the optimal path for the caller immediately." },
+                    { title: "3. Seamless Handover", text: "Calls are delivered to desk phones, softphones, or mobile apps with zero packet loss or delay." },
+                    { title: "4. Managed Continuity", text: "If a destination is unavailable, pre-configured failover paths engage to keep the caller connected." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-5">
                        <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1 shadow-sm">
@@ -250,12 +271,12 @@ export default function C9PhoneSystemPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <ShieldCheck />, title: "Reliable Call Handling", desc: "Advanced cloud-native routing ensuring your teams are reachable across office, mobile, and home sites." },
-              { icon: <Users />, title: "Stronger CX Continuity", desc: "Intelligent queueing and routing logic to ensure customers reach the right person every time." },
-              { icon: <Clock />, title: "Single Support Ownership", desc: "We manage your internet, lines, and hardware. No more vendor finger-pointing or support dead-ends." },
-              { icon: <Monitor />, title: "Operational Visibility", desc: "Real-time reporting and management dashboards to keep you in control of your entire voice ecosystem." },
-              { icon: <Globe />, title: "Multi-Site Resilience", desc: "Unified governance and consistent team communication regardless of geographical location." },
-              { icon: <Activity />, title: "Proactive Incident Support", desc: "Direct access to senior Australian engineers who own the resolution of any communication anomaly." }
+              { icon: <Layers />, title: "Voice Core Cluster", desc: "Enterprise-grade high-availability core ensuring crystal clear audio and 99.99% system uptime." },
+              { icon: <Settings />, title: "Engineered Routing", desc: "Precision call handling logic and queueing protocols to enforce immediate customer engagement." },
+              { icon: <Monitor />, title: "Managed Endpoints", desc: "Fully integrated handsets and wireless hardware managed as part of your unified communication stack." },
+              { icon: <Zap />, title: "Redundancy Protocols", desc: "Automatic site-level failover paths to keep operations active during local internet or power failures." },
+              { icon: <Activity />, title: "Operational Intelligence", desc: "Real-time visibility into system health and call metrics via enterprise-grade management dashboards." },
+              { icon: <RefreshCcw />, title: "Infrastructure Sync", desc: "Seamless integration with CRM and productivity tools to unify your business communication environment." }
             ].map((item, i) => (
               <div key={i} className="flex gap-6 group">
                 <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
@@ -299,10 +320,10 @@ export default function C9PhoneSystemPage() {
             <FadeIn direction="left" className="order-2 lg:order-1">
                <div className="grid sm:grid-cols-2 gap-6">
                   {[
-                    { label: "Number Porting", val: "Zero Downtime", icon: <RefreshCcw /> },
-                    { label: "Deployment", val: "Risk Managed", icon: <ShieldCheck /> },
-                    { label: "Onboarding", val: "Day-One Ready", icon: <UserCheck /> },
-                    { label: "Support", val: "Live Assisted", icon: <Headphones /> }
+                    { label: "Internal Dialling", val: "Across Sites", icon: <Building2 /> },
+                    { label: "Presence", val: "Global Visibility", icon: <UserCheck /> },
+                    { label: "Management", val: "Centralised", icon: <Layout /> },
+                    { label: "Reliability", val: "Multi-Node", icon: <Signal /> }
                   ].map((stat, i) => (
                     <div key={i} className="bg-slate-50 border border-slate-100 rounded-3xl p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-2xl group">
                         <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-4">
@@ -316,16 +337,16 @@ export default function C9PhoneSystemPage() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2} className="order-1 lg:order-2">
-               <span className="c9-eyebrow mb-4">Managed Onboarding</span>
-               <h2 className="c9-section-heading mb-6">Transitioning Your Operations Safely.</h2>
+               <span className="c9-eyebrow mb-4">Scale Architecture</span>
+               <h2 className="c9-section-heading mb-6">Multi-Site Capability & Unified Governance.</h2>
                <p className="c9-body mb-10 text-lg">
-                  We manage the entire migration cycle to ensure your operations never pause. Our team handles the complex porting and technical execution so you can focus on your business.
+                  Stop managing 10 different phone systems. C9 unifies your national footprint into a single, high-authority communication environment.
                </p>
                <ul className="space-y-5">
                   {[
-                    { t: 'Strategic Transition Planning', d: 'Audit of call flows and porting requirements before execution.' },
-                    { t: 'Validated Number Porting', d: 'Managed liaison with providers for service gap-free movement.' },
-                    { t: 'Staff Training & Rollout', d: 'Live hands-on training to ensure team operational confidence.' }
+                    { t: 'Unified National Numbering', d: 'Consistent internal extensions and dialling across every office and retail site.' },
+                    { t: 'Centralised Call Management', d: 'Control routing and IVRs for every location from a single operational dashboard.' },
+                    { t: 'Cross-Site Call Handover', d: 'Seamlessly transfer calls between departments and locations without friction.' }
                   ].map((item, i) => (
                     <li key={i} className="flex gap-4">
                       <div className="shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center mt-1">
@@ -343,23 +364,23 @@ export default function C9PhoneSystemPage() {
         </div>
       </section>
 
-      {/* ══ 8. SUPPORT, VISIBILITY, AND OPERATIONAL CONTROL ═════════ */}
+       {/* ══ 8. EXECUTIVE GOVERNANCE ═══════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
                <span className="c9-eyebrow mb-4">Executive Governance</span>
-               <h2 className="c9-section-heading mb-6">Visibility and Accountability Built-In.</h2>
+               <h2 className="c9-section-heading mb-6">Total Control Over Communication Infrastructure.</h2>
                <p className="c9-body mb-10 text-lg">
-                  IT leaders and Operations Heads need visibility. We provide the governance tools required to ensure you have full control over your customer experience and team reachability.
+                  Operations and IT leaders require absolute visibility. C9 provides the governance tools to enforce accountability across your entire customer experience and team reachability.
                </p>
                
                <div className="grid sm:grid-cols-2 gap-8">
                   {[
-                    { icon: <Monitor />, title: "Reporting Visibility", desc: "Live dashboards showing abandoned rates and team availability." },
-                    { icon: <Settings />, title: "System Control", desc: "Manage routing, IVRs, and user permissions in real-time." },
-                    { icon: <ShieldCheck />, title: "Support Ownership", desc: "Direct access to senior Australian engineers for all voice incidents." },
-                    { icon: <Zap />, title: "Continuity Planning", desc: "Pre-configured failover paths for immediate outage recovery." }
+                    { icon: <Monitor />, title: "Operational Visibility", desc: "Live dashboards tracking system performance and team availability metrics." },
+                    { icon: <Settings />, title: "Infrastructure Control", desc: "Immediate management of routing logic, user permissions, and IVR paths." },
+                    { icon: <ShieldCheck />, title: "Engineer Accountability", desc: "Direct access to senior Australian engineers who own every incident." },
+                    { icon: <Zap />, title: "Continuity Protocols", desc: "Pre-configured failover paths to ensure 100% operational uptime." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-5">
                        <div className="text-[#5D00D6] shrink-0 mt-1">
@@ -415,7 +436,7 @@ export default function C9PhoneSystemPage() {
                     alt="Stable business communication infrastructure" 
                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
+                             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
                </div>
             </FadeIn>
             
@@ -438,9 +459,9 @@ export default function C9PhoneSystemPage() {
           <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
              <FadeIn direction="left">
                 <span className="c9-eyebrow mb-4">Measured Results</span>
-                <h2 className="c9-section-heading mb-6">Commercially Credible Outcomes for Modern Operations.</h2>
+                <h2 className="c9-section-heading mb-6">Operational Outcomes for Modern Infrastructure.</h2>
                 <p className="c9-body mb-10 text-slate-600">
-                   When you shift to C9 Managed Voice, the impact is immediate and observable across your entire business.
+                   Deploying C9 Managed Voice delivers immediate, observable impact across your entire business operations.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -490,13 +511,13 @@ export default function C9PhoneSystemPage() {
            <div className="max-w-4xl mx-auto text-center mb-16">
               <FadeIn>
                 <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6">
-                  If your current phone system is creating missed calls or support frustration, it is already costing your business.
+                  If your communication system isn&apos;t managed, it&apos;s a liability.
                 </h3>
                 <p className="c9-body mb-10 text-lg">
-                  Let&apos;s review whether your current communication setup is protecting your customers or pushing them away.
+                  Stop tolerating missed-call risks and support dead-ends. Deploy a communication system designed for high-authority business operations.
                 </p>
                 <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Book a Communication System Review</Link>
+                  <Link href="#consultation">Enforce System Reliability</Link>
                 </C9Button>
               </FadeIn>
            </div>
@@ -504,10 +525,10 @@ export default function C9PhoneSystemPage() {
            <div className="bg-[#5D00D6] rounded-[48px] p-10 lg:p-20 relative overflow-hidden shadow-2xl shadow-purple-900/40 text-center">
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-[0.05] rounded-full blur-[100px] -mr-64 -mt-64" />
               <div className="relative z-10">
-                <span className="c9-eyebrow !text-white/80 mb-4">Commercial Strategy</span>
-                <h2 className="c9-section-heading !text-white mb-6">Customer Experience + Reliability + Accountability</h2>
+                <span className="c9-eyebrow !text-white/80 mb-4">Infrastructure Strategy</span>
+                <h2 className="c9-section-heading !text-white mb-6">Reliability + Accountability + Control</h2>
                 <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Talk to C9 About Business Phone Systems</Link>
+                  <Link href="#consultation">Talk to C9 About Managed Systems</Link>
                 </C9Button>
               </div>
            </div>
@@ -529,18 +550,18 @@ export default function C9PhoneSystemPage() {
       <section id="consultation" className="bg-white">
         <WpConsultationForm 
           showHeader={false} 
-          eyebrow="VOICE INFRASTRUCTURE AUDIT"
-          title="Ready to remove communication risk?"
-          description="Book a technical strategy session with our senior voice engineers to review your national infrastructure and identify missed-call risks."
+          eyebrow="COMMUNICATION AUDIT"
+          title="Ready to eliminate communication risk?"
+          description="Book a technical strategy session with our senior engineers to review your national infrastructure and identify missed-call vulnerabilities."
           formTitle="Request an Operational Review"
         />
       </section>
 
       <WpFAQAndFeedback 
         faqItems={[
-          { q: "How does C9 handle transition from legacy systems?", a: "We manage every stage of the migration, from strategic number porting to day-one staff training. Our framework is designed to ensure zero operational downtime, meaning your customers can reach you throughout the entire rollout process." },
-          { q: "What happens if our primary internet fails?", a: "Our cloud-native platform includes pre-configured failover paths. Calls can be automatically re-routed to mobile apps, secondary locations, or remote softphones, ensuring 100% reachability regardless of site-level outages." },
-          { q: "Does C9 Voice integrate with our existing CRM?", a: "Yes. C9 Voice supports deep integration with leading CRM platforms, allowing for live synchronisation of customer data, click-to-call functionality, and real-time activity logging to improve team productivity." }
+          { q: "How does C9 manage the transition of critical infrastructure?", a: "We treat every migration as a high-authority engineering project. From strategic number porting to day-one staff onboarding, our framework is designed to ensure zero operational downtime, ensuring your business stays reachable throughout the entire deployment." },
+          { q: "What protocols are in place for site-level failures?", a: "Our platform includes pre-configured, automatic failover paths. Calls are immediately re-routed to secondary locations, mobile apps, or remote softphones, enforcing 100% reachability regardless of site-level internet or power outages." },
+          { q: "Can the C9 System integrate with our operational tools?", a: "Yes. C9 Voice supports deep integration with leading CRM and productivity platforms, synchronising customer data and activity logs in real-time to remove team friction and improve data accuracy." }
         ]}
       />
 
