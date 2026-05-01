@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Linkedin, Twitter, ArrowLeft, ArrowRight, ChevronRight, Target, ShieldCheck, CheckCircle, Clock, Calendar } from 'lucide-react';
