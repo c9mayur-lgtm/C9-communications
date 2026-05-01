@@ -94,7 +94,7 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="pt-16 md:pt-24 bg-white">
+    <div className="pt-0 bg-white">
       {/* ── HERO ── */}
       <Section className="text-center" bg="none">
         <FadeIn>

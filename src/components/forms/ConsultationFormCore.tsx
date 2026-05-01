@@ -69,7 +69,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
   const currentPath = paths.find(p => p.id === selectedPath)!;
 
   return (
-    <div className="bg-white rounded-[32px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] p-8 md:p-10 border border-slate-100 max-w-[500px] mx-auto lg:ml-auto">
+    <div className="bg-white rounded-none p-8 md:p-10 max-w-[500px] mx-auto lg:ml-auto">
       <div className="flex flex-col items-center mb-8">
         <h3 className="text-[22px] font-bold text-center text-[#0c1024] mb-2 tracking-tight">
           {formTitle}
@@ -94,22 +94,22 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1.5">
             <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">First Name</label>
-            <input type="text" placeholder="John" className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" />
+            <input type="text" placeholder="John" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" />
           </div>
           <div className="flex flex-col gap-1.5">
             <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Last Name</label>
-            <input type="text" placeholder="Doe" className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" />
+            <input type="text" placeholder="Doe" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" />
           </div>
         </div>
 
         <div className="flex flex-col gap-1.5">
           <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Work Email</label>
-          <input type="email" placeholder="john@company.com.au" className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" />
+          <input type="email" placeholder="john@company.com.au" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" />
         </div>
 
         <div className="flex flex-col gap-1.5">
           <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Organisation</label>
-          <input type="text" placeholder="Organisation name" className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" />
+          <input type="text" placeholder="Organisation name" className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" />
         </div>
 
         <div className="flex flex-col gap-1.5">
@@ -124,7 +124,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             }
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold min-h-[80px] resize-none placeholder:text-slate-300"
+            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold min-h-[80px] resize-none placeholder:text-slate-300"
           />
         </div>
 

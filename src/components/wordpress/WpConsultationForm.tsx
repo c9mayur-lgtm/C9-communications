@@ -43,7 +43,7 @@ export const WpConsultationForm = ({
           {/* Left Column (Content) */}
           <div className="max-w-[580px]">
             <FadeIn>
-              <span className="c9-eyebrow !text-white bg-[#0c1024] px-4 py-1.5 rounded-lg mb-6 block w-fit">
+              <span className="c9-eyebrow !text-white bg-[#0c1024] px-4 py-1.5 rounded-none mb-6 block w-fit">
                 {eyebrow}
               </span>
               
@@ -70,7 +70,7 @@ export const WpConsultationForm = ({
                     { title: '3. You get a clear roadmap', body: 'Plain English. Exact pricing. No lock-in or pressure.', icon: FileText }
                   ].map((step, idx) => (
                     <div key={idx} className="flex gap-4 items-start">
-                      <div className="w-10 h-10 rounded-full bg-[#D6CEFD] flex items-center justify-center text-[#5D00D6] shrink-0">
+                      <div className="w-10 h-10 rounded-none bg-[#D6CEFD] flex items-center justify-center text-[#5D00D6] shrink-0">
                         <step.icon size={18} />
                       </div>
                       <div className="pt-0.5">

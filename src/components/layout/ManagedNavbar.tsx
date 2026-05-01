@@ -222,7 +222,7 @@ export const ManagedNavbar = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/resources/blog" legacyBehavior passHref>
+                <Link href="/insights" legacyBehavior passHref>
                   <NavigationMenuLink className="bg-transparent hover:bg-gray-50 text-text-primary font-bold text-sm tracking-tight px-4 py-2 rounded-xl transition-all block h-auto">
                     Resources
                   </NavigationMenuLink>

@@ -2,166 +2,289 @@
 
 import React from 'react';
 import { 
-  Building2, 
   Users, 
-  Target, 
   ShieldCheck, 
-  Globe2, 
-  Briefcase,
   Zap,
   ArrowRight,
-  Heart,
-  Award
+  Server,
+  Headphones,
+  CheckCircle2,
+  Monitor,
+  Lock,
+  Rocket,
+  PhoneCall
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Section } from '@/components/design-system/Section';
+import { H1, H2, H3, Body, Label } from '@/components/design-system/Typography';
+import { C9Button } from '@/components/design-system/C9Button';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { WpWhyPartner } from '@/components/wordpress/WpWhyPartner';
 import EngineeringStructure from '@/components/sections/enterprise/EngineeringStructure';
-import EscalationModel from '@/components/sections/enterprise/EscalationModel';
+import { AuthorityCta } from '@/components/sections/shared/AuthorityCta';
+import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
+import { LogoStrip } from '@/components/sections/LogoStrip';
 
-const FadeUp = ({ children, delay = 0, className = '' }: { children: React.ReactNode, delay?: number, className?: string }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6, delay, ease: 'easeOut' }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
+const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
+  children: React.ReactNode; 
+  delay?: number; 
+  className?: string;
+  direction?: 'up' | 'down' | 'left' | 'right' 
+}) => {
+  const variants = {
+    up: { y: 20, opacity: 0 },
+    down: { y: -20, opacity: 0 },
+    left: { x: 20, opacity: 0 },
+    right: { x: -20, opacity: 0 }
+  };
+
+  return (
+    <motion.div
+      initial={variants[direction]}
+      whileInView={{ y: 0, x: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <div className="pt-0 bg-white overflow-x-hidden">
       
-      {/* ── 1. HERO: PURPOSE-DRIVEN ── */}
-      <section className="relative pt-32 pb-40 overflow-hidden bg-[#1A1A2E] text-white">
-        <div className="container mx-auto px-6 max-w-[1240px] relative z-10">
-          <div className="max-w-4xl">
-            <FadeUp>
-              <span className="c9-eyebrow !text-white/60 mb-8 border border-white/20 px-4 py-1.5 rounded-full bg-white/10">
-                SINCE 2015
-              </span>
-              <h1 className="c9-hero-title !text-white mb-10">
-                Simplifying technology <br />
-                <span className="text-[#A855F7]">for a complex world.</span>
-              </h1>
-              <p className="c9-body !text-gray-400 !text-[20px] md:!text-[24px] max-w-3xl">
-                C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations, SLA-driven support, and proven large-scale deployments.
-              </p>
-            </FadeUp>
+      {/* ══ 1. HERO ══════════════════════════════════════════════════ */}
+      <Section className="relative overflow-hidden" bg="none">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
+          <div>
+            <FadeIn>
+              <Label>About C9 Communications</Label>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <H1 className="mb-6 !text-left">
+                A Managed IT Partner You Can Rely On <span className="text-[#5D00D6]">When It Matters</span>
+              </H1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <Body className="mb-10 text-lg md:text-xl text-left">
+                C9 Communications delivers secure, scalable IT and telco operations with clear ownership, fast response, and zero vendor confusion. We don’t just support systems — we take responsibility for keeping your business running.
+              </Body>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <div className="flex flex-wrap gap-4">
+                <C9Button className="px-10 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
+                   <Link href="#consultation">Speak to Our Team</Link>
+                </C9Button>
+                <C9Button variant="outline" className="px-10 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
+                   <Link href="#accountability">Our Accountability Model</Link>
+                </C9Button>
+              </div>
+            </FadeIn>
           </div>
+
+          <FadeIn delay={0.2} direction="right" className="relative">
+            <div className="relative rounded-none overflow-hidden aspect-square lg:aspect-[4/5]">
+               <img 
+                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
+                 alt="C9 Operational Centre" 
+                 className="w-full h-full object-cover grayscale opacity-90"
+               />
+               <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/20 to-transparent" />
+               <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 bg-white/95 backdrop-blur-md rounded-none p-6 md:p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-none bg-[#5D00D6] flex items-center justify-center text-white">
+                      <ShieldCheck size={20} />
+                    </div>
+                    <div className="text-[16px] font-bold text-slate-900 leading-none">Operational Maturity</div>
+                  </div>
+                  <Body className="text-[14px]">Engineering-first support for high-stakes environments.</Body>
+               </div>
+            </div>
+          </FadeIn>
+        </div>
+      </Section>
+
+      {/* ══ 2. POSITIONING ══════════════════════════════════════════ */}
+      <Section id="accountability" bg="gray" className="py-20 md:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <FadeIn>
+            <Label className="mb-4 block text-rose-600">The C9 Differentiator</Label>
+            <H2 className="mb-6">Built for Businesses That Can’t Afford Downtime</H2>
+            <Body className="mb-8">
+              Most Managed Service Providers (MSPs) operate on a volume-based model. C9 operates on an accountability model. We treat your infrastructure as a business-critical utility, not just a list of support tickets.
+            </Body>
+            <div className="space-y-6">
+              {[
+                { title: "Single Partner Ownership", desc: "We manage your entire stack—IT, network, and security—eliminating the gap between providers." },
+                { title: "Operational Responsibility", desc: "We own the uptime. If there is a fault, we own the resolution, regardless of which vendor is at fault." },
+                { title: "Eliminating Fragmentation", desc: "No more juggling multiple telco and IT contracts. One partner, one invoice, one point of contact." }
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4">
+                  <CheckCircle2 className="text-[#5D00D6] shrink-0 mt-1" size={20} />
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
+                    <Body className="text-sm">{item.desc}</Body>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1} direction="right">
+            <div className="bg-[#0c1024] p-10 md:p-12 rounded-none text-white">
+               <H3 className="text-white mb-8">Business Continuity Focus</H3>
+               <p className="text-white/60 mb-10 leading-relaxed">
+                 We don't just "help businesses grow"—we provide the stable, secure foundation that makes growth possible. Our focus is on removing technical friction so your leadership can focus on strategy.
+               </p>
+               <div className="p-8 bg-white/5 rounded-none">
+                  <div className="text-3xl font-black text-[#A855F7] mb-2 leading-none tracking-tight">99.99%</div>
+                  <div className="text-[11px] font-bold uppercase tracking-widest text-white/40">Core Network Uptime</div>
+               </div>
+            </div>
+          </FadeIn>
+        </div>
+      </Section>
+
+      {/* ══ 3. WHAT WE DO (RESPONSIBILITY) ═══════════════════════════ */}
+      <Section bg="white" className="py-20 md:py-24">
+        <div className="text-center mb-16">
+          <Label className="mb-4 block">Responsibility Framework</Label>
+          <H2>What We Take Responsibility For</H2>
+          <Body className="max-w-2xl mx-auto mt-4">
+            You don’t manage multiple providers. We own the outcome for your entire technology environment.
+          </Body>
         </div>
         
-        {/* Animated Background Element */}
-        <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none opacity-20 overflow-hidden">
-            <motion.div 
-               animate={{ rotate: 360 }}
-               transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-               className="w-[800px] h-[800px] border-[1px] border-white/20 rounded-full flex items-center justify-center -translate-y-1/4 translate-x-1/4"
-            >
-                <div className="w-[600px] h-[600px] border-[1px] border-white/10 rounded-full" />
-                <div className="w-[400px] h-[400px] border-[1px] border-white/5 rounded-full" />
-            </motion.div>
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+          {[
+            { 
+              icon: Server, 
+              title: "Managed IT & Infrastructure", 
+              desc: "Full ownership of server environments, cloud infrastructure (Azure/AWS), and core network routing. We ensure your systems are resilient, patched, and performing at peak levels." 
+            },
+            { 
+              icon: Monitor, 
+              title: "Modern Workplace & Endpoints", 
+              desc: "Management of the entire end-user experience. From hardware procurement and automated deployment to Microsoft 365 governance and endpoint security." 
+            },
+            { 
+              icon: Lock, 
+              title: "Cybersecurity & Protection", 
+              desc: "Continuous security operations including EDR monitoring, identity protection, and risk visibility. Security is not an add-on; it is baked into every layer of our management." 
+            },
+            { 
+              icon: Headphones, 
+              title: "Support & Operations", 
+              desc: "Australia-wide support with direct access to senior engineers. We focus on root-cause resolution, not just closing tickets, to ensure long-term stability." 
+            }
+          ].map((item, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+              <div className="p-8 md:p-10 rounded-none bg-slate-50 transition-all group h-full flex flex-col">
+                <div className="w-14 h-14 rounded-none bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:scale-110 transition-transform">
+                  <item.icon size={28} />
+                </div>
+                <H3 className="mb-4 text-2xl tracking-tight">{item.title}</H3>
+                <Body className="flex-grow">{item.desc}</Body>
+              </div>
+            </FadeIn>
+          ))}
         </div>
-      </section>
+      </Section>
 
-      {/* ── 2. AT A GLANCE (Big Stats) ── */}
-      <section className="py-20 bg-slate-50 border-b border-gray-100">
-        <div className="container mx-auto px-6 max-w-[1240px]">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left">
+      {/* ══ 4. ENGINEERING STRUCTURE ═══════════════════════════════ */}
+      <EngineeringStructure />
+
+      {/* ══ 5. TRUST SIGNALS: LOGO STRIP ═══════════════════════════ */}
+      <LogoStrip />
+
+      {/* ══ 6. OPERATIONAL CERTAINTY ════════════════════════════════ */}
+      <WpWhyPartner />
+
+      {/* ══ 7. THE C9 ECOSYSTEM (Trust Funnel Transition) ════════════ */}
+      <AuthorityCta 
+        variant="funnel"
+        eyebrow="THE C9 ECOSYSTEM"
+        title="Operational Proof Across the Entire Lifecycle."
+        description="About Us is just the foundation. Explore the specific layers of our operational capability and cultural standard."
+        primaryText="Review Our Differentiation"
+        primaryHref="/about/why-c9"
+        secondaryText="Meet the Team"
+        secondaryHref="/about/team"
+      />
+
+      {/* ══ 8. FUNNEL NAVIGATION CARDS ══════════════════════════════ */}
+      <section className="py-16 lg:py-24 bg-white border-y border-slate-100">
+        <div className={C}>
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              { label: 'Business Endpoints', val: '25,000+' },
-              { label: 'Uptime Commitment', val: '99.99%' },
-              { label: 'AU Engineering Support', val: '24/7/365' },
-              { label: 'National Infrastructure', val: 'Tier 1 Core' }
-            ].map((s, i) => (
-              <FadeUp key={i} delay={i * 0.05}>
-                <div className="text-[42px] md:text-[56px] font-black text-[#1A1A2E] tracking-tighter leading-none mb-4">{s.val}</div>
-                <div className="c9-eyebrow">{s.label}</div>
-              </FadeUp>
+              { 
+                icon: Zap, 
+                title: "/about/why-c9", 
+                subtitle: "Risk Reduction", 
+                desc: "How we eliminate the standard MSP accountability gap." 
+              },
+              { 
+                icon: Users, 
+                title: "/about/team", 
+                subtitle: "Capability Proof", 
+                desc: "The senior engineering team owning your outcomes." 
+              },
+              { 
+                icon: Rocket, 
+                title: "/about/careers", 
+                subtitle: "Culture Validation", 
+                desc: "The standards that define our technical performance." 
+              }
+            ].map((card, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <Link href={card.title} className="block group">
+                  <div className="p-10 bg-[#F4F0FA] rounded-none transition-all h-full group-hover:-translate-y-1">
+                    <div className="w-12 h-12 rounded-none bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
+                      <card.icon size={24} />
+                    </div>
+                    <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#5D00D6] mb-2">{card.subtitle}</div>
+                    <h3 className="c9-card-title !text-2xl mb-4 text-[#0c1024]">{card.title}</h3>
+                    <p className="c9-body !text-sm text-slate-600">{card.desc}</p>
+                    <div className="mt-8 flex items-center gap-2 text-[#5D00D6] font-bold text-sm">
+                      Explore Layer <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 3. OUR STORY & DNA ── */}
-      <section className="py-24 md:py-40">
-        <div className="container mx-auto px-6 max-w-[1240px]">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
-             <FadeUp>
-                <div className="relative">
-                    <div className="aspect-[4/5] bg-gray-100 rounded-[40px] overflow-hidden group border border-gray-200">
-                        <img 
-                          src="/images/c9_team_collaboration.png" 
-                          alt="C9 Team" 
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                </div>
-             </FadeUp>
-             
-             <div>
-                <FadeUp>
-                    <span className="c9-eyebrow mb-6">OUR DNA</span>
-                    <h2 className="c9-section-heading mb-10">
-                        Born in Sydney. <br className="hidden md:block"/>
-                        Engineered for Australia.
-                    </h2>
-                    <div className="space-y-8 mb-12">
-                        <p className="c9-body !text-xl !text-gray-600 font-medium">
-                            Founded in 2015, C9 was established to solve a critical gap: mid-market Australian businesses were being underserved by the marketing-heavy majors.
-                        </p>
-                        <p className="c9-body">
-                            We built a telco that prioritises engineering over everything else. We own and operate our core network infrastructure, ensuring that whenever you connect with C9, you're on a private, optimized, and business-focused network.
-                        </p>
-                    </div>
-                    <button 
-                      onClick={() => document.getElementById('engineering-section')?.scrollIntoView({ behavior: 'smooth' })}
-                      className="flex items-center gap-3 bg-[#5D00D6] text-white px-10 py-5 rounded-full font-bold hover:gap-5 transition-all shadow-xl shadow-purple-900/10 cursor-pointer c9-button-label"
-                    >
-                        See Our Engineering Model <ArrowRight size={20} />
-                    </button>
-                </FadeUp>
-             </div>
-          </div>
-        </div>
-      </section>
+      {/* ══ 9. FAQ & FEEDBACK ═══════════════════════════════════════ */}
+      <WpFAQAndFeedback />
 
-      {/* ── 4. ENGINEERING STRUCTURE ── */}
-      <div id="engineering-section">
-        <EngineeringStructure />
-      </div>
-
-      {/* ── 5. ESCALATION MODEL ── */}
-      <EscalationModel />
-
-      {/* ── 6. GLOBAL SCALE / TRUST (Awards & Partners Logo Strip) ── */}
-      <section className="py-24 border-y border-gray-100 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-[1240px]">
-            <div className="text-center mb-16">
-                <span className="text-[#5D00D6] font-bold uppercase tracking-widest text-[11px] mb-4 block">VALIDATED BY INDUSTRY</span>
-                <h3 className="text-2xl font-bold text-[#1A1A2E]">Certifications & Recognition</h3>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 items-center opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100">
-                <div className="flex flex-col items-center gap-3"><Award size={42} className="text-[#5D00D6]" /><span className="font-bold text-[10px] uppercase tracking-wider">Microsoft Partner</span></div>
-                <div className="flex flex-col items-center gap-3"><Globe2 size={42} className="text-[#5D00D6]" /><span className="font-bold text-[10px] uppercase tracking-wider">nbn Accredited</span></div>
-                <div className="flex flex-col items-center gap-3"><ShieldCheck size={42} className="text-[#5D00D6]" /><span className="font-bold text-[10px] uppercase tracking-wider">Fortinet Expert</span></div>
-                <div className="flex flex-col items-center gap-3"><Briefcase size={42} className="text-[#5D00D6]" /><span className="font-bold text-[10px] uppercase tracking-wider">ISO 27001 Ready</span></div>
-                <div className="flex flex-col items-center gap-3"><Heart size={42} className="text-[#5D00D6]" /><span className="font-bold text-[10px] uppercase tracking-wider">Sydney Enterprise</span></div>
-                <div className="flex flex-col items-center gap-3"><Zap size={42} className="text-[#5D00D6]" /><span className="font-bold text-[10px] uppercase tracking-wider">Innovation Leader</span></div>
-            </div>
-        </div>
-      </section>
-
-      {/* ── 7. FINAL CTA ── */}
-      <WpConsultationForm
-        eyebrow="READY TO PARTNER?"
-        title="Simplifying IT for your business."
-        description="Experience a more technical, more reliable, and more human technology partner."
-        formTitle="Speak with an Expert"
+      {/* ══ 10. FINAL CTA (Authority Style) ═════════════════════════ */}
+      <AuthorityCta 
+        pillIcon={PhoneCall}
+        eyebrow="READY TO START?"
+        title="Experience Operational Maturity Firsthand"
+        description="Book a technical strategy session to discuss how our infrastructure management model can scale your business and eliminate operational risk."
+        primaryText="Schedule Strategy Session"
+        primaryHref="#consultation"
+        secondaryText="Call 1800 000 299"
+        secondaryHref="tel:1800000299"
+        footerText="Zero-day operational readiness. Guaranteed."
       />
-    </main>
+
+      <section id="consultation" className="bg-white border-t border-slate-100">
+        <WpConsultationForm 
+          showHeader={false} 
+          eyebrow="READY TO START?"
+          title="Build Your Foundation with C9"
+          description="Schedule a technical strategy session to discuss how our infrastructure management model can scale your business."
+          formTitle="Start Strategy Session"
+        />
+      </section>
+    </div>
   );
 }

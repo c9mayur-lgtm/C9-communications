@@ -1,114 +1,210 @@
 'use client';
 
 import React from 'react';
-import { Rocket, Heart, Lightbulb, Coffee, ArrowRight, Zap } from 'lucide-react';
+import { 
+  Rocket, 
+  Target,
+  ShieldCheck,
+  Cpu,
+  Globe,
+  Plus,
+  Zap
+} from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Section } from '@/components/design-system/Section';
+import { H1, H2, H3, Body, Label } from '@/components/design-system/Typography';
+import { C9Button } from '@/components/design-system/C9Button';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { AuthorityCta } from '@/components/sections/shared/AuthorityCta';
 
-const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6, delay, ease: 'easeOut' }}
-  >
-    {children}
-  </motion.div>
-);
+const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
+  children: React.ReactNode; 
+  delay?: number; 
+  className?: string;
+  direction?: 'up' | 'down' | 'left' | 'right' 
+}) => {
+  const variants = {
+    up: { y: 20, opacity: 0 },
+    down: { y: -20, opacity: 0 },
+    left: { x: 20, opacity: 0 },
+    right: { x: -20, opacity: 0 }
+  };
+
+  return (
+    <motion.div
+      initial={variants[direction]}
+      whileInView={{ y: 0, x: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-32 overflow-hidden bg-[#1A1A2E] text-white">
-        <div className="container mx-auto px-6 max-w-[1240px] relative z-10">
-          <div className="max-w-3xl">
-            <FadeUp>
-              <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest mb-8 border border-white/20">
-                JOIN THE TEAM
-              </span>
-              <h1 className="text-[40px] md:text-[64px] font-bold leading-tight mb-8">
-                Build the future of <br />
-                <span className="text-[#A855F7]">Business Connectivity.</span>
-              </h1>
-              <p className="text-gray-400 text-[18px] md:text-[22px] leading-relaxed mb-12">
-                We're looking for architects, engineers, and visionaries who want to redefine how Australian businesses connect and grow.
-              </p>
-              <button className="bg-[#5D00D6] hover:bg-[#4E00AD] text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-xl shadow-purple-900/50">
-                View Open Roles
-              </button>
-            </FadeUp>
+    <div className="pt-0 bg-white">
+      
+      {/* ══ 1. HERO: CULTURE ════════════════════════════════════════ */}
+      <Section className="relative overflow-hidden" bg="none">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
+          <div>
+            <FadeIn>
+              <Label>C9 Careers</Label>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <H1 className="mb-6 !text-left">
+                A Career Defined by <span className="text-[#5D00D6]">Technical Excellence.</span>
+              </H1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <Body className="mb-10 text-lg md:text-xl text-left">
+                The best engineers choose C9 because we prioritize precision over corporate fluff. We provide the high-stakes environments and engineering freedom required to do your best work.
+              </Body>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <div className="flex flex-wrap gap-4">
+                <C9Button className="px-10 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
+                   <Link href="#values">Our Values & Culture</Link>
+                </C9Button>
+                <C9Button variant="outline" className="px-10 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
+                   <Link href="/about">Back to About C9</Link>
+                </C9Button>
+              </div>
+            </FadeIn>
           </div>
-        </div>
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none gradient-mask-l">
-            <Zap size={600} className="text-[#A855F7] -translate-y-1/4 translate-x-1/4" />
-        </div>
-      </section>
 
-      {/* Why Work Here */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container mx-auto px-6 max-w-[1240px]">
-          <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A2E] mb-6">Why grow with C9?</h2>
-              <p className="text-gray-500 text-lg max-w-2xl mx-auto">We provide the environment for you to do your best work, with an engineering-first culture that values innovative problem solving.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Rocket, title: 'Impact', desc: 'Work on mission-critical national infrastructure that powers major Australian businesses.' },
-              { icon: Lightbulb, title: 'Innovation', desc: 'Access the latest networking and security tech, with freedom to experiment and optimize.' },
-              { icon: Heart, title: 'Culture', desc: 'A collaborative, engineering-led environment where your expertise is heard and respected.' },
-              { icon: Coffee, title: 'Balance', desc: 'Flexible working arrangements designed for high performance and personal well-being.' }
-            ].map((item, idx) => (
-              <FadeUp key={idx} delay={idx * 0.1}>
-                <div className="p-8 rounded-3xl border border-gray-100 hover:border-[#5D00D6]/20 hover:shadow-lg transition-all text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mx-auto mb-6">
-                    <item.icon size={32} />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#1A1A2E] mb-4">{item.title}</h3>
-                  <p className="text-gray-500 leading-relaxed text-[14px]">{item.desc}</p>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Departments */}
-      <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-[1240px]">
-            <div className="grid md:grid-cols-2 gap-8">
-                {[
-                    { title: 'Engineering & Operations', roles: 'Network Architects, Security Engineers, VoIP Specialists' },
-                    { title: 'Sales & Growth', roles: 'Account Executives, Partnership Managers, Business Development' },
-                    { title: 'Customer Experience', roles: 'Level 3 Engineers, Project Managers, Support Specialists' },
-                    { title: 'Product & Marketing', roles: 'Product Owners, UX/UI Designers, Marketing Strategists' }
-                ].map((dept, idx) => (
-                    <FadeUp key={idx}>
-                        <div className="bg-white p-10 rounded-[32px] border border-gray-200 group flex justify-between items-center transition-all hover:border-[#5D00D6]">
-                            <div>
-                                <h4 className="text-2xl font-bold text-[#1A1A2E] mb-2">{dept.title}</h4>
-                                <p className="text-gray-500">{dept.roles}</p>
-                            </div>
-                            <div className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center group-hover:bg-[#5D00D6] transition-colors">
-                                <ArrowRight size={20} className="text-gray-300 group-hover:text-white" />
-                            </div>
-                        </div>
-                    </FadeUp>
-                ))}
+          <FadeIn delay={0.2} direction="right" className="relative">
+            <div className="relative rounded-[48px] overflow-hidden shadow-2xl border border-slate-100 aspect-square">
+               <img 
+                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" 
+                 alt="C9 Collaborative Engineering" 
+                 className="w-full h-full object-cover grayscale"
+               />
+               <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/20 to-transparent" />
             </div>
+          </FadeIn>
         </div>
-      </section>
+      </Section>
 
-      {/* Final CTA */}
-      <div id="consultation-section">
+      {/* ══ 2. VALUES: CREDIBILITY ══════════════════════════════════ */}
+      <Section id="values" bg="gray" className="py-24">
+        <div className="text-center mb-16">
+          <Label className="mb-4 block text-rose-600">The C9 Code</Label>
+          <H2>Precision. Ownership. Accountability.</H2>
+          <Body className="max-w-2xl mx-auto mt-4">
+            Our culture is built on a shared commitment to technical results. We remove the noise so you can focus on solving complex infrastructure challenges.
+          </Body>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { 
+              icon: Target, 
+              title: "Extreme Ownership", 
+              desc: "We own the results of our engineering. No blame-shifting, just root-cause resolution." 
+            },
+            { 
+              icon: Zap, 
+              title: "Operational Speed", 
+              desc: "We move fast but with precision. We value engineers who can deliver high-velocity stability." 
+            },
+            { 
+              icon: ShieldCheck, 
+              title: "Security Baseline", 
+              desc: "Security isn't a task—it's how we think about everything we build and manage." 
+            },
+            { 
+              icon: Cpu, 
+              title: "Engineering Freedom", 
+              desc: "The freedom to design, optimize, and deploy best-practice solutions without corporate bureaucracy." 
+            }
+          ].map((item, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+              <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-[#5D00D6]/20 transition-all group h-full shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform">
+                  <item.icon size={24} />
+                </div>
+                <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
+                <Body className="text-sm">{item.desc}</Body>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </Section>
+
+      {/* ══ 3. WHY JOIN: ENVIRONMENT ════════════════════════════════ */}
+      <Section bg="white" className="py-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+           <FadeIn direction="left">
+              <Label className="mb-4 block">The Environment</Label>
+              <H2>High-Stakes Projects. Low-Friction Culture.</H2>
+              <Body className="mt-6 mb-10 text-lg">
+                At C9, you'll work on mission-critical national infrastructure that powers major Australian healthcare, logistics, and retail groups. This is where your expertise has a measurable impact.
+              </Body>
+              <ul className="space-y-6">
+                {[
+                  { title: "Onshore Senior Team", desc: "Collaborate with high-calibre specialists who respect technical precision." },
+                  { title: "Direct Infrastructure Control", desc: "Work on our own core network, not just resold portals." },
+                  { title: "Rigorous Standards", desc: "We align with ISO 27001 and Essential Eight across all operations." }
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-[#5D00D6] flex items-center justify-center text-white shrink-0 mt-0.5">
+                       <Plus size={14} />
+                    </div>
+                    <div>
+                       <h4 className="font-bold text-slate-900">{item.title}</h4>
+                       <p className="text-sm text-slate-500">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+           </FadeIn>
+           <FadeIn direction="right" delay={0.2} className="relative">
+              <div className="bg-[#0c1024] p-12 rounded-[48px] text-white overflow-hidden relative">
+                 <div className="absolute top-0 right-0 p-8 text-[#5D00D6] opacity-10">
+                   <Rocket size={160} />
+                 </div>
+                 <H3 className="text-white mb-6">Growth Path</H3>
+                 <Body className="text-gray-400 mb-8">
+                   We invest in your capability through formal certifications and hands-on exposure to complex enterprise environments.
+                 </Body>
+                 <div className="flex flex-wrap gap-3">
+                    {["Network Architect", "Security Lead", "Solution Engineer", "Service Manager"].map((role, i) => (
+                      <div key={i} className="px-4 py-2 bg-white/10 rounded-full text-[12px] font-bold">
+                         {role}
+                      </div>
+                    ))}
+                 </div>
+              </div>
+           </FadeIn>
+        </div>
+      </Section>
+
+      {/* ══ 4. LOOP CLOSURE: ABOUT (Trust Funnel Transition) ════════ */}
+      <AuthorityCta 
+        variant="funnel"
+        eyebrow="ECOSYSTEM VALIDATION"
+        title="Ready to Impact Enterprise IT?"
+        description="We're always looking for exceptional engineers who value technical accountability. Start by learning more about our operational model."
+        primaryText="About C9 Operations"
+        primaryHref="/about"
+        secondaryText="Submit Your Interest"
+        secondaryHref="#consultation"
+        bg="bg-gray"
+      />
+
+      <div id="consultation">
         <WpConsultationForm
-          eyebrow="READY TO JOIN?"
-          title="Don't see the right role?"
-          description="We're always looking for exceptional talent. Reach out to our team even if there isn't an active listing that fits your profile."
-          formTitle="Connect with HR"
+          eyebrow="TALENT ACQUISITION"
+          title="Connect with Our Talent Team"
+          description="Don't see a specific role? We're always looking for senior engineers and network architects who fit our engineering-first culture."
+          formTitle="Express Interest"
         />
       </div>
-    </main>
+    </div>
   );
 }

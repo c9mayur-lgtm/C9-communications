@@ -54,7 +54,7 @@ export const WpWhyPartner = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             { 
               title: 'Infrastructure Uptime', 
@@ -117,9 +117,9 @@ export const WpWhyPartner = () => {
               ]
             }
           ].map((block, i) => (
-            <div key={i} className="p-8 md:p-12 lg:p-16 border-r border-b border-gray-200 transition-all duration-300 cursor-default flex flex-col">
+            <div key={i} className="p-0 transition-all duration-300 cursor-default flex flex-col">
               <div className="mb-4 self-start">
-                <span className="c9-eyebrow !text-[#5D00D6] px-4 py-1.5 rounded-full border bg-[#F4F0FA] border-[#5D00D6]/20">
+                <span className="c9-eyebrow !text-[#5D00D6]">
                   {block.tag}
                 </span>
               </div>
@@ -132,7 +132,7 @@ export const WpWhyPartner = () => {
               </p>
 
               {/* Metrics Row */}
-              <div className="mt-auto pt-6 border-t border-gray-200 flex items-center gap-0">
+              <div className="mt-auto pt-6 border-t border-gray-100 flex items-center gap-0">
                 {block.metrics.map((m, mi) => (
                   <React.Fragment key={mi}>
                     <div className="flex-1">

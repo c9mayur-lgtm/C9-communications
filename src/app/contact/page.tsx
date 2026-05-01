@@ -90,7 +90,7 @@ export default function ContactPage() {
   const currentPath = paths.find(p => p.id === selectedPath)!;
 
   return (
-    <div className="pt-16 md:pt-24 bg-white">
+    <div className="pt-0 bg-white">
       
       {/* ── HERO ── */}
       <Section className="text-center pb-12" bg="none">
