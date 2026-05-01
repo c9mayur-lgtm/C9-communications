@@ -50,7 +50,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/support',
     '/telco',
     '/telco/business-nbn',
-    '/telco/c9voice',
     '/telco/contact-centre',
     '/telco/enterprise-ethernet',
     '/telco/fast-fibre',

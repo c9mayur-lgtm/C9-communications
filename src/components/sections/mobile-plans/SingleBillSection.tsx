@@ -21,10 +21,10 @@ const SERVICES = [
     icon: Zap
   },
   {
-    title: "C9 Voice Cloud Phone System",
-    body: "Cloud-based phone system for your entire business.",
-    link: "View C9 Voice →",
-    href: "/telco/c9voice",
+    title: "C9 Managed Phone System",
+    body: "Business-grade communication with full accountability and ownership.",
+    link: "View Phone System →",
+    href: "/telco/phone-system",
     icon: Cloud
   }
 ];

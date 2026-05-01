@@ -68,7 +68,6 @@ export default function SitemapPage() {
         { label: "Ultra-Fast Fibre", path: "/telco/fast-fibre" },
         { label: "Inbound & 1300 Services", path: "/telco/inbound-services" },
         { label: "Business Mobile Plans", path: "/telco/mobile-plans" },
-        { label: "C9 Voice Specialized", path: "/telco/c9voice" },
       ]
     },
     {

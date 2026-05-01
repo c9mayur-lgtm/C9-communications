@@ -17,6 +17,7 @@ import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { C9Button } from '@/components/design-system/C9Button';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
+import C9VoiceNetworkDiagram from '@/components/sections/c9-phone-system/C9VoiceNetworkDiagram';
 
 const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
   children: React.ReactNode; 
@@ -542,6 +543,11 @@ export default function C9PhoneSystemPage() {
           { q: "Does C9 Voice integrate with our existing CRM?", a: "Yes. C9 Voice supports deep integration with leading CRM platforms, allowing for live synchronisation of customer data, click-to-call functionality, and real-time activity logging to improve team productivity." }
         ]}
       />
+
+      {/* ══ 12. HIDDEN ARCHIVE ═══════════════════════════════════════ */}
+      <div className="hidden pointer-events-none opacity-0 h-0 overflow-hidden" aria-hidden="true">
+         <C9VoiceNetworkDiagram />
+      </div>
     </main>
   );
 }

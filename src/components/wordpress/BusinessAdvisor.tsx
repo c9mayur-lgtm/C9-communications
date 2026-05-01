@@ -174,8 +174,8 @@ function getResponse(query: string): ChatResponse {
   }
   if (q.match(/voice|phone system|pbx|c9 voice|c9-phone-system|teams.?calling/)) {
     return { 
-      text: "The C9 Voice Cloud Phone System is built for modern work. It includes enterprise features, mobile apps, and deep Microsoft Teams integration to keep your team connected on one platform.", 
-      links: [{ label: 'Business Voice', href: '/telco/c9voice' }]
+      text: "C9 provides reliable business communication with full accountability and support ownership, keeping your teams reachable and your customers connected.", 
+      links: [{ label: 'Business Voice', href: '/telco/phone-system' }]
     };
   }
   if (q.match(/voice.?ai|ai.?receptionist/)) {
