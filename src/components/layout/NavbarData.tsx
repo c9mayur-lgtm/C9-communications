@@ -99,7 +99,7 @@ export const IT_SOLUTIONS_FIXED = {
             { label: 'IT Infrastructure Services', path: '/managed-it/infrastructure' },
             { label: 'Network Solutions', path: '/managed-it/network-solutions' },
             { label: 'Cloud Services', path: '/managed-it/cloud-services' },
-            { label: 'Software Solutions', path: '/managed-it/cloud-services' },
+            // { label: 'Software Solutions', path: '/managed-it/cloud-services' },
           ]
         }
       ]
@@ -265,7 +265,7 @@ export const BUSINESS_IT_SOLUTIONS = {
             { icon: <Server size={14} />,    label: 'IT Infrastructure Services', path: '/managed-it/infrastructure' },
             { icon: <Network size={14} />,   label: 'Network Solutions',           path: '/managed-it/network-solutions' },
             { icon: <Cloud size={14} />,     label: 'Cloud Services',              path: '/managed-it/cloud-services' },
-            { icon: <HardDrive size={14} />, label: 'Software Solutions',          path: '/managed-it/cloud-services' },
+            // { icon: <HardDrive size={14} />, label: 'Software Solutions',          path: '/managed-it/cloud-services' },
           ]
         },
         {

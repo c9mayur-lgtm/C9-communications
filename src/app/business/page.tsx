@@ -13,6 +13,7 @@ import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpSupport } from '@/components/wordpress/WpSupport';
+import { SectionSolutionsPills } from '@/components/sections/SectionSolutionsPills';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -546,6 +547,7 @@ export default function SmallBusinessPage() {
     <main className="min-h-screen bg-white">
       <Hero />
       <WpClientTicker />
+      <SectionSolutionsPills audience="business" />
       <SectionProblem />
       <SectionSolution />
       <SectionProcess />

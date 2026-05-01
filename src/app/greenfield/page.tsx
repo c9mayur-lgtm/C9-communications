@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import {
   ArrowRight, CheckCircle, ShoppingCart, Users2,
@@ -13,6 +13,7 @@ import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpVendors } from '@/components/wordpress/WpVendors';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
+import { SectionSolutionsPills } from '@/components/sections/SectionSolutionsPills';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -702,6 +703,8 @@ const FinalCTA = () => (
   </section>
 );
 
+
+
 /* ─────────────────────────────────────────────────────────
    PAGE EXPORT
    ───────────────────────────────────────────────────────── */
@@ -710,6 +713,7 @@ export default function GreenfieldPage() {
     <main className="min-h-screen bg-white">
       <Hero />
       <WpClientTicker />
+      <SectionSolutionsPills audience="greenfield" />
       <SectionPain />
       <SectionAccountability />
       <SectionGuarantee />

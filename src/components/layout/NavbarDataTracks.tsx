@@ -262,7 +262,7 @@ export const SOLUTIONS_MENU = {
             { icon: <Server size={14} />, label: 'IT Infrastructure Services', path: '/managed-it/infrastructure', desc: 'Secure, high-availability server and compute environments.' },
             { icon: <Network size={14} />, label: 'Network Solutions', path: '/managed-it/network-solutions', desc: 'Robust SD-WAN and LAN architectures for multi-site companies.' },
             { icon: <Cloud size={14} />, label: 'Cloud Services', path: '/managed-it/cloud-services', desc: 'Seamless migration and management for Azure and AWS cloud stacks.' },
-            { icon: <Layers size={14} />, label: 'Software Solutions', path: '/managed-it/cloud-services', desc: 'Tailored software licensing and custom integration services.' },
+            // { icon: <Layers size={14} />, label: 'Software Solutions', path: '/managed-it/cloud-services', desc: 'Tailored software licensing and custom integration services.' },
           ]
         }
       ]
