@@ -131,15 +131,49 @@ export const ManagedFooter = () => {
            </div>
         </div>
         
-        {/* Accreditation Logos */}
-        <div className="flex flex-wrap items-center gap-12 py-12 border-t border-gray-100 opacity-20 filter grayscale group-hover:grayscale-0 transition-opacity">
-           {['nbn Accredited Advisor', 'APNIC', 'TIO', 'CommCom'].map(acc => (
-             <div key={acc} className="flex flex-col gap-2">
-                <div className="h-6 w-16 bg-text-primary rounded" />
-                <span className="text-[8px] font-bold uppercase tracking-widest leading-none">{acc}</span>
-             </div>
-           ))}
-        </div>
+         {/* ══ 4. AUTHORITY ECOSYSTEM (Logos) ══════════════════════════════ */}
+         <div className="py-16 border-t border-gray-100 flex flex-col gap-12">
+            
+            {/* Technical Partners */}
+            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16">
+               <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest min-w-[140px]">Technical Partners</span>
+               <div className="flex flex-wrap items-center gap-x-12 gap-y-8 opacity-30 grayscale hover:opacity-100 transition-all duration-500">
+                  {['Hewlett Packard Enterprise', 'Microsoft Partner', 'Fortinet', 'Ubiquiti'].map(logo => (
+                    <div key={logo} className="flex flex-col items-start">
+                       <div className="h-6 w-20 bg-text-primary rounded mb-1" />
+                       <span className="text-[8px] font-bold uppercase tracking-widest">{logo}</span>
+                    </div>
+                  ))}
+               </div>
+            </div>
+
+            {/* Infrastructure Leaders */}
+            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16">
+               <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest min-w-[140px]">Carrier Infrastructure</span>
+               <div className="flex flex-wrap items-center gap-x-12 gap-y-8 opacity-30 grayscale hover:opacity-100 transition-all duration-500">
+                  {['nbn™ Accredited', 'Telstra Wholesale', 'Optus Wholesale', 'TPG Telecom'].map(logo => (
+                    <div key={logo} className="flex flex-col items-start">
+                       <div className="h-6 w-20 bg-text-primary rounded mb-1" />
+                       <span className="text-[8px] font-bold uppercase tracking-widest">{logo}</span>
+                    </div>
+                  ))}
+               </div>
+            </div>
+
+            {/* Accredited & Compliance */}
+            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16">
+               <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest min-w-[140px]">Compliance & Governance</span>
+               <div className="flex flex-wrap items-center gap-x-12 gap-y-8 opacity-30 grayscale hover:opacity-100 transition-all duration-500">
+                  {['APNIC', 'TIO', 'CommCom', 'ISO 27001 Certified'].map(logo => (
+                    <div key={logo} className="flex flex-col items-start">
+                       <div className="h-6 w-20 bg-text-primary rounded mb-1" />
+                       <span className="text-[8px] font-bold uppercase tracking-widest">{logo}</span>
+                    </div>
+                  ))}
+               </div>
+            </div>
+
+         </div>
         
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-gray-100">
@@ -147,10 +181,14 @@ export const ManagedFooter = () => {
              © {new Date().getFullYear()} C9 Communications. All rights reserved.
            </div>
            
-           <div className="flex gap-8 text-[11px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans">
-              <a href="/privacy-policy" className="hover:text-dark-purple">Cookie Policy</a>
-              <a href="/terms" className="hover:text-dark-purple">Terms</a>
-              <a href="/privacy-policy" className="hover:text-dark-purple">Privacy</a>
+           <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4 text-[11px] font-bold text-brand-purple uppercase tracking-widest font-dm-sans">
+              <Link href="/trust-center" className="hover:text-dark-purple">Trust Center</Link>
+              <Link href="/accessibility-statement" className="hover:text-dark-purple">Accessibility</Link>
+              <Link href="/complaints" className="hover:text-dark-purple">Complaints</Link>
+              <Link href="/financial-hardship" className="hover:text-dark-purple">Hardship</Link>
+              <Link href="/cookie-policy" className="hover:text-dark-purple">Cookie Policy</Link>
+              <Link href="/privacy-policy" className="hover:text-dark-purple">Privacy</Link>
+              <Link href="/terms" className="hover:text-dark-purple">Terms</Link>
            </div>
         </div>
         

@@ -112,7 +112,19 @@ export default function AboutPage() {
       {/* ══ 2. POSITIONING ══════════════════════════════════════════ */}
       <Section id="accountability" bg="gray" className="py-20 md:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <FadeIn>
+          <FadeIn direction="left">
+            <div className="bg-[#0c1024] p-10 md:p-12 rounded-none text-white">
+               <H3 className="text-white mb-8">Business Continuity Focus</H3>
+               <p className="text-white/60 mb-10 leading-relaxed">
+                 We don't just "help businesses grow"—we provide the stable, secure foundation that makes growth possible. Our focus is on removing technical friction so your leadership can focus on strategy.
+               </p>
+               <div className="p-8 bg-white/5 rounded-none">
+                  <div className="text-3xl font-black text-[#A855F7] mb-2 leading-none tracking-tight">99.99%</div>
+                  <div className="text-[11px] font-bold uppercase tracking-widest text-white/40">Core Network Uptime</div>
+               </div>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1} direction="right">
             <Label className="mb-4 block text-rose-600">The C9 Differentiator</Label>
             <H2 className="mb-6">Built for Businesses That Can’t Afford Downtime</H2>
             <Body className="mb-8">
@@ -134,18 +146,58 @@ export default function AboutPage() {
               ))}
             </div>
           </FadeIn>
-          <FadeIn delay={0.1} direction="right">
-            <div className="bg-[#0c1024] p-10 md:p-12 rounded-none text-white">
-               <H3 className="text-white mb-8">Business Continuity Focus</H3>
-               <p className="text-white/60 mb-10 leading-relaxed">
-                 We don't just "help businesses grow"—we provide the stable, secure foundation that makes growth possible. Our focus is on removing technical friction so your leadership can focus on strategy.
-               </p>
-               <div className="p-8 bg-white/5 rounded-none">
-                  <div className="text-3xl font-black text-[#A855F7] mb-2 leading-none tracking-tight">99.99%</div>
-                  <div className="text-[11px] font-bold uppercase tracking-widest text-white/40">Core Network Uptime</div>
-               </div>
+        </div>
+      </Section>
+
+      {/* ══ 2.5 VALUES & NUMBERS ══════════════════════════════════════ */}
+      <Section bg="white" className="py-24 border-y border-slate-100">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
+          {/* Values */}
+          <div>
+            <FadeIn>
+              <Label className="mb-4 block">Our Core Values</Label>
+              <H2 className="mb-10 text-4xl">Principles That Drive Performance</H2>
+            </FadeIn>
+            <div className="grid sm:grid-cols-2 gap-10">
+              {[
+                { title: "Absolute Accountability", desc: "No finger-pointing. If it's on our network, we own the resolution." },
+                { title: "Engineering First", desc: "You speak to Level 2/3 engineers immediately. No script-readers." },
+                { title: "Radical Transparency", desc: "Real-time visibility into your infrastructure performance and security." },
+                { title: "100% On-Shore", desc: "Proudly Australian based. Every support ticket is handled on-shore." }
+              ].map((val, i) => (
+                <FadeIn key={i} delay={i * 0.1}>
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-xl font-bold text-slate-900">{val.title}</h4>
+                    <Body className="text-sm leading-relaxed text-slate-600">{val.desc}</Body>
+                  </div>
+                </FadeIn>
+              ))}
             </div>
-          </FadeIn>
+          </div>
+
+          {/* Numbers */}
+          <div className="bg-[#0c1024] p-12 md:p-16 rounded-none text-white relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <FadeIn>
+              <Label className="mb-4 block text-white/40">C9 by the Numbers</Label>
+              <H2 className="text-white mb-12">Measurable Operational Excellence</H2>
+            </FadeIn>
+            <div className="grid grid-cols-2 gap-x-12 gap-y-16">
+              {[
+                { val: "15+", label: "Years Experience" },
+                { val: "24/7", label: "NOC Monitoring" },
+                { val: "99.9%", label: "Client Retention" },
+                { val: "2.5k+", label: "Endpoints Managed" }
+              ].map((stat, i) => (
+                <FadeIn key={i} delay={i * 0.1}>
+                  <div className="flex flex-col border-l border-white/10 pl-6">
+                    <div className="text-3xl md:text-4xl font-bold text-white mb-1 tracking-tight">{stat.val}</div>
+                    <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">{stat.label}</div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -223,31 +275,34 @@ export default function AboutPage() {
             {[
               { 
                 icon: Zap, 
-                title: "/about/why-c9", 
+                name: "Why C9 Communications", 
+                path: "/about/why-c9",
                 subtitle: "Risk Reduction", 
                 desc: "How we eliminate the standard MSP accountability gap." 
               },
               { 
                 icon: Users, 
-                title: "/about/team", 
+                name: "The C9 Team", 
+                path: "/about/team",
                 subtitle: "Capability Proof", 
                 desc: "The senior engineering team owning your outcomes." 
               },
               { 
                 icon: Rocket, 
-                title: "/about/careers", 
+                name: "Careers & Culture", 
+                path: "/about/careers",
                 subtitle: "Culture Validation", 
                 desc: "The standards that define our technical performance." 
               }
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <Link href={card.title} className="block group">
+                <Link href={card.path} className="block group">
                   <div className="p-10 bg-[#F4F0FA] rounded-none transition-all h-full group-hover:-translate-y-1">
                     <div className="w-12 h-12 rounded-none bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                       <card.icon size={24} />
                     </div>
                     <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#5D00D6] mb-2">{card.subtitle}</div>
-                    <h3 className="c9-card-title !text-2xl mb-4 text-[#0c1024]">{card.title}</h3>
+                    <h3 className="c9-card-title !text-2xl mb-4 text-[#0c1024]">{card.name}</h3>
                     <p className="c9-body !text-sm text-slate-600">{card.desc}</p>
                     <div className="mt-8 flex items-center gap-2 text-[#5D00D6] font-bold text-sm">
                       Explore Layer <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

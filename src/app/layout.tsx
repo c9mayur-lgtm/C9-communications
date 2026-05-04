@@ -5,6 +5,7 @@ import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
 import { WpFloatingContact } from "@/components/wordpress/WpFloatingContact";
 import { BusinessAdvisor } from "@/components/wordpress/BusinessAdvisor";
 import { CookieConsent } from "@/components/layout/CookieConsent";
+import { FloatingCEO } from "@/components/layout/FloatingCEO";
 import { InquiryProvider } from "@/components/context/InquiryContext";
 import { AudienceProvider } from "@/components/context/AudienceContext";
 import { AudienceSwitcher } from "@/components/layout/AudienceSwitcher";
@@ -161,6 +162,7 @@ export default function RootLayout({
             </div>
             <WpFloatingContact />
             <BusinessAdvisor />
+            <FloatingCEO />
             <CookieConsent />
             <Analytics />
           </InquiryProvider>

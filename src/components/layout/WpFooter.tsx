@@ -33,7 +33,7 @@ export const WpFooter = () => {
                 <li><a href="/about/team" className="!text-white hover:text-[#5D00D6] transition-colors block">Team</a></li>
                 <li><a href="/about/careers" className="!text-white hover:text-[#5D00D6] transition-colors block">Careers</a></li>
                 <li><a href="/about/partners" className="!text-white hover:text-[#5D00D6] transition-colors block">Partners & Certifications</a></li>
-                <li><a href="/about/reviews" className="!text-white hover:text-[#5D00D6] transition-colors block">Reviews & Awards</a></li>
+                <li><a href="/accessibility-statement" className="!text-white hover:text-[#5D00D6] transition-colors block">Accessibility Statement</a></li>
                 <li><a href="/insights" className="!text-white hover:text-[#5D00D6] transition-colors block">Blog</a></li>
                 <li><a href="/case-studies" className="!text-white hover:text-[#5D00D6] transition-colors block">Case studies</a></li>
             </ul>
@@ -146,7 +146,12 @@ export const WpFooter = () => {
           <div className="w-full h-px bg-gray-100 mb-2"></div>
 
           {/* Legal Links Row */}
-          <div className="flex justify-center items-center gap-8 mb-2 text-[14px] font-semibold text-[#5D00D6]">
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 mb-2 text-[14px] font-semibold text-[#5D00D6]">
+            <a href="/trust-center" className="hover:underline">Trust Center</a>
+            <a href="/accessibility-statement" className="hover:underline">Accessibility</a>
+            <a href="/complaints" className="hover:underline">Complaints</a>
+            <a href="/financial-hardship" className="hover:underline">Hardship Policy</a>
+            <a href="/cookie-policy" className="hover:underline">Cookie Policy</a>
             <a href="/terms" className="hover:underline">Terms of Use</a>
             <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
             <a href="/site-map" className="hover:underline">Sitemap</a>

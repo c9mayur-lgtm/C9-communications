@@ -36,8 +36,9 @@ export const CookieConsent = () => {
 
   return (
     <AnimatePresence>
-      {isVisible && (
+      {isVisible ? (
         <motion.div
+          key="consent-banner"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0, transition: { duration: 0.3 } }}
@@ -61,7 +62,7 @@ export const CookieConsent = () => {
                   <div>
                     <h3 className="text-[16px] font-bold mb-1">Your Privacy</h3>
                     <p className="text-[14px] text-white/60 leading-relaxed">
-                      We use cookies to improve your browsing experience, analyze site traffic, and personalize content.
+                      We use cookies to improve your browsing experience, analyze site traffic, and personalize content. Read our <a href="/cookie-policy" className="text-[#5D00D6] hover:underline font-semibold">Cookie Policy</a>.
                     </p>
                   </div>
                 </div>
@@ -157,6 +158,25 @@ export const CookieConsent = () => {
             )}
           </div>
         </motion.div>
+      ) : (
+        <motion.button
+          key="consent-trigger"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => {
+            setIsVisible(true);
+            setShowSettings(true);
+          }}
+          className="fixed bottom-6 left-6 z-[290] w-10 h-10 bg-white border border-slate-200 text-slate-400 hover:text-[#5D00D6] hover:border-[#5D00D6] shadow-lg rounded-full flex items-center justify-center transition-all group"
+          title="Cookie Settings"
+        >
+          <Shield size={18} className="group-hover:rotate-12 transition-transform" />
+          <span className="absolute left-12 bg-[#0c1024] text-white text-[10px] font-bold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">
+            Manage Privacy
+          </span>
+        </motion.button>
       )}
     </AnimatePresence>
   );
