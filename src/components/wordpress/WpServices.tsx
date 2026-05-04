@@ -142,6 +142,13 @@ export const WpServices = () => {
               </motion.div>
             </AnimatePresence>
           </div>
+          <div className="mt-8 flex items-center justify-between border-t border-gray-100 pt-6">
+            <p className="text-[13px] text-slate-400 font-medium">One provider. One point of accountability. No blame shifting.</p>
+            <a href="/telco" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] hover:gap-3 transition-all group">
+              View All Telco Solutions
+              <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+          </div>
         </div>
       </section>
     </>

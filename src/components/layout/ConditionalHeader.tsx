@@ -6,7 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { AudienceSwitcher } from "@/components/layout/AudienceSwitcher";
 
-const pagesWithSelfNavFooter: string[] = ['/managed', '/defense', '/lumina'];
+const pagesWithSelfNavFooter: string[] = ['/defense', '/lumina'];
 
 export function ConditionalHeader() {
   const pathname = usePathname();

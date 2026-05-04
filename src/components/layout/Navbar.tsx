@@ -347,15 +347,21 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
                 return (
                   <div key={tab.name} className="border-b border-gray-50 last:border-none pb-2">
-                    <button 
-                      onClick={() => toggleAccordion(tab.menuKey)}
-                      className="flex items-center justify-between w-full py-4 text-left group"
-                    >
-                      <span className={`text-[18px] font-semibold  transition-colors ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}>
+                  <div className="flex items-center justify-between w-full py-4">
+                      <Link
+                        href={tab.path}
+                        onClick={onClose}
+                        className={`text-[18px] font-semibold transition-colors flex-1 ${isActive ? 'text-[#5D00D6]' : 'text-slate-800'}`}
+                      >
                         {tab.name}
-                      </span>
-                      <ChevronDown size={20} className={`text-slate-400 transition-transform duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
-                    </button>
+                      </Link>
+                      <button
+                        onClick={() => toggleAccordion(tab.menuKey)}
+                        className="p-2 -mr-2"
+                      >
+                        <ChevronDown size={20} className={`text-slate-400 transition-transform duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
+                      </button>
+                  </div>
 
                     <AnimatePresence>
                       {isActive && (
@@ -637,12 +643,22 @@ export const Navbar = () => {
             const isOpen = openMenu === tab.menuKey;
             return (
               <div key={tab.name} className="relative h-full flex items-center" onMouseEnter={() => handleEnter(tab.menuKey)}>
-                <button className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-[13px] font-medium transition-all duration-300 ${
+                <div className={`flex items-center gap-0.5 rounded-xl text-[13px] font-medium transition-all duration-300 ${
                   isOpen ? 'text-[#5D00D6] bg-purple-50/80 shadow-sm' : (isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]')
                 }`}>
-                  {tab.name}
-                  <ChevronDown size={13} className={`transition-transform duration-300 opacity-40 ${isOpen ? 'rotate-180 text-[#5D00D6] opacity-100' : ''}`} />
-                </button>
+                  <Link
+                    href={tab.path}
+                    className="px-3 py-1.5"
+                  >
+                    {tab.name}
+                  </Link>
+                  <button
+                    className="pr-2 py-1.5 opacity-40 hover:opacity-100"
+                    onClick={() => setOpenMenu(isOpen ? null : tab.menuKey)}
+                  >
+                    <ChevronDown size={13} className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : ''}`} />
+                  </button>
+                </div>
               </div>
             );
           })}

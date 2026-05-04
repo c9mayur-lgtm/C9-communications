@@ -75,6 +75,7 @@ export const IT_SOLUTIONS_FIXED = {
         {
           heading: 'Managed IT Service',
           items: [
+            { label: 'Managed IT Overview', path: '/managed-it', color: '#5D00D6' },
             { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
             { label: 'Outsourcing', path: '/managed-it/outsourcing' },
             { label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting' },
@@ -140,7 +141,8 @@ export const TELCO_FIXED = {
         {
           heading: 'Internet',
           items: [
-            { label: 'Business nbn™', path: '/telco/business-nbn', color: '#5D00D6' },
+            { label: 'Telco Solutions Overview', path: '/telco', color: '#5D00D6' },
+            { label: 'Business nbn™', path: '/telco/business-nbn' },
             { label: 'Fast Fibre', path: '/telco/fast-fibre' },
             { label: 'nbn™ Enterprise Ethernet', path: '/telco/enterprise-ethernet' },
           ]
@@ -201,7 +203,8 @@ export const MODERN_WORKPLACE_FIXED = {
         {
           heading: 'Services',
           items: [
-            { label: 'Productivity', path: '/modern-workplace/productivity', color: '#5D00D6' },
+            { label: 'Modern Workplace Overview', path: '/modern-workplace', color: '#5D00D6' },
+            { label: 'Productivity', path: '/modern-workplace/productivity' },
             { label: 'Communication Tools', path: '/modern-workplace/communication-tools' },
             { label: 'Secure Remote Work', path: '/modern-workplace/secure-remote-work' },
             { label: 'Compliance & Data Protection', path: '/modern-workplace/compliance-data-protection' },
@@ -660,7 +663,7 @@ export const MEGA_MAP: Record<string, any> = {
 export const TABS = [
   { name: 'IT Solutions',     menuKey: 'it-solutions',     path: '/managed-it' },
   { name: 'Telco',            menuKey: 'telco',            path: '/telco' },
-  { name: 'Modern Workplace', menuKey: 'modern-workplace', path: '/modern-workplace/productivity' },
+  { name: 'Modern Workplace', menuKey: 'modern-workplace', path: '/modern-workplace' },
   { name: 'Company',          menuKey: 'company',          path: '/about' },
   { name: 'Resources',        menuKey: 'resources',        path: '/resources' },
 ];

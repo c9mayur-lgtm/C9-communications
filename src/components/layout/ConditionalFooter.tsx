@@ -4,7 +4,7 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import { WpFooter } from "@/components/layout/WpFooter";
 
-const pagesWithSelfNavFooter: string[] = ['/managed', '/defense', '/lumina'];
+const pagesWithSelfNavFooter: string[] = ['/defense', '/lumina'];
 
 export function ConditionalFooter() {
   const pathname = usePathname();

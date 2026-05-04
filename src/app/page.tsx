@@ -26,8 +26,71 @@ export default function Homepage() {
 
       <WpClientTicker />
       <WpHighlights />
+
       <WpHeroProducts />
       <WpSimplifyingIT />
+
+      {/* ── CAPABILITY PILLARS — Direct links to the 3 major hubs ── */}
+      <section className="py-14 bg-slate-50 border-y border-slate-100">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
+          <div className="text-center mb-10">
+            <span className="c9-eyebrow mb-3 block">WHAT WE DO</span>
+            <h2 className="c9-section-heading">Three Pillars. One Accountable Partner.</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                label: 'Managed IT',
+                desc: 'Helpdesk, infrastructure, cloud, and strategy — all under one managed service model with full accountability.',
+                href: '/managed-it',
+                bg: 'bg-[#5D00D6]',
+                pill: 'IT Solutions',
+              },
+              {
+                label: 'Telco & Connectivity',
+                desc: 'Business nbn™, fast fibre, cloud voice, mobile fleet, and contact centre — one provider, no finger-pointing.',
+                href: '/telco',
+                bg: 'bg-[#0c1024]',
+                pill: 'Telco',
+              },
+              {
+                label: 'Modern Workplace',
+                desc: 'Microsoft 365, device management, security training, collaboration tools — your entire digital workplace, managed.',
+                href: '/modern-workplace',
+                isLight: true,
+                pill: 'Workplace',
+              }
+            ].map((pillar: any, i) => (
+              <a
+                key={i}
+                href={pillar.href}
+                className={`group relative rounded-[28px] p-8 md:p-10 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 flex flex-col min-h-[240px] border ${
+                  pillar.isLight
+                    ? 'bg-white border-slate-200 hover:border-[#5D00D6]/30'
+                    : `${pillar.bg} text-white border-transparent`
+                }`}
+              >
+                <div
+                  className="absolute inset-0 opacity-[0.05]"
+                  style={{
+                    backgroundImage: `radial-gradient(${pillar.isLight ? '#5D00D6' : 'white'} 1.5px, transparent 1.5px)`,
+                    backgroundSize: '28px 28px'
+                  }}
+                />
+                <div className="relative z-10 flex flex-col h-full">
+                  <span className={`text-[10px] font-bold uppercase tracking-widest mb-4 ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white/60'}`}>{pillar.pill}</span>
+                  <h3 className={`text-[22px] md:text-[26px] font-bold leading-tight mb-3 ${pillar.isLight ? 'text-slate-900' : 'text-white'}`}>{pillar.label}</h3>
+                  <p className={`text-[14px] leading-relaxed flex-1 ${pillar.isLight ? 'text-slate-500' : 'text-white/70'}`}>{pillar.desc}</p>
+                  <div className={`mt-6 flex items-center gap-2 font-bold text-[13px] group-hover:gap-3 transition-all ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white'}`}>
+                    Explore {pillar.pill} <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <DualAudienceLadder />
       
       {/* Promo Offer — Business Voice Switch */}

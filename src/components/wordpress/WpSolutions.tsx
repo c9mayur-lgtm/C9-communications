@@ -147,8 +147,8 @@ export const WpSolutions = () => {
         </div>
 
         <div className="flex justify-center mt-14">
-          <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group px-10 h-14 rounded-full font-medium">
-            View All Solutions <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+          <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group px-10 h-14 rounded-full font-medium" asChild>
+            <Link href="/modern-workplace">View All Workplace Solutions <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" /></Link>
           </Button>
         </div>
       </div>
