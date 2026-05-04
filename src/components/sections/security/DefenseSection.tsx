@@ -29,7 +29,7 @@ export default function DefenseSection() {
           
           {/* LEFT */}
           <div className="flex flex-col items-start max-w-[640px]">
-            <div className="bg-[#5D00D6] text-white px-4 py-1.5 rounded-none text-[11px] font-bold tracking-[0.2em] uppercase mb-8 inline-flex items-center">
+            <div className="bg-[#5D00D6] text-white px-4 py-1.5 rounded-lg text-[11px] font-bold tracking-[0.2em] uppercase mb-8 inline-flex items-center">
               C9 Defense
             </div>
             
@@ -43,8 +43,8 @@ export default function DefenseSection() {
 
             <div className="flex flex-col gap-4 w-full">
               {scenarios.map((sc, idx) => (
-                <div key={idx} className="bg-[#1A1A2E] rounded-none p-5 flex gap-5 items-start transition-all hover:-translate-y-1 hover:bg-[#1A1A2E]/80 border border-white/5">
-                  <div className="shrink-0 mt-0.5 w-10 h-10 bg-[#5D00D6]/10 rounded-none flex items-center justify-center">
+                <div key={idx} className="bg-[#1A1A2E] rounded-lg p-5 flex gap-5 items-start transition-all hover:-translate-y-1 hover:bg-[#1A1A2E]/80 border border-white/5">
+                  <div className="shrink-0 mt-0.5 w-10 h-10 bg-[#5D00D6]/10 rounded-lg flex items-center justify-center">
                     <sc.icon size={20} className="text-[#5D00D6]" />
                   </div>
                   <div className="flex flex-col">
@@ -57,7 +57,7 @@ export default function DefenseSection() {
           </div>
 
           {/* RIGHT */}
-          <div className="bg-[#1A1A2E] border border-purple-700/50 rounded-none p-8 md:p-12 shadow-2xl flex flex-col relative overflow-hidden transition-all hover:border-purple-600">
+          <div className="bg-[#1A1A2E] border border-purple-700/50 rounded-lg p-8 md:p-12 shadow-2xl flex flex-col relative overflow-hidden transition-all hover:border-purple-600">
             {/* Subtle glow */}
             <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-[#5D00D6]/10 blur-[90px] pointer-events-none" />
 

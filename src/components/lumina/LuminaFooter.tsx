@@ -24,11 +24,8 @@ export function LuminaFooter() {
               Premium digital signage and content management solutions for modern business environments. From hardware to storytelling.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 border border-[#BF2F70]/30 flex items-center justify-center text-[#BF2F70] hover:bg-[#BF2F70] hover:text-white transition-all">
+              <a href="https://in.linkedin.com/company/c9groupofcompanies" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#BF2F70]/30 flex items-center justify-center text-[#BF2F70] hover:bg-[#BF2F70] hover:text-white transition-all">
                 <Linkedin size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 border border-[#BF2F70]/30 flex items-center justify-center text-[#BF2F70] hover:bg-[#BF2F70] hover:text-white transition-all">
-                <Instagram size={18} />
               </a>
             </div>
           </div>
@@ -78,7 +75,7 @@ export function LuminaFooter() {
         </div>
 
         <div className="pt-10 border-t border-[#151515] flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] text-[#404040] uppercase tracking-[0.2em]">
+          <p className="text-[10px] text-[#606060] uppercase tracking-[0.2em]">
             © 2026 C9 COMMUNICATIONS PTY LTD. LUMINA DIVISION.
           </p>
           <button 

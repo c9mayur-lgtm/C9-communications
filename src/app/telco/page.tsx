@@ -48,8 +48,8 @@ const SectionHero = () => (
     {/* Background Infrastructure Visual */}
     <div className="absolute inset-0 z-0">
       <img 
-        src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=2000" 
-        alt="Connectivity Infrastructure" 
+        src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop" 
+        alt="Managed Connectivity Team"
         className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0c1024] via-[#0c1024]/80 to-transparent" />
@@ -129,8 +129,8 @@ const SectionProblems = () => (
         <FadeIn direction="left">
           <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
             <img 
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200" 
-              alt="Business Operations Interrupted" 
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000&auto=format&fit=crop" 
+              alt="Business Operations Impacted by Connectivity Issues" 
               className="w-full aspect-[4/5] object-cover"
             />
             <div className="absolute inset-0 bg-red-900/10 mix-blend-overlay" />
@@ -152,7 +152,7 @@ const SectionApproach = () => (
           <div className="grid grid-cols-2 gap-6">
              <div className="space-y-6">
                 <div className="aspect-square rounded-[32px] overflow-hidden shadow-xl border border-slate-100">
-                   <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" alt="Telco Hardware" />
+                   <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover" alt="Engineer working on Telco Hardware" />
                 </div>
                 <div className="bg-[#5D00D6] p-8 rounded-[32px] text-white">
                    <div className="text-4xl font-bold mb-2">One</div>
@@ -165,7 +165,7 @@ const SectionApproach = () => (
                    <div className="text-sm font-bold uppercase tracking-widest opacity-80">Vendor Blame Games</div>
                 </div>
                 <div className="aspect-square rounded-[32px] overflow-hidden shadow-xl border border-slate-100">
-                   <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" alt="Data Center" />
+                   <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover" alt="Advanced Connectivity Hub" />
                 </div>
              </div>
           </div>
@@ -384,7 +384,7 @@ const SectionProcess = () => (
 const SectionMonitoring = () => (
   <section className="py-16 lg:py-20 bg-slate-900 text-white overflow-hidden relative">
     <div className="absolute inset-0 opacity-[0.2]">
-       <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2000" className="w-full h-full object-cover" alt="Operations Center" />
+       <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover" alt="NOC Operations Center" />
        <div className="absolute inset-0 bg-slate-900/90" />
     </div>
     <div className={C + " relative z-10"}>
@@ -419,8 +419,8 @@ const SectionMonitoring = () => (
              <div className="relative">
                 <div className="rounded-[40px] overflow-hidden border-8 border-white/5 shadow-2xl">
                    <img 
-                     src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200" 
-                     alt="Monitoring Station" 
+                     src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop" 
+                     alt="C9 NOC Monitoring Station" 
                      className="w-full aspect-video object-cover"
                    />
                 </div>

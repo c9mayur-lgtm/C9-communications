@@ -43,33 +43,33 @@ export const ContactSection = () => {
           
           {/* Right: Form */}
           <div className="relative">
-             <div className="absolute inset-0 bg-[#5D00D6]/5 rounded-none transform -rotate-1 scale-105" />
+             <div className="absolute inset-0 bg-[#5D00D6]/5 rounded-lg transform -rotate-1 scale-105" />
              
-             <div className="bg-white p-10 md:p-12 rounded-none border border-[#5D00D6]/10 shadow-2xl relative z-10 flex flex-col gap-8">
+             <div className="bg-white p-10 md:p-12 rounded-lg border border-[#5D00D6]/10 shadow-2xl relative z-10 flex flex-col gap-8">
                 <div className="flex flex-col gap-6">
                    <div className="grid grid-cols-2 gap-6">
                       <div className="flex flex-col gap-2">
                          <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >Your Name</label>
-                         <Input placeholder="Full Name" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
+                         <Input placeholder="Full Name" className="bg-[#F8F9FA] border-none rounded-lg h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
                       </div>
                       <div className="flex flex-col gap-2">
                          <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >Phone Number</label>
-                         <Input placeholder="+61 (0) 000 000 000" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
+                         <Input placeholder="+61 (0) 000 000 000" className="bg-[#F8F9FA] border-none rounded-lg h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
                       </div>
                    </div>
                    
                    <div className="flex flex-col gap-2">
                       <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >Email Address</label>
-                      <Input placeholder="name@company.com.au" className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
+                      <Input placeholder="name@company.com.au" className="bg-[#F8F9FA] border-none rounded-lg h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1"  />
                    </div>
                    
                    <div className="flex flex-col gap-2">
                       <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >I'm interested in</label>
                       <Select>
-                        <SelectTrigger className="bg-[#F8F9FA] border-none rounded-none h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1" >
+                        <SelectTrigger className="bg-[#F8F9FA] border-none rounded-lg h-12 px-4 font-sans focus:ring-[#5D00D6] focus:ring-1" >
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
-                        <SelectContent className="rounded-none">
+                        <SelectContent className="rounded-lg">
                           <SelectItem value="managed-it">Managed IT</SelectItem>
                           <SelectItem value="telco">Telco</SelectItem>
                           <SelectItem value="modern-workplace">Modern Workplace</SelectItem>
@@ -81,7 +81,7 @@ export const ContactSection = () => {
                    
                    <div className="flex flex-col gap-2">
                       <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest font-sans ml-1" >Message</label>
-                      <Textarea placeholder="How can we help your business?" className="bg-[#F8F9FA] border-none rounded-none px-4 py-4 min-h-[120px] font-sans focus:ring-[#5D00D6] focus:ring-1"  />
+                      <Textarea placeholder="How can we help your business?" className="bg-[#F8F9FA] border-none rounded-lg px-4 py-4 min-h-[120px] font-sans focus:ring-[#5D00D6] focus:ring-1"  />
                    </div>
                 </div>
                 

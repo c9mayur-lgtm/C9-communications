@@ -148,7 +148,7 @@ const SectionOperationalRisk = () => (
                   desc: "Unsolved root causes that lead to the same failures happening repeatedly across sites."
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-xl transition-all">
                   <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center mb-6">
                      {item.icon}
                   </div>
@@ -182,7 +182,7 @@ const SectionFailurePoints = () => (
                      { title: "Offices", desc: "Lack of monitoring leading to undetected performance degradation." },
                      { title: "Branch Sites", desc: "Repeated connectivity issues due to unmanaged edge infrastructure." }
                   ].map((item, i) => (
-                     <div key={i} className="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                     <div key={i} className="bg-slate-50 p-6 rounded-lg border border-slate-100">
                         <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
                         <p className="text-slate-500 text-sm">{item.desc}</p>
                      </div>
@@ -191,7 +191,7 @@ const SectionFailurePoints = () => (
             </FadeIn>
 
             <FadeIn direction="right" className="relative">
-               <div className="bg-[#0c1024] rounded-[48px] p-12 text-white relative overflow-hidden shadow-2xl">
+               <div className="bg-[#0c1024] rounded-lg p-12 text-white relative overflow-hidden shadow-2xl">
                   <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
                   <div className="relative z-10">
                      <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
@@ -243,7 +243,7 @@ const SectionHowWeOperate = () => (
                { step: '04', title: 'Response', desc: 'Structured incident protocols for rapid resolution.' },
                { step: '05', title: 'Management', desc: 'Coordinated control across all locations.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
                   <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
                      {i + 1}
                   </div>
@@ -264,7 +264,7 @@ const SectionStandardisation = () => (
       <div className={C}>
          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <FadeIn direction="left">
-               <div className="bg-slate-50 rounded-[40px] p-10 border border-slate-100 relative overflow-hidden shadow-xl">
+               <div className="bg-slate-50 rounded-lg p-10 border border-slate-100 relative overflow-hidden shadow-xl">
                   <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-[0.03] rounded-full blur-[100px]" />
                   <div className="relative z-10">
                      <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
@@ -337,7 +337,7 @@ const SectionPerformanceVisibility = () => (
                      { title: "Proactive Optimisation", desc: "Automated tuning of traffic flow based on real-world usage patterns." },
                      { title: "Issue Prevention", desc: "Identifying and resolving anomalies before they lead to operational failure." }
                   ].map((item, i) => (
-                     <div key={i} className="flex gap-4 p-5 bg-white rounded-2xl border border-slate-200">
+                     <div key={i} className="flex gap-4 p-5 bg-white rounded-lg border border-slate-200">
                         <div className="text-[#5D00D6] mt-1"><Activity size={18} /></div>
                         <div>
                            <h4 className="font-bold text-slate-900 text-[15px]">{item.title}</h4>
@@ -348,7 +348,7 @@ const SectionPerformanceVisibility = () => (
                </div>
             </FadeIn>
 
-            <FadeIn direction="right" className="bg-[#0c1024] rounded-[48px] p-8 lg:p-12 text-white relative overflow-hidden shadow-2xl">
+            <FadeIn direction="right" className="bg-[#0c1024] rounded-lg p-8 lg:p-12 text-white relative overflow-hidden shadow-2xl">
                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
                <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-8">Existing Integration</h3>
@@ -403,7 +403,7 @@ const SectionBusinessImpact = () => (
                { title: 'Customer Experience', desc: 'Ensuring seamless interaction across all digital touchpoints.', icon: <Users /> },
                { title: 'Scaling Efficiency', desc: 'Deploying new sites faster with zero management overhead.', icon: <RefreshCw /> }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="p-8 bg-white rounded-[32px] border border-slate-200 shadow-sm text-center">
+               <FadeIn key={i} delay={i * 0.1} className="p-8 bg-white rounded-lg border border-slate-200 shadow-sm text-center">
                   <div className="w-12 h-12 bg-[#5D00D6]/5 rounded-xl flex items-center justify-center text-[#5D00D6] mx-auto mb-6">
                      {item.icon}
                   </div>
@@ -442,7 +442,7 @@ const SectionWhyItMatters = () => (
                </div>
             </FadeIn>
             <FadeIn direction="right">
-               <div className="p-10 rounded-[48px] bg-white/5 border border-white/10 backdrop-blur-sm">
+               <div className="p-10 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
                   <p className="text-xl font-medium leading-relaxed italic text-white/90 mb-8">
                      "C9 doesn't just support devices. We operate the systems that keep your business online. That is the difference between reactive IT and enterprise infrastructure stability."
                   </p>

@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 md:px-8 relative z-10 w-full" style={{ maxWidth: '1240px' }}>
         <div className="grid lg:grid-cols-[60%_40%] gap-12 lg:gap-16 items-center">
           <div className="flex flex-col items-start max-w-[640px]">
-            <Badge variant="outline" className="bg-[#5D00D6]/10 text-[#5D00D6] border-none mb-6 rounded-none px-4 py-1.5 font-bold tracking-widest text-[11px] uppercase">
+            <Badge variant="outline" className="bg-[#5D00D6]/10 text-[#5D00D6] border-none mb-6 rounded-lg px-4 py-1.5 font-bold tracking-widest text-[11px] uppercase">
               Managed IT · Backup & Disaster Recovery
             </Badge>
             <h1 className="text-[38px] md:text-[52px] lg:text-[62px] tracking-tight font-bold text-[#0c1024] leading-[1.08] mb-6" style={{ fontFamily: F }}>

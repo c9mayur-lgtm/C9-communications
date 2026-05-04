@@ -195,10 +195,10 @@ export default function InsightArticlePage() {
 
           <FadeIn delay={0.1}>
             <div className="flex flex-wrap items-center gap-3 mb-6">
-              <span className="px-3 py-1 rounded-none border border-[#5D00D6] text-[#A855F7] text-[11px] font-bold uppercase tracking-widest bg-[#5D00D6]/10">
+              <span className="px-3 py-1 rounded-lg border border-[#5D00D6] text-[#A855F7] text-[11px] font-bold uppercase tracking-widest bg-[#5D00D6]/10">
                 Industry Insights
               </span>
-              <span className="px-3 py-1 rounded-none bg-white/5 border border-white/10 text-slate-300 text-[11px] font-bold uppercase tracking-widest">
+              <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-300 text-[11px] font-bold uppercase tracking-widest">
                 {article.eyebrow}
               </span>
               <span className="text-slate-400 text-[13px] font-medium ml-2">— {article.time}</span>
@@ -213,7 +213,7 @@ export default function InsightArticlePage() {
 
           <FadeIn delay={0.2} className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-white/10 pt-8 mt-12 gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-none overflow-hidden bg-[#5D00D6] flex items-center justify-center text-white font-bold">
+              <div className="w-12 h-12 rounded-lg overflow-hidden bg-[#5D00D6] flex items-center justify-center text-white font-bold">
                 C9
               </div>
               <div>
@@ -224,10 +224,10 @@ export default function InsightArticlePage() {
             
             <div className="flex items-center gap-3">
               <span className="text-slate-400 text-[13px] font-bold uppercase tracking-widest mr-2">Share Insight</span>
-              <button className="w-10 h-10 rounded-none bg-white/5 hover:bg-[#5D00D6] hover:text-white text-slate-300 border border-white/10 transition-all flex items-center justify-center">
+              <button className="w-10 h-10 rounded-lg bg-white/5 hover:bg-[#5D00D6] hover:text-white text-slate-300 border border-white/10 transition-all flex items-center justify-center">
                 <Linkedin size={16} />
               </button>
-              <button className="w-10 h-10 rounded-none bg-white/5 hover:bg-[#5D00D6] hover:text-white text-slate-300 border border-white/10 transition-all flex items-center justify-center">
+              <button className="w-10 h-10 rounded-lg bg-white/5 hover:bg-[#5D00D6] hover:text-white text-slate-300 border border-white/10 transition-all flex items-center justify-center">
                 <Twitter size={16} />
               </button>
             </div>
@@ -260,8 +260,8 @@ export default function InsightArticlePage() {
             </div>
 
             {/* MAIN CONTENT (Centered Reading Column) */}
-            <div className="grow max-w-[700px] w-full bg-white rounded-none p-8 md:p-14 lg:p-16 lg:-mt-32 relative z-20">
-              <div className="max-w-none text-slate-600 [&>p]:mb-6 [&>p]:text-[18px] [&>p]:leading-relaxed [&>h2]:font-bold [&>h2]:tracking-tight [&>h2]:text-slate-900 [&>h2]:mt-12 [&>h2]:mb-6 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-3 [&>ul>li]:text-[18px] [&>ul>li]:leading-relaxed [&>a]:text-[#5D00D6] [&>a]:underline [&>figure>img]:rounded-none">
+            <div className="grow max-w-[700px] w-full bg-white rounded-lg p-8 md:p-14 lg:p-16 lg:-mt-32 relative z-20">
+              <div className="max-w-none text-slate-600 [&>p]:mb-6 [&>p]:text-[18px] [&>p]:leading-relaxed [&>h2]:font-bold [&>h2]:tracking-tight [&>h2]:text-slate-900 [&>h2]:mt-12 [&>h2]:mb-6 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-3 [&>ul>li]:text-[18px] [&>ul>li]:leading-relaxed [&>a]:text-[#5D00D6] [&>a]:underline [&>figure>img]:rounded-lg">
                 {article.content}
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function InsightArticlePage() {
             {Object.keys(INSIGHTS).filter(k => k !== slug).slice(0, 3).map((key) => {
                const item = INSIGHTS[key];
                return (
-                  <Link href={`/insights/${key}`} key={key} className="group flex flex-col h-full bg-slate-50 rounded-none overflow-hidden hover:bg-white transition-all">
+                  <Link href={`/insights/${key}`} key={key} className="group flex flex-col h-full bg-slate-50 rounded-lg overflow-hidden hover:bg-white transition-all">
                      <div className="aspect-[16/10] overflow-hidden">
                         <img 
                            src={item.img} 
@@ -302,7 +302,7 @@ export default function InsightArticlePage() {
                         
                         <div className="mt-auto flex items-center justify-between pt-6">
                            <span className="text-slate-500 text-[13px] font-medium border-b border-transparent group-hover:border-[#5D00D6]">Read Insight</span>
-                           <div className="w-8 h-8 rounded-none bg-white flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
+                           <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                               <ChevronRight size={16} />
                            </div>
                         </div>

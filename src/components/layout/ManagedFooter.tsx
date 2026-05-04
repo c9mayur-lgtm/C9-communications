@@ -17,11 +17,9 @@ export const ManagedFooter = () => {
            </Link>
            
            <div className="flex gap-10">
-              {[
-                { Icon: Linkedin, url: 'https://linkedin.com/company/c9communications' },
-                { Icon: Facebook, url: 'https://facebook.com/c9communications' },
-                { Icon: Instagram, url: 'https://instagram.com/c9communications' }
-              ].map(({ Icon, url }, i) => (
+               {[
+                 { Icon: Linkedin, url: 'https://in.linkedin.com/company/c9groupofcompanies' }
+               ].map(({ Icon, url }, i) => (
                 <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="h-12 w-12 rounded-full border border-gray-200 flex items-center justify-center text-text-secondary hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300">
                   <Icon size={20} />
                 </a>
@@ -122,8 +120,8 @@ export const ManagedFooter = () => {
            <span className="text-xs font-bold text-gray-400 uppercase tracking-widest font-dm-sans">Part of the C9 Group:</span>
            <div className="flex gap-8">
               {[
-                { name: 'C9 Teams', url: '/contact' },
-                { name: 'C9 Lumina', url: '/contact' },
+                { name: 'C9 Teams', url: 'https://c9teams.com.au/' },
+                { name: 'C9 Lumina', url: 'https://c9lumina.com.au/' },
                 { name: 'C9 Digital', url: '/contact' }
               ].map(brand => (
                 <a key={brand.name} href={brand.url} className="text-sm font-bold font-syne text-text-secondary hover:text-brand-purple transition-colors">{brand.name}</a>
@@ -177,7 +175,7 @@ export const ManagedFooter = () => {
         
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-gray-100">
-           <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest font-dm-sans">
+           <div className="text-[11px] font-bold text-slate-600 uppercase tracking-widest font-dm-sans">
              © {new Date().getFullYear()} C9 Communications. All rights reserved.
            </div>
            

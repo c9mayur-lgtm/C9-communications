@@ -146,9 +146,9 @@ export default function BusinessNbnPage() {
             <FadeIn direction="left" className="order-2 lg:order-1">
                <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square max-w-md mx-auto lg:max-w-none">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000&auto=format&fit=crop" 
-                    alt="Network Hardware Exposure and downtime risk" 
-                    className="w-full h-full object-cover grayscale object-center" 
+                    src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2000&auto=format&fit=crop" 
+                    alt="Network engineer managing complex infrastructure to reduce operational risk" 
+                    className="w-full h-full object-cover grayscale object-center transition-transform duration-700 group-hover:scale-105" 
                   />
                   <div className="absolute inset-0 bg-rose-500/10 mix-blend-overlay" />
                   <div className="absolute top-6 right-6 bg-white/95 p-6 rounded-2xl shadow-xl border border-rose-100">

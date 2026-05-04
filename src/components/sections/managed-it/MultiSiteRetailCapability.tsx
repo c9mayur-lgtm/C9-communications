@@ -67,7 +67,7 @@ export default function MultiSiteRetailCapability() {
           <div className="grid sm:grid-cols-2 gap-6">
             {features.map((f, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all duration-500 group h-full">
+                <div className="bg-slate-50 rounded-lg p-8 border border-slate-100 hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all duration-500 group h-full">
                   <div className="w-12 h-12 rounded-2xl bg-white text-[#5D00D6] flex items-center justify-center mb-8 group-hover:bg-[#5D00D6] group-hover:text-white shadow-sm transition-all duration-500">
                     <f.icon size={24} strokeWidth={2} />
                   </div>
@@ -86,7 +86,7 @@ export default function MultiSiteRetailCapability() {
           </div>
 
           <FadeIn delay={0.3}>
-            <div className="bg-[#0c1024] rounded-[48px] p-10 lg:p-16 text-white relative overflow-hidden shadow-2xl shadow-purple-900/10">
+            <div className="bg-[#0c1024] rounded-lg p-10 lg:p-16 text-white relative overflow-hidden shadow-2xl shadow-purple-900/10">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/20 blur-3xl rounded-full" />
               
               <div className="relative z-10">

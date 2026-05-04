@@ -106,7 +106,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
 
   if (isSuccess) {
     return (
-      <div className="bg-white rounded-none p-8 md:p-10 max-w-[500px] mx-auto lg:ml-auto flex flex-col items-center justify-center min-h-[400px] animate-in fade-in duration-500">
+      <div className="bg-white rounded-lg p-8 md:p-10 max-w-[500px] mx-auto lg:ml-auto flex flex-col items-center justify-center min-h-[400px] animate-in fade-in duration-500">
         <div className="w-16 h-16 bg-[#5D00D6] rounded-full flex items-center justify-center text-white mb-6">
           <Zap size={32} />
         </div>
@@ -125,7 +125,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
   }
 
   return (
-    <div className="bg-white rounded-none p-8 md:p-10 max-w-[500px] mx-auto lg:ml-auto">
+    <div className="bg-white rounded-lg p-8 md:p-10 max-w-[500px] mx-auto lg:ml-auto">
       <div className="flex flex-col items-center mb-8">
         <h3 className="text-[22px] font-bold text-center text-[#0c1024] mb-2 tracking-tight">
           {formTitle}
@@ -157,7 +157,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
               value={formData.firstName}
               onChange={handleInputChange}
               placeholder="John" 
-              className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
+              className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -169,7 +169,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
               value={formData.lastName}
               onChange={handleInputChange}
               placeholder="Doe" 
-              className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
+              className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
             />
           </div>
         </div>
@@ -183,7 +183,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             value={formData.email}
             onChange={handleInputChange}
             placeholder="john@company.com.au" 
-            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
+            className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
           />
         </div>
 
@@ -196,7 +196,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             value={formData.organisation}
             onChange={handleInputChange}
             placeholder="Organisation name" 
-            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
+            className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
           />
         </div>
 
@@ -214,7 +214,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             }
             value={formData.message}
             onChange={handleInputChange}
-            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold min-h-[80px] resize-none placeholder:text-slate-300"
+            className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold min-h-[80px] resize-none placeholder:text-slate-300"
           />
         </div>
 

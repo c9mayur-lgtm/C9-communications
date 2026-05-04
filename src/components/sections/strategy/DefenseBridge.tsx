@@ -14,13 +14,13 @@ export default function DefenseBridge() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-[#0c1024] rounded-none p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group shadow-2xl"
+          className="bg-[#0c1024] rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group shadow-2xl"
         >
           {/* Subtle Background Glow */}
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6]/10 rounded-none blur-[100px] -mr-48 -mt-48 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6]/10 rounded-lg blur-[100px] -mr-48 -mt-48 pointer-events-none" />
           
           {/* Icon Container (Keeping it sharp to match aesthetic) */}
-          <div className="w-20 h-20 md:w-24 md:h-24 bg-white/5 border border-white/10 rounded-none flex items-center justify-center shrink-0 shadow-inner group-hover:border-[#5D00D6]/30 transition-colors">
+          <div className="w-20 h-20 md:w-24 md:h-24 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center shrink-0 shadow-inner group-hover:border-[#5D00D6]/30 transition-colors">
             <Shield className="w-10 h-10 md:w-12 md:h-12 text-[#5D00D6]" />
           </div>
 

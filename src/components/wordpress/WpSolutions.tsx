@@ -86,7 +86,7 @@ export const WpSolutions = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((s, i) => (
-            <div key={i} className="bg-white p-6 md:p-10 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full relative border border-transparent hover:border-gray-100 focus-within:ring-2 focus-within:ring-[#5D00D6]">
+            <div key={i} className="bg-white p-6 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full relative border border-transparent hover:border-gray-100 focus-within:ring-2 focus-within:ring-[#5D00D6]">
               {s.url && (
                 <Link href={s.url} className="absolute inset-0 z-0" aria-label={`View details about ${s.title}`} />
               )}
@@ -124,7 +124,7 @@ export const WpSolutions = () => {
                   href="https://c9defense.com.au/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-[#0c1024] flex flex-col px-3 py-2.5 rounded-none mb-4 hover:bg-[#1C223A] transition-all group/defense relative z-20 pointer-events-auto"
+                  className="bg-[#0c1024] flex flex-col px-3 py-2.5 rounded-lg mb-4 hover:bg-[#1C223A] transition-all group/defense relative z-20 pointer-events-auto"
                 >
                     <p className="c9-eyebrow !text-white !text-[8.5px] mb-0.5">Pairs with C9 Defense</p>
                     <p className="c9-body !text-[11px] !text-white/50 !leading-snug group-hover/defense:text-white transition-colors flex items-center gap-1">
@@ -148,7 +148,7 @@ export const WpSolutions = () => {
 
         <div className="flex justify-center mt-14">
           <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group px-10 h-14 rounded-full font-medium" asChild>
-            <Link href="/modern-workplace">View All Workplace Solutions <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" /></Link>
+            <Link href="/modern-workplace" className="flex items-center gap-2">View All Workplace Solutions <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" /></Link>
           </Button>
         </div>
       </div>

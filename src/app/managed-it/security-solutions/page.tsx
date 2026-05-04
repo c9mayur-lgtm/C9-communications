@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar"
 import { WpFooter as Footer } from "@/components/layout/WpFooter"
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback"
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm"
+import { ContinueJourney } from '@/components/sections/ContinueJourney'
 import Hero from "@/components/sections/security/Hero"
 import ThreatReality from "@/components/sections/security/ThreatReality"
 import TwoLayers from "@/components/sections/security/TwoLayers"
@@ -71,7 +72,16 @@ export default function SecuritySolutionsPage() {
         description="A C9 security assessment identifies your current posture, highlights the gaps, and gives you a clear remediation roadmap. No obligation. No jargon."
         formTitle="Schedule Security Assessment"
       />
-      
+      <ContinueJourney 
+        title="Security is the Foundation."
+        description="Baseline security is just the beginning. Explore the operational support and infrastructure layers that keep your organisation resilient."
+        links={[
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Endpoint Protection', path: '/managed-it/edr' },
+          { label: 'Backup & Recovery', path: '/managed-it/backup-disaster-recovery' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' }
+        ]}
+      />
       <Footer />
     </main>
   )

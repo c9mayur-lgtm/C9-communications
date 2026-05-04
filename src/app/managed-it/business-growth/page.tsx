@@ -10,6 +10,7 @@ import {
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -304,6 +305,17 @@ export default function GrowthPage() {
         description="Growth requires active leadership and engineering discipline. We provide the vCIO and engineering resources to drive your success."
         buttonText="View Strategy Services"
         href="/managed-it/strategy-consulting"
+      />
+
+      <ContinueJourney 
+        title="Grow Without the Technical Anchor."
+        description="Scalability is built on a stable foundation. Discover the services that handle the complexity of growth for you."
+        links={[
+          { label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+          { label: 'Cloud Services', path: '/managed-it/cloud-services' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

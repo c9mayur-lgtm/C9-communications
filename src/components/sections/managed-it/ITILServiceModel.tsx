@@ -62,7 +62,7 @@ export default function ITILServiceModel() {
               We don't just "fix IT." We provide a structured service delivery framework based on ITIL standards, ensuring every transition, incident, and strategic review is governed by documented protocols.
             </p>
             
-            <div className="bg-white rounded-3xl p-10 border border-slate-200 shadow-sm relative overflow-hidden group">
+            <div className="bg-white rounded-lg p-10 border border-slate-200 shadow-sm relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/5 rounded-bl-full group-hover:scale-150 transition-transform duration-700" />
               <h4 className="c9-card-title mb-6">The Transition Protocol</h4>
               <div className="space-y-6">
@@ -84,7 +84,7 @@ export default function ITILServiceModel() {
           <div className="grid sm:grid-cols-2 gap-6 relative">
             {serviceStages.map((stage, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-[32px] p-10 border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 h-full group">
+                <div className="bg-white rounded-lg p-10 border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 h-full group">
                   <div className="flex items-center justify-between mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 text-[#5D00D6] flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                       <stage.icon size={28} strokeWidth={1.5} />

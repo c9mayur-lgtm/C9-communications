@@ -10,6 +10,7 @@ import {
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -99,7 +100,7 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-           <div className="bg-[#0c1024] rounded-[48px] p-10 text-white shadow-2xl relative overflow-hidden">
+           <div className="bg-[#0c1024] rounded-lg p-10 text-white shadow-2xl relative overflow-hidden">
               <div className="flex items-center justify-between mb-10">
                  <div className="flex items-center gap-3">
                     <Target className="text-[#a56eff]" size={24} />
@@ -181,7 +182,7 @@ const SectionWhyItMatters = () => (
                   desc: "Automatically track and report on training completion for ISO 27001, Essential Eight, and insurance requirements."
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-xl transition-all">
                   <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center mb-6">
                      {item.icon}
                   </div>
@@ -222,7 +223,7 @@ const SectionManagedService = () => (
                </div>
             </FadeIn>
             <FadeIn direction="right">
-               <div className="bg-slate-50 p-10 rounded-[48px] border border-slate-100">
+               <div className="bg-slate-50 p-10 rounded-lg border border-slate-100">
                   <h3 className="text-xl font-bold text-[#0c1024] mb-8">Program Roadmap</h3>
                   <div className="space-y-6">
                      {[
@@ -272,7 +273,7 @@ const SectionOutcomes = () => (
                </div>
             </FadeIn>
             <FadeIn direction="right">
-               <div className="p-10 rounded-[48px] bg-white/5 border border-white/10 backdrop-blur-sm">
+               <div className="p-10 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
                   <p className="text-xl font-medium leading-relaxed italic text-white/90 mb-8">
                      "Cybersecurity is no longer just an IT problem; it&apos;s a people problem. We give your people the tools to be part of the solution."
                   </p>
@@ -307,6 +308,17 @@ export default function SecurityAwarenessPage() {
         description="Training is only one layer of defense. Combine it with our SOC-monitored EDR and automated email filtering for total protection."
         buttonText="View C9 Defense"
         href="https://c9defense.com.au/"
+      />
+
+      <ContinueJourney 
+        title="Security is a Collective Effort."
+        description="Training your staff is the first layer. See how our managed services and security solutions protect the rest of your organisation."
+        links={[
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Endpoint Protection', path: '/managed-it/edr' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' },
+          { label: 'Security Solutions', path: '/managed-it/security-solutions' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

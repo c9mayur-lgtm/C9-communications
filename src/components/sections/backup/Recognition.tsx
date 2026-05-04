@@ -21,7 +21,7 @@ export default function Recognition() {
 
         <div className="flex flex-col gap-4 text-left">
           {pains.map((pain, i) => (
-            <div key={i} className="bg-slate-50 border border-slate-100 rounded-none p-6 flex gap-5 items-start">
+            <div key={i} className="bg-slate-50 border border-slate-100 rounded-lg p-6 flex gap-5 items-start">
               <span className="text-[#5D00D6] font-bold text-[20px] shrink-0 leading-none mt-0.5">"</span>
               <p className="text-[17px] text-[#0c1024] leading-[1.7] font-normal italic" style={{ fontFamily: F }}>{pain}</p>
             </div>

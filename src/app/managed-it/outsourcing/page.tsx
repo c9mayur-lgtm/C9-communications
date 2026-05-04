@@ -11,6 +11,7 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -112,18 +113,12 @@ const Hero = () => (
                 >
                    Replace Legacy IT
                 </a>
-                <a
-                   href="#enterprise"
-                   className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-7 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
-                >
-                   Scale Operations
-                </a>
              </div>
           </FadeIn>
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-           <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group border-8 border-slate-50">
+           <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
               <img
                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200"
                  alt="IT Outsourcing Management"
@@ -131,7 +126,7 @@ const Hero = () => (
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
               
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-5 border border-white/60 shadow-xl">
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-lg p-5 border border-white/60 shadow-xl">
                  <div className="flex items-center justify-between mb-3 pb-3 border-b border-slate-100">
                     <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Department Status</span>
                     <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 font-bold text-[10px] uppercase tracking-wider">
@@ -170,8 +165,7 @@ const SectionPersonas = () => (
          </div>
          
          <div className="grid md:grid-cols-3 gap-8">
-            <FadeIn id="greenfield" className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-2 h-full bg-[#5D00D6]/20" />
+            <FadeIn id="greenfield" className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Building size={24} />
                </div>
@@ -188,8 +182,7 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="brownfield" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-2 h-full bg-[#5D00D6]/20" />
+            <FadeIn id="brownfield" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Activity size={24} />
                </div>
@@ -206,8 +199,7 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="enterprise" delay={0.2} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-2 h-full bg-[#5D00D6]/20" />
+            <FadeIn id="enterprise" delay={0.2} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Users size={24} />
                </div>
@@ -249,7 +241,7 @@ const SectionHowItWorks = () => (
                { step: '03', title: 'Operational Rigour', desc: 'Implementation of patching, monitoring, and helpdesk workflows.' },
                { step: '04', title: 'vCIO Governance', desc: 'Quarterly reviews to ensure IT remains a strategic asset, not a cost centre.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -277,19 +269,19 @@ const SectionOutcomes = () => (
                <span className="c9-eyebrow !text-[#a56eff] mb-4">Proven Results</span>
                <h2 className="c9-section-heading !text-white mb-6">Measurable Efficiency</h2>
                <div className="grid grid-cols-2 gap-6 mb-10">
-                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                  <div className="bg-white/5 p-6 rounded-lg border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">30%</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Reduction in OpEx</div>
                   </div>
-                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                  <div className="bg-white/5 p-6 rounded-lg border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">0h</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Unplanned Downtime</div>
                   </div>
-                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                  <div className="bg-white/5 p-6 rounded-lg border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">10+</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Site Multi-Scaling</div>
                   </div>
-                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                  <div className="bg-white/5 p-6 rounded-lg border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">500+</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Managed Endpoints</div>
                   </div>
@@ -309,7 +301,7 @@ const SectionOutcomes = () => (
             </FadeIn>
 
             <FadeIn direction="right" className="relative">
-               <div className="relative rounded-[32px] overflow-hidden aspect-square border-4 border-white/10 shadow-2xl">
+               <div className="relative rounded-lg overflow-hidden aspect-square border-4 border-white/10 shadow-2xl">
                   <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" alt="Department Efficiency" className="w-full h-full object-cover" />
                </div>
             </FadeIn>
@@ -324,7 +316,7 @@ const SectionOutcomes = () => (
 const SectionAccountability = () => (
    <section className="py-16 lg:py-24 bg-white">
       <div className={C}>
-         <div className="bg-slate-50 rounded-[48px] p-10 lg:p-20 border border-slate-100 relative overflow-hidden">
+         <div className="bg-slate-50 rounded-lg p-10 lg:p-20 border border-slate-100 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5D00D6] opacity-[0.02] rounded-full blur-[100px] -mr-64 -mt-64" />
             
             <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -350,7 +342,7 @@ const SectionAccountability = () => (
                      ))}
                   </div>
                </div>
-               <div className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-xl">
+               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-xl">
                   <h4 className="text-xl font-bold mb-6 flex items-center gap-2 text-slate-900">
                      <Activity size={20} className="text-[#5D00D6]" /> Operational Clarity
                   </h4>
@@ -380,32 +372,7 @@ const SectionAccountability = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 6 — SERVICE INTEGRATION
    ───────────────────────────────────────────────────────── */
-const SectionIntegration = () => (
-   <section className="py-16 bg-slate-50">
-      <div className={C}>
-         <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#0c1024] p-8 md:p-12 rounded-[32px] text-white">
-            <div className="max-w-md">
-               <h3 className="text-2xl font-bold mb-4 text-white">Total Environment Control</h3>
-               <p className="text-white text-sm">
-                  Outsourcing means unifying every layer. We manage your connectivity, security, and cloud under one agreement.
-               </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-               {[
-                  { name: 'Helpdesk', href: '/managed-it/helpdesk-support' },
-                  { name: 'Network', href: '/managed-it/network-solutions' },
-                  { name: 'Cloud', href: '/managed-it/cloud-services' },
-                  { name: 'Security', href: 'https://c9defense.com.au/' }
-               ].map(link => (
-                  <a key={link.name} href={link.href} className="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-[#0c1024] transition-all text-xs font-bold uppercase tracking-wider">
-                     {link.name}
-                  </a>
-               ))}
-            </div>
-         </div>
-      </div>
-   </section>
-);
+
 
 /* ─────────────────────────────────────────────────────────
    SECTION 7 — TECHNICAL DEPTH
@@ -426,7 +393,7 @@ const SectionTechnical = () => (
                      { icon: <Lock size={20} />, title: 'Vendor Management', desc: 'We act as the single point of contact for ISPs, software vendors, and hardware partners.' },
                      { icon: <Network size={20} />, title: 'Infrastructure Lifecycle', desc: 'Proactive planning for refreshes, preventing performance degradation.' }
                   ].map((item, i) => (
-                     <div key={i} className="flex gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#5D00D6]/20 transition-all">
+                     <div key={i} className="flex gap-4 p-5 rounded-lg bg-slate-50 border border-slate-100 hover:border-[#5D00D6]/20 transition-all">
                         <div className="text-[#5D00D6]">{item.icon}</div>
                         <div>
                            <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.title}</h4>
@@ -436,7 +403,7 @@ const SectionTechnical = () => (
                   ))}
                </div>
             </FadeIn>
-            <FadeIn direction="right" className="bg-[#0c1024] rounded-[32px] p-10 text-white relative overflow-hidden">
+            <FadeIn direction="right" className="bg-[#0c1024] rounded-lg p-10 text-white relative overflow-hidden">
                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
                <div className="relative z-10">
                   <h4 className="text-lg font-bold mb-8">Management Framework</h4>
@@ -487,7 +454,7 @@ const SectionImpact = () => (
                { title: 'Headcount Scalability', desc: 'Add 10 or 100 staff without worrying about IT capacity. Our department model scales with your payroll.' },
                { title: 'Enterprise Tooling Included', desc: 'Access the world\'s best RMM, security, and management tools without individual licensing costs.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-3xl border border-slate-200 shadow-sm">
+               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm">
                   <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 mx-auto mb-6">
                      <Zap size={24} />
                   </div>
@@ -512,7 +479,7 @@ export default function ITOutsourcingPage() {
       <SectionHowItWorks />
       <SectionOutcomes />
       <SectionAccountability />
-      <SectionIntegration />
+
       <SectionTechnical />
       <SectionImpact />
 
@@ -521,6 +488,17 @@ export default function ITOutsourcingPage() {
         description="Don't assume your outsourcing provider is actively hunting threats. C9 Defense adds a dedicated security layer to your outsourced IT department."
         buttonText="Learn About C9 Defense"
         href="https://c9defense.com.au/"
+      />
+
+      <ContinueJourney 
+        title="Total Accountability Beyond Outsourcing."
+        description="When we own your IT department, we optimize every layer—from connectivity to security. See how it all connects."
+        links={[
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+          { label: 'Managed Cloud', path: '/managed-it/cloud-services' },
+          { label: 'Infrastructure', path: '/managed-it/infrastructure' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

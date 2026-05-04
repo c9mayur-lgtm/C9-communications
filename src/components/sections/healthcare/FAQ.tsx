@@ -38,7 +38,7 @@ export default function FAQ() {
     <section className="w-full bg-[#FDFDFF] py-12 md:py-16 border-t border-gray-100">
       <div className="container mx-auto px-6 md:px-8 max-w-4xl">
         <div className="flex flex-col items-center text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-none border border-[#5D00D6]/10 mb-6 cursor-default">
+          <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-lg border border-[#5D00D6]/10 mb-6 cursor-default">
             <HelpCircle className="text-[#5D00D6]" size={16} />
             <span className="text-[12px] font-extrabold text-[#5D00D6] uppercase tracking-[0.2em] leading-none mt-0.5" >Quick Answers</span>
           </div>

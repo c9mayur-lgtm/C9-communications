@@ -68,11 +68,11 @@ export default function Hero() {
             >
               <Button 
                 onClick={handleProposalRequest}
-                className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-10 h-14 rounded-none font-bold transition-all duration-300 shadow-2xl shadow-purple-900/30 group font-sans text-[16px]"
+                className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-10 h-14 rounded-lg font-bold transition-all duration-300 shadow-2xl shadow-purple-900/30 group font-sans text-[16px]"
               >
                 Request IT Proposal <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="ghost" onClick={handleScrollToScope} className="text-[#0c1024] hover:bg-slate-100 px-8 h-14 rounded-none font-bold transition-all font-sans text-[16px]">
+              <Button variant="ghost" onClick={handleScrollToScope} className="text-[#0c1024] hover:bg-slate-100 px-8 h-14 rounded-lg font-bold transition-all font-sans text-[16px]">
                 View Scope Details
               </Button>
             </motion.div>
@@ -187,7 +187,7 @@ export default function Hero() {
                 </motion.div>
               ))}
 
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.2 }} className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-xl border border-gray-100 rounded-none p-5 shadow-xl flex items-center justify-between z-30">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.2 }} className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-xl border border-gray-100 rounded-lg p-5 shadow-xl flex items-center justify-between z-30">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
                     <Activity className="w-5 h-5 text-green-500 animate-pulse" />

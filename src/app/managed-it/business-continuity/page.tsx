@@ -361,10 +361,10 @@ export default function BusinessContinuityPage() {
         title="Consolidate Your Operational Logic."
         description="Continuity is only one layer of the C9 system. Explore the infrastructure and recovery services that keep your organisation resilient."
         links={[
-          { label: "Infrastructure Control", path: "/managed-it/infrastructure" },
-          { label: "SaaS Data Recovery", path: "/modern-workplace/saas-backup" },
-          { label: "Managed IT Operations", path: "/managed-it" },
-          { label: "Enterprise Systems", path: "/enterprise" }
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Backup & Recovery', path: '/managed-it/backup-disaster-recovery' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+          { label: 'Security Solutions', path: '/managed-it/security-solutions' }
         ]}
       />
     </main>

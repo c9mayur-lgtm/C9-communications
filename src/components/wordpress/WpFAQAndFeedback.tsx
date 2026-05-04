@@ -52,7 +52,7 @@ export const WpFAQAndFeedback = ({
           <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
             
             <div className="flex flex-col items-start mb-12">
-              <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-none border border-[#5D00D6]/10 mb-6 cursor-default">
+              <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-lg border border-[#5D00D6]/10 mb-6 cursor-default">
                 <HelpCircle className="text-[#5D00D6]" size={16} />
                 <span className="c9-eyebrow !text-[11px] leading-none mt-0.5">Quick Answers</span>
               </div>

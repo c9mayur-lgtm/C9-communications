@@ -10,6 +10,7 @@ import {
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from '@/components/wordpress/WpDefenseBanner';
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    HELPERS
@@ -49,7 +50,7 @@ const EdrVisual = () => {
   ];
 
   return (
-    <div className="w-full bg-[#0c1024] rounded-[32px] border border-white/10 overflow-hidden shadow-2xl font-sans">
+    <div className="w-full bg-[#0c1024] rounded-lg border border-white/10 overflow-hidden shadow-2xl font-sans">
       {/* Header */}
       <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -195,7 +196,7 @@ const SectionRisk = () => (
           { icon: <Lock className="text-[#5D00D6]" />, title: 'Data Compromise', desc: 'Sensitive files, credentials, and customer data are accessed and exfiltrated without notification.' },
           { icon: <Activity className="text-red-400" />, title: 'Operational Disruption', desc: 'Systems lock, applications fail, and staff lose access — often during peak operational hours.' },
         ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm flex items-start gap-6">
+          <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex items-start gap-6">
             <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center shrink-0">
               {item.icon}
             </div>
@@ -232,7 +233,7 @@ const SectionExposure = () => (
           { title: 'Multi-Site Environments', desc: 'Inconsistent configuration across locations creates uneven protection. A gap at one site is a gap across the organisation.' },
           { title: 'Unmanaged Devices', desc: 'Personally owned or unregistered devices accessing company systems introduce risk that is invisible to IT.' },
         ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="p-8 bg-slate-50 rounded-[32px] border border-slate-100">
+          <FadeIn key={i} delay={i * 0.1} className="p-8 bg-slate-50 rounded-lg border border-slate-100">
             <h4 className="text-[18px] font-bold text-slate-900 mb-3">{item.title}</h4>
             <p className="text-slate-600 text-[14px] leading-relaxed">{item.desc}</p>
           </FadeIn>
@@ -265,7 +266,7 @@ const SectionHowWeOperate = () => (
           { title: 'Containment', desc: 'Compromised devices are isolated from the network before threats spread to other systems.' },
           { title: 'Remediation', desc: 'Threats are neutralised. Root cause is identified. Systems are returned to a clean, verified state.' },
         ].map((s, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm">
+          <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
             <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/10 text-[#5D00D6] flex items-center justify-center font-bold text-[15px] mb-6">
               0{i + 1}
             </div>
@@ -312,7 +313,7 @@ const SectionResponseModel = () => (
         </FadeIn>
 
         <FadeIn delay={0.2} direction="left">
-          <div className="bg-[#0c1024] rounded-[40px] p-10 text-white">
+          <div className="bg-[#0c1024] rounded-lg p-10 text-white">
             <Zap className="w-10 h-10 text-[#a56eff] mb-6" />
             <h3 className="text-[24px] font-bold text-white mb-4">Response Speed Determines Outcome</h3>
             <p className="text-white/70 text-[15px] leading-relaxed mb-8">
@@ -344,7 +345,7 @@ const SectionIntegrationAndVisibility = () => (
   <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-8">
-        <FadeIn className="bg-white p-10 md:p-12 rounded-[40px] border border-slate-200">
+        <FadeIn className="bg-white p-10 md:p-12 rounded-lg border border-slate-200">
           <Server className="w-10 h-10 text-[#5D00D6] mb-6" />
           <h3 className="text-[24px] font-bold text-slate-900 mb-4">Integration with Security Environment</h3>
           <p className="text-slate-600 text-[15px] leading-relaxed mb-6">
@@ -364,7 +365,7 @@ const SectionIntegrationAndVisibility = () => (
           </ul>
         </FadeIn>
 
-        <FadeIn delay={0.2} className="bg-[#0c1024] p-10 md:p-12 rounded-[40px] border border-white/10 text-white">
+        <FadeIn delay={0.2} className="bg-[#0c1024] p-10 md:p-12 rounded-lg border border-white/10 text-white">
           <BarChart3 className="w-10 h-10 text-[#a56eff] mb-6" />
           <h3 className="text-[24px] font-bold text-white mb-4">Centralised Visibility & Control</h3>
           <p className="text-white/70 text-[15px] leading-relaxed mb-6">
@@ -412,7 +413,7 @@ const SectionBusinessImpact = () => (
           { title: 'Business Continuity', desc: 'Recovery is structured. Downtime is measured in minutes.' },
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.1}>
-            <div className="p-8 bg-slate-50 rounded-[24px] h-full border border-slate-100">
+            <div className="p-8 bg-slate-50 rounded-lg h-full border border-slate-100">
               <h4 className="text-[17px] font-bold mb-3 text-slate-900">{item.title}</h4>
               <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
             </div>
@@ -476,6 +477,17 @@ export default function EdrPage() {
         description="Endpoint protection is one layer. Pair it with network security and identity management for complete coverage."
         buttonText="View Security Solutions"
         href="/managed-it/security-solutions"
+      />
+
+      <ContinueJourney 
+        title="Device Security is the First Line."
+        description="Protecting the endpoint is critical. See how we secure the rest of your environment, from network to cloud."
+        links={[
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' },
+          { label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

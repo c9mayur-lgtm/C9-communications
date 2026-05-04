@@ -242,7 +242,7 @@ export default function Plans() {
         {/* HEADER */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
           <div className="max-w-[750px]">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-[#5D00D6]/5 rounded-none border border-[#5D00D6]/10">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-[#5D00D6]/5 rounded-lg border border-[#5D00D6]/10">
                <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6] animate-pulse" />
                <span className="text-[#5D00D6] text-[11px] font-black uppercase tracking-[0.3em]">MOBILE PLAN OPTIONS</span>
             </div>

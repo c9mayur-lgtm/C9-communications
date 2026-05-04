@@ -42,7 +42,7 @@ export const HomePillarsTabbed = () => {
       <div className="container mx-auto max-w-7xl px-6 relative z-10">
         
         {/* Main Architectural Container */}
-        <div className="border border-gray-200 rounded-none overflow-hidden bg-white shadow-[0_8px_40px_rgba(0,0,0,0.02)]">
+        <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-[0_8px_40px_rgba(0,0,0,0.02)]">
           
           {/* Header Area */}
           <div className="p-8 md:p-14 lg:p-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-10">

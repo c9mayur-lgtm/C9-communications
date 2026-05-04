@@ -23,6 +23,7 @@ import {
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from '@/components/wordpress/WpDefenseBanner';
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -59,7 +60,7 @@ const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
    HERO VISUAL COMPONENT (Transition Engine)
    ───────────────────────────────────────────────────────── */
 const TransitionEngineVisual = () => (
-  <div className="bg-[#0c1024] rounded-[48px] p-10 border border-white/10 shadow-2xl relative overflow-hidden group">
+  <div className="bg-[#0c1024] rounded-lg p-10 border border-white/10 shadow-2xl relative overflow-hidden group">
     {/* Grid Background */}
     <div className="absolute inset-0 opacity-10 pointer-events-none" 
       style={{ backgroundImage: 'radial-gradient(#5D00D6 1px, transparent 1px)', backgroundSize: '24px 24px' }} 
@@ -207,7 +208,7 @@ const SectionOperationalRisk = () => (
                { icon: <Zap className="text-amber-500" />, title: 'Operational Inefficiency', desc: 'Legacy systems slow down core workflows, creating friction for staff and preventing the adoption of automated improvements.' },
                { icon: <Layers className="text-[#5D00D6]" />, title: 'Integration Gaps', desc: 'Outdated platforms cannot communicate with modern cloud or security environments, creating dangerous technical silos.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 rounded-[32px] border border-slate-200 shadow-sm flex flex-col items-start h-full">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 rounded-lg border border-slate-200 shadow-sm flex flex-col items-start h-full">
                   <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-8">
                      {item.icon}
                   </div>
@@ -256,7 +257,7 @@ const SectionWhereEnvironmentsStruggle = () => (
                   { label: 'Process Friction', val: 'Persistent', icon: <Activity className="text-amber-500" size={18} /> },
                   { label: 'Security Gaps', val: 'Active', icon: <ShieldAlert className="text-red-500" size={18} /> }
                ].map((pill, i) => (
-                  <FadeIn key={i} delay={i * 0.1} className="p-8 bg-slate-50 rounded-[32px] border border-slate-100 text-center flex flex-col items-center">
+                  <FadeIn key={i} delay={i * 0.1} className="p-8 bg-slate-50 rounded-lg border border-slate-100 text-center flex flex-col items-center">
                      <div className="mb-4">{pill.icon}</div>
                      <div className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-2">{pill.label}</div>
                      <div className="text-[20px] font-bold text-slate-900">{pill.val}</div>
@@ -291,7 +292,7 @@ const SectionHowWeExecute = () => (
                { icon: <ShieldAlert size={24} />, title: 'Controlled Rollout', desc: 'New systems are validated in isolated environments before being introduced to your core network.' },
                { icon: <RefreshCw size={24} />, title: 'Iterative Refinement', desc: 'We continuously monitor the impact of changes, optimising performance as we modernise.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-9 rounded-[32px] border border-slate-200 shadow-sm flex flex-col h-full">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-9 rounded-lg border border-slate-200 shadow-sm flex flex-col h-full">
                   <div className="w-12 h-12 bg-[#5D00D6]/5 text-[#5D00D6] rounded-xl flex items-center justify-center mb-8">
                      {item.icon}
                   </div>
@@ -327,7 +328,7 @@ const SectionTransitionModel = () => (
                { step: '03', title: 'System Validation', desc: 'Rigorous testing of all changes within isolated, risk-free environments.' },
                { step: '04', title: 'Controlled Execution', desc: 'Phased deployment to ensure zero disruption to core business operations.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className={`relative bg-white p-8 rounded-3xl border shadow-sm group hover:border-[#5D00D6]/30 transition-all h-full ${i === 1 ? 'border-[#5D00D6]/40 shadow-[0_0_20px_rgba(93,0,214,0.1)]' : 'border-slate-200'}`}>
+               <FadeIn key={i} delay={i * 0.1} className={`relative bg-white p-8 rounded-lg border shadow-sm group hover:border-[#5D00D6]/30 transition-all h-full ${i === 1 ? 'border-[#5D00D6]/40 shadow-[0_0_20px_rgba(93,0,214,0.1)]' : 'border-slate-200'}`}>
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none pointer-events-none">
                      {s.step}
                   </div>
@@ -350,7 +351,7 @@ const SectionIntegrationAndControl = () => (
    <section className="py-16 lg:py-24 bg-slate-50 border-b border-slate-100">
       <div className={C}>
          <div className="grid lg:grid-cols-2 gap-8">
-            <FadeIn className="bg-white p-12 rounded-[40px] border border-slate-200 shadow-sm relative overflow-hidden">
+            <FadeIn className="bg-white p-12 rounded-lg border border-slate-200 shadow-sm relative overflow-hidden">
                <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-[100%] -z-10" />
                <Monitor className="w-12 h-12 text-[#5D00D6] mb-8" />
                <h3 className="text-[24px] font-bold text-slate-900 mb-6">Integration With Your Environment</h3>
@@ -362,7 +363,7 @@ const SectionIntegrationAndControl = () => (
                </div>
             </FadeIn>
 
-            <FadeIn delay={0.2} className="bg-[#0c1024] p-12 rounded-[40px] border border-white/10 text-white relative overflow-hidden shadow-2xl">
+            <FadeIn delay={0.2} className="bg-[#0c1024] p-12 rounded-lg border border-white/10 text-white relative overflow-hidden shadow-2xl">
                <div className="absolute top-0 right-0 w-32 h-32 bg-[#5D00D6]/10 rounded-bl-[100%] -z-10" />
                <BarChart3 className="w-12 h-12 text-[#a56eff] mb-8" />
                <h3 className="text-[24px] font-bold text-white mb-6">Absolute Visibility & Control</h3>
@@ -401,7 +402,7 @@ const SectionBusinessImpact = () => (
                { label: 'Risk Incident Rate', val: '-80%' },
                { label: 'Uptime Reliability', val: '99.9%' }
             ].map((stat, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 text-center hover:bg-white hover:shadow-xl hover:border-slate-200 transition-all duration-500">
+               <FadeIn key={i} delay={i * 0.1} className="p-10 bg-slate-50 rounded-lg border border-slate-100 text-center hover:bg-white hover:shadow-xl hover:border-slate-200 transition-all duration-500">
                   <div className="text-[28px] font-bold text-[#5D00D6] mb-2">{stat.val}</div>
                   <div className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">{stat.label}</div>
                </FadeIn>
@@ -434,7 +435,7 @@ const SectionWhyThisMatters = () => (
                   { title: 'Execution Quality', desc: 'Determines whether a transition stabilizes or disrupts your business operations.' },
                   { title: 'Proven Stability', desc: 'We maintain 100% uptime through rigorous validation and phased rollouts.' }
                ].map((item, i) => (
-                  <FadeIn key={i} delay={i * 0.15} className="p-8 bg-white/5 rounded-[32px] border border-white/10 hover:bg-[#5D00D6]/10 transition-all group">
+                  <FadeIn key={i} delay={i * 0.15} className="p-8 bg-white/5 rounded-lg border border-white/10 hover:bg-[#5D00D6]/10 transition-all group">
                      <div className="flex gap-6 items-start">
                         <div className="w-10 h-10 rounded-full bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] shrink-0 mt-1">
                            <CheckCircle size={14} />
@@ -473,6 +474,17 @@ export default function SystemsModernisationPage() {
         description="Pair your system modernisation with C9's managed infrastructure services for total operational control."
         buttonText="View Infrastructure Services"
         href="/managed-it/infrastructure"
+      />
+
+      <ContinueJourney 
+        title="Modernise to Scale."
+        description="Modern systems require modern support. Explore the managed services that keep your new environment running at peak performance."
+        links={[
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Cloud Services', path: '/managed-it/cloud-services' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

@@ -12,6 +12,7 @@ import {
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -124,7 +125,7 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-           <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group border-8 border-slate-50">
+           <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
               <img
                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
                  alt="Managed Cloud Infrastructure"
@@ -177,7 +178,7 @@ const SectionProblems = () => (
                { icon: <Layers className="text-red-500" />, title: 'Fragmented Infra', desc: 'Hybrid environments that create blind spots and operational silos.' },
                { icon: <Activity className="text-red-500" />, title: 'Downtime Concerns', desc: 'System instability that impacts daily operations and revenue.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
                   <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center mb-4">
                      {item.icon}
                   </div>
@@ -208,7 +209,7 @@ const SectionPersonas = () => (
          </div>
          
          <div className="grid md:grid-cols-3 gap-8">
-            <FadeIn className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
 
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Zap size={24} />
@@ -226,7 +227,7 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn delay={0.1} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
 
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <RefreshCw size={24} />
@@ -244,7 +245,7 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn delay={0.2} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn delay={0.2} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
 
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Layout size={24} />
@@ -296,7 +297,7 @@ const SectionArchitecture = () => (
                   ))}
                </div>
             </FadeIn>
-            <FadeIn direction="right" className="bg-white/5 p-8 lg:p-12 rounded-[40px] border border-white/10">
+            <FadeIn direction="right" className="bg-white/5 p-8 lg:p-12 rounded-lg border border-white/10">
                <h4 className="text-xl font-bold mb-8 flex items-center gap-3">
                   <Database size={24} className="text-[#a56eff]" /> The Cloud Stack
                </h4>
@@ -340,10 +341,10 @@ const SectionMigration = () => (
       <div className={C}>
          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
             <FadeIn direction="left" className="relative">
-               <div className="rounded-[40px] overflow-hidden border-8 border-slate-50 shadow-2xl">
+               <div className="rounded-lg overflow-hidden shadow-2xl">
                   <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" alt="Cloud Migration" className="w-full aspect-[4/5] object-cover" />
                </div>
-               <div className="absolute -bottom-8 -right-8 bg-[#5D00D6] text-white p-8 rounded-[32px] shadow-2xl max-w-[240px]">
+               <div className="absolute -bottom-8 -right-8 bg-[#5D00D6] text-white p-8 rounded-lg shadow-2xl max-w-[240px]">
                   <div className="text-3xl font-bold mb-2">Zero</div>
                   <div className="text-sm font-bold leading-tight opacity-80 uppercase tracking-wider">Unplanned Downtime During Migration</div>
                </div>
@@ -402,7 +403,7 @@ const SectionProcess = () => (
                { step: '05', title: 'Optimization', desc: 'Tuning for performance.' },
                { step: '06', title: 'Management', desc: '24/7 ongoing support.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-6 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-6 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[32px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-4 right-4 leading-none">
                      {s.step}
                   </div>
@@ -424,7 +425,7 @@ const SectionProcess = () => (
 const SectionProof = () => (
    <section className="py-12 lg:py-16 bg-white">
       <div className={C}>
-         <div className="bg-[#0c1024] rounded-[48px] p-10 lg:p-16 text-white overflow-hidden relative">
+         <div className="bg-[#0c1024] rounded-lg p-10 lg:p-16 text-white overflow-hidden relative">
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6] opacity-10 rounded-full blur-[120px] -mr-80 -mt-80" />
             
             <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -451,7 +452,7 @@ const SectionProof = () => (
                   </div>
                </div>
                
-               <div className="bg-white/5 rounded-[32px] p-8 border border-white/10">
+               <div className="bg-white/5 rounded-lg p-8 border border-white/10">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
                      <div className="w-12 h-12 bg-[#5D00D6] rounded-full flex items-center justify-center font-bold text-xl">R</div>
                      <div>
@@ -472,32 +473,7 @@ const SectionProof = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 8 — INTEGRATION ECOSYSTEM
    ───────────────────────────────────────────────────────── */
-const SectionIntegration = () => (
-   <section className="py-10 bg-slate-50">
-      <div className={C}>
-         <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#0c1024] p-8 md:p-12 rounded-[32px] text-white">
-            <div className="max-w-md">
-               <h3 className="text-2xl font-bold mb-4 text-white">Cloud is Part of a System</h3>
-               <p className="text-white/80 text-sm">
-                  Your cloud environment shouldn't be a standalone silo. We integrate it deeply with your broader technical ecosystem for total control.
-               </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-               {[
-                  { name: 'Network Solutions', href: '/managed-it/network-solutions' },
-                  { name: 'Infrastructure', href: '/managed-it/infrastructure' },
-                  { name: 'Helpdesk Support', href: '/managed-it/helpdesk-support' },
-                  { name: 'C9 Defense', href: 'https://c9defense.com.au/' }
-               ].map(link => (
-                  <a key={link.name} href={link.href} className="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-[#0c1024] transition-all text-xs font-bold uppercase tracking-wider">
-                     {link.name}
-                  </a>
-               ))}
-            </div>
-         </div>
-      </div>
-   </section>
-);
+
 
 /* ─────────────────────────────────────────────────────────
    SECTION 9 — SECURITY & COMPLIANCE
@@ -530,7 +506,7 @@ const SectionSecurity = () => (
                </div>
             </FadeIn>
             
-            <FadeIn direction="right" className="bg-slate-50 p-10 rounded-[40px] border border-slate-100">
+            <FadeIn direction="right" className="bg-slate-50 p-10 rounded-lg border border-slate-100">
                <h4 className="font-bold text-[12px] uppercase tracking-[0.2em] text-[#5D00D6] mb-8">Security Audit Dashboard</h4>
                <div className="space-y-6">
                   {[
@@ -581,7 +557,7 @@ const SectionImpact = () => (
                { title: 'Internal IT Focus', desc: 'Free your team from maintaining hardware silos.' },
                { title: 'Faster Site Rollout', desc: 'Standardized cloud blueprints for rapid expansion.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-3xl border border-slate-200 shadow-sm">
+               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm">
                   <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 mx-auto mb-6">
                      <Zap size={24} />
                   </div>
@@ -608,7 +584,7 @@ export default function CloudServicesPage() {
       <SectionMigration />
       <SectionProcess />
       <SectionProof />
-      <SectionIntegration />
+
       <SectionSecurity />
       <SectionImpact />
 
@@ -617,6 +593,17 @@ export default function CloudServicesPage() {
         description="Public cloud is public by default. We wrap your managed environment in an enterprise-grade security layer so your systems stay protected from the core outward."
         buttonText="Learn About C9 Defense"
         href="https://c9defense.com.au/"
+      />
+
+      <ContinueJourney 
+        title="Cloud Scale, Total Control."
+        description="Cloud is the engine. Explore the network and support structures that keep your hybrid environment stable."
+        links={[
+          { label: 'Infrastructure Governance', path: '/managed-it/infrastructure' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

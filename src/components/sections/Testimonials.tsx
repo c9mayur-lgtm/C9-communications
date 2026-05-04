@@ -18,7 +18,7 @@ export const Testimonials = () => {
         {/* Testimonial Track (CSS Flex with Snap) */}
         <div className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-12 mask-fade-r no-scrollbar">
           {TESTIMONIALS.map((t, i) => (
-            <Card key={i} className="min-w-[320px] md:min-w-[420px] p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-none snap-center flex flex-col group relative">
+            <Card key={i} className="min-w-[320px] md:min-w-[420px] p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-lg snap-center flex flex-col group relative">
               <div className="absolute top-6 right-8 text-[#5D00D6]/10 scale-x-[-1] pointer-events-none">
                  <Quote size={80} fill="currentColor" strokeWidth={0} />
               </div>

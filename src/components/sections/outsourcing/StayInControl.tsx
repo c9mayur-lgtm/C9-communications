@@ -51,7 +51,7 @@ export default function StayInControl() {
 
           {/* RIGHT COLUMN */}
           <div className="flex justify-center md:justify-end">
-            <Card className="w-full max-w-[440px] bg-[#0c1024] rounded-none p-8 border-none shadow-2xl">
+            <Card className="w-full max-w-[440px] bg-[#0c1024] rounded-lg p-8 border-none shadow-2xl">
               <h3 className="text-[22px] font-semibold text-white  mb-6 font-sans">
                 What you see every month
               </h3>

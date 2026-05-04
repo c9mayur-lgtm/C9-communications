@@ -25,7 +25,7 @@ export default function TestingCommitment() {
     <section className="py-24" style={{ backgroundColor: '#F3EEFF', fontFamily: F }}>
       <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
         <div
-          className="bg-white rounded-none p-8 md:p-10 border max-w-4xl mx-auto"
+          className="bg-white rounded-lg p-8 md:p-10 border max-w-4xl mx-auto"
           style={{ borderColor: 'rgba(93,0,214,0.15)' }}
         >
           <div className="grid lg:grid-cols-[55%_45%] gap-10 items-start">

@@ -20,8 +20,8 @@ export default function TwoLayers() {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* LEFT CARD */}
-          <div className="bg-white rounded-none border border-[#5D00D6]/15 p-8 md:p-12 shadow-2xl shadow-[#5D00D6]/5 flex flex-col items-start transition-all hover:-translate-y-1">
-            <div className="bg-[#F3EEFF] text-[#5D00D6] text-[11px] uppercase font-bold tracking-widest px-4 py-2 rounded-none mb-8 inline-block shadow-sm">
+          <div className="bg-white rounded-lg border border-[#5D00D6]/15 p-8 md:p-12 shadow-2xl shadow-[#5D00D6]/5 flex flex-col items-start transition-all hover:-translate-y-1">
+            <div className="bg-[#F3EEFF] text-[#5D00D6] text-[11px] uppercase font-bold tracking-widest px-4 py-2 rounded-lg mb-8 inline-block shadow-sm">
               Managed IT — Security Baseline
             </div>
 
@@ -52,11 +52,11 @@ export default function TwoLayers() {
           </div>
 
           {/* RIGHT CARD */}
-          <div className="bg-[#0c1024] rounded-none border border-[#5D00D6] p-8 md:p-12 shadow-2xl shadow-purple-900/40 flex flex-col items-start transition-all hover:-translate-y-1 relative overflow-hidden">
+          <div className="bg-[#0c1024] rounded-lg border border-[#5D00D6] p-8 md:p-12 shadow-2xl shadow-purple-900/40 flex flex-col items-start transition-all hover:-translate-y-1 relative overflow-hidden">
             {/* Subtle glow */}
-            <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-[#5D00D6]/10 blur-[80px] pointer-events-none rounded-none" />
+            <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-[#5D00D6]/10 blur-[80px] pointer-events-none rounded-lg" />
 
-            <div className="bg-[#5D00D6] text-white text-[11px] uppercase font-bold tracking-widest px-4 py-2 rounded-none mb-8 inline-block shadow-lg relative z-10">
+            <div className="bg-[#5D00D6] text-white text-[11px] uppercase font-bold tracking-widest px-4 py-2 rounded-lg mb-8 inline-block shadow-lg relative z-10">
               C9 Defense — Enterprise Layer
             </div>
 

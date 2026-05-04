@@ -44,10 +44,10 @@ export const WpFooter = () => {
             <div className="mb-10">
                <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Also from the C9 Group:</h4>
                <ul className="space-y-3 text-[14px]">
-                 <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Teams</a></li>
+                 <li><a href="https://c9teams.com.au/" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Teams</a></li>
                  <li><a href="https://c9defense.com.au/" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Defense</a></li>
                  <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Digital</a></li>
-                 <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Lumina</a></li>
+                 <li><a href="https://c9lumina.com.au/" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Lumina</a></li>
                </ul>
             </div>
             
@@ -115,7 +115,7 @@ export const WpFooter = () => {
                 T: 1800 000 299<br/>
                 E: office@c9communications.com.au
               </div>
-              <div className="text-[11px] text-gray-300 font-medium font-sans">
+              <div className="text-[11px] text-slate-500 font-medium font-sans">
                 © {new Date().getFullYear()} C9 Communications. All rights reserved.
               </div>
             </div>
@@ -125,11 +125,7 @@ export const WpFooter = () => {
             {/* Social Links Section */}
             <div className="flex gap-10 lg:pl-4">
               {[
-                { label: 'LINKEDIN', icon: Linkedin, url: 'https://linkedin.com/company/c9communications' },
-                { label: 'GITHUB', icon: Github, url: 'https://github.com/c9mayur-lgtm' },
-                { label: 'TWITTER', icon: Twitter, url: 'https://twitter.com/c9comms' },
-                { label: 'FACEBOOK', icon: Facebook, url: 'https://facebook.com/c9communications' },
-                { label: 'YOUTUBE', icon: Play, url: 'https://youtube.com/@c9communications' }
+                { label: 'LINKEDIN', icon: Linkedin, url: 'https://in.linkedin.com/company/c9groupofcompanies' }
               ].map((social) => (
                 <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
                   <div className="h-6 flex items-center justify-center text-slate-700 opacity-80 group-hover:opacity-100 transition-opacity">

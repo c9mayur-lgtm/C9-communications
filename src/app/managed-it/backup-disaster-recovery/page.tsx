@@ -4,6 +4,7 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { WpFooter as Footer } from '@/components/layout/WpFooter'
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback'
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm'
+import { ContinueJourney } from '@/components/sections/ContinueJourney'
 import Hero from '@/components/sections/backup/Hero'
 import Recognition from '@/components/sections/backup/Recognition'
 import RTOExplainer from '@/components/sections/backup/RTOExplainer'
@@ -70,6 +71,16 @@ export default function BackupDRPage() {
         title="Find out if your backup would actually save you."
         description="A C9 backup assessment reviews your current environment — what's being backed up, how often, where it's stored, and whether recovery has ever been tested. No obligation. Plain language report."
         formTitle="Request a Backup Assessment"
+      />
+      <ContinueJourney 
+        title="Recovery is the Safety Net."
+        description="When incidents happen, you need a way back. See how we integrate recovery with proactive support and continuity."
+        links={[
+          { label: 'Business Continuity', path: '/managed-it/business-continuity' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' },
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Cloud Services', path: '/managed-it/cloud-services' }
+        ]}
       />
       <Footer />
     </main>

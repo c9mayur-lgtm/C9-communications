@@ -12,6 +12,7 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 import { NetworkTopologyVisual } from './components/NetworkTopologyVisual';
 
 /* ─────────────────────────────────────────────────────────
@@ -183,8 +184,8 @@ const SectionManagedStack = () => (
                   points: ["Site-to-Site VPN Mesh", "Centralised Governance Control", "Policy & Performance Consistency"]
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.05} className="p-8 bg-slate-50 border border-slate-100 rounded-none hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all group">
-                  <div className="w-12 h-12 bg-white rounded-none flex items-center justify-center text-[#5D00D6] mb-8 shadow-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
+               <FadeIn key={i} delay={i * 0.05} className="p-8 bg-slate-50 border border-slate-100 rounded-lg hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all group">
+                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-[#5D00D6] mb-8 shadow-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                      {item.icon}
                   </div>
                   <h4 className="text-lg font-bold mb-6 text-slate-900 uppercase tracking-tight">{item.title}</h4>
@@ -216,7 +217,7 @@ const SectionNetworkHardware = () => (
             </p>
          </FadeIn>
          <FadeIn delay={0.1} className="-mb-16 -mt-10">
-           <div className="w-full rounded-[48px] overflow-hidden bg-white flex items-center justify-center">
+           <div className="w-full rounded-lg overflow-hidden bg-white flex items-center justify-center">
               <img 
                 src="/images/network-system-fleet.png" 
                 alt="Complete Managed Network Ecosystem" 
@@ -268,11 +269,11 @@ const SectionArchitectureFlow = () => (
             </FadeIn>
 
             <FadeIn direction="right" className="relative">
-               <div className="bg-[#0c1024] rounded-none p-10 lg:p-12 text-white relative overflow-hidden shadow-2xl min-h-[500px] flex flex-col justify-center">
+               <div className="bg-[#0c1024] rounded-lg p-10 lg:p-12 text-white relative overflow-hidden shadow-2xl min-h-[500px] flex flex-col justify-center">
                   <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
                   
                   <div className="relative z-10 space-y-8">
-                     <div className="flex flex-col items-center text-center p-6 bg-white/5 border border-white/10 rounded-none group hover:bg-white/10 transition-all">
+                     <div className="flex flex-col items-center text-center p-6 bg-white/5 border border-white/10 rounded-lg group hover:bg-white/10 transition-all">
                         <Globe className="text-[#a56eff] mb-4" size={32} />
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 mb-1">Entry</span>
                         <h5 className="font-bold">Encrypted External Links</h5>
@@ -282,7 +283,7 @@ const SectionArchitectureFlow = () => (
                         <ArrowRight className="rotate-90 text-white/20" size={24} />
                      </div>
 
-                     <div className="flex flex-col items-center text-center p-6 bg-[#5D00D6]/20 border border-[#5D00D6]/40 rounded-none shadow-xl shadow-purple-900/40">
+                     <div className="flex flex-col items-center text-center p-6 bg-[#5D00D6]/20 border border-[#5D00D6]/40 rounded-lg shadow-xl shadow-purple-900/40">
                         <Shield className="text-[#a56eff] mb-4" size={32} />
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-1">Active Filter</span>
                         <h5 className="font-bold">Managed Security Layer</h5>
@@ -293,11 +294,11 @@ const SectionArchitectureFlow = () => (
                      </div>
 
                      <div className="grid sm:grid-cols-2 gap-4">
-                        <div className="flex flex-col items-center text-center p-4 bg-white/5 border border-white/10 rounded-none">
+                        <div className="flex flex-col items-center text-center p-4 bg-white/5 border border-white/10 rounded-lg">
                            <Network className="text-[#a56eff] mb-3" size={24} />
                            <h6 className="text-[12px] font-bold">Switching Fabric</h6>
                         </div>
-                        <div className="flex flex-col items-center text-center p-4 bg-white/5 border border-white/10 rounded-none">
+                        <div className="flex flex-col items-center text-center p-4 bg-white/5 border border-white/10 rounded-lg">
                            <Wifi className="text-[#a56eff] mb-3" size={24} />
                            <h6 className="text-[12px] font-bold">Wireless Core</h6>
                         </div>
@@ -354,8 +355,8 @@ const SectionSystemOwnership = () => (
                   desc: "Strict adherence to configuration baselines across all sites to ensure reliability and rapid scaling."
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-none border border-slate-200 shadow-sm hover:shadow-xl transition-all">
-                  <div className="w-12 h-12 bg-slate-50 rounded-none flex items-center justify-center mb-6">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-xl transition-all">
+                  <div className="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center mb-6">
                      {item.icon}
                   </div>
                   <h4 className="text-lg font-bold mb-3 text-slate-900">{item.title}</h4>
@@ -365,7 +366,7 @@ const SectionSystemOwnership = () => (
          </div>
 
          <FadeIn delay={0.4} className="mt-12 flex justify-center">
-            <div className="inline-flex items-center gap-4 px-6 py-4 rounded-none bg-[#0c1024] text-white">
+            <div className="inline-flex items-center gap-4 px-6 py-4 rounded-lg bg-[#0c1024] text-white">
                <Activity className="text-emerald-400" size={24} />
                <span className="font-bold text-[14px]">Operational Standard: C9 maintains 24/7 engineering oversight on every core link.</span>
             </div>
@@ -404,7 +405,7 @@ const SectionStrategicControl = () => (
                   ))}
                </div>
 
-               <div className="p-6 rounded-none bg-slate-50 border border-slate-100">
+               <div className="p-6 rounded-lg bg-slate-50 border border-slate-100">
                   <p className="text-slate-600 italic text-[14px]">
                      "We don't manage connections; we manage business continuity. If your network stops, your revenue stops. We exist to prevent that."
                   </p>
@@ -412,7 +413,7 @@ const SectionStrategicControl = () => (
             </FadeIn>
 
             <FadeIn direction="right" className="relative">
-               <div className="bg-[#0c1024] rounded-none p-12 text-white relative overflow-hidden shadow-2xl">
+               <div className="bg-[#0c1024] rounded-lg p-12 text-white relative overflow-hidden shadow-2xl">
                   <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
                   
                   <div className="relative z-10">
@@ -424,7 +425,7 @@ const SectionStrategicControl = () => (
                         <div className="relative">
                            <div className="absolute left-[20px] top-[40px] bottom-[-40px] w-0.5 bg-dashed border-l border-white/20" />
                            <div className="flex items-center gap-6 mb-2">
-                              <div className="w-10 h-10 rounded-none bg-[#5D00D6] flex items-center justify-center font-bold">1</div>
+                              <div className="w-10 h-10 rounded-lg bg-[#5D00D6] flex items-center justify-center font-bold">1</div>
                               <div className="font-bold text-lg">External Layer</div>
                            </div>
                            <p className="pl-16 text-white/60 text-sm">Fiber, SD-WAN Mesh, 4G/5G Failover and Carrier Management</p>
@@ -432,7 +433,7 @@ const SectionStrategicControl = () => (
                         
                         <div className="relative">
                            <div className="flex items-center gap-6 mb-2">
-                              <div className="w-10 h-10 rounded-none bg-[#5D00D6] flex items-center justify-center font-bold">2</div>
+                              <div className="w-10 h-10 rounded-lg bg-[#5D00D6] flex items-center justify-center font-bold">2</div>
                               <div className="font-bold text-lg">Internal Layer</div>
                            </div>
                            <p className="pl-16 text-white/60 text-sm">Managed Core Switching, Wireless Fabric, and Access Control</p>
@@ -440,7 +441,7 @@ const SectionStrategicControl = () => (
 
                         <div className="pt-4 mt-4 border-t border-white/10">
                            <div className="flex items-center gap-4">
-                              <div className="w-12 h-12 rounded-none bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                              <div className="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
                                  <ShieldCheck size={24} />
                               </div>
                               <div>
@@ -498,7 +499,7 @@ const SectionArchitecture = () => (
                   color: "bg-white"
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className={`${item.color === 'bg-[#5D00D6]' ? 'bg-[#5D00D6] text-white shadow-2xl shadow-[#5D00D6]/20' : 'bg-white border-slate-200'} p-8 lg:p-10 rounded-[40px] border shadow-sm relative group hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full`}>
+               <FadeIn key={i} delay={i * 0.1} className={`${item.color === 'bg-[#5D00D6]' ? 'bg-[#5D00D6] text-white shadow-2xl shadow-[#5D00D6]/20' : 'bg-white border-slate-200'} p-8 lg:p-10 rounded-lg border shadow-sm relative group hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full`}>
                   <div className={`mb-8 w-16 h-16 rounded-[24px] ${item.color === 'bg-[#5D00D6]' ? 'bg-white/10 border border-white/20' : 'bg-[#5D00D6]/5 border border-[#5D00D6]/10'} flex items-center justify-center transition-transform group-hover:scale-110 duration-500`}>
                      {item.icon}
                   </div>
@@ -544,7 +545,7 @@ const SectionRedundancy = () => (
                      { icon: <Activity size={20} />, title: "Continuity Audits", desc: "Regular testing of failover mechanisms to ensure they work when you need them." },
                      { icon: <Server size={20} />, title: "Redundant Hardware", desc: "Dual-router and dual-firewall configurations for hardware-level resilience." }
                   ].map((item, i) => (
-                     <div key={i} className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                     <div key={i} className="bg-white/5 p-6 rounded-lg border border-white/10">
                         <div className="text-[#a56eff] mb-4">{item.icon}</div>
                         <h4 className="font-bold mb-2">{item.title}</h4>
                         <p className="text-white/50 text-xs leading-relaxed">{item.desc}</p>
@@ -554,7 +555,7 @@ const SectionRedundancy = () => (
             </FadeIn>
 
             <FadeIn direction="right" className="relative">
-               <div className="relative rounded-[40px] overflow-hidden aspect-square border-4 border-white/10 shadow-2xl">
+               <div className="relative rounded-lg overflow-hidden aspect-square border-4 border-white/10 shadow-2xl">
                   <img 
                      src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200" 
                      alt="Network Redundancy" 
@@ -563,7 +564,7 @@ const SectionRedundancy = () => (
                   <div className="absolute inset-0 bg-[#0c1024]/40" />
                   
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[320px]">
-                     <div className="bg-white/95 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-2xl text-slate-900">
+                     <div className="bg-white/95 backdrop-blur-md rounded-lg p-8 border border-white/60 shadow-2xl text-slate-900">
                         <div className="flex items-center justify-between mb-6">
                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Simulation</span>
                            <span className="text-red-500 font-bold text-[10px] uppercase">Link Failure Detected</span>
@@ -611,7 +612,7 @@ const SectionMultiSite = () => (
       <div className={C}>
          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center">
             <FadeIn direction="left" className="relative">
-               <div className="bg-slate-50 rounded-[40px] p-10 border border-slate-100 relative overflow-hidden shadow-xl">
+               <div className="bg-slate-50 rounded-lg p-10 border border-slate-100 relative overflow-hidden shadow-xl">
                   <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-[0.03] rounded-full blur-[100px]" />
                   <div className="relative z-10">
                      <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
@@ -657,7 +658,7 @@ const SectionMultiSite = () => (
                         desc: "Consistent firewall policies and threat protection enforced across every edge device." 
                      }
                   ].map((item, i) => (
-                     <div key={i} className="flex gap-4 p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-[#5D00D6]/20 transition-all group">
+                     <div key={i} className="flex gap-4 p-6 rounded-lg bg-slate-50 border border-slate-100 hover:border-[#5D00D6]/20 transition-all group">
                         <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm">
                            <Share2 size={20} />
                         </div>
@@ -705,7 +706,7 @@ const SectionMonitoring = () => (
                </div>
             </FadeIn>
 
-            <FadeIn direction="right" className="bg-[#0c1024] rounded-[48px] p-8 lg:p-12 text-white relative overflow-hidden shadow-2xl">
+            <FadeIn direction="right" className="bg-[#0c1024] rounded-lg p-8 lg:p-12 text-white relative overflow-hidden shadow-2xl">
                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
                
                <div className="relative z-10">
@@ -787,7 +788,7 @@ const SectionHowItWorks = () => (
                { step: '04', title: 'Optimization', desc: 'Tuning traffic flow for business-critical apps.' },
                { step: '05', title: 'Monitoring & Support', desc: 'Active 24/7 oversight and proactive resolution.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -838,7 +839,7 @@ const SectionOutcomes = () => (
             </FadeIn>
 
             <FadeIn direction="right" className="relative">
-               <div className="relative rounded-[40px] overflow-hidden aspect-[4/3] border-4 border-white/10">
+               <div className="relative rounded-lg overflow-hidden aspect-[4/3] border-4 border-white/10">
                   <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200" alt="Network Operations" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024] to-transparent opacity-60" />
                </div>
@@ -866,7 +867,7 @@ const SectionImpact = () => (
                { title: 'Operational Continuity', desc: 'Staff remain productive regardless of carrier issues or site-level connectivity challenges.' },
                { title: 'Predictable Performance', desc: 'Ensure your business-critical systems always have the bandwidth they need to function at peak speed.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="p-8 lg:p-10 bg-white rounded-[32px] border border-slate-200 shadow-sm hover:shadow-lg transition-all text-center">
+               <FadeIn key={i} delay={i * 0.1} className="p-8 lg:p-10 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-lg transition-all text-center">
                   <div className="w-14 h-14 bg-[#5D00D6]/5 rounded-2xl flex items-center justify-center text-[#5D00D6] mx-auto mb-6">
                      <Activity size={28} />
                   </div>
@@ -882,33 +883,7 @@ const SectionImpact = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 11 — SERVICE INTEGRATION
    ───────────────────────────────────────────────────────── */
-const SectionIntegration = () => (
-   <section className="py-16 bg-white">
-      <div className={C}>
-         <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#0c1024] p-10 md:p-16 rounded-[48px] text-white relative overflow-hidden">
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
-            <div className="max-w-md relative z-10">
-               <h3 className="text-3xl font-bold mb-6 text-white">Specialised Management</h3>
-               <p className="text-white/70 text-lg">
-                  Each part of your network requires specific management. Explore our deeper capabilities to understand how we support your infrastructure.
-               </p>
-            </div>
-            <div className="flex flex-wrap gap-3 relative z-10">
-               {[
-                  { name: 'Routing & Switching', href: '/telco/hardware/routers' },
-                  { name: 'Wireless Infrastructure', href: '/telco/hardware/access-points' },
-                  { name: 'Connectivity', href: '/telco' },
-                  { name: 'Managed IT', href: '/managed-it' }
-               ].map(link => (
-                  <a key={link.name} href={link.href} className="px-6 py-3 rounded-full border border-white/20 bg-white/5 hover:bg-white hover:text-[#0c1024] transition-all text-[14px] font-bold">
-                     {link.name}
-                  </a>
-               ))}
-            </div>
-         </div>
-      </div>
-   </section>
-);
+
 
 /* ─────────────────────────────────────────────────────────
    SECTION 12 — SERVICE INTERCONNECT
@@ -944,7 +919,7 @@ const SectionServiceInterconnect = () => (
                   link: "/modern-workplace"
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 border border-slate-200 rounded-none flex flex-col h-full shadow-sm hover:shadow-xl transition-all group">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 border border-slate-200 rounded-lg flex flex-col h-full shadow-sm hover:shadow-xl transition-all group">
                   <h4 className="text-xl font-bold mb-4 text-[#0c1024]">{item.title}</h4>
                   <p className="text-slate-500 text-[15px] leading-relaxed mb-8 flex-grow">{item.desc}</p>
                   <a href={item.link} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] uppercase tracking-widest group-hover:gap-3 transition-all">
@@ -978,13 +953,24 @@ export default function NetworkSolutionsPage() {
       <SectionHowItWorks />
       <SectionOutcomes />
       <SectionImpact />
-      <SectionIntegration />
+
 
       <WpDefenseBanner 
         title={<>Network-Level <span className="text-[#5D00D6]">Protection.</span></>}
         description="Every connection is a potential entry point. We embed security directly into your network fabric with active threat monitoring and secure access."
         buttonText="View Security Solutions"
         href="https://c9defense.com.au/"
+      />
+
+      <ContinueJourney 
+        title="Connectivity is the Pulse."
+        description="Your network powers your apps and your team. Discover how we manage the systems that travel across your links."
+        links={[
+          { label: 'Managed Cloud Services', path: '/managed-it/cloud-services' },
+          { label: 'Infrastructure Governance', path: '/managed-it/infrastructure' },
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

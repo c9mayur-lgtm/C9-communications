@@ -25,8 +25,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-[70vh] flex items-center bg-[#FDFDFF] overflow-hidden py-16 md:py-20 px-6 md:px-8 lg:px-12 border-b border-gray-50">
       {/* Dynamic Background Gradients */}
-      <div className="absolute top-0 right-0 w-[50%] h-full bg-[#5D00D6]/5 blur-[120px] rounded-none pointer-events-none -z-1" />
-      <div className="absolute bottom-[-10%] left-[-5%] w-[30%] h-[40%] bg-blue-50/30 blur-[100px] rounded-none pointer-events-none -z-1" />
+      <div className="absolute top-0 right-0 w-[50%] h-full bg-[#5D00D6]/5 blur-[120px] rounded-lg pointer-events-none -z-1" />
+      <div className="absolute bottom-[-10%] left-[-5%] w-[30%] h-[40%] bg-blue-50/30 blur-[100px] rounded-lg pointer-events-none -z-1" />
 
       <div className="container mx-auto max-w-[1240px] relative z-10 font-sans">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
@@ -122,7 +122,7 @@ export default function Hero() {
                                        <span className="text-slate-500">{item.l}</span>
                                        <span className={item.c}>{item.s}</span>
                                     </div>
-                                    <div className="h-1.5 w-full bg-slate-50 rounded-none overflow-hidden border border-slate-100/50">
+                                    <div className="h-1.5 w-full bg-slate-50 rounded-lg overflow-hidden border border-slate-100/50">
                                        <motion.div initial={{ width: 0 }} animate={{ width: `${item.p}%` }} transition={{ duration: 1.5, delay: 0.2 }} className={`h-full ${item.p === 100 ? 'bg-emerald-500' : 'bg-[#5D00D6]'}`} />
                                     </div>
                                  </div>
@@ -152,7 +152,7 @@ export default function Hero() {
                                <div className="bg-slate-50/50 border border-slate-100 rounded-2xl p-4 flex flex-col justify-between">
                                   <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider mb-2 block">Risk Score</span>
                                   <span className="text-[20px] font-bold text-[#0c1024]">92/100</span>
-                                  <div className="w-full h-1 bg-emerald-200 mt-2 rounded-none" />
+                                  <div className="w-full h-1 bg-emerald-200 mt-2 rounded-lg" />
                                </div>
                                <div className="bg-slate-50/50 border border-slate-100 rounded-2xl p-4 flex flex-col justify-between">
                                   <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider mb-2 block">Mitigation Progress</span>

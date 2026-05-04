@@ -10,6 +10,7 @@ import {
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -99,7 +100,7 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-           <div className="bg-slate-50 rounded-[48px] p-10 border border-slate-200 shadow-2xl relative overflow-hidden">
+           <div className="bg-slate-50 rounded-lg p-10 border border-slate-200 shadow-2xl relative overflow-hidden">
               <div className="flex items-center gap-4 mb-8">
                  <div className="w-12 h-12 rounded-2xl bg-[#5D00D6] text-white flex items-center justify-center shadow-lg">
                     <Rocket size={24} />
@@ -178,7 +179,7 @@ const SectionCostOfInertia = () => (
                   desc: "Disconnected data sources that prevent executive visibility and accurate business forecasting."
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-xl transition-all">
                   <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center mb-6">
                      {item.icon}
                   </div>
@@ -219,7 +220,7 @@ const SectionTransformationModel = () => (
                </div>
             </FadeIn>
             <FadeIn direction="right">
-               <div className="bg-[#0c1024] p-10 rounded-[48px] text-white relative overflow-hidden">
+               <div className="bg-[#0c1024] p-10 rounded-lg text-white relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#5D00D6]/20 rounded-bl-full" />
                   <h3 className="text-xl font-bold mb-8">Transformation Outcomes</h3>
                   <div className="space-y-6">
@@ -267,7 +268,7 @@ const SectionWhyItMatters = () => (
                </div>
             </FadeIn>
             <FadeIn direction="right">
-               <div className="p-10 rounded-[48px] bg-white/5 border border-white/10 backdrop-blur-sm">
+               <div className="p-10 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
                   <p className="text-xl font-medium leading-relaxed italic text-white/90 mb-8">
                      "Transformation isn&apos;t a destination. It&apos;s about building the operational muscle to adapt to a changing digital landscape with confidence."
                   </p>
@@ -302,6 +303,17 @@ export default function DigitalTransformationPage() {
         description="Transformation requires active leadership and engineering discipline. We provide the vCIO and engineering resources to drive your success."
         buttonText="View Strategy Services"
         href="/managed-it/strategy-consulting"
+      />
+
+      <ContinueJourney 
+        title="Transformation is the Journey."
+        description="Modernising your stack is the first step. See how we support your transformed environment through managed services and strategy."
+        links={[
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' },
+          { label: 'Cloud Services', path: '/managed-it/cloud-services' },
+          { label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

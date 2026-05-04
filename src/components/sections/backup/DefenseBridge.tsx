@@ -8,13 +8,13 @@ export default function DefenseBridge() {
   return (
     <section className="bg-[#0F0F1A] py-20" style={{ fontFamily: F }}>
       <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
-        <div className="bg-[#1A1A2E] border border-[#5D00D6]/30 rounded-none p-8 md:p-12 relative overflow-hidden">
+        <div className="bg-[#1A1A2E] border border-[#5D00D6]/30 rounded-lg p-8 md:p-12 relative overflow-hidden">
           {/* Glow */}
           <div className="absolute top-0 right-0 w-[40%] h-full bg-[#5D00D6]/10 blur-[100px] pointer-events-none" />
 
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div className="max-w-[680px]">
-              <div className="inline-flex items-center gap-2 bg-[#5D00D6] text-white px-4 py-1.5 text-[11px] font-bold tracking-[0.2em] uppercase mb-6 rounded-none">
+              <div className="inline-flex items-center gap-2 bg-[#5D00D6] text-white px-4 py-1.5 text-[11px] font-bold tracking-[0.2em] uppercase mb-6 rounded-lg">
                 <ShieldCheck size={14} /> C9 Defense
               </div>
               <h2 className="c9-section-heading !text-white mb-4" style={{ fontFamily: F }}>

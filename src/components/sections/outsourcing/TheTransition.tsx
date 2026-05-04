@@ -165,7 +165,7 @@ export default function TheTransition() {
               >
                 <div
                   className={cn(
-                    'w-12 h-12 rounded-none flex items-center justify-center',
+                    'w-12 h-12 rounded-lg flex items-center justify-center',
                     'border-[1.5px] transition-all duration-300',
                     isActive && 'bg-[#5D00D6] border-[#5D00D6] scale-110 shadow-2xl shadow-purple-900/20',
                     isDone && 'bg-[#EDE9FE] border-[#5D00D6]',
@@ -190,13 +190,13 @@ export default function TheTransition() {
         </div>
 
         {/* Detail panel */}
-        <div className="mt-12 bg-white rounded-none border border-purple-100 overflow-hidden shadow-2xl shadow-purple-900/5">
+        <div className="mt-12 bg-white rounded-lg border border-purple-100 overflow-hidden shadow-2xl shadow-purple-900/5">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_320px]">
 
             {/* Left */}
             <div className="p-8 lg:p-12 md:border-r border-purple-50 flex flex-col">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#F4F0FA] text-[#5D00D6] text-[11px] font-bold tracking-widest uppercase px-4 py-2 rounded-none w-fit mb-8">
+              <div className="inline-flex items-center gap-2 bg-[#F4F0FA] text-[#5D00D6] text-[11px] font-bold tracking-widest uppercase px-4 py-2 rounded-lg w-fit mb-8">
                 <CheckCircle size={14} />
                 {s.badge}
               </div>
@@ -212,7 +212,7 @@ export default function TheTransition() {
               <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 flex-1 mb-10">
                 {s.checklist.map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
-                    <div className="w-6 h-6 rounded-none bg-[#F4F0FA] flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-lg bg-[#F4F0FA] flex items-center justify-center flex-shrink-0">
                       <CheckCircle size={12} className="text-[#5D00D6]" />
                     </div>
                     <span className="text-[14px] font-semibold text-[#0c1024] leading-snug">{item}</span>
@@ -236,7 +236,7 @@ export default function TheTransition() {
                 <div
                   key={i}
                   className={cn(
-                    'rounded-none p-5 border transition-all duration-300',
+                    'rounded-lg p-5 border transition-all duration-300',
                     m.hi
                       ? 'bg-white border-[#5D00D6] shadow-xl shadow-purple-900/5'
                       : 'bg-white/50 border-purple-100 hover:border-[#5D00D6]/30'
@@ -271,7 +271,7 @@ export default function TheTransition() {
               onClick={() => setCur(Math.max(0, cur - 1))}
               disabled={cur === 0}
               className={cn(
-                'px-6 py-3 rounded-none text-[14px] font-bold border transition-all duration-300',
+                'px-6 py-3 rounded-lg text-[14px] font-bold border transition-all duration-300',
                 'border-purple-100 text-[#0c1024] hover:border-[#5D00D6] hover:text-[#5D00D6]',
                 'disabled:opacity-25 disabled:cursor-not-allowed'
               )}
@@ -297,7 +297,7 @@ export default function TheTransition() {
               onClick={() => setCur(Math.min(steps.length - 1, cur + 1))}
               disabled={cur === steps.length - 1}
               className={cn(
-                'px-8 py-3 rounded-none text-[14px] font-bold transition-all duration-300',
+                'px-8 py-3 rounded-lg text-[14px] font-bold transition-all duration-300',
                 'bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-xl shadow-purple-900/20',
                 'disabled:opacity-25 disabled:cursor-not-allowed'
               )}

@@ -38,7 +38,7 @@ export default function RTOExplainer() {
 
         <div className="grid md:grid-cols-2 gap-6 mt-10">
           {cards.map((card, i) => (
-            <div key={i} className="bg-white rounded-none p-8 border" style={{ borderColor: 'rgba(93,0,214,0.15)' }}>
+            <div key={i} className="bg-white rounded-lg p-8 border" style={{ borderColor: 'rgba(93,0,214,0.15)' }}>
               <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: '#EDE9FE' }}>
                 <card.icon size={22} style={{ color: '#5D00D6' }} />
               </div>
@@ -53,7 +53,7 @@ export default function RTOExplainer() {
           ))}
         </div>
 
-        <div className="bg-white rounded-none p-5 text-center border mt-6" style={{ borderColor: 'rgba(93,0,214,0.15)' }}>
+        <div className="bg-white rounded-lg p-5 text-center border mt-6" style={{ borderColor: 'rgba(93,0,214,0.15)' }}>
           <p className="text-[14px] font-bold text-[#0c1024]" style={{ fontFamily: F }}>
             C9 defines your RTO and RPO in your agreement — and tests against them on a scheduled basis. Not estimates. <span className="text-[#5D00D6]">Commitments.</span>
           </p>

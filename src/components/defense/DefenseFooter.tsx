@@ -24,14 +24,8 @@ export function DefenseFooter() {
               continuous defence operations, and tested recovery assurance.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="https://facebook.com" className="w-9 h-9 border border-[#303030] flex items-center justify-center text-[#606060] hover:text-white hover:border-[#606060] transition-colors">
-                <Facebook size={15} />
-              </Link>
-              <Link href="https://linkedin.com" className="w-9 h-9 border border-[#303030] flex items-center justify-center text-[#606060] hover:text-white hover:border-[#606060] transition-colors">
+              <Link href="https://in.linkedin.com/company/c9groupofcompanies" className="w-9 h-9 border border-[#303030] flex items-center justify-center text-[#606060] hover:text-white hover:border-[#606060] transition-colors">
                 <Linkedin size={15} />
-              </Link>
-              <Link href="https://youtube.com" className="w-9 h-9 border border-[#303030] flex items-center justify-center text-[#606060] hover:text-white hover:border-[#606060] transition-colors">
-                <Youtube size={15} />
               </Link>
             </div>
           </div>
@@ -110,7 +104,7 @@ export function DefenseFooter() {
       {/* Bottom bar */}
       <div className="border-t border-[#151515]">
         <div className="max-w-[1280px] mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#404040]">© 2025 C9 Group. All Rights Reserved.</p>
+          <p className="text-xs text-[#606060]">© 2025 C9 Group. All Rights Reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/defense/terms-conditions" className="text-xs text-[#404040] hover:text-[#808080] transition-colors">
               Terms & Conditions

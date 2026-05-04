@@ -368,10 +368,10 @@ export default function WhatsCovered() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-none p-8 border border-gray-100 flex flex-col overflow-hidden group min-h-[520px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5 relative"
+              className="bg-white rounded-lg p-8 border border-gray-100 flex flex-col overflow-hidden group min-h-[520px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5 relative"
             >
               {/* Scaled Component Container - Inheriting F8FAFC behind it to pop the white card */}
-              <div className="relative h-[250px] bg-[#F8FAFC] rounded-none mb-8 overflow-hidden flex items-center justify-center border border-gray-50/80">
+              <div className="relative h-[250px] bg-[#F8FAFC] rounded-lg mb-8 overflow-hidden flex items-center justify-center border border-gray-50/80">
                 {item.visual}
               </div>
               

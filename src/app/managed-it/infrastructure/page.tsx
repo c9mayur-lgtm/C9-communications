@@ -12,6 +12,7 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 import { InfrastructureBackboneVisual } from '../network-solutions/components/InfrastructureBackboneVisual';
 
 /* ─────────────────────────────────────────────────────────
@@ -154,7 +155,7 @@ const SectionPersonas = () => (
          </div>
          
          <div className="grid md:grid-cols-3 gap-8">
-            <FadeIn id="monitoring-alignment" className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn id="monitoring-alignment" className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Activity size={24} />
                </div>
@@ -171,7 +172,7 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="audited-workflows" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn id="audited-workflows" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Cpu size={24} />
                </div>
@@ -188,7 +189,7 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="enforced-escalation" delay={0.2} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn id="enforced-escalation" delay={0.2} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <ShieldCheck size={24} />
                </div>
@@ -231,7 +232,7 @@ const SectionHowItWorks = () => (
                { step: '03', title: 'Orchestrated Escalation', desc: 'Coordinated technical response across internal leads and third-party vendors under unified control.' },
                { step: '04', title: 'Resolution Verification', desc: 'Formal root-cause confirmation and system validation before incident closure and stakeholder reporting.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -333,7 +334,7 @@ const SectionAccountability = () => (
                      ))}
                   </div>
                </div>
-               <div className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-xl">
+               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-xl">
                   <h4 className="text-xl font-bold mb-6 flex items-center gap-2 text-slate-900">
                      <Database size={20} className="text-[#5D00D6]" /> Operational Service Levels
                   </h4>
@@ -382,7 +383,7 @@ const SectionIntegration = () => (
                { icon: <ShieldCheck />, name: 'Stability Oversight', desc: 'Governance layer ensuring long-term infrastructure health and reliability.' },
                { icon: <RefreshCcw />, name: 'Issue Elimination', desc: 'Systemic identification and removal of recurring failure points.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white border border-slate-200 p-8 rounded-[32px] hover:border-[#5D00D6]/20 hover:shadow-xl transition-all group">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white border border-slate-200 p-8 rounded-lg hover:border-[#5D00D6]/20 hover:shadow-xl transition-all group">
                   <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                      {item.icon}
                   </div>
@@ -427,7 +428,7 @@ const SectionTechnical = () => (
                   ))}
                </div>
             </FadeIn>
-            <FadeIn direction="right" className="bg-[#0c1024] rounded-[32px] p-10 text-white relative overflow-hidden">
+            <FadeIn direction="right" className="bg-[#0c1024] rounded-lg p-10 text-white relative overflow-hidden">
                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
                <div className="relative z-10">
                   <h4 className="text-lg font-bold mb-8">Operational Standards</h4>
@@ -480,7 +481,7 @@ const SectionImpact = () => (
                { title: 'Not Reactive Break-Fix', desc: 'We are not an ad-hoc support service. Our model is built on continuous stability and risk prevention.' },
                { title: 'Not Advisory-Only', desc: 'We do not just provide reports. We implement, manage, and own the security and operational outcomes of your infrastructure.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-3xl border border-slate-200 shadow-sm">
+               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm">
                   <div className="w-12 h-12 bg-rose-50 rounded-full flex items-center justify-center text-rose-500 mx-auto mb-6">
                      <ShieldAlert size={24} />
                   </div>
@@ -515,6 +516,17 @@ export default function InfrastructurePage() {
         description="SLA without operational enforcement provides zero protection. Request an assessment to review your infrastructure readiness and SLA governance."
         buttonText="Review SLA + Security Framework"
         href="#sla-framework"
+      />
+
+      <ContinueJourney 
+        title="Governing the Foundation."
+        description="Infrastructure provides the backbone. Now explore the layers that sit on top—from cloud scale to end-user support."
+        links={[
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' },
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+          { label: 'Managed Cloud', path: '/managed-it/cloud-services' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

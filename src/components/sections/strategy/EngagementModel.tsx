@@ -145,13 +145,13 @@ export default function EngagementModel() {
         </div>
 
         {/* Detail panel */}
-        <div className="mt-12 bg-white rounded-none border border-purple-100 overflow-hidden shadow-2xl shadow-purple-900/5">
+        <div className="mt-12 bg-white rounded-lg border border-purple-100 overflow-hidden shadow-2xl shadow-purple-900/5">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_320px]">
 
             {/* Left */}
             <div className="p-8 lg:p-12 md:border-r border-purple-50 flex flex-col">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#F4F0FA] text-[#5D00D6] text-[11px] font-bold tracking-widest uppercase px-4 py-2 rounded-none w-fit mb-8">
+              <div className="inline-flex items-center gap-2 bg-[#F4F0FA] text-[#5D00D6] text-[11px] font-bold tracking-widest uppercase px-4 py-2 rounded-lg w-fit mb-8">
                 <CheckCircle size={14} />
                 {s.badge}
               </div>
@@ -167,7 +167,7 @@ export default function EngagementModel() {
               <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 flex-1 mb-10">
                 {s.checklist.map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
-                    <div className="w-6 h-6 rounded-none bg-[#F4F0FA] flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-lg bg-[#F4F0FA] flex items-center justify-center flex-shrink-0">
                       <CheckCircle size={12} className="text-[#5D00D6]" />
                     </div>
                     <span className="text-[14px] font-semibold text-[#0c1024] leading-snug">{item}</span>
@@ -177,7 +177,7 @@ export default function EngagementModel() {
 
               {/* Outcome */}
               <div className="flex items-center gap-4 mt-auto pt-8 border-t border-purple-50">
-                <div className="w-2.5 h-2.5 rounded-none bg-[#5D00D6] flex-shrink-0 animate-pulse" />
+                <div className="w-2.5 h-2.5 rounded-lg bg-[#5D00D6] flex-shrink-0 animate-pulse" />
                 <span className="text-[14px] font-bold text-[#5D00D6]">{s.outcome}</span>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function EngagementModel() {
                 <div
                   key={i}
                   className={cn(
-                    'rounded-none p-5 border transition-all duration-300',
+                    'rounded-lg p-5 border transition-all duration-300',
                     m.hi
                       ? 'bg-white border-[#5D00D6] shadow-xl shadow-purple-900/5'
                       : 'bg-white/50 border-purple-100 hover:border-[#5D00D6]/30'

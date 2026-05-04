@@ -11,6 +11,7 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -239,7 +240,7 @@ const SectionPersonas = () => (
          </div>
          
          <div className="grid md:grid-cols-3 gap-8">
-            <FadeIn id="greenfield" className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn id="greenfield" className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
 
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Zap size={24} />
@@ -257,7 +258,7 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="brownfield" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn id="brownfield" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
 
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Activity size={24} />
@@ -275,7 +276,7 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="enterprise" delay={0.2} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
+            <FadeIn id="enterprise" delay={0.2} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
 
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <ShieldCheck size={24} />
@@ -332,7 +333,7 @@ const SectionSupportModel = () => (
                   { title: 'Escalation Path', items: ['Immediate Senior Oversight', 'Dedicated Escalation Lead', 'Vendor Liaison Management'] },
                   { title: 'Operational Reporting', items: ['Monthly Ticket Trends', 'Resolution Performance', 'Risk Identification'] }
                ].map((box, i) => (
-                  <FadeIn key={i} delay={i * 0.1} className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                  <FadeIn key={i} delay={i * 0.1} className="bg-slate-50 p-8 rounded-lg border border-slate-100">
                      <h4 className="font-bold text-slate-900 text-[18px] mb-4">{box.title}</h4>
                      <ul className="space-y-3">
                         {box.items.map(item => (
@@ -371,7 +372,7 @@ const SectionProcess = () => (
                { step: '04', title: 'Resolved', desc: 'Issue fixed or escalated to senior leads.' },
                { step: '05', title: 'Reported', desc: 'Closure confirmed and root cause logged.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -430,7 +431,7 @@ const SectionOutcomes = () => (
             </FadeIn>
 
             <FadeIn direction="right" className="relative">
-               <div className="relative rounded-[32px] overflow-hidden aspect-square border-4 border-white/10 shadow-2xl">
+               <div className="relative rounded-lg overflow-hidden aspect-square border-4 border-white/10 shadow-2xl">
                   <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1200" alt="Measured Success" className="w-full h-full object-cover" />
                </div>
             </FadeIn>
@@ -445,7 +446,7 @@ const SectionOutcomes = () => (
 const SectionAccountability = () => (
    <section className="py-12 lg:py-16 bg-white">
       <div className={C}>
-         <div className="bg-slate-50 rounded-[48px] p-8 lg:p-14 border border-slate-100 relative overflow-hidden">
+         <div className="bg-slate-50 rounded-lg p-8 lg:p-14 border border-slate-100 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5D00D6] opacity-[0.02] rounded-full blur-[100px] -mr-64 -mt-64" />
             
             <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -471,7 +472,7 @@ const SectionAccountability = () => (
                      ))}
                   </div>
                </div>
-               <div className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-xl">
+               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-xl">
                   <h4 className="text-xl font-bold mb-6 flex items-center gap-2">
                      <Clock size={20} className="text-[#5D00D6]" /> SLA & Response Structure
                   </h4>
@@ -501,32 +502,7 @@ const SectionAccountability = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 6 — SERVICE INTEGRATION
    ───────────────────────────────────────────────────────── */
-const SectionIntegration = () => (
-   <section className="py-10 bg-slate-50">
-      <div className={C}>
-         <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#0c1024] p-8 md:p-12 rounded-[32px] text-white">
-            <div className="max-w-md">
-               <h3 className="text-2xl font-bold mb-4 text-white">Full Service Continuity</h3>
-               <p className="text-white/80 text-sm">
-                  Our support desk is the central node for all your IT requirements. We integrate seamlessly with:
-               </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-               {[
-                  { name: 'Network Solutions', href: '/managed-it/network-solutions' },
-                  { name: 'Cloud Services', href: '/managed-it/cloud-services' },
-                  { name: 'Cybersecurity', href: 'https://c9defense.com.au/' },
-                  { name: 'Infrastructure', href: '/managed-it/infrastructure' }
-               ].map(link => (
-                  <a key={link.name} href={link.href} className="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-[#0c1024] transition-all text-xs font-bold uppercase tracking-wider">
-                     {link.name}
-                  </a>
-               ))}
-            </div>
-         </div>
-      </div>
-   </section>
-);
+
 
 /* ─────────────────────────────────────────────────────────
    SECTION 7 — TECHNICAL DEPTH
@@ -557,7 +533,7 @@ const SectionTechnical = () => (
                   ))}
                </div>
             </FadeIn>
-            <FadeIn direction="right" className="bg-[#0c1024] rounded-[32px] p-10 text-white relative overflow-hidden">
+            <FadeIn direction="right" className="bg-[#0c1024] rounded-lg p-10 text-white relative overflow-hidden">
                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
                <div className="relative z-10">
                   <h4 className="text-lg font-bold mb-8">The Stack</h4>
@@ -608,7 +584,7 @@ const SectionImpact = () => (
                { title: 'Predictable Operations', desc: 'Fixed monthly support costs remove the uncertainty from your IT budgeting.' },
                { title: 'Lower Internal Overhead', desc: 'Eliminate the cost of recruiting, training, and managing an internal helpdesk team.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-3xl border border-slate-200 shadow-sm">
+               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm">
                   <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 mx-auto mb-6">
                      <Zap size={24} />
                   </div>
@@ -634,7 +610,7 @@ export default function HelpdeskSupportPage() {
       <SectionProcess />
       <SectionOutcomes />
       <SectionAccountability />
-      <SectionIntegration />
+
       <SectionTechnical />
       <SectionImpact />
 
@@ -643,6 +619,17 @@ export default function HelpdeskSupportPage() {
         description="When your team is facing a potential breach, ransomware, or active threat — C9 Defense provides continuous monitoring and incident response so helpdesk is never your only line of defence."
         buttonText="Learn About C9 Defense"
         href="https://c9defense.com.au/"
+      />
+
+      <ContinueJourney 
+        title="Support is just the start."
+        description="Great helpdesk works best when your infrastructure is governed and your cloud is managed. Explore the full stack."
+        links={[
+          { label: 'Managed Cloud Services', path: '/managed-it/cloud-services' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' },
+          { label: 'Infrastructure Governance', path: '/managed-it/infrastructure' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

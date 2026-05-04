@@ -28,7 +28,7 @@ export default function Comparison() {
           </p>
         </div>
 
-        <div className="rounded-none border-[0.5px] border-[#5D00D6]/15 overflow-hidden mt-10 shadow-sm">
+        <div className="rounded-lg border-[0.5px] border-[#5D00D6]/15 overflow-hidden mt-10 shadow-sm">
           <Table className="w-full">
             <TableHeader className="bg-[#F4F0FA]">
               <TableRow className="hover:bg-transparent transition-none">

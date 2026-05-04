@@ -42,7 +42,7 @@ export const WpITDepartmentOptions = () => {
               href={opt.href}
               className="group cursor-pointer block"
             >
-              <div className="relative aspect-[12/10] rounded-none overflow-hidden mb-10 shadow-2xl shadow-purple-900/10 bg-slate-100">
+              <div className="relative aspect-[12/10] rounded-lg overflow-hidden mb-10 shadow-2xl shadow-purple-900/10 bg-slate-100">
                 <img
                   src={opt.img}
                   alt={opt.title}

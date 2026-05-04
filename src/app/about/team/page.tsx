@@ -82,7 +82,7 @@ export default function TeamPage() {
           </div>
 
           <FadeIn delay={0.2} direction="right" className="relative">
-            <div className="relative rounded-none overflow-hidden aspect-[4/5]">
+            <div className="relative rounded-lg overflow-hidden aspect-[4/5]">
                <img 
                  src="/c9_engineering_team_collaboration_1777621695616.png" 
                  alt="C9 Senior Engineering" 
@@ -132,8 +132,8 @@ export default function TeamPage() {
             }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="p-8 rounded-none bg-white transition-all group h-full">
-                <div className="w-12 h-12 rounded-none bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform">
+              <div className="p-8 rounded-lg bg-white transition-all group h-full">
+                <div className="w-12 h-12 rounded-lg bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform">
                   <item.icon size={24} />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>

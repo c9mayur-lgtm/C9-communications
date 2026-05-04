@@ -182,7 +182,7 @@ export default function InsightsPage() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
                 >
-                  <Link href={`/insights/${item.slug}`} className="group flex flex-col h-full bg-white rounded-none overflow-hidden transition-all duration-500">
+                  <Link href={`/insights/${item.slug}`} className="group flex flex-col h-full bg-white rounded-lg overflow-hidden transition-all duration-500">
                     <div className="aspect-[16/10] overflow-hidden relative">
                       <img 
                         src={item.image} 
@@ -190,7 +190,7 @@ export default function InsightsPage() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className={`px-4 py-1.5 rounded-none text-[10px] font-black uppercase tracking-widest text-white ${
+                        <span className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest text-white ${
                           item.type === 'Article' ? 'bg-[#5D00D6]' : 'bg-slate-900'
                         }`}>
                           {item.type}
@@ -232,14 +232,14 @@ export default function InsightsPage() {
 
           {filteredData.length === 0 && (
             <div className="text-center py-24">
-               <div className="w-20 h-20 bg-gray-100 rounded-none flex items-center justify-center mx-auto mb-6">
+               <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
                   <Search size={32} className="text-slate-300" />
                </div>
                <h3 className="text-2xl font-bold text-slate-900 mb-2">No articles found.</h3>
                <p className="text-slate-500">Try adjusting your search or filters to find what you're looking for.</p>
                <Button 
                 variant="outline" 
-                className="mt-8 rounded-none"
+                className="mt-8 rounded-lg"
                 onClick={() => { setSearchQuery(''); setActiveCategory('All'); }}
                >
                  Clear all filters
@@ -252,7 +252,7 @@ export default function InsightsPage() {
       {/* NEWSLETTER / CTA */}
       <section className="py-24 bg-white">
         <div className={C}>
-          <div className="bg-[#5D00D6] rounded-none p-8 md:p-16 relative overflow-hidden text-center text-white">
+          <div className="bg-[#5D00D6] rounded-lg p-8 md:p-16 relative overflow-hidden text-center text-white">
             <div className="relative z-10 max-w-2xl mx-auto">
               <span className="c9-eyebrow !text-white/60 mb-6 block">STAY INFORMED</span>
               <h2 className="c9-hero-title !text-white mb-8">
@@ -265,9 +265,9 @@ export default function InsightsPage() {
                 <input 
                   type="email" 
                   placeholder="Enter your email" 
-                  className="flex-1 px-8 py-5 rounded-none bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all"
+                  className="flex-1 px-8 py-5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all"
                 />
-                <button className="px-10 py-5 bg-white text-[#5D00D6] font-bold rounded-none hover:bg-slate-100 transition-all">
+                <button className="px-10 py-5 bg-white text-[#5D00D6] font-bold rounded-lg hover:bg-slate-100 transition-all">
                   Subscribe
                 </button>
               </div>

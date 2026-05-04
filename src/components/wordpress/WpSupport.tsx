@@ -39,7 +39,7 @@ export const WpSupport = () => {
             }
           ].map((card, idx) => (
             <div key={idx} className="group cursor-pointer">
-              <div className="relative aspect-[16/10] rounded-none overflow-hidden mb-8 shadow-sm group-hover:shadow-xl transition-all duration-500">
+              <div className="relative aspect-[16/10] rounded-lg overflow-hidden mb-8 shadow-sm group-hover:shadow-xl transition-all duration-500">
                 <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay group-hover:bg-[#5D00D6]/20 transition-colors duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 via-transparent to-transparent opacity-60" />
@@ -85,7 +85,7 @@ export const WpSupport = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] rounded-none overflow-hidden shadow-2xl relative">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl relative">
               <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000" alt="Customer Care" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent opacity-60" />

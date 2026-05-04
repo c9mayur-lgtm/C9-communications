@@ -43,10 +43,10 @@ export default function Hero() {
             {/* LEFT COLUMN */}
             <div className="flex flex-col items-start">
               <div className="flex flex-wrap items-center gap-3 mb-6">
-                <div className="bg-[#5D00D6]/10 text-[#5D00D6] px-4 py-1.5 rounded-none text-[11px] font-bold uppercase tracking-[0.2em] border border-[#5D00D6]/20">
+                <div className="bg-[#5D00D6]/10 text-[#5D00D6] px-4 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-[0.2em] border border-[#5D00D6]/20">
                   Telco · nbn™ Enterprise Ethernet
                 </div>
-                <div className="bg-[#1A1A2E]/5 text-[#1A1A2E]/60 px-4 py-1.5 rounded-none text-[11px] font-bold uppercase tracking-[0.2em] border border-[#1A1A2E]/10 flex items-center gap-2">
+                <div className="bg-[#1A1A2E]/5 text-[#1A1A2E]/60 px-4 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-[0.2em] border border-[#1A1A2E]/10 flex items-center gap-2">
                    <ShieldCheck size={12} className="text-[#5D00D6]" /> nbn™ Accredited Adviser
                 </div>
               </div>

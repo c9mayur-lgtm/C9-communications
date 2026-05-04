@@ -124,21 +124,7 @@ export default function SecureRemoteWorkContent() {
                 <div className="absolute -top-12 -right-12 w-64 h-64 bg-purple-100 rounded-full blur-3xl -z-10 opacity-60" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100 rounded-full blur-3xl -z-10 opacity-60" />
                 
-                {/* Floating trust card */}
-                <motion.div 
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden md:block"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
-                      <Shield className="text-[#5D00D6]" size={20} />
-                    </div>
-                    <span className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Security Live</span>
-                  </div>
-                  <div className="text-[24px] font-bold text-[#0c1024] mb-1">100%</div>
-                  <div className="text-[13px] font-medium text-gray-500">Fleet Compliance Enforced</div>
-                </motion.div>
+                
               </ScaleIn>
             </div>
           </div>

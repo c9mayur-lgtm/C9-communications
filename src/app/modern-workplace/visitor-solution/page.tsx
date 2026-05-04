@@ -108,7 +108,7 @@ export default function VisitorSolutionPage() {
               <ScaleIn>
                 <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50">
                   <img 
-                    src="/visitor_solution_hero_v2_1777400711900.png" 
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
                     alt="Premium Visitor Management Kiosk"
                     className="w-full h-full object-cover aspect-[4/3]"
                   />
@@ -116,21 +116,7 @@ export default function VisitorSolutionPage() {
                 <div className="absolute -top-12 -right-12 w-64 h-64 bg-purple-100 rounded-full blur-3xl -z-10 opacity-60" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100 rounded-full blur-3xl -z-10 opacity-60" />
                 
-                {/* Floating trust card */}
-                <motion.div 
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 max-w-[240px] hidden md:block"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
-                      <UserCheck className="text-[#5D00D6]" size={20} />
-                    </div>
-                    <span className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Security Check</span>
-                  </div>
-                  <div className="text-[24px] font-bold text-[#0c1024] mb-1">100%</div>
-                  <div className="text-[13px] font-medium text-gray-500">Visitor Compliance Rate</div>
-                </motion.div>
+                
               </ScaleIn>
             </div>
           </div>

@@ -92,7 +92,7 @@ export const C9PhoneSystemAdvantage = () => {
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
                transition={{ duration: 0.5, delay: i * 0.05 }}
-               className="bg-white p-7 md:p-10 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col group border border-transparent hover:border-gray-100"
+               className="bg-white p-7 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col group border border-transparent hover:border-gray-100"
             >
                <div className="mb-8">
                   <item.icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />

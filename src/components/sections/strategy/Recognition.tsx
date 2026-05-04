@@ -33,7 +33,7 @@ export default function Recognition() {
   return (
     <section className="bg-[#0c1024] py-24 px-6 md:px-8 lg:px-12 overflow-hidden relative border-t border-white/5" >
       {/* Background Lighting Effect */}
-      <div className="absolute top-0 left-1/4 w-[50%] h-[120%] bg-[#5D00D6]/10 blur-[120px] rounded-none pointer-events-none -z-1" />
+      <div className="absolute top-0 left-1/4 w-[50%] h-[120%] bg-[#5D00D6]/10 blur-[120px] rounded-lg pointer-events-none -z-1" />
       
       <div className="container mx-auto max-w-[1240px] relative z-10">
         
@@ -63,7 +63,7 @@ export default function Recognition() {
               transition={{ delay: i * 0.1 }}
             >
               <Card 
-                className="bg-[#0b0e18] rounded-none border border-white/5 p-8 flex flex-col items-start min-h-[500px] hover:border-[#5D00D6]/40 transition-all duration-500 group relative overflow-hidden"
+                className="bg-[#0b0e18] rounded-lg border border-white/5 p-8 flex flex-col items-start min-h-[500px] hover:border-[#5D00D6]/40 transition-all duration-500 group relative overflow-hidden"
               >
                 {/* Subtle gradient hover effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#5D00D6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

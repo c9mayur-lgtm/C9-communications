@@ -38,7 +38,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hidden xl:block w-full h-[400px] lg:h-[500px] relative rounded-none overflow-hidden shadow-2xl">
+          <div className="hidden xl:block w-full h-[400px] lg:h-[500px] relative rounded-lg overflow-hidden shadow-2xl">
             <img
               src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=2850"
               alt="Non-Profit IT Support"

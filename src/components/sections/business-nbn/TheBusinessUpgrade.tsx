@@ -88,7 +88,7 @@ export default function TheBusinessUpgrade() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-gray-100 rounded-none overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-gray-100 rounded-lg overflow-hidden">
           {upgradeBlocks.map((block, i) => (
             <div key={i} className="p-10 md:p-12 border-r border-b border-gray-100 flex flex-col group transition-all duration-300 hover:bg-[#F8F7FF]">
               <div className="mb-6 self-start">

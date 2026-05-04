@@ -41,7 +41,7 @@ export default function SocialProof() {
           {testimonials.map((t, i) => (
             <Card 
               key={i} 
-              className="group h-full bg-white rounded-none border-[0.5px] border-[#7B2FBE]/15 p-8 flex flex-col gap-4 hover:border-[#7B2FBE] hover:-translate-y-0.5 transition-all duration-200 shadow-sm"
+              className="group h-full bg-white rounded-lg border-[0.5px] border-[#7B2FBE]/15 p-8 flex flex-col gap-4 hover:border-[#7B2FBE] hover:-translate-y-0.5 transition-all duration-200 shadow-sm"
             >
               <div className="flex gap-1 mb-2">
                 {[1, 2, 3, 4, 5].map((_, star) => (

@@ -94,7 +94,7 @@ export default function WhatIsEnterpriseEthernet() {
         
         {/* HEADER */}
         <div className="max-w-[800px] mb-20">
-          <div className="mb-6 px-4 py-1.5 bg-[#5D00D6]/5 rounded-none border border-[#5D00D6]/10 inline-block">
+          <div className="mb-6 px-4 py-1.5 bg-[#5D00D6]/5 rounded-lg border border-[#5D00D6]/10 inline-block">
              <span className="c9-eyebrow">nbn™ ENTERPRISE ETHERNET</span>
           </div>
           <h2 className="c9-section-heading mb-10">

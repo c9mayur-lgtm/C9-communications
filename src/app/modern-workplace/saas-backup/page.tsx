@@ -10,6 +10,7 @@ import {
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -464,6 +465,17 @@ export default function SaasBackupPage() {
         description="Data recovery is only one component of business continuity. We integrate recovery assurance with full infrastructure protection."
         buttonText="View Continuity Services"
         href="https://c9defense.com.au/"
+      />
+
+      <ContinueJourney 
+        title="Protection is Persistence."
+        description="Backing up your data is critical. Now explore the support and infrastructure services that keep your organisation resilient."
+        links={[
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'Backup & Recovery', path: '/managed-it/backup-disaster-recovery' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' },
+          { label: 'Security Solutions', path: '/managed-it/security-solutions' }
+        ]}
       />
 
       <section id="consultation" className="bg-white">

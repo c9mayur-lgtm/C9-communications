@@ -28,7 +28,7 @@ export default function FinalCTA() {
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-10">
           <Button 
             onClick={handleGetProposal}
-            className="bg-[#5D00D6] hover:bg-[#4B00AD] text-white px-10 h-[56px] rounded-none font-bold transition-all text-[16px] font-sans border-none"
+            className="bg-[#5D00D6] hover:bg-[#4B00AD] text-white px-10 h-[56px] rounded-lg font-bold transition-all text-[16px] font-sans border-none"
             
           >
             Get an IT Outsourcing Proposal <ArrowRight className="ml-2 w-5 h-5" />
@@ -36,7 +36,7 @@ export default function FinalCTA() {
 
           <a 
             href="tel:1800000299"
-            className="inline-flex items-center justify-center border-2 border-[#E5E7EB] text-[#0c1024] hover:bg-slate-50 px-10 h-[56px] rounded-none font-bold transition-all text-[16px] font-sans no-underline"
+            className="inline-flex items-center justify-center border-2 border-[#E5E7EB] text-[#0c1024] hover:bg-slate-50 px-10 h-[56px] rounded-lg font-bold transition-all text-[16px] font-sans no-underline"
             
           >
             Call 1800 000 299

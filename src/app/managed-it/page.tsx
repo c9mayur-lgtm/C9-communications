@@ -122,7 +122,7 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-           <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group border-8 border-slate-50">
+           <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
               <img
                  src="/images/hero/enterprise.png"
                  alt="Enterprise IT Operations"
@@ -209,7 +209,7 @@ const SectionOutcomes = () => (
                      { title: 'Security Governance', desc: 'Continuous compliance tracking and SOC response ensuring audit-ready infrastructure.' },
                      { title: 'Vendor Blame-Cycle Removal', desc: 'Single-point accountability for IT, Telco, and Cloud orchestration.' }
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-6 p-6 bg-white/5 rounded-3xl border border-white/10 hover:bg-[#5D00D6]/20 transition-all">
+                    <div key={i} className="flex gap-6 p-6 bg-white/5 rounded-lg border border-white/10 hover:bg-[#5D00D6]/20 transition-all">
                        <div className="w-10 h-10 rounded-full bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] shrink-0">
                           <CheckCircle size={12} />
                        </div>
@@ -229,7 +229,7 @@ const SectionOutcomes = () => (
                   { label: 'Security Score', val: 'A+' },
                   { label: 'SLA Compliance', val: '100%' }
                ].map((stat, i) => (
-                  <FadeIn key={i} delay={i * 0.1} className="bg-white/5 border border-white/10 p-8 rounded-3xl text-center">
+                  <FadeIn key={i} delay={i * 0.1} className="bg-white/5 border border-white/10 p-8 rounded-lg text-center">
                      <div className="text-[32px] font-black text-[#a56eff] mb-2">{stat.val}</div>
                      <div className="c9-eyebrow !text-white/40">{stat.label}</div>
                   </FadeIn>
@@ -239,6 +239,8 @@ const SectionOutcomes = () => (
       </div>
    </section>
 );
+
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    PAGE EXPORT
@@ -276,6 +278,17 @@ export default function ManagedITPage() {
       <SectionRetail />
       <SectionResources />
       <SectionOutcomes />
+
+      <ContinueJourney 
+        title="Infrastructure Is One Piece. See the Full Stack."
+        description="Managed IT works best when integrated with a secure, resilient environment. Explore the connected services that complete the picture."
+        links={[
+          { label: "Cybersecurity & Defense", path: "https://c9defense.com.au/" },
+          { label: "Managed Cloud Services", path: "/managed-it/cloud-services" },
+          { label: "Network Solutions", path: "/managed-it/network-solutions" },
+          { label: "Helpdesk & Support", path: "/managed-it/helpdesk-support" }
+        ]} 
+      />
 
       <section id="consultation" className="bg-white border-t border-slate-100">
         <WpConsultationForm

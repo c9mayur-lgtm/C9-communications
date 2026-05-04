@@ -88,16 +88,16 @@ export default function AboutPage() {
           </div>
 
           <FadeIn delay={0.2} direction="right" className="relative">
-            <div className="relative rounded-none overflow-hidden aspect-square lg:aspect-[4/5]">
+            <div className="relative rounded-lg overflow-hidden aspect-square lg:aspect-[4/5]">
                <img 
                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
                  alt="C9 Operational Centre" 
                  className="w-full h-full object-cover grayscale opacity-90"
                />
                <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/20 to-transparent" />
-               <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 bg-white/95 backdrop-blur-md rounded-none p-6 md:p-8">
+               <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 bg-white/95 backdrop-blur-md rounded-lg p-6 md:p-8">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-none bg-[#5D00D6] flex items-center justify-center text-white">
+                    <div className="w-10 h-10 rounded-lg bg-[#5D00D6] flex items-center justify-center text-white">
                       <ShieldCheck size={20} />
                     </div>
                     <div className="text-[16px] font-bold text-slate-900 leading-none">Operational Maturity</div>
@@ -113,12 +113,12 @@ export default function AboutPage() {
       <Section id="accountability" bg="gray" className="py-20 md:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <FadeIn direction="left">
-            <div className="bg-[#0c1024] p-10 md:p-12 rounded-none text-white">
+            <div className="bg-[#0c1024] p-10 md:p-12 rounded-lg text-white">
                <H3 className="text-white mb-8">Business Continuity Focus</H3>
                <p className="text-white/60 mb-10 leading-relaxed">
                  We don't just "help businesses grow"—we provide the stable, secure foundation that makes growth possible. Our focus is on removing technical friction so your leadership can focus on strategy.
                </p>
-               <div className="p-8 bg-white/5 rounded-none">
+               <div className="p-8 bg-white/5 rounded-lg">
                   <div className="text-3xl font-black text-[#A855F7] mb-2 leading-none tracking-tight">99.99%</div>
                   <div className="text-[11px] font-bold uppercase tracking-widest text-white/40">Core Network Uptime</div>
                </div>
@@ -176,7 +176,7 @@ export default function AboutPage() {
           </div>
 
           {/* Numbers */}
-          <div className="bg-[#0c1024] p-12 md:p-16 rounded-none text-white relative overflow-hidden">
+          <div className="bg-[#0c1024] p-12 md:p-16 rounded-lg text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <FadeIn>
               <Label className="mb-4 block text-white/40">C9 by the Numbers</Label>
@@ -235,8 +235,8 @@ export default function AboutPage() {
             }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="p-8 md:p-10 rounded-none bg-slate-50 transition-all group h-full flex flex-col">
-                <div className="w-14 h-14 rounded-none bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:scale-110 transition-transform">
+              <div className="p-8 md:p-10 rounded-lg bg-slate-50 transition-all group h-full flex flex-col">
+                <div className="w-14 h-14 rounded-lg bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:scale-110 transition-transform">
                   <item.icon size={28} />
                 </div>
                 <H3 className="mb-4 text-2xl tracking-tight">{item.title}</H3>
@@ -297,8 +297,8 @@ export default function AboutPage() {
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <Link href={card.path} className="block group">
-                  <div className="p-10 bg-[#F4F0FA] rounded-none transition-all h-full group-hover:-translate-y-1">
-                    <div className="w-12 h-12 rounded-none bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
+                  <div className="p-10 bg-[#F4F0FA] rounded-lg transition-all h-full group-hover:-translate-y-1">
+                    <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                       <card.icon size={24} />
                     </div>
                     <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#5D00D6] mb-2">{card.subtitle}</div>

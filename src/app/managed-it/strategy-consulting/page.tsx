@@ -11,6 +11,7 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
+import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -65,7 +66,7 @@ const Hero = () => (
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
                <Target size={13} className="text-[#5D00D6]" />
-               <span className="c9-eyebrow !mb-0">Strategic vCIO Services</span>
+               <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Strategic vCIO Services</span>
             </div>
           </FadeIn>
 
@@ -101,42 +102,36 @@ const Hero = () => (
              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                    href="#greenfield"
-                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-7 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap c9-button-label"
                 >
                    Plan Your Expansion
                    <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                 </a>
                 <a
                    href="#brownfield"
-                   className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-7 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                   className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-9 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white c9-button-label"
                 >
                    Fix Your Roadmap
-                </a>
-                <a
-                   href="#enterprise"
-                   className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-7 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
-                >
-                   Optimise Strategy
                 </a>
              </div>
           </FadeIn>
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-           <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group border-8 border-slate-50">
+           <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
               <img
-                 src="https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&q=80&w=1200"
+                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1200"
                  alt="Strategic IT Consulting"
                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
               
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-5 border border-white/60 shadow-xl">
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-lg p-5 border border-white/60 shadow-xl">
                  <div className="flex items-center justify-between mb-3 pb-3 border-b border-slate-100">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Roadmap Status</span>
-                    <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 font-bold text-[10px] uppercase tracking-wider">
-                       <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Strategic Alignment
-                    </span>
+                     <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Roadmap Status</span>
+                     <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 font-bold text-[10px] uppercase tracking-wider border border-emerald-500/20">
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]" /> Strategic Alignment
+                     </span>
                  </div>
                  <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -170,12 +165,11 @@ const SectionPersonas = () => (
          </div>
          
          <div className="grid md:grid-cols-3 gap-8">
-            <FadeIn id="greenfield" className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-2 h-full bg-[#5D00D6]/20" />
+            <FadeIn id="greenfield" className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <LineChart size={24} />
                </div>
-               <h3 className="text-xl font-bold mb-4">Greenfield CEO</h3>
+               <h3 className="c9-card-title mb-4">Greenfield CEO</h3>
                <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Strategic planning for rapid scale. We architect your future-state environment before you spend a cent on hardware, ensuring your technology never slows your growth.
                </p>
@@ -188,12 +182,11 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="brownfield" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-2 h-full bg-[#5D00D6]/20" />
+            <FadeIn id="brownfield" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Activity size={24} />
                </div>
-               <h3 className="text-xl font-bold mb-4">Brownfield CEO</h3>
+               <h3 className="c9-card-title mb-4">Brownfield CEO</h3>
                <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Roadmap recovery. We audit failed projects and stagnant technology, realigning your IT spend with business goals to eliminate waste and restore performance.
                </p>
@@ -206,12 +199,11 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="enterprise" delay={0.2} className="bg-white border border-slate-200 p-10 rounded-[32px] shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-2 h-full bg-[#5D00D6]/20" />
+            <FadeIn id="enterprise" delay={0.2} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <ShieldCheck size={24} />
                </div>
-               <h3 className="text-xl font-bold mb-4">Head of IT</h3>
+               <h3 className="c9-card-title mb-4">Head of IT</h3>
                <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Board-level reporting and governance. We provide the vCIO expertise to handle complex vendor management, risk assessments, and multi-year budget forecasting.
                </p>
@@ -249,7 +241,7 @@ const SectionHowItWorks = () => (
                { step: '03', title: 'Roadmap Development', desc: 'Prioritised execution plan with clear ROI milestones and budget requirements.' },
                { step: '04', title: 'Ongoing Governance', desc: 'Monthly reviews to ensure execution stays on track and roadmaps evolve with your business.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -277,19 +269,19 @@ const SectionOutcomes = () => (
                <span className="c9-eyebrow !text-[#a56eff] mb-4">Strategic Impact</span>
                <h2 className="c9-section-heading !text-white mb-6">Execution Results</h2>
                <div className="grid grid-cols-2 gap-6 mb-10">
-                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                  <div className="bg-white/5 p-6 rounded-lg border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">20%</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Growth Alignment</div>
                   </div>
-                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                  <div className="bg-white/5 p-6 rounded-lg border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">15+</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Vendors Consolidated</div>
                   </div>
-                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                  <div className="bg-white/5 p-6 rounded-lg border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">$2M+</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Budget Managed</div>
                   </div>
-                  <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                  <div className="bg-white/5 p-6 rounded-lg border border-white/10">
                      <div className="text-[32px] font-black text-[#a56eff] mb-1">100%</div>
                      <div className="text-[14px] text-white/60 uppercase tracking-widest font-bold">Objective Execution</div>
                   </div>
@@ -309,7 +301,7 @@ const SectionOutcomes = () => (
             </FadeIn>
 
             <FadeIn direction="right" className="relative">
-               <div className="relative rounded-[32px] overflow-hidden aspect-square border-4 border-white/10 shadow-2xl">
+               <div className="relative rounded-lg overflow-hidden aspect-square border-4 border-white/10 shadow-2xl">
                   <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200" alt="Strategic Planning" className="w-full h-full object-cover" />
                </div>
             </FadeIn>
@@ -324,7 +316,7 @@ const SectionOutcomes = () => (
 const SectionAccountability = () => (
    <section className="py-16 lg:py-24 bg-white">
       <div className={C}>
-         <div className="bg-slate-50 rounded-[48px] p-10 lg:p-20 border border-slate-100 relative overflow-hidden">
+         <div className="bg-slate-50 rounded-lg p-10 lg:p-20 border border-slate-100 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5D00D6] opacity-[0.02] rounded-full blur-[100px] -mr-64 -mt-64" />
             
             <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -350,8 +342,8 @@ const SectionAccountability = () => (
                      ))}
                   </div>
                </div>
-               <div className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-xl">
-                  <h4 className="text-xl font-bold mb-6 flex items-center gap-2 text-slate-900">
+               <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-xl">
+                  <h4 className="c9-card-title mb-6 flex items-center gap-2 text-slate-900">
                      <BarChart3 size={20} className="text-[#5D00D6]" /> Strategic Deliverables
                   </h4>
                   <div className="space-y-4">
@@ -380,32 +372,7 @@ const SectionAccountability = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION 6 — SERVICE INTEGRATION
    ───────────────────────────────────────────────────────── */
-const SectionIntegration = () => (
-   <section className="py-16 bg-slate-50">
-      <div className={C}>
-         <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#0c1024] p-8 md:p-12 rounded-[32px] text-white">
-            <div className="max-w-md">
-               <h3 className="text-2xl font-bold mb-4 text-white">Total Alignment</h3>
-               <p className="text-white text-sm">
-                  Strategy is the foundation. We align it with your helpdesk, network, and security for cohesive operations.
-               </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-               {[
-                  { name: 'Helpdesk', href: '/managed-it/helpdesk-support' },
-                  { name: 'Outsourcing', href: '/managed-it/outsourcing' },
-                  { name: 'Cloud', href: '/managed-it/cloud-services' },
-                  { name: 'Security', href: 'https://c9defense.com.au/' }
-               ].map(link => (
-                  <a key={link.name} href={link.href} className="px-5 py-2 rounded-full border border-white/10 hover:bg-white hover:text-[#0c1024] transition-all text-xs font-bold uppercase tracking-wider">
-                     {link.name}
-                  </a>
-               ))}
-            </div>
-         </div>
-      </div>
-   </section>
-);
+
 
 /* ─────────────────────────────────────────────────────────
    SECTION 7 — TECHNICAL DEPTH
@@ -426,17 +393,17 @@ const SectionTechnical = () => (
                      { icon: <Monitor size={20} />, title: 'Vendor Governance', desc: 'Managing the performance and contracts of your technology partners.' },
                      { icon: <BarChart3 size={20} />, title: 'Budget Forecasting', desc: 'Multi-year CapEx and OpEx planning to eliminate financial surprises.' }
                   ].map((item, i) => (
-                     <div key={i} className="flex gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#5D00D6]/20 transition-all">
+                     <div key={i} className="flex gap-4 p-5 rounded-lg bg-slate-50 border border-slate-100 hover:border-[#5D00D6]/20 transition-all">
                         <div className="text-[#5D00D6]">{item.icon}</div>
                         <div>
-                           <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.title}</h4>
+                           <h4 className="c9-card-title mb-1 leading-tight">{item.title}</h4>
                            <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
                         </div>
                      </div>
                   ))}
                </div>
             </FadeIn>
-            <FadeIn direction="right" className="bg-[#0c1024] rounded-[32px] p-10 text-white relative overflow-hidden">
+            <FadeIn direction="right" className="bg-[#0c1024] rounded-lg p-10 text-white relative overflow-hidden">
                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
                <div className="relative z-10">
                   <h4 className="text-lg font-bold mb-8">Governance Stack</h4>
@@ -487,7 +454,7 @@ const SectionImpact = () => (
                { title: 'Accelerated Time-to-Market', desc: 'Deploy new sites and technologies faster with a pre-architected strategic foundation.' },
                { title: 'Reduced Risk Profile', desc: 'Strategic alignment ensures security is built-in, reducing the likelihood of costly breaches.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-3xl border border-slate-200 shadow-sm">
+               <FadeIn key={i} delay={i * 0.1} className="text-center p-8 bg-white rounded-lg border border-slate-200 shadow-sm">
                   <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 mx-auto mb-6">
                      <Zap size={24} />
                   </div>
@@ -512,7 +479,7 @@ export default function StrategyConsultingPage() {
       <SectionHowItWorks />
       <SectionOutcomes />
       <SectionAccountability />
-      <SectionIntegration />
+
       <SectionTechnical />
       <SectionImpact />
 
@@ -521,6 +488,17 @@ export default function StrategyConsultingPage() {
         description="Don't build a roadmap that leaves you vulnerable. C9 Defense integrates active security oversight into every strategic decision."
         buttonText="Learn About C9 Defense"
         href="https://c9defense.com.au/"
+      />
+
+      <ContinueJourney 
+        title="Total Alignment Beyond Strategy."
+        description="Strategy is the roadmap. Now explore the engineering and support layers that bring it to life."
+        links={[
+          { label: 'Helpdesk Support', path: '/managed-it/helpdesk-support' },
+          { label: 'IT Outsourcing', path: '/managed-it/outsourcing' },
+          { label: 'Cloud Services', path: '/managed-it/cloud-services' },
+          { label: 'Network Solutions', path: '/managed-it/network-solutions' }
+        ]}
       />
 
       <section id="consultation" className="bg-white border-t border-slate-100">

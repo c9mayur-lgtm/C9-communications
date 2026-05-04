@@ -76,7 +76,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((s, i) => (
-            <div key={i} className="bg-white p-8 md:p-10 rounded-none shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/20 transition-all group flex flex-col h-full border border-transparent hover:border-gray-100">
+            <div key={i} className="bg-white p-8 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/20 transition-all group flex flex-col h-full border border-transparent hover:border-gray-100">
               <div className="mb-6">
                 <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
               </div>

@@ -88,7 +88,7 @@ export default function EngineeringStructure() {
             
             {tiers.map((tier, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-none p-8 transition-all duration-500 h-full group">
+                <div className="bg-white rounded-lg p-8 transition-all duration-500 h-full group">
                   <div className={`w-14 h-14 rounded-2xl ${tier.bgColor} ${tier.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
                     <tier.icon size={28} strokeWidth={1.5} />
                   </div>

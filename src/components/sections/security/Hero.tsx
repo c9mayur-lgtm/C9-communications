@@ -42,8 +42,8 @@ export default function Hero() {
           </div>
 
           <div className="w-full flex flex-col gap-4">
-            <div className="bg-slate-50 border border-slate-100 rounded-none p-6 md:p-8 flex flex-col gap-2 shadow-xl shadow-purple-900/5">
-              <div className="bg-white rounded-none p-8 flex flex-col items-center text-center justify-center border border-[#5D00D6]/10 shadow-sm transition-all hover:-translate-y-1">
+            <div className="bg-slate-50 border border-slate-100 rounded-lg p-6 md:p-8 flex flex-col gap-2 shadow-xl shadow-purple-900/5">
+              <div className="bg-white rounded-lg p-8 flex flex-col items-center text-center justify-center border border-[#5D00D6]/10 shadow-sm transition-all hover:-translate-y-1">
                 <span className="c9-eyebrow !text-slate-400 !text-[12px] mb-3">Most targeted AU sector</span>
                 <span className="text-[64px] md:text-[84px] text-[#5D00D6] font-bold leading-none mb-3 tracking-tighter">#1</span>
                 <span className="c9-card-title !text-[18px] md:!text-[20px]">Healthcare</span>
@@ -51,13 +51,13 @@ export default function Hero() {
             </div>
             
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-none p-6 md:p-8 flex flex-col items-center justify-center text-center shadow-lg shadow-purple-900/5 border border-slate-100 transition-all hover:-translate-y-1">
+              <div className="bg-white rounded-lg p-6 md:p-8 flex flex-col items-center justify-center text-center shadow-lg shadow-purple-900/5 border border-slate-100 transition-all hover:-translate-y-1">
                 <span className="c9-eyebrow !text-slate-400 !text-[11px] mb-2 h-8 flex items-center">Attacks via email</span>
                 <span className="text-[44px] md:text-[56px] text-[#0c1024] font-bold leading-none mb-2 tracking-tight">94%</span>
                 <span className="c9-eyebrow !text-[#5D00D6] !text-[11px]">ACSC Report</span>
               </div>
 
-              <div className="bg-white rounded-none p-6 md:p-8 flex flex-col items-center justify-center text-center shadow-lg shadow-purple-900/5 border border-slate-100 transition-all hover:-translate-y-1">
+              <div className="bg-white rounded-lg p-6 md:p-8 flex flex-col items-center justify-center text-center shadow-lg shadow-purple-900/5 border border-slate-100 transition-all hover:-translate-y-1">
                 <span className="c9-eyebrow !text-slate-400 !text-[11px] mb-2 h-8 flex items-center">Avg AU breach cost</span>
                 <span className="text-[44px] md:text-[56px] text-[#0c1024] font-bold leading-none mb-2 tracking-tight">$3.4M</span>
                 <span className="c9-eyebrow !text-[#5D00D6] !text-[11px]">IBM Cost Report</span>
