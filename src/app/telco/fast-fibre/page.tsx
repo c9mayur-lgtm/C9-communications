@@ -137,7 +137,40 @@ export default function FastFibrePage() {
         </div>
       </section>
 
-      <WpClientTicker />
+
+      {/* ══ 1.5 STRATEGIC PARTNERS ════════════════════════════════════ */}
+      <section className="py-16 bg-white border-b border-slate-100 overflow-hidden relative">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px]" style={{ background: 'radial-gradient(ellipse, rgba(93,0,214,0.05) 0%, transparent 70%)' }} />
+        </div>
+        <div className={`${C} relative z-10`}>
+          <div className="text-center mb-12">
+            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em] relative inline-block before:absolute before:top-1/2 before:-left-12 before:w-8 before:h-[1px] before:bg-slate-200 after:absolute after:top-1/2 after:-right-12 after:w-8 after:h-[1px] after:bg-slate-200">
+              Carrier-Grade Infrastructure. Powered by Global Leaders.
+            </span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-slate-200 border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+            {[
+              { src: '/Vendors/NBN_Co-Logo.wine.png', alt: 'nbn', w: 'w-[100px] md:w-[120px]' },
+              { src: '/Vendors/Telstra%20logo.svg', alt: 'Telstra', w: 'w-[100px] md:w-[120px]' },
+              { src: '/Vendors/vocus.png', alt: 'Vocus', w: 'w-[100px] md:w-[120px]' },
+              { src: '/Vendors/cisco.png', alt: 'Cisco', w: 'w-[70px] md:w-[90px]' },
+              { src: '/Vendors/PANW_Parent_Brand_Primary_Logo_RGB.png', alt: 'Palo Alto Networks', w: 'w-[130px] md:w-[160px]' },
+              { src: '/Vendors/fortinet.png', alt: 'Fortinet', w: 'w-[100px] md:w-[120px]' },
+              { src: '/Vendors/UI_BIG.png', alt: 'Ubiquiti', w: 'w-[70px] md:w-[90px]' },
+              { src: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg', alt: 'Microsoft Azure', w: 'w-[110px] md:w-[130px]' }
+            ].map((logo, i) => (
+              <div key={i} className="bg-white flex items-center justify-center p-8 md:p-12 hover:bg-slate-50 transition-colors duration-300 group">
+                <img 
+                  src={logo.src} 
+                  alt={logo.alt} 
+                  className={`${logo.w} h-auto object-contain transition-transform duration-500 group-hover:scale-105`} 
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ══ 2. WHY SPEED ALONE IS NOT ENOUGH ═════════════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 overflow-hidden">

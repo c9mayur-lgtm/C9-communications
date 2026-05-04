@@ -54,7 +54,7 @@ export const WpWhyPartner = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-100">
           {[
             { 
               title: 'Infrastructure Uptime', 
@@ -117,7 +117,7 @@ export const WpWhyPartner = () => {
               ]
             }
           ].map((block, i) => (
-            <div key={i} className="p-0 transition-all duration-300 cursor-default flex flex-col">
+            <div key={i} className="p-8 md:p-10 lg:p-12 border-r border-b border-slate-100 hover:bg-slate-50/50 transition-all duration-300 cursor-default flex flex-col">
               <div className="mb-4 self-start">
                 <span className="c9-eyebrow !text-[#5D00D6]">
                   {block.tag}

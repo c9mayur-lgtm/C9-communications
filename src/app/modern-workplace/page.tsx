@@ -13,18 +13,18 @@ import { ServiceTestimonialKajabi } from '@/components/wordpress/ServiceTestimon
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 
 const MW_FAQS = [
-  { q:'How does C9 handle the transition from our current provider?', a:'We manage a staged, non-disruptive migration. Your existing environment remains stable while we build and validate your new C9-managed tenant. Only after rigorous UAT (User Acceptance Testing) do we move your users, ensuring zero downtime and total data integrity.' },
-  { q:'Who owns the operational risk during the rollout?', a:'C9 takes full accountability for the transition. We provide a dedicated migration engineer who owns the outcome from initial audit to final user onboarding. We don\'t just move data; we enforce policy, security, and stability from day one.' },
-  { q:'Can we retain our existing Microsoft 365 licensing?', a:'Yes. We audit your current licensing to eliminate redundant spend and ensure your SKUs align with your security and compliance requirements. We often reduce monthly licensing overhead by optimizing seat usage and removing unused features.' },
-  { q:'What is the response time for critical endpoint issues?', a:'Our Australian-based engineering team operates under strict enterprise SLAs. Critical device or access issues are addressed immediately by engineers who have deep context on your environment—no offshore tiers, no generic scripts.' },
-  { q:'How do you manage device compliance for remote staff?', a:'We enforce automated compliance policies through Microsoft Intune. If a device fails security requirements (MFA disabled, out-of-date OS, or compromised identity), it is automatically quarantined from corporate data until rectified.' },
+  { q:'How do you transition us to a unified workplace stack?', a:'We deploy a phased integration strategy. Your communication layer—voice, video, and chat—is established first. We then bring your applications, devices, and security policies into a single managed environment, ensuring zero disruption.' },
+  { q:'Can we integrate our existing platforms like Microsoft Teams?', a:'Absolutely. We build your unified workplace around core platforms like Microsoft Teams, transforming them from standalone tools into a fully integrated communication and collaboration system.' },
+  { q:'Who manages the day-to-day operations of the workplace environment?', a:'C9 assumes full operational ownership. From proactive device management to securing identities and maintaining carrier-grade voice uptime, we manage the entire stack so your IT team doesn\'t have to.' },
+  { q:'How does the unified model improve security?', a:'By centralizing communication, devices, and access, we eliminate the security gaps common in fragmented networks. Every connection, call, and file access is governed by a single Zero Trust security layer.' },
+  { q:'What level of support do end-users receive?', a:'Your team is supported by our 100% Australian-based engineering group. Because we manage the entire unified stack—from the network connection to the endpoint device—we resolve issues at the root level without vendor hand-offs.' },
 ];
 
 /* ── Pricing ─────────────────────────────────────────────────── */
 const PLANS = [
-  { name:'Productivity (Startup)', price:'$15', period:'/user/mo', highlight:false, tag:'STARTUP READY', desc:'Managed M365 infrastructure and identity control.', features:['Full Tenant Management','Essential Eight Alignment','99.9% Uptime SLA','Managed Mail & Collaboration','C9 Engineering Support','Onshore SOC Triage'] },
-  { name:'Modern Workplace (Growth)', price:'$30', period:'/user/mo', highlight:true, tag:'GROWTH BASELINE', desc:'Integrated voice and infrastructure consolidation.', features:['All Productivity features','Microsoft Teams Phone System','Intune Device Management','Conditional Access Enforced','Prioritised Engineering Support','Carrier-Grade Voice SLA'] },
-  { name:'Enterprise Control', price:'Custom', period:'', highlight:false, tag:'TOTAL GOVERNANCE', desc:'Full device lifecycle and security governance at scale.', features:['All Growth features','Lifecycle Device Management','Managed EDR & SIEM','Zero Trust Data Governance','Compliance Audit Readiness','Security Incident Response'] },
+  { name:'Unified Baseline (Startup)', price:'$15', period:'/user/mo', highlight:false, tag:'STARTUP READY', desc:'Core communication and identity integration.', features:['Unified Communication Layer','Identity & Access Control','99.9% Uptime SLA','Managed Collaboration Environment','C9 Engineering Support','Onshore SOC Triage'] },
+  { name:'Integrated Workplace (Growth)', price:'$30', period:'/user/mo', highlight:true, tag:'GROWTH BASELINE', desc:'Complete voice, device, and workflow unification.', features:['All Baseline features','Enterprise Voice Integration','Unified Endpoint Management','Zero Trust Policy Enforcement','Prioritised Engineering Support','Carrier-Grade Voice SLA'] },
+  { name:'Total Governance', price:'Custom', period:'', highlight:false, tag:'TOTAL GOVERNANCE', desc:'Full-stack lifecycle management and advanced security.', features:['All Integrated features','Complete Device Lifecycle','Managed EDR & SIEM','Advanced Data Governance','Compliance Audit Readiness','Security Incident Response'] },
 ];
 
 export default function ModernWorkplacePage() {
@@ -40,23 +40,23 @@ export default function ModernWorkplacePage() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <FadeUp>
-                <Eyebrow>Operational Infrastructure Governance</Eyebrow>
+                <Eyebrow>Unified Workplace Infrastructure</Eyebrow>
                 <h1 className="c9-hero-title mb-8 leading-[1.1] font-bold">
-                  Consolidated Control Over Your <br />
-                  <span className="text-[#5D00D6]">Distributed Workplace.</span>
+                  A Unified Workplace Stack Powered by <br />
+                  <span className="text-[#5D00D6]">Unified Communications.</span>
                 </h1>
                 <p className="c9-body text-slate-600 mb-10 text-xl max-w-2xl leading-relaxed">
-                  Stop managing vendors. Start managing results. C9 operates your devices, identity, and security as a single, accountable utility—delivering zero-downtime productivity without the operational overhead.
+                  Stop treating voice, devices, and security as separate problems. We design, integrate, and manage your entire workplace as a single communication-driven system—delivering a seamless experience for your users and total control for your IT team.
                 </p>
               </FadeUp>
 
               <FadeUp delay={0.2}>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
                   <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Request Operational Audit <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                    Design Your Unified Workplace <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
-                    Talk to an Engineering Lead
+                    Speak to a Workplace Specialist
                   </Link>
                 </div>
               </FadeUp>
@@ -109,14 +109,14 @@ export default function ModernWorkplacePage() {
       <section className="py-12 md:py-16 overflow-hidden" style={{ background: PL }}>
         <div className="c9-container">
           <FadeUp className="text-center mb-12">
-            <Eyebrow>Managed Operational Domains</Eyebrow>
+            <Eyebrow>The Unified Workplace Layers</Eyebrow>
           </FadeUp>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: Laptop, label:'Endpoints', sub:'Centralized compliance & rollout' },
-              { icon: UserCheck, label:'Identities', sub:'Zero Trust access control' },
-              { icon: Cloud, label:'Governance', sub:'Policy-enforced data security' },
-              { icon: Monitor, label:'Unified Comms', sub:'Consolidated voice & video' },
+              { icon: PhoneCall, label:'Core Communication', sub:'Integrated voice, video, and messaging' },
+              { icon: Cloud, label:'Collaboration & Apps', sub:'Centralized workflows and document control' },
+              { icon: Laptop, label:'Connected Devices', sub:'Unified endpoint deployment and management' },
+              { icon: ShieldCheck, label:'Security & Access', sub:'Zero Trust identity and data protection' },
             ].map(({ icon: Icon, label, sub }, i) => (
               <ScaleIn key={label} delay={i*0.07}>
                 <div className="text-center p-6 rounded-2xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group" style={{ borderColor: BD }}>
@@ -135,12 +135,12 @@ export default function ModernWorkplacePage() {
       {/* ══ SERVICES BENTO GRID ═══════════════════════════════════ */}
       <section id="services" className="py-12 md:py-20" style={{ background: '#F9FBFF' }}>
         <div className="c9-container">
-          <FadeUp className="max-w-[720px] mb-20">
+          <FadeUp className="text-center max-w-[720px] mx-auto mb-20">
             <h2 className="c9-section-heading mb-6 font-bold">
-              Workplace Operations.<br />Owned and Accountable.
+              One Unified System.<br />Fully Managed.
             </h2>
             <p className="c9-body text-xl">
-              We eliminate the gap between IT procurement and business results. C9 manages the complete lifecycle of your workplace infrastructure, from "Day One" readiness to persistent Essential Eight governance.
+              We eliminate the friction of fragmented tools. By placing communication at the core, we build a seamless environment where your calling, collaboration, devices, and security operate as a single managed stack.
             </p>
           </FadeUp>
 
@@ -153,9 +153,9 @@ export default function ModernWorkplacePage() {
                 className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-[#F9FAFB]"
               >
                 <div className="px-8 pt-10 pb-6 text-center">
-                  <h3 className="c9-card-title mb-3">Managed Productivity <span className="text-[#5D00D6]">— Operational Ownership.</span></h3>
+                  <h3 className="c9-card-title mb-3">Collaboration &amp; Application Layer <span className="text-[#5D00D6]">— Integrated Workflows.</span></h3>
                   <p className="c9-body max-w-xl mx-auto">
-                    Business Value: Total elimination of M365 management overhead. C9 handles licensing, tenant security hardening, and 24/7 Australian-based user support.
+                    Business Value: We transform disconnected applications into a cohesive environment. Built on platforms like Microsoft 365, we manage the entire suite to ensure seamless collaboration and document control.
                   </p>
                 </div>
                 <div className="px-6 md:px-12 pb-10 mt-auto flex justify-center overflow-hidden">
@@ -174,9 +174,9 @@ export default function ModernWorkplacePage() {
                 className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-[#F9FAFB]"
               >
                 <div className="px-7 pt-10 pb-6 text-center">
-                  <h3 className="c9-card-title mb-3">Unified Comms <span className="text-[#6264A7]">— Infrastructure Consolidation.</span></h3>
+                  <h3 className="c9-card-title mb-3">Core Communication Layer <span className="text-[#6264A7]">— Unified Voice &amp; Video.</span></h3>
                   <p className="c9-body">
-                    Business Value: Consolidate voice, video, and chat into a single managed carrier-grade platform with 99.95% uptime reliability.
+                    Business Value: Communication is the foundation of the modern workplace. We integrate enterprise calling, video, and chat into a single managed system with 99.95% uptime reliability.
                   </p>
                 </div>
                 <div className="px-6 pb-10 mt-auto flex justify-center overflow-hidden">
@@ -198,9 +198,9 @@ export default function ModernWorkplacePage() {
                   <div className="w-20 h-20 rounded-3xl bg-[#5D00D6]/10 flex items-center justify-center mx-auto mb-8 text-[#5D00D6]">
                     <ShieldCheck size={40} />
                   </div>
-                  <h3 className="c9-card-title !text-white mb-3">Zero Trust Identity Control.</h3>
+                  <h3 className="c9-card-title !text-white mb-3">Security &amp; Access Layer.</h3>
                   <p className="c9-body !text-white/60">
-                    Business Value: Mitigate identity risk with enforced MFA and Conditional Access. We engineer the security baselines so your users can&apos;t bypass them.
+                    Business Value: Protect the entire unified stack with identity-driven security. Every call, file, and login is governed by enforced MFA and Conditional Access baselines.
                   </p>
                   <div className="mt-8 pt-8 border-t border-white/5 text-left space-y-3">
                     {['Automated MFA Enforcement', 'Conditional Access Policies', 'Defender for Identity'].map(t => (
@@ -222,9 +222,9 @@ export default function ModernWorkplacePage() {
                   <div className="w-20 h-20 rounded-3xl bg-blue-500/10 flex items-center justify-center mx-auto mb-8 text-blue-600">
                     <Laptop size={40} />
                   </div>
-                  <h3 className="c9-card-title mb-3">Procurement-Ready Compliance.</h3>
+                  <h3 className="c9-card-title mb-3">Connected Device Layer.</h3>
                   <p className="c9-body">
-                    Business Value: Rapid, zero-touch deployment of compliant hardware. Every device arrives configured to your exact security and operational standards.
+                    Business Value: Bring every endpoint into the unified system. We provide rapid, zero-touch deployment so devices arrive fully configured to your exact security and communication standards.
                   </p>
                   <div className="mt-8 pt-8 border-t border-black/5 text-left space-y-3">
                     {['Zero-Touch Enrolment', 'Intune Policy Management', 'Remote Wipe & Lock'].map(t => (
@@ -246,9 +246,9 @@ export default function ModernWorkplacePage() {
                   <div className="w-20 h-20 rounded-3xl bg-purple-500/10 flex items-center justify-center mx-auto mb-8 text-purple-600">
                     <UserCheck size={40} />
                   </div>
-                  <h3 className="c9-card-title mb-3">Root-Cause Accountability.</h3>
+                  <h3 className="c9-card-title mb-3">Single-Partner Accountability.</h3>
                   <p className="c9-body">
-                    Business Value: Access local engineering leads who own the problem until resolution. No hand-offs, no vendor-blame shifting.
+                    Business Value: Because we design and manage the entire workplace stack, we own the resolution. Access local engineering leads with deep context on your unified environment.
                   </p>
                   <div className="mt-8 pt-8 border-t border-black/5 text-left space-y-3">
                     {['Sydney-Based L3 Engineers', 'Strict Enterprise SLAs', 'Accountable Ownership'].map(t => (
@@ -275,20 +275,20 @@ export default function ModernWorkplacePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <FadeUp>
               <div className="inline-flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full mb-6">
-                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Unification Protocol</span>
               </div>
               <h2 className="text-[32px] md:text-[42px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-[#0c1024]">
                 The C9 Managed <br />
-                <span className="text-[#5D00D6]">MSP Takeover Protocol.</span>
+                <span className="text-[#5D00D6]">System Unification Protocol.</span>
               </h2>
               <p className="text-[18px] text-gray-600 mb-10 leading-relaxed font-medium">
-                Transitioning from a failing provider shouldn&apos;t be a risk. We utilize a structured takeover protocol to audit, secure, and stabilize your environment without operational disruption.
+                Transitioning from fragmented tools to a unified stack shouldn&apos;t disrupt operations. We utilize a structured integration protocol to audit, secure, and connect your environment seamlessly.
               </p>
               <div className="space-y-6">
                 {[
-                  { t: 'Phase 1: Deep Audit', d: 'Comprehensive scan of technical debt, ghost accounts, and security holes.' },
-                  { t: 'Phase 2: Baseline Hardening', d: 'Enforcing MFA, Conditional Access, and Essential Eight standards.' },
-                  { t: 'Phase 3: Operational Stabilisation', d: 'Restoring uptime and performance while eliminating recurring issues.' }
+                  { t: 'Phase 1: Deep Audit', d: 'Comprehensive scan of fragmented communication tools and security gaps.' },
+                  { t: 'Phase 2: Baseline Unification', d: 'Establishing the core communication layer and enforcing identity standards.' },
+                  { t: 'Phase 3: Operational Stabilisation', d: 'Consolidating applications and devices into the single managed system.' }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-1">
@@ -305,14 +305,14 @@ export default function ModernWorkplacePage() {
 
             <FadeUp delay={0.2}>
               <div className="inline-flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full mb-6">
-                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Greenfield Guarantee</span>
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Unified Launch Guarantee</span>
               </div>
               <h2 className="text-[32px] md:text-[42px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-[#0c1024]">
                 The Mandatory <br />
-                <span className="text-[#5D00D6]">Day One Guarantee.</span>
+                <span className="text-[#5D00D6]">Day One Integration.</span>
               </h2>
               <p className="text-[18px] text-gray-600 mb-10 leading-relaxed font-medium">
-                For new sites and startups, &quot;good enough&quot; is not an option. We guarantee a fully-operational, secure workplace environment on your first day of operation.
+                For new sites and startups, we bypass fragmentation entirely. We guarantee a fully unified, communication-driven workplace environment on your first day of operation.
               </p>
               <div className="bg-[#0B0B0F] border border-white/5 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all shadow-2xl">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/5 rounded-bl-full group-hover:bg-[#5D00D6]/10 transition-all" />
@@ -347,12 +347,12 @@ export default function ModernWorkplacePage() {
         </div>
         <div className="c9-container relative z-10">
           <FadeUp className="text-center max-w-[680px] mx-auto mb-16">
-            <Eyebrow light>Migration & Continuity</Eyebrow>
+            <Eyebrow light>System Integration &amp; Continuity</Eyebrow>
             <h2 className="c9-section-heading mb-5 !text-white">
-              Risk-Managed Transition. Zero Disruption.
+              Risk-Managed Transformation. Zero Disruption.
             </h2>
             <p className="c9-body !text-white/60">
-              We manage the entire migration from legacy providers to a stabilized C9 environment. Our staged rollout model ensures your business remains active while we harden policies and validate compliance at every step.
+              We manage the entire shift from disconnected vendors to a unified C9 stack. Our staged integration model ensures your core communications remain active while we connect your devices, apps, and security policies.
             </p>
           </FadeUp>
           <InfraCarousel />
@@ -363,12 +363,12 @@ export default function ModernWorkplacePage() {
       <section id="other-solutions" className="py-12 md:py-20" style={{ background: PL }}>
         <div className="c9-container">
           <FadeUp className="max-w-[620px] mb-16">
-            <Eyebrow>Enterprise Physical Ops</Eyebrow>
+            <Eyebrow>Extended Ecosystem</Eyebrow>
             <h2 className="c9-section-heading mb-6">
-              Consolidated Infrastructure.
+              Extend Your Unified Stack.
             </h2>
             <p className="c9-body text-lg">
-              Integrate physical workplace technology into your managed IT ecosystem. CCTV intelligence, print fleet management, and visitor governance — all under one support model.
+              Integrate your physical workplace into the unified system. CCTV intelligence, print fleet management, and visitor governance — all delivered and supported under our Managed IT framework.
             </p>
           </FadeUp>
           <OtherSolutions />
@@ -379,8 +379,8 @@ export default function ModernWorkplacePage() {
       <section className="py-12 md:py-20" style={{ background: '#fff' }}>
         <div className="c9-container">
           <FadeUp className="text-center max-w-[640px] mx-auto mb-20">
-            <Eyebrow>Operational Outcomes</Eyebrow>
-            <h2 className="c9-section-heading font-bold">The C9 Advantage.</h2>
+            <Eyebrow>System-Wide Outcomes</Eyebrow>
+            <h2 className="c9-section-heading font-bold">The Power of a Unified Stack.</h2>
           </FadeUp>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -391,20 +391,20 @@ export default function ModernWorkplacePage() {
                 <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-5 border border-white/20 backdrop-blur-sm shadow-sm">
                   <Monitor size={24} className="text-white" />
                 </div>
-                <h3 className="text-[24px] font-bold text-white leading-snug mb-4 tracking-tight">Day One Readiness.<br />Guaranteed.</h3>
-                <p className="text-[15px] leading-[1.6] text-white/80 flex-grow">Every endpoint arrives pre-configured to your security standard. We ensure every user onboarding is a silent, compliant, and productive event for your team.</p>
+                <h3 className="text-[24px] font-bold text-white leading-snug mb-4 tracking-tight">Seamless User Experience.<br />Total IT Control.</h3>
+                <p className="text-[15px] leading-[1.6] text-white/80 flex-grow">Every component of your workplace—from the network connection to the Teams call—operates in harmony. We ensure your team experiences silent, compliant, and highly productive workflows without the friction of disjointed tools.</p>
                 <div className="mt-8 pt-8 border-t border-white/20">
-                  <div className="text-[32px] font-bold text-white tracking-tight mb-2">Strategic Readiness</div>
-                  <div className="text-[12px] font-bold uppercase tracking-widest text-white/60">Integrated Security Governance</div>
+                  <div className="text-[32px] font-bold text-white tracking-tight mb-2">Integrated Ecosystem</div>
+                  <div className="text-[12px] font-bold uppercase tracking-widest text-white/60">Strategic Readiness</div>
                 </div>
               </div>
             </ScaleIn>
 
             {[
-              { icon:Zap, title:'Reduced Vendor Overhead', body:'Consolidate multiple providers into a single, accountable infrastructure partner.' },
-              { icon:Shield, title:'Persistent Governance', body:'Continuous monitoring of policy enforcement across every user, device, and login.' },
-              { icon:Lock, title:'Operationalized Security', body:"Zero Trust architectures that follow your users, ensuring data integrity at every site." },
-              { icon:TrendingUp, title:'Predictable Scaling', body:'Add sites and users with confidence. Fully managed growth backed by clear SLAs.' },
+              { icon:Zap, title:'Eliminated Vendor Sprawl', body:'Replace fragmented providers with a single partner who designs, integrates, and manages the entire workplace stack.' },
+              { icon:Shield, title:'Communication at the Core', body:'By anchoring the workplace around unified communications, team collaboration becomes native, not an afterthought.' },
+              { icon:Lock, title:'System-Wide Security', body:"Secured through integrated identity and protection layers that follow your users across all apps and devices." },
+              { icon:TrendingUp, title:'Predictable Transformation', body:'Evolve your workplace with confidence. A fully managed growth strategy backed by clear SLAs and robust voice infrastructure.' },
             ].map(({ icon: Icon, title, body }, i) => (
               <ScaleIn key={title} delay={i * 0.07}>
                 <motion.div 
@@ -426,9 +426,9 @@ export default function ModernWorkplacePage() {
       <section id="pricing" className="py-12 md:py-20" style={{ background: PL }}>
         <div className="c9-container">
           <FadeUp className="text-center max-w-[640px] mx-auto mb-20">
-            <Eyebrow>SLA-Backed Management</Eyebrow>
-            <h2 className="c9-section-heading mb-6 font-bold">Predictable Cost.<br />Enterprise Accountability.</h2>
-            <p className="c9-body">Transparent pricing for full infrastructure ownership. All plans include Australian engineering leads and zero hidden fees.</p>
+            <Eyebrow>SLA-Backed Unified Management</Eyebrow>
+            <h2 className="c9-section-heading mb-6 font-bold">Predictable Investment.<br />Complete System Ownership.</h2>
+            <p className="c9-body">Transparent pricing for a fully integrated workplace stack. All plans include Australian engineering leads and zero hidden integration fees.</p>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
             {PLANS.map((plan, i) => (
@@ -470,10 +470,10 @@ export default function ModernWorkplacePage() {
       {/* ══ CTA ═════════════════════════════════════════════════════ */}
       <WpConsultationForm 
         showHeader={false}
-        eyebrow="Managed Workplace Audit"
-        title="Stabilize Your Distributed Workforce Operations"
-        description="Eliminate vendor fragmentation and regain control. Book a 30-minute consultation with an Australian engineering lead to review your current environment and migration path."
-        formTitle="Get Operational Audit"
+        eyebrow="Plan Your Workplace Transformation"
+        title="Unify Your Distributed Workforce Operations"
+        description="Eliminate fragmented tools and regain control. Book a 30-minute consultation with an Australian engineering lead to design your unified workplace stack."
+        formTitle="Design Your Unified Workplace"
       />
 
     </div>

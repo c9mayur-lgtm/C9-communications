@@ -4,6 +4,30 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, Server, Shield, Cpu, Network, Wifi, Monitor, ShieldCheck, LayoutGrid } from 'lucide-react';
 
+const BrandLogoRender = ({ brandName, brandImage, fallbackIcon }: { brandName: string, brandImage?: string, fallbackIcon: string }) => {
+  const [error, setError] = useState(false);
+
+  if (error || !brandImage) {
+    return (
+      <div className="flex items-center gap-3">
+        <div className="p-1.5 bg-white/10 rounded-sm">
+          <img src={fallbackIcon} alt="" className="w-5 h-5 object-contain filter grayscale brightness-200" />
+        </div>
+        <span className="c9-eyebrow !text-[10px] !text-white/40">{brandName}</span>
+      </div>
+    );
+  }
+
+  return (
+    <img 
+      src={brandImage} 
+      alt={brandName} 
+      onError={() => setError(true)}
+      className="h-6 max-w-[130px] object-contain filter grayscale brightness-[10] contrast-200 opacity-60 group-hover:opacity-100 transition-opacity" 
+    />
+  );
+};
+
 const VendorCard = ({ card }: { card: any }) => {
   return (
     <div className="group relative bg-[#0D0D0D] border border-white/5 p-6 md:p-8 flex flex-col h-full hover:border-[#5D00D6]/30 transition-all duration-500 overflow-hidden">
@@ -28,14 +52,9 @@ const VendorCard = ({ card }: { card: any }) => {
         </div>
         
         {/* Brand Highlight at bottom */}
-        {card.brandLogo && (
-          <div className="px-8 py-6 bg-black/40 border-t border-white/5 flex items-center gap-3 mt-auto">
-            <div className="p-1.5 bg-white/10 rounded-sm">
-              <img src={card.brandLogo} alt="" className="w-5 h-5 object-contain filter grayscale brightness-200" />
-            </div>
-            <span className="c9-eyebrow !text-[10px] !text-white/40">{card.brandName}</span>
-          </div>
-        )}
+        <div className="px-8 py-6 bg-black/40 border-t border-white/5 flex items-center justify-start mt-auto min-h-[80px]">
+          <BrandLogoRender brandName={card.brandName} brandImage={card.brandImage} fallbackIcon={card.brandLogo} />
+        </div>
     </div>
   );
 };
@@ -57,7 +76,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Server,
       details: ['Legacy hardware retirement', 'Cloud migration strategy', 'Hybrid-cloud connectivity'],
       brandName: 'Microsoft Azure',
-      brandLogo: 'https://cdn.simpleicons.org/microsoftazure/white'
+      brandLogo: 'https://cdn.simpleicons.org/microsoftazure/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg'
     },
     {
       title: 'Cyber Resilience',
@@ -65,7 +85,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Shield,
       details: ['Endpoint protection', '24/7 SIEM monitoring', 'Incident response planning'],
       brandName: 'CrowdStrike',
-      brandLogo: 'https://cdn.simpleicons.org/crowdstrike/white'
+      brandLogo: 'https://cdn.simpleicons.org/crowdstrike/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/CrowdStrike_logo.svg'
     },
     {
       title: 'Workflow Automation',
@@ -73,7 +94,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Cpu,
       details: ['Process mapping', 'SaaS integration', 'Custom API development'],
       brandName: 'ServiceNow',
-      brandLogo: 'https://cdn.simpleicons.org/servicenow/white'
+      brandLogo: 'https://cdn.simpleicons.org/servicenow/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/9/91/ServiceNow_logo.png'
     }
   ],
   strategy: [
@@ -83,7 +105,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Network,
       details: ['Application steering', 'Direct cloud access', 'Unified management'],
       brandName: 'Cisco',
-      brandLogo: 'https://cdn.simpleicons.org/cisco/white'
+      brandLogo: 'https://cdn.simpleicons.org/cisco/white',
+      brandImage: '/images/clients/cisco.png'
     },
     {
       title: 'SASE Architecture',
@@ -91,7 +114,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: ShieldCheck,
       details: ['Cloud access security broker', 'Secure web gateway', 'Zero-trust network access'],
       brandName: 'Palo Alto Networks',
-      brandLogo: 'https://cdn.simpleicons.org/paloaltonetworks/white'
+      brandLogo: 'https://cdn.simpleicons.org/paloaltonetworks/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/2/23/Palo_Alto_Networks_logo.svg'
     },
     {
       title: 'Private 5G Networks',
@@ -99,7 +123,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Wifi,
       details: ['Site surveys', 'Spectrum management', 'IoT prioritization'],
       brandName: 'Nokia',
-      brandLogo: 'https://cdn.simpleicons.org/nokia/white'
+      brandLogo: 'https://cdn.simpleicons.org/nokia/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Nokia_wordmark.svg'
     }
   ],
   'modern-workplace': [
@@ -109,7 +134,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Monitor,
       details: ['Teams/Slack optimization', 'Digital whiteboarding', 'Async work patterns'],
       brandName: 'Microsoft Teams',
-      brandLogo: 'https://cdn.simpleicons.org/microsoftteams/white'
+      brandLogo: 'https://cdn.simpleicons.org/microsoftteams/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_logo.svg'
     },
     {
       title: 'Intelligent Productivity',
@@ -117,7 +143,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Cpu,
       details: ['AI-powered search & discover', 'Modern intranet portals', 'Centralized knowledge hubs'],
       brandName: 'Microsoft 365',
-      brandLogo: 'https://cdn.simpleicons.org/microsoft/white'
+      brandLogo: 'https://cdn.simpleicons.org/microsoft/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_logo.svg'
     },
     {
       title: 'App Ecosystem Integration',
@@ -125,7 +152,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: LayoutGrid,
       details: ['Single Sign-On (SSO)', 'Workflow cross-integration', 'Contextual team spaces'],
       brandName: 'Slack',
-      brandLogo: 'https://cdn.simpleicons.org/slack/white'
+      brandLogo: 'https://cdn.simpleicons.org/slack/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg'
     }
   ],
   telco: [
@@ -135,7 +163,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Network,
       details: ['Dedicated 100Gbps links', 'P2P data center interconnect', 'Low-latency direct routing'],
       brandName: 'nbn Australia',
-      brandLogo: 'https://cdn.simpleicons.org/nbn/white'
+      brandLogo: 'https://cdn.simpleicons.org/nbn/white',
+      brandImage: '/images/compliance/NBN_Co-Logo.wine 1 (1).svg'
     },
     {
       title: 'Next-Gen Cloud Voice',
@@ -143,7 +172,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Wifi,
       details: ['Global SIP trunking', 'CRM-integrated dialers', 'AI sentiment analysis'],
       brandName: 'C9 Communications',
-      brandLogo: 'https://cdn.simpleicons.org/c9/white'
+      brandLogo: 'https://cdn.simpleicons.org/c9/white',
+      brandImage: '/images/c9_logo_light.svg'
     },
     {
       title: 'Edge Connectivity',
@@ -151,7 +181,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Server,
       details: ['Satellite/Starlink backup', 'Carrier-neutral peering', 'Rapid site deployment'],
       brandName: 'Telstra Business',
-      brandLogo: 'https://cdn.simpleicons.org/telstra/white'
+      brandLogo: 'https://cdn.simpleicons.org/telstra/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Telstra_logo_2022.svg'
     }
   ],
   devices: [
@@ -161,7 +192,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Monitor,
       details: ['Security policy enforcement', 'Remote wipe & lock', 'App distribution profiles'],
       brandName: 'Jamf Pro',
-      brandLogo: 'https://cdn.simpleicons.org/jamf/white'
+      brandLogo: 'https://cdn.simpleicons.org/jamf/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Jamf_Logo.svg'
     },
     {
       title: 'Secure Device Lifecycle',
@@ -169,7 +201,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: LayoutGrid,
       details: ['Autopilot deployment', 'Asset tracking & refresh', 'Secure e-waste disposal'],
       brandName: 'Apple Business',
-      brandLogo: 'https://cdn.simpleicons.org/apple/white'
+      brandLogo: 'https://cdn.simpleicons.org/apple/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'
     }
   ],
   security: [
@@ -179,7 +212,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: ShieldCheck,
       details: ['Threat hunting', 'Vulnerability scanning', 'Compliance reporting'],
       brandName: 'Tenable',
-      brandLogo: 'https://cdn.simpleicons.org/tenable/white'
+      brandLogo: 'https://cdn.simpleicons.org/tenable/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/en/0/04/Tenable_Inc_Logo.svg'
     },
     {
       title: 'Identity Protection',
@@ -187,7 +221,8 @@ const VENDORS_DATA: Record<string, any[]> = {
       icon: Shield,
       details: ['MFA enforcement', 'Conditional access scoring', 'Privileged identity management'],
       brandName: 'Okta',
-      brandLogo: 'https://cdn.simpleicons.org/okta/white'
+      brandLogo: 'https://cdn.simpleicons.org/okta/white',
+      brandImage: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Okta_logo.svg'
     }
   ]
 };
