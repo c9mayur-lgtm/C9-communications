@@ -21,19 +21,17 @@ export const C9Button = React.forwardRef<HTMLButtonElement, C9ButtonProps>(
     );
 
     if (asChild && React.isValidElement(children)) {
-      const child = children as React.ReactElement<{ className?: string; children?: React.ReactNode }>;
-      return React.cloneElement(child, {
+      return React.cloneElement(children as React.ReactElement, {
         ...props,
-        className: cn(buttonVariants({ variant, size, className }), child.props.className),
-        // @ts-ignore
+        className: cn(buttonVariants({ variant, size, className }), (children.props as any).className),
         children: (
           <>
-            {child.props.children}
+            {(children.props as any).children}
             {arrowElement}
           </>
         ),
         ref,
-      });
+      } as any);
     }
 
     return (
