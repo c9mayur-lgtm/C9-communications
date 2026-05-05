@@ -61,7 +61,7 @@ export default function TeamsCallingPage() {
       {/* 1. HERO SECTION */}
       <Section bg="white" className="pt-12 pb-10 md:pt-16 md:pb-12 overflow-hidden border-b border-slate-100 relative">
         <div className="absolute top-0 left-0 w-full h-1 bg-[#5D00D6]/20" />
-        <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-[#5D00D6]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#5D00D6]/5 rounded-full blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto max-w-[1240px] relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-2xl relative z-10">
@@ -327,7 +327,7 @@ export default function TeamsCallingPage() {
 
       {/* 8. SUPPORT & CONTROL */}
       <Section bg="dark" className="py-10 md:py-14 overflow-hidden relative bg-[#0c1024]">
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] bg-[#5D00D6]/20 blur-[160px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[#5D00D6]/20 blur-[160px] rounded-full pointer-events-none" />
         
         <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10 max-w-[1240px] mx-auto">
           <div className="flex flex-col gap-10">
@@ -415,8 +415,8 @@ export default function TeamsCallingPage() {
 
       {/* 11. MID-PAGE CTA */}
       <section className="py-14 bg-[#5D00D6] text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-black/20 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-white/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-black/20 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 pointer-events-none" />
           
           <div className="container mx-auto px-6 md:px-8 max-w-[1240px] text-center relative z-10">
             <div className="max-w-4xl mx-auto flex flex-col gap-10 items-center">

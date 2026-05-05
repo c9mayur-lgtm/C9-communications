@@ -468,6 +468,7 @@ export const InfraCarousel = () => {
               <div className="mt-6 pt-5 flex items-center gap-3" style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}>
                   {card.partnerLogo ? (
+                    /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
                     <img src={card.partnerLogo} alt={card.partner} className="w-5 h-5 object-contain" style={{ filter: 'brightness(0) invert(1)', opacity: 0.7 }} onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
                   ) : (
                     <span className="text-[10px] font-bold text-white/60">C9</span>

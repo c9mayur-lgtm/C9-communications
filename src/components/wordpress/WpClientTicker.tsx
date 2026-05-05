@@ -75,6 +75,7 @@ export const WpClientTicker = () => {
             { name: 'Chobani',            logo: '/images/clients/chobani.png', className: 'h-[25px] md:h-[35px] lg:h-[45px]' },
           ].map((c, i) => (
             <div key={i} className="group ticker-pill px-[20px] md:px-[40px]">
+              {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
               <img
                 src={c.logo}
                 alt={c.name}

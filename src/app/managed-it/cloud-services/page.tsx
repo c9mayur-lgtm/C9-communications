@@ -420,7 +420,7 @@ const SectionProof = () => (
    <section className="py-12 lg:py-16 bg-white">
       <div className={C}>
          <div className="bg-[#0c1024] rounded-lg p-10 lg:p-16 text-white overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6] opacity-10 rounded-full blur-[120px] -mr-80 -mt-80" />
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#5D00D6] opacity-10 rounded-full blur-[120px] -mr-40 -mt-40 md:-mr-80 md:-mt-80" />
             
             <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
                <div>

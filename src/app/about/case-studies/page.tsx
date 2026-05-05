@@ -117,7 +117,7 @@ export default function CaseStudiesPage() {
           }}
         />
         {/* Purple glow */}
-        <div className="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#5D00D6] opacity-[0.05] blur-[100px]" />
+        <div className="pointer-events-none absolute -top-40 -left-40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-[#5D00D6] opacity-[0.05] blur-[100px]" />
 
         <div className="container mx-auto px-6 max-w-[1240px] relative z-10">
           <FadeUp>
@@ -135,13 +135,13 @@ export default function CaseStudiesPage() {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#consultation-section"
-                  className="px-8 py-4 bg-[#5D00D6] text-white font-bold rounded-full hover:bg-[#4A00AB] transition-all text-center min-w-[240px] shadow-xl shadow-purple-900/20"
+                  className="px-8 py-4 bg-[#5D00D6] text-white font-bold rounded-full hover:bg-[#4A00AB] transition-all text-center w-full sm:w-auto sm:min-w-[240px] shadow-xl shadow-purple-900/20"
                 >
                   Request Infrastructure Assessment
                 </a>
                 <a
                   href="/contact"
-                  className="px-8 py-4 bg-white text-slate-700 font-bold rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all border-2 border-slate-200 text-center min-w-[240px]"
+                  className="px-8 py-4 bg-white text-slate-700 font-bold rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all border-2 border-slate-200 text-center w-full sm:w-auto sm:min-w-[240px]"
                 >
                   Discuss Your Environment
                 </a>
@@ -157,7 +157,7 @@ export default function CaseStudiesPage() {
           <div className="space-y-20">
             {caseStudies.map((study, idx) => (
               <FadeUp key={idx}>
-                <div className="bg-white rounded-[48px] border border-gray-100 p-8 md:p-12 shadow-sm hover:shadow-2xl hover:shadow-purple-900/5 transition-all overflow-hidden relative">
+                <div className="bg-white rounded-[24px] md:rounded-[48px] border border-gray-100 p-8 md:p-12 shadow-sm hover:shadow-2xl hover:shadow-purple-900/5 transition-all overflow-hidden relative">
                   <div className="grid lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-7">
                       <div className="flex items-center gap-3 mb-6">

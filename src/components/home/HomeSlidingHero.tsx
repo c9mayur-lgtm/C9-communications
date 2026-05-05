@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, Store, Building2, Briefcase } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { C9Button } from '@/components/design-system/C9Button';
 import Link from 'next/link';
 
 const slides = [
@@ -109,27 +109,25 @@ export const HomeSlidingHero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Button
+                  <C9Button
                     size="lg"
                     className="rounded-full shadow-xl"
                     asChild
                   >
-                    <Link href={slide.href} className="flex items-center gap-2">
+                    <Link href={slide.href}>
                       {slide.cta}
-                      
                     </Link>
-                  </Button>
-                  <Button
+                  </C9Button>
+                  <C9Button
                     variant="outline"
                     size="lg"
                     className="rounded-full border-2 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6]"
                     asChild
                   >
-                    <Link href="/managed-it" className="flex items-center gap-2">
+                    <Link href="/managed-it">
                       Explore Services
-                      
                     </Link>
-                  </Button>
+                  </C9Button>
                 </div>
 
                 <div className="flex flex-wrap gap-x-6 gap-y-4">

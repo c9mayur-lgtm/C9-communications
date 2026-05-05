@@ -57,7 +57,7 @@ const Hero = () => (
     />
     {/* Radial highlight */}
     <div
-      className="pointer-events-none absolute -top-60 -left-60 w-[700px] h-[700px] rounded-full opacity-[0.05]"
+      className="pointer-events-none absolute -top-60 -left-60 w-[350px] h-[350px] md:w-[700px] md:h-[700px] rounded-full opacity-[0.05]"
       style={{ background: 'radial-gradient(circle, #5D00D6 0%, transparent 70%)' }}
     />
 

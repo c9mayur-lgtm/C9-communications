@@ -42,7 +42,7 @@ const INSIGHTS_DATA = [
     type: 'Article',
     title: 'State of Australian IT: Transitioning to Managed Cloud',
     excerpt: 'The ongoing costs of self-managed hardware are eclipsing the benefits. Here is why Australian mid-market firms are shifting to fully managed infrastructure.',
-    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800',
+    image: '/images/insights/managed_cloud_it_1777975822642.png',
     date: 'Apr 30, 2026',
     readTime: '8 min read',
     slug: 'state-of-australian-it-2026'
@@ -51,7 +51,7 @@ const INSIGHTS_DATA = [
     type: 'Article',
     title: 'Scaling Your Network Architecture for 2026',
     excerpt: 'How multi-site organizations are solving the lag and security challenges of distributed workforces.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=800',
+    image: '/images/insights/network_architecture_blueprint_1777975905989.png',
     date: 'Apr 25, 2026',
     readTime: '6 min read',
     slug: 'scaling-network-architecture'
@@ -60,7 +60,7 @@ const INSIGHTS_DATA = [
     type: 'Article',
     title: 'The CEO Guide to Managed Security Governance',
     excerpt: 'A technical deep-dive into the Essential Eight and why software alone is not a security strategy.',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
+    image: '/images/insights/security_governance_soc_1777976306234.png',
     date: 'Apr 05, 2026',
     readTime: '12 min read',
     slug: 'ceo-security-governance'
@@ -69,7 +69,7 @@ const INSIGHTS_DATA = [
     type: 'Blog',
     title: 'Why Onshore SOC Matters for Australian Enterprise',
     excerpt: 'Understanding the operational and compliance benefits of local security monitoring and response.',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
+    image: '/images/insights/onshore_soc_australia_1777976542764.png',
     date: 'Mar 28, 2026',
     readTime: '5 min read',
     slug: 'onshore-soc-benefits'
@@ -78,7 +78,7 @@ const INSIGHTS_DATA = [
     type: 'Article',
     title: 'Modern Workplace: Beyond Microsoft 365',
     excerpt: 'Controlling the user environment is the next frontier of business productivity and security.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
+    image: '/images/insights/modern_workplace_management_1777976608029.png',
     date: 'Mar 02, 2026',
     readTime: '7 min read',
     slug: 'modern-workplace-control'
@@ -87,7 +87,7 @@ const INSIGHTS_DATA = [
     type: 'Blog',
     title: 'The Myth of "Set and Forget" IT',
     excerpt: 'Why continuous operational discipline is the only way to maintain infrastructure stability.',
-    image: 'https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&q=80&w=800',
+    image: '/images/insights/operational_discipline_gears_1777976675820.png',
     date: 'Feb 20, 2026',
     readTime: '4 min read',
     slug: 'set-and-forget-myth'

@@ -6,7 +6,7 @@ import { CheckCircle, ShieldCheck, Zap, Monitor, Lock, Cloud, PhoneCall, Users, 
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
-import { Button } from '@/components/ui/button';
+import { C9Button } from '@/components/design-system/C9Button';
 import { handleCtaClick } from '@/lib/utils';
 
 // Enterprise Components
@@ -101,22 +101,21 @@ const Hero = () => (
 
           <FadeIn delay={0.3}>
              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
+                <C9Button
                    size="lg"
                    className="rounded-full shadow-xl"
                    onClick={handleCtaClick}
                 >
                    Request Delivery Briefing
-                   
-                </Button>
-                <Button
+                </C9Button>
+                <C9Button
                    variant="outline"
                    size="lg"
                    className="rounded-full border-2"
                    onClick={() => document.getElementById('service-model')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                    Review Operating Model
-                </Button>
+                </C9Button>
              </div>
           </FadeIn>
         </div>

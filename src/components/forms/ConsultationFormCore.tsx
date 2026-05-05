@@ -149,8 +149,9 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
       <form onSubmit={handleSubmit} className="grid gap-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1.5">
-            <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">First Name</label>
+            <label htmlFor="core-firstName" className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">First Name</label>
             <input 
+              id="core-firstName"
               type="text" 
               name="firstName"
               required
@@ -161,8 +162,9 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             />
           </div>
           <div className="flex flex-col gap-1.5">
-            <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Last Name</label>
+            <label htmlFor="core-lastName" className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Last Name</label>
             <input 
+              id="core-lastName"
               type="text" 
               name="lastName"
               required
@@ -175,8 +177,9 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Work Email</label>
+          <label htmlFor="core-email" className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Work Email</label>
           <input 
+            id="core-email"
             type="email" 
             name="email"
             required
@@ -188,8 +191,9 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Organisation</label>
+          <label htmlFor="core-org" className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">Organisation</label>
           <input 
+            id="core-org"
             type="text" 
             name="organisation"
             required
@@ -201,10 +205,11 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">
+          <label htmlFor="core-message" className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">
             {selectedPath === 'sla' ? 'Infrastructure Footprint' : 'Current Environment'}
           </label>
           <textarea 
+            id="core-message"
             name="message"
             required
             placeholder={

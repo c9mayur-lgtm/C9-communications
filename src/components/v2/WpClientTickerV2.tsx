@@ -75,12 +75,15 @@ export const WpClientTickerV2 = () => {
                       </span>
                     </div>
                   ) : (
-                    <img
-                      src={c.logo}
-                      alt={c.name}
-                      className="h-[50px] md:h-[70px] w-auto object-contain transition-all duration-500 grayscale opacity-40 hover:grayscale-0 hover:opacity-100"
-                      onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-                    />
+                    <>
+                      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
+                      <img
+                        src={c.logo}
+                        alt={c.name}
+                        className="h-[50px] md:h-[70px] w-auto object-contain transition-all duration-500 grayscale opacity-40 hover:grayscale-0 hover:opacity-100"
+                        onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                      />
+                    </>
                   )}
                 </div>
               ))}
@@ -98,6 +101,7 @@ export const WpClientTickerV2 = () => {
             <div className="ticker-row-left" style={{ animationDirection: 'reverse' }}>
               {[...partners, ...partners].map((p, i) => (
                 <div key={i} className="ticker-pill px-[25px] md:px-[50px]">
+                  {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
                   <img
                     src={p.logo}
                     alt={p.name}

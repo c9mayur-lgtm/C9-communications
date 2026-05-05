@@ -362,27 +362,27 @@ export function LuminaContact() {
              <form className="space-y-8">
                 <div className="grid md:grid-cols-2 gap-8">
                    <div className="space-y-3">
-                      <label className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Full Name</label>
-                      <input type="text" required className="w-full bg-black border border-white/10 px-5 py-4 text-white text-sm focus:border-[#BF2F70] outline-none transition-colors" />
+                      <label htmlFor="lumina-name" className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Full Name</label>
+                      <input id="lumina-name" type="text" required className="w-full bg-black border border-white/10 px-5 py-4 text-white text-sm focus:border-[#BF2F70] outline-none transition-colors" />
                    </div>
                    <div className="space-y-3">
-                      <label className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Work Email</label>
-                      <input type="email" required className="w-full bg-black border border-white/10 px-5 py-4 text-white text-sm focus:border-[#BF2F70] outline-none transition-colors" />
+                      <label htmlFor="lumina-email" className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Work Email</label>
+                      <input id="lumina-email" type="email" required className="w-full bg-black border border-white/10 px-5 py-4 text-white text-sm focus:border-[#BF2F70] outline-none transition-colors" />
                    </div>
                 </div>
-                <div className="space-y-3">
-                   <label className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Project Type</label>
-                   <select className="w-full bg-black border border-white/10 px-5 py-4 text-white/40 text-sm focus:border-[#BF2F70] outline-none transition-colors appearance-none cursor-pointer">
-                      <option>MicroLED / Video Wall</option>
-                      <option>Outdoor / Ruggedized</option>
-                      <option>Interactive Collaboration</option>
-                      <option>Managed Signage Network</option>
-                   </select>
-                </div>
-                <div className="space-y-3">
-                   <label className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Message</label>
-                   <textarea rows={4} className="w-full bg-black border border-white/10 px-5 py-4 text-white text-sm focus:border-[#BF2F70] outline-none transition-colors resize-none" />
-                </div>
+                 <div className="space-y-3">
+                    <label htmlFor="lumina-type" className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Project Type</label>
+                    <select id="lumina-type" className="w-full bg-black border border-white/10 px-5 py-4 text-white/40 text-sm focus:border-[#BF2F70] outline-none transition-colors appearance-none cursor-pointer">
+                       <option>MicroLED / Video Wall</option>
+                       <option>Outdoor / Ruggedized</option>
+                       <option>Interactive Collaboration</option>
+                       <option>Managed Signage Network</option>
+                    </select>
+                 </div>
+                 <div className="space-y-3">
+                    <label htmlFor="lumina-message" className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Message</label>
+                    <textarea id="lumina-message" rows={4} className="w-full bg-black border border-white/10 px-5 py-4 text-white text-sm focus:border-[#BF2F70] outline-none transition-colors resize-none" />
+                 </div>
                 <button className="w-full bg-[#BF2F70] text-white font-bold py-5 hover:bg-[#A32469] transition-all flex items-center justify-center gap-3">
                    Submit Project Inquiry <ChevronRight size={18} />
                 </button>

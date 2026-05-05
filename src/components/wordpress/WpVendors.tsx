@@ -18,6 +18,7 @@ const BrandLogoRender = ({ brandName, brandImage, fallbackIcon }: { brandName: s
     );
   }
 
+  // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
   return (
     <img 
       src={brandImage} 

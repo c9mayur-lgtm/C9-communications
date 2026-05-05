@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Shield } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { C9Button } from "@/components/design-system/C9Button";
 import { handleCtaClick } from "@/lib/utils";
 
 export interface WpDefenseBannerProps {
@@ -46,7 +46,7 @@ export const WpDefenseBanner = ({
 
           {/* Action Button */}
           <div className="mt-6 md:mt-0 relative z-10 w-full md:w-auto">
-            <Button
+            <C9Button
               size="lg"
               className="rounded-full bg-[#5D00D6]/10 border border-[#5D00D6]/30 text-white hover:bg-[#5D00D6] hover:border-[#5D00D6] group/btn"
               onClick={(e) => {
@@ -60,7 +60,7 @@ export const WpDefenseBanner = ({
               }}
             >
               {buttonText} 
-            </Button>
+            </C9Button>
           </div>
         </div>
       </div>

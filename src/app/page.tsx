@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { HomeSlidingHero } from "@/components/home/HomeSlidingHero";
 ;
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
@@ -83,7 +84,7 @@ export default function Homepage() {
                   <h3 className={`text-[22px] md:text-[26px] font-bold leading-tight mb-3 ${pillar.isLight ? 'text-slate-900' : 'text-white'}`}>{pillar.label}</h3>
                   <p className={`text-[14px] leading-relaxed flex-1 ${pillar.isLight ? 'text-slate-500' : 'text-white/70'}`}>{pillar.desc}</p>
                   <div className={`mt-auto pt-6 flex items-center gap-2 font-bold text-[14px] group-hover:gap-3 transition-all ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white'}`}>
-                    Explore {pillar.pill} 
+                    Explore {pillar.pill} <ArrowRight className="size-4" />
                   </div>
                 </div>
               </a>

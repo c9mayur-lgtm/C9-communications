@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import { C9Button } from '@/components/design-system/C9Button';
 ;
 import { handleCtaClick } from '@/lib/utils';
 
@@ -37,7 +37,7 @@ export const WpPromoBanner = ({
               {description}
             </p>
             <div>
-              <Button
+              <C9Button
                 size="lg"
                 className="h-14 px-10 rounded-xl"
                 onClick={(e) => {
@@ -51,7 +51,7 @@ export const WpPromoBanner = ({
                 }}
               >
                 {ctaText} 
-              </Button>
+              </C9Button>
             </div>
             <p className="text-[11px] text-gray-500 mt-6">{disclaimer}</p>
           </div>

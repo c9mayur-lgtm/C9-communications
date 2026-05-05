@@ -12,7 +12,7 @@ import { WpWhyPartner } from '@/components/wordpress/WpWhyPartner';
 import EngineeringStructure from '@/components/sections/enterprise/EngineeringStructure';
 import { AuthorityCta } from '@/components/sections/shared/AuthorityCta';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
-import { LogoStrip } from '@/components/sections/LogoStrip';
+import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 
 const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
   children: React.ReactNode; 
@@ -239,7 +239,7 @@ export default function AboutPage() {
       <EngineeringStructure />
 
       {/* ══ 5. TRUST SIGNALS: LOGO STRIP ═══════════════════════════ */}
-      <LogoStrip />
+      <WpClientTicker />
 
       {/* ══ 6. OPERATIONAL CERTAINTY ════════════════════════════════ */}
       <WpWhyPartner />

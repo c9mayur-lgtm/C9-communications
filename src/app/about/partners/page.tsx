@@ -44,7 +44,7 @@ export default function PartnersPage() {
       {/* 1. HERO SECTION — TRUST POSITIONING */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-white border-b border-gray-100">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F9FBFF] -z-10 hidden lg:block" />
-        <div className="c9-container relative z-10 text-center max-w-[1000px] mx-auto">
+        <div className="c9-container relative z-10 text-center w-full max-w-[1000px] mx-auto px-6">
           <FadeUp>
             <Eyebrow>Enterprise Trust Architecture</Eyebrow>
             <h1 className="c9-hero-title mb-8 !leading-[1.1] font-bold">
@@ -175,7 +175,7 @@ export default function PartnersPage() {
       {/* 4. HOW PARTNERSHIPS IMPROVE DELIVERY */}
       <section className="py-16 md:py-24 relative overflow-hidden bg-[#0c1024] text-white">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px]" style={{ background: 'radial-gradient(ellipse, rgba(93,0,214,0.2) 0%, transparent 70%)' }} />
+          <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px]" style={{ background: 'radial-gradient(ellipse, rgba(93,0,214,0.2) 0%, transparent 70%)' }} />
         </div>
         <div className="c9-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">

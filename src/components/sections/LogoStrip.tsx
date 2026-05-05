@@ -12,8 +12,8 @@ export const LogoStrip = () => {
         
         <div className="relative overflow-hidden">
           {/* Subtle Faders */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-white/0 z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-white/0 z-10 pointer-events-none" />
           
           <div className="flex gap-20 items-center justify-between whitespace-nowrap animate-marquee-custom overflow-visible w-fit">
             {[...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, index) => (

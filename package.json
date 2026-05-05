@@ -31,8 +31,11 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript-eslint/parser": "^8.59.2",
     "eslint": "^9",
     "eslint-config-next": "16.1.7",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "pa11y": "^9.1.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

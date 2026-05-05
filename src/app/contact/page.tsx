@@ -34,8 +34,18 @@ const ConversionOption = ({
   isSelected: boolean; 
   onClick: () => void;
 }) => (
-  <div 
-    onClick={onClick}
+  <>
+    {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+    <div 
+      onClick={onClick}
+    role="button"
+    tabIndex={0}
+    onKeyDown={(e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick();
+      }
+    }}
     className={cn(
       "cursor-pointer p-6 rounded-2xl border-2 transition-all duration-300 flex flex-col items-start gap-4 h-full",
       isSelected 
@@ -58,6 +68,7 @@ const ConversionOption = ({
       </p>
     </div>
   </div>
+  </>
 );
 
 export default function ContactPage() {
@@ -140,22 +151,23 @@ export default function ContactPage() {
                 
                 <form onSubmit={e => e.preventDefault()} className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
                   <div>
-                    <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Full Name</label>
-                    <input type="text" placeholder="Your name" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                    <label htmlFor="contact-name" className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Full Name</label>
+                    <input id="contact-name" type="text" placeholder="Your name" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Work Email</label>
-                    <input type="email" placeholder="you@company.com.au" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                    <label htmlFor="contact-email" className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Work Email</label>
+                    <input id="contact-email" type="email" placeholder="you@company.com.au" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                   </div>
                   <div className="sm:col-span-2">
-                    <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Organisation Name</label>
-                    <input type="text" placeholder="Company or business name" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
+                    <label htmlFor="contact-org" className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">Organisation Name</label>
+                    <input id="contact-org" type="text" placeholder="Company or business name" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#5D00D6]/20 focus:border-[#5D00D6] transition-all" />
                   </div>
                   <div className="sm:col-span-2">
-                    <label className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">
+                    <label htmlFor="contact-desc" className="block text-[11px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3">
                       {selectedPath === 'sla' ? 'Infrastructure Footprint' : 'Current Environment & Pain Points'}
                     </label>
                     <textarea 
+                      id="contact-desc"
                       placeholder={
                         selectedPath === 'sla' 
                           ? "Briefly describe your site count and current network requirements so we can tailor the SLA documentation to your scale."

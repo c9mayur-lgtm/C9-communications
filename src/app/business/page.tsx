@@ -233,7 +233,7 @@ const SectionProcess = () => (
                { step: '05', title: 'Single Ownership', desc: 'Full operational accountability for performance.' },
             ].map((s, i) => (
                <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all">
-                  <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
+                  <div className="text-[32px] md:text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
                   <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
@@ -294,8 +294,8 @@ const SectionSafety = () => (
    <section className="py-12 lg:py-16 bg-white border-t border-slate-100 overflow-hidden">
       <div className={C}>
          <div className="bg-[#5D00D6] rounded-[48px] p-10 lg:p-20 relative overflow-hidden shadow-2xl shadow-purple-900/40">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-[0.05] rounded-full blur-[100px] -mr-64 -mt-64" />
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white opacity-[0.05] rounded-full blur-[80px] -ml-32 -mb-32" />
+            <div className="absolute top-0 right-0 w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-white opacity-[0.05] rounded-full blur-[100px] -mr-32 -mt-32 md:-mr-64 md:-mt-64" />
+            <div className="absolute bottom-0 left-0 w-[150px] h-[150px] md:w-[300px] md:h-[300px] bg-white opacity-[0.05] rounded-full blur-[80px] -ml-16 -mb-16 md:-ml-32 md:-mb-32" />
             
             <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center text-white">
                <div>

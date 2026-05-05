@@ -39,7 +39,7 @@ const Hero = () => (
       }}
     />
     <div
-      className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-[0.05]"
+      className="pointer-events-none absolute -top-40 -right-40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full opacity-[0.05]"
       style={{ background: 'radial-gradient(circle, #5D00D6 0%, transparent 70%)' }}
     />
 

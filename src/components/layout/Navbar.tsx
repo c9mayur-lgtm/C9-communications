@@ -258,9 +258,9 @@ const TopUtilityBar = () => {
           <Link href="/defense" className="text-[12px] font-bold uppercase text-slate-600 hover:text-[#5D00D6] transition-colors pl-6 tracking-wide">
             C9 Defense
           </Link>
-          <Link href="/login" className="text-[12px] font-bold uppercase text-slate-500 hover:text-slate-900 transition-colors pl-6 tracking-wide">
+          {/* <Link href="/login" className="text-[12px] font-bold uppercase text-slate-500 hover:text-slate-900 transition-colors pl-6 tracking-wide">
             Portal Login
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
@@ -574,6 +574,7 @@ export const Navbar = () => {
   return (
     <div className="w-full relative">
       <TopUtilityBar />
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
       <nav 
         className={`transition-all duration-500 border-b bg-white/95 backdrop-blur-md ${
           isScrolled ? 'py-2.5 shadow-sm border-gray-100' : 'py-4 border-gray-100'
