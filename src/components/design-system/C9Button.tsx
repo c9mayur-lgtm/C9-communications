@@ -14,7 +14,7 @@ export interface C9ButtonProps
 export const C9Button = React.forwardRef<HTMLButtonElement, C9ButtonProps>(
   ({ className, variant, size, asChild, showArrow, children, ...props }, ref) => {
     // Determine if we should show the arrow by default (for default/outline/secondary variants)
-    const shouldShowArrow = showArrow ?? (variant !== 'icon' && variant !== 'link' && variant !== 'ghost');
+    const shouldShowArrow = showArrow ?? (size !== 'icon' && variant !== 'link' && variant !== 'ghost');
 
     const arrowElement = shouldShowArrow && (
       <ArrowRight className="ml-2.5 size-4 transition-transform duration-300 group-hover/button:translate-x-1" />
