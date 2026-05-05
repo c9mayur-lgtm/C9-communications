@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Linkedin, Twitter, ArrowLeft, ArrowRight, ChevronRight, Target, ShieldCheck, CheckCircle, Clock, Calendar } from 'lucide-react';
+import { Linkedin, Twitter, ArrowLeft, ChevronRight, Target, ShieldCheck, CheckCircle, Clock, Calendar } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -188,8 +188,8 @@ export default function InsightArticlePage() {
         
         <div className="container mx-auto max-w-[1000px] relative z-10">
           <FadeIn>
-            <Link href="/insights" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10 group">
-              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Insights
+            <Link href="/insights" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10">
+              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1" /> Back to Insights
             </Link>
           </FadeIn>
 
@@ -283,12 +283,12 @@ export default function InsightArticlePage() {
             {Object.keys(INSIGHTS).filter(k => k !== slug).slice(0, 3).map((key) => {
                const item = INSIGHTS[key];
                return (
-                  <Link href={`/insights/${key}`} key={key} className="group flex flex-col h-full bg-slate-50 rounded-lg overflow-hidden hover:bg-white transition-all">
+                  <Link href={`/insights/${key}`} key={key} className="flex flex-col h-full bg-slate-50 rounded-lg overflow-hidden hover:bg-white transition-all">
                      <div className="aspect-[16/10] overflow-hidden">
                         <img 
                            src={item.img} 
                            alt={item.title} 
-                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale"
+                           className="w-full h-full object-cover group-hover:scale-105 duration-700 grayscale"
                         />
                      </div>
                      <div className="p-8 pb-10 flex flex-col grow">
@@ -315,7 +315,7 @@ export default function InsightArticlePage() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="STRATEGY & EXECUTION"

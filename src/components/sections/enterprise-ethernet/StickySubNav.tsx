@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, ArrowRight } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -79,7 +79,7 @@ export default function StickySubNav() {
                   onClick={() => scrollToSection('consultation-section')}
                   className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-10 px-6 rounded-full text-[14px] shadow-lg shadow-[#5D00D6]/20 border-none"
                >
-                  Get Quote <ArrowRight className="ml-1 w-4 h-4" />
+                  Get Quote 
                </Button>
             </div>
           </div>

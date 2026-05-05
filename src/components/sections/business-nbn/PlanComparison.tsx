@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, Star, ShieldCheck, Zap, ArrowRight, Info, Package, Clock } from 'lucide-react';
+import { Check, Star, ShieldCheck, Zap, Info, Package, Clock } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const bestEffortSpeeds = ['50/20', '100/20', '250/25', '1000/50'];
@@ -125,7 +125,7 @@ export default function PlanComparison() {
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
                transition={{ delay: i * 0.1 }}
-               className={`${plan.featured ? 'bg-[#1A1A2E] text-white' : 'bg-white border-gray-100 border'} rounded-[40px] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.02)] flex flex-col relative overflow-hidden group`}
+               className={`${plan.featured ? 'bg-[#1A1A2E] text-white' : 'bg-white border-gray-100 border'} rounded-[40px] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.02)] flex flex-col relative overflow-hidden `}
              >
                 {plan.featured && (
                   <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#5D00D6]/20 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none" />
@@ -162,7 +162,7 @@ export default function PlanComparison() {
                   onClick={() => handleSelectPlan(plan.title)}
                   className={`w-full h-14 rounded-full font-bold flex items-center justify-center gap-2 transition-all relative z-10 group/btn mt-auto ${plan.featured ? 'bg-[#5D00D6] hover:bg-[#4c00b0] text-white' : 'bg-[#5D00D6] hover:bg-[#4c00b0] text-white shadow-lg'}`}
                 >
-                    Get My Business Connected <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                    Get My Business Connected 
                 </button>
              </motion.div>
            ))}

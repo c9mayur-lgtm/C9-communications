@@ -47,7 +47,7 @@ export const ResponsibilityBuckets = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {buckets.map((bucket, i) => (
-            <div key={i} className="flex flex-col gap-6 p-2 group">
+            <div key={i} className="flex flex-col gap-6 p-2">
               <div className="w-20 h-20 rounded-2xl bg-slate-50 flex items-center justify-center group-hover:bg-brand-purple/5 transition-colors duration-500">
                 {bucket.icon}
               </div>

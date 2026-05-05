@@ -2,10 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Phone, Smartphone, Video, Headphones,
-  Building2, Zap, PhoneIncoming, CheckCircle2, Wifi
-} from 'lucide-react';
+import { Phone, Smartphone, Video, Headphones, Building2, Zap, PhoneIncoming, CheckCircle2, Wifi } from 'lucide-react';
 
 /* ─── Data ─── */
 const PRODUCTS = [

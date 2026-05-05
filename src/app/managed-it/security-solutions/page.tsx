@@ -65,13 +65,15 @@ export default function SecuritySolutionsPage() {
       <FinalCTA />
       
       {/* Universal Consultation Form Component */}
-      <WpConsultationForm 
-        showHeader={false} 
-        eyebrow="SECURITY ASSESSMENT"
-        title="Find out where your organisation actually stands."
-        description="A C9 security assessment identifies your current posture, highlights the gaps, and gives you a clear remediation roadmap. No obligation. No jargon."
-        formTitle="Schedule Security Assessment"
-      />
+      <section id="consultation-section">
+        <WpConsultationForm 
+          showHeader={false} 
+          eyebrow="SECURITY ASSESSMENT"
+          title="Find out where your organisation actually stands."
+          description="A C9 security assessment identifies your current posture, highlights the gaps, and gives you a clear remediation roadmap. No obligation. No jargon."
+          formTitle="Schedule Security Assessment"
+        />
+      </section>
       <ContinueJourney 
         title="Security is the Foundation."
         description="Baseline security is just the beginning. Explore the operational support and infrastructure layers that keep your organisation resilient."

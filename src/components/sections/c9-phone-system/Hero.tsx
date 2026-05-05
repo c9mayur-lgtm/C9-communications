@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Phone, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import C9VoiceNetworkDiagram from './C9VoiceNetworkDiagram';
 
@@ -48,10 +48,10 @@ export const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-center gap-4"
             >
-              <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-10 h-14 text-base font-medium w-full sm:w-auto shadow-lg shadow-[#5D00D6]/20">
-                Get a C9 Voice Quote <ArrowRight className="ml-2 w-5 h-5" />
+              <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-10 h-14 text-[14px] font-medium w-full sm:w-auto shadow-lg shadow-[#5D00D6]/20">
+                Get a C9 Voice Quote 
               </Button>
-              <Button variant="outline" size="lg" className="border-gray-200 text-[#0c1024] hover:bg-gray-50 rounded-full px-10 h-14 text-base font-medium w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="border-gray-200 text-[#0c1024] hover:bg-gray-50 rounded-full px-10 h-14 text-[14px] font-medium w-full sm:w-auto">
                 See All Features
               </Button>
             </motion.div>

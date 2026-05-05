@@ -74,7 +74,7 @@ export const WpClientTicker = () => {
             { name: 'Novo',               logo: '/images/clients/novo.webp' },
             { name: 'Chobani',            logo: '/images/clients/chobani.png', className: 'h-[25px] md:h-[35px] lg:h-[45px]' },
           ].map((c, i) => (
-            <div key={i} className="ticker-pill group px-[20px] md:px-[40px]">
+            <div key={i} className="ticker-pill px-[20px] md:px-[40px]">
               <img
                 src={c.logo}
                 alt={c.name}

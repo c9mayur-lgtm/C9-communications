@@ -46,7 +46,7 @@ export default function WhyBusiness() {
           {cards.map(({ icon: Icon, title, body, tag }) => (
             <div
               key={title}
-              className="bg-white rounded-2xl p-7 flex flex-col border transition-all duration-200 hover:-translate-y-0.5 hover:border-[#5D00D6] hover:shadow-lg group"
+              className="bg-white rounded-2xl p-7 flex flex-col border transition-all duration-200 hover:-translate-y-0.5 hover:border-[#5D00D6] hover:shadow-lg"
               style={{ border: '0.5px solid rgba(93,0,214,0.15)' }}
             >
               <div

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Home, Search, PhoneCall, ArrowLeft } from 'lucide-react';
+import { Home, Search, PhoneCall, ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -98,7 +98,7 @@ export default function NotFound() {
     { label: 'Small Business', href: '/business' },
     { label: 'Enterprise', href: '/enterprise' },
     { label: 'Greenfield', href: '/greenfield' },
-    { label: 'Case Studies', href: '/about/case-studies' },
+    { label: 'Case Studies', href: '/case-studies' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -178,15 +178,15 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
           <Link
             href="/"
-            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40 group"
+            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40 h-14 px-8 text-[15px] font-bold"
           >
             <Home size={16} />
             Back to Home
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 border border-white/15 text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-white/5 transition-all"
+            className="inline-flex items-center justify-center gap-2 border border-white/15 text-white rounded-full hover:bg-white/5 transition-all h-14 px-8 text-[15px] font-bold"
           >
             <PhoneCall size={16} />
             Talk to Us

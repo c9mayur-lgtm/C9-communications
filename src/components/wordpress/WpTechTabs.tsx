@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Network, Phone, Laptop, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Network, Phone, Laptop, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
 const TECH_CATEGORIES = [
@@ -142,12 +142,12 @@ export const WpTechTabs = () => {
               className="grid md:grid-cols-3 gap-8"
             >
               {TECH_CATEGORIES[activeTab].cards.map((card, i) => (
-                <div key={i} className="bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col h-full">
+                <div key={i} className="bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col h-full">
                   <div className="aspect-[16/9] w-full relative overflow-hidden">
                     <img 
                       src={card.img} 
                       alt={card.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-cover duration-700 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
@@ -157,7 +157,7 @@ export const WpTechTabs = () => {
                     </p>
                     <Link 
                       href={card.href}
-                      className="inline-flex items-center justify-center w-full py-3.5 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold rounded-lg transition-colors text-[14px]"
+                      className="inline-flex items-center justify-center w-full py-3.5 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-lg transition-colors h-14 px-8 text-[15px] font-bold"
                     >
                       Find out more
                     </Link>

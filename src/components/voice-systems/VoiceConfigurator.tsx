@@ -2,17 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Users, 
-  Phone, 
-  Smartphone, 
-  Video, 
-  ShieldCheck, 
-  ArrowRight, 
-  ChevronRight,
-  Headphones,
-  Check
-} from 'lucide-react';
+import { Users, Phone, Smartphone, Video, ShieldCheck, ChevronRight, Headphones, Check } from 'lucide-react';
 
 const HARDWARE = [
   { id: 't54w', name: 'SIP-T54W Desktop', price: 15, desc: 'Enterprise Grade', image: '/images/yealink-t54w.png' },
@@ -107,7 +97,7 @@ export const VoiceConfigurator = () => {
                   <button
                     key={hw.id}
                     onClick={() => toggleHardware(hw.id)}
-                    className={`p-6 rounded-2xl border text-center transition-all group relative overflow-hidden ${
+                    className={`p-6 rounded-2xl border text-center transition-all  relative overflow-hidden ${
                       hardware.includes(hw.id) 
                         ? 'border-[#5D00D6] bg-purple-50/30' 
                         : 'border-gray-100 hover:border-[#5D00D6]/30 bg-white'
@@ -115,7 +105,7 @@ export const VoiceConfigurator = () => {
                   >
                     <div className="h-24 flex items-center justify-center mb-4">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={hw.image} alt={hw.name} className={`w-auto h-full object-contain transition-transform ${hardware.includes(hw.id) ? 'scale-110' : 'group-hover:scale-105'}`} />
+                      <img src={hw.image} alt={hw.name} className={`w-auto h-full object-contain ${hardware.includes(hw.id) ? 'scale-110' : 'group-hover:scale-105'}`} />
                     </div>
                     <p className="text-[14px] font-bold text-[#0c1024] mb-1">{hw.name}</p>
                     <p className="text-[11px] text-slate-400 font-medium uppercase tracking-wider">{hw.desc}</p>
@@ -205,7 +195,7 @@ export const VoiceConfigurator = () => {
                   onClick={() => window.dispatchEvent(new CustomEvent('c9-open-lead-modal', { detail: { intent: `Quote for ${users} user system` } }))}
                   className="w-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-xl h-16 text-[16px] font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
                 >
-                  Get Formal Quote <ArrowRight size={20} />
+                  Get Formal Quote 
                 </button>
                 <button className="w-full bg-white/5 hover:bg-white/10 text-white/60 rounded-xl h-14 text-[14px] font-bold transition-all flex items-center justify-center gap-2">
                   Download Components PDF

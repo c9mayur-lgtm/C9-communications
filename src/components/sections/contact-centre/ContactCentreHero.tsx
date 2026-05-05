@@ -70,7 +70,7 @@ export default function ContactCentreHero() {
                transition={{ duration: 0.7, delay: 0.3 }}
                className="flex flex-col sm:flex-row items-center gap-6"
             >
-               <Link href="#consultation" className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-10 h-14 flex items-center justify-center text-[16px] font-medium shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-105 active:scale-95 leading-none">
+               <Link href="#consultation-section" className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-10 h-14 flex items-center justify-center text-[16px] font-medium shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-105 active:scale-95 leading-none">
                   Book a Contact Centre Consultation
                </Link>
                <Link href="#capabilities" className="w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full px-10 h-14 flex items-center justify-center text-[16px] font-medium transition-all hover:scale-105 active:scale-95 leading-none">

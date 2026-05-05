@@ -4,8 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 
 const VendorCard = ({ logo, title }: { logo: string, title: string }) => (
-  <div className="bg-white rounded-[32px] border border-[rgba(93,0,214,0.08)] p-8 text-center flex flex-col items-center justify-center transition-all duration-700 hover:border-[#5D00D6] hover:shadow-2xl hover:shadow-purple-900/10 hover:-translate-y-2 group min-h-[180px]">
-    <div className="relative w-full h-[100px] flex items-center justify-center group-hover:scale-110 duration-1000 transition-transform ease-out">
+  <div className="bg-white rounded-[32px] border border-[rgba(93,0,214,0.08)] p-8 text-center flex flex-col items-center justify-center transition-all duration-700 hover:border-[#5D00D6] hover:shadow-2xl hover:shadow-purple-900/10 hover:-translate-y-2 min-h-[180px]">
+    <div className="relative w-full h-[100px] flex items-center justify-center group-hover:scale-110 duration-1000 ease-out">
       <div className="relative w-full h-full max-w-[250px]">
         <Image 
           src={logo} 

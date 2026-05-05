@@ -63,13 +63,13 @@ export default function FinalCTA() {
         >
           <button
             onClick={handleQuoteClick}
-            className="inline-flex items-center justify-center h-[56px] px-10 rounded-full text-[14px] font-semibold bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-colors duration-200"
+            className="inline-flex items-center justify-center h-[56px] rounded-full bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-colors duration-200 h-14 px-8 text-[15px] font-bold"
           >
             Get a Mobile Fleet Quote →
           </button>
           <a
             href="tel:1800000299"
-            className="inline-flex items-center justify-center h-[56px] px-10 rounded-full text-[14px] text-[#9CA3AF] border bg-transparent hover:border-white hover:text-white transition-all duration-200"
+            className="inline-flex items-center justify-center h-[56px] rounded-full text-[#9CA3AF] border bg-transparent hover:border-white hover:text-white transition-all duration-200 h-14 px-8 text-[15px] font-bold"
             style={{ borderColor: '#4B5563', fontFamily: '"Proxima Nova", sans-serif' }}
           >
             Call 1800 000 299

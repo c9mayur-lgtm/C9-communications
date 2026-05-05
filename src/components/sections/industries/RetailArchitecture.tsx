@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, Cloud, Store, ShieldCheck, ArrowRight, Zap, Network, Activity } from 'lucide-react';
+import { Building2, Cloud, Store, ShieldCheck, Zap, Network, Activity, ArrowRight } from 'lucide-react';
 
 const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };
 
@@ -80,8 +80,8 @@ export default function RetailArchitecture() {
           
           {nodes.map((node, i) => (
             <FadeIn key={node.id} delay={i * 0.1} className="relative z-10">
-              <div className="bg-white rounded-[32px] p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 h-full flex flex-col group">
-                <div className={`w-14 h-14 rounded-2xl ${node.bgColor} ${node.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-inner`}>
+              <div className="bg-white rounded-[32px] p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 h-full flex flex-col">
+                <div className={`w-14 h-14 rounded-2xl ${node.bgColor} ${node.color} flex items-center justify-center mb-8 group-hover:scale-110 duration-500 shadow-inner`}>
                   <node.icon size={28} strokeWidth={1.5} />
                 </div>
                 
@@ -107,7 +107,7 @@ export default function RetailArchitecture() {
 
         {/* NOC Overlay Banner */}
         <FadeIn delay={0.4} className="mt-12">
-          <div className="bg-[#0c1024] rounded-[32px] p-8 lg:p-12 relative overflow-hidden group">
+          <div className="bg-[#0c1024] rounded-[32px] p-8 lg:p-12 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[#5D00D6]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
               <div className="max-w-2xl">

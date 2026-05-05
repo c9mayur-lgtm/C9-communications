@@ -2,13 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { 
-  PhoneCall, PhoneOff, AlertTriangle, TrendingUp, BarChart3, 
-  Users, ShieldCheck, RefreshCcw, Zap, Globe, Activity, 
-  Headphones, MessageSquare, Layers, Settings, CheckCircle2,
-  ArrowRight, Clock, Building2, Monitor, CheckCircle, HeartHandshake,
-  UserCheck, PieChart, Scale, ServerCog, Signal, ShieldAlert
-} from 'lucide-react';
+import { PhoneCall, PhoneOff, AlertTriangle, TrendingUp, BarChart3, Users, ShieldCheck, RefreshCcw, Zap, Globe, Activity, Headphones, MessageSquare, Layers, Settings, CheckCircle2, Clock, Building2, Monitor, CheckCircle, HeartHandshake, UserCheck, PieChart, Scale, ServerCog, Signal, ShieldAlert } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
@@ -48,13 +42,13 @@ export default function InboundServicesPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-               <Link href="#consultation" className="w-full sm:w-auto">
-                 <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-base font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all">
-                   Review Your Customer Call Flow <ArrowRight className="ml-2 w-5 h-5" />
+               <Link href="#consultation-section" className="w-full sm:w-auto">
+                 <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all">
+                   Review Your Customer Call Flow 
                  </Button>
                </Link>
-               <Link href="#consultation" className="w-full sm:w-auto">
-                 <Button variant="outline" size="lg" className="w-full border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 h-14 text-base font-bold rounded-full transition-all">
+               <Link href="#consultation-section" className="w-full sm:w-auto">
+                 <Button variant="outline" size="lg" className="w-full border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 h-14 text-[14px] font-bold rounded-full transition-all">
                    Talk to a Specialist
                  </Button>
                </Link>
@@ -82,11 +76,11 @@ export default function InboundServicesPage() {
           </div>
 
           <div className="relative">
-             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/5] group">
+             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/5]">
                 <img
                    src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2000&auto=format&fit=crop"
                    alt="Customer Support Excellence"
-                   className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+                   className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
                 
@@ -140,8 +134,8 @@ export default function InboundServicesPage() {
             { icon: <TrendingUp />, title: "Inbound Bottlenecks", text: "Manual call handling slows your business down. Without intelligent automation, growth is limited by receptionist capacity." },
             { icon: <ShieldAlert />, title: "Support Anarchy", text: "When everyone is responsible for answering, no one is. Accountability requires clear routing and escalation logic." }
           ].map((item, i) => (
-            <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:border-[#5D00D6]/20 group">
-               <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-600 mb-6 group-hover:scale-110 transition-transform">
+            <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:border-[#5D00D6]/20">
+               <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-600 mb-6 group-hover:scale-110">
                   {item.icon}
                </div>
                <h4 className="font-bold text-slate-900 text-[17px] mb-3">{item.title}</h4>
@@ -188,7 +182,7 @@ export default function InboundServicesPage() {
                 { title: "Cross-Team Synchronicity", desc: "Seamlessly routing calls between departments, sites, and remote teams based on real-time availability and skills." },
                 { title: "Operational Scalability", desc: "A foundation that scales instantly as you add new locations, brands, or team members without infrastructure friction." }
               ].map((item, i) => (
-                <div key={i} className="flex gap-6 items-start group">
+                <div key={i} className="flex gap-6 items-start">
                   <div className="w-8 h-8 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center shrink-0 mt-1 group-hover:border-[#5D00D6] group-hover:bg-[#5D00D6] transition-all">
                     <CheckCircle2 className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
                   </div>
@@ -201,11 +195,11 @@ export default function InboundServicesPage() {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl bg-slate-200 overflow-hidden shadow-2xl relative border border-slate-100 group">
+            <div className="aspect-[4/5] rounded-2xl bg-slate-200 overflow-hidden shadow-2xl relative border border-slate-100">
               <img 
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop" 
                 alt="Executive operational control" 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
@@ -227,9 +221,9 @@ export default function InboundServicesPage() {
             <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">The C9 Approach</span>
             <h2 className="c9-section-heading text-[#0c1024]">If customers cannot reach you easily, they will reach someone else.</h2>
           </div>
-          <Link href="#consultation" className="shrink-0">
-             <Button size="lg" className="rounded-full bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-8 h-14 text-base font-bold shadow-xl transition-all">
-                Request a Call Flow Audit <ArrowRight className="ml-2 w-5 h-5" />
+          <Link href="#consultation-section" className="shrink-0">
+             <Button size="lg" className="rounded-full bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-8 h-14 text-[14px] font-bold shadow-xl transition-all">
+                Request a Call Flow Audit 
              </Button>
           </Link>
         </div>
@@ -243,8 +237,8 @@ export default function InboundServicesPage() {
             { icon: <RefreshCcw />, title: "Simplified Ownership", text: "One bill, one portal, one accountable partner. No more chasing multiple providers for simple changes." },
             { icon: <Headphones />, title: "Accountable Support", text: "Direct access to local C9 engineers who understand your business-critical communication logic." }
           ].map((item, i) => (
-            <div key={i} className="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500">
-              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#5D00D6] mb-8 shadow-sm group-hover:scale-110 transition-transform duration-500">
+            <div key={i} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500">
+              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#5D00D6] mb-8 shadow-sm group-hover:scale-110 duration-500">
                 {item.icon}
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h4>
@@ -271,7 +265,7 @@ export default function InboundServicesPage() {
                 { title: "Overflow Handling", desc: "Smart rerouting to ensure no customer is left waiting during surges.", icon: RefreshCcw },
                 { title: "Performance Dashboards", desc: "Real-time visibility for team leads to manage resources dynamically.", icon: Monitor }
               ].map((item, i) => (
-                <div key={i} className="flex flex-col gap-3 group">
+                <div key={i} className="flex flex-col gap-3">
                    <div className="flex items-center gap-3">
                       <div className="p-2.5 rounded-xl bg-white/5 text-[#a56eff] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300 border border-white/10 group-hover:border-[#5D00D6]">
                          <item.icon className="w-4 h-4 shrink-0" />
@@ -337,7 +331,7 @@ export default function InboundServicesPage() {
             { step: "03", title: "Routing Transition", desc: "A phased transition of logic ensuring every call is captured and routed correctly during move." },
             { step: "04", title: "Adoption & Support", desc: "Full team training and post-launch engineering support to ensure total operational confidence." }
           ].map((item, i) => (
-            <div key={i} className="flex flex-col gap-4 p-8 rounded-[24px] bg-slate-50 border border-slate-200 hover:border-[#5D00D6] transition-all duration-500 hover:shadow-xl group">
+            <div key={i} className="flex flex-col gap-4 p-8 rounded-[24px] bg-slate-50 border border-slate-200 hover:border-[#5D00D6] transition-all duration-500 hover:shadow-xl">
                <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-[#0c1024] font-bold text-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                   {item.step}
                </div>
@@ -369,8 +363,8 @@ export default function InboundServicesPage() {
              { icon: <RefreshCcw size={24} />, title: "Simplified Management", text: "A single accountable partner removes the friction of juggling multiple carriers and porting logic." },
              { icon: <ShieldAlert size={24} />, title: "Reduced Business Risk", text: "Retire fragmented legacy systems that create single points of failure and customer friction." }
            ].map((stat, i) => (
-             <div key={i} className="bg-white border border-slate-100 rounded-2xl p-8 hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10 group">
-                <div className="text-[#5D00D6] mb-4 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
+             <div key={i} className="bg-white border border-slate-100 rounded-2xl p-8 hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10">
+                <div className="text-[#5D00D6] mb-4 group-hover:scale-110 duration-300">{stat.icon}</div>
                 <h4 className="text-xl font-bold text-slate-900 mb-2">{stat.title}</h4>
                 <p className="text-slate-500 text-[14px] leading-relaxed">{stat.text}</p>
              </div>
@@ -414,9 +408,9 @@ export default function InboundServicesPage() {
                 <p className="c9-body !text-white/90 !text-[18px] max-w-2xl mx-auto mb-8">
                   Let's review your inbound environment and map out a path to total accessibility.
                 </p>
-                <Link href="#consultation">
-                    <Button size="lg" className="bg-white text-[#5D00D6] hover:bg-[#0c1024] hover:text-white px-10 h-14 text-base font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
-                        Book an Inbound Infrastructure Review <ArrowRight className="ml-2 w-5 h-5" />
+                <Link href="#consultation-section">
+                    <Button size="lg" className="bg-white text-[#5D00D6] hover:bg-[#0c1024] hover:text-white px-10 h-14 text-[14px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
+                        Book an Inbound Infrastructure Review 
                     </Button>
                 </Link>
             </div>
@@ -435,7 +429,7 @@ export default function InboundServicesPage() {
         ]}
       />
 
-      <div id="consultation" className="bg-white">
+      <div id="consultation-section" className="bg-white">
         <WpConsultationForm 
           showHeader={false} 
           eyebrow="INBOUND AUDIT"

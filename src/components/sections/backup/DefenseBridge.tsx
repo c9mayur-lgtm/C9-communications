@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 const F = '"Proxima Nova", sans-serif';
 
@@ -27,11 +27,11 @@ export default function DefenseBridge() {
             <div className="shrink-0">
               <Link
                 href="https://c9defense.com.au/"
-                className="inline-flex items-center gap-2 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold px-8 h-14 rounded-full transition-all shadow-xl shadow-purple-900/40 text-[14px] group whitespace-nowrap"
+                className="inline-flex items-center gap-2 bg-[#5D00D6] hover:bg-[#4d00b3] text-white font-bold px-8 h-14 rounded-full transition-all shadow-xl shadow-purple-900/40 text-[14px] whitespace-nowrap"
                 style={{ fontFamily: F }}
               >
                 Learn About C9 Defense
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                
               </Link>
             </div>
           </div>

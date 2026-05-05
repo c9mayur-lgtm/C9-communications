@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Headset, Repeat, ListOrdered, Inbox, Clock, Mail, 
-  Users, Music, Printer, Mic, Volume2, Link2, 
-  ChevronRight, Sparkles 
-} from 'lucide-react';
+import { Headset, Repeat, ListOrdered, Inbox, Clock, Mail, Users, Music, Printer, Mic, Volume2, Link2, ChevronRight, Sparkles } from 'lucide-react';
 
 const FeatureCard = ({ title, body, icon: Icon, delay }: { title: string, body: string, icon: any, delay: number }) => (
   <motion.div 
@@ -14,7 +10,7 @@ const FeatureCard = ({ title, body, icon: Icon, delay }: { title: string, body: 
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-    className="group relative h-full flex flex-col p-10 rounded-[32px] bg-slate-900/40 border border-white/5 hover:border-[#5D00D6]/40 hover:bg-slate-900/60 transition-all duration-500 overflow-hidden backdrop-blur-md"
+    className="relative h-full flex flex-col p-10 rounded-[32px] bg-slate-900/40 border border-white/5 hover:border-[#5D00D6]/40 hover:bg-slate-900/60 transition-all duration-500 overflow-hidden backdrop-blur-md"
   >
     {/* Inner Glow Overlay */}
     <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#5D00D6]/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-[#5D00D6]/20 transition-all duration-700" />
@@ -34,7 +30,7 @@ const FeatureCard = ({ title, body, icon: Icon, delay }: { title: string, body: 
     </div>
 
     {/* Bottom Accent */}
-    <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent w-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+    <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent w-full scale-x-0 group-hover:scale-x-100 duration-500" />
   </motion.div>
 );
 
@@ -112,9 +108,9 @@ export const KeyFeatures = () => {
             viewport={{ once: true }}
             className="mt-16 text-center"
         >
-            <div className="inline-flex items-center gap-4 p-1 pl-6 pr-1 bg-white/5 border border-white/10 rounded-full hover:bg-white/[0.08] transition-all cursor-pointer group">
+            <div className="inline-flex items-center gap-4 p-1 pl-6 pr-1 bg-white/5 border border-white/10 rounded-full hover:bg-white/[0.08] transition-all cursor-pointer">
                 <span className="text-white/80 text-[14px] font-medium">Explore all 82 enterprise-grade features</span>
-                <div className="w-10 h-10 rounded-full bg-[#5D00D6] flex items-center justify-center text-white shadow-lg shadow-purple-900/30 group-hover:rotate-45 transition-transform">
+                <div className="w-10 h-10 rounded-full bg-[#5D00D6] flex items-center justify-center text-white shadow-lg shadow-purple-900/30 group-hover:rotate-45">
                     <Link2 size={16} />
                 </div>
             </div>

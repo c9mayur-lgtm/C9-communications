@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, ArrowRight, CheckCircle } from 'lucide-react';
+import { MessageSquare, X, Send, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FLOWS = {
@@ -176,7 +176,7 @@ export const StartupChatbot = () => {
               <span className="text-[#5D00D6] font-bold">Let us set up everything from Day 1.</span>
             </p>
             <div className="mt-2 flex items-center gap-1 text-[#5D00D6] text-[12px] font-bold">
-              Chat with us <ArrowRight size={12} />
+              Chat with us 
             </div>
             {/* Arrow */}
             <div className="absolute bottom-[-8px] right-8 w-4 h-4 bg-white border-r border-b border-gray-100 rotate-45" />

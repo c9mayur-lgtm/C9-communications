@@ -1,15 +1,5 @@
 import * as React from 'react';
-import { 
-  Wifi, Phone, Network, Globe, Smartphone, Truck, Server, 
-  Headphones, Database, Shield, LayoutGrid, Monitor, 
-  UserPlus, Cloud, HardDrive, Cpu, ShieldCheck, 
-  Infinity as InfinityIcon, BarChart3, Building2, 
-  Volume2, GraduationCap, ShieldAlert, Layers,
-  Users, Star, Layout, MessageSquare, Calendar, Briefcase,
-  Zap, Building, Lock, Activity, Link2,
-  Rocket, Hammer, Lightbulb, TrendingUp, Factory, Stethoscope, Wallet, Gavel, HeartHandshake, MousePointer2,
-  Laptop
-} from 'lucide-react';
+import { Wifi, Phone, Network, Globe, Smartphone, Truck, Server, Headphones, Database, Shield, LayoutGrid, Monitor, UserPlus, Cloud, HardDrive, Cpu, ShieldCheck, Infinity as InfinityIcon, BarChart3, Building2, Volume2, GraduationCap, ShieldAlert, Layers, Users, Star, Layout, MessageSquare, Calendar, Briefcase, Zap, Building, Lock, Activity, Link2, Rocket, Hammer, Lightbulb, TrendingUp, Factory, Stethoscope, Wallet, Gavel, HeartHandshake, MousePointer2, Laptop } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
    1. STARTUP / NEW BUSINESS TRACK
@@ -95,8 +85,8 @@ export const STARTUP_IT_MENU = {
   sidebar: {
     heading: 'Founder Resources',
     items: [
-      { label: 'Security Checklist', path: '/resources/security-checklist' },
-      { label: 'Remote Work Guide', path: '/resources/remote-work' }
+      { label: 'Security Checklist', path: '/insights/ceo-security-governance' },
+      { label: 'Remote Work Guide', path: '/insights/modern-workplace-control' }
     ]
   }
 };
@@ -225,7 +215,7 @@ export const ENTERPRISE_TELCO_MENU = {
   sidebar: {
     heading: 'Enterprise Compliance',
     items: [
-      { icon: <ShieldCheck className="text-purple-400" size={18} />, title: 'Mission Critical 24/7', desc: 'Redundant infrastructure with guaranteed response times.', path: '/managed-it/security' },
+      { icon: <ShieldCheck className="text-purple-400" size={18} />, title: 'Mission Critical 24/7', desc: 'Redundant infrastructure with guaranteed response times.', path: '/managed-it/security-solutions' },
       { icon: <Activity className="text-purple-400" size={18} />, title: 'High-Scale Performance', desc: 'Connectivity designed for 10Gbps+ environments.', path: '/telco/enterprise-ethernet' }
     ]
   }
@@ -277,10 +267,10 @@ export const SOLUTIONS_MENU = {
   sidebar: {
     heading: 'Industry Focus',
     items: [
-      { icon: <Factory size={18} />, label: 'Manufacturing', path: '/industries/manufacturing' },
-      { icon: <Truck size={18} />, label: 'Transportation & Logistics', path: '/industries/logistics' },
+      { icon: <Factory size={18} />, label: 'Manufacturing', path: '/industries' },
+      { icon: <Truck size={18} />, label: 'Transportation & Logistics', path: '/industries' },
       { icon: <Stethoscope size={18} />, label: 'Healthcare', path: '/industries/healthcare' },
-      { icon: <Wallet size={18} />, label: 'Banks & Insurance', path: '/industries/finance' },
+      { icon: <Wallet size={18} />, label: 'Banks & Insurance', path: '/industries' },
       { icon: <Briefcase size={18} />, label: 'Consulting Providers', path: '/industries/professional-services' },
       { icon: <HeartHandshake size={18} />, label: 'Non Profit', path: '/industries/non-profit' },
     ]
@@ -341,8 +331,8 @@ export const PRODUCTS_MENU = {
           heading: 'Other',
           items: [
             { icon: <LayoutGrid size={14} />, label: 'CCTV Camera & People Count', path: '/modern-workplace/cctv-people-count', desc: 'Smart AI-driven surveillance and occupancy monitoring.' },
-            { icon: <Monitor size={14} />, label: 'Managed Print Solution', path: '/modern-workplace/productivity', desc: 'Simplified, cost-efficient printing across all your sites.' },
-            { icon: <Users size={14} />, label: 'Visitor Solution', path: '/modern-workplace/productivity', desc: 'Modern contactless visitor check-in and safety tracking.' },
+            { icon: <Monitor size={14} />, label: 'Managed Print Solution', path: '/modern-workplace/managed-print', desc: 'Simplified, cost-efficient printing across all your sites.' },
+            { icon: <Users size={14} />, label: 'Visitor Solution', path: '/modern-workplace/visitor-solution', desc: 'Modern contactless visitor check-in and safety tracking.' },
           ]
         }
       ]
@@ -374,10 +364,10 @@ export const INDUSTRIES_MENU = {
         {
           heading: 'Core Sectors',
           items: [
-            { icon: <Factory size={14} />, label: 'Manufacturing', path: '/industries/manufacturing' },
-            { icon: <Truck size={14} />, label: 'Transportation & Logistics', path: '/industries/logistics' },
+            { icon: <Factory size={14} />, label: 'Manufacturing', path: '/industries' },
+            { icon: <Truck size={14} />, label: 'Transportation & Logistics', path: '/industries' },
             { icon: <Stethoscope size={14} />, label: 'Healthcare', path: '/industries/healthcare' },
-            { icon: <Wallet size={14} />, label: 'Banks & Insurance', path: '/industries/finance' },
+            { icon: <Wallet size={14} />, label: 'Banks & Insurance', path: '/industries' },
             { icon: <Briefcase size={14} />, label: 'Consulting Providers', path: '/industries/professional-services' },
             { icon: <HeartHandshake size={14} />, label: 'Non Profit', path: '/industries/non-profit' },
           ]
@@ -391,7 +381,7 @@ export const INDUSTRIES_MENU = {
           items: [
             { icon: <Building2 size={14} />, label: 'Real Estate & Property', path: '/industries/real-estate' },
             { icon: <GraduationCap size={14} />, label: 'Education & Training', path: '/industries/education' },
-            { icon: <Building size={14} />, label: 'Government & Public Sector', path: '/industries/gov' },
+            { icon: <Building size={14} />, label: 'Government & Public Sector', path: '/industries' },
             { icon: <Star size={14} />, label: 'Retail & Hospitality', path: '/industries/retail' },
           ]
         }
@@ -408,7 +398,7 @@ export const INDUSTRIES_MENU = {
     heading: 'Build a Smart Workplace',
     title: 'Transform your workplace with Smart Board Solution',
     button: 'View all solutions',
-    path: '/managed-it/modern-workplace'
+    path: '/modern-workplace'
   }
 };
 

@@ -1,11 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  TrendingUp, DollarSign, Sliders, LayoutGrid, Cloud, 
-  GitMerge, Shield, Database, ShieldCheck, Globe, Lock, Layers,
-  ChevronRight, ArrowRight
-} from 'lucide-react';
+import { TrendingUp, DollarSign, Sliders, LayoutGrid, Cloud, GitMerge, Shield, Database, ShieldCheck, Globe, Lock, Layers, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -200,7 +196,7 @@ export default function CloudFeatureExplorer() {
                 >
                   <button
                     onClick={() => setActiveTab(idx)}
-                    className="w-full flex items-center justify-between py-4 text-left group"
+                    className="w-full flex items-center justify-between py-4 text-left"
                   >
                     <span className={cn(
                       "text-[20px] font-bold tracking-tight transition-colors duration-300",
@@ -245,7 +241,7 @@ export default function CloudFeatureExplorer() {
                           
                           <div className="pt-4">
                             <button className="flex items-center gap-2 text-[14px] font-bold text-brand-purple uppercase tracking-wider hover:gap-3 transition-all">
-                              Learn more about {feature.id.replace('-', ' ')} <ArrowRight size={14} />
+                              Learn more about {feature.id.replace('-', ' ')} 
                             </button>
                           </div>
                         </div>

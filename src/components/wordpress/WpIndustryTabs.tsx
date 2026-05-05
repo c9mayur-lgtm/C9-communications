@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Search, Map, ShieldCheck, RefreshCw, Users, Wifi, AlertTriangle, Lock, FileText, Activity, Phone, Shield, Layers, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Search, Map, ShieldCheck, RefreshCw, Users, Wifi, AlertTriangle, Lock, FileText, Activity, Phone, Shield, Layers, CheckCircle } from 'lucide-react';
 
 const OPERATING_MODEL = [
   {
@@ -135,12 +136,15 @@ export const WpIndustryTabs = () => {
                 ))}
               </div>
               
-              <Link 
-                href={OPERATING_MODEL[activeTab].href}
-                className="inline-flex items-center gap-2 c9-button-label transition-all hover:gap-3 text-[#5D00D6] hover:text-[#4d00b3] uppercase whitespace-nowrap"
-              >
-                Learn More About Our Approach <ArrowRight size={18} className="shrink-0" />
-              </Link>
+               <Button 
+                 size="lg"
+                 className="rounded-full shadow-xl px-10 h-14"
+                 asChild
+               >
+                 <Link href={OPERATING_MODEL[activeTab].href}>
+                   Learn More About Our Approach 
+                 </Link>
+               </Button>
             </motion.div>
           </AnimatePresence>
 

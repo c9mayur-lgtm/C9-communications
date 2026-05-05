@@ -4,11 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { 
-  Stethoscope, ShoppingBag, HardHat, ArrowRight, X, 
-  CheckCircle2, PhoneCall, Scale, GraduationCap, Briefcase,
-  Sparkles, MessageSquare, Building2, Send, Bot, User, Heart
-} from 'lucide-react';
+import { Stethoscope, ShoppingBag, HardHat, X, CheckCircle2, PhoneCall, Scale, GraduationCap, Briefcase, Sparkles, MessageSquare, Building2, Send, Bot, User, Heart } from 'lucide-react';
 
 /* ─── INDUSTRIES DATA ──────────────────────────────────────── */
 const INDUSTRIES = [
@@ -296,7 +292,7 @@ const TypingBubble = ({ text, links, onDone }: { text: string; links?: { label: 
         <div className="flex flex-wrap gap-2 mt-3">
           {links.map(l => (
             <Link key={l.href} href={l.href} className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full c9-eyebrow !text-[10px] !text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all">
-              {l.label} <ArrowRight size={10} />
+              {l.label} 
             </Link>
           ))}
         </div>
@@ -422,7 +418,7 @@ export const BusinessAdvisor = () => {
                               whileHover={{ y: -2 }}
                               whileTap={{ scale: 0.97 }}
                               onClick={() => setSelected(ind)}
-                              className="flex items-center gap-3 p-3.5 rounded-2xl border border-gray-100 hover:border-[#5D00D6]/30 hover:bg-[#5D00D6]/[0.02] transition-all text-left group"
+                              className="flex items-center gap-3 p-3.5 rounded-2xl border border-gray-100 hover:border-[#5D00D6]/30 hover:bg-[#5D00D6]/[0.02] transition-all text-left"
                             >
                               <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${ind.iconBg} transition-all group-hover:scale-105`}>
                                 <Icon size={18} strokeWidth={1.8} />
@@ -445,7 +441,7 @@ export const BusinessAdvisor = () => {
                     >
                       <div className="p-5">
                         <button onClick={() => setSelected(null)} className="flex items-center gap-1 c9-eyebrow !text-[#5D00D6]/60 hover:text-[#5D00D6] mb-4">
-                          <ArrowRight size={10} className="rotate-180" /> Back
+                           Back
                         </button>
                         <h4 className="c9-card-title !text-[18px] text-[#0c1024] mb-1">
                           Best for <span className="text-[#5D00D6]">{selected.label}</span>
@@ -454,12 +450,12 @@ export const BusinessAdvisor = () => {
                         <div className="flex flex-col gap-2">
                           {selected.recommend.map(rec => (
                             <Link key={rec.name} href={rec.href} onClick={() => setIsOpen(false)}
-                              className="group flex items-center justify-between px-4 py-3 rounded-xl border border-gray-100 hover:border-[#5D00D6]/30 hover:bg-[#5D00D6]/[0.02] transition-all">
+                              className="flex items-center justify-between px-4 py-3 rounded-xl border border-gray-100 hover:border-[#5D00D6]/30 hover:bg-[#5D00D6]/[0.02] transition-all">
                               <div className="flex items-center gap-2.5">
                                 <CheckCircle2 size={14} className="text-[#5D00D6]" />
                                 <span className="text-[14px] font-medium text-[#0c1024]">{rec.name}</span>
                               </div>
-                              <ArrowRight size={13} className="text-gray-300 group-hover:text-[#5D00D6] group-hover:translate-x-0.5 transition-all" />
+                              
                             </Link>
                           ))}
                         </div>
@@ -512,7 +508,7 @@ export const BusinessAdvisor = () => {
                                   <div className="flex flex-wrap gap-2 mt-3">
                                     {msg.links.map(l => (
                                       <Link key={l.href} href={l.href} className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#5D00D6]/5 border border-[#5D00D6]/20 rounded-full c9-eyebrow !text-[10px] !text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all">
-                                        {l.label} <ArrowRight size={10} />
+                                        {l.label} 
                                       </Link>
                                     ))}
                                   </div>
@@ -610,14 +606,14 @@ export const BusinessAdvisor = () => {
               `}</style>
               <button
                 onClick={() => setIsOpen(true)}
-                className={`advisor-pill flex items-center gap-3 px-5 py-3 border group hover:scale-[0.985] transition-transform ${lum ? 'bg-[#111111] border-[#BF2F70]/20' : def ? 'bg-[#111111] border-white/10' : 'bg-white rounded-full border-[#5D00D6]/20'}`}
+                className={`advisor-pill flex items-center gap-3 px-5 py-3 border  hover:scale-[0.985] ${lum ? 'bg-[#111111] border-[#BF2F70]/20' : def ? 'bg-[#111111] border-white/10' : 'bg-white rounded-full border-[#5D00D6]/20'}`}
               >
                 <span className={`text-[14px] font-medium tracking-tight whitespace-nowrap transition-colors ${lum ? 'text-[#ED9EA2] group-hover:text-white' : def ? 'text-[#808080] group-hover:text-white' : 'text-gray-600 group-hover:text-[#5D00D6]'}`}>
                   <span className="inline sm:hidden">{lum ? 'Ask Lumina Advisor' : def ? 'Ask Security Advisor' : 'Ask C9 Advisor'}</span>
                   <span className="hidden sm:inline">{lum ? 'What digital signage challenge is your business facing?' : def ? 'What security challenge is your business facing?' : 'What type of business are you building?'}</span>
                 </span>
                 <div className={`w-7 h-7 flex items-center justify-center transition-all duration-300 shrink-0 group-hover:scale-105 ${lum ? 'border border-[#BF2F70] text-[#BF2F70] group-hover:bg-[#BF2F70] group-hover:text-white' : def ? 'border border-[#404040] text-[#808080] group-hover:border-white group-hover:text-white' : 'rounded-full bg-[#5D00D6] text-white'}`}>
-                  <ArrowRight size={13} className="stroke-[2.5px]" />
+                  
                 </div>
               </button>
             </motion.div>

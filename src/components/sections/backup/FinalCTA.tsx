@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useInquiry } from '@/components/context/InquiryContext';
 
@@ -32,7 +32,7 @@ export default function FinalCTA() {
             className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[14px] shadow-lg shadow-purple-900/30 flex items-center gap-2 border-none"
             style={{ fontFamily: F }}
           >
-            Assess My Backup Environment <ArrowRight size={16} />
+            Assess My Backup Environment 
           </Button>
           <a
             href="tel:1800000299"

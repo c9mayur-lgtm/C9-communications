@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Linkedin, Facebook, Instagram, ArrowRight, MessageSquare, PhoneCall } from 'lucide-react';
+import { Linkedin, Facebook, Instagram, MessageSquare, PhoneCall } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const ManagedFooter = () => {
@@ -10,8 +10,8 @@ export const ManagedFooter = () => {
         
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 mb-20 pb-16 border-b border-gray-100">
-           <Link href="/" className="flex items-center gap-1 shrink-0 group">
-              <span className="text-3xl font-black text-text-primary tracking-tighter transition-transform group-hover:scale-105">
+           <Link href="/" className="flex items-center gap-1 shrink-0">
+              <span className="text-3xl font-black text-text-primary tracking-tighter group-hover:scale-105">
                 <span className="text-brand-purple">9</span>communications
               </span>
            </Link>

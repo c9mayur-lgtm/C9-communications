@@ -3,14 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Globe, PhoneCall, ShieldCheck, Activity, 
-  Building2, Users, Layers, Zap, ArrowRight,
-  Headphones, BarChart3, Cloud, Network,
-  Lock, HardDrive, HelpCircle, Briefcase,
-  MapPin, Mail, Phone, ExternalLink,
-  Rocket, Lightbulb, Scale
-} from 'lucide-react';
+import { Globe, PhoneCall, ShieldCheck, Activity, Building2, Users, Layers, Zap, Headphones, BarChart3, Cloud, Network, Lock, HardDrive, HelpCircle, Briefcase, MapPin, Mail, Phone, ExternalLink, Rocket, Lightbulb, Scale } from 'lucide-react';
 
 const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
 
@@ -27,10 +20,10 @@ const Section = ({ title, links, icon: Icon }: { title: string, links: { label: 
         <Link 
           key={link.path} 
           href={link.path}
-          className="group flex items-center justify-between py-2 text-slate-500 hover:text-[#5D00D6] transition-colors border-b border-slate-50"
+          className="flex items-center justify-between py-2 text-slate-500 hover:text-[#5D00D6] transition-colors border-b border-slate-50"
         >
           <span className="text-[15px] font-medium">{link.label}</span>
-          <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+          
         </Link>
       ))}
     </div>
@@ -104,7 +97,6 @@ export default function SitemapPage() {
         { label: "Greenfield Infrastructure", path: "/greenfield" },
         { label: "Business Transformation", path: "/business" },
         { label: "Enterprise Operations", path: "/enterprise" },
-        { label: "Startup Scaling Model", path: "/startups" },
         { label: "Pricing & Models", path: "/pricing" },
         { label: "New Office Setup", path: "/help/new-office-setup" },
         { label: "Secure WiFi Deployment", path: "/help/secure-wifi" },
@@ -163,7 +155,7 @@ export default function SitemapPage() {
             href="/contact" 
             className="inline-flex items-center gap-2 bg-[#5D00D6] px-8 py-4 rounded-full font-bold hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/40"
           >
-            Contact Engineering <ArrowRight size={18} />
+            Contact Engineering 
           </Link>
         </div>
       </div>

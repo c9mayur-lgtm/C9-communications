@@ -44,7 +44,7 @@ export const NetworkTopologyVisual = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[540px] bg-[#0c1024] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+    <div className="relative w-full h-[540px] bg-[#0c1024] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl">
       {/* Background Grid */}
       <div 
         className="absolute inset-0 opacity-[0.15] pointer-events-none" 

@@ -3,12 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { 
-  Server, Cpu, HardDrive, Wifi, Shield, ShieldCheck, 
-  Globe, Lock, Layers, Cloud, GitMerge, LayoutGrid,
-  Users, Activity, Database, RefreshCw, BarChart2,
-  CheckCircle2
-} from 'lucide-react';
+import { Server, Cpu, HardDrive, Wifi, Shield, ShieldCheck, Globe, Lock, Layers, Cloud, GitMerge, LayoutGrid, Users, Activity, Database, RefreshCw, BarChart2, CheckCircle2 } from 'lucide-react';
 
 const FF = { fontFamily: "'Proxima Nova', sans-serif" };
 

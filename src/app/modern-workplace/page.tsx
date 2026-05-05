@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, CheckCircle2, Phone, Star, Zap, Clock, Lock, Shield, Monitor, PhoneCall, ShieldCheck, Laptop, UserCheck, Cloud, TrendingUp, Users as UsersIcon } from 'lucide-react';
+import { Check, CheckCircle2, Phone, Star, Zap, Clock, Lock, Shield, Monitor, PhoneCall, ShieldCheck, Laptop, UserCheck, Cloud, TrendingUp, Users as UsersIcon } from 'lucide-react';
 import {
   P, PL, T, TM, TM2, BD,
   FadeUp, ScaleIn, Eyebrow,
@@ -11,13 +11,15 @@ import {
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { ServiceTestimonialKajabi } from '@/components/wordpress/ServiceTestimonialKajabi';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
+import { Button } from '@/components/ui/button';
+import { handleCtaClick } from '@/lib/utils';
 
 const MW_FAQS = [
   { q:'How do you transition us to a unified workplace stack?', a:'We deploy a phased integration strategy. Your communication layer—voice, video, and chat—is established first. We then bring your applications, devices, and security policies into a single managed environment, ensuring zero disruption.' },
   { q:'Can we integrate our existing platforms like Microsoft Teams?', a:'Absolutely. We build your unified workplace around core platforms like Microsoft Teams, transforming them from standalone tools into a fully integrated communication and collaboration system.' },
   { q:'Who manages the day-to-day operations of the workplace environment?', a:'C9 assumes full operational ownership. From proactive device management to securing identities and maintaining carrier-grade voice uptime, we manage the entire stack so your IT team doesn\'t have to.' },
   { q:'How does the unified model improve security?', a:'By centralizing communication, devices, and access, we eliminate the security gaps common in fragmented networks. Every connection, call, and file access is governed by a single Zero Trust security layer.' },
-  { q:'What level of support do end-users receive?', a:'Your team is supported by our 100% Australian-based engineering group. Because we manage the entire unified stack—from the network connection to the endpoint device—we resolve issues at the root level without vendor hand-offs.' },
+  { q:'What level of support do end-users receive?', a:'Your team is supported by our 100% Australian-based engineering . Because we manage the entire unified stack—from the network connection to the endpoint device—we resolve issues at the root level without vendor hand-offs.' },
 ];
 
 /* ── Pricing ─────────────────────────────────────────────────── */
@@ -52,12 +54,21 @@ export default function ModernWorkplacePage() {
 
               <FadeUp delay={0.2}>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Design Your Unified Workplace <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-                  </Link>
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                  <Button 
+                    size="lg" 
+                    className="rounded-full shadow-xl"
+                    onClick={handleCtaClick}
+                  >
+                    Design Your Unified Workplace 
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    size="lg" 
+                    className="rounded-full border-2 border-black/10 text-[#0c1024] hover:bg-black/5"
+                    onClick={handleCtaClick}
+                  >
                     Speak to a Workplace Specialist
-                  </Link>
+                  </Button>
                 </div>
               </FadeUp>
 
@@ -119,8 +130,8 @@ export default function ModernWorkplacePage() {
               { icon: ShieldCheck, label:'Security & Access', sub:'Zero Trust identity and data protection' },
             ].map(({ icon: Icon, label, sub }, i) => (
               <ScaleIn key={label} delay={i*0.07}>
-                <div className="text-center p-6 rounded-2xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group" style={{ borderColor: BD }}>
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3" style={{ background: `${P}12`, color: P }}>
+                <div className="text-center p-6 rounded-2xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ borderColor: BD }}>
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4 duration-300 group-hover:scale-110 group-hover:-rotate-3" style={{ background: `${P}12`, color: P }}>
                     <Icon size={22} strokeWidth={2} />
                   </div>
                   <div className="c9-card-title !text-[14px] mb-1">{label}</div>
@@ -150,7 +161,7 @@ export default function ModernWorkplacePage() {
             {/* Row 1 — Cell 1: Microsoft 365 (2 cols wide) */}
             <ScaleIn className="lg:col-span-2" delay={0}>
               <motion.div
-                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-[#F9FAFB]"
+                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-[#F9FAFB]"
               >
                 <div className="px-8 pt-10 pb-6 text-center">
                   <h3 className="c9-card-title mb-3">Collaboration &amp; Application Layer <span className="text-[#5D00D6]">— Integrated Workflows.</span></h3>
@@ -161,7 +172,7 @@ export default function ModernWorkplacePage() {
                 <div className="px-6 md:px-12 pb-10 mt-auto flex justify-center overflow-hidden">
                   <img 
                     src="/modern_workplace_managed_productivity_desktop_1777367167269.png" 
-                    className="w-full max-w-[800px] aspect-video object-cover rounded-2xl shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]" 
+                    className="w-full max-w-[800px] aspect-video object-cover rounded-2xl shadow-2xl duration-700 group-hover:scale-[1.03]" 
                     alt="Managed Productivity"
                   />
                 </div>
@@ -171,7 +182,7 @@ export default function ModernWorkplacePage() {
             {/* Row 1 — Cell 2: Teams (1 col) */}
             <ScaleIn delay={0.08}>
               <motion.div
-                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-[#F9FAFB]"
+                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-[#F9FAFB]"
               >
                 <div className="px-7 pt-10 pb-6 text-center">
                   <h3 className="c9-card-title mb-3">Core Communication Layer <span className="text-[#6264A7]">— Unified Voice &amp; Video.</span></h3>
@@ -182,7 +193,7 @@ export default function ModernWorkplacePage() {
                 <div className="px-6 pb-10 mt-auto flex justify-center overflow-hidden">
                   <img 
                     src="/modern_workplace_teams_unified_comms_1777367199429.png" 
-                    className="w-full h-48 object-cover rounded-2xl shadow-2xl transition-transform duration-700 group-hover:scale-[1.05]" 
+                    className="w-full h-48 object-cover rounded-2xl shadow-2xl duration-700 group-hover:scale-[1.05]" 
                     alt="Unified Comms"
                   />
                 </div>
@@ -192,7 +203,7 @@ export default function ModernWorkplacePage() {
             {/* Row 2 — Cell 3: Security (1 col) */}
             <ScaleIn delay={0.14}>
               <motion.div
-                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-[#0B0B0F] text-white"
+                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-[#0B0B0F] text-white"
               >
                 <div className="px-7 pt-10 pb-10 text-center flex-grow flex flex-col">
                   <div className="w-20 h-20 rounded-3xl bg-[#5D00D6]/10 flex items-center justify-center mx-auto mb-8 text-[#5D00D6]">
@@ -216,7 +227,7 @@ export default function ModernWorkplacePage() {
             {/* Row 2 — Cell 4: Device Management (1 col) */}
             <ScaleIn delay={0.2}>
               <motion.div
-                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-[#F9FAFB]"
+                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-[#F9FAFB]"
               >
                 <div className="px-7 pt-10 pb-10 text-center flex-grow flex flex-col">
                   <div className="w-20 h-20 rounded-3xl bg-blue-500/10 flex items-center justify-center mx-auto mb-8 text-blue-600">
@@ -240,7 +251,7 @@ export default function ModernWorkplacePage() {
             {/* Row 2 — Cell 5: Expert Support (1 col) */}
             <ScaleIn delay={0.26}>
               <motion.div
-                className="rounded-[32px] border border-purple-500/20 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-[0_20px_60px_rgba(93,0,214,0.15)] hover:-translate-y-1 bg-[#F9FAFB]"
+                className="rounded-[32px] border border-purple-500/20 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-[0_20px_60px_rgba(93,0,214,0.15)] hover:-translate-y-1 bg-[#F9FAFB]"
               >
                 <div className="px-7 pt-10 pb-10 text-center flex-grow flex flex-col">
                   <div className="w-20 h-20 rounded-3xl bg-purple-500/10 flex items-center justify-center mx-auto mb-8 text-purple-600">
@@ -314,7 +325,7 @@ export default function ModernWorkplacePage() {
               <p className="text-[18px] text-gray-600 mb-10 leading-relaxed font-medium">
                 For new sites and startups, we bypass fragmentation entirely. We guarantee a fully unified, communication-driven workplace environment on your first day of operation.
               </p>
-              <div className="bg-[#0B0B0F] border border-white/5 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all shadow-2xl">
+              <div className="bg-[#0B0B0F] border border-white/5 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/20 transition-all shadow-2xl">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/5 rounded-bl-full group-hover:bg-[#5D00D6]/10 transition-all" />
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4">
@@ -408,9 +419,9 @@ export default function ModernWorkplacePage() {
             ].map(({ icon: Icon, title, body }, i) => (
               <ScaleIn key={title} delay={i * 0.07}>
                 <motion.div 
-                  className="rounded-[32px] p-8 border border-black/10 transition-all duration-500 h-full group bg-[#F9FAFB] hover:shadow-2xl hover:-translate-y-1" 
+                  className="rounded-[32px] p-8 border border-black/10 transition-all duration-500 h-full bg-[#F9FAFB] hover:shadow-2xl hover:-translate-y-1" 
                 >
-                  <div className="w-12 h-12 rounded-[16px] flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-[1.15] group-hover:-rotate-3 bg-white shadow-sm border border-black/5" style={{ color: P }}>
+                  <div className="w-12 h-12 rounded-[16px] flex items-center justify-center mb-6 duration-500 group-hover:scale-[1.15] group-hover:-rotate-3 bg-white shadow-sm border border-black/5" style={{ color: P }}>
                     <Icon size={22} strokeWidth={2.5} />
                   </div>
                   <h3 className="c9-card-title mb-2.5">{title}</h3>
@@ -451,9 +462,14 @@ export default function ModernWorkplacePage() {
                       </div>
                     ))}
                   </div>
-                  <Link href="/contact" className="mt-auto flex items-center justify-center gap-2 w-full py-3.5 rounded-2xl font-bold text-[16px] transition-all duration-300 active:scale-95" style={plan.highlight ? { background: 'rgba(255,255,255,0.18)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)' } : { background: `${P}0D`, color: P, border: `1px solid ${BD}` }}>
-                    Speak to Engineering <ArrowRight size={15} />
-                  </Link>
+                  <Button 
+                    variant={plan.highlight ? "default" : "outline"}
+                    size="lg"
+                    className={`mt-auto w-full rounded-2xl font-bold transition-all ${plan.highlight ? 'bg-white/20 hover:bg-white/30 text-white border-white/30' : 'border-gray-200 hover:bg-gray-50'}`}
+                    onClick={handleCtaClick}
+                  >
+                    Speak to Engineering 
+                  </Button>
                 </motion.div>
               </FadeUp>
             ))}
@@ -467,14 +483,15 @@ export default function ModernWorkplacePage() {
       {/* ══ FAQ ═════════════════════════════════════════════════════ */}
       <WpFAQAndFeedback showTestimonials={false} faqItems={MW_FAQS} showStillQuestions={false} />
 
-      {/* ══ CTA ═════════════════════════════════════════════════════ */}
-      <WpConsultationForm 
-        showHeader={false}
-        eyebrow="Plan Your Workplace Transformation"
-        title="Unify Your Distributed Workforce Operations"
-        description="Eliminate fragmented tools and regain control. Book a 30-minute consultation with an Australian engineering lead to design your unified workplace stack."
-        formTitle="Design Your Unified Workplace"
-      />
+      <section id="consultation-section">
+        <WpConsultationForm 
+          showHeader={false}
+          eyebrow="Plan Your Workplace Transformation"
+          title="Unify Your Distributed Workforce Operations"
+          description="Eliminate fragmented tools and regain control. Book a 30-minute consultation with an Australian engineering lead to design your unified workplace stack."
+          formTitle="Design Your Unified Workplace"
+        />
+      </section>
 
     </div>
   );

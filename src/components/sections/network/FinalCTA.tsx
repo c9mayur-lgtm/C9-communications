@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, MessageCircle } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const BackgroundElements = () => (
@@ -56,15 +56,15 @@ export default function FinalCTA() {
           <div className="flex flex-col sm:flex-row flex-wrap gap-5 justify-center mt-16 mb-16">
             <Button 
               onClick={scrollToAssessment}
-              className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-16 px-12 rounded-full text-[17px] transition-all shadow-[0_15px_40px_rgba(93,0,214,0.3)] group flex items-center gap-3 active:scale-95 border-none"
+              className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-16 px-12 rounded-full text-[17px] transition-all shadow-[0_15px_40px_rgba(93,0,214,0.3)] flex items-center gap-3 active:scale-95 border-none"
             >
               Get a Network Assessment 
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              
             </Button>
             <a href="tel:1800000299" className="inline-block no-underline">
               <Button 
                 variant="outline" 
-                className="border-2 border-slate-100 text-[#1A1A2E] font-bold h-16 px-12 rounded-full text-[17px] transition-all hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white flex items-center gap-3 active:scale-95 shadow-xl shadow-slate-900/5 group"
+                className="border-2 border-slate-100 text-[#1A1A2E] font-bold h-16 px-12 rounded-full text-[17px] transition-all hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white flex items-center gap-3 active:scale-95 shadow-xl shadow-slate-900/5"
               >
                 <div className="w-7 h-7 bg-slate-50 text-slate-500 rounded-lg flex items-center justify-center group-hover:bg-[#5D00D6]/20 group-hover:text-white transition-colors duration-300">
                   <Phone size={14} />

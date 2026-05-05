@@ -11,24 +11,7 @@ import {
   FullStackSection
 } from '../components';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  ChevronDown, 
-  ClipboardCheck, 
-  Laptop, 
-  LifeBuoy, 
-  PackageCheck, 
-  Shield, 
-  ShieldAlert, 
-  Smartphone, 
-  Wrench, 
-  Download, 
-  Users as UsersIcon, 
-  Target,
-  Monitor,
-  Check
-} from 'lucide-react';
+import { CheckCircle2, ChevronDown, ClipboardCheck, Laptop, LifeBuoy, PackageCheck, Shield, ShieldAlert, Smartphone, Wrench, Download, Users as UsersIcon, Target, Monitor, Check } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 type Problem = {
@@ -75,7 +58,7 @@ const FAQS = [
   { q: 'Can we manage Macs and iPhones too?', a: 'Yes. We provide unified management via Microsoft Intune for Windows, macOS, iOS, and Android—ensuring a consistent security posture across your entire mobile fleet.' },
   { q: 'What happens if a device is lost or stolen?', a: 'We can trigger an immediate remote wipe or lock from our central dashboard. If the device is found, we can restore it; if not, the data remains encrypted and inaccessible.' },
   { q: 'Do you handle the hardware procurement?', a: 'Yes. We manage the entire lifecycle—from selecting the right hardware profiles for your staff to procurement, deployment, and eventual secure decommissioning.' },
-  { q: 'How do you handle OS updates?', a: 'We manage update rings. We test updates on a small group of devices first to ensure compatibility before rolling them out across your entire organization, preventing widespread disruption.' }
+  { q: 'How do you handle OS updates?', a: 'We manage update rings. We test updates on a small  of devices first to ensure compatibility before rolling them out across your entire organization, preventing widespread disruption.' }
 ];
 
 const problems: Problem[] = [
@@ -239,10 +222,10 @@ export default function EndpointManagementPage() {
                   Managing a mobile fleet shouldn&apos;t be a manual task. C9 delivers carrier-grade endpoint governance via Microsoft Intune—enabling zero-touch deployment, absolute security, and 100% visibility for your entire device estate.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Link href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Request Fleet Audit <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
+                    Request Fleet Audit 
                   </Link>
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full hover:bg-black/5 transition-all backdrop-blur-sm h-14 px-8 text-[15px] font-bold">
                     View Managed Hardware
                   </Link>
                 </div>
@@ -259,11 +242,11 @@ export default function EndpointManagementPage() {
             
             <div className="relative">
               <ScaleIn className="relative hidden lg:block">
-                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50 group">
+                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50">
                   <img 
                     src="/endpoint_management_hero_v2.png" 
                     alt="Endpoint Management Operations Center"
-                    className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-1000"
+                    className="w-full h-full object-cover aspect-square group-hover:scale-105 duration-1000"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/10 to-transparent mix-blend-overlay" />
                 </div>
@@ -326,12 +309,12 @@ export default function EndpointManagementPage() {
               return (
                 <ScaleIn key={problem.title} delay={idx * 0.1}>
                   <article className={cardClassName}>
-                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+                    <div className="mb-4 inline-flex w-14 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{problem.title}</h3>
                     <p className="text-[14px] leading-relaxed text-gray-500">{problem.description}</p>
-                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />
                   </article>
                 </ScaleIn>
               );
@@ -352,7 +335,7 @@ export default function EndpointManagementPage() {
               return (
                 <ScaleIn key={item.title} delay={idx * 0.1}>
                   <article className={`${cardClassName} flex flex-col h-full bg-white`}>
-                    <div className="mb-5 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+                    <div className="mb-5 inline-flex w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
@@ -366,7 +349,7 @@ export default function EndpointManagementPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />
                   </article>
                 </ScaleIn>
               );
@@ -388,7 +371,7 @@ export default function EndpointManagementPage() {
             
             <div className="space-y-6">
               {timelineEvents.map((event, idx) => (
-                <ScaleIn key={event.label} delay={idx * 0.1} className="relative flex flex-col md:flex-row gap-6 md:gap-12 group">
+                <ScaleIn key={event.label} delay={idx * 0.1} className="relative flex flex-col md:flex-row gap-6 md:gap-12">
                   {/* Timeline Node */}
                   <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-full border-4 border-white bg-[#F4F0FA] text-[#5D00D6] shadow-sm z-10 transition-colors duration-500 group-hover:bg-[#5D00D6] group-hover:text-white hidden md:flex">
                     <span className="font-bold text-xl">{`0${idx + 1}`}</span>
@@ -405,7 +388,7 @@ export default function EndpointManagementPage() {
                       <h3 className="text-xl font-bold text-slate-900 tracking-tight">
                         {event.title}
                       </h3>
-                      <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-[#5D00D6]/5 text-[#5D00D6] text-[11px] font-bold uppercase tracking-[0.14em] border border-[#5D00D6]/10">
+                      <span className="inline-flex items-center justify-center rounded-full bg-[#5D00D6]/5 text-[#5D00D6] uppercase tracking-[0.14em] border border-[#5D00D6]/10 h-14 px-8 text-[15px] font-bold">
                         {event.label}
                       </span>
                     </div>
@@ -443,7 +426,7 @@ export default function EndpointManagementPage() {
                       </li>
                     ))}
                   </ul>
-                  {!plan.popular && <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />}
+                  {!plan.popular && <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />}
                 </article>
               </ScaleIn>
             ))}
@@ -465,7 +448,7 @@ export default function EndpointManagementPage() {
               ))}
             </div>
             <Link href="/cybersecurity" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 py-2.5 text-[14px] font-bold text-white transition hover:border-white">
-              Explore C9 Defense <ArrowRight className="h-4 w-4" />
+              Explore C9 Defense 
             </Link>
           </article>
         </div>
@@ -536,7 +519,7 @@ export default function EndpointManagementPage() {
               <p className="text-[17px] text-slate-300 mb-10 leading-relaxed font-medium">
                 For new sites, staff readiness is mandatory from the first hour. We guarantee fully-configured, secure devices on your first day of operation.
               </p>
-              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl">
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/40 transition-all shadow-2xl">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/10 rounded-bl-full" />
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4">
@@ -587,7 +570,7 @@ export default function EndpointManagementPage() {
       />
 
       {/* 11. FINAL CONSULTATION FORM */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="Fleet Audit"

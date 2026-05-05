@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { PhoneCall, Wifi, ShieldCheck, Truck, Layers, Headphones, Search, Activity, RefreshCw } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const CountUp = ({ value, duration = 2 }: { value: string; duration?: number }) => {
   const [displayValue, setDisplayValue] = useState("0");
@@ -153,16 +154,13 @@ export const WpWhyPartner = () => {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <a
-            href="#consultation-section"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="inline-flex items-center gap-3 px-10 py-4 bg-[#5D00D6] text-white rounded-full c9-button-label hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/20"
+          <Button 
+            size="lg"
+            className="rounded-full shadow-xl px-10 h-14"
+            onClick={() => document.querySelector('#consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Request Infrastructure Assessment →
-          </a>
+            Request Infrastructure Assessment 
+          </Button>
           <p className="text-[12px] text-slate-400 mt-4 font-medium">Direct Engineer Audit. Operational Control Layer.</p>
         </div>
       </div>

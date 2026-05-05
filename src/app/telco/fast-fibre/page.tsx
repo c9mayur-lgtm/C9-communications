@@ -3,11 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Zap, ShieldAlert, Activity, Users, ArrowRight, CheckCircle2, 
-  Clock, Layers, ShieldCheck, Building2, TrendingUp,
-  Server, Smartphone, PhoneCall, Monitor, CheckCircle, BarChart3, Globe
-} from 'lucide-react';
+import { Zap, ShieldAlert, Activity, Users, CheckCircle2, Clock, Layers, ShieldCheck, Building2, TrendingUp, Server, Smartphone, PhoneCall, Monitor, CheckCircle, BarChart3, Globe } from 'lucide-react';
 import { Section } from '@/components/design-system/Section';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
@@ -81,10 +77,10 @@ export default function FastFibrePage() {
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
                     <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                      <Link href="#consultation">Check Fibre Availability</Link>
+                      <Link href="#consultation-section">Check Fibre Availability</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#consultation">Talk to a Connectivity Specialist</Link>
+                      <Link href="#consultation-section">Talk to a Connectivity Specialist</Link>
                     </C9Button>
                  </div>
               </FadeIn>
@@ -102,11 +98,11 @@ export default function FastFibrePage() {
             </div>
 
             <FadeIn delay={0.2} direction="right" className="relative">
-               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square group">
+               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square">
                   <img
                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop"
                      alt="Head of IT managing business critical infrastructure"
-                     className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                     className="w-full h-full object-cover object-top duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/60 via-transparent to-transparent" />
                   
@@ -160,11 +156,11 @@ export default function FastFibrePage() {
               { src: '/Vendors/UI_BIG.png', alt: 'Ubiquiti', w: 'w-[70px] md:w-[90px]' },
               { src: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg', alt: 'Microsoft Azure', w: 'w-[110px] md:w-[130px]' }
             ].map((logo, i) => (
-              <div key={i} className="bg-white flex items-center justify-center p-8 md:p-12 hover:bg-slate-50 transition-colors duration-300 group">
+              <div key={i} className="bg-white flex items-center justify-center p-8 md:p-12 hover:bg-slate-50 transition-colors duration-300">
                 <img 
                   src={logo.src} 
                   alt={logo.alt} 
-                  className={`${logo.w} h-auto object-contain transition-transform duration-500 group-hover:scale-105`} 
+                  className={`${logo.w} h-auto object-contain duration-500 group-hover:scale-105`} 
                 />
               </div>
             ))}
@@ -208,8 +204,8 @@ export default function FastFibrePage() {
                 desc: "When performance drops, generic providers blame hardware, leaving you stuck in the middle." 
               }
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-lg transition-all group">
-                <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-lg transition-all">
+                <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center mb-6 group-hover:scale-110">
                   {item.icon}
                 </div>
                 <h3 className="c9-card-title mb-3 text-[18px]">{item.title}</h3>
@@ -228,7 +224,7 @@ export default function FastFibrePage() {
               </p>
             </div>
             <C9Button variant="outline" className="rounded-full h-12 px-8 border-slate-200 text-[#5D00D6] hover:border-[#5D00D6]" asChild>
-              <Link href="#consultation">Assess Your Resilience</Link>
+              <Link href="#consultation-section">Assess Your Resilience</Link>
             </C9Button>
           </FadeIn>
         </div>
@@ -443,8 +439,8 @@ export default function FastFibrePage() {
                      { label: "Deployment Speed", val: "Rapid" },
                      { label: "Support Ownership", val: "Direct" }
                    ].map((stat, i) => (
-                     <div key={i} className="bg-slate-50/80 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10 group">
-                        <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight group-hover:translate-x-1 transition-transform duration-500">{stat.val}</div>
+                     <div key={i} className="bg-slate-50/80 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10">
+                        <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight duration-500">{stat.val}</div>
                         <div className="text-slate-500 font-bold text-[12px] uppercase tracking-widest leading-tight">{stat.label}</div>
                      </div>
                    ))}
@@ -496,7 +492,7 @@ export default function FastFibrePage() {
                   Let&apos;s assess whether your current setup is protecting operations or creating hidden risk.
                 </p>
                 <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Book a Fibre Performance Review</Link>
+                  <Link href="#consultation-section">Book a Fibre Performance Review</Link>
                 </C9Button>
               </FadeIn>
            </div>
@@ -517,7 +513,7 @@ export default function FastFibrePage() {
                   Stop settling for consumer-grade service. Partner with C9 for business fibre that performs when it matters most to your bottom line.
                 </p>
                 <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Talk to C9 About Business Fibre</Link>
+                  <Link href="#consultation-section">Talk to C9 About Business Fibre</Link>
                 </C9Button>
               </div>
            </div>
@@ -536,7 +532,7 @@ export default function FastFibrePage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm 
           showHeader={false} 
           eyebrow="FAST FIBRE ENQUIRY"

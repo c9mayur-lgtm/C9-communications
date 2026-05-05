@@ -1,14 +1,7 @@
 'use client';
 
 import React from 'react';
-import { 
-  PhoneCall, 
-  Wifi, 
-  ShieldCheck, 
-  Truck, 
-  Layers, 
-  Headphones 
-} from 'lucide-react';
+import { PhoneCall, Wifi, ShieldCheck, Truck, Layers, Headphones } from 'lucide-react';
 
 const INDUSTRIES = [
   {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+;
 
 export default function FinalCTA() {
   return (
@@ -15,19 +15,19 @@ export default function FinalCTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-10">
-          <Button className="bg-[#5D00D6] hover:bg-[#4B00AD] text-white px-10 h-[56px] rounded-full font-bold transition-all text-[16px] font-sans">
-            Book a Strategy Session <ArrowRight className="ml-2 w-5 h-5" />
+          <Button className="bg-[#5D00D6] hover:bg-[#4B00AD] text-white px-10 h-[56px] rounded-full font-bold transition-all text-[14px] font-sans">
+            Book a Strategy Session 
           </Button>
 
           <a 
             href="tel:1800000299"
-            className="inline-flex items-center justify-center border-2 border-[#E5E7EB] text-[#0c1024] hover:bg-slate-50 px-10 h-[56px] rounded-full font-bold transition-all text-[16px] font-sans"
+            className="inline-flex items-center justify-center border-2 border-[#E5E7EB] text-[#0c1024] hover:bg-slate-50 h-[56px] rounded-full transition-all font-sans px-8 text-[14px] font-bold gap-2"
           >
-            Call 1800 000 299
+            Call 1800 000 299 
           </a>
         </div>
 
-        <div className="text-[14px] text-slate-600 text-center mt-8  opacity-80 uppercase tracking-widest font-bold font-sans">
+        <div className="text-[14px] text-slate-600 text-center mt-8 opacity-80 uppercase tracking-widest font-bold font-sans">
           Australian team · Responds within 1 business day · No lock-in consultations
         </div>
       </div>

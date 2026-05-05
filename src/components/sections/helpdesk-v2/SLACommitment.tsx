@@ -1,7 +1,7 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Clock, ShieldCheck } from "lucide-react";
+import { CheckCircle, Clock, ShieldCheck } from 'lucide-react';
 
 export default function SLACommitment() {
   const rows = [
@@ -56,7 +56,7 @@ export default function SLACommitment() {
               {rows.map((row, i) => (
                 <div 
                   key={i} 
-                  className="bg-white rounded-[24px] border border-gray-100 p-6 md:p-8 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-[#5D00D6]/10 hover:border-[#5D00D6]/20 transition-all duration-300 group flex flex-col justify-between"
+                  className="bg-white rounded-[24px] border border-gray-100 p-6 md:p-8 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-[#5D00D6]/10 hover:border-[#5D00D6]/20 transition-all duration-300 flex flex-col justify-between"
                   
                 >
                   <div className="mb-6">

@@ -169,10 +169,10 @@ export const CookieConsent = () => {
             setIsVisible(true);
             setShowSettings(true);
           }}
-          className="fixed bottom-6 left-6 z-[290] w-10 h-10 bg-white border border-slate-200 text-slate-400 hover:text-[#5D00D6] hover:border-[#5D00D6] shadow-lg rounded-full flex items-center justify-center transition-all group"
+          className="fixed bottom-6 left-6 z-[290] w-10 h-10 bg-white border border-slate-200 text-slate-400 hover:text-[#5D00D6] hover:border-[#5D00D6] shadow-lg rounded-full flex items-center justify-center transition-all"
           title="Cookie Settings"
         >
-          <Shield size={18} className="group-hover:rotate-12 transition-transform" />
+          <Shield size={18} className="group-hover:rotate-12" />
           <span className="absolute left-12 bg-[#0c1024] text-white text-[10px] font-bold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">
             Manage Privacy
           </span>

@@ -65,13 +65,15 @@ export default function BackupDRPage() {
       <FAQ />
       <FinalCTA />
       <WpFAQAndFeedback faqItems={BACKUP_FAQS} showTestimonials={true} showFAQ={false} />
-      <WpConsultationForm
-        showHeader={false}
-        eyebrow="BACKUP ASSESSMENT"
-        title="Find out if your backup would actually save you."
-        description="A C9 backup assessment reviews your current environment — what's being backed up, how often, where it's stored, and whether recovery has ever been tested. No obligation. Plain language report."
-        formTitle="Request a Backup Assessment"
-      />
+      <section id="consultation-section">
+        <WpConsultationForm
+          showHeader={false}
+          eyebrow="BACKUP ASSESSMENT"
+          title="Find out if your backup would actually save you."
+          description="A C9 backup assessment reviews your current environment — what's being backed up, how often, where it's stored, and whether recovery has ever been tested. No obligation. Plain language report."
+          formTitle="Request a Backup Assessment"
+        />
+      </section>
       <ContinueJourney 
         title="Recovery is the Safety Net."
         description="When incidents happen, you need a way back. See how we integrate recovery with proactive support and continuity."

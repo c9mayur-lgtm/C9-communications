@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Calendar, PhoneCall, ArrowRight, CheckCircle2, User, Building2, Mail, Phone, ChevronRight } from 'lucide-react';
+import { X, Calendar, PhoneCall, CheckCircle2, User, Building2, Mail, Phone, ChevronRight } from 'lucide-react';
 
 export const VoiceSmartLeadModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -109,13 +109,13 @@ export const VoiceSmartLeadModal = () => {
                           <button
                             key={i}
                             onClick={() => handleIntent(opt.title)}
-                            className="flex items-center justify-between p-5 rounded-2xl border border-gray-100 bg-white hover:border-[#5D00D6]/40 hover:shadow-md transition-all text-left group"
+                            className="flex items-center justify-between p-5 rounded-2xl border border-gray-100 bg-white hover:border-[#5D00D6]/40 hover:shadow-md transition-all text-left"
                           >
                             <div>
                               <p className="text-[14px] font-bold text-[#0c1024] mb-1 group-hover:text-[#5D00D6] transition-colors">{opt.title}</p>
                               <p className="text-[14px] text-slate-500">{opt.desc}</p>
                             </div>
-                            <ChevronRight size={18} className="text-slate-300 group-hover:text-[#5D00D6] group-hover:translate-x-1 transition-all" />
+                            <ChevronRight size={18} className="text-slate-300 group-hover:text-[#5D00D6] transition-all" />
                           </button>
                         ))}
                       </div>
@@ -179,9 +179,9 @@ export const VoiceSmartLeadModal = () => {
 
                         <button 
                           type="submit"
-                          className="w-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-xl h-14 text-[16px] font-medium shadow-xl shadow-[#5D00D6]/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                          className="w-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-xl h-14 text-[14px] font-medium shadow-xl shadow-[#5D00D6]/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                         >
-                          Confirm & Connect <ArrowRight size={18} />
+                          Confirm & Connect 
                         </button>
                         <p className="text-center text-[12px] text-slate-400 mt-2">
                           By submitting, you agree to our privacy policy. (No spam, ever).

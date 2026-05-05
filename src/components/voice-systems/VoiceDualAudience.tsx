@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 
 export const VoiceDualAudience = () => {
@@ -43,13 +43,13 @@ export const VoiceDualAudience = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="group rounded-[32px] border border-gray-100 overflow-hidden bg-white hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
+            className="rounded-[32px] border border-gray-100 overflow-hidden bg-white hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
           >
             <div className="relative h-[220px] overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200"
                 alt="Small business owner"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               <span className="absolute top-6 left-6 bg-[#5D00D6] text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
@@ -74,7 +74,7 @@ export const VoiceDualAudience = () => {
                 ))}
               </ul>
               <Link href="/contact" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] hover:gap-3 transition-all">
-                Get a simple quote <ArrowRight size={16} />
+                Get a simple quote 
               </Link>
             </div>
           </motion.div>
@@ -85,13 +85,13 @@ export const VoiceDualAudience = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="group rounded-[32px] overflow-hidden bg-[#0c1024] border border-white/5 hover:border-[#5D00D6]/30 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500"
+            className="rounded-[32px] overflow-hidden bg-[#0c1024] border border-white/5 hover:border-[#5D00D6]/30 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500"
           >
             <div className="relative h-[220px] overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200"
                 alt="Enterprise professional"
-                className="w-full h-full object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover object-[center_20%] duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/70 to-[#0c1024]/20" />
               <span className="absolute top-6 left-6 bg-white text-[#0c1024] text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
@@ -116,7 +116,7 @@ export const VoiceDualAudience = () => {
                 ))}
               </ul>
               <Link href="/telco/phone-system" className="inline-flex items-center gap-2 text-white font-bold text-[14px] hover:gap-3 transition-all group/link">
-                Talk to an enterprise specialist <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                Talk to an enterprise specialist 
               </Link>
             </div>
           </motion.div>

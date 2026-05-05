@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+;
 
 export default function FinalCTA() {
   return (
@@ -19,8 +19,8 @@ export default function FinalCTA() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/contact" passHref>
-            <Button size="lg" className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white shadow-2xl hover:shadow-[#5D00D6]/20 hover:gap-4 transition-all group rounded-full px-8 h-14 font-bold text-[14px]" >
-              Book an IT Assessment <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+            <Button size="lg" className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white shadow-2xl hover:shadow-[#5D00D6]/20 hover:gap-4 transition-all rounded-full px-8 h-14 font-bold text-[14px]" >
+              Book an IT Assessment 
             </Button>
           </Link>
           <Link href="tel:1800000299" passHref>

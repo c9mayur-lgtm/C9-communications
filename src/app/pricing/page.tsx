@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Check, ArrowRight, Minus, Clock, DollarSign, ArrowUp, Zap, Phone, CheckCircle } from 'lucide-react';
+import { Check, Minus, Clock, DollarSign, ArrowUp, Zap, Phone, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Section } from '@/components/design-system/Section';
 import { H1, H2, H3, Body, Label } from '@/components/design-system/Typography';
@@ -128,7 +128,7 @@ export default function PricingPage() {
           {NBN_PLANS.map((plan, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className={cn(
-                "relative p-10 rounded-[24px] border transition-all duration-300 h-full flex flex-col group",
+                "relative p-10 rounded-[24px] border transition-all duration-300 h-full flex flex-col ",
                 plan.highlight 
                   ? "bg-white border-[#5D00D6]/20 shadow-2xl shadow-purple-900/10" 
                   : "bg-white border-gray-100 hover:border-[#5D00D6]/20 hover:shadow-xl"
@@ -159,7 +159,7 @@ export default function PricingPage() {
                 </ul>
 
                 <C9Button variant={plan.highlight ? "default" : "outline"} className="w-full">
-                  Get Started <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  Get Started 
                 </C9Button>
               </div>
             </FadeIn>
@@ -262,7 +262,7 @@ export default function PricingPage() {
                       <button
                         key={opt}
                         onClick={() => handleSelect(quizStep, opt)}
-                        className="p-6 rounded-2xl border border-gray-100 hover:border-[#5D00D6] hover:bg-[#F4F0FA] text-[#0c1024] font-bold transition-all text-center cursor-pointer group"
+                        className="p-6 rounded-2xl border border-gray-100 hover:border-[#5D00D6] hover:bg-[#F4F0FA] text-[#0c1024] font-bold transition-all text-center cursor-pointer"
                       >
                         {opt}
                       </button>
@@ -291,7 +291,7 @@ export default function PricingPage() {
                   <H3 className="mb-4">We recommend <span className="text-[#5D00D6]">{result?.plan}</span></H3>
                   <Body className="mb-10">{result?.text}</Body>
                   <div className="flex flex-wrap justify-center gap-4">
-                    <C9Button>Get Started <ArrowRight size={16} className="ml-2" /></C9Button>
+                    <C9Button>Get Started </C9Button>
                     <C9Button variant="ghost" onClick={resetQuiz}>Start Again</C9Button>
                   </div>
                 </motion.div>
@@ -326,7 +326,7 @@ export default function PricingPage() {
       {/* ── CTA ── */}
       <Section className="pb-32">
         <FadeIn>
-          <div className="p-12 md:p-20 rounded-[40px] bg-[#F4F0FA] border border-[#5D00D6]/10 text-center relative overflow-hidden group">
+          <div className="p-12 md:p-20 rounded-[40px] bg-[#F4F0FA] border border-[#5D00D6]/10 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 p-8 text-[#5D00D6] opacity-5 group-hover:opacity-10 transition-opacity">
               <Zap size={300} strokeWidth={0.5} />
             </div>

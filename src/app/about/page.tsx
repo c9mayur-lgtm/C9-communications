@@ -1,19 +1,7 @@
 'use client';
 
 import React from 'react';
-import { 
-  Users, 
-  ShieldCheck, 
-  Zap,
-  ArrowRight,
-  Server,
-  Headphones,
-  CheckCircle2,
-  Monitor,
-  Lock,
-  Rocket,
-  PhoneCall
-} from 'lucide-react';
+import { Users, ShieldCheck, Zap, Server, Headphones, CheckCircle2, Monitor, Lock, Rocket, PhoneCall } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Section } from '@/components/design-system/Section';
@@ -78,7 +66,7 @@ export default function AboutPage() {
             <FadeIn delay={0.3}>
               <div className="flex flex-wrap gap-4">
                 <C9Button className="px-10 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                   <Link href="#consultation">Speak to Our Team</Link>
+                   <Link href="#consultation-section">Speak to Our Team</Link>
                 </C9Button>
                 <C9Button variant="outline" className="px-10 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
                    <Link href="#accountability">Our Accountability Model</Link>
@@ -235,8 +223,8 @@ export default function AboutPage() {
             }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="p-8 md:p-10 rounded-lg bg-slate-50 transition-all group h-full flex flex-col">
-                <div className="w-14 h-14 rounded-lg bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:scale-110 transition-transform">
+              <div className="p-8 md:p-10 rounded-lg bg-slate-50 transition-all h-full flex flex-col">
+                <div className="w-14 h-14 rounded-lg bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:scale-110">
                   <item.icon size={28} />
                 </div>
                 <H3 className="mb-4 text-2xl tracking-tight">{item.title}</H3>
@@ -296,7 +284,7 @@ export default function AboutPage() {
               }
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <Link href={card.path} className="block group">
+                <Link href={card.path} className="block">
                   <div className="p-10 bg-[#F4F0FA] rounded-lg transition-all h-full group-hover:-translate-y-1">
                     <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                       <card.icon size={24} />
@@ -305,7 +293,7 @@ export default function AboutPage() {
                     <h3 className="c9-card-title !text-2xl mb-4 text-[#0c1024]">{card.name}</h3>
                     <p className="c9-body !text-sm text-slate-600">{card.desc}</p>
                     <div className="mt-8 flex items-center gap-2 text-[#5D00D6] font-bold text-sm">
-                      Explore Layer <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                      Explore Layer 
                     </div>
                   </div>
                 </Link>
@@ -325,13 +313,13 @@ export default function AboutPage() {
         title="Experience Operational Maturity Firsthand"
         description="Book a technical strategy session to discuss how our infrastructure management model can scale your business and eliminate operational risk."
         primaryText="Schedule Strategy Session"
-        primaryHref="#consultation"
+        primaryHref="#consultation-section"
         secondaryText="Call 1800 000 299"
         secondaryHref="tel:1800000299"
         footerText="Zero-day operational readiness. Guaranteed."
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm 
           showHeader={false} 
           eyebrow="READY TO START?"

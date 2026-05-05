@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FadeUp, ScaleIn, Eyebrow } from '../components';
-import { Phone, MessageCircle, Video, CircleUserRound, Mic, Smartphone, Users as UsersIcon, Cloud, ArrowRight, PackageCheck, Target, ShieldAlert } from 'lucide-react';
+import { Phone, MessageCircle, Video, CircleUserRound, Mic, Smartphone, Users as UsersIcon, Cloud, PackageCheck, Target, ShieldAlert } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 type StackItem = {
@@ -219,13 +219,13 @@ export default function CommunicationToolsPage() {
                 <div className="mb-8 flex flex-wrap gap-4">
                   <Link
                     href="#communication-stack"
-                    className="inline-flex h-14 items-center justify-center rounded-full bg-[#5D00D6] px-8 text-[16px] font-bold text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(93,0,214,0.3)]"
+                    className="inline-flex items-center justify-center rounded-full bg-[#5D00D6] text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(93,0,214,0.3)] h-14 px-8 text-[15px] font-bold"
                   >
                     See Unified Comms Solutions
                   </Link>
                   <Link
-                    href="/contact"
-                    className="inline-flex h-14 items-center justify-center rounded-full border border-[#DCCDF8] bg-white px-8 text-[16px] font-bold text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50"
+                    href="#consultation-section"
+                    className="inline-flex items-center justify-center rounded-full border border-[#DCCDF8] bg-white text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50 h-14 px-8 text-[15px] font-bold"
                   >
                     Talk to a Comms Specialist
                   </Link>
@@ -244,11 +244,11 @@ export default function CommunicationToolsPage() {
 
             {/* Right: Realistic Communication Visual */}
             <ScaleIn delay={0.4} className="relative hidden lg:block">
-              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 group">
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border border-gray-100">
                 <img 
                   src="/modern_communication_collaboration.png" 
                   alt="Modern Team Collaborating with Unified Communications" 
-                  className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-1000"
+                  className="w-full h-full object-cover aspect-square group-hover:scale-105 duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/10 to-transparent mix-blend-overlay" />
               </div>
@@ -301,7 +301,7 @@ export default function CommunicationToolsPage() {
               return (
                 <ScaleIn key={item.title} delay={idx * 0.1}>
                   <article className={cardClassName}>
-                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+                    <div className="mb-4 inline-flex w-14 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
@@ -313,7 +313,7 @@ export default function CommunicationToolsPage() {
                         </li>
                       ))}
                     </ul>
-                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />
                 </article>
                 </ScaleIn>
               );
@@ -345,7 +345,7 @@ export default function CommunicationToolsPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />
                 </article>
               </FadeUp>
             ))}
@@ -438,7 +438,7 @@ export default function CommunicationToolsPage() {
                  if (activeTab.id === 'mobile-dect') ModelIcon = Smartphone;
                  
                  return (
-                   <div key={model} className="bg-white/[0.03] border border-white/10 rounded-[32px] p-8 md:p-10 hover:border-[#5D00D6]/40 transition-all duration-500 group relative overflow-hidden">
+                   <div key={model} className="bg-white/[0.03] border border-white/10 rounded-[32px] p-8 md:p-10 hover:border-[#5D00D6]/40 transition-all duration-500 relative overflow-hidden">
                       <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500 mb-10">
                          <ModelIcon size={24} />
                       </div>
@@ -449,9 +449,9 @@ export default function CommunicationToolsPage() {
                         {activeTab.id === 'mobile-dect' && 'Ruggedized mobile handset for teams that require constant workplace mobility.'}
                       </p>
                       <div className="flex items-center gap-2 text-[#5D00D6] text-[14px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
-                         Details <ArrowRight size={14} />
+                         Details 
                       </div>
-                      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#5D00D6]/20 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+                      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#5D00D6]/20 to-transparent scale-x-0 group-hover:scale-x-100 duration-700" />
                    </div>
                  );
                })}
@@ -490,7 +490,7 @@ export default function CommunicationToolsPage() {
                   <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.12em] text-[#5D00D6] bg-[#5D00D6]/5 inline-flex px-3 py-1 rounded-full">{item.step}</p>
                   <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
                   <p className="text-[14px] leading-relaxed text-gray-500">{item.detail}</p>
-                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />
                 </article>
               </FadeUp>
             ))}
@@ -551,7 +551,7 @@ export default function CommunicationToolsPage() {
                 <p className="text-[17px] text-white/60 mb-10 leading-relaxed font-medium">
                   For new sites, communications are mandatory from the first hour. We guarantee fully-operational, high-fidelity voice and chat on your first day of operation.
                 </p>
-                <div className="bg-white/5 border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl">
+                <div className="bg-white/5 border border-white/10 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/40 transition-all shadow-2xl">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/10 rounded-bl-full" />
                   <div className="space-y-6 relative z-10">
                     <div className="flex items-center gap-4">
@@ -576,20 +576,20 @@ export default function CommunicationToolsPage() {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-[#5D00D6] px-7 text-[14px] font-bold text-white transition hover:bg-[#7116FF]"
+                href="#consultation-section"
+                className="inline-flex items-center justify-center rounded-full bg-[#5D00D6] text-white transition hover:bg-[#7116FF] h-14 px-8 text-[15px] font-bold"
               >
                 Request Proposal
               </Link>
               <Link
-                href="/resources"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
+                href="/insights"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 text-white transition hover:border-white h-14 px-8 text-[15px] font-bold"
               >
-                Download Guide
+                View Insights
               </Link>
               <a
                 href="tel:1800000299"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 px-7 text-[14px] font-bold text-white transition hover:border-white"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 text-white transition hover:border-white h-14 px-8 text-[15px] font-bold"
               >
                 Call 1800 000 299
               </a>

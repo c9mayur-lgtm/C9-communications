@@ -3,28 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Users as UsersIcon, 
-  Clock, 
-  CheckCircle2, 
-  ArrowRight, 
-  Monitor, 
-  LayoutGrid,
-  ShieldAlert,
-  Database,
-  LifeBuoy,
-  FileCheck,
-  Laptop,
-  Check,
-  TrendingUp,
-  Zap,
-  PhoneCall,
-  ShieldCheck,
-  Smartphone,
-  Globe as GlobeIcon
-} from 'lucide-react';
+import { Shield, Lock, Users as UsersIcon, Clock, CheckCircle2, Monitor, LayoutGrid, ShieldAlert, Database, LifeBuoy, FileCheck, Laptop, Check, TrendingUp, Zap, PhoneCall, ShieldCheck, Smartphone, Globe as GlobeIcon } from 'lucide-react';
 import { 
   FadeUp, 
   ScaleIn, 
@@ -94,10 +73,10 @@ export default function SecureRemoteWorkContent() {
                   Managing a distributed workforce shouldn&apos;t be a risk. C9 delivers complete endpoint visibility, identity protection, and zero-downtime Australian support to ensure your team stays productive and protected—wherever they work.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Link href="#risk-audit" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Assess Your Risk Exposure <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
+                    Assess Your Risk Exposure 
                   </Link>
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full hover:bg-black/5 transition-all backdrop-blur-sm h-14 px-8 text-[15px] font-bold">
                     Request Enterprise Briefing
                   </Link>
                 </div>
@@ -159,8 +138,8 @@ export default function SecureRemoteWorkContent() {
               { icon: Clock, label: 'Support Latency', sub: 'Remote staff stalled by legacy helpdesk models.' },
             ].map(({ icon: Icon, label, sub }, i) => (
               <ScaleIn key={label} delay={i*0.07}>
-                <div className="text-center p-8 rounded-3xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group h-full" style={{ borderColor: BD }}>
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3" style={{ background: `${P}12`, color: P }}>
+                <div className="text-center p-8 rounded-3xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-full" style={{ borderColor: BD }}>
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-6 duration-300 group-hover:scale-110 group-hover:-rotate-3" style={{ background: `${P}12`, color: P }}>
                     <Icon size={24} strokeWidth={2} />
                   </div>
                   <div className="c9-card-title !text-[16px] mb-2">{label}</div>
@@ -189,7 +168,7 @@ export default function SecureRemoteWorkContent() {
             {/* Row 1 — Cell 1: Secure Endpoint (2 cols wide) */}
             <ScaleIn className="lg:col-span-2" delay={0}>
               <motion.div
-                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-white"
+                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-white"
               >
                 <div className="px-8 pt-10 pb-6 text-center lg:text-left lg:px-12">
                   <h3 className="c9-card-title mb-3">Secure Endpoint Fleet <span className="text-[#5D00D6]">— Total Visibility.</span></h3>
@@ -200,7 +179,7 @@ export default function SecureRemoteWorkContent() {
                 <div className="px-6 md:px-12 pb-10 mt-auto flex justify-center overflow-hidden">
                   <img 
                     src="/secure_remote_work_case_study_1777376875878.png" 
-                    className="w-full max-w-[800px] aspect-video object-cover rounded-2xl shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]" 
+                    className="w-full max-w-[800px] aspect-video object-cover rounded-2xl shadow-2xl duration-700 group-hover:scale-[1.03]" 
                     alt="Secure Fleet Management"
                   />
                 </div>
@@ -210,7 +189,7 @@ export default function SecureRemoteWorkContent() {
             {/* Row 1 — Cell 2: Identity (1 col) */}
             <ScaleIn delay={0.08}>
               <motion.div
-                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-white"
+                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-white"
               >
                 <div className="px-7 pt-10 pb-10 text-center flex-grow flex flex-col">
                   <div className="w-20 h-20 rounded-3xl bg-purple-500/10 flex items-center justify-center mx-auto mb-8 text-purple-600">
@@ -234,7 +213,7 @@ export default function SecureRemoteWorkContent() {
             {/* Row 2 — Cell 3: Support (1 col) */}
             <ScaleIn delay={0.14}>
               <motion.div
-                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-white"
+                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-white"
               >
                 <div className="px-7 pt-10 pb-10 text-center flex-grow flex flex-col">
                   <div className="w-20 h-20 rounded-3xl bg-[#5D00D6]/10 flex items-center justify-center mx-auto mb-8 text-[#5D00D6]">
@@ -258,7 +237,7 @@ export default function SecureRemoteWorkContent() {
             {/* Row 2 — Cell 4: Compliance (2 cols wide) */}
             <ScaleIn className="lg:col-span-2" delay={0.2}>
               <motion.div
-                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 group hover:shadow-2xl hover:-translate-y-1 bg-[#0c1024] text-white"
+                className="rounded-[32px] border border-black/10 overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-[#0c1024] text-white"
               >
                 <div className="grid md:grid-cols-2 h-full">
                   <div className="px-10 pt-12 pb-12 flex flex-col justify-center">
@@ -345,7 +324,7 @@ export default function SecureRemoteWorkContent() {
               <p className="text-[18px] text-gray-600 mb-10 leading-relaxed font-medium">
                 For remote hiring and distributed expansion, delay is technical debt. We guarantee a fully-operational, secured device for every new hire on their first day.
               </p>
-              <div className="bg-[#0B0B0F] border border-white/5 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all shadow-2xl">
+              <div className="bg-[#0B0B0F] border border-white/5 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/20 transition-all shadow-2xl">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/5 rounded-bl-full group-hover:bg-[#5D00D6]/10 transition-all" />
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4">
@@ -394,7 +373,7 @@ export default function SecureRemoteWorkContent() {
                 <p className="text-[14px] text-slate-400 leading-relaxed font-medium">{p.desc}</p>
                 {i < PROCESS.length - 1 && (
                   <div className="absolute top-1/2 -right-4 hidden lg:block text-white/10">
-                    <ArrowRight size={24} />
+                    
                   </div>
                 )}
               </FadeUp>
@@ -434,8 +413,8 @@ export default function SecureRemoteWorkContent() {
               { icon: TrendingUp, title: 'Transparent Scaling', body: 'Add remote users with confidence, backed by clear per-user pricing.' },
             ].map(({ icon: Icon, title, body }, i) => (
               <ScaleIn key={title} delay={i * 0.07}>
-                <div className="rounded-[32px] p-8 border border-black/10 transition-all duration-500 h-full group bg-[#F9FAFB] hover:shadow-2xl hover:-translate-y-1">
-                  <div className="w-12 h-12 rounded-[16px] flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-[1.15] group-hover:-rotate-3 bg-white shadow-sm border border-black/5" style={{ color: P }}>
+                <div className="rounded-[32px] p-8 border border-black/10 transition-all duration-500 h-full bg-[#F9FAFB] hover:shadow-2xl hover:-translate-y-1">
+                  <div className="w-12 h-12 rounded-[16px] flex items-center justify-center mb-6 duration-500 group-hover:scale-[1.15] group-hover:-rotate-3 bg-white shadow-sm border border-black/5" style={{ color: P }}>
                     <Icon size={22} strokeWidth={2.5} />
                   </div>
                   <h3 className="c9-card-title mb-2.5">{title}</h3>
@@ -474,8 +453,8 @@ export default function SecureRemoteWorkContent() {
                       </div>
                     ))}
                   </div>
-                  <Link href="/contact" className="mt-auto flex items-center justify-center gap-2 w-full py-4 rounded-2xl font-bold text-[15px] transition-all duration-300" style={plan.highlight ? { background: 'rgba(255,255,255,0.18)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)' } : { background: `${P}0D`, color: P, border: `1px solid ${BD}` }}>
-                    Select Plan <ArrowRight size={15} />
+                  <Link href="#consultation-section" className="mt-auto flex items-center justify-center gap-2 w-full py-4 rounded-2xl font-bold text-[15px] transition-all duration-300" style={plan.highlight ? { background: 'rgba(255,255,255,0.18)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)' } : { background: `${P}0D`, color: P, border: `1px solid ${BD}` }}>
+                    Select Plan 
                   </Link>
                 </motion.div>
               </FadeUp>
@@ -510,7 +489,7 @@ export default function SecureRemoteWorkContent() {
       />
 
       {/* 10. FINAL CTA (Standardized Form) */}
-      <section id="risk-audit">
+      <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="Secure Remote Audit"

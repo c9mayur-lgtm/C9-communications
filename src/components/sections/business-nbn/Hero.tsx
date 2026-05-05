@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, Star, Wifi, Zap, Shield, Activity, Globe, ArrowRight } from 'lucide-react';
+import { Award, Star, Wifi, Zap, Shield, Activity, Globe } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const speedTiers = [
@@ -168,9 +168,9 @@ export default function Hero() {
                   const el = document.getElementById('consultation-section');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-[14px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 group transition-colors cursor-pointer"
+                className="text-[14px] font-bold text-[#1A1A2E] hover:text-[#5D00D6] flex items-center gap-2 transition-colors cursor-pointer"
               >
-                Speak to an Expert <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                Speak to an Expert 
               </button>
             </div>
           </div>

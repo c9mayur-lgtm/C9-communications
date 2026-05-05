@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle, XCircle } from 'lucide-react';
 
 export default function C9Difference() {
   const compared = [
@@ -39,8 +39,8 @@ export default function C9Difference() {
                 "Full environment documentation maintained and updated",
                 "Proactive communication — we call you first"
               ].map((text, i) => (
-                <div key={i} className="flex items-start gap-4 group">
-                  <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                <div key={i} className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110">
                       <CheckCircle size={14} className="text-[#5D00D6]" strokeWidth={2.5} />
                   </div>
                   <span className="text-[14px] md:text-[16px] text-[#0c1024] font-bold leading-snug" >{text}</span>
@@ -54,7 +54,7 @@ export default function C9Difference() {
             {compared.map((row, i) => (
               <div 
                 key={i} 
-                className="bg-white rounded-[24px] overflow-hidden shadow-lg shadow-purple-100/30 border border-purple-50/50 group flex flex-col md:flex-row shadow-sm hover:shadow-xl hover:translate-x-1 transition-all duration-300"
+                className="bg-white rounded-[24px] overflow-hidden shadow-lg shadow-purple-100/30 border border-purple-50/50 flex flex-col md:flex-row shadow-sm hover:shadow-xl hover:translate-x-1 transition-all duration-300"
               >
                 {/* Aspect Header - Label */}
                 <div className="md:w-[35%] p-5 md:p-8 flex items-center bg-slate-50/30 border-b md:border-b-0 md:border-r border-purple-50">

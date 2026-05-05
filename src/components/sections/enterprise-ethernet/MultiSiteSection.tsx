@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Network, Globe, Plus, Link as LinkIcon } from 'lucide-react';
+import { Network, Globe, Plus, Link as LinkIcon } from 'lucide-react';
 import Link from 'next/link';
 
 const RelatedService = ({ title, body, link, href }: any) => (
-  <Link href={href} className="group bg-white rounded-3xl p-8 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col gap-4 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 no-underline">
+  <Link href={href} className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col gap-4 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 no-underline">
     <div className="flex justify-between items-center mb-2">
        <h4 className="text-[20px] font-bold text-[#1A1A2E] leading-tight group-hover:text-[#5D00D6] transition-colors">{title}</h4>
        <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white flex items-center justify-center transition-all duration-500 group-hover:rotate-[45deg]">
@@ -15,7 +15,7 @@ const RelatedService = ({ title, body, link, href }: any) => (
     </div>
     <p className="text-[14px] md:text-[14px] text-slate-500 font-normal leading-relaxed">{body}</p>
     <div className="flex items-center gap-2 text-[#5D00D6] text-[14px] font-black uppercase tracking-widest mt-auto">
-       {link} <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+       {link} 
     </div>
   </Link>
 );

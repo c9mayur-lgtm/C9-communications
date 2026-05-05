@@ -4,17 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, 
-  ChevronRight, 
-  ChevronDown, 
-  Menu, 
-  X, 
-  PhoneCall,
-  Zap,
-  Building2,
-  Shield
-} from 'lucide-react';
+import { ChevronRight, ChevronDown, Menu, X, PhoneCall, Zap, Building2, Shield } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useAudience } from "@/components/context/AudienceContext";
 import { getMegaMap, TABS } from './NavbarData';
@@ -59,7 +49,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                             <Link 
                               key={ii} 
                               href={item.path || '#'} 
-                              className="group flex items-center gap-3 text-slate-500 hover:text-[#5D00D6] transition-all"
+                              className="flex items-center gap-3 text-slate-500 hover:text-[#5D00D6] transition-all"
                             >
                               <span className="text-[14px] font-medium transition-colors" style={{ color: item.color || 'inherit' }}>{item.label}</span>
                             </Link>
@@ -76,10 +66,10 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                   )}
 
                   {col.promoCard && (
-                    <div className="mt-6 p-6 bg-[#F8F9FB] rounded-[32px] border border-gray-100 relative overflow-hidden group">
+                    <div className="mt-6 p-6 bg-[#F8F9FB] rounded-[32px] border border-gray-100 relative overflow-hidden">
                       <div className="relative z-10">
                         <p className="text-[12px] font-medium text-slate-800 leading-tight mb-4 pr-12">{col.promoCard.title}</p>
-                        <Link href={col.promoCard.path || '#'} className="inline-flex items-center justify-center px-6 py-2.5 bg-[#5D00D6] text-white text-[11px] font-bold rounded-xl hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/10">
+                        <Link href={col.promoCard.path || '#'} className="inline-flex items-center justify-center py-2.5 bg-[#5D00D6] text-white rounded-xl hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/10 h-14 px-8 text-[15px] font-bold">
                           {col.promoCard.button}
                         </Link>
                       </div>
@@ -98,9 +88,9 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                       <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] opacity-60 mb-6">Hardware</h4>
                       <div className="grid grid-cols-2 gap-4">
                         {data.hardware.map((h: any, i: number) => (
-                          <Link key={i} href={h.path || '#'} className="group bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center justify-center text-center hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500">
+                          <Link key={i} href={h.path || '#'} className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col items-center justify-center text-center hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500">
                             <div className="aspect-[1.5/1] w-full mb-2 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-0">
-                              <img src={h.img} alt={h.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                              <img src={h.img} alt={h.title} className="w-full h-full object-contain group-hover:scale-105 duration-500" />
                             </div>
                             <span className="text-[12px] font-semibold text-slate-700">{h.title}</span>
                           </Link>
@@ -117,7 +107,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                           <Link 
                             key={i} 
                             href={c.path || '#'}
-                            className="group relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden aspect-square"
+                            className="relative p-6 bg-white border border-gray-100 rounded-[28px] flex flex-col items-center justify-center text-center hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all duration-500 cursor-pointer overflow-hidden aspect-square"
                           >
                             <div className="mb-4 p-4 rounded-2xl bg-purple-50 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
                               {c.icon}
@@ -144,10 +134,10 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                     <div className="space-y-6">
                        {data.sidebar.slider.map((slide: any, i: number) => (
                          <div key={i} className="space-y-6">
-                           <div className="aspect-[1.8/1] w-full rounded-2xl overflow-hidden relative group cursor-pointer shadow-xl shadow-purple-900/5">
+                           <div className="aspect-[1.8/1] w-full rounded-2xl overflow-hidden relative cursor-pointer shadow-xl shadow-purple-900/5">
                               <img 
                                 src={slide.img} 
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                className="absolute inset-0 w-full h-full object-cover duration-1000 group-hover:scale-105"
                                 alt={slide.title}
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/90 via-transparent to-transparent opacity-80" />
@@ -168,9 +158,9 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                       {data.sidebar?.items && data.sidebar.items[0]?.logo ? (
                         <div className="grid grid-cols-2 gap-x-6 gap-y-8 mt-2">
                           {data.sidebar.items.map((item: any, i: number) => (
-                            <div key={i} className="flex flex-col items-center gap-2 group cursor-default">
+                            <div key={i} className="flex flex-col items-center gap-2 cursor-default">
                               <div className="h-10 w-full flex items-center justify-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-                                <img src={item.logo} alt={item.title} className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                                <img src={item.logo} alt={item.title} className="max-h-full max-w-full object-contain group-hover:scale-110 duration-500" />
                               </div>
                               <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-slate-600 transition-colors">{item.title}</span>
                             </div>
@@ -181,10 +171,10 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                           <Link 
                             key={i} 
                             href={item.path || '#'} 
-                            className="group flex flex-col gap-1 transition-all"
+                            className="flex flex-col gap-1 transition-all"
                           >
                             <div className="flex items-center gap-3">
-                              {item.icon && <div className="text-[#5D00D6] group-hover:scale-110 transition-transform shrink-0">{item.icon}</div>}
+                              {item.icon && <div className="text-[#5D00D6] group-hover:scale-110 shrink-0">{item.icon}</div>}
                               <span className="text-[14px] font-semibold text-slate-800 group-hover:text-[#5D00D6] transition-colors leading-tight">
                                 {item.label || item.title}
                               </span>
@@ -205,13 +195,13 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
                 {!data.sidebar?.hideCTA && !data.sidebar?.variant && (
                   <div className="mt-8 pt-8 border-t border-gray-200/60">
-                    <Link href="/contact" className="group flex items-center justify-between p-5 bg-[#5D00D6] rounded-[24px] shadow-2xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
+                    <Link href="/contact" className="flex items-center justify-between p-5 bg-[#5D00D6] rounded-[24px] shadow-2xl shadow-purple-900/20 hover:bg-[#4d00b3] transition-all hover:-translate-y-1">
                       <div className="flex flex-col">
                         <span className="text-white/60 text-[10px] uppercase font-bold mb-1 tracking-wider">Expert Led</span>
                         <span className="text-white font-bold text-[15px]">Free Consultation</span>
                       </div>
                       <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center transition-all group-hover:bg-white/20">
-                        <ArrowRight size={20} className="text-white" />
+                        
                       </div>
                     </Link>
                   </div>
@@ -223,7 +213,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
           {/* FULL WIDTH CTA BANNER (e.g. IT Solutions) */}
           {data.ctaBanner && (
             <div className="px-7 pb-7">
-              <div className="bg-[#5D00D6] rounded-2xl p-6 lg:p-7 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 group">
+              <div className="bg-[#5D00D6] rounded-2xl p-6 lg:p-7 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="relative z-10 max-w-2xl">
                   <h3 className="text-xl lg:text-2xl font-bold text-white mb-1.5">{data.ctaBanner.title}</h3>
                   <p className="text-white/70 text-[13px] lg:text-[14px] font-medium leading-relaxed">{data.ctaBanner.body}</p>
@@ -257,7 +247,7 @@ const TopUtilityBar = () => {
         <div className="flex items-center gap-6 divide-x divide-gray-200">
           <a
             href={`tel:${AUDIENCE_INFO[audience].phone}`}
-            className="flex items-center gap-2.5 group pr-6"
+            className="flex items-center gap-2.5 pr-6"
           >
             <span className="text-[12px] font-semibold uppercase text-slate-500 group-hover:text-[#5D00D6] transition-colors tracking-wide">Priority Support</span>
             <span className="text-[13px] font-black text-slate-800 group-hover:text-[#5D00D6] transition-colors">{AUDIENCE_INFO[audience].phone}</span>
@@ -359,7 +349,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                         onClick={() => toggleAccordion(tab.menuKey)}
                         className="p-2 -mr-2"
                       >
-                        <ChevronDown size={20} className={`text-slate-400 transition-transform duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
+                        <ChevronDown size={20} className={`text-slate-400 duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
                       </button>
                   </div>
 
@@ -396,7 +386,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                                           key={ii} 
                                           href={item.path || '#'} 
                                           onClick={onClose}
-                                          className="flex items-center gap-3 group"
+                                          className="flex items-center gap-3"
                                         >
                                           <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                       <span className="text-[16px] font-medium text-slate-600 group-hover:text-[#5D00D6] transition-colors">{item.label}</span>
@@ -423,8 +413,8 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                             {(menuData?.challenges || menuData?.modernization) && (
                               <div className="grid grid-cols-2 gap-3 pb-4">
                                 {(menuData.challenges || menuData.modernization).map((c: any, i: number) => (
-                                  <Link key={i} href={c.path || '#'} onClick={onClose} className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center aspect-square hover:border-[#5D00D6]/20 hover:shadow-lg transition-all group">
-                                    <div className="mb-2 text-[#5D00D6] group-hover:scale-110 transition-transform">{c.icon}</div>
+                                  <Link key={i} href={c.path || '#'} onClick={onClose} className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center aspect-square hover:border-[#5D00D6]/20 hover:shadow-lg transition-all">
+                                    <div className="mb-2 text-[#5D00D6] group-hover:scale-110">{c.icon}</div>
                                     <span className="text-[11px] font-bold text-slate-700">{c.title}</span>
                                   </Link>
                                 ))}
@@ -515,7 +505,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 <Link 
                   href="/contact"
                   onClick={onClose}
-                  className="flex items-center justify-between w-full py-4 text-left group"
+                  className="flex items-center justify-between w-full py-4 text-left"
                 >
                   <span className="text-[18px] font-semibold text-slate-800 transition-colors">
                     Contact Us
@@ -532,7 +522,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 <PhoneCall size={18} className="text-[#5D00D6]" /> {AUDIENCE_INFO[audience].phone}
               </a>
               <Link href="/contact" onClick={onClose} className="w-full">
-                <Button size="lg" className="w-full py-7 text-[16px] font-bold rounded-2xl shadow-xl shadow-purple-900/20 bg-[#5D00D6] border-none text-white transition-transform active:scale-95">
+                <Button size="lg" className="w-full py-7 text-[16px] font-bold rounded-2xl shadow-xl shadow-purple-900/20 bg-[#5D00D6] border-none text-white active:scale-95">
                   Get Free Consultation
                 </Button>
               </Link>
@@ -592,7 +582,7 @@ export const Navbar = () => {
       >
         <div className="container mx-auto px-6 md:px-8 flex items-center justify-between" style={{ maxWidth: '1240px' }}>
           <div className="flex items-center gap-6 md:gap-10 shrink-0">
-            <Link href="/" className="transition-transform active:scale-95">
+            <Link href="/" className="active:scale-95">
                 <img 
                   src="/images/c9_logo_scrolled.svg" 
                   alt="C9 Communications" 
@@ -656,7 +646,7 @@ export const Navbar = () => {
                     className="pr-2 py-1.5 opacity-40 hover:opacity-100"
                     onClick={() => setOpenMenu(isOpen ? null : tab.menuKey)}
                   >
-                    <ChevronDown size={13} className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : ''}`} />
+                    <ChevronDown size={13} className={` duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : ''}`} />
                   </button>
                 </div>
               </div>

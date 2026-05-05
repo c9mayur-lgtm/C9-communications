@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Shield, ArrowRight } from "lucide-react";
+import { Shield } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export default function DefenseBridge() {
@@ -24,8 +24,8 @@ export default function DefenseBridge() {
           </div>
 
           <Link href="https://c9defense.com.au/" className="shrink-0 relative z-10 w-full lg:w-auto" passHref>
-            <Button className="w-full lg:w-auto shadow-2xl hover:gap-6 group bg-white hover:bg-slate-100 text-[#0c1024] font-bold h-14 px-8 rounded-full transition-all duration-300" >
-              Learn About C9 Defense <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2 text-[#5D00D6]" />
+            <Button className="w-full lg:w-auto shadow-2xl hover:gap-6 bg-white hover:bg-slate-100 text-[#0c1024] font-bold h-14 px-8 rounded-full transition-all duration-300" >
+              Learn About C9 Defense 
             </Button>
           </Link>
 

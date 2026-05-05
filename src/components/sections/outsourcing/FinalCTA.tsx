@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+;
 import { useInquiry } from '@/components/context/InquiryContext';
 
 export default function FinalCTA() {
@@ -31,19 +31,19 @@ export default function FinalCTA() {
             className="bg-[#5D00D6] hover:bg-[#4B00AD] text-white px-10 h-[56px] rounded-lg font-bold transition-all text-[16px] font-sans border-none"
             
           >
-            Get an IT Outsourcing Proposal <ArrowRight className="ml-2 w-5 h-5" />
+            Get an IT Outsourcing Proposal 
           </Button>
 
           <a 
             href="tel:1800000299"
-            className="inline-flex items-center justify-center border-2 border-[#E5E7EB] text-[#0c1024] hover:bg-slate-50 px-10 h-[56px] rounded-lg font-bold transition-all text-[16px] font-sans no-underline"
+            className="inline-flex items-center justify-center border-2 border-[#E5E7EB] text-[#0c1024] hover:bg-slate-50 h-[56px] rounded-lg transition-all font-sans no-underline h-14 px-8 text-[15px] font-bold"
             
           >
             Call 1800 000 299
           </a>
         </div>
 
-        <div className="text-[14px] text-slate-600 text-center mt-8  opacity-80 uppercase tracking-widest font-bold font-sans" >
+        <div className="text-[14px] text-slate-600 text-center mt-8 opacity-80 uppercase tracking-widest font-bold font-sans" >
           Australian team · Responds within 1 business day · No lock-in consultations
         </div>
       </div>

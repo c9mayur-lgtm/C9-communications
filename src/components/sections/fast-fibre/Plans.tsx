@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, ShieldCheck, Zap, ArrowRight, Info, Package, Clock } from 'lucide-react';
+import { Check, Star, ShieldCheck, Zap, Info, Package, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { useInquiry } from '@/components/context/InquiryContext';
 
@@ -187,7 +187,7 @@ export default function Plans({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3 }}
-                  className={`${isDark ? 'bg-[#1A1A2E] shadow-[0_30px_60px_rgba(93,0,214,0.15)] ring-1 ring-white/10' : 'bg-white shadow-[0_20px_50px_rgba(0,0,0,0.02)] border border-gray-100'} rounded-[40px] p-8 md:p-12 flex flex-col relative overflow-hidden group`}
+                  className={`${isDark ? 'bg-[#1A1A2E] shadow-[0_30px_60px_rgba(93,0,214,0.15)] ring-1 ring-white/10' : 'bg-white shadow-[0_20px_50px_rgba(0,0,0,0.02)] border border-gray-100'} rounded-[40px] p-8 md:p-12 flex flex-col relative overflow-hidden `}
                 >
                   {isDark && <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6]/20 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none" />}
                   
@@ -251,7 +251,7 @@ export default function Plans({
                     onClick={() => handleSelectPlan(plan)}
                     className={`w-full h-16 rounded-full font-bold flex items-center justify-center gap-2 transition-all relative z-10 group/btn ${isDark ? 'bg-[#5D00D6] hover:bg-[#4c00b0] text-white shadow-xl shadow-[#5D00D6]/40' : 'bg-[#5D00D6] hover:bg-[#4c00b0] text-white shadow-xl shadow-[#5D00D6]/20'}`}
                   >
-                     Select This Plan <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                     Select This Plan 
                   </button>
 
                 </motion.div>

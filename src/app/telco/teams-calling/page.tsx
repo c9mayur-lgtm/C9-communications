@@ -4,18 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { 
-  ShieldCheck, 
-  ArrowRight, 
-  AlertTriangle, 
-  RefreshCcw, 
-  Users, 
-  Lock,
-  CheckCircle2,
-  LayoutDashboard,
-  HardDrive,
-  PhoneCall
-} from "lucide-react";
+import { ShieldCheck, AlertTriangle, RefreshCcw, Users, Lock, CheckCircle2, LayoutDashboard, HardDrive, PhoneCall } from 'lucide-react';
 
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
@@ -86,12 +75,12 @@ export default function TeamsCallingPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
               <Link href="#consultation-section" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-base font-bold rounded-full shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-[1.02]">
-                  Plan Your Teams Calling Migration <ArrowRight className="ml-2 w-5 h-5" />
+                <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-[1.02]">
+                  Plan Your Teams Calling Migration 
                 </Button>
               </Link>
               <Link href="#consultation-section" className="w-full sm:w-auto">
-                <Button variant="outline" size="lg" className="w-full border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 h-14 text-base font-bold rounded-full transition-all">
+                <Button variant="outline" size="lg" className="w-full border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 h-14 text-[14px] font-bold rounded-full transition-all">
                   Talk to a Specialist
                 </Button>
               </Link>
@@ -157,8 +146,8 @@ export default function TeamsCallingPage() {
           ].map((item, i) => {
             const Icon = item.icon;
             return (
-            <div key={i} className="bg-slate-50 border border-slate-100 p-8 rounded-3xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all group text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-5 transform group-hover:scale-110 transition-transform">
+            <div key={i} className="bg-slate-50 border border-slate-100 p-8 rounded-3xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-5 transform group-hover:scale-110">
                 <Icon size={24} strokeWidth={1.5} />
               </div>
               <h3 className="c9-card-title mb-2">{item.title}</h3>
@@ -205,7 +194,7 @@ export default function TeamsCallingPage() {
                 { title: "Supporting Workforce Flexibility", desc: "Enable teams to make and receive business calls from any device — office, mobile, or remote — with zero friction." },
                 { title: "Improving Operational Control", desc: "Gain centralized visibility over call routing, user provisioning, and performance reporting across the entire organization." }
               ].map((item, i) => (
-                <div key={i} className="flex gap-6 items-start group">
+                <div key={i} className="flex gap-6 items-start">
                   <div className="w-8 h-8 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center shrink-0 mt-1 group-hover:border-[#5D00D6] group-hover:bg-[#5D00D6] transition-all">
                     <CheckCircle2 className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
                   </div>
@@ -278,7 +267,7 @@ export default function TeamsCallingPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`p-8 md:p-10 lg:p-12 flex flex-col items-start text-left min-h-[380px] relative group ${!item.isLast ? 'border-b lg:border-b-0 lg:border-r border-gray-200' : ''}`}
+                className={`p-8 md:p-10 lg:p-12 flex flex-col items-start text-left min-h-[380px] relative  ${!item.isLast ? 'border-b lg:border-b-0 lg:border-r border-gray-200' : ''}`}
               >
                 {/* Title */}
                 <h3 className="c9-card-title mb-4 group-hover:text-[#5D00D6] transition-colors duration-300">
@@ -298,7 +287,7 @@ export default function TeamsCallingPage() {
                 </div>
 
                 {/* Bottom hover bar */}
-                <div className="absolute inset-x-0 bottom-0 h-1 bg-[#5D00D6] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute inset-x-0 bottom-0 h-1 bg-[#5D00D6] scale-x-0 group-hover:scale-x-100 duration-500 origin-left" />
               </div>
             ))}
           </div>
@@ -323,7 +312,7 @@ export default function TeamsCallingPage() {
                   { step: "03", title: "Rollout", desc: "Managed cut-over with zero-downtime engineering and precise number migration." },
                   { step: "04", title: "Adoption", desc: "Structured user onboarding, staff training, and accountable post-launch support." }
               ].map((item, i) => (
-                  <div key={i} className="flex flex-col gap-4 p-8 rounded-[24px] bg-white border border-slate-200 hover:border-[#5D00D6] transition-all duration-500 hover:shadow-xl group">
+                  <div key={i} className="flex flex-col gap-4 p-8 rounded-[24px] bg-white border border-slate-200 hover:border-[#5D00D6] transition-all duration-500 hover:shadow-xl">
                       <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-[#0c1024] font-bold text-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                           {item.step}
                       </div>
@@ -361,7 +350,7 @@ export default function TeamsCallingPage() {
                 ].map((item, i) => {
                     const Icon = item.icon;
                     return (
-                    <div key={i} className="flex flex-col gap-3 group">
+                    <div key={i} className="flex flex-col gap-3">
                         <div className="flex items-center gap-3">
                             <div className="p-2.5 rounded-xl bg-white/5 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300 border border-white/10 group-hover:border-[#5D00D6]">
                                 <Icon className="w-4 h-4 shrink-0" />
@@ -414,7 +403,7 @@ export default function TeamsCallingPage() {
             "Fewer operational disruptions through proactive monitoring",
             "Stronger executive confidence with a single accountable partner"
           ].map((outcome, i) => (
-            <div key={i} className="flex gap-4 items-start bg-slate-50 p-6 rounded-[20px] border border-slate-100 hover:border-[#5D00D6]/30 hover:bg-white hover:shadow-md transition-all duration-300 group">
+            <div key={i} className="flex gap-4 items-start bg-slate-50 p-6 rounded-[20px] border border-slate-100 hover:border-[#5D00D6]/30 hover:bg-white hover:shadow-md transition-all duration-300">
               <div className="w-6 h-6 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center shrink-0 group-hover:bg-[#5D00D6] group-hover:border-[#5D00D6] transition-colors mt-0.5">
                 <CheckCircle2 className="w-3 h-3 text-[#5D00D6] group-hover:text-white transition-colors" />
               </div>
@@ -438,8 +427,8 @@ export default function TeamsCallingPage() {
                   Let's review your environment and map out a safe transition path.
                 </p>
                 <Link href="#consultation-section">
-                    <Button size="lg" className="bg-white text-[#5D00D6] hover:bg-[#0c1024] hover:text-white px-10 h-14 text-base font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
-                        Book a Teams Calling Migration Review <ArrowRight className="ml-2 w-5 h-5" />
+                    <Button size="lg" className="bg-white text-[#5D00D6] hover:bg-[#0c1024] hover:text-white px-10 h-14 text-[14px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
+                        Book a Teams Calling Migration Review 
                     </Button>
                 </Link>
             </div>

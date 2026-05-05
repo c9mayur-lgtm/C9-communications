@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Eye, RefreshCw, ArrowRight, Shield } from 'lucide-react';
+import { ShieldCheck, Eye, RefreshCw, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -36,7 +36,7 @@ export const DefenseSection = () => {
                 { icon: Eye, title: "Continuous Defence Operations", desc: "24/7 monitoring, threat detection, and response." },
                 { icon: RefreshCw, title: "Tested Recovery Assurance", desc: "Verified backup and tested incident recovery workflows." }
               ].map((feature, i) => (
-                <div key={i} className="flex items-start gap-6 group">
+                <div key={i} className="flex items-start gap-6">
                    <div className="p-4 bg-brand-purple/20 rounded-2xl border border-brand-purple/20 group-hover:bg-brand-purple/30 transition-colors duration-300">
                      <feature.icon className="text-defense-accent w-6 h-6" />
                    </div>
@@ -51,7 +51,7 @@ export const DefenseSection = () => {
           
           {/* Right: Scorecard */}
           <div className="relative">
-            <Card className="p-10 bg-[#1A1A2E] border border-brand-purple/20 shadow-2xl rounded-[40px] flex flex-col gap-8 relative overflow-hidden group">
+            <Card className="p-10 bg-[#1A1A2E] border border-brand-purple/20 shadow-2xl rounded-[40px] flex flex-col gap-8 relative overflow-hidden">
                <div className="absolute top-0 right-0 p-4 bg-brand-purple/10 rounded-bl-[40px] opacity-20 transform scale-150 rotate-12">
                  <Shield size={120} strokeWidth={1} className="text-defense-accent" />
                </div>
@@ -85,8 +85,8 @@ export const DefenseSection = () => {
                  </div>
                </div>
                
-               <Button size="lg" className="bg-brand-purple hover:bg-defense-accent text-white px-10 rounded-full h-14 text-base font-bold font-dm-sans mt-4 relative z-10">
-                 Assess My Organisation <ArrowRight className="ml-2 w-5 h-5" />
+               <Button size="lg" className="bg-brand-purple hover:bg-defense-accent text-white px-10 rounded-full h-14 text-[14px] font-bold font-dm-sans mt-4 relative z-10">
+                 Assess My Organisation 
                </Button>
             </Card>
           </div>

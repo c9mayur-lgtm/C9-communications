@@ -1,21 +1,7 @@
 'use client';
 
 import React from 'react';
-import { 
-  ShieldCheck, 
-  Zap, 
-  Headphones, 
-  LineChart, 
-  CheckCircle2, 
-  ArrowRight, 
-  ShieldAlert,
-  BarChart3,
-  Users,
-  Lock,
-  Activity,
-  Server,
-  Layers
-} from 'lucide-react';
+import { ShieldCheck, Zap, Headphones, LineChart, CheckCircle2, ShieldAlert, BarChart3, Users, Lock, Activity, Server, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Section } from '@/components/design-system/Section';
@@ -125,8 +111,8 @@ export default function WhyC9Page() {
             }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="p-10 rounded-[32px] bg-white border border-slate-100 hover:border-[#5D00D6]/20 transition-all group h-full shadow-sm">
-                <div className="w-14 h-14 rounded-2xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-8 group-hover:scale-110 transition-transform">
+              <div className="p-10 rounded-[32px] bg-white border border-slate-100 hover:border-[#5D00D6]/20 transition-all h-full shadow-sm">
+                <div className="w-14 h-14 rounded-2xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-8 group-hover:scale-110">
                   <item.icon size={28} />
                 </div>
                 <H3 className="mb-4 text-2xl tracking-tight">{item.title}</H3>

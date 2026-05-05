@@ -65,7 +65,7 @@ export const WpCompliance = () => {
               key={index}
               className={`
                 flex items-center justify-center px-4 py-10 md:py-12
-                transition-all duration-300 group hover:bg-[#f9f9fb] cursor-default
+                transition-all duration-300  hover:bg-[#f9f9fb] cursor-default
                 ${logo.colClass}
                 ${(index === 0 || index === 2 || index === 4) ? 'border-r border-gray-200' : ''} 
                 ${(index === 1 || index === 3) ? 'md:border-r border-gray-200' : ''}

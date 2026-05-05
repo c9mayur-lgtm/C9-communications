@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, ArrowRight, Quote } from 'lucide-react';
+import { Star, Quote } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -18,7 +18,7 @@ export const Testimonials = () => {
         {/* Testimonial Track (CSS Flex with Snap) */}
         <div className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-12 mask-fade-r no-scrollbar">
           {TESTIMONIALS.map((t, i) => (
-            <Card key={i} className="min-w-[320px] md:min-w-[420px] p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-lg snap-center flex flex-col group relative">
+            <Card key={i} className="min-w-[320px] md:min-w-[420px] p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-lg snap-center flex flex-col relative">
               <div className="absolute top-6 right-8 text-[#5D00D6]/10 scale-x-[-1] pointer-events-none">
                  <Quote size={80} fill="currentColor" strokeWidth={0} />
               </div>
@@ -47,8 +47,8 @@ export const Testimonials = () => {
         </div>
         
         <div className="flex justify-center mt-12 pt-8 border-t border-gray-100">
-          <Button variant="link" size="lg" className="text-[#5D00D6] font-bold text-base group">
-             Read Our Case Studies <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <Button variant="link" size="lg" className="text-[#5D00D6] font-bold text-[14px]">
+             Read Our Case Studies 
           </Button>
         </div>
         

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HelpCircle, ChevronDown } from "lucide-react";
+import { HelpCircle, ChevronDown } from 'lucide-react';
 
 export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
@@ -54,7 +54,7 @@ export default function FAQ() {
               <div key={i} className="border-b border-[#5D00D6]/10">
                 <button 
                   onClick={() => setOpenIdx(isOpen ? null : i)}
-                  className="w-full flex items-start justify-between gap-6 py-6 md:py-8 text-left group"
+                  className="w-full flex items-start justify-between gap-6 py-6 md:py-8 text-left"
                 >
                   <span 
                     className={`text-[18px] md:text-[20px] font-bold leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} 
@@ -62,7 +62,7 @@ export default function FAQ() {
                   >
                     {item.question}
                   </span>
-                  <ChevronDown size={22} className={`shrink-0 mt-0.5 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : 'text-gray-400 group-hover:text-[#5D00D6]'}`} />
+                  <ChevronDown size={22} className={`shrink-0 mt-0.5 duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : 'text-gray-400 group-hover:text-[#5D00D6]'}`} />
                 </button>
                 <AnimatePresence initial={false}>
                   {isOpen && (

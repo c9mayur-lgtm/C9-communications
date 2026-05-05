@@ -44,7 +44,7 @@ export default function FAQ() {
     <section className="bg-white py-24 px-6 md:px-8 lg:px-12 overflow-hidden">
       <div className="container mx-auto max-w-[760px]">
         <div className="text-left mb-12 font-sans">
-          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE]  font-sans">
+          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#7B2FBE] font-sans">
             COMMON QUESTIONS
           </span>
           <h2 className="c9-section-heading -[1.1] font-sans">
@@ -55,10 +55,10 @@ export default function FAQ() {
         <Accordion className="mt-10 border-t border-[#E5E7EB]">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="border-b border-[#E5E7EB] py-2">
-              <AccordionTrigger className="text-[16px] font-normal text-[#0c1024] hover:text-[#5D00D6] hover:no-underline transition-colors  text-left font-sans">
+              <AccordionTrigger className="text-[16px] font-normal text-[#0c1024] hover:text-[#5D00D6] hover:no-underline transition-colors text-left font-sans">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-[14px] text-slate-600 leading-[1.7] pb-4  font-sans">
+              <AccordionContent className="text-[14px] text-slate-600 leading-[1.7] pb-4 font-sans">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>

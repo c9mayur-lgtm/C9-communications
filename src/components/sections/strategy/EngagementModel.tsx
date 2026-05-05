@@ -1,10 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import {
-  Search, FileText,
-  Repeat, CheckCircle, ChevronRight
-} from 'lucide-react'
+import { Search, FileText, Repeat, CheckCircle, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const steps = [
@@ -116,7 +113,7 @@ export default function EngagementModel() {
               <button
                 key={i}
                 onClick={() => setCur(i)}
-                className="flex-1 flex flex-col items-center relative z-10 group px-1"
+                className="flex-1 flex flex-col items-center relative z-10 px-1"
               >
                 <div
                   className={cn(

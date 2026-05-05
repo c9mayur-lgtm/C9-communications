@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Download, ArrowRight, CheckCircle, BookOpen, ShieldCheck } from 'lucide-react';
+import { FileText, Download, CheckCircle, BookOpen, ShieldCheck } from 'lucide-react';
 
 
 
@@ -62,10 +62,10 @@ export default function CapabilityPack() {
               <FadeIn delay={0.3}>
                 <a 
                   href="/contact" 
-                  className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer c9-button-label"
+                  className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer c9-button-label h-14 px-8 text-[15px] font-bold"
                 >
                   Download Capability Pack (PDF)
-                  <Download size={20} className="transition-transform group-hover:translate-y-0.5" />
+                  <Download size={20} className="group-hover:translate-y-0.5" />
                 </a>
               </FadeIn>
             </div>
@@ -73,7 +73,7 @@ export default function CapabilityPack() {
             <FadeIn delay={0.2}>
               <div className="relative">
                 {/* Visual Representation of the Pack */}
-                <div className="aspect-[3/4] bg-slate-900 rounded-lg p-10 text-white relative overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700">
+                <div className="aspect-[3/4] bg-slate-900 rounded-lg p-10 text-white relative overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 duration-700">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent" />
                   <FileText size={48} className="text-[#a56eff] mb-8" />
                   <h3 className="text-3xl font-black mb-4 leading-tight text-white">

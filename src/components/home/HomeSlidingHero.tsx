@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, CheckCircle, Store, Building2, Briefcase } from 'lucide-react';
+import { CheckCircle, Store, Building2, Briefcase } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const slides = [
   {
@@ -107,19 +109,27 @@ export const HomeSlidingHero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a
-                    href={slide.href}
-                    className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-14 px-10 c9-button-label hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group"
+                  <Button
+                    size="lg"
+                    className="rounded-full shadow-xl"
+                    asChild
                   >
-                    {slide.cta}
-                    <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-                  </a>
-                  <a
-                    href="/managed-it"
-                    className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-10 c9-button-label hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
+                    <Link href={slide.href} className="flex items-center gap-2">
+                      {slide.cta}
+                      
+                    </Link>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="rounded-full border-2 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6]"
+                    asChild
                   >
-                    Explore Services
-                  </a>
+                    <Link href="/managed-it" className="flex items-center gap-2">
+                      Explore Services
+                      
+                    </Link>
+                  </Button>
                 </div>
 
                 <div className="flex flex-wrap gap-x-6 gap-y-4">

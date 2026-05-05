@@ -16,7 +16,7 @@ export const FloatingCEO = () => {
           layout: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
         }}
         className={`
-          relative overflow-hidden bg-[#0c1024] rounded-xl shadow-2xl border-4 border-white group cursor-pointer
+          relative overflow-hidden bg-[#0c1024] rounded-xl shadow-2xl border-4 border-white  cursor-pointer
           ${isOpen ? 'w-[320px] md:w-[350px] h-[520px] md:h-[580px]' : 'w-28 h-44 md:w-32 md:h-52'}
         `}
         onClick={() => !isOpen && setIsOpen(true)}

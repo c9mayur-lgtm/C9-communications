@@ -10,26 +10,7 @@ import {
   FullStackSection
 } from '../components';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { 
-  Building2, 
-  Cable, 
-  CheckCircle2, 
-  GraduationCap, 
-  Headphones, 
-  LayoutGrid, 
-  Mic, 
-  MonitorUp, 
-  Network, 
-  Settings2, 
-  Wrench, 
-  Users as UsersIcon, 
-  Target, 
-  ShieldAlert,
-  ArrowRight,
-  Monitor,
-  Video,
-  MessagesSquare
-} from 'lucide-react';
+import { Building2, Cable, CheckCircle2, GraduationCap, Headphones, LayoutGrid, Mic, MonitorUp, Network, Settings2, Wrench, Users as UsersIcon, Target, ShieldAlert, Monitor, Video, MessagesSquare } from 'lucide-react';
 
 type Problem = {
   title: string;
@@ -202,10 +183,10 @@ export default function CollaborationPage() {
                   Your meeting space should be an asset, not a support burden. C9 delivers carrier-grade Microsoft Teams Rooms and Zoom Rooms—engineered for one-touch operation, absolute audio clarity, and 100% reliability.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Link href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Book Room Design <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
+                    Book Room Design 
                   </Link>
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full hover:bg-black/5 transition-all backdrop-blur-sm h-14 px-8 text-[15px] font-bold">
                     View Hardware Options
                   </Link>
                 </div>
@@ -270,12 +251,12 @@ export default function CollaborationPage() {
               return (
                 <ScaleIn key={problem.title} delay={idx * 0.1}>
                   <article className={cardClassName}>
-                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+                    <div className="mb-4 inline-flex w-14 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{problem.title}</h3>
                     <p className="text-[14px] leading-relaxed text-gray-500">{problem.description}</p>
-                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />
                   </article>
                 </ScaleIn>
               );
@@ -334,7 +315,7 @@ export default function CollaborationPage() {
                   <p className="mb-3 text-[14px] font-bold uppercase tracking-[0.12em] text-[#556087]">Recommended hardware</p>
                   <p className="mb-4 text-[14px] font-medium text-gray-700">{room.hardware}</p>
                   <p className="text-[14px] leading-relaxed text-gray-500">{room.fit}</p>
-                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />
                 </article>
               </FadeUp>
             ))}
@@ -441,7 +422,7 @@ export default function CollaborationPage() {
       />
 
       {/* 11. FINAL CONSULTATION FORM */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="Collaboration Design"

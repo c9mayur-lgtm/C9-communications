@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, BarChart3, CalendarDays, Rocket, ShieldAlert, Globe, LayoutDashboard } from 'lucide-react';
+import { CheckCircle2, TrendingUp, ShieldCheck, BarChart3, CalendarDays, Rocket, ShieldAlert, Globe, LayoutDashboard } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Hero() {
@@ -60,8 +60,8 @@ export default function Hero() {
                transition={{ duration: 0.6, delay: 0.3 }}
                className="flex flex-row items-center gap-4 w-full sm:w-auto"
             >
-              <Button className="flex-1 sm:flex-none bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-8 h-12 rounded-full font-bold transition-all duration-300 shadow-xl shadow-purple-900/30 group font-sans text-[14px]">
-                Book Session <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <Button className="flex-1 sm:flex-none bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-8 h-12 rounded-full font-bold transition-all duration-300 shadow-xl shadow-purple-900/30 font-sans text-[14px]">
+                Book Session 
               </Button>
               <Button variant="outline" onClick={scrollToEngagement} className="flex-1 sm:flex-none text-[#0c1024] bg-white hover:bg-slate-50 border-[#5D00D6]/20 px-8 h-12 rounded-full font-bold transition-all font-sans text-[14px]">
                 View Model

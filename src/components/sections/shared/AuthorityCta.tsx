@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { PhoneCall, ArrowRight, LucideIcon } from 'lucide-react';
+import { PhoneCall, LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -48,7 +48,7 @@ export const AuthorityCta = ({
       <section className={`py-16 lg:py-24 ${bg || 'bg-[#F4F0FA]'}`}>
         <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
           <FadeIn>
-            <div className="text-center relative overflow-hidden group">
+            <div className="text-center relative overflow-hidden">
               <div className="relative z-10">
                 <span className="c9-eyebrow !text-[#5D00D6] mb-4 block uppercase tracking-[0.2em]">{eyebrow}</span>
                 <h2 className="c9-section-heading mb-6 text-4xl md:text-5xl leading-tight text-[#0c1024]">
@@ -60,15 +60,15 @@ export const AuthorityCta = ({
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Link 
                     href={primaryHref}
-                    className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group/btn whitespace-nowrap c9-button-label"
+                    className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group/btn whitespace-nowrap c9-button-label h-14 px-8 text-[15px] font-bold"
                   >
                     {primaryText}
-                    <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                    
                   </Link>
                   {secondaryText && secondaryHref && (
                     <Link 
                       href={secondaryHref}
-                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-10 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white c9-button-label"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white c9-button-label h-14 px-8 text-[15px] font-bold"
                     >
                       {secondaryText}
                     </Link>
@@ -99,15 +99,15 @@ export const AuthorityCta = ({
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
              <Link 
                href={primaryHref}
-               className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group/btn whitespace-nowrap c9-button-label"
+               className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group/btn whitespace-nowrap c9-button-label h-14 px-8 text-[15px] font-bold"
              >
                 {primaryText}
-                <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                
              </Link>
              {secondaryText && secondaryHref && (
                <Link 
                  href={secondaryHref}
-                 className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap bg-white c9-button-label"
+                 className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap bg-white c9-button-label h-14 px-8 text-[15px] font-bold"
                >
                   {secondaryText}
                </Link>

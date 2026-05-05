@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, PhoneCall } from 'lucide-react';
+import { PhoneCall } from 'lucide-react';
 import { Navbar } from "@/components/layout/Navbar";
 // import VoiceVisual from './VoiceVisual'; // hidden — kept for reference
 import VoiceVisualNew from './VoiceVisualNew';
@@ -52,16 +52,16 @@ export const VoiceHero = () => {
               >
                 <button
                   onClick={() => window.dispatchEvent(new CustomEvent('c9-open-lead-modal', { detail: { intent: 'Get a Pricing Quote' } }))}
-                  className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-10 h-14 text-[16px] font-medium shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+                  className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-10 h-14 text-[14px] font-medium shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
                 >
                   Get your phone system sorted
-                  <ArrowRight size={18} />
+                  
                 </button>
                 <button
                   onClick={() => window.dispatchEvent(new CustomEvent('c9-open-lead-modal', { detail: { intent: 'Book a Full System Demo' } }))}
                   className="text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 hover:gap-3 transition-all"
                 >
-                  See what's included <ArrowRight size={16} />
+                  See what's included 
                 </button>
               </motion.div>
 

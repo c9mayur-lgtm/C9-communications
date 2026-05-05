@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { CheckCircle2, Shield, FileCheck, Target, ArrowRight, Phone, Mail, ChevronRight } from 'lucide-react';
+import { CheckCircle2, Shield, FileCheck, Target, Phone, Mail, ChevronRight } from 'lucide-react';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -112,12 +112,12 @@ export function DefenseHero() {
           <Link
             key={bar.label}
             href={bar.href}
-            className={`flex items-center justify-between px-8 py-5 text-sm font-semibold transition-all duration-200 group ${
+            className={`flex items-center justify-between px-8 py-5 text-sm font-semibold transition-all duration-200  ${
               i === 0 ? 'bg-[#202020] text-white hover:bg-[#303030] hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]' : 'bg-[#101010] text-[#C0C0C0] hover:bg-[#1a1a1a] hover:text-white'
             }`}
           >
             {bar.label}
-            <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform duration-200" />
+            
           </Link>
         ))}
       </div>
@@ -157,7 +157,7 @@ export function CyberChallenge() {
             <motion.div 
               variants={fadeIn}
               key={sub} 
-              className="bg-[#0a0a0a] p-10 hover:bg-[#0f0f0f] transition-colors duration-300 group"
+              className="bg-[#0a0a0a] p-10 hover:bg-[#0f0f0f] transition-colors duration-300"
             >
               <div className="text-5xl font-black text-white mb-2 group-hover:text-[#C0C0C0] transition-colors">{stat}</div>
               <div className="text-[10px] font-bold tracking-[0.2em] text-[#404040] uppercase mb-4">{sub}</div>
@@ -259,7 +259,7 @@ export function EssentialFramework() {
             <motion.div 
               key={i} 
               whileHover={{ y: -5, borderColor: '#404040' }}
-              className="bg-black p-8 hover:bg-[#0a0a0a] hover:border-[#2a2a2a] border border-transparent transition-all duration-200 group"
+              className="bg-black p-8 hover:bg-[#0a0a0a] hover:border-[#2a2a2a] border border-transparent transition-all duration-200"
             >
               {card.img ? (
                 <img src={card.img} alt={card.title} className="w-12 h-12 object-contain grayscale mb-6" />
@@ -278,7 +278,7 @@ export function EssentialFramework() {
 
         <div className="text-center mt-10">
           <Link href="/defense/security" className="text-sm text-[#808080] hover:text-white transition-colors flex items-center justify-center gap-2">
-            View all services <ArrowRight size={14} />
+            View all services 
           </Link>
         </div>
       </motion.div>
@@ -380,7 +380,7 @@ export function SecurityPath() {
                 href={program.href}
                 className="inline-flex items-center gap-2 bg-white text-black font-semibold text-sm px-8 py-4 hover:bg-[#C0C0C0] hover:shadow-[0_0_24px_rgba(255,255,255,0.12)] active:scale-[0.97] transition-all duration-200"
               >
-                {program.cta} <ArrowRight size={14} />
+                {program.cta} 
               </Link>
             </div>
 
@@ -477,7 +477,7 @@ export function Methodology() {
             <motion.div 
               variants={fadeIn}
               key={step} 
-              className="bg-[#0a0a0a] p-12 hover:bg-[#0f0f0f] transition-all duration-300 group"
+              className="bg-[#0a0a0a] p-12 hover:bg-[#0f0f0f] transition-all duration-300"
             >
               <div className="text-5xl font-black text-[#1a1a1a] mb-4 group-hover:text-[#303030] transition-colors">{step}</div>
               <h3 className="text-2xl font-bold text-white mb-4">{label}</h3>
@@ -490,7 +490,7 @@ export function Methodology() {
             href="#contact-form"
             className="inline-flex items-center gap-2 bg-white text-black font-semibold text-sm px-10 py-4 hover:bg-[#C0C0C0] hover:shadow-[0_0_24px_rgba(255,255,255,0.12)] active:scale-[0.97] transition-all duration-200"
           >
-            Book a Confidential Security Briefing <ArrowRight size={14} />
+            Book a Confidential Security Briefing 
           </Link>
         </div>
       </div>

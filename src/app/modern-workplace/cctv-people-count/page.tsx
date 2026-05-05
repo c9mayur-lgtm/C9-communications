@@ -10,26 +10,7 @@ import {
   FullStackSection
 } from '../components';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  ShieldAlert, 
-  BarChart3, 
-  Maximize, 
-  FileCheck, 
-  Target, 
-  RefreshCw, 
-  Building2, 
-  Search, 
-  Users as UsersIcon, 
-  Store, 
-  LineChart, 
-  HardDrive,
-  Shield,
-  Activity,
-  Video,
-  Camera
-} from 'lucide-react';
+import { CheckCircle2, ShieldAlert, BarChart3, Maximize, FileCheck, Target, RefreshCw, Building2, Search, Users as UsersIcon, Store, LineChart, HardDrive, Shield, Activity, Video, Camera } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 type Problem = {
@@ -194,14 +175,14 @@ export default function CCTVPeopleCountPage() {
               <FadeUp delay={0.3}>
                 <div className="mb-8 flex flex-wrap gap-4">
                   <Link
-                    href="/contact"
-                    className="inline-flex h-14 items-center justify-center rounded-full bg-[#5D00D6] px-8 text-[16px] font-bold text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(93,0,214,0.3)]"
+                    href="#consultation-section"
+                    className="inline-flex items-center justify-center rounded-full bg-[#5D00D6] text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(93,0,214,0.3)] h-14 px-8 text-[15px] font-bold"
                   >
                     Get Measurable Outcomes
                   </Link>
                   <Link
-                    href="/contact"
-                    className="inline-flex h-14 items-center justify-center rounded-full border border-[#DCCDF8] bg-white px-8 text-[16px] font-bold text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50"
+                    href="#consultation-section"
+                    className="inline-flex items-center justify-center rounded-full border border-[#DCCDF8] bg-white text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50 h-14 px-8 text-[15px] font-bold"
                   >
                     Talk to a Specialist
                   </Link>
@@ -220,11 +201,11 @@ export default function CCTVPeopleCountPage() {
 
             {/* Right: Realistic Visual */}
             <ScaleIn delay={0.4} className="relative hidden lg:block h-[560px] w-full">
-              <div className="absolute top-8 right-0 w-[500px] aspect-[4/3] rounded-[40px] bg-white shadow-[0_20px_50px_rgba(93,0,214,0.1)] overflow-hidden border-8 border-white group">
+              <div className="absolute top-8 right-0 w-[500px] aspect-[4/3] rounded-[40px] bg-white shadow-[0_20px_50px_rgba(93,0,214,0.1)] overflow-hidden border-8 border-white">
                 <img 
                   src="/cctv_ai_dashboard_hero_1777562131092.png" 
                   alt="Surveillance Intelligence Dashboard" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+                  className="w-full h-full object-cover duration-1000 group-hover:scale-105" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/20 via-transparent to-transparent pointer-events-none" />
               </div>
@@ -286,12 +267,12 @@ export default function CCTVPeopleCountPage() {
               return (
                 <ScaleIn key={problem.title} delay={idx * 0.1}>
                   <article className={cardClassName}>
-                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+                    <div className="mb-4 inline-flex w-14 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 group-hover:text-[#5D00D6] transition-colors">{problem.title}</h3>
                     <p className="text-[14px] leading-relaxed text-gray-500">{problem.description}</p>
-                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent scale-x-0 group-hover:scale-x-100 duration-500" />
                   </article>
                 </ScaleIn>
               );
@@ -314,7 +295,7 @@ export default function CCTVPeopleCountPage() {
               <article className={`${cardClassName} flex flex-col h-full bg-[#f8fbff] border-blue-100 overflow-hidden`}>
                 <div className="flex flex-col md:flex-row gap-8 h-full relative z-10">
                   <div className="flex-1 flex flex-col pt-2">
-                    <div className="mb-5 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#ecf4ff] text-blue-600 transition-colors duration-500">
+                    <div className="mb-5 inline-flex w-14 shrink-0 items-center justify-center rounded-2xl bg-[#ecf4ff] text-blue-600 transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                       <Maximize className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3">{solutions[0].title}</h3>
@@ -333,7 +314,7 @@ export default function CCTVPeopleCountPage() {
                   <div className="flex-1 w-full min-h-[240px] md:h-auto md:self-stretch bg-[#0c1024] rounded-2xl shadow-[0_10px_30px_rgba(93,0,214,0.15)] overflow-hidden grid grid-cols-2 grid-rows-2 gap-[2px] relative mt-4 md:mt-0">
                     
                     {/* Cam 1: Main Entrance (Live Tracking) */}
-                    <div className="col-span-2 row-span-1 relative overflow-hidden bg-black group">
+                    <div className="col-span-2 row-span-1 relative overflow-hidden bg-black">
                       <img src="/modern_office_entrance_cctv_1777562149739.png" className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-1000 group-hover:scale-105" alt="Office Entrance" />
                       <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-sm text-[9px] font-bold text-white uppercase tracking-widest border border-white/10 z-20">
                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" /> ENTRANCE 1
@@ -347,7 +328,7 @@ export default function CCTVPeopleCountPage() {
                     </div>
 
                     {/* Cam 2: Lobby (Night Vision/IR Simulation) */}
-                    <div className="relative overflow-hidden bg-black group">
+                    <div className="relative overflow-hidden bg-black">
                       <div className="absolute inset-0 bg-[#0c1b33]/60 mix-blend-color z-10 pointer-events-none" />
                       <img src="/corporate_lobby_security_1777562244237.png" className="w-full h-full object-cover opacity-90 contrast-125 filter grayscale group-hover:scale-105 transition-all duration-1000" alt="Lobby" />
                       <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-sm text-[9px] font-bold text-[#b8d8be] uppercase tracking-widest border border-[#b8d8be]/20 z-20">
@@ -356,7 +337,7 @@ export default function CCTVPeopleCountPage() {
                     </div>
 
                     {/* Cam 3: Corridor (Facial Detect Simulation) */}
-                    <div className="relative overflow-hidden bg-black group">
+                    <div className="relative overflow-hidden bg-black">
                       <img src="/office_corridor_smart_camera_1777562386872.png" className="w-full h-full object-cover opacity-50 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-1000 group-hover:scale-105" alt="Hallway" />
                       <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-sm text-[9px] font-bold text-white uppercase tracking-widest border border-white/10 z-20">
                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" /> CORRIDOR
@@ -378,7 +359,7 @@ export default function CCTVPeopleCountPage() {
             {/* CARD 1: People Count (Square) */}
             <ScaleIn delay={0.2} className="md:col-span-1 lg:col-span-1">
               <article className={`${cardClassName} flex flex-col h-full bg-white`}>
-                <div className="mb-5 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] transition-colors duration-500">
+                <div className="mb-5 inline-flex w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                   <UsersIcon className="h-6 w-6" />
                 </div>
                 <h3 className="c9-card-title mb-3">{solutions[1].title}</h3>
@@ -402,7 +383,7 @@ export default function CCTVPeopleCountPage() {
             {/* CARD 2: Centralised Dashboard (Square) */}
             <ScaleIn delay={0.3} className="md:col-span-1 lg:col-span-1">
               <article className={`${cardClassName} flex flex-col h-full bg-white`}>
-                <div className="mb-5 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] transition-colors duration-500">
+                <div className="mb-5 inline-flex w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                   <HardDrive className="h-6 w-6" />
                 </div>
                 <h3 className="c9-card-title mb-3">{solutions[2].title}</h3>
@@ -483,7 +464,7 @@ export default function CCTVPeopleCountPage() {
               <article className={`${cardClassName} flex flex-col h-full bg-[#FCFAFF] border-[#E9E2F7] overflow-hidden`}>
                 <div className="flex flex-col md:flex-row-reverse gap-8 h-full relative z-10">
                   <div className="flex-1 flex flex-col pt-2">
-                    <div className="mb-5 inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] transition-colors duration-500">
+                    <div className="mb-5 inline-flex w-14 shrink-0 items-center justify-center rounded-2xl bg-[#F4F0FA] text-[#5D00D6] transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                       <FileCheck className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3">{solutions[3].title}</h3>
@@ -542,8 +523,8 @@ export default function CCTVPeopleCountPage() {
               const Icon = seg.icon;
               return (
                 <ScaleIn key={seg.title} delay={idx * 0.1}>
-                  <article className="group rounded-[24px] border border-white/10 bg-white/5 p-6 md:p-8 hover:border-[#5D00D6] hover:bg-[#5D00D6]/10 transition-all duration-500">
-                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-white group-hover:bg-[#5D00D6] transition-colors duration-500">
+                  <article className="rounded-[24px] border border-white/10 bg-white/5 p-6 md:p-8 hover:border-[#5D00D6] hover:bg-[#5D00D6]/10 transition-all duration-500">
+                    <div className="mb-4 inline-flex w-14 items-center justify-center rounded-2xl bg-white/10 text-white group-hover:bg-[#5D00D6] transition-colors duration-500 h-14 px-8 text-[15px] font-bold">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="c9-card-title mb-3 !text-white">{seg.title}</h3>
@@ -581,17 +562,17 @@ export default function CCTVPeopleCountPage() {
             <ScaleIn delay={0.2} className="relative aspect-square lg:aspect-auto lg:h-[500px] rounded-[32px] overflow-hidden bg-gray-50 border border-gray-100 flex items-center justify-center p-8">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/5 to-transparent" />
               <div className="relative z-10 grid grid-cols-2 gap-4 w-full h-full">
-                <div className="rounded-2xl border border-gray-200 bg-white shadow-xl shadow-purple-500/5 p-5 flex flex-col justify-center items-center gap-3 hover:-translate-y-1 transition-transform">
+                <div className="rounded-2xl border border-gray-200 bg-white shadow-xl shadow-purple-500/5 p-5 flex flex-col justify-center items-center gap-3 hover:-translate-y-1">
                   <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
                     <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse" />
                   </div>
                   <span className="font-bold text-[14px] text-gray-500 text-center">Cameras Online</span>
                 </div>
-                <div className="rounded-2xl border border-gray-200 bg-white shadow-xl shadow-purple-500/5 p-5 flex flex-col justify-center items-center gap-3 hover:-translate-y-1 transition-transform animate-float" style={{ animationDelay: '1s' }}>
+                <div className="rounded-2xl border border-gray-200 bg-white shadow-xl shadow-purple-500/5 p-5 flex flex-col justify-center items-center gap-3 hover:-translate-y-1 animate-float" style={{ animationDelay: '1s' }}>
                   <div className="text-[32px] font-bold text-[#5D00D6]">124</div>
                   <span className="font-bold text-[14px] text-gray-500 text-center">People Count</span>
                 </div>
-                <div className="col-span-2 rounded-2xl border border-[#5D00D6]/20 bg-[#5D00D6] shadow-xl p-6 flex items-center justify-between hover:-translate-y-1 transition-transform text-white">
+                <div className="col-span-2 rounded-2xl border border-[#5D00D6]/20 bg-[#5D00D6] shadow-xl p-6 flex items-center justify-between hover:-translate-y-1 text-white">
                   <div>
                     <div className="text-[11px] font-bold uppercase tracking-wider text-white/70 mb-1">C9 SOC Operations</div>
                     <div className="font-bold text-[16px]">Active Incident Monitoring</div>
@@ -671,7 +652,7 @@ export default function CCTVPeopleCountPage() {
               <p className="text-[17px] text-gray-500 mb-10 leading-relaxed font-medium">
                 For new sites, visibility is mandatory from the first hour. We guarantee a fully-operational, AI-powered surveillance environment on your first day of operation.
               </p>
-              <div className="bg-white border border-gray-100 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl shadow-[#5D00D6]/5">
+              <div className="bg-white border border-gray-100 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/40 transition-all shadow-2xl shadow-[#5D00D6]/5">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/5 rounded-bl-full" />
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4">
@@ -751,7 +732,7 @@ export default function CCTVPeopleCountPage() {
       />
 
       {/* 11. FINAL CONSULTATION FORM */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="Surveillance Audit"

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+;
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useAudience } from '@/components/context/AudienceContext';
@@ -55,13 +55,13 @@ export const Hero = () => {
 
             <div className="flex flex-wrap items-center gap-4">
               <Link href={content.cta1.href}>
-                <Button size="lg" className="bg-brand-purple hover:bg-dark-purple text-white px-8 rounded-full h-14 text-base font-bold font-dm-sans shadow-lg shadow-brand-purple/20">
-                  {content.cta1.label} <ArrowRight className="ml-2 w-5 h-5" />
+                <Button size="lg" className="bg-brand-purple hover:bg-dark-purple text-white px-8 rounded-full h-14 text-[14px] font-bold font-dm-sans shadow-lg shadow-brand-purple/20">
+                  {content.cta1.label} 
                 </Button>
               </Link>
               <Link href={content.cta2.href}>
-                <Button variant="outline" size="lg" className="border-brand-purple text-brand-purple hover:bg-light-purple-bg px-8 rounded-full h-14 text-base font-bold font-dm-sans">
-                  {content.cta2.label} <ArrowRight className="ml-2 w-5 h-5" />
+                <Button variant="outline" size="lg" className="border-brand-purple text-brand-purple hover:bg-light-purple-bg px-8 rounded-full h-14 text-[14px] font-bold font-dm-sans">
+                  {content.cta2.label} 
                 </Button>
               </Link>
             </div>

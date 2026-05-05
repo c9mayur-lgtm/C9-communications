@@ -70,7 +70,7 @@ export const VoiceProcess = () => {
             {STEPS.map((step, i) => (
               <div
                 key={i}
-                className={`p-8 md:p-10 lg:p-12 flex flex-col items-start text-left min-h-[340px] relative group ${i < STEPS.length - 1 ? 'border-b md:border-b-0 md:border-r border-gray-200' : ''}`}
+                className={`p-8 md:p-10 lg:p-12 flex flex-col items-start text-left min-h-[340px] relative  ${i < STEPS.length - 1 ? 'border-b md:border-b-0 md:border-r border-gray-200' : ''}`}
               >
                 {/* Step Number */}
                 <div className="mb-6">
@@ -100,7 +100,7 @@ export const VoiceProcess = () => {
                 </div>
 
                 {/* Bottom hover accent */}
-                <div className="absolute inset-x-0 bottom-0 h-1 bg-[#5D00D6] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute inset-x-0 bottom-0 h-1 bg-[#5D00D6] scale-x-0 group-hover:scale-x-100 duration-500 origin-left" />
               </div>
             ))}
           </div>

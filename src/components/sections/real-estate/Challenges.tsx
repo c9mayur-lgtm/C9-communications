@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Smartphone, ShieldAlert, Building2, MonitorPlay } from "lucide-react";
+import { Shield, Smartphone, ShieldAlert, Building2, MonitorPlay } from 'lucide-react';
 import Link from "next/link";
 
 const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };

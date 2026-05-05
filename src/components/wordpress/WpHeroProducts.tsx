@@ -2,23 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Shield, 
-  Globe, 
-  Phone, 
-  Monitor, 
-  Cloud, 
-  Headphones, 
-  Printer, 
-  Wifi, 
-  Fingerprint, 
-  ChevronLeft, 
-  ChevronRight,
-  Server,
-  Network,
-  FileText,
-  Laptop
-} from 'lucide-react';
+import { Shield, Globe, Phone, Monitor, Cloud, Headphones, Printer, Wifi, Fingerprint, ChevronLeft, ChevronRight, Server, Network, FileText, Laptop } from 'lucide-react';
 
 const PRODUCTS = [
   { label: 'Managed Infrastructure', icon: Server, url: '/managed-it/infrastructure' },
@@ -65,13 +49,13 @@ export const WpHeroProducts = () => {
           <div className="flex gap-4">
             <button 
               onClick={() => scroll('left')}
-              className="w-14 h-14 rounded-2xl flex items-center justify-center text-[#5D00D6] bg-white border border-[#5D00D6]/10 hover:bg-[#5D00D6] hover:text-white transition-all shadow-xl shadow-purple-900/5"
+              className="w-14 h-14 rounded-full flex items-center justify-center text-[#5D00D6] bg-white border border-[#5D00D6]/10 hover:bg-[#5D00D6] hover:text-white transition-all shadow-xl shadow-purple-900/5"
             >
               <ChevronLeft size={24} />
             </button>
             <button 
               onClick={() => scroll('right')}
-              className="w-14 h-14 rounded-2xl flex items-center justify-center text-white bg-[#5D00D6] hover:bg-[#4c00b0] transition-all shadow-xl shadow-purple-900/20"
+              className="w-14 h-14 rounded-full flex items-center justify-center text-white bg-[#5D00D6] hover:bg-[#4c00b0] transition-all shadow-xl shadow-purple-900/20"
             >
               <ChevronRight size={24} />
             </button>
@@ -88,10 +72,10 @@ export const WpHeroProducts = () => {
               <Link 
                 href={product.url}
                 key={idx} 
-                className="flex flex-col items-center justify-center gap-6 group cursor-pointer text-center min-w-[200px] md:min-w-[220px] snap-start bg-white border border-gray-100/60 rounded-[28px] p-8 hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500"
+                className="flex flex-col items-center justify-center gap-6 cursor-pointer text-center min-w-[200px] md:min-w-[220px] snap-start bg-white border border-gray-100/60 rounded-[28px] p-8 hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500"
               >
                 {/* Icon Container (Homepage Style) */}
-                <div className="text-[#5D00D6] transition-transform duration-300 group-hover:-translate-y-1.5 opacity-90">
+                <div className="text-[#5D00D6] duration-300 group-hover:-translate-y-1.5 opacity-90">
                   <product.icon size={46} strokeWidth={1.5} />
                 </div>
                 

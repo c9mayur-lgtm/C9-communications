@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ArrowRight, Zap, Shield, BarChart3, Calendar } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Zap, Shield, BarChart3, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/design-system/Section';
 import { H1, H2, H3, Body, Label } from '@/components/design-system/Typography';
@@ -167,7 +167,7 @@ export default function ContactPage() {
                   </div>
                   <div className="sm:col-span-2 mt-4">
                     <C9Button className="w-full py-5 text-lg shadow-lg shadow-purple-900/10">
-                      {currentPath.buttonText} <ArrowRight size={18} className="ml-2" />
+                      {currentPath.buttonText} 
                     </C9Button>
                     <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 mt-8 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
                       <span className="flex items-center gap-1.5 whitespace-nowrap"><Shield size={12} className="text-[#5D00D6]" /> Senior Engineer Review</span>
@@ -183,7 +183,7 @@ export default function ContactPage() {
           {/* ── INFO ── */}
           <div className="space-y-6">
             <FadeIn delay={0.5}>
-              <div className="bg-gray-50/50 border border-gray-100 rounded-2xl p-8 hover:border-[#5D00D6]/20 transition-all group">
+              <div className="bg-gray-50/50 border border-gray-100 rounded-2xl p-8 hover:border-[#5D00D6]/20 transition-all">
                 <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shadow-sm">
                   <Phone size={22} />
                 </div>
@@ -194,7 +194,7 @@ export default function ContactPage() {
             </FadeIn>
 
             <FadeIn delay={0.6}>
-              <div className="bg-gray-50/50 border border-gray-100 rounded-2xl p-8 hover:border-[#5D00D6]/20 transition-all group">
+              <div className="bg-gray-50/50 border border-gray-100 rounded-2xl p-8 hover:border-[#5D00D6]/20 transition-all">
                 <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shadow-sm">
                   <Mail size={22} />
                 </div>
@@ -205,7 +205,7 @@ export default function ContactPage() {
             </FadeIn>
 
             <FadeIn delay={0.7}>
-              <div className="bg-gray-50/50 border border-gray-100 rounded-2xl p-8 hover:border-[#5D00D6]/20 transition-all group">
+              <div className="bg-gray-50/50 border border-gray-100 rounded-2xl p-8 hover:border-[#5D00D6]/20 transition-all">
                 <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shadow-sm">
                   <MapPin size={22} />
                 </div>
@@ -233,8 +233,8 @@ export default function ContactPage() {
              { icon: Zap, title: "Actionable Output", text: "Whether it's a capability pack, assessment report, or consultation, you receive technical documentation with no fluff." }
            ].map((item, i) => (
              <FadeIn key={i} delay={i * 0.1}>
-               <div className="p-8 rounded-2xl bg-white border border-gray-100 hover:border-[#5D00D6]/20 transition-all text-center group">
-                 <div className="text-[#5D00D6] mb-4 flex justify-center group-hover:scale-110 transition-transform"><item.icon size={32} strokeWidth={1.5} /></div>
+               <div className="p-8 rounded-2xl bg-white border border-gray-100 hover:border-[#5D00D6]/20 transition-all text-center">
+                 <div className="text-[#5D00D6] mb-4 flex justify-center group-hover:scale-110"><item.icon size={32} strokeWidth={1.5} /></div>
                  <h5 className="text-[#0c1024] font-bold text-lg mb-2">{item.title}</h5>
                  <Body className="text-sm text-gray-500">{item.text}</Body>
                </div>

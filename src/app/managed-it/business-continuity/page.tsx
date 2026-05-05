@@ -3,12 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  ShieldAlert, Activity, GitBranch, ArrowRight, 
-  CheckCircle2, AlertTriangle, Zap, Layers, 
-  ShieldCheck, RefreshCw, BarChart3, Users,
-  Target, Command, Radio, Clock, TrendingDown
-} from 'lucide-react';
+import { ShieldAlert, Activity, GitBranch, CheckCircle2, AlertTriangle, Zap, Layers, ShieldCheck, RefreshCw, BarChart3, Users, Target, Command, Radio, Clock, TrendingDown } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
@@ -70,10 +65,10 @@ export default function BusinessContinuityPage() {
 
             <FadeIn delay={0.2}>
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <Link href="#assessment" className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                  Request Continuity Assessment <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                <Link href="#consultation-section" className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
+                  Request Continuity Assessment 
                 </Link>
-                <Link href="#assessment" className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-10 font-bold text-[14px] hover:bg-slate-50 transition-all">
+                <Link href="#consultation-section" className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full hover:bg-slate-50 transition-all h-14 px-8 text-[15px] font-bold">
                   Review Your Current Readiness
                 </Link>
               </div>
@@ -116,8 +111,8 @@ export default function BusinessContinuityPage() {
                   </div>
                 ))}
               </div>
-              <a href="#assessment" className="text-[#5D00D6] font-bold flex items-center gap-2 group text-lg">
-                Assess your operational risk <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+              <a href="#consultation-section" className="text-[#5D00D6] font-bold flex items-center gap-2 text-lg">
+                Assess your operational risk 
               </a>
             </FadeIn>
             <FadeIn direction="left">
@@ -154,7 +149,7 @@ export default function BusinessContinuityPage() {
               { title: "Platform Lockouts", desc: "Loss of access to business-critical SaaS or internal platforms without a functional secondary path." },
               { title: "Disconnected Vendors", desc: "IT, Telco, and SaaS vendors finger-pointing during an incident while your business remains offline." }
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1} className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 flex flex-col h-full group hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500">
+              <FadeIn key={i} delay={i * 0.1} className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 flex flex-col h-full hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500">
                 <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-red-500 mb-6 shadow-sm">
                   <AlertTriangle size={20} />
                 </div>
@@ -203,7 +198,7 @@ export default function BusinessContinuityPage() {
                   </div>
                 ))}
               </div>
-              <Link href="#assessment" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10">
+              <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10 h-14 px-8 text-[15px] font-bold">
                 Speak to an Operations Specialist
               </Link>
             </FadeIn>
@@ -302,12 +297,12 @@ export default function BusinessContinuityPage() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <FadeIn direction="right" className="order-2 lg:order-1">
               <div className="grid grid-cols-2 gap-6">
-                <Link href="/managed-it/infrastructure" className="group p-8 bg-white border border-slate-200 rounded-3xl hover:border-[#5D00D6]/30 shadow-sm transition-all">
+                <Link href="/managed-it/infrastructure" className="p-8 bg-white border border-slate-200 rounded-3xl hover:border-[#5D00D6]/30 shadow-sm transition-all">
                   <ShieldCheck size={24} className="text-[#5D00D6] mb-4" />
                   <h4 className="font-bold text-slate-900 mb-2 uppercase tracking-wide text-xs">Stability Layer</h4>
                   <p className="text-xs text-slate-500">Infrastructure designed to prevent initial failure.</p>
                 </Link>
-                <Link href="/modern-workplace/saas-backup" className="group p-8 bg-white border border-slate-200 rounded-3xl hover:border-[#5D00D6]/30 shadow-sm transition-all">
+                <Link href="/modern-workplace/saas-backup" className="p-8 bg-white border border-slate-200 rounded-3xl hover:border-[#5D00D6]/30 shadow-sm transition-all">
                   <RefreshCw size={24} className="text-[#5D00D6] mb-4" />
                   <h4 className="font-bold text-slate-900 mb-2 uppercase tracking-wide text-xs">Recovery Layer</h4>
                   <p className="text-xs text-slate-500">SaaS Backup ensures data integrity and recovery.</p>
@@ -345,7 +340,7 @@ export default function BusinessContinuityPage() {
       </section>
 
       {/* 10. FINAL CTA */}
-      <section id="assessment" className="pt-12 pb-24 bg-white">
+      <section id="consultation-section" className="pt-12 pb-24 bg-white">
         <WpConsultationForm 
           eyebrow="VALIDATE YOUR RESILIENCE"
           title="Business Continuity Assessment"

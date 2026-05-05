@@ -2,14 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MonitorPlay, Monitor, Camera, LayoutGrid, 
-  ShieldCheck, BadgeCheck, ArrowRight, Video, 
-  Cpu, Smartphone, Laptop, Settings, Lock,
-  Mic, MonitorUp, PhoneOff, User, Mail, FileText,
-  PieChart, Calendar, Bell, Info, ShieldAlert, SmartphoneNfc,
-  Search, ScanLine, Activity, Zap
-} from 'lucide-react';
+import { MonitorPlay, Monitor, Camera, LayoutGrid, ShieldCheck, BadgeCheck, Video, Cpu, Smartphone, Laptop, Settings, Lock, Mic, MonitorUp, PhoneOff, User, Mail, FileText, PieChart, Calendar, Bell, Info, ShieldAlert, SmartphoneNfc, Search, ScanLine, Activity, Zap } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const ease = [0.22, 1, 0.36, 1] as any;
@@ -47,7 +40,7 @@ export const WpBentoSolutions = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* Card 1: Meeting Rooms & Displays */}
-            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden group min-h-[520px] shadow-sm relative transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
+            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden min-h-[520px] shadow-sm relative transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
               
               {/* Visual Container - Standardized Height */}
               <div className="relative flex items-center justify-center h-[300px] md:h-[340px] w-full perspective-1000 mb-8">
@@ -169,7 +162,7 @@ export const WpBentoSolutions = () => {
             </div>
 
             {/* Card 2: Microsoft 365 (Equal Width & Aligned) */}
-            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden group min-h-[520px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
+            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden min-h-[520px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
               
               {/* Visual Container - Standardized Height */}
               <div className="relative h-[300px] md:h-[340px] flex items-center justify-center mb-8">
@@ -235,7 +228,7 @@ export const WpBentoSolutions = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Card 3: Endpoint Security */}
-            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden group min-h-[460px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
+            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden min-h-[460px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
               <div className="relative pt-4 h-44 flex items-center justify-center mb-8">
                 <motion.div className="relative z-20 bg-white p-5 rounded-2xl shadow-xl border border-gray-100 w-[95%] group-hover:-translate-y-2 transition-all duration-500">
                   <div className="flex items-center justify-between mb-3">
@@ -294,7 +287,7 @@ export const WpBentoSolutions = () => {
             </div>
 
             {/* Card 4: CCTV & Space Analytics */}
-            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden group min-h-[460px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
+            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden min-h-[460px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
               <div className="grid grid-cols-2 gap-2.5 w-full mt-2 relative mb-8 h-44">
                 {[1, 2, 3, 4].map(i => (
                   <div key={i} className="aspect-video bg-[#0c1024] rounded-lg relative overflow-hidden ring-1 ring-white/10 group-hover:ring-[#5D00D6]/30 transition-all">
@@ -342,7 +335,7 @@ export const WpBentoSolutions = () => {
             </div>
 
             {/* Card 5: Visitor Management */}
-            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden group min-h-[460px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
+            <div className="bg-white rounded-[40px] p-8 border border-gray-100 flex flex-col overflow-hidden min-h-[460px] shadow-sm transition-all hover:shadow-xl hover:shadow-[#5D00D6]/5">
               <div className="relative pt-4 h-48 flex items-center justify-center mb-8">
                 <motion.div className="absolute w-24 h-24 rounded-full border-[2px] border-[#5D00D6]/20" animate={{ scale: [1, 1.4, 1], opacity: [0.8, 0, 0.8] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} />
                 <motion.div className="absolute w-[200px] h-[200px] rounded-full border border-dashed border-[#5D00D6]/10" animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} />
@@ -353,7 +346,7 @@ export const WpBentoSolutions = () => {
                     </div>
                 </motion.div>
 
-                <motion.div className="absolute -left-2 top-2 w-[130px] bg-white rounded-xl shadow-xl border border-gray-50 p-3 z-30 flex flex-col gap-2 group-hover:-translate-x-1 transition-transform" animate={{ y: [-5, 5, -5], rotateZ: [-1, 1, -1] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
+                <motion.div className="absolute -left-2 top-2 w-[130px] bg-white rounded-xl shadow-xl border border-gray-50 p-3 z-30 flex flex-col gap-2 group-hover:-translate-x-1" animate={{ y: [-5, 5, -5], rotateZ: [-1, 1, -1] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
                     <div className="flex gap-1 mb-1">
                       {[0, 0.2].map(d => (
                         <motion.div key={d} className="w-1 h-1 rounded-full bg-gray-200" animate={{ scale: [1, 1.4, 1], backgroundColor: ['#E5E7EB', '#5D00D6', '#E5E7EB'] }} transition={{ duration: 2, repeat: Infinity, delay: d }} />
@@ -368,7 +361,7 @@ export const WpBentoSolutions = () => {
                     </div>
                 </motion.div>
 
-                <motion.div className="absolute -right-2 bottom-4 w-[130px] bg-white rounded-xl shadow-xl border border-gray-50 p-4 z-30 flex flex-col gap-4 group-hover:translate-x-1 transition-transform" animate={{ y: [5, -5, 5], rotateZ: [1, -1, 1] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}>
+                <motion.div className="absolute -right-2 bottom-4 w-[130px] bg-white rounded-xl shadow-xl border border-gray-50 p-4 z-30 flex flex-col gap-4" animate={{ y: [5, -5, 5], rotateZ: [1, -1, 1] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}>
                     <div className="flex items-center gap-3 relative">
                       <div className="absolute left-[7.5px] top-4 bottom-[-16px] w-[1px] bg-gray-100" />
                       <div className="w-4 h-4 rounded-full bg-[#0c1024] flex items-center justify-center text-white relative z-10 shadow-lg"><FileText size={8} /></div>
@@ -402,8 +395,8 @@ export const WpBentoSolutions = () => {
 
         {/* Global CTA - Updated to C9 Brand Purple */}
         <div className="flex justify-center mt-16">
-          <Button size="lg" className="rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] px-10 py-7 text-[16px] font-medium group shadow-2xl shadow-[#5D00D6]/20 transition-all border-none">
-            View All Workplace Solutions <ArrowRight className="ml-3 transition-transform group-hover:translate-x-1" />
+          <Button size="lg" className="rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] px-10 py-7 text-[14px] font-medium shadow-2xl shadow-[#5D00D6]/20 transition-all border-none">
+            View All Workplace Solutions 
           </Button>
         </div>
       </div>

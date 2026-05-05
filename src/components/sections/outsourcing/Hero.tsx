@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Headphones, Shield, Globe, BarChart, Cloud, Activity, CheckCircle2 } from 'lucide-react';
+import { Headphones, Shield, Globe, BarChart, Cloud, Activity, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInquiry } from '@/components/context/InquiryContext';
 
@@ -68,11 +68,11 @@ export default function Hero() {
             >
               <Button 
                 onClick={handleProposalRequest}
-                className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-10 h-14 rounded-lg font-bold transition-all duration-300 shadow-2xl shadow-purple-900/30 group font-sans text-[16px]"
+                className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-10 h-14 rounded-lg font-bold transition-all duration-300 shadow-2xl shadow-purple-900/30 font-sans text-[14px]"
               >
-                Request IT Proposal <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                Request IT Proposal 
               </Button>
-              <Button variant="ghost" onClick={handleScrollToScope} className="text-[#0c1024] hover:bg-slate-100 px-8 h-14 rounded-lg font-bold transition-all font-sans text-[16px]">
+              <Button variant="ghost" onClick={handleScrollToScope} className="text-[#0c1024] hover:bg-slate-100 px-8 h-14 rounded-lg font-bold transition-all font-sans text-[14px]">
                 View Scope Details
               </Button>
             </motion.div>
@@ -110,7 +110,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.4 }}
             className="hidden lg:flex justify-end relative"
           >
-            <div className="w-full max-w-[540px] aspect-square bg-white border border-gray-100 rounded-[48px] p-10 shadow-[0_32px_80px_-20px_rgba(93,0,214,0.12)] relative overflow-hidden group">
+            <div className="w-full max-w-[540px] aspect-square bg-white border border-gray-100 rounded-[48px] p-10 shadow-[0_32px_80px_-20px_rgba(93,0,214,0.12)] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-purple-50 rounded-full blur-[80px] -mr-32 -mt-32 opacity-60" />
               <div className="absolute bottom-0 left-0 w-[240px] h-[240px] bg-blue-50 rounded-full blur-[60px] -ml-20 -mb-20 opacity-60" />
               <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
@@ -158,7 +158,7 @@ export default function Hero() {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full border border-gray-100 shadow-2xl flex items-center justify-center z-20"
               >
-                <div className="w-40 h-40 bg-[#5D00D6] rounded-full flex flex-col items-center justify-center text-white relative overflow-hidden group">
+                <div className="w-40 h-40 bg-[#5D00D6] rounded-full flex flex-col items-center justify-center text-white relative overflow-hidden">
                   <motion.div animate={{ y: [0, -4, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
                     <span className="text-[32px] font-black tracking-tighter">C9</span>
                   </motion.div>

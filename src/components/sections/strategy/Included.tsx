@@ -52,9 +52,9 @@ export default function Included() {
           {ITEMS.map((item, i) => (
             <div 
               key={i} 
-              className="bg-white rounded-2xl p-10 border-[0.5px] border-[rgba(123,47,190,0.15)] hover:border-brand-purple hover:-translate-y-1 transition-all duration-200 group shadow-sm hover:shadow-xl flex flex-col items-start text-left"
+              className="bg-white rounded-2xl p-10 border-[0.5px] border-[rgba(123,47,190,0.15)] hover:border-brand-purple hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow-xl flex flex-col items-start text-left"
             >
-              <div className="w-[48px] h-[48px] rounded-xl bg-[#EDE9FE] flex items-center justify-center text-brand-purple flex-shrink-0 transition-transform group-hover:scale-110 mb-8">
+              <div className="w-[48px] h-[48px] rounded-xl bg-[#EDE9FE] flex items-center justify-center text-brand-purple flex-shrink-0 group-hover:scale-110 mb-8">
                 <item.icon size={22} strokeWidth={2.5} />
               </div>
 

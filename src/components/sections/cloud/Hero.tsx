@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Server, Globe, Shield, Database, RefreshCw } from "lucide-react";
+import { CheckCircle, Server, Globe, Shield, Database, RefreshCw } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const CloudMonitorVisual = () => {
@@ -43,7 +43,7 @@ const CloudMonitorVisual = () => {
         </div>
       </div>
 
-      <div className="flex-1 relative flex items-center justify-center mb-8 bg-slate-50/50 rounded-3xl border border-slate-100 scale-75 sm:scale-100 transition-transform duration-500">
+      <div className="flex-1 relative flex items-center justify-center mb-8 bg-slate-50/50 rounded-3xl border border-slate-100 scale-75 sm:scale-100 duration-500">
         <AnimatePresence mode="wait">
           {phase === 0 && (
             <motion.div key="discovery" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center">
@@ -161,10 +161,10 @@ export default function Hero() {
                 <Button 
                   size="lg" 
                   onClick={handleProposalRequest}
-                  className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none" 
+                  className="w-full sm:w-auto shadow-2xl hover:gap-4 bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none" 
                   
                 >
-                  Request a Cloud Proposal <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
+                  Request a Cloud Proposal 
                 </Button>
                 <Button 
                   variant="outline" 

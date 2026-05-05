@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function LuminaNavbar() {
@@ -44,9 +44,9 @@ export function LuminaNavbar() {
           ))}
           <Link 
             href="#contact"
-            className="bg-[#BF2F70] text-white px-6 py-2.5 text-sm font-bold hover:bg-[#A32469] transition-all active:scale-95 flex items-center gap-2 group"
+            className="bg-[#BF2F70] text-white px-6 py-2.5 text-sm font-bold hover:bg-[#A32469] transition-all active:scale-95 flex items-center gap-2"
           >
-            Get a Quote <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            Get a Quote 
           </Link>
         </div>
 

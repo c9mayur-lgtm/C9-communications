@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export const WpHeroV2 = () => {
@@ -18,8 +18,8 @@ export const WpHeroV2 = () => {
                 Whether you need reliable cloud voice, enterprise fibre, or a fully outsourced IT department, C9 delivers seamless, fully managed infrastructure. One provider, one fully onshore team, zero IT headaches.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#5D00D6]/90 rounded-full font-bold">
-                  Get Your Free IT Audit <ArrowRight className="transition-transform group-hover:translate-x-1" />
+                <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 bg-[#5D00D6] hover:bg-[#5D00D6]/90 rounded-full font-bold">
+                  Get Your Free IT Audit 
                 </Button>
                 <Button variant="outline" size="lg" className="w-full sm:w-auto border-gray-200 rounded-full font-bold">
                   Download Enterprise Playbook

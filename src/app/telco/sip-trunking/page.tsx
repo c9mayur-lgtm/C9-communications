@@ -2,11 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Users, ShieldCheck, Activity, ArrowRight, CheckCircle2, 
-  Layers, Building2, TrendingUp, Monitor, RefreshCcw, 
-  ShieldAlert, PhoneCall, AlertTriangle, PhoneOff, Scale, ServerCog, BarChart3
-} from 'lucide-react';
+import { Users, ShieldCheck, Activity, CheckCircle2, Layers, Building2, TrendingUp, Monitor, RefreshCcw, ShieldAlert, PhoneCall, AlertTriangle, PhoneOff, Scale, ServerCog, BarChart3 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
@@ -45,13 +41,13 @@ export default function SipTrunkingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-               <Link href="#consultation" className="w-full sm:w-auto">
-                 <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-base font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all">
-                   Review Your Current Infrastructure <ArrowRight className="ml-2 w-5 h-5" />
+               <Link href="#consultation-section" className="w-full sm:w-auto">
+                 <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all">
+                   Review Your Current Infrastructure 
                  </Button>
                </Link>
-               <Link href="#consultation" className="w-full sm:w-auto">
-                 <Button variant="outline" size="lg" className="w-full border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 h-14 text-base font-bold rounded-full transition-all">
+               <Link href="#consultation-section" className="w-full sm:w-auto">
+                 <Button variant="outline" size="lg" className="w-full border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 h-14 text-[14px] font-bold rounded-full transition-all">
                    Talk to a SIP Specialist
                  </Button>
                </Link>
@@ -79,11 +75,11 @@ export default function SipTrunkingPage() {
           </div>
 
           <div className="relative">
-             <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/5] group">
+             <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/5]">
                 <img
                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop"
                    alt="IT Executive reviewing infrastructure performance"
-                   className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+                   className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
                 
@@ -191,7 +187,7 @@ export default function SipTrunkingPage() {
                 ].map((item, i) => (
                   <div key={i} className="flex gap-5">
                      <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1 shadow-sm">
-                        <ArrowRight size={14} />
+                        
                      </div>
                      <div>
                         <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.title}</h4>
@@ -308,7 +304,7 @@ export default function SipTrunkingPage() {
                 { label: "Dependencies", val: "Removed", icon: <Layers /> },
                 { label: "Continuity", val: "Assured", icon: <Activity /> }
               ].map((stat, i) => (
-                <div key={i} className="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:bg-white hover:shadow-xl group">
+                <div key={i} className="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:bg-white hover:shadow-xl">
                     <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center text-[#5D00D6] mb-4 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                        {stat.icon}
                     </div>
@@ -367,7 +363,7 @@ export default function SipTrunkingPage() {
              { icon: <PhoneCall size={24} />, title: "Communication Reliability", text: "High-definition voice quality guarantees professional client interactions." },
              { icon: <AlertTriangle size={24} />, title: "Fewer Disruptions", text: "By retiring legacy ISDN, you remove the most common source of business communication failure." }
            ].map((stat, i) => (
-             <div key={i} className="bg-white border border-slate-100 rounded-[32px] p-8 hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10 group">
+             <div key={i} className="bg-white border border-slate-100 rounded-[32px] p-8 hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10">
                 <div className="text-[#5D00D6] mb-4">{stat.icon}</div>
                 <h4 className="text-xl font-bold text-slate-900 mb-2">{stat.title}</h4>
                 <p className="text-slate-500 text-[14px] leading-relaxed">{stat.text}</p>
@@ -389,9 +385,9 @@ export default function SipTrunkingPage() {
                 <p className="c9-body !text-white/90 !text-[18px] max-w-2xl mx-auto mb-8">
                   Let's review it.
                 </p>
-                <Link href="#consultation">
-                    <Button size="lg" className="bg-white text-[#5D00D6] hover:bg-[#0c1024] hover:text-white px-10 h-14 text-base font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
-                        Book a SIP Infrastructure Review <ArrowRight className="ml-2 w-5 h-5" />
+                <Link href="#consultation-section">
+                    <Button size="lg" className="bg-white text-[#5D00D6] hover:bg-[#0c1024] hover:text-white px-10 h-14 text-[14px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
+                        Book a SIP Infrastructure Review 
                     </Button>
                 </Link>
             </div>
@@ -410,7 +406,7 @@ export default function SipTrunkingPage() {
         ]}
       />
 
-      <div id="consultation" className="bg-white">
+      <div id="consultation-section" className="bg-white">
         <WpConsultationForm 
           showHeader={false} 
           eyebrow="INFRASTRUCTURE AUDIT"

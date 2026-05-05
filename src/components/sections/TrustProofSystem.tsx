@@ -61,7 +61,7 @@ export const TrustProofSystem = ({
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full relative group hover:shadow-md transition-shadow">
+                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full relative hover:shadow-md transition-shadow">
                   <Quote size={32} className="text-[#5D00D6]/10 absolute top-6 right-8" />
                   <p className="text-slate-600 italic mb-6 text-[14px] leading-relaxed relative z-10">
                     "{t.quote}"

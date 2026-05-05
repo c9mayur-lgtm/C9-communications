@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 import { useAudience } from '@/components/context/AudienceContext';
 import { HeroHighlighter } from '@/components/common/HeroHighlighter';
@@ -94,14 +94,14 @@ export const WpHero = () => {
               <a
                 href={activeContent.cta1Href}
                 onClick={handlePrimaryCta}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/30 group"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-colors shadow-xl shadow-purple-900/30 h-14 px-8 text-[15px] font-bold"
               >
                 {activeContent.cta1}
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                
               </a>
               <a
                 href={activeContent.cta2Href}
-                className="inline-flex items-center justify-center gap-2 border-2 border-white xl:border-[#5D00D6] text-white xl:text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-white/10 xl:hover:bg-[#5D00D6] xl:hover:text-white transition-colors"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white xl:border-[#5D00D6] text-white xl:text-[#5D00D6] rounded-full hover:bg-white/10 xl:hover:bg-[#5D00D6] xl:hover:text-white transition-colors h-14 px-8 text-[15px] font-bold"
               >
                 {activeContent.cta2}
               </a>

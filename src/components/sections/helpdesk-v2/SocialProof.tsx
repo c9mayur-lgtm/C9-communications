@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
-import { Star, ArrowRight } from "lucide-react";
+import { Star } from 'lucide-react';
 
 export default function SocialProof() {
   const reviews = [
@@ -43,11 +43,11 @@ export default function SocialProof() {
           {reviews.map((review, i) => (
             <div 
               key={i} 
-              className="group bg-white border border-purple-50 rounded-[32px] p-8 md:p-10 flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-200/50"
+              className="bg-white border border-purple-50 rounded-[32px] p-8 md:p-10 flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-200/50"
             >
               <div className="flex gap-1 mb-8">
                 {[...Array(5)].map((_, idx) => (
-                  <Star key={idx} size={18} fill="#F59E0B" color="#F59E0B" className="group-hover:scale-110 transition-transform duration-300" style={{ transitionDelay: `${idx * 100}ms` }} />
+                  <Star key={idx} size={18} fill="#F59E0B" color="#F59E0B" className="group-hover:scale-110 duration-300" style={{ transitionDelay: `${idx * 100}ms` }} />
                 ))}
               </div>
               

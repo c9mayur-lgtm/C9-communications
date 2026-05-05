@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
           <li><strong>Service Partners:</strong> Contractors for installation, maintenance, repairs, and billing support.</li>
           <li><strong>Wholesale Suppliers:</strong> Infrastructure owners necessary for your connectivity services.</li>
           <li><strong>Authorities:</strong> ACMA, police, and law enforcement agencies specifically as required by law.</li>
-          <li><strong>Agents & Dealers:</strong> Members of our corporate group and authorized business partners.</li>
+          <li><strong>Agents & Dealers:</strong> Members of our corporate  and authorized business partners.</li>
         </ul>
 
         <div className="h-8" />

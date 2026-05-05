@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Eye, FileText, Activity } from 'lucide-react';
 
 const MonitoringVisual = () => (
-  <div className="relative w-full h-[400px] bg-[#161622] rounded-[40px] border border-white/5 overflow-hidden shadow-2xl p-8 group">
+  <div className="relative w-full h-[400px] bg-[#161622] rounded-[40px] border border-white/5 overflow-hidden shadow-2xl p-8">
     {/* Grid Overlay */}
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ 
       backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
@@ -116,9 +116,9 @@ export default function MonitoringBlock() {
                   "24/7 technical helpdesk",
                   "Monthly network health report"
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-3 items-center group">
+                  <div key={i} className="flex gap-3 items-center">
                     <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />
-                    <span className="font-['Proxima_Nova'] text-[15.5px] text-white/90 font-bold leading-tight tracking-tight group-hover:text-white group-hover:translate-x-1 duration-300 transition-all">{item}</span>
+                    <span className="font-['Proxima_Nova'] text-[15.5px] text-white/90 font-bold leading-tight tracking-tight group-hover:text-white duration-300 transition-all">{item}</span>
                   </div>
                 ))}
               </div>
@@ -135,9 +135,9 @@ export default function MonitoringBlock() {
             <MonitoringVisual />
             
             <div className="mt-8 flex flex-col gap-4">
-               <div className="p-6 bg-[#161622] rounded-[24px] border border-white/5 hover:border-[#5D00D6]/40 transition-colors flex items-center justify-between group">
+               <div className="p-6 bg-[#161622] rounded-[24px] border border-white/5 hover:border-[#5D00D6]/40 transition-colors flex items-center justify-between">
                   <div className="flex items-center gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-[#5D00D6] group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-[#5D00D6] group-hover:scale-110">
                       <FileText size={22} />
                     </div>
                     <div>

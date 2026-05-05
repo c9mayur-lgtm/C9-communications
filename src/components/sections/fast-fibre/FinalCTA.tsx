@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Phone, CheckCircle2, Shield, Clock, Zap } from 'lucide-react';
+import { Phone, CheckCircle2, Shield, Clock, Zap } from 'lucide-react';
 
 const trustSignals = [
   { icon: Clock, text: "Site qualification within 1 business day" },
@@ -40,7 +40,7 @@ export default function FinalCTA() {
                         }}
                         className="w-full sm:w-auto bg-white text-[#5D00D6] px-8 py-4 rounded-full font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2 text-[14px] shadow-lg"
                      >
-                        Get a Fibre Quote <ArrowRight size={16} />
+                        Get a Fibre Quote 
                      </button>
                      <a 
                         href="tel:1800000299"
@@ -53,7 +53,7 @@ export default function FinalCTA() {
 
               <div className="grid grid-cols-1 gap-3 bg-white/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10">
                  {trustSignals.map((sig, idx) => (
-                     <div key={idx} className="flex items-center gap-3 group">
+                     <div key={idx} className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-all shrink-0">
                            <sig.icon size={15} className="text-white" />
                         </div>

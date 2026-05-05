@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, Phone, Mail, Send, CheckCircle, ArrowRight, Bot } from 'lucide-react';
+import { MessageSquare, X, Phone, Mail, Send, CheckCircle, Bot } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 // ─── Chatbot Flow Data ────────────────────────────────────────────────────────

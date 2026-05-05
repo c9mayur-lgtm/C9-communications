@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Clock, User } from 'lucide-react';
+import { Clock, User } from 'lucide-react';
 
 const BLOG_POSTS = [
   {
@@ -59,12 +59,12 @@ export default function BlogIndexPage() {
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {BLOG_POSTS.map((post, idx) => (
             <FadeIn key={idx} delay={idx * 0.1}>
-              <Link href={`/blog/${post.slug}`} className="group block">
+              <Link href={`/blog/${post.slug}`} className="block">
                 <div className="relative aspect-[16/9] rounded-[32px] overflow-hidden mb-8 shadow-sm">
                   <img 
                     src={post.img} 
                     alt={post.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    className="w-full h-full object-cover duration-700 group-hover:scale-105" 
                   />
                   <div className="absolute top-6 left-6">
                     <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest shadow-sm">
@@ -85,7 +85,7 @@ export default function BlogIndexPage() {
                   </div>
                   <div className="flex items-center gap-4 text-slate-400 text-xs font-bold uppercase tracking-widest">
                     <span className="flex items-center gap-1.5"><Clock size={14} /> {post.time}</span>
-                    <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform text-[#5D00D6]" />
+                    
                   </div>
                 </div>
               </Link>

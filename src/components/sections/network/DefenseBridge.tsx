@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, ArrowRight, Lock } from 'lucide-react';
+import { Shield, Lock } from 'lucide-react';
 import Link from 'next/link';
 
 export default function DefenseBridge() {
@@ -14,7 +14,7 @@ export default function DefenseBridge() {
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="bg-[#0A0A14] rounded-[40px] p-8 md:p-10 lg:p-12 flex flex-col md:flex-row items-center gap-10 lg:gap-12 shadow-2xl shadow-[#5D00D6]/10 max-w-[960px] mx-auto border border-white/5 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all duration-700"
+          className="bg-[#0A0A14] rounded-[40px] p-8 md:p-10 lg:p-12 flex flex-col md:flex-row items-center gap-10 lg:gap-12 shadow-2xl shadow-[#5D00D6]/10 max-w-[960px] mx-auto border border-white/5 relative overflow-hidden hover:border-[#5D00D6]/40 transition-all duration-700"
         >
           
           {/* Animated background elements */}
@@ -28,7 +28,7 @@ export default function DefenseBridge() {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="absolute inset-0 bg-[#5D00D6]/20 rounded-full blur-[30px]"
             />
-            <div className="w-20 h-20 md:w-[100px] md:h-[100px] bg-[#161622] rounded-[28px] flex items-center justify-center border border-white/10 shadow-2xl relative z-10 group-hover:rotate-3 transition-transform duration-700">
+            <div className="w-20 h-20 md:w-[100px] md:h-[100px] bg-[#161622] rounded-[28px] flex items-center justify-center border border-white/10 shadow-2xl relative z-10 group-hover:rotate-3 duration-700">
                <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#5D00D6] rounded-lg flex items-center justify-center text-white shadow-lg shadow-purple-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   <Lock size={14} />
                </div>
@@ -57,7 +57,7 @@ export default function DefenseBridge() {
               className="group/btn flex items-center justify-center gap-3 border-[1.5px] border-[#5D00D6]/60 bg-[#5D00D6]/10 hover:bg-[#5D00D6] text-white font-['Proxima_Nova'] font-bold text-[14px] h-[56px] px-8 rounded-full transition-all w-full md:w-auto shadow-2xl shadow-purple-900/20 active:scale-95"
             >
               Explore C9 Defense 
-              <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+              
             </Link>
           </div>
 

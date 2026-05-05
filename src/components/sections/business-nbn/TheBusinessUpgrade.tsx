@@ -90,7 +90,7 @@ export default function TheBusinessUpgrade() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-gray-100 rounded-lg overflow-hidden">
           {upgradeBlocks.map((block, i) => (
-            <div key={i} className="p-10 md:p-12 border-r border-b border-gray-100 flex flex-col group transition-all duration-300 hover:bg-[#F8F7FF]">
+            <div key={i} className="p-10 md:p-12 border-r border-b border-gray-100 flex flex-col transition-all duration-300 hover:bg-[#F8F7FF]">
               <div className="mb-6 self-start">
                 <span className="px-3 py-1 rounded-full bg-[#5D00D6]/5 border border-[#5D00D6]/10 text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">
                   {block.tag}

@@ -60,11 +60,11 @@ export const ServiceDetailBenefits = ({
           </div>
 
           {/* Right Column: Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] lg:h-full min-h-[400px] group">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] lg:h-full min-h-[400px]">
             <img 
               src={imageSrc} 
               alt={title} 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              className="absolute inset-0 w-full h-full object-cover duration-700 group-hover:scale-110" 
             />
             {/* Subtle Overlay */}
             <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />

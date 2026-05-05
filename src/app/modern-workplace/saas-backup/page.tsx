@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ShieldCheck, Cloud, Database, RefreshCw, 
-  Lock, AlertTriangle, ArrowRight, CheckCircle2,
-  HardDrive, Shield, Zap, Search, Activity, FileText
-} from 'lucide-react';
+import { ShieldCheck, Cloud, Database, RefreshCw, Lock, AlertTriangle, CheckCircle2, HardDrive, Shield, Zap, Search, Activity, FileText } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
@@ -82,15 +78,15 @@ const Hero = () => (
              <div className="flex flex-col items-start gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap h-14 px-8 text-[15px] font-bold"
                    >
                       Request Data Protection Assessment
-                      <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                      
                    </a>
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white h-14 px-8 text-[15px] font-bold"
                    >
                       Review Recovery Setup
                    </a>
@@ -426,15 +422,15 @@ const FinalCTA = () => (
                <h2 className="c9-section-heading mb-8">Validate Your Data Recovery <br />Before You Need It.</h2>
                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                   <a
-                     href="#consultation"
-                     className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group"
+                     href="#consultation-section"
+                     className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 h-14 px-8 text-[15px] font-bold"
                   >
                      Request Data Protection Assessment
-                     <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                     
                   </a>
                   <a
-                     href="#consultation"
-                     className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
+                     href="#consultation-section"
+                     className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all h-14 px-8 text-[15px] font-bold"
                   >
                      Talk to Recovery Specialist
                   </a>
@@ -478,7 +474,7 @@ export default function SaasBackupPage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white">
+      <section id="consultation-section" className="bg-white">
         <WpConsultationForm
           showHeader={false}
           eyebrow="Recovery Assurance Audit"

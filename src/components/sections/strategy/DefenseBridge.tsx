@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, ArrowRight } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export default function DefenseBridge() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-[#0c1024] rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group shadow-2xl"
+          className="bg-[#0c1024] rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden shadow-2xl"
         >
           {/* Subtle Background Glow */}
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6]/10 rounded-lg blur-[100px] -mr-48 -mt-48 pointer-events-none" />
@@ -38,7 +38,7 @@ export default function DefenseBridge() {
           <div className="shrink-0 w-full md:w-auto">
              <Link href="/managed-it/defense">
                 <Button variant="outline" className="w-full md:w-auto border-white/20 bg-white/5 hover:bg-[#5D00D6] hover:border-[#5D00D6] text-white rounded-full px-8 h-14 font-bold transition-all duration-300 flex items-center justify-between gap-4 border-[1.5px]">
-                  Learn About C9 Defense <ArrowRight size={18} className="group-hover:text-white transition-colors" />
+                  Learn About C9 Defense 
                 </Button>
              </Link>
           </div>

@@ -3,10 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  PhoneCall, Users, ShieldCheck, Activity, ArrowRight, CheckCircle2, 
-  Building2, TrendingUp, Layout, Settings, Zap, RefreshCcw, ShieldAlert
-} from 'lucide-react';
+import { PhoneCall, Users, ShieldCheck, Activity, CheckCircle2, Building2, TrendingUp, Layout, Settings, Zap, RefreshCcw, ShieldAlert } from 'lucide-react';
 import { Section } from '@/components/design-system/Section';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
@@ -79,21 +76,21 @@ export default function C9PhoneSystemPage() {
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
                     <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full text-white" asChild>
-                      <Link href="#consultation">Speak to a Specialist</Link>
+                      <Link href="#consultation-section">Speak to a Specialist</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#consultation">Review Your Current Setup</Link>
+                      <Link href="#consultation-section">Review Your Current Setup</Link>
                     </C9Button>
                  </div>
               </FadeIn>
             </div>
 
             <FadeIn delay={0.2} direction="right" className="relative">
-               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3]">
                   <img
                      src="/images/yealink-phone-1.jpg"
                      alt="Professional using a modern business phone system"
-                     className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+                     className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
                   />
                </div>
             </FadeIn>
@@ -164,7 +161,7 @@ export default function C9PhoneSystemPage() {
               { icon: <Activity />, title: "Monitoring & Visibility", desc: "Every call is tracked, measured, and visible — giving you full control over performance, response times, and usage." },
               { icon: <RefreshCcw />, title: "Integration with Business Systems", desc: "Your phone system connects with your internal tools — ensuring communication is aligned with your operations, not isolated from them." }
             ].map((item, i) => (
-              <div key={i} className="flex gap-6 group">
+              <div key={i} className="flex gap-6">
                 <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                   {item.icon}
                 </div>
@@ -209,7 +206,7 @@ export default function C9PhoneSystemPage() {
                   ].map((item, i) => (
                     <div key={i} className="flex gap-5">
                        <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1 shadow-sm">
-                          <ArrowRight size={14} />
+                          
                        </div>
                        <div>
                           <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.title}</h4>
@@ -281,8 +278,8 @@ export default function C9PhoneSystemPage() {
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left" className="order-2 lg:order-1 relative">
-               <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3] group">
-                  <img src="/images/yealink-phone-4.jpg" alt="Business Impact of Systems" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+               <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3]">
+                  <img src="/images/yealink-phone-4.jpg" alt="Business Impact of Systems" className="w-full h-full object-cover object-top duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
                </div>
             </FadeIn>
@@ -354,7 +351,7 @@ export default function C9PhoneSystemPage() {
                    { label: "Management", val: "Centralised" },
                    { label: "Reliability", val: "Multi-Node" }
                  ].map((stat, i) => (
-                   <div key={i} className="bg-white border border-slate-100 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:shadow-2xl group shadow-sm">
+                   <div key={i} className="bg-white border border-slate-100 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:shadow-2xl shadow-sm">
                        <div className="text-2xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight">{stat.val}</div>
                        <div className="text-slate-500 font-bold text-[11px] uppercase tracking-widest leading-tight mt-2">{stat.label}</div>
                    </div>
@@ -451,11 +448,11 @@ export default function C9PhoneSystemPage() {
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left" className="order-2 lg:order-1 relative">
-               <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3] group">
+               <div className="relative rounded-[48px] overflow-hidden shadow-2xl aspect-[4/3]">
                   <img 
                     src="/images/yealink-phone-3.jpg" 
                     alt="Stable business communication infrastructure" 
-                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" 
+                    className="w-full h-full object-cover object-center duration-700 group-hover:scale-105" 
                   />
                </div>
             </FadeIn>
@@ -502,7 +499,7 @@ export default function C9PhoneSystemPage() {
                   We’ll review your current setup and identify where calls are being missed, delayed, or impacting your operations.
                 </p>
                 <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Request a System Review</Link>
+                  <Link href="#consultation-section">Request a System Review</Link>
                 </C9Button>
               </FadeIn>
            </div>
@@ -521,7 +518,7 @@ export default function C9PhoneSystemPage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white">
+      <section id="consultation-section" className="bg-white">
         <WpConsultationForm 
           showHeader={false} 
           eyebrow="COMMUNICATION AUDIT"

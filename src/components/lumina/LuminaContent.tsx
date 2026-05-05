@@ -3,30 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Monitor, 
-  Layers, 
-  Smartphone, 
-  Zap, 
-  CheckCircle2, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  ChevronRight,
-  Sparkles,
-  Maximize,
-  Touchpad,
-  Cloud,
-  Settings,
-  ShieldCheck,
-  Eye,
-  Box,
-  ScreenShare,
-  Wifi,
-  Sun,
-  Shield,
-  Clock
-} from 'lucide-react';
+import { Monitor, Layers, Smartphone, Zap, CheckCircle2, Phone, Mail, ChevronRight, Sparkles, Maximize, Touchpad, Cloud, Settings, ShieldCheck, Eye, Box, ScreenShare, Wifi, Sun, Shield, Clock } from 'lucide-react';
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
@@ -75,8 +52,8 @@ export function LuminaHero() {
               From MicroLED architecture to global cloud orchestration, we engineer visual authority.
             </p>
             <div className="flex flex-wrap gap-6">
-              <Link href="#solutions" className="group bg-[#BF2F70] text-white font-bold text-sm px-10 py-5 flex items-center gap-3 hover:bg-[#A32469] transition-all shadow-[0_20px_40px_rgba(191,47,112,0.3)]">
-                Explore Portfolio <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              <Link href="#solutions" className="bg-[#BF2F70] text-white font-bold text-sm px-10 py-5 flex items-center gap-3 hover:bg-[#A32469] transition-all shadow-[0_20px_40px_rgba(191,47,112,0.3)]">
+                Explore Portfolio 
               </Link>
               <Link href="#contact" className="border border-white/10 text-white font-bold text-sm px-10 py-5 hover:bg-white/5 transition-all">
                 Request Specifications
@@ -178,7 +155,7 @@ export function LuminaCategories() {
               key={cat.id}
               {...fadeIn}
               transition={{ delay: i * 0.1 }}
-              className="group relative bg-[#0a0a0a] border border-white/5 overflow-hidden flex flex-col"
+              className="relative bg-[#0a0a0a] border border-white/5 overflow-hidden flex flex-col"
             >
               <div className="aspect-video overflow-hidden">
                 <img src={cat.image} alt={cat.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
@@ -245,7 +222,7 @@ export function LuminaCMS() {
             </div>
 
             <Link href="#contact" className="inline-flex items-center gap-3 text-sm font-bold text-white border-b border-[#BF2F70] pb-2 hover:text-[#ED9EA2] transition-all">
-              Request Platform Architecture Whitepaper <ArrowRight size={16} />
+              Request Platform Architecture Whitepaper 
             </Link>
           </motion.div>
 
@@ -259,7 +236,7 @@ export function LuminaCMS() {
                    </div>
                    <div className="ml-auto text-[10px] font-bold text-white/20 uppercase tracking-[0.2em]">Global Network Monitor</div>
                 </div>
-                <div className="aspect-video bg-black flex items-center justify-center relative overflow-hidden group">
+                <div className="aspect-video bg-black flex items-center justify-center relative overflow-hidden">
                    <div className="grid grid-cols-4 gap-3 w-full h-full p-4">
                       {[...Array(12)].map((_, i) => (
                         <div key={i} className="bg-white/5 border border-white/5 rounded flex items-center justify-center group-hover:border-[#BF2F70]/30 transition-colors">
@@ -320,8 +297,8 @@ export function LuminaIndustries() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5">
           {industries.map((ind, i) => (
-            <div key={i} className="bg-black p-12 hover:bg-[#0a0a0a] transition-all group">
-              <ind.icon size={32} className="text-[#BF2F70] mb-8 group-hover:scale-110 transition-transform" />
+            <div key={i} className="bg-black p-12 hover:bg-[#0a0a0a] transition-all">
+              <ind.icon size={32} className="text-[#BF2F70] mb-8 group-hover:scale-110" />
               <h4 className="text-xl font-bold text-white mb-6">{ind.title}</h4>
               <ul className="space-y-4">
                 {ind.points.map(p => (

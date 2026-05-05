@@ -16,7 +16,7 @@ const FAQAccordionItem = ({ question, answer }: FAQItemProps) => {
     <div className="bg-[#fcfaff] border border-purple-50 rounded-[24px] px-6 md:px-10 mb-5 overflow-hidden hover:border-[#5D00D6]/20 transition-all duration-300">
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between py-8 text-left group"
+        className="w-full flex items-center justify-between py-8 text-left"
       >
         <span className="text-[18px] md:text-[18px] font-medium text-[#0c1024] group-hover:text-[#5D00D6] transition-colors leading-tight pr-6" >
           {question}

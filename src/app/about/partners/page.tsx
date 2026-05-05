@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ShieldCheck, Cloud, LayoutGrid, CheckCircle2, ArrowRight, Network, Server, Activity, Lock, Layers } from 'lucide-react';
+import { ShieldCheck, Cloud, LayoutGrid, CheckCircle2, Network, Server, Activity, Lock, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import Link from 'next/link';
@@ -55,10 +55,10 @@ export default function PartnersPage() {
               We do not experiment with your infrastructure. We deploy, manage, and secure environments using recognised enterprise vendors and validated technical frameworks.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-                <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                  Discuss Your Environment <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
+                  Discuss Your Environment 
                 </Link>
-                <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full hover:bg-black/5 transition-all backdrop-blur-sm h-14 px-8 text-[15px] font-bold">
                   Request Infrastructure Assessment
                 </Link>
             </div>
@@ -111,8 +111,8 @@ export default function PartnersPage() {
               }
             ].map((partner, idx) => (
               <ScaleIn key={idx} delay={idx * 0.1}>
-                <div className="rounded-[32px] p-10 border border-black/10 transition-all duration-500 h-full group bg-white hover:shadow-2xl hover:-translate-y-1">
-                  <div className="w-16 h-16 rounded-[20px] bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8 transition-transform duration-500 group-hover:scale-[1.1] group-hover:-rotate-3">
+                <div className="rounded-[32px] p-10 border border-black/10 transition-all duration-500 h-full bg-white hover:shadow-2xl hover:-translate-y-1">
+                  <div className="w-16 h-16 rounded-[20px] bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8 duration-500 group-hover:scale-[1.1] group-hover:-rotate-3">
                     <partner.icon size={32} />
                   </div>
                   <h3 className="c9-card-title mb-4">{partner.title}</h3>
@@ -159,7 +159,7 @@ export default function PartnersPage() {
               }
             ].map((cert, idx) => (
               <FadeUp key={idx} delay={idx * 0.1}>
-                <div className="p-8 rounded-[32px] bg-white border border-black/10 h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+                <div className="p-8 rounded-[32px] bg-white border border-black/10 h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-[#1A1A2E] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-300">
                     <cert.icon size={28} />
                   </div>

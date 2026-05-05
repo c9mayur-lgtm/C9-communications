@@ -3,11 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { 
-  TrendingUp, DollarSign, Sliders, LayoutGrid, Cloud, 
-  GitMerge, Shield, Database, ShieldCheck, Globe, Lock, Layers,
-  ChevronRight, ArrowRight
-} from 'lucide-react';
+import { TrendingUp, DollarSign, Sliders, LayoutGrid, Cloud, GitMerge, Shield, Database, ShieldCheck, Globe, Lock, Layers, ChevronRight } from 'lucide-react';
 
 const FONT_FAMILY = { fontFamily: "'Proxima Nova', sans-serif" };
 

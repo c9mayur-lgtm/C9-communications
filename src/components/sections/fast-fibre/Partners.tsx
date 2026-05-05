@@ -47,9 +47,9 @@ export default function Partners() {
           {partners.map((partner, idx) => (
             <div 
               key={idx} 
-              className="bg-white/5 border border-white/10 p-8 md:p-10 rounded-3xl hover:bg-white/10 hover:border-[#5D00D6]/30 transition-all group"
+              className="bg-white/5 border border-white/10 p-8 md:p-10 rounded-3xl hover:bg-white/10 hover:border-[#5D00D6]/30 transition-all"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/10 flex items-center justify-center mb-10 border border-[#5D00D6]/20 transition-transform group-hover:scale-110">
+              <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/10 flex items-center justify-center mb-10 border border-[#5D00D6]/20 group-hover:scale-110">
                 <partner.icon size={28} className="text-[#5D00D6]" />
               </div>
               <h3 className="text-[20px] font-bold text-white mb-4 leading-tight">{partner.name}</h3>

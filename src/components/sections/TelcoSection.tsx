@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Signal, Shield, Monitor, Smartphone, Headphones, Phone } from 'lucide-react';
+import { Signal, Shield, Monitor, Smartphone, Headphones, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
@@ -20,11 +20,11 @@ export const TelcoSection = () => {
                 { name: "Premium Headset", icon: Headphones, color: "from-indigo-500/10 to-transparent" },
                 { name: "Security Gateway / Router", icon: Shield, color: "from-cyan-500/10 to-transparent" }
               ].map((product, i) => (
-                <div key={i} className="bg-white p-8 rounded-[32px] border border-brand-purple/5 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group overflow-hidden relative">
+                <div key={i} className="bg-white p-8 rounded-[32px] border border-brand-purple/5 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden relative">
                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-brand-purple/5 to-transparent pointer-events-none" />
                    
                    <div className="flex flex-col items-center gap-6 relative z-10">
-                      <div className={`p-6 rounded-2xl bg-gradient-to-br ${product.color} group-hover:scale-110 transition-transform duration-500`}>
+                      <div className={`p-6 rounded-2xl bg-gradient-to-br ${product.color} group-hover:scale-110 duration-500`}>
                         <product.icon className="text-[#5D00D6] w-8 h-8" />
                       </div>
                       <span className="c9-eyebrow !text-[#0c1024] !text-[12px] text-center">
@@ -32,12 +32,12 @@ export const TelcoSection = () => {
                       </span>
                    </div>
                    
-                   <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#5D00D6]/5 rounded-tl-full translate-x-4 translate-y-4 group-hover:scale-150 transition-transform duration-700" />
+                   <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#5D00D6]/5 rounded-tl-full translate-x-4 translate-y-4 group-hover:scale-150 duration-700" />
                 </div>
               ))}
               
               {/* Promo Badge */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 bg-[#5D00D6] text-white rounded-3xl shadow-[0_20px_60px_-10px_rgba(93,0,214,0.6)] z-20 flex flex-col items-center gap-2 w-56 text-center transform -rotate-6 hover:rotate-0 transition-transform cursor-pointer">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 bg-[#5D00D6] text-white rounded-3xl shadow-[0_20px_60px_-10px_rgba(93,0,214,0.6)] z-20 flex flex-col items-center gap-2 w-56 text-center transform -rotate-6 hover:rotate-0 cursor-pointer">
                  <span className="c9-eyebrow !text-white opacity-80">Upgrade to C9 phone system</span>
                  <span className="text-[28px] font-black leading-none">Save 70%</span>
                  <span className="c9-body !text-white !text-xs">on your call costs</span>
@@ -110,24 +110,24 @@ export const TelcoSection = () => {
             </Accordion>
             
             <div className="flex items-center gap-6 pt-4">
-              <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-10 rounded-full h-14 text-base font-bold shadow-lg shadow-[#5D00D6]/20">
-                Explore Telco Solutions <ArrowRight className="ml-2 w-5 h-5" />
+              <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-10 rounded-full h-14 text-[14px] font-bold shadow-lg shadow-[#5D00D6]/20">
+                Explore Telco Solutions 
               </Button>
             </div>
             
             {/* Defense Bridge Callout */}
-            <div className="p-6 bg-[#0c1024] rounded-2xl border-l-[6px] border-[#5D00D6] flex items-center gap-6 shadow-xl relative overflow-hidden group cursor-pointer hover:bg-[#5D00D6]/20 transition-all">
+            <div className="p-6 bg-[#0c1024] rounded-2xl border-l-[6px] border-[#5D00D6] flex items-center gap-6 shadow-xl relative overflow-hidden cursor-pointer hover:bg-[#5D00D6]/20 transition-all">
               <div className="absolute inset-0 bg-gradient-to-r from-[#5D00D6]/10 to-transparent pointer-events-none" />
               <Shield className="text-[#5D00D6] w-8 h-8 shrink-0 relative z-10" />
               <div className="flex flex-col gap-1 relative z-10">
-                <p className="c9-card-title !text-white !text-[16px] group-hover:translate-x-1 transition-transform">
+                <p className="c9-card-title !text-white !text-[16px]">
                   🛡 Secure your network.
                 </p>
                 <p className="c9-body !text-gray-400 !text-[14px]">
                   C9 Defense adds continuous monitoring and threat response to your connectivity stack.
                 </p>
               </div>
-              <ArrowRight className="text-[#5D00D6] w-5 h-5 ml-auto shrink-0 relative z-10 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              
             </div>
           </div>
           

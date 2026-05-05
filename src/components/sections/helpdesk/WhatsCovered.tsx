@@ -1,5 +1,5 @@
 import React from "react";
-import { Monitor, Cloud, Server, Smartphone, UserPlus, AlertTriangle } from "lucide-react";
+import { Monitor, Cloud, Server, Smartphone, UserPlus, AlertTriangle } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function WhatsCovered() {

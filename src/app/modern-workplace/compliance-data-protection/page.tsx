@@ -11,21 +11,7 @@ import {
   FullStackSection
 } from '../components';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { 
-  ShieldCheck, 
-  Lock, 
-  FileCheck2, 
-  UserCheck, 
-  Activity, 
-  AlertTriangle, 
-  CheckCircle2, 
-  ArrowRight,
-  ShieldAlert,
-  Target,
-  Users as UsersIcon,
-  Fingerprint,
-  Shield
-} from 'lucide-react';
+import { ShieldCheck, Lock, FileCheck2, UserCheck, Activity, AlertTriangle, CheckCircle2, ShieldAlert, Target, Users as UsersIcon, Fingerprint, Shield } from 'lucide-react';
 
 const sectionClassName = 'py-16 md:py-24 relative overflow-hidden';
 const containerClassName = 'c9-container relative z-10';
@@ -86,10 +72,10 @@ export default function CompliancePage() {
                   Enterprise security is not a checkbox. C9 implements multi-layered data protection frameworks, Zero Trust identity governance, and Essential Eight alignment to ensure your data stays defended and compliant.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Link href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Request Security Audit <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
+                    Request Security Audit 
                   </Link>
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full hover:bg-black/5 transition-all backdrop-blur-sm h-14 px-8 text-[15px] font-bold">
                     View Governance Framework
                   </Link>
                 </div>
@@ -106,11 +92,11 @@ export default function CompliancePage() {
             
             <div className="relative">
               <ScaleIn className="relative hidden lg:block">
-                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50 group">
+                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50">
                   <img 
                     src="/compliance_data_protection_hero.png" 
                     alt="Modern Cybersecurity Operations Center"
-                    className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-1000"
+                    className="w-full h-full object-cover aspect-square group-hover:scale-105 duration-1000"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/10 to-transparent mix-blend-overlay" />
                 </div>
@@ -224,7 +210,7 @@ export default function CompliancePage() {
               <p className="text-[17px] text-gray-500 mb-10 leading-relaxed font-medium">
                 For new sites, security is mandatory from the first hour. We guarantee a fully-compliant, hardened environment on your first day of operation.
               </p>
-              <div className="bg-[#0C1024] border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl">
+              <div className="bg-[#0C1024] border border-white/10 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/40 transition-all shadow-2xl">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/10 rounded-bl-full" />
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4">
@@ -387,7 +373,7 @@ export default function CompliancePage() {
       />
 
       {/* 8. FINAL CONSULTATION FORM */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="Security Posture Audit"

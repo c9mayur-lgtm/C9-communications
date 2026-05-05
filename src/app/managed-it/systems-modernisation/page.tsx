@@ -2,24 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Settings, 
-  ShieldAlert, 
-  Layers, 
-  Zap, 
-  CheckCircle2, 
-  Activity, 
-  RefreshCw, 
-  Search, 
-  Layout, 
-  Cpu,
-  BarChart3,
-  Box,
-  Monitor,
-  Maximize,
-  CheckCircle
-} from 'lucide-react';
+import { Settings, ShieldAlert, Layers, Zap, CheckCircle2, Activity, RefreshCw, Search, Layout, Cpu, BarChart3, Box, Monitor, Maximize, CheckCircle } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from '@/components/wordpress/WpDefenseBanner';
@@ -60,7 +43,7 @@ const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
    HERO VISUAL COMPONENT (Transition Engine)
    ───────────────────────────────────────────────────────── */
 const TransitionEngineVisual = () => (
-  <div className="bg-[#0c1024] rounded-lg p-10 border border-white/10 shadow-2xl relative overflow-hidden group">
+  <div className="bg-[#0c1024] rounded-lg p-10 border border-white/10 shadow-2xl relative overflow-hidden">
     {/* Grid Background */}
     <div className="absolute inset-0 opacity-10 pointer-events-none" 
       style={{ backgroundImage: 'radial-gradient(#5D00D6 1px, transparent 1px)', backgroundSize: '24px 24px' }} 
@@ -162,15 +145,15 @@ const Hero = () => (
           <FadeIn delay={0.3}>
              <div className="flex flex-col sm:flex-row items-center gap-4">
                 <a
-                   href="#consultation"
-                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap c9-button-label"
+                   href="#consultation-section"
+                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap c9-button-label h-14 px-8 text-[15px] font-bold"
                 >
                    Request Environment Assessment
-                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                   
                 </a>
                 <a
-                   href="#consultation"
-                   className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap bg-white c9-button-label"
+                   href="#consultation-section"
+                   className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap bg-white c9-button-label h-14 px-8 text-[15px] font-bold"
                 >
                    Review Your Current Setup
                 </a>
@@ -328,7 +311,7 @@ const SectionTransitionModel = () => (
                { step: '03', title: 'System Validation', desc: 'Rigorous testing of all changes within isolated, risk-free environments.' },
                { step: '04', title: 'Controlled Execution', desc: 'Phased deployment to ensure zero disruption to core business operations.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className={`relative bg-white p-8 rounded-lg border shadow-sm group hover:border-[#5D00D6]/30 transition-all h-full ${i === 1 ? 'border-[#5D00D6]/40 shadow-[0_0_20px_rgba(93,0,214,0.1)]' : 'border-slate-200'}`}>
+               <FadeIn key={i} delay={i * 0.1} className={`relative bg-white p-8 rounded-lg border shadow-sm  hover:border-[#5D00D6]/30 transition-all h-full ${i === 1 ? 'border-[#5D00D6]/40 shadow-[0_0_20px_rgba(93,0,214,0.1)]' : 'border-slate-200'}`}>
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none pointer-events-none">
                      {s.step}
                   </div>
@@ -435,7 +418,7 @@ const SectionWhyThisMatters = () => (
                   { title: 'Execution Quality', desc: 'Determines whether a transition stabilizes or disrupts your business operations.' },
                   { title: 'Proven Stability', desc: 'We maintain 100% uptime through rigorous validation and phased rollouts.' }
                ].map((item, i) => (
-                  <FadeIn key={i} delay={i * 0.15} className="p-8 bg-white/5 rounded-lg border border-white/10 hover:bg-[#5D00D6]/10 transition-all group">
+                  <FadeIn key={i} delay={i * 0.15} className="p-8 bg-white/5 rounded-lg border border-white/10 hover:bg-[#5D00D6]/10 transition-all">
                      <div className="flex gap-6 items-start">
                         <div className="w-10 h-10 rounded-full bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] shrink-0 mt-1">
                            <CheckCircle size={14} />
@@ -487,7 +470,7 @@ export default function SystemsModernisationPage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="SYSTEMS MODERNISATION"

@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle } from 'lucide-react';
 
 export default function C9Difference() {
   const rows = [

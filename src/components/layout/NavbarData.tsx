@@ -1,13 +1,5 @@
 import * as React from 'react';
-import { 
-  Wifi, Phone, Network, Globe, Smartphone, Truck, Server, 
-  Headphones, Database, Shield, LayoutGrid, Monitor, 
-  UserPlus, Cloud, HardDrive, Cpu, ShieldCheck, 
-  Infinity as InfinityIcon, BarChart3, Building2, 
-  Volume2, GraduationCap, ShieldAlert, Layers,
-  Users, Star, Layout, MessageSquare, Calendar, Briefcase,
-  Printer, Video, Lock, Zap, RefreshCcw, Handshake, TrendingUp
-} from 'lucide-react';
+import { Wifi, Phone, Network, Globe, Smartphone, Truck, Server, Headphones, Database, Shield, LayoutGrid, Monitor, UserPlus, Cloud, HardDrive, Cpu, ShieldCheck, Infinity as InfinityIcon, BarChart3, Building2, Volume2, GraduationCap, ShieldAlert, Layers, Users, Star, Layout, MessageSquare, Calendar, Briefcase, Printer, Video, Lock, Zap, RefreshCcw, Handshake, TrendingUp } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────
 //  SHARED CONTENT (unchanged)
@@ -628,9 +620,9 @@ export const RESOURCES_MENU = {
     heading: 'Industry Insights',
     hideCTA: true,
     items: [
-      { icon: <Building2 size={18} />, title: 'Enterprise Governance',  desc: 'Multi-site infrastructure control models.', path: '/insights/enterprise-governance' },
-      { icon: <Wifi size={18} />,       title: 'Security Frameworks',    desc: 'Protecting distributed retail footprints.', path: '/insights/security-frameworks' },
-      { icon: <Phone size={18} />,      title: 'Cloud Transformation',   desc: 'Migrating legacy voice to modern UC.', path: '/insights/cloud-transformation' },
+      { icon: <Building2 size={18} />, title: 'Enterprise Governance',  desc: 'Multi-site infrastructure control models.', path: '/insights/ceo-security-governance' },
+      { icon: <Wifi size={18} />,       title: 'Security Frameworks',    desc: 'Protecting distributed retail footprints.', path: '/insights/scaling-network-architecture' },
+      { icon: <Phone size={18} />,      title: 'Cloud Transformation',   desc: 'Migrating legacy voice to modern UC.', path: '/insights/state-of-australian-it-2026' },
     ]
   }
 };
@@ -665,5 +657,5 @@ export const TABS = [
   { name: 'Telco',            menuKey: 'telco',            path: '/telco' },
   { name: 'Modern Workplace', menuKey: 'modern-workplace', path: '/modern-workplace' },
   { name: 'Company',          menuKey: 'company',          path: '/about' },
-  { name: 'Resources',        menuKey: 'resources',        path: '/resources' },
+  { name: 'Resources',        menuKey: 'resources',        path: '/insights' },
 ];

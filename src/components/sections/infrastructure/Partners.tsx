@@ -58,9 +58,9 @@ export default function Partners() {
             return (
               <div 
                 key={idx} 
-                className="bg-white rounded-2xl border-[0.5px] border-[rgba(93,0,214,0.12)] p-10 text-center flex flex-col items-center gap-4 transition-all hover:border-[color:var(--brand-purple)] group"
+                className="bg-white rounded-2xl border-[0.5px] border-[rgba(93,0,214,0.12)] p-10 text-center flex flex-col items-center gap-4 transition-all hover:border-[color:var(--brand-purple)]"
               >
-                <div className="w-full h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <div className="w-full h-16 flex items-center justify-center duration-300 group-hover:scale-105">
                   <img src={partner.logo} alt={partner.title} className={`max-h-full max-w-[160px] w-auto h-auto object-contain grayscale group-hover:grayscale-0 transition-all ${partner.customClass || ''}`} />
                 </div>
               </div>

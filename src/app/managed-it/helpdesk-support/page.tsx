@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
-  Monitor, Lock, Activity, Users, 
-  MessageSquare, Clock, ShieldAlert, Laptop
-} from 'lucide-react';
+import { CheckCircle, ShieldCheck, Zap, Monitor, Lock, Activity, Users, MessageSquare, Clock, ShieldAlert, Laptop } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
@@ -129,7 +125,7 @@ const LiveChatVisual = () => {
         <div className="flex items-center gap-3 bg-slate-50 rounded-full border border-slate-200 px-5 py-3">
           <span className="flex-1 text-[14px] text-slate-400 font-medium">Message C9 Helpdesk…</span>
           <div className="w-8 h-8 rounded-full bg-[#5D00D6] flex items-center justify-center shadow-md">
-            <ArrowRight size={14} className="text-white" />
+            
           </div>
         </div>
       </div>
@@ -192,25 +188,25 @@ const Hero = () => (
              <div className="flex flex-col items-start gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-7 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap h-14 px-8 text-[15px] font-bold"
                    >
                       Set Up Support for New Sites
-                      <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                      
                    </a>
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-7 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white h-14 px-8 text-[15px] font-bold"
                    >
                       Stabilize Existing IT Support
                    </a>
                 </div>
                 <a
-                   href="#consultation"
-                   className="inline-flex items-center gap-1.5 text-slate-400 text-[14px] font-medium hover:text-[#5D00D6] transition-colors group whitespace-nowrap"
+                   href="#consultation-section"
+                   className="inline-flex items-center gap-1.5 text-slate-400 text-[14px] font-medium hover:text-[#5D00D6] transition-colors whitespace-nowrap"
                 >
                    Or talk to a support architect
-                   <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
+                   
                 </a>
              </div>
           </FadeIn>
@@ -372,7 +368,7 @@ const SectionProcess = () => (
                { step: '04', title: 'Resolved', desc: 'Issue fixed or escalated to senior leads.' },
                { step: '05', title: 'Reported', desc: 'Closure confirmed and root cause logged.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -632,7 +628,7 @@ export default function HelpdeskSupportPage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
           eyebrow="READY TO FIX YOUR HELPDESK?"

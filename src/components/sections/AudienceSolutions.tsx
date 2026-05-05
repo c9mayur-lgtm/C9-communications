@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Building2, Rocket, ShieldAlert } from 'lucide-react';
+import { Building2, Rocket, ShieldAlert } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useAudience } from '@/components/context/AudienceContext';
@@ -53,7 +53,7 @@ export const AudienceSolutions = () => {
           {cards.map((card) => (
             <div 
               key={card.id}
-              className="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-purple/20 transition-all duration-500 flex flex-col h-full"
+              className="relative bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-purple/20 transition-all duration-500 flex flex-col h-full"
             >
               <div className="mb-6 w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center group-hover:bg-brand-purple/5 transition-colors">
                 {card.icon}
@@ -73,7 +73,7 @@ export const AudienceSolutions = () => {
                   variant="outline" 
                   className="w-full border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white rounded-full h-12 font-bold group-hover:shadow-md transition-all"
                 >
-                  {card.cta} <ArrowRight className="ml-2 w-4 h-4" />
+                  {card.cta} 
                 </Button>
               </Link>
             </div>

@@ -459,7 +459,7 @@ export default function SubServices() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 lg:mt-16 max-w-[1010px] mx-auto">
           {cards.map((card, i) => (
-            <div key={i} className="group bg-white border border-slate-200 hover:border-[#5D00D6]/30 transition-colors duration-500 rounded-3xl overflow-hidden flex flex-col shadow-sm hover:shadow-xl">
+            <div key={i} className="bg-white border border-slate-200 hover:border-[#5D00D6]/30 transition-colors duration-500 rounded-3xl overflow-hidden flex flex-col shadow-sm hover:shadow-xl">
               {/* Visual Container - Mid Size */}
               <div className="h-[250px] bg-[#FDFDFD] flex items-center justify-center relative border-b border-slate-200">
                 {card.visual}
@@ -475,10 +475,9 @@ export default function SubServices() {
                   {card.body}
                 </p>
                 <a href={card.href}
-                  className="flex items-center gap-2 text-[14px] font-bold text-[#5D00D6]
-                    pt-6 border-t border-slate-200 mt-auto group/link transition-colors">
+                  className="flex items-center gap-2 text-[14px] font-bold text-[#5D00D6] pt-6 border-t border-slate-200 mt-auto group/link transition-colors">
                   {card.link}
-                  <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform"
+                  <svg className="w-4 h-4 group-hover/link:translate-x-1"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>

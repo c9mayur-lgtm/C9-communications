@@ -1,9 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import {
-  Search, PenTool, Repeat, CheckCircle, ChevronRight
-} from 'lucide-react'
+import { Search, PenTool, Repeat, CheckCircle, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const FONT_FAMILY = { fontFamily: "'Proxima Nova', sans-serif" };
@@ -131,7 +129,7 @@ export default function MigrationPath() {
                 key={i}
                 onClick={() => setCur(i)}
                 className={cn(
-                  'flex items-center text-left p-3.5 md:p-4 rounded-[1.25rem] border transition-all duration-300 w-full group outline-none focus:ring-2 focus:ring-brand-purple/30',
+                  'flex items-center text-left p-3.5 md:p-4 rounded-[1.25rem] border transition-all duration-300 w-full  outline-none focus:ring-2 focus:ring-brand-purple/30',
                   isActive 
                     ? 'border-brand-purple bg-white shadow-lg shadow-brand-purple/5' 
                     : 'border-brand-purple/10 bg-white/50 hover:bg-white hover:border-brand-purple/40 hover:shadow-md hover:shadow-brand-purple/5'

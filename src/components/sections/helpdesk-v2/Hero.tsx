@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { CheckCircle } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const MESSAGES = [
@@ -85,7 +85,7 @@ const LiveChatVisual = () => {
         <div className="flex items-center gap-3 bg-slate-50 rounded-full border border-slate-200 px-5 py-3">
           <span className="flex-1 text-[14px] text-slate-400 font-medium">Message C9 Helpdesk…</span>
           <div className="w-8 h-8 rounded-full bg-[#5D00D6] flex items-center justify-center shadow-md">
-            <ArrowRight size={14} className="text-white" />
+            
           </div>
         </div>
       </div>
@@ -129,10 +129,10 @@ export default function Hero() {
                 <Button 
                   onClick={handleProposalRequest}
                   size="lg" 
-                  className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none text-[14px]" 
+                  className="w-full sm:w-auto shadow-2xl hover:gap-4 bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none text-[14px]" 
                   
                 >
-                  Get a Helpdesk Proposal <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
+                  Get a Helpdesk Proposal 
                 </Button>
                 <Button 
                   onClick={handleSlaScroll}

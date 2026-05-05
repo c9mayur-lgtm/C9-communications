@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Shield, BarChart3, Calendar, Clock, Zap } from 'lucide-react';
+import { Shield, BarChart3, Calendar, Clock, Zap } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -223,7 +223,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             type="submit"
             disabled={isSubmitting}
             size="lg" 
-            className="w-full h-14 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] c9-button-label shadow-2xl shadow-purple-900/30 group transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full h-14 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] c9-button-label shadow-2xl shadow-purple-900/30 transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
           >
              {isSubmitting ? (
                <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
                </div>
              ) : (
                <>
-                 {ctaText || currentPath.btn} <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                 {ctaText || currentPath.btn} 
                </>
              )}
           </Button>

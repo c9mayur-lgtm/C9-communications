@@ -2,12 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
-  Monitor, Lock, Activity, Users, 
-  Server, Database, HardDrive, Cpu, ShieldAlert,
-  Wrench, RefreshCcw
-} from 'lucide-react';
+import { CheckCircle, ShieldCheck, Zap, Monitor, Lock, Activity, Users, Server, Database, HardDrive, Cpu, ShieldAlert, Wrench, RefreshCcw } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
@@ -105,25 +100,25 @@ const Hero = () => (
              <div className="flex flex-col items-start gap-6">
                 <div className="flex flex-col sm:flex-row gap-4">
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-7 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap c9-button-label"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap c9-button-label h-14 px-8 text-[15px] font-bold"
                    >
                       Request Infrastructure Assessment
-                      <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                      
                    </a>
                    <a
                       href="#sla-framework"
-                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-7 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white c9-button-label"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white c9-button-label h-14 px-8 text-[15px] font-bold"
                    >
                       Review SLA Framework
                    </a>
                 </div>
                 <a
-                   href="#consultation"
-                   className="inline-flex items-center gap-1.5 text-slate-400 text-[14px] font-medium hover:text-[#5D00D6] transition-colors group whitespace-nowrap c9-button-label"
+                   href="#consultation-section"
+                   className="inline-flex items-center gap-1.5 text-slate-400 text-[14px] font-medium hover:text-[#5D00D6] transition-colors whitespace-nowrap c9-button-label"
                 >
                    Talk to an Infrastructure Architect
-                   <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
+                   
                 </a>
              </div>
           </FadeIn>
@@ -232,7 +227,7 @@ const SectionHowItWorks = () => (
                { step: '03', title: 'Orchestrated Escalation', desc: 'Coordinated technical response across internal leads and third-party vendors under unified control.' },
                { step: '04', title: 'Resolution Verification', desc: 'Formal root-cause confirmation and system validation before incident closure and stakeholder reporting.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -383,14 +378,14 @@ const SectionIntegration = () => (
                { icon: <ShieldCheck />, name: 'Stability Oversight', desc: 'Governance layer ensuring long-term infrastructure health and reliability.' },
                { icon: <RefreshCcw />, name: 'Issue Elimination', desc: 'Systemic identification and removal of recurring failure points.' }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white border border-slate-200 p-8 rounded-lg hover:border-[#5D00D6]/20 hover:shadow-xl transition-all group">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white border border-slate-200 p-8 rounded-lg hover:border-[#5D00D6]/20 hover:shadow-xl transition-all">
                   <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                      {item.icon}
                   </div>
                   <h4 className="text-lg font-bold text-slate-900 mb-3">{item.name}</h4>
                   <p className="text-slate-500 text-sm leading-relaxed mb-6">{item.desc}</p>
-                  <a href="#consultation" className="inline-flex items-center gap-2 text-[#5D00D6] text-[13px] font-bold group-hover:gap-3 transition-all">
-                     Review Framework <ArrowRight size={14} />
+                  <a href="#consultation-section" className="inline-flex items-center gap-2 text-[#5D00D6] text-[13px] font-bold group-hover:gap-3 transition-all">
+                     Review Framework 
                   </a>
                </FadeIn>
             ))}
@@ -529,7 +524,7 @@ export default function InfrastructurePage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
           eyebrow="OPERATIONAL RISK CLOSURE"

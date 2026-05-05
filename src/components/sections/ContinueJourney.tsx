@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+;
 
 interface LinkItem {
   label: string;
@@ -36,12 +36,12 @@ export function ContinueJourney({
             <Link 
               key={i} 
               href={link.path}
-              className="group flex items-center justify-between p-5 bg-white border border-slate-200 rounded-2xl hover:border-[#5D00D6] hover:shadow-lg transition-all"
+              className="flex items-center justify-between p-5 bg-white border border-slate-200 rounded-2xl hover:border-[#5D00D6] hover:shadow-lg transition-all"
             >
               <span className="font-bold text-slate-800 text-[14px] group-hover:text-[#5D00D6] transition-colors">
                 {link.label}
               </span>
-              <ArrowRight size={16} className="text-slate-400 group-hover:text-[#5D00D6] group-hover:translate-x-1 transition-all shrink-0" />
+              
             </Link>
           ))}
         </div>

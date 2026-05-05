@@ -23,7 +23,7 @@ export const OurProcess = () => {
           <div className="hidden lg:block absolute top-[60px] left-[5%] right-[5%] h-px border-t border-dashed border-[#5D00D6]/20 z-0" />
           
           {steps.map((step, i) => (
-            <div key={i} className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 group relative z-10 w-full lg:w-48">
+            <div key={i} className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 relative z-10 w-full lg:w-48">
               <div className="w-14 h-14 bg-white border-2 border-[#5D00D6] rounded-full flex items-center justify-center text-[#5D00D6] text-xl font-bold shadow-lg shadow-[#5D00D6]/10 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300 transform group-hover:scale-110">
                 {i + 1}
               </div>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Settings, Cloud, Globe, Shield, Server } from 'lucide-react';
+import { Zap, Settings, Cloud, Globe, Shield, Server } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const cards = [
@@ -58,7 +58,7 @@ export default function WhyFastFibre() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((item, i) => (
-            <div key={i} className="bg-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
+            <div key={i} className="bg-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
               {/* Icon */}
               <div className="mb-6">
                 <item.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
@@ -80,9 +80,9 @@ export default function WhyFastFibre() {
               const el = document.getElementById('consultation-section');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center justify-center gap-2 shadow-2xl hover:gap-4 transition-all group bg-[#5D00D6] text-white rounded-full h-14 px-10 text-base font-bold"
+            className="inline-flex items-center justify-center gap-2 shadow-2xl hover:gap-4 transition-all bg-[#5D00D6] text-white rounded-full h-14 px-8 text-[15px] font-bold"
           >
-            Get Started Now <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+            Get Started Now 
           </button>
         </div>
       </div>

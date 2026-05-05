@@ -3,11 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Wifi, ShieldAlert, Activity, Users, ArrowRight, CheckCircle2, 
-  Zap, Clock, Layers, ShieldCheck, Building2, TrendingUp,
-  Server, Smartphone, PhoneCall, Monitor, CheckCircle
-} from 'lucide-react';
+import { Wifi, ShieldAlert, Activity, Users, CheckCircle2, Zap, Clock, Layers, ShieldCheck, Building2, TrendingUp, Server, Smartphone, PhoneCall, Monitor, CheckCircle } from 'lucide-react';
 import { Section } from '@/components/design-system/Section';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
@@ -95,7 +91,7 @@ export default function BusinessNbnPage() {
               <FadeIn delay={0.3}>
                  <div className="flex flex-col sm:flex-row gap-4">
                     <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                      <Link href="#consultation">Get a Connectivity Assessment</Link>
+                      <Link href="#consultation-section">Get a Connectivity Assessment</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
                       <Link href="#solutions">Explore Solutions</Link>
@@ -105,11 +101,11 @@ export default function BusinessNbnPage() {
             </div>
 
             <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-               <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+               <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3]">
                   <img
                      src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2000"
                      alt="Operational IT Center"
-                     className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                     className="w-full h-full object-cover object-top duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
                   
@@ -148,7 +144,7 @@ export default function BusinessNbnPage() {
                   <img 
                     src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2000&auto=format&fit=crop" 
                     alt="Network engineer managing complex infrastructure to reduce operational risk" 
-                    className="w-full h-full object-cover grayscale object-center transition-transform duration-700 group-hover:scale-105" 
+                    className="w-full h-full object-cover grayscale object-center duration-700 group-hover:scale-105" 
                   />
                   <div className="absolute inset-0 bg-rose-500/10 mix-blend-overlay" />
                   <div className="absolute top-6 right-6 bg-white/95 p-6 rounded-2xl shadow-xl border border-rose-100">
@@ -187,9 +183,10 @@ export default function BusinessNbnPage() {
                      Unreliable providers leave you exposed. C9 removes the risk.
                   </p>
                </div>
-               <a href="#consultation" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-3 transition-all group">
-                  Assess your connectivity risk <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-               </a>
+               <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 h-14 px-8 text-[15px] font-bold">
+                Check My Address
+                
+              </a>
             </FadeIn>
           </div>
         </div>
@@ -212,8 +209,8 @@ export default function BusinessNbnPage() {
               { icon: <ShieldCheck />, title: "Senior Local Support", desc: "Speak directly to a senior Australian engineer. No offshore queues, no scripts." },
               { icon: <Layers />, title: "Single Vendor Model", desc: "Consolidate internet, voice, and security into one managed, accountable environment." }
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.05} className="bg-slate-50 border border-slate-100 p-8 rounded-3xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all group text-center flex flex-col items-center">
-                <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-5 transform group-hover:scale-110 transition-transform">
+              <FadeIn key={i} delay={i * 0.05} className="bg-slate-50 border border-slate-100 p-8 rounded-3xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all text-center flex flex-col items-center">
+                <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-5 transform group-hover:scale-110">
                   {item.icon}
                 </div>
                 <h3 className="c9-card-title mb-2 text-[18px]">{item.title}</h3>
@@ -254,7 +251,7 @@ export default function BusinessNbnPage() {
                       desc: "Centralized visibility and guaranteed uptime confidence across dozens or hundreds of locations." 
                     }
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-5 group">
+                    <div key={i} className="flex gap-5">
                        <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm shrink-0 mt-1">
                           {item.icon}
                        </div>
@@ -276,7 +273,7 @@ export default function BusinessNbnPage() {
                     Most failures happen because of poor planning, not bad hardware. Let our engineers audit your environment and identify the risks.
                   </p>
                   <C9Button className="w-full h-14 bg-[#5D00D6] hover:bg-[#4d00b3] rounded-full shadow-2xl shadow-purple-900/40" asChild>
-                    <Link href="#consultation">Book a Connectivity Review</Link>
+                    <Link href="#consultation-section">Book a Connectivity Review</Link>
                   </C9Button>
                </div>
             </FadeIn>
@@ -342,7 +339,7 @@ export default function BusinessNbnPage() {
                 </div>
                 
                 <C9Button variant={plan.popular ? "default" : "outline"} className={`w-full justify-center rounded-full h-12 ${plan.popular ? 'bg-[#5D00D6] hover:bg-[#4d00b3] text-white border-transparent' : 'bg-white border-slate-200 text-slate-700 hover:border-[#5D00D6] hover:text-[#5D00D6]'}`} asChild>
-                  <Link href="#consultation">Select Plan</Link>
+                  <Link href="#consultation-section">Select Plan</Link>
                 </C9Button>
               </FadeIn>
             ))}
@@ -393,7 +390,7 @@ export default function BusinessNbnPage() {
                    We’ll assess your requirements and recommend the right connectivity option based on your usage, locations, and operational needs.
                 </p>
                 <C9Button className="px-10 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-full shadow-xl shadow-purple-900/20" asChild>
-                   <Link href="#consultation">Get a Recommendation</Link>
+                   <Link href="#consultation-section">Get a Recommendation</Link>
                 </C9Button>
              </FadeIn>
           </div>
@@ -449,8 +446,8 @@ export default function BusinessNbnPage() {
                      { label: "Vendor Management", val: "Single Owner" },
                      { label: "Accountability", val: "Absolute" }
                    ].map((stat, i) => (
-                     <div key={i} className="bg-slate-50/80 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10 group">
-                        <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight group-hover:translate-x-1 transition-transform duration-500">{stat.val}</div>
+                     <div key={i} className="bg-slate-50/80 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10">
+                        <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight duration-500">{stat.val}</div>
                         <div className="text-slate-500 font-bold text-[12px] uppercase tracking-widest leading-tight">{stat.label}</div>
                      </div>
                    ))}
@@ -505,7 +502,7 @@ export default function BusinessNbnPage() {
                   Stop accepting downtime as a cost of business. Partner with an accountable leader who takes full ownership of your infrastructure.
                 </p>
                 <C9Button className="px-10 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Request Connectivity Audit</Link>
+                  <Link href="#consultation-section">Request Connectivity Audit</Link>
                 </C9Button>
               </div>
            </div>
@@ -524,7 +521,7 @@ export default function BusinessNbnPage() {
         ]} 
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm 
           showHeader={false} 
           eyebrow="GET CONNECTED"

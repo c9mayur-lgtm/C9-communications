@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, Network, Zap, Cloud } from 'lucide-react';
+import { Check, Network, Zap, Cloud } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const SERVICES = [
@@ -78,7 +78,7 @@ export default function SingleBillSection() {
                 onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-[#5D00D6] text-white hover:bg-[#4c00b0] font-medium h-[56px] px-10 rounded-full transition-all text-[14px] shadow-xl shadow-[#5D00D6]/20 flex items-center gap-2 transform hover:-translate-y-0.5"
               >
-                Bundle My Quote <ArrowRight size={18} />
+                Bundle My Quote 
               </Button>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function SingleBillSection() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-8 bg-gray-50 border border-gray-100 rounded-[32px] hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all group flex gap-6 items-center"
+                    className="p-8 bg-gray-50 border border-gray-100 rounded-[32px] hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all flex gap-6 items-center"
                   >
                     <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0">
                        <service.icon size={26} strokeWidth={1.5} />

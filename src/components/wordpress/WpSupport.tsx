@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export const WpSupport = () => {
   return (
@@ -38,9 +39,9 @@ export const WpSupport = () => {
               link: "MEET THE TEAM"
             }
           ].map((card, idx) => (
-            <div key={idx} className="group cursor-pointer">
+            <div key={idx} className="cursor-pointer">
               <div className="relative aspect-[16/10] rounded-lg overflow-hidden mb-8 shadow-sm group-hover:shadow-xl transition-all duration-500">
-                <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay group-hover:bg-[#5D00D6]/20 transition-colors duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 via-transparent to-transparent opacity-60" />
               </div>
@@ -50,8 +51,8 @@ export const WpSupport = () => {
               <p className="c9-body mb-6 line-clamp-3">
                 {card.desc}
               </p>
-              <div className="inline-flex items-center gap-2 text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.2em] group-hover:underline">
-                {card.link} <ArrowRight size={14} strokeWidth={2.5} className="shrink-0" />
+              <div className="inline-flex items-center gap-2 text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.15em] group-hover:gap-3 transition-all">
+                {card.link} 
               </div>
             </div>
           ))}

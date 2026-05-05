@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+;
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useInquiry } from '@/components/context/InquiryContext';
@@ -38,10 +38,10 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap items-center gap-4 mt-8 w-full sm:w-auto">
               <Button onClick={handleAssessmentRequest} className="flex-1 sm:flex-none bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[14px] shadow-lg shadow-purple-900/20 border-none" style={{ fontFamily: F }}>
-                Assess My Backup Environment <ArrowRight className="ml-2 w-4 h-4" />
+                Assess My Backup Environment 
               </Button>
               <button onClick={scrollToRTO} className="flex-1 sm:flex-none flex items-center justify-center text-[#1A1A2E] border border-[#5D00D6]/20 hover:bg-slate-50 px-8 h-14 rounded-full font-bold transition-all text-[14px]" style={{ fontFamily: F }}>
-                What is RTO and RPO? <ArrowRight className="ml-2 w-4 h-4" />
+                What is RTO and RPO? 
               </button>
             </div>
             <div className="flex flex-col gap-2 border-l-2 border-[#5D00D6]/20 pl-4 mt-6">

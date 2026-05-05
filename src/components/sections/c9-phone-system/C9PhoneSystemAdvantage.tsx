@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Network, Scaling as ScaleIcon, Building2, Share2, MessageSquare, Zap, ArrowRight } from 'lucide-react';
+import { Network, Scaling as ScaleIcon, Building2, Share2, MessageSquare, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { useInquiry } from '@/components/context/InquiryContext';
 
@@ -92,7 +92,7 @@ export const C9PhoneSystemAdvantage = () => {
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
                transition={{ duration: 0.5, delay: i * 0.05 }}
-               className="bg-white p-7 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col group border border-transparent hover:border-gray-100"
+               className="bg-white p-7 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col border border-transparent hover:border-gray-100"
             >
                <div className="mb-8">
                   <item.icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />
@@ -108,7 +108,7 @@ export const C9PhoneSystemAdvantage = () => {
                    href={item.link.href} 
                    className="inline-flex items-center gap-2 text-[#5D00D6] c9-eyebrow !text-[10px] hover:gap-3 transition-all"
                  >
-                   {item.link.label} <ArrowRight size={14} />
+                   {item.link.label} 
                  </Link>
                )}
             </motion.div>
@@ -121,9 +121,9 @@ export const C9PhoneSystemAdvantage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             onClick={handleGetStarted}
-            className="group inline-flex items-center justify-center gap-2 bg-white text-[#5D00D6] rounded-full h-14 px-10 text-[14px] font-medium shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 active:scale-95"
+            className="inline-flex items-center justify-center gap-2 bg-white text-[#5D00D6] rounded-full shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 active:scale-95 h-14 px-8 text-[15px] font-bold"
           >
-            Upgrade Your Phone System <ArrowRight size={20} className="transition-transform group-hover:translate-x-2" />
+            Upgrade Your Phone System 
           </motion.button>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Settings, ShieldCheck, Zap } from 'lucide-react';
+import { Settings, ShieldCheck, Zap } from 'lucide-react';
 
 export const VoiceHardware = () => {
   return (
@@ -71,7 +71,7 @@ export const VoiceHardware = () => {
               onClick={() => window.dispatchEvent(new CustomEvent('c9-open-lead-modal', { detail: { interest: ' hardware & systems' } }))}
               className="text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 hover:gap-3 transition-all"
             >
-              View hardware specs <ArrowRight size={16} />
+              View hardware specs 
             </motion.button>
           </div>
 
@@ -87,11 +87,11 @@ export const VoiceHardware = () => {
               {/* Card 1: SIP-T54W */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                className="col-span-3 group bg-gradient-to-b from-slate-50 to-white rounded-[24px] border border-gray-100 p-8 flex flex-col items-center shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500"
+                className="col-span-3 bg-gradient-to-b from-slate-50 to-white rounded-[24px] border border-gray-100 p-8 flex flex-col items-center shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500"
               >
                 <div className="h-[220px] w-full flex items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/yealink-t54w.png" alt="Yealink SIP-T54W" className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-xl" />
+                  <img src="/images/yealink-t54w.png" alt="Yealink SIP-T54W" className="max-h-full w-auto object-contain group-hover:scale-105 duration-500 drop-shadow-xl" />
                 </div>
                 <div className="mt-6 text-center w-full border-t border-gray-100 pt-5">
                   <p className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-1">Yealink SIP-T54W</p>
@@ -103,11 +103,11 @@ export const VoiceHardware = () => {
               {/* Card 2: W73P DECT */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                className="col-span-1 group bg-gradient-to-b from-slate-50 to-white rounded-[24px] border border-gray-100 p-6 flex flex-col items-center shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500"
+                className="col-span-1 bg-gradient-to-b from-slate-50 to-white rounded-[24px] border border-gray-100 p-6 flex flex-col items-center shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500"
               >
                 <div className="h-[140px] w-full flex items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/yealink-w73p.png" alt="Yealink W73P" className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-lg" />
+                  <img src="/images/yealink-w73p.png" alt="Yealink W73P" className="max-h-full w-auto object-contain group-hover:scale-105 duration-500 drop-shadow-lg" />
                 </div>
                 <div className="mt-4 text-center w-full border-t border-gray-100 pt-4">
                   <p className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-1">Yealink W73P</p>
@@ -119,11 +119,11 @@ export const VoiceHardware = () => {
               {/* Card 3: BH71 Headset */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.25 }}
-                className="col-span-2 group bg-gradient-to-b from-slate-50 to-white rounded-[24px] border border-gray-100 p-6 flex flex-col items-center shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500"
+                className="col-span-2 bg-gradient-to-b from-slate-50 to-white rounded-[24px] border border-gray-100 p-6 flex flex-col items-center shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500"
               >
                 <div className="h-[140px] w-full flex items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/yealink-bh71.png" alt="Yealink BH71" className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-lg" />
+                  <img src="/images/yealink-bh71.png" alt="Yealink BH71" className="max-h-full w-auto object-contain group-hover:scale-105 duration-500 drop-shadow-lg" />
                 </div>
                 <div className="mt-4 text-center w-full border-t border-gray-100 pt-4">
                   <p className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-1">Yealink BH71</p>

@@ -2,12 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
-  HelpCircle, Clock, Search, Handshake, 
-  Target, Monitor, Lock, Cloud, PhoneCall,
-  Users, MessageSquare, AlertCircle, AlertTriangle, ChevronRight, Activity, Database, ShieldAlert
-} from 'lucide-react';
+import { CheckCircle, ShieldCheck, Zap, HelpCircle, Clock, Search, Handshake, Target, Monitor, Lock, Cloud, PhoneCall, Users, MessageSquare, AlertCircle, AlertTriangle, ChevronRight, Activity, Database, ShieldAlert } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
@@ -100,15 +95,15 @@ const Hero = () => (
           <FadeIn delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#consultation"
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap c9-button-label"
+                href="#consultation-section"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap c9-button-label h-14 px-8 text-[15px] font-bold"
               >
                 Request Infrastructure Assessment
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                
               </a>
               <a
                 href="#takeover-process"
-                className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-9 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white c9-button-label"
+                className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white c9-button-label h-14 px-8 text-[15px] font-bold"
               >
                 Review Migration Approach
               </a>
@@ -117,11 +112,11 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-          <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[3/4] group">
+          <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[3/4]">
             <img
               src="/images/hero/brownfield-hero.png"
               alt="Professional managing complex business infrastructure issues"
-              className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+              className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
             
@@ -163,7 +158,7 @@ const SectionProblem = () => (
             { title: 'Operational Redundancy', desc: 'Paying multiple vendors for overlapping services with no centralized strategy.' },
             { title: 'Unmanaged Escalation Risks', desc: 'No defined hierarchy for critical incidents involving multiple service layers.' },
           ].map((item, i) => (
-            <div key={i} className="bg-white p-5 rounded-2xl border border-slate-200 flex gap-4 shadow-sm group hover:border-[#5D00D6]/20 transition-all">
+            <div key={i} className="bg-white p-5 rounded-2xl border border-slate-200 flex gap-4 shadow-sm hover:border-[#5D00D6]/20 transition-all">
               <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center shrink-0">
                 <ShieldAlert size={20} className="text-rose-500" />
               </div>
@@ -202,8 +197,8 @@ const SectionSolution = () => (
           { icon: <ShieldCheck />, title: 'Accountability Structure', desc: 'Clear escalation hierarchy and root cause responsibility for every incident.' },
           { icon: <PhoneCall />, title: 'SLA Enforcement', desc: 'Measurable performance standards backed by direct operational accountability.' },
         ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.05} className="bg-slate-50 border border-slate-100 p-8 rounded-[32px] hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all group">
-            <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 transform group-hover:scale-110 transition-transform">
+          <FadeIn key={i} delay={i * 0.05} className="bg-slate-50 border border-slate-100 p-8 rounded-[32px] hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all">
+            <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 transform group-hover:scale-110">
               {item.icon}
             </div>
             <h3 className="c9-card-title mb-3">{item.title}</h3>
@@ -237,7 +232,7 @@ const SectionProcess = () => (
                { step: '04', title: 'Controlled Takeover', desc: 'Phased migration of control with rollback paths.' },
                { step: '05', title: 'Single Ownership', desc: 'Full operational accountability for performance.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -369,7 +364,7 @@ const SectionComparison = () => (
               { title: 'Hidden Risks', desc: 'Unmanaged failure points between vendor silos.' },
             ].map((p, i) => (
               <li key={i} className="flex gap-4">
-                <div className="mt-1"><ArrowRight size={16} className="text-slate-400" /></div>
+                <div className="mt-1"></div>
                 <div>
                   <p className="font-bold text-slate-900 text-[17px] mb-1">{p.title}</p>
                   <p className="text-slate-600 text-[14px] leading-relaxed">{p.desc}</p>
@@ -394,7 +389,7 @@ const SectionComparison = () => (
               { title: 'Integrated Security', desc: 'Threat detection baked into the core infrastructure.' },
             ].map((p, i) => (
               <li key={i} className="flex gap-4">
-                <div className="mt-1"><ArrowRight size={16} className="text-[#a56eff]" /></div>
+                <div className="mt-1"></div>
                 <div>
                   <p className="font-bold text-white text-[17px] mb-1">{p.title}</p>
                   <p className="text-white/80 text-[14px] leading-relaxed">{p.desc}</p>
@@ -520,15 +515,15 @@ const SectionFinalCTA = () => (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                <a
-                  href="#consultation"
-                  className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-16 px-12 font-extrabold text-[17px] hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/30 group w-full sm:w-auto c9-button-label"
+                  href="#consultation-section"
+                  className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/30 w-full sm:w-auto c9-button-label h-14 px-8 text-[15px] font-bold"
                >
                   Request Infrastructure Assessment
-                  <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                  
                </a>
                <a
                   href="#takeover-process"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-16 px-12 font-extrabold text-[17px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all w-full sm:w-auto bg-white c9-button-label"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all w-full sm:w-auto bg-white c9-button-label h-14 px-8 text-[15px] font-bold"
                >
                   Migration Readiness Review
                </a>
@@ -623,7 +618,7 @@ export default function SmallBusinessPage() {
 
       <SectionFinalCTA />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
           eyebrow="CONSOLIDATE CONTROL"

@@ -77,7 +77,7 @@ const MobileMockup = () => {
                transition={{ duration: 0.5, type: "spring", bounce: 0.2 }}
                className="absolute inset-0 bg-white rounded-3xl p-6 shadow-[0_10px_30px_rgba(93,0,214,0.1)] border border-slate-100 flex flex-col items-center justify-center text-center gap-5"
              >
-               <div className="w-16 h-16 bg-[#F4F0FA] rounded-2xl flex items-center justify-center shrink-0 border border-white shadow-sm relative group overflow-hidden">
+               <div className="w-16 h-16 bg-[#F4F0FA] rounded-2xl flex items-center justify-center shrink-0 border border-white shadow-sm relative overflow-hidden">
                  <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/10 to-transparent pointer-events-none" />
                  {React.createElement(features[currentIndex].icon, { 
                    size: 32, 

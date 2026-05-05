@@ -1,14 +1,7 @@
 'use client';
 
 import React from 'react';
-import { 
-  PhoneCall, 
-  Wifi, 
-  ShieldCheck, 
-  Truck, 
-  Layers, 
-  Headphones 
-} from 'lucide-react';
+import { PhoneCall, Wifi, ShieldCheck, Truck, Layers, Headphones } from 'lucide-react';
 
 const INDUSTRIES = [
   {
@@ -86,13 +79,13 @@ export const WpIndustryGridV2 = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-gray-200 rounded-[12px] overflow-hidden">
           {INDUSTRIES.map((block, i) => (
-            <div key={i} className="p-8 md:p-10 border-r border-b border-gray-200 flex flex-col bg-white transition-all duration-300 hover:bg-[#F9F9F9] group">
+            <div key={i} className="p-8 md:p-10 border-r border-b border-gray-200 flex flex-col bg-white transition-all duration-300 hover:bg-[#F9F9F9]">
               <div className="mb-6 self-start">
                 <span className="px-4 py-1.5 rounded-full bg-[#F4F0FA] text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.1em]" >
                   {block.tag}
                 </span>
               </div>
-              <div className="mb-6 text-[#5D00D6] transition-transform duration-300 group-hover:scale-110">
+              <div className="mb-6 text-[#5D00D6] duration-300 group-hover:scale-110">
                 <block.icon size={40} strokeWidth={1.5} />
               </div>
               <h3 className="text-[20px] md:text-[22px] font-bold text-[#0c1024] mb-4 tracking-tight leading-tight" >{block.title}</h3>

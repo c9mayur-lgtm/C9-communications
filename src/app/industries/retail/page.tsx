@@ -2,10 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon,
-  AlertTriangle, MapPin, BarChart3, Clock, TrendingUp, Zap, Activity, Building2
-} from 'lucide-react';
+import { CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon, AlertTriangle, MapPin, BarChart3, Clock, TrendingUp, Zap, Activity, Building2 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 import RetailArchitecture from '@/components/sections/industries/RetailArchitecture';
@@ -78,14 +75,14 @@ const Hero = () => (
                   e.preventDefault();
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer whitespace-nowrap h-14 px-8 text-[15px] font-bold"
               >
                 Request Retail Brief
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                
               </a>
               <a
                 href="/industries"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap h-14 px-8 text-[15px] font-bold"
               >
                 View All Industries
               </a>
@@ -195,10 +192,10 @@ const FinalCTA = () => (
               e.preventDefault();
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer"
           >
             Get a Retail Infrastructure Audit
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            
           </a>
           <p className="text-[14px] text-slate-500">No obligation. Just clear, operational insight.</p>
         </div>

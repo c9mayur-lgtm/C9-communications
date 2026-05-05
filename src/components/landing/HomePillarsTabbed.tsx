@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+;
 import Link from 'next/link';
 
 const TABS = [
@@ -61,7 +61,7 @@ export const HomePillarsTabbed = () => {
             <div className="shrink-0 w-full md:w-auto">
                <Link 
                  href="/contact" 
-                 className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-[#E00A3F] hover:bg-[#C20935] text-white font-bold rounded-lg transition-colors text-[16px]"
+                 className="inline-flex items-center justify-center w-full md:w-auto bg-[#E00A3F] hover:bg-[#C20935] text-white rounded-lg transition-colors h-14 px-8 text-[15px] font-bold"
                  style={{ backgroundColor: '#5D00D6' }}
                >
                  Get access now
@@ -75,7 +75,7 @@ export const HomePillarsTabbed = () => {
                <button 
                  key={tab.id}
                  onClick={() => setActiveTab(i)}
-                 className={`relative flex-1 p-6 md:p-8 flex justify-center items-center border-b md:border-b-0 md:border-r last:border-r-0 border-gray-200 transition-colors group cursor-pointer ${activeTab === i ? 'bg-[#FCFCFD]' : 'bg-white hover:bg-gray-50/50'}`}
+                 className={`relative flex-1 p-6 md:p-8 flex justify-center items-center border-b md:border-b-0 md:border-r last:border-r-0 border-gray-200 transition-colors  cursor-pointer ${activeTab === i ? 'bg-[#FCFCFD]' : 'bg-white hover:bg-gray-50/50'}`}
                >
                   <span className={`text-[18px] md:text-[22px] font-bold transition-colors ${activeTab === i ? 'text-[#0c1024]' : 'text-gray-400 group-hover:text-gray-600'}`} >
                     {tab.label}
@@ -114,7 +114,7 @@ export const HomePillarsTabbed = () => {
                   </p>
                   
                   <Link href={TABS[activeTab].link} className="inline-flex items-center gap-2 font-bold transition-colors hover:gap-3 text-[14px] uppercase tracking-wider" style={{ color: TABS[activeTab].color }}>
-                    Explore Details <ArrowRight size={18} />
+                    Explore Details 
                   </Link>
                 </div>
               </motion.div>
@@ -133,7 +133,7 @@ export const HomePillarsTabbed = () => {
                 <img 
                   src={TABS[activeTab].image} 
                   alt={TABS[activeTab].label}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] hover:scale-105" 
+                  className="absolute inset-0 w-full h-full object-cover duration-[2s] hover:scale-105" 
                 />
               </motion.div>
             </AnimatePresence>

@@ -3,11 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  ShieldAlert, Activity, Users, ArrowRight, CheckCircle2, 
-  Zap, Clock, Layers, ShieldCheck, Building2, TrendingUp,
-  Smartphone, PhoneCall, CheckCircle, Navigation, Network, Briefcase, FileText
-} from 'lucide-react';
+import { ShieldAlert, Activity, Users, CheckCircle2, Zap, Clock, Layers, ShieldCheck, Building2, TrendingUp, Smartphone, PhoneCall, CheckCircle, Navigation, Network, Briefcase, FileText } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { C9Button } from '@/components/design-system/C9Button';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
@@ -106,11 +102,11 @@ export default function MobilePlansPage() {
             </div>
 
             <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-               <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+               <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3]">
                   <img
                      src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2000"
                      alt="Executive reviewing operations on a mobile device"
-                     className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                     className="w-full h-full object-cover object-top duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/60 via-transparent to-transparent" />
                   
@@ -422,11 +418,11 @@ export default function MobilePlansPage() {
          <div className={C}>
             <div className="grid lg:grid-cols-2 gap-16 items-center">
                <FadeIn direction="right">
-                  <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square group">
+                  <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square">
                      <img
                         src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200"
                         alt="Logistics warehouse team connected via mobile"
-                        className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+                        className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
                      />
                      <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
                      <div className="absolute bottom-8 left-8 text-white">

@@ -3,13 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Users, ShieldCheck, Activity, ArrowRight, CheckCircle2, 
-  Clock, Layers, Building2, TrendingUp,
-  Monitor, CheckCircle, BarChart3, Globe, PhoneCall,
-  MessageSquare, Zap, RefreshCcw, ShieldAlert, Headphones,
-  Settings, Layout, Signal, HeartHandshake, UserCheck, PieChart
-} from 'lucide-react';
+import { Users, ShieldCheck, Activity, CheckCircle2, Clock, Layers, Building2, TrendingUp, Monitor, CheckCircle, BarChart3, Globe, PhoneCall, MessageSquare, Zap, RefreshCcw, ShieldAlert, Headphones, Settings, Layout, Signal, HeartHandshake, UserCheck, PieChart } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
@@ -81,10 +75,10 @@ export default function ContactCentrePage() {
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
                     <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                      <Link href="#consultation">Review Your Contact Centre Performance</Link>
+                      <Link href="#consultation-section">Review Your Contact Centre Performance</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#consultation">Talk to a Contact Centre Specialist</Link>
+                      <Link href="#consultation-section">Talk to a Contact Centre Specialist</Link>
                     </C9Button>
                  </div>
               </FadeIn>
@@ -113,11 +107,11 @@ export default function ContactCentrePage() {
             </div>
 
             <FadeIn delay={0.2} direction="right" className="relative">
-               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/5] group">
+               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/5]">
                   <img
                      src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=2000"
                      alt="Operations manager reviewing customer support performance"
-                     className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+                     className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
                   
@@ -229,7 +223,7 @@ export default function ContactCentrePage() {
                   ].map((item, i) => (
                     <div key={i} className="flex gap-5">
                        <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1 shadow-sm">
-                          <ArrowRight size={14} />
+                          
                        </div>
                        <div>
                           <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.title}</h4>
@@ -288,8 +282,8 @@ export default function ContactCentrePage() {
               { icon: <Settings />, title: "Simplified Vendor Ownership", desc: "We manage the carrier network, the SIP paths, and the contact centre platform as one ecosystem." },
               { icon: <ShieldCheck />, title: "One Accountable Partner", desc: "When issues arise, you call our senior engineering team directly. No vendor finger-pointing." }
             ].map((item, i) => (
-              <div key={i} className="flex gap-6 group p-6 rounded-[28px] border border-slate-100 hover:border-[#5D00D6]/20 hover:shadow-lg transition-all bg-slate-50 hover:bg-white">
-                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:scale-110 transition-transform">
+              <div key={i} className="flex gap-6 p-6 rounded-[28px] border border-slate-100 hover:border-[#5D00D6]/20 hover:shadow-lg transition-all bg-slate-50 hover:bg-white">
+                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:scale-110">
                   {item.icon}
                 </div>
                 <div>
@@ -384,7 +378,7 @@ export default function ContactCentrePage() {
                     { label: "Onboarding", val: "Comprehensive", icon: <Users /> },
                     { label: "Post-Launch", val: "Managed", icon: <ShieldCheck /> }
                   ].map((stat, i) => (
-                    <div key={i} className="bg-white border border-slate-200 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:shadow-xl group">
+                    <div key={i} className="bg-white border border-slate-200 rounded-3xl p-8 hover:border-[#5D00D6]/20 transition-all hover:shadow-xl">
                         <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-4">
                            {stat.icon}
                         </div>
@@ -441,7 +435,7 @@ export default function ContactCentrePage() {
                      { label: "Team Efficiency", val: "Optimised", icon: <Users size={20} /> },
                      { label: "Decision Making", val: "Data-Driven", icon: <BarChart3 size={20} /> }
                    ].map((stat, i) => (
-                     <div key={i} className="bg-slate-50 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10 group">
+                     <div key={i} className="bg-slate-50 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10">
                         <div className="text-2xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight">{stat.val}</div>
                         <div className="text-slate-500 font-bold text-[11px] uppercase tracking-widest leading-tight">{stat.label}</div>
                      </div>
@@ -487,7 +481,7 @@ export default function ContactCentrePage() {
                   Let&apos;s review it.
                 </p>
                 <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Book a Contact Centre Performance Review</Link>
+                  <Link href="#consultation-section">Book a Contact Centre Performance Review</Link>
                 </C9Button>
               </FadeIn>
            </div>
@@ -508,7 +502,7 @@ export default function ContactCentrePage() {
                   Stop settling for fragmented support tools. Partner with C9 for operational control that drives true customer retention.
                 </p>
                 <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Talk to C9 About Contact Centre Systems</Link>
+                  <Link href="#consultation-section">Talk to C9 About Contact Centre Systems</Link>
                 </C9Button>
               </div>
            </div>
@@ -527,7 +521,7 @@ export default function ContactCentrePage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white">
+      <section id="consultation-section" className="bg-white">
         <WpConsultationForm 
           showHeader={false} 
           eyebrow="OPERATIONAL AUDIT"

@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
-  Monitor, Lock, Activity, Users, 
-  Building, Briefcase, Network, Server
-} from 'lucide-react';
+import { CheckCircle, ShieldCheck, Zap, Monitor, Lock, Activity, Users, Building, Briefcase, Network, Server } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
@@ -102,14 +98,14 @@ const Hero = () => (
              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                    href="#greenfield"
-                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-7 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap h-14 px-8 text-[15px] font-bold"
                 >
                    Build Your IT Dept
-                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                   
                 </a>
                 <a
                    href="#brownfield"
-                   className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-7 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                   className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white h-14 px-8 text-[15px] font-bold"
                 >
                    Replace Legacy IT
                 </a>
@@ -118,11 +114,11 @@ const Hero = () => (
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-           <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+           <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3]">
               <img
                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200"
                  alt="IT Outsourcing Management"
-                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                 className="w-full h-full object-cover duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
               
@@ -241,7 +237,7 @@ const SectionHowItWorks = () => (
                { step: '03', title: 'Operational Rigour', desc: 'Implementation of patching, monitoring, and helpdesk workflows.' },
                { step: '04', title: 'vCIO Governance', desc: 'Quarterly reviews to ensure IT remains a strategic asset, not a cost centre.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -501,7 +497,7 @@ export default function ITOutsourcingPage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
           eyebrow="READY TO OUTSOURCE YOUR IT?"

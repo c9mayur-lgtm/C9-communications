@@ -6,7 +6,7 @@ import { ChevronRight, ChevronLeft, Server, Shield, Cpu, Network, Wifi, Monitor,
 
 const VendorCard = ({ card }: { card: any }) => {
   return (
-    <div className="group relative bg-[#0D0D0D] border border-white/5 p-6 md:p-8 flex flex-col h-full hover:border-[#5D00D6]/30 transition-all duration-500 overflow-hidden">
+    <div className="relative bg-[#0D0D0D] border border-white/5 p-6 md:p-8 flex flex-col h-full hover:border-[#5D00D6]/30 transition-all duration-500 overflow-hidden">
         <h3 className="c9-card-title !text-[20px] text-white mb-3 group-hover:text-[#5D00D6] transition-colors leading-tight">
           {card.title}
         </h3>

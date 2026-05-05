@@ -203,13 +203,13 @@ export const ServiceTestimonialKajabi = ({ testimonials = DEFAULT_TESTIMONIALS }
               <div className="flex gap-2">
                 <button 
                   onClick={prev}
-                  className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors group cursor-pointer"
+                  className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors cursor-pointer"
                 >
                   <ChevronLeft size={20} className="text-gray-500 group-hover:text-white transition-all" />
                 </button>
                 <button 
                   onClick={next}
-                  className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors group cursor-pointer"
+                  className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors cursor-pointer"
                 >
                   <ChevronRight size={20} className="text-gray-500 group-hover:text-white transition-all" />
                 </button>

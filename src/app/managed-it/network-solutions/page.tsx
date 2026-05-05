@@ -2,12 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShieldCheck, Shield, Zap, 
-  Monitor, Lock, Activity, Users, 
-  Network, Wifi, Globe, Share2, Server,
-  AlertTriangle, RefreshCw, BarChart3, Radio
-} from 'lucide-react';
+import { CheckCircle, ShieldCheck, Shield, Zap, Monitor, Lock, Activity, Users, Network, Wifi, Globe, Share2, Server, AlertTriangle, RefreshCw, BarChart3, Radio } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
@@ -101,22 +96,22 @@ const Hero = () => (
              <div className="flex flex-col items-start gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap h-14 px-8 text-[15px] font-bold"
                    >
                       Request Architecture Review
-                      <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                      
                    </a>
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white h-14 px-8 text-[15px] font-bold"
                    >
                        Audit Your Environment
                    </a>
                 </div>
-                <a href="#consultation" className="text-slate-500 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors group whitespace-nowrap">
+                <a href="#consultation-section" className="text-slate-500 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors whitespace-nowrap">
                    Speak with a principal network architect
-                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                   
                 </a>
              </div>
           </FadeIn>
@@ -184,7 +179,7 @@ const SectionManagedStack = () => (
                   points: ["Site-to-Site VPN Mesh", "Centralised Governance Control", "Policy & Performance Consistency"]
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.05} className="p-8 bg-slate-50 border border-slate-100 rounded-lg hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all group">
+               <FadeIn key={i} delay={i * 0.05} className="p-8 bg-slate-50 border border-slate-100 rounded-lg hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all">
                   <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-[#5D00D6] mb-8 shadow-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                      {item.icon}
                   </div>
@@ -273,14 +268,14 @@ const SectionArchitectureFlow = () => (
                   <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
                   
                   <div className="relative z-10 space-y-8">
-                     <div className="flex flex-col items-center text-center p-6 bg-white/5 border border-white/10 rounded-lg group hover:bg-white/10 transition-all">
+                     <div className="flex flex-col items-center text-center p-6 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-all">
                         <Globe className="text-[#a56eff] mb-4" size={32} />
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 mb-1">Entry</span>
                         <h5 className="font-bold">Encrypted External Links</h5>
                      </div>
                      
                      <div className="flex justify-center">
-                        <ArrowRight className="rotate-90 text-white/20" size={24} />
+                        
                      </div>
 
                      <div className="flex flex-col items-center text-center p-6 bg-[#5D00D6]/20 border border-[#5D00D6]/40 rounded-lg shadow-xl shadow-purple-900/40">
@@ -290,7 +285,7 @@ const SectionArchitectureFlow = () => (
                      </div>
 
                      <div className="flex justify-center">
-                        <ArrowRight className="rotate-90 text-white/20" size={24} />
+                        
                      </div>
 
                      <div className="grid sm:grid-cols-2 gap-4">
@@ -499,8 +494,8 @@ const SectionArchitecture = () => (
                   color: "bg-white"
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className={`${item.color === 'bg-[#5D00D6]' ? 'bg-[#5D00D6] text-white shadow-2xl shadow-[#5D00D6]/20' : 'bg-white border-slate-200'} p-8 lg:p-10 rounded-lg border shadow-sm relative group hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full`}>
-                  <div className={`mb-8 w-16 h-16 rounded-[24px] ${item.color === 'bg-[#5D00D6]' ? 'bg-white/10 border border-white/20' : 'bg-[#5D00D6]/5 border border-[#5D00D6]/10'} flex items-center justify-center transition-transform group-hover:scale-110 duration-500`}>
+               <FadeIn key={i} delay={i * 0.1} className={`${item.color === 'bg-[#5D00D6]' ? 'bg-[#5D00D6] text-white shadow-2xl shadow-[#5D00D6]/20' : 'bg-white border-slate-200'} p-8 lg:p-10 rounded-lg border shadow-sm relative  hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full`}>
+                  <div className={`mb-8 w-16 h-16 rounded-[24px] ${item.color === 'bg-[#5D00D6]' ? 'bg-white/10 border border-white/20' : 'bg-[#5D00D6]/5 border border-[#5D00D6]/10'} flex items-center justify-center group-hover:scale-110 duration-500`}>
                      {item.icon}
                   </div>
                   <h4 className={`text-2xl font-bold mb-4 tracking-tight ${item.color === 'bg-[#5D00D6]' ? 'text-white' : 'text-slate-900'}`}>{item.title}</h4>
@@ -580,7 +575,7 @@ const SectionRedundancy = () => (
                             </div>
                             
                             <div className="flex items-center justify-center">
-                               <ArrowRight className="text-slate-300 rotate-90" />
+                               
                             </div>
 
                             <div className="flex items-center justify-between">
@@ -658,7 +653,7 @@ const SectionMultiSite = () => (
                         desc: "Consistent firewall policies and threat protection enforced across every edge device." 
                      }
                   ].map((item, i) => (
-                     <div key={i} className="flex gap-4 p-6 rounded-lg bg-slate-50 border border-slate-100 hover:border-[#5D00D6]/20 transition-all group">
+                     <div key={i} className="flex gap-4 p-6 rounded-lg bg-slate-50 border border-slate-100 hover:border-[#5D00D6]/20 transition-all">
                         <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm">
                            <Share2 size={20} />
                         </div>
@@ -788,7 +783,7 @@ const SectionHowItWorks = () => (
                { step: '04', title: 'Optimization', desc: 'Tuning traffic flow for business-critical apps.' },
                { step: '05', title: 'Monitoring & Support', desc: 'Active 24/7 oversight and proactive resolution.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-black text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -919,11 +914,11 @@ const SectionServiceInterconnect = () => (
                   link: "/modern-workplace"
                }
             ].map((item, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 border border-slate-200 rounded-lg flex flex-col h-full shadow-sm hover:shadow-xl transition-all group">
+               <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 border border-slate-200 rounded-lg flex flex-col h-full shadow-sm hover:shadow-xl transition-all">
                   <h4 className="text-xl font-bold mb-4 text-[#0c1024]">{item.title}</h4>
                   <p className="text-slate-500 text-[15px] leading-relaxed mb-8 flex-grow">{item.desc}</p>
                   <a href={item.link} className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] uppercase tracking-widest group-hover:gap-3 transition-all">
-                     Explore Integration <ArrowRight size={16} />
+                     Explore Integration 
                   </a>
                </FadeIn>
             ))}
@@ -973,7 +968,7 @@ export default function NetworkSolutionsPage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
           eyebrow="READY FOR STABLE INFRASTRUCTURE?"

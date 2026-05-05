@@ -47,7 +47,7 @@ export default function MonitoringBlock() {
         {/* Right Content */}
         <div className="flex flex-col gap-6">
           {/* Card 1 */}
-          <div className="bg-[#1A1A2E] rounded-2xl border-[0.5px] border-[color:var(--brand-purple)] p-8 transition-transform hover:-translate-y-1">
+          <div className="bg-[#1A1A2E] rounded-2xl border-[0.5px] border-[color:var(--brand-purple)] p-8 hover:-translate-y-1">
             <div className="w-10 h-10 bg-[color:var(--brand-purple)]/10 rounded-lg flex items-center justify-center mb-5">
               <Activity className="w-6 h-6 text-[color:var(--brand-purple)]" />
             </div>
@@ -63,7 +63,7 @@ export default function MonitoringBlock() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#1A1A2E] rounded-2xl border-[0.5px] border-[#374151] p-8 transition-transform hover:-translate-y-1">
+          <div className="bg-[#1A1A2E] rounded-2xl border-[0.5px] border-[#374151] p-8 hover:-translate-y-1">
             <div className="w-10 h-10 bg-[color:var(--brand-purple)]/10 rounded-lg flex items-center justify-center mb-5">
               <FileText className="w-6 h-6 text-[color:var(--brand-purple)]" />
             </div>

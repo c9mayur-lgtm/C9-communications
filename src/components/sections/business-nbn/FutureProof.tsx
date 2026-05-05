@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Building2, Wifi, Cloud } from 'lucide-react';
+import { Building2, Wifi, Cloud } from 'lucide-react';
 import Link from 'next/link';
 
 export default function FutureProof() {
@@ -25,8 +25,8 @@ export default function FutureProof() {
                 nbn upgrades are rolling out nationwide. Is your office ready? Stay productive and connected with C9 managed connectivity.
               </p>
               
-              <Link href="/contact" className="mt-8 inline-flex items-center gap-2 bg-[#5D00D6] hover:bg-[#4B00AD] text-white font-bold py-3 px-8 rounded-full transition-all group active:scale-95 shadow-xl shadow-purple-900/20 text-[14px]">
-                 Get Started Now <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              <Link href="/contact" className="mt-8 inline-flex items-center gap-2 bg-[#5D00D6] hover:bg-[#4B00AD] text-white font-bold py-3 px-8 rounded-full transition-all active:scale-95 shadow-xl shadow-purple-900/20 text-[14px]">
+                 Get Started Now 
               </Link>
            </div>
 
@@ -42,7 +42,7 @@ export default function FutureProof() {
                 { icon: Wifi, label: 'LINK' },
                 { icon: Cloud, label: 'CORE' }
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center gap-3 group relative z-10">
+                <div key={i} className="flex flex-col items-center gap-3 relative z-10">
                    <motion.div 
                      whileHover={{ scale: 1.05 }}
                      className="w-16 h-16 md:w-22 md:h-22 rounded-2xl bg-white shadow-xl flex items-center justify-center p-4"

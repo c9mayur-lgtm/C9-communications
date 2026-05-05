@@ -92,7 +92,7 @@ export default function HardwareSpotlight() {
                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
                 >
                    {/* High-Fidelity Router Chassis */}
-                   <div className="relative w-64 h-40 bg-[#0c1024] rounded-[32px] shadow-[0_50px_120px_rgba(93,0,214,0.22)] border border-white/10 p-6 flex flex-col justify-between group">
+                   <div className="relative w-64 h-40 bg-[#0c1024] rounded-[32px] shadow-[0_50px_120px_rgba(93,0,214,0.22)] border border-white/10 p-6 flex flex-col justify-between">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-[32px] pointer-events-none" />
                       
                       {/* Port Layout Labels */}

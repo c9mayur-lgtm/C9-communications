@@ -3,13 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { 
-  TrendingUp, TrendingDown, CheckCircle2, AlertCircle, 
-  Server, Cpu, HardDrive, Wifi, Shield, ShieldCheck, 
-  Globe, Lock, Layers, Cloud, GitMerge, LayoutGrid,
-  Users, Activity, Database, ArrowRight, RefreshCw,
-  Monitor, Zap, BarChart2
-} from 'lucide-react';
+import { TrendingUp, TrendingDown, CheckCircle2, AlertCircle, Server, Cpu, HardDrive, Wifi, Shield, ShieldCheck, Globe, Lock, Layers, Cloud, GitMerge, LayoutGrid, Users, Activity, Database, RefreshCw, Monitor, Zap, BarChart2 } from 'lucide-react';
 
 const FF = { fontFamily: "'Proxima Nova', sans-serif" };
 // Official C9 Communications purple

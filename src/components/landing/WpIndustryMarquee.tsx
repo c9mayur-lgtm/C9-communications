@@ -1,10 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import { 
-  HeartPulse, Briefcase, Heart, GraduationCap, 
-  ShoppingBag, Home, ArrowRight
-} from 'lucide-react';
+import { HeartPulse, Briefcase, Heart, GraduationCap, ShoppingBag, Home } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const INDUSTRIES = [
@@ -71,7 +68,7 @@ const INDUSTRIES = [
 ];
 
 export const IndustryCard = ({ industry }: { industry: any }) => (
-  <div className="bg-[#F9F7FF] border border-[#E9E4FF] rounded-[32px] p-10 shadow-sm hover:shadow-2xl hover:border-[#5D00D6]/30 transition-all group flex flex-col h-full w-full">
+  <div className="bg-[#F9F7FF] border border-[#E9E4FF] rounded-[32px] p-10 shadow-sm hover:shadow-2xl hover:border-[#5D00D6]/30 transition-all flex flex-col h-full w-full">
     <div className="flex justify-between items-start mb-8">
       <span className="px-4 py-1.5 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] text-[11px] font-bold tracking-widest uppercase">
         {industry.tag}
@@ -141,8 +138,8 @@ export const WpIndustryMarquee = () => {
         </div>
 
         <div className="flex justify-center mt-12">
-          <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group rounded-xl">
-            Explore Industry Solutions <ArrowRight className="transition-transform group-hover:translate-x-1" />
+          <Button size="lg" className="shadow-2xl hover:gap-4 transition-all rounded-xl">
+            Explore Industry Solutions 
           </Button>
         </div>
       </div>

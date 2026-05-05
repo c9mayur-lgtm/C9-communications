@@ -21,11 +21,11 @@ export const ServiceImageText = ({
         <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${reverse ? 'direction-rtl' : ''}`}>
           
           {/* Image Column */}
-          <div className={`relative rounded-[32px] overflow-hidden shadow-2xl shadow-purple-900/10 aspect-[4/3] lg:aspect-[16/9] group ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
+          <div className={`relative rounded-[32px] overflow-hidden shadow-2xl shadow-purple-900/10 aspect-[4/3] lg:aspect-[16/9]  ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
             <img 
               src={imageSrc} 
               alt={imageAlt} 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              className="absolute inset-0 w-full h-full object-cover duration-700 group-hover:scale-110" 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
           </div>

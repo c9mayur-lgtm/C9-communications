@@ -2,17 +2,9 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, 
-  ChevronRight, 
-  Shapes, 
-  HeartHandshake, 
-  Building2,
-  Box,
-  Monitor,
-  Zap
-} from 'lucide-react';
+import { ChevronRight, Shapes, HeartHandshake, Building2, Box, Monitor, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import { PRODUCTS_MENU, SOLUTIONS_MENU, INDUSTRIES_MENU } from '@/components/layout/NavbarDataTracks';
 
 const CATEGORIES = [
@@ -79,10 +71,10 @@ export const WpUnifiedClassification = ({
         {!onlySidebar && (
           <div className="grid grid-cols-3 gap-3 md:flex md:items-center md:justify-center md:gap-6 mb-12 md:mb-16">
             {CATEGORIES.map((track) => (
-              <button
+               <button
                 key={track.id}
                 onClick={() => setActiveTrack(track.id)}
-                className={`flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 px-3 md:px-8 py-3 md:py-4 rounded-2xl md:rounded-full transition-all duration-300 border ${
+                className={`flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 px-3 md:px-8 py-3 md:py-4 rounded-full transition-all duration-300 border ${
                   activeTrack === track.id
                     ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-xl shadow-purple-900/40'
                     : 'bg-white border-slate-200 text-slate-600 hover:border-[#5D00D6]/50 hover:bg-slate-50'
@@ -128,7 +120,7 @@ export const WpUnifiedClassification = ({
                               <Link 
                                 key={ii} 
                                 href={item.path || '#'} 
-                                className="group flex flex-col h-full bg-white border border-slate-100 p-6 rounded-[24px] hover:border-[#5D00D6]/30 hover:shadow-2xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
+                                className="flex flex-col h-full bg-white border border-slate-100 p-6 rounded-[24px] hover:border-[#5D00D6]/30 hover:shadow-2xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
                               >
                                 {item.icon && (
                                   <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 flex items-center justify-center mb-5 group-hover:bg-[#5D00D6]/10 group-hover:text-[#5D00D6] transition-all duration-500">
@@ -154,28 +146,31 @@ export const WpUnifiedClassification = ({
               {/* Actionable Feature Sections (Sidebar equivalent) */}
               {(showSidebar || onlySidebar) && activeData.sidebar && (
                 <div className={onlySidebar ? "pt-0" : "pt-10"}>
-                  <div className="bg-[#F8F9FF] rounded-[32px] p-8 md:p-12 text-slate-900 relative overflow-hidden group border border-slate-200 shadow-xl">
+                  <div className="bg-[#F8F9FF] rounded-[32px] p-8 md:p-12 text-slate-900 relative overflow-hidden border border-slate-200 shadow-xl">
                      <div className="relative z-10 grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
                         <div>
                            <span className="text-[#5D00D6] text-[11px] font-bold uppercase tracking-[0.2em] mb-4 block">
                               {activeData.sidebar.heading}
                            </span>
                            <h3 className="text-[28px] md:text-[36px] font-bold leading-tight mb-6 tracking-tight">
-                              {activeData.sidebar.title || "Ready to transform your workplace?"}
+                              {activeData.sidebar.title || "Ready To Transform Your Workplace?"}
                            </h3>
-                           <Link 
-                             href={activeData.sidebar.path || "/contact"} 
-                             className="inline-flex items-center gap-3 px-8 py-4 bg-[#5D00D6] text-white rounded-full font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group/btn whitespace-nowrap"
+                           <Button 
+                             size="lg"
+                             className="rounded-full shadow-xl px-10 h-14"
+                             asChild
                            >
-                             {activeData.sidebar.button || "Schedule consultation"} <ArrowRight size={18} className="shrink-0 translate-x-0 group-hover/btn:translate-x-1 transition-transform" />
-                           </Link>
+                             <Link href={activeData.sidebar.path || "/contact"}>
+                               {activeData.sidebar.button || "Schedule Consultation"} 
+                             </Link>
+                           </Button>
                         </div>
 
                         {activeData.sidebar.items && (
                            <div className="grid gap-3">
                               {activeData.sidebar.items.map((item: any, idx: number) => (
                                 <Link key={idx} href={item.path} className="flex items-center gap-5 p-5 bg-white hover:bg-slate-50 border border-slate-200 rounded-[20px] transition-all group/item shadow-sm">
-                                   <div className="w-10 h-10 rounded-lg bg-[#5D00D6]/10 text-[#5D00D6] flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                                   <div className="w-10 h-10 rounded-lg bg-[#5D00D6]/10 text-[#5D00D6] flex items-center justify-center group-hover/item:scale-110">
                                       {item.icon || <Monitor size={18} strokeWidth={2} />}
                                    </div>
                                    <div>

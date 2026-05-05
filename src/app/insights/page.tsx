@@ -3,12 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Search, Filter, 
-  Calendar, Clock, ChevronRight,
-  BookOpen, Target, FileText,
-  LayoutGrid, List
-} from 'lucide-react';
+import { Search, Filter, Calendar, Clock, ChevronRight, BookOpen, Target, FileText, LayoutGrid, List } from 'lucide-react';
+import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { Button } from "@/components/ui/button";
 
 const C = "container mx-auto px-6 md:px-8 max-w-[1240px]";
@@ -182,12 +178,12 @@ export default function InsightsPage() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
                 >
-                  <Link href={`/insights/${item.slug}`} className="group flex flex-col h-full bg-white rounded-lg overflow-hidden transition-all duration-500">
+                  <Link href={`/insights/${item.slug}`} className="flex flex-col h-full bg-white rounded-lg overflow-hidden transition-all duration-500">
                     <div className="aspect-[16/10] overflow-hidden relative">
                       <img 
                         src={item.image} 
                         alt={item.title} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                        className="w-full h-full object-cover duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                       />
                       <div className="absolute top-4 left-4">
                         <span className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest text-white ${
@@ -220,7 +216,7 @@ export default function InsightsPage() {
 
                       <div className="mt-auto pt-6 border-t border-gray-50 flex items-center justify-between">
                         <span className="text-[11px] font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
-                          Read {item.type} <ArrowRight size={16} className="text-[#5D00D6]" />
+                          Read {item.type} 
                         </span>
                       </div>
                     </div>
@@ -247,6 +243,16 @@ export default function InsightsPage() {
             </div>
           )}
         </div>
+      </section>
+
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
+        <WpConsultationForm 
+          showHeader={false}
+          eyebrow="STRATEGIC ADVISORY"
+          title="Deepen Your Operational Control"
+          description="Schedule a 30-minute brief with an engineering lead to discuss the architectural and security shifts relevant to your environment."
+          formTitle="Request Strategy Brief"
+        />
       </section>
 
       {/* NEWSLETTER / CTA */}

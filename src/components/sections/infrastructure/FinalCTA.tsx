@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { buttonVariants } from '@/components/ui/button';
-import { ArrowRight, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useInquiry } from '@/components/context/InquiryContext';
 
@@ -35,7 +35,7 @@ export default function FinalCTA() {
               "bg-[#5D00D6] text-white font-['Proxima_Nova'] font-bold text-[14px] h-[52px] px-10 rounded-full hover:bg-[#4c00b0] shadow-xl shadow-purple-900/10 transition-all border-none flex items-center gap-2"
             )}
           >
-            Get an Infrastructure Assessment <ArrowRight className="w-4 h-4 ml-1" />
+            Get an Infrastructure Assessment 
           </button>
           
           <a 

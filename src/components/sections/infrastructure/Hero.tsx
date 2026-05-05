@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, HardDrive, Wifi, Activity, ShieldCheck, Globe } from "lucide-react";
+import { CheckCircle, HardDrive, Wifi, Activity, ShieldCheck, Globe } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const InfraMonitorVisual = () => {
@@ -112,8 +112,8 @@ export default function Hero() {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-8">
-                <Button onClick={handleAssessmentRequest} size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none text-[14px]" >
-                  Get an Infrastructure Assessment <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
+                <Button onClick={handleAssessmentRequest} size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none text-[14px]" >
+                  Get an Infrastructure Assessment 
                 </Button>
                 <Button variant="outline" size="lg" onClick={scrollToInfraScope} className="w-full sm:w-auto border-gray-200 text-[#0c1024] font-bold h-14 px-8 rounded-full hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white transition-colors text-[14px]" >
                   See What We Manage

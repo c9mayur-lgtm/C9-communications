@@ -9,7 +9,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export const InfrastructureBackboneVisual = () => {
   return (
-    <div className="relative w-full h-[540px] bg-white rounded-[40px] overflow-hidden border border-slate-100 shadow-2xl group">
+    <div className="relative w-full h-[540px] bg-white rounded-[40px] overflow-hidden border border-slate-100 shadow-2xl">
       {/* Background Grid */}
       <div 
         className="absolute inset-0 opacity-[0.03] pointer-events-none" 

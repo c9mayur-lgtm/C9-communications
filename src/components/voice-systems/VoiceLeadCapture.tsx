@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+;
 
 export const VoiceLeadCapture = () => {
   return (
@@ -75,7 +75,7 @@ export const VoiceLeadCapture = () => {
                 type="submit"
                 className="w-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold rounded-full h-14 mt-2 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95 shadow-xl shadow-[#5D00D6]/30 text-[16px]"
               >
-                Talk to a Voice Engineer <ArrowRight size={18} />
+                Talk to a Voice Engineer 
               </button>
             </form>
 

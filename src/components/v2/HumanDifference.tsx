@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+;
 import { Button } from "@/components/ui/button";
 
 export const HumanDifference = () => {
@@ -47,7 +47,7 @@ export const HumanDifference = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {cards.map((card, i) => (
-            <div key={i} className="bg-white rounded-[16px] overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,0.07)] border border-[#E5E7EB] flex flex-col h-full transition-transform duration-300 hover:-translate-y-2">
+            <div key={i} className="bg-white rounded-[16px] overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,0.07)] border border-[#E5E7EB] flex flex-col h-full duration-300 hover:-translate-y-2">
               <div className="h-[220px] overflow-hidden">
                 <img src={card.photo} alt={card.tag} className="w-full h-full object-cover" />
               </div>
@@ -71,7 +71,7 @@ export const HumanDifference = () => {
 
         <div className="flex justify-center">
           <Button size="lg" className="bg-[#5D00D6] hover:bg-[#5D00D6]/90 rounded-full px-10 h-14 font-bold">
-            Read our client stories <ArrowRight className="ml-2" />
+            Read our client stories 
           </Button>
         </div>
       </div>

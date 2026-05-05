@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Target, TrendingUp, Shield, Activity, ArrowRight, ExternalLink, Network, Zap, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Target, TrendingUp, Shield, Activity, ExternalLink, Network, Zap, CheckCircle2, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
@@ -157,7 +157,7 @@ export default function CaseStudiesPage() {
           <div className="space-y-20">
             {caseStudies.map((study, idx) => (
               <FadeUp key={idx}>
-                <div className="group bg-white rounded-[48px] border border-gray-100 p-8 md:p-12 shadow-sm hover:shadow-2xl hover:shadow-purple-900/5 transition-all overflow-hidden relative">
+                <div className="bg-white rounded-[48px] border border-gray-100 p-8 md:p-12 shadow-sm hover:shadow-2xl hover:shadow-purple-900/5 transition-all overflow-hidden relative">
                   <div className="grid lg:grid-cols-12 gap-12 items-start">
                     <div className="lg:col-span-7">
                       <div className="flex items-center gap-3 mb-6">
@@ -218,7 +218,7 @@ export default function CaseStudiesPage() {
                           href={`/case-studies/${study.slug}`}
                           className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all"
                         >
-                          Read Full Case Study <ArrowRight size={16} />
+                          Read Full Case Study 
                         </a>
                         <div className="flex gap-4">
                           <a href="/managed-it" className="text-gray-400 text-xs hover:text-[#5D00D6] transition-colors uppercase font-bold tracking-wider">Operating Model</a>

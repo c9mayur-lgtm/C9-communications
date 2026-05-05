@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useSpring, useTransform, animate } from 'framer-motion';
-import { ArrowRight, Smartphone, Share2, ShieldCheck, FileText, Globe, FileDown, Wifi, CheckCircle2, TrendingUp, Zap } from 'lucide-react';
+import { Smartphone, Share2, ShieldCheck, FileText, Globe, FileDown, Wifi, CheckCircle2, TrendingUp, Zap } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 // ─── Animated Count-Up Number ─────────────────────────────────────
@@ -232,11 +232,11 @@ export default function Hero() {
                 onClick={handleQuoteClick}
                 className="bg-[#5D00D6] text-white hover:bg-[#4c00b0] font-bold h-14 px-10 rounded-full text-[14px] shadow-xl shadow-purple-900/20 flex items-center gap-2 hover:-translate-y-0.5 transition-all"
               >
-                Build My Mobile Fleet <ArrowRight size={18} />
+                Build My Mobile Fleet 
               </Button>
               <Button
                 variant="outline"
-                className="border-2 border-slate-200 bg-white text-[#1A1A2E] hover:bg-[#5D00D6]/5 hover:border-[#5D00D6] hover:text-[#5D00D6] font-bold h-14 px-10 rounded-full text-[14px] flex items-center gap-2 hover:-translate-y-0.5 transition-all group"
+                className="border-2 border-slate-200 bg-white text-[#1A1A2E] hover:bg-[#5D00D6]/5 hover:border-[#5D00D6] hover:text-[#5D00D6] font-bold h-14 px-10 rounded-full text-[14px] flex items-center gap-2 hover:-translate-y-0.5 transition-all"
               >
                 <FileDown size={17} className="text-[#5D00D6] group-hover:text-[#5D00D6] transition-colors" /> Download Fleet Guide
               </Button>

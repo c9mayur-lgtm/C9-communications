@@ -1,18 +1,7 @@
 'use client';
 
 import React from 'react';
-import { 
-  Users, 
-  Code, 
-  Shield, 
-  Network, 
-  ArrowRight, 
-  CheckCircle2, 
-  Cpu, 
-  Activity,
-  Award,
-  Globe
-} from 'lucide-react';
+import { Users, Code, Shield, Network, CheckCircle2, Cpu, Activity, Award, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Section } from '@/components/design-system/Section';
@@ -132,8 +121,8 @@ export default function TeamPage() {
             }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="p-8 rounded-lg bg-white transition-all group h-full">
-                <div className="w-12 h-12 rounded-lg bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform">
+              <div className="p-8 rounded-lg bg-white transition-all h-full">
+                <div className="w-12 h-12 rounded-lg bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110">
                   <item.icon size={24} />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+;
 import { C9Button } from "@/components/design-system/C9Button";
 
 interface ServiceHeroProps {
@@ -59,7 +59,7 @@ export const ServiceHero = ({
 
           <div className="flex flex-col sm:flex-row gap-5 items-start">
             <C9Button size="lg" className="min-w-[240px] shadow-2xl shadow-purple-900/40">
-              {ctaText} <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+              {ctaText} 
             </C9Button>
           </div>
         </div>

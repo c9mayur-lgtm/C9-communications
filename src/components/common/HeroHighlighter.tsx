@@ -41,7 +41,7 @@ export const HeroHighlighter = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-8">
           {points.map((point, index) => (
-            <div key={index} className="flex items-center gap-4 group">
+            <div key={index} className="flex items-center gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center group-hover:bg-[#5D00D6]/10 transition-colors">
                 {React.cloneElement(point.icon as React.ReactElement<{ className?: string }>, { className: "w-6 h-6 text-[#5D00D6]" })}
               </div>

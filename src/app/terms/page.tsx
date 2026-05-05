@@ -20,7 +20,7 @@ const TERMS_TOC = [
 ];
 
 const DocItem = ({ title, icon: Icon }: { title: string, icon: any }) => (
-  <div className="group flex items-center justify-between p-6 bg-white border border-gray-100 rounded-2xl hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-300 mb-4 cursor-pointer">
+  <div className="flex items-center justify-between p-6 bg-white border border-gray-100 rounded-2xl hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-300 mb-4 cursor-pointer">
     <div className="flex items-center gap-5">
       <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-[#0c1024] group-hover:bg-[#5D00D6]/10 group-hover:text-[#5D00D6] transition-colors">
         <Icon size={24} strokeWidth={1.5} />

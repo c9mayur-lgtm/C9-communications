@@ -11,20 +11,7 @@ import {
   FullStackSection
 } from '../components';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { 
-  Printer, 
-  ShieldCheck, 
-  BarChart3, 
-  RefreshCw, 
-  FileLock2, 
-  Zap, 
-  CheckCircle2, 
-  ArrowRight,
-  ShieldAlert,
-  Target,
-  Users as UsersIcon,
-  Shield
-} from 'lucide-react';
+import { Printer, ShieldCheck, BarChart3, RefreshCw, FileLock2, Zap, CheckCircle2, ShieldAlert, Target, Users as UsersIcon, Shield } from 'lucide-react';
 
 const sectionClassName = 'py-16 md:py-24 relative overflow-hidden';
 const containerClassName = 'c9-container relative z-10';
@@ -84,10 +71,10 @@ export default function ManagedPrintPage() {
                   Stop managing printers and start managing your infrastructure. C9 provides a fully governed, carrier-grade print utility with automated fulfillment, secure release, and 100% Australian support.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Link href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Request Print Audit <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
+                    Request Print Audit 
                   </Link>
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full hover:bg-black/5 transition-all backdrop-blur-sm h-14 px-8 text-[15px] font-bold">
                     View Fleet Options
                   </Link>
                 </div>
@@ -200,7 +187,7 @@ export default function ManagedPrintPage() {
               <p className="text-[17px] text-gray-500 mb-10 leading-relaxed font-medium">
                 For new sites, document workflows are mandatory from the first hour. We guarantee fully-operational, secure print infrastructure on your first day of operation.
               </p>
-              <div className="bg-[#0C1024] border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl">
+              <div className="bg-[#0C1024] border border-white/10 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/40 transition-all shadow-2xl">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/10 rounded-bl-full" />
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4">
@@ -336,10 +323,10 @@ export default function ManagedPrintPage() {
               </div>
               
               <Link 
-                href="#consultation" 
-                className="inline-flex h-14 items-center justify-center rounded-full bg-[#5D00D6] px-10 text-[16px] font-bold text-white transition-all hover:bg-[#4B00AD] hover:-translate-y-1 hover:shadow-xl"
+                href="#consultation-section" 
+                className="inline-flex items-center justify-center rounded-full bg-[#5D00D6] text-white transition-all hover:bg-[#4B00AD] hover:-translate-y-1 hover:shadow-xl h-14 px-8 text-[15px] font-bold"
               >
-                Start Your Print Audit <ArrowRight size={18} className="ml-2" />
+                Start Your Print Audit 
               </Link>
             </div>
           </div>
@@ -372,7 +359,7 @@ export default function ManagedPrintPage() {
       />
 
       {/* 8. FINAL CONSULTATION FORM */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="Managed Print Audit"

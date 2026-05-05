@@ -95,7 +95,7 @@ export const AuthoritySection = () => {
             </div>
             
             {/* Floating Badge */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#5D00D6] rounded-full flex items-center justify-center p-6 text-center shadow-2xl rotate-12 transition-transform hover:rotate-0 duration-500">
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#5D00D6] rounded-full flex items-center justify-center p-6 text-center shadow-2xl rotate-12 hover:rotate-0 duration-500">
                 <span className="text-sm font-bold leading-tight">OFFICIAL TECHNOLOGY PARTNER</span>
             </div>
           </div>

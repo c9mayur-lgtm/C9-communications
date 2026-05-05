@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShoppingCart, Stethoscope, Briefcase, Building2, UtensilsCrossed, GraduationCap } from 'lucide-react';
+import { ShoppingCart, Stethoscope, Briefcase, Building2, UtensilsCrossed, GraduationCap } from 'lucide-react';
 
 const FadeIn = ({
   children,
@@ -93,7 +93,7 @@ export default function IndustryGrid() {
             <FadeIn key={i} delay={i * 0.07}>
               <Link
                 href={industry.path}
-                className="group flex flex-col bg-white rounded-[24px] border border-slate-100 p-8 h-full hover:shadow-xl hover:border-[#5D00D6]/25 transition-all duration-400"
+                className="flex flex-col bg-white rounded-[24px] border border-slate-100 p-8 h-full hover:shadow-xl hover:border-[#5D00D6]/25 transition-all duration-400"
               >
                 {/* Icon */}
                 <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-300">
@@ -111,7 +111,7 @@ export default function IndustryGrid() {
                 {/* CTA */}
                 <span className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] uppercase tracking-widest group-hover:gap-3 transition-all duration-300">
                   Explore {industry.title}
-                  <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+                  
                 </span>
               </Link>
             </FadeIn>

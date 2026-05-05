@@ -51,6 +51,14 @@ export const NextStepStrip = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <Button 
             className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-full px-8 h-12 font-bold shadow-lg shadow-[#5D00D6]/10 transition-all flex items-center gap-2"
+            onClick={() => {
+              const el = document.getElementById('consultation-section');
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.location.href = '/contact#consultation-section';
+              }
+            }}
           >
             <PhoneCall size={18} />
             Talk to a Solutions Expert

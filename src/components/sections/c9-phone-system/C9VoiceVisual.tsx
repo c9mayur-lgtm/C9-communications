@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Laptop, Smartphone, Tablet, Video, Cloud, Globe, User, ArrowRight } from 'lucide-react';
+import { Phone, Laptop, Smartphone, Tablet, Video, Cloud, Globe, User } from 'lucide-react';
 
 const FlowLine = ({ path, delay = 0 }: { path: string; delay?: number }) => (
   <>

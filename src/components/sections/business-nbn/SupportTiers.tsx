@@ -56,7 +56,7 @@ export default function SupportTiers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex flex-col p-10 rounded-[40px] shadow-[0_15px_40px_rgba(0,0,0,0.04)] bg-white border border-gray-100 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5 group"
+              className="flex flex-col p-10 rounded-[40px] shadow-[0_15px_40px_rgba(0,0,0,0.04)] bg-white border border-gray-100 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5"
             >
               <div className="mb-8 self-start">
                 <span className="px-3 py-1 rounded-full bg-[#5D00D6]/5 border border-[#5D00D6]/10 text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">

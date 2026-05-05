@@ -2,15 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
-  HelpCircle, Clock, Search, Handshake, 
-  Target, Monitor, Lock, Cloud, PhoneCall,
-  Users, MessageSquare, AlertCircle, Server,
-  Activity, Database, Shield, Globe, Cpu,
-  FileCheck, ShieldAlert, BarChart3, RefreshCw,
-  Network, Laptop, Layers, Share2, ClipboardCheck, Check
-} from 'lucide-react';
+import { CheckCircle, ShieldCheck, Zap, HelpCircle, Clock, Search, Handshake, Target, Monitor, Lock, Cloud, PhoneCall, Users, MessageSquare, AlertCircle, Server, Activity, Database, Shield, Globe, Cpu, FileCheck, ShieldAlert, BarChart3, RefreshCw, Network, Laptop, Layers, Share2, ClipboardCheck, Check } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
@@ -99,14 +91,14 @@ const Hero = () => (
             <div className="flex flex-col gap-4 mb-8">
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="#consultation"
-                  className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-7 font-bold text-[13px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group whitespace-nowrap"
+                  href="#consultation-section"
+                  className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 whitespace-nowrap h-14 px-8 text-[15px] font-bold"
                 >
                   Request Infrastructure Assessment
                 </a>
                 <a
                   href="#platform"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-12 px-7 font-bold text-[13px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap h-14 px-8 text-[15px] font-bold"
                 >
                   Review Operating Model
                 </a>
@@ -185,8 +177,8 @@ const SectionProblem = () => (
           { icon: <Globe size={24} />, title: 'Expansion Lag', desc: 'The absence of standardised infrastructure blueprints prevents rapid site rollouts and consistent performance at scale.' }
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.05}>
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 h-full shadow-sm hover:border-[#5D00D6]/30 transition-all group">
-               <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform origin-left">
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 h-full shadow-sm hover:border-[#5D00D6]/30 transition-all">
+               <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 origin-left">
                   {item.icon}
                </div>
                <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -319,7 +311,7 @@ const SectionModelDetail = () => (
             }
           ].map((card, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full shadow-sm hover:border-[#5D00D6]/20 transition-all group">
+               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full shadow-sm hover:border-[#5D00D6]/20 transition-all">
                   <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                      {card.icon}
                   </div>
@@ -464,7 +456,7 @@ const SectionSecurity = () => (
             { icon: <ClipboardCheck />, title: 'Audit Readiness', desc: 'Continuous logging and audit readiness aligned with ISO and Essential 8 standards.' }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full hover:border-[#5D00D6]/20 transition-all group shadow-sm">
+               <div className="bg-white p-8 rounded-[32px] border border-slate-200 h-full hover:border-[#5D00D6]/20 transition-all shadow-sm">
                   <div className="w-10 h-10 rounded-xl bg-[#5D00D6]/5 flex items-center justify-center mb-6 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                      {item.icon}
                   </div>
@@ -583,7 +575,7 @@ const SectionProof = () => (
             }
           ].map((caseStudy, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-slate-50 p-10 rounded-[40px] border border-slate-200 hover:shadow-xl transition-all duration-500 h-full group">
+               <div className="bg-slate-50 p-10 rounded-[40px] border border-slate-200 hover:shadow-xl transition-all duration-500 h-full">
                   <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-4 block">{caseStudy.tag}</span>
                   <h3 className="text-xl font-bold text-slate-900 mb-6">{caseStudy.title}</h3>
                   <p className="text-slate-600 text-[14px] leading-relaxed mb-10">{caseStudy.desc}</p>
@@ -632,7 +624,7 @@ const SectionCommercial = () => (
                   { title: 'Knowledge Sharing', desc: 'Full access to technical documentation and configuration blueprints for your internal team.' },
                   { title: 'Strategic Alignment', desc: 'Acting as an operational extension of your internal IT department protocols.' }
                 ].map((item, i) => (
-                  <div key={i} className="p-6 bg-white/5 border border-white/10 rounded-3xl hover:bg-[#5D00D6]/20 transition-all flex items-center gap-6 group">
+                  <div key={i} className="p-6 bg-white/5 border border-white/10 rounded-3xl hover:bg-[#5D00D6]/20 transition-all flex items-center gap-6">
                      <div className="w-10 h-10 rounded-full bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] group-hover:bg-white group-hover:text-[#5D00D6] transition-colors">
                         <Check size={20} />
                      </div>
@@ -689,7 +681,7 @@ const SectionEcosystem = () => (
             }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 text-center opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 group h-full">
+               <div className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 text-center opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 h-full">
                   <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm">
                      {item.icon}
                   </div>
@@ -718,9 +710,9 @@ const SectionEcosystem = () => (
             { label: 'Helpdesk Support', icon: <MessageSquare /> },
             { label: 'Security Ops', icon: <Shield /> }
           ].map((item, i) => (
-            <FadeIn key={i} delay={i * 0.05} className="group">
-               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center hover:bg-[#5D00D6] transition-all duration-500 hover:-translate-y-2 group h-full flex flex-col justify-center">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 text-[#5D00D6] group-hover:scale-110 transition-transform">
+            <FadeIn key={i} delay={i * 0.05} className="">
+               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center hover:bg-[#5D00D6] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col justify-center">
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 text-[#5D00D6] group-hover:scale-110">
                      {item.icon}
                   </div>
                   <span className="text-[14px] font-bold text-slate-900 group-hover:text-white transition-colors uppercase tracking-widest">{item.label}</span>
@@ -745,10 +737,10 @@ const FinalCTA = () => (
              Fragmented environments create hidden operational risks. Establish a structured operating model and regain control across your entire multi-site estate.
            </p>
            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-16 px-12 font-extrabold text-[14px] hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/40 group">
+              <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/40 h-14 px-8 text-[15px] font-bold">
                  Request Enterprise Infrastructure Assessment
               </a>
-              <a href="#consultation" className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-16 px-12 font-extrabold text-[14px] hover:bg-white hover:text-[#0c1024] transition-all">
+              <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full hover:bg-white hover:text-[#0c1024] transition-all h-14 px-8 text-[15px] font-bold">
                  Talk to an Infrastructure Architect
               </a>
            </div>
@@ -785,7 +777,7 @@ export default function EnterprisePage() {
       <SectionEcosystem />
       <FinalCTA />
 
-      <section id="consultation" className="bg-slate-50 py-12">
+      <section id="consultation-section" className="bg-slate-50 py-12">
         <WpConsultationForm
           showHeader={false}
           eyebrow="STRATEGIC GOVERNANCE"

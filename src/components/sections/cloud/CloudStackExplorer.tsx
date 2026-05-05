@@ -150,7 +150,7 @@ export default function CloudStackExplorer() {
                 {section.cards.map((card, cardIdx) => (
                   <div 
                     key={cardIdx} 
-                    className="flex flex-col group cursor-pointer"
+                    className="flex flex-col cursor-pointer"
                   >
                     <div className="w-full aspect-[4/5] rounded-3xl overflow-hidden mb-6 relative shadow-lg">
                        <img 

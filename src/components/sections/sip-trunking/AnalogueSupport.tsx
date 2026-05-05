@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Plug, ArrowRight, Cloud } from 'lucide-react';
+import { Plug, Cloud } from 'lucide-react';
 
 export default function AnalogueSupport() {
   return (
@@ -39,7 +39,7 @@ export default function AnalogueSupport() {
                         <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
                         <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
                         <div className="w-10 h-10 bg-[#5D00D6] rounded-full flex items-center justify-center shadow-lg shadow-[#5D00D6]/30 text-white z-10">
-                            <ArrowRight size={18} />
+                            
                         </div>
                         <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
                         <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />

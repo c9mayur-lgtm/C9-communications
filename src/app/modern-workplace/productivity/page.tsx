@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, Shield, Zap, Clock, Lock, ShieldCheck, Mail, Users as UsersIcon, Settings, ChevronDown, Laptop, MessageSquare, Database, Headphones, HardDrive, CheckCircle2 } from 'lucide-react';
+import { Check, Shield, Zap, Clock, Lock, ShieldCheck, Mail, Users as UsersIcon, Settings, ChevronDown, Laptop, MessageSquare, Database, Headphones, HardDrive, CheckCircle2 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import {
   P, PL, T, TM, TM2, BD,
@@ -119,7 +119,7 @@ const SharePointVisual = () => (
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: idx * 0.1 }}
-          className="bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex flex-col gap-3 group hover:border-purple-200 transition-colors"
+          className="bg-white rounded-2xl p-4 shadow-xl border border-gray-100 flex flex-col gap-3 hover:border-purple-200 transition-colors"
         >
           <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center text-gray-400 group-hover:bg-purple-50 group-hover:text-purple-600 transition-colors">
             <box.i size={16} />
@@ -285,7 +285,7 @@ const ManagedScopeUI = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {items.map((item, i) => (
-        <FadeUp key={i} delay={i * 0.05} className="bg-white rounded-[32px] p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 flex flex-col group">
+        <FadeUp key={i} delay={i * 0.05} className="bg-white rounded-[32px] p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 flex flex-col">
           <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
             <item.icon size={22} />
           </div>
@@ -314,7 +314,7 @@ const PainCard = ({ icon: Icon, title, body, delay }: { icon: any, title: string
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
-    className="group p-8 md:p-10 flex flex-col items-start text-left relative border border-gray-100 rounded-[24px] bg-white hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
+    className="p-8 md:p-10 flex flex-col items-start text-left relative border border-gray-100 rounded-[24px] bg-white hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
   >
     <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 mb-8 border border-gray-100 group-hover:bg-[#5D00D6] group-hover:text-white group-hover:border-[#5D00D6] transition-all duration-500">
       <Icon size={24} strokeWidth={1.5} />
@@ -325,7 +325,7 @@ const PainCard = ({ icon: Icon, title, body, delay }: { icon: any, title: string
     <p className="text-gray-500 text-[14px] leading-relaxed font-normal">
       {body}
     </p>
-    <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent w-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-[24px]" />
+    <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent w-full scale-x-0 group-hover:scale-x-100 duration-500 rounded-b-[24px]" />
   </motion.div>
 );
 
@@ -368,10 +368,10 @@ export default function ProductivityPage() {
 
               <FadeUp delay={0.3}>
                 <div className="flex flex-wrap items-center gap-4">
-                  <Link href="#managed-scope" className="inline-flex items-center justify-center h-14 rounded-full bg-[#5D00D6] px-8 text-[16px] font-bold text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-xl active:scale-95">
+                  <Link href="#managed-scope" className="inline-flex items-center justify-center rounded-full bg-[#5D00D6] text-white transition-all hover:bg-[#7116FF] hover:-translate-y-1 hover:shadow-xl active:scale-95 h-14 px-8 text-[15px] font-bold">
                     See What We Manage
                   </Link>
-                  <Link href="/contact" className="inline-flex items-center justify-center h-14 rounded-full border border-[#DCCDF8] bg-white px-8 text-[16px] font-bold text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50">
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center rounded-full border border-[#DCCDF8] bg-white text-[#5D00D6] transition-all hover:border-[#5D00D6] hover:bg-gray-50 h-14 px-8 text-[15px] font-bold">
                     Book M365 Audit
                   </Link>
                 </div>
@@ -393,11 +393,11 @@ export default function ProductivityPage() {
 
             {/* Right: Realistic Engagement Visual */}
             <ScaleIn delay={0.5} className="relative hidden lg:block">
-              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 group">
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border border-gray-100">
                 <img 
                   src="/modern_m365_office_collaboration.png" 
                   alt="Modern Office Team Collaborating with Microsoft 365" 
-                  className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-1000"
+                  className="w-full h-full object-cover aspect-square group-hover:scale-105 duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/10 to-transparent mix-blend-overlay" />
               </div>
@@ -484,7 +484,7 @@ export default function ProductivityPage() {
 
           <FadeUp delay={0.4} className="mt-12 text-center">
              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gray-50 border border-gray-100 text-[#5D00D6] font-bold text-[16px]">
-               C9 manages every layer of your M365 environment <ArrowRight size={18} />
+               C9 manages every layer of your M365 environment 
              </div>
           </FadeUp>
         </div>
@@ -548,7 +548,7 @@ export default function ProductivityPage() {
               <p className="text-[18px] text-gray-600 mb-10 leading-relaxed font-medium">
                 For new sites and startups, "good enough" is not an option. We guarantee a fully-operational, secure M365 environment on your first day of operation.
               </p>
-              <div className="bg-[#0B0B0F] border border-white/5 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/20 transition-all shadow-2xl">
+              <div className="bg-[#0B0B0F] border border-white/5 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/20 transition-all shadow-2xl">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/5 rounded-bl-full group-hover:bg-[#5D00D6]/10 transition-all" />
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4">
@@ -613,7 +613,7 @@ export default function ProductivityPage() {
                 price: 'Custom Managed Pricing'
               }
             ].map((card, idx) => (
-              <div key={idx} className="bg-[#12121A] border border-white/5 rounded-[32px] p-8 md:p-10 shadow-xl flex flex-col h-full hover:bg-[#16161F] transition-all duration-300 group">
+              <div key={idx} className="bg-[#12121A] border border-white/5 rounded-[32px] p-8 md:p-10 shadow-xl flex flex-col h-full hover:bg-[#16161F] transition-all duration-300">
                 <div className="mb-6 flex justify-between items-start">
                   <h3 className="text-[22px] md:text-[24px] text-white font-bold leading-tight">{card.title}</h3>
                 </div>
@@ -642,8 +642,8 @@ export default function ProductivityPage() {
           </div>
 
           <div className="flex justify-center mt-16">
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 h-14 rounded-full bg-[#5D00D6] hover:bg-[#7116FF] text-white font-bold text-[16px] transition-all duration-300 hover:shadow-[0_0_30px_rgba(93,0,214,0.3)] group">
-              Speak to a Licensing Expert <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#5D00D6] hover:bg-[#7116FF] text-white transition-all duration-300 hover:shadow-[0_0_30px_rgba(93,0,214,0.3)] h-14 px-8 text-[15px] font-bold">
+              Speak to a Licensing Expert 
             </Link>
           </div>
 
@@ -666,8 +666,8 @@ export default function ProductivityPage() {
                 <p className="text-[18px] text-gray-500 font-medium mb-6">
                   Moving platforms is high-stakes. Our phased approach ensures zero data loss and zero downtime for your staff.
                 </p>
-                <Link href="/resources/m365-migration-guide" className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-bold text-[16px] transition-all duration-300 hover:shadow-xl" style={{ background: `linear-gradient(135deg, ${P} 0%, #7B1FE8 100%)` }}>
-                  Download M365 Migration Guide <ArrowRight size={17} />
+                <Link href="/insights" className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-bold text-[16px] transition-all duration-300 hover:shadow-xl" style={{ background: `linear-gradient(135deg, ${P} 0%, #7B1FE8 100%)` }}>
+                  View All Insights 
                 </Link>
               </FadeUp>
             </div>
@@ -751,8 +751,8 @@ export default function ProductivityPage() {
           </div>
 
           <FadeUp delay={0.3} className="text-center">
-            <Link href="/about/case-studies" className="inline-flex items-center gap-2 text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest hover:underline">
-              Read More Case Studies <ArrowRight size={14} />
+            <Link href="/case-studies" className="inline-flex items-center gap-2 text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest hover:underline">
+              Read More Case Studies 
             </Link>
           </FadeUp>
         </div>
@@ -786,8 +786,8 @@ export default function ProductivityPage() {
                   ))}
                 </div>
 
-                <Link href="/contact" className="inline-flex items-center gap-2 mt-4 text-[#5D00D6] font-bold hover:underline">
-                  Talk to an M365 Specialist <ArrowRight size={18} />
+                <Link href="#consultation-section" className="inline-flex items-center gap-2 mt-4 text-[#5D00D6] font-bold hover:underline">
+                  Talk to an M365 Specialist 
                 </Link>
               </div>
             </FadeUp>
@@ -845,10 +845,10 @@ export default function ProductivityPage() {
               </h2>
               
               <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                <Link href="/contact" className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-10 py-5 rounded-full text-white font-bold text-[16px] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl" style={{ background: `linear-gradient(135deg, ${P} 0%, #7B1FE8 100%)`, boxShadow: '0 4px 24px rgba(93,0,214,0.35)' }}>
+                <Link href="/contact" className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-full text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl h-14 px-8 text-[15px] font-bold" style={{ background: `linear-gradient(135deg, ${P} 0%, #7B1FE8 100%)`, boxShadow: '0 4px 24px rgba(93,0,214,0.35)' }}>
                   Request M365 Audit
                 </Link>
-                <Link href="/resources/pricing-guide" className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-10 py-5 rounded-full font-bold text-[16px] border transition-all duration-300 hover:border-[#5D00D6] hover:text-[#5D00D6]" style={{ color: TM2, borderColor: BD, background: '#fff' }}>
+                <Link href="/resources/pricing-guide" className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-full border transition-all duration-300 hover:border-[#5D00D6] hover:text-[#5D00D6] h-14 px-8 text-[15px] font-bold" style={{ color: TM2, borderColor: BD, background: '#fff' }}>
                   Download Pricing Guide
                 </Link>
               </div>

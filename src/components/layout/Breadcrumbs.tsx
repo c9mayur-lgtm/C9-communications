@@ -11,7 +11,7 @@ import {
   BreadcrumbPage, 
   BreadcrumbSeparator 
 } from "@/components/ui/breadcrumb";
-import { ChevronRight, Home } from "lucide-react";
+import { ChevronRight, Home } from 'lucide-react';
 
 const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };
 

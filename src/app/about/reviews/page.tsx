@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Star, Quote, CheckCircle2, MessageSquare, ArrowRight } from 'lucide-react';
+import { Star, Quote, CheckCircle2, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 

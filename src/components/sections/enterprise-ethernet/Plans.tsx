@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, ShieldCheck, Zap, ArrowRight, Info, Package, Clock } from 'lucide-react';
+import { Check, Star, ShieldCheck, Zap, Info, Package, Clock } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const bestEffortSpeeds = ['50/50', '100/100', '250/250', '500/500', '1000/1000'];
@@ -144,7 +144,7 @@ export default function Plans() {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="bg-white rounded-[40px] border border-gray-100 p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] flex flex-col relative overflow-hidden group"
+             className="bg-white rounded-[40px] border border-gray-100 p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.02)] flex flex-col relative overflow-hidden"
            >
               <div className="flex justify-between items-start mb-8">
                  <div>
@@ -227,7 +227,7 @@ export default function Plans() {
                 onClick={() => handleSelectPlan('Best Effort', bestEffortSpeeds[bestEffortIdx])}
                 className="w-full h-16 rounded-2xl bg-gray-100 text-[#1A1A2E] font-bold flex items-center justify-center gap-2 hover:bg-gray-200 transition-all group/btn shadow-sm"
               >
-                  Get A Standard Quote <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                  Get A Standard Quote 
               </button>
            </motion.div>
 
@@ -236,7 +236,7 @@ export default function Plans() {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="bg-[#1A1A2E] rounded-[40px] p-8 md:p-12 shadow-[0_30px_60px_rgba(93,0,214,0.15)] flex flex-col relative overflow-hidden group scale-[1.02]"
+             className="bg-[#1A1A2E] rounded-[40px] p-8 md:p-12 shadow-[0_30px_60px_rgba(93,0,214,0.15)] flex flex-col relative overflow-hidden scale-[1.02]"
            >
               <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6]/20 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none" />
               
@@ -322,7 +322,7 @@ export default function Plans() {
                 onClick={() => handleSelectPlan('Committed (TC-2)', committedSpeeds[committedIdx])}
                 className="w-full h-16 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-[#5D00D6]/40 relative z-10 group/btn"
               >
-                  Get A High-Performance Quote <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                  Get A High-Performance Quote 
               </button>
            </motion.div>
 

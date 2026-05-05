@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Wifi, Radio, Smartphone, Phone, ArrowRight, Volume2 } from 'lucide-react';
+import { Wifi, Radio, Smartphone, Phone, Volume2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import { TELCO_SERVICES_CONTENT } from '@/components/layout/NavbarData';
 
 export const WpServices = () => {
@@ -44,7 +46,7 @@ export const WpServices = () => {
                     </span>
                     <span className="whitespace-nowrap">{tab.label}</span>
                     {tab.isNew && (
-                      <span className="ml-1.5 px-1.5 py-0.5 bg-red-500 text-white text-[9px] font-bold rounded-sm uppercase tracking-tighter leading-none inline-flex items-center justify-center">
+                      <span className="ml-1.5 px-2 py-0.5 bg-red-500 text-white rounded-sm text-[10px] font-bold uppercase tracking-wider leading-none inline-flex items-center justify-center">
                         NEW
                       </span>
                     )}
@@ -78,7 +80,7 @@ export const WpServices = () => {
 
                   {/* High-Impact Visual */}
                   <div className="w-full relative group/gfx perspective-1000 mt-4">
-                    <div className="relative z-10 transition-transform duration-700 group-hover/gfx:rotate-y-6 group-hover/gfx:scale-[1.02]">
+                    <div className="relative z-10 duration-700 group-hover/gfx:rotate-y-6 group-hover/gfx:scale-[1.02]">
                       {activeTelcoTab === 'internet' ? (
                         <img 
                           src="/images/realistic_business_internet_fiber_box_1776077417680.png" 
@@ -125,7 +127,7 @@ export const WpServices = () => {
                   {TELCO_SERVICES_CONTENT[activeTelcoTab].options.map((option: any, idx: number) => (
                     <div 
                       key={idx} 
-                      className="group flex items-start justify-between p-4 md:p-5 bg-white border border-gray-100 rounded-xl hover:border-[#5D00D6] hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all cursor-pointer"
+                      className="flex items-start justify-between p-4 md:p-5 bg-white border border-gray-100 rounded-xl hover:border-[#5D00D6] hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all cursor-pointer"
                     >
                       <div className="flex items-start gap-5">
                         <div className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center text-[#5D00D6] bg-[#F4F0FA] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shrink-0 overflow-hidden mt-1">
@@ -142,12 +144,14 @@ export const WpServices = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-          <div className="mt-8 flex items-center justify-between border-t border-gray-100 pt-6">
+          <div className="mt-8 flex items-center justify-between border-t border-gray-100 pt-8">
             <p className="text-[13px] text-slate-400 font-medium">One provider. One point of accountability. No blame shifting.</p>
-            <a href="/telco" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[13px] hover:gap-3 transition-all group">
-              View All Telco Solutions
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </a>
+            <Button size="lg" className="rounded-full shadow-xl px-8 h-14" asChild>
+              <Link href="/telco" className="flex items-center gap-2">
+                View All Telco Solutions
+                
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

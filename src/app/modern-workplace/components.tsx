@@ -3,11 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Check, CheckCircle2, ArrowRight, ChevronDown, Shield, Users, Laptop,
-  Cloud, MessageSquare, Globe, Lock, Zap, Monitor, Phone, Star,
-  Camera, Printer, UserCheck, HardDrive, BookOpen, Clock, TrendingUp
-} from 'lucide-react';
+import { Check, CheckCircle2, ChevronDown, Shield, Users, Laptop, Cloud, MessageSquare, Globe, Lock, Zap, Monitor, Phone, Star, Camera, Printer, UserCheck, HardDrive, BookOpen, Clock, TrendingUp } from 'lucide-react';
 
 export const ease = [0.22, 1, 0.36, 1] as const;
 export const P = '#5D00D6';
@@ -55,7 +51,7 @@ export const M365Mockup = () => (
           transition={{ duration: 4, repeat: Infinity, delay: i * 0.5, ease: "easeInOut" }}
           className="flex flex-col items-center gap-3 p-4 rounded-2xl hover:bg-gray-50 transition-all cursor-pointer group/icon"
         >
-          <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white shadow-lg border border-gray-100 group-hover/icon:scale-110 group-hover/icon:-rotate-3 transition-transform">
+          <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white shadow-lg border border-gray-100 group-hover/icon:scale-110 group-hover/icon:-rotate-3">
              <img src={a.bg} alt={a.l} className="w-9 h-9 object-contain" />
           </div>
           <span className="text-[11px] font-bold tracking-tight uppercase" style={{ color: TM }}>{a.l}</span>
@@ -95,7 +91,7 @@ export const TeamsMockup = () => (
         {n:'You', img:'https://randomuser.me/api/portraits/women/68.jpg', status: 'Muted'}
       ].map((user, i)=>(
         <div key={user.n} className="rounded-2xl relative overflow-hidden group/call aspect-video">
-           <img src={user.img} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/call:scale-110" alt={user.n} />
+           <img src={user.img} className="absolute inset-0 w-full h-full object-cover duration-700 group-hover/call:scale-110" alt={user.n} />
            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
            <div className="absolute bottom-3 left-3 flex items-center gap-2">
               <div className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/10 overflow-hidden">
@@ -190,7 +186,7 @@ export const DeviceMockup = () => (
         {n:'MacBook Pro M3 — Dev', s:'Compliant', i:'https://img.icons8.com/color/144/macbook.png'},
         {n:'iPhone 16 Pro — Sales', s:'Compliant', i:'https://img.icons8.com/color/144/iphone-14-pro.png'}
       ].map(({n,s,i})=>(
-        <div key={n} className="flex items-center gap-4 p-3 rounded-2xl bg-white border border-gray-100 shadow-sm transition-transform hover:scale-[1.02] cursor-pointer">
+        <div key={n} className="flex items-center gap-4 p-3 rounded-2xl bg-white border border-gray-100 shadow-sm hover:scale-[1.02] cursor-pointer">
           <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center p-2">
              <img src={i} className="w-full h-full object-contain" alt="" />
           </div>
@@ -235,7 +231,7 @@ export const ServicesAccordion = () => {
         {FEATURES.map(f => {
           const Icon = f.icon; const isA = active === f.id;
           return (
-            <button key={f.id} onClick={() => setActive(f.id)} className="w-full text-left group">
+            <button key={f.id} onClick={() => setActive(f.id)} className="w-full text-left">
               <div className="flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-300" style={{ background: isA ? f.color+'0E' : 'transparent', border: `1px solid ${isA ? f.color+'35' : 'transparent'}` }}>
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all" style={{ background: isA ? f.color+'20' : 'rgba(12,16,36,0.05)' }}>
                   <Icon size={18} style={{ color: isA ? f.color : TM }} />
@@ -243,7 +239,7 @@ export const ServicesAccordion = () => {
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
                     <span className="text-[17px] font-bold transition-colors" style={{ color: isA ? '#0c1024' : 'gray' }}>{f.label}</span>
-                    <ChevronDown size={15} className={`transition-transform duration-300 ${isA ? 'rotate-180' : ''}`} style={{ color: isA ? f.color : 'gray' }} />
+                    <ChevronDown size={15} className={` duration-300 ${isA ? 'rotate-180' : ''}`} style={{ color: isA ? f.color : 'gray' }} />
                   </div>
                   <AnimatePresence>
                     {isA && (
@@ -258,7 +254,7 @@ export const ServicesAccordion = () => {
                           ))}
                         </div>
                         <Link href="/contact" className="inline-flex items-center gap-1 mt-4 text-[12px] font-bold group/l" style={{ color: f.color }}>
-                          Learn more <ArrowRight size={12} className="transition-transform group-hover/l:translate-x-1" />
+                          Learn more 
                         </Link>
                       </motion.div>
                     )}
@@ -550,7 +546,7 @@ export const OtherSolutions = () => {
               key={item.title}
               href={item.href}
               onMouseEnter={() => setActive(i)}
-              className="relative group cursor-pointer block"
+              className="relative cursor-pointer block"
             >
               {i > 0 && <div className="absolute top-0 left-0 right-0 h-px bg-black/[0.06]" />}
               <div className={`py-10 transition-colors duration-500 ${isActive ? 'translate-x-2' : ''}`}>
@@ -575,7 +571,7 @@ export const OtherSolutions = () => {
                     <div className={`text-[36px] font-bold leading-none tracking-tight transition-all duration-500 ${isActive ? '!text-[#0c1024]' : '!text-gray-300'}`}>{item.metric}</div>
                     <div className={`c9-body !text-[14px] !text-gray-500 mt-1.5 transition-all duration-500 ${isActive ? 'opacity-100' : 'opacity-40'}`}>{item.metricLabel}</div>
                     <div className={`mt-4 transition-all duration-500 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
-                       <ArrowRight size={20} style={{ color: item.color }} />
+                       
                     </div>
                   </div>
                 </div>
@@ -623,9 +619,9 @@ export const FAQSection = ({ items = FAQS }: { items?: { q: string; a: string }[
       {items.map((f, i) => (
         <FadeUp key={i} delay={i * 0.04}>
           <div className="border-b" style={{ borderColor: BD }}>
-            <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-start justify-between gap-6 py-6 text-left group">
+            <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-start justify-between gap-6 py-6 text-left">
               <span className={`c9-card-title !text-[18px] md:!text-[20px] transition-colors ${open===i ? '!text-[#5D00D6]' : '!text-[#0c1024]'}`}>{f.q}</span>
-              <ChevronDown size={20} className={`shrink-0 mt-0.5 transition-transform duration-300 ${open===i?'rotate-180':''}`} style={{ color: open===i ? P : 'gray' }} />
+              <ChevronDown size={20} className={`shrink-0 mt-0.5 duration-300 ${open===i?'rotate-180':''}`} style={{ color: open===i ? P : 'gray' }} />
             </button>
             <AnimatePresence>
               {open===i && (
@@ -772,7 +768,7 @@ export const InteractiveHeroDashboard = () => {
                 transition={{ delay: i * 0.1, type: 'spring', stiffness: 200 }}
                 className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-gray-100 group/app" 
               >
-                <img src={app.bg} alt={app.t} className="w-9 h-9 object-contain transition-transform duration-500 group-hover/app:scale-110" />
+                <img src={app.bg} alt={app.t} className="w-9 h-9 object-contain duration-500 group-hover/app:scale-110" />
               </motion.div>
             ))}
           </div>
@@ -860,11 +856,11 @@ export const FullStackSection = ({
           <Link 
             key={s.title} 
             href={s.href}
-            className="group flex items-center justify-between p-7 bg-white rounded-2xl border border-gray-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-300"
+            className="flex items-center justify-between p-7 bg-white rounded-2xl border border-gray-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-300"
           >
             <span className="text-[15px] font-medium text-[#0c1024] tracking-tight">{s.title}</span>
             <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center transition-all group-hover:bg-[#5D00D6] group-hover:text-white">
-              <ArrowRight size={16} />
+              
             </div>
           </Link>
         ))}

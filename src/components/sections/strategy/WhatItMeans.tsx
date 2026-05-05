@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, DollarSign, Users, ShieldCheck, BarChart2, ShoppingBag, ArrowRight } from 'lucide-react';
+import { Map, DollarSign, Users, ShieldCheck, BarChart2, ShoppingBag } from 'lucide-react';
 
 const strategyServices = [
   {
@@ -67,7 +67,7 @@ export default function WhatItMeans() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {strategyServices.map((s, i) => (
-            <div key={i} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
+            <div key={i} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
               <div className="mb-6">
                 <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
               </div>
@@ -92,7 +92,7 @@ export default function WhatItMeans() {
               
               <div className="flex items-center c9-eyebrow !text-[12px] group-hover:underline">
                 {s.link ? 'Explore Defense' : 'Strategic Outcome'}
-                <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                
               </div>
             </div>
           ))}

@@ -45,7 +45,7 @@ export default function FinalCTA() {
         <div className="flex flex-wrap items-center justify-center gap-3 mt-10">
           <button
             onClick={handleCheck}
-            className="inline-flex items-center justify-center h-[60px] px-10 rounded-full text-[16px] font-bold bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-all shadow-xl shadow-purple-900/30"
+            className="inline-flex items-center justify-center h-[60px] rounded-full bg-[#5D00D6] hover:bg-[#4B00AD] text-white transition-all shadow-xl shadow-purple-900/30 h-14 px-8 text-[15px] font-bold"
           >
             Get My Business Connected
           </button>
@@ -54,7 +54,7 @@ export default function FinalCTA() {
               const el = document.getElementById('consultation-section');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center justify-center h-[60px] px-10 rounded-full text-[16px] font-bold text-white border border-white/20 bg-white/5 hover:bg-white/10 transition-all"
+            className="inline-flex items-center justify-center h-[60px] rounded-full text-white border border-white/20 bg-white/5 hover:bg-white/10 transition-all h-14 px-8 text-[15px] font-bold"
             style={{ fontFamily: '"Proxima Nova", sans-serif' }}
           >
             Speak to an Expert

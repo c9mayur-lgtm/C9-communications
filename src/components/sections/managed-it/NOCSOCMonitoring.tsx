@@ -70,7 +70,7 @@ export default function NOCSOCMonitoring() {
                  { title: 'Automated Alerting', icon: Bell },
                  { title: 'Threat Containment', icon: ShieldCheck }
                ].map((item, i) => (
-                 <div key={i} className="flex items-center gap-4 group">
+                 <div key={i} className="flex items-center gap-4">
                    <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#a56eff] group-hover:bg-[#a56eff] group-hover:text-white transition-all duration-300">
                      <item.icon size={20} />
                    </div>
@@ -82,7 +82,7 @@ export default function NOCSOCMonitoring() {
 
           <FadeIn delay={0.2} className="relative">
             {/* Visual Representation of NOC/SOC */}
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-10 lg:p-16 relative overflow-hidden group">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-10 lg:p-16 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/10 blur-3xl rounded-full" />
               
               <div className="relative z-10 space-y-12">
@@ -123,8 +123,8 @@ export default function NOCSOCMonitoring() {
         <div className="grid lg:grid-cols-3 gap-8">
           {capabilities.map((c, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="bg-white/5 border border-white/10 rounded-lg p-10 h-full hover:bg-white/10 transition-all duration-500 group">
-                <div className="w-16 h-16 rounded-2xl bg-[#a56eff]/10 text-[#a56eff] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
+              <div className="bg-white/5 border border-white/10 rounded-lg p-10 h-full hover:bg-white/10 transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-[#a56eff]/10 text-[#a56eff] flex items-center justify-center mb-10 group-hover:scale-110 duration-500">
                   <c.icon size={32} strokeWidth={1.5} />
                 </div>
                 <span className="c9-eyebrow !text-[#a56eff] mb-3">

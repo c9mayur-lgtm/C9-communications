@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Zap, Globe, Shield, Wifi, ArrowRight, Star } from 'lucide-react';
+import { Award, Zap, Globe, Shield, Wifi, Star } from 'lucide-react';
 
 const trustSignals = [
   'Up to 1000 Mbps',
@@ -50,13 +50,13 @@ export default function Hero() {
                 onClick={scrollToForm}
                 className="w-full sm:w-auto bg-[#5D00D6] text-white px-8 py-4 rounded-full font-bold hover:bg-[#4E00AD] transition-all flex items-center justify-center gap-2 shadow-xl shadow-purple-900/20"
               >
-                Get a Fibre Quote <ArrowRight size={18} />
+                Get a Fibre Quote 
               </button>
               <button 
                 onClick={scrollToPlans}
                 className="w-full sm:w-auto bg-white text-[#1A1A2E] border border-[#E5E7EB] px-8 py-4 rounded-full font-bold hover:bg-gray-50 hover:border-[#5D00D6] transition-all flex items-center justify-center gap-2"
               >
-                View Plans <ArrowRight size={18} />
+                View Plans 
               </button>
             </div>
 

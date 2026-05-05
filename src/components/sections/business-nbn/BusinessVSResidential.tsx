@@ -79,10 +79,10 @@ export default function BusinessVSResidential() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="bg-[#FAFAFA] rounded-2xl p-5 border border-gray-100 hover:border-[#5D00D6]/20 hover:shadow-sm transition-all group"
+              className="bg-[#FAFAFA] rounded-2xl p-5 border border-gray-100 hover:border-[#5D00D6]/20 hover:shadow-sm transition-all"
             >
               <div className="flex items-center justify-between mb-4">
-                <div className="w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center text-[#5D00D6] group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center text-[#5D00D6] group-hover:scale-110">
                   <f.icon size={20} strokeWidth={1.5} />
                 </div>
                 <span className="text-[9px] font-bold text-[#5D00D6] uppercase tracking-wider bg-[#F3EEFF] px-2 py-1 rounded-full border border-[#5D00D6]/5">
@@ -117,7 +117,7 @@ export default function BusinessVSResidential() {
 
         {/* Dense footer summary */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 py-6 border-t border-gray-100">
-           <div className="flex items-center gap-2 group cursor-help">
+           <div className="flex items-center gap-2 cursor-help">
               <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               <p className="text-[11px] text-[#6B7280] font-medium">
                 Optimized for High-Throughput Technology (FTTP/Ethernet)

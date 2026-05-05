@@ -70,8 +70,8 @@ export default function PlatformStack() {
         <div className="grid lg:grid-cols-3 gap-8 mb-24">
           {platforms.map((p, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-[32px] p-10 h-full flex flex-col hover:bg-white/10 transition-all duration-500 group">
-                <div className="w-16 h-16 rounded-2xl bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] mb-10 group-hover:scale-110 transition-transform duration-500">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-[32px] p-10 h-full flex flex-col hover:bg-white/10 transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] mb-10 group-hover:scale-110 duration-500">
                   <p.icon size={32} strokeWidth={1.5} />
                 </div>
                 <span className="c9-eyebrow !text-[#a56eff] mb-3">
@@ -98,7 +98,7 @@ export default function PlatformStack() {
 
         {/* Partners Banner */}
         <FadeIn delay={0.4}>
-          <div className="bg-white/5 rounded-[40px] p-10 lg:p-16 border border-white/10 relative overflow-hidden group">
+          <div className="bg-white/5 rounded-[40px] p-10 lg:p-16 border border-white/10 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[#5D00D6]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
               <div className="max-w-md text-center lg:text-left">

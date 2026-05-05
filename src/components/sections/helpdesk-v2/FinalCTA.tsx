@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+;
 
 export default function FinalCTA() {
   return (
     <section className="w-full bg-[#fcfaff] py-12 md:py-20 border-y border-purple-50">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-        <div className="bg-[#0c1024] rounded-[48px] px-8 py-16 md:px-16 md:py-24 text-center relative overflow-hidden shadow-2xl shadow-purple-900/40 group transition-all duration-700 hover:scale-[1.01]">
+        <div className="bg-[#0c1024] rounded-[48px] px-8 py-16 md:px-16 md:py-24 text-center relative overflow-hidden shadow-2xl shadow-purple-900/40 transition-all duration-700 hover:scale-[1.01]">
           
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
             <span className="text-[#5D00D6] text-[14px] font-bold uppercase tracking-[0.4em] mb-8 block" >
@@ -24,8 +24,8 @@ export default function FinalCTA() {
 
             <div className="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-auto">
               <Link href="/contact" className="w-full sm:w-auto" passHref>
-                <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-6 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-16 px-10 rounded-full border-none text-[17px]" >
-                  Request a Proposal <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
+                <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-6 bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-16 px-10 rounded-full border-none text-[17px]" >
+                  Request a Proposal 
                 </Button>
               </Link>
               <Link href="/contact" className="w-full sm:w-auto" passHref>

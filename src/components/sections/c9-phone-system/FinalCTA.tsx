@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, Phone, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useInquiry } from '@/components/context/InquiryContext';
 
@@ -54,11 +54,11 @@ export const FinalCTA = () => {
               onClick={scrollToForm}
               className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-12 h-16 text-[16px] font-medium w-full sm:w-auto shadow-2xl shadow-[#5D00D6]/40 transition-all hover:scale-105 border-none"
             >
-              Get a C9 Voice Quote <ArrowRight className="ml-3 w-5 h-5" />
+              Get a C9 Voice Quote 
             </Button>
             <a 
               href="tel:1800000299" 
-              className="flex items-center justify-center h-16 px-10 rounded-full text-[16px] text-slate-400 border border-slate-700 bg-transparent hover:border-white hover:text-white transition-all duration-300 w-full sm:w-auto group"
+              className="flex items-center justify-center h-16 px-10 rounded-full text-[16px] text-slate-400 border border-slate-700 bg-transparent hover:border-white hover:text-white transition-all duration-300 w-full sm:w-auto"
             >
               <Phone size={18} className="mr-3 text-slate-500 group-hover:text-[#5D00D6] transition-colors" />
               Call 1800 000 299

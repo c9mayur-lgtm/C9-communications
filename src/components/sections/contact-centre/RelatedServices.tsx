@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Phone, Headset, Wifi } from 'lucide-react';
+import { Phone, Headset, Wifi } from 'lucide-react';
 import Link from 'next/link';
 
 const services = [
@@ -65,7 +65,7 @@ export default function RelatedServices() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="bg-white rounded-[24px] p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-300 group flex flex-col"
+                    className="bg-white rounded-[24px] p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-300 flex flex-col"
                 >
                     <div className="w-12 h-12 bg-slate-50 text-slate-400 rounded-xl flex items-center justify-center mb-6 border border-gray-100 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-300">
                         <service.icon size={20} />
@@ -83,7 +83,7 @@ export default function RelatedServices() {
                         href={service.href} 
                         className="inline-flex items-center gap-2 text-[#5D00D6] font-bold text-[14px] group-hover:gap-3 transition-all mt-auto"
                     >
-                        {service.linkText} <ArrowRight size={16} />
+                        {service.linkText} 
                     </Link>
                 </motion.div>
             ))}

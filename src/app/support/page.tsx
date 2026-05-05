@@ -1,12 +1,7 @@
 'use client';
 
 import React from 'react';
-import { 
-  Phone, Mail, MessageSquare, ArrowRight, Activity, 
-  Book, HelpCircle, ShieldCheck, Zap, Lock, 
-  Users, Globe, Server, CheckCircle2, AlertTriangle,
-  FileText, Clock, BarChart3, Headphones, ShieldAlert
-} from 'lucide-react';
+import { Phone, Mail, MessageSquare, Activity, Book, HelpCircle, ShieldCheck, Zap, Lock, Users, Globe, Server, CheckCircle2, AlertTriangle, FileText, Clock, BarChart3, Headphones, ShieldAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/design-system/Section';
 import { H1, H2, H3, Body, Label } from '@/components/design-system/Typography';
@@ -115,7 +110,7 @@ export default function SupportPage() {
       <Section bg="white" className="pb-24">
         <div className="grid md:grid-cols-3 gap-8">
           <FadeIn>
-            <div className="bg-[#F4F0FA]/30 border border-gray-100 rounded-[32px] p-10 h-full flex flex-col hover:border-[#5D00D6]/20 transition-all group">
+            <div className="bg-[#F4F0FA]/30 border border-gray-100 rounded-[32px] p-10 h-full flex flex-col hover:border-[#5D00D6]/20 transition-all">
               <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#5D00D6] mb-8 shadow-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                 <Phone size={28} />
               </div>
@@ -124,13 +119,13 @@ export default function SupportPage() {
                 Immediate 24/7 access to Level 3 engineers for critical network, voice, or security outages. No gatekeepers.
               </Body>
               <a href="tel:1800000299" className="mt-auto flex items-center gap-2 text-xl font-black text-[#5D00D6] hover:underline">
-                1800 000 299 <ArrowRight size={20} />
+                1800 000 299 
               </a>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className="bg-[#F4F0FA]/30 border border-gray-100 rounded-[32px] p-10 h-full flex flex-col hover:border-[#5D00D6]/20 transition-all group">
+            <div className="bg-[#F4F0FA]/30 border border-gray-100 rounded-[32px] p-10 h-full flex flex-col hover:border-[#5D00D6]/20 transition-all">
               <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#5D00D6] mb-8 shadow-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                 <FileText size={28} />
               </div>
@@ -145,7 +140,7 @@ export default function SupportPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="bg-[#0c1024] border border-gray-800 rounded-[32px] p-10 h-full flex flex-col group relative overflow-hidden">
+            <div className="bg-[#0c1024] border border-gray-800 rounded-[32px] p-10 h-full flex flex-col relative overflow-hidden">
               <div className="absolute top-0 right-0 p-8 text-[#5D00D6] opacity-10">
                 <Activity size={100} strokeWidth={1} />
               </div>
@@ -184,8 +179,8 @@ export default function SupportPage() {
             { icon: Zap, title: "Vendor Coordination", desc: "We act as your single point of contact for ISPs, hardware vendors, and software providers." }
           ].map((res, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="p-8 rounded-[24px] bg-white border border-gray-100 hover:border-[#5D00D6]/20 transition-all group shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform">
+              <div className="p-8 rounded-[24px] bg-white border border-gray-100 hover:border-[#5D00D6]/20 transition-all shadow-sm">
+                <div className="w-10 h-10 rounded-lg bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110">
                   <res.icon size={20} />
                 </div>
                 <h4 className="text-[18px] font-bold text-[#0c1024] mb-2">{res.title}</h4>
@@ -304,7 +299,7 @@ export default function SupportPage() {
       {/* ── FOOTER CTA ── */}
       <Section className="pb-32 bg-white">
          <FadeIn>
-            <div className="bg-[#F4F0FA] border border-[#5D00D6]/10 rounded-[48px] p-12 md:p-20 text-center relative overflow-hidden group">
+            <div className="bg-[#F4F0FA] border border-[#5D00D6]/10 rounded-[48px] p-12 md:p-20 text-center relative overflow-hidden">
                <div className="absolute top-0 right-0 p-12 text-[#5D00D6] opacity-5 group-hover:opacity-10 transition-opacity">
                  <Zap size={350} strokeWidth={0.5} />
                </div>

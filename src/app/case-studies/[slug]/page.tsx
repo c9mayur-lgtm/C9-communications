@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, notFound } from 'next/navigation';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Share2, Linkedin, Twitter, Mail, ArrowLeft, ArrowRight, ChevronRight, TrendingUp, Zap, Target, CheckCircle, CheckCircle2, BarChart3, Activity } from 'lucide-react';
+import { Share2, Linkedin, Twitter, Mail, ArrowLeft, ChevronRight, TrendingUp, Zap, Target, CheckCircle, CheckCircle2, BarChart3, Activity } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -58,7 +58,7 @@ const CASE_STUDIES: Record<string, any> = {
     content: (
       <>
         <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
-          A national retail distribution group was suffering from systemic revenue leakage caused by fragmented vendor management across 142 locations.
+          A national retail distribution  was suffering from systemic revenue leakage caused by fragmented vendor management across 142 locations.
         </p>
 
         <h2 id="situation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Fragmented Environment</h2>
@@ -292,8 +292,8 @@ export default function CaseStudyPage() {
         
         <div className="container mx-auto max-w-[1000px] relative z-10">
           <FadeIn>
-            <a href="/about/case-studies" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10 group">
-              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Case Studies
+            <a href="/case-studies" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10">
+              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1" /> Back to Case Studies
             </a>
           </FadeIn>
 
@@ -372,7 +372,7 @@ export default function CaseStudyPage() {
                   </div>
                   <h5 className="font-bold text-slate-900 text-[15px] mb-2">Verified Result</h5>
                   <p className="text-slate-500 text-[13px] mb-5">This case study represents actual operational outcomes achieved by C9.</p>
-                  <a href="#consultation" className="block w-full py-2 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-lg text-[13px] font-bold transition-colors">
+                  <a href="#consultation-section" className="block w-full py-2 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-lg text-[13px] font-bold transition-colors">
                     Talk to the Team
                   </a>
                 </div>
@@ -414,8 +414,8 @@ export default function CaseStudyPage() {
                <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Other Success Stories</h3>
                <p className="text-slate-500 text-[18px]">See how we solve complexity across different sectors.</p>
             </div>
-            <a href="/about/case-studies" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all mt-6 md:mt-0">
-               View All Stories <ArrowRight size={18} />
+            <a href="/case-studies" className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:gap-4 transition-all mt-6 md:mt-0">
+               View All Stories 
             </a>
           </div>
 
@@ -423,12 +423,12 @@ export default function CaseStudyPage() {
             {Object.keys(CASE_STUDIES).filter(k => k !== slug).map((key) => {
                const item = CASE_STUDIES[key];
                return (
-                  <a href={`/case-studies/${key}`} key={key} className="group flex flex-col h-full bg-slate-50 rounded-[28px] overflow-hidden border border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all">
+                  <a href={`/case-studies/${key}`} key={key} className="flex flex-col h-full bg-slate-50 rounded-[28px] overflow-hidden border border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all">
                      <div className="aspect-[16/10] overflow-hidden">
                         <img 
                            src={item.img} 
                            alt={item.title} 
-                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                           className="w-full h-full object-cover group-hover:scale-105 duration-700"
                         />
                      </div>
                      <div className="p-8 pb-10 flex flex-col grow">
@@ -455,7 +455,7 @@ export default function CaseStudyPage() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="GET STARTED"

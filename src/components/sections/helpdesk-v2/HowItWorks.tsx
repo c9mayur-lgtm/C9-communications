@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
-import { XCircle, CheckCircle, ArrowRight, Download } from "lucide-react";
+import { XCircle, CheckCircle, Download } from 'lucide-react';
 
 const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };
 
@@ -151,7 +151,7 @@ export default function HowItWorks() {
             {/* Download Guide CTA */}
             <a
               href="/contact"
-              className="group flex items-center justify-between gap-4 p-6 rounded-[24px] bg-[#5D00D6] hover:bg-[#6D10E6] transition-all duration-300 shadow-xl shadow-[#5D00D6]/20"
+              className="flex items-center justify-between gap-4 p-6 rounded-[24px] bg-[#5D00D6] hover:bg-[#6D10E6] transition-all duration-300 shadow-xl shadow-[#5D00D6]/20"
             >
               <div>
                 <p className="text-[16px] font-semibold text-white mb-0.5" style={fontStyle}>

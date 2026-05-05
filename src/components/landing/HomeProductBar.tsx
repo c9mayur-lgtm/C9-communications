@@ -29,9 +29,9 @@ export const HomeProductBar = () => {
             {PRODUCTS.map((prod, i) => {
               const Icon = prod.icon;
               return (
-                <div key={i} className="flex flex-col items-center justify-center gap-4 group text-center cursor-pointer">
+                <div key={i} className="flex flex-col items-center justify-center gap-4 text-center cursor-pointer">
                   {/* Icon Wrapper mimicking the green outline style in the image, but with C9 Purple */}
-                  <div className="text-[#5D00D6] transition-transform duration-300 group-hover:-translate-y-1.5 opacity-90">
+                  <div className="text-[#5D00D6] duration-300 group-hover:-translate-y-1.5 opacity-90">
                     <Icon size={46} strokeWidth={1.5} />
                   </div>
                   <span className="text-[#0c1024] font-semibold text-[16px] md:text-[17px] group-hover:text-[#5D00D6] transition-colors">

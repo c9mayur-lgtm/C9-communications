@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, ShieldAlert, RefreshCcw, TrendingUp, ArrowRight } from 'lucide-react';
+import { Cpu, ShieldAlert, RefreshCcw, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -55,7 +55,7 @@ export const BusinessChallenges = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-8">
           {challenges.map((item, idx) => (
             <Link key={idx} href={`/challenges/${item.slug}`} className="flex">
-              <Card className={`p-10 border shadow-sm rounded-3xl group cursor-pointer transition-all duration-300 transform hover:-translate-y-2 flex flex-col w-full ${
+              <Card className={`p-10 border shadow-sm rounded-3xl  cursor-pointer transition-all duration-300 transform hover:-translate-y-2 flex flex-col w-full ${
                 item.secondary 
                   ? 'bg-[#0F0F1A] border-[#A855F7]/10 hover:border-[#A855F7]' 
                   : 'bg-white border-[#5D00D6]/5 hover:border-[#5D00D6]'
@@ -85,9 +85,7 @@ export const BusinessChallenges = () => {
                   }`}>
                     {item.badge}
                   </Badge>
-                  <ArrowRight className={`${
-                    item.secondary ? 'text-[#A855F7]' : 'text-[#5D00D6]'
-                  } opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1`} />
+                  
                 </div>
               </Card>
             </Link>

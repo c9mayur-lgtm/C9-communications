@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Network, Zap, Globe, Users, Check, X, ArrowRight } from 'lucide-react';
+import { Network, Zap, Globe, Users, Check, X } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const Card = ({ icon: Icon, title, body, delay }: any) => (
@@ -11,7 +11,7 @@ const Card = ({ icon: Icon, title, body, delay }: any) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8, delay }}
-    className="bg-white rounded-[32px] p-8 md:p-10 shadow-[0_20px_50px_-16px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group"
+    className="bg-white rounded-[32px] p-8 md:p-10 shadow-[0_20px_50px_-16px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all"
   >
     <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
       <Icon size={28} strokeWidth={1.5} />
@@ -51,7 +51,7 @@ const ComparisonTable = () => {
                    { f: 'Service Restoration', n: 'Best effort (Standard)', e: '4hr / 8hr / 12hr eSLA targets', desc: 'Contractual commitment' },
                    { f: 'Equipment Management', n: 'Consumer grade (usually)', e: 'Enterprise-grade fully managed', desc: 'Cisco / Juniper options', last: true }
                 ].map((row, i) => (
-                   <tr key={i} className="group transition-colors">
+                   <tr key={i} className="transition-colors">
                       <td className={`py-8 px-10 border-b border-gray-50 transition-colors group-hover:bg-gray-50/30`}>
                          <div className="flex flex-col">
                             <span className="text-[16px] font-bold text-[#1A1A2E] mb-1">{row.f}</span>
@@ -80,7 +80,7 @@ const ComparisonTable = () => {
              }}
              className="bg-[#5D00D6] text-white px-8 py-3.5 rounded-full font-bold text-[14px] hover:bg-[#4B00AD] transition-all shadow-lg shadow-[#5D00D6]/20 active:scale-95 flex items-center gap-2"
           >
-             Speak with an Enterprise Advisor <ArrowRight size={14} />
+             Speak with an Enterprise Advisor 
           </button>
        </div>
     </div>

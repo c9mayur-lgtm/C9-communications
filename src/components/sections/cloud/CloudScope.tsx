@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { LayoutGrid, Cloud, GitMerge, Shield, Database, ShieldCheck, ArrowRight } from 'lucide-react';
+import { LayoutGrid, Cloud, GitMerge, Shield, Database, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
 interface CardProps {
@@ -13,8 +13,8 @@ interface CardProps {
 }
 
 const ServiceCard = ({ icon, title, body, href, badge }: CardProps) => (
-  <div className="group bg-white border-[0.5px] border-[rgba(93,0,214,0.15)] rounded-2xl p-8 hover:border-[color:var(--brand-purple)] hover:-translate-y-0.5 transition-all duration-200 ease-in-out h-full flex flex-col">
-    <div className="w-12 h-12 bg-[#EDE9FE] rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+  <div className="bg-white border-[0.5px] border-[rgba(93,0,214,0.15)] rounded-2xl p-8 hover:border-[color:var(--brand-purple)] hover:-translate-y-0.5 transition-all duration-200 ease-in-out h-full flex flex-col">
+    <div className="w-12 h-12 bg-[#EDE9FE] rounded-xl flex items-center justify-center mb-6 duration-300 group-hover:scale-110">
       <div className="text-[color:var(--brand-purple)] w-[22px] h-[22px]">
         {icon}
       </div>
@@ -26,7 +26,7 @@ const ServiceCard = ({ icon, title, body, href, badge }: CardProps) => (
       <Link href={href || "#"} className="mt-4 pt-4 border-t border-[rgba(93,0,214,0.1)] flex items-center gap-2 text-[color:var(--brand-purple)] group-hover:opacity-80 transition-opacity text-left">
         <Shield className="w-3.5 h-3.5" />
         <span className="font-['Proxima_Nova'] text-[11px] font-semibold uppercase tracking-wider">{badge}</span>
-        <ArrowRight className="w-3 h-3 ml-auto opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0" />
+        
       </Link>
     )}
   </div>

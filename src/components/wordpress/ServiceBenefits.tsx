@@ -1,5 +1,5 @@
 import React from 'react';
-import { LucideIcon, ArrowRight } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
 interface BenefitItem {
   icon: LucideIcon;
@@ -37,7 +37,7 @@ export const ServiceBenefits = ({
           {benefits.map((benefit, i) => (
             <div 
               key={i} 
-              className="bg-white p-10 md:p-12 rounded-[40px] shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100/50"
+              className="bg-white p-10 md:p-12 rounded-[40px] shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100/50"
             >
               <div className="mb-10 w-16 h-16 rounded-2xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all transform group-hover:scale-110 duration-500">
                 <benefit.icon size={32} strokeWidth={1.5} />
@@ -55,7 +55,7 @@ export const ServiceBenefits = ({
                 <span className="text-[14px] font-bold uppercase tracking-wider">
                   Learn more
                 </span>
-                <ArrowRight size={20} className="transition-transform group-hover:translate-x-2" />
+                
               </div>
             </div>
           ))}

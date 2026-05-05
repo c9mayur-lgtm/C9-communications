@@ -10,7 +10,7 @@ const PainCard = ({ icon: Icon, title, body, delay }: { icon: any, title: string
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
-    className="group p-8 md:p-10 flex flex-col items-start text-left relative border border-gray-100 rounded-[24px] bg-white hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
+    className="p-8 md:p-10 flex flex-col items-start text-left relative border border-gray-100 rounded-[24px] bg-white hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all duration-500"
   >
     <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 mb-8 border border-gray-100 group-hover:bg-[#5D00D6] group-hover:text-white group-hover:border-[#5D00D6] transition-all duration-500">
       <Icon size={24} strokeWidth={1.5} />
@@ -21,7 +21,7 @@ const PainCard = ({ icon: Icon, title, body, delay }: { icon: any, title: string
     <p className="text-gray-500 text-[14px] leading-relaxed font-normal">
       {body}
     </p>
-    <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent w-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-[24px]" />
+    <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-transparent via-[#5D00D6] to-transparent w-full scale-x-0 group-hover:scale-x-100 duration-500 rounded-b-[24px]" />
   </motion.div>
 );
 

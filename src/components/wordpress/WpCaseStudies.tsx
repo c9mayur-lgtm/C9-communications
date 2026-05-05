@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, ChevronLeft, Play, ArrowUpRight } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Play } from 'lucide-react';
 
 const CASE_STUDIES = [
   {
@@ -104,9 +104,9 @@ export const WpCaseStudies = ({
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             {articles.map((cs, idx) => (
-              <div key={idx} className="w-full lg:w-[calc(50%-16px)] shrink-0 group cursor-pointer">
+              <div key={idx} className="w-full lg:w-[calc(50%-16px)] shrink-0 cursor-pointer">
                 <div className="relative aspect-[16/10] rounded-[32px] overflow-hidden mb-10 shadow-2xl shadow-purple-900/10 bg-slate-100">
-                  <img src={cs.img} alt={cs.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                  <img src={cs.img} alt={cs.title} className="w-full h-full object-cover duration-1000 group-hover:scale-110" />
                   
                   {/* Brand Tint Overlays */}
                   <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay group-hover:bg-[#5D00D6]/20 transition-colors duration-500" />
@@ -133,10 +133,10 @@ export const WpCaseStudies = ({
                    </p>
                    <a
                      href={cs.href || '/about/case-studies'}
-                     className="flex items-center gap-2 text-[#5D00D6] text-[10px] font-bold uppercase tracking-[0.15em] hover:underline whitespace-nowrap group/cta"
+                     className="flex items-center gap-2 text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.15em] hover:gap-3 transition-all whitespace-nowrap group/cta"
                    >
-                      Read full article 
-                      <ArrowUpRight size={14} className="shrink-0 transition-transform group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
+                      Read Full Article 
+                      
                    </a>
                 </div>
               </div>

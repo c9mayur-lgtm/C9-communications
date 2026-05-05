@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, notFound } from 'next/navigation';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Share2, Linkedin, Twitter, ArrowLeft, ArrowRight, ChevronRight, CheckCircle, Target, ArrowUpRight } from 'lucide-react';
+import { Share2, Linkedin, Twitter, ArrowLeft, ChevronRight, CheckCircle, Target, ArrowUpRight } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -262,8 +262,8 @@ export default function HelpArticlePage() {
         
         <div className="container mx-auto max-w-[1000px] relative z-10">
           <FadeIn>
-            <a href="/" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10 group">
-              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Home
+            <a href="/" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10">
+              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1" /> Back to Home
             </a>
           </FadeIn>
 
@@ -338,7 +338,7 @@ export default function HelpArticlePage() {
                   </div>
                   <h5 className="font-bold text-slate-900 text-[15px] mb-2">Need Expert Help?</h5>
                   <p className="text-slate-500 text-[13px] mb-5">Talk to a C9 specialist about your specific requirements.</p>
-                  <a href="#consultation" className="block w-full py-2 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-lg text-[13px] font-bold transition-colors">
+                  <a href="#consultation-section" className="block w-full py-2 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-lg text-[13px] font-bold transition-colors">
                     Contact Us
                   </a>
                 </div>
@@ -371,12 +371,12 @@ export default function HelpArticlePage() {
             {Object.keys(ARTICLES).filter(k => k !== slug).map((key) => {
                const item = ARTICLES[key];
                return (
-                  <a href={`/help/${key}`} key={key} className="group flex flex-col h-full bg-slate-50 rounded-[28px] overflow-hidden border border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all">
+                  <a href={`/help/${key}`} key={key} className="flex flex-col h-full bg-slate-50 rounded-[28px] overflow-hidden border border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all">
                      <div className="aspect-[16/10] overflow-hidden">
                         <img 
                            src={item.img} 
                            alt={item.title} 
-                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                           className="w-full h-full object-cover group-hover:scale-105 duration-700"
                         />
                      </div>
                      <div className="p-8 pb-10 flex flex-col grow">
@@ -403,7 +403,7 @@ export default function HelpArticlePage() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm
           showHeader={false}
           eyebrow="GET EXPERT ADVICE"

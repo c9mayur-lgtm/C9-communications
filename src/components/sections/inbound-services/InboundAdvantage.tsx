@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
 const AdvantageItem = ({ title, description, metric, isLast }: { title: string, description: string, metric: string, isLast?: boolean }) => (
-  <div className={`p-8 md:p-10 lg:p-12 flex flex-col items-start text-left min-h-[380px] relative group ${!isLast ? 'border-b lg:border-b-0 lg:border-r border-gray-200' : ''}`}>
+  <div className={`p-8 md:p-10 lg:p-12 flex flex-col items-start text-left min-h-[380px] relative  ${!isLast ? 'border-b lg:border-b-0 lg:border-r border-gray-200' : ''}`}>
     
     {/* 1. SMALL CHECKMARK AT TOP */}
     <div className="mb-6">
@@ -32,7 +32,7 @@ const AdvantageItem = ({ title, description, metric, isLast }: { title: string, 
     </div>
 
     {/* Subtle Background Hover Effect */}
-    <div className="absolute inset-x-0 bottom-0 h-1 bg-[#5D00D6] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+    <div className="absolute inset-x-0 bottom-0 h-1 bg-[#5D00D6] scale-x-0 group-hover:scale-x-100 duration-500 origin-left" />
   </div>
 );
 

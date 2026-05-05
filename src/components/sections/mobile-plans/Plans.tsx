@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, ShieldCheck, Zap, ArrowRight, Share2, FileDown, Timer, Info, Globe, Shield } from 'lucide-react';
+import { Check, ShieldCheck, Zap, Share2, FileDown, Timer, Info, Globe, Shield } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const PLANS_DATA = {
@@ -175,7 +175,7 @@ const PlanCard = ({ plan, index, isRecommended }: { plan: any; index: number; is
             onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
             className={`absolute -bottom-8 left-8 right-8 py-4 px-6 rounded-full font-bold transition-all shadow-xl group-hover:scale-[1.03] active:scale-[0.97] z-20 flex items-center justify-center gap-2 ${isRecommended || plan.isDark ? 'bg-white text-[#5D00D6] hover:bg-gray-50 shadow-purple-900/30' : 'bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-[#5D00D6]/20'}`}
           >
-            {plan.cta} <ArrowRight size={18} />
+            {plan.cta} 
           </button>
       </div>
 
@@ -224,7 +224,7 @@ const PlanCard = ({ plan, index, isRecommended }: { plan: any; index: number; is
               target="_blank"
               className="group/cis inline-flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest hover:text-[#5D00D6] transition-colors"
             >
-              <FileDown size={13} className="transition-transform group-hover/cis:-translate-y-0.5" /> Download Summary (CIS)
+              <FileDown size={13} className="group-hover/cis:-translate-y-0.5" /> Download Summary (CIS)
             </a>
          </div>
       </div>

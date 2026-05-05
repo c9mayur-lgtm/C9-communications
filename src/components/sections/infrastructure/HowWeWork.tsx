@@ -120,7 +120,7 @@ export default function HowWeWork() {
                 key={idx}
                 onClick={() => setActiveTab(idx)}
                 className={cn(
-                  "flex-1 flex items-center gap-4 p-6 rounded-2xl border transition-all duration-300 text-left group",
+                  "flex-1 flex items-center gap-4 p-6 rounded-2xl border transition-all duration-300 text-left ",
                   activeTab === idx 
                     ? "bg-white border-[color:var(--brand-purple)] shadow-xl shadow-purple-900/5 translate-y-[-2px]" 
                     : "bg-white/50 border-[rgba(93,0,214,0.1)] hover:border-[color:var(--brand-purple)]"

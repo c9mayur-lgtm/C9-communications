@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Phone, PhoneIncoming, Video, Smartphone, Network, Headphones, ArrowRight } from 'lucide-react';
+import { Phone, PhoneIncoming, Video, Smartphone, Network, Headphones } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
@@ -73,7 +73,7 @@ export const VoiceSystemOverview = () => {
             <Link 
               key={i} 
               href={cap.link}
-              className="bg-white p-6 md:p-10 rounded-[32px] shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100"
+              className="bg-white p-6 md:p-10 rounded-[32px] shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100"
             >
               {/* Icon */}
               <div className="mb-6">
@@ -107,9 +107,9 @@ export const VoiceSystemOverview = () => {
           <Button 
             size="lg" 
             onClick={() => window.dispatchEvent(new CustomEvent('c9-open-lead-modal', { detail: { interest: 'voice system overview' } }))}
-            className="shadow-2xl hover:gap-4 transition-all group px-10 h-14 rounded-full font-medium"
+            className="shadow-2xl hover:gap-4 transition-all px-10 h-14 rounded-full font-medium"
           >
-            Get a tailored voice quote <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            Get a tailored voice quote 
           </Button>
         </div>
       </div>

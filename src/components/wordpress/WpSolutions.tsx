@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, MonitorPlay, Monitor, Camera, LayoutGrid, ShieldCheck, BadgeCheck } from 'lucide-react';
+import { MonitorPlay, Monitor, Camera, LayoutGrid, ShieldCheck, BadgeCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const cards = [
@@ -86,7 +86,7 @@ export const WpSolutions = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((s, i) => (
-            <div key={i} className="bg-white p-6 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full relative border border-transparent hover:border-gray-100 focus-within:ring-2 focus-within:ring-[#5D00D6]">
+            <div key={i} className="bg-white p-6 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full relative border border-transparent hover:border-gray-100 focus-within:ring-2 focus-within:ring-[#5D00D6]">
               {s.url && (
                 <Link href={s.url} className="absolute inset-0 z-0" aria-label={`View details about ${s.title}`} />
               )}
@@ -129,7 +129,7 @@ export const WpSolutions = () => {
                     <p className="c9-eyebrow !text-white !text-[8.5px] mb-0.5">Pairs with C9 Defense</p>
                     <p className="c9-body !text-[11px] !text-white/50 !leading-snug group-hover/defense:text-white transition-colors flex items-center gap-1">
                       <span className="flex-1">{s.defenseDark}</span> 
-                      <ArrowRight size={12} className="shrink-0" />
+                      
                     </p>
                   </a>
               )}
@@ -147,8 +147,8 @@ export const WpSolutions = () => {
         </div>
 
         <div className="flex justify-center mt-14">
-          <Button size="lg" className="shadow-2xl hover:gap-4 transition-all group px-10 h-14 rounded-full font-medium" asChild>
-            <Link href="/modern-workplace" className="flex items-center gap-2">View All Workplace Solutions <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" /></Link>
+          <Button size="lg" className="shadow-2xl hover:gap-4 transition-all px-10 h-14 rounded-full font-medium" asChild>
+            <Link href="/modern-workplace" className="flex items-center gap-2">View All Workplace Solutions </Link>
           </Button>
         </div>
       </div>

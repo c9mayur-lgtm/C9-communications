@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+;
 import { useInquiry } from '@/components/context/InquiryContext';
 
 export default function FinalCTA() {
@@ -30,12 +30,12 @@ export default function FinalCTA() {
             onClick={handleAssessmentRequest}
             className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-10 h-[56px] rounded-full font-bold transition-all text-[14px] shadow-lg shadow-purple-900/20 border-none"
           >
-            Get a Security Assessment <ArrowRight className="ml-2 w-5 h-5" />
+            Get a Security Assessment 
           </Button>
 
           <a 
             href="tel:1800000299"
-            className="w-full sm:w-auto inline-flex items-center justify-center border-2 border-[#1A1A2E]/10 text-[#1A1A2E] hover:bg-slate-50 px-10 h-[56px] rounded-full font-bold transition-all text-[14px] no-underline"
+            className="w-full sm:w-auto inline-flex items-center justify-center border-2 border-[#1A1A2E]/10 text-[#1A1A2E] hover:bg-slate-50 h-[56px] rounded-full transition-all no-underline h-14 px-8 text-[15px] font-bold"
           >
             Call 1800 000 299
           </a>

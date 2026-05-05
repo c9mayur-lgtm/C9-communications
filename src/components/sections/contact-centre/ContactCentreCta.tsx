@@ -41,7 +41,7 @@ export default function ContactCentreCta() {
            transition={{ delay: 0.2 }}
            className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
         >
-           <Link href="#consultation" className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-10 h-14 flex items-center justify-center text-[16px] font-bold shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-105 active:scale-95 leading-none">
+           <Link href="#consultation-section" className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-10 h-14 flex items-center justify-center text-[16px] font-bold shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-105 active:scale-95 leading-none">
               Book a Contact Centre Consultation
            </Link>
            <a href="tel:1800000299" className="w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full px-10 h-14 flex items-center justify-center text-[16px] font-bold transition-all hover:scale-105 active:scale-95 leading-none">

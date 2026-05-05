@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MessageSquare, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -28,7 +28,7 @@ export const ContactSection = () => {
                 { icon: Mail, text: "Contact our team", sub: "Send a message and we'll respond within 1 business day." },
                 { icon: MessageSquare, text: "Client Support Portal", sub: "Existing clients can manage tickets and infrastructure." }
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-6 group cursor-pointer">
+                <div key={i} className="flex items-start gap-6 cursor-pointer">
                   <div className="p-4 bg-white rounded-2xl border border-[#5D00D6]/10 text-[#5D00D6] transition-all duration-300 transform group-hover:scale-110 shadow-sm group-hover:shadow-md">
                     <item.icon size={24} />
                   </div>
@@ -86,8 +86,8 @@ export const ContactSection = () => {
                 </div>
                 
                 <div className="flex flex-col gap-4">
-                   <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-10 rounded-full h-14 text-base font-bold font-sans shadow-lg shadow-[#5D00D6]/20">
-                     Send Message <ArrowRight className="ml-2 w-5 h-5" />
+                   <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white px-10 rounded-full h-14 text-[14px] font-bold font-sans shadow-lg shadow-[#5D00D6]/20">
+                     Send Message 
                    </Button>
                    <p className="text-[11px] text-gray-400 font-bold text-center uppercase tracking-widest font-sans">
                      Australian team responds within 1 business day

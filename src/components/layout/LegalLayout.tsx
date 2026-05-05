@@ -68,7 +68,7 @@ export const LegalLayout = ({ title, effectiveDate, links, toc, children }: Lega
                   onClick={() => {
                     document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }}
-                  className="group flex items-start gap-4 text-left transition-all duration-300 relative pl-4"
+                  className="flex items-start gap-4 text-left transition-all duration-300 relative pl-4"
                 >
                   <div className={`absolute left-[-2.5px] top-2.5 w-1 h-1 rounded-full shrink-0 transition-all duration-300 group-hover:scale-150 group-hover:bg-[#5D00D6] ${i === 0 ? 'bg-[#5D00D6] scale-[2.5] shadow-[0_0_8px_rgba(93,0,214,0.4)]' : 'bg-gray-200'}`} />
                   <span className={`text-[14px] leading-snug transition-colors ${i === 0 ? 'text-[#0c1024] font-bold' : 'text-gray-400 font-medium group-hover:text-[#0c1024]'}`}>
@@ -80,16 +80,7 @@ export const LegalLayout = ({ title, effectiveDate, links, toc, children }: Lega
           </aside>
 
           {/* Main Content */}
-          <article className="prose prose-slate max-w-[850px] 
-            prose-headings:text-[#0c1024] prose-headings:font-bold prose-headings:tracking-tight
-            prose-h2:text-[36px] prose-h2:mt-24 prose-h2:mb-12 prose-h2:scroll-mt-32 prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-6
-            prose-h3:text-[24px] prose-h3:mt-16 prose-h3:mb-8
-            prose-p:text-[18px] prose-p:leading-[1.8] prose-p:text-[#4b5563] prose-p:mb-10
-            prose-li:text-[18px] prose-li:leading-[1.8] prose-li:text-[#4b5563] prose-li:mb-6
-            prose-ul:mb-12
-            prose-strong:text-[#0c1024] prose-strong:font-bold
-            prose-a:text-[#5D00D6] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
-          ">
+          <article className="prose prose-slate max-w-[850px] prose-headings:text-[#0c1024] prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-[36px] prose-h2:mt-24 prose-h2:mb-12 prose-h2:scroll-mt-32 prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-6 prose-h3:text-[24px] prose-h3:mt-16 prose-h3:mb-8 prose-p:text-[18px] prose-p:leading-[1.8] prose-p:text-[#4b5563] prose-p:mb-10 prose-li:text-[18px] prose-li:leading-[1.8] prose-li:text-[#4b5563] prose-li:mb-6 prose-ul:mb-12 prose-strong:text-[#0c1024] prose-strong:font-bold prose-a:text-[#5D00D6] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline">
             {children}
           </article>
         </div>

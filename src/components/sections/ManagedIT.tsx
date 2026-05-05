@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Shield, Server, Headphones, Lightbulb, ArrowRight, Activity, Cloud, Terminal } from 'lucide-react';
+import { Check, Shield, Server, Headphones, Lightbulb, Activity, Cloud, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card } from '@/components/ui/card';
@@ -49,24 +49,24 @@ export const ManagedIT = () => {
             </div>
             
             <div className="flex items-center gap-6 pt-4">
-              <Button size="lg" className="bg-brand-purple hover:bg-dark-purple text-white px-10 rounded-full h-14 text-base font-bold font-dm-sans shadow-lg shadow-brand-purple/20">
-                Get a Managed IT Assessment <ArrowRight className="ml-2 w-5 h-5" />
+              <Button size="lg" className="bg-brand-purple hover:bg-dark-purple text-white px-10 rounded-full h-14 text-[14px] font-bold font-dm-sans shadow-lg shadow-brand-purple/20">
+                Get a Managed IT Assessment 
               </Button>
             </div>
             
             {/* Defense Bridge Callout */}
-            <div className="p-6 bg-[#0c1024] rounded-2xl border-l-[6px] border-[#5D00D6] flex items-center gap-6 shadow-xl relative overflow-hidden group cursor-pointer hover:bg-[#5D00D6]/20 transition-all">
+            <div className="p-6 bg-[#0c1024] rounded-2xl border-l-[6px] border-[#5D00D6] flex items-center gap-6 shadow-xl relative overflow-hidden cursor-pointer hover:bg-[#5D00D6]/20 transition-all">
               <div className="absolute inset-0 bg-gradient-to-r from-[#5D00D6]/10 to-transparent pointer-events-none" />
               <Shield className="text-[#5D00D6] w-8 h-8 shrink-0 relative z-10" />
               <div className="flex flex-col gap-1 relative z-10">
-                <p className="c9-card-title !text-white !text-[16px] group-hover:translate-x-1 transition-transform">
+                <p className="c9-card-title !text-white !text-[16px]">
                   🛡 Need compliance assurance?
                 </p>
                 <p className="c9-body !text-gray-400 !text-[14px]">
                   C9 Defense delivers Essential 8 + continuous monitoring for regulated industries.
                 </p>
               </div>
-              <ArrowRight className="text-[#5D00D6] w-5 h-5 ml-auto shrink-0 relative z-10 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              
             </div>
           </div>
           
@@ -95,8 +95,8 @@ export const ManagedIT = () => {
                     { title: "Storage", desc: "Fast & distributed systems", icon: Server },
                     { title: "Software", desc: "Custom business logic", icon: Terminal }
                   ].map((item, i) => (
-                    <Card key={i} className="p-6 bg-white border border-gray-100 shadow-sm hover:border-[#5D00D6]/20 transition-all rounded-2xl group cursor-default h-full">
-                      <div className="p-3 bg-[#5D00D6]/5 rounded-xl w-fit mb-4 group-hover:scale-110 transition-transform">
+                    <Card key={i} className="p-6 bg-white border border-gray-100 shadow-sm hover:border-[#5D00D6]/20 transition-all rounded-2xl cursor-default h-full">
+                      <div className="p-3 bg-[#5D00D6]/5 rounded-xl w-fit mb-4 group-hover:scale-110">
                         <item.icon className="text-[#5D00D6] w-6 h-6" />
                       </div>
                       <h4 className="c9-card-title !text-[14px] mb-1">{item.title}</h4>
@@ -133,7 +133,7 @@ export const ManagedIT = () => {
               <TabsContent value="strategy" className="mt-0 outline-none animate-in fade-in zoom-in-95 duration-500">
                  <div className="flex flex-col gap-8">
                     <div className="flex items-start gap-6">
-                       <div className="p-4 bg-[#5D00D6] text-white rounded-2xl shadow-lg shadow-[#5D00D6]/30 group-hover:rotate-12 transition-transform h-fit">
+                       <div className="p-4 bg-[#5D00D6] text-white rounded-2xl shadow-lg shadow-[#5D00D6]/30 group-hover:rotate-12 h-fit">
                          <Lightbulb size={24} />
                        </div>
                        <div className="flex flex-col gap-2">

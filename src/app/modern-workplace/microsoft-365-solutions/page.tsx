@@ -3,13 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  ShieldCheck, Users, Lock, Settings, 
-  Activity, ArrowRight, CheckCircle2, 
-  AlertTriangle, Eye, LayoutGrid, 
-  Database, Zap, Briefcase, Command,
-  Target, Radio, Clock, BarChart3
-} from 'lucide-react';
+import { ShieldCheck, Users, Lock, Settings, Activity, CheckCircle2, AlertTriangle, Eye, LayoutGrid, Database, Zap, Briefcase, Command, Target, Radio, Clock, BarChart3 } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
@@ -62,10 +56,10 @@ export default function M365GovernancePage() {
 
               <FadeIn delay={0.2} direction="right">
                 <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                  <Link href="#assessment" className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Request Workplace Assessment <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
+                    Request Workplace Assessment 
                   </Link>
-                  <Link href="#assessment" className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-10 font-bold text-[14px] hover:bg-slate-50 transition-all">
+                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full hover:bg-slate-50 transition-all h-14 px-8 text-[15px] font-bold">
                     Review Your Setup
                   </Link>
                 </div>
@@ -162,7 +156,7 @@ export default function M365GovernancePage() {
               { title: "Shadow IT Adoption", desc: "Teams deploying third-party integrations into M365 without technical or security approval." },
               { title: "Governance Gaps", desc: "Lack of life-cycle management for users, leading to thousands of stale, unmanaged objects." }
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1} className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 flex flex-col h-full group hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500">
+              <FadeIn key={i} delay={i * 0.1} className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 flex flex-col h-full hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500">
                 <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-red-500 mb-6 shadow-sm">
                   <AlertTriangle size={20} />
                 </div>
@@ -211,7 +205,7 @@ export default function M365GovernancePage() {
                   </div>
                 ))}
               </div>
-              <Link href="#assessment" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10">
+              <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10 h-14 px-8 text-[15px] font-bold">
                 Talk to a Workplace Specialist
               </Link>
             </FadeIn>
@@ -417,7 +411,7 @@ export default function M365GovernancePage() {
                 desc: "Automated lifecycles and standardized configurations that reduce operational overhead." 
               }
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1} className="group">
+              <FadeIn key={i} delay={i * 0.1} className="">
                 <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-purple-900/5 hover:-translate-y-2 transition-all duration-500 flex flex-col h-full relative overflow-hidden">
                   <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-[#5D00D6] mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
                     {item.icon}
@@ -450,7 +444,7 @@ export default function M365GovernancePage() {
       </section>
 
       {/* 10. FINAL CTA */}
-      <section id="assessment" className="pt-12 pb-24 bg-white">
+      <section id="consultation-section" className="pt-12 pb-24 bg-white">
         <WpConsultationForm 
           eyebrow="TAKE CONTROL"
           title="Workplace Governance Assessment"

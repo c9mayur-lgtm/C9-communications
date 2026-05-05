@@ -41,7 +41,7 @@ export const TopUtilityBar = () => {
         <div className="flex items-center gap-6">
           <a 
             href="tel:1800000299" 
-            className="flex items-center gap-2 text-slate-600 hover:text-[#5D00D6] transition-colors group"
+            className="flex items-center gap-2 text-slate-600 hover:text-[#5D00D6] transition-colors"
           >
             <div className="w-6 h-6 rounded-full bg-purple-50 flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
               <PhoneCall size={12} />

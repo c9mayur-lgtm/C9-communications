@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Linkedin, Github, Twitter, Facebook, Play } from 'lucide-react';
+import { Linkedin, Github, Twitter, Facebook, Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export const WpFooter = () => {
@@ -56,7 +56,7 @@ export const WpFooter = () => {
                 <div className="bg-transparent rounded-lg border border-[#333] flex items-center overflow-hidden focus-within:border-[#5D00D6] transition-colors">
                   <input type="email" placeholder="Email" className="bg-transparent px-4 py-3 w-full text-[14px] outline-none text-white placeholder-gray-600" />
                   <button className="bg-[#5D00D6] p-3 hover:bg-[#4d00b3] transition-colors">
-                    <ArrowRight size={16} />
+                    
                   </button>
                 </div>
                 <div className="flex items-center gap-2.5 mt-0.5">
@@ -75,10 +75,10 @@ export const WpFooter = () => {
              
              <Button 
                size="lg" 
-               className="w-full lg:max-w-[260px] shadow-2xl group border-none text-[14px] h-12 rounded-full"
+               className="w-full lg:max-w-[260px] shadow-2xl border-none text-[14px] h-12 rounded-full"
                onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
              >
-               Schedule Consultation <ArrowRight className="transition-transform group-hover:translate-x-1" />
+               Schedule Consultation 
              </Button>
           </div>
       </div>
@@ -127,7 +127,7 @@ export const WpFooter = () => {
               {[
                 { label: 'LINKEDIN', icon: Linkedin, url: 'https://in.linkedin.com/company/c9groupofcompanies' }
               ].map((social) => (
-                <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
+                <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
                   <div className="h-6 flex items-center justify-center text-slate-700 opacity-80 group-hover:opacity-100 transition-opacity">
                     <social.icon size={20} strokeWidth={2.5} />
                   </div>

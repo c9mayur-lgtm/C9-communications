@@ -91,7 +91,7 @@ export function DefenseNavbar() {
                 className="flex items-center gap-1 px-4 py-2 text-sm text-[#C0C0C0] hover:text-white transition-colors font-medium"
               >
                 {link.label}
-                {link.children && <ChevronDown size={13} className={`transition-transform ${activeDropdown === link.label ? 'rotate-180' : ''}`} />}
+                {link.children && <ChevronDown size={13} className={` ${activeDropdown === link.label ? 'rotate-180' : ''}`} />}
               </Link>
 
               {link.children && activeDropdown === link.label && (

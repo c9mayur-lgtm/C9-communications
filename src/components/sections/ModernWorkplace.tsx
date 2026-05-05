@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Laptop, ShieldCheck, Share2, Globe, Database, Monitor, Briefcase } from 'lucide-react';
+import { Laptop, ShieldCheck, Share2, Globe, Database, Monitor, Briefcase } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -32,7 +32,7 @@ export const ModernWorkplace = () => {
             const isEDR = card.title.includes("Endpoint Detection");
             
             return (
-              <Card key={i} className="p-8 bg-white border border-[#5D00D6]/5 shadow-sm rounded-3xl hover:border-[#5D00D6] transition-all duration-300 transform hover:-translate-y-2 group flex flex-col h-full relative">
+              <Card key={i} className="p-8 bg-white border border-[#5D00D6]/5 shadow-sm rounded-3xl hover:border-[#5D00D6] transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full relative">
                 <div className="p-4 bg-[#5D00D6]/5 rounded-2xl w-fit mb-6 group-hover:bg-[#5D00D6] transition-colors duration-300">
                   <Icon size={24} className="text-[#5D00D6] group-hover:text-white transition-colors duration-300" />
                 </div>
@@ -46,7 +46,7 @@ export const ModernWorkplace = () => {
                 </p>
                 
                 {isEDR && (
-                   <div className="mt-auto pt-4 group-hover:translate-x-1 transition-transform">
+                   <div className="mt-auto pt-4">
                       <div className="c9-eyebrow !text-[#5D00D6] cursor-help border-b border-[#5D00D6]/20 pb-1">
                         Pairs with C9 Defense →
                       </div>
@@ -54,7 +54,7 @@ export const ModernWorkplace = () => {
                 )}
                 
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                   <ArrowRight size={20} className="text-[#5D00D6]" />
+                   
                 </div>
               </Card>
             );
@@ -62,7 +62,7 @@ export const ModernWorkplace = () => {
         </div>
         
         {/* Horizontal Promo Strip */}
-        <div className="p-10 bg-[#5D00D6] text-white rounded-3xl shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 group overflow-hidden relative">
+        <div className="p-10 bg-[#5D00D6] text-white rounded-3xl shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden relative">
            <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
            <div className="flex items-center gap-6 relative z-10 text-center md:text-left">
               <div className="p-4 bg-white/10 rounded-2xl border border-white/20 shrink-0">
@@ -70,8 +70,8 @@ export const ModernWorkplace = () => {
               </div>
               <h4 className="c9-section-heading !text-white !text-[24px] md:!text-[32px]">Ready to build a smarter workplace?</h4>
            </div>
-           <Button className="bg-white text-[#5D00D6] hover:bg-white/90 rounded-full px-10 py-7 h-auto text-base font-bold relative z-10 shadow-lg">
-             Book a Workplace Assessment <ArrowRight className="ml-2 w-5 h-5 shadow-inner" />
+           <Button className="bg-white text-[#5D00D6] hover:bg-white/90 rounded-full px-10 py-7 h-auto text-[14px] font-bold relative z-10 shadow-lg">
+             Book a Workplace Assessment 
            </Button>
         </div>
         

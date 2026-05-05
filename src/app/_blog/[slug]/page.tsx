@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, notFound } from 'next/navigation';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Share2, Linkedin, Twitter, Mail, ArrowLeft, ArrowRight, ChevronRight, TrendingUp, Zap, Clock, User } from 'lucide-react';
+import { Share2, Linkedin, Twitter, Mail, ArrowLeft, ChevronRight, TrendingUp, Zap, Clock, User } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -91,8 +91,8 @@ export default function BlogPostPage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6] opacity-[0.06] rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none" />
         <div className="container mx-auto max-w-[1000px] relative z-10">
           <FadeIn>
-            <a href="/blog" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10 group">
-              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Resources
+            <a href="/blog" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10">
+              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1" /> Back to Resources
             </a>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -158,7 +158,7 @@ export default function BlogPostPage() {
           <h3 className="text-3xl font-bold text-slate-900 mb-12">More to Read</h3>
           <div className="grid md:grid-cols-2 gap-8">
             {Object.keys(BLOG_POSTS).filter(k => k !== slug).map(key => (
-              <a href={`/blog/${key}`} key={key} className="group p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-[#5D00D6]/30 transition-all">
+              <a href={`/blog/${key}`} key={key} className="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-[#5D00D6]/30 transition-all">
                 <span className="text-[#5D00D6] text-[11px] font-bold uppercase tracking-widest mb-2 block">{BLOG_POSTS[key].tag}</span>
                 <h4 className="text-xl font-bold mb-4 group-hover:text-[#5D00D6] transition-colors">{BLOG_POSTS[key].title}</h4>
                 <p className="text-slate-500 line-clamp-2">{BLOG_POSTS[key].summary}</p>

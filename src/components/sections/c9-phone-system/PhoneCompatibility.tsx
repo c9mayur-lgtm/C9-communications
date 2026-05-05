@@ -65,7 +65,7 @@ export const PhoneCompatibility = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.05 }}
-                      className="flex items-center justify-center group h-14 w-full"
+                      className="flex items-center justify-center h-14 w-full"
                     >
                        <img 
                          src={brand.logo} 
@@ -79,19 +79,19 @@ export const PhoneCompatibility = () => {
 
                 {/* TRUST LIST - COMPACT */}
                 <div className="mt-16 pt-10 border-t border-gray-200/50 flex flex-wrap gap-x-12 gap-y-6 items-center justify-center">
-                   <div className="flex items-center gap-3 group cursor-default">
+                   <div className="flex items-center gap-3 cursor-default">
                       <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                         <Phone size={18} className="stroke-[1.5]" />
                       </div>
                       <span className="c9-eyebrow !text-slate-500 !text-[10px] group-hover:text-[#0c1024] transition-colors uppercase tracking-widest">IP Phones</span>
                    </div>
-                   <div className="flex items-center gap-3 group cursor-default">
+                   <div className="flex items-center gap-3 cursor-default">
                       <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                         <Headphones size={18} className="stroke-[1.5]" />
                       </div>
                       <span className="c9-eyebrow !text-slate-500 !text-[10px] group-hover:text-[#0c1024] transition-colors uppercase tracking-widest">Headsets</span>
                    </div>
-                   <div className="flex items-center gap-3 group cursor-default">
+                   <div className="flex items-center gap-3 cursor-default">
                       <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                         <Monitor size={18} className="stroke-[1.5]" />
                       </div>

@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+;
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export const DualAudienceLadder = () => {
   return (
@@ -33,14 +34,16 @@ export const DualAudienceLadder = () => {
                 <img 
                   src="/images/frustrated_worker.png" 
                   alt="Frustrated worker managing IT issues" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover/card:scale-105" 
+                  className="w-full h-full object-cover duration-1000 group-hover/card:scale-105" 
                 />
                 <div className="absolute inset-0 bg-[#5D00D6]/5 opacity-60 group-hover/card:opacity-0 transition-opacity duration-700" />
               </div>
               <div className="mt-auto">
-                <a href="/greenfield" className="inline-flex items-center justify-center gap-3 text-white bg-[#5D00D6] px-10 h-14 rounded-full hover:bg-[#4d00b3] transition-all duration-300 c9-button-label shadow-xl shadow-purple-900/20 w-full md:w-auto">
-                  Request Managed IT Setup <ArrowRight size={18} />
-                </a>
+                <Button size="lg" className="rounded-full shadow-xl w-full md:w-auto h-14 px-8 text-[15px] font-bold" asChild>
+                  <Link href="/greenfield">
+                    Request Managed IT Setup 
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -66,14 +69,16 @@ export const DualAudienceLadder = () => {
                 <img 
                   src="/images/c9_support_engineer.png" 
                   alt="C9 Support Engineer in control" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover/card:scale-105" 
+                  className="w-full h-full object-cover duration-1000 group-hover/card:scale-105" 
                 />
                 <div className="absolute inset-0 bg-[#5D00D6]/5 opacity-60 group-hover/card:opacity-0 transition-opacity duration-700" />
               </div>
               <div className="mt-auto">
-                <a href="/managed-it" className="inline-flex items-center justify-center gap-3 text-[#5D00D6] border-2 border-[#5D00D6] px-10 h-14 rounded-full hover:bg-[#5D00D6] hover:text-white transition-all duration-300 c9-button-label w-full md:w-auto">
-                  Explore Co-Management Model <ArrowRight size={18} />
-                </a>
+                <Button variant="outline" size="lg" className="rounded-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white w-full md:w-auto h-14 px-8 text-[15px] font-bold" asChild>
+                  <Link href="/managed-it">
+                    Explore Co-Management Model 
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>

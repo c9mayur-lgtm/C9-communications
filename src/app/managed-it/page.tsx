@@ -2,15 +2,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
-  Monitor, Lock, Cloud, PhoneCall,
-  Users, ShieldAlert, Activity, Database, Server, Building, Network, Wrench,
-  Clock, BarChart3, MessageSquare
-} from 'lucide-react';
+import { CheckCircle, ShieldCheck, Zap, Monitor, Lock, Cloud, PhoneCall, Users, ShieldAlert, Activity, Database, Server, Building, Network, Wrench, Clock, BarChart3, MessageSquare } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
+import { Button } from '@/components/ui/button';
+import { handleCtaClick } from '@/lib/utils';
 
 // Enterprise Components
 import ITILServiceModel from '@/components/sections/managed-it/ITILServiceModel';
@@ -104,29 +101,32 @@ const Hero = () => (
 
           <FadeIn delay={0.3}>
              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                   href="#consultation"
-                   className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap c9-button-label"
+                <Button
+                   size="lg"
+                   className="rounded-full shadow-xl"
+                   onClick={handleCtaClick}
                 >
                    Request Delivery Briefing
-                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-                </a>
-                <a
-                   href="#service-model"
-                   className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap bg-white c9-button-label"
+                   
+                </Button>
+                <Button
+                   variant="outline"
+                   size="lg"
+                   className="rounded-full border-2"
+                   onClick={() => document.getElementById('service-model')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                    Review Operating Model
-                </a>
+                </Button>
              </div>
           </FadeIn>
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
-           <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+           <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3]">
               <img
                  src="/images/hero/enterprise.png"
                  alt="Enterprise IT Operations"
-                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                 className="w-full h-full object-cover duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent" />
               
@@ -290,7 +290,7 @@ export default function ManagedITPage() {
         ]} 
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
           eyebrow="TAKE CONTROL"

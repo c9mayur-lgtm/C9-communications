@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ChevronRight } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 
 const PlanCard = ({ title, price, features, isPopular, link }: { title: string, price: string, features: {name: string, value: string}[], isPopular?: boolean, link: string }) => (
@@ -43,14 +43,14 @@ const PlanCard = ({ title, price, features, isPopular, link }: { title: string, 
 
     <Link 
       href={link}
-      className={`w-full h-14 rounded-full flex items-center justify-center font-bold text-[16px] transition-all hover:scale-[1.02] active:scale-95 ${
+      className={`w-full h-14 rounded-full flex items-center justify-center gap-2 font-bold text-[14px] transition-all hover:scale-[1.02] active:scale-95  ${
         isPopular 
           ? 'bg-[#5D00D6] text-white shadow-lg shadow-[#5D00D6]/20 hover:bg-[#4c00b0]' 
           : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
       }`}
     >
       Get Started
-      <ChevronRight size={18} className="ml-2" />
+      
     </Link>
     
     <div className="text-center mt-6">

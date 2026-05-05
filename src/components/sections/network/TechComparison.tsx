@@ -41,7 +41,7 @@ const TabCard = ({
         
         <div className="flex flex-col gap-5 mt-10">
           {features.map((feat, i) => (
-            <div key={i} className="flex gap-4 items-start group">
+            <div key={i} className="flex gap-4 items-start">
               <div className="w-6 h-6 rounded-full bg-purple-50 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#5D00D6] transition-colors duration-300">
                  <CheckCircle size={12} className="text-[#5D00D6] group-hover:text-white transition-colors" />
               </div>
@@ -70,9 +70,9 @@ const TabCard = ({
           </h4>
           <div className="flex flex-col gap-4">
             {bestFor.map((item, i) => (
-              <div key={i} className="flex gap-4 items-start group">
+              <div key={i} className="flex gap-4 items-start">
                 <div className="w-5 h-5 rounded-md bg-[#5D00D6]/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#5D00D6] transition-colors">
-                   <ChevronRight size={14} className="text-[#5D00D6] group-hover:text-white transition-transform group-hover:translate-x-0.5" />
+                   <ChevronRight size={14} className="text-[#5D00D6] group-hover:text-white group-hover:translate-x-0.5" />
                 </div>
                 <span className="font-['Proxima_Nova'] text-[14px] text-[#E5E7EB] font-bold leading-[1.4] tracking-tight">{item}</span>
               </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, ArrowRight } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 const FONT_FAMILY = { fontFamily: "'Proxima Nova', sans-serif" };
 
@@ -34,9 +34,9 @@ export default function DefenseBridge() {
           <div className="shrink-0 z-10 mt-2 md:mt-0">
             <a 
               href="https://c9defense.com.au/"
-              className="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-[#5D00D6]/40 text-white rounded-full font-bold text-[14px] hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300"
+              className="inline-flex items-center justify-center bg-transparent border border-[#5D00D6]/40 text-white rounded-full hover:bg-[#5D00D6] hover:border-[#5D00D6] transition-all duration-300 h-14 px-8 text-[15px] font-bold"
             >
-              Learn About C9 Defense <ArrowRight size={16} className="ml-2" />
+              Learn About C9 Defense 
             </a>
           </div>
 

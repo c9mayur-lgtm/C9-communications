@@ -3,12 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  ShieldCheck, Activity, Users, ArrowRight, CheckCircle2, 
-  Clock, Layers, Building2, TrendingUp,
-  Server, PhoneCall, Monitor, CheckCircle, BarChart3, Globe,
-  Network, Lock, Zap, FileSearch, HardDrive, RefreshCcw, ShieldAlert
-} from 'lucide-react';
+import { ShieldCheck, Activity, Users, CheckCircle2, Clock, Layers, Building2, TrendingUp, Server, PhoneCall, Monitor, CheckCircle, BarChart3, Globe, Network, Lock, Zap, FileSearch, HardDrive, RefreshCcw, ShieldAlert } from 'lucide-react';
 import { Section } from '@/components/design-system/Section';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
@@ -81,10 +76,10 @@ export default function EnterpriseEthernetPage() {
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
                     <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                      <Link href="#consultation">Book an Enterprise Network Review</Link>
+                      <Link href="#consultation-section">Book an Enterprise Network Review</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#consultation">Speak to a Network Specialist</Link>
+                      <Link href="#consultation-section">Speak to a Network Specialist</Link>
                     </C9Button>
                  </div>
               </FadeIn>
@@ -102,11 +97,11 @@ export default function EnterpriseEthernetPage() {
             </div>
 
             <FadeIn delay={0.2} direction="right" className="relative">
-               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square group">
+               <div className="relative rounded-[48px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square">
                   <img
                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop"
                      alt="Enterprise technical lead analyzing network infrastructure data"
-                     className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
+                     className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
                   
@@ -150,7 +145,7 @@ export default function EnterpriseEthernetPage() {
                   Operational downtime directly impacts revenue. If your connectivity relies on shared infrastructure or fragmented support, you are managing a hidden commercial liability.
                </p>
                <C9Button variant="outline" className="rounded-full h-12 px-8 border-slate-200 text-[#5D00D6] hover:border-[#5D00D6]" asChild>
-                  <Link href="#consultation">Request a Risk Assessment</Link>
+                  <Link href="#consultation-section">Request a Risk Assessment</Link>
                </C9Button>
             </FadeIn>
 
@@ -205,8 +200,8 @@ export default function EnterpriseEthernetPage() {
                 desc: "Consistent infrastructure and unified billing across your entire national location portfolio." 
               }
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1} className="bg-slate-50/50 p-8 rounded-[32px] border border-slate-100 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-xl group">
-                <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform shadow-sm">
+              <FadeIn key={i} delay={i * 0.1} className="bg-slate-50/50 p-8 rounded-[32px] border border-slate-100 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-xl">
+                <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 shadow-sm">
                   {item.icon}
                 </div>
                 <h3 className="c9-card-title mb-3 text-[17px]">{item.title}</h3>
@@ -391,7 +386,7 @@ export default function EnterpriseEthernetPage() {
                      { label: "Incident Ownership", val: "Absolute", icon: <Zap size={20} /> },
                      { label: "Operational Risk", val: "Minimized", icon: <ShieldAlert size={20} /> }
                    ].map((stat, i) => (
-                     <div key={i} className="bg-slate-50 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10 group">
+                     <div key={i} className="bg-slate-50 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10">
                         <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight">{stat.val}</div>
                         <div className="text-slate-500 font-bold text-[12px] uppercase tracking-widest leading-tight">{stat.label}</div>
                      </div>
@@ -413,7 +408,7 @@ export default function EnterpriseEthernetPage() {
                       {
                         tag: 'HEALTHCARE NETWORK',
                         title: 'Multi-Site Patient Data Syncing',
-                        desc: "A healthcare group required 99.95% availability for critical patient data records. C9 deployed private Ethernet architecture with eSLA ownership. Result: Full compliance and zero downtime.",
+                        desc: "A healthcare  required 99.95% availability for critical patient data records. C9 deployed private Ethernet architecture with eSLA ownership. Result: Full compliance and zero downtime.",
                         img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop',
                         videoText: 'Zero Downtime'
                       },
@@ -444,7 +439,7 @@ export default function EnterpriseEthernetPage() {
                   Let&apos;s review whether your current network is protecting operations or exposing them.
                 </p>
                 <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Request an Enterprise Connectivity Review</Link>
+                  <Link href="#consultation-section">Request an Enterprise Connectivity Review</Link>
                 </C9Button>
               </FadeIn>
            </div>
@@ -465,7 +460,7 @@ export default function EnterpriseEthernetPage() {
                    Stop settling for generic infrastructure. Talk to C9 about Enterprise Connectivity built for business continuity and long-term growth.
                 </p>
                 <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation">Talk to C9 About Enterprise Connectivity</Link>
+                  <Link href="#consultation-section">Talk to C9 About Enterprise Connectivity</Link>
                 </C9Button>
               </div>
            </div>
@@ -484,7 +479,7 @@ export default function EnterpriseEthernetPage() {
         ]}
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm 
           showHeader={false} 
           eyebrow="ENTERPRISE INFRASTRUCTURE AUDIT"

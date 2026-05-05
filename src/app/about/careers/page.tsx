@@ -1,15 +1,7 @@
 'use client';
 
 import React from 'react';
-import { 
-  Rocket, 
-  Target,
-  ShieldCheck,
-  Cpu,
-  Globe,
-  Plus,
-  Zap
-} from 'lucide-react';
+import { Rocket, Target, ShieldCheck, Cpu, Globe, Plus, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Section } from '@/components/design-system/Section';
@@ -124,8 +116,8 @@ export default function CareersPage() {
             }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-[#5D00D6]/20 transition-all group h-full shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 transition-transform">
+              <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-[#5D00D6]/20 transition-all h-full shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110">
                   <item.icon size={24} />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
@@ -193,11 +185,11 @@ export default function CareersPage() {
         primaryText="About C9 Operations"
         primaryHref="/about"
         secondaryText="Submit Your Interest"
-        secondaryHref="#consultation"
+        secondaryHref="#consultation-section"
         bg="bg-gray"
       />
 
-      <div id="consultation">
+      <div id="consultation-section">
         <WpConsultationForm
           eyebrow="TALENT ACQUISITION"
           title="Connect with Our Talent Team"

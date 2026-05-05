@@ -69,7 +69,7 @@ export default function EscalationModel() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-lg p-10 transition-all duration-500 h-full group">
+                <div className="bg-white rounded-lg p-10 transition-all duration-500 h-full">
                   <div className="flex items-center justify-between mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 text-[#5D00D6] flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
                       <step.icon size={28} strokeWidth={1.5} />
@@ -94,7 +94,7 @@ export default function EscalationModel() {
 
         {/* Leadership Credibility Strip */}
         <FadeIn delay={0.4}>
-          <div className="mt-20 lg:mt-32 p-10 lg:p-14 bg-[#0c1024] rounded-lg text-white relative overflow-hidden group">
+          <div className="mt-20 lg:mt-32 p-10 lg:p-14 bg-[#0c1024] rounded-lg text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[#5D00D6]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
               <div className="flex -space-x-4">

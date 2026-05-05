@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Store, ShoppingCart, Globe, Wifi, CheckCircle, ArrowRight, Zap, Layers, Cpu } from 'lucide-react';
+import { Store, ShoppingCart, Globe, Wifi, CheckCircle, Zap, Layers, Cpu } from 'lucide-react';
 
 
 
@@ -67,7 +67,7 @@ export default function MultiSiteRetailCapability() {
           <div className="grid sm:grid-cols-2 gap-6">
             {features.map((f, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-slate-50 rounded-lg p-8 border border-slate-100 hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all duration-500 group h-full">
+                <div className="bg-slate-50 rounded-lg p-8 border border-slate-100 hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all duration-500 h-full">
                   <div className="w-12 h-12 rounded-2xl bg-white text-[#5D00D6] flex items-center justify-center mb-8 group-hover:bg-[#5D00D6] group-hover:text-white shadow-sm transition-all duration-500">
                     <f.icon size={24} strokeWidth={2} />
                   </div>
@@ -111,11 +111,11 @@ export default function MultiSiteRetailCapability() {
                 </div>
 
                 <a 
-                  href="#consultation" 
-                  className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl group"
+                  href="#consultation-section" 
+                  className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl h-14 px-8 text-[15px] font-bold"
                 >
                   Request Retail Briefing
-                  <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                  
                 </a>
               </div>
             </div>

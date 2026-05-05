@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+;
+import { handleCtaClick } from '@/lib/utils';
 
 interface WpPromoBannerProps {
   eyebrow?: string;
@@ -35,18 +37,21 @@ export const WpPromoBanner = ({
               {description}
             </p>
             <div>
-              <a
-                href={ctaHref}
+              <Button
+                size="lg"
+                className="h-14 px-10 rounded-xl"
                 onClick={(e) => {
-                  if (ctaHref.startsWith('#')) {
-                    e.preventDefault();
+                  if (ctaHref === '#consultation-section') {
+                    handleCtaClick(e);
+                  } else if (ctaHref.startsWith('#')) {
                     document.querySelector(ctaHref)?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = ctaHref;
                   }
                 }}
-                className="inline-flex items-center justify-center px-10 py-4 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-lg transition-colors c9-button-label"
               >
-                {ctaText}
-              </a>
+                {ctaText} 
+              </Button>
             </div>
             <p className="text-[11px] text-gray-500 mt-6">{disclaimer}</p>
           </div>

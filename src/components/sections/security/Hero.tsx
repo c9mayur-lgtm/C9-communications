@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+;
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useInquiry } from '@/components/context/InquiryContext';
@@ -33,10 +33,10 @@ export default function Hero() {
                 onClick={handleAssessmentRequest}
                 className="flex-1 sm:flex-none bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 rounded-full font-bold transition-all text-[14px] shadow-lg shadow-purple-900/20"
               >
-                Get a Security Assessment <ArrowRight className="ml-2 w-4 h-4" />
+                Get a Security Assessment 
               </Button>
               <Link href="https://c9defense.com.au/" className="flex-1 justify-center sm:flex-none flex items-center text-[#1A1A2E] border border-[#5D00D6]/20 hover:bg-slate-50 px-8 h-14 rounded-full font-bold transition-all text-[14px]">
-                Explore C9 Defense <ArrowRight className="ml-2 w-4 h-4" />
+                Explore C9 Defense 
               </Link>
             </div>
           </div>

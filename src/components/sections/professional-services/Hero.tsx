@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { CheckCircle } from 'lucide-react';
 import Link from "next/link";
 
 export default function Hero() {
@@ -19,8 +19,8 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-8">
               <Link href="/contact" passHref>
-                <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 group bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none" >
-                  Speak to Our Specialist <ArrowRight className="transition-transform group-hover:translate-x-1 ml-2" />
+                <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-14 px-8 rounded-full border-none" >
+                  Speak to Our Specialist 
                 </Button>
               </Link>
               <Link href="/about/case-studies" passHref>

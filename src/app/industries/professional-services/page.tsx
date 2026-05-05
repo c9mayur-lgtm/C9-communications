@@ -2,10 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon,
-  AlertTriangle, Users, Zap, Clock, Briefcase
-} from 'lucide-react';
+import { CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon, AlertTriangle, Users, Zap, Clock, Briefcase } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
@@ -77,14 +74,14 @@ const Hero = () => (
                   e.preventDefault();
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer whitespace-nowrap h-14 px-8 text-[15px] font-bold"
               >
                 Talk to an IT Architect
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                
               </a>
               <a
                 href="/industries"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap h-14 px-8 text-[15px] font-bold"
               >
                 View All Industries
               </a>
@@ -135,7 +132,7 @@ const DayInTheLife = () => (
     <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
       <div className="max-w-3xl mx-auto text-center">
         <FadeIn>
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] mb-6">
+          <div className="inline-flex items-center justify-center w-12 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] mb-6 h-14 px-8 text-[15px] font-bold">
             <Briefcase size={24} />
           </div>
           <h2 className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 leading-tight">
@@ -194,7 +191,7 @@ const Challenges = () => (
           },
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.07}>
-            <div className="bg-white rounded-[20px] border border-slate-100 p-7 h-full hover:shadow-lg hover:border-[#5D00D6]/20 transition-all duration-300 group flex gap-5">
+            <div className="bg-white rounded-[20px] border border-slate-100 p-7 h-full hover:shadow-lg hover:border-[#5D00D6]/20 transition-all duration-300 flex gap-5">
               <div className="w-11 h-11 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center text-[#5D00D6] shrink-0 group-hover:bg-[#5D00D6]/15 transition-colors">
                 {item.icon}
               </div>
@@ -277,7 +274,7 @@ const Trust = () => (
             }}
             className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:text-indigo-900 transition-colors"
           >
-            Learn about our SLA response times <ArrowRight size={16} />
+            Learn about our SLA response times 
           </a>
         </FadeIn>
 
@@ -311,10 +308,10 @@ const FinalCTA = () => (
               e.preventDefault();
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group cursor-pointer"
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer"
           >
             Book an Advisory Session
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            
           </a>
           <p className="text-[14px] text-slate-500">No obligation. Just clear, practical advice.</p>
         </div>

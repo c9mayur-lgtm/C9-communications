@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+;
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS (Copied for self-containment)
@@ -202,10 +202,10 @@ export const SectionSolutionsPills = ({ audience }: SectionSolutionsPillsProps) 
                 <FadeIn delay={0.2} direction="none">
                   <a
                     href={tab.path}
-                    className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+                    className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20"
                   >
                     Explore {tab.name} Solutions
-                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    
                   </a>
                 </FadeIn>
               </div>

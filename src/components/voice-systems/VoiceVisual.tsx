@@ -2,11 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Phone, Smartphone, Video, Headphones, PhoneIncoming,
-  Building2, Zap, Mic, ArrowRight, CheckCircle, Wifi,
-  Shield, Globe
-} from 'lucide-react';
+import { Phone, Smartphone, Video, Headphones, PhoneIncoming, Building2, Zap, Mic, CheckCircle, Wifi, Shield, Globe } from 'lucide-react';
 
 // ──────────────────────────────────────────────
 // Constants (defined outside to avoid re-creation)

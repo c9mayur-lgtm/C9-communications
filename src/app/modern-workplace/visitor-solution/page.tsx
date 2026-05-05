@@ -10,22 +10,10 @@ import {
   FAQSection,
   FullStackSection
 } from '../components';
+import { Button } from '@/components/ui/button';
+import { handleCtaClick } from '@/lib/utils';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { 
-  Scan, 
-  ShieldCheck, 
-  UserPlus, 
-  History, 
-  Smartphone, 
-  Bell, 
-  CheckCircle2, 
-  ArrowRight,
-  ShieldAlert,
-  Target,
-  Users as UsersIcon,
-  Shield,
-  UserCheck
-} from 'lucide-react';
+import { Scan, ShieldCheck, UserPlus, History, Smartphone, Bell, CheckCircle2, ShieldAlert, Target, Users as UsersIcon, Shield, UserCheck } from 'lucide-react';
 
 const sectionClassName = 'py-16 md:py-24 relative overflow-hidden';
 const containerClassName = 'c9-container relative z-10';
@@ -86,12 +74,21 @@ export default function VisitorSolutionPage() {
                   First impressions are critical. C9 delivers a high-authority visitor experience with automated sign-ins, digital NDAs, and instant host notifications—ensuring 100% compliance from the moment they enter.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Link href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-                    Request Solution Brief <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-                  </Link>
-                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-black/10 text-[#0c1024] rounded-full h-14 px-8 font-bold text-[14px] hover:bg-black/5 transition-all backdrop-blur-sm">
+                  <Button 
+                    size="lg" 
+                    className="rounded-full shadow-xl"
+                    onClick={handleCtaClick}
+                  >
+                    Schedule Consultation 
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    size="lg"
+                    className="rounded-full border-black/10 text-[#0c1024] hover:bg-black/5"
+                    onClick={handleCtaClick}
+                  >
                     View Hardware Options
-                  </Link>
+                  </Button>
                 </div>
                 <div className="flex items-center gap-6">
                   <div className="flex items-center gap-2">
@@ -201,7 +198,7 @@ export default function VisitorSolutionPage() {
               <p className="text-[17px] text-gray-500 mb-10 leading-relaxed font-medium">
                 For new sites, professionalism is mandatory from the first hour. We guarantee a fully-operational, compliant visitor experience on your first day of operation.
               </p>
-              <div className="bg-[#0C1024] border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#5D00D6]/40 transition-all shadow-2xl">
+              <div className="bg-[#0C1024] border border-white/10 rounded-3xl p-8 relative overflow-hidden hover:border-[#5D00D6]/40 transition-all shadow-2xl">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#5D00D6]/10 rounded-bl-full" />
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4">
@@ -386,7 +383,7 @@ export default function VisitorSolutionPage() {
       />
 
       {/* 8. FINAL CONSULTATION FORM */}
-      <section id="consultation">
+      <section id="consultation-section">
         <WpConsultationForm 
           showHeader={false}
           eyebrow="Visitor Governance Audit"

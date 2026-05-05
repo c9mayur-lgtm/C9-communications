@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, ShieldCheck, MapPin, Search, Loader2 } from 'lucide-react';
+import { CheckCircle, ShieldCheck, MapPin, Search, Loader2 } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 import { HeroHighlighter } from '@/components/common/HeroHighlighter';
 
@@ -120,7 +120,7 @@ export default function Hero() {
                  initial={{ opacity: 0, scale: 0.95 }}
                  animate={{ opacity: 1, scale: 1 }}
                  transition={{ duration: 1 }}
-                 className="relative w-full max-w-[480px] aspect-[4/5] bg-white rounded-[40px] p-8 shadow-[0_40px_80px_-15px_rgba(93,0,214,0.15)] border border-gray-100 overflow-hidden group"
+                 className="relative w-full max-w-[480px] aspect-[4/5] bg-white rounded-[40px] p-8 shadow-[0_40px_80px_-15px_rgba(93,0,214,0.15)] border border-gray-100 overflow-hidden"
                >
                   {/* Scanner Sweep */}
                   <motion.div 

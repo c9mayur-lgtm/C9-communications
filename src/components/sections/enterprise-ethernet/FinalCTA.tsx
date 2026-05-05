@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, CheckCircle } from 'lucide-react';
+import { Phone, CheckCircle } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 export default function FinalCTA() {
@@ -32,13 +32,13 @@ export default function FinalCTA() {
             <Button 
               size="lg" 
               onClick={handleQuoteClick}
-              className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-16 px-12 rounded-full shadow-2xl shadow-[#5D00D6]/30 group transition-all text-[17px]"
+              className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white font-bold h-16 px-12 rounded-full shadow-2xl shadow-[#5D00D6]/30 transition-all text-[17px]"
             >
-              Get an Enterprise Ethernet Quote <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+              Get an Enterprise Ethernet Quote 
             </Button>
             <a 
               href="tel:1800000299"
-              className="w-full sm:w-auto inline-flex items-center justify-center border-2 border-slate-200 text-[#1A1A2E] hover:bg-slate-50 px-12 h-16 rounded-full font-bold transition-all text-[17px] no-underline bg-white"
+              className="w-full sm:w-auto inline-flex items-center justify-center border-2 border-slate-200 text-[#1A1A2E] hover:bg-slate-50 rounded-full transition-all no-underline bg-white h-14 px-8 text-[15px] font-bold"
             >
               <Phone size={18} className="mr-2" /> Call 1800 000 299
             </a>

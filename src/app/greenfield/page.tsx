@@ -2,12 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShoppingCart, Users2,
-  Wrench, Network, Zap, MapPin, AlertTriangle,
-  ClipboardList, Package, HardHat, Settings, BadgeCheck,
-  PhoneCall, Search, ShieldCheck, Lock,
-} from 'lucide-react';
+import { CheckCircle, ShoppingCart, Users2, Wrench, Network, Zap, MapPin, AlertTriangle, ClipboardList, Package, HardHat, Settings, BadgeCheck, PhoneCall, Search, ShieldCheck, Lock } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpVendors } from '@/components/wordpress/WpVendors';
@@ -93,15 +88,15 @@ const Hero = () => (
           <FadeIn delay={0.22}>
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <a
-                href="#consultation"
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                href="#consultation-section"
+                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap h-14 px-8 text-[15px] font-bold"
               >
                 Plan My New Site
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                
               </a>
               <a
                 href="#delivery-model"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap h-14 px-8 text-[15px] font-bold"
               >
                 See How It Works
               </a>
@@ -126,11 +121,11 @@ const Hero = () => (
 
         {/* RIGHT — Hero image */}
         <FadeIn delay={0.14} direction="right" className="relative hidden lg:block">
-          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3] group">
+          <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/3]">
             <img
               src="/images/greenfield_hero.png"
               alt="C9 team delivering a new site build"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover group-hover:scale-105 duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/30 via-transparent to-transparent" />
             {/* Floating badge */}
@@ -224,7 +219,7 @@ const SectionGuarantee = () => (
           { label: 'System Integration', desc: 'Cross-system communication and API integrations validated.' },
           { label: 'Documentation', desc: 'Complete "As-Built" diagrams and handover documentation provided.' },
         ].map((s, i) => (
-          <FadeIn key={i} delay={i * 0.05} className="group">
+          <FadeIn key={i} delay={i * 0.05} className="">
             <div className="h-full bg-white border border-slate-100 rounded-2xl p-6 hover:border-[#5D00D6]/20 transition-all hover:shadow-md">
               <div className="w-10 h-10 rounded-full bg-[#5D00D6]/5 flex items-center justify-center mb-4 group-hover:bg-[#5D00D6]/10 transition-colors">
                 <CheckCircle size={12} className="text-[#5D00D6]" />
@@ -326,7 +321,7 @@ const SectionFlow = () => (
 
         {steps.map((s, i) => (
           <FadeIn key={i} delay={i * 0.07} className="relative flex flex-col items-center text-center px-3">
-            <div className="relative z-10 w-[92px] h-[92px] rounded-full bg-white border-2 border-[#5D00D6]/20 flex flex-col items-center justify-center mb-5 shadow-md hover:border-[#5D00D6]/60 hover:shadow-purple-100 transition-all group">
+            <div className="relative z-10 w-[92px] h-[92px] rounded-full bg-white border-2 border-[#5D00D6]/20 flex flex-col items-center justify-center mb-5 shadow-md hover:border-[#5D00D6]/60 hover:shadow-purple-100 transition-all">
               <div className="mb-0.5">{s.icon}</div>
               <span className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-widest">Step {s.num}</span>
             </div>
@@ -380,8 +375,8 @@ const SectionProof = () => (
                 { stat: 'Zero', label: 'Day-One Failures', sub: 'Guaranteed' },
                 { stat: '100%', label: 'Operational', sub: 'At Launch' }
              ].map((item, i) => (
-                <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-md group">
-                   <div className="text-3xl font-black text-[#5D00D6] mb-1 group-hover:scale-105 transition-transform origin-left">{item.stat}</div>
+                <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-md">
+                   <div className="text-3xl font-black text-[#5D00D6] mb-1 group-hover:scale-105 origin-left">{item.stat}</div>
                    <div className="text-slate-900 font-bold text-[14px] leading-tight">{item.label}</div>
                    <div className="text-slate-400 text-[11px] font-medium uppercase tracking-wider">{item.sub}</div>
                 </div>
@@ -407,7 +402,7 @@ const SectionProof = () => (
                    { name: 'Grandstream',          logo: '/images/clients/Grandstream.png' },
                    { name: 'Cisco',                logo: '/images/clients/cisco.png' },
                  ].map((brand, i) => (
-                    <div key={i} className="flex items-center justify-center group p-4">
+                    <div key={i} className="flex items-center justify-center p-4">
                        <img
                          src={brand.logo}
                          alt={brand.name}
@@ -509,11 +504,11 @@ const SectionAccountability = () => (
             <p className="text-slate-600 text-center font-medium">We don&apos;t just install hardware — we own the operational outcome.</p>
           </div>
           <a
-            href="#consultation"
-            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+            href="#consultation-section"
+            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20"
           >
             Start Your Greenfield Project
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            
           </a>
         </FadeIn>
 
@@ -648,11 +643,11 @@ const SectionReassurance = () => (
           </p>
           <div className="mt-8">
             <a
-              href="#consultation"
-              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20 group"
+              href="#consultation-section"
+              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20"
             >
               Get My Setup Plan
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              
             </a>
           </div>
         </FadeIn>
@@ -681,15 +676,15 @@ const FinalCTA = () => (
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
           <a
-            href="#consultation"
-            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+            href="#consultation-section"
+            className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap h-14 px-8 text-[15px] font-bold"
           >
             Start Your Greenfield Project
-            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            
           </a>
           <a
             href="tel:1300000000"
-            className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all whitespace-nowrap h-14 px-8 text-[15px] font-bold"
           >
             Speak to an Expert
           </a>
@@ -799,7 +794,7 @@ export default function GreenfieldPage() {
         ]}
       />
       <FinalCTA />
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
           eyebrow="NEW BUSINESS SETUP"

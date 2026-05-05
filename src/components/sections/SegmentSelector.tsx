@@ -1,5 +1,5 @@
 import React from 'react';
-import { Server, Laptop, Signal, Shield, ArrowRight } from 'lucide-react';
+import { Server, Laptop, Signal, Shield } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -15,7 +15,7 @@ export const SegmentSelector = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-8">
           
           {/* Managed IT */}
-          <Card className="p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-3xl flex flex-col hover:border-[#5D00D6] transition-all duration-300 transform hover:-translate-y-2 group">
+          <Card className="p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-3xl flex flex-col hover:border-[#5D00D6] transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-[#5D00D6]/5 rounded-2xl w-fit mb-8 group-hover:bg-[#5D00D6] transition-colors duration-300">
               <Server className="text-[#5D00D6] w-8 h-8 group-hover:text-white transition-colors duration-300" />
             </div>
@@ -31,12 +31,12 @@ export const SegmentSelector = () => {
               ))}
             </div>
             <Button variant="link" className="text-[#5D00D6] font-bold p-0 flex items-center gap-1 group/btn w-fit">
-              Explore Managed IT <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+              Explore Managed IT 
             </Button>
           </Card>
 
           {/* Modern Workplace - Elevated */}
-          <Card className="p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-3xl flex flex-col hover:border-[#5D00D6] transition-all duration-300 transform md:scale-105 z-10 hover:-translate-y-2 group relative overflow-hidden ring-4 ring-[#5D00D6]/5">
+          <Card className="p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-3xl flex flex-col hover:border-[#5D00D6] transition-all duration-300 transform md:scale-105 z-10 hover:-translate-y-2 relative overflow-hidden ring-4 ring-[#5D00D6]/5">
             <div className="absolute top-0 right-0 left-0 h-1.5 bg-[#5D00D6]" />
             <div className="mb-4">
                <Badge className="bg-[#5D00D6] text-white px-4 py-1.5 rounded-full c9-eyebrow">
@@ -58,12 +58,12 @@ export const SegmentSelector = () => {
               ))}
             </div>
             <Button variant="link" className="text-[#5D00D6] font-bold p-0 flex items-center gap-1 group/btn w-fit">
-              Explore Modern Workplace <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+              Explore Modern Workplace 
             </Button>
           </Card>
 
           {/* Telco */}
-          <Card className="p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-3xl flex flex-col hover:border-[#5D00D6] transition-all duration-300 transform hover:-translate-y-2 group">
+          <Card className="p-10 bg-white border border-[#5D00D6]/5 shadow-sm rounded-3xl flex flex-col hover:border-[#5D00D6] transition-all duration-300 transform hover:-translate-y-2">
             <div className="p-4 bg-[#5D00D6]/5 rounded-2xl w-fit mb-8 group-hover:bg-[#5D00D6] transition-colors duration-300">
               <Signal className="text-[#5D00D6] w-8 h-8 group-hover:text-white transition-colors duration-300" />
             </div>
@@ -79,14 +79,14 @@ export const SegmentSelector = () => {
               ))}
             </div>
             <Button variant="link" className="text-[#5D00D6] font-bold p-0 flex items-center gap-1 group/btn w-fit">
-              Explore Telco <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+              Explore Telco 
             </Button>
           </Card>
           
         </div>
         
         {/* Defense Barrier */}
-        <div className="mt-20 p-8 md:p-12 bg-[#0c1024] rounded-3xl border border-[#A855F7]/20 flex flex-col md:flex-row items-center gap-8 shadow-2xl overflow-hidden relative group">
+        <div className="mt-20 p-8 md:p-12 bg-[#0c1024] rounded-3xl border border-[#A855F7]/20 flex flex-col md:flex-row items-center gap-8 shadow-2xl overflow-hidden relative">
            <div className="absolute inset-0 bg-gradient-to-r from-[#5D00D6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
            
            <div className="p-4 bg-[#A855F7]/20 rounded-2xl border border-[#A855F7]/20 z-10 shrink-0">
@@ -103,7 +103,7 @@ export const SegmentSelector = () => {
            </div>
            
            <Button variant="outline" className="border-[#A855F7] text-white hover:bg-[#A855F7]/10 rounded-full px-8 py-6 h-auto font-bold z-10 shrink-0">
-             Discover C9 Defense <ArrowRight className="ml-2 w-5 h-5" />
+             Discover C9 Defense 
            </Button>
         </div>
         

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, ArrowRight, Info, Package, Zap } from 'lucide-react';
+import { Check, Info, Package, Zap } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const inboundTiers = [
@@ -104,7 +104,7 @@ export const InboundPlans = () => {
                     onClick={() => handleSelectPlan(t.title)}
                     className={`absolute -bottom-8 left-8 right-8 py-4 px-6 rounded-full font-bold transition-all shadow-xl group-hover:scale-[1.03] active:scale-[0.97] z-20 flex items-center justify-center gap-2 ${t.recommended ? 'bg-white text-[#5D00D6] hover:bg-gray-50 shadow-purple-900/30' : 'bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-[#5D00D6]/20'}`}
                   >
-                    {t.cta} <ArrowRight size={18} />
+                    {t.cta} 
                   </button>
               </div>
 
@@ -144,7 +144,7 @@ export const InboundPlans = () => {
                 target="_blank" 
                 className="text-[12px] font-bold text-[#5D00D6] uppercase tracking-[0.1em] hover:underline flex items-center gap-2"
             >
-                View Critical Information Summary (CIS) <ArrowRight size={14} />
+                View Critical Information Summary (CIS) 
             </a>
            <div className="inline-flex items-center gap-2 text-[12px] text-slate-400 font-bold uppercase tracking-widest bg-gray-50 px-6 py-2 rounded-full border border-gray-100">
               <Info size={14} className="text-[#5D00D6]" />

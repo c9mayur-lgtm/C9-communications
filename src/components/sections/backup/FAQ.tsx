@@ -58,7 +58,7 @@ export default function FAQ() {
                 <span className="text-[17px] font-bold text-[#0c1024] leading-snug">{faq.q}</span>
                 <ChevronDown
                   size={20}
-                  className="shrink-0 mt-0.5 transition-transform duration-300"
+                  className="shrink-0 mt-0.5 duration-300"
                   style={{ color: '#5D00D6', transform: open === i ? 'rotate(180deg)' : 'rotate(0deg)' }}
                 />
               </button>

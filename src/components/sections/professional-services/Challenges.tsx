@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, ShieldAlert, Wifi, Users } from "lucide-react";
+import { Shield, Lock, ShieldAlert, Wifi, Users } from 'lucide-react';
 import Link from "next/link";
 
 const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };

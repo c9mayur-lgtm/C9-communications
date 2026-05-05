@@ -2,22 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  CloudUpload,
-  Clock,
-  Users,
-  Activity,
-  CheckCircle2,
-  Zap,
-  Phone,
-  Server,
-  Shield,
-  Wifi,
-  Globe,
-  Check,
-  X
-} from 'lucide-react';
+import { CloudUpload, Clock, Users, Activity, CheckCircle2, Zap, Phone, Server, Shield, Wifi, Globe, Check, X } from 'lucide-react';
 
 import Plans from '@/components/sections/fast-fibre/Plans';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
@@ -74,13 +59,13 @@ export default function FastFibrePage() {
                   onClick={scrollToPlans}
                   className="w-full sm:w-auto bg-[#5D00D6] text-white px-8 py-4 rounded-full font-bold hover:bg-[#4E00AD] transition-all flex items-center justify-center gap-2 shadow-xl shadow-purple-900/20"
                 >
-                  Get the Right Fibre Plan <ArrowRight size={18} />
+                  Get the Right Fibre Plan 
                 </button>
                 <button 
                   onClick={scrollToForm}
                   className="w-full sm:w-auto bg-white text-[#1A1A2E] border border-[#E5E7EB] px-8 py-4 rounded-full font-bold hover:bg-gray-50 hover:border-[#5D00D6] transition-all flex items-center justify-center gap-2"
                 >
-                  Check Availability <ArrowRight size={16} />
+                  Check Availability 
                 </button>
               </div>
 
@@ -278,7 +263,7 @@ export default function FastFibrePage() {
                { icon: Clock, title: "No slowdowns during busy periods", desc: "Maintain full speed even during peak afternoon hours when other connections fail." },
                { icon: Users, title: "Improved operational efficiency", desc: "Your team stays in the flow, completing tasks faster without network-related delays." }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all group flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
+              <div key={i} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
                 <div className="mb-6"><item.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} /></div>
                 <h3 className="text-[20px] font-bold mb-4 text-[#0c1024] tracking-tight leading-tight">{item.title}</h3>
                 <p className="text-gray-600 text-[14px] leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
@@ -313,9 +298,9 @@ export default function FastFibrePage() {
             <p className="text-[#A855F7] font-bold text-[18px] mb-10">"This is a connection your business can depend on."</p>
             <button 
                onClick={scrollToPlans}
-               className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4E00AD] transition-colors shadow-xl"
+               className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4E00AD] transition-colors shadow-xl h-14 px-8 text-[15px] font-bold"
             >
-               Get the Right Fibre Plan <ArrowRight size={18}/>
+               Get the Right Fibre Plan 
             </button>
           </FadeUp>
         </div>
@@ -336,7 +321,7 @@ export default function FastFibrePage() {
                     { step: "03", title: "Coordinate installation", desc: "C9 coordinates the entire installation process — no technical involvement needed from your team." },
                     { step: "04", title: "Configure and test", desc: "We configure your connection and perform rigorous testing. Provide ongoing support to ensure your operation stays online." }
                 ].map((item, idx) => (
-                    <div key={idx} className="relative group">
+                    <div key={idx} className="relative">
                         <div className="text-[60px] font-bold text-[#5D00D6]/5 absolute -top-8 -left-2 select-none group-hover:text-[#5D00D6]/10 transition-colors">{item.step}</div>
                         <div className="relative z-10">
                             <h4 className="text-xl font-bold text-[#1A1A2E] mb-4">{item.title}</h4>
@@ -400,9 +385,9 @@ export default function FastFibrePage() {
       {/* 9. SERVICE LINKING */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-6 max-w-[1240px] flex flex-wrap justify-center gap-x-12 gap-y-6">
-            <a href="/telco/business-nbn" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">Explore Business NBN <ArrowRight size={14}/></a>
-            <a href="/telco/phone-system" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">See Business Phone Systems <ArrowRight size={14}/></a>
-            <a href="/managed-it" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">View Managed IT Services <ArrowRight size={14}/></a>
+            <a href="/telco/business-nbn" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">Explore Business NBN </a>
+            <a href="/telco/phone-system" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">See Business Phone Systems </a>
+            <a href="/managed-it" className="text-gray-400 hover:text-[#5D00D6] font-bold text-[14px] flex items-center gap-2 transition-colors">View Managed IT Services </a>
         </div>
       </div>
 

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ChevronDown, Menu, PhoneCall, X, Shield } from 'lucide-react';
+import { ChevronDown, Menu, PhoneCall, X, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { 
   NavigationMenu, 
@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger, 
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { cn } from '@/lib/utils';
+import { cn, handleCtaClick } from '@/lib/utils';
 
 import { Badge } from '@/components/ui/badge';
 
@@ -58,8 +58,8 @@ export const ManagedNavbar = () => {
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px] flex items-center justify-between">
         
         {/* Logo */}
-        <Link href="/managed" className="flex items-center gap-1 shrink-0 group">
-           <span className="text-2xl font-black text-text-primary tracking-tighter transition-transform group-hover:scale-105">
+        <Link href="/managed-it" className="flex items-center gap-1 shrink-0">
+           <span className="text-2xl font-black text-text-primary tracking-tighter group-hover:scale-105">
              <span className="text-brand-purple">9</span>communications
            </span>
         </Link>
@@ -117,7 +117,7 @@ export const ManagedNavbar = () => {
                          </ul>
                        </div>
                        <Button variant="link" className="p-0 h-auto justify-start text-[11px] font-bold text-brand-purple uppercase tracking-widest">
-                         All Industries <ArrowRight size={12} className="ml-1" />
+                         All Industries 
                        </Button>
                     </div>
                   </div>
@@ -190,24 +190,24 @@ export const ManagedNavbar = () => {
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Services</h4>
                          <div className="grid grid-cols-2 gap-4">
                             <ListItem href="/modern-workplace/productivity" title="Productivity" />
-                            <ListItem href="/modern-workplace/endpoint-management" title="Secure Remote Work" />
+                            <ListItem href="/modern-workplace/secure-remote-work" title="Secure Remote Work" />
                             <ListItem href="/modern-workplace/communication-tools" title="Communication Tools" />
                             <ListItem href="/modern-workplace/collaboration" title="Collaboration" />
-                            <ListItem href="/modern-workplace/endpoint-management" title="Compliance" />
+                            <ListItem href="/modern-workplace/compliance-data-protection" title="Compliance" />
                             <ListItem href="/modern-workplace/endpoint-management" title="Device Mgmt" />
                          </div>
                        </div>
                     </div>
                     
-                    <div className="bg-brand-purple text-white rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden group">
+                    <div className="bg-brand-purple text-white rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden">
                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
                        <div className="relative z-10">
                          <Badge className="bg-white text-brand-purple hover:bg-white/90 mb-4 rounded-full font-bold">New</Badge>
                          <h4 className="text-2xl font-bold font-syne mb-2">Build a Smart Workplace</h4>
                          <p className="text-white/70 text-sm font-dm-sans mb-6">Efficient setup designed for team progress.</p>
                        </div>
-                       <Button className="relative z-10 bg-white text-brand-purple hover:bg-white/90 rounded-full w-fit group-hover:scale-105 transition-transform">
-                          Book a Demo <ArrowRight size={14} className="ml-2" />
+                       <Button className="relative z-10 bg-white text-brand-purple hover:bg-white/90 rounded-full w-fit group-hover:scale-105">
+                          Book a Demo 
                        </Button>
                     </div>
                   </div>
@@ -215,7 +215,7 @@ export const ManagedNavbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/about" legacyBehavior passHref>
+                <Link href="/about" passHref legacyBehavior>
                   <NavigationMenuLink className="bg-transparent hover:bg-gray-50 text-text-primary font-bold text-sm tracking-tight px-4 py-2 rounded-xl transition-all block h-auto">
                     Company
                   </NavigationMenuLink>
@@ -247,8 +247,9 @@ export const ManagedNavbar = () => {
           
           <Button 
             className="hidden lg:flex bg-brand-purple hover:bg-dark-purple text-white px-6 rounded-full h-11 text-xs font-bold font-dm-sans transition-all active:scale-95"
+            onClick={handleCtaClick}
           >
-            Contact Us
+            Schedule Consultation
           </Button>
           
           {/* Mobile hamburger */}
@@ -264,21 +265,25 @@ export const ManagedNavbar = () => {
                     </span>
                   </div>
                   <div className="flex-grow overflow-y-auto p-6 flex flex-col gap-8">
-                     {['IT Solutions', 'Telco', 'Modern Workplace', 'Company', 'Resources'].map(item => (
-                        <div key={item} className="flex flex-col gap-4">
-                           <h4 className="text-xs font-bold uppercase tracking-widest text-brand-purple opacity-40">{item}</h4>
+                      {[{ label: 'IT Solutions', path: '/managed-it' }, { label: 'Telco', path: '/telco' }, { label: 'Modern Workplace', path: '/modern-workplace' }, { label: 'Company', path: '/about' }, { label: 'Resources', path: '/insights' }].map(item => (
+                        <div key={item.label} className="flex flex-col gap-4">
+                           <h4 className="text-xs font-bold uppercase tracking-widest text-brand-purple opacity-40">{item.label}</h4>
                            <div className="flex flex-col gap-4 pl-2">
-                              {/* Simple list for brevity here */}
-                              <Link href="/managed" className="font-bold text-text-primary text-lg">Explore {item}</Link>
+                              <Link href={item.path} className="font-bold text-text-primary text-lg">Explore {item.label}</Link>
                            </div>
                         </div>
-                     ))}
+                      ))}
                   </div>
                   <div className="p-6 bg-gray-50 border-t border-gray-100 flex flex-col gap-4">
                      <a href="tel:1800000299" className="flex items-center justify-center gap-2 w-full py-4 bg-white rounded-2xl border border-gray-200 font-bold text-text-primary shadow-sm">
                         <PhoneCall size={18} /> 1800 000 299
                      </a>
-                     <Button className="bg-brand-purple py-7 rounded-2xl text-base font-bold">Get Started</Button>
+                     <Button 
+                        className="bg-brand-purple py-7 rounded-2xl text-[14px] font-bold"
+                        onClick={handleCtaClick}
+                      >
+                        Schedule Consultation
+                      </Button>
                   </div>
                </div>
             </SheetContent>

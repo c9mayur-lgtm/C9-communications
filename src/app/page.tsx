@@ -1,4 +1,5 @@
 import { HomeSlidingHero } from "@/components/home/HomeSlidingHero";
+;
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
 import { DualAudienceLadder } from "@/components/v2/DualAudienceLadder";
 import { WpITDepartmentOptions } from "@/components/wordpress/WpITDepartmentOptions";
@@ -81,8 +82,8 @@ export default function Homepage() {
                   <span className={`text-[10px] font-bold uppercase tracking-widest mb-4 ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white/60'}`}>{pillar.pill}</span>
                   <h3 className={`text-[22px] md:text-[26px] font-bold leading-tight mb-3 ${pillar.isLight ? 'text-slate-900' : 'text-white'}`}>{pillar.label}</h3>
                   <p className={`text-[14px] leading-relaxed flex-1 ${pillar.isLight ? 'text-slate-500' : 'text-white/70'}`}>{pillar.desc}</p>
-                  <div className={`mt-6 flex items-center gap-2 font-bold text-[13px] group-hover:gap-3 transition-all ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white'}`}>
-                    Explore {pillar.pill} <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  <div className={`mt-auto pt-6 flex items-center gap-2 font-bold text-[14px] group-hover:gap-3 transition-all ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white'}`}>
+                    Explore {pillar.pill} 
                   </div>
                 </div>
               </a>

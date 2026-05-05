@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, ArrowRight, Info, Package, Zap } from 'lucide-react';
+import { Check, Info, Package, Zap } from 'lucide-react';
 import { useInquiry } from '@/components/context/InquiryContext';
 
 const tiers = [
@@ -102,7 +102,7 @@ export const Plans = () => {
                     onClick={() => handleSelectPlan(t.title)}
                     className={`absolute -bottom-8 left-8 right-8 py-4 px-6 rounded-full font-bold transition-all shadow-xl group-hover:scale-[1.03] active:scale-[0.97] z-20 flex items-center justify-center gap-2 ${t.recommended ? 'bg-white text-[#5D00D6] hover:bg-gray-50 shadow-purple-900/30' : 'bg-[#5D00D6] text-white hover:bg-[#4c00b0] shadow-[#5D00D6]/20'}`}
                   >
-                    {t.cta} <ArrowRight size={18} />
+                    {t.cta} 
                   </button>
               </div>
 

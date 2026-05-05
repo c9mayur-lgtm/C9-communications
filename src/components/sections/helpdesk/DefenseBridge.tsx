@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Shield } from "lucide-react";
+import { Shield } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export default function DefenseBridge() {

@@ -41,7 +41,7 @@ export default function StayInControl() {
               {features.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <CheckCircle className="w-[18px] h-[18px] text-[#5D00D6] shrink-0 mt-0.5 font-sans" />
-                  <span className="text-[14px] text-[#0c1024] font-normal  leading-tight font-sans">
+                  <span className="text-[14px] text-[#0c1024] font-normal leading-tight font-sans">
                     {item}
                   </span>
                 </div>
@@ -52,28 +52,28 @@ export default function StayInControl() {
           {/* RIGHT COLUMN */}
           <div className="flex justify-center md:justify-end">
             <Card className="w-full max-w-[440px] bg-[#0c1024] rounded-lg p-8 border-none shadow-2xl">
-              <h3 className="text-[22px] font-semibold text-white  mb-6 font-sans">
+              <h3 className="text-[22px] font-semibold text-white mb-6 font-sans">
                 What you see every month
               </h3>
 
               <div className="flex flex-col gap-0 mt-6">
                 {metrics.map((m, i) => (
                   <div key={i} className="flex justify-between items-center py-[0.875rem] border-b border-[#374151]">
-                    <span className="text-[14px] text-slate-600  font-sans">{m.label}</span>
-                    <span className="text-[14px] text-white font-normal  font-sans">{m.value}</span>
+                    <span className="text-[14px] text-slate-600 font-sans">{m.label}</span>
+                    <span className="text-[14px] text-white font-normal font-sans">{m.value}</span>
                   </div>
                 ))}
               </div>
 
               <div className="mt-6 pt-6 border-t border-[#374151]">
-                <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#5D00D6] mb-3  font-sans">
+                <div className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#5D00D6] mb-3 font-sans">
                   PLUS QUARTERLY
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-2 text-white  text-[14px] font-sans">
+                  <div className="flex items-center gap-2 text-white text-[14px] font-sans">
                     <span className="text-[#5D00D6] font-bold font-sans">›</span> IT roadmap review
                   </div>
-                  <div className="flex items-center gap-2 text-white  text-[14px] font-sans">
+                  <div className="flex items-center gap-2 text-white text-[14px] font-sans">
                     <span className="text-[#5D00D6] font-bold font-sans">›</span> Budget and lifecycle planning
                   </div>
                 </div>

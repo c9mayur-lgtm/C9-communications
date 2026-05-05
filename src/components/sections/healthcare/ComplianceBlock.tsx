@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle } from 'lucide-react';
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -133,8 +133,8 @@ export default function ComplianceBlock() {
 
         <div className="flex justify-center mt-12">
           <Link href="https://c9defense.com.au/" passHref>
-            <Button size="lg" className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white flex items-center group h-14 px-10 rounded-full shadow-2xl hover:shadow-[#5D00D6]/20 transition-all border-none font-bold tracking-wide" >
-              Request a Free Compliance Assessment <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4c00b0] text-white flex items-center h-14 px-10 rounded-full shadow-2xl hover:shadow-[#5D00D6]/20 transition-all border-none font-bold tracking-wide" >
+              Request a Free Compliance Assessment 
             </Button>
           </Link>
         </div>

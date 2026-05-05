@@ -29,7 +29,7 @@ export default function AccreditationBar() {
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
 
           {/* Marquee Container */}
-          <div className="flex overflow-hidden group">
+          <div className="flex overflow-hidden">
             <motion.div 
                animate={{ x: ["0%", "-33.33%"] }}
                transition={{ 

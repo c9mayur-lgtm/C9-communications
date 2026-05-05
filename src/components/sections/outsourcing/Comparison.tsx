@@ -32,13 +32,13 @@ export default function Comparison() {
           <Table className="w-full">
             <TableHeader className="bg-[#F4F0FA]">
               <TableRow className="hover:bg-transparent transition-none">
-                <TableHead className="w-[40%] text-left px-5 py-4 text-[14px] font-bold uppercase tracking-[0.06em] text-slate-600  border-b-0 font-sans">
+                <TableHead className="w-[40%] text-left px-5 py-4 text-[14px] font-bold uppercase tracking-[0.06em] text-slate-600 border-b-0 font-sans">
                    {/* EMPTY LABEL COLUMN */}
                 </TableHead>
-                <TableHead className="text-center px-5 py-4 text-[14px] font-bold uppercase tracking-[0.06em] text-slate-600  border-b-0 font-sans">
+                <TableHead className="text-center px-5 py-4 text-[14px] font-bold uppercase tracking-[0.06em] text-slate-600 border-b-0 font-sans">
                   In-house IT
                 </TableHead>
-                <TableHead className="text-center px-5 py-4 text-[14px] font-bold uppercase tracking-[0.06em] text-[#5D00D6] bg-[#F4F0FA]  border-b-0 font-sans">
+                <TableHead className="text-center px-5 py-4 text-[14px] font-bold uppercase tracking-[0.06em] text-[#5D00D6] bg-[#F4F0FA] border-b-0 font-sans">
                   C9 Managed IT
                 </TableHead>
               </TableRow>
@@ -46,13 +46,13 @@ export default function Comparison() {
             <TableBody>
               {rows.map((row, i) => (
                 <TableRow key={i} className={`border-b border-[#F3F4F6] transition-none ${i % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFA]'}`}>
-                  <TableCell className="px-5 py-4 text-[14px] text-[#0c1024] font-normal  font-sans">
+                  <TableCell className="px-5 py-4 text-[14px] text-[#0c1024] font-normal font-sans">
                     {row.label}
                   </TableCell>
-                  <TableCell className="text-center px-5 py-4 text-[14px] text-[#9CA3AF]  font-sans">
+                  <TableCell className="text-center px-5 py-4 text-[14px] text-[#9CA3AF] font-sans">
                     {row.inhouse}
                   </TableCell>
-                  <TableCell className="text-center px-5 py-4 text-[14px] text-[#0c1024] font-bold bg-[#F9F5FF]  font-sans">
+                  <TableCell className="text-center px-5 py-4 text-[14px] text-[#0c1024] font-bold bg-[#F9F5FF] font-sans">
                     {row.c9}
                   </TableCell>
                 </TableRow>
@@ -61,7 +61,7 @@ export default function Comparison() {
           </Table>
         </div>
 
-        <p className="text-[14px] text-[#9CA3AF] italic mt-4  text-left font-sans">
+        <p className="text-[14px] text-[#9CA3AF] italic mt-4 text-left font-sans">
           "Salary figures are indicative for an IT support generalist in Australia. Senior or specialised hires cost significantly more."
         </p>
       </div>

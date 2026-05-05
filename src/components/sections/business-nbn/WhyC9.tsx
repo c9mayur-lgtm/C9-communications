@@ -49,11 +49,11 @@ export default function WhyC9() {
             <motion.div 
                key={i} 
                whileHover={{ y: -5 }}
-               className="flex flex-col items-center group text-center lg:text-left"
+               className="flex flex-col items-center text-center lg:text-left"
             >
                <div className="relative mb-6">
                   <div className="absolute -inset-2 bg-[#5D00D6]/20 rounded-full blur-xl group-hover:bg-[#5D00D6]/40 transition-all" />
-                  <div className="relative w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-3 text-white group-hover:scale-110 transition-transform">
+                  <div className="relative w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-3 text-white group-hover:scale-110">
                      <r.icon size={32} strokeWidth={1.75} />
                   </div>
                </div>

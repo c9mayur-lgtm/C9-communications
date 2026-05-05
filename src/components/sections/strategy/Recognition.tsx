@@ -63,7 +63,7 @@ export default function Recognition() {
               transition={{ delay: i * 0.1 }}
             >
               <Card 
-                className="bg-[#0b0e18] rounded-lg border border-white/5 p-8 flex flex-col items-start min-h-[500px] hover:border-[#5D00D6]/40 transition-all duration-500 group relative overflow-hidden"
+                className="bg-[#0b0e18] rounded-lg border border-white/5 p-8 flex flex-col items-start min-h-[500px] hover:border-[#5D00D6]/40 transition-all duration-500 relative overflow-hidden"
               >
                 {/* Subtle gradient hover effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#5D00D6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

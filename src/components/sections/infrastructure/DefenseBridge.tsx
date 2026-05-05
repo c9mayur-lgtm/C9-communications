@@ -1,4 +1,4 @@
-import { Shield, ArrowRight } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import Link from 'next/link';
 
 export default function DefenseBridge() {
@@ -30,9 +30,9 @@ export default function DefenseBridge() {
           <div className="shrink-0 z-10 w-full md:w-auto flex justify-center md:justify-end pl-0 md:pl-4">
             <Link 
               href="https://c9defense.com.au/" 
-              className="group flex items-center justify-center gap-2 border border-[#5D00D6]/50 bg-transparent hover:bg-[#5D00D6]/10 text-white font-['Proxima_Nova'] font-bold text-[14px] h-[48px] px-8 rounded-full transition-all w-full md:w-auto shadow-[0_0_20px_rgba(93,0,214,0.15)]"
+              className="flex items-center justify-center gap-2 border border-[#5D00D6]/50 bg-transparent hover:bg-[#5D00D6]/10 text-white font-['Proxima_Nova'] font-bold text-[14px] h-[48px] px-8 rounded-full transition-all w-full md:w-auto shadow-[0_0_20px_rgba(93,0,214,0.15)]"
             >
-              Discover C9 Defense <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              Discover C9 Defense 
             </Link>
           </div>
 

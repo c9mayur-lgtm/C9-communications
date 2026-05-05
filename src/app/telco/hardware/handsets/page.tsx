@@ -2,13 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, CheckCircle, ShieldCheck, Zap, 
-  Monitor, Activity, Users, 
-  Phone, Volume2, Mic, Settings,
-  AlertTriangle, RefreshCw, BarChart3,
-  LayoutGrid, Layers, Database
-} from 'lucide-react';
+import { CheckCircle, ShieldCheck, Zap, Monitor, Activity, Users, Phone, Volume2, Mic, Settings, AlertTriangle, RefreshCw, BarChart3, LayoutGrid, Layers, Database } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
@@ -84,15 +78,15 @@ const Hero = () => (
              <div className="flex flex-col items-start gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 group whitespace-nowrap"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap h-14 px-8 text-[15px] font-bold"
                    >
                       Request Hardware Audit
-                      <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                      
                    </a>
                    <a
-                      href="#consultation"
-                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full h-14 px-8 font-bold text-[14px] hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white"
+                      href="#consultation-section"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white h-14 px-8 text-[15px] font-bold"
                    >
                       View Solutions
                    </a>
@@ -184,7 +178,7 @@ const SectionHowWeOperate = () => (
                { title: 'Performance Oversight', desc: 'Monitoring call quality (MOS) directly from the handset endpoint.' },
                { title: 'Seamless Swapping', desc: 'Rapid replacement protocols that restore user profiles in minutes.' },
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-[#5D00D6]/30 transition-all">
                   <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
                      {i + 1}
                   </div>
@@ -215,7 +209,7 @@ export default function HandsetsPage() {
         href="/telco/phone-system"
       />
 
-      <section id="consultation" className="bg-white border-t border-slate-100">
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
           eyebrow="Modernise Your Desk Experience"

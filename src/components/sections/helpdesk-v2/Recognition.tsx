@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Users, Server, AlertTriangle, CheckCircle2, ShieldCheck, Activity } from "lucide-react";
+import { Users, Server, AlertTriangle, CheckCircle2, ShieldCheck, Activity } from 'lucide-react';
 
 const fontStyle = { fontFamily: '"Proxima Nova", sans-serif' };
 
@@ -340,7 +340,7 @@ export default function Recognition() {
                    <div 
                      key={idx} 
                      onClick={() => setActiveTab(idx)}
-                     className={`cursor-pointer transition-all duration-500 py-6 md:py-8 border-t-[2px] first:border-t-[2px] flex flex-col relative group ${isActive ? 'border-transparent' : 'border-gray-100 hover:border-gray-200'}`}
+                     className={`cursor-pointer transition-all duration-500 py-6 md:py-8 border-t-[2px] first:border-t-[2px] flex flex-col relative  ${isActive ? 'border-transparent' : 'border-gray-100 hover:border-gray-200'}`}
                    >
                       {/* Timer Progress Line (Only animates if active and not paused) */}
                       {isActive && (

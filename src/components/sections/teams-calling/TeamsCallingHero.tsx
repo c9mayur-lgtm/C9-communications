@@ -47,8 +47,8 @@ export const TeamsCallingHero = () => {
                transition={{ duration: 0.6, delay: 0.2 }}
                className="flex flex-col sm:flex-row items-center gap-8"
             >
-               <button className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-12 h-16 text-[16px] font-medium shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-105 active:scale-95 leading-none">
-                  View Teams Plans
+               <button className="bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full px-12 h-16 text-[14px] font-medium shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                  View Teams Plans 
                </button>
                
                <div className="flex items-center gap-4">

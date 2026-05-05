@@ -55,7 +55,7 @@ export default function FAQ() {
               <div key={index} className="border-b border-purple-50">
                 <button
                   onClick={() => handleToggle(index)}
-                  className="w-full flex items-center justify-between py-6 md:py-8 text-left group"
+                  className="w-full flex items-center justify-between py-6 md:py-8 text-left"
                 >
                   <h3 className="text-[18px] md:text-[20px] font-bold text-[#1A1A2E] tracking-tight pr-8 group-hover:text-[#7B2FBE] transition-colors">
                     {faq.q}

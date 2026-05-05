@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircle, Phone, Mail, Instagram, ArrowRight, LayoutDashboard } from 'lucide-react';
+import { MessageCircle, Phone, Mail, Instagram, LayoutDashboard } from 'lucide-react';
 
 export default function OmniChannel() {
   return (
@@ -82,7 +82,7 @@ export default function OmniChannel() {
                             { icon: Mail, name: 'Email', color: 'text-orange-500' },
                             { icon: Instagram, name: 'Social', color: 'text-pink-500' },
                         ].map((item, i) => (
-                            <div key={i} className="bg-white rounded-2xl p-4 flex items-center justify-between shadow-sm border border-gray-100 hover:scale-105 transition-transform">
+                            <div key={i} className="bg-white rounded-2xl p-4 flex items-center justify-between shadow-sm border border-gray-100 hover:scale-105">
                                 <span className="font-bold text-[#0c1024]">{item.name}</span>
                                 <div className={`w-8 h-8 rounded-full bg-slate-50 flex flex-col items-center justify-center ${item.color}`}>
                                     <item.icon size={16} />
@@ -93,7 +93,7 @@ export default function OmniChannel() {
 
                     {/* Convergence Arrow & Dashboard */}
                     <div className="flex flex-col items-center justify-center relative">
-                        <ArrowRight size={40} strokeWidth={1} className="text-[#5D00D6]/30 absolute left-[-24px] top-1/2 -translate-y-1/2" />
+                        
                         
                         <div className="w-full bg-[#0c1024] rounded-3xl p-6 text-center shadow-2xl relative">
                             {/* Glow */}

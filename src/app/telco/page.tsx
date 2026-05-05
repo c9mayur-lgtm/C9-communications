@@ -3,14 +3,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Wifi, PhoneCall, Smartphone, PhoneIncoming, GitBranch, 
-  ArrowRight, Clock, CheckCircle, Activity, 
-  ShieldCheck, Settings, Monitor, Lock, 
-  Check, Building2, Search, Zap, ShieldAlert, 
-  Layers, Database, Server, RefreshCw, Users
-} from 'lucide-react';
+import { Wifi, PhoneCall, Smartphone, PhoneIncoming, GitBranch, Clock, CheckCircle, Activity, ShieldCheck, Settings, Monitor, Lock, Check, Building2, Search, Zap, ShieldAlert, Layers, Database, Server, RefreshCw, Users } from 'lucide-react';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { Button } from '@/components/ui/button';
+import { handleCtaClick } from '@/lib/utils';
 
 const C = "container mx-auto px-6 md:px-8 max-w-[1240px]";
 
@@ -71,12 +67,21 @@ const SectionHero = () => (
 
         <FadeIn delay={0.2}>
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 group">
-              Check Your Network Readiness <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-            </a>
-            <a href="#consultation" className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-14 px-8 font-bold text-[14px] hover:bg-white/10 transition-all backdrop-blur-sm">
+            <Button 
+              size="lg" 
+              className="rounded-full shadow-xl"
+              onClick={handleCtaClick}
+            >
+              Check Your Network Readiness 
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg" 
+              className="rounded-full border-white/20 text-white hover:bg-white/10"
+              onClick={handleCtaClick}
+            >
               Speak to a Connectivity Expert
-            </a>
+            </Button>
           </div>
         </FadeIn>
 
@@ -121,9 +126,13 @@ const SectionProblems = () => (
               </div>
             ))}
           </div>
-          <a href="#consultation" className="text-[#5D00D6] font-bold flex items-center gap-2 group text-lg">
-            Assess your current setup <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-          </a>
+          <Button 
+            variant="link" 
+            className="p-0 h-auto font-bold flex items-center gap-2 text-lg text-[#5D00D6]"
+            onClick={handleCtaClick}
+          >
+            Assess your current setup 
+          </Button>
         </FadeIn>
 
         <FadeIn direction="left">
@@ -197,9 +206,13 @@ const SectionApproach = () => (
               </div>
             </div>
           </div>
-          <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10">
+          <Button 
+            size="lg"
+            className="rounded-full shadow-lg"
+            onClick={handleCtaClick}
+          >
             Get a resilient network plan
-          </a>
+          </Button>
         </FadeIn>
       </div>
     </div>
@@ -245,8 +258,8 @@ const SectionServices = () => (
             desc: "Automatic secondary links that kick in instantly when primary lines fail." 
           }
         ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group">
-            <div className="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-[#5D00D6] mb-6 transition-transform group-hover:scale-110">
+          <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500">
+            <div className="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110">
               {item.icon}
             </div>
             <h3 className="text-lg font-bold mb-3 text-slate-900">{item.title}</h3>
@@ -291,9 +304,13 @@ const SectionResilience = () => (
               </div>
             ))}
           </div>
-          <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all">
+          <Button 
+            size="lg"
+            className="rounded-full shadow-lg"
+            onClick={handleCtaClick}
+          >
             Check your network resilience
-          </a>
+          </Button>
         </FadeIn>
 
         <FadeIn direction="left">
@@ -362,7 +379,7 @@ const SectionProcess = () => (
                { step: '03', title: "Deploy", desc: "Rapid rollout with zero operational downtime." },
                { step: '04', title: "Monitor", desc: "24/7 management to ensure continuous uptime." }
             ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm group hover:border-[#5D00D6]/30 transition-all">
+               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all">
                   <div className="text-[40px] font-bold text-slate-100 group-hover:text-[#5D00D6]/10 transition-colors absolute top-6 right-6 leading-none">
                      {s.step}
                   </div>
@@ -410,9 +427,13 @@ const SectionMonitoring = () => (
                   </div>
                 ))}
              </div>
-             <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all">
+             <Button 
+                size="lg"
+                className="rounded-full shadow-lg"
+                onClick={handleCtaClick}
+             >
                 Speak to an expert
-             </a>
+             </Button>
           </FadeIn>
 
           <FadeIn direction="left">
@@ -496,9 +517,13 @@ const SectionOutcomes = () => (
                 <p className="c9-body text-slate-600 mb-10">
                    When connectivity is a given, your leadership team can stop worrying about outages and start focusing on scale.
                 </p>
-                <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all">
-                   Start with a consultation
-                </a>
+                 <Button 
+                    size="lg"
+                    className="rounded-full shadow-lg"
+                    onClick={handleCtaClick}
+                 >
+                    Start with a consultation
+                 </Button>
              </FadeIn>
 
              <FadeIn direction="left" className="grid grid-cols-1 gap-4">
@@ -535,12 +560,21 @@ const SectionFinalCTA = () => (
                 Stop accepting downtime as a cost of doing business. Partner with an accountable connectivity leader who owns the outcome.
              </p>
              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full h-16 px-12 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-[#5D00D6]/20">
-                   Book a Consultation
-                </a>
-                <a href="#consultation" className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white rounded-full h-16 px-12 font-bold text-[14px] hover:bg-white/10 transition-all backdrop-blur-sm">
-                   Speak to a Specialist
-                </a>
+                <Button 
+                  size="lg" 
+                  className="rounded-full shadow-xl"
+                  onClick={handleCtaClick}
+                >
+                  Schedule Consultation
+                </Button>
+                <Button 
+                  variant="outline"
+                  size="lg" 
+                  className="rounded-full border-white/20 text-white hover:bg-white/10"
+                  onClick={handleCtaClick}
+                >
+                  Speak to a Specialist
+                </Button>
              </div>
           </FadeIn>
        </div>
@@ -562,7 +596,7 @@ export default function TelcoPage() {
       <SectionOutcomes />
       <SectionFinalCTA />
 
-      <section id="consultation" className="pt-12 pb-24 bg-slate-50">
+      <section id="consultation-section" className="pt-12 pb-24 bg-slate-50">
         <WpConsultationForm 
           eyebrow="READY TO SECURE YOUR UPTIME?"
           title="Connectivity Audit & Strategy"
