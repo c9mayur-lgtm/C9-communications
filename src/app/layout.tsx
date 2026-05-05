@@ -11,6 +11,7 @@ import { AudienceProvider } from "@/components/context/AudienceContext";
 import { AudienceSwitcher } from "@/components/layout/AudienceSwitcher";
 import { NextStepStrip } from "@/components/layout/NextStepStrip";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -165,6 +166,7 @@ export default function RootLayout({
             <FloatingCEO />
             <CookieConsent />
             <Analytics />
+            <SpeedInsights />
           </InquiryProvider>
         </AudienceProvider>
       </body>
