@@ -3,6 +3,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import Image from 'next/image';
 
 export const WpHeroV2 = () => {
   return (
@@ -38,10 +39,13 @@ export const WpHeroV2 = () => {
 
             {/* Right side rectangular image */}
             <div className="hidden xl:block w-full h-[400px] lg:h-[500px] relative rounded-[16px] overflow-hidden shadow-2xl">
-              <img 
+              <Image 
                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2850" 
                  alt="Office Team" 
-                 className="absolute inset-0 w-full h-full object-cover"
+                 fill
+                 className="object-cover"
+                 priority
+                 sizes="(max-width: 1280px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/60 via-transparent to-transparent opacity-60" />
@@ -61,8 +65,13 @@ export const WpHeroV2 = () => {
                 "photo-1560250097-0b93528c311a",
                 "photo-1600486913747-55e5470d0d44"
               ].map((id, i) => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <img src={`https://images.unsplash.com/${id}?auto=format&fit=crop&q=80&w=100`} alt="user" className="w-full h-full object-cover" />
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden relative">
+                  <Image 
+                    src={`https://images.unsplash.com/${id}?auto=format&fit=crop&q=80&w=100`} 
+                    alt="user" 
+                    fill
+                    className="object-cover" 
+                  />
                 </div>
               ))}
             </div>

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, Store, Building2, Briefcase } from 'lucide-react';
 import { C9Button } from '@/components/design-system/C9Button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const slides = [
   {
@@ -75,13 +76,13 @@ export const HomeSlidingHero = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="absolute inset-0"
               >
-                <img
+                <Image
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full h-full object-cover"
-                  fetchPriority={current === 0 ? 'high' : 'auto'}
-                  loading={current === 0 ? 'eager' : 'lazy'}
-                  decoding={current === 0 ? 'sync' : 'async'}
+                  fill
+                  className="object-cover"
+                  priority={current === 0}
+                  sizes="(max-width: 1280px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-[#5D00D6]/5 mix-blend-overlay" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/10 to-transparent" />

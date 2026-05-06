@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon, AlertTriangle, Star, Clock, Utensils } from 'lucide-react';
+import Image from 'next/image';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
@@ -103,10 +104,13 @@ const Hero = () => (
         {/* Visual panel */}
         <FadeIn delay={0.12} className="relative h-full hidden lg:block">
           <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl">
-            <img 
+            <Image 
               src="/hospitality_restaurant_realism_1776419336049.png" 
               alt="Premium Restaurant Service" 
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1280px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/90 via-[#0c1024]/20 to-transparent flex items-end p-10">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 w-full">
