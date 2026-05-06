@@ -23,7 +23,7 @@ export default function Hero() {
                   Speak to Our Retail IT Specialist 
                 </Button>
               </Link>
-              <Link href="/about/case-studies" passHref>
+              <Link href="/case-studies" passHref>
                 <Button variant="outline" size="lg" className="w-full sm:w-auto border-gray-200 text-[#0c1024] font-bold h-14 px-8 rounded-full hover:bg-[#5D00D6] hover:text-white hover:border-[#5D00D6] bg-white transition-colors">
                   View Case Studies
                 </Button>

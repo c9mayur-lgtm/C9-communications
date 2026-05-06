@@ -226,7 +226,7 @@ function getResponse(query: string): ChatResponse {
   if (q.match(/case.study|case.studies|projects|success.story/)) {
     return { 
       text: "We've helped hundreds of businesses across Australia transform their IT. You can browse our case studies to see how we've solved complex challenges for clients in various industries.", 
-      links: [{ label: 'View Case Studies', href: '/about/case-studies' }]
+      links: [{ label: 'View Case Studies', href: '/case-studies' }]
     };
   }
   if (q.match(/faq|help|question/)) {

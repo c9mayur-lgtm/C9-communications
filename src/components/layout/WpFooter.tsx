@@ -34,7 +34,7 @@ export const WpFooter = () => {
                 <li><a href="/about/careers" className="!text-white hover:text-[#5D00D6] transition-colors block">Careers</a></li>
                 <li><a href="/about/partners" className="!text-white hover:text-[#5D00D6] transition-colors block">Partners & Certifications</a></li>
                 <li><a href="/accessibility-statement" className="!text-white hover:text-[#5D00D6] transition-colors block">Accessibility Statement</a></li>
-                <li><a href="/insights" className="!text-white hover:text-[#5D00D6] transition-colors block">Blog</a></li>
+                <li><a href="/insights" className="!text-white hover:text-[#5D00D6] transition-colors block">Industry Insights</a></li>
                 <li><a href="/case-studies" className="!text-white hover:text-[#5D00D6] transition-colors block">Case studies</a></li>
             </ul>
          </div>

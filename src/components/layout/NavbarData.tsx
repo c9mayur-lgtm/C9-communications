@@ -607,7 +607,7 @@ export const RESOURCES_MENU = {
           heading: 'Learning Center',
           items: [
             { icon: <Layout size={14} />,        label: 'Case Studies',              path: '/case-studies' },
-            { icon: <MessageSquare size={14} />, label: 'Blog',                      path: '/insights' },
+            { icon: <MessageSquare size={14} />, label: 'Industry Insights',      path: '/insights' },
             { icon: <Headphones size={14} />,    label: 'FAQ',                       path: '/support' },
             { icon: <Phone size={14} />,         label: 'Schedule a Consultation',   path: '#consultation-section' },
           ]
@@ -617,7 +617,7 @@ export const RESOURCES_MENU = {
   ],
   // challenges removed (Workplace Evolution)
   sidebar: {
-    heading: 'Industry Insights',
+    heading: 'Latest Industry Insights',
     hideCTA: true,
     items: [
       { icon: <Building2 size={18} />, title: 'Enterprise Governance',  desc: 'Multi-site infrastructure control models.', path: '/insights/ceo-security-governance' },

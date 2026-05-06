@@ -132,7 +132,7 @@ export const WpCaseStudies = ({
                      {cs.desc}
                    </p>
                    <a
-                     href={cs.href || '/about/case-studies'}
+                     href={cs.href || '/case-studies'}
                      className="flex items-center gap-2 text-[#5D00D6] text-[12px] font-bold uppercase tracking-[0.15em] hover:gap-3 transition-all whitespace-nowrap group/cta"
                    >
                       Read Full Article 

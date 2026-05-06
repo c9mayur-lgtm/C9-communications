@@ -13,12 +13,14 @@ export const metadata = {
   },
 }
 
+import IndustryInsightsSection from "@/components/sections/industries/IndustryInsightsSection"
+
 export default function IndustriesIndexPage() {
   return (
     <main className="min-h-screen bg-white">
       <IndustriesHero />
       <IndustryGrid />
-
+      <IndustryInsightsSection />
       <TrustProofSystem />
 
       <section id="consultation-section">
