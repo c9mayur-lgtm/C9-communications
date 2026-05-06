@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { CheckCircle, ShieldCheck, Zap, HelpCircle, Clock, Search, Handshake, Target, Monitor, Lock, Cloud, PhoneCall, Users, MessageSquare, AlertCircle, Server, Activity, Database, Shield, Globe, Cpu, FileCheck, ShieldAlert, BarChart3, RefreshCw, Network, Laptop, Layers, Share2, ClipboardCheck, Check } from 'lucide-react';
+import { ArrowRight, CheckCircle, ShieldCheck, Zap, HelpCircle, Clock, Search, Handshake, Target, Monitor, Lock, Cloud, PhoneCall, Users, MessageSquare, AlertCircle, Server, Activity, Database, Shield, Globe, Cpu, FileCheck, ShieldAlert, BarChart3, RefreshCw, Network, Laptop, Layers, Share2, ClipboardCheck, Check } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
