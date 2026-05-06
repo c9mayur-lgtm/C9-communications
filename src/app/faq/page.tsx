@@ -21,7 +21,7 @@ const FAQ_DATA = {
   'general': [
     {
       q: "What makes C9 Communications different from other providers?",
-      a: "Unlike traditional providers that only offer either IT or internet, C9 owns the entire technology stack. This means we provide your internet connection, manage your network, secure your endpoints, and run your helpdesk without ever pointing fingers at third-party vendors when something goes wrong."
+      a: "Unlike traditional providers that only offer either IT or internet, C9 owns the entire technology stack. We provide your internet connection, manage your network, secure your endpoints, and run your helpdesk without ever pointing fingers at third-party vendors when something goes wrong."
     },
     {
       q: "Where is your support team located?",
@@ -29,57 +29,85 @@ const FAQ_DATA = {
     },
     {
       q: "Do you only work with large enterprises?",
-      a: "No. While we provide enterprise-grade infrastructure, our solutions are highly scalable and tailored to support small-to-medium businesses (SMBs), growing mid-market firms, and large multi-site corporations."
+      a: "No. While we provide enterprise-grade infrastructure, our solutions are highly scalable and tailored to support small-to-medium businesses (SMBs), growing mid-market firms, and large multi-site corporations across various industries."
     },
     {
       q: "How fast are your response times?",
       a: "Our response times are governed by strict, contractually-backed Service Level Agreements (SLAs). For P1 (Critical) events such as a total site outage, we guarantee a 15-minute response time with immediate Level 3 engineering assignment."
+    },
+    {
+      q: "Do you offer fixed-fee agreements?",
+      a: "Yes. Our managed service agreements operate on predictable, flat-fee monthly models. This allows you to forecast your technology spend accurately without unexpected spikes for standard support requests."
+    },
+    {
+      q: "Which industries do you specialise in?",
+      a: "We have deep expertise across several key sectors, including Retail, Hospitality, Healthcare, Non-Profit, Professional Services, Real Estate, and Education. We tailor our compliance and operational models to suit the specific regulatory needs of each."
     }
   ],
   'managed-it': [
     {
       q: "What does 'Fully Managed IT' actually include?",
-      a: "Fully managed IT covers your entire operational technology environment. This includes unlimited helpdesk support for your staff, proactive 24/7 server and network monitoring, routine patching, hardware lifecycle management, and strategic IT roadmap planning."
+      a: "Fully managed IT covers your entire operational technology environment. This includes unlimited helpdesk support, proactive 24/7 server and network monitoring, routine patching, hardware lifecycle management, and strategic IT roadmap planning."
     },
     {
       q: "Can you co-manage IT with our internal team?",
-      a: "Yes. Our Co-Managed IT model is designed for businesses with internal IT staff who need additional support. We can take over the mundane tier-1 helpdesk tasks, or provide high-level escalation support and infrastructure monitoring so your internal team can focus on strategic projects."
+      a: "Yes. Our Co-Managed IT model is designed for businesses with internal IT staff who need additional support. We can take over mundane tier-1 helpdesk tasks, or provide high-level escalation support and infrastructure monitoring so your internal team can focus on strategic projects."
+    },
+    {
+      q: "Do you provide Virtual CIO (vCIO) services?",
+      a: "Absolutely. As part of our Strategy Consulting, we provide vCIO services to align your technology investments with your business goals, offering technology roadmaps, budget planning, and board-level reporting."
     },
     {
       q: "Do you support both Windows and Mac environments?",
-      a: "Absolutely. Our engineers are certified and experienced in managing and securing mixed environments, including Windows, macOS, and Linux endpoints, via enterprise mobile device management (MDM) platforms."
+      a: "Yes. Our engineers are certified and experienced in managing and securing mixed environments, including Windows, macOS, and Linux endpoints, via enterprise mobile device management (MDM) platforms."
     },
     {
       q: "How do you handle onboarding a new client?",
-      a: "We have a structured, zero-downtime onboarding framework. It starts with a comprehensive discovery audit to document your entire environment, followed by deploying our management agents, securing credentials, and training your team on how to access support."
+      a: "We use a structured, zero-downtime onboarding framework. It starts with a comprehensive discovery audit to document your entire environment, followed by deploying our management agents, securing credentials, and training your team."
+    },
+    {
+      q: "Do you offer Backup and Disaster Recovery?",
+      a: "Yes. We implement robust Business Continuity and Disaster Recovery (BCDR) solutions. This includes immutable, air-gapped backups, off-site replication, and regular recovery testing to ensure minimal RPO (Recovery Point Objective) and RTO (Recovery Time Objective)."
     }
   ],
   'telco': [
     {
       q: "What type of internet connections do you provide?",
-      a: "We provide true business-grade connectivity, including Business NBN (TC4 and TC2), Enterprise Ethernet (EE), Dedicated Fibre (up to 10Gbps), and 4G/5G failover solutions, all managed entirely by our network operations center."
+      a: "We provide true business-grade connectivity, including Business NBN (TC4 and TC2), Enterprise Ethernet (EE), Dedicated Fibre (up to 10Gbps), and 4G/5G failover solutions."
     },
     {
       q: "How do you guarantee internet uptime?",
-      a: "We design highly resilient architectures using active/passive or active/active failover. If your primary fibre connection goes down, your network will automatically failover to a secondary NBN or 5G connection without dropping active sessions, guaranteeing up to 99.95% uptime."
-    },
-    {
-      q: "Can you replace our old PABX phone system?",
-      a: "Yes. We specialize in migrating legacy on-premise PABX systems to modern Cloud Hosted PBX and Microsoft Teams Calling solutions, which are significantly cheaper to run and provide advanced features like call routing and mobile apps."
+      a: "We design highly resilient architectures using active/passive or active/active failover. If your primary fibre connection goes down, your network will automatically failover to a secondary connection without dropping active sessions, guaranteeing up to 99.95% uptime."
     },
     {
       q: "What is SD-WAN and do I need it?",
-      a: "SD-WAN (Software-Defined Wide Area Network) intelligently routes traffic across multiple internet links to prioritize critical applications (like voice or video) over general browsing. If you have multiple office locations or rely heavily on cloud apps, SD-WAN is essential for performance and reliability."
+      a: "SD-WAN (Software-Defined Wide Area Network) intelligently routes traffic across multiple internet links to prioritize critical applications. If you have multiple office locations or rely heavily on cloud apps, SD-WAN is essential for performance and reliability."
+    },
+    {
+      q: "Can you replace our old PABX phone system?",
+      a: "Yes. We specialize in migrating legacy on-premise PABX systems to modern Cloud Hosted PBX and Microsoft Teams Calling solutions, which are significantly cheaper to run and provide advanced routing features."
+    },
+    {
+      q: "Do you provide hardware like routers and switches?",
+      a: "Yes. We supply, configure, and fully manage enterprise-grade network hardware including routers, switches, wireless access points (Wi-Fi), VoIP handsets, and professional headsets."
+    },
+    {
+      q: "Do you offer mobile phone plans?",
+      a: "Yes, we offer business mobile plans that leverage the full Telstra Wholesale and Optus networks. We manage the fleet provisioning, SIM dispatch, and data pooling for your entire workforce."
+    },
+    {
+      q: "Can you set up a contact centre for my business?",
+      a: "Absolutely. We deploy advanced omnichannel Contact Centre solutions (CCaaS) integrating voice, email, chat, and CRM systems, complete with advanced analytics and call recording."
     }
   ],
   'security': [
     {
       q: "Are your security services aligned with the Essential Eight?",
-      a: "Yes. We map our security implementations and compliance reporting directly to the Australian Cyber Security Centre's (ACSC) Essential Eight maturity models, ensuring your business meets recognized national security standards."
+      a: "Yes. We map our security implementations directly to the Australian Cyber Security Centre's (ACSC) Essential Eight maturity models, ensuring your business meets recognized national security standards."
     },
     {
       q: "What is the difference between Antivirus and EDR?",
-      a: "Traditional antivirus relies on known signatures to block threats, which is ineffective against new or zero-day attacks. Endpoint Detection and Response (EDR) uses behavioral analysis and AI to detect abnormal activity, allowing us to isolate and kill active threats in real-time."
+      a: "Traditional antivirus relies on known signatures to block threats. Endpoint Detection and Response (EDR) uses behavioral analysis and AI to detect abnormal activity, allowing us to isolate and kill active threats in real-time."
     },
     {
       q: "Do you provide Security Operations Center (SOC) services?",
@@ -87,7 +115,11 @@ const FAQ_DATA = {
     },
     {
       q: "How do you protect against ransomware?",
-      a: "We use a multi-layered defense-in-depth strategy. This includes advanced EDR, DNS filtering, strict application control, multi-factor authentication (MFA), and immutable, air-gapped backups that cannot be deleted or encrypted by ransomware."
+      a: "We use a multi-layered defense-in-depth strategy. This includes advanced EDR, DNS filtering, strict application control, MFA, and immutable backups that cannot be encrypted by ransomware."
+    },
+    {
+      q: "Do you offer Penetration Testing?",
+      a: "Yes. We conduct comprehensive vulnerability assessments and ethical penetration testing to identify weaknesses in your external and internal networks before malicious actors can exploit them."
     }
   ],
   'workplace': [
@@ -97,11 +129,27 @@ const FAQ_DATA = {
     },
     {
       q: "How do you manage company data on employee mobile phones?",
-      a: "We deploy Mobile Device Management (MDM) via Microsoft Intune. This allows us to separate company data from personal data on employee devices. If a device is lost or an employee leaves, we can remotely wipe only the corporate data without touching their personal photos or apps."
+      a: "We deploy Mobile Device Management (MDM) via Microsoft Intune. This allows us to separate company data from personal data. If a device is lost, we can remotely wipe only the corporate data."
     },
     {
       q: "Do Microsoft 365 and Google Workspace backup their own data?",
-      a: "No. Microsoft and Google operate on a 'Shared Responsibility Model'. They guarantee the infrastructure uptime, but you are responsible for your data. We provide third-party SaaS backup solutions that automatically backup your emails, SharePoint, and OneDrive multiple times a day."
+      a: "No. Microsoft and Google operate on a 'Shared Responsibility Model'. They guarantee infrastructure uptime, but you are responsible for your data. We provide third-party SaaS backup solutions to secure your emails and files."
+    },
+    {
+      q: "Do you supply and install meeting room technology?",
+      a: "Yes. We design and install comprehensive Microsoft Teams Rooms and Zoom Rooms, providing high-fidelity audio, 4K video, and one-touch join capabilities for modern hybrid meetings."
+    },
+    {
+      q: "What is Visitor Management?",
+      a: "We implement digital visitor management systems (like Sign In App) to modernize your reception area. It allows guests to sign in via iPad, prints badges, notifies hosts via Teams, and maintains digital evacuation registers."
+    },
+    {
+      q: "Do you provide CCTV and surveillance?",
+      a: "Yes. We deploy enterprise IP CCTV systems with AI-driven analytics, such as people counting, license plate recognition, and advanced motion detection, fully integrated into your IT network."
+    },
+    {
+      q: "Can you manage our office printers?",
+      a: "Yes. We offer Managed Print Services (MPS), providing enterprise-grade multi-function devices, automated toner replenishment, and secure 'follow-me' printing to reduce waste and protect sensitive documents."
     }
   ]
 };
