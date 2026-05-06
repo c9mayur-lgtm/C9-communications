@@ -66,6 +66,7 @@ export default function Homepage() {
               <a
                 key={i}
                 href={pillar.href}
+                aria-label={`Explore our ${pillar.label} solutions`}
                 className={`group relative rounded-[28px] p-8 md:p-10 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 flex flex-col min-h-[240px] border ${
                   pillar.isLight
                     ? 'bg-white border-slate-200 hover:border-[#5D00D6]/30'
@@ -80,11 +81,11 @@ export default function Homepage() {
                   }}
                 />
                 <div className="relative z-10 flex flex-col h-full">
-                  <span className={`text-[10px] font-bold uppercase tracking-widest mb-4 ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white/60'}`}>{pillar.pill}</span>
+                  <span className={`text-[10px] font-bold uppercase tracking-widest mb-4 ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white/80'}`}>{pillar.pill}</span>
                   <h3 className={`text-[22px] md:text-[26px] font-bold leading-tight mb-3 ${pillar.isLight ? 'text-slate-900' : 'text-white'}`}>{pillar.label}</h3>
-                  <p className={`text-[14px] leading-relaxed flex-1 ${pillar.isLight ? 'text-slate-500' : 'text-white/70'}`}>{pillar.desc}</p>
+                  <p className={`text-[14px] leading-relaxed flex-1 ${pillar.isLight ? 'text-slate-700' : 'text-white/80'}`}>{pillar.desc}</p>
                   <div className={`mt-auto pt-6 flex items-center gap-2 font-bold text-[14px] group-hover:gap-3 transition-all ${pillar.isLight ? 'text-[#5D00D6]' : 'text-white'}`}>
-                    Explore {pillar.pill} <ArrowRight className="size-4" />
+                    Explore {pillar.pill} <ArrowRight className="size-4" aria-hidden="true" />
                   </div>
                 </div>
               </a>
@@ -165,7 +166,7 @@ export default function Homepage() {
       {/* 10. POSITIONING — Site-wide final statement */}
       <section className="py-20 bg-[#0c1024] text-white">
         <div className="container mx-auto px-8 max-w-[1240px] text-center">
-          <p className="c9-body !text-white/80 max-w-4xl mx-auto text-xl md:text-2xl leading-relaxed">
+          <p className="c9-body !text-white/95 max-w-4xl mx-auto text-xl md:text-2xl leading-relaxed">
             C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations, SLA-driven support, and proven large-scale deployments.
           </p>
         </div>

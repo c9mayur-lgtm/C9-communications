@@ -9,8 +9,8 @@ export const ease = [0.22, 1, 0.36, 1] as const;
 export const P = '#5D00D6';
 export const PL = '#F4F0FA';
 export const T = '#0c1024';
-export const TM = 'rgba(12,16,36,0.55)';
-export const TM2 = 'rgba(12,16,36,0.78)';
+export const TM = 'rgba(12,16,36,0.7)';
+export const TM2 = 'rgba(12,16,36,0.85)';
 export const BD = 'rgba(93,0,214,0.12)';
 
 export const FadeUp = ({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) => (

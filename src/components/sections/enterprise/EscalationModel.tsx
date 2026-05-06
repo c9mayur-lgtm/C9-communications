@@ -69,12 +69,12 @@ export default function EscalationModel() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-lg p-10 transition-all duration-500 h-full">
+                <div className="bg-white rounded-none p-10 transition-all duration-500 h-full">
                   <div className="flex items-center justify-between mb-8">
-                    <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 text-[#5D00D6] flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
-                      <step.icon size={28} strokeWidth={1.5} />
+                    <div className="w-14 h-14 rounded-none bg-[#5D00D6]/5 text-[#5D00D6] flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
+                      <step.icon size={28} strokeWidth={1.5} aria-hidden="true" />
                     </div>
-                    <span className="c9-eyebrow !text-slate-300 !text-[9px] bg-slate-50 px-3 py-1.5 rounded-full group-hover:!text-[#5D00D6] group-hover:bg-[#5D00D6]/5 transition-colors">
+                    <span className="c9-eyebrow !text-slate-800 !text-[9px] bg-slate-50 px-3 py-1.5 rounded-none group-hover:!text-[#5D00D6] group-hover:bg-[#5D00D6]/5 transition-colors">
                       {step.time}
                     </span>
                   </div>
@@ -83,7 +83,7 @@ export default function EscalationModel() {
                     {step.title}
                   </h3>
                   
-                  <p className="c9-body !text-sm">
+                  <p className="c9-body !text-sm text-slate-800">
                     {step.desc}
                   </p>
                 </div>
@@ -94,7 +94,7 @@ export default function EscalationModel() {
 
         {/* Leadership Credibility Strip */}
         <FadeIn delay={0.4}>
-          <div className="mt-20 lg:mt-32 p-10 lg:p-14 bg-[#0c1024] rounded-lg text-white relative overflow-hidden">
+          <div className="mt-20 lg:mt-32 p-10 lg:p-14 bg-[#0c1024] rounded-none text-white relative overflow-hidden border border-white/5 shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-r from-[#5D00D6]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
               <div className="flex -space-x-4">
@@ -107,24 +107,24 @@ export default function EscalationModel() {
                     />
                   </div>
                 ))}
-                <div className="w-16 h-16 rounded-full border-4 border-[#0c1024] bg-[#5D00D6] flex items-center justify-center text-[11px] font-bold tracking-tighter">
+                <div className="w-16 h-16 rounded-full border-4 border-[#0c1024] bg-[#5D00D6] flex items-center justify-center text-[11px] font-black tracking-tighter">
                   +12 Leads
                 </div>
               </div>
               <div className="text-center lg:text-left flex-1">
                 <h3 className="c9-card-title !text-white !text-2xl mb-3">Technical Leadership Oversight</h3>
-                <p className="c9-body !text-white/50">
+                <p className="c9-body !text-white/95">
                   Every enterprise client is assigned a Technical Account Lead with over 15 years of infrastructure experience. Strategic decisions are never delegated to juniors.
                 </p>
               </div>
               <div className="flex gap-4">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center min-w-[120px]">
+                <div className="bg-white/5 border border-white/10 rounded-none p-5 text-center min-w-[120px]">
                   <div className="text-[20px] font-black text-white mb-0.5">15+ yrs</div>
-                  <div className="c9-eyebrow !text-white/40 !text-[8px]">Avg Experience</div>
+                  <div className="c9-eyebrow !text-white/95 !text-[8px]">Avg Experience</div>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center min-w-[120px]">
+                <div className="bg-white/5 border border-white/10 rounded-none p-5 text-center min-w-[120px]">
                   <div className="text-[20px] font-black text-[#a56eff] mb-0.5">Direct</div>
-                  <div className="c9-eyebrow !text-white/40 !text-[8px]">Lead Access</div>
+                  <div className="c9-eyebrow !text-white/95 !text-[8px]">Lead Access</div>
                 </div>
               </div>
             </div>

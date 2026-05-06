@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-;
+import { C9Button } from '@/components/design-system/C9Button';
+import Image from 'next/image';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS (Copied for self-containment)
@@ -144,7 +145,7 @@ export const SectionSolutionsPills = ({ audience }: SectionSolutionsPillsProps) 
           <h2 className="c9-section-heading mb-6">
             {content.title}
           </h2>
-          <p className="c9-body max-w-2xl mx-auto">
+          <p className="c9-body max-w-2xl mx-auto text-slate-700">
             {content.subtitle}
           </p>
         </FadeIn>
@@ -156,10 +157,12 @@ export const SectionSolutionsPills = ({ audience }: SectionSolutionsPillsProps) 
               <button
                 key={tab.name}
                 onClick={() => setActiveTab(tab.name)}
+                aria-pressed={activeTab === tab.name}
+                aria-label={`Show ${tab.name} solutions`}
                 className={`px-8 py-3 rounded-full font-bold text-[14px] transition-all duration-300 border-2 ${
                   activeTab === tab.name
                     ? 'bg-[#5D00D6] border-[#5D00D6] text-white shadow-xl shadow-purple-900/20'
-                    : 'bg-white border-slate-100 text-slate-500 hover:border-[#5D00D6]/30 hover:text-[#5D00D6]'
+                    : 'bg-white border-slate-100 text-slate-700 hover:border-[#5D00D6]/30 hover:text-[#5D00D6]'
                 }`}
               >
                 {tab.name}
@@ -183,30 +186,35 @@ export const SectionSolutionsPills = ({ audience }: SectionSolutionsPillsProps) 
             >
               {/* Persona Content */}
               <div className="text-center mb-8 max-w-3xl mx-auto">
-                <p className="c9-body text-slate-600">
+                <p className="c9-body text-slate-700">
                   {tab.desc}
                 </p>
               </div>
 
-              {/* Image without padding */}
-              <div className="w-full">
-                <img
+              {/* Image Container */}
+              <div className="w-full relative aspect-[16/7] overflow-hidden rounded-2xl shadow-xl">
+                <Image
                   src={tab.img}
-                  alt={tab.name}
-                  className="w-full h-auto block"
+                  alt={`${tab.name} capability visual`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 1024px"
                 />
               </div>
               
               {/* Related CTA */}
-              <div className="mt-8">
+              <div className="mt-10">
                 <FadeIn delay={0.2} direction="none">
-                  <a
-                    href={tab.path}
-                    className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-12 px-8 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-lg shadow-purple-900/20"
+                  <C9Button
+                    variant="primary"
+                    size="lg"
+                    className="rounded-full"
+                    onClick={() => {
+                      window.location.href = tab.path;
+                    }}
                   >
                     Explore {tab.name} Solutions
-                    
-                  </a>
+                  </C9Button>
                 </FadeIn>
               </div>
             </motion.div>

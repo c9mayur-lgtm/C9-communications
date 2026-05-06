@@ -80,7 +80,7 @@ export default function IndustryGrid() {
           <h2 className="c9-section-heading mb-6 max-w-2xl mx-auto">
             Built for the Industries We Know Best
           </h2>
-          <p className="c9-body text-slate-600 max-w-xl mx-auto">
+          <p className="c9-body text-slate-700 max-w-xl mx-auto">
             We support businesses across multiple industries — from multi-site retail and healthcare
             environments to professional services and real estate. We focus on reliable, scalable
             systems that reduce complexity and support day-to-day operations.
@@ -104,7 +104,7 @@ export default function IndustryGrid() {
                 <h3 className="text-[20px] font-bold text-slate-900 mb-3 leading-tight">
                   {industry.title}
                 </h3>
-                <p className="text-[14px] text-slate-500 leading-relaxed flex-1 mb-6">
+                <p className="text-[14px] text-slate-600 leading-relaxed flex-1 mb-6">
                   {industry.desc}
                 </p>
 

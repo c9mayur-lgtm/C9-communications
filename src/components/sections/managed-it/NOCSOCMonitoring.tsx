@@ -71,8 +71,8 @@ export default function NOCSOCMonitoring() {
                  { title: 'Threat Containment', icon: ShieldCheck }
                ].map((item, i) => (
                  <div key={i} className="flex items-center gap-4">
-                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#a56eff] group-hover:bg-[#a56eff] group-hover:text-white transition-all duration-300">
-                     <item.icon size={20} />
+                   <div className="w-10 h-10 border border-white/10 flex items-center justify-center text-[#a56eff] group-hover:bg-[#a56eff] group-hover:text-white transition-all duration-300">
+                     <item.icon size={20} aria-hidden="true" />
                    </div>
                    <span className="text-[15px] font-bold text-white/80">{item.title}</span>
                  </div>
@@ -82,38 +82,38 @@ export default function NOCSOCMonitoring() {
 
           <FadeIn delay={0.2} className="relative">
             {/* Visual Representation of NOC/SOC */}
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-10 lg:p-16 relative overflow-hidden">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-none p-10 lg:p-16 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/10 blur-3xl rounded-full" />
               
               <div className="relative z-10 space-y-12">
                 <div className="flex items-center justify-between">
                    <h3 className="c9-card-title !text-white">Live Operations State</h3>
-                   <span className="c9-eyebrow !text-emerald-400 bg-emerald-500/10 !text-[9px] px-3 py-1 rounded-full border border-emerald-500/20">
+                   <span className="c9-eyebrow !text-emerald-400 bg-emerald-500/10 !text-[9px] px-3 py-1 rounded-none border border-emerald-500/20">
                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse inline-block mr-1.5" /> NOC Active
                    </span>
                 </div>
 
                 <div className="space-y-6">
-                  {[
-                    { label: 'Ingested Logs / Sec', val: '4,850', color: 'text-[#a56eff]' },
-                    { label: 'Active RMM Agents', val: '12,402', color: 'text-[#a56eff]' },
-                    { label: 'Threats Blocked (24h)', val: '1,240', color: 'text-rose-400' }
-                  ].map((stat, i) => (
-                    <div key={i} className="pb-6 border-b border-white/10 last:border-0">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="c9-eyebrow !text-white/60 !text-[9px]">{stat.label}</span>
-                        <span className={`text-[18px] font-black ${stat.color}`}>{stat.val}</span>
-                      </div>
-                      <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
-                        <motion.div 
-                          initial={{ width: 0 }}
-                          whileInView={{ width: '70%' }}
-                          transition={{ duration: 1, delay: 0.5 + i * 0.1 }}
-                          className={`h-full ${stat.color.includes('rose') ? 'bg-rose-400' : 'bg-[#5D00D6]'}`}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                    { [
+                        { label: 'Ingested Logs / Sec', val: '4,850', color: 'text-[#a56eff]' },
+                        { label: 'Active RMM Agents', val: '12,402', color: 'text-[#a56eff]' },
+                        { label: 'Threats Blocked (24h)', val: '1,240', color: 'text-rose-400' }
+                      ].map((stat, i) => (
+                        <div key={i} className="pb-6 border-b border-white/10 last:border-0">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="c9-eyebrow !text-white/95 !text-[9px]">{stat.label}</span>
+                            <span className={`text-[18px] font-black ${stat.color}`}>{stat.val}</span>
+                          </div>
+                          <div className="w-full h-1.5 bg-white/5 rounded-none overflow-hidden">
+                            <motion.div 
+                              initial={{ width: 0 }}
+                              whileInView={{ width: '70%' }}
+                              transition={{ duration: 1, delay: 0.5 + i * 0.1 }}
+                              className={`h-full ${stat.color.includes('rose') ? 'bg-rose-400' : 'bg-[#5D00D6]'}`}
+                            />
+                          </div>
+                        </div>
+                      ))}
                 </div>
               </div>
             </div>
@@ -123,9 +123,9 @@ export default function NOCSOCMonitoring() {
         <div className="grid lg:grid-cols-3 gap-8">
           {capabilities.map((c, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <div className="bg-white/5 border border-white/10 rounded-lg p-10 h-full hover:bg-white/10 transition-all duration-500">
-                <div className="w-16 h-16 rounded-2xl bg-[#a56eff]/10 text-[#a56eff] flex items-center justify-center mb-10 group-hover:scale-110 duration-500">
-                  <c.icon size={32} strokeWidth={1.5} />
+               <div className="bg-white/5 border border-white/10 rounded-none p-10 h-full hover:bg-white/10 transition-all duration-500">
+                <div className="w-16 h-16 rounded-none bg-[#a56eff]/10 text-[#a56eff] flex items-center justify-center mb-10 group-hover:scale-110 duration-500">
+                  <c.icon size={32} strokeWidth={1.5} aria-hidden="true" />
                 </div>
                 <span className="c9-eyebrow !text-[#a56eff] mb-3">
                   {c.tag}
@@ -133,7 +133,7 @@ export default function NOCSOCMonitoring() {
                 <h3 className="c9-card-title !text-white mb-6">
                   {c.title}
                 </h3>
-                <p className="c9-body !text-white/70">
+                <p className="c9-body !text-white/95">
                   {c.desc}
                 </p>
               </div>

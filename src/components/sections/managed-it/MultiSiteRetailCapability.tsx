@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Store, ShoppingCart, Globe, Wifi, CheckCircle, Zap, Layers, Cpu } from 'lucide-react';
+import { C9Button } from '@/components/design-system/C9Button';
 
 
 
@@ -57,7 +58,7 @@ export default function MultiSiteRetailCapability() {
             <h2 className="c9-section-heading mb-8">
               Multi-Site <span className="text-[#5D00D6]">Retail Operations.</span>
             </h2>
-            <p className="c9-body">
+            <p className="c9-body text-slate-800">
               Retail environments require a specific operational posture. We manage thousands of endpoints across national retail estates, ensuring POS uptime and site consistency at scale.
             </p>
           </FadeIn>
@@ -67,17 +68,17 @@ export default function MultiSiteRetailCapability() {
           <div className="grid sm:grid-cols-2 gap-6">
             {features.map((f, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-slate-50 rounded-lg p-8 border border-slate-100 hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all duration-500 h-full">
-                  <div className="w-12 h-12 rounded-2xl bg-white text-[#5D00D6] flex items-center justify-center mb-8 group-hover:bg-[#5D00D6] group-hover:text-white shadow-sm transition-all duration-500">
-                    <f.icon size={24} strokeWidth={2} />
+                <div className="bg-slate-50 rounded-none p-8 border border-slate-100 hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all duration-500 h-full">
+                  <div className="w-12 h-12 rounded-none bg-white text-[#5D00D6] flex items-center justify-center mb-8 group-hover:bg-[#5D00D6] group-hover:text-white shadow-sm transition-all duration-500">
+                    <f.icon size={24} strokeWidth={2} aria-hidden="true" />
                   </div>
-                  <span className="c9-eyebrow !text-slate-400 !text-[9px] mb-3">
+                  <span className="c9-eyebrow !text-slate-800 !text-[9px] mb-3">
                     {f.tag}
                   </span>
                   <h3 className="c9-card-title mb-4">
                     {f.title}
                   </h3>
-                  <p className="c9-body !text-sm">
+                  <p className="c9-body !text-sm text-slate-800">
                     {f.desc}
                   </p>
                 </div>
@@ -86,13 +87,13 @@ export default function MultiSiteRetailCapability() {
           </div>
 
           <FadeIn delay={0.3}>
-            <div className="bg-[#0c1024] rounded-lg p-10 lg:p-16 text-white relative overflow-hidden shadow-2xl shadow-purple-900/10">
+            <div className="bg-[#0c1024] rounded-none p-10 lg:p-16 text-white relative overflow-hidden shadow-2xl shadow-purple-900/10 border border-white/5">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/20 blur-3xl rounded-full" />
               
               <div className="relative z-10">
-                <Store size={48} className="text-[#a56eff] mb-8" />
+                <Store size={48} className="text-[#a56eff] mb-8" aria-hidden="true" />
                 <h3 className="c9-card-title !text-white !text-2xl mb-8">Retail Infrastructure Audit</h3>
-                <p className="c9-body !text-white/70 mb-10">
+                <p className="c9-body !text-white/95 mb-10">
                   Our audit protocol for retail estates identifies single points of failure in store connectivity, POS hardware vulnerabilities, and SD-WAN optimisation gaps.
                 </p>
                 
@@ -105,18 +106,20 @@ export default function MultiSiteRetailCapability() {
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-4">
                       <div className="w-2 h-2 rounded-full bg-[#a56eff]" />
-                      <span className="text-[15px] font-bold text-white/90">{item}</span>
+                      <span className="text-[15px] font-bold text-white/95">{item}</span>
                     </div>
                   ))}
                 </div>
 
-                <a 
-                  href="#consultation-section" 
-                  className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl h-14 px-8 text-[15px] font-bold"
+                <C9Button
+                  size="lg"
+                  className="rounded-none shadow-xl"
+                  onClick={() => {
+                    document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   Request Retail Briefing
-                  
-                </a>
+                </C9Button>
               </div>
             </div>
           </FadeIn>

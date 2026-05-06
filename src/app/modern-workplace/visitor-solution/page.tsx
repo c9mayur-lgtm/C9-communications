@@ -10,7 +10,7 @@ import {
   FAQSection,
   FullStackSection
 } from '../components';
-import { Button } from '@/components/ui/button';
+import { C9Button } from '@/components/design-system/C9Button';
 import { handleCtaClick } from '@/lib/utils';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { Scan, ShieldCheck, UserPlus, History, Smartphone, Bell, CheckCircle2, ShieldAlert, Target, Users as UsersIcon, Shield, UserCheck } from 'lucide-react';
@@ -70,44 +70,48 @@ export default function VisitorSolutionPage() {
                   Visitor Governance. <br />
                   <span className="text-[#5D00D6]">Lobby Automation.</span>
                 </h1>
-                <p className="c9-body text-slate-600 mb-10 text-xl max-w-2xl leading-relaxed">
+                <p className="c9-body text-slate-700 mb-10 text-xl max-w-2xl leading-relaxed">
                   First impressions are critical. C9 delivers a high-authority visitor experience with automated sign-ins, digital NDAs, and instant host notifications—ensuring 100% compliance from the moment they enter.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Button 
+                  <C9Button 
                     size="lg" 
                     className="rounded-full shadow-xl"
                     onClick={handleCtaClick}
                   >
                     Schedule Consultation 
-                  </Button>
-                  <Button 
+                  </C9Button>
+                  <C9Button 
                     variant="outline"
                     size="lg"
                     className="rounded-full border-black/10 text-[#0c1024] hover:bg-black/5"
                     onClick={handleCtaClick}
                   >
                     View Hardware Options
-                  </Button>
+                  </C9Button>
                 </div>
                 <div className="flex items-center gap-6">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">AU Hosted Infrastructure</span>
+                    <span className="text-slate-600 text-[11px] font-bold uppercase tracking-widest">AU Hosted Infrastructure</span>
                   </div>
                   <div className="h-4 w-px bg-black/10" />
-                  <div className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Instant Host Alerts</div>
+                  <div className="text-slate-600 text-[11px] font-bold uppercase tracking-widest">Instant Host Alerts</div>
                 </div>
               </FadeUp>
             </div>
             
             <div className="relative">
               <ScaleIn>
-                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50">
-                  <img 
+                <div className="relative z-10 rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-black/5 bg-gray-50 aspect-[4/3]">
+                  <Image 
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
                     alt="Premium Visitor Management Kiosk"
-                    className="w-full h-full object-cover aspect-[4/3]"
+                    fill
+                    className="object-cover"
+                    priority
+                    fetchPriority="high"
+                    sizes="(max-width: 1280px) 100vw, 50vw"
                   />
                 </div>
                 <div className="absolute -top-12 -right-12 w-64 h-64 bg-purple-100 rounded-full blur-3xl -z-10 opacity-60" />
@@ -126,8 +130,8 @@ export default function VisitorSolutionPage() {
             {METRICS.map((m, i) => (
               <FadeUp key={m.label} delay={i * 0.1} className="text-center md:text-left">
                 <div className="text-[32px] md:text-[42px] font-bold leading-none tracking-tight mb-3 text-[#5D00D6]">{m.value}</div>
-                <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400">{m.label}</div>
-                <p className="text-[12px] text-gray-400 font-medium mt-1">{m.desc}</p>
+                <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500">{m.label}</div>
+                <p className="text-[12px] text-slate-600 font-medium mt-1">{m.desc}</p>
               </FadeUp>
             ))}
           </div>
@@ -145,7 +149,7 @@ export default function VisitorSolutionPage() {
                     <item.icon size={28} />
                   </div>
                   <h3 className="text-[22px] font-bold mb-4 tracking-tight">{item.title}</h3>
-                  <p className="text-gray-500 leading-relaxed text-[15px] font-medium">{item.description}</p>
+                  <p className="text-slate-700 leading-relaxed text-[15px] font-medium">{item.description}</p>
                 </div>
               </ScaleIn>
             ))}
@@ -229,7 +233,7 @@ export default function VisitorSolutionPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="c9-section-heading mb-8 font-proxima tracking-tight font-bold leading-tight">More than a check-in. <br /><span className="text-[#5D00D6]">Physical Data Intelligence.</span></h2>
-              <p className="text-[18px] text-gray-500 mb-12 leading-relaxed font-medium">
+              <p className="text-[18px] text-slate-700 mb-12 leading-relaxed font-medium">
                 C9 Visitor Solution provides real-time analytics into visitor frequency, duration, and intent, allowing you to optimize your lobby operations and security protocols.
               </p>
               
@@ -245,7 +249,7 @@ export default function VisitorSolutionPage() {
                     </div>
                     <div>
                       <h4 className="font-bold text-[#0C1024] mb-1">{item.t}</h4>
-                      <p className="text-gray-500 text-[14px]">{item.d}</p>
+                      <p className="text-slate-600 text-[14px]">{item.d}</p>
                     </div>
                   </div>
                 ))}
@@ -284,7 +288,7 @@ export default function VisitorSolutionPage() {
               <h2 className="c9-section-heading mb-8 font-proxima tracking-tight font-bold leading-tight text-[#0C1024]">
                 The First Impression <br /><span className="text-[#5D00D6]">Your Lobby Deserves.</span>
               </h2>
-              <p className="text-[18px] text-gray-500 mb-8 leading-relaxed font-medium">
+              <p className="text-[18px] text-slate-700 mb-8 leading-relaxed font-medium">
                 C9 Visitor Management isn&apos;t just about check-ins; it&apos;s about creating a premium, secure gateway to your workplace. Our sleek kiosk interfaces reflect your brand authority while ensuring every entry is documented and compliant.
               </p>
               <div className="space-y-4">
@@ -302,11 +306,13 @@ export default function VisitorSolutionPage() {
               </div>
             </FadeUp>
             <ScaleIn delay={0.2}>
-              <div className="rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-gray-100">
-                <img 
+              <div className="rounded-[40px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border border-gray-100 relative aspect-video">
+                <Image 
                   src="/modern_workplace_visitor_management_kiosk_1777367997443.png" 
                   alt="Visitor Management Kiosk" 
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1280px) 100vw, 50vw"
                 />
               </div>
             </ScaleIn>
@@ -328,9 +334,9 @@ export default function VisitorSolutionPage() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-gray-50">
-                  <th className="p-8 text-[12px] font-bold uppercase tracking-widest text-gray-400">Governance Layer</th>
-                  <th className="p-8 text-[12px] font-bold uppercase tracking-widest text-gray-400">Managed Protocol</th>
-                  <th className="p-8 text-[12px] font-bold uppercase tracking-widest text-gray-400">Operational Outcome</th>
+                  <th className="p-8 text-[12px] font-bold uppercase tracking-widest text-slate-600">Governance Layer</th>
+                  <th className="p-8 text-[12px] font-bold uppercase tracking-widest text-slate-600">Managed Protocol</th>
+                  <th className="p-8 text-[12px] font-bold uppercase tracking-widest text-slate-600">Operational Outcome</th>
                 </tr>
               </thead>
               <tbody>
@@ -343,7 +349,7 @@ export default function VisitorSolutionPage() {
                 ].map((row, i) => (
                   <tr key={i} className="border-t border-gray-50 hover:bg-[#F8FAFF] transition-colors">
                     <td className="p-8 font-bold text-[#0C1024]">{row.g}</td>
-                    <td className="p-8 text-gray-500 font-medium">{row.p}</td>
+                    <td className="p-8 text-slate-700 font-medium">{row.p}</td>
                     <td className="p-8">
                       <span className="inline-flex items-center gap-2 text-[#00875A] font-bold">
                         <CheckCircle2 size={12} /> {row.o}

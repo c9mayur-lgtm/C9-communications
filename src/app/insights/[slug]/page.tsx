@@ -4,8 +4,11 @@ import React from 'react';
 import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Linkedin, Twitter, ArrowLeft, ChevronRight, Target, ShieldCheck, CheckCircle, Clock, Calendar } from 'lucide-react';
+import { Linkedin, Twitter, ArrowLeft, ChevronRight, Target, ShieldCheck, CheckCircle, Clock, Calendar, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Script from 'next/script';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { C9Button } from '@/components/design-system/C9Button';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
   <motion.div
@@ -163,6 +166,10 @@ export default function InsightArticlePage() {
   const slug = params.slug as string;
   const article = INSIGHTS[slug];
 
+  if (!article) {
+    return notFound();
+  }
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -170,12 +177,26 @@ export default function InsightArticlePage() {
     restDelta: 0.001
   });
 
-  if (!article) {
-    return notFound();
-  }
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.summary,
+    "author": {
+      "@type": "Person",
+      "name": article.author
+    },
+    "datePublished": article.date,
+    "image": article.img,
+  };
 
   return (
     <div className="min-h-screen bg-white">
+      <Script
+        id="article-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Top Scroll Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-[#5D00D6] origin-left z-[100]"
@@ -188,8 +209,8 @@ export default function InsightArticlePage() {
         
         <div className="container mx-auto max-w-[1000px] relative z-10">
           <FadeIn>
-            <Link href="/insights" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10">
-              <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1" /> Back to Insights
+            <Link href="/insights" className="inline-flex items-center text-slate-400 font-medium text-[13px] hover:text-white transition-colors mb-10 group">
+              <ArrowLeft size={16} className="mr-2 transition-transform group-hover:-translate-x-1" /> Back to Insights
             </Link>
           </FadeIn>
 
@@ -213,7 +234,7 @@ export default function InsightArticlePage() {
 
           <FadeIn delay={0.2} className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-white/10 pt-8 mt-12 gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-lg overflow-hidden bg-[#5D00D6] flex items-center justify-center text-white font-bold">
+              <div className="w-12 h-12 rounded-lg overflow-hidden bg-[#5D00D6] flex items-center justify-center text-white font-extrabold shadow-lg shadow-purple-900/20">
                 C9
               </div>
               <div>
@@ -224,10 +245,16 @@ export default function InsightArticlePage() {
             
             <div className="flex items-center gap-3">
               <span className="text-slate-400 text-[13px] font-bold uppercase tracking-widest mr-2">Share Insight</span>
-              <button className="w-10 h-10 rounded-lg bg-white/5 hover:bg-[#5D00D6] hover:text-white text-slate-300 border border-white/10 transition-all flex items-center justify-center">
+              <button 
+                aria-label="Share on LinkedIn"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-[#5D00D6] hover:text-white text-slate-300 border border-white/10 transition-all flex items-center justify-center"
+              >
                 <Linkedin size={16} />
               </button>
-              <button className="w-10 h-10 rounded-lg bg-white/5 hover:bg-[#5D00D6] hover:text-white text-slate-300 border border-white/10 transition-all flex items-center justify-center">
+              <button 
+                aria-label="Share on Twitter"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-[#5D00D6] hover:text-white text-slate-300 border border-white/10 transition-all flex items-center justify-center"
+              >
                 <Twitter size={16} />
               </button>
             </div>
@@ -249,7 +276,7 @@ export default function InsightArticlePage() {
                     <li key={i}>
                       <a 
                         href={`#${link.id}`} 
-                        className={`text-[14px] font-medium transition-colors hover:text-[#5D00D6] ${i === 0 ? 'text-[#5D00D6] font-bold' : 'text-slate-500'}`}
+                        className={`text-[14px] font-medium transition-colors hover:text-[#5D00D6] ${i === 0 ? 'text-[#5D00D6] font-bold' : 'text-slate-600'}`}
                       >
                         {link.label}
                       </a>
@@ -275,7 +302,7 @@ export default function InsightArticlePage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
                <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">More Industry Insights</h3>
-               <p className="text-slate-500 text-[18px]">Stay ahead of infrastructure complexity.</p>
+               <p className="text-slate-600 text-[18px]">Stay ahead of infrastructure complexity.</p>
             </div>
           </div>
 
@@ -283,12 +310,14 @@ export default function InsightArticlePage() {
             {Object.keys(INSIGHTS).filter(k => k !== slug).slice(0, 3).map((key) => {
                const item = INSIGHTS[key];
                return (
-                  <Link href={`/insights/${key}`} key={key} className="flex flex-col h-full bg-slate-50 rounded-lg overflow-hidden hover:bg-white transition-all">
-                     <div className="aspect-[16/10] overflow-hidden">
-                        <img 
+                  <Link href={`/insights/${key}`} key={key} className="group flex flex-col h-full bg-slate-50 rounded-lg overflow-hidden hover:bg-white transition-all shadow-sm hover:shadow-xl">
+                     <div className="aspect-[16/10] overflow-hidden relative">
+                        <Image 
                            src={item.img} 
                            alt={item.title} 
-                           className="w-full h-full object-cover group-hover:scale-105 duration-700 grayscale"
+                           fill
+                           className="object-cover group-hover:scale-105 duration-700 grayscale"
+                           sizes="(max-width: 768px) 100vw, 33vw"
                         />
                      </div>
                      <div className="p-8 pb-10 flex flex-col grow">
@@ -296,15 +325,15 @@ export default function InsightArticlePage() {
                         <h4 className="text-[20px] font-bold text-slate-900 mb-4 leading-tight group-hover:text-[#5D00D6] transition-colors">
                            {item.title}
                         </h4>
-                        <p className="text-slate-500 text-[15px] mb-8 line-clamp-2">
+                        <p className="text-slate-600 text-[15px] mb-8 line-clamp-2">
                            {item.summary}
                         </p>
                         
-                        <div className="mt-auto flex items-center justify-between pt-6">
-                           <span className="text-slate-500 text-[13px] font-medium border-b border-transparent group-hover:border-[#5D00D6]">Read Insight</span>
-                           <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
-                              <ChevronRight size={16} />
-                           </div>
+                        <div className="mt-auto flex items-center justify-between pt-6 border-t border-slate-100/50">
+                           <span className="text-slate-900 text-[13px] font-bold uppercase tracking-widest flex items-center gap-2">
+                             Read Insight
+                             <ArrowRight size={14} className="text-[#5D00D6] transition-transform group-hover:translate-x-1" />
+                           </span>
                         </div>
                      </div>
                   </Link>

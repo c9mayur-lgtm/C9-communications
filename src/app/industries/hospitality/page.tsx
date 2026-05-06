@@ -48,8 +48,8 @@ const Hero = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
           <FadeIn>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
-              <Star size={13} className="text-[#5D00D6]" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
+              <Star size={13} className="text-[#5D00D6]" aria-hidden="true" />
               <span className="c9-eyebrow !mb-0">Hospitality IT</span>
             </div>
           </FadeIn>
@@ -61,7 +61,7 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.14}>
-            <p className="c9-body text-slate-600 mb-2 max-w-[530px]">
+            <p className="c9-body text-slate-800 mb-2 max-w-[530px]">
               In hospitality, the best technology is the kind guests never notice. We deliver rock-solid Wi-Fi, seamless POS connectivity, and clear communications that keep your operations humming and your reviews glowing.
             </p>
             <p className="text-[14px] text-[#5D00D6] font-bold mb-10">Supporting industry-specific environments with reliable, scalable systems</p>
@@ -69,32 +69,34 @@ const Hero = () => (
 
           <FadeIn delay={0.2}>
             <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
-              <a
-                href="#consultation-section"
-                onClick={(e) => {
-                  e.preventDefault();
+              <C9Button
+                size="lg"
+                className="rounded-none shadow-xl"
+                onClick={() => {
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer whitespace-nowrap h-14 px-8 text-[15px] font-bold"
               >
                 Talk to a Hospitality Specialist
-                
-              </a>
-              <a
-                href="/industries"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap h-14 px-8 text-[15px] font-bold"
+              </C9Button>
+              <C9Button
+                variant="outline"
+                size="lg"
+                className="rounded-none border-2 border-slate-200 text-slate-700 hover:border-[#5D00D6] hover:text-[#5D00D6]"
+                asChild
               >
-                View All Industries
-              </a>
+                <Link href="/industries">
+                  View All Industries
+                </Link>
+              </C9Button>
             </div>
-            <p className="text-[14px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
+            <p className="text-[14px] text-slate-800 ml-1 font-medium">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
             <div className="flex flex-wrap gap-5">
               {['Seamless Guest Wi-Fi', 'POS & EFTPOS Uptime', 'Unified Team Comms', '24/7 Monitoring'].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-slate-500 text-[14px] font-bold">
-                  <CheckCircle size={12} className="text-[#5D00D6]" /> {t}
+                <div key={t} className="flex items-center gap-2 text-slate-800 text-[14px] font-bold">
+                  <CheckCircle size={12} className="text-[#5D00D6]" aria-hidden="true" /> {t}
                 </div>
               ))}
             </div>
@@ -103,22 +105,23 @@ const Hero = () => (
 
         {/* Visual panel */}
         <FadeIn delay={0.12} className="relative h-full hidden lg:block">
-          <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl">
+          <div className="absolute inset-0 rounded-none overflow-hidden shadow-2xl border border-slate-100">
             <Image 
               src="/hospitality_restaurant_realism_1776419336049.png" 
               alt="Premium Restaurant Service" 
               fill
               className="object-cover"
               priority
+              fetchPriority="high"
               sizes="(max-width: 1280px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/90 via-[#0c1024]/20 to-transparent flex items-end p-10">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 w-full">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-none p-6 w-full">
                 <div className="flex items-center gap-4 text-white">
-                  <Wifi className="text-green-400" size={24} />
+                  <Wifi className="text-green-400" size={24} aria-hidden="true" />
                   <div>
                     <div className="font-bold text-[14px]">Zero Guest Wi-Fi Complaints</div>
-                    <div className="text-white/70 text-[14px]">Full coverage. High-speed. Secure.</div>
+                    <div className="text-white/95 text-[14px]">Full coverage. High-speed. Secure.</div>
                   </div>
                 </div>
               </div>
@@ -136,16 +139,16 @@ const DayInTheLife = () => (
     <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
       <div className="max-w-3xl mx-auto text-center">
         <FadeIn>
-          <div className="inline-flex items-center justify-center w-12 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] mb-6 h-14 px-8 text-[15px] font-bold">
-            <Clock size={24} />
+          <div className="inline-flex items-center justify-center w-12 rounded-none bg-[#5D00D6]/10 text-[#5D00D6] mb-6 h-14 px-8 text-[15px] font-bold">
+            <Clock size={24} aria-hidden="true" />
           </div>
           <h2 className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 leading-tight">
             It’s 7:00 PM on a Friday. The house is full.
           </h2>
-          <p className="text-[17px] text-slate-600 mb-8 leading-relaxed">
+          <p className="text-[17px] text-slate-800 mb-8 leading-relaxed">
             Your restaurant is buzzing, every table is flipped, and the kitchen is in high gear. Suddenly, the POS system lags. Then the EFTPOS terminals stop connecting.
           </p>
-          <p className="text-[17px] text-slate-600 mb-8 leading-relaxed">
+          <p className="text-[17px] text-slate-800 mb-8 leading-relaxed">
             In hospitality, you don't have "business hours"—you have "service periods." If your tech fails when you're busiest, the chaos ripples through the whole night. Front-of-house staff get stressed, diners wait too long, and revenue is literally left on the table.
           </p>
           <p className="text-[18px] text-slate-900 font-bold mb-8 leading-relaxed">
@@ -174,28 +177,28 @@ const Challenges = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           {
-            icon: <Wifi size={20} />,
+            icon: <Wifi size={20} aria-hidden="true" />,
             title: 'Spotty Guest Wi-Fi',
             desc: 'Guests view fast Wi-Fi as a utility, not a luxury. If they can\'t stream or work from their room, they won\'t come back.',
           },
           {
-            icon: <Utensils size={20} />,
+            icon: <Utensils size={20} aria-hidden="true" />,
             title: 'POS/EFTPOS Latency',
             desc: 'Slow transaction times at the counter or tableside create bottlenecks that kill your efficiency and frustrate customers.',
           },
           {
-            icon: <Phone size={20} />,
+            icon: <Phone size={20} aria-hidden="true" />,
             title: 'Team Communication Gaps',
             desc: 'If reception, housekeeping, and maintenance can\'t communicate instantly across the property, guest requests fall through the cracks.',
           },
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.07}>
-            <div className="bg-white rounded-[20px] border border-slate-100 p-7 h-full hover:shadow-lg hover:border-[#5D00D6]/20 transition-all duration-300">
-              <div className="w-11 h-11 rounded-xl bg-[#5D00D6]/8 flex items-center justify-center text-[#5D00D6] mb-5 group-hover:bg-[#5D00D6]/15 transition-colors">
+            <div className="bg-white rounded-none border border-slate-100 p-7 h-full hover:shadow-lg hover:border-[#5D00D6]/20 transition-all duration-300">
+              <div className="w-11 h-11 rounded-none bg-[#5D00D6]/8 flex items-center justify-center text-[#5D00D6] mb-5 group-hover:bg-[#5D00D6]/15 transition-colors">
                 {item.icon}
               </div>
               <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
-              <p className="text-[14px] text-slate-500 leading-relaxed">{item.desc}</p>
+              <p className="text-[14px] text-slate-800 leading-relaxed">{item.desc}</p>
             </div>
           </FadeIn>
         ))}
@@ -213,11 +216,13 @@ const Impact = () => (
     />
     <div className="relative z-10 container mx-auto px-6 md:px-8 max-w-[1240px]">
       <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-        <FadeIn delay={0.1} className="order-2 lg:order-1 relative rounded-[32px] overflow-hidden aspect-[4/3] hidden md:block">
-           <img 
+        <FadeIn delay={0.1} className="order-2 lg:order-1 relative rounded-none overflow-hidden aspect-[4/3] hidden md:block border border-white/5">
+           <Image 
               src="/hospitality_hotel_lobby_realism_1776419484915.png" 
               alt="Guest enjoying hotel lobby Wi-Fi" 
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-indigo-900/20 mix-blend-multiply"></div>
         </FadeIn>
@@ -235,10 +240,10 @@ const Impact = () => (
               { title: 'Reduced Staff Stress', desc: 'When the tech just works, your team can focus on what they do best: hospitality. No more fighting with hardware.' },
             ].map((point, i) => (
               <div key={i} className="flex items-start gap-4">
-                <CheckCircle className="text-[#a56eff] shrink-0 mt-1" size={20} />
+                <CheckCircle className="text-[#a56eff] shrink-0 mt-1" size={20} aria-hidden="true" />
                 <div>
                   <h4 className="text-white font-bold text-[16px] mb-1">{point.title}</h4>
-                  <p className="text-white/70 text-[14px] leading-relaxed">{point.desc}</p>
+                  <p className="text-white/95 text-[14px] leading-relaxed">{point.desc}</p>
                 </div>
               </div>
             ))}
@@ -257,29 +262,30 @@ const Trust = () => (
         <FadeIn>
           <p className="c9-eyebrow mb-4">Direct Support</p>
           <h2 className="c9-section-heading mb-6">Support that respects your service times.</h2>
-          <p className="c9-body text-slate-600 mb-5">
+          <p className="c9-body text-slate-800 mb-5">
             Communication issues on a Tuesday afternoon are annoying. Communication issues during a Saturday night rush are a disaster. We understand the difference.
           </p>
-          <p className="c9-body text-slate-600 mb-8">
+          <p className="c9-body text-slate-800 mb-8">
             Our Australian-based support team knows your venue’s floor plan and network layout. We don’t ask your floor managers to reboot switches; we monitor your systems proactively and often fix issues before your team even notices a flicker. One call, real humans, instant action.
           </p>
-          <a
-            href="#consultation-section"
-            onClick={(e) => {
-              e.preventDefault();
+          <C9Button
+            variant="link"
+            className="!p-0 h-auto text-[#5D00D6] font-bold hover:text-indigo-900 transition-colors"
+            onClick={() => {
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:text-indigo-900 transition-colors"
           >
             Meet the team backing your service 
-          </a>
+          </C9Button>
         </FadeIn>
 
-        <FadeIn delay={0.1} className="relative rounded-[32px] overflow-hidden aspect-[4/3] lg:aspect-square bg-slate-50 border border-slate-100">
-          <img 
+        <FadeIn delay={0.1} className="relative rounded-none overflow-hidden aspect-[4/3] lg:aspect-square bg-slate-50 border border-slate-100">
+          <Image 
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" 
             alt="Team meeting in a professional environment" 
-            className="w-full h-full object-cover grayscale opacity-80"
+            fill
+            className="object-cover grayscale opacity-80"
+            sizes="(max-width: 1280px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/40 to-transparent mix-blend-hard-light" />
         </FadeIn>
@@ -295,22 +301,20 @@ const FinalCTA = () => (
       <FadeIn>
         <p className="c9-eyebrow mb-5">Next Steps</p>
         <h2 className="c9-section-heading mb-6">Let's eliminate your Wi-Fi dead zones.</h2>
-        <p className="c9-body text-slate-600 mb-10">
+        <p className="c9-body text-slate-800 mb-10">
           We'll conduct a comprehensive site survey to identify weak spots in your guest and operational networks. No obligation, just a clear plan to ensure your hospitality venue is always online and always fast.
         </p>
         <div className="flex flex-col items-center gap-4">
-          <a
-            href="#consultation-section"
-            onClick={(e) => {
-              e.preventDefault();
+          <C9Button
+            size="lg"
+            className="rounded-none shadow-xl"
+            onClick={() => {
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer"
           >
             Book a Site Audit
-            
-          </a>
-          <p className="text-[14px] text-slate-500">No obligation. Just clear, practical advice.</p>
+          </C9Button>
+          <p className="text-[14px] text-slate-800 font-medium">No obligation. Just clear, practical advice.</p>
         </div>
       </FadeIn>
     </div>

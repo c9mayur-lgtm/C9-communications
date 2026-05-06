@@ -2,7 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon, AlertTriangle, Heart, Clock, Users } from 'lucide-react';
+import { CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon, AlertTriangle, Heart, Clock, Users, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { C9Button } from '@/components/design-system/C9Button';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
@@ -60,7 +63,7 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.14}>
-            <p className="c9-body text-slate-600 mb-2 max-w-[530px]">
+            <p className="c9-body text-slate-800 mb-2 max-w-[530px]">
               Technology should be an enabler of your mission, not a drain on your resources. We deliver affordable, reliable IT and Telco solutions designed specifically for the unique needs (and budgets) of Australian non-profits.
             </p>
             <p className="text-[14px] text-[#5D00D6] font-bold mb-10">Supporting industry-specific environments with reliable, scalable systems</p>
@@ -68,32 +71,34 @@ const Hero = () => (
 
           <FadeIn delay={0.2}>
             <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-4">
-              <a
-                href="#consultation-section"
-                onClick={(e) => {
-                  e.preventDefault();
+              <C9Button
+                size="lg"
+                className="rounded-full shadow-xl"
+                onClick={() => {
                   document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer whitespace-nowrap h-14 px-8 text-[15px] font-bold"
               >
                 Talk to an NFP Specialist
-                
-              </a>
-              <a
-                href="/industries"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#5D00D6] text-[#5D00D6] rounded-full hover:bg-[#5D00D6] hover:text-white transition-all cursor-pointer whitespace-nowrap h-14 px-8 text-[15px] font-bold"
+              </C9Button>
+              <C9Button
+                variant="outline"
+                size="lg"
+                className="rounded-full border-2 border-slate-200 text-slate-700 hover:border-[#5D00D6] hover:text-[#5D00D6]"
+                asChild
               >
-                View All Industries
-              </a>
+                <Link href="/industries">
+                  View All Industries
+                </Link>
+              </C9Button>
             </div>
-            <p className="text-[14px] text-slate-500 ml-1">No obligation. Just clear, practical advice.</p>
+            <p className="text-[14px] text-slate-800 ml-1 font-medium">No obligation. Just clear, practical advice.</p>
           </FadeIn>
 
           <FadeIn delay={0.28}>
             <div className="flex flex-wrap gap-5">
               {['Cost-Effective Managed IT', 'Secure Donor Data', 'Reliable Comms', 'Dedicated Support'].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-slate-500 text-[14px] font-bold">
-                  <CheckCircle size={12} className="text-[#5D00D6]" /> {t}
+                <div key={t} className="flex items-center gap-2 text-slate-800 text-[14px] font-bold">
+                  <CheckCircle size={12} className="text-[#5D00D6]" aria-hidden="true" /> {t}
                 </div>
               ))}
             </div>
@@ -103,18 +108,22 @@ const Hero = () => (
         {/* Visual panel */}
         <FadeIn delay={0.12} className="relative h-full hidden lg:block">
           <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl">
-            <img 
+            <Image 
               src="/non_profit_team_realism_1776419577084.png" 
               alt="Non-profit team working together" 
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              fetchPriority="high"
+              sizes="(max-width: 1280px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/90 via-[#0c1024]/20 to-transparent flex items-end p-10">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 w-full">
                 <div className="flex items-center gap-4 text-white">
-                  <Shield className="text-blue-400" size={24} />
+                  <Shield className="text-blue-400" size={24} aria-hidden="true" />
                   <div>
                     <div className="font-bold text-[14px]">Secure & Compliant</div>
-                    <div className="text-white/70 text-[14px]">Protecting donor data and privacy.</div>
+                    <div className="text-white/95 text-[14px]">Protecting donor data and privacy.</div>
                   </div>
                 </div>
               </div>
@@ -138,10 +147,10 @@ const DayInTheLife = () => (
           <h2 className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 leading-tight">
             Every dollar redirected to IT is a dollar away from your cause.
           </h2>
-          <p className="text-[17px] text-slate-600 mb-8 leading-relaxed">
+          <p className="text-[17px] text-slate-800 mb-8 leading-relaxed">
             You’re running a vital community program, coordinating volunteers, and managing donors. The last thing you need is a "technical issue" halting your operations or a massive bill for a generic IT service that doesn’t understand your constraints.
           </p>
-          <p className="text-[17px] text-slate-600 mb-8 leading-relaxed">
+          <p className="text-[17px] text-slate-800 mb-8 leading-relaxed">
             In non-profits, technology often feels like a necessary evil—expensive, confusing, and prone to breaking when you need it most. Your staff are there because they care about the mission, not because they want to spend their time resetting passwords or fighting with an unreliable internet connection.
           </p>
           <p className="text-[18px] text-slate-900 font-bold mb-8 leading-relaxed">
@@ -191,7 +200,7 @@ const Challenges = () => (
                 {item.icon}
               </div>
               <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
-              <p className="text-[14px] text-slate-500 leading-relaxed">{item.desc}</p>
+              <p className="text-[14px] text-slate-800 leading-relaxed">{item.desc}</p>
             </div>
           </FadeIn>
         ))}
@@ -210,10 +219,12 @@ const Impact = () => (
     <div className="relative z-10 container mx-auto px-6 md:px-8 max-w-[1240px]">
       <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <FadeIn delay={0.1} className="order-2 lg:order-1 relative rounded-[32px] overflow-hidden aspect-[4/3] hidden md:block">
-           <img 
+           <Image 
               src="/non_profit_community_impact_realism_1776419646399.png" 
               alt="Community impact registered via tablet" 
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-indigo-900/20 mix-blend-multiply"></div>
         </FadeIn>
@@ -231,10 +242,10 @@ const Impact = () => (
               { title: 'Focus on the Cause', desc: 'No more "accidental IT managers." Your team can get back to doing the work they’re passionate about.' },
             ].map((point, i) => (
               <div key={i} className="flex items-start gap-4">
-                <CheckCircle className="text-[#a56eff] shrink-0 mt-1" size={20} />
+                <CheckCircle className="text-[#a56eff] shrink-0 mt-1" size={20} aria-hidden="true" />
                 <div>
                   <h4 className="text-white font-bold text-[16px] mb-1">{point.title}</h4>
-                  <p className="text-white/70 text-[14px] leading-relaxed">{point.desc}</p>
+                  <p className="text-white/95 text-[14px] leading-relaxed">{point.desc}</p>
                 </div>
               </div>
             ))}
@@ -253,29 +264,30 @@ const Trust = () => (
         <FadeIn>
           <p className="c9-eyebrow mb-4">Dedicated Support</p>
           <h2 className="c9-section-heading mb-6">Humans who value your mission as much as you do.</h2>
-          <p className="c9-body text-slate-600 mb-5">
+          <p className="c9-body text-slate-800 mb-5">
             We don't see non-profits as "small business" accounts. We see you as vital community pillars. When something goes wrong, you shouldn't have to wait in a generic phone queue.
           </p>
-          <p className="c9-body text-slate-600 mb-8">
+          <p className="c9-body text-slate-800 mb-8">
             Our Australian-based support team knows your exact setup. We understand that a downtime for your donor management system isn't just a tech glitch—it's a critical threat to your mission. We’re fast, we’re jargon-free, and we’re here to help your team do more of what matters.
           </p>
-          <a
-            href="#consultation-section"
-            onClick={(e) => {
-              e.preventDefault();
+          <C9Button
+            variant="link"
+            className="!p-0 h-auto text-[#5D00D6] font-bold hover:text-indigo-900 transition-colors"
+            onClick={() => {
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 text-[#5D00D6] font-bold hover:text-indigo-900 transition-colors"
           >
             Meet the team backing your mission 
-          </a>
+          </C9Button>
         </FadeIn>
 
         <FadeIn delay={0.1} className="relative rounded-[32px] overflow-hidden aspect-[4/3] lg:aspect-square bg-slate-50 border border-slate-100">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" 
             alt="C9 team collaborating with empathy" 
-            className="w-full h-full object-cover grayscale opacity-80"
+            fill
+            className="object-cover grayscale opacity-80"
+            sizes="(max-width: 1280px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-[#5D00D6]/40 to-transparent mix-blend-hard-light" />
         </FadeIn>
@@ -291,22 +303,20 @@ const FinalCTA = () => (
       <FadeIn>
         <p className="c9-eyebrow mb-5">Next Steps</p>
         <h2 className="c9-section-heading mb-6">Let's audit your IT overhead.</h2>
-        <p className="c9-body text-slate-600 mb-10">
+        <p className="c9-body text-slate-800 mb-10">
           We'll do a transparent review of your current tech spending and security posture. No high-pressure sales—just a clear, mission-aligned report on how you can stretch your budget further and protect your organisation.
         </p>
         <div className="flex flex-col items-center gap-4">
-          <a
-            href="#consultation-section"
-            onClick={(e) => {
-              e.preventDefault();
+          <C9Button
+            size="lg"
+            className="rounded-full shadow-xl"
+            onClick={() => {
               document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-10 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer"
           >
             Book an NFP Tech Review
-            
-          </a>
-          <p className="text-[14px] text-slate-500">No obligation. Just clear, practical advice.</p>
+          </C9Button>
+          <p className="text-[14px] text-slate-800 font-medium">No obligation. Just clear, practical advice.</p>
         </div>
       </FadeIn>
     </div>

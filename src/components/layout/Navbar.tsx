@@ -61,7 +61,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
 
                   {col.footerLogo && (
                     <div className="mt-auto pt-6">
-                       <img src={col.footerLogo} alt="Logo" className="h-10 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all border border-gray-100 rounded-xl p-2 inline-block" />
+                       <img src={col.footerLogo} alt="Partner Logo" className="h-10 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all border border-gray-100 rounded-xl p-2 inline-block" />
                     </div>
                   )}
 
@@ -179,7 +179,7 @@ const TecnologiaMegaPanel = ({ data, visible }: { data: any; visible: boolean })
                                 {item.label || item.title}
                               </span>
                             </div>
-                            {item.desc && <p className="text-[11px] text-slate-400 leading-normal mt-1.5 line-clamp-2">{item.desc}</p>}
+                            {item.desc && <p className="text-[11px] text-slate-500 leading-normal mt-1.5 line-clamp-2">{item.desc}</p>}
                           </Link>
                         ))
                       )}
@@ -249,7 +249,7 @@ const TopUtilityBar = () => {
             href={`tel:${AUDIENCE_INFO[audience].phone}`}
             className="flex items-center gap-2.5 pr-6"
           >
-            <span className="text-[12px] font-semibold uppercase text-slate-500 group-hover:text-[#5D00D6] transition-colors tracking-wide">Priority Support</span>
+            <span className="text-[12px] font-semibold uppercase text-slate-600 group-hover:text-[#5D00D6] transition-colors tracking-wide">Priority Support</span>
             <span className="text-[13px] font-black text-slate-800 group-hover:text-[#5D00D6] transition-colors">{AUDIENCE_INFO[audience].phone}</span>
           </a>
           <Link href="/contact" className="text-[12px] font-bold uppercase text-slate-600 hover:text-[#5D00D6] transition-colors pl-6 tracking-wide">
@@ -296,7 +296,11 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             <Link href="/" onClick={onClose}>
               <img src="/images/c9_logo_scrolled.svg" alt="C9" className="h-[44px]" />
             </Link>
-            <button onClick={onClose} className="p-2 text-slate-900 hover:bg-slate-50 rounded-lg">
+            <button 
+              onClick={onClose} 
+              aria-label="Close menu"
+              className="p-2 text-slate-900 hover:bg-slate-50 rounded-lg"
+            >
               <X size={24} />
             </button>
           </div>
@@ -347,6 +351,8 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                       </Link>
                       <button
                         onClick={() => toggleAccordion(tab.menuKey)}
+                        aria-label={`Toggle ${tab.name} submenu`}
+                        aria-expanded={isActive}
                         className="p-2 -mr-2"
                       >
                         <ChevronDown size={20} className={`text-slate-400 duration-300 ${isActive ? 'rotate-180 text-[#5D00D6]' : ''}`} />
@@ -599,7 +605,7 @@ export const Navbar = () => {
             className={`px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ${
               pathname === '/'
                 ? 'text-[#5D00D6]'
-                : 'text-slate-400 hover:text-[#5D00D6]'
+                : 'text-slate-600 hover:text-[#5D00D6]'
             }`}
           >
             Homepage
@@ -618,7 +624,7 @@ export const Navbar = () => {
               className={`px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ${
                 pathname === track.path
                   ? 'text-[#5D00D6]'
-                  : 'text-slate-400 hover:text-[#5D00D6]'
+                  : 'text-slate-600 hover:text-[#5D00D6]'
               }`}
             >
               {track.label}
@@ -644,7 +650,9 @@ export const Navbar = () => {
                     {tab.name}
                   </Link>
                   <button
-                    className="pr-2 py-1.5 opacity-40 hover:opacity-100"
+                    className="pr-2 py-1.5 opacity-60 hover:opacity-100"
+                    aria-label={`Toggle ${tab.name} menu`}
+                    aria-expanded={isOpen}
                     onClick={() => setOpenMenu(isOpen ? null : tab.menuKey)}
                   >
                     <ChevronDown size={13} className={` duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : ''}`} />
@@ -658,6 +666,7 @@ export const Navbar = () => {
         <div className="flex items-center gap-4 md:gap-7">
           <button 
             className="lg:hidden p-2.5 rounded-xl transition-colors text-[#0c1024] hover:bg-gray-50 border border-gray-100"
+            aria-label="Open mobile menu"
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <Menu size={22} />

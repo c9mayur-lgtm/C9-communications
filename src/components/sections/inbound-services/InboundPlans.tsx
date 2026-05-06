@@ -142,6 +142,7 @@ export const InboundPlans = () => {
             <a 
                 href="https://c9communications.com.au/service-terms-and-conditions/#CIS" 
                 target="_blank" 
+                rel="noopener noreferrer"
                 className="text-[12px] font-bold text-[#5D00D6] uppercase tracking-[0.1em] hover:underline flex items-center gap-2"
             >
                 View Critical Information Summary (CIS) 

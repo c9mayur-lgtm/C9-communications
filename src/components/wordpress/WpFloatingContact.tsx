@@ -155,7 +155,11 @@ export const WpFloatingContact = () => {
                   <h3 className="text-white font-bold text-[16px]">{lum ? 'Lumina Virtual Agent' : def ? 'Security Support' : 'C9 Assistant'}</h3>
                   <p className="text-white/50 text-[12px] mt-0.5">Online & ready to assist.</p>
                 </div>
-                <button onClick={() => setIsOpen(false)} className="text-white/40 hover:text-white transition-colors cursor-pointer">
+                <button 
+                  onClick={() => setIsOpen(false)} 
+                  aria-label="Close assistant"
+                  className="text-white/40 hover:text-white transition-colors cursor-pointer"
+                >
                   <X size={20} />
                 </button>
               </div>
@@ -183,9 +187,9 @@ export const WpFloatingContact = () => {
                     </div>
                   ) : currentFlow?.isForm ? (
                     <form onSubmit={handleFormSubmit} className="space-y-2">
-                      <input required type="text" placeholder="Your name" value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
-                      <input required type="email" placeholder="Work email" value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
-                      <input required type="tel" placeholder="Phone number" value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
+                      <input required type="text" placeholder="Your name" aria-label="Your name" value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
+                      <input required type="email" placeholder="Work email" aria-label="Work email" value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
+                      <input required type="tel" placeholder="Phone number" aria-label="Phone number" value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} className={`w-full px-4 py-2.5 border text-[14px] outline-none transition-colors ${def || lum ? 'bg-black border-[#252525] text-white focus:border-[#BF2F70]' : 'bg-white rounded-xl border-gray-200 focus:border-[#5D00D6]'}`} />
                       <button type="submit" className={`w-full py-3 text-white font-bold text-[14px] flex items-center justify-center gap-2 transition-colors cursor-pointer ${lum ? 'bg-[#BF2F70] hover:bg-[#A32469]' : def ? 'bg-white text-black hover:bg-[#C0C0C0]' : 'bg-[#5D00D6] rounded-xl hover:bg-[#4d00b3]'}`}>
                         <Send size={15} /> Send my details
                       </button>
@@ -225,6 +229,7 @@ export const WpFloatingContact = () => {
               {/* Dismiss */}
               <button
                 onClick={(e) => { e.stopPropagation(); setShowBubble(false); }}
+                aria-label="Dismiss message"
                 className="absolute top-2 right-2 text-gray-300 hover:text-gray-500 transition-colors"
               >
                 <X size={12} />
@@ -236,9 +241,10 @@ export const WpFloatingContact = () => {
         {/* FAB Button */}
         <button
           onClick={() => { setIsOpen(prev => !prev); setShowBubble(false); }}
+          aria-label={isOpen ? "Close contact assistant" : "Open contact assistant"}
           className={`wp-floating-contact-btn w-[54px] h-[54px] md:w-[58px] md:h-[58px] shadow-xl hover:scale-105 transition-all duration-200 flex items-center justify-center cursor-pointer active:scale-95 ${
             lum ? 'bg-[#BF2F70] text-white hover:bg-[#A32469] hover:shadow-[0_8px_30px_rgba(191,47,112,0.45)]' :
-            def ? 'bg-white text-black hover:bg-[#C0C0C0] hover:shadow-[0_8px_30px_rgba(255,255,255,0.15)]' : 
+            def ? 'bg-white text-black hover:bg-[#C0C0C0] hover:shadow-[0_8px_30_rgba(255,255,255,0.15)]' : 
             'rounded-full bg-[#5D00D6] text-white hover:shadow-[0_8px_30px_rgba(93,0,214,0.45)]'
           } ${!def && !lum ? 'rounded-full' : ''}`}
         >

@@ -396,9 +396,10 @@ export const BusinessAdvisor = () => {
                   </div>
                   <button
                     onClick={() => { setIsOpen(false); setSelected(null); }}
+                    aria-label="Close advisor"
                     className={`w-7 h-7 flex items-center justify-center transition-colors ml-1 ${def ? 'border border-[#303030] text-[#606060] hover:text-white hover:border-[#606060]' : 'rounded-full bg-gray-50 hover:bg-gray-100'}`}
                   >
-                    <X size={14} className={def ? '' : 'text-gray-400'} />
+                    <X size={14} className={def ? '' : 'text-gray-500'} />
                   </button>
                 </div>
               </div>
@@ -418,6 +419,7 @@ export const BusinessAdvisor = () => {
                               whileHover={{ y: -2 }}
                               whileTap={{ scale: 0.97 }}
                               onClick={() => setSelected(ind)}
+                              aria-label={`View solutions for ${ind.label}`}
                               className="flex items-center gap-3 p-3.5 rounded-2xl border border-gray-100 hover:border-[#5D00D6]/30 hover:bg-[#5D00D6]/[0.02] transition-all text-left"
                             >
                               <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${ind.iconBg} transition-all group-hover:scale-105`}>
@@ -562,12 +564,14 @@ export const BusinessAdvisor = () => {
                         onChange={e => setInput(e.target.value)}
                         onKeyDown={e => { if (e.key === 'Enter') sendMessage(); }}
                         placeholder="Ask about Managed IT, internet, voice, security..."
+                        aria-label="Ask the C9 Advisor a question"
                         className="flex-1 text-[13.5px] text-[#0c1024] placeholder:text-gray-300 outline-none bg-transparent"
                         disabled={isTyping}
                       />
                     <button
                       onClick={() => sendMessage()}
                       disabled={!input.trim() || isTyping}
+                      aria-label="Send question"
                       className={`w-8 h-8 flex items-center justify-center disabled:opacity-30 transition-all duration-200 active:scale-95 shrink-0 ${def ? 'bg-white text-black hover:bg-[#C0C0C0]' : 'rounded-full bg-[#5D00D6] hover:bg-[#4c00b0]'}`}
                     >
                       <Send size={14} className="text-white" />
@@ -606,6 +610,8 @@ export const BusinessAdvisor = () => {
               `}</style>
               <button
                 onClick={() => setIsOpen(true)}
+                aria-label={lum ? 'Open Lumina Advisor' : def ? 'Open Security Advisor' : 'Open C9 Business Advisor'}
+                aria-expanded={isOpen}
                 className={`advisor-pill flex items-center gap-3 px-5 py-3 border  hover:scale-[0.985] ${lum ? 'bg-[#111111] border-[#BF2F70]/20' : def ? 'bg-[#111111] border-white/10' : 'bg-white rounded-full border-[#5D00D6]/20'}`}
               >
                 <span className={`text-[14px] font-medium tracking-tight whitespace-nowrap transition-colors ${lum ? 'text-[#ED9EA2] group-hover:text-white' : def ? 'text-[#808080] group-hover:text-white' : 'text-gray-600 group-hover:text-[#5D00D6]'}`}>

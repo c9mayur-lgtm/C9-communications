@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Download, CheckCircle, BookOpen, ShieldCheck } from 'lucide-react';
+import { C9Button } from '@/components/design-system/C9Button';
 
 
 
@@ -21,9 +22,9 @@ export default function CapabilityPack() {
   return (
     <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-        <div className="bg-white rounded-lg p-8 lg:p-20 shadow-2xl shadow-purple-900/5 border border-slate-100 relative">
+        <div className="bg-white rounded-none p-8 lg:p-20 shadow-2xl shadow-purple-900/5 border border-slate-100 relative">
           {/* Decorative Gradient */}
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#5D00D6]/5 to-transparent rounded-lg pointer-events-none" />
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#5D00D6]/5 to-transparent rounded-none pointer-events-none" />
 
           <div className="grid lg:grid-cols-[60%_40%] gap-16 items-center">
             <div>
@@ -35,7 +36,7 @@ export default function CapabilityPack() {
                   Enterprise <br />
                   <span className="text-[#5D00D6]">Capability Pack.</span>
                 </h2>
-                <p className="c9-body mb-12">
+                <p className="c9-body mb-12 text-slate-800">
                   Download our complete service catalogue, SLA definitions, and multi-site case studies to assist in your vendor selection process.
                 </p>
               </FadeIn>
@@ -47,12 +48,12 @@ export default function CapabilityPack() {
                 ].map((item, i) => (
                   <FadeIn key={i} delay={0.1 + i * 0.1}>
                     <div className="flex gap-4">
-                      <div className="w-10 h-10 rounded-full bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0">
-                        <item.icon size={20} strokeWidth={2} />
+                      <div className="w-10 h-10 rounded-none bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0">
+                        <item.icon size={20} strokeWidth={2} aria-hidden="true" />
                       </div>
                       <div>
                         <h4 className="c9-card-title !text-sm mb-1">{item.title}</h4>
-                        <p className="c9-body !text-[13px]">{item.desc}</p>
+                        <p className="c9-body !text-[13px] text-slate-800">{item.desc}</p>
                       </div>
                     </div>
                   </FadeIn>
@@ -60,22 +61,25 @@ export default function CapabilityPack() {
               </div>
 
               <FadeIn delay={0.3}>
-                <a 
-                  href="/contact" 
-                  className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer c9-button-label h-14 px-8 text-[15px] font-bold"
+                <C9Button
+                  size="lg"
+                  className="rounded-none shadow-xl shadow-purple-900/20"
+                  onClick={() => {
+                    window.location.href = '/contact';
+                  }}
                 >
                   Download Capability Pack (PDF)
-                  <Download size={20} className="group-hover:translate-y-0.5" />
-                </a>
+                  <Download size={20} className="ml-2" aria-hidden="true" />
+                </C9Button>
               </FadeIn>
             </div>
 
             <FadeIn delay={0.2}>
               <div className="relative">
                 {/* Visual Representation of the Pack */}
-                <div className="aspect-[3/4] bg-slate-900 rounded-lg p-10 text-white relative overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 duration-700">
+                <div className="aspect-[3/4] bg-slate-900 rounded-none p-10 text-white relative overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 duration-700 border border-white/5">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent" />
-                  <FileText size={48} className="text-[#a56eff] mb-8" />
+                  <FileText size={48} className="text-[#a56eff] mb-8" aria-hidden="true" />
                   <h3 className="text-3xl font-black mb-4 leading-tight text-white">
                     C9 <br/>
                     Capability <br/>
@@ -90,11 +94,11 @@ export default function CapabilityPack() {
                   </div>
                   <div className="absolute bottom-10 left-10 right-10 flex items-center justify-between">
                     <span className="text-[10px] font-black tracking-widest uppercase text-white/60">v2.4 | 2024</span>
-                    <ShieldCheck size={24} className="text-white/20" />
+                    <ShieldCheck size={24} className="text-white/20" aria-hidden="true" />
                   </div>
                 </div>
                 {/* Secondary Page Peeking Out */}
-                <div className="absolute inset-0 -z-10 bg-slate-200 rounded-lg -rotate-3 translate-x-4" />
+                <div className="absolute inset-0 -z-10 bg-slate-200 rounded-none -rotate-3 translate-x-4" />
               </div>
             </FadeIn>
           </div>

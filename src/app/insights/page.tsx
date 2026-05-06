@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Calendar, Clock, ChevronRight, BookOpen, Target, FileText, LayoutGrid, List } from 'lucide-react';
+import { Search, Filter, Calendar, Clock, ChevronRight, BookOpen, Target, FileText, LayoutGrid, List, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { Button } from "@/components/ui/button";
+import { C9Button } from '@/components/design-system/C9Button';
 
 const C = "container mx-auto px-6 md:px-8 max-w-[1240px]";
 
@@ -121,7 +121,7 @@ export default function InsightsPage() {
                 Blog & Operational <br />
                 <span className="text-[#5D00D6]">Intelligence</span>
               </h1>
-              <p className="c9-body mb-10 text-xl leading-relaxed">
+              <p className="c9-body mb-10 text-xl leading-relaxed text-slate-800">
                 Deep dives into network architecture, security governance, and the operational shifts driving business performance.
               </p>
             </FadeIn>
@@ -134,15 +134,15 @@ export default function InsightsPage() {
         <div className={C}>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             {/* Tabs */}
-            <div className="flex items-center gap-1 bg-gray-100 p-1 rounded-xl w-fit">
+            <div className="flex items-center gap-1 bg-gray-100 p-1 rounded-none w-fit">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all ${
+                  className={`px-6 py-2.5 rounded-none text-sm font-bold transition-all ${
                     activeCategory === cat 
                     ? 'bg-white text-[#5D00D6] shadow-sm' 
-                    : 'text-slate-500 hover:text-slate-900'
+                    : 'text-slate-800 hover:text-slate-900'
                   }`}
                 >
                   {cat}
@@ -152,13 +152,14 @@ export default function InsightsPage() {
 
             {/* Search */}
             <div className="relative max-w-md w-full">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-800" size={18} aria-hidden="true" />
               <input 
                 type="text" 
                 placeholder="Search articles and blogs..."
+                aria-label="Search insights"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-gray-100 border-none rounded-xl text-sm font-medium focus:ring-2 focus:ring-[#5D00D6]/20 transition-all outline-none"
+                className="w-full pl-12 pr-4 py-3 bg-gray-100 border border-transparent rounded-none text-sm font-medium focus:bg-white focus:border-[#5D00D6]/20 focus:ring-4 focus:ring-[#5D00D6]/5 transition-all outline-none"
               />
             </div>
           </div>
@@ -179,7 +180,7 @@ export default function InsightsPage() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
                 >
-                  <Link href={`/insights/${item.slug}`} className="flex flex-col h-full bg-white rounded-lg overflow-hidden transition-all duration-500">
+                  <Link href={`/insights/${item.slug}`} className="flex flex-col h-full bg-white rounded-none overflow-hidden transition-all duration-500 border border-slate-100 hover:border-[#5D00D6]/30">
                     <div className="aspect-[16/10] overflow-hidden relative">
                       <Image 
                         src={item.image} 
@@ -189,7 +190,7 @@ export default function InsightsPage() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest text-white ${
+                        <span className={`px-4 py-1.5 rounded-none text-[10px] font-black uppercase tracking-widest text-white ${
                           item.type === 'Article' ? 'bg-[#5D00D6]' : 'bg-slate-900'
                         }`}>
                           {item.type}
@@ -199,13 +200,13 @@ export default function InsightsPage() {
 
                     {/* Content */}
                     <div className="p-8 flex flex-col flex-grow">
-                      <div className="flex items-center gap-4 text-slate-400 text-[11px] font-bold uppercase tracking-widest mb-4">
+                      <div className="flex items-center gap-4 text-slate-800 text-[11px] font-bold uppercase tracking-widest mb-4">
                         <div className="flex items-center gap-1.5">
-                          <Calendar size={14} /> {item.date}
+                          <Calendar size={14} className="text-[#5D00D6]" aria-hidden="true" /> {item.date}
                         </div>
-                        <div className="w-1 h-1 rounded-full bg-slate-200" />
+                        <div className="w-1 h-1 rounded-full bg-slate-400" />
                         <div className="flex items-center gap-1.5">
-                          <Clock size={14} /> {item.readTime}
+                          <Clock size={14} className="text-[#5D00D6]" aria-hidden="true" /> {item.readTime}
                         </div>
                       </div>
 
@@ -213,13 +214,14 @@ export default function InsightsPage() {
                         {item.title}
                       </h3>
                       
-                      <p className="c9-body text-sm leading-relaxed mb-8 line-clamp-3">
+                      <p className="c9-body text-sm leading-relaxed mb-8 line-clamp-3 text-slate-800">
                         {item.excerpt}
                       </p>
 
                       <div className="mt-auto pt-6 border-t border-gray-50 flex items-center justify-between">
-                        <span className="text-[11px] font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+                        <span className="text-[11px] font-black text-slate-900 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
                           Read {item.type} 
+                          <ArrowRight size={14} className="text-[#5D00D6]" aria-hidden="true" />
                         </span>
                       </div>
                     </div>
@@ -231,18 +233,18 @@ export default function InsightsPage() {
 
           {filteredData.length === 0 && (
             <div className="text-center py-24">
-               <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Search size={32} className="text-slate-300" />
+               <div className="w-20 h-20 bg-gray-100 rounded-none flex items-center justify-center mx-auto mb-6">
+                  <Search size={32} className="text-slate-300" aria-hidden="true" />
                </div>
                <h3 className="text-2xl font-bold text-slate-900 mb-2">No articles found.</h3>
-               <p className="text-slate-500">Try adjusting your search or filters to find what you're looking for.</p>
-               <Button 
+               <p className="text-slate-800">Try adjusting your search or filters to find what you're looking for.</p>
+               <C9Button 
                 variant="outline" 
                 className="mt-8 rounded-lg"
                 onClick={() => { setSearchQuery(''); setActiveCategory('All'); }}
                >
                  Clear all filters
-               </Button>
+               </C9Button>
             </div>
           )}
         </div>
@@ -261,24 +263,28 @@ export default function InsightsPage() {
       {/* NEWSLETTER / CTA */}
       <section className="py-24 bg-white">
         <div className={C}>
-          <div className="bg-[#5D00D6] rounded-lg p-8 md:p-16 relative overflow-hidden text-center text-white">
+          <div className="bg-[#5D00D6] rounded-none p-8 md:p-16 relative overflow-hidden text-center text-white">
             <div className="relative z-10 max-w-2xl mx-auto">
-              <span className="c9-eyebrow !text-white/60 mb-6 block">STAY INFORMED</span>
+              <span className="c9-eyebrow !text-white/95 mb-6 block">STAY INFORMED</span>
               <h2 className="c9-hero-title !text-white mb-8">
                 Operational Intelligence <br /> Delivered.
               </h2>
-              <p className="c9-body !text-white/70 mb-12">
+              <p className="c9-body !text-white/95 mb-12">
                 Join 500+ enterprise leaders receiving our monthly reports on infrastructure control and security governance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input 
                   type="email" 
                   placeholder="Enter your email" 
-                  className="flex-1 px-8 py-5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all"
+                  aria-label="Email for newsletter"
+                  className="flex-1 px-8 py-5 rounded-none bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all"
                 />
-                <button className="px-10 py-5 bg-white text-[#5D00D6] font-bold rounded-lg hover:bg-slate-100 transition-all">
+                <C9Button 
+                  size="lg"
+                  className="px-10 py-5 bg-white text-[#5D00D6] hover:bg-slate-100 rounded-none"
+                >
                   Subscribe
-                </button>
+                </C9Button>
               </div>
             </div>
           </div>

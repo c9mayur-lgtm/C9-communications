@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Linkedin, Github, Twitter, Facebook, Play } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { Linkedin, Play } from 'lucide-react';
+import { C9Button } from "@/components/design-system/C9Button";
 
 export const WpFooter = () => {
   return (
@@ -44,42 +44,51 @@ export const WpFooter = () => {
             <div className="mb-10">
                <h4 className="font-bold text-[20px] mb-6 text-white tracking-tight underline decoration-[#5D00D6] decoration-2 underline-offset-8">Also from the C9 Group:</h4>
                <ul className="space-y-3 text-[14px]">
-                 <li><a href="https://c9teams.com.au/" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Teams</a></li>
-                 <li><a href="https://c9defense.com.au/" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Defense</a></li>
+                 <li><a href="https://c9teams.com.au/" target="_blank" rel="noopener noreferrer" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Teams</a></li>
+                 <li><a href="https://c9defense.com.au/" target="_blank" rel="noopener noreferrer" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Defense</a></li>
                  <li><a href="/contact" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Digital</a></li>
-                 <li><a href="https://c9lumina.com.au/" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Lumina</a></li>
+                 <li><a href="https://c9lumina.com.au/" target="_blank" rel="noopener noreferrer" className="text-[#a166ff] hover:text-white font-semibold transition-colors block">C9 Lumina</a></li>
                </ul>
             </div>
             
             <div className="flex flex-col gap-4 pt-4 border-t border-white/5">
-                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-widest leading-none">Stay in the loop</p>
-                <div className="bg-transparent rounded-lg border border-[#333] flex items-center overflow-hidden focus-within:border-[#5D00D6] transition-colors">
-                  <input type="email" placeholder="Email" className="bg-transparent px-4 py-3 w-full text-[14px] outline-none text-white placeholder-gray-600" />
-                  <button className="bg-[#5D00D6] p-3 hover:bg-[#4d00b3] transition-colors">
-                    
-                  </button>
-                </div>
-                <div className="flex items-center gap-2.5 mt-0.5">
-                   <input type="checkbox" className="w-3 h-3 border-gray-600 rounded-sm bg-black text-[#5D00D6] focus:ring-[#5D00D6] cursor-pointer" />
-                   <span className="text-[10px] text-gray-500 leading-tight">I agree to the Privacy Policy</span>
-                </div>
+                 <p className="text-[11px] text-gray-300 font-black uppercase tracking-widest leading-none">Stay in the loop</p>
+                 <div className="bg-transparent rounded-lg border border-[#333] flex items-center overflow-hidden focus-within:border-[#5D00D6] transition-colors">
+                   <input 
+                     type="email" 
+                     placeholder="Email" 
+                     aria-label="Email address for newsletter"
+                     className="bg-transparent px-4 py-3 w-full text-[14px] outline-none text-white placeholder-gray-500" 
+                   />
+                    <button 
+                      type="submit"
+                      aria-label="Subscribe to newsletter"
+                      className="bg-[#5D00D6] p-3 hover:bg-[#4d00b3] transition-colors flex items-center justify-center text-white"
+                    >
+                      <Play size={16} fill="currentColor" aria-hidden="true" />
+                    </button>
+                 </div>
+                 <div className="flex items-center gap-2.5 mt-0.5">
+                    <input type="checkbox" id="footer-privacy" className="w-3 h-3 border-gray-600 rounded-sm bg-black text-[#5D00D6] focus:ring-[#5D00D6] cursor-pointer" />
+                    <label htmlFor="footer-privacy" className="text-[10px] text-gray-300 leading-tight cursor-pointer font-medium">I agree to the Privacy Policy</label>
+                 </div>
             </div>
          </div>
 
           {/* Col 4: Logo & CTA Area - Grouped Together */}
           <div className="flex flex-col items-center lg:items-center pt-2">
              <img src="/images/c9_logo_light.svg" alt="C9 Communications" className="w-[180px] filter brightness-0 invert mb-6" />
-             <p className="text-[14px] text-gray-400 mb-8 leading-relaxed max-w-[280px]">
+             <p className="text-[14px] text-gray-300 mb-8 leading-relaxed max-w-[280px] text-center">
                C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations and SLA-driven support.
              </p>
              
-             <Button 
-               size="lg" 
-               className="w-full lg:max-w-[260px] shadow-2xl border-none text-[14px] h-12 rounded-full"
-               onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
-             >
-               Schedule Consultation 
-             </Button>
+              <C9Button 
+                size="lg" 
+                className="w-full lg:max-w-[260px] shadow-2xl border-none text-[14px] h-12 rounded-full"
+                onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Schedule Consultation 
+              </C9Button>
           </div>
       </div>
       
@@ -91,34 +100,34 @@ export const WpFooter = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center gap-10 lg:gap-4 pb-12">
             
             {/* Google Section */}
-            <div className="flex items-center gap-4 py-2">
-              <span className="font-bold text-[32px] tracking-tighter text-[#0c1024]">Google</span>
-              <div className="flex flex-col">
-                <div className="text-[10px] font-bold text-gray-400 leading-none uppercase tracking-wide mb-1">Reviewed on</div>
-                <div className="flex text-[#4285F4] text-md leading-none mb-1">★★★★★</div>
-                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wide leading-none">4.9/5 Rating</span>
+              <div className="flex items-center gap-4 py-2">
+                <span className="font-bold text-[32px] tracking-tighter text-[#0c1024]">Google</span>
+                <div className="flex flex-col">
+                  <div className="text-[10px] font-black text-slate-700 leading-none uppercase tracking-wide mb-1">Reviewed on</div>
+                  <div className="flex text-[#4285F4] text-md leading-none mb-1" aria-hidden="true">★★★★★</div>
+                  <span className="text-[10px] font-black text-slate-700 uppercase tracking-wide leading-none">4.9/5 Rating</span>
+                </div>
               </div>
-            </div>
 
             <div className="hidden lg:block w-[1px] h-14 bg-gray-200"></div>
 
             {/* Address Section - Narrow Stack */}
-            <div className="text-[14px] text-gray-600 leading-[1.6] text-center lg:text-left max-w-[120px]">
-              level 3 480 Collins Street Melbourne 3000
-            </div>
+             <div className="text-[14px] text-slate-700 font-medium leading-[1.6] text-center lg:text-left max-w-[120px]">
+               level 3 480 Collins Street Melbourne 3000
+             </div>
 
             <div className="hidden lg:block w-[1px] h-14 bg-gray-200"></div>
 
             {/* Contact & Copyright Section */}
-            <div className="text-center lg:text-left">
-              <div className="text-[14px] text-gray-600 leading-[1.6] mb-1">
-                T: 1800 000 299<br/>
-                E: office@c9communications.com.au
+               <div className="text-center lg:text-left">
+                <div className="text-[14px] text-slate-800 font-bold leading-[1.6] mb-1">
+                  T: 1800 000 299<br/>
+                  E: office@c9communications.com.au
+                </div>
+                <div className="text-[11px] text-slate-700 font-black font-sans uppercase tracking-wider">
+                  © {new Date().getFullYear()} C9 Communications. All rights reserved.
+                </div>
               </div>
-              <div className="text-[11px] text-slate-500 font-medium font-sans">
-                © {new Date().getFullYear()} C9 Communications. All rights reserved.
-              </div>
-            </div>
 
             <div className="hidden lg:block w-[1px] h-14 bg-gray-200"></div>
 
@@ -127,9 +136,9 @@ export const WpFooter = () => {
               {[
                 { label: 'LINKEDIN', icon: Linkedin, url: 'https://in.linkedin.com/company/c9groupofcompanies' }
               ].map((social) => (
-                <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+                <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
                   <div className="h-6 flex items-center justify-center text-slate-700 opacity-80 group-hover:opacity-100 transition-opacity">
-                    <social.icon size={20} strokeWidth={2.5} />
+                    <social.icon size={20} strokeWidth={2.5} aria-hidden="true" />
                   </div>
                   <span className="text-[10px] font-semibold text-[#5D00D6] tracking-[0.05em] group-hover:underline">
                     {social.label}
@@ -154,11 +163,11 @@ export const WpFooter = () => {
           </div>
 
           {/* Acknowledgement of Country */}
-          <div className="max-w-4xl mx-auto text-center border-t border-gray-50 pt-4">
-            <p className="text-[14px] md:text-[14px] text-gray-400 italic leading-[1.8] font-medium opacity-80">
-              We acknowledge the Traditional Owners on whose lands we work. We pay our respects to their elders past and present and recognise their continuing connection to this land.
-            </p>
-          </div>
+            <div className="max-w-4xl mx-auto text-center border-t border-gray-50 pt-4">
+              <p className="text-[14px] md:text-[14px] text-slate-800 italic leading-[1.8] font-bold opacity-100">
+                We acknowledge the Traditional Owners on whose lands we work. We pay our respects to their elders past and present and recognise their continuing connection to this land.
+              </p>
+            </div>
         </div>
       </div>
     </footer>

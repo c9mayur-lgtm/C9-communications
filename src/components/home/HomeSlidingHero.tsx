@@ -61,7 +61,11 @@ export const HomeSlidingHero = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative h-auto pt-0 pb-12 xl:py-0 xl:h-[600px] bg-white overflow-hidden border-b border-slate-100 flex items-center">
+    <section 
+      className="relative h-auto pt-0 pb-12 xl:py-0 xl:h-[600px] bg-white overflow-hidden border-b border-slate-100 flex items-center"
+      aria-roledescription="carousel"
+      aria-label="C9 Solutions Showcase"
+    >
       <div className="container mx-auto px-6 md:px-8 h-full relative z-10" style={{ maxWidth: '1240px' }}>
         <div className="grid xl:grid-cols-[1.1fr_0.9fr] gap-4 xl:gap-12 items-center h-full pt-0 xl:pt-8 pb-20 md:pt-4 md:pb-4">
           
@@ -93,7 +97,7 @@ export const HomeSlidingHero = () => {
           </div>
 
           {/* Content Area - Responsive (Comes second on mobile/tablet) */}
-          <div className="order-2 xl:order-1 relative z-20">
+          <div className="order-2 xl:order-1 relative z-20" aria-live="polite">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
@@ -127,7 +131,7 @@ export const HomeSlidingHero = () => {
                   <C9Button
                     variant="outline"
                     size="lg"
-                    className="rounded-full border-2 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6]"
+                    className="rounded-full border-2 border-slate-200 text-slate-700 hover:border-[#5D00D6] hover:text-[#5D00D6]"
                     asChild
                   >
                     <Link href="/managed-it">
@@ -138,8 +142,8 @@ export const HomeSlidingHero = () => {
 
                 <div className="flex flex-wrap gap-x-6 gap-y-4">
                   {slide.tags.map((tag, i) => (
-                    <div key={i} className="flex items-center gap-2 text-slate-500 font-bold text-[11px] uppercase tracking-wider">
-                      <CheckCircle size={14} className="text-[#5D00D6]" />
+                    <div key={i} className="flex items-center gap-2 text-slate-700 font-bold text-[11px] uppercase tracking-wider">
+                      <CheckCircle size={14} className="text-[#5D00D6]" aria-hidden="true" />
                       {tag}
                     </div>
                   ))}
@@ -158,9 +162,10 @@ export const HomeSlidingHero = () => {
             key={i}
             onClick={() => { setCurrent(i); setDirection(i > current ? 1 : -1); }}
             className={`h-1.5 rounded-full transition-all duration-500 ${
-              i === current ? 'w-10 bg-[#5D00D6]' : 'w-2 bg-slate-200 hover:bg-slate-300'
+              i === current ? 'w-10 bg-[#5D00D6]' : 'w-2 bg-slate-400 hover:bg-slate-500'
             }`}
             aria-label={`Go to slide ${i + 1}`}
+            aria-current={i === current ? 'true' : 'false'}
           />
         ))}
       </div>

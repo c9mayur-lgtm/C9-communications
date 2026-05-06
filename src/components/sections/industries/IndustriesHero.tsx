@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-;
+import { C9Button } from '@/components/design-system/C9Button';
 
 const FadeIn = ({
   children,
@@ -57,7 +57,7 @@ export default function IndustriesHero() {
         </FadeIn>
 
         <FadeIn delay={0.16}>
-          <p className="c9-body text-slate-600 text-[18px] mb-2 max-w-2xl mx-auto">
+          <p className="c9-body text-slate-700 text-[18px] mb-2 max-w-2xl mx-auto">
             Every industry has different demands. We design, deliver, and support IT and
             communications environments that align with how your business actually runs.
           </p>
@@ -66,18 +66,16 @@ export default function IndustriesHero() {
 
         <FadeIn delay={0.24}>
           <div className="flex flex-col items-center gap-4">
-            <a
-              href="#industry-grid"
-              onClick={(e) => {
-                e.preventDefault();
+            <C9Button
+              size="lg"
+              className="rounded-full shadow-xl"
+              onClick={() => {
                 document.getElementById('industry-grid')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-2 bg-[#5D00D6] text-white rounded-full h-14 px-9 font-bold text-[14px] hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 cursor-pointer"
             >
               Explore Industries
-              
-            </a>
-            <p className="text-[14px] text-slate-500">No obligation. Just clear, practical advice.</p>
+            </C9Button>
+            <p className="text-[14px] text-slate-600">No obligation. Just clear, practical advice.</p>
           </div>
         </FadeIn>
       </div>

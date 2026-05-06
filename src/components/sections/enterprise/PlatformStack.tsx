@@ -61,7 +61,7 @@ export default function PlatformStack() {
             <h2 className="c9-section-heading !text-white mb-8">
               The Infrastructure <span className="text-[#a56eff]">Operating System.</span>
             </h2>
-            <p className="c9-body !text-white/70">
+            <p className="c9-body !text-white/85">
               We don't rely on generic tools. Our platform is a bespoke integration of enterprise-grade RMM, SIEM, and Backup technologies designed to provide total visibility and control.
             </p>
           </FadeIn>
@@ -80,14 +80,14 @@ export default function PlatformStack() {
                 <h3 className="c9-card-title !text-white mb-6">
                   {p.title}
                 </h3>
-                <p className="c9-body !text-white/60 !text-sm mb-10">
+                <p className="c9-body !text-white/80 !text-sm mb-10">
                   {p.desc}
                 </p>
                 <div className="mt-auto space-y-4">
                   {p.features.map((f, j) => (
                     <div key={j} className="flex items-center gap-3">
-                      <CheckCircle size={14} className="text-[#a56eff]" />
-                      <span className="c9-body !text-[13px] !text-white/80">{f}</span>
+                      <CheckCircle size={14} className="text-[#a56eff]" aria-hidden="true" />
+                      <span className="c9-body !text-[13px] !text-white/90">{f}</span>
                     </div>
                   ))}
                 </div>
@@ -103,22 +103,22 @@ export default function PlatformStack() {
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
               <div className="max-w-md text-center lg:text-left">
                 <h3 className="text-white text-[24px] font-bold mb-4" style={fontStyle}>Strategic Partnerships</h3>
-                <p className="text-white/40 text-[15px]" style={fontStyle}>
+                <p className="text-white/70 text-[15px]" style={fontStyle}>
                   Our platform is built on the world's leading infrastructure and cloud technologies, ensuring your environment is always Tier-1 standard.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-10 lg:gap-20 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
                 <div className="flex flex-col items-center gap-3">
                   <div className="h-10 w-auto bg-white/10 rounded px-4 flex items-center text-white font-black text-xl tracking-tighter">Microsoft</div>
-                  <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Solutions Partner</span>
+                  <span className="text-[10px] font-bold text-white/70 uppercase tracking-widest">Solutions Partner</span>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <div className="h-10 w-auto bg-white/10 rounded px-4 flex items-center text-white font-black text-xl tracking-tighter">AWS</div>
-                  <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Consulting Partner</span>
+                  <span className="text-[10px] font-bold text-white/70 uppercase tracking-widest">Consulting Partner</span>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <div className="h-10 w-auto bg-white/10 rounded px-4 flex items-center text-white font-black text-xl tracking-tighter">FORTINET</div>
-                  <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Expert Partner</span>
+                  <span className="text-[10px] font-bold text-white/70 uppercase tracking-widest">Expert Partner</span>
                 </div>
               </div>
             </div>
