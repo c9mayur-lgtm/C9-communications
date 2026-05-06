@@ -82,6 +82,8 @@ export const HomeSlidingHero = () => {
                   fill
                   className="object-cover"
                   priority={current === 0}
+                  loading={current === 0 ? "eager" : undefined}
+                  fetchPriority={current === 0 ? "high" : undefined}
                   sizes="(max-width: 1280px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-[#5D00D6]/5 mix-blend-overlay" />
