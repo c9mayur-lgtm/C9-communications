@@ -17,23 +17,27 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
   weight: ["400", "700"],
+  display: 'swap',
 });
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -111,6 +115,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-AU">
+      <head>
+        {/* LCP Optimisation: preconnect to image origins */}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        {/* LCP Optimisation: preload first hero image so browser fetches it immediately */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero/greenfield.png"
+          fetchPriority="high"
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30 overflow-x-hidden`}>
         <script
           type="application/ld+json"

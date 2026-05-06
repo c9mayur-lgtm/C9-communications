@@ -69,16 +69,19 @@ export const HomeSlidingHero = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
-                initial={{ opacity: 0, scale: 1.05 }}
+                initial={current === 0 ? false : { opacity: 0, scale: 1.03 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 className="absolute inset-0"
               >
                 <img
                   src={slide.image}
                   alt={slide.title}
                   className="w-full h-full object-cover"
+                  fetchPriority={current === 0 ? 'high' : 'auto'}
+                  loading={current === 0 ? 'eager' : 'lazy'}
+                  decoding={current === 0 ? 'sync' : 'async'}
                 />
                 <div className="absolute inset-0 bg-[#5D00D6]/5 mix-blend-overlay" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/10 to-transparent" />
