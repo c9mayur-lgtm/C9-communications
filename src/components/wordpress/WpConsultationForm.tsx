@@ -62,20 +62,20 @@ export const WpConsultationForm = ({
               </div>
 
               <div>
-                <h3 className="c9-eyebrow !text-[11px] mb-6">WHAT HAPPENS AFTER YOU SUBMIT</h3>
-                <div className="flex flex-col gap-6">
+                <h3 className="text-[11px] font-bold text-[#0c1024]/60 uppercase tracking-widest mb-4">WHAT HAPPENS AFTER YOU SUBMIT</h3>
+                <div className="flex flex-col gap-4">
                   {[
                     { title: '1. A real Australian calls you', body: 'Not a call centre. Not a script. Someone who actually knows IT.', icon: Phone },
                     { title: '2. We review your current gaps', body: 'We show you exactly where your infrastructure is exposed.', icon: Search },
                     { title: '3. You get a clear roadmap', body: 'Plain English. Exact pricing. No lock-in or pressure.', icon: FileText }
                   ].map((step, idx) => (
-                    <div key={idx} className="flex gap-4 items-start">
-                      <div className="w-10 h-10 rounded-lg bg-[#D6CEFD] flex items-center justify-center text-[#5D00D6] shrink-0">
-                        <step.icon size={18} />
+                    <div key={idx} className="flex gap-3 items-start">
+                      <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0 mt-0.5">
+                        <step.icon size={15} />
                       </div>
-                      <div className="pt-0.5">
-                        <h4 className="c9-eyebrow !text-[#0c1024] !text-[11px] mb-1">{step.title}</h4>
-                        <p className="c9-body !text-[14px] !leading-relaxed !text-[#0c1024]/60">{step.body}</p>
+                      <div>
+                        <h4 className="font-bold text-[#0c1024] text-[15px] mb-0.5">{step.title}</h4>
+                        <p className="text-[14px] leading-relaxed text-[#0c1024]/70 font-medium">{step.body}</p>
                       </div>
                     </div>
                   ))}
