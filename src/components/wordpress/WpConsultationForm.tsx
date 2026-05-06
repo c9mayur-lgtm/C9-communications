@@ -38,7 +38,7 @@ export const WpConsultationForm = ({
       className="bg-[#E4E0FD] py-8 md:py-12 overflow-hidden" 
     >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Left Column (Content) */}
           <div className="max-w-[580px]">
