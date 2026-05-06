@@ -61,7 +61,7 @@ export const WpConsultationForm = ({
                 </p>
               </div>
 
-              <div>
+              <div className="font-proxima">
                 <h3 className="text-[11px] font-bold text-[#0c1024]/60 uppercase tracking-widest mb-4">WHAT HAPPENS AFTER YOU SUBMIT</h3>
                 <div className="flex flex-col gap-4">
                   {[
