@@ -206,7 +206,7 @@ export const SectionSolutionsPills = ({ audience }: SectionSolutionsPillsProps) 
               <div className="mt-10">
                 <FadeIn delay={0.2} direction="none">
                   <C9Button
-                    variant="primary"
+                    variant="default"
                     size="lg"
                     className="rounded-full"
                     onClick={() => {

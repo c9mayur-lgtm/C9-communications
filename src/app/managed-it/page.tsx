@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { CheckCircle, ShieldCheck, Zap, Monitor, Lock, Cloud, PhoneCall, Users, ShieldAlert, Activity, Database, Server, Building, Network, Wrench, Clock, BarChart3, MessageSquare } from 'lucide-react';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';

@@ -4,6 +4,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Wifi, Phone, Network, Shield, HeadphonesIcon, AlertTriangle, Star, Clock, Utensils } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { C9Button } from '@/components/design-system/C9Button';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { TrustProofSystem } from '@/components/sections/TrustProofSystem';
 
