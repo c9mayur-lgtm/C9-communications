@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Search, ChevronRight, HelpCircle, Server, Phone, ShieldCheck, Laptop, Building2 } from 'lucide-react';
+import { Search, ChevronRight, ChevronDown, HelpCircle, Server, Phone, ShieldCheck, Laptop } from 'lucide-react';
 import { Section } from '@/components/design-system/Section';
 import { H1, H2, H3, Body, Label } from '@/components/design-system/Typography';
 import { C9Button } from '@/components/design-system/C9Button';
@@ -166,6 +165,43 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode;
   </motion.div>
 );
 
+const FAQItem = ({ q, a, index }: { q: string; a: string; index: number }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-slate-100 py-1">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-start justify-between gap-4 py-5 text-left group"
+        aria-expanded={open}
+      >
+        <span className="text-[17px] font-bold text-[#0c1024] group-hover:text-[#5D00D6] transition-colors leading-snug">
+          {q}
+        </span>
+        <ChevronDown
+          size={20}
+          className={`shrink-0 mt-0.5 text-slate-400 transition-transform duration-300 ${
+            open ? 'rotate-180 text-[#5D00D6]' : ''
+          }`}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden"
+          >
+            <p className="text-[16px] text-slate-600 leading-relaxed pb-6">{a}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 export default function FAQPage() {
   const [activeCategory, setActiveCategory] = useState('general');
   const [searchQuery, setSearchQuery] = useState('');
@@ -271,18 +307,11 @@ export default function FAQPage() {
                 )}
 
                 {filteredFaqs.length > 0 ? (
-                  <Accordion type="single" collapsible className="w-full">
+                  <div className="w-full divide-y divide-slate-100">
                     {filteredFaqs.map((faq, index) => (
-                      <AccordionItem key={index} value={`item-${index}`} className="border-b border-slate-100 py-2">
-                        <AccordionTrigger className="text-left text-[17px] font-bold text-[#0c1024] hover:text-[#5D00D6] transition-colors py-4 group">
-                          <span className="pr-8">{faq.q}</span>
-                        </AccordionTrigger>
-                        <AccordionContent className="text-[16px] text-slate-600 leading-relaxed pb-6 pt-2">
-                          {faq.a}
-                        </AccordionContent>
-                      </AccordionItem>
+                      <FAQItem key={index} q={faq.q} a={faq.a} index={index} />
                     ))}
-                  </Accordion>
+                  </div>
                 ) : (
                   <div className="py-20 text-center">
                     <div className="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mx-auto mb-6">
