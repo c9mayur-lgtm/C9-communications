@@ -8,7 +8,6 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
-import { SectionSolutionsPills } from '@/components/sections/SectionSolutionsPills';
 import { C9Button } from '@/components/design-system/C9Button';
 import PlatformStack from '@/components/sections/enterprise/PlatformStack';
 import CapabilityPack from '@/components/sections/enterprise/CapabilityPack';
@@ -795,7 +794,6 @@ export default function EnterprisePage() {
     <main className="min-h-screen bg-white">
       <Hero />
       <WpClientTicker />
-      <SectionSolutionsPills audience="enterprise" />
       <SectionProblem />
       <SectionHowItWorks />
       <SectionPlatform />
