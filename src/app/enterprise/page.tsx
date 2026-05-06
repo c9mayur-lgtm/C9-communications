@@ -430,7 +430,8 @@ const SectionScalability = () => (
              <p className="c9-body text-slate-800 mb-8">
                We achieve enterprise stability by eliminating the root causes of infrastructure failure. Our framework ensures that every site operates at peak performance through proactive issue detection and root-cause elimination.
              </p>
-             <div className="space-y-6">                 {[
+             <div className="space-y-6">
+                {[
                   { title: 'Proactive Issue Detection', desc: 'Identifying and solving infrastructure bottlenecks before they impact operational continuity.' },
                   { title: 'Recurring Issue Elimination', desc: 'Hardened root-cause analysis to permanently remove systemic technical debt from the environment.' },
                   { title: 'System-Wide Consistency', desc: 'Standardised hardware and software stacks that ensure identical performance across all enterprise locations.' }
@@ -444,7 +445,7 @@ const SectionScalability = () => (
                         <p className="text-sm text-slate-700">{item.desc}</p>
                      </div>
                   </div>
-                ))})}
+                ))}
              </div>
           </FadeIn>
        </div>
@@ -481,7 +482,7 @@ const SectionSecurity = () => (
                </div>
             </FadeIn>
           ))}
-       </div>v>
+       </div>
     </div>
   </section>
 );
@@ -505,7 +506,8 @@ const SectionArchitecture = () => (
              <h2 className="c9-section-heading mb-6">Integration with Existing Environments</h2>
              <p className="c9-body text-slate-800 mb-8">
                We govern your multi-site infrastructure without disrupting current operations. Our architecture integrates deeply with your established enterprise systems.
-             </p>              <div className="space-y-4">
+             </p>
+             <div className="space-y-4">
                 {[
                   { icon: <Database size={18} aria-hidden="true" />, title: 'ERP & POS Systems', desc: 'Direct integration with core business platforms to ensure transaction continuity across all sites.' },
                   { icon: <Cloud size={18} aria-hidden="true" />, title: 'Cloud & Hybrid Platforms', desc: 'Unified control of Azure, AWS, and legacy infrastructure without disrupting existing workflows.' },
@@ -518,15 +520,13 @@ const SectionArchitecture = () => (
                         <p className="text-sm text-slate-800">{item.desc}</p>
                      </div>
                   </div>
-                        <p className="text-sm text-slate-900">{item.desc}</p>
-                     </div>
-                  </div>
                 ))}
              </div>
           </FadeIn>
 
           <FadeIn direction="left">
-             <div className="relative">                 <div className="bg-[#0c1024] p-10 rounded-none shadow-2xl relative overflow-hidden border border-white/5">
+             <div className="relative">
+                <div className="bg-[#0c1024] p-10 rounded-none shadow-2xl relative overflow-hidden border border-white/5">
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#5D00D6]/20 to-transparent" />
                     <div className="relative z-10">
                        <h3 className="text-white text-2xl font-bold mb-6">Integration Architecture</h3>
