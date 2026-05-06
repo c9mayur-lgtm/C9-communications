@@ -192,12 +192,12 @@ export const SectionSolutionsPills = ({ audience }: SectionSolutionsPillsProps) 
               </div>
 
               {/* Image Container */}
-              <div className="w-full relative aspect-[16/7] overflow-hidden rounded-2xl shadow-xl">
+              <div className="w-full relative aspect-[16/7] overflow-hidden rounded-2xl">
                 <Image
                   src={tab.img}
                   alt={`${tab.name} capability visual`}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 1024px) 100vw, 1024px"
                 />
               </div>

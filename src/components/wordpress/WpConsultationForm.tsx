@@ -74,8 +74,8 @@ export const WpConsultationForm = ({
                         <step.icon size={15} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-[#0c1024] text-[15px] mb-0.5">{step.title}</h4>
-                        <p className="text-[14px] leading-relaxed text-[#0c1024]/70 font-medium">{step.body}</p>
+                        <h4 className="font-semibold text-[#0c1024] text-[15px] mb-0.5">{step.title}</h4>
+                        <p className="text-[14px] leading-relaxed text-[#0c1024]/70 font-normal">{step.body}</p>
                       </div>
                     </div>
                   ))}
