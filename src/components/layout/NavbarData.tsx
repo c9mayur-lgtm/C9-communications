@@ -608,7 +608,7 @@ export const RESOURCES_MENU = {
           items: [
             { icon: <Layout size={14} />,        label: 'Case Studies',              path: '/case-studies' },
             { icon: <MessageSquare size={14} />, label: 'Industry Insights',      path: '/insights' },
-            { icon: <Headphones size={14} />,    label: 'FAQ',                       path: '/support' },
+            { icon: <Headphones size={14} />,    label: 'FAQ',                       path: '/faq' },
             { icon: <Phone size={14} />,         label: 'Schedule a Consultation',   path: '#consultation-section' },
           ]
         }
