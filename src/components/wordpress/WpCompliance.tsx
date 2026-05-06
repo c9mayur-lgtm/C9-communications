@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { ShieldCheck, Database, Lock, Headset } from 'lucide-react';
 
