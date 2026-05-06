@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Calendar, Clock, ChevronRight, BookOpen, Target, FileText, LayoutGrid, List } from 'lucide-react';
+import Image from 'next/image';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { Button } from "@/components/ui/button";
 
@@ -180,10 +181,12 @@ export default function InsightsPage() {
                 >
                   <Link href={`/insights/${item.slug}`} className="flex flex-col h-full bg-white rounded-lg overflow-hidden transition-all duration-500">
                     <div className="aspect-[16/10] overflow-hidden relative">
-                      <img 
+                      <Image 
                         src={item.image} 
                         alt={item.title} 
-                        className="w-full h-full object-cover duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                        fill
+                        className="object-cover duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <div className="absolute top-4 left-4">
                         <span className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest text-white ${

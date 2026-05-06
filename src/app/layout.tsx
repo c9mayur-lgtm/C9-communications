@@ -105,8 +105,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = 0;
-export const dynamic = 'force-dynamic';
 
 export default function RootLayout({
   children,
@@ -119,13 +117,6 @@ export default function RootLayout({
         {/* LCP Optimisation: preconnect to image origins */}
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        {/* LCP Optimisation: preload first hero image so browser fetches it immediately */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero/greenfield.png"
-          fetchPriority="high"
-        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} ${dmSans.variable} antialiased selection:bg-purple-500/30 overflow-x-hidden`}>
         <script
