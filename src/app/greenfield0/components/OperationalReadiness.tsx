@@ -45,7 +45,7 @@ export const OperationalReadiness = () => {
                   className="flex items-start gap-4"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center shrink-0 text-[#5D00D6]">
-                    {React.cloneElement(sys.icon as React.ReactElement, { size: 20 })}
+                    {React.cloneElement(sys.icon as React.ReactElement, { size: 20 } as any)}
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 text-[14px] uppercase tracking-tight mb-1">{sys.label}</h4>

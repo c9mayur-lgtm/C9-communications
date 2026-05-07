@@ -68,7 +68,7 @@ export const SupportSection = () => {
                 className="bg-white rounded-[32px] p-8 border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col items-center text-center group hover:bg-[#7C3AED] transition-colors duration-500"
               >
                 <div className="w-12 h-12 rounded-2xl bg-slate-50 text-[#5D00D6] flex items-center justify-center mb-6 group-hover:bg-white/20 group-hover:text-white transition-colors">
-                  {React.cloneElement(s.icon as React.ReactElement, { size: 24 })}
+                  {React.cloneElement(s.icon as React.ReactElement, { size: 24 } as any)}
                 </div>
                 <div className="text-3xl font-bold text-slate-900 mb-1 group-hover:text-white transition-colors">{s.stat}</div>
                 <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-hover:text-white/60 transition-colors">{s.label}</div>

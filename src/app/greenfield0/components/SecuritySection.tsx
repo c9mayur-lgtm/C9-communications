@@ -45,7 +45,7 @@ export const SecuritySection = () => {
               className="p-8 rounded-[40px] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 hover:border-purple-100 transition-all group"
             >
               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300">
-                {React.cloneElement(feat.icon as React.ReactElement, { size: 28 })}
+                {React.cloneElement(feat.icon as React.ReactElement, { size: 28 } as any)}
               </div>
               <h3 className="c9-card-title mb-4">{feat.title}</h3>
               <p className="text-[14px] text-slate-500 font-medium leading-relaxed">{feat.desc}</p>
