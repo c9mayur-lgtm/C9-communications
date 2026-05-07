@@ -26,7 +26,7 @@ export const SiteMissionControl = () => {
   return (
     <section className="py-8 md:py-12 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1240px]">
-        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center">
+        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-center">
           <div>
             <span className="c9-eyebrow mb-4 block">TOTAL VISIBILITY</span>
             <h2 className="c9-section-heading mb-8">
@@ -144,7 +144,7 @@ export const SiteMissionControl = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="absolute -bottom-6 -left-10 bg-white p-5 rounded-2xl border-l-4 border-amber-500 shadow-2xl flex items-center gap-4 max-w-[280px]"
+              className="absolute -bottom-6 -left-4 lg:-left-10 bg-white p-4 lg:p-5 rounded-2xl border-l-4 border-amber-500 shadow-2xl flex items-center gap-4 max-w-[260px] lg:max-w-[280px] hidden md:flex"
             >
               <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-500 shrink-0">
                 <AlertCircle size={24} />

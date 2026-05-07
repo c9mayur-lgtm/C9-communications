@@ -150,7 +150,7 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
 
   return (
     <section className="py-12 md:py-16 bg-white border-t border-gray-100 font-dm-sans">
-      <div className="container mx-auto px-8 max-w-[1240px]">
+      <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="mb-12 text-center">
           <span className="c9-eyebrow mb-4 block">STARTING FROM SCRATCH?</span>
           <h2 className="c9-section-heading mb-6 font-clash mx-auto max-w-2xl">
@@ -180,7 +180,7 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
         </div>
 
         {/* Tab Content Area */}
-        <div className="py-4 md:py-6 min-h-[500px]">
+        <div className="py-4 md:py-6 min-h-[300px] md:min-h-[500px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -188,7 +188,7 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="grid lg:grid-cols-[1.3fr_1fr] gap-10 md:gap-16 items-start"
+              className="grid lg:grid-cols-[1.3fr_1fr] gap-8 md:gap-16 items-start"
             >
               {/* Left side: Focused Hero Image */}
               <div className="w-full relative group">
@@ -196,7 +196,7 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
                   <img 
                     src={activeStep.image} 
                     alt={activeStep.heading} 
-                    className="w-full h-[550px] object-cover object-center rounded-[32px] border border-slate-100 shadow-2xl"
+                    className="w-full h-[280px] sm:h-[380px] md:h-[450px] lg:h-[550px] object-cover object-center rounded-[32px] border border-slate-100 shadow-2xl"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#5D00D6]/5 rounded-full blur-3xl -z-10" />
@@ -271,8 +271,11 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
           </AnimatePresence>
         </div>
 
+        {/* Section Divider */}
+        <div className="w-full border-t border-slate-200 mt-24 mb-16"></div>
+
         {/* Extra Divisional Cards - RESTORED */}
-        <div className="grid md:grid-cols-2 gap-8 mt-20 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}

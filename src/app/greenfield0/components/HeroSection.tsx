@@ -104,7 +104,7 @@ export const HeroSection = ({ onOpenQualifier }: { onOpenQualifier: () => void }
             </FadeIn>
 
             <FadeIn delay={0.5}>
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8 pt-8 border-t border-slate-100">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pt-8 border-t border-slate-100">
                 {[
                   { text: '12+ sites delivered across 3 states', icon: <MapPin size={16} /> },
                   { text: 'Fully commissioned in under 6 weeks', icon: <Zap size={16} /> },

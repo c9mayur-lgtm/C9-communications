@@ -61,43 +61,42 @@ export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => vo
     <section className="py-12 md:py-16 bg-white border-t border-gray-100 font-dm-sans">
       {/* Narrative Header */}
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px] mb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-end">
-          <div>
-            <motion.span 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="c9-eyebrow mb-4 block"
-            >
-              END-TO-END OWNERSHIP
-            </motion.span>
-            <motion.h2 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="c9-section-heading !text-[28px] md:!text-[36px] !leading-[1.1] mb-6 font-clash"
-            >
-              From Empty Shell to Full-Fledged Operations.
-            </motion.h2>
-          </div>
+        <div className="max-w-3xl">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="c9-eyebrow mb-4 block"
+          >
+            END-TO-END OWNERSHIP
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="c9-section-heading !text-[28px] md:!text-[36px] !leading-[1.1] mb-8 font-clash"
+          >
+            From Empty Shell to Full-Fledged Operations.
+          </motion.h2>
+
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <p className="c9-body text-slate-500 max-w-xl mb-8 font-dm-sans">
+            <p className="c9-body text-slate-500 max-w-2xl mb-8 font-dm-sans !font-normal !text-[15px]">
               Most vendors join at the end. We start at the beginning. As your Managed Service Provider, we own the technical journey so you can focus on the customer experience.
             </p>
             <div className="flex flex-wrap gap-6 items-center">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
-                <span className="text-[11px] font-black uppercase tracking-widest text-slate-400">Fixed Cost Delivery</span>
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-400">Fixed Cost Delivery</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
-                <span className="text-[11px] font-black uppercase tracking-widest text-slate-400">Zero Trade Chaos</span>
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-400">Zero Trade Chaos</span>
               </div>
             </div>
           </motion.div>
@@ -105,7 +104,7 @@ export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => vo
       </div>
 
       {/* The Visual Journey Row */}
-      <div className="container mx-auto px-6 max-w-[1400px]">
+      <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="relative">
           {/* Connecting Line Backdrop */}
           <div className="absolute top-[80px] left-0 w-full h-1 bg-slate-50 hidden lg:block" />
@@ -124,7 +123,7 @@ export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => vo
                   {/* Phase Marker & Icon */}
                   <div className="flex items-center justify-between mb-8">
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-[#5D00D6] uppercase tracking-[0.25em] mb-1">Phase {step.phase}</span>
+                      <span className="text-[9px] font-semibold text-[#5D00D6] uppercase tracking-[0.25em] mb-1">Phase {step.phase}</span>
                       <div className="h-1 w-12 bg-[#5D00D6]/10 rounded-full overflow-hidden">
                         <motion.div 
                           initial={{ width: 0 }}
@@ -144,10 +143,10 @@ export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => vo
                   </div>
 
                   {/* Text Content */}
-                  <div className="mb-8">
-                    <h3 className="text-xl font-bold text-[#0c1024] mb-2 font-clash">{step.title}</h3>
-                    <p className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest mb-4">{step.subtitle}</p>
-                    <p className="text-slate-500 text-sm leading-relaxed font-medium font-dm-sans">
+                  <div className="mb-6">
+                    <h3 className="text-[18px] font-semibold text-[#0c1024] mb-2 font-clash">{step.title}</h3>
+                    <p className="text-[10px] font-semibold text-[#5D00D6] uppercase tracking-widest mb-4">{step.subtitle}</p>
+                    <p className="text-slate-500 text-[13px] leading-relaxed font-normal font-dm-sans">
                       {step.desc}
                     </p>
                   </div>
@@ -157,7 +156,7 @@ export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => vo
                     {step.features.map((feat, fi) => (
                       <div key={fi} className="flex items-center gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]/30" />
-                        <span className="text-[12px] font-bold text-slate-700">{feat}</span>
+                        <span className="text-[11px] font-medium text-slate-600">{feat}</span>
                       </div>
                     ))}
                   </div>

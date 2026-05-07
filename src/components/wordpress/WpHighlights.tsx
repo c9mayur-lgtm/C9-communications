@@ -27,9 +27,9 @@ export const WpHighlights = () => {
             {/* Metric 1 */}
             <div className="flex flex-col items-center lg:items-start shrink-0">
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">120+</span>
+                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">1.2M+</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Vendor Consolidation</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Successful PBX Calls</span>
             </div>
 
             <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
@@ -37,9 +37,9 @@ export const WpHighlights = () => {
             {/* Metric 2 */}
             <div className="flex flex-col items-center lg:items-start shrink-0">
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">3,000+</span>
+                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">99.99%</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Lower Downtime Risk</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">System Uptime Achieved</span>
             </div>
 
             <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
@@ -47,9 +47,9 @@ export const WpHighlights = () => {
             {/* Metric 3 */}
             <div className="flex flex-col items-center lg:items-start shrink-0">
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">99.99%</span>
+                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">&lt;15m</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">System Visibility</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Support Response Time</span>
             </div>
 
             <div className="h-10 w-[1px] bg-gray-200 shrink-0 hidden lg:block"></div>
@@ -57,9 +57,9 @@ export const WpHighlights = () => {
             {/* Metric 4 */}
             <div className="flex flex-col items-center lg:items-start shrink-0">
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">24/7</span>
+                <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">500+</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Predictable Behaviour</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Enterprise Sites Live</span>
             </div>
           </div>
 

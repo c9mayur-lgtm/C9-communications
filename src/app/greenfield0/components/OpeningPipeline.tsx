@@ -64,7 +64,7 @@ export const OpeningPipeline = ({ onOpenQualifier }: { onOpenQualifier: () => vo
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 items-start">
+        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-8 lg:gap-12 items-start">
           {/* Left: Phase Selectors */}
           <div className="space-y-4">
             {PIPELINE_STAGES.map((stage) => (
@@ -103,7 +103,7 @@ export const OpeningPipeline = ({ onOpenQualifier }: { onOpenQualifier: () => vo
           </div>
 
           {/* Right: Stage Detail Content */}
-          <div className="bg-slate-50 rounded-[32px] p-8 md:p-12 min-h-[480px] relative overflow-hidden flex flex-col">
+          <div className="bg-slate-50 rounded-[32px] p-6 md:p-12 min-h-[320px] md:min-h-[480px] relative overflow-hidden flex flex-col">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStage}
@@ -121,7 +121,7 @@ export const OpeningPipeline = ({ onOpenQualifier }: { onOpenQualifier: () => vo
                     {activeStage === 4 && <Zap size={22} />}
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-[#0c1024]">
+                    <h3 className="text-xl md:text-3xl font-bold text-[#0c1024]">
                       {PIPELINE_STAGES.find(s => s.id === activeStage)?.title}
                     </h3>
                     <p className="text-[#5D00D6] font-black uppercase tracking-widest text-[11px] mt-1">
@@ -130,7 +130,7 @@ export const OpeningPipeline = ({ onOpenQualifier }: { onOpenQualifier: () => vo
                   </div>
                 </div>
 
-                <p className="text-xl text-slate-600 font-medium leading-relaxed mb-10">
+                <p className="text-base md:text-xl text-slate-600 font-medium leading-relaxed mb-8 md:mb-10">
                   {PIPELINE_STAGES.find(s => s.id === activeStage)?.longDesc}
                 </p>
 

@@ -14,7 +14,7 @@ export const StatsSection = () => {
   return (
     <section className="py-12 bg-white">
       <div className="container mx-auto px-6 max-w-[1240px]">
-        <div className="flex flex-wrap md:flex-nowrap items-center justify-between">
+        <div className="grid grid-cols-2 md:flex md:flex-nowrap items-center justify-between">
           {STATS.map((s, i) => (
             <React.Fragment key={i}>
               <motion.div
@@ -22,7 +22,7 @@ export const StatsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="flex-1 px-4 py-6 text-center md:text-left min-w-[200px]"
+                className="flex-1 px-4 py-6 text-center md:text-left"
               >
                 <div className="text-[42px] md:text-[54px] font-semibold text-[#0c1024] tracking-tight leading-none mb-3">
                   {s.metric}
