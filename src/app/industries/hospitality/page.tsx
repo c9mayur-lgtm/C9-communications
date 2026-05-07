@@ -268,7 +268,7 @@ const Trust = () => (
             Communication issues on a Tuesday afternoon are annoying. Communication issues during a Saturday night rush are a disaster. We understand the difference.
           </p>
           <p className="c9-body text-slate-800 mb-8">
-            Our Australian-based support team knows your venue’s floor plan and network layout. We don’t ask your floor managers to reboot switches; we monitor your systems proactively and often fix issues before your team even notices a flicker. One call, real humans, instant action.
+            Our AU-managed support team knows your venue’s floor plan and network layout. We don’t ask your floor managers to reboot switches; we monitor your systems proactively and often fix issues before your team even notices a flicker. One call, real humans, instant action.
           </p>
           <C9Button
             variant="link"

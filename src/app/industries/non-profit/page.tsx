@@ -268,7 +268,7 @@ const Trust = () => (
             We don't see non-profits as "small business" accounts. We see you as vital community pillars. When something goes wrong, you shouldn't have to wait in a generic phone queue.
           </p>
           <p className="c9-body text-slate-800 mb-8">
-            Our Australian-based support team knows your exact setup. We understand that a downtime for your donor management system isn't just a tech glitch—it's a critical threat to your mission. We’re fast, we’re jargon-free, and we’re here to help your team do more of what matters.
+            Our AU-managed support team knows your exact setup. We understand that a downtime for your donor management system isn't just a tech glitch—it's a critical threat to your mission. We’re fast, we’re jargon-free, and we’re here to help your team do more of what matters.
           </p>
           <C9Button
             variant="link"

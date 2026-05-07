@@ -148,7 +148,7 @@ export default function Hero() {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
               <div className="flex flex-wrap gap-5 md:gap-8 mt-10 md:mt-12 pb-4">
-                {[ "Australian-based team", "Remote + on-site support", "Dedicated account manager" ].map((text, i) => (
+                {[ "AU-managed technical team", "Remote + on-site support", "Dedicated account manager" ].map((text, i) => (
                   <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
                     <CheckCircle size={12} className="text-[#5D00D6]" /> {text}
                   </span>

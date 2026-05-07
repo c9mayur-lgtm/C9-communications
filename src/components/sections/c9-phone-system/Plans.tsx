@@ -17,7 +17,7 @@ const tiers = [
       'Local/National: 10c per call',
       'Mobile: 14c per minute',
       'Yealink handset compatible',
-      'Australian-based support'
+      'AU-managed support'
     ],
     recommended: false,
     cta: 'Select Basic'

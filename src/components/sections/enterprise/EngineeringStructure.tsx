@@ -21,7 +21,7 @@ const tiers = [
   {
     title: 'L1 Operations Support',
     role: 'Incident Identification & Triage',
-    desc: '24/7 AU-based monitoring and rapid response for standard service requests and incident classification.',
+    desc: '24/7 AU-managed monitoring and rapid response for standard service requests and incident classification.',
     icon: Headphones,
     color: 'text-blue-500',
     bgColor: 'bg-blue-500/10'
@@ -69,7 +69,7 @@ export default function EngineeringStructure() {
             </p>
             <div className="space-y-6">
               {[
-                '100% Onshore Australian Engineering',
+                'Australian-Managed Engineering Team',
                 'No Level 1 "Script" Support',
                 'Direct Access to Senior Technicians',
                 'Outcome-Based Performance Metrics'

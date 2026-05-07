@@ -153,7 +153,7 @@ export default function PrivacyPolicy() {
         <ul>
           <li><strong>Identify you</strong> accurately and prevent fraud.</li>
           <li><strong>Supply products</strong> and services that you have requested from us.</li>
-          <li><strong>Provide support</strong> through our Australian-based engineering team.</li>
+          <li><strong>Provide support</strong> through our AU-managed engineering team.</li>
           <li><strong>Bill and collect payment</strong> for your communication services.</li>
           <li><strong>Monitor and improve</strong> our network and facilities.</li>
         </ul>

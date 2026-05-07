@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const STATS = [
-  { metric: '12+', label: 'Sites Delivered', sub: 'Across 3 States' },
+  { metric: '500+', label: 'Sites Delivered', sub: 'Across Aus and NZ' },
   { metric: '<6 wks', label: 'Rapid Deployment', sub: 'Project Average' },
   { metric: 'Zero', label: 'Day-One Failures', sub: 'Guaranteed' },
   { metric: '100%', label: 'Operational at Launch', sub: 'Success Rate' },

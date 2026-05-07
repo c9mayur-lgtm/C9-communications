@@ -361,7 +361,7 @@ const INFRA_TABS = [
     cards: [
       {
         title: '24/7 Monitoring',
-        body: 'Continuous monitoring of security health and device compliance by our Sydney-based SOC team.',
+        body: 'Continuous monitoring of security health and device compliance by our AU-managed SOC team.',
         pointers: ['Real-time threat detection', 'Compliance reporting', 'Patch management'],
         partner: 'C9 Managed IT',
         partnerLogo: null,
@@ -376,7 +376,7 @@ const INFRA_TABS = [
       {
         title: 'Expert Support',
         body: 'Direct access to L1-L3 engineers who know your environment and own the outcome of every request.',
-        pointers: ['< 2 hr response SLA', 'Sydney-based desk', 'Named engineers'],
+        pointers: ['< 2 hr response SLA', 'AU-managed desk', 'Named engineers'],
         partner: 'Engineering',
         partnerLogo: null,
       },

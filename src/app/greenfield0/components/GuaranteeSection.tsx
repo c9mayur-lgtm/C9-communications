@@ -29,7 +29,7 @@ export const GuaranteeSection = () => {
           <h2 className="c9-section-heading mb-6 font-clash">
             Day One Operational Guarantee
           </h2>
-          <p className="c9-body max-w-2xl mx-auto text-slate-500 text-lg">
+          <p className="c9-body max-w-2xl mx-auto text-slate-500">
             Before your site opens, we ensure every technical layer is fully operational. We don&apos;t leave until your business can run.
           </p>
         </div>

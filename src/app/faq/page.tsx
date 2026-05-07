@@ -24,7 +24,7 @@ const FAQ_DATA = {
     },
     {
       q: "Where is your support team located?",
-      a: "Our support engineering team is 100% onshore, based right here in Australia. When you call us, you speak directly to a local, qualified technical expert, eliminating timezone misalignments and language barriers."
+      a: "Our support engineering team is Australian-managed, with local technical leadership overseeing our operations. When you call us, you speak to a qualified expert, eliminating the delay of call-center script-reading and ensuring high-level technical oversight."
     },
     {
       q: "Do you only work with large enterprises?",

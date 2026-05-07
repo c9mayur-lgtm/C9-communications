@@ -123,7 +123,7 @@ export default function RetailArchitecture() {
                   24/7 Managed Operations & Security
                 </h3>
                 <p className="text-white/60 text-[15px] leading-relaxed" style={fontStyle}>
-                  Your entire architecture is under constant supervision by our Australian-based NOC. We detect and resolve store connectivity issues before your managers even pick up the phone.
+                  Your entire architecture is under constant supervision by our AU-managed NOC. We detect and resolve store connectivity issues before your managers even pick up the phone.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">

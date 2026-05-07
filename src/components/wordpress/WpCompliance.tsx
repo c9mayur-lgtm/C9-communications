@@ -128,7 +128,7 @@ export const WpCompliance = () => {
             <div>
               <p className="text-[#0c1024] text-[15px] font-semibold mb-1">100% On-Shore Support</p>
               <p className="text-gray-500 text-[14px] leading-relaxed">
-                Zero off-shoring. Our Level 2/3 engineering teams and Network Operations Centre are proudly Australian-based.
+                Zero off-shoring. Our Level 2/3 engineering teams and Network Operations Centre are AU-managed.
               </p>
             </div>
           </div>

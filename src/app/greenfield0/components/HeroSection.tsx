@@ -71,14 +71,14 @@ export const HeroSection = ({ onOpenQualifier }: { onOpenQualifier: () => void }
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <h1 className="c9-hero-title mb-8 font-clash">
+              <h1 className="c9-hero-title !text-[32px] md:!text-[42px] lg:!text-[52px] mb-8 font-clash">
                 Your New Site. <br/>
                 <span className="text-[#5D00D6]">Fully Operational from Day One.</span>
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <p className="c9-body mb-10 max-w-xl text-lg text-slate-500">
+              <p className="c9-body mb-10 max-w-xl text-slate-500">
                 Single partner for IT, Telco, and infrastructure — delivered, tested, and ready before your doors open.
               </p>
             </FadeIn>

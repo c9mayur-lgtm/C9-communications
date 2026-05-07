@@ -49,7 +49,7 @@ export default function FinalCTA() {
               "Site qualification within 1 business day",
               "Symmetrical speeds 50/50 to 1000/1000 Mbps",
               "$0 fibre install on 36-month contracts",
-              "Australian-based technical team"
+              "AU-managed technical team"
             ].map((item, i) => (
                <div key={i} className="flex items-center justify-start gap-3">
                   <CheckCircle size={12} className="text-[#5D00D6] shrink-0" />

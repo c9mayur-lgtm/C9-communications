@@ -20,7 +20,7 @@ export const FAQSection = () => {
     },
     {
       question: "Do you provide ongoing support after deployment?",
-      answer: "Yes. Our team monitors and manages your infrastructure to keep everything running reliably. We offer 24/7 Australian-based support, ensuring proactive issue resolution and immediate assistance when needed.",
+      answer: "Yes. Our team monitors and manages your infrastructure to keep everything running reliably. We offer 24/7 AU-managed support, ensuring proactive issue resolution and immediate assistance when needed.",
     },
     {
       question: "Are your solutions scalable for growing businesses?",

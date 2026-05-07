@@ -55,7 +55,7 @@ export default function TeamPage() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <Body className="mb-10 text-lg md:text-xl text-left">
-                C9 removes the frustration of script-reading helpdesks. We provide direct access to Australian-based senior engineers who own your technical outcomes.
+                C9 removes the frustration of script-reading helpdesks. We provide direct access to Australian-managed senior engineers who own your technical outcomes.
               </Body>
             </FadeIn>
             <FadeIn delay={0.3}>
@@ -79,8 +79,8 @@ export default function TeamPage() {
                />
                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
                <div className="absolute bottom-8 left-8 right-8 text-white">
-                  <div className="text-[12px] font-bold uppercase tracking-widest text-[#A855F7] mb-2">Onshore Delivery</div>
-                  <H3 className="text-white text-2xl">100% Australian Support</H3>
+                  <div className="text-[12px] font-bold uppercase tracking-widest text-[#A855F7] mb-2">AU-Managed Delivery</div>
+                  <H3 className="text-white text-2xl">AU-Managed Engineering</H3>
                </div>
             </div>
           </FadeIn>
@@ -145,7 +145,7 @@ export default function TeamPage() {
               <div className="space-y-6">
                  {[
                    { title: "No Script Reading", desc: "Our engineers assess the specific context of your environment before acting." },
-                   { title: "Onshore Only", desc: "100% of our service desk and engineering team is based in Australia." },
+                   { title: "AU-Managed Operations", desc: "Our service desk and engineering team is managed by Australian technical leads." },
                    { title: "Direct Access", desc: "No Level 1 gatekeepers. Your request goes straight to the people who can fix it." }
                  ].map((item, i) => (
                    <div key={i} className="flex gap-4">

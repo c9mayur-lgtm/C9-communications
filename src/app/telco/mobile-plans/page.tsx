@@ -376,7 +376,7 @@ export default function MobilePlansPage() {
           <div className="grid md:grid-cols-2 gap-6">
              {[
                { icon: <ShieldCheck size={20} />, title: "Support Ownership", desc: "We don't pass you back to the carrier. We own the support lifecycle from the moment an issue is raised until total resolution." },
-               { icon: <Navigation size={20} />, title: "Escalation Clarity", desc: "Clear SLAs and direct access to Australian-based tier-2 engineers for rapid problem resolution." },
+               { icon: <Navigation size={20} />, title: "Escalation Clarity", desc: "Clear SLAs and direct access to AU-managed tier-2 engineers for rapid problem resolution." },
                { icon: <TrendingUp size={20} />, title: "Usage Visibility", desc: "Transparent dashboarding ensuring your operations and finance teams always know exactly where data and spend are directed." },
                { icon: <Briefcase size={20} />, title: "Device Lifecycle Support", desc: "From procurement and provisioning to deployment and decommissioning, we manage the entire hardware lifecycle." }
              ].map((feature, idx) => (

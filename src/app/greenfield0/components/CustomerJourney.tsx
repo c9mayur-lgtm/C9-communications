@@ -30,7 +30,7 @@ const JOURNEY_STEPS = [
     phase: 'The Empty Shell',
     link: '/telco',
     description: 'The foundation of your digital site. We handle the entire connectivity lifecycle from initial qualification to live high-speed fibre delivery.',
-    image: '/images/realistic_business_internet_fiber_box_1776077417680.png',
+    image: '/images/greenfield/internet.png',
     options: [
       { icon: <Wifi size={20} />, title: 'Free Service Qualification', desc: 'Exact speeds and technology audits for your site.' },
       { icon: <Zap size={20} />, title: 'LOC ID & Registrations', desc: 'Managing all infrastructure IDs to avoid delays.' },
@@ -48,7 +48,7 @@ const JOURNEY_STEPS = [
     phase: 'The Build Phase',
     link: '/managed-it/network-solutions',
     description: 'High-density connectivity that reaches every corner. We design, stage, and deploy the entire internal network fabric.',
-    image: '/images/realistic_business_networking_rack_1776077491291.png',
+    image: '/images/greenfield/networking.png',
     options: [
       { icon: <Network size={20} />, title: 'Structured Cabling', desc: 'Certified Cat6A and Fibre backbone installation.' },
       { icon: <Wifi size={20} />, title: 'WiFi 6E Rollout', desc: 'High-density coverage for guests and staff.' },
@@ -66,7 +66,7 @@ const JOURNEY_STEPS = [
     phase: 'The Hardware Stack',
     link: '/telco/phone-system',
     description: 'Crystal clear communication from Day 1. Modern cloud-based systems that integrate perfectly with your workflows.',
-    image: '/images/realistic_business_voice_poly_yealink_1776077360073.png',
+    image: '/images/greenfield/phone-system.png',
     options: [
       { icon: <Phone size={20} />, title: 'Teams Integration', desc: 'Direct routing for calling within Microsoft Teams.' },
       { icon: <CheckCircle2 size={20} />, title: 'Cloud PBX Setup', desc: 'Full-featured system without on-site hardware.' },
@@ -101,7 +101,7 @@ const JOURNEY_STEPS = [
     phase: 'The Hardware Stack',
     link: '/managed-it',
     description: 'Reliable, managed print services that work perfectly across your network from the moment you open.',
-    image: '/images/greenfield/networking.png',
+    image: '/images/greenfield/print-solutions.png',
     options: [
       { icon: <Printer size={20} />, title: 'Smart Fleet Management', desc: 'Hardware tailored to your site-specific volumes.' },
       { icon: <Zap size={20} />, title: 'Auto-Replenishment', desc: 'Toner arrives before you ever run out.' },
@@ -133,7 +133,7 @@ const JOURNEY_STEPS = [
     phase: 'The Live Venue',
     link: '/modern-workplace',
     description: 'The first impression your site makes. Seamless digital visitor check-ins and contractor management.',
-    image: '/images/greenfield/networking.png',
+    image: '/images/greenfield/visitors-solution.png',
     options: [
       { icon: <Users size={20} />, title: 'Digital Sign-in', desc: 'Contactless visitor registration at the front desk.' },
       { icon: <CheckCircle2 size={20} />, title: 'Safety Inductions', desc: 'Automated health and safety walkthroughs.' },
@@ -151,30 +151,28 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
   return (
     <section className="py-12 md:py-16 bg-white border-t border-gray-100 font-dm-sans">
       <div className="container mx-auto px-8 max-w-[1240px]">
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <span className="c9-eyebrow mb-4 block">STARTING FROM SCRATCH?</span>
-          <h2 className="c9-section-heading mb-6 font-clash">
+          <h2 className="c9-section-heading mb-6 font-clash mx-auto max-w-2xl">
             Everything your new site needs.
           </h2>
           
-          {/* Tabs Header - Matching WpServices UI */}
-          <div className="flex flex-nowrap overflow-x-auto no-scrollbar border-b border-gray-200">
+          {/* Navigation Pills - Cleaner, non-congested wrapping */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
             {JOURNEY_STEPS.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 md:py-4 text-[13px] font-bold transition-all border-b-2 relative shrink-0 ${
+                  className={`flex items-center gap-2 md:gap-3 px-5 md:px-6 py-2.5 md:py-3 text-[12px] md:text-[13px] font-bold transition-all rounded-full border-2 ${
                     isActive 
-                      ? 'text-[#5D00D6] border-[#5D00D6] bg-[#F4F0FA]' 
-                      : 'text-gray-500 border-transparent hover:text-gray-700 hover:bg-gray-50'
+                      ? 'bg-[#5D00D6] text-white border-[#5D00D6] shadow-lg shadow-purple-900/20 scale-105' 
+                      : 'bg-white text-gray-500 border-gray-100 hover:border-[#5D00D6]/30 hover:text-[#5D00D6] hover:bg-purple-50/50'
                   }`}
                 >
-                  <span className={`${isActive ? 'text-[#5D00D6]' : 'text-gray-400'} shrink-0`}>
-                    {tab.icon}
-                  </span>
-                  <span className="whitespace-nowrap uppercase tracking-wider">{tab.label}</span>
+                  <span className={isActive ? 'text-white' : 'text-[#5D00D6]'}>{tab.icon}</span>
+                  <span className="uppercase tracking-wider">{tab.label}</span>
                 </button>
               );
             })}
@@ -190,82 +188,82 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="grid lg:grid-cols-[1fr_1.2fr] gap-8 md:gap-16 items-start"
+              className="grid lg:grid-cols-[1.3fr_1fr] gap-10 md:gap-16 items-start"
             >
-              {/* Left side: Heading, Description & Image */}
+              {/* Left side: Focused Hero Image */}
+              <div className="w-full relative group">
+                <div className="relative z-10">
+                  <img 
+                    src={activeStep.image} 
+                    alt={activeStep.heading} 
+                    className="w-full h-[550px] object-cover object-center rounded-[32px] border border-slate-100 shadow-2xl"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#5D00D6]/5 rounded-full blur-3xl -z-10" />
+              </div>
+
               <div className="flex flex-col">
-                <div className="mb-8 md:mb-10">
+                <div className="mb-6 md:mb-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="px-3 py-1 bg-[#5D00D6]/10 text-[#5D00D6] text-[10px] font-black uppercase tracking-[0.2em] rounded-full">
-                      Journey Phase: {activeStep.phase}
+                    <div className="px-4 py-1.5 bg-[#5D00D6]/5 text-[#5D00D6] text-[11px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#5D00D6]/10">
+                      Phase {activeStep.id.toUpperCase()} • {activeStep.phase}
                     </div>
                   </div>
-                  <h3 className="c9-card-title !text-[28px] md:!text-[36px] mb-6 leading-tight text-[#0c1024] font-clash">
+                  <h3 className="text-[24px] md:text-[32px] font-bold mb-4 leading-[1.2] text-[#0c1024] font-clash tracking-tight">
                     {activeStep.heading}
                   </h3>
-                  <p className="c9-body leading-relaxed text-slate-500 text-lg font-dm-sans">
+                  <p className="text-[14px] md:text-[15px] leading-relaxed text-slate-500 font-medium font-dm-sans">
                     {activeStep.description}
                   </p>
                 </div>
 
-                <div className="w-full relative group perspective-1000">
-                  <div className="relative z-10 duration-700">
-                    <img 
-                      src={activeStep.image} 
-                      alt={activeStep.heading} 
-                      className="w-full h-[300px] object-cover object-center rounded-2xl border border-slate-100 shadow-lg"
-                    />
+                <div className="pt-2">
+                  <div className="mb-6 flex items-center justify-between">
+                     <span className="text-[12px] font-black uppercase tracking-[0.3em] text-[#5D00D6]">
+                        What we handle end-to-end
+                     </span>
                   </div>
-                </div>
-              </div>
 
-              {/* Right side: Service Pointers */}
-              <div className="flex flex-col pt-2">
-                <div className="mb-6 flex items-center justify-between">
-                   <span className="text-[11px] font-black uppercase tracking-[0.25em] text-[#5D00D6]">
-                      What we handle end-to-end
-                   </span>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
-                  {activeStep.options.map((option: any, idx: number) => (
-                    <motion.div 
-                      key={idx} 
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: idx * 0.05 }}
-                      className="group"
-                    >
-                      <div className="flex items-center gap-3 mb-1">
-                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center shrink-0">
-                          <CheckCircle2 size={12} />
+                  <div className="grid sm:grid-cols-2 gap-x-8 gap-y-7">
+                    {activeStep.options.map((option: any, idx: number) => (
+                      <motion.div 
+                        key={idx} 
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: idx * 0.05 }}
+                        className="group"
+                      >
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 shadow-sm">
+                            <CheckCircle2 size={14} strokeWidth={3} />
+                          </div>
+                          <h4 className="text-[15px] font-bold text-[#0c1024] group-hover:text-[#5D00D6] transition-colors font-clash leading-tight">
+                            {option.title}
+                          </h4>
                         </div>
-                        <h4 className="text-[14px] font-bold text-[#0c1024] group-hover:text-[#5D00D6] transition-colors font-clash leading-tight">
-                          {option.title}
-                        </h4>
-                      </div>
-                      <p className="text-[12px] font-medium text-slate-400 leading-snug font-dm-sans pl-8">
-                        {option.desc}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
+                        <p className="text-[12px] font-medium text-slate-400 leading-normal font-dm-sans pl-9">
+                          {option.desc}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
 
-                <div className="mt-10 pt-8 border-t border-slate-50">
-                  <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-                    <div>
-                      <h4 className="text-[15px] font-bold text-[#0c1024] mb-1 font-clash">Want to know more?</h4>
-                      <p className="text-[13px] text-slate-400 font-medium font-dm-sans">Explore our dedicated {activeStep.label} solutions.</p>
+                  <div className="mt-12 pt-8 border-t border-slate-100">
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+                      <div>
+                        <h4 className="text-[15px] font-bold text-[#0c1024] mb-1 font-clash text-center sm:text-left">Want to know more?</h4>
+                        <p className="text-[13px] text-slate-400 font-medium font-dm-sans text-center sm:text-left">Explore our dedicated {activeStep.label} solutions.</p>
+                      </div>
+                      <C9Button 
+                        asChild
+                        variant="outline"
+                        className="rounded-full border-[#5D00D6]/20 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all px-8 h-12"
+                      >
+                        <Link href={activeStep.link}>
+                          Go to {activeStep.label} Page
+                        </Link>
+                      </C9Button>
                     </div>
-                    <C9Button 
-                      asChild
-                      variant="outline"
-                      className="rounded-full border-[#5D00D6]/20 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all px-8 h-12"
-                    >
-                      <Link href={activeStep.link}>
-                        Go to {activeStep.label} Page <ArrowRight size={16} className="ml-2" />
-                      </Link>
-                    </C9Button>
                   </div>
                 </div>
               </div>
@@ -282,6 +280,9 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
             className="group bg-[#0c1024] rounded-3xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-between h-full border border-white/5"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-8 right-8">
+              <img src="/c9-defense-logo.png" alt="C9 Defense" className="h-10 w-auto object-contain opacity-100" />
+            </div>
             <div className="relative z-10">
               <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-purple-400 mb-6">
                 <Shield size={28} />
@@ -309,13 +310,23 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
             className="group bg-white rounded-3xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-between h-full border border-slate-100 shadow-xl shadow-slate-200/50"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#5D00D6]/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-8 right-8">
+              <img 
+                src="/c9-lumina-logo.png" 
+                alt="C9 Lumina" 
+                className="h-12 w-auto object-contain opacity-100" 
+                style={{ filter: 'invert(1) hue-rotate(180deg)' }}
+              />
+            </div>
             <div className="relative z-10">
               <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6">
                 <Monitor size={28} />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3 tracking-tight font-clash">Want complete managed digital signages?</h4>
+              <h4 className="text-xl font-bold text-slate-900 mb-3 tracking-tight font-clash">
+                Want complete managed <span style={{ color: '#BF2F70' }}>digital signages</span>?
+              </h4>
               <p className="text-slate-500 text-sm font-medium mb-8 leading-relaxed font-dm-sans">
-                Transform your site with immersive, managed visual communication and digital signage solutions.
+                Transform your site with immersive, managed visual communication and <span style={{ color: '#BF2F70' }}>digital signage</span> solutions.
               </p>
             </div>
             <C9Button 

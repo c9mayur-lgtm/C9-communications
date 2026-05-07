@@ -25,9 +25,9 @@ const cards = [
   },
   {
     icon: Headphones,
-    title: 'Onshore 24/7 Fleet Support',
-    desc: 'Direct access to our Australian-based support team. No offshore call centres, no scripts — just expert mobile technicians who understand the urgency of business connectivity.',
-    tags: ['Onshore Support', 'Tier 1 Access', '24/7 Available'],
+    title: 'AU-Managed 24/7 Fleet Support',
+    desc: 'Direct access to our Australian-managed support team. No script-reading call centres — just expert mobile technicians who understand the urgency of business connectivity.',
+    tags: ['AU-Managed Support', 'Tier 1 Access', '24/7 Available'],
   },
   {
     icon: Globe,
@@ -56,7 +56,7 @@ export default function WhyC9Mobile() {
             Keeping Australian businesses <br />connected — your way.
           </h2>
           <p className="text-white/85 text-[18px] md:text-[20px] max-w-[800px] leading-relaxed mt-2 font-medium">
-             C9 keeps your business mobile fleet connected with flexible shared plans, Tier 1 Optus network coverage, and Australian-based support that actually answers the phone.
+             C9 keeps your business mobile fleet connected with flexible shared plans, Tier 1 Optus network coverage, and Australian-managed support that actually answers the phone.
           </p>
         </div>
 

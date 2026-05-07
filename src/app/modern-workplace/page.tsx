@@ -20,12 +20,12 @@ const MW_FAQS = [
   { q:'Can we integrate our existing platforms like Microsoft Teams?', a:'Absolutely. We build your unified workplace around core platforms like Microsoft Teams, transforming them from standalone tools into a fully integrated communication and collaboration system.' },
   { q:'Who manages the day-to-day operations of the workplace environment?', a:'C9 assumes full operational ownership. From proactive device management to securing identities and maintaining carrier-grade voice uptime, we manage the entire stack so your IT team doesn\'t have to.' },
   { q:'How does the unified model improve security?', a:'By centralizing communication, devices, and access, we eliminate the security gaps common in fragmented networks. Every connection, call, and file access is governed by a single Zero Trust security layer.' },
-  { q:'What level of support do end-users receive?', a:'Your team is supported by our 100% Australian-based engineering . Because we manage the entire unified stack—from the network connection to the endpoint device—we resolve issues at the root level without vendor hand-offs.' },
+  { q:'What level of support do end-users receive?', a:'Your team is supported by our AU-Managed Engineering. Because we manage the entire unified stack—from the network connection to the endpoint device—we resolve issues at the root level without vendor hand-offs.' },
 ];
 
 /* ── Pricing ─────────────────────────────────────────────────── */
 const PLANS = [
-  { name:'Unified Baseline (Startup)', price:'$15', period:'/user/mo', highlight:false, tag:'STARTUP READY', desc:'Core communication and identity integration.', features:['Unified Communication Layer','Identity & Access Control','99.9% Uptime SLA','Managed Collaboration Environment','C9 Engineering Support','Onshore SOC Triage'] },
+  { name:'Unified Baseline (Startup)', price:'$15', period:'/user/mo', highlight:false, tag:'STARTUP READY', desc:'Core communication and identity integration.', features:['Unified Communication Layer','Identity & Access Control','99.9% Uptime SLA','Managed Collaboration Environment','C9 Engineering Support','AU-Managed SOC Triage'] },
   { name:'Integrated Workplace (Growth)', price:'$30', period:'/user/mo', highlight:true, tag:'GROWTH BASELINE', desc:'Complete voice, device, and workflow unification.', features:['All Baseline features','Enterprise Voice Integration','Unified Endpoint Management','Zero Trust Policy Enforcement','Prioritised Engineering Support','Carrier-Grade Voice SLA'] },
   { name:'Total Governance', price:'Custom', period:'', highlight:false, tag:'TOTAL GOVERNANCE', desc:'Full-stack lifecycle management and advanced security.', features:['All Integrated features','Complete Device Lifecycle','Managed EDR & SIEM','Advanced Data Governance','Compliance Audit Readiness','Security Incident Response'] },
 ];
@@ -77,7 +77,7 @@ export default function ModernWorkplacePage() {
                 <div className="flex items-center gap-6">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-slate-600 text-[11px] font-bold uppercase tracking-widest">Australian Support Operations Active</span>
+                    <span className="text-slate-600 text-[11px] font-bold uppercase tracking-widest">AU-Managed Support Operations Active</span>
                   </div>
                   <div className="h-4 w-px bg-black/10" />
                   <div className="text-slate-600 text-[11px] font-bold uppercase tracking-widest">99.9% Uptime Guarantee</div>
@@ -111,7 +111,7 @@ export default function ModernWorkplacePage() {
       <section style={{ background: '#fff', borderBottom: `1px solid ${BD}` }}>
         <div className="c9-container py-12 md:py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            {[{v:'60+',l:'Active Enterprise Sites'},{v:'99.9%',l:'Infrastructure Uptime'},{v:'Real-Time',l:'Incident Response'},{v:'100%',l:'Australian Sovereignty'}].map(({ v, l }, i) => (
+            {[{v:'60+',l:'Active Enterprise Sites'},{v:'99.9%',l:'Infrastructure Uptime'},{v:'Real-Time',l:'Incident Response'},{v:'Managed',l:'AU Data Sovereignty'}].map(({ v, l }, i) => (
               <FadeUp key={l} delay={i * 0.07} className="text-center">
                 <div className="text-[32px] md:text-[42px] font-black leading-none tracking-tight mb-3" style={{ color: P }}>{v}</div>
                 <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-800">{l}</div>
@@ -275,7 +275,7 @@ export default function ModernWorkplacePage() {
                     Business Value: Because we design and manage the entire workplace stack, we own the resolution. Access local engineering leads with deep context on your unified environment.
                   </p>
                   <div className="mt-8 pt-8 border-t border-black/5 text-left space-y-3">
-                    {['Sydney-Based L3 Engineers', 'Strict Enterprise SLAs', 'Accountable Ownership'].map(t => (
+                    {['AU-Managed L3 Engineers', 'Strict Enterprise SLAs', 'Accountable Ownership'].map(t => (
                       <div key={t} className="flex items-center gap-2 text-[12px] font-bold text-slate-900">
                         <Check size={14} className="text-purple-500" aria-hidden="true" /> {t}
                       </div>
@@ -284,7 +284,7 @@ export default function ModernWorkplacePage() {
                 </div>
                 <div className="px-8 pb-10 text-center mt-auto">
                    <div className="text-[20px] font-bold text-[#0c1024] mb-1">1800 000 299</div>
-                   <div className="c9-eyebrow !text-slate-500 !mb-0">Australian Senior Engineering</div>
+                   <div className="c9-eyebrow !text-slate-500 !mb-0">AU-Managed Senior Engineering</div>
                 </div>
               </motion.div>
             </ScaleIn>
@@ -355,7 +355,7 @@ export default function ModernWorkplacePage() {
                   </div>
                 </div>
                 <div className="mt-10 pt-6 border-t border-white/10">
-                  <p className="text-[11px] font-bold text-white/95 uppercase tracking-widest">Protocol Version 4.2 • Onshore Deployment Team</p>
+                  <p className="text-[11px] font-bold text-white/95 uppercase tracking-widest">Protocol Version 4.2 • AU-Managed Deployment Team</p>
                 </div>
               </div>
             </FadeUp>
@@ -501,7 +501,7 @@ export default function ModernWorkplacePage() {
           showHeader={false}
           eyebrow="Plan Your Workplace Transformation"
           title="Unify Your Distributed Workforce Operations"
-          description="Eliminate fragmented tools and regain control. Book a 30-minute consultation with an Australian engineering lead to design your unified workplace stack."
+          description="Eliminate fragmented tools and regain control. Book a 30-minute consultation with an AU-managed engineering lead to design your unified workplace stack."
           formTitle="Design Your Unified Workplace"
         />
       </section>

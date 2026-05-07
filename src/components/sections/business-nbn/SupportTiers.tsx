@@ -6,7 +6,7 @@ import { Shield, ShieldCheck, ShieldPlus, Wifi } from 'lucide-react';
 
 const supportValues = [
   {
-    title: 'Australian-based support',
+    title: 'AU-managed support',
     desc: 'Talk directly to our local nbn experts who understand your business. No scripted call centres — just real help when you need it.',
     icon: ShieldCheck,
     tag: 'LOCAL TEAM'
@@ -44,7 +44,7 @@ export default function SupportTiers() {
                </h2>
             </div>
             <p className="text-[17px] text-[#6B7280] max-w-[500px] leading-relaxed">
-              We provide the specialized support that businesses need to stay connected. No call centres, just Australian-based expertise.
+              We provide the specialized support that businesses need to stay connected. No call centres, just AU-managed expertise.
             </p>
         </div>
 

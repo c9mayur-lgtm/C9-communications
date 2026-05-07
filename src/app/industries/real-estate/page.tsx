@@ -257,7 +257,7 @@ const Trust = () => (
             We know that a listing goes live at a specific time and an auction has no "undo" button. Our support isn't about just closing tickets; it's about solving problems fast.
           </p>
           <p className="c9-body text-slate-600 mb-8">
-            Our Australian-based team learns your specific agency's workflow. We don't ask your admin staff to troubleshoot firewall logs; we handle the technical heavy lifting so they can support your agents. We’re local, we’re responsive, and we actually answer the phone when it matters most.
+            Our AU-managed team learns your specific agency's workflow. We don't ask your admin staff to troubleshoot firewall logs; we handle the technical heavy lifting so they can support your agents. We’re local, we’re responsive, and we actually answer the phone when it matters most.
           </p>
           <a
             href="#consultation-section"

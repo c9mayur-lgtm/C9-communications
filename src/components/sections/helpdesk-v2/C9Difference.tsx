@@ -8,7 +8,7 @@ export default function C9Difference() {
     { label: "Escalation", generic: "You chase for updates", c9: "Proactive communication", genericOk: false },
     { label: "Account management", generic: "No dedicated contact", c9: "Named account manager", genericOk: false },
     { label: "Reporting", generic: "No visibility on trends", c9: "Monthly performance reports", genericOk: false },
-    { label: "Team location", generic: "Offshore routing", c9: "100% Australian-based", genericOk: false }
+    { label: "Team location", generic: "Offshore routing", c9: "AU-managed technical team", genericOk: false }
   ];
 
   return (

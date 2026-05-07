@@ -24,7 +24,7 @@ const STATUS_ITEMS = [
 
 export const SiteMissionControl = () => {
   return (
-    <section className="py-16 bg-slate-50 overflow-hidden">
+    <section className="py-8 md:py-12 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1240px]">
         <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center">
           <div>
@@ -63,7 +63,7 @@ export const SiteMissionControl = () => {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative lg:scale-95 xl:scale-90 origin-left"
           >
             {/* The "Dashboard" Card */}
             <div className="bg-white border border-slate-200 rounded-[32px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] overflow-hidden">
@@ -82,10 +82,10 @@ export const SiteMissionControl = () => {
               </div>
 
               {/* Dashboard Content */}
-              <div className="p-8 grid grid-cols-2 gap-6 bg-slate-50/50">
+              <div className="p-4 md:p-6 grid grid-cols-2 gap-4 bg-slate-50/50">
                 {/* Stats Grid */}
                 {STATUS_ITEMS.map((item, i) => (
-                  <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                  <div key={i} className="bg-white p-3 md:p-4 rounded-xl border border-slate-100 shadow-sm">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-8 h-8 rounded-lg bg-slate-50 text-slate-400 flex items-center justify-center">
                         {item.icon}
@@ -99,7 +99,7 @@ export const SiteMissionControl = () => {
                 ))}
 
                 {/* Large Activity Chart Mockup */}
-                <div className="col-span-2 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                <div className="col-span-2 bg-white p-4 md:p-5 rounded-xl border border-slate-100 shadow-sm">
                   <div className="flex justify-between items-center mb-6">
                     <div className="text-[12px] font-black text-slate-400 uppercase tracking-widest">Network Performance</div>
                     <div className="flex gap-1">
@@ -108,7 +108,7 @@ export const SiteMissionControl = () => {
                        <div className="w-1.5 h-1.5 rounded-full bg-[#5D00D6]" />
                     </div>
                   </div>
-                  <div className="flex items-end gap-1.5 h-24">
+                  <div className="flex items-end gap-1.5 h-16 md:h-20">
                     {[40, 65, 45, 80, 55, 90, 70, 85, 40, 60, 95, 75, 50, 80].map((h, i) => (
                       <motion.div 
                         key={i}

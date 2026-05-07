@@ -27,7 +27,7 @@ const CHALLENGES = [
     title: 'Fast & Secure Internet For My Business',
     subtitle: 'We have got super-fast, epically reliable broadband solutions.',
     challenge: 'Slow speeds, unexpected dropouts, and residential-grade internet plans that do not come with guaranteed SLA timeframes cost your business money every hour you are offline.',
-    solution: 'We supply enterprise-grade Fast Fibre and Business nbn™ tailored specifically to your footprint and daily bandwidth requirements. We build robust networks complete with automated 4G/5G failover systems and advanced Next-Gen firewall security, keeping your business online 99.99% of the time. Everything is backed by an Australian-based rapid response engineering team.',
+    solution: 'We supply enterprise-grade Fast Fibre and Business nbn™ tailored specifically to your footprint and daily bandwidth requirements. We build robust networks complete with automated 4G/5G failover systems and advanced Next-Gen firewall security, keeping your business online 99.99% of the time. Everything is backed by an AU-managed rapid response engineering team.',
     bullets: [
       'Guaranteed Service Level Agreements (SLAs)',
       'Automated 4G/5G failover options',

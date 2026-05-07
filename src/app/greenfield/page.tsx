@@ -135,7 +135,7 @@ export default function GreenfieldPage() {
                    Ready to Start Your Project?
                 </h2>
                 <p className="c9-body !text-[#0c1024]/70 mb-10 text-lg">
-                  Speak with an Australian-based infrastructure expert today. We&apos;ll help you map out your technical requirements and ensure a risk-free opening day.
+                  Speak with an AU-managed infrastructure expert today. We&apos;ll help you map out your technical requirements and ensure a risk-free opening day.
                 </p>
                 
                 <div className="space-y-5 mb-12">

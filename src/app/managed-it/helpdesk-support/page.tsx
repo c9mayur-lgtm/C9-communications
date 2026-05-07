@@ -152,7 +152,7 @@ const Hero = () => (
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
                <Users size={13} className="text-[#5D00D6]" />
-               <span className="c9-eyebrow !mb-0">Australian-Based Support</span>
+               <span className="c9-eyebrow !mb-0">AU-Managed Support</span>
             </div>
           </FadeIn>
 

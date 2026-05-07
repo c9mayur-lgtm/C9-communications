@@ -26,7 +26,7 @@ const METRICS = [
   { label: 'Incident Response', value: '< 15m', desc: 'Critical security alerts triage.' },
   { label: 'Uptime Confidence', value: '99.95%', desc: 'Carrier-grade infrastructure SLA.' },
   { label: 'Fleet Visibility', value: '100%', desc: 'Real-time endpoint compliance.' },
-  { label: 'Support Origin', value: 'AU', desc: '100% Australian-based engineering.' },
+  { label: 'Support Origin', value: 'AU', desc: 'AU-Managed engineering.' },
 ];
 
 const PROCESS = [
@@ -34,7 +34,7 @@ const PROCESS = [
   { step: '02', title: 'Migrate', desc: 'Zero-downtime transition of data, users, and security policies to C9.' },
   { step: '03', title: 'Secure', desc: 'Implementation of Zero Trust perimeters and endpoint hardening.' },
   { step: '04', title: 'Standardise', desc: 'Establishing uniform device builds and automated onboarding.' },
-  { step: '05', title: 'Support', desc: '24/7 Australian operational ownership and user helpdesk.' },
+  { step: '05', title: 'Support', desc: '24/7 AU-managed operational ownership and user helpdesk.' },
   { step: '06', title: 'Optimise', desc: 'Continuous security reviews and roadmap alignment for growth.' }
 ];
 
@@ -70,7 +70,7 @@ export default function SecureRemoteWorkContent() {
                   <span className="text-[#5D00D6]">Without Operational Risk.</span>
                 </h1>
                 <p className="c9-body text-slate-600 mb-10 text-xl max-w-2xl leading-relaxed">
-                  Managing a distributed workforce shouldn&apos;t be a risk. C9 delivers complete endpoint visibility, identity protection, and zero-downtime Australian support to ensure your team stays productive and protected—wherever they work.
+                  Managing a distributed workforce shouldn&apos;t be a risk. C9 delivers complete endpoint visibility, identity protection, and zero-downtime AU-managed support to ensure your team stays productive and protected—wherever they work.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
                   <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
@@ -83,7 +83,7 @@ export default function SecureRemoteWorkContent() {
                 <div className="flex items-center gap-6">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">AU Engineering Desk Active</span>
+                    <span className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">AU-Managed Engineering Desk Active</span>
                   </div>
                   <div className="h-4 w-px bg-black/10" />
                   <div className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">100% Security Compliance</div>
@@ -221,7 +221,7 @@ export default function SecureRemoteWorkContent() {
                   </div>
                   <h3 className="c9-card-title mb-3">SLA Accountability.</h3>
                   <p className="c9-body">
-                    24/7 Australian support desk that owns the user outcome. We don&apos;t just &quot;support&quot; remote work; we optimize the entire employee experience.
+                    24/7 AU-managed support desk that owns the user outcome. We don&apos;t just &quot;support&quot; remote work; we optimize the entire employee experience.
                   </p>
                   <div className="mt-8 pt-8 border-t border-black/5 text-left space-y-3">
                     {['AU-Based Engineers', '15m Critical Response', 'Endpoint Health Audits'].map(t => (
@@ -298,7 +298,7 @@ export default function SecureRemoteWorkContent() {
                 {[
                   { t: 'Phase 1: Deep Audit', d: 'Audit of every remote endpoint, identity policy, and shadow IT risk.' },
                   { t: 'Phase 2: Baseline Hardening', d: 'Enforcing MFA, Conditional Access, and Essential Eight compliance.' },
-                  { t: 'Phase 3: Operational Control', d: '24/7 Australian management restoring fleet stability and uptime.' }
+                  { t: 'Phase 3: Operational Control', d: '24/7 AU-managed management restoring fleet stability and uptime.' }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-1">
@@ -341,7 +341,7 @@ export default function SecureRemoteWorkContent() {
                   </div>
                 </div>
                 <div className="mt-10 pt-6 border-t border-white/10">
-                  <p className="text-[11px] font-bold text-white/40 uppercase tracking-widest">Protocol Version 4.2 • Onshore Deployment Team</p>
+                  <p className="text-[11px] font-bold text-white/40 uppercase tracking-widest">Protocol Version 4.2 • AU-Managed Deployment Team</p>
                 </div>
               </div>
             </FadeUp>
@@ -398,7 +398,7 @@ export default function SecureRemoteWorkContent() {
                   <ShieldCheck size={24} className="text-white" />
                 </div>
                 <h3 className="text-[24px] font-bold text-white leading-snug mb-4 tracking-tight">Outcome-Driven<br />Infrastructure.</h3>
-                <p className="text-[15px] leading-[1.6] text-white/80 flex-grow">We don't just sell licenses. C9 owns the operational outcome. From identity hardening to hardware failure, our Australian team is the single point of accountability.</p>
+                <p className="text-[15px] leading-[1.6] text-white/80 flex-grow">We don't just sell licenses. C9 owns the operational outcome. From identity hardening to hardware failure, our AU-managed team is the single point of accountability.</p>
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <div className="text-[32px] font-bold text-white tracking-tight mb-2">100% Accountable</div>
                   <div className="text-[12px] font-bold uppercase tracking-widest text-white/60">Zero Vendor-Blame Shifting</div>
@@ -408,7 +408,7 @@ export default function SecureRemoteWorkContent() {
 
             {[
               { icon: Zap, title: 'Consolidated Support', body: 'Replace multiple vendors with a single, expert IT and Telco partner.' },
-              { icon: GlobeIcon, title: 'National Support Fleet', body: 'Consistent service and device deployment across all Australian sites.' },
+              { icon: GlobeIcon, title: 'AU-Managed Support Fleet', body: 'Consistent service and device deployment across all major Australian regions.' },
               { icon: Lock, title: 'Managed Security Ops', body: 'Persistent monitoring and incident response for the remote edge.' },
               { icon: TrendingUp, title: 'Transparent Scaling', body: 'Add remote users with confidence, backed by clear per-user pricing.' },
             ].map(({ icon: Icon, title, body }, i) => (
@@ -432,7 +432,7 @@ export default function SecureRemoteWorkContent() {
           <FadeUp className="text-center max-w-[640px] mx-auto mb-20">
             <Eyebrow>Transparent Management</Eyebrow>
             <h2 className="c9-section-heading mb-6">Predictable Costs.<br />No Hidden Risks.</h2>
-            <p className="c9-body">Flexible pricing designed for Australian businesses of all scales. No long-term lock-ins on licensing—just operational excellence.</p>
+            <p className="c9-body">Flexible pricing designed for Australian businesses of all scales. No long-term lock-ins on licensing—just AU-managed operational excellence.</p>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">
             {PLANS.map((plan, i) => (
@@ -494,7 +494,7 @@ export default function SecureRemoteWorkContent() {
           showHeader={false}
           eyebrow="Secure Remote Audit"
           title="Eliminate Remote Work Security Gaps"
-          description="Book a 30-minute review with an Australian engineering lead. We'll identify operational risks in your current remote setup and provide a stabilization roadmap."
+          description="Book a 30-minute review with an AU-managed engineering lead. We'll identify operational risks in your current remote setup and provide a stabilization roadmap."
           formTitle="Get Risk Review"
         />
       </section>

@@ -141,7 +141,7 @@ export const LeadQualifier = ({ isOpen, onClose, isEmbedded = false }: LeadQuali
                   ))}
                 </div>
                 <C9Button disabled={!sel.siteType} onClick={next} className="w-full h-11 rounded-full text-sm mt-2">
-                  Continue <ArrowRight size={15} className="ml-1" />
+                  Continue
                 </C9Button>
               </div>
             )}
@@ -164,7 +164,7 @@ export const LeadQualifier = ({ isOpen, onClose, isEmbedded = false }: LeadQuali
                 </div>
                 <div className="flex flex-col gap-2 pt-1">
                   <C9Button disabled={!sel.challenge} onClick={next} className="w-full h-11 rounded-full text-sm">
-                    Continue <ArrowRight size={15} className="ml-1" />
+                    Continue
                   </C9Button>
                   <button type="button" onClick={back} className="flex items-center justify-center gap-1 text-slate-400 hover:text-slate-600 text-xs font-semibold transition-colors">
                     <ChevronLeft size={13} /> Back
@@ -208,7 +208,7 @@ export const LeadQualifier = ({ isOpen, onClose, isEmbedded = false }: LeadQuali
                 )}
                 <div className="flex flex-col gap-2 pt-1">
                   <C9Button disabled={sel.services.length === 0} onClick={next} className="w-full h-11 rounded-full text-sm">
-                    Final Step <ArrowRight size={15} className="ml-1" />
+                    Final Step
                   </C9Button>
                   <button type="button" onClick={back} className="flex items-center justify-center gap-1 text-slate-400 hover:text-slate-600 text-xs font-semibold transition-colors">
                     <ChevronLeft size={13} /> Back

@@ -89,7 +89,7 @@ const FLOWS = {
     ]
   },
   phone: {
-    message: "Call us anytime at **1300 293 332** — our Australian-based team picks up fast. No hold queues, no offshore handoffs. 😊",
+    message: "Call us anytime at **1300 293 332** — our AU-managed team picks up fast. No hold queues, no offshore handoffs. 😊",
     options: [
       { label: "← Start over", next: 'start' },
     ]

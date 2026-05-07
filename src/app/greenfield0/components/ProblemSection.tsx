@@ -47,7 +47,7 @@ export const ProblemSection = () => {
           <h2 className="c9-section-heading mb-6 font-clash">
             Why Most New Site Launches Fail
           </h2>
-          <p className="c9-body leading-relaxed text-slate-500 text-lg">
+          <p className="c9-body leading-relaxed text-slate-500">
             Opening a new site shouldn&apos;t be a technical gamble. But when multiple vendors are involved without a single owner, the same patterns emerge.
           </p>
         </div>

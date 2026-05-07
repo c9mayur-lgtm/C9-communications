@@ -492,7 +492,7 @@ export default function EnterpriseEthernetPage() {
       <WpFAQAndFeedback 
         faqItems={[
           { q: "How does C9 ensure zero-disruption migration?", a: "We manage migrations through a risk-managed, phased approach. We conduct a deep-dive audit of legacy systems, architect validated fallback paths, and coordinate all onsite trades to ensure your operational continuity remains protected throughout the transition." },
-          { q: "What defines C9's 'Senior Engineering' support?", a: "Our support model removes call centers and script-readers. Enterprise clients have direct access to Australian-based senior engineers who own the incident from detection to resolution, managing all carrier liaisons on your behalf." },
+          { q: "What defines C9's 'Senior Engineering' support?", a: "Our support model removes call centers and script-readers. Enterprise clients have direct access to AU-managed senior engineers who own the incident from detection to resolution, managing all carrier liaisons on your behalf." },
           { q: "How is Enterprise Ethernet commercially different from business nbn™?", a: "Enterprise Ethernet is a dedicated, private fibre path with a 1:1 contention ratio and professional eSLA (from 4 hours). It is designed specifically for operations where network instability creates significant financial risk, providing guaranteed performance that nbn™ cannot match." }
         ]}
       />

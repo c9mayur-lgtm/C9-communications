@@ -17,7 +17,7 @@ const PRODUCTIVITY_FAQS = [
   { q: 'What is "Managed M365" vs. just buying licenses?', a: 'Buying licenses gives you access to the software. Managed M365 means C9 handles the setup, security hardening (MFA, Conditional Access), user onboarding/offboarding, and ongoing optimization. We ensure you actually use the features you pay for.' },
   { q: 'Can you migrate our existing emails to Microsoft 365?', a: 'Yes. We specialize in zero-downtime migrations from Google Workspace, on-premise Exchange, and POP/IMAP providers. We handle the data move and cutover.' },
   { q: 'Is security included in the management?', a: 'Absolutely. We apply enterprise-grade security baselines to every tenant, including MFA enforcement, anti-phishing policies, and data loss prevention (DLP) configuration.' },
-  { q: 'Do you offer local Australian support?', a: 'Yes. All support is provided by our Sydney-based engineering team. No offshore call centers, just experts who answer and resolve issues fast.' },
+  { q: 'Do you offer local Australian support?', a: 'Yes. All support is provided by our AU-managed engineering team. No offshore call centers, just experts who answer and resolve issues fast.' },
 ];
 
 // ── UNIQUE ANIMATED VISUALS FOR SCOPE ──
@@ -147,7 +147,7 @@ const SecurityVisual = () => (
       </div>
       <div className="text-[11px] font-bold text-red-500 uppercase tracking-[0.2em] mb-2">Zero Trust Defense</div>
       <div className="text-[20px] font-bold text-gray-900 mb-4">24 Threats Blocked</div>
-      <div className="text-[10px] text-gray-400 font-bold uppercase tracking-widest leading-relaxed">Active Monitoring • Pod 3 SecOps<br />Sydney NSW</div>
+      <div className="text-[10px] text-gray-400 font-bold uppercase tracking-widest leading-relaxed">Active Monitoring • Pod 3 SecOps<br />AU-Managed Operations</div>
     </motion.div>
   </div>
 );
@@ -206,7 +206,7 @@ const SupportVisual = () => (
           <div className="w-8 h-8 rounded-full bg-slate-200" />
           <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-500 border-2 border-white" />
         </div>
-        <div className="text-[12px] font-bold text-gray-800">Sydney Engineering Active</div>
+        <div className="text-[12px] font-bold text-gray-800">AU-Managed Engineering Active</div>
       </div>
     </motion.div>
   </div>
@@ -274,7 +274,7 @@ const ManagedScopeUI = () => {
       icon: Headphones,
       content: 'We provide continuous operational stewardship, ensuring your environment evolves with security standards and business growth.',
       bullets: [
-        'Onshore SOC & Helpdesk',
+        'AU-Managed SOC & Helpdesk',
         'Continuous monitoring',
         'Monthly ROI & License audits',
         'Strategic vCIO alignment'
@@ -379,7 +379,7 @@ export default function ProductivityPage() {
 
               <FadeUp delay={0.4}>
                 <div className="flex flex-wrap gap-5 mt-8">
-                  {['Expert Setup', '24/7 Security', 'Onshore Support'].map(t => (
+                  {['Expert Setup', '24/7 Security', 'AU-Managed Support'].map(t => (
                     <div key={t} className="flex items-center gap-2">
                       <div className="flex h-5 w-5 items-center justify-center rounded-full bg-green-100/50">
                         <Check size={14} className="text-green-600" />
@@ -565,7 +565,7 @@ export default function ProductivityPage() {
                   </div>
                 </div>
                 <div className="mt-10 pt-6 border-t border-white/10">
-                  <p className="text-[11px] font-bold text-white/40 uppercase tracking-widest">Protocol Version 4.2 • Onshore Deployment Team</p>
+                  <p className="text-[11px] font-bold text-white/40 uppercase tracking-widest">Protocol Version 4.2 • AU-Managed Deployment Team</p>
                 </div>
               </div>
             </FadeUp>
@@ -594,7 +594,7 @@ export default function ProductivityPage() {
               {
                 title: 'M365 Core (Startup)',
                 desc: "Enterprise-grade email and collaboration for businesses requiring professional presence without complex device management. Fully managed operational stability.",
-                items: ['Zero-downtime mailbox migration', 'Managed tenant governance', 'Standard security baselines', 'Onshore Australian support'],
+                items: ['Zero-downtime mailbox migration', 'Managed tenant governance', 'Standard security baselines', 'AU-managed Australian support'],
                 badge: 'STARTUP READINESS',
                 price: '$15 / user / mo'
               },
@@ -649,7 +649,7 @@ export default function ProductivityPage() {
 
           <div className="flex items-center justify-center gap-3 mt-8 text-gray-200 text-[14px]">
             <div className="h-px w-10 bg-gray-100/20" />
-            All plans include: Australian support, monthly reporting, security monitoring
+            All plans include: AU-managed support, monthly reporting, security monitoring
             <div className="h-px w-10 bg-gray-100/20" />
           </div>
         </div>
@@ -692,7 +692,7 @@ export default function ProductivityPage() {
                  { 
                    week: 'ONGOING', 
                    title: 'Managed Support', 
-                   items: ['Monthly health checks and optimization', 'Proactive security monitoring', 'Onshore Australian helpdesk'] 
+                   items: ['Monthly health checks and optimization', 'Proactive security monitoring', 'AU-managed Australian helpdesk'] 
                  }
                ].map((phase, i) => (
                  <ScaleIn key={phase.title} delay={i * 0.1}>
@@ -772,7 +772,7 @@ export default function ProductivityPage() {
                   {[
                     { t: 'Strategic Alignment', d: 'We align your M365 stack with your business goals, ensuring every license provides value.' },
                     { t: 'Compliance Ready', d: 'Configured to meet Australian Privacy Act guidelines and industry-specific regulations.' },
-                    { t: 'Australian Support', d: 'Sydney-based engineers who know your name and your setup.' }
+                    { t: 'Australian Support', d: 'AU-managed engineers who know your name and your setup.' }
                   ].map(f => (
                     <div key={f.t} className="flex gap-4">
                       <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center shadow-sm">

@@ -8,7 +8,7 @@ export default function C9Difference() {
     { label: "Escalation", generic: "❌ You chase for updates", c9: "✓ Proactive communication" },
     { label: "Account management", generic: "❌ No dedicated contact", c9: "✓ Named account manager" },
     { label: "Reporting", generic: "❌ No visibility", c9: "✓ Monthly performance report" },
-    { label: "Team location", generic: "❌ Offshore routing", c9: "✓ Australian-based team" }
+    { label: "Team location", generic: "❌ Offshore routing", c9: "✓ AU-managed technical team" }
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function C9Difference() {
                 "Dedicated account manager who owns your relationship",
                 "Full environment documentation maintained and updated by C9",
                 "Proactive updates — we tell you what's happening, you don't chase us",
-                "Australian-based team, no offshore routing"
+                "AU-managed team, no offshore routing"
               ].map((text, i) => (
                 <div key={i} className="flex items-start gap-2">
                   <CheckCircle size={12} className="text-[#7B2FBE] shrink-0 mt-[2px]" />

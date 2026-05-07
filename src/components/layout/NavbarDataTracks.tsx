@@ -230,7 +230,7 @@ export const SOLUTIONS_MENU = {
         {
           heading: 'Managed IT Service',
           items: [
-            { icon: <Headphones size={14} />, label: 'Helpdesk Support', path: '/managed-it/helpdesk-support', desc: 'Australian-based 24/7 technical support for your entire team.' },
+            { icon: <Headphones size={14} />, label: 'Helpdesk Support', path: '/managed-it/helpdesk-support', desc: 'AU-managed 24/7 technical support for your entire team.' },
             { icon: <Users size={14} />, label: 'Outsourcing', path: '/managed-it/outsourcing', desc: 'Strategic IT staffing and expertise to augment your internal capability.' },
             { icon: <Globe size={14} />, label: 'Strategy & Consulting', path: '/managed-it/strategy-consulting', desc: 'Expert IT roadmaps aligned with your business growth and budget.' },
           ]

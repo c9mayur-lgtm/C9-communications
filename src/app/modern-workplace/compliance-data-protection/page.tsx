@@ -21,7 +21,7 @@ const METRICS = [
   { label: 'Incident Response', value: '< 15m', desc: 'Critical alert triage SLA.' },
   { label: 'Data Residency', value: '100%', desc: 'Sovereign Australian storage.' },
   { label: 'Security Score', value: '94/100', desc: 'Average managed fleet health.' },
-  { label: 'Monitoring', value: '24/7', desc: 'Active onshore SOC coverage.' },
+  { label: 'Monitoring', value: '24/7', desc: 'Active AU-managed SOC coverage.' },
 ];
 
 const FAQS = [
@@ -29,7 +29,7 @@ const FAQS = [
   { q: 'How does Zero Trust differ from traditional security?', a: 'Traditional security assumes everything inside the network is safe. Zero Trust assumes the network is compromised and requires strict identity verification and device health checks for every single access request.' },
   { q: 'Is all our data stored in Australia?', a: 'Yes. We ensure your Microsoft 365 tenancy and all backup data are locked to Australian data centers, satisfying data sovereignty requirements and local regulatory standards.' },
   { q: 'How do you manage personal devices (BYOD) safely?', a: 'We use App Protection Policies (MAM) to create a secure container for corporate data on personal devices. This allows you to secure company data without managing the entire personal device or invading employee privacy.' },
-  { q: 'What is the response time for a security incident?', a: 'Our SLA guarantees critical security triage within 15 minutes. Our onshore SOC engineers are alerted immediately to any suspicious lateral movement or anomalous login behavior.' },
+  { q: 'What is the response time for a security incident?', a: 'Our SLA guarantees critical security triage within 15 minutes. Our AU-managed SOC engineers are alerted immediately to any suspicious lateral movement or anomalous login behavior.' },
   { q: 'Can you help us achieve ISO 27001 or SOC2 compliance?', a: 'Yes. While we provide the technical infrastructure and persistent governance required for these certifications, we also work with your auditors to provide the necessary logs and evidence of control enforcement.' }
 ];
 
@@ -85,7 +85,7 @@ export default function CompliancePage() {
                     <span className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">24/7 SOC Active</span>
                   </div>
                   <div className="h-4 w-px bg-black/10" />
-                  <div className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">100% AU Sovereignty</div>
+                  <div className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">100% AU-Managed Sovereignty</div>
                 </div>
               </FadeUp>
             </div>
@@ -184,7 +184,7 @@ export default function CompliancePage() {
                 {[
                   { t: 'Vulnerability Assessment', d: 'Deep scan of your existing environment for active security holes.' },
                   { t: 'Compliance Hardening', d: 'Immediate implementation of MFA, Conditional Access, and DLP baselines.' },
-                  { t: 'Onshore SOC Transition', d: 'Migrating your monitoring to C9&apos;s 24/7 Australian Security Operations Centre.' }
+                  { t: 'AU-Managed SOC Transition', d: 'Migrating your monitoring to C9&apos;s 24/7 AU-managed Security Operations Centre.' }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-1">
@@ -249,7 +249,7 @@ export default function CompliancePage() {
               <div className="space-y-4">
                 {[
                   'Real-time Essential 8 Scorecard',
-                  'Data Residency Verification (100% Onshore)',
+                  'Data Residency Verification (AU-Managed)',
                   'Identity Risk & MFA Health Monitoring',
                   'Automated Compliance Drift Alerts'
                 ].map((item, i) => (
@@ -298,7 +298,7 @@ export default function CompliancePage() {
                   { c: 'Endpoint', s: 'Intune + Defender EDR', o: 'Compromised devices auto-quarantined.' },
                   { c: 'Data', s: 'DLP + Sensitivity Labels', o: 'Confidential data cannot leave the tenant.' },
                   { c: 'Sovereignty', s: '100% Australian Tenancy', o: 'No data subject to foreign access laws.' },
-                  { c: 'Monitoring', s: '24/7 Onshore SOC', o: 'Incident response in < 15 minutes.' }
+                  { c: 'Monitoring', s: '24/7 AU-Managed SOC', o: 'Incident response in < 15 minutes.' }
                 ].map((row, i) => (
                   <tr key={i} className="border-t border-gray-50 hover:bg-[#F8FAFF] transition-colors">
                     <td className="p-8 font-bold text-[#0C1024]">{row.c}</td>
@@ -322,7 +322,7 @@ export default function CompliancePage() {
           <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="c9-section-heading mb-8 font-proxima tracking-tight font-bold leading-tight text-white">Enterprise Data Protection. <br /><span className="text-[#5D00D6]">Uncompromising Accountability.</span></h2>
             <p className="text-slate-300 text-[18px] font-medium leading-relaxed">
-              We provide total visibility into your security posture. Our onshore team manages the complexity of modern compliance so you can focus on operational outcomes.
+              We provide total visibility into your security posture. Our AU-managed team manages the complexity of modern compliance so you can focus on operational outcomes.
             </p>
           </div>
           
@@ -378,7 +378,7 @@ export default function CompliancePage() {
           showHeader={false}
           eyebrow="Security Posture Audit"
           title="Protect Your Data. Prove Your Compliance."
-          description="Book a 30-minute security review with an Australian SOC lead. We'll identify architectural gaps in your defense and provide a prioritized hardening roadmap."
+          description="Book a 30-minute security review with an AU-managed SOC lead. We'll identify architectural gaps in your defense and provide a prioritized hardening roadmap."
           formTitle="Request Security Audit"
         />
       </section>

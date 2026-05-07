@@ -264,7 +264,7 @@ const Trust = () => (
             When you're trying to lodge a document at 4:55 PM, you need an IT partner who feels that urgency.
           </p>
           <p className="c9-body text-slate-600 mb-8">
-            We don’t subject professional services explicitly to slow ticket queues. Our Australian-based engineers pick up the phone, remote in immediately, and get your team back on track. We understand that in your industry, IT support isn't about fixing computers—it's about protecting throughput.
+            We don’t subject professional services explicitly to slow ticket queues. Our AU-managed engineers pick up the phone, remote in immediately, and get your team back on track. We understand that in your industry, IT support isn't about fixing computers—it's about protecting throughput.
           </p>
           <a
             href="#consultation-section"

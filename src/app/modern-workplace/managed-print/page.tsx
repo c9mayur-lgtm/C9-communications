@@ -21,7 +21,7 @@ const METRICS = [
   { label: 'Incident Response', value: '< 15m', desc: 'Critical security alerts triage.' },
   { label: 'Fleet Visibility', value: '100%', desc: 'Real-time print compliance.' },
   { label: 'Toner Fulfillment', value: 'Auto', desc: 'SLA-backed consumables supply.' },
-  { label: 'Support Origin', value: 'AU', desc: '100% Australian-based desk.' },
+  { label: 'Support Origin', value: 'AU', desc: 'Australian-managed desk.' },
 ];
 
 const FAQS = [
@@ -68,7 +68,7 @@ export default function ManagedPrintPage() {
                   <span className="text-[#5D00D6]">Fleet Accountability.</span>
                 </h1>
                 <p className="c9-body text-slate-600 mb-10 text-xl max-w-2xl leading-relaxed">
-                  Stop managing printers and start managing your infrastructure. C9 provides a fully governed, carrier-grade print utility with automated fulfillment, secure release, and 100% Australian support.
+                  Stop managing printers and start managing your infrastructure. C9 provides a fully governed, carrier-grade print utility with automated fulfillment, secure release, and Australian-managed support.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
                   <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
@@ -272,7 +272,7 @@ export default function ManagedPrintPage() {
               <tbody>
                 {[
                   { l: 'Consumables', o: 'Auto-shipped before you run out.', c: 'Toner Uptime Guarantee' },
-                  { l: 'Support', o: 'One ticket for IT and Hardware.', c: 'Onshore Support Ownership' },
+                  { l: 'Support', o: 'One ticket for IT and Hardware.', c: 'AU-Managed Support Ownership' },
                   { l: 'Security', o: 'Zero documents left in trays.', c: 'Secure Print Enforcement' },
                   { l: 'Licensing', o: 'Drivers updated automatically.', c: 'Intune Policy Management' },
                   { l: 'Costing', o: 'Fixed, predictable monthly spend.', c: 'Zero Hidden Fees' }
@@ -309,7 +309,7 @@ export default function ManagedPrintPage() {
                 {[
                   { t: 'Security Aligned', d: 'Print security integrated with your M365 identity governance.' },
                   { t: 'Cost Recovery', d: 'Detailed auditing to identify and eliminate wasteful volume.' },
-                  { t: 'One Support Point', d: 'Printers are IT. We support them through our primary onshore desk.' },
+                  { t: 'One Support Point', d: 'Printers are IT. We support them through our primary AU-managed desk.' },
                   { t: 'Vendor Agnostic', d: 'We recommend the best hardware for your specific layout.' }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
@@ -364,7 +364,7 @@ export default function ManagedPrintPage() {
           showHeader={false}
           eyebrow="Managed Print Audit"
           title="Eliminate Print Waste & Security Risks"
-          description="Book a 30-minute review with an Australian print engineering lead. We'll audit your current fleet, identifying cost leaks and document security vulnerabilities."
+          description="Book a 30-minute review with an Australian-managed print engineering lead. We'll audit your current fleet, identifying cost leaks and document security vulnerabilities."
           formTitle="Request Print Audit"
         />
       </section>

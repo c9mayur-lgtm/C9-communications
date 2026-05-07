@@ -86,7 +86,7 @@ const ITEMS = [
   },
   {
     title: 'Australian Support Hub',
-    desc: 'Bypass offshore call centres. Access a dedicated Australian-based mobile support desk with Tier-1 escalation paths to network engineers.',
+    desc: 'Bypass offshore call centres. Access a dedicated AU-managed mobile support desk with Tier-1 escalation paths to network engineers.',
     icon: Headphones,
     tag: 'HUMAN EXPERTISE',
     metrics: [

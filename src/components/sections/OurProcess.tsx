@@ -6,7 +6,7 @@ export const OurProcess = () => {
     { title: "Design & Strategy", desc: "Tailored architecture for your business" },
     { title: "Installation & Mgmt", desc: "Professional deployment" },
     { title: "Provisioning & Porting", desc: "Minimal business disruption" },
-    { title: "Ongoing Support", desc: "Responsive Australian-based team" }
+    { title: "Ongoing Support", desc: "Responsive AU-managed team" }
   ];
 
   return (

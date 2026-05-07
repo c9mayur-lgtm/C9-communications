@@ -7,7 +7,7 @@ import { CheckCircle } from 'lucide-react';
 const trustItems = [
   'Optus 4G & 5G network coverage',
   'Fleet proposal within 1 business day',
-  'Australian onshore team',
+  'Australian-managed team',
   'No hidden bill shock or individual overage fees',
 ];
 

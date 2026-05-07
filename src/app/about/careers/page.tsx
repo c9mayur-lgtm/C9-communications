@@ -139,7 +139,7 @@ export default function CareersPage() {
               </Body>
               <ul className="space-y-6">
                 {[
-                  { title: "Onshore Senior Team", desc: "Collaborate with high-calibre specialists who respect technical precision." },
+                  { title: "AU-Managed Senior Team", desc: "Collaborate with high-calibre specialists who respect technical precision." },
                   { title: "Direct Infrastructure Control", desc: "Work on our own core network, not just resold portals." },
                   { title: "Rigorous Standards", desc: "We align with ISO 27001 and Essential Eight across all operations." }
                 ].map((item, i) => (

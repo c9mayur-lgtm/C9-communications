@@ -219,7 +219,7 @@ export default function Hero() {
               transition={{ delay: 0.35 }}
               className="text-[17px] md:text-[18px] text-[#6B7280] max-w-[540px] leading-relaxed font-medium"
             >
-              Optus coverage, 5G speeds, and Australian-based support that actually answers the phone — all on a single fleet bill.
+              Optus coverage, 5G speeds, and AU-managed support that actually answers the phone — all on a single fleet bill.
             </motion.p>
 
             <motion.div

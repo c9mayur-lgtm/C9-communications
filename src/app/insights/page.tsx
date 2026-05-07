@@ -68,12 +68,12 @@ const INSIGHTS_DATA = [
   },
   {
     type: 'Blog',
-    title: 'Why Onshore SOC Matters for Australian Enterprise',
+    title: 'Why AU-Managed SOC Matters for Australian Enterprise',
     excerpt: 'Understanding the operational and compliance benefits of local security monitoring and response.',
     image: '/images/insights/onshore_soc_australia_1777976542764.png',
     date: 'Mar 28, 2026',
     readTime: '5 min read',
-    slug: 'onshore-soc-benefits'
+    slug: 'au-managed-soc-benefits'
   },
   {
     type: 'Article',

@@ -6,7 +6,7 @@ const services = [
   {
     icon: Headphones,
     title: "Helpdesk & user support",
-    body: "Every IT problem your staff encounter — resolved by an Australian-based team that knows your environment. Remote and on-site. Defined SLAs. No offshore routing.",
+    body: "Every IT problem your staff encounter — resolved by an AU-managed team that knows your environment. Remote and on-site. Defined SLAs. No offshore routing.",
     tags: ['AU Support', 'Defined SLAs', 'Remote & On-site'],
     link: "/managed-it/helpdesk-support"
   },

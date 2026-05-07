@@ -55,7 +55,7 @@ export default function SupportPage() {
     },
     {
       q: "Is C9's support offshore or Australian-based?",
-      a: "C9 support is 100% Australian-managed. Our engineering team is based onshore, providing direct access to local expertise without the delay of call-center script-reading or offshore time-zone misalignment."
+      a: "C9 support is Australian-managed. Our engineering team operates under local technical leadership, providing direct access to expert oversight without the delay of call-center script-reading."
     }
   ];
 
@@ -278,7 +278,7 @@ export default function SupportPage() {
               {[
                 "Immediate containment procedures",
                 "Threat analysis & forensic logging",
-                "Direct escalation to Onshore SOC",
+                "Direct escalation to AU-Managed SOC",
                 "Post-incident governance reporting"
               ].map((li, i) => (
                 <li key={i} className="flex items-center gap-3 text-sm text-gray-300">

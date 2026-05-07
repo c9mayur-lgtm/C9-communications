@@ -129,7 +129,7 @@ function getResponse(query: string): ChatResponse {
   }
   if (q.match(/helpdesk|sla|response time|ticket|support call/)) {
     return { 
-      text: "C9's helpdesk operates with defined SLA tiers: P1 Critical — response < 1 hour. P2 High — < 4hr response. Every ticket is documented and reviewed in your monthly report. The team is 100% Australian-based.", 
+      text: "C9's helpdesk operates with defined SLA tiers: P1 Critical — response < 1 hour. P2 High — < 4hr response. Every ticket is documented and reviewed in your monthly report. The team is AU-managed.", 
       links: [{ label: 'Helpdesk Support', href: '/managed-it/helpdesk-support' }]
     };
   }

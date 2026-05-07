@@ -58,9 +58,9 @@ const JOURNEY_STEPS = [
 
 export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => void }) => {
   return (
-    <section className="py-16 bg-white relative overflow-hidden font-dm-sans">
+    <section className="py-12 md:py-16 bg-white border-t border-gray-100 font-dm-sans">
       {/* Narrative Header */}
-      <div className="container mx-auto px-6 max-w-[1240px] mb-20">
+      <div className="container mx-auto px-6 md:px-8 max-w-[1240px] mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-end">
           <div>
             <motion.span 
@@ -76,7 +76,7 @@ export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => vo
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="c9-section-heading !leading-[1.1] mb-6 font-clash"
+              className="c9-section-heading !text-[28px] md:!text-[36px] !leading-[1.1] mb-6 font-clash"
             >
               From Empty Shell to Full-Fledged Operations.
             </motion.h2>
@@ -87,7 +87,7 @@ export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => vo
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <p className="c9-body text-slate-500 text-lg max-w-xl mb-8 font-dm-sans">
+            <p className="c9-body text-slate-500 max-w-xl mb-8 font-dm-sans">
               Most vendors join at the end. We start at the beginning. As your Managed Service Provider, we own the technical journey so you can focus on the customer experience.
             </p>
             <div className="flex flex-wrap gap-6 items-center">
@@ -145,7 +145,7 @@ export const SolutionSection = ({ onOpenQualifier }: { onOpenQualifier: () => vo
 
                   {/* Text Content */}
                   <div className="mb-8">
-                    <h3 className="text-2xl font-bold text-[#0c1024] mb-2 font-clash">{step.title}</h3>
+                    <h3 className="text-xl font-bold text-[#0c1024] mb-2 font-clash">{step.title}</h3>
                     <p className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest mb-4">{step.subtitle}</p>
                     <p className="text-slate-500 text-sm leading-relaxed font-medium font-dm-sans">
                       {step.desc}

@@ -43,7 +43,7 @@ export const NextStepStrip = () => {
             {getDynamicText()}
           </h3>
           <p className="text-gray-500 mt-2 font-normal">
-            Our Australian-based experts are ready to design your solution.
+            Our AU-managed experts are ready to design your solution.
           </p>
         </div>
 

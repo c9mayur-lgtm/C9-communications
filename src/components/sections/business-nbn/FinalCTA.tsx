@@ -7,7 +7,7 @@ import { useInquiry } from '@/components/context/InquiryContext';
 const trustItems = [
   'No lock-in beyond contract term',
   'Site qualification within 1 business day',
-  'Australian-based support team',
+  'AU-managed support team',
   'Fully managed setup',
 ];
 

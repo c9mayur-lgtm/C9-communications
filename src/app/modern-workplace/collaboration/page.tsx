@@ -43,7 +43,7 @@ const METRICS = [
   { label: 'Meeting Start Time', value: '< 10s', desc: 'One-touch join reliability.' },
   { label: 'Audio Coverage', value: '100%', desc: 'Beamforming mic precision.' },
   { label: 'Uptime Guarantee', value: '99.9%', desc: 'Managed room availability.' },
-  { label: 'Support Origin', value: 'AU', desc: 'Onshore AV engineering.' },
+  { label: 'Support Origin', value: 'AU', desc: 'AU-Managed AV engineering.' },
 ];
 
 const FAQS = [
@@ -100,7 +100,7 @@ const deploymentPhases: Phase[] = [
   {
     phase: 'Phase 5',
     title: 'Ongoing Support',
-    detail: 'Provide monitoring, firmware lifecycle updates, and Australian support for continuous room reliability.',
+    detail: 'Provide monitoring, firmware lifecycle updates, and AU-managed support for continuous room reliability.',
     icon: Headphones,
   },
 ];
@@ -154,8 +154,8 @@ const platformComparison: ComparisonItem[] = [
   },
   {
     label: 'Support model',
-    teamsRooms: 'Australian support with room monitoring and lifecycle maintenance.',
-    zoomRooms: 'Australian support with room monitoring and lifecycle maintenance.',
+    teamsRooms: 'AU-managed support with room monitoring and lifecycle maintenance.',
+    zoomRooms: 'AU-managed support with room monitoring and lifecycle maintenance.',
   },
 ];
 
@@ -193,7 +193,7 @@ export default function CollaborationPage() {
                 <div className="flex items-center gap-6">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">AU AV Support Active</span>
+                    <span className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">AU-Managed AV Support Active</span>
                   </div>
                   <div className="h-4 w-px bg-black/10" />
                   <div className="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Certified Integrator</div>
@@ -427,7 +427,7 @@ export default function CollaborationPage() {
           showHeader={false}
           eyebrow="Collaboration Design"
           title="Eliminate Meeting Friction & AV complexity"
-          description="Book a 30-minute review with an Australian AV engineering lead. We'll audit your current room layouts and design a professional Teams or Zoom Room architecture that works every time."
+          description="Book a 30-minute review with an AU-managed AV engineering lead. We'll audit your current room layouts and design a professional Teams or Zoom Room architecture that works every time."
           formTitle="Request Room Design"
         />
       </section>

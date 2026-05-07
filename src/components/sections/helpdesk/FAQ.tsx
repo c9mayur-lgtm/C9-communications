@@ -12,7 +12,7 @@ export default function FAQ() {
   const faqs = [
     {
       q: "Is the helpdesk team based in Australia?",
-      a: "Yes. C9's helpdesk is Australian-based. When your staff call, they speak to a technician in Australia who is familiar with your environment. There is no offshore routing."
+      a: "Yes. C9's helpdesk is AU-managed. When your staff call, they speak to a technician overseeing your environment under local technical leadership. There is no offshore routing."
     },
     {
       q: "What hours does the helpdesk operate?",

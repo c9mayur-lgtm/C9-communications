@@ -589,7 +589,7 @@ export default function SmallBusinessPage() {
           },
           { 
             q: 'How fast is your support team?', 
-            a: 'Our Australian-based team picks up the phone within 60 seconds. For critical system issues, we have a 15-minute response SLA, but our proactive monitoring usually catches problems before they even reach your desk.' 
+            a: 'Our AU-managed team picks up the phone within 60 seconds. For critical system issues, we have a 15-minute response SLA, but our proactive monitoring usually catches problems before they even reach your desk.' 
           },
           { 
             q: 'Will you replace all our existing hardware?', 

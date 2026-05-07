@@ -79,7 +79,7 @@ export const ManagedNavbar = () => {
                        <div>
                          <h4 className="text-[10px] font-bold text-brand-purple uppercase tracking-widest mb-4 opacity-40">Managed IT Service</h4>
                          <ul className="flex flex-col gap-2">
-                           <ListItem href="/managed-it/helpdesk-support" title="Helpdesk Support">24/7 Australian-based ticket resolution.</ListItem>
+                           <ListItem href="/managed-it/helpdesk-support" title="Helpdesk Support">24/7 AU-managed ticket resolution.</ListItem>
                            <ListItem href="/managed-it/outsourcing" title="IT Outsourcing">Expert capacity for your IT needs.</ListItem>
                            <ListItem href="/managed-it/strategy-consulting" title="Strategy">vCIO and roadmapping for growth.</ListItem>
                          </ul>

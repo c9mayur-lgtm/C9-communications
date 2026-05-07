@@ -16,7 +16,7 @@ export const WpHeroV2 = () => {
                 We don't just supply hardware. We engineer complete managed IT & Telco solutions.
               </h1>
               <p className="c9-body mb-8 max-w-[550px]">
-                Whether you need reliable cloud voice, enterprise fibre, or a fully outsourced IT department, C9 delivers seamless, fully managed infrastructure. One provider, one fully onshore team, zero IT headaches.
+                Whether you need reliable cloud voice, enterprise fibre, or a fully outsourced IT department, C9 delivers seamless, fully managed infrastructure. One provider, one dedicated technical team, zero IT headaches.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                 <Button size="lg" className="w-full sm:w-auto shadow-2xl hover:gap-4 bg-[#5D00D6] hover:bg-[#5D00D6]/90 rounded-full font-bold">
@@ -29,7 +29,7 @@ export const WpHeroV2 = () => {
 
               {/* Uptime, Support, No Lock-In marks */}
               <div className="flex items-center gap-5 md:gap-8 mt-10 md:mt-12 flex-wrap pb-4">
-                {['99.99% SLA Uptime', '24/7 AU Local Support', '0 Lock-In Contracts'].map((t, i) => (
+                {['99.99% SLA Uptime', '24/7 AU-Managed Support', '0 Lock-In Contracts'].map((t, i) => (
                   <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
                     <CheckCircle size={12} className="text-[#5D00D6]" /> {t}
                   </span>
@@ -83,7 +83,7 @@ export const WpHeroV2 = () => {
           <div className="hidden md:flex items-center gap-4 text-[14px] text-[#6B7280] font-medium" >
             <span>20 years in business</span>
             <span className="opacity-30">·</span>
-            <span>100% AU-based support</span>
+            <span>100% AU-managed support</span>
             <span className="opacity-30">·</span>
             <span>4.9★ on Google</span>
           </div>

@@ -9,6 +9,7 @@ import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { C9Button } from '@/components/design-system/C9Button';
+import { WpVendors } from '@/components/wordpress/WpVendors';
 import PlatformStack from '@/components/sections/enterprise/PlatformStack';
 import CapabilityPack from '@/components/sections/enterprise/CapabilityPack';
 import { 
@@ -803,6 +804,7 @@ export default function EnterprisePage() {
       <SectionSecurity />
       <SectionCapabilityPack />
       <SectionArchitecture />
+      <WpVendors />
       <SectionProof />
       <SectionCommercial />
       <SectionEcosystem />

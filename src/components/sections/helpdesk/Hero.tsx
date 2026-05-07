@@ -38,7 +38,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-6 mt-6">
               {[
-                "Australian-based team",
+                "AU-managed technical team",
                 "Remote + on-site support",
                 "Dedicated account manager"
               ].map((text, i) => (

@@ -141,7 +141,7 @@ const OperationalFocus = () => (
             {[
               { title: 'POS Continuity', desc: 'Local cache and LTE failover ensure your registers keep ringing even during local exchange outages.' },
               { title: 'POS Reliability', desc: 'Bulletproof POS networking with dedicated VLANs and prioritised traffic to ensure zero latency at checkout.' },
-              { title: 'Remote Support Model', desc: 'Australian-based NOC that understands retail logic. We don’t troubleshoot routers; we fix store operations.' },
+              { title: 'Remote Support Model', desc: 'AU-managed NOC that understands retail logic. We don’t troubleshoot routers; we fix store operations.' },
             ].map((item, i) => (
               <div key={i} className="flex gap-4">
                 <div className="w-10 h-10 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0">

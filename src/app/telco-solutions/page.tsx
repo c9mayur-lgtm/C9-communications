@@ -49,7 +49,7 @@ const VISITOR_PATHS = [
   },
   {
     title: "Enterprise & Multi-Site",
-    description: "Complex infrastructure simplified. Managed SD-WAN, private fibre, and Australian-based engineering support.",
+    description: "Complex infrastructure simplified. Managed SD-WAN, private fibre, and AU-managed engineering support.",
     icon: Building2,
     cta: "Enterprise Solutions",
     href: "/enterprise"
@@ -67,7 +67,7 @@ const SOLUTION_TIERS = [
   },
   {
     title: "Managed Support",
-    points: ["24/7 Australian Engineering", "Zero-Touch Hardware Mgmt", "Cyber-Security Audits"]
+    points: ["24/7 AU-managed engineering", "Zero-Touch Hardware Mgmt", "Cyber-Security Audits"]
   }
 ];
 
@@ -150,7 +150,7 @@ export default function TelcoSolutionsPage() {
            showHeader={true}
            eyebrow="READY TO START?"
            title="Let’s build your technology roadmap."
-           description="Speak with an Australian-based engineer about your connectivity, voice, and IT needs."
+           description="Speak with an AU-managed engineer about your connectivity, voice, and IT needs."
            formTitle="Book Your Strategy Session"
         />
       </section>
