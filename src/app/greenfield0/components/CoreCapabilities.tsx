@@ -129,7 +129,7 @@ export const CoreCapabilities = () => {
                     {/* Placeholder for interactive visual or image */}
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-30" />
                     <div className="relative z-10 text-[#5D00D6]/20">
-                      {React.cloneElement(cap.icon as React.ReactElement, { className: 'w-48 h-48' })}
+                      {React.cloneElement(cap.icon as React.ReactElement, { className: 'w-48 h-48' } as any)}
                     </div>
                     <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-white/50 shadow-lg">
                       <p className="c9-eyebrow !text-[#5D00D6] !mb-1">Standard Implementation</p>
