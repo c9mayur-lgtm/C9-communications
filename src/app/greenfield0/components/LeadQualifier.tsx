@@ -313,7 +313,8 @@ export const LeadQualifier = ({ isOpen, onClose, isEmbedded = false }: LeadQuali
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose?.()}>
       <DialogContent
-        className="max-w-[420px] w-full p-0 border border-slate-100 overflow-hidden rounded-2xl shadow-2xl shadow-slate-300/30 bg-white !top-[4vh] !translate-y-0"
+        showCloseButton={false}
+        className="max-w-[420px] w-full p-0 border border-slate-100 overflow-hidden rounded-2xl shadow-2xl shadow-slate-300/30 bg-white z-[1001] !top-1/2 !-translate-y-1/2"
       >
         {shell}
       </DialogContent>

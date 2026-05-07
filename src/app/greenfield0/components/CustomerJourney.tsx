@@ -15,7 +15,8 @@ import {
   Globe,
   Zap,
   CheckCircle2,
-  ChevronRight
+  ChevronRight,
+  ArrowRight
 } from 'lucide-react';
 import { C9Button } from '@/components/design-system/C9Button';
 import Link from 'next/link';
@@ -26,12 +27,17 @@ const JOURNEY_STEPS = [
     label: 'Internet',
     icon: <Globe size={20} />,
     heading: 'Business Internet & Fibre',
-    description: 'The foundation of your digital site. We perform free service qualifications, handle LOC ID creation, and ensure your business is connected with high-speed enterprise fibre from day one.',
+    phase: 'The Empty Shell',
+    link: '/telco',
+    description: 'The foundation of your digital site. We handle the entire connectivity lifecycle from initial qualification to live high-speed fibre delivery.',
     image: '/images/realistic_business_internet_fiber_box_1776077417680.png',
     options: [
-      { icon: <Wifi size={20} />, title: 'Free Service Qualification', desc: 'We verify exact speeds and technology available at your specific site.' },
-      { icon: <Zap size={20} />, title: 'LOC ID Management', desc: 'We handle all infrastructure registrations to avoid connection delays.' },
-      { icon: <CheckCircle2 size={20} />, title: 'Enterprise nbn®', desc: 'Symmetrical high-speed fibre backed by enterprise-grade SLAs.' }
+      { icon: <Wifi size={20} />, title: 'Free Service Qualification', desc: 'Exact speeds and technology audits for your site.' },
+      { icon: <Zap size={20} />, title: 'LOC ID & Registrations', desc: 'Managing all infrastructure IDs to avoid delays.' },
+      { icon: <CheckCircle2 size={20} />, title: 'Enterprise nbn® Fibre', desc: 'Symmetrical high-speed fibre with enterprise SLAs.' },
+      { icon: <Network size={20} />, title: 'Carrier Path Audits', desc: 'Ensuring diverse entry points for maximum uptime.' },
+      { icon: <ShieldCheck size={20} />, title: 'Redundancy Design', desc: 'Failover paths via secondary carriers or 5G.' },
+      { icon: <Monitor size={20} />, title: '24/7 Link Monitoring', desc: 'Proactive alerts and engineering support.' }
     ]
   },
   {
@@ -39,12 +45,17 @@ const JOURNEY_STEPS = [
     label: 'Networking & WiFi',
     icon: <Network size={20} />,
     heading: 'Managed Site Connectivity',
-    description: 'High-density connectivity that reaches every corner of your new premises. Our comprehensive scope includes professional cabling, secure switching, and enterprise-grade WiFi access points.',
+    phase: 'The Build Phase',
+    link: '/managed-it/network-solutions',
+    description: 'High-density connectivity that reaches every corner. We design, stage, and deploy the entire internal network fabric.',
     image: '/images/realistic_business_networking_rack_1776077491291.png',
     options: [
-      { icon: <Network size={20} />, title: 'Professional Cabling', desc: 'Full Cat6A data cabling included as part of your infrastructure setup.' },
-      { icon: <Wifi size={20} />, title: 'WiFi 6E Rollout', desc: 'High-density wireless coverage optimized for high-traffic environments.' },
-      { icon: <ShieldCheck size={20} />, title: 'Secure SD-WAN', desc: 'Centralized network control with built-in security and failover paths.' }
+      { icon: <Network size={20} />, title: 'Structured Cabling', desc: 'Certified Cat6A and Fibre backbone installation.' },
+      { icon: <Wifi size={20} />, title: 'WiFi 6E Rollout', desc: 'High-density coverage for guests and staff.' },
+      { icon: <ShieldCheck size={20} />, title: 'Managed SD-WAN', desc: 'Centralised control with built-in security.' },
+      { icon: <Zap size={20} />, title: 'Hardware Staging', desc: 'Off-site configuration for rapid Day 1 rollout.' },
+      { icon: <Monitor size={20} />, title: 'VLAN Segmentation', desc: 'Secure isolation for POS, Guest, and Staff traffic.' },
+      { icon: <Shield size={20} />, title: 'Network Security', desc: 'Integrated firewalls and intrusion prevention.' }
     ]
   },
   {
@@ -52,12 +63,17 @@ const JOURNEY_STEPS = [
     label: 'Phone System',
     icon: <Phone size={20} />,
     heading: 'Modern Cloud Voice',
-    description: 'Crystal clear communication for your team and customers. Modern cloud-based systems that integrate perfectly with Microsoft Teams and your mobile workforce.',
+    phase: 'The Hardware Stack',
+    link: '/telco/phone-system',
+    description: 'Crystal clear communication from Day 1. Modern cloud-based systems that integrate perfectly with your workflows.',
     image: '/images/realistic_business_voice_poly_yealink_1776077360073.png',
     options: [
-      { icon: <Phone size={20} />, title: 'Teams Integration', desc: 'Make and receive calls directly through your Microsoft Teams environment.' },
-      { icon: <CheckCircle2 size={20} />, title: 'Cloud PBX', desc: 'A full-featured phone system managed in the cloud — no local hardware.' },
-      { icon: <Zap size={20} />, title: 'Number Porting', desc: 'We handle all existing number migrations for a seamless cutover.' }
+      { icon: <Phone size={20} />, title: 'Teams Integration', desc: 'Direct routing for calling within Microsoft Teams.' },
+      { icon: <CheckCircle2 size={20} />, title: 'Cloud PBX Setup', desc: 'Full-featured system without on-site hardware.' },
+      { icon: <Zap size={20} />, title: 'Number Porting', desc: 'Seamless migration of your existing business numbers.' },
+      { icon: <Users size={20} />, title: 'IVR & Call Routing', desc: 'Professional greetings and smart call distribution.' },
+      { icon: <Monitor size={20} />, title: 'Softphone Apps', desc: 'Unified communication across mobile and desktop.' },
+      { icon: <ShieldCheck size={20} />, title: 'Voice AI', desc: 'Smart AI receptionists to handle routine enquiries.' }
     ]
   },
   {
@@ -65,12 +81,16 @@ const JOURNEY_STEPS = [
     label: 'CCTV',
     icon: <Camera size={20} />,
     heading: 'AI-Driven Surveillance',
-    description: 'Absolute visibility over your new site. Intelligent surveillance with AI-driven motion detection and mobile access to keep your physical assets secure.',
+    phase: 'The Hardware Stack',
+    link: '/defense',
+    description: 'Absolute visibility over your new site. Intelligent surveillance that integrates with your core network.',
     image: '/images/greenfield/cctv.png',
     options: [
-      { icon: <Camera size={20} />, title: '4K AI Cameras', desc: 'Intelligent people-counting and motion analytics built directly in.' },
-      { icon: <ShieldCheck size={20} />, title: 'Remote Monitoring', desc: 'Secure mobile and desktop access to live feeds from anywhere.' },
-      { icon: <CheckCircle2 size={20} />, title: 'Secure Storage', desc: 'Compliance-certified local and cloud recording for total protection.' }
+      { icon: <Camera size={20} />, title: '4K AI Cameras', desc: 'Intelligent people-counting and motion analytics.' },
+      { icon: <ShieldCheck size={20} />, title: 'Remote Monitoring', desc: 'Live feeds accessible from mobile and desktop.' },
+      { icon: <CheckCircle2 size={20} />, title: 'Secure Storage', desc: 'Compliance-certified local and cloud recording.' },
+      { icon: <Zap size={20} />, title: 'Mobile Alerts', desc: 'Instant notifications for unusual site activity.' },
+      { icon: <Users size={20} />, title: 'Face Recognition', desc: 'Secure access control for staff and contractors.' }
     ]
   },
   {
@@ -78,12 +98,15 @@ const JOURNEY_STEPS = [
     label: 'Print Solutions',
     icon: <Printer size={20} />,
     heading: 'Managed Print Services',
-    description: 'Seamless document management tailored for your operations. Reliable, managed print services that work perfectly across your network.',
+    phase: 'The Hardware Stack',
+    link: '/managed-it',
+    description: 'Reliable, managed print services that work perfectly across your network from the moment you open.',
     image: '/images/greenfield/networking.png',
     options: [
-      { icon: <Printer size={20} />, title: 'Smart Fleet Management', desc: 'High-performance hardware tailored to your specific site volumes.' },
-      { icon: <Zap size={20} />, title: 'Auto-Replenishment', desc: 'Toner and supplies arrive automatically before you run out.' },
-      { icon: <CheckCircle2 size={20} />, title: 'Secure Printing', desc: 'User-based authentication to ensure document confidentiality.' }
+      { icon: <Printer size={20} />, title: 'Smart Fleet Management', desc: 'Hardware tailored to your site-specific volumes.' },
+      { icon: <Zap size={20} />, title: 'Auto-Replenishment', desc: 'Toner arrives before you ever run out.' },
+      { icon: <CheckCircle2 size={20} />, title: 'Secure Printing', desc: 'Authentication to ensure document confidentiality.' },
+      { icon: <Monitor size={20} />, title: 'Fleet Monitoring', desc: 'Real-time visibility into usage and performance.' }
     ]
   },
   {
@@ -91,12 +114,15 @@ const JOURNEY_STEPS = [
     label: 'Modern Workplace',
     icon: <Monitor size={20} />,
     heading: 'Digital Employee Ecosystem',
-    description: 'Empower your Aussie workforce with a secure, productive digital environment. Full M365 deployment and device management ready for launch.',
+    phase: 'The Live Venue',
+    link: '/modern-workplace',
+    description: 'Empower your workforce with a secure digital environment. M365 and device management ready for launch.',
     image: '/images/greenfield/modern-workplace.png',
     options: [
-      { icon: <Monitor size={20} />, title: 'M365 Deployment', desc: 'Full configuration of your email, collaboration, and file systems.' },
-      { icon: <ShieldCheck size={20} />, title: 'Endpoint Security', desc: 'Protection for every laptop and mobile device in your fleet.' },
-      { icon: <CheckCircle2 size={20} />, title: 'User Onboarding', desc: 'Automated setup for new staff to ensure they are productive day one.' }
+      { icon: <Monitor size={20} />, title: 'M365 Deployment', desc: 'Full config of email and collaboration systems.' },
+      { icon: <ShieldCheck size={20} />, title: 'Endpoint Security', desc: 'Protection for every laptop and mobile device.' },
+      { icon: <CheckCircle2 size={20} />, title: 'User Onboarding', desc: 'Automated setup for day-one productivity.' },
+      { icon: <Zap size={20} />, title: 'Intune Enrollment', desc: 'Simplified remote management of all company assets.' }
     ]
   },
   {
@@ -104,12 +130,15 @@ const JOURNEY_STEPS = [
     label: 'Visitor Solutions',
     icon: <Users size={20} />,
     heading: 'Managed Site Induction',
-    description: 'The first impression your site makes. Seamless, digital visitor check-ins and contractor management that ensures safety and compliance.',
+    phase: 'The Live Venue',
+    link: '/modern-workplace',
+    description: 'The first impression your site makes. Seamless digital visitor check-ins and contractor management.',
     image: '/images/greenfield/networking.png',
     options: [
-      { icon: <Users size={20} />, title: 'Digital Sign-in', desc: 'Branded, contactless visitor registration at your front desk.' },
-      { icon: <CheckCircle2 size={20} />, title: 'Safety Inductions', desc: 'Automated health and safety walkthroughs for every visitor.' },
-      { icon: <ShieldCheck size={20} />, title: 'Contractor Compliance', desc: 'Verify insurance and certifications automatically before entry.' }
+      { icon: <Users size={20} />, title: 'Digital Sign-in', desc: 'Contactless visitor registration at the front desk.' },
+      { icon: <CheckCircle2 size={20} />, title: 'Safety Inductions', desc: 'Automated health and safety walkthroughs.' },
+      { icon: <ShieldCheck size={20} />, title: 'Contractor Compliance', desc: 'Automatic verification of insurance and certs.' },
+      { icon: <Zap size={20} />, title: 'Evacuation Mgmt', desc: 'Real-time digital roll-call during emergencies.' }
     ]
   },
 ];
@@ -166,6 +195,11 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
               {/* Left side: Heading, Description & Image */}
               <div className="flex flex-col">
                 <div className="mb-8 md:mb-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="px-3 py-1 bg-[#5D00D6]/10 text-[#5D00D6] text-[10px] font-black uppercase tracking-[0.2em] rounded-full">
+                      Journey Phase: {activeStep.phase}
+                    </div>
+                  </div>
                   <h3 className="c9-card-title !text-[28px] md:!text-[36px] mb-6 leading-tight text-[#0c1024] font-clash">
                     {activeStep.heading}
                   </h3>
@@ -179,54 +213,60 @@ export const CustomerJourney = ({ onOpenQualifier }: { onOpenQualifier: () => vo
                     <img 
                       src={activeStep.image} 
                       alt={activeStep.heading} 
-                      className="w-full h-[300px] object-cover object-center rounded-2xl border border-slate-100"
+                      className="w-full h-[300px] object-cover object-center rounded-2xl border border-slate-100 shadow-lg"
                     />
                   </div>
                 </div>
               </div>
 
-              {/* Right side: Feature Cards */}
-              <div className="flex flex-col gap-5 pt-2">
-                {activeStep.options.map((option: any, idx: number) => (
-                  <motion.div 
-                    key={idx} 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="flex items-start justify-between p-6 bg-white border border-slate-100 rounded-2xl hover:border-[#5D00D6] hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all cursor-pointer group"
-                  >
-                    <div className="flex items-start gap-6">
-                      <div className="w-10 h-10 rounded-xl bg-[#F4F0FA] text-[#5D00D6] flex items-center justify-center group-hover:bg-[#5D00D6] group-hover:text-white group-hover:shadow-[0_0_15px_rgba(93,0,214,0.3)] transition-all shrink-0 mt-1">
-                        {option.icon}
-                      </div>
-                      <div>
-                        <h4 className="c9-card-title !text-[20px] mb-2 leading-tight text-[#0c1024] group-hover:text-[#5D00D6] transition-colors font-clash">
+              {/* Right side: Service Pointers */}
+              <div className="flex flex-col pt-2">
+                <div className="mb-6 flex items-center justify-between">
+                   <span className="text-[11px] font-black uppercase tracking-[0.25em] text-[#5D00D6]">
+                      What we handle end-to-end
+                   </span>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+                  {activeStep.options.map((option: any, idx: number) => (
+                    <motion.div 
+                      key={idx} 
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.05 }}
+                      className="group"
+                    >
+                      <div className="flex items-center gap-3 mb-1">
+                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center shrink-0">
+                          <CheckCircle2 size={12} />
+                        </div>
+                        <h4 className="text-[14px] font-bold text-[#0c1024] group-hover:text-[#5D00D6] transition-colors font-clash leading-tight">
                           {option.title}
                         </h4>
-                        <p className="c9-body !text-[15px] font-medium text-slate-500 leading-relaxed font-dm-sans">
-                          {option.desc}
-                        </p>
                       </div>
-                    </div>
-                    <div className="self-center text-slate-200 group-hover:text-[#5D00D6] transition-colors">
-                       <ChevronRight size={24} />
-                    </div>
-                  </motion.div>
-                ))}
+                      <p className="text-[12px] font-medium text-slate-400 leading-snug font-dm-sans pl-8">
+                        {option.desc}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
 
-                <div className="mt-8 p-8 bg-[#0c1024] rounded-3xl text-white flex items-center justify-between group overflow-hidden relative">
-                   <div className="absolute inset-0 bg-[#5D00D6]/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                   <div className="relative z-10">
-                      <h4 className="text-xl font-bold mb-1 font-clash text-white">Operational Ready</h4>
-                      <p className="text-white/60 text-sm font-dm-sans">We handle all technical dependencies for you.</p>
-                   </div>
-                   <C9Button 
-                      onClick={onOpenQualifier}
-                      size="lg" 
-                      className="rounded-full relative z-10"
-                   >
-                      Build Site Plan
-                   </C9Button>
+                <div className="mt-10 pt-8 border-t border-slate-50">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                      <h4 className="text-[15px] font-bold text-[#0c1024] mb-1 font-clash">Want to know more?</h4>
+                      <p className="text-[13px] text-slate-400 font-medium font-dm-sans">Explore our dedicated {activeStep.label} solutions.</p>
+                    </div>
+                    <C9Button 
+                      asChild
+                      variant="outline"
+                      className="rounded-full border-[#5D00D6]/20 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all px-8 h-12"
+                    >
+                      <Link href={activeStep.link}>
+                        Go to {activeStep.label} Page <ArrowRight size={16} className="ml-2" />
+                      </Link>
+                    </C9Button>
+                  </div>
                 </div>
               </div>
             </motion.div>
