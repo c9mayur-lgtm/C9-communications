@@ -30,14 +30,14 @@ const PathOption = ({
     onClick={onClick}
     aria-pressed={isSelected}
     className={cn(
-      "flex flex-col items-center justify-center p-3 rounded-xl border transition-all duration-300 gap-2 flex-1",
+      "flex flex-col items-center justify-center p-3 rounded-none border transition-all duration-300 gap-2 flex-1",
       isSelected 
         ? "bg-[#5D00D6]/5 border-[#5D00D6] shadow-sm" 
         : "bg-white border-slate-100 hover:border-slate-200"
     )}
   >
     <div className={cn(
-      "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
+      "w-8 h-8 rounded-none flex items-center justify-center transition-colors",
       isSelected ? "bg-[#5D00D6] text-white" : "bg-slate-50 text-slate-400"
     )}>
       <Icon size={16} />
@@ -107,8 +107,8 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
 
   if (isSuccess) {
     return (
-      <div className="bg-white rounded-lg p-8 md:p-10 w-full max-w-[600px] mx-auto lg:ml-auto flex flex-col items-center justify-center min-h-[400px] animate-in fade-in duration-500">
-        <div className="w-16 h-16 bg-[#5D00D6] rounded-full flex items-center justify-center text-white mb-6">
+      <div className="bg-white rounded-none p-8 md:p-10 w-full max-w-[600px] mx-auto lg:ml-auto flex flex-col items-center justify-center min-h-[400px] animate-in fade-in duration-500">
+        <div className="w-16 h-16 bg-[#5D00D6] rounded-none flex items-center justify-center text-white mb-6">
           <Zap size={32} />
         </div>
         <h3 className="text-[24px] font-bold text-center text-[#0c1024] mb-4">Request Received</h3>
@@ -117,7 +117,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
         </p>
         <Button 
           onClick={() => setIsSuccess(false)}
-          className="w-full h-14 rounded-full bg-[#0c1024] hover:bg-black text-white font-bold uppercase tracking-widest text-[11px]"
+          className="w-full h-14 rounded-none bg-[#0c1024] hover:bg-black text-white font-bold uppercase tracking-widest text-[11px]"
         >
           Send Another Request
         </Button>
@@ -126,7 +126,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
   }
 
   return (
-    <div className="bg-white rounded-lg p-8 md:p-10 w-full max-w-[600px] mx-auto lg:ml-auto">
+    <div className="bg-white rounded-none p-8 md:p-10 w-full max-w-[600px] mx-auto lg:ml-auto">
       <div className="flex flex-col items-center mb-8">
         <h3 className="text-[22px] font-bold text-center text-[#0c1024] mb-2 tracking-tight">
           {formTitle}
@@ -159,7 +159,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
               value={formData.firstName}
               onChange={handleInputChange}
               placeholder="John" 
-              className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
+              className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -172,7 +172,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
               value={formData.lastName}
               onChange={handleInputChange}
               placeholder="Doe" 
-              className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
+              className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
             />
           </div>
         </div>
@@ -187,7 +187,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             value={formData.email}
             onChange={handleInputChange}
             placeholder="john@company.com.au" 
-            className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
+            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
           />
         </div>
 
@@ -201,7 +201,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             value={formData.organisation}
             onChange={handleInputChange}
             placeholder="Organisation name" 
-            className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
+            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold placeholder:text-slate-300" 
           />
         </div>
 
@@ -220,7 +220,7 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             }
             value={formData.message}
             onChange={handleInputChange}
-            className="w-full px-5 py-3.5 rounded-lg bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold min-h-[80px] resize-none placeholder:text-slate-300"
+            className="w-full px-5 py-3.5 rounded-none bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-[14px] font-semibold min-h-[80px] resize-none placeholder:text-slate-300"
           />
         </div>
 
@@ -229,11 +229,11 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
             type="submit"
             disabled={isSubmitting}
             size="lg" 
-            className="w-full h-14 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] c9-button-label shadow-2xl shadow-purple-900/30 transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full h-14 rounded-none bg-[#5D00D6] hover:bg-[#4c00b0] c9-button-label shadow-2xl shadow-purple-900/30 transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
           >
              {isSubmitting ? (
                <div className="flex items-center gap-2">
-                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-none animate-spin" />
                  Sending...
                </div>
              ) : (

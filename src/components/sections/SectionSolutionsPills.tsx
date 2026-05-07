@@ -46,28 +46,47 @@ const CONTENT_MAP = {
     subtitle: 'Select a capability to see how we deliver enterprise-grade infrastructure for your greenfield project.',
     tabs: [
       { 
-        name: 'Networking', 
+        name: 'Internet', 
+        img: '/images/greenfield/networking.png', 
+        path: '/telco/nbn-business',
+        desc: 'The foundation of your site. We perform free service qualifications and handle all LOC ID creations with Aussie-based providers to ensure your fibre is live before your team arrives.'
+      },
+      { 
+        name: 'Networking & Wifi', 
         img: '/images/greenfield/networking.png', 
         path: '/managed-it/network-solutions',
-        desc: 'Build a high-performance network foundation that scales with your business. From enterprise-grade fibre to secure SD-WAN, we ensure your site is connected and secure from day one.'
-      },
-      { 
-        name: 'CCTV & Security', 
-        img: '/images/greenfield/cctv.png', 
-        path: '/modern-workplace/cctv-people-count',
-        desc: 'Protect your physical assets with intelligent surveillance and AI-driven occupancy tracking. Our integrated security systems provide real-time visibility and absolute control over your new premises.'
-      },
-      { 
-        name: 'Modern Workplace', 
-        img: '/images/greenfield/modern-workplace.png', 
-        path: '/modern-workplace/productivity',
-        desc: 'Empower your team with the tools they need to succeed. We deploy and manage your entire Microsoft 365 environment, productivity tools, and secure remote access protocols.'
+        desc: 'A complete managed network stack including professional Cat6A cabling, high-performance switching, and high-density Wi-Fi 6E. We own the architecture from rack to endpoint.'
       },
       { 
         name: 'Phone System', 
         img: '/images/greenfield/phone-system.png', 
         path: '/telco/phone-system',
-        desc: 'Crystal clear communication tailored for modern business. Our Teams-integrated cloud voice platform replaces legacy hardware with a scalable, feature-rich system.'
+        desc: 'Modern cloud voice solutions that integrate seamlessly with your workforce. We provision, install, and manage your hosted PBX and Microsoft Teams Voice environment.'
+      },
+      { 
+        id: 'cctv',
+        name: 'CCTV', 
+        img: '/images/greenfield/cctv.png', 
+        path: '/modern-workplace/cctv-people-count',
+        desc: 'Intelligent AI-driven surveillance that protects your physical assets. We design and manage the entire surveillance network with 24/7 remote access.'
+      },
+      { 
+        name: 'Print Solutions', 
+        img: '/images/greenfield/networking.png', 
+        path: '/modern-workplace/print-solutions',
+        desc: 'Seamless document management for your new site. We provide high-performance hardware, automated toner replenishment, and proactive maintenance.'
+      },
+      { 
+        name: 'Modern Workplace', 
+        img: '/images/greenfield/modern-workplace.png', 
+        path: '/modern-workplace/productivity',
+        desc: 'The complete digital software and device ecosystem. From Microsoft 365 deployment to endpoint management and cybersecurity protocols for your staff.'
+      },
+      { 
+        name: 'Visitors Solutions', 
+        img: '/images/greenfield/networking.png', 
+        path: '/modern-workplace/visitor-contractor-management',
+        desc: 'Digital check-in, contractor management, and automated inductions. Making a professional first impression while maintaining site safety.'
       },
     ]
   },

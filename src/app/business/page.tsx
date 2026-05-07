@@ -546,6 +546,8 @@ export default function SmallBusinessPage() {
       <SectionProcess />
       <SectionProof />
       
+      <WpSupport />
+
       <WpCaseStudies 
         eyebrow="SUCCESSFUL TRANSITIONS"
         title="Migration Outcomes"
