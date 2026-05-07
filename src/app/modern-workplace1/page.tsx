@@ -269,7 +269,7 @@ export default function ModernWorkplace1Page() {
             ].map((module, mIdx) => (
               <div key={mIdx} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">{module.title}</h3>
-                <Accordion type="single" collapsible className="w-full" {...({} as any)}>
+                <Accordion className="w-full">
                   {module.items.map((item, iIdx) => (
                     <AccordionItem key={iIdx} value={`item-${iIdx}`} className="border-b border-slate-100 last:border-0">
                       <AccordionTrigger className="text-left font-medium text-slate-700 hover:text-purple-600 py-4">

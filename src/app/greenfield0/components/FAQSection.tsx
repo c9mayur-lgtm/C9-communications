@@ -51,7 +51,7 @@ export const FAQSection = () => {
             </h2>
           </div>
 
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion className="w-full space-y-4">
             {FAQS.map((faq, i) => (
               <AccordionItem 
                 key={i} 
