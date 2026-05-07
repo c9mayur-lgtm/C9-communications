@@ -50,7 +50,7 @@ export const DeliveryProcess = () => {
               >
                 <div className="relative z-10 w-[120px] h-[120px] rounded-full bg-white border-4 border-slate-50 shadow-xl shadow-slate-100 flex flex-col items-center justify-center mb-8 group hover:border-[#5D00D6]/20 transition-all duration-300">
                   <div className="text-[#5D00D6] mb-1 group-hover:scale-110 transition-transform">
-                    {React.cloneElement(s.icon as React.ReactElement, { size: 32 })}
+                    {React.cloneElement(s.icon as React.ReactElement, { size: 32 } as any)}
                   </div>
                   <span className="text-[10px] font-black text-slate-300 uppercase tracking-[0.2em]">Stage {s.id}</span>
                 </div>
