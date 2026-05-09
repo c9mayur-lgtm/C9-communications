@@ -114,7 +114,7 @@ const HeroV3 = () => (
                 { label: 'Single accountable partner', icon: <Handshake /> }
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
-                  <div className="text-[#5D00D6] shrink-0">{React.cloneElement(item.icon as React.ReactElement, { size: 14 })}</div>
+                  <div className="text-[#5D00D6] shrink-0">{React.cloneElement(item.icon as React.ReactElement<any>, { size: 14 })}</div>
                   <span className="text-slate-700 font-bold text-[14px] uppercase tracking-wider">{item.label}</span>
                 </div>
               ))}
@@ -405,7 +405,7 @@ const OperationalChaos = () => {
               <div key={i} className="embla__slide flex-[0_0_85%] md:flex-[0_0_45%] lg:flex-[0_0_31%] min-w-0">
                 <FadeIn delay={i * 0.05} className="h-full bg-white p-8 rounded-3xl border border-slate-200 flex flex-col gap-4 shadow-sm hover:border-[#5D00D6]/20 transition-all group">
                   <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-500 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
-                    {React.cloneElement(item.icon as React.ReactElement, { size: 22 })}
+                    {React.cloneElement(item.icon as React.ReactElement<any>, { size: 22 })}
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 text-[16px] mb-2 font-clash">{item.title}</h4>
@@ -617,7 +617,7 @@ const TransitionFramework = () => {
                 <div className="p-8 lg:p-10">
                   <div className="flex items-start gap-6 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-[#5D00D6] text-white flex items-center justify-center shrink-0 shadow-lg shadow-purple-900/20">
-                      {React.cloneElement(current.icon as React.ReactElement, { size: 22 })}
+                      {React.cloneElement(current.icon as React.ReactElement<any>, { size: 22 })}
                     </div>
                     <div>
                       <div className="flex items-center gap-3 mb-2">
@@ -734,7 +734,7 @@ const OutcomesOfferings = () => (
             {/* Icon + Title row */}
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] shrink-0 shadow-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
-                {React.cloneElement(item.icon as React.ReactElement, { size: 18 })}
+                {React.cloneElement(item.icon as React.ReactElement<any>, { size: 18 })}
               </div>
               <h3 className="text-[15px] font-bold text-[#0c1024] font-clash leading-tight">{item.title}</h3>
             </div>
@@ -1022,7 +1022,7 @@ const FinalCTAV3 = () => (
                     { label: '99.9% UPTIME GUARANTEE', icon: <ShieldCheck /> }
                  ].map(item => (
                     <div key={item.label} className="flex items-center gap-2">
-                       <div className="text-[#5D00D6]">{React.cloneElement(item.icon as React.ReactElement, { size: 14 })}</div>
+                       <div className="text-[#5D00D6]">{React.cloneElement(item.icon as React.ReactElement<any>, { size: 14 })}</div>
                        <span className="text-slate-400 font-bold uppercase tracking-[0.2em] text-[10px]">{item.label}</span>
                     </div>
                  ))}

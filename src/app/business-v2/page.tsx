@@ -319,7 +319,7 @@ const Hero = ({ onOpenQualifier }: { onOpenQualifier: () => void }) => (
                 { label: 'Australian-based support team', icon: <Users /> }
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="text-[#5D00D6] shrink-0">{React.cloneElement(item.icon as React.ReactElement, { size: 16 })}</div>
+                  <div className="text-[#5D00D6] shrink-0">{React.cloneElement(item.icon as React.ReactElement<any>, { size: 16 })}</div>
                   <span className="text-slate-700 font-bold text-[14px] uppercase tracking-wider">{item.label}</span>
                 </div>
               ))}
@@ -776,6 +776,7 @@ const FAQSection = () => {
             <p className="c9-body font-dm-sans">Honest, specific answers to the most common questions from Brownfield CEOs.</p>
           </FadeIn>
 
+          {/* @ts-ignore */}
           <Accordion type="single" collapsible className="space-y-3 font-dm-sans">
             {faqs.map((faq, i) => (
               <FadeIn key={i} delay={i * 0.05} direction="none">
@@ -946,7 +947,7 @@ export default function SmallBusinessPageV2() {
                      ].map((item, i) => (
                         <div key={i} className="flex items-center gap-4">
                            <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] shadow-sm">
-                              {React.cloneElement(item.icon as React.ReactElement, { size: 16 })}
+                              {React.cloneElement(item.icon as React.ReactElement<any>, { size: 16 })}
                            </div>
                            <span className="text-slate-700 font-bold text-sm uppercase tracking-widest">{item.label}</span>
                         </div>
