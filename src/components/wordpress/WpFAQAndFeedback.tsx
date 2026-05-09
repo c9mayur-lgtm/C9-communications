@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { ChevronDown } from 'lucide-react';
 import { ServiceTestimonialKajabi } from './ServiceTestimonialKajabi';
 
 const FAQS = [
@@ -34,13 +33,17 @@ export const WpFAQAndFeedback = ({
   showTestimonials = true, 
   testimonials,
   faqItems = FAQS,
-  showStillQuestions = true
+  showStillQuestions = true,
+  maxWidth = "1240px",
+  compact = false
 }: { 
   showFAQ?: boolean; 
   showTestimonials?: boolean; 
   testimonials?: TestimonialData[];
   faqItems?: FAQItemData[];
   showStillQuestions?: boolean;
+  maxWidth?: string;
+  compact?: boolean;
 } = {}) => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
@@ -48,15 +51,12 @@ export const WpFAQAndFeedback = ({
     <>
       {/* FAQ Section */}
       {showFAQ && (
-        <section className="py-16 md:py-24 bg-[#FDFDFF] border-t border-gray-100">
-          <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
+        <section className="py-16 md:py-20 bg-white border-t border-slate-100">
+          <div className="container mx-auto px-6 md:px-8" style={{ maxWidth: maxWidth }}>
             
-            <div className="flex flex-col items-start mb-12">
-              <div className="inline-flex items-center gap-2 bg-[#F4F0FA] px-4 py-2 rounded-lg border border-[#5D00D6]/10 mb-6 cursor-default">
-                <HelpCircle className="text-[#5D00D6]" size={16} />
-                <span className="c9-eyebrow !text-[11px] leading-none mt-0.5">Quick Answers</span>
-              </div>
-              <h2 className="c9-section-heading text-[#0c1024]">
+            <div className="flex flex-col items-start mb-10">
+              <span className="c9-eyebrow mb-4 block">Common Questions</span>
+              <h2 className={`font-bold font-clash text-[#0c1024] ${compact ? 'text-2xl md:text-3xl' : 'text-3xl md:text-4xl'}`}>
                 Frequently Asked Questions
               </h2>
             </div>
@@ -66,17 +66,17 @@ export const WpFAQAndFeedback = ({
               {faqItems.map((item, i) => {
                 const isOpen = openIdx === i;
                 return (
-                  <div key={i} className="border-b border-[#5D00D6]/10">
+                  <div key={i} className="border-b border-slate-100 last:border-0">
                     <button 
                       onClick={() => setOpenIdx(isOpen ? null : i)}
-                      className="w-full flex items-start justify-between gap-6 py-6 md:py-8 text-left"
+                      className="w-full flex items-start justify-between gap-6 py-5 md:py-6 text-left group"
                     >
                       <span 
-                        className={`text-[19px] md:text-[22px] font-medium leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-[#0c1024]'}`} 
+                        className={`text-[17px] md:text-[19px] font-medium font-clash leading-snug transition-colors ${isOpen ? 'text-[#5D00D6]' : 'text-slate-800'}`} 
                       >
                         {item.q}
                       </span>
-                      <ChevronDown size={22} className={`shrink-0 mt-0.5 duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : 'text-gray-400 group-hover:text-[#5D00D6]'}`} />
+                      <ChevronDown size={20} className={`shrink-0 mt-0.5 duration-300 ${isOpen ? 'rotate-180 text-[#5D00D6]' : 'text-slate-300 group-hover:text-[#5D00D6]'}`} />
                     </button>
                     <AnimatePresence initial={false}>
                       {isOpen && (
@@ -87,8 +87,8 @@ export const WpFAQAndFeedback = ({
                           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                           className="overflow-hidden"
                         >
-                          <div className="pb-8 pt-0 pr-8">
-                            <p className="c9-body max-w-[840px]">
+                          <div className="pb-6 pt-0 pr-8">
+                            <p className="text-slate-500 text-[15px] leading-relaxed font-dm-sans max-w-3xl">
                               {item.a}
                             </p>
                           </div>

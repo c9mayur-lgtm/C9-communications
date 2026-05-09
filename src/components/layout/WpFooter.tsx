@@ -92,8 +92,8 @@ export const WpFooter = () => {
           </div>
       </div>
       
-      {/* High-Fidelity White Footer Section */}
-      <div className="bg-white text-slate-900 py-12">
+      {/* High-Fidelity Black Footer Section */}
+      <div className="bg-black text-white py-12 border-t border-white/10">
         <div className="container mx-auto px-6 md:px-8 w-full" style={{ maxWidth: '1240px' }}>
           
           {/* Main Info Row */}
@@ -101,35 +101,35 @@ export const WpFooter = () => {
             
             {/* Google Section */}
               <div className="flex items-center gap-4 py-2">
-                <span className="font-bold text-[32px] tracking-tighter text-[#0c1024]">Google</span>
+                <span className="font-bold text-[32px] tracking-tighter text-white">Google</span>
                 <div className="flex flex-col">
-                  <div className="text-[10px] font-black text-slate-700 leading-none uppercase tracking-wide mb-1">Reviewed on</div>
+                  <div className="text-[10px] font-medium text-gray-400 leading-none uppercase tracking-wide mb-1">Reviewed on</div>
                   <div className="flex text-[#4285F4] text-md leading-none mb-1" aria-hidden="true">★★★★★</div>
-                  <span className="text-[10px] font-black text-slate-700 uppercase tracking-wide leading-none">4.9/5 Rating</span>
+                  <span className="text-[10px] font-medium text-gray-400 uppercase tracking-wide leading-none">4.9/5 Rating</span>
                 </div>
               </div>
 
-            <div className="hidden lg:block w-[1px] h-14 bg-gray-200"></div>
+            <div className="hidden lg:block w-[1px] h-14 bg-white/10"></div>
 
             {/* Address Section - Narrow Stack */}
-             <div className="text-[14px] text-slate-700 font-medium leading-[1.6] text-center lg:text-left max-w-[120px]">
+             <div className="text-[14px] text-gray-300 font-normal leading-[1.6] text-center lg:text-left max-w-[120px]">
                level 3 480 Collins Street Melbourne 3000
              </div>
 
-            <div className="hidden lg:block w-[1px] h-14 bg-gray-200"></div>
+            <div className="hidden lg:block w-[1px] h-14 bg-white/10"></div>
 
             {/* Contact & Copyright Section */}
                <div className="text-center lg:text-left">
-                <div className="text-[14px] text-slate-800 font-bold leading-[1.6] mb-1">
+                <div className="text-[14px] text-gray-300 font-normal leading-[1.6] mb-1">
                   T: 1800 000 299<br/>
                   E: office@c9communications.com.au
                 </div>
-                <div className="text-[11px] text-slate-700 font-black font-sans uppercase tracking-wider">
+                <div className="text-[11px] text-gray-500 font-medium font-sans uppercase tracking-wider">
                   © {new Date().getFullYear()} C9 Communications. All rights reserved.
                 </div>
               </div>
 
-            <div className="hidden lg:block w-[1px] h-14 bg-gray-200"></div>
+            <div className="hidden lg:block w-[1px] h-14 bg-white/10"></div>
 
             {/* Social Links Section */}
             <div className="flex gap-10 lg:pl-4">
@@ -137,10 +137,10 @@ export const WpFooter = () => {
                 { label: 'LINKEDIN', icon: Linkedin, url: 'https://in.linkedin.com/company/c9groupofcompanies' }
               ].map((social) => (
                 <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
-                  <div className="h-6 flex items-center justify-center text-slate-700 opacity-80 group-hover:opacity-100 transition-opacity">
-                    <social.icon size={20} strokeWidth={2.5} aria-hidden="true" />
+                  <div className="h-6 flex items-center justify-center text-gray-400 group-hover:text-white transition-colors">
+                    <social.icon size={20} strokeWidth={2} aria-hidden="true" />
                   </div>
-                  <span className="text-[10px] font-semibold text-[#5D00D6] tracking-[0.05em] group-hover:underline">
+                  <span className="text-[10px] font-normal text-gray-400 tracking-[0.05em] group-hover:text-white transition-colors">
                     {social.label}
                   </span>
                 </a>
@@ -148,23 +148,23 @@ export const WpFooter = () => {
             </div>
           </div>
 
-          <div className="w-full h-px bg-gray-100 mb-2"></div>
+          <div className="w-full h-px bg-white/10 mb-4"></div>
 
           {/* Legal Links Row */}
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 mb-2 text-[14px] font-semibold text-[#5D00D6]">
-            <a href="/trust-center" className="hover:underline">Trust Center</a>
-            <a href="/accessibility-statement" className="hover:underline">Accessibility</a>
-            <a href="/complaints" className="hover:underline">Complaints</a>
-            <a href="/financial-hardship" className="hover:underline">Hardship Policy</a>
-            <a href="/cookie-policy" className="hover:underline">Cookie Policy</a>
-            <a href="/terms" className="hover:underline">Terms of Use</a>
-            <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
-            <a href="/site-map" className="hover:underline">Sitemap</a>
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 mb-6 text-[13px] font-normal text-gray-400">
+            <a href="/trust-center" className="hover:text-white transition-colors">Trust Center</a>
+            <a href="/accessibility-statement" className="hover:text-white transition-colors">Accessibility</a>
+            <a href="/complaints" className="hover:text-white transition-colors">Complaints</a>
+            <a href="/financial-hardship" className="hover:text-white transition-colors">Hardship Policy</a>
+            <a href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Use</a>
+            <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/site-map" className="hover:text-white transition-colors">Sitemap</a>
           </div>
 
           {/* Acknowledgement of Country */}
-            <div className="max-w-4xl mx-auto text-center border-t border-gray-50 pt-4">
-              <p className="text-[14px] md:text-[14px] text-slate-800 italic leading-[1.8] font-bold opacity-100">
+            <div className="max-w-4xl mx-auto text-center pt-2">
+              <p className="text-[13px] text-gray-500 italic leading-[1.8] font-normal">
                 We acknowledge the Traditional Owners on whose lands we work. We pay our respects to their elders past and present and recognise their continuing connection to this land.
               </p>
             </div>

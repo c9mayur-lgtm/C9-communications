@@ -71,9 +71,9 @@ export const ConsultationFormCore = ({ formTitle, ctaText }: ConsultationFormCor
   }, [inquiryMessage]);
 
   const paths = [
-    { id: 'consultation', icon: Calendar, label: 'Technical Consult', btn: 'Book Infrastructure Review' },
-    { id: 'sla', icon: Shield, label: 'Governance Pack', btn: 'Request Governance Pack' },
-    { id: 'assessment', icon: BarChart3, label: 'Operational Audit', btn: 'Request Operational Audit' }
+    { id: 'consultation', icon: Calendar, label: 'IT Strategy Session', btn: 'Book IT Strategy Session' },
+    { id: 'sla', icon: Shield, label: 'Infrastructure Review', btn: 'Request Infrastructure Review' },
+    { id: 'assessment', icon: BarChart3, label: 'Managed IT Quote', btn: 'Request Managed IT Quote' }
   ];
 
   const currentPath = paths.find(p => p.id === selectedPath)!;
