@@ -16,19 +16,19 @@ const slides = [
     desc: 'Ensure every new site opens with fully operational connectivity, infrastructure, devices, and support—without vendor delays or deployment risk.',
     cta: 'View Rollout Approach',
     href: '/greenfield',
-    image: '/images/hero/greenfield.png',
+    image: '/images/hero/greenfield-new.png',
     icon: <Briefcase size={18} />,
     tags: ['Zero-Delay Deployment', 'Standardised Infrastructure', 'On-Site Integration', 'Ready-to-Trade Delivery']
   },
   {
-    id: 'brownfield',
-    eyebrow: 'BROWNFIELD',
+    id: 'Small Business',
+    eyebrow: 'Small Business',
     dotColor: '#f59e0b',
     title: 'Consolidate IT, Telco, and Support\ninto One Accountable Model',
     desc: 'Reduce vendor fragmentation, improve operational visibility, and stabilise business-critical systems without disrupting day-to-day operations.',
     cta: 'View Stabilisation Model',
     href: '/business',
-    image: '/images/hero/brownfield.png',
+    image: '/images/hero/business-new.png',
     icon: <Store size={18} />,
     tags: ['Vendor Consolidation', 'Visibility Mapping', 'No Transition Disruption', '24/7 Monitoring']
   },
@@ -40,7 +40,7 @@ const slides = [
     desc: 'C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations, SLA-driven support, and proven large-scale deployments.',
     cta: 'Review Enterprise Operations',
     href: '/enterprise',
-    image: '/images/hero/enterprise.png',
+    image: '/images/hero/enterprise-new.png',
     icon: <Building2 size={18} />,
     tags: ['SLA-Backed Performance', 'Governance Compliance', 'Root-Cause Ownership', 'Multi-Site Stability']
   }

@@ -178,11 +178,11 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="brownfield" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
+            <FadeIn id="Small Business" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Activity size={24} />
                </div>
-               <h3 className="c9-card-title mb-4">Brownfield CEO</h3>
+               <h3 className="c9-card-title mb-4">Small Business CEO</h3>
                <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Roadmap recovery. We audit failed projects and stagnant technology, realigning your IT spend with business goals to eliminate waste and restore performance.
                </p>

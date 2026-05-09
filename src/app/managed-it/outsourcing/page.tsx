@@ -104,7 +104,7 @@ const Hero = () => (
                    
                 </a>
                 <a
-                   href="#brownfield"
+                   href="#Small Business"
                    className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white h-14 px-8 text-[15px] font-bold"
                 >
                    Replace Legacy IT
@@ -178,11 +178,11 @@ const SectionPersonas = () => (
                </ul>
             </FadeIn>
 
-            <FadeIn id="brownfield" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
+            <FadeIn id="Small Business" delay={0.1} className="bg-white border border-slate-200 p-10 rounded-lg shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <Activity size={24} />
                </div>
-               <h3 className="text-xl font-bold mb-4">Brownfield CEO</h3>
+               <h3 className="text-xl font-bold mb-4">Small Business CEO</h3>
                <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Stop the bleeding. We replace fragmented, unreliable legacy setups with a unified, professional department that actually supports your business objectives.
                </p>

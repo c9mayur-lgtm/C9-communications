@@ -382,7 +382,7 @@ export default function SolutionsPage() {
         </div>
       </Section>
 
-      {/* 7. BUILT FOR GREENFIELD + BROWNFIELD + ENTERPRISE */}
+      {/* 7. BUILT FOR GREENFIELD + Small Business + ENTERPRISE */}
       <Section bg="gray" className="py-24">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <FadeIn>
@@ -404,7 +404,7 @@ export default function SolutionsPage() {
               icon: <Rocket />
             },
             { 
-              title: "Brownfield Consolidation", 
+              title: "Small Business Consolidation", 
               persona: "Managing Legacy Chaos",
               desc: "You are dealing with vendor sprawl, billing confusion, and support blind spots. We execute a clean migration, consolidating your landscape into one accountable partner.",
               focus: ["Vendor Landscape Audit", "Risk-Managed Migration", "Cost & Complexity Reduction"],
@@ -525,7 +525,7 @@ export default function SolutionsPage() {
       <WpFAQAndFeedback 
         faqItems={[
           { q: "How long does a transition to C9 take?", a: "Timelines depend on complexity, but our phased migration approach ensures zero-downtime cut-overs. We build and test your new environment alongside your current one before execution." },
-          { q: "Can you manage our existing hardware and vendors?", a: "Yes. Many of our 'Brownfield' clients start by having us take over management of their current stack before we gradually consolidate and simplify their landscape." },
+          { q: "Can you manage our existing hardware and vendors?", a: "Yes. Many of our 'Small Business' clients start by having us take over management of their current stack before we gradually consolidate and simplify their landscape." },
           { q: "Do you support businesses with multiple interstate locations?", a: "Absolutely. We specialize in national multi-site operations, providing uniform support, visibility, and accountability regardless of where your teams or sites are located." }
         ]}
       />

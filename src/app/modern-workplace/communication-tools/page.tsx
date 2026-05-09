@@ -325,7 +325,7 @@ export default function CommunicationToolsPage() {
       <section className={sectionClassName}>
         <div className={containerClassName}>
           <FadeUp className="mb-12 max-w-[680px]">
-            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Built for greenfield, brownfield, and enterprise teams</h2>
+            <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">Built for greenfield, Small Business, and enterprise teams</h2>
             <p className="text-[18px] text-gray-500 font-medium">
               Whether you are launching from scratch or replacing legacy systems, we design communications around operational outcomes.
             </p>
@@ -512,7 +512,7 @@ export default function CommunicationToolsPage() {
             <div className="mt-16 pt-12 border-t border-white/10 grid lg:grid-cols-2 gap-12 lg:gap-20 mb-12">
               <div className="text-left">
                 <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
-                  <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+                  <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Small Business Protocol</span>
                 </div>
                 <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-white">
                   The C9 Managed <br />

@@ -126,7 +126,7 @@ export const HeroSection = ({ onOpenQualifier }: { onOpenQualifier: () => void }
               <div className="absolute inset-0 bg-[#5D00D6]/10 rounded-[32px] rotate-3 group-hover:rotate-2 transition-transform duration-500" />
               <div className="relative rounded-[32px] overflow-hidden shadow-2xl aspect-[4/5] border border-slate-100">
                 <img 
-                  src="/images/greenfield_hero.png" 
+                  src="/images/hero/greenfield-new.png" 
                   alt="Professional team delivering modern IT infrastructure" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />

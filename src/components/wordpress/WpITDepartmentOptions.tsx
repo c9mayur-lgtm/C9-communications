@@ -15,7 +15,7 @@ const OPTIONS = [
     btnText: "Partner With Us"
   },
   {
-    tag: 'BROWNFIELD',
+    tag: 'Small Business',
     title: "Multi-Vendor Reliance",
     desc: "We consolidate fragmented vendor environments into a single accountable model—removing coordination gaps and reducing operational risk.\n\n• Vendor Consolidation\n• SLA Standardisation\n• Unified Support Structure",
     img: "/images/hero_business.png",

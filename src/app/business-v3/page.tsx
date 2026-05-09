@@ -113,7 +113,7 @@ const Hero = () => (
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
           <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[3/4]">
             <img
-              src="/images/hero/brownfield-hero.png"
+              src="/images/hero/Small Business-hero.png"
               alt="Professional managing complex business infrastructure issues"
               className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
             />

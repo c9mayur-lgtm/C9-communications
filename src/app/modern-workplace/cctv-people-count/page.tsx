@@ -46,7 +46,7 @@ const METRICS = [
 ];
 
 const FAQS = [
-  { q: 'Can we use our existing cameras?', a: 'Yes. Our "Brownfield Protocol" allows us to integrate most IP-based cameras into our centralized AI dashboard, extending their life with smart analytics.' },
+  { q: 'Can we use our existing cameras?', a: 'Yes. Our "Small Business Protocol" allows us to integrate most IP-based cameras into our centralized AI dashboard, extending their life with smart analytics.' },
   { q: 'How does the people counting work?', a: 'We use AI computer vision to identify and track human silhouettes. This provides accurate foot-traffic data without storing personal identifiable information (PII).' },
   { q: 'Is the footage stored in the cloud or on-site?', a: 'We offer hybrid storage. Critical footage is cached on-site for instant access and backed up to secure Australian-based cloud storage for long-term retention and audit.' },
   { q: 'Can we set up alerts for specific zones?', a: 'Absolutely. You can define "Digital Fences" in the dashboard. If a person enters a restricted zone after hours, your security team receives an instant alert with a live video clip.' },
@@ -105,7 +105,7 @@ const segments: Segment[] = [
     icon: Target,
   },
   {
-    title: 'Brownfield',
+    title: 'Small Business',
     description: 'Integrate existing cameras into a unified cloud platform and replace fragmented legacy systems.',
     icon: RefreshCw,
   },
@@ -613,7 +613,7 @@ export default function CCTVPeopleCountPage() {
           <div className="mt-24 pt-16 border-t border-gray-100 grid lg:grid-cols-2 gap-12 lg:gap-20">
             <div className="text-left">
               <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
-                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Small Business Protocol</span>
               </div>
               <h2 className="text-[32px] md:text-[38px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-[#0C1024]">
                 The C9 Managed <br />

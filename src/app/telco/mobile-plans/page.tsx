@@ -237,7 +237,7 @@ export default function MobilePlansPage() {
                 Why Businesses Replace Their Current Mobile Setup
               </h2>
               <p className="c9-body mb-8">
-                Brownfield environments are often plagued by legacy retail accounts that were added piecemeal as the company grew. This results in severe operational friction.
+                Small Business environments are often plagued by legacy retail accounts that were added piecemeal as the company grew. This results in severe operational friction.
               </p>
               
               <div className="space-y-6">

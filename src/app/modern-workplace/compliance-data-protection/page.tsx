@@ -171,7 +171,7 @@ export default function CompliancePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <FadeUp>
               <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
-                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Small Business Protocol</span>
               </div>
               <h2 className="c9-section-heading mb-8 font-proxima tracking-tight font-bold leading-[1.1] text-[#0C1024]">
                 The C9 Managed <br />

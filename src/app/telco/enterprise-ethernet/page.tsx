@@ -340,7 +340,7 @@ export default function EnterpriseEthernetPage() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2} className="order-1 lg:order-2">
-               <span className="c9-eyebrow mb-4">Brownfield Transition</span>
+               <span className="c9-eyebrow mb-4">Small Business Transition</span>
                <h2 className="c9-section-heading mb-6">Transition Without Business Disruption.</h2>
                <p className="c9-body mb-10">
                   Replacing legacy infrastructure creates fear of downtime. C9 manages the entire migration process with a risk-managed approach that ensures continuity from the first day.

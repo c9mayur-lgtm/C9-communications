@@ -479,7 +479,7 @@ const SectionPersonas = () => (
           },
           { 
             title: "Existing Businesses", 
-            tag: "BROWNFIELD",
+            tag: "Small Business",
             desc: "Stable connectivity. We takeover and stabilize fragmented environments, removing technical debt and improving reliability." 
           },
           { 

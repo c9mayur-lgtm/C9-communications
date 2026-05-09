@@ -26,7 +26,7 @@ const METRICS = [
 
 const FAQS = [
   { q: 'How does the "cost-per-page" billing work?', a: 'You pay a single, transparent rate for every page printed. This includes the hardware, all toner, and all maintenance—eliminating unpredictable office expenses.' },
-  { q: 'Can we keep our existing printer fleet?', a: 'Yes. Our "Brownfield Protocol" allows us to takeover and manage your existing equipment, standardising support and security while we plan a phased upgrade to a more efficient fleet.' },
+  { q: 'Can we keep our existing printer fleet?', a: 'Yes. Our "Small Business Protocol" allows us to takeover and manage your existing equipment, standardising support and security while we plan a phased upgrade to a more efficient fleet.' },
   { q: 'How do you secure documents in a shared office?', a: 'We implement Secure Print Release. Documents are encrypted in the queue and only print when the user authenticated at the device via card, PIN, or mobile app.' },
   { q: 'What happens when a printer runs out of toner?', a: 'Our systems monitor your fleet 24/7. When toner hits 15%, we automatically ship a replacement directly to the machine\'s location, arriving before you run out.' },
   { q: 'Do you support both Mac and Windows users?', a: 'Absolutely. We provide unified print drivers and cloud-print solutions that work seamlessly across Windows, macOS, and mobile operating systems.' },
@@ -148,7 +148,7 @@ export default function ManagedPrintPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <FadeUp>
               <div className="inline-flex items-center gap-2 bg-[#5D00D6]/10 px-4 py-2 rounded-full mb-6">
-                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Small Business Protocol</span>
               </div>
               <h2 className="c9-section-heading mb-8 font-proxima tracking-tight font-bold leading-[1.1] text-[#0C1024]">
                 The C9 Managed <br />

@@ -773,7 +773,7 @@ const FAQSection = () => {
           <FadeIn className="text-center mb-16">
             <span className="c9-eyebrow mb-4 block">Addressing Your Concerns</span>
             <h2 className="c9-section-heading mb-6 font-clash">Frequently Asked Questions</h2>
-            <p className="c9-body font-dm-sans">Honest, specific answers to the most common questions from Brownfield CEOs.</p>
+            <p className="c9-body font-dm-sans">Honest, specific answers to the most common questions from Small Business CEOs.</p>
           </FadeIn>
 
           {/* @ts-ignore */}

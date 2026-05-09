@@ -203,12 +203,12 @@ export default function ContactCentrePage() {
         </div>
       </section>
 
-      {/* ══ 4. WHY BUSINESSES UPGRADE (BROWNFIELD) ═══════════════════ */}
+      {/* ══ 4. WHY BUSINESSES UPGRADE (Small Business) ═══════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
         <div className={C}>
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Brownfield Transformation</span>
+               <span className="c9-eyebrow mb-4">Small Business Transformation</span>
                <h2 className="c9-section-heading mb-6">Why Operations Leaders Move to Better Systems.</h2>
                <p className="c9-body mb-10 text-lg">
                   Outdated queueing and disjointed data create a ceiling on business growth. We help businesses transition from chaotic phone rooms to structured, high-visibility contact centres.

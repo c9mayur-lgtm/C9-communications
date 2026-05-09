@@ -509,7 +509,7 @@ export default function ProductivityPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <FadeUp>
               <div className="inline-flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full mb-6">
-                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Brownfield Protocol</span>
+                <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Small Business Protocol</span>
               </div>
               <h2 className="text-[32px] md:text-[42px] font-bold leading-[1.1] mb-8 font-proxima tracking-tight text-[#0c1024]">
                 The C9 Managed <br />

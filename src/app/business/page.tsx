@@ -142,7 +142,7 @@ const HeroV3 = () => (
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
           <div className="relative rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/5] bg-slate-100 border border-slate-100">
             <img
-              src="/images/hero/brownfield-hero.png"
+              src="/images/hero/business-new.png"
               alt="Professional managing complex business infrastructure issues"
               className="w-full h-full object-cover object-center duration-1000 hover:scale-105"
             />
@@ -940,7 +940,7 @@ const FAQV3 = () => (
       },
       { 
         q: 'Can you work with our existing legacy systems?', 
-        a: 'Yes. Our audit phase identifies how to integrate or safely isolate legacy hardware. We specialize in "brownfield" environments where legacy operational dependencies must be maintained during modernization.' 
+        a: 'Yes. Our audit phase identifies how to integrate or safely isolate legacy hardware. We specialize in "Small Business" environments where legacy operational dependencies must be maintained during modernization.' 
       },
       { 
         q: 'What happens to our current vendor contracts?', 

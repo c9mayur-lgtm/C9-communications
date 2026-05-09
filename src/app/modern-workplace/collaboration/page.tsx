@@ -270,7 +270,7 @@ export default function CollaborationPage() {
           <FadeUp className="mb-12 max-w-[760px]">
             <h2 className="c9-section-heading mb-4 font-proxima tracking-tight font-bold leading-tight">C9 deployment process</h2>
             <p className="text-[18px] text-gray-500 font-medium">
-              A structured five-phase rollout from site survey through to support, tailored for greenfield, brownfield, and enterprise rollouts.
+              A structured five-phase rollout from site survey through to support, tailored for greenfield, Small Business, and enterprise rollouts.
             </p>
           </FadeUp>
 

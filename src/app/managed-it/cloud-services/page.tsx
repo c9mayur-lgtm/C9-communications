@@ -226,7 +226,7 @@ const SectionPersonas = () => (
                <div className="w-12 h-12 bg-[#5D00D6]/10 rounded-xl flex items-center justify-center text-[#5D00D6] mb-6">
                   <RefreshCw size={24} />
                </div>
-               <h3 className="text-xl font-bold mb-4 text-slate-900">Brownfield</h3>
+               <h3 className="text-xl font-bold mb-4 text-slate-900">Small Business</h3>
                <p className="text-slate-600 text-[14px] leading-relaxed mb-6">
                   Structured migration. We transition legacy systems to the cloud using a phased approach that minimizes disruption and eliminates technical debt.
                </p>
