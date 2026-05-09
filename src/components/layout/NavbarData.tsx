@@ -196,6 +196,7 @@ export const MODERN_WORKPLACE_FIXED = {
           heading: 'Services',
           items: [
             { label: 'Modern Workplace Overview', path: '/modern-workplace', color: '#5D00D6' },
+            { label: 'Cloud Office', path: '/cloud-office', color: '#5D00D6' },
             { label: 'Productivity', path: '/modern-workplace/productivity' },
             { label: 'Communication Tools', path: '/modern-workplace/communication-tools' },
             { label: 'Secure Remote Work', path: '/modern-workplace/secure-remote-work' },
@@ -363,7 +364,8 @@ export const BUSINESS_MODERN_WORKPLACE = {
         {
           heading: 'Services',
           items: [
-            { icon: <LayoutGrid size={14} />, label: 'Productivity',               path: '/modern-workplace/productivity', active: true },
+            { icon: <Cloud size={14} />,      label: 'Cloud Office',               path: '/cloud-office', active: true },
+            { icon: <LayoutGrid size={14} />, label: 'Productivity',               path: '/modern-workplace/productivity' },
             { icon: <Monitor size={14} />,    label: 'Communication Tools',        path: '/modern-workplace/communication-tools' },
             { icon: <Shield size={14} />,     label: 'Secure Remote Work',         path: '/modern-workplace/secure-remote-work' },
             { icon: <Database size={14} />,   label: 'Compliance & Data',          path: '/modern-workplace/compliance-data-protection' },
@@ -527,6 +529,7 @@ export const ENTERPRISE_MODERN_WORKPLACE = {
         {
           heading: 'Enterprise Workplace',
           items: [
+            { icon: <Cloud size={14} />,      label: 'Cloud Office',                 path: '/cloud-office' },
             { icon: <LayoutGrid size={14} />, label: 'Microsoft 365 Enterprise',    path: '/modern-workplace/microsoft-365-solutions' },
             { icon: <Monitor size={14} />,    label: 'Enterprise Device Management', path: '/modern-workplace/endpoint-management' },
             { icon: <Shield size={14} />,     label: 'Secure Remote Work',           path: '/modern-workplace/secure-remote-work' },
@@ -628,6 +631,35 @@ export const RESOURCES_MENU = {
 };
 
 // ─────────────────────────────────────────────────────────────
+//  RELOCATION MENU
+// ─────────────────────────────────────────────────────────────
+export const RELOCATION_MENU = {
+  layout: 'relocation',
+  columns: [
+    {
+      sections: [
+        {
+          heading: 'Office Relocation',
+          items: [
+            { icon: <Building2 size={14} />, label: 'New Office Setup', path: '/help/new-office-setup' },
+            { icon: <Network size={14} />, label: 'Network Migration', path: '/managed-it/network-solutions' },
+            { icon: <Phone size={14} />, label: 'Voice Relocation', path: '/telco' },
+            { icon: <Server size={14} />, label: 'Infrastructure Move', path: '/managed-it/infrastructure' },
+          ]
+        }
+      ]
+    }
+  ],
+  sidebar: {
+    heading: 'Relocation Assistance',
+    variant: 'purple',
+    items: [
+      { icon: <Briefcase size={18} />, title: 'Speak to a Relocation Expert', desc: 'Get your IT and Telco moved with zero downtime.', path: '/contact' }
+    ]
+  }
+};
+
+// ─────────────────────────────────────────────────────────────
 //  AUDIENCE-SPECIFIC MEGA_MAP FACTORY
 // ─────────────────────────────────────────────────────────────
 export function getMegaMap(audience: string): Record<string, any> {
@@ -638,6 +670,7 @@ export function getMegaMap(audience: string): Record<string, any> {
     'modern-workplace': MODERN_WORKPLACE_FIXED,
     'company':          COMPANY_MENU,
     'resources':        RESOURCES_MENU,
+    'relocation':       RELOCATION_MENU,
   };
 }
 
@@ -650,6 +683,7 @@ export const MEGA_MAP: Record<string, any> = {
   'modern-workplace': MODERN_WORKPLACE_FIXED,
   'company':          COMPANY_MENU,
   'resources':        RESOURCES_MENU,
+  'relocation':       RELOCATION_MENU,
 };
 
 export const TABS = [
@@ -658,4 +692,5 @@ export const TABS = [
   { name: 'Modern Workplace', menuKey: 'modern-workplace', path: '/modern-workplace' },
   { name: 'Company',          menuKey: 'company',          path: '/about' },
   { name: 'Resources',        menuKey: 'resources',        path: '/insights' },
+  { name: 'Relocation',       menuKey: 'relocation',       path: '/help/new-office-setup' },
 ];

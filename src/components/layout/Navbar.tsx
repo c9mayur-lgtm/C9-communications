@@ -310,7 +310,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             <div className="flex flex-col gap-2">
               {/* Primary Navigation Tracks */}
               {[
-                { key: 'home', label: 'Homepage', path: '/' },
+                { key: 'home', label: 'Home', path: '/' },
                 { key: 'startup', label: 'Greenfield', path: '/greenfield' },
                 { key: 'business', label: 'Small Business', path: '/business' },
                 { key: 'enterprise', label: 'Enterprise', path: '/enterprise' }
@@ -599,16 +599,16 @@ export const Navbar = () => {
           </div>
         
         <div className="hidden lg:flex gap-1 items-center">
-          {/* Homepage Link */}
+          {/* Home Link */}
           <Link
             href="/"
-            className={`px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ${
+            className={`px-2 md:px-2.5 py-1.5 text-[13px] font-medium whitespace-nowrap transition-all duration-200 ${
               pathname === '/'
                 ? 'text-[#5D00D6]'
                 : 'text-slate-600 hover:text-[#5D00D6]'
             }`}
           >
-            Homepage
+            Home
           </Link>
 
           {/* Audience Persona Links (No Pills) */}
@@ -621,7 +621,7 @@ export const Navbar = () => {
               key={track.key}
               href={track.path}
               onClick={() => setAudience(track.key as any)}
-              className={`px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ${
+              className={`px-2 md:px-2.5 py-1.5 text-[13px] font-medium whitespace-nowrap transition-all duration-200 ${
                 pathname === track.path
                   ? 'text-[#5D00D6]'
                   : 'text-slate-600 hover:text-[#5D00D6]'
@@ -640,12 +640,12 @@ export const Navbar = () => {
             const isOpen = openMenu === tab.menuKey;
             return (
               <div key={tab.name} className="relative h-full flex items-center" onMouseEnter={() => handleEnter(tab.menuKey)}>
-                <div className={`flex items-center gap-0.5 rounded-xl text-[13px] font-medium transition-all duration-300 ${
+                <div className={`flex items-center gap-0.5 rounded-xl text-[13px] font-medium whitespace-nowrap transition-all duration-300 ${
                   isOpen ? 'text-[#5D00D6] bg-purple-50/80 shadow-sm' : (isScrolled ? 'text-slate-600 hover:bg-gray-50' : 'text-slate-500 hover:text-[#5D00D6]')
                 }`}>
                   <Link
                     href={tab.path}
-                    className="px-3 py-1.5"
+                    className="pl-2 md:pl-2.5 pr-1 py-1.5"
                   >
                     {tab.name}
                   </Link>

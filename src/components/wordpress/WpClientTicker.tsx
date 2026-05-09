@@ -14,7 +14,7 @@ export const WpClientTicker = ({
   className = "" 
 }: WpClientTickerProps) => {
   return (
-    <section className={`bg-transparent py-4 md:py-6 overflow-hidden relative ${className}`}>
+    <section className={`bg-transparent py-10 md:py-14 overflow-hidden relative ${className}`}>
       <style>{`
         @keyframes ticker-left {
           0%   { transform: translateX(0); }
@@ -58,14 +58,14 @@ export const WpClientTicker = ({
       <div className="ticker-wrapper overflow-hidden">
         <div className="ticker-row-left">
           {[
-            { name: 'Arthritis',          logo: '/images/clients/Arthritis.png', className: 'h-[45px] md:h-[60px]' },
-            { name: 'Baxter Institute',   logo: '/images/clients/Baxter Institute.png', className: 'h-[45px] md:h-[60px]' },
+            { name: 'Arthritis',          logo: '/images/clients/Arthritis.png', className: 'h-[55px] md:h-[75px]' },
+            { name: 'Baxter Institute',   logo: '/images/clients/Baxter Institute.png', className: 'h-[55px] md:h-[75px]' },
             { name: 'CEVA Logistics',     logo: '/images/clients/CEVA_Logistics_New_Logo.png' },
-            { name: 'XWise Group',        logo: '/images/clients/692eaaac9126d3e459fb23df_xwise_group_logo_full_dark_rgb.svg', className: 'h-[25px] md:h-[35px]' },
+            { name: 'XWise Group',        logo: '/images/clients/692eaaac9126d3e459fb23df_xwise_group_logo_full_dark_rgb.svg', className: 'h-[35px] md:h-[50px]' },
             { name: 'Forty Winks',        logo: '/images/clients/Forty_Winks_Blue_Logo.png' },
             { name: 'Clarks',             logo: '/images/clients/Clarks-Logo.png' },
-            { name: 'DCO',                logo: '/images/clients/DCOLogo-v7z.png', className: 'h-[30px] md:h-[45px]' },
-            { name: 'Luxton',             logo: '/images/clients/Luxton_Logo_Black_R.svg', className: 'h-[25px] md:h-[35px]' },
+            { name: 'DCO',                logo: '/images/clients/DCOLogo-v7z.png', className: 'h-[40px] md:h-[60px]' },
+            { name: 'Luxton',             logo: '/images/clients/Luxton_Logo_Black_R.svg', className: 'h-[35px] md:h-[50px]' },
             { name: 'Norris',             logo: '/images/clients/norris_trimmed.png' },
             { name: 'Novo',               logo: '/images/clients/novo.webp' },
             { name: 'Ray White',          logo: '/images/clients/OIP.webp' },
@@ -74,16 +74,16 @@ export const WpClientTicker = ({
             { name: 'Spendless Shoes',    logo: '/images/clients/spendless-shoes-logo-600x600.webp' },
             { name: 'Stockdale & Leggo',  logo: '/images/clients/stockdale & leggo.png' },
             { name: 'Wild Rhino',         logo: '/images/clients/wild-rhino-logo_2x_cab21dc3-cddf-456a-8975-1361e177efce.webp' },
-            { name: 'Chobani',            logo: '/images/clients/chobani.png', className: 'h-[20px] md:h-[30px]' },
+            { name: 'Chobani',            logo: '/images/clients/chobani.png', className: 'h-[30px] md:h-[45px]' },
             // Duplicates
-            { name: 'Arthritis',          logo: '/images/clients/Arthritis.png', className: 'h-[45px] md:h-[60px]' },
-            { name: 'Baxter Institute',   logo: '/images/clients/Baxter Institute.png', className: 'h-[45px] md:h-[60px]' },
+            { name: 'Arthritis',          logo: '/images/clients/Arthritis.png', className: 'h-[55px] md:h-[75px]' },
+            { name: 'Baxter Institute',   logo: '/images/clients/Baxter Institute.png', className: 'h-[55px] md:h-[75px]' },
             { name: 'CEVA Logistics',     logo: '/images/clients/CEVA_Logistics_New_Logo.png' },
-            { name: 'XWise Group',        logo: '/images/clients/692eaaac9126d3e459fb23df_xwise_group_logo_full_dark_rgb.svg', className: 'h-[25px] md:h-[35px]' },
+            { name: 'XWise Group',        logo: '/images/clients/692eaaac9126d3e459fb23df_xwise_group_logo_full_dark_rgb.svg', className: 'h-[35px] md:h-[50px]' },
             { name: 'Forty Winks',        logo: '/images/clients/Forty_Winks_Blue_Logo.png' },
             { name: 'Clarks',             logo: '/images/clients/Clarks-Logo.png' },
-            { name: 'DCO',                logo: '/images/clients/DCOLogo-v7z.png', className: 'h-[30px] md:h-[45px]' },
-            { name: 'Luxton',             logo: '/images/clients/Luxton_Logo_Black_R.svg', className: 'h-[25px] md:h-[35px]' },
+            { name: 'DCO',                logo: '/images/clients/DCOLogo-v7z.png', className: 'h-[40px] md:h-[60px]' },
+            { name: 'Luxton',             logo: '/images/clients/Luxton_Logo_Black_R.svg', className: 'h-[35px] md:h-[50px]' },
             { name: 'Norris',             logo: '/images/clients/norris_trimmed.png' },
             { name: 'Novo',               logo: '/images/clients/novo.webp' },
             { name: 'Ray White',          logo: '/images/clients/OIP.webp' },
@@ -92,7 +92,7 @@ export const WpClientTicker = ({
             { name: 'Spendless Shoes',    logo: '/images/clients/spendless-shoes-logo-600x600.webp' },
             { name: 'Stockdale & Leggo',  logo: '/images/clients/stockdale & leggo.png' },
             { name: 'Wild Rhino',         logo: '/images/clients/wild-rhino-logo_2x_cab21dc3-cddf-456a-8975-1361e177efce.webp' },
-            { name: 'Chobani',            logo: '/images/clients/chobani.png', className: 'h-[20px] md:h-[30px]' },
+            { name: 'Chobani',            logo: '/images/clients/chobani.png', className: 'h-[30px] md:h-[45px]' },
           ].map((c, i) => (
           <div key={i} className="ticker-pill px-[25px] md:px-[50px]">
               <img
@@ -102,7 +102,7 @@ export const WpClientTicker = ({
                   opacity: opacity,
                   filter: grayscale ? 'grayscale(100%)' : 'none'
                 }}
-                className={`w-auto object-contain ${c.className || 'h-[40px] md:h-[60px]'}`}
+                className={`w-auto object-contain ${c.className || 'h-[50px] md:h-[70px]'}`}
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
               />
             </div>
