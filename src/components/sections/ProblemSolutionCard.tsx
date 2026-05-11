@@ -41,7 +41,7 @@ export default function ProblemSolutionCard({ offering, onCTAClick }: ProblemSol
                     hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
       
       {/* Image Container - Reduced Height */}
-      <div className="relative h-40 md:h-48 overflow-hidden bg-muted">
+      <div className="relative h-56 md:h-72 overflow-hidden bg-muted">
         {offering.image ? (
           <img 
             src={offering.image}

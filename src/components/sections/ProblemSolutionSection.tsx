@@ -10,7 +10,7 @@ const OFFERINGS_DATA: OfferingData[] = [
   {
     id: "internet",
     icon: <Wifi className="w-6 h-6" />,
-    image: "/images/offerings/internet.jpg",
+    image: "/SMB/Internet_SMB.png",
     problemStatement: "Your internet is unreliable. When it goes down, your business stops.",
     problemContext: "Internet outages cost you revenue immediately. Customers can't reach you. Staff can't work. You're dependent on a single ISP. No backup when things fail.",
     solutionTitle: "Reliable Internet with Redundancy",
@@ -49,7 +49,7 @@ const OFFERINGS_DATA: OfferingData[] = [
   {
     id: "networking",
     icon: <Radio className="w-6 h-6" />,
-    image: "/images/offerings/networking.jpg",
+    image: "/SMB/Networking_SMB.png",
     problemStatement: "Your WiFi is slow and unreliable. Staff can't connect. Guests complain.",
     problemContext: "WiFi drops during peak hours. Staff productivity suffers. Guest experience is poor. You have dead zones in the office. Multiple WiFi networks causing confusion. Security concerns with open networks.",
     solutionTitle: "Enterprise-Grade Networking & WiFi",
@@ -89,7 +89,7 @@ const OFFERINGS_DATA: OfferingData[] = [
   {
     id: "phone",
     icon: <Phone className="w-6 h-6" />,
-    image: "/images/offerings/phone-system.jpg",
+    image: "/SMB/Phone_System_SMB.png",
     problemStatement: "Your phone system is outdated. Calls drop. Voicemail is unreliable. Scaling is expensive.",
     problemContext: "Old PBX system is hard to manage. Adding phone lines is expensive and slow. Calls drop or don't connect properly. Voicemail messages get lost. Remote staff can't use the system properly. No integration with other business tools. High maintenance costs.",
     solutionTitle: "Modern Cloud Phone System",
@@ -133,7 +133,7 @@ const OFFERINGS_DATA: OfferingData[] = [
   {
     id: "cctv",
     icon: <Camera className="w-6 h-6" />,
-    image: "/images/offerings/cctv.jpg",
+    image: "/SMB/CCTV_SMB.png",
     problemStatement: "You can't see what's happening on your site. Theft happens. You have no proof.",
     problemContext: "Theft and shrinkage is a constant problem. You don't know what's happening after hours. Disputes with staff or customers (no evidence). Insurance claims are hard to prove. You're not compliant with security standards. Old CCTV system is outdated and unreliable. No remote access to footage.",
     solutionTitle: "Professional CCTV with Cloud Storage",
@@ -177,7 +177,7 @@ const OFFERINGS_DATA: OfferingData[] = [
   {
     id: "print",
     icon: <Printer className="w-6 h-6" />,
-    image: "/images/offerings/print-solutions.jpg",
+    image: "/SMB/Print_Solution_SMB.png",
     problemStatement: "Your printers are always breaking down. Toner costs are out of control. Staff wastes time on printing issues.",
     problemContext: "Multiple old printers scattered around. Constant paper jams and toner issues. Staff wastes 30 minutes/week on printer problems. Toner costs are unpredictable. No visibility into print usage. Security concerns (sensitive documents left in printer). Maintenance contracts are expensive.",
     solutionTitle: "Managed Print Services",
@@ -221,7 +221,7 @@ const OFFERINGS_DATA: OfferingData[] = [
   {
     id: "workplace",
     icon: <Laptop className="w-6 h-6" />,
-    image: "/images/offerings/modern-workplace.jpg",
+    image: "/SMB/Modern_Workplace_SMB.png",
     problemStatement: "Your team uses outdated tools. Collaboration is difficult. Remote staff feel disconnected.",
     problemContext: "Staff uses personal devices for work (security risk). No unified communication platform. Remote staff struggle to collaborate. Data is scattered across multiple systems. Cybersecurity is weak. Staff can't work from anywhere. Onboarding new staff is slow.",
     solutionTitle: "Modern Workplace Tools & Management",
@@ -265,7 +265,7 @@ const OFFERINGS_DATA: OfferingData[] = [
   {
     id: "visitor",
     icon: <Users className="w-6 h-6" />,
-    image: "/images/offerings/visitor-solutions.jpg",
+    image: "/SMB/Visitor_Solution_SMB.png",
     problemStatement: "You can't control who accesses your site. Visitors cause disruptions. You have no record of who was here.",
     problemContext: "Unauthorized people access restricted areas. Visitors disrupt operations. No record of who visited and when. Safety and security concerns. Compliance issues (who has access?). Manual sign-in process is slow. No integration with other systems.",
     solutionTitle: "Visitor Management & Access Control",
