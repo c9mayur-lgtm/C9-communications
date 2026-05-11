@@ -37,9 +37,6 @@ const ShieldAlert = ({ size, className }: { size: number; className: string }) =
   </svg>
 );
 
-/* ─────────────────────────────────────────────────────────
-   REPRESENTATIVE CASE STUDY DATA
-   ───────────────────────────────────────────────────────── */
 const CASE_STUDIES: Record<string, any> = {
   'multi-site-retail-stabilisation': {
     eyebrow: 'Multi-Site Environment',
@@ -60,202 +57,264 @@ const CASE_STUDIES: Record<string, any> = {
         <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
           A national retail distribution  was suffering from systemic revenue leakage caused by fragmented vendor management across 142 locations.
         </p>
-
-        <h2 id="situation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Fragmented Environment</h2>
-        <p>
-          The client was managing over 9 different ISP and MSP contracts. This fragmentation led to 40+ hours of monthly aggregate downtime, with zero visibility into store-level latency. Support was entirely reactive, relying on store managers to report outages manually.
-        </p>
-
-        <h2 id="risk" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Operational Exposure</h2>
-        <p>
-          Audit identified a single point of failure in the legacy MPLS backbone. Unpatched edge devices at store locations created critical security vulnerabilities, and there was a high probability of a site-wide POS blackout during peak seasonal trading.
-        </p>
-
-        <div className="my-12 bg-slate-50 border-l-4 border-[#5D00D6] p-6 lg:p-8 rounded-r-2xl">
-          <h4 className="flex items-center gap-2 text-[#5D00D6] font-extrabold text-[12px] uppercase tracking-widest mb-3">
-            <Activity size={14} className="text-rose-500" /> Critical Risk Identified
-          </h4>
-          <p className="text-slate-800 text-[17px] font-semibold leading-relaxed m-0">
-            Site-wide POS dependency on a single unmanaged link was identified as the primary risk to Q4 revenue targets.
-          </p>
-        </div>
-
-        <h2 id="implementation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Consolidation Layer</h2>
-        <p>
-          C9 implemented a centralised SD-WAN overlay, consolidating all 142 sites under a single management plane. We integrated 4G failover at every location and established a proactive monitoring layer that alerts engineers before a site goes offline.
-        </p>
-
-        <h2 id="outcomes" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Measurable Impact</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-10">
-          <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 p-6 rounded-2xl text-center">
-            <div className="text-[28px] font-black text-[#5D00D6] mb-1">99.99%</div>
-            <div className="text-[11px] font-bold text-slate-600 uppercase">Uptime</div>
-          </div>
-          <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 p-6 rounded-2xl text-center">
-            <div className="text-[28px] font-black text-[#5D00D6] mb-1">70%</div>
-            <div className="text-[11px] font-bold text-slate-600 uppercase">MTTR Reduction</div>
-          </div>
-          <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 p-6 rounded-2xl text-center">
-            <div className="text-[28px] font-black text-[#5D00D6] mb-1">9 → 1</div>
-            <div className="text-[11px] font-bold text-slate-600 uppercase">Vendors</div>
-          </div>
-          <div className="bg-[#5D00D6]/5 border border-[#5D00D6]/20 p-6 rounded-2xl text-center">
-            <div className="text-[28px] font-black text-[#5D00D6] mb-1">85%</div>
-            <div className="text-[11px] font-bold text-slate-600 uppercase">Incidents ↓</div>
-          </div>
-        </div>
+        <h2 id="situation">Fragmented Environment</h2>
+        <p>The client was managing over 9 different ISP and MSP contracts. This fragmentation led to 40+ hours of monthly aggregate downtime, with zero visibility into store-level latency. Support was entirely reactive, relying on store managers to report outages manually.</p>
+        <h2 id="risk">Operational Exposure</h2>
+        <p>Audit identified a single point of failure in the legacy MPLS backbone. Unpatched edge devices at store locations created critical security vulnerabilities, and there was a high probability of a site-wide POS blackout during peak seasonal trading.</p>
+        <h2 id="implementation">Consolidation Layer</h2>
+        <p>C9 implemented a centralised SD-WAN overlay, consolidating all 142 sites under a single management plane. We integrated 4G failover at every location and established a proactive monitoring layer that alerts engineers before a site goes offline.</p>
       </>
     )
   },
-  'financial-vendor-consolidation': {
-    eyebrow: 'Vendor Consolidation',
-    title: 'Financial Services: Reducing OpEx by 35% through Consolidation',
-    summary: 'Moving from 12 uncoordinated vendors to a single accountable partner for core infrastructure.',
+  'smb-internet': {
+    eyebrow: 'Business Continuity',
+    title: 'Retail Group Stability: Eliminating Outages for 12 Locations',
+    summary: 'How a growing retail brand eliminated $2k/hour revenue losses through redundant internet infrastructure.',
     author: 'James Wilson',
-    role: 'Infrastructure Strategist @ C9',
-    time: '5 Min Read',
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
-    sections: [
-      { id: 'situation', label: 'Billing Fragmentation' },
-      { id: 'risk', label: 'Security Gaps' },
-      { id: 'implementation', label: 'Unified Stack' },
-      { id: 'results', label: 'Financial Outcomes' }
-    ],
+    role: 'SMB Solutions Lead @ C9',
+    time: '4 Min Read',
+    img: 'https://images.unsplash.com/photo-1556740734-7f1a02de30f4?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Outages' }, { id: 'solution', label: 'Redundancy' }],
     content: (
       <>
-        <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
-          A mid-market financial services firm was managing 12 different telco and IT invoices, leading to massive administrative overhead and critical support delays.
-        </p>
-
-        <h2 id="situation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Billing Fragmentation</h2>
-        <p>
-          Internal IT staff were spending 15+ hours weekly just on invoice reconciliation and chasing vendors for status updates on cross-platform issues. There was no single point of accountability for system-wide failures.
-        </p>
-
-        <h2 id="risk" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Security Gaps</h2>
-        <p>
-          Audit revealed overlapping security tools that were not communicating. This created blind spots in the threat detection layer, posing a significant risk to the firm&apos;s compliance posture and client data integrity.
-        </p>
-
-        <h2 id="implementation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Unified Stack</h2>
-        <p>
-          C9 executed a full infrastructure takeover, consolidating all vendor contracts into a single managed agreement. We unified the security stack under a centralised SOC and stabilised core connectivity links with a primary-secondary failover model.
-        </p>
-
-        <div className="my-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-            <div className="text-2xl font-black text-[#5D00D6] mb-1">35%</div>
-            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">OpEx Reduction</div>
-          </div>
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-            <div className="text-2xl font-black text-[#5D00D6] mb-1">100%</div>
-            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Visibility</div>
-          </div>
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-            <div className="text-2xl font-black text-[#5D00D6] mb-1">50%</div>
-            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Faster Resolution</div>
-          </div>
-        </div>
+        <h2 id="problem">The Cost of Outages</h2>
+        <p>A retail business with 12 locations was losing approximately $2,000 per hour during internet outages. Their reliance on a single ISP created a critical single point of failure that halted sales and frustrated customers.</p>
+        <h2 id="solution">Dual-Carrier Redundancy</h2>
+        <p>C9 implemented a primary and backup internet connection model with automatic failover. Since implementation, the client has maintained 100% uptime across all locations for over 18 months.</p>
       </>
     )
   },
-  'enterprise-migration-success': {
-    eyebrow: 'Infrastructure Migration',
-    title: 'Zero-Disruption Migration for Industrial Manufacturing',
-    summary: 'Migrating legacy on-prem servers to Hybrid Cloud with zero minutes of production downtime.',
+  'smb-networking': {
+    eyebrow: 'Infrastructure Optimization',
+    title: 'Mesh WiFi Revolution: Eliminating Dead Zones for Retail Excellence',
+    summary: 'A 90% reduction in WiFi-related customer complaints through enterprise-grade mesh networking.',
+    author: 'David Peterson',
+    role: 'Network Architect @ C9',
+    time: '4 Min Read',
+    img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Dead Zones' }, { id: 'solution', label: 'Mesh Overlay' }],
+    content: (
+      <>
+        <h2 id="problem">Connectivity Dead Zones</h2>
+        <p>A large retail store suffered from significant WiFi dead zones, leading to constant dropouts for staff tablets and customer guest networks.</p>
+        <h2 id="solution">Enterprise Mesh Overlay</h2>
+        <p>We installed a high-density mesh WiFi network with a dedicated guest portal. Customer complaints regarding WiFi dropped by 90%.</p>
+      </>
+    )
+  },
+  'smb-phone': {
+    eyebrow: 'Communications Management',
+    title: 'Cloud PBX Migration: Empowering the Remote Workforce',
+    summary: 'Reducing scaling costs from $1,000 to $0 per line while enabling 100% remote work integration.',
+    author: 'Sarah Jenkins',
+    role: 'Cloud Comms Specialist @ C9',
+    time: '5 Min Read',
+    img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Legacy Constraints' }, { id: 'solution', label: 'Unified Cloud' }],
+    content: (
+      <>
+        <h2 id="problem">Legacy Hardware Constraints</h2>
+        <p>A professional services firm was trapped by an aging PBX system. Remote workers were completely disconnected from the office line.</p>
+        <h2 id="solution">Unified Cloud Comms</h2>
+        <p>C9 migrated the firm to a modern Cloud Phone System. Adding new users now takes 5 minutes instead of weeks, and the firm reduced operational costs by 60%.</p>
+      </>
+    )
+  },
+  'smb-cctv': {
+    eyebrow: 'Security & Surveillance',
+    title: 'Retail Security Overhaul: 75% Reduction in Theft Incidents',
+    summary: 'Implementing professional CCTV with cloud storage to deterrent shrinkage and provide evidence.',
+    author: 'Mark Thompson',
+    role: 'Security Specialist @ C9',
+    time: '4 Min Read',
+    img: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Shrinkage' }, { id: 'solution', label: 'Cloud CCTV' }],
+    content: (
+      <>
+        <h2 id="problem">Unmanaged Security Risk</h2>
+        <p>A multi-location retail business was suffering from constant theft and shrinkage with no evidence to resolve disputes.</p>
+        <h2 id="solution">Professional CCTV with Cloud Storage</h2>
+        <p>C9 installed HD/4K cameras with 30-day rolling cloud storage. Theft incidents dropped 75% in the first month.</p>
+      </>
+    )
+  },
+  'smb-print': {
+    eyebrow: 'Managed Print',
+    title: 'Legal Firm Optimization: Reducing Print Costs by 35%',
+    summary: 'Consolidating unmanaged printer fleets into a single, proactive managed service.',
+    author: 'Emma Davis',
+    role: 'Managed Print Lead @ C9',
+    time: '4 Min Read',
+    img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Cost Overruns' }, { id: 'solution', label: 'Managed Fleet' }],
+    content: (
+      <>
+        <h2 id="problem">Unpredictable Print Costs</h2>
+        <p>A legal firm had scattered, unmanaged printers causing constant downtime and high toner costs.</p>
+        <h2 id="solution">Managed Print Services</h2>
+        <p>We replaced old units with modern multifunction printers and automated toner replenishment. Costs dropped 35% and issues reduced by 80%.</p>
+      </>
+    )
+  },
+  'smb-modern-workplace': {
+    eyebrow: 'Digital Workplace',
+    title: 'Modernizing Collaboration: Onboarding Time Reduced by 85%',
+    summary: 'Unifying collaboration and security for a professional services firm.',
+    author: 'James Wilson',
+    role: 'Modern Workplace Lead @ C9',
+    time: '5 Min Read',
+    img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Siloed Tools' }, { id: 'solution', label: 'Unified Stack' }],
+    content: (
+      <>
+        <h2 id="problem">Fragmented Collaboration</h2>
+        <p>Staff used personal devices and siloed tools, creating security risks and onboarding delays of up to a week.</p>
+        <h2 id="solution">Unified Digital Workplace</h2>
+        <p>C9 implemented unified device management and cloud collaboration. Onboarding now takes 1 day, and security incidents have dropped by 70%.</p>
+      </>
+    )
+  },
+  'smb-visitor': {
+    eyebrow: 'Access Control',
+    title: 'Distribution Center Security: 95% Reduction in Unauthorized Access',
+    summary: 'Moving from manual sign-in to integrated digital visitor management.',
+    author: 'Sarah Jenkins',
+    role: 'Security Operations @ C9',
+    time: '4 Min Read',
+    img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Access Gaps' }, { id: 'solution', label: 'Digital Sign-In' }],
+    content: (
+      <>
+        <h2 id="problem">Manual Access Risks</h2>
+        <p>A distribution center had no reliable record of visitors, and unauthorized people were frequently accessing restricted zones.</p>
+        <h2 id="solution">Digital Visitor Management</h2>
+        <p>We implemented a digital sign-in system with badge printing and CCTV integration. Unauthorized access dropped 95%, and check-in time reduced to 30 seconds.</p>
+      </>
+    )
+  },
+  'ent-internet': {
+    eyebrow: 'Enterprise Resilience',
+    title: 'National Carrier-Grade Redundancy: 50+ Sites, 99.99% Uptime',
+    summary: 'Eliminating unplanned outages across a national multi-site estate.',
     author: 'David Peterson',
     role: 'Head of Infrastructure @ C9',
-    time: '7 Min Read',
-    img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200',
-    sections: [
-      { id: 'planning', label: 'Technical Debt Audit' },
-      { id: 'execution', label: 'Staged Migration' },
-      { id: 'outcomes', label: 'Operational Control' }
-    ],
+    time: '6 Min Read',
+    img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'risk', label: 'Continuity Risk' }, { id: 'solution', label: 'Carrier Redundancy' }],
     content: (
       <>
-        <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
-          An industrial manufacturer with multi-state operations needed to migrate from end-of-life hardware without halting production lines.
-        </p>
-
-        <h2 id="planning" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Technical Debt Audit</h2>
-        <p>
-          The client was operating on unstable legacy servers with no viable disaster recovery path. The primary risk was a catastrophic hardware failure that could stop manufacturing for days.
-        </p>
-
-        <h2 id="execution" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Staged Migration</h2>
-        <p>
-          C9 developed a phased migration plan using parallel-run environments. We stabilised the legacy infrastructure first to de-risk the move, then migrated workloads in waves. We established a cloud-hosted DR site before the final cutover.
-        </p>
-
-        <div className="my-12 bg-emerald-50 border-emerald-200 border p-8 rounded-3xl">
-           <div className="flex items-center gap-3 text-emerald-600 font-bold mb-4">
-              <CheckCircle2 size={12} />
-              <span>Migration Milestone</span>
-           </div>
-           <p className="text-emerald-900 text-[18px] font-medium leading-relaxed m-0">
-              Migration was completed with 0 minutes of induced downtime, maintaining 100% data integrity across all manufacturing systems.
-           </p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-8 my-10">
-          <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-             <div className="text-[#5D00D6] font-black text-4xl mb-2">60% ↑</div>
-             <div className="text-slate-500 font-bold text-[13px] uppercase tracking-widest">Visibility Gain</div>
-          </div>
-          <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-             <div className="text-[#5D00D6] font-black text-4xl mb-2">24/7</div>
-             <div className="text-slate-500 font-bold text-[13px] uppercase tracking-widest">Control Layer</div>
-          </div>
-        </div>
+        <h2 id="risk">Multi-Site Continuity Risk</h2>
+        <p>Reliance on single ISPs across 50 locations created critical failure points for national operations.</p>
+        <h2 id="solution">Carrier-Grade Architecture</h2>
+        <p>C9 implemented multi-carrier failover and 24/7 NOC monitoring. The client has maintained 99.99% uptime for 24 months across the entire estate.</p>
       </>
     )
   },
-  'healthcare-uptime-stabilisation': {
-    eyebrow: 'Stability & Uptime',
-    title: 'Healthcare Provider: Achieving 100% Uptime for Life-Critical Apps',
-    summary: 'Hardening hybrid cloud infrastructure to protect patient data access and operational continuity.',
-    author: 'James Wilson',
-    role: 'Infrastructure Strategist @ C9',
-    time: '5 Min Read',
-    img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200',
-    sections: [
-      { id: 'situation', label: 'Network Instability' },
-      { id: 'risk', label: 'Life-Critical Gaps' },
-      { id: 'action', label: 'Hardening & Redundancy' },
-      { id: 'outcomes', label: 'Stability Metrics' }
-    ],
+  'ent-networking': {
+    eyebrow: 'Unified Governance',
+    title: 'Enterprise Networking for 10,000 Users: 40% Ticket Reduction',
+    summary: 'Unifying network governance across 20 enterprise locations.',
+    author: 'Michael Chen',
+    role: 'Enterprise Architect @ C9',
+    time: '7 Min Read',
+    img: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'gap', label: 'Security Gaps' }, { id: 'solution', label: 'Unified Control' }],
     content: (
       <>
-        <p className="text-[20px] md:text-[22px] leading-relaxed text-slate-800 font-medium mb-12">
-          A critical healthcare provider was experiencing frequent network instability, impacting patient data access during peak medical hours.
-        </p>
-
-        <h2 id="situation" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Network Instability</h2>
-        <p>
-          Frequent dropouts and high latency were causing patient records to be unavailable when needed most. The lack of visibility into application performance made troubleshooting a manual, slow process.
-        </p>
-
-        <h2 id="risk" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Life-Critical Gaps</h2>
-        <p>
-          Audit identified that data unavailability posed a direct risk to patient care and compliance. There was no redundancy for the primary cloud link, leaving the provider exposed to ISP-level failures.
-        </p>
-
-        <h2 id="action" className="text-[26px] md:text-[32px] font-bold text-slate-900 mb-6 mt-12">Hardening & Redundancy</h2>
-        <p>
-          C9 deployed redundant connectivity links and implemented real-time application telemetry. We hardened the infrastructure to prioritise life-critical data traffic and established a 15-minute response SLA.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
-          <div className="bg-[#1A1A2E] p-8 rounded-3xl text-white">
-            <div className="text-3xl font-black text-[#A855F7] mb-2">100%</div>
-            <div className="text-[12px] font-bold text-gray-400 uppercase tracking-widest">Uptime over 18m</div>
-          </div>
-          <div className="bg-[#1A1A2E] p-8 rounded-3xl text-white">
-            <div className="text-3xl font-black text-[#A855F7] mb-2">90% ↓</div>
-            <div className="text-[12px] font-bold text-gray-400 uppercase tracking-widest">Critical Incidents</div>
-          </div>
-        </div>
+        <h2 id="gap">Fragmented Network Management</h2>
+        <p>Decentralized management led to security vulnerabilities and high support overhead across 20 locations.</p>
+        <h2 id="solution">Centrally Managed Architecture</h2>
+        <p>We deployed a unified network with micro-segmentation and compliance enforcement. IT tickets dropped 40% and security standards are now 100% consistent.</p>
+      </>
+    )
+  },
+  'ent-communications': {
+    eyebrow: 'Compliance Comms',
+    title: 'Financial Communications: 100% Compliance for 15 locations',
+    summary: 'Unified communications with built-in audit trails and CRM integration.',
+    author: 'Sarah Jenkins',
+    role: 'Enterprise Comms @ C9',
+    time: '6 Min Read',
+    img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Audit Gaps' }, { id: 'solution', label: 'Unified Platform' }],
+    content: (
+      <>
+        <h2 id="problem">Legacy Communication Risks</h2>
+        <p>Legacy PBX systems lacked audit trails and call recording required for financial regulatory compliance.</p>
+        <h2 id="solution">Enterprise Comms Platform</h2>
+        <p>C9 implemented a cloud-based platform with automatic recording and CRM integration, achieving 100% compliance and 50% cost reduction.</p>
+      </>
+    )
+  },
+  'ent-security': {
+    eyebrow: 'Surveillance Ops',
+    title: 'Enterprise Security: 30 Locations Integrated Monitoring',
+    summary: 'Centralizing surveillance and security protocols for 30 multi-site locations.',
+    author: 'Mark Thompson',
+    role: 'Security Strategist @ C9',
+    time: '6 Min Read',
+    img: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'risk', label: 'Liability Risks' }, { id: 'solution', label: 'Centralized Ops' }],
+    content: (
+      <>
+        <h2 id="risk">Fragmented Liability Exposure</h2>
+        <p>Disconnected security systems across 30 locations made incident response slow and audit trails impossible.</p>
+        <h2 id="solution">Integrated Security System</h2>
+        <p>We deployed 4K surveillance with centralized monitoring and automatic retention policies. Security incidents reduced by 60% with instant audit readiness.</p>
+      </>
+    )
+  },
+  'ent-workplace': {
+    eyebrow: 'Zero-Trust',
+    title: 'Digital Workplace for 5,000 Employees: 80% Incident Reduction',
+    summary: 'Deploying zero-trust architecture and unified device management at scale.',
+    author: 'Emma Davis',
+    role: 'Workplace Architect @ C9',
+    time: '7 Min Read',
+    img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Endpoint Risk' }, { id: 'solution', label: 'Zero-Trust Stack' }],
+    content: (
+      <>
+        <h2 id="problem">Unmanaged Endpoint Vulnerabilities</h2>
+        <p>With 5,000 employees, the organization faced massive security risks from unmanaged personal and work devices.</p>
+        <h2 id="solution">Enterprise Workplace Platform</h2>
+        <p>C9 implemented a zero-trust architecture with unified device management. Result: 80% reduction in security incidents and 35% lower IT costs.</p>
+      </>
+    )
+  },
+  'ent-print': {
+    eyebrow: 'Fleet Management',
+    title: 'Enterprise Print Infrastructure: Managing 1,000+ Devices',
+    summary: 'Optimizing print costs and security across a massive multi-site estate.',
+    author: 'Michael Chen',
+    role: 'Print Solutions Lead @ C9',
+    time: '6 Min Read',
+    img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'problem', label: 'Waste & Cost' }, { id: 'solution', label: 'Fleet Optimization' }],
+    content: (
+      <>
+        <h2 id="problem">Unmanaged Print Waste</h2>
+        <p>The enterprise was overspending by 40% due to unmanaged printing and high device downtime across 20 locations.</p>
+        <h2 id="solution">Managed Print Infrastructure</h2>
+        <p>We centralized management for 1,000+ devices with secure printing and predictive maintenance. Print costs dropped 40% with 100% security compliance.</p>
+      </>
+    )
+  },
+  'ent-access': {
+    eyebrow: 'Identity & Access',
+    title: 'Enterprise Access Control: 95% Unauthorized Access Reduction',
+    summary: 'Implementing biometric access and centralized protocols across 25 locations.',
+    author: 'Sarah Jenkins',
+    role: 'Security Operations @ C9',
+    time: '6 Min Read',
+    img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200',
+    sections: [{ id: 'risk', label: 'Physical Security' }, { id: 'solution', label: 'Biometric Access' }],
+    content: (
+      <>
+        <h2 id="risk">Physical Security Gaps</h2>
+        <p>Fragmented access systems across 25 locations created significant security vulnerabilities and liability risks.</p>
+        <h2 id="solution">Integrated Access & Identity</h2>
+        <p>C9 implemented centralized access control with biometric options and emergency protocols. Unauthorized access dropped 95% with complete audit trails.</p>
       </>
     )
   }
@@ -420,10 +479,10 @@ export default function CaseStudyPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.keys(CASE_STUDIES).filter(k => k !== slug).map((key) => {
+            {Object.keys(CASE_STUDIES).filter(k => k !== slug).slice(0, 3).map((key) => {
                const item = CASE_STUDIES[key];
                return (
-                  <a href={`/case-studies/${key}`} key={key} className="flex flex-col h-full bg-slate-50 rounded-[28px] overflow-hidden border border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all">
+                  <a href={`/case-studies/${key}`} key={key} className="flex flex-col h-full bg-slate-50 rounded-[28px] overflow-hidden border border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all group">
                      <div className="aspect-[16/10] overflow-hidden">
                         <img 
                            src={item.img} 
@@ -467,4 +526,3 @@ export default function CaseStudyPage() {
     </div>
   );
 }
-

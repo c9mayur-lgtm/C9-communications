@@ -20,6 +20,8 @@ import {
   TableRow, 
   TableCell 
 } from "@/components/ui/table";
+import ProblemSolutionSection from '@/components/sections/ProblemSolutionSection';
+import { ENTERPRISE_CAPABILITIES_DATA } from '@/data/enterprise-capabilities';
 
 /* 
    ANIMATION HELPERS
@@ -202,6 +204,18 @@ const SectionProblem = () => (
       </div>
     </div>
   </section>
+);
+
+/* 
+   SECTION 3  CAPABILITIES (ENTERPRISE SOLUTIONS)
+    */
+const SectionCapabilities = () => (
+  <ProblemSolutionSection 
+    data={ENTERPRISE_CAPABILITIES_DATA}
+    eyebrow="ENTERPRISE INFRASTRUCTURE MANAGEMENT"
+    title={<>Strategic Infrastructure for <span className="text-[#5D00D6]">Enterprise Scale.</span></>}
+    description="Unified, managed infrastructure with SLA-backed guarantees, compliance controls, and 24/7 accountability. Built for enterprises that cannot tolerate downtime."
+  />
 );
 
 /* 
@@ -796,6 +810,7 @@ export default function EnterprisePage() {
       <Hero />
       <WpClientTicker />
       <SectionProblem />
+      <SectionCapabilities />
       <SectionHowItWorks />
       <SectionPlatform />
       <SectionModelDetail />

@@ -9,7 +9,7 @@ export const FloatingCEO = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-28 right-6 z-[400] font-sans">
+    <div className="fixed bottom-28 right-6 z-[400] font-sans hidden lg:block">
       <motion.div
         layout
         transition={{ 

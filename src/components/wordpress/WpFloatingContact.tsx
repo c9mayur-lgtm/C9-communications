@@ -217,7 +217,7 @@ export const WpFloatingContact = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 8, scale: 0.94 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-2xl shadow-2xl shadow-purple-900/10 border border-gray-100 p-4 max-w-[220px] cursor-pointer relative mb-1"
+              className="bg-white rounded-2xl shadow-2xl shadow-purple-900/10 border border-gray-100 p-4 max-w-[220px] cursor-pointer relative mb-1 hidden lg:block"
               onClick={() => { setShowBubble(false); setIsOpen(true); setActiveTab('chat'); }}
             >
               <p className="text-[14px] text-[#0c1024] font-semibold leading-snug">

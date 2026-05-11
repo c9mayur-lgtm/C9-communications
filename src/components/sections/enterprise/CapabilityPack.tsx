@@ -20,7 +20,7 @@ const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function CapabilityPack() {
   return (
-    <section className="py-16 lg:py-20 bg-slate-50 border-y border-slate-100 overflow-hidden">
+    <section className="py-20 lg:py-28 bg-slate-50 border-y border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="bg-white rounded-none p-8 lg:p-20 shadow-2xl shadow-purple-900/5 border border-slate-100 relative">
           {/* Decorative Gradient */}
@@ -77,7 +77,7 @@ export default function CapabilityPack() {
             <FadeIn delay={0.2}>
               <div className="relative">
                 {/* Visual Representation of the Pack */}
-                <div className="aspect-[3/4] bg-slate-900 rounded-none p-10 text-white relative overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 duration-700 border border-white/5">
+                <div className="aspect-[3/4] bg-slate-900 rounded-none p-10 text-white relative overflow-hidden shadow-2xl lg:rotate-3 group-hover:rotate-0 duration-700 border border-white/5">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent" />
                   <FileText size={48} className="text-[#a56eff] mb-8" aria-hidden="true" />
                   <h3 className="text-3xl font-black mb-4 leading-tight text-white">

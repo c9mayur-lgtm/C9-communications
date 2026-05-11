@@ -17,6 +17,9 @@ import {
   TableRow, 
   TableCell 
 } from "@/components/ui/table";
+import CapabilityPack from '@/components/sections/enterprise/CapabilityPack';
+import ProblemSolutionSection from '@/components/sections/ProblemSolutionSection';
+import { ENTERPRISE_CAPABILITIES_DATA } from '@/data/enterprise-capabilities';
 
 /* 
    ANIMATION HELPERS
@@ -187,6 +190,18 @@ const SectionChallenges = () => (
       </div>
     </div>
   </section>
+);
+
+/* 
+   3. ENTERPRISE CAPABILITIES (REUSING SMALL BUSINESS STRUCTURE)
+*/
+const SectionCapabilities = () => (
+  <ProblemSolutionSection 
+    data={ENTERPRISE_CAPABILITIES_DATA}
+    eyebrow="ENTERPRISE INFRASTRUCTURE MANAGEMENT"
+    title={<>Strategic Infrastructure for <span className="text-[#5D00D6]">Enterprise Scale.</span></>}
+    description="Unified, managed infrastructure with SLA-backed guarantees, compliance controls, and 24/7 accountability. Built for enterprises that cannot tolerate downtime."
+  />
 );
 
 /* 
@@ -383,7 +398,7 @@ const SectionOfferings = () => {
             </FadeIn>
           </div>
           
-          <FadeIn delay={0.1} className="shrink-0 flex gap-3">
+          <FadeIn delay={0.1} className="shrink-0 hidden md:flex gap-3">
             <button 
               onClick={() => scroll('left')}
               className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-400 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all"
@@ -451,9 +466,9 @@ const SectionMultiSiteScalability = () => (
                      sizes="(max-width: 1280px) 100vw, 50vw"
                    />
                 </div>
-                <div className="absolute -bottom-8 -right-8 bg-[#5D00D6] text-white p-10 rounded-[32px] shadow-2xl border border-white/10">
-                   <div className="text-4xl font-black mb-1">Scale</div>
-                   <div className="text-xs font-black uppercase tracking-widest opacity-95">Without Compromise</div>
+                <div className="absolute bottom-4 right-4 lg:-bottom-8 lg:-right-8 bg-[#5D00D6] text-white p-6 lg:p-10 rounded-2xl lg:rounded-[32px] shadow-2xl border border-white/10">
+                   <div className="text-2xl lg:text-4xl font-black mb-1">Scale</div>
+                   <div className="text-[10px] lg:text-xs font-black uppercase tracking-widest opacity-95">Without Compromise</div>
                 </div>
              </div>
           </FadeIn>
@@ -690,11 +705,13 @@ export default function EnterprisePage() {
       <Hero />
       <WpClientTicker />
       <SectionChallenges />
+      <SectionCapabilities />
       <SectionMSPPositioning />
       <SectionGovernance />
       <SectionSecurityCompliance />
       <SectionOfferings />
       <SectionMultiSiteScalability />
+      <CapabilityPack />
       <WpVendors />
       <SectionOperationalProof />
       <SectionSLAConfidence />

@@ -358,7 +358,7 @@ export const BusinessAdvisor = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-full px-4 pointer-events-none flex flex-col items-center">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-full px-4 pointer-events-none hidden lg:flex flex-col items-center">
       <div className="pointer-events-auto flex flex-col items-center w-full max-w-2xl">
         
         <AnimatePresence>

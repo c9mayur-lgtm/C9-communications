@@ -38,6 +38,8 @@ import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpSupport } from '@/components/wordpress/WpSupport';
+import ProblemSolutionSection from '@/components/sections/ProblemSolutionSection';
+
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPERS
@@ -95,15 +97,16 @@ const HeroV3 = () => (
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Consolidate Your <span className="text-[#5D00D6]">Vendor Chaos</span> Into One Managed Environment
+              Your Business Has Outgrown <span className="text-[#5D00D6]">Reactive Support</span>. Switch to Single-Vendor Accountability.
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
             <p className="c9-body mb-8 max-w-[620px]">
-              C9 helps established businesses simplify fragmented IT and communications. We take full ownership of your existing environment, providing stability and accountability without operational disruption.
+              C9 helps established businesses move away from fragmented IT and communication providers. We take full accountability for your existing environment, providing the stability and proactive support your current provider is missing.
             </p>
           </FadeIn>
+
 
           <FadeIn delay={0.22}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10">
@@ -127,16 +130,17 @@ const HeroV3 = () => (
                 href="#consultation-section"
                 className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 whitespace-nowrap c9-button-label h-14 px-10 text-[15px] font-bold"
               >
-                Book a Business Systems Assessment
+                Review Your Current Environment
               </a>
               <a
                 href="#transition-framework"
                 className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 rounded-full hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all whitespace-nowrap bg-white c9-button-label h-14 px-10 text-[15px] font-bold"
               >
-                See How We Consolidate Existing Environments
+                See Why Businesses Switch to C9
               </a>
             </div>
           </FadeIn>
+
         </div>
 
         <FadeIn delay={0.2} direction="right" className="hidden lg:block relative">
@@ -228,9 +232,10 @@ const IndustrySections = () => {
           {/* Navigation - More Compact */}
           <div className="lg:w-[260px] shrink-0">
             <FadeIn>
-              <span className="c9-eyebrow mb-4 block">Expertise</span>
-              <h2 className="c9-section-heading mb-8">Sector Proof</h2>
+              <span className="c9-eyebrow mb-4 block">Proven Transitions</span>
+              <h2 className="c9-section-heading mb-8">Switching Outcomes</h2>
             </FadeIn>
+
             
             <div className="space-y-1.5 mb-6">
               {industries.map((ind) => (
@@ -322,7 +327,8 @@ const IndustrySections = () => {
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-slate-200/60 flex items-center gap-4">
-                   <p className="text-[8px] font-black text-rose-400 uppercase tracking-[0.2em] shrink-0">Pains Resolved:</p>
+                   <p className="text-[8px] font-black text-rose-400 uppercase tracking-[0.2em] shrink-0">Legacy Provider Pains Resolved:</p>
+
                    <div className="flex flex-wrap gap-2">
                       {current.pains.map((p, i) => (
                         <span key={i} className="px-3 py-1 bg-rose-50 text-rose-600 rounded-full text-[10px] font-normal border border-rose-100 flex items-center gap-1.5">
@@ -377,11 +383,12 @@ const OperationalChaos = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <FadeIn className="max-w-2xl">
             <span className="c9-eyebrow mb-4">Operational Reality</span>
-            <h2 className="c9-section-heading mb-6">The Hidden Cost of Fragmented Infrastructure</h2>
+            <h2 className="c9-section-heading mb-6">Stop Accepting Operational Friction</h2>
             <p className="c9-body">
-              When multiple vendors manage disconnected systems, your business carries the operational risk of the gaps between them.
+              When your current provider is reactive and fragmented, your business carries the risk. It’s time to move to an environment designed for accountability.
             </p>
           </FadeIn>
+
           
           <FadeIn delay={0.1} className="flex gap-3">
             <button 
@@ -430,10 +437,11 @@ const AccountabilityPositioning = () => (
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <FadeIn direction="left">
           <span className="c9-eyebrow mb-4">Total Ownership</span>
-          <h2 className="c9-section-heading mb-6">Finally, One Accountable Partner for Everything</h2>
+          <h2 className="c9-section-heading mb-6">Leave the Vendor Finger-Pointing Behind</h2>
           <p className="c9-body mb-10 text-slate-600">
-            We don't just manage services; we own the operational outcomes of your technology environment. One invoice, one contact, one escalation path. Total accountability for your business continuity.
+            Most businesses outgrow their IT provider when support becomes reactive. C9 provides the centralized management and single-point accountability required for modern, stable operations.
           </p>
+
           
           <div className="space-y-6">
             {[
@@ -458,8 +466,9 @@ const AccountabilityPositioning = () => (
         <FadeIn direction="right" className="relative">
           <div className="bg-[#0c1024] p-10 lg:p-16 rounded-[48px] text-white relative shadow-2xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6] opacity-10 rounded-full blur-[80px] -mr-32 -mt-32" />
-            <h3 className="text-3xl font-bold mb-8 font-clash leading-tight">We remove operational complexity and become your single accountable technology partner.</h3>
-            <p className="text-white/60 mb-10 font-dm-sans">This is the moment your operational friction ends. By centralizing management, we unlock visibility and stability that fragmented vendors cannot provide.</p>
+            <h3 className="text-3xl font-bold mb-8 font-clash leading-tight">Switching to C9 isn't just a provider change—it's an operational upgrade.</h3>
+            <p className="text-white/60 mb-10 font-dm-sans">We eliminate the "gray areas" where current providers fail. By centralizing your infrastructure, we remove the friction that slows your business down.</p>
+
             <div className="pt-8 border-t border-white/10 flex items-center gap-6">
               <div className="w-16 h-16 rounded-2xl bg-[#5D00D6] flex items-center justify-center shadow-lg">
                 <ShieldCheck size={32} />
@@ -549,14 +558,15 @@ const TransitionFramework = () => {
           {/* Left: Header + Step Nav */}
           <div>
             <FadeIn>
-              <span className="c9-eyebrow mb-4 block">Zero-Disruption Transition</span>
+              <span className="c9-eyebrow mb-4 block">Safe Provider Migration</span>
               <h2 className="c9-section-heading mb-4">
-                6 Stages. Zero Downtime.
+                Switching is Safer Than Staying.
               </h2>
               <p className="text-slate-500 text-[14px] leading-relaxed font-dm-sans mb-8">
-                Every step is validated before the next begins. Your operations never pause.
+                Our structured transition framework ensures your business operations never pause while we migrate your systems.
               </p>
             </FadeIn>
+
 
             <div className="space-y-1">
               {steps.map((s, i) => (
@@ -687,8 +697,9 @@ const OutcomesOfferings = () => (
   <section className="py-10 lg:py-16 bg-white border-t border-slate-100">
     <div className={C}>
       <FadeIn className="mb-10">
-        <span className="c9-eyebrow mb-4 block">Operational Outcomes</span>
-        <h2 className="c9-section-heading">Service Pillars for Established Businesses</h2>
+        <span className="c9-eyebrow mb-4 block">Why Businesses Switch</span>
+        <h2 className="c9-section-heading">Replace Fragmented Support With C9</h2>
+
       </FadeIn>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -765,11 +776,12 @@ const RiskReduction = () => (
     <div className={C}>
       <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center">
         <FadeIn direction="left">
-          <span className="c9-eyebrow mb-4">Risk Mitigation</span>
-          <h2 className="c9-section-heading mb-6">Designed for Operational Continuity</h2>
+          <span className="c9-eyebrow mb-4">Transition Security</span>
+          <h2 className="c9-section-heading mb-6">A Smarter Path to Operational Stability</h2>
           <p className="c9-body mb-8">
-            We understand that for an established business, migration isn't about "moving to the cloud"—it's about ensuring your staff can work without interruption.
+            Moving to C9 is a guided, professional transition. We reduce the anxiety of switching by ensuring your staff remains productive at every stage of the onboarding process.
           </p>
+
           <div className="space-y-4">
              {[
                'Phased onboarding windows',
@@ -810,24 +822,27 @@ const OperationalProof = () => (
   <section className="py-12 lg:py-24 bg-white">
     <div className={C}>
       <FadeIn className="text-center mb-16">
-        <span className="c9-eyebrow mb-4">Operational proof</span>
-        <h2 className="c9-section-heading mb-6">Established Business Transitions</h2>
-        <p className="c9-body max-w-2xl mx-auto">Real results from companies that consolidated their infrastructure with C9.</p>
+        <span className="c9-eyebrow mb-4">Operational Proof</span>
+        <h2 className="c9-section-heading mb-6">Transition Success Stories</h2>
+        <p className="c9-body max-w-2xl mx-auto">Real outcomes from businesses that switched to C9 to end vendor chaos and stabilize their infrastructure.</p>
       </FadeIn>
+
 
       <div className="grid md:grid-cols-2 gap-8 font-dm-sans">
         {[
           {
-            title: 'Multi-Site Retail Consolidation',
+            title: 'Multi-Site Retail Switching',
             before: '4 vendors, inconsistent POS uptime, 4-hour support delays.',
             after: 'Single accountable partner, 99.9% uptime, 15-minute response.',
+
             metric: '99.9%',
             metricLabel: 'Stability Boost'
           },
           {
-            title: 'Professional Firm Takeover',
+            title: 'Professional Services Takeover',
             before: 'Legacy server debt, unmanaged security, fragmented voice providers.',
             after: 'Managed cloud environment, integrated voice, 100% security visibility.',
+
             metric: 'Zero',
             metricLabel: 'Transition Downtime'
           }
@@ -872,8 +887,9 @@ const SupportStructure = () => (
     <div className={C}>
       <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center relative z-10">
         <FadeIn direction="left">
-          <span className="c9-eyebrow !text-[#5D00D6] mb-4">Support & Governance</span>
-          <h2 className="c9-section-heading !text-white mb-8">Commercially Structured Reliability</h2>
+          <span className="c9-eyebrow !text-[#5D00D6] mb-4">Support Governance</span>
+          <h2 className="c9-section-heading !text-white mb-8">Commercially Structured Accountability</h2>
+
           <p className="text-white/60 text-lg mb-10 max-w-xl font-dm-sans">
             Our support model is designed for business continuity, not just "fixing things." We operate with defined commitment levels and transparent escalation hierarchies.
           </p>
@@ -897,9 +913,10 @@ const SupportStructure = () => (
           <h3 className="text-2xl font-bold mb-8 font-clash">Escalation Commitment</h3>
           <div className="space-y-6">
             {[
-              { level: 'Level 1', title: 'Service Desk', time: '< 60 Seconds', desc: 'Immediate incident logging and triage.' },
-              { level: 'Level 2', title: 'Technical Ops', time: '< 15 Minutes', desc: 'Standard remediation and coordination.' },
-              { level: 'Level 3', title: 'Lead Engineering', time: 'Immediate', desc: 'Direct owner for critical systemic failures.' }
+              { level: 'Level 1', title: 'Transition Desk', time: '< 60 Seconds', desc: 'Immediate incident logging and triage during and after migration.' },
+              { level: 'Level 2', title: 'Managed Ops', time: '< 15 Minutes', desc: 'Active remediation and multi-vendor coordination.' },
+              { level: 'Level 3', title: 'Senior Engineering', time: 'Immediate', desc: 'Direct accountability for critical business systems.' }
+
             ].map((item, i) => (
               <div key={i} className="flex gap-6 items-start">
                 <div className="w-12 h-12 rounded-xl bg-[#5D00D6] flex items-center justify-center shrink-0 font-black text-[12px]">
@@ -962,7 +979,8 @@ const FAQV3 = () => (
         content: "Switching to C9 was about accountability. We no longer spend hours on hold with three different vendors. When something fluctuates, C9 owns it. Period.",
         image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800",
         metric: "99.9%",
-        metricLabel: "Uptime Guaranteed"
+        metricLabel: "Uptime Guaranteed",
+        cta: <a href="#consultation-section" className="inline-flex items-center justify-center bg-[#5D00D6] text-white rounded-full h-16 px-12 text-[16px] font-bold hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/30 w-full sm:w-auto">Review Your Current Environment</a>
       },
       {
         name: "Dr. Amira K.",
@@ -970,7 +988,8 @@ const FAQV3 = () => (
         content: "The zero-disruption promise was real. Our systems were stabilized within 48 hours, and we haven't had a major outage since they took over the environment.",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800",
         metric: "24/7",
-        metricLabel: "Active Monitoring"
+        metricLabel: "Active Monitoring",
+        cta: <a href="#transition-framework" className="inline-flex items-center justify-center border-2 border-slate-200 text-slate-600 rounded-full h-16 px-12 text-[16px] font-bold hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all bg-white w-full sm:w-auto">How the Transition Works</a>
       },
       {
         name: "Robert P.",
@@ -994,12 +1013,12 @@ const FinalCTAV3 = () => (
      <div className={C}>
         <div className="max-w-4xl mx-auto text-center relative z-10">
            <FadeIn>
-              <span className="c9-eyebrow mb-6 block">Take Ownership</span>
+              <span className="c9-eyebrow mb-6 block">Replace Fragmented Support</span>
               <h2 className="c9-hero-title mb-8">
-                Consolidate Your Infrastructure. <br className="hidden md:block" /> Eliminate Operational Risk.
+                Consolidate Your Environment. <br className="hidden md:block" /> Upgrade Your Operations.
               </h2>
               <p className="c9-body mb-12 max-w-2xl mx-auto">
-                Stop managing vendor chaos. Book a consultative assessment to review your current environment and map out a safe, accountable path to simplified operations.
+                Stop managing vendor finger-pointing. Book a Business Systems Assessment to review your current environment and map out a safe path to C9 accountability.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                  <a
@@ -1042,6 +1061,9 @@ export default function SmallBusinessPageV3() {
       <HeroV3 />
       
       <WpClientTicker grayscale={true} opacity={0.3} />
+      
+      <ProblemSolutionSection />
+
 
       <OperationalChaos />
       <AccountabilityPositioning />
@@ -1059,10 +1081,11 @@ export default function SmallBusinessPageV3() {
       <section id="consultation-section" className="bg-white border-t border-slate-100">
         <WpConsultationForm
           showHeader={false}
-          eyebrow="SCHEDULE YOUR REVIEW"
-          title="Start Your Infrastructure Operational Assessment"
-          description="Review your current environment and map out a safe, accountable strategy to consolidate your operations. Zero disruption. Total accountability."
-          formTitle="Request an IT Assessment"
+          eyebrow="READY TO SWITCH?"
+          title="Start Your Business Systems Assessment"
+          description="Expose the friction in your current environment and map out a safe, accountable strategy to move to C9. Zero disruption. Total accountability."
+          formTitle="Speak With a Transition Specialist"
+
         />
       </section>
 
