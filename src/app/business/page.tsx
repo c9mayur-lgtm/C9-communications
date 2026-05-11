@@ -39,6 +39,7 @@ import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpSupport } from '@/components/wordpress/WpSupport';
 import ProblemSolutionSection from '@/components/sections/ProblemSolutionSection';
+import { PricingSection } from '@/components/sections/PricingSection';
 
 
 /* ─────────────────────────────────────────────────────────
@@ -1070,6 +1071,7 @@ export default function SmallBusinessPageV3() {
       <IndustrySections />
       <TransitionFramework />
       <OutcomesOfferings />
+      <PricingSection />
       <RiskReduction />
       {/* <OperationalProof /> */}
       <WpSupport />
