@@ -8,7 +8,7 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
   {
     id: "internet",
     icon: <Globe className="w-6 h-6" />,
-    image: "/images/enterprise/internet-infrastructure.jpg",
+    image: "/Enterprise/Internet.png",
     problemStatement: "Single-ISP Dependency Creates Business Continuity Risk",
     problemContext: "Reliance on a single internet provider creates a critical single point of failure. When your ISP goes down, your entire business stops. For enterprises managing multiple locations, this risk is multiplied across your infrastructure.",
     solutionTitle: "Carrier-Grade Internet Infrastructure",
@@ -47,7 +47,7 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
   {
     id: "networking",
     icon: <Radio className="w-6 h-6" />,
-    image: "/images/enterprise/network-infrastructure.jpg",
+    image: "/Enterprise/Network and wifi_Enterprise.png",
     problemStatement: "Fragmented Network Architecture Creates Security & Compliance Gaps",
     problemContext: "Decentralized network management across multiple locations creates security vulnerabilities, compliance risks, and operational inefficiencies. Without centralized control, you cannot ensure consistent security policies across your organization.",
     solutionTitle: "Enterprise-Grade Unified Network Infrastructure",
@@ -86,7 +86,7 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
   {
     id: "communications",
     icon: <Phone className="w-6 h-6" />,
-    image: "/images/enterprise/communications-platform.jpg",
+    image: "/Enterprise/Phone_system_enterprise.png",
     problemStatement: "Legacy PBX Systems Create Operational Risk & Compliance Gaps",
     problemContext: "Legacy PBX systems lack compliance controls, create operational silos, and limit business agility. Without call recording and audit trails, you cannot meet regulatory requirements or optimize customer interactions.",
     solutionTitle: "Enterprise Communications Platform",
@@ -125,7 +125,7 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
   {
     id: "security",
     icon: <Camera className="w-6 h-6" />,
-    image: "/images/enterprise/security-surveillance.jpg",
+    image: "/Enterprise/CCTV_Enterprise.png",
     problemStatement: "Fragmented Security Systems Create Compliance & Liability Risks",
     problemContext: "Decentralized surveillance systems across multiple locations create compliance gaps and liability exposure. Without centralized monitoring and audit trails, you cannot respond effectively to security incidents.",
     solutionTitle: "Enterprise Security & Surveillance System",
@@ -164,7 +164,7 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
   {
     id: "workplace",
     icon: <Laptop className="w-6 h-6" />,
-    image: "/images/enterprise/digital-workplace.jpg",
+    image: "/Enterprise/Modern_Workplace_Enterprise.png",
     problemStatement: "Fragmented Workplace Technology Creates Security & Productivity Risks",
     problemContext: "Decentralized device management and fragmented collaboration tools create security vulnerabilities and productivity inefficiencies. Without unified security, you cannot ensure data protection.",
     solutionTitle: "Enterprise Digital Workplace Platform",
