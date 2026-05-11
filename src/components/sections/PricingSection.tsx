@@ -34,9 +34,7 @@ export const PricingSection = () => {
                 Packages Built for <br />Growing Businesses.
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed max-w-xl font-dm-sans">
-                Choose the package that fits your business. All packages include 24/7 support, 
-                no setup fees, and the flexibility to upgrade or downgrade anytime. 
-                Save 17% with annual billing.
+                Choose the package that fits your business. All prices are in Australian Dollars (AUD) and exclusive of GST. Save 17% with annual billing.
               </p>
             </FadeIn>
           </div>

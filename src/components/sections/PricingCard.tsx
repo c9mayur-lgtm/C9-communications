@@ -32,13 +32,15 @@ export const PricingCard = ({ tier, isAnnual }: PricingCardProps) => {
         </div>
 
         <div className="mb-8">
-          <div className="flex items-baseline gap-1">
+          <div className="flex items-baseline gap-1 font-clash">
+            <span className="text-sm font-bold text-slate-400 mr-1">AUD</span>
             <span className="text-4xl font-bold text-slate-900">${displayPrice.toLocaleString()}</span>
             <span className="text-slate-500 text-sm font-medium">/month</span>
           </div>
+          <p className="text-[10px] font-bold text-slate-400 mt-1 uppercase tracking-widest">+ GST</p>
           {isAnnual && (
-            <div className="mt-2 text-[#5D00D6] text-sm font-bold">
-              ${annualTotal.toLocaleString()} billed annually (Save {tier.savingsPercentage}%)
+            <div className="mt-3 text-[#5D00D6] text-[11px] font-black uppercase tracking-wider font-dm-sans">
+              AUD ${annualTotal.toLocaleString()} billed annually (Save {tier.savingsPercentage}%)
             </div>
           )}
         </div>
