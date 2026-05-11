@@ -57,7 +57,7 @@ export default function ProblemSolutionCard({ offering, onCTAClick }: ProblemSol
         {/* Icon Badge - Slightly Smaller */}
         <div className="absolute top-3 right-3 bg-[#5D00D6] text-white 
                         rounded-none p-2.5 shadow-lg flex items-center justify-center">
-          {React.cloneElement(offering.icon as React.ReactElement, { size: 20 })}
+          {React.cloneElement(offering.icon as React.ReactElement<any>, { size: 20 })}
         </div>
       </div>
 

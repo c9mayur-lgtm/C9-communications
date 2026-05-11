@@ -13,6 +13,7 @@ interface Testimonial {
   avatar?: string | React.ReactNode;
   metric?: string;
   metricLabel?: string;
+  cta?: React.ReactNode;
 }
 
 const DEFAULT_TESTIMONIALS: Testimonial[] = [
@@ -156,6 +157,12 @@ export const ServiceTestimonialKajabi = ({ testimonials = DEFAULT_TESTIMONIALS }
                         <p className="text-[16px] md:text-[18px] lg:text-[20px] text-white leading-relaxed mb-6 font-medium italic opacity-95" >
                           "{t.content}"
                         </p>
+
+                        {t.cta && (
+                          <div className="mb-8">
+                            {t.cta}
+                          </div>
+                        )}
 
                         <div className="flex items-end justify-between mt-auto border-t border-white/5 pt-6">
                           <div>

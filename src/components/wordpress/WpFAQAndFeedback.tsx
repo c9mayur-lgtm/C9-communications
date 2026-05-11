@@ -21,6 +21,7 @@ export interface TestimonialData {
   image?: string;
   metric?: string;
   metricLabel?: string;
+  cta?: React.ReactNode;
 }
 
 export interface FAQItemData {
@@ -115,7 +116,8 @@ export const WpFAQAndFeedback = ({
             avatar: t.avatar,
             metric: t.metric,
             metricLabel: t.metricLabel,
-            image: t.image
+            image: t.image,
+            cta: t.cta
           })) : undefined} 
         />
       )}
