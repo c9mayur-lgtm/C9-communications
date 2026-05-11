@@ -27,13 +27,13 @@ export const PricingSection = () => {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-20">
           <div className="max-w-2xl">
             <FadeIn>
-              <span className="inline-block text-[11px] font-black text-[#5D00D6] uppercase tracking-[0.2em] mb-4 bg-[#5D00D6]/5 px-3 py-1 font-dm-sans">
+              <span className="c9-eyebrow mb-4 bg-[#5D00D6]/5 px-3 py-1 inline-block">
                 SIMPLE, TRANSPARENT PRICING
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-[1.1] tracking-tight font-clash">
+              <h2 className="c9-section-heading mb-6">
                 Packages Built for <br />Growing Businesses.
               </h2>
-              <p className="text-lg text-slate-700 leading-relaxed max-w-xl font-dm-sans">
+              <p className="c9-body max-w-xl">
                 Choose the package that fits your business. All prices are in Australian Dollars (AUD) and exclusive of GST. Save 17% with annual billing.
               </p>
             </FadeIn>
@@ -41,16 +41,16 @@ export const PricingSection = () => {
 
           <FadeIn delay={0.2}>
             <div className="flex flex-col items-center lg:items-end gap-3">
-              <div className="flex items-center gap-4 bg-white p-1.5 border border-slate-200 rounded-none shadow-sm">
+              <div className="flex items-center gap-4 bg-white p-1.5 border border-slate-200 rounded-full shadow-sm">
                 <button 
                   onClick={() => setIsAnnual(false)}
-                  className={`px-6 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all font-dm-sans ${!isAnnual ? 'bg-[#5D00D6] text-white' : 'text-slate-500 hover:text-slate-900'}`}
+                  className={`px-6 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all rounded-full font-dm-sans ${!isAnnual ? 'bg-[#5D00D6] text-white shadow-lg shadow-purple-900/20' : 'text-slate-500 hover:text-slate-900'}`}
                 >
                   Monthly
                 </button>
                 <button 
                   onClick={() => setIsAnnual(true)}
-                  className={`px-6 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all font-dm-sans ${isAnnual ? 'bg-[#5D00D6] text-white' : 'text-slate-500 hover:text-slate-900'}`}
+                  className={`px-6 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all rounded-full font-dm-sans ${isAnnual ? 'bg-[#5D00D6] text-white shadow-lg shadow-purple-900/20' : 'text-slate-500 hover:text-slate-900'}`}
                 >
                   Annual (Save 17%)
                 </button>
@@ -71,9 +71,9 @@ export const PricingSection = () => {
         </div>
 
         <FadeIn delay={0.4}>
-          <div className="mt-20 p-10 bg-white border border-slate-200 text-center">
+          <div className="mt-20 p-10 bg-white border border-slate-200 text-center rounded-[32px]">
             <h3 className="text-xl font-bold text-slate-900 mb-4 font-clash">Looking for a Custom Enterprise Solution?</h3>
-            <p className="text-slate-600 mb-8 max-w-2xl mx-auto text-sm leading-relaxed font-dm-sans">
+            <p className="c9-body !text-sm max-w-2xl mx-auto mb-8">
               For businesses with 250+ employees or complex multi-site requirements, we offer tailored infrastructure governance and SLA management.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
