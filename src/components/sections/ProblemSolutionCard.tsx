@@ -140,7 +140,7 @@ export default function ProblemSolutionCard({ offering, onCTAClick }: ProblemSol
             <button 
               onClick={() => handleCTAClick('solution')}
               className="w-full bg-[#5D00D6] text-white font-bold py-2.5 px-4 
-                         rounded-none hover:bg-[#4d00b3] transition-all duration-200 uppercase tracking-widest text-[11px]"
+                         rounded-full hover:bg-[#4d00b3] transition-all duration-200 uppercase tracking-widest text-[11px]"
             >
               {offering.primaryCTAText}
             </button>
@@ -152,7 +152,7 @@ export default function ProblemSolutionCard({ offering, onCTAClick }: ProblemSol
               <button 
                 onClick={() => handleCTAClick('casestudy')}
                 className="w-full bg-slate-100 text-slate-900 font-bold py-2 px-2 
-                           rounded-none hover:bg-slate-200 transition-all duration-200 uppercase tracking-widest text-[9px] h-full"
+                           rounded-full hover:bg-slate-200 transition-all duration-200 uppercase tracking-widest text-[9px] h-full"
               >
                 Case Study
               </button>
@@ -163,7 +163,7 @@ export default function ProblemSolutionCard({ offering, onCTAClick }: ProblemSol
               <button 
                 onClick={() => handleCTAClick('tertiary')}
                 className="w-full border border-[#5D00D6] text-[#5D00D6] font-bold py-2 px-2 
-                           rounded-none hover:bg-[#5D00D6]/5 transition-all duration-200 uppercase tracking-widest text-[9px] h-full"
+                           rounded-full hover:bg-[#5D00D6]/5 transition-all duration-200 uppercase tracking-widest text-[9px] h-full"
               >
                 Consultation
               </button>
