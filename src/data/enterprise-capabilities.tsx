@@ -203,7 +203,7 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
   {
     id: "print",
     icon: <Printer className="w-6 h-6" />,
-    image: "/images/enterprise/print-infrastructure.jpg",
+    image: "/Enterprise/Print_Enterprise.png",
     problemStatement: "Unmanaged Print Environment Creates Security & Cost Risks",
     problemContext: "Unmanaged printing infrastructure across multiple locations creates security vulnerabilities and cost overruns. Without centralized management, you cannot ensure data protection or control costs.",
     solutionTitle: "Enterprise Print Infrastructure Management",
@@ -242,7 +242,7 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
   {
     id: "access",
     icon: <Lock className="w-6 h-6" />,
-    image: "/images/enterprise/access-control.jpg",
+    image: "/Enterprise/Visitors_Enterprise.png",
     problemStatement: "Fragmented Access Control Creates Security & Compliance Risks",
     problemContext: "Decentralized access control systems across multiple locations create security vulnerabilities and operational inefficiencies. Without centralized management, you cannot ensure physical security.",
     solutionTitle: "Enterprise Access Control & Visitor Management",
