@@ -77,27 +77,19 @@ export const PricingCard = ({ tier, isAnnual }: PricingCardProps) => {
           </div>
         </div>
 
-        <div className="space-y-4 pt-8 border-t border-slate-50">
-          <Link href={tier.primaryCTA.link} className="block w-full">
+        <div className="space-y-4 pt-8 border-t border-slate-50 mt-auto">
+          <Link href="#consultation-section" className="block w-full">
             <button className="w-full bg-[#5D00D6] text-white font-bold py-4 px-6 rounded-full hover:bg-[#4d00b3] transition-all duration-300 uppercase tracking-widest text-[12px] flex items-center justify-center gap-2 shadow-xl shadow-purple-900/20">
-              {tier.primaryCTA.text}
+              Schedule a Consultation
               <ArrowRight size={16} />
             </button>
           </Link>
           
-          <Link href={tier.secondaryCTA.link} className="block w-full text-center">
+          <Link href="#consultation-section" className="block w-full text-center">
             <span className="text-[11px] font-bold text-slate-900 hover:text-[#5D00D6] transition-colors uppercase tracking-widest cursor-pointer font-dm-sans">
-              {tier.secondaryCTA.text}
+              Talk to a specialist
             </span>
           </Link>
-
-          {tier.tertiaryCTA && (
-            <Link href={tier.tertiaryCTA.link} className="block w-full text-center">
-              <span className="text-[10px] font-medium text-slate-400 hover:text-slate-800 transition-colors uppercase tracking-widest cursor-pointer font-dm-sans">
-                {tier.tertiaryCTA.text}
-              </span>
-            </Link>
-          )}
         </div>
       </div>
     </div>
