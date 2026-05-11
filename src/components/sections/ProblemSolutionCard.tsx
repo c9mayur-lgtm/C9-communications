@@ -65,7 +65,7 @@ export default function ProblemSolutionCard({ offering, onCTAClick }: ProblemSol
       <div className="p-5 md:p-6 flex flex-col flex-1">
         
         {/* Problem Statement - Increased size for better differentiation */}
-        <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-3 leading-tight tracking-tight">
+        <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 leading-tight tracking-tight">
           {offering.problemStatement}
         </h3>
         
@@ -78,7 +78,7 @@ export default function ProblemSolutionCard({ offering, onCTAClick }: ProblemSol
         <div className="h-px bg-slate-100 mb-5"></div>
 
         {/* Solution Label - Using c9-eyebrow */}
-        <p className="c9-eyebrow !mb-2 !text-[11px] !text-[#5D00D6] !font-black">
+        <p className="c9-eyebrow !mb-2 !text-[11px] !text-[#5D00D6]">
           OUR SOLUTION
         </p>
 
