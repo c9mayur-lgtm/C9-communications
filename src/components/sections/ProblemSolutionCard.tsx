@@ -64,26 +64,26 @@ export default function ProblemSolutionCard({ offering, onCTAClick }: ProblemSol
       {/* Content Container - Reduced Padding */}
       <div className="p-5 md:p-6 flex flex-col flex-1">
         
-        {/* Problem Statement - Using c9-card-title as base but allowed to be bigger if needed per user instruction */}
-        <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 leading-tight">
+        {/* Problem Statement - Increased size for better differentiation */}
+        <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-3 leading-tight tracking-tight">
           {offering.problemStatement}
         </h3>
         
         {/* Problem Context - Compact Body */}
-        <p className="text-[14px] text-slate-600 mb-4 leading-relaxed line-clamp-3 hover:line-clamp-none transition-all">
+        <p className="text-[14px] text-slate-600 mb-5 leading-relaxed line-clamp-3 hover:line-clamp-none transition-all">
           {offering.problemContext}
         </p>
 
         {/* Divider */}
-        <div className="h-px bg-slate-100 mb-4"></div>
+        <div className="h-px bg-slate-100 mb-5"></div>
 
         {/* Solution Label - Using c9-eyebrow */}
-        <p className="c9-eyebrow !mb-1.5 !text-[10px]">
+        <p className="c9-eyebrow !mb-2 !text-[11px] !text-[#5D00D6] !font-black">
           OUR SOLUTION
         </p>
 
-        {/* Solution Title */}
-        <h4 className="text-md font-bold text-slate-900 mb-2">
+        {/* Solution Title - Increased size */}
+        <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-3">
           {offering.solutionTitle}
         </h4>
 
