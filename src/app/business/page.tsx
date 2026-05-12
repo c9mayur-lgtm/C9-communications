@@ -928,9 +928,9 @@ const ManagedITHighlight = () => (
         <FadeIn direction="right" className="relative">
           <div className="relative rounded-[48px] overflow-hidden shadow-2xl border border-slate-100 aspect-square lg:aspect-auto lg:h-[600px] bg-slate-100">
              <img 
-               src="/images/hero/managed-it-business.png" 
+               src="/Managed IT_SMB.png" 
                alt="Managed IT Helpdesk Operations" 
-               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+               className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/60 via-transparent to-transparent" />
              
