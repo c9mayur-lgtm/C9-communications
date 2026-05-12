@@ -8,10 +8,10 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
+import { EnterpriseOfferingsSection } from '@/components/sections/EnterpriseOfferings';
 import { C9Button } from '@/components/design-system/C9Button';
 import { WpVendors } from '@/components/wordpress/WpVendors';
 import PlatformStack from '@/components/sections/enterprise/PlatformStack';
-import CapabilityPack from '@/components/sections/enterprise/CapabilityPack';
 import { 
   Table, 
   TableHeader, 
@@ -817,7 +817,7 @@ export default function EnterprisePage() {
       <SectionSLA />
       <SectionScalability />
       <SectionSecurity />
-      <SectionCapabilityPack />
+      <EnterpriseOfferingsSection />
       <SectionArchitecture />
       <WpVendors />
       <SectionProof />
