@@ -38,7 +38,7 @@ export const EnterpriseOfferingsSection = () => {
 
         {/* Capability Matrix - Desktop View */}
         <FadeIn delay={0.2} className="hidden lg:block">
-          <div className="overflow-hidden border border-slate-200 rounded-[32px] shadow-sm bg-white">
+          <div className="border border-slate-200 rounded-none shadow-sm bg-white">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-slate-50/50 border-b border-slate-200">
@@ -112,23 +112,23 @@ export const EnterpriseOfferingsSection = () => {
 
         {/* Custom Quote Section */}
         <FadeIn delay={0.4}>
-          <div className="mt-24 p-10 md:p-20 bg-slate-900 text-white rounded-[48px] relative overflow-hidden">
+          <div className="mt-24 p-10 md:p-20 bg-slate-900 text-white rounded-none relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
                <div className="absolute top-[-20%] right-[-10%] w-[80%] h-[80%] bg-[#5D00D6] rounded-full blur-[120px]" />
             </div>
 
-            <div className="max-w-3xl relative z-10">
+            <div className="max-w-4xl mx-auto text-center relative z-10">
               <h3 className="text-3xl md:text-5xl font-bold mb-8 font-clash leading-tight">
-                Complex Environments Require <span className="text-[#5D00D6]">Custom Architecture.</span>
+                Complex Environments Require <br/><span className="text-[#5D00D6]">Custom Architecture.</span>
               </h3>
               
-              <p className="text-lg text-white/60 mb-10 leading-relaxed font-dm-sans">
+              <p className="text-lg text-white/60 mb-10 leading-relaxed font-dm-sans max-w-2xl mx-auto">
                 If your enterprise operates across 50+ locations, maintains strict regulatory compliance, 
                 or requires deep integration with legacy industrial systems, our architects will design 
                  a bespoke governance model for you.
               </p>
               
-              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6 mb-12">
+              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6 mb-12 max-w-2xl mx-auto text-left">
                 {[
                   "Multi-site redundancy design",
                   "Regulatory compliance mapping",
@@ -142,14 +142,14 @@ export const EnterpriseOfferingsSection = () => {
                 ))}
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-6">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link href="#consultation-section">
-                  <button className="bg-[#5D00D6] text-white font-bold py-4 px-10 rounded-full hover:bg-[#4d00b3] transition-all duration-300 uppercase tracking-widest text-[13px] shadow-xl shadow-purple-900/40">
+                  <button className="bg-[#5D00D6] text-white font-bold py-4 px-10 rounded-none hover:bg-[#4d00b3] transition-all duration-300 uppercase tracking-widest text-[13px] shadow-xl shadow-purple-900/40">
                     Schedule Executive Briefing
                   </button>
                 </Link>
                 <Link href="/enterprise/capabilities-guide">
-                  <button className="bg-transparent border-2 border-white/20 text-white font-bold py-4 px-10 rounded-full hover:border-white transition-all duration-300 uppercase tracking-widest text-[13px]">
+                  <button className="bg-transparent border-2 border-white/20 text-white font-bold py-4 px-10 rounded-none hover:border-white transition-all duration-300 uppercase tracking-widest text-[13px]">
                     Download Capabilities Guide
                   </button>
                 </Link>
@@ -196,7 +196,7 @@ const MatrixRow = ({ label, foundation, strategic, premium, custom }: {
 const OfferingAccordion = ({ tier }: { tier: EnterpriseTier }) => {
   return (
     <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value={tier.id} className="border border-slate-200 rounded-[32px] px-8 bg-white mb-4 overflow-hidden">
+      <AccordionItem value={tier.id} className="border border-slate-200 rounded-none px-8 bg-white mb-4 overflow-hidden">
         <AccordionTrigger className="hover:no-underline py-8 group">
           <div className="flex items-center justify-between w-full pr-6">
             <div className="flex items-center gap-6">
@@ -207,7 +207,7 @@ const OfferingAccordion = ({ tier }: { tier: EnterpriseTier }) => {
                 <div className="flex items-center gap-3 mb-1">
                   <h3 className="text-xl font-bold text-slate-900 font-clash">{tier.name}</h3>
                   {tier.badge && (
-                    <span className="bg-[#5D00D6] text-white text-[8px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest">
+                    <span className="bg-[#5D00D6] text-white text-[8px] font-black px-2 py-0.5 rounded-none uppercase tracking-widest">
                       {tier.badge}
                     </span>
                   )}
@@ -247,7 +247,7 @@ const OfferingAccordion = ({ tier }: { tier: EnterpriseTier }) => {
                 </div>
               </div>
 
-              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+              <div className="bg-slate-50 p-8 rounded-none border border-slate-100">
                 <h4 className="c9-eyebrow !text-slate-900 mb-6 flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-[#5D00D6]" />
                   Strategic Business Value
@@ -268,7 +268,7 @@ const OfferingAccordion = ({ tier }: { tier: EnterpriseTier }) => {
                 <h4 className="c9-eyebrow !text-slate-400 mb-4">Best Suited For</h4>
                 <div className="flex flex-wrap gap-2">
                   {tier.bestFor.map((item, idx) => (
-                    <span key={idx} className="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                    <span key={idx} className="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-none uppercase tracking-wider">
                       {item}
                     </span>
                   ))}
@@ -277,7 +277,7 @@ const OfferingAccordion = ({ tier }: { tier: EnterpriseTier }) => {
 
               <div className="space-y-4 pt-8">
                 <Link href={tier.primaryCTA.link} className="block w-full">
-                  <button className="w-full bg-[#5D00D6] text-white font-bold py-5 px-6 rounded-full hover:bg-[#4d00b3] transition-all duration-300 uppercase tracking-widest text-[12px] flex items-center justify-center gap-3 shadow-xl shadow-purple-900/20">
+                  <button className="w-full bg-[#5D00D6] text-white font-bold py-5 px-6 rounded-none hover:bg-[#4d00b3] transition-all duration-300 uppercase tracking-widest text-[12px] flex items-center justify-center gap-3 shadow-xl shadow-purple-900/20">
                     {tier.primaryCTA.text}
                     <ArrowRight size={18} />
                   </button>

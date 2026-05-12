@@ -825,15 +825,13 @@ export default function EnterprisePage() {
       <SectionEcosystem />
       <FinalCTA />
 
-      <section id="consultation-section" className="bg-slate-50 py-12">
-        <WpConsultationForm
-          showHeader={false}
-          eyebrow="STRATEGIC GOVERNANCE"
-          title="Speak to an Enterprise Solutions Lead"
-          description="Ready to consolidate your technology stack under a single accountable partner? Book a discovery session to discuss architecture, SLAs, and multi-site strategy."
-          formTitle="Request Enterprise Briefing"
-        />
-      </section>
+      <WpConsultationForm
+        showHeader={false}
+        eyebrow="STRATEGIC GOVERNANCE"
+        title="Speak to an Enterprise Solutions Lead"
+        description="Ready to consolidate your technology stack under a single accountable partner? Book a discovery session to discuss architecture, SLAs, and multi-site strategy."
+        formTitle="Request Enterprise Briefing"
+      />
     </main>
   );
 }

@@ -1162,16 +1162,13 @@ export default function SmallBusinessPageV3() {
       
       <FinalCTAV3 />
 
-      <section id="consultation-section" className="bg-white border-t border-slate-100">
-        <WpConsultationForm
-          showHeader={false}
-          eyebrow="READY TO SWITCH?"
-          title="Start Your Business Systems Assessment"
-          description="Expose the friction in your current environment and map out a safe, accountable strategy to move to C9. Zero disruption. Total accountability."
-          formTitle="Speak With a Transition Specialist"
-
-        />
-      </section>
+      <WpConsultationForm
+        showHeader={false}
+        eyebrow="READY TO SWITCH?"
+        title="Start Your Business Systems Assessment"
+        description="Expose the friction in your current environment and map out a safe, accountable strategy to move to C9. Zero disruption. Total accountability."
+        formTitle="Speak With a Transition Specialist"
+      />
 
     </main>
   );
