@@ -876,7 +876,88 @@ const OperationalProof = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 8 — SUPPORT & SLA
+   SECTION 8 — MANAGED IT & HELPDESK (The Human Element)
+   ───────────────────────────────────────────────────────── */
+const ManagedITHighlight = () => (
+  <section className="py-24 bg-white overflow-hidden border-t border-slate-100">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow mb-4">Accountable Managed IT</span>
+          <h2 className="c9-section-heading mb-6">
+            An Australian Helpdesk That <span className="text-[#5D00D6]">Actually Owns</span> the Outcome.
+          </h2>
+          <p className="c9-body mb-10 text-slate-600">
+            Most "Managed IT" providers stop at the ticket. C9 provides a dedicated operational hub that manages your entire environment—from your local network and WiFi to your cloud security and vendor relationships.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-6 mb-10">
+            {[
+              { 
+                title: 'AU-Based Helpdesk', 
+                desc: 'Speak directly to senior Australian engineers who know your site history.' 
+              },
+              { 
+                title: 'Proactive Governance', 
+                desc: 'We monitor your systems 24/7, resolving 80% of issues before your staff notices.' 
+              },
+              { 
+                title: 'Vendor Accountability', 
+                desc: 'We manage your other technical vendors so you never have to play middleman.' 
+              },
+              { 
+                title: 'Lifecycle Management', 
+                desc: 'Continuous tracking of hardware and software to prevent "surprise" failures.' 
+              }
+            ].map((item, i) => (
+              <div key={i} className="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-[#5D00D6]/20 transition-colors">
+                <h4 className="font-bold text-slate-900 text-[15px] mb-2 font-clash">{item.title}</h4>
+                <p className="text-slate-500 text-[13px] leading-relaxed font-dm-sans">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <a
+            href="#consultation-section"
+            className="inline-flex items-center justify-center gap-2 bg-[#0c1024] text-white rounded-full h-14 px-8 text-[14px] font-bold hover:bg-[#5D00D6] transition-all"
+          >
+            Review Your Managed IT Requirements
+          </a>
+        </FadeIn>
+
+        <FadeIn direction="right" className="relative">
+          <div className="relative rounded-[48px] overflow-hidden shadow-2xl border border-slate-100 aspect-square lg:aspect-auto lg:h-[600px] bg-slate-100">
+             <img 
+               src="/images/hero/managed-it-business.png" 
+               alt="Managed IT Helpdesk Operations" 
+               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+             />
+             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/60 via-transparent to-transparent" />
+             
+             {/* Floating Info Card */}
+             <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-xl">
+                <div className="flex items-center gap-4 mb-4">
+                   <div className="w-10 h-10 rounded-full bg-[#5D00D6] flex items-center justify-center text-white shrink-0">
+                      <Activity size={20} />
+                   </div>
+                   <div>
+                      <p className="text-[14px] font-bold text-slate-900 font-clash">Real-Time Accountability</p>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Active System Governance</p>
+                   </div>
+                </div>
+                <p className="text-[13px] text-slate-600 font-dm-sans leading-relaxed">
+                  "Unlike traditional MSPs, C9's Managed IT layer is built into your infrastructure. We don't just fix problems; we govern your entire technical environment to prevent them."
+                </p>
+             </div>
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 9 — SUPPORT & SLA
    ───────────────────────────────────────────────────────── */
 const SupportStructure = () => (
   <section className="py-12 lg:py-20 bg-slate-900 text-white overflow-hidden relative">
@@ -1070,6 +1151,7 @@ export default function SmallBusinessPageV3() {
       <AccountabilityPositioning />
       <IndustrySections />
       <TransitionFramework />
+      <ManagedITHighlight />
       <OutcomesOfferings />
       <PricingSection />
       <RiskReduction />
