@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Check, ArrowRight, ChevronDown, TrendingUp, Info } from 'lucide-react';
+import { Check, ArrowRight, ChevronDown, TrendingUp, Info, Zap, ShieldCheck } from 'lucide-react';
 import { ENTERPRISE_OFFERINGS_DATA, EnterpriseTier } from '@/data/enterprise-offerings';
 import { FadeIn } from '@/components/shared/FadeIn';
 import {
