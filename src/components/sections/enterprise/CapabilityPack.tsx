@@ -2,10 +2,30 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Download, CheckCircle, BookOpen, ShieldCheck } from 'lucide-react';
+import { Check, Download, ShieldCheck } from 'lucide-react';
 import { C9Button } from '@/components/design-system/C9Button';
+import Link from 'next/link';
 
-
+const CERTIFICATIONS = [
+  {
+    name: 'Cisco Certified Network Associate (CCNA)',
+    description: 'Enterprise-grade networking expertise',
+    logo: '/images/certifications/ccna.svg',
+    alt: 'CCNA Certification Logo'
+  },
+  {
+    name: 'Certified Information Systems Auditor (CISA)',
+    description: 'Audit-ready security governance',
+    logo: '/images/certifications/cisa.svg',
+    alt: 'CISA Certification Logo'
+  },
+  {
+    name: 'ITIL® 4 Foundation',
+    description: 'Best-practice service delivery',
+    logo: '/images/certifications/itil.svg',
+    alt: 'ITIL 4 Foundation Certification Logo'
+  }
+];
 
 const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
   <motion.div
@@ -22,85 +42,107 @@ export default function CapabilityPack() {
   return (
     <section className="py-20 lg:py-28 bg-slate-50 border-y border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-        <div className="bg-white rounded-none p-8 lg:p-20 shadow-2xl shadow-purple-900/5 border border-slate-100 relative">
+        <div className="bg-white rounded-none p-10 md:p-20 shadow-2xl shadow-purple-900/5 border border-slate-100 relative overflow-hidden">
           {/* Decorative Gradient */}
           <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#5D00D6]/5 to-transparent rounded-none pointer-events-none" />
 
-          <div className="grid lg:grid-cols-[60%_40%] gap-16 items-center">
-            <div>
-              <FadeIn>
-                <span className="c9-eyebrow mb-6">
-                  ENTERPRISE RESOURCES
-                </span>
-                <h2 className="c9-section-heading mb-8">
-                  Enterprise <br />
-                  <span className="text-[#5D00D6]">Capability Pack.</span>
-                </h2>
-                <p className="c9-body mb-12 text-slate-800">
-                  Download our complete service catalogue, SLA definitions, and multi-site case studies to assist in your vendor selection process.
-                </p>
-              </FadeIn>
-
-              <div className="grid sm:grid-cols-2 gap-8 mb-12">
+          {/* Custom Architecture Content (Moved from EnterpriseOfferings) */}
+          <div className="max-w-4xl mx-auto text-center relative z-10 mb-24">
+            <FadeIn>
+              <span className="c9-eyebrow mb-6">ENTERPRISE RESOURCES</span>
+              <h3 className="text-3xl md:text-5xl font-bold mb-8 font-clash leading-tight text-slate-900">
+                Complex Environments Require <br/><span className="text-[#5D00D6]">Custom Architecture.</span>
+              </h3>
+              
+              <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                If your enterprise operates across 50+ locations, maintains strict regulatory compliance, 
+                or requires deep integration with legacy industrial systems, our architects will design 
+                a bespoke governance model for you.
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6 mb-12 max-w-2xl mx-auto text-left">
                 {[
-                  { title: 'Service Catalogue', icon: BookOpen, desc: 'Full breakdown of managed IT, telco, and cloud services.' },
-                  { title: 'SLA Framework', icon: ShieldCheck, desc: 'Detailed response and resolution time commitments.' },
+                  "Multi-site redundancy design",
+                  "Regulatory compliance mapping",
+                  "Custom incident hierarchies",
+                  "Executive operational dashboarding"
                 ].map((item, i) => (
-                  <FadeIn key={i} delay={0.1 + i * 0.1}>
-                    <div className="flex gap-4">
-                      <div className="w-10 h-10 rounded-none bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0">
-                        <item.icon size={20} strokeWidth={2} aria-hidden="true" />
-                      </div>
-                      <div>
-                        <h4 className="c9-card-title !text-sm mb-1">{item.title}</h4>
-                        <p className="c9-body !text-[13px] text-slate-800">{item.desc}</p>
-                      </div>
-                    </div>
-                  </FadeIn>
+                  <div key={i} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-[#5D00D6]" />
+                    <span className="text-[15px] font-medium text-slate-700">{item}</span>
+                  </div>
                 ))}
               </div>
-
-              <FadeIn delay={0.3}>
-                <C9Button
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <C9Button 
                   size="lg"
-                  className="rounded-none shadow-xl shadow-purple-900/20"
+                  className="rounded-full shadow-xl shadow-purple-900/20"
                   onClick={() => {
-                    window.location.href = '/contact';
+                    document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Download Capability Pack (PDF)
-                  <Download size={20} className="ml-2" aria-hidden="true" />
+                  Schedule Executive Briefing
                 </C9Button>
+                <C9Button 
+                  variant="outline"
+                  size="lg"
+                  className="rounded-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all"
+                  onClick={() => {
+                    window.location.href = '/enterprise/capabilities-guide';
+                  }}
+                >
+                  Download Capabilities Guide
+                </C9Button>
+              </div>
+            </FadeIn>
+          </div>
+
+          {/* Certifications Section (Light Theme) */}
+          <div className="border-t border-slate-100 pt-20">
+            <div className="text-center mb-16">
+              <FadeIn>
+                <h3 className="c9-section-heading !text-3xl mb-4 text-slate-900">Certified Expertise. Proven Delivery.</h3>
+                <p className="c9-body max-w-2xl mx-auto text-slate-600">
+                  Backed by globally recognised certifications in networking, cybersecurity, and service operations.
+                </p>
               </FadeIn>
             </div>
 
-            <FadeIn delay={0.2}>
-              <div className="relative">
-                {/* Visual Representation of the Pack */}
-                <div className="aspect-[3/4] bg-slate-900 rounded-none p-10 text-white relative overflow-hidden shadow-2xl lg:rotate-3 group-hover:rotate-0 duration-700 border border-white/5">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent" />
-                  <FileText size={48} className="text-[#a56eff] mb-8" aria-hidden="true" />
-                  <h3 className="text-3xl font-black mb-4 leading-tight text-white">
-                    C9 <br/>
-                    Capability <br/>
-                    Catalogue
-                  </h3>
-                  <div className="w-12 h-1 bg-[#5D00D6] mb-8" />
-                  <div className="space-y-4 opacity-60">
-                    <div className="h-2 bg-white/20 rounded w-full" />
-                    <div className="h-2 bg-white/20 rounded w-[80%]" />
-                    <div className="h-2 bg-white/20 rounded w-full" />
-                    <div className="h-2 bg-white/20 rounded w-[60%]" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {CERTIFICATIONS.map((cert, index) => (
+                <FadeIn key={index} delay={index * 0.1}>
+                  <div 
+                    className={`
+                      flex flex-col items-center text-center p-10 bg-slate-50 border border-slate-200 
+                      rounded-none transition-all duration-300 group
+                      hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 hover:border-[#5D00D6]/20
+                      h-full
+                      ${index === 2 ? 'sm:col-span-2 lg:col-span-1 sm:max-w-md sm:mx-auto lg:max-w-none' : ''}
+                    `}
+                  >
+                    {/* Logo Container */}
+                    <div className="mb-8 flex items-center justify-center h-16 w-full">
+                      <img 
+                        src={cert.logo} 
+                        alt={cert.alt}
+                        className="max-h-full max-w-[160px] object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex flex-col flex-1">
+                      <h4 className="text-lg font-bold text-slate-900 mb-3 leading-tight">
+                        {cert.name}
+                      </h4>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        {cert.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="absolute bottom-10 left-10 right-10 flex items-center justify-between">
-                    <span className="text-[10px] font-black tracking-widest uppercase text-white/60">v2.4 | 2024</span>
-                    <ShieldCheck size={24} className="text-white/20" aria-hidden="true" />
-                  </div>
-                </div>
-                {/* Secondary Page Peeking Out */}
-                <div className="absolute inset-0 -z-10 bg-slate-200 rounded-none -rotate-3 translate-x-4" />
-              </div>
-            </FadeIn>
+                </FadeIn>
+              ))}
+            </div>
           </div>
         </div>
       </div>

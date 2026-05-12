@@ -318,7 +318,7 @@ interface ProblemSolutionSectionProps {
 export default function ProblemSolutionSection({
   data = OFFERINGS_DATA,
   eyebrow = "SOLUTIONS TO YOUR PROBLEMS",
-  title = <>Your Infrastructure Challenges, <span className="text-[#5D00D6]">Solved.</span></>,
+  title = <>Your Telco & IT Challenges, <span className="text-[#5D00D6]">Solved.</span></>,
   description = "We understand the pain points of growing small businesses. Here's how we solve each one—with proven results and single-vendor accountability."
 }: ProblemSolutionSectionProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 

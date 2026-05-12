@@ -16,10 +16,10 @@ import {
 } from 'lucide-react';
 
 const STATUS_ITEMS = [
-  { name: 'Enterprise Fibre', status: 'Active', color: 'bg-emerald-500', icon: <Globe size={14} /> },
+  { name: 'NBN', status: 'Active', color: 'bg-emerald-500', icon: <Globe size={14} /> },
   { name: 'CCTV Surveillance', status: 'Monitoring', color: 'bg-emerald-500', icon: <Shield size={14} /> },
-  { name: 'VoIP Network', status: 'Online', color: 'bg-emerald-500', icon: <Phone size={14} /> },
-  { name: 'Guest WiFi', status: 'High Traffic', color: 'bg-amber-500', icon: <Wifi size={14} /> },
+  { name: 'Phone system', status: 'Online', color: 'bg-emerald-500', icon: <Phone size={14} /> },
+  { name: 'wifi', status: 'High Traffic', color: 'bg-amber-500', icon: <Wifi size={14} /> },
 ];
 
 export const SiteMissionControl = () => {
@@ -52,10 +52,7 @@ export const SiteMissionControl = () => {
               ))}
             </div>
 
-            <button className="flex items-center gap-2 text-[#5D00D6] font-black uppercase tracking-widest text-[11px] group">
-              Explore the Dashboard Experience 
-              <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+
           </div>
 
           {/* Mockup Dashboard UI */}

@@ -97,7 +97,7 @@ const Hero = () => (
               <div className="flex flex-col sm:flex-row gap-3">
                 <C9Button
                   size="lg"
-                  className="rounded-none shadow-lg shadow-purple-900/20"
+                  className="rounded-full shadow-lg shadow-purple-900/20"
                   onClick={() => {
                     document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                   }}
@@ -107,7 +107,7 @@ const Hero = () => (
                 <C9Button
                   variant="outline"
                   size="lg"
-                  className="rounded-none border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all"
+                  className="rounded-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all"
                   onClick={() => {
                     document.getElementById('platform')?.scrollIntoView({ behavior: 'smooth' });
                   }}
@@ -769,7 +769,7 @@ const FinalCTA = () => (
            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <C9Button 
                  size="lg"
-                 className="bg-[#5D00D6] text-white rounded-none hover:bg-[#4d00b3] transition-all shadow-2xl shadow-purple-900/40"
+                 className="bg-[#5D00D6] text-white rounded-full shadow-2xl shadow-purple-900/40"
                  onClick={() => {
                    document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                  }}
@@ -779,7 +779,7 @@ const FinalCTA = () => (
                <C9Button 
                  variant="outline"
                  size="lg"
-                 className="border-2 border-white/20 text-white rounded-none hover:bg-white hover:text-[#0c1024] transition-all"
+                 className="border-2 border-white/20 text-white rounded-full hover:bg-white hover:text-[#0c1024] transition-all"
                  onClick={() => {
                    document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                  }}
@@ -819,6 +819,7 @@ export default function EnterprisePage() {
       <SectionScalability />
       <SectionSecurity />
       <EnterpriseOfferingsSection />
+      <SectionCapabilityPack />
       <SectionArchitecture />
       <WpVendors />
       <SectionProof />

@@ -110,53 +110,6 @@ export const EnterpriseOfferingsSection = () => {
           </div>
         </div>
 
-        {/* Custom Quote Section */}
-        <FadeIn delay={0.4}>
-          <div className="mt-24 p-10 md:p-20 bg-slate-900 text-white rounded-none relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
-               <div className="absolute top-[-20%] right-[-10%] w-[80%] h-[80%] bg-[#5D00D6] rounded-full blur-[120px]" />
-            </div>
-
-            <div className="max-w-4xl mx-auto text-center relative z-10">
-              <h3 className="text-3xl md:text-5xl font-bold mb-8 font-clash leading-tight">
-                Complex Environments Require <br/><span className="text-[#5D00D6]">Custom Architecture.</span>
-              </h3>
-              
-              <p className="text-lg text-white/60 mb-10 leading-relaxed font-dm-sans max-w-2xl mx-auto">
-                If your enterprise operates across 50+ locations, maintains strict regulatory compliance, 
-                or requires deep integration with legacy industrial systems, our architects will design 
-                 a bespoke governance model for you.
-              </p>
-              
-              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6 mb-12 max-w-2xl mx-auto text-left">
-                {[
-                  "Multi-site redundancy design",
-                  "Regulatory compliance mapping",
-                  "Custom incident hierarchies",
-                  "Executive operational dashboarding"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-[#5D00D6]" />
-                    <span className="text-[15px] font-medium font-dm-sans text-white/80">{item}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link href="#consultation-section">
-                  <button className="bg-[#5D00D6] text-white font-bold py-4 px-10 rounded-none hover:bg-[#4d00b3] transition-all duration-300 uppercase tracking-widest text-[13px] shadow-xl shadow-purple-900/40">
-                    Schedule Executive Briefing
-                  </button>
-                </Link>
-                <Link href="/enterprise/capabilities-guide">
-                  <button className="bg-transparent border-2 border-white/20 text-white font-bold py-4 px-10 rounded-none hover:border-white transition-all duration-300 uppercase tracking-widest text-[13px]">
-                    Download Capabilities Guide
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </FadeIn>
       </div>
     </section>
   );
@@ -277,7 +230,7 @@ const OfferingAccordion = ({ tier }: { tier: EnterpriseTier }) => {
 
               <div className="space-y-4 pt-8">
                 <Link href={tier.primaryCTA.link} className="block w-full">
-                  <button className="w-full bg-[#5D00D6] text-white font-bold py-5 px-6 rounded-none hover:bg-[#4d00b3] transition-all duration-300 uppercase tracking-widest text-[12px] flex items-center justify-center gap-3 shadow-xl shadow-purple-900/20">
+                  <button className="w-full bg-[#5D00D6] text-white font-bold py-5 px-6 rounded-full hover:bg-[#4d00b3] transition-all duration-300 uppercase tracking-widest text-[12px] flex items-center justify-center gap-3 shadow-xl shadow-purple-900/20">
                     {tier.primaryCTA.text}
                     <ArrowRight size={18} />
                   </button>
