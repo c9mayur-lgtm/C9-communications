@@ -195,7 +195,7 @@ const MatrixRow = ({ label, foundation, strategic, premium, custom }: {
 
 const OfferingAccordion = ({ tier }: { tier: EnterpriseTier }) => {
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion collapsible className="w-full">
       <AccordionItem value={tier.id} className="border border-slate-200 rounded-none px-8 bg-white mb-4 overflow-hidden">
         <AccordionTrigger className="hover:no-underline py-8 group">
           <div className="flex items-center justify-between w-full pr-6">
