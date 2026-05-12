@@ -12,6 +12,7 @@ import { EnterpriseOfferingsSection } from '@/components/sections/EnterpriseOffe
 import { C9Button } from '@/components/design-system/C9Button';
 import { WpVendors } from '@/components/wordpress/WpVendors';
 import PlatformStack from '@/components/sections/enterprise/PlatformStack';
+import CapabilityPack from '@/components/sections/enterprise/CapabilityPack';
 import { 
   Table, 
   TableHeader, 
