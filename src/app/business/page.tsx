@@ -1091,11 +1091,6 @@ export default function SmallBusinessPageV3() {
         />
       </section>
 
-      <footer className="py-12 bg-white border-t border-slate-100 text-center font-dm-sans">
-         <div className={C}>
-            <p className="text-slate-400 text-[11px] font-bold uppercase tracking-[0.3em]">© 2026 C9 Communications. Australian Managed Infrastructure & Accountability Specialist.</p>
-         </div>
-      </footer>
     </main>
   );
 }
