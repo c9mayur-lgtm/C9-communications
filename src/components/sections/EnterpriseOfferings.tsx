@@ -3,7 +3,7 @@
 import React from 'react';
 import { Check, ArrowRight, ChevronDown, TrendingUp, Info } from 'lucide-react';
 import { ENTERPRISE_OFFERINGS_DATA, EnterpriseTier } from '@/data/enterprise-offerings';
-import { FadeIn } from '../animations/FadeIn';
+import { FadeIn } from '@/components/shared/FadeIn';
 import {
   Accordion,
   AccordionContent,
