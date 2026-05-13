@@ -177,7 +177,7 @@ export default function FastFibrePage() {
                What "1:1 Contention" Actually Means for Your Business.
             </h2>
             <p className="c9-body text-lg">
-               Standard broadband is shared with the rest of your street. During peak hours, your speeds drop. 1:1 Fast Fibre means the line goes straight to your premises and is not shared with anyone else. You get exactly the speed you pay for, 24/7.
+               Standard broadband is shared with the rest of your street. During peak hours, your speeds drop. 1:1 Fast Fibre means the line goes straight to your premises and is not shared with anyone else. You get exactly the speed you pay for, consistently.
             </p>
           </FadeIn>
 
@@ -551,7 +551,7 @@ export default function FastFibrePage() {
         faqItems={[
           { q: "How is Fast Fibre different from standard business nbn™?", a: "Fast Fibre provides dedicated 1:1 bandwidth, meaning your speeds aren't shared with other businesses. It also carries a higher uptime SLA (99.95%) and lower latency, making it ideal for critical operations." },
           { q: "How long does installation take?", a: "Installation times vary based on the carrier and site readiness, but we manage the entire project end-to-end to ensure you are operational by your target date." },
-          { q: "What happens if the fibre link goes down?", a: "We architect every connection with failover paths. Our NOC monitors your link 24/7, and our senior engineers own the restoration process until you are back online." }
+          { q: "What happens if the fibre link goes down?", a: "We architect every connection with failover paths. Our NOC monitors your link proactively, and our senior engineers own the restoration process until you are back online." }
         ]}
       />
     </main>

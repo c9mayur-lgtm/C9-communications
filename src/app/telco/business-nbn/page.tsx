@@ -68,7 +68,7 @@ export default function BusinessNbnPage() {
 
               <FadeIn delay={0.15}>
                  <p className="c9-body mb-8 max-w-[580px] text-lg">
-                    Stop accepting downtime as a cost of business. C9 provides the internet reliability and provider accountability needed to keep your POS, cloud apps, and voice systems live 24/7.
+                    Stop accepting downtime as a cost of business. C9 provides the internet reliability and provider accountability needed to keep your POS, cloud apps, and voice systems live consistently.
                  </p>
               </FadeIn>
 

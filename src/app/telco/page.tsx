@@ -295,7 +295,7 @@ const SectionResilience = () => (
           <div className="grid sm:grid-cols-2 gap-8 mb-10">
             {[
               { title: "Multi-Carrier Failover", desc: "Automatic carrier diversity to eliminate single points of failure." },
-              { title: "Proactive Link Monitoring", desc: "24/7 pings to detect link degradation before downtime occurs." },
+              { title: "Proactive Link Monitoring", desc: "Proactive pings to detect link degradation before downtime occurs." },
               { title: "Seamless Voice Failover", desc: "Your Teams calls and phone lines stay active even if primary internet drops." },
               { title: "SLA-Backed Escalation", desc: "Structured carrier escalation to ensure rapid incident resolution." }
             ].map((item, i) => (
@@ -381,7 +381,7 @@ const SectionProcess = () => (
                { step: '01', title: "Audit", desc: "Absolute audit of your current connectivity environment to identify risks and contract traps." },
                { step: '02', title: "Strategy", desc: "Design of a standardized, multi-site internet and voice blueprint for your business." },
                { step: '03', title: "Execution", desc: "Managed rollout or migration with dedicated carrier coordination and installation support." },
-               { step: '04', title: "Governance", desc: "24/7 NOC monitoring, proactive carrier management, and quarterly reviews." }
+               { step: '04', title: "Governance", desc: "NOC monitoring, proactive carrier management, and quarterly reviews." }
             ].map((s, i) => (
                <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all border-b-4 hover:border-b-[#5D00D6]">
                   <div className="text-[40px] font-bold text-slate-100 absolute top-6 right-6 leading-none" aria-hidden="true">
@@ -415,7 +415,7 @@ const SectionMonitoring = () => (
              <span className="c9-eyebrow !text-[#a56eff] mb-4">Carrier Management</span>
              <h2 className="c9-section-heading !text-white mb-6">Issues Resolved Before Operational Impact.</h2>
              <p className="c9-body !text-white/95 mb-10 leading-relaxed font-medium">
-                Our 24/7 NOC continuously governs every managed connection. We identify drops, packet loss, or latency in real-time and handle the carrier escalation directly, ensuring your business stays connected.
+                Our NOC continuously governs every managed connection. We identify drops, packet loss, or latency in real-time and handle the carrier escalation directly, ensuring your business stays connected.
              </p>
              <div className="space-y-4 mb-10">
                 {[
