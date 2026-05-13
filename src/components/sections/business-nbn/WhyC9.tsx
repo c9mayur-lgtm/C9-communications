@@ -45,24 +45,27 @@ export default function WhyC9() {
 
         {/* Feature 4-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-          {reasons.map((r, i) => (
-            <motion.div 
-               key={i} 
-               whileHover={{ y: -5 }}
-               className="flex flex-col items-center text-center lg:text-left"
-            >
-               <div className="relative mb-6">
-                  <div className="absolute -inset-2 bg-[#5D00D6]/20 rounded-full blur-xl group-hover:bg-[#5D00D6]/40 transition-all" />
-                  <div className="relative w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-3 text-white group-hover:scale-110">
-                     <r.icon size={32} strokeWidth={1.75} />
-                  </div>
-               </div>
-               <h3 className="text-[20px] font-bold text-white mb-4 tracking-tight leading-tight">{r.title}</h3>
-               <p className="text-[14px] text-gray-400 leading-relaxed font-medium">
-                  {r.desc}
-               </p>
-            </motion.div>
-          ))}
+          {reasons.map((r, i) => {
+            const Icon = r.icon;
+            return (
+              <motion.div 
+                 key={i} 
+                 whileHover={{ y: -5 }}
+                 className="flex flex-col items-center text-center lg:text-left"
+              >
+                 <div className="relative mb-6">
+                    <div className="absolute -inset-2 bg-[#5D00D6]/20 rounded-full blur-xl group-hover:bg-[#5D00D6]/40 transition-all" />
+                    <div className="relative w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-3 text-white group-hover:scale-110">
+                       <Icon size={32} strokeWidth={1.75} />
+                    </div>
+                 </div>
+                 <h3 className="text-[20px] font-bold text-white mb-4 tracking-tight leading-tight">{r.title}</h3>
+                 <p className="text-[14px] text-gray-400 leading-relaxed font-medium">
+                    {r.desc}
+                 </p>
+              </motion.div>
+            );
+          })}
         </div>
 
       </div>

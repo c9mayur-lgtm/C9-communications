@@ -85,17 +85,19 @@ export const WpSolutions = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cards.map((s, i) => (
-            <div key={i} className="bg-white p-6 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full relative border border-transparent hover:border-gray-100 focus-within:ring-2 focus-within:ring-[#5D00D6]">
-              {s.url && (
-                <Link href={s.url} className="absolute inset-0 z-0" aria-label={`View details about ${s.title}`} />
-              )}
-              
-              <div className="relative z-10 flex flex-col flex-grow pointer-events-none">
-                {/* Icon */}
-                <div className="mb-6">
-                  <s.icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />
-                </div>
+          {cards.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <div key={i} className="bg-white p-6 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full relative border border-transparent hover:border-gray-100 focus-within:ring-2 focus-within:ring-[#5D00D6]">
+                {s.url && (
+                  <Link href={s.url} className="absolute inset-0 z-0" aria-label={`View details about ${s.title}`} />
+                )}
+                
+                <div className="relative z-10 flex flex-col flex-grow pointer-events-none">
+                  {/* Icon */}
+                  <div className="mb-6">
+                    <Icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />
+                  </div>
 
                 {/* Title */}
                 <h3 className="c9-card-title mb-3 text-[#0c1024] group-hover:text-[#5D00D6] transition-colors">{s.title}</h3>

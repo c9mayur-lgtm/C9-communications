@@ -229,30 +229,33 @@ export default function SipTrunkingPage() {
                 solution: "Instantly scale call capacity to match your business growth.",
                 icon: TrendingUp 
               }
-            ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.05}>
-                <div className="group bg-slate-50 p-8 rounded-[32px] border border-slate-100 h-full hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300">
-                    <item.icon size={22} strokeWidth={1.5} />
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <FadeIn key={i} delay={i * 0.05}>
+                  <div className="group bg-slate-50 p-8 rounded-[32px] border border-slate-100 h-full hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300">
+                      <Icon size={22} strokeWidth={1.5} />
+                    </div>
+                    <h3 className="c9-card-title mb-4 text-[#0c1024]">{item.title}</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Operational Challenge</div>
+                        <p className="text-[13px] text-slate-600 leading-relaxed">{item.challenge}</p>
+                      </div>
+                      <div>
+                        <div className="text-[10px] font-black text-rose-400 uppercase tracking-widest mb-1">Business Impact</div>
+                        <p className="text-[13px] text-slate-600 leading-relaxed font-bold">{item.impact}</p>
+                      </div>
+                      <div className="pt-2 border-t border-slate-100">
+                        <div className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-1">The SIP Solution</div>
+                        <p className="text-[13px] text-slate-700 leading-relaxed">{item.solution}</p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="c9-card-title mb-4 text-[#0c1024]">{item.title}</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Operational Challenge</div>
-                      <p className="text-[13px] text-slate-600 leading-relaxed">{item.challenge}</p>
-                    </div>
-                    <div>
-                      <div className="text-[10px] font-black text-rose-400 uppercase tracking-widest mb-1">Business Impact</div>
-                      <p className="text-[13px] text-slate-600 leading-relaxed font-bold">{item.impact}</p>
-                    </div>
-                    <div className="pt-2 border-t border-slate-100">
-                      <div className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-1">The SIP Solution</div>
-                      <p className="text-[13px] text-slate-700 leading-relaxed">{item.solution}</p>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </Section>

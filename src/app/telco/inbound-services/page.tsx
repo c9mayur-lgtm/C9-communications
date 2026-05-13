@@ -295,17 +295,20 @@ export default function InboundServicesPage() {
                 { title: "Escalation Clarity", desc: "Defined logic that ensures complex calls move to experts automatically.", icon: ShieldCheck },
                 { title: "Overflow Handling", desc: "Smart rerouting to ensure no customer is left waiting during surges.", icon: RefreshCcw },
                 { title: "Performance Dashboards", desc: "Real-time visibility for team leads to manage resources dynamically.", icon: Monitor }
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col gap-3">
-                   <div className="flex items-center gap-3">
-                      <div className="p-2.5 rounded-xl bg-white/5 text-[#a56eff] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300 border border-white/10 group-hover:border-[#5D00D6]">
-                         <item.icon className="w-4 h-4 shrink-0" />
-                      </div>
-                      <h3 className="font-bold text-white text-[16px] mb-0">{item.title}</h3>
-                   </div>
-                   <p className="text-white/40 text-[13px] leading-relaxed !mb-0">{item.desc}</p>
-                </div>
-              ))}
+              ].map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div key={i} className="flex flex-col gap-3">
+                     <div className="flex items-center gap-3">
+                        <div className="p-2.5 rounded-xl bg-white/5 text-[#a56eff] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300 border border-white/10 group-hover:border-[#5D00D6]">
+                           <Icon className="w-4 h-4 shrink-0" />
+                        </div>
+                        <h3 className="font-bold text-white text-[16px] mb-0">{item.title}</h3>
+                     </div>
+                     <p className="text-white/40 text-[13px] leading-relaxed !mb-0">{item.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
           

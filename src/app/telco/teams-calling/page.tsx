@@ -183,17 +183,20 @@ export default function TeamsCallingPage() {
               { title: "Desk Phone Integration", desc: "Certified hardware deployment and management for office environments.", icon: HardDrive },
               { title: "User Onboarding", desc: "Structured training and support to ensure high adoption and user confidence.", icon: UserPlus },
               { title: "Ongoing Support", desc: "Direct access to Australian engineers for escalation and system management.", icon: Settings }
-            ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.05}>
-                <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300">
-                    <item.icon size={22} strokeWidth={1.5} />
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <FadeIn key={i} delay={i * 0.05}>
+                  <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300">
+                      <Icon size={22} strokeWidth={1.5} />
+                    </div>
+                    <h3 className="c9-card-title mb-3 text-[#0c1024]">{item.title}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
                   </div>
-                  <h3 className="c9-card-title mb-3 text-[#0c1024]">{item.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </Section>
@@ -228,17 +231,20 @@ export default function TeamsCallingPage() {
                   { title: "Disconnected Remote Users", desc: "Unifying mobile and office staff into a single, high-quality voice ecosystem.", icon: Smartphone },
                   { title: "Poor Teams Voice Quality", desc: "Optimising network paths and carrier connections to guarantee crystal-clear calling.", icon: CheckCircle },
                   { title: "Number Porting Anxiety", desc: "Managed porting processes that ensure you never lose contact with your customers.", icon: RefreshCcw }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-5">
-                    <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center shrink-0 mt-1 text-[#5D00D6]">
-                      <item.icon size={20} />
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i} className="flex gap-5">
+                      <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center shrink-0 mt-1 text-[#5D00D6]">
+                        <Icon size={20} />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-[#0c1024] mb-1">{item.title}</h4>
+                        <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-[#0c1024] mb-1">{item.title}</h4>
-                      <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
               <div className="mt-10">
                 <div className="flex flex-wrap gap-4">
@@ -404,19 +410,22 @@ export default function TeamsCallingPage() {
                 </p>
                 <div className="grid sm:grid-cols-2 gap-8">
                   {[
-                    { title: "Direct Escalation", desc: "Skip the queues. Speak with Australian engineers who know your environment.", icon: Headphones },
-                    { title: "Hybrid Workforce Support", desc: "Expert troubleshooting for office, mobile, and home-office users.", icon: Smartphone },
-                    { title: "Uptime Accountability", desc: "Rigorous SLAs that ensure your communication stays online 24/7.", icon: ShieldCheck },
-                    { title: "Workflow Optimization", desc: "Continuous refinement of call flows and auto attendants as you grow.", icon: Settings }
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-4">
-                      <div className="text-[#5D00D6] shrink-0 mt-1"><item.icon size={18} /></div>
-                      <div>
-                        <h4 className="font-bold text-white text-sm mb-1">{item.title}</h4>
-                        <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                    { title: "Escalation Ownership", desc: "We manage the carrier and Microsoft escalation path for you.", icon: ShieldCheck },
+                    { title: "Network Optimisation", desc: "End-to-end path testing to ensure call quality and reliability.", icon: Activity },
+                    { title: "Australian Support", desc: "Direct access to our local engineering team for all voice issues.", icon: Headphones },
+                    { title: "Direct Peering", desc: "High-performance voice transit for crystal clear audio quality.", icon: Zap }
+                  ].map((item, i) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={i} className="flex gap-4">
+                        <div className="text-[#5D00D6] shrink-0 mt-1"><Icon size={18} /></div>
+                        <div>
+                          <h4 className="font-bold text-white text-sm mb-1">{item.title}</h4>
+                          <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </FadeIn>
             </div>

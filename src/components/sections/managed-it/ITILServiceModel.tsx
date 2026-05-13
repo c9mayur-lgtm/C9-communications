@@ -83,26 +83,29 @@ export default function ITILServiceModel() {
           </FadeIn>
 
           <div className="grid sm:grid-cols-2 gap-6 relative">
-            {serviceStages.map((stage, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-none p-10 border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 h-full">
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="w-14 h-14 rounded-none bg-[#5D00D6]/5 text-[#5D00D6] flex items-center justify-center group-hover:scale-110 duration-500">
-                      <stage.icon size={28} strokeWidth={1.5} aria-hidden="true" />
+            {serviceStages.map((stage, i) => {
+              const Icon = stage.icon;
+              return (
+                <FadeIn key={i} delay={i * 0.1}>
+                  <div className="bg-white rounded-none p-10 border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 h-full">
+                    <div className="flex items-center justify-between mb-8">
+                      <div className="w-14 h-14 rounded-none bg-[#5D00D6]/5 text-[#5D00D6] flex items-center justify-center group-hover:scale-110 duration-500">
+                        <Icon size={28} strokeWidth={1.5} aria-hidden="true" />
+                      </div>
+                      <span className="c9-eyebrow !text-slate-800 !text-[9px] bg-slate-50 px-3 py-1.5 rounded-none group-hover:!text-[#5D00D6] group-hover:bg-[#5D00D6]/5 transition-colors">
+                        {stage.tag}
+                      </span>
                     </div>
-                    <span className="c9-eyebrow !text-slate-800 !text-[9px] bg-slate-50 px-3 py-1.5 rounded-none group-hover:!text-[#5D00D6] group-hover:bg-[#5D00D6]/5 transition-colors">
-                      {stage.tag}
-                    </span>
+                    <h3 className="c9-card-title mb-4">
+                      {stage.title}
+                    </h3>
+                    <p className="c9-body !text-sm text-slate-800">
+                      {stage.desc}
+                    </p>
                   </div>
-                  <h3 className="c9-card-title mb-4">
-                    {stage.title}
-                  </h3>
-                  <p className="c9-body !text-sm text-slate-800">
-                    {stage.desc}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </div>

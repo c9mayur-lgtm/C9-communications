@@ -68,17 +68,20 @@ export const WpConsultationForm = ({
                     { title: '1. A real Australian calls you', body: 'Not a call centre. Not a script. Someone who actually knows IT.', icon: Phone },
                     { title: '2. We review your current gaps', body: 'We show you exactly where your infrastructure is exposed.', icon: Search },
                     { title: '3. You get a clear roadmap', body: 'Plain English. Exact pricing. No lock-in or pressure.', icon: FileText }
-                  ].map((step, idx) => (
-                    <div key={idx} className="flex gap-3 items-start">
-                      <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0 mt-0.5">
-                        <step.icon size={15} />
+                  ].map((step, idx) => {
+                    const Icon = step.icon;
+                    return (
+                      <div key={idx} className="flex gap-3 items-start">
+                        <div className="w-8 h-8 rounded-lg bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0 mt-0.5">
+                          <Icon size={15} />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-[#0c1024] text-[15px] mb-0.5">{step.title}</h4>
+                          <p className="text-[14px] leading-relaxed text-[#0c1024]/70 font-normal">{step.body}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-[#0c1024] text-[15px] mb-0.5">{step.title}</h4>
-                        <p className="text-[14px] leading-relaxed text-[#0c1024]/70 font-normal">{step.body}</p>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </FadeIn>

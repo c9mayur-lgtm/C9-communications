@@ -87,19 +87,21 @@ export default function SingleBillSection() {
           <div className="flex flex-col gap-6">
              <p className="c9-eyebrow !text-[#5D00D6] mb-4">Related Services</p>
              <div className="flex flex-col gap-5">
-                {SERVICES.map((service, i) => (
-                  <motion.a 
-                    key={i}
-                    href={service.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="p-8 bg-gray-50 border border-gray-100 rounded-[32px] hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all flex gap-6 items-center"
-                  >
-                    <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0">
-                       <service.icon size={26} strokeWidth={1.5} />
-                    </div>
+                {SERVICES.map((service, i) => {
+                  const Icon = service.icon;
+                  return (
+                    <motion.a 
+                      key={i}
+                      href={service.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                      className="p-8 bg-gray-50 border border-gray-100 rounded-[32px] hover:border-[#5D00D6]/20 hover:shadow-xl hover:shadow-[#5D00D6]/5 transition-all flex gap-6 items-center"
+                    >
+                      <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#5D00D6] shrink-0">
+                         <Icon size={26} strokeWidth={1.5} />
+                      </div>
                     <div className="flex flex-col gap-1 items-start text-left">
                       <h4 className="text-[18px] font-medium text-[#1A1A2E] leading-tight group-hover:text-[#5D00D6] transition-colors">{service.title}</h4>
                       <p className="c9-body !text-[14px] mb-1">{service.body}</p>

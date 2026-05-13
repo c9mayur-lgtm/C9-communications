@@ -263,15 +263,18 @@ export default function Plans() {
             {[
               { id: '4G', icon: Share2, label: 'Standard 4G' },
               { id: '5G', icon: Zap, label: 'Premium 5G' }
-            ].map((t) => (
-              <button
-                key={t.id}
-                onClick={() => setNetwork(t.id as any)}
-                className={`flex items-center gap-3 px-8 py-4 rounded-[18px] text-[14px] font-bold transition-all ${network === t.id ? 'bg-[#5D00D6] text-white shadow-xl shadow-[#5D00D6]/20' : 'text-slate-400 hover:text-[#5D00D6]'}`}
-              >
-                <t.icon size={18} /> {t.label}
-              </button>
-            ))}
+            ].map((t) => {
+              const Icon = t.icon;
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => setNetwork(t.id as any)}
+                  className={`flex items-center gap-3 px-8 py-4 rounded-[18px] text-[14px] font-bold transition-all ${network === t.id ? 'bg-[#5D00D6] text-white shadow-xl shadow-[#5D00D6]/20' : 'text-slate-400 hover:text-[#5D00D6]'}`}
+                >
+                  <Icon size={18} /> {t.label}
+                </button>
+              );
+            })}
           </div>
         </div>
 

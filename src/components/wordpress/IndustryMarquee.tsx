@@ -66,16 +66,18 @@ const INDUSTRIES = [
   }
 ];
 
-const IndustryCard = ({ industry }: { industry: typeof INDUSTRIES[0] }) => (
-  <div className="bg-[#F9F7FF] border border-[#E9E4FF] rounded-[32px] p-10 shadow-sm hover:shadow-2xl hover:border-[#5D00D6]/30 transition-all flex flex-col h-full">
-    <div className="flex justify-between items-start mb-8">
-      <span className="px-4 py-1.5 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] text-[11px] font-bold tracking-widest uppercase">
-        {industry.tag}
-      </span>
-      <div className="w-12 h-12 rounded-2xl bg-white border border-[#E9E4FF] flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shadow-sm">
-        <industry.icon size={24} />
+const IndustryCard = ({ industry }: { industry: typeof INDUSTRIES[0] }) => {
+  const Icon = industry.icon;
+  return (
+    <div className="bg-[#F9F7FF] border border-[#E9E4FF] rounded-[32px] p-10 shadow-sm hover:shadow-2xl hover:border-[#5D00D6]/30 transition-all flex flex-col h-full">
+      <div className="flex justify-between items-start mb-8">
+        <span className="px-4 py-1.5 rounded-full bg-[#5D00D6]/10 text-[#5D00D6] text-[11px] font-bold tracking-widest uppercase">
+          {industry.tag}
+        </span>
+        <div className="w-12 h-12 rounded-2xl bg-white border border-[#E9E4FF] flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-colors shadow-sm">
+          <Icon size={24} />
+        </div>
       </div>
-    </div>
     
     <h3 className="text-[20px] font-bold text-[#0c1024] mb-3 tracking-tight leading-tight" >
       {industry.title}

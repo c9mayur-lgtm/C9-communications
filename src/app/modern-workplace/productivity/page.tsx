@@ -284,15 +284,17 @@ const ManagedScopeUI = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-      {items.map((item, i) => (
-        <FadeUp key={i} delay={i * 0.05} className="bg-white rounded-[32px] p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 flex flex-col">
-          <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
-            <item.icon size={22} />
-          </div>
-          <h3 className="text-[20px] font-bold text-[#0c1024] mb-4">{item.title}</h3>
-          <p className="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow">
-            {item.content}
-          </p>
+      {items.map((item, i) => {
+        const Icon = item.icon;
+        return (
+          <FadeUp key={i} delay={i * 0.05} className="bg-white rounded-[32px] p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 flex flex-col">
+            <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors duration-500">
+              <Icon size={22} />
+            </div>
+            <h3 className="text-[20px] font-bold text-[#0c1024] mb-4">{item.title}</h3>
+            <p className="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow">
+              {item.content}
+            </p>
           <div className="pt-6 border-t border-gray-50 space-y-3">
             {item.bullets.map((bullet, bi) => (
               <div key={bi} className="flex items-center gap-3">

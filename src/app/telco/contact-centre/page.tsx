@@ -235,18 +235,20 @@ export default function ContactCentrePage() {
                 visibility: "SLA-tracked queue management and agent analytics.",
                 icon: HelpCircle 
               }
-            ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.05}>
-                <div className="group bg-slate-50 p-8 rounded-[32px] border border-slate-100 h-full hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300">
-                    <item.icon size={22} strokeWidth={1.5} />
-                  </div>
-                  <h3 className="c9-card-title mb-4 text-[#0c1024]">{item.title}</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Communication Challenge</div>
-                      <p className="text-[13px] text-slate-600 leading-relaxed">{item.challenge}</p>
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <FadeIn key={i} delay={i * 0.05}>
+                  <div className="group bg-slate-50 p-8 rounded-[32px] border border-slate-100 h-full hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300">
+                      <Icon size={22} strokeWidth={1.5} />
                     </div>
+                    <h3 className="c9-card-title mb-4 text-[#0c1024]">{item.title}</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Communication Challenge</div>
+                        <p className="text-[13px] text-slate-600 leading-relaxed">{item.challenge}</p>
+                      </div>
                     <div>
                       <div className="text-[10px] font-black text-rose-400 uppercase tracking-widest mb-1">CX Impact</div>
                       <p className="text-[13px] text-slate-600 leading-relaxed font-bold">{item.impact}</p>
@@ -287,19 +289,22 @@ export default function ContactCentrePage() {
               <h2 className="c9-section-heading mb-8 text-[#0c1024]">The Business Cost of Communication Blind Spots.</h2>
               <div className="grid sm:grid-cols-2 gap-x-8 gap-y-10">
                 {[
-                  { icon: <PhoneCall />, title: "Abandoned Revenue", text: "Every missed call in the queue is a lost commercial opportunity or a damaged relationship." },
-                  { icon: <Clock />, title: "Wait Time Attrition", text: "Customers interpret hold times as a lack of respect. Trust erodes with every second of silence." },
-                  { icon: <RefreshCcw />, title: "Routing Friction", text: "Bouncing callers between departments without context makes your team look incompetent." },
-                  { icon: <BarChart3 />, title: "Management Blind Spots", text: "Without live data, leaders can't see the bottleneck until the customer has already left." }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4">
-                    <div className="text-rose-500 shrink-0 mt-1"><item.icon size={18} /></div>
-                    <div>
-                      <h4 className="font-bold text-[#0c1024] text-[15px] mb-1">{item.title}</h4>
-                      <p className="text-[13px] text-slate-500 leading-relaxed">{item.text}</p>
+                  { icon: PhoneCall, title: "Abandoned Revenue", text: "Every missed call in the queue is a lost commercial opportunity or a damaged relationship." },
+                  { icon: Clock, title: "Wait Time Attrition", text: "Customers interpret hold times as a lack of respect. Trust erodes with every second of silence." },
+                  { icon: RefreshCcw, title: "Routing Friction", text: "Bouncing callers between departments without context makes your team look incompetent." },
+                  { icon: BarChart3, title: "Management Blind Spots", text: "Without live data, leaders can't see the bottleneck until the customer has already left." }
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i} className="flex gap-4">
+                      <div className="text-rose-500 shrink-0 mt-1"><Icon size={18} /></div>
+                      <div>
+                        <h4 className="font-bold text-[#0c1024] text-[15px] mb-1">{item.title}</h4>
+                        <p className="text-[13px] text-slate-500 leading-relaxed">{item.text}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
               <div className="mt-12 flex flex-wrap gap-4">
                  <Link href="#consultation-section">
@@ -432,19 +437,22 @@ export default function ContactCentrePage() {
                   You cannot manage what you cannot see. Our cloud contact centre environments give operations managers absolute clarity over every interaction, queue, and agent.
                </p>
                
-               <div className="grid sm:grid-cols-2 gap-x-10 gap-y-12">
+                <div className="grid sm:grid-cols-2 gap-x-10 gap-y-12">
                   {[
-                    { icon: <Monitor />, title: "Live Queue Oversight", text: "Identify spikes in real-time and intervene before customer experience is affected." },
-                    { icon: <PieChart />, title: "Staffing Visibility", text: "Monitor agent status across all sites to ensure staffing efficiency and workload balance." },
-                    { icon: <BarChart3 />, title: "CX Performance Data", text: "Track average speed of answer and abandonment rates to measure operational success." },
-                    { icon: <ShieldCheck />, title: "Escalation Clarity", text: "Structured pathways for complex enquiries to ensure no customer is left without resolution." }
-                  ].map((item, i) => (
-                    <div key={i} className="flex flex-col gap-3">
-                       <div className="text-[#a56eff] mb-1"><item.icon size={22} /></div>
-                       <h4 className="font-bold text-white text-[16px] leading-tight">{item.title}</h4>
-                       <p className="text-white/50 text-[13px] leading-relaxed">{item.text}</p>
-                    </div>
-                  ))}
+                    { icon: Monitor, title: "Live Queue Oversight", text: "Identify spikes in real-time and intervene before customer experience is affected." },
+                    { icon: PieChart, title: "Staffing Visibility", text: "Monitor agent status across all sites to ensure staffing efficiency and workload balance." },
+                    { icon: BarChart3, title: "CX Performance Data", text: "Track average speed of answer and abandonment rates to measure operational success." },
+                    { icon: ShieldCheck, title: "Escalation Clarity", text: "Structured pathways for complex enquiries to ensure no customer is left without resolution." }
+                  ].map((item, i) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={i} className="flex flex-col gap-3">
+                         <div className="text-[#a56eff] mb-1"><Icon size={22} /></div>
+                         <h4 className="font-bold text-white text-[16px] leading-tight">{item.title}</h4>
+                         <p className="text-white/50 text-[13px] leading-relaxed">{item.text}</p>
+                      </div>
+                    );
+                  })}
                </div>
                <div className="mt-12">
                   <Link href="#consultation-section">

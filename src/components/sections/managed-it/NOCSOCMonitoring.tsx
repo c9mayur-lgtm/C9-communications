@@ -69,14 +69,17 @@ export default function NOCSOCMonitoring() {
                  { title: 'Live Health Telemetry', icon: Activity },
                  { title: 'Automated Alerting', icon: Bell },
                  { title: 'Threat Containment', icon: ShieldCheck }
-               ].map((item, i) => (
-                 <div key={i} className="flex items-center gap-4">
-                   <div className="w-10 h-10 border border-white/10 flex items-center justify-center text-[#a56eff] group-hover:bg-[#a56eff] group-hover:text-white transition-all duration-300">
-                     <item.icon size={20} aria-hidden="true" />
+               ].map((item, i) => {
+                 const Icon = item.icon;
+                 return (
+                   <div key={i} className="flex items-center gap-4">
+                     <div className="w-10 h-10 border border-white/10 flex items-center justify-center text-[#a56eff] group-hover:bg-[#a56eff] group-hover:text-white transition-all duration-300">
+                       <Icon size={20} aria-hidden="true" />
+                     </div>
+                     <span className="text-[15px] font-bold text-white/80">{item.title}</span>
                    </div>
-                   <span className="text-[15px] font-bold text-white/80">{item.title}</span>
-                 </div>
-               ))}
+                 );
+               })}
             </div>
           </FadeIn>
 
@@ -121,24 +124,27 @@ export default function NOCSOCMonitoring() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {capabilities.map((c, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
-               <div className="bg-white/5 border border-white/10 rounded-none p-10 h-full hover:bg-white/10 transition-all duration-500">
-                <div className="w-16 h-16 rounded-none bg-[#a56eff]/10 text-[#a56eff] flex items-center justify-center mb-10 group-hover:scale-110 duration-500">
-                  <c.icon size={32} strokeWidth={1.5} aria-hidden="true" />
+          {capabilities.map((c, i) => {
+            const Icon = c.icon;
+            return (
+              <FadeIn key={i} delay={i * 0.1}>
+                 <div className="bg-white/5 border border-white/10 rounded-none p-10 h-full hover:bg-white/10 transition-all duration-500">
+                  <div className="w-16 h-16 rounded-none bg-[#a56eff]/10 text-[#a56eff] flex items-center justify-center mb-10 group-hover:scale-110 duration-500">
+                    <Icon size={32} strokeWidth={1.5} aria-hidden="true" />
+                  </div>
+                  <span className="c9-eyebrow !text-[#a56eff] mb-3">
+                    {c.tag}
+                  </span>
+                  <h3 className="c9-card-title !text-white mb-6">
+                    {c.title}
+                  </h3>
+                  <p className="c9-body !text-white/95">
+                    {c.desc}
+                  </p>
                 </div>
-                <span className="c9-eyebrow !text-[#a56eff] mb-3">
-                  {c.tag}
-                </span>
-                <h3 className="c9-card-title !text-white mb-6">
-                  {c.title}
-                </h3>
-                <p className="c9-body !text-white/95">
-                  {c.desc}
-                </p>
-              </div>
-            </FadeIn>
-          ))}
+              </FadeIn>
+            );
+          })}
         </div>
       </div>
     </section>

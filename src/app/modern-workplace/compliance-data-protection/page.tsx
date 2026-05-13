@@ -150,17 +150,20 @@ export default function CompliancePage() {
       <section className={sectionClassName}>
         <div className={containerClassName}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {corePrinciples.map((item, i) => (
-              <ScaleIn key={item.title} delay={i * 0.1}>
-                <div className={cardClassName}>
-                  <div className="w-14 h-14 rounded-2xl bg-[#F4F0FA] flex items-center justify-center mb-6 text-[#5D00D6]">
-                    <item.icon size={28} />
+            {corePrinciples.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <ScaleIn key={item.title} delay={i * 0.1}>
+                  <div className={cardClassName}>
+                    <div className="w-14 h-14 rounded-2xl bg-[#F4F0FA] flex items-center justify-center mb-6 text-[#5D00D6]">
+                      <Icon size={28} />
+                    </div>
+                    <h3 className="text-[22px] font-bold mb-4 tracking-tight">{item.title}</h3>
+                    <p className="text-gray-500 leading-relaxed text-[15px] font-medium">{item.description}</p>
                   </div>
-                  <h3 className="text-[22px] font-bold mb-4 tracking-tight">{item.title}</h3>
-                  <p className="text-gray-500 leading-relaxed text-[15px] font-medium">{item.description}</p>
-                </div>
-              </ScaleIn>
-            ))}
+                </ScaleIn>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -332,17 +335,20 @@ export default function CompliancePage() {
               { t: 'Threat Hunting', d: 'Proactive detection of lateral movement and suspicious activity.', icon: Activity },
               { t: 'Risk Mitigation', d: 'Automated remediation of configuration drift and policy violations.', icon: AlertTriangle },
               { t: 'Audit Readiness', d: 'Persistent logging and reporting for regulatory compliance.', icon: FileCheck2 }
-            ].map((item, i) => (
-              <ScaleIn key={i} delay={i * 0.1}>
-                <div className="p-8 rounded-[32px] bg-white/5 border border-white/10 h-full flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/20 flex items-center justify-center mb-6 text-[#5D00D6]">
-                    <item.icon size={24} />
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <ScaleIn key={i} delay={i * 0.1}>
+                  <div className="p-8 rounded-[32px] bg-white/5 border border-white/10 h-full flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-xl bg-[#5D00D6]/20 flex items-center justify-center mb-6 text-[#5D00D6]">
+                      <Icon size={24} />
+                    </div>
+                    <h4 className="font-bold text-white mb-3 text-[18px]">{item.t}</h4>
+                    <p className="text-slate-400 text-[14px] leading-relaxed">{item.d}</p>
                   </div>
-                  <h4 className="font-bold text-white mb-3 text-[18px]">{item.t}</h4>
-                  <p className="text-slate-400 text-[14px] leading-relaxed">{item.d}</p>
-                </div>
-              </ScaleIn>
-            ))}
+                </ScaleIn>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -117,16 +117,18 @@ export const WpWhyPartner = () => {
                 { value: 'Zero', label: 'blind changes' }
               ]
             }
-          ].map((block, i) => (
-            <div key={i} className="p-8 md:p-10 lg:p-12 border-r border-b border-slate-100 hover:bg-slate-50/50 transition-all duration-300 cursor-default flex flex-col">
-              <div className="mb-4 self-start">
-                <span className="c9-eyebrow !text-[#5D00D6]">
-                  {block.tag}
-                </span>
-              </div>
-              <div className="mb-6 mt-4">
-                <block.icon size={32} strokeWidth={1.5} color="#5D00D6" fill="none" />
-              </div>
+            ].map((block, i) => {
+              const Icon = block.icon;
+              return (
+                <div key={i} className="p-8 md:p-10 lg:p-12 border-r border-b border-slate-100 hover:bg-slate-50/50 transition-all duration-300 cursor-default flex flex-col">
+                  <div className="mb-4 self-start">
+                    <span className="c9-eyebrow !text-[#5D00D6]">
+                      {block.tag}
+                    </span>
+                  </div>
+                  <div className="mb-6 mt-4">
+                    <Icon size={32} strokeWidth={1.5} color="#5D00D6" fill="none" />
+                  </div>
               <h3 className="c9-card-title mb-4">{block.title}</h3>
               <p className="c9-body flex-grow">
                 {block.desc}

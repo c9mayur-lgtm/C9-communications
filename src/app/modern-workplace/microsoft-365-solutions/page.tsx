@@ -277,11 +277,13 @@ export default function M365GovernancePage() {
                 tag: "AUTOMATED HYGIENE",
                 desc: "Automated on-boarding and off-boarding protocols to ensure orphaned accounts are purged instantly."
               }
-            ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1} className="relative p-10 rounded-[40px] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all duration-500">
-                <div className="w-16 h-16 rounded-2xl bg-[#5D00D6] flex items-center justify-center text-white mb-8 shadow-lg shadow-purple-900/20">
-                  <item.icon size={32} />
-                </div>
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <FadeIn key={i} delay={i * 0.1} className="relative p-10 rounded-[40px] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all duration-500">
+                  <div className="w-16 h-16 rounded-2xl bg-[#5D00D6] flex items-center justify-center text-white mb-8 shadow-lg shadow-purple-900/20">
+                    <Icon size={32} />
+                  </div>
                 <div className="mb-4">
                   <span className="text-[11px] font-bold text-purple-600 uppercase tracking-widest">{item.tag}</span>
                 </div>

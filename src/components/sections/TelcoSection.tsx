@@ -19,22 +19,25 @@ export const TelcoSection = () => {
                 { name: "Wireless Enterprise AP", icon: Signal, color: "from-brand-purple/10 to-transparent" },
                 { name: "Premium Headset", icon: Headphones, color: "from-indigo-500/10 to-transparent" },
                 { name: "Security Gateway / Router", icon: Shield, color: "from-cyan-500/10 to-transparent" }
-              ].map((product, i) => (
-                <div key={i} className="bg-white p-8 rounded-[32px] border border-brand-purple/5 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden relative">
-                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-brand-purple/5 to-transparent pointer-events-none" />
-                   
-                   <div className="flex flex-col items-center gap-6 relative z-10">
-                      <div className={`p-6 rounded-2xl bg-gradient-to-br ${product.color} group-hover:scale-110 duration-500`}>
-                        <product.icon className="text-[#5D00D6] w-8 h-8" />
-                      </div>
-                      <span className="c9-eyebrow !text-[#0c1024] !text-[12px] text-center">
-                        {product.name}
-                      </span>
-                   </div>
-                   
-                   <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#5D00D6]/5 rounded-tl-full translate-x-4 translate-y-4 group-hover:scale-150 duration-700" />
-                </div>
-              ))}
+              ].map((product, i) => {
+                const Icon = product.icon;
+                return (
+                  <div key={i} className="bg-white p-8 rounded-[32px] border border-brand-purple/5 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden relative">
+                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-brand-purple/5 to-transparent pointer-events-none" />
+                     
+                     <div className="flex flex-col items-center gap-6 relative z-10">
+                        <div className={`p-6 rounded-2xl bg-gradient-to-br ${product.color} group-hover:scale-110 duration-500`}>
+                          <Icon className="text-[#5D00D6] w-8 h-8" />
+                        </div>
+                        <span className="c9-eyebrow !text-[#0c1024] !text-[12px] text-center">
+                          {product.name}
+                        </span>
+                     </div>
+                     
+                     <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#5D00D6]/5 rounded-tl-full translate-x-4 translate-y-4 group-hover:scale-150 duration-700" />
+                  </div>
+                );
+              })}
               
               {/* Promo Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 bg-[#5D00D6] text-white rounded-3xl shadow-[0_20px_60px_-10px_rgba(93,0,214,0.6)] z-20 flex flex-col items-center gap-2 w-56 text-center transform -rotate-6 hover:rotate-0 cursor-pointer">

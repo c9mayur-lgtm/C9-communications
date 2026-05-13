@@ -94,15 +94,18 @@ export const ManagedIT = () => {
                     { title: "Cloud", desc: "Private & public management", icon: Cloud },
                     { title: "Storage", desc: "Fast & distributed systems", icon: Server },
                     { title: "Software", desc: "Custom business logic", icon: Terminal }
-                  ].map((item, i) => (
-                    <Card key={i} className="p-6 bg-white border border-gray-100 shadow-sm hover:border-[#5D00D6]/20 transition-all rounded-2xl cursor-default h-full">
-                      <div className="p-3 bg-[#5D00D6]/5 rounded-xl w-fit mb-4 group-hover:scale-110">
-                        <item.icon className="text-[#5D00D6] w-6 h-6" />
-                      </div>
-                      <h4 className="c9-card-title !text-[14px] mb-1">{item.title}</h4>
-                      <p className="c9-body !text-[12px] leading-tight">{item.desc}</p>
-                    </Card>
-                  ))}
+                  ].map((item, i) => {
+                    const Icon = item.icon;
+                    return (
+                      <Card key={i} className="p-6 bg-white border border-gray-100 shadow-sm hover:border-[#5D00D6]/20 transition-all rounded-2xl cursor-default h-full">
+                        <div className="p-3 bg-[#5D00D6]/5 rounded-xl w-fit mb-4 group-hover:scale-110">
+                          <Icon className="text-[#5D00D6] w-6 h-6" />
+                        </div>
+                        <h4 className="c9-card-title !text-[14px] mb-1">{item.title}</h4>
+                        <p className="c9-body !text-[12px] leading-tight">{item.desc}</p>
+                      </Card>
+                    );
+                  })}
                 </div>
               </TabsContent>
               

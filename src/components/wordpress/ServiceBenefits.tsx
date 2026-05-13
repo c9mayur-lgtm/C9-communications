@@ -34,14 +34,16 @@ export const ServiceBenefits = ({
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, i) => (
-            <div 
-              key={i} 
-              className="bg-white p-10 md:p-12 rounded-[40px] shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100/50"
-            >
-              <div className="mb-10 w-16 h-16 rounded-2xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all transform group-hover:scale-110 duration-500">
-                <benefit.icon size={32} strokeWidth={1.5} />
-              </div>
+          {benefits.map((benefit, i) => {
+            const Icon = benefit.icon;
+            return (
+              <div 
+                key={i} 
+                className="bg-white p-10 md:p-12 rounded-[40px] shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100/50"
+              >
+                <div className="mb-10 w-16 h-16 rounded-2xl bg-[#F4F0FA] flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all transform group-hover:scale-110 duration-500">
+                  <Icon size={32} strokeWidth={1.5} />
+                </div>
               
               <h3 className="text-[20px] font-bold mb-5 text-[#0c1024] tracking-tight leading-tight" >
                 {benefit.title}

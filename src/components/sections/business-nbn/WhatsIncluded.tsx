@@ -74,15 +74,18 @@ export default function WhatsIncluded() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {inclusions.map((item, i) => (
-            <div key={i} className="bg-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
-              <div className="mb-6">
-                <item.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
+          {inclusions.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div key={i} className="bg-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
+                <div className="mb-6">
+                  <Icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight">{item.title}</h3>
+                <p className="text-gray-600 text-[16px] md:text-[17px] mb-6 leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
               </div>
-              <h3 className="text-[22px] font-bold mb-3 text-[#0c1024] tracking-tight leading-tight">{item.title}</h3>
-              <p className="text-gray-600 text-[16px] md:text-[17px] mb-6 leading-relaxed flex-grow font-normal group-hover:text-[#1A1A2E] transition-colors">{item.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="flex justify-center mt-12">

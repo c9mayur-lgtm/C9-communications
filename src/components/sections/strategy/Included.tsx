@@ -49,14 +49,16 @@ export default function Included() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {ITEMS.map((item, i) => (
-            <div 
-              key={i} 
-              className="bg-white rounded-2xl p-10 border-[0.5px] border-[rgba(123,47,190,0.15)] hover:border-brand-purple hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow-xl flex flex-col items-start text-left"
-            >
-              <div className="w-[48px] h-[48px] rounded-xl bg-[#EDE9FE] flex items-center justify-center text-brand-purple flex-shrink-0 group-hover:scale-110 mb-8">
-                <item.icon size={22} strokeWidth={2.5} />
-              </div>
+          {ITEMS.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div 
+                key={i} 
+                className="bg-white rounded-2xl p-10 border-[0.5px] border-[rgba(123,47,190,0.15)] hover:border-brand-purple hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow-xl flex flex-col items-start text-left"
+              >
+                <div className="w-[48px] h-[48px] rounded-xl bg-[#EDE9FE] flex items-center justify-center text-brand-purple flex-shrink-0 group-hover:scale-110 mb-8">
+                  <Icon size={22} strokeWidth={2.5} />
+                </div>
 
               <h3 className="text-[18px] md:text-[20px] font-bold text-[#1A1A2E] font-syne mb-4 tracking-tight">
                 {item.title}

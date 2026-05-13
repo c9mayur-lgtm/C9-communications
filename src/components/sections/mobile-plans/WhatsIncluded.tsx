@@ -122,20 +122,22 @@ export default function WhatsIncluded() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-gray-100 rounded-lg overflow-hidden">
-          {ITEMS.map((block, i) => (
-            <div key={i} className="p-10 md:p-12 border-r border-b border-gray-100 flex flex-col transition-all duration-300 hover:bg-[#F8F7FF]">
-              <div className="mb-6 self-start">
-                  <span className="c9-eyebrow !text-[#5D00D6] bg-[#5D00D6]/5 px-3 py-1 rounded-full border border-[#5D00D6]/10">
-                    {block.tag}
-                  </span>
-              </div>
-              <div className="mb-6">
-                <block.icon size={32} strokeWidth={1.5} className="text-[#5D00D6]" />
-              </div>
-              <h3 className="c9-card-title mb-4">{block.title}</h3>
-              <p className="c9-body mb-10 flex-grow font-medium">
-                {block.desc}
-              </p>
+          {ITEMS.map((block, i) => {
+            const Icon = block.icon;
+            return (
+              <div key={i} className="p-10 md:p-12 border-r border-b border-gray-100 flex flex-col transition-all duration-300 hover:bg-[#F8F7FF]">
+                <div className="mb-6 self-start">
+                    <span className="c9-eyebrow !text-[#5D00D6] bg-[#5D00D6]/5 px-3 py-1 rounded-full border border-[#5D00D6]/10">
+                      {block.tag}
+                    </span>
+                </div>
+                <div className="mb-6">
+                  <Icon size={32} strokeWidth={1.5} className="text-[#5D00D6]" />
+                </div>
+                <h3 className="c9-card-title mb-4">{block.title}</h3>
+                <p className="c9-body mb-10 flex-grow font-medium">
+                  {block.desc}
+                </p>
 
               {/* Metrics Row */}
               <div className="mt-auto pt-8 border-t border-gray-100 flex items-center gap-0">

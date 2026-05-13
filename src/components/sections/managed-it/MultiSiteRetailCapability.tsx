@@ -66,24 +66,27 @@ export default function MultiSiteRetailCapability() {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="grid sm:grid-cols-2 gap-6">
-            {features.map((f, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-slate-50 rounded-none p-8 border border-slate-100 hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all duration-500 h-full">
-                  <div className="w-12 h-12 rounded-none bg-white text-[#5D00D6] flex items-center justify-center mb-8 group-hover:bg-[#5D00D6] group-hover:text-white shadow-sm transition-all duration-500">
-                    <f.icon size={24} strokeWidth={2} aria-hidden="true" />
+            {features.map((f, i) => {
+              const Icon = f.icon;
+              return (
+                <FadeIn key={i} delay={i * 0.1}>
+                  <div className="bg-slate-50 rounded-none p-8 border border-slate-100 hover:border-[#5D00D6]/20 hover:bg-white hover:shadow-xl transition-all duration-500 h-full">
+                    <div className="w-12 h-12 rounded-none bg-white text-[#5D00D6] flex items-center justify-center mb-8 group-hover:bg-[#5D00D6] group-hover:text-white shadow-sm transition-all duration-500">
+                      <Icon size={24} strokeWidth={2} aria-hidden="true" />
+                    </div>
+                    <span className="c9-eyebrow !text-slate-800 !text-[9px] mb-3">
+                      {f.tag}
+                    </span>
+                    <h3 className="c9-card-title mb-4">
+                      {f.title}
+                    </h3>
+                    <p className="c9-body !text-sm text-slate-800">
+                      {f.desc}
+                    </p>
                   </div>
-                  <span className="c9-eyebrow !text-slate-800 !text-[9px] mb-3">
-                    {f.tag}
-                  </span>
-                  <h3 className="c9-card-title mb-4">
-                    {f.title}
-                  </h3>
-                  <p className="c9-body !text-sm text-slate-800">
-                    {f.desc}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
 
           <FadeIn delay={0.3}>

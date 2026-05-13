@@ -68,16 +68,18 @@ export const WpHeroProducts = () => {
             ref={scrollRef}
             className="flex gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4"
           >
-            {PRODUCTS.map((product, idx) => (
-              <Link 
-                href={product.url}
-                key={idx} 
-                className="flex flex-col items-center justify-center gap-6 cursor-pointer text-center min-w-[200px] md:min-w-[220px] snap-start bg-white border border-gray-100/60 rounded-[28px] p-8 hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500"
-              >
-                {/* Icon Container (Homepage Style) */}
-                <div className="text-[#5D00D6] duration-300 group-hover:-translate-y-1.5 opacity-90">
-                  <product.icon size={46} strokeWidth={1.5} />
-                </div>
+            {PRODUCTS.map((product, idx) => {
+              const Icon = product.icon;
+              return (
+                <Link 
+                  href={product.url}
+                  key={idx} 
+                  className="flex flex-col items-center justify-center gap-6 cursor-pointer text-center min-w-[200px] md:min-w-[220px] snap-start bg-white border border-gray-100/60 rounded-[28px] p-8 hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500"
+                >
+                  {/* Icon Container (Homepage Style) */}
+                  <div className="text-[#5D00D6] duration-300 group-hover:-translate-y-1.5 opacity-90">
+                    <Icon size={46} strokeWidth={1.5} />
+                  </div>
                 
                 {/* Product Label */}
                 <span className="c9-card-title !text-[14px] md:!text-[16px] transition-colors group-hover:text-[#5D00D6]">

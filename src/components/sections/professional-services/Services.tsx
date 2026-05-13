@@ -75,11 +75,13 @@ export default function Services() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cards.map((s, i) => (
-            <div key={i} className="bg-white p-8 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/20 transition-all flex flex-col h-full border border-transparent hover:border-gray-100">
-              <div className="mb-6">
-                <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
-              </div>
+          {cards.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <div key={i} className="bg-white p-8 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/20 transition-all flex flex-col h-full border border-transparent hover:border-gray-100">
+                <div className="mb-6">
+                  <Icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
+                </div>
               <h3 className="text-[22px] font-bold mb-4 text-[#0c1024] tracking-tight leading-tight" style={fontStyle}>{s.title}</h3>
               <p className="text-gray-600 text-[16px] mb-8 leading-relaxed flex-grow font-normal" style={fontStyle}>{s.desc}</p>
               <div className="flex flex-wrap gap-2 mb-6">

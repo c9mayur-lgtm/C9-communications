@@ -38,15 +38,18 @@ export default function SipTrunkingFeatures() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {inclusions.map((item, i) => (
-            <div key={i} className="bg-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
-              <div className="mb-6">
-                <item.icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
+          {inclusions.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div key={i} className="bg-white p-6 md:p-8 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100">
+                <div className="mb-6">
+                  <Icon size={40} className="text-[#5D00D6]" strokeWidth={1.5} />
+                </div>
+                <h3 className="c9-card-title !text-[20px] mb-3">{item.title}</h3>
+                <p className="c9-body !text-[14px] !text-gray-600 mb-6 flex-grow group-hover:text-[#0c1024] transition-colors">{item.desc}</p>
               </div>
-              <h3 className="c9-card-title !text-[20px] mb-3">{item.title}</h3>
-              <p className="c9-body !text-[14px] !text-gray-600 mb-6 flex-grow group-hover:text-[#0c1024] transition-colors">{item.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="flex justify-center mt-12">

@@ -26,18 +26,21 @@ export default function WhatWeManage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-          {services.map((svc, i) => (
-            <div
-              key={i}
-              className="bg-slate-50 border border-slate-100 rounded-lg p-7 flex flex-col gap-4 transition-all hover:-translate-y-1 hover:border-[#5D00D6]/20 hover:shadow-lg hover:shadow-purple-900/5"
-            >
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'rgba(93,0,214,0.08)' }}>
-                <svc.icon size={20} style={{ color: '#5D00D6' }} />
+          {services.map((svc, i) => {
+            const Icon = svc.icon;
+            return (
+              <div
+                key={i}
+                className="bg-slate-50 border border-slate-100 rounded-lg p-7 flex flex-col gap-4 transition-all hover:-translate-y-1 hover:border-[#5D00D6]/20 hover:shadow-lg hover:shadow-purple-900/5"
+              >
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'rgba(93,0,214,0.08)' }}>
+                  <Icon size={20} style={{ color: '#5D00D6' }} />
+                </div>
+                <h3 className="text-[18px] font-bold text-[#0c1024] tracking-tight leading-tight" style={{ fontFamily: F }}>{svc.title}</h3>
+                <p className="text-[14px] text-[#6B7280] leading-[1.7] font-normal" style={{ fontFamily: F }}>{svc.body}</p>
               </div>
-              <h3 className="text-[18px] font-bold text-[#0c1024] tracking-tight leading-tight" style={{ fontFamily: F }}>{svc.title}</h3>
-              <p className="text-[14px] text-[#6B7280] leading-[1.7] font-normal" style={{ fontFamily: F }}>{svc.body}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

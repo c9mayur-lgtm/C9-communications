@@ -61,27 +61,30 @@ export default function WhyC9Mobile() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cards.map((s, i) => (
-            <motion.div 
-              key={i} 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white p-8 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100"
-            >
-              {/* Icon */}
-              <div className="mb-8">
-                <s.icon size={40} className="text-[#5D00D6]" strokeWidth={1.2} />
-              </div>
-
-              {/* Title */}
-              <h3 className="text-[22px] font-bold mb-4 text-[#1A1A2E] tracking-tight leading-tight transition-colors group-hover:text-[#5D00D6]">{s.title}</h3>
-
-              {/* Description */}
-              <p className="text-[#6B7280] text-[16px] leading-relaxed flex-grow font-medium">{s.desc}</p>
-            </motion.div>
-          ))}
+          {cards.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white p-8 md:p-10 rounded-lg shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100"
+              >
+                {/* Icon */}
+                <div className="mb-8">
+                  <Icon size={40} className="text-[#5D00D6]" strokeWidth={1.2} />
+                </div>
+  
+                {/* Title */}
+                <h3 className="text-[22px] font-bold mb-4 text-[#1A1A2E] tracking-tight leading-tight transition-colors group-hover:text-[#5D00D6]">{s.title}</h3>
+  
+                {/* Description */}
+                <p className="text-[#6B7280] text-[16px] leading-relaxed flex-grow font-medium">{s.desc}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -69,16 +69,18 @@ export const VoiceSystemOverview = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {CAPABILITIES.map((cap, i) => (
-            <Link 
-              key={i} 
-              href={cap.link}
-              className="bg-white p-6 md:p-10 rounded-[32px] shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100"
-            >
-              {/* Icon */}
-              <div className="mb-6">
-                <cap.icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />
-              </div>
+          {CAPABILITIES.map((cap, i) => {
+            const Icon = cap.icon;
+            return (
+              <Link 
+                key={i} 
+                href={cap.link}
+                className="bg-white p-6 md:p-10 rounded-[32px] shadow-sm hover:shadow-2xl hover:shadow-[#5D00D6]/10 transition-all flex flex-col h-full cursor-pointer border border-transparent hover:border-gray-100"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <Icon size={44} className="text-[#5D00D6]" strokeWidth={1.2} />
+                </div>
 
               {/* Title */}
               <h3 className="c9-card-title mb-3 text-[#0c1024] group-hover:text-[#5D00D6] transition-colors">{cap.title}</h3>

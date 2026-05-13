@@ -254,20 +254,23 @@ export default function Hero() {
                 { icon: Share2, text: "Shared data pool — no waste" },
                 { icon: FileText, text: "Single bill for all services" },
                 { icon: ShieldCheck, text: "Dedicated account manager" }
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -8 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.75 + i * 0.06 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-5 h-5 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0">
-                    <item.icon size={12} className="text-[#5D00D6]" />
-                  </div>
-                  <span className="text-[14px] font-medium text-[#6B7280]">{item.text}</span>
-                </motion.div>
-              ))}
+              ].map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.75 + i * 0.06 }}
+                    className="flex items-center gap-3"
+                  >
+                    <div className="w-5 h-5 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0">
+                      <Icon size={12} className="text-[#5D00D6]" />
+                    </div>
+                    <span className="text-[14px] font-medium text-[#6B7280]">{item.text}</span>
+                  </motion.div>
+                );
+              })}
             </motion.div>
           </div>
 

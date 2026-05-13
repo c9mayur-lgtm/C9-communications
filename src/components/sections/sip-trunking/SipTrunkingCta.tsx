@@ -62,12 +62,15 @@ export default function SipTrunkingCta() {
                 { icon: PlugZap, title: "Analogue PBX support" },
                 { icon: PhoneForwarded, title: "Port existing numbers" },
                 { icon: CheckCircle2, title: "Basic from $20/month" }
-            ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                    <item.icon size={18} className="text-[#5D00D6]" />
-                    <span className="c9-body !text-[14px] font-medium !text-white/60">{item.title}</span>
-                </div>
-            ))}
+            ].map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div key={idx} className="flex items-center gap-3">
+                      <Icon size={18} className="text-[#5D00D6]" />
+                      <span className="c9-body !text-[14px] font-medium !text-white/60">{item.title}</span>
+                  </div>
+                );
+            })}
         </motion.div>
 
       </div>
