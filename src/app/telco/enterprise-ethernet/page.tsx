@@ -57,36 +57,36 @@ export default function EnterpriseEthernetPage() {
               <FadeIn>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
                    <ShieldCheck size={13} className="text-[#5D00D6]" />
-                   <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Decision Tier</span>
+                   <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Governance-Led Infrastructure</span>
                 </div>
               </FadeIn>
 
               <FadeIn delay={0.08}>
                  <h1 className="c9-hero-title mb-6 !leading-[1.1]">
-                    Guaranteed Performance. Dedicated Infrastructure. <span className="text-[#5D00D6]">Full Accountability.</span>
+                    Enterprise-Grade Connectivity Built for <span className="text-[#5D00D6]">Operational Governance.</span>
                  </h1>
               </FadeIn>
 
               <FadeIn delay={0.15}>
                  <p className="c9-body mb-8 max-w-[620px] text-lg">
-                    Business-critical operations cannot run on shared or unstable networks. Downtime creates immediate operational and financial exposure. C9 delivers dedicated connectivity with SLA-backed accountability and enterprise support.
+                    Infrastructure decisions are risk management decisions. C9 Enterprise Ethernet provides the dedicated bandwidth, rigid eSLA, and escalation governance required for distributed multi-site operations.
                  </p>
               </FadeIn>
 
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
                     <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full font-bold" asChild>
-                      <Link href="#consultation-section">Request Network Architecture Review</Link>
+                      <Link href="#consultation-section">Request Enterprise Connectivity Review</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white font-bold" asChild>
-                      <Link href="#consultation-section">Discuss SD-WAN Connectivity</Link>
+                      <Link href="#consultation-section">Discuss eSLA Requirements</Link>
                     </C9Button>
                  </div>
               </FadeIn>
 
               <FadeIn delay={0.3} className="mt-10">
                 <div className="flex flex-wrap gap-x-10 gap-y-3">
-                   {['eSLA from 4 Hours', '1:1 Guaranteed Bandwidth', 'Dedicated Port Architecture', 'Proactive Incident Ownership'].map((item) => (
+                   {['4-Hour Restoration eSLA', '1:1 Uncontended Capacity', 'Rollout Governance', 'Senior Escalation Ownership'].map((item) => (
                       <div key={item} className="flex items-center gap-2 text-slate-400 font-bold text-[11px] uppercase tracking-widest">
                          <CheckCircle size={14} className="text-[#5D00D6]" />
                          {item}
@@ -139,13 +139,13 @@ export default function EnterpriseEthernetPage() {
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4 text-rose-600">Decision Framing</span>
-               <h2 className="c9-section-heading mb-6">When Network Instability Creates Financial Exposure.</h2>
+               <span className="c9-eyebrow mb-4 text-rose-600">Enterprise Risk Mitigation</span>
+               <h2 className="c9-section-heading mb-6">When Network Instability Threatens Business Continuity.</h2>
                <p className="c9-body text-lg mb-8">
-                  For mid-market and enterprise organizations, network failure is not an IT problem—it is a financial liability. If your multi-site operations rely on fragmented infrastructure, you lack the governance required to scale securely.
+                  For mid-market and enterprise organizations, connectivity is a governance requirement. Fragmented infrastructure creates operational visibility gaps and unmanaged risk. C9 restores control through standardized enterprise architecture and escalation ownership.
                </p>
                <C9Button variant="outline" className="rounded-full h-12 px-8 border-slate-200 text-[#5D00D6] hover:border-[#5D00D6] font-bold" asChild>
-                  <Link href="#consultation-section">Audit Our Network Governance</Link>
+                  <Link href="#consultation-section">Review Multi-Site Connectivity Risks</Link>
                </C9Button>
             </FadeIn>
 
@@ -182,23 +182,23 @@ export default function EnterpriseEthernetPage() {
             {[
               { 
                 icon: <Network />, 
-                title: "SD-WAN Optimization", 
-                desc: "Integrate Enterprise Ethernet with intelligent SD-WAN routing to prioritize critical ERP, SIP, and video traffic automatically." 
+                title: "eSLA Reporting", 
+                desc: "Full visibility into performance metrics and SLA compliance. We provide the reporting cadence required for enterprise IT governance." 
               },
               { 
                 icon: <Lock />, 
-                title: "Private IP & MPLS Transition", 
-                desc: "Securely replace legacy MPLS with agile, encrypted networks that provide deep visibility and granular control." 
+                title: "Architecture Maturity", 
+                desc: "Move beyond 'best effort' links. We design dedicated fibre paths with carrier diversity and BGP-governed failover." 
               },
               { 
                 icon: <Globe />, 
-                title: "Carrier Path Diversity", 
-                desc: "We engineer solutions with complete path diversity, ensuring no single point of physical failure in the carrier network." 
+                title: "Multi-Site Governance", 
+                desc: "Standardise connectivity across your entire footprint. Uniform security, uniform performance, and uniform billing." 
               },
               { 
                 icon: <ShieldCheck />, 
-                title: "Unified Perimeter Security", 
-                desc: "Seamless integration with Next-Gen Firewalls (NGFW) to enforce standardized security policies across all locations." 
+                title: "Escalation Ownership", 
+                desc: "Eliminate vendor finger-pointing. C9 takes absolute ownership of carrier liaisons and restoration priority." 
               }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1} className="bg-slate-50/50 p-8 rounded-[32px] border border-slate-100 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-xl">
@@ -335,23 +335,24 @@ export default function EnterpriseEthernetPage() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left" className="order-2 lg:order-1">
                <div className="relative aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl">
-                  <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000" alt="Seamless Migration" className="w-full h-full object-cover object-center" />
+                  {/* [IMAGE PLACEHOLDER: Professional enterprise NOC environment showing real-time network governance and reporting] */}
+                  <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2000" alt="Enterprise Network Governance" className="w-full h-full object-cover object-center" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#5D00D6]/40 to-transparent" />
                </div>
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2} className="order-1 lg:order-2">
-               <span className="c9-eyebrow mb-4">Small Business Transition</span>
-               <h2 className="c9-section-heading mb-6">Transition Without Business Disruption.</h2>
+               <span className="c9-eyebrow mb-4">Enterprise Operating Model</span>
+               <h2 className="c9-section-heading mb-6">Structured Rollout Governance.</h2>
                <p className="c9-body mb-10">
-                  Replacing legacy infrastructure creates fear of downtime. C9 manages the entire migration process with a risk-managed approach that ensures continuity from the first day.
+                  Large-scale infrastructure transitions require procurement-grade planning. C9 follows a mature operational model to ensure zero-disruption migrations and long-term SLA monitoring.
                </p>
                
                <div className="space-y-6">
                   {[
-                    { icon: <FileSearch />, title: "Transition Planning", text: "Detailed audit of legacy environments and technical requirements." },
-                    { icon: <RefreshCcw />, title: "Risk-Managed Implement", text: "Phased deployment with validated fallback paths for zero-disruption." },
-                    { icon: <Users />, title: "Vendor Consolidation", text: "Removing fragmented management and simplifying your vendor landscape." }
+                    { icon: <FileSearch />, title: "Discovery & Architecture Review", text: "Deep-dive audit of legacy multi-site topologies and carrier validation." },
+                    { icon: <RefreshCcw />, title: "Implementation & Governance", text: "Phased rollout planning with dedicated project management and testing." },
+                    { icon: <Users />, title: "SLA Monitoring & Reporting", text: "Ongoing performance reviews and transparent incident reporting cadence." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-5">
                        <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1 shadow-sm">
@@ -374,18 +375,18 @@ export default function EnterpriseEthernetPage() {
         <div className={C}>
           <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
              <FadeIn direction="left">
-                <span className="c9-eyebrow mb-4">Strategic Proof</span>
-                <h2 className="c9-section-heading mb-6">Measured Commercial Outcomes.</h2>
+                <span className="c9-eyebrow mb-4">Governance Proof</span>
+                <h2 className="c9-section-heading mb-6">Measured Enterprise Outcomes.</h2>
                 <p className="c9-body mb-10 text-slate-600">
-                   Outcome-driven connectivity for the modern enterprise. Shift from managing outages to managing business growth.
+                   Outcome-driven connectivity for distributed operations. We connect technical eSLA performance to commercial risk reduction and business continuity.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
                    {[
-                     { label: "Downtime Reduction", val: "90%+", icon: <TrendingUp size={20} /> },
-                     { label: "SLA Adherence", val: "99.95%", icon: <ShieldCheck size={20} /> },
-                     { label: "Incident Ownership", val: "Absolute", icon: <Zap size={20} /> },
-                     { label: "Operational Risk", val: "Minimized", icon: <ShieldAlert size={20} /> }
+                     { label: "Restoration SLA", val: "4-Hour Max", icon: <TrendingUp size={20} /> },
+                     { label: "Throughput Guarantee", val: "100%", icon: <ShieldCheck size={20} /> },
+                     { label: "Governance Reporting", val: "Executive", icon: <Zap size={20} /> },
+                     { label: "Accountability Tier", val: "Absolute", icon: <ShieldAlert size={20} /> }
                    ].map((stat, i) => (
                      <div key={i} className="bg-slate-50 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10">
                         <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight">{stat.val}</div>
@@ -400,25 +401,25 @@ export default function EnterpriseEthernetPage() {
                  <WpCaseStudies 
                     articles={[
                       {
-                        tag: 'ENTERPRISE MIGRATION',
-                        title: 'National Distribution Centre Takeover',
-                        desc: "A logistics leader faced constant syncing lag with standard nbn™. C9 migrated 4 sites to symmetrical 1000/1000 Ethernet. Result: Zero lost orders and 60% faster syncing.",
-                        img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Stability Restored'
+                        tag: 'DISTRIBUTED RETAIL',
+                        title: 'National Footprint Ethernet Rollout',
+                        desc: "A major retail group required uniform connectivity governance across 50+ locations. C9 managed the national rollout with centralized reporting and proactive eSLA monitoring. Result: 99.95% uptime achieved.",
+                        img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2000&auto=format&fit=crop',
+                        videoText: 'Governance Secured'
                       },
                       {
-                        tag: 'HEALTHCARE NETWORK',
-                        title: 'Multi-Site Patient Data Syncing',
-                        desc: "A healthcare  required 99.95% availability for critical patient data records. C9 deployed private Ethernet architecture with eSLA ownership. Result: Full compliance and zero downtime.",
+                        tag: 'HEALTHCARE GROUPS',
+                        title: 'Critical Patient Record Syncing',
+                        desc: "A healthcare provider required absolute path diversity for ERP-dependent operations. C9 architected a dual-carrier Ethernet solution with BGP-managed failover. Result: Zero data interruptions.",
                         img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Zero Downtime'
+                        videoText: 'Operational Continuity'
                       },
                       {
-                        tag: 'PROFESSIONAL SERVICES',
-                        title: 'Law Firm Infrastructure Governance',
-                        desc: "An enterprise law firm faced critical delays during massive data transfers. C9 implemented symmetrical 1000/1000 Ethernet. Result: Productivity up by 40% across all branches.",
-                        img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Efficiency Optimized'
+                        tag: 'WAREHOUSE LOGISTICS',
+                        title: 'Supply Chain Connectivity Audit',
+                        desc: "A logistics leader faced hidden productivity losses due to packet loss on standard fibre. C9 upgraded them to symmetric 1000/1000 Enterprise Ethernet with direct engineering support. Result: 40% efficiency gain.",
+                        img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
+                        videoText: 'Performance Validated'
                       }
                     ]}
                   />
@@ -434,13 +435,13 @@ export default function EnterpriseEthernetPage() {
            <div className="max-w-4xl mx-auto text-center">
               <FadeIn>
                 <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6">
-                  If your business depends on uptime, standard connectivity is already a risk.
+                   Procurement-grade infrastructure requires governance-led planning.
                 </h3>
                 <p className="c9-body mb-10 text-lg">
-                  Let&apos;s review your multi-site architecture and implement a true high-availability strategy.
+                   Partner with a communications leader who takes absolute ownership of your eSLA and multi-site rollout performance.
                 </p>
                 <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg font-bold" asChild>
-                  <Link href="#consultation-section">Request Network Architecture Review</Link>
+                  <Link href="#consultation-section">Plan an Enterprise Rollout</Link>
                 </C9Button>
               </FadeIn>
            </div>
@@ -455,13 +456,13 @@ export default function EnterpriseEthernetPage() {
               <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white opacity-[0.05] rounded-full blur-[80px] -ml-32 -mb-32" />
               
               <div className="relative z-10">
-                <span className="c9-eyebrow !text-white/80 mb-4">Infrastructure Strategy</span>
-                <h2 className="c9-section-heading !text-white mb-6">Performance + Accountability + Operational Certainty</h2>
+                <span className="c9-eyebrow !text-white/80 mb-4">Enterprise Governance</span>
+                <h2 className="c9-section-heading !text-white mb-6">Governance + Architecture + Absolute Accountability</h2>
                 <p className="c9-body !text-white/70 mb-10 max-w-2xl mx-auto text-lg">
-                   Stop settling for generic infrastructure. Talk to C9 about Enterprise Connectivity built for business continuity and long-term growth.
+                   Stop settling for consumer-grade infrastructure. Talk to C9 about Enterprise Ethernet built for operational continuity and national scale.
                 </p>
                 <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg font-bold" asChild>
-                  <Link href="#consultation-section">Talk to a Senior Network Architect</Link>
+                   <Link href="#consultation-section">Audit Enterprise Connectivity Performance</Link>
                 </C9Button>
               </div>
            </div>

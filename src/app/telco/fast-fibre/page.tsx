@@ -58,19 +58,19 @@ export default function FastFibrePage() {
               <FadeIn>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
                    <Zap size={13} className="text-[#5D00D6]" />
-                   <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Performance Infrastructure</span>
+                   <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Dedicated Performance Fibre</span>
                 </div>
               </FadeIn>
 
               <FadeIn delay={0.08}>
                  <h1 className="c9-hero-title mb-6 !leading-[1.1]">
-                    High-Performance Fibre Built for <span className="text-[#5D00D6]">Business-Critical Operations.</span>
+                    Dedicated Fibre Built for <span className="text-[#5D00D6]">High-Throughput Business.</span>
                  </h1>
               </FadeIn>
 
               <FadeIn delay={0.15}>
                  <p className="c9-body mb-8 max-w-[600px] text-lg">
-                    Speed alone does not protect your operations. Performance consistency matters more than peak claims. C9 delivers reliable business fibre backed by accountability and senior engineering support.
+                    Stop settling for congested broadband. C9 Fast Fibre delivers the uncontended bandwidth, symmetric speeds, and low-latency connectivity required for stable cloud access and professional voice continuity.
                  </p>
               </FadeIn>
 
@@ -80,14 +80,14 @@ export default function FastFibrePage() {
                       <Link href="#consultation-section">Check Fibre Availability</Link>
                     </C9Button>
                     <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white font-bold" asChild>
-                      <Link href="#consultation-section">Request Build Costs</Link>
+                      <Link href="#consultation-section">Upgrade My Connectivity</Link>
                     </C9Button>
                  </div>
               </FadeIn>
 
               <FadeIn delay={0.3} className="mt-10">
                 <div className="flex flex-wrap gap-x-8 gap-y-3">
-                   {['Dedicated 1:1 Bandwidth', '99.95% Uptime SLA', 'Managed Install', '24/7 NOC Monitoring'].map((item) => (
+                   {['1:1 Uncontended Bandwidth', 'Symmetric Throughput', 'Performance SLA', 'Australian Senior Engineering'].map((item) => (
                       <div key={item} className="flex items-center gap-2 text-slate-400 font-bold text-[11px] uppercase tracking-widest">
                          <CheckCircle size={14} className="text-[#5D00D6]" />
                          {item}
@@ -185,23 +185,23 @@ export default function FastFibrePage() {
             {[
               { 
                 icon: <Server className="text-emerald-500" />, 
-                title: "Instant File Syncing", 
-                desc: "Move massive design files, databases, or backups to the cloud instantly without saturating the office network." 
+                title: "Symmetric Throughput", 
+                desc: "Upload speeds that match your downloads. Move massive design files, cloud backups, or ERP data without bottlenecks." 
               },
               { 
                 icon: <Monitor className="text-emerald-500" />, 
-                title: "Crystal Clear Video", 
-                desc: "Symmetric upload speeds guarantee that all company Teams and Zoom meetings run flawlessly, even with dozens of active cameras." 
+                title: "Predictable Performance", 
+                desc: "Uncontended bandwidth means zero peak-hour congestion. Your staff productivity stays high regardless of the time of day." 
               },
               { 
-                icon: <Smartphone className="text-emerald-500" />, 
-                title: "Zero POS Lag", 
-                desc: "For retail and hospitality, dedicated fibre ensures payment terminals and guest networks operate with zero transaction delay." 
+                icon: <Globe className="text-emerald-500" />, 
+                title: "Low-Latency Connectivity", 
+                desc: "Critical for cloud apps and VDI. Fast Fibre removes the lag and jitter often found on standard business nbn™ links." 
               },
               { 
                 icon: <Activity className="text-emerald-500" />, 
-                title: "Symmetric Speeds", 
-                desc: "Your upload speed is just as fast as your download speed, which is critical for cloud-heavy modern workloads." 
+                title: "Voice & Teams QoS", 
+                desc: "Dedicated fibre allows for superior Quality of Service (QoS), prioritising your Teams calls above standard web traffic." 
               }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-lg transition-all">
@@ -217,14 +217,19 @@ export default function FastFibrePage() {
           <FadeIn delay={0.4} className="mt-12 bg-white border border-slate-200 p-8 rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex gap-4 items-center">
               <div className="w-14 h-14 rounded-full bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0">
-                <CheckCircle2 size={12} />
+                <ShieldCheck size={20} />
               </div>
-              <p className="text-slate-900 font-bold text-lg leading-snug">
-                Shift your thinking from &ldquo;faster internet&rdquo; toward &ldquo;business resilience.&rdquo;
-              </p>
+              <div className="max-w-2xl">
+                <p className="text-slate-900 font-bold text-lg leading-snug mb-1">
+                  Choosing the right category of fibre.
+                </p>
+                <p className="text-slate-500 text-sm">
+                  Business nbn™ is for standard offices. Fast Fibre is for performance-heavy ops. Enterprise Ethernet is for governed SLA environments.
+                </p>
+              </div>
             </div>
-            <C9Button className="rounded-full h-12 px-8 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl text-white font-bold" asChild>
-              <Link href="#consultation-section">Review Fibre Options</Link>
+            <C9Button className="rounded-full h-12 px-8 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl text-white font-bold whitespace-nowrap" asChild>
+              <Link href="#consultation-section">Design My Fibre Upgrade</Link>
             </C9Button>
           </FadeIn>
         </div>
@@ -235,24 +240,24 @@ export default function FastFibrePage() {
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Enterprise Grade SLA</span>
+               <span className="c9-eyebrow mb-4">Performance Urgency</span>
                <h2 className="c9-section-heading mb-6">
-                  Backed by a 99.95% Operational Guarantee.
+                  Is Your Current Internet Bottlenecking Growth?
                </h2>
                <p className="c9-body mb-10">
-                  When you invest in Fast Fibre, you aren't just buying speed—you're buying an insurance policy against downtime. Our Service Level Agreement (SLA) puts financial penalties on the line if we don't deliver.
+                  Most businesses upgrade to Fast Fibre when standard nbn™ links fail to support modern operational pressure. If you are experiencing cloud lag or Teams instability, it's a performance signal.
                </p>
                
                <div className="space-y-6">
                   {[
-                    { title: "99.95% Uptime Target", text: "Mathematically, this means no more than a few hours of downtime annually. In practice, our failover designs aim for 100%." },
-                    { title: "Priority Restoration", text: "In the rare event of a physical fibre cut, your ticket jumps the queue to immediate enterprise priority." },
-                    { title: "Proactive NOC Layer", text: "Our engineers monitor latency and packet loss 24/7, catching anomalies before your team notices." },
-                    { title: "Absolute Ownership", text: "If there's an issue, we handle the carrier escalation. You speak to an Australian engineer, not a script." }
+                    { title: "Congested nbn Recovery", text: "Replace the 'shared' nature of broadband with 1:1 dedicated fibre throughput that never dips during peak hours." },
+                    { title: "Stable Cloud Access", text: "Ensure your ERP, CRM, and cloud backups perform identically at 9 AM and 3 PM. No more syncing delays." },
+                    { title: "Staff Productivity", text: "Eliminate the hidden costs of staff waiting for files to upload or dealing with disconnected meetings." },
+                    { title: "Reliable Teams & VoIP", text: "Prioritise voice and video traffic to ensure professional client interactions every single time." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4">
-                      <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-1">
-                        <CheckCircle size={14} className="text-[#5D00D6]" />
+                      <div className="w-6 h-6 rounded-full bg-rose-500/10 flex items-center justify-center shrink-0 mt-1">
+                        <TrendingUp size={14} className="text-rose-500" />
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.title}</h4>
@@ -266,13 +271,13 @@ export default function FastFibrePage() {
             <FadeIn direction="right" delay={0.2} className="relative">
               <div className="bg-slate-50 rounded-[48px] p-10 lg:p-16 border border-slate-100 relative shadow-inner">
                  <div className="absolute top-10 right-10 opacity-5">
-                    <ShieldCheck size={160} className="text-[#5D00D6]" />
+                    <Zap size={160} className="text-[#5D00D6]" />
                  </div>
-                 <h3 className="text-2xl font-bold text-slate-900 mb-8">SLA Metrics</h3>
+                 <h3 className="text-2xl font-bold text-slate-900 mb-8">Performance Targets</h3>
                  <div className="space-y-8 relative z-10">
                     {[
-                      { label: "Target Availability", val: "99.95%", width: "99.95%" },
-                      { label: "Contention", val: "1:1 Dedicated", width: "100%" },
+                      { label: "Throughput Consistency", val: "100%", width: "100%" },
+                      { label: "Symmetric Capacity", val: "1:1 Dedicated", width: "100%" },
                       { label: "Latency Target", val: "< 5ms", width: "95%" }
                     ].map((m, i) => (
                       <div key={i}>
@@ -294,7 +299,7 @@ export default function FastFibrePage() {
                  </div>
                  <div className="mt-12 p-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
                     <p className="text-slate-500 text-[14px] leading-relaxed italic">
-                       &ldquo;We focus on outcomes, not just technical speed specs. C9 fibre is designed to perform when your business matters.&rdquo;
+                       &ldquo;Speed is easy. Predictable throughput under load is what separates Fast Fibre from standard business internet.&rdquo;
                     </p>
                  </div>
               </div>
@@ -307,22 +312,22 @@ export default function FastFibrePage() {
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
         <div className={C}>
           <FadeIn className="text-center mb-16">
-            <span className="c9-eyebrow mb-4 text-[#5D00D6]">Strategic Relevance</span>
-            <h2 className="c9-section-heading">Infrastructure Built for Every Stage.</h2>
+            <span className="c9-eyebrow mb-4 text-[#5D00D6]">Migration Excellence</span>
+            <h2 className="c9-section-heading">Structured Fibre Upgrades.</h2>
           </FadeIn>
 
           <div className="grid md:grid-cols-3 gap-8">
             <FadeIn delay={0.1} className="bg-white p-10 rounded-[40px] border border-slate-200 shadow-sm hover:shadow-xl transition-all">
               <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8">
-                <Building2 size={28} />
+                <TrendingUp size={28} />
               </div>
-              <h3 className="c9-card-title mb-4">Opening New Sites</h3>
+              <h3 className="c9-card-title mb-4">nbn™ to Fibre Migration</h3>
               <p className="c9-body mb-6 !text-[15px]">
-                Fast deployment and operational readiness. We ensure your fibre is commissioned and tested well before your doors open.
+                Transition from standard broadband to dedicated performance with zero operational disruption. We coordinate the takeover and cutover.
               </p>
               <ul className="space-y-3 mb-8">
-                {['Day-one readiness', 'Site survey coordination', 'Project managed install'].map(t => (
-                  <li key={t} className="flex items-center gap-2 text-[13px] font-medium text-slate-700">
+                {['Seamless takeover planning', 'Voice & VoIP continuity', 'Minimal cutover windows'].map(t => (
+                   <li key={t} className="flex items-center gap-2 text-[13px] font-medium text-slate-700">
                     <CheckCircle2 size={14} className="text-emerald-500" /> {t}
                   </li>
                 ))}
@@ -331,14 +336,14 @@ export default function FastFibrePage() {
 
             <FadeIn delay={0.2} className="bg-white p-10 rounded-[40px] border border-slate-200 shadow-sm hover:shadow-xl transition-all">
               <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8">
-                <TrendingUp size={28} />
+                <Building2 size={28} />
               </div>
-              <h3 className="c9-card-title mb-4">Growing Existing Ops</h3>
+              <h3 className="c9-card-title mb-4">New Site Commissioning</h3>
               <p className="c9-body mb-6 !text-[15px]">
-                Scalable infrastructure that keeps pace with demand. Transition from congested nbn™ to dedicated performance without disruption.
+                Opening a new retail flagship or warehouse? We manage the entire fibre build project to ensure day-one operational readiness.
               </p>
               <ul className="space-y-3 mb-8">
-                {['Zero-disruption migration', 'Scalable bandwidth', 'Consolidated billing'].map(t => (
+                {['Direct carrier coordination', 'Managed site surveys', 'Validated day-one uptime'].map(t => (
                   <li key={t} className="flex items-center gap-2 text-[13px] font-medium text-slate-700">
                     <CheckCircle2 size={14} className="text-emerald-500" /> {t}
                   </li>
@@ -350,12 +355,12 @@ export default function FastFibrePage() {
               <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8">
                 <Server size={28} />
               </div>
-              <h3 className="c9-card-title mb-4">Enterprise Scaling</h3>
+              <h3 className="c9-card-title mb-4">Multi-Site Convergence</h3>
               <p className="c9-body mb-6 !text-[15px]">
-                Network consistency across locations. Ensure critical systems (ERP, Voice, Cloud) perform identically at every site.
+                Consolidate your wide area network with consistent performance. Ensure your ERP and Teams perform identically at every office.
               </p>
               <ul className="space-y-3 mb-8">
-                {['Unified SLA model', 'Direct cloud connects', 'Multi-site governance'].map(t => (
+                {['Unified network governance', 'Symmetric site performance', 'Centralised NOC monitoring'].map(t => (
                   <li key={t} className="flex items-center gap-2 text-[13px] font-medium text-slate-700">
                     <CheckCircle2 size={14} className="text-emerald-500" /> {t}
                   </li>
@@ -429,15 +434,15 @@ export default function FastFibrePage() {
                 <span className="c9-eyebrow mb-4">Predictable Continuity</span>
                 <h2 className="c9-section-heading mb-6">Commercial Proof of Operational Performance.</h2>
                 <p className="c9-body mb-10 text-slate-600">
-                   When connectivity is managed, the business results are measurable. Shift from hoping for uptime to guaranteeing it.
+                   When connectivity is managed, the results are measurable. C9 Fast Fibre removes the performance bottlenecks that slow down Australian business operations.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
                    {[
                      { label: "Uptime Confidence", val: "99.95%" },
                      { label: "Contention Ratio", val: "1:1 Dedicated" },
-                     { label: "Deployment Speed", val: "Rapid" },
-                     { label: "Support Ownership", val: "Direct" }
+                     { label: "Cloud Sync Speed", val: "Symmetric" },
+                     { label: "Teams Quality", val: "Prioritised" }
                    ].map((stat, i) => (
                      <div key={i} className="bg-slate-50/80 border border-slate-100 rounded-[32px] p-8 hover:bg-white hover:border-[#5D00D6]/20 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5D00D6]/10">
                         <div className="text-3xl font-bold text-[#5D00D6] mb-1 leading-none tracking-tight duration-500">{stat.val}</div>
@@ -454,23 +459,23 @@ export default function FastFibrePage() {
                       {
                         tag: 'FAST FIBRE SUCCESS',
                         title: 'High-Traffic Office Transformation',
-                        desc: "A national distribution centre was plagued by nbn™ congestion. C9 deployed dedicated Fast Fibre with a 99.95% SLA. Result: Operational friction eliminated.",
+                        desc: "A national distribution centre was plagued by nbn™ congestion during peak cloud sync windows. C9 deployed dedicated symmetric fibre. Result: Productivity bottleneck eliminated.",
                         img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop',
                         videoText: 'Performance Restored'
                       },
                       {
-                        tag: 'ENTERPRISE SCALE',
-                        title: 'Multi-Site Warehouse Connectivity',
-                        desc: "A logistics leader required symmetric speeds across 4 sites. C9 architected a private fibre network with unified governance. Result: 60% faster data syncing.",
+                        tag: 'WAREHOUSE OPS',
+                        title: 'Logistics Center Symmetric Upgrade',
+                        desc: "A busy logistics hub needed symmetric 1000/1000 speeds for inventory replication. C9 architected a dedicated fibre path with 4G backup. Result: 60% faster data replication.",
                         img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop',
                         videoText: 'Symmetric Performance'
                       },
                       {
-                        tag: 'GREENFIELD SITE',
-                        title: 'Day-One Readiness for Retail',
-                        desc: "A new retail flagship needed operational internet before opening. C9 managed the fibre build and commissioning in record time. Result: Live for launch.",
-                        img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2000&auto=format&fit=crop',
-                        videoText: 'Operational Readiness'
+                        tag: 'CLOUD COLLABORATION',
+                        title: 'Teams & Voice Quality Restoration',
+                        desc: "A professional services firm suffered from call jitter on standard internet. C9 migrated them to dedicated fibre with QoS prioritization. Result: Professional voice continuity.",
+                        img: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2000&auto=format&fit=crop',
+                        videoText: 'Voice Optimized'
                       }
                     ]}
                   />
@@ -507,13 +512,13 @@ export default function FastFibrePage() {
               <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white opacity-[0.05] rounded-full blur-[80px] -ml-32 -mb-32" />
               
               <div className="relative z-10">
-                <span className="c9-eyebrow !text-white/80 mb-4">Final Decision Point</span>
-                <h2 className="c9-section-heading !text-white mb-6">Performance + Reliability + Accountability</h2>
+                <span className="c9-eyebrow !text-white/80 mb-4">Improve My Business Performance</span>
+                <h2 className="c9-section-heading !text-white mb-6">Dedicated Fibre + Predictable Throughput + Senior Support</h2>
                 <p className="c9-body !text-white/70 mb-10 max-w-2xl mx-auto text-lg">
                   Stop settling for consumer-grade service. Partner with C9 for business fibre that performs when it matters most to your bottom line.
                 </p>
                 <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg font-bold" asChild>
-                  <Link href="#consultation-section">Talk to a Connectivity Specialist</Link>
+                  <Link href="#consultation-section">Improve My Business Performance</Link>
                 </C9Button>
               </div>
            </div>
