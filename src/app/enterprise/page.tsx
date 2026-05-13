@@ -79,7 +79,7 @@ const Hero = () => (
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Enterprise Infrastructure & Managed Services Built for <br/>
+              Enterprise Telco & IT & Managed Services Built for <br/>
               <span className="text-[#5D00D6]">Operational Continuity.</span>
             </h1>
           </FadeIn>
@@ -176,7 +176,7 @@ const SectionChallenges = () => (
           { icon: <ClipboardCheck size={24} aria-hidden="true" />, title: 'Compliance Pressure', desc: 'Struggling to maintain compliance readiness and governance alignment across disconnected support structures.' },
           { icon: <Users size={24} aria-hidden="true" />, title: 'Support Inconsistency', desc: 'Escalating operational overhead caused by fragmented support structures and inconsistent response times.' },
           { icon: <ShieldAlert size={24} aria-hidden="true" />, title: 'Security Risks', desc: 'Unmanaged operational risk and security vulnerabilities stemming from reactive vendor relationships.' },
-          { icon: <RefreshCw size={24} aria-hidden="true" />, title: 'Infrastructure Complexity', desc: 'Balancing the demands of modernizing ecosystems while maintaining uptime for critical legacy systems.' }
+          { icon: <RefreshCw size={24} aria-hidden="true" />, title: 'Telco & IT Complexity', desc: 'Balancing the demands of modernizing ecosystems while maintaining uptime for critical legacy systems.' }
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.05}>
             <div className="group bg-white p-8 rounded-3xl border border-slate-100 h-full hover:border-[#5D00D6]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-900/5 hover:-translate-y-2">
@@ -199,7 +199,7 @@ const SectionChallenges = () => (
 const SectionCapabilities = () => (
   <ProblemSolutionSection 
     data={ENTERPRISE_CAPABILITIES_DATA}
-    eyebrow="ENTERPRISE INFRASTRUCTURE MANAGEMENT"
+    eyebrow="ENTERPRISE TELCO & IT MANAGEMENT"
     title={<>Strategic Infrastructure for <span className="text-[#5D00D6]">Enterprise Scale.</span></>}
     description="Unified, managed infrastructure with SLA-backed guarantees, compliance controls, and 24/7 accountability. Built for enterprises that cannot tolerate downtime."
   />
@@ -221,7 +221,7 @@ const SectionMSPPositioning = () => (
            <div className="space-y-8">
               {[
                 { 
-                  title: 'Integrated Infrastructure Management', 
+                  title: 'Integrated Telco & IT Management', 
                   icon: <Layers aria-hidden="true" />, 
                   desc: 'We provide ongoing managed support across your entire multi-site ecosystem, eliminating the burden of managing multiple vendors.' 
                 },
@@ -315,7 +315,7 @@ const SectionGovernance = () => (
             {
               title: 'Maintenance Workflows',
               icon: <RefreshCw aria-hidden="true" />,
-              desc: 'Strict maintenance workflows and lifecycle management processes ensuring infrastructure resilience without unexpected downtime.'
+              desc: 'Strict maintenance workflows and lifecycle management processes ensuring telco & IT resilience without unexpected downtime.'
             }
           ].map((card, i) => (
             <FadeIn key={i} delay={i * 0.1}>
@@ -344,7 +344,7 @@ const SectionSecurityCompliance = () => (
              <span className="c9-eyebrow mb-4">Security Posture & Resilience</span>
              <h2 className="c9-section-heading">Security & Compliance Integration</h2>
              <p className="c9-body text-slate-800 mt-6">
-               Enterprise risk demands operational safeguards. We establish governance-driven environments that align with complex compliance frameworks and ensure infrastructure resilience.
+               Enterprise risk demands operational safeguards. We establish governance-driven environments that align with complex compliance frameworks and ensure telco & IT resilience.
              </p>
           </FadeIn>
        </div>
@@ -422,13 +422,13 @@ const SectionOfferings = () => {
           className="flex overflow-x-auto gap-6 pb-8 pt-4 -mx-6 px-6 md:-mx-8 md:px-8 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         >
           {[
-            { icon: <Globe size={20} aria-hidden="true" />, title: 'Managed Multi-Site Infrastructure', desc: 'Ensures support continuity and operational standardization across all physical locations.' },
+            { icon: <Globe size={20} aria-hidden="true" />, title: 'Managed Multi-Site Telco & IT', desc: 'Ensures support continuity and operational standardization across all physical locations.' },
             { icon: <PhoneCall size={20} aria-hidden="true" />, title: 'Enterprise Communications Management', desc: 'Centralized voice, unified communications, and connectivity with SLA-backed reliability.' },
             { icon: <Monitor size={20} aria-hidden="true" />, title: 'Centralized Monitoring & Support', desc: 'Unifies visibility to rapidly identify incidents and reduce ongoing support overhead.' },
             { icon: <Shield size={20} aria-hidden="true" />, title: 'Network & Security Operations', desc: 'Integrates proactive threat management and governance to secure the enterprise perimeter.' },
             { icon: <Server size={20} aria-hidden="true" />, title: 'Infrastructure Lifecycle Management', desc: 'Strategic planning and management of hardware/software to maximize operational outcomes.' },
             { icon: <FileCheck size={20} aria-hidden="true" />, title: 'Governance & Compliance Support', desc: 'Aligns daily IT operations with internal governance and regulatory compliance demands.' },
-            { icon: <Network size={20} aria-hidden="true" />, title: 'Enterprise Connectivity Management', desc: 'Provides robust connectivity orchestration, ensuring uptime for complex hybrid cloud environments.' },
+            { icon: <Network size={20} aria-hidden="true" />, title: 'Enterprise Telco & IT Management', desc: 'Provides robust connectivity orchestration, ensuring uptime for complex hybrid cloud environments.' },
             { icon: <Activity size={20} aria-hidden="true" />, title: 'Business Continuity & Resilience', desc: 'Proactive safeguards and rapid recovery processes to eliminate outages during critical operations.' }
           ].map((item, i) => (
             <div key={i} className="w-[85vw] md:w-[45vw] lg:w-[320px] shrink-0 snap-start">
@@ -478,7 +478,7 @@ const SectionMultiSiteScalability = () => (
              <span className="c9-eyebrow mb-4">Multi-Site Scalability</span>
              <h2 className="c9-section-heading mb-6">Designed for Distributed Operations</h2>
              <p className="c9-body text-slate-800 mb-8">
-               We support your growth by providing location consistency, operational standardization, and scalable infrastructure. Confidently expand your footprint with a managed services partner that scales with you.
+               We support your growth by providing location consistency, operational standardization, and scalable telco & IT. Confidently expand your footprint with a managed services partner that scales with you.
              </p>
              <div className="space-y-6">
                 {[
@@ -514,7 +514,7 @@ const SectionOperationalProof = () => (
              <span className="c9-eyebrow mb-4">Operational Proof</span>
              <h2 className="c9-section-heading">Measurable Operational Outcomes</h2>
              <p className="c9-body text-slate-900 mt-6">
-               Transitioning from complexity to control. We deliver proven infrastructure consolidation and improved support responsiveness.
+               Transitioning from complexity to control. We deliver proven telco & IT consolidation and improved support responsiveness.
              </p>
           </FadeIn>
        </div>
@@ -723,8 +723,8 @@ export default function EnterprisePage() {
       <WpConsultationForm
         showHeader={false}
         eyebrow="STRATEGIC OPERATIONS ASSESSMENT"
-        title="Evaluate Your Infrastructure Environment"
-        description="Ready to consolidate your technology operations under a single accountable partner? Schedule an infrastructure review to discuss architecture, governance, and your multi-site strategy."
+        title="Evaluate Your Telco & IT Environment"
+        description="Ready to consolidate your technology operations under a single accountable partner? Schedule a telco & IT review to discuss architecture, governance, and your multi-site strategy."
         formTitle="Request Enterprise Briefing"
       />
     </main>

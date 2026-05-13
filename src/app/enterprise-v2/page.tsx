@@ -75,13 +75,13 @@ const Hero = () => (
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
               <ShieldCheck size={13} className="text-[#5D00D6]" aria-hidden="true" />
-              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Infrastructure Governance</span>
+              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Telco & IT Governance</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-6">
-              Multi-Site Infrastructure <br/>
+              Multi-Site Telco & IT <br/>
               <span className="text-[#5D00D6]">Control & Governance Clarity.</span>
             </h1>
           </FadeIn>
@@ -102,7 +102,7 @@ const Hero = () => (
                     document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Request Infrastructure Assessment
+                  Request Telco & IT Assessment
                 </C9Button>
                 <C9Button
                   variant="outline"
@@ -213,9 +213,9 @@ const SectionProblem = () => (
 const SectionCapabilities = () => (
   <ProblemSolutionSection 
     data={ENTERPRISE_CAPABILITIES_DATA}
-    eyebrow="ENTERPRISE INFRASTRUCTURE MANAGEMENT"
-    title={<>Strategic Infrastructure for <span className="text-[#5D00D6]">Enterprise Scale.</span></>}
-    description="Unified, managed infrastructure with SLA-backed guarantees, compliance controls, and 24/7 accountability. Built for enterprises that cannot tolerate downtime."
+    eyebrow="ENTERPRISE TELCO & IT MANAGEMENT"
+    title={<>Strategic Telco & IT for <span className="text-[#5D00D6]">Enterprise Scale.</span></>}
+    description="Unified, managed telco & IT with SLA-backed guarantees, compliance controls, and 24/7 accountability. Built for enterprises that cannot tolerate downtime."
   />
 );
 
@@ -320,7 +320,7 @@ const SectionModelDetail = () => (
             { 
               title: 'Single Ownership Model', 
               icon: <Layers aria-hidden="true" />, 
-              desc: 'We eliminate resolution deadlocks by assigning absolute ownership for every infrastructure layer. One accountable partner for all estate layers.' 
+              desc: 'We eliminate resolution deadlocks by assigning absolute ownership for every telco & IT layer. One accountable partner for all estate layers.' 
             },
             { 
               title: 'Escalation Hierarchy', 
@@ -444,13 +444,13 @@ const SectionScalability = () => (
              <span className="c9-eyebrow mb-4">Performance & Stability at Scale</span>
              <h2 className="c9-section-heading mb-6">Uptime & System-Wide Consistency</h2>
              <p className="c9-body text-slate-800 mb-8">
-               We achieve enterprise stability by eliminating the root causes of infrastructure failure. Our framework ensures that every site operates at peak performance through proactive issue detection and root-cause elimination.
+               We achieve enterprise stability by eliminating the root causes of telco & IT failure. Our framework ensures that every site operates at peak performance through proactive issue detection and root-cause elimination.
              </p>
              <div className="space-y-6">
                 {[
-                  { title: 'Proactive Issue Detection', desc: 'Identifying and solving infrastructure bottlenecks before they impact operational continuity.' },
+                  { title: 'Proactive Issue Detection', desc: 'Identifying and solving telco & IT bottlenecks before they impact operational continuity.' },
                   { title: 'Recurring Issue Elimination', desc: 'Hardened root-cause analysis to permanently remove systemic technical debt from the environment.' },
-                  { title: 'System-Wide Consistency', desc: 'Standardised hardware and software stacks that ensure identical performance across all enterprise locations.' }
+                  { title: 'System-Wide Consistency', desc: 'Standardised telco & IT stacks that ensure identical performance across all enterprise locations.' }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                      <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0 mt-1">
@@ -521,13 +521,13 @@ const SectionArchitecture = () => (
              <span className="c9-eyebrow mb-4">System Integration</span>
              <h2 className="c9-section-heading mb-6">Integration with Existing Environments</h2>
              <p className="c9-body text-slate-800 mb-8">
-               We govern your multi-site infrastructure without disrupting current operations. Our architecture integrates deeply with your established enterprise systems.
+               We govern your multi-site telco & IT without disrupting current operations. Our architecture integrates deeply with your established enterprise systems.
              </p>
              <div className="space-y-4">
                 {[
                   { icon: <Database size={18} aria-hidden="true" />, title: 'ERP & POS Systems', desc: 'Direct integration with core business platforms to ensure transaction continuity across all sites.' },
                   { icon: <Cloud size={18} aria-hidden="true" />, title: 'Cloud & Hybrid Platforms', desc: 'Unified control of Azure, AWS, and legacy infrastructure without disrupting existing workflows.' },
-                  { icon: <Server size={18} aria-hidden="true" />, title: 'Legacy Infrastructure Governance', desc: 'Bringing Small Business environments into a modern governance model without service disruption.' }
+                  { icon: <Server size={18} aria-hidden="true" />, title: 'Legacy Telco & IT Governance', desc: 'Bringing Small Business environments into a modern governance model without service disruption.' }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 p-6 bg-white rounded-none border border-slate-200 shadow-sm">
                      <div className="text-[#5D00D6] shrink-0 mt-1">{item.icon}</div>
@@ -602,7 +602,7 @@ const SectionProof = () => (
             { 
               tag: 'LOGISTICS', 
               title: '1,200 Endpoint Governance', 
-              desc: 'Seamless migration of 1,200 distributed endpoints with zero operational downtime. Incident volume reduced through standardised infrastructure.',
+              desc: 'Seamless migration of 1,200 distributed endpoints with zero operational downtime. Incident volume reduced through standardised telco & IT.',
               metric: '42%',
               metricLabel: 'Incident Reduction'
             }
@@ -633,10 +633,10 @@ const SectionCommercial = () => (
     <div className={C}>
        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <FadeIn direction="right">
-             <span className="c9-eyebrow mb-4 !text-white">Co-Managed Infrastructure</span>
+             <span className="c9-eyebrow mb-4 !text-white">Co-Managed Telco & IT</span>
              <h2 className="c9-section-heading !text-white !text-left mb-8">Working with Internal IT Teams</h2>
              <p className="c9-body text-white/95 mb-10 max-w-lg leading-relaxed">
-               We empower internal IT departments by removing the operational burden of multi-site infrastructure management. Our model is built on role clarity, not replacement.
+               We empower internal IT departments by removing the operational burden of multi-site telco & IT management. Our model is built on role clarity, not replacement.
              </p>
              <div className="flex gap-4">
                 <div className="w-12 h-12 rounded-none bg-white/10 flex items-center justify-center text-white">
@@ -702,7 +702,7 @@ const SectionEcosystem = () => (
             },
             { 
               label: 'Non-Structured Ops', 
-              desc: 'Environments where leadership does not support the standardisation of infrastructure and hardware across sites.',
+              desc: 'Environments where leadership does not support the standardisation of telco & IT and hardware across sites.',
               icon: <Layers aria-hidden="true" />
             },
             { 
@@ -736,7 +736,7 @@ const SectionEcosystem = () => (
           {[
             { label: 'Cloud Services', icon: <Cloud aria-hidden="true" /> },
             { label: 'Network Solutions', icon: <Network aria-hidden="true" /> },
-            { label: 'Infrastructure', icon: <Server aria-hidden="true" /> },
+            { label: 'Telco & IT', icon: <Server aria-hidden="true" /> },
             { label: 'Helpdesk Support', icon: <MessageSquare aria-hidden="true" /> },
             { label: 'Security Ops', icon: <Shield aria-hidden="true" /> }
           ].map((item, i) => (
@@ -762,7 +762,7 @@ const FinalCTA = () => (
      <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/30 to-transparent opacity-50" />
      <div className={C + " relative z-10 text-center"}>
         <FadeIn>
-           <h2 className="c9-section-heading !text-white mb-8 !text-4xl lg:!text-5xl">Establish Infrastructure Governance. <br/>Enforce Your SLA.</h2>
+           <h2 className="c9-section-heading !text-white mb-8 !text-4xl lg:!text-5xl">Establish Telco & IT Governance. <br/>Enforce Your SLA.</h2>
            <p className="text-white/95 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
              Fragmented environments create hidden operational risks. Establish a structured operating model and regain control across your entire multi-site estate.
            </p>
@@ -774,7 +774,7 @@ const FinalCTA = () => (
                    document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                  }}
                >
-                  Request Enterprise Infrastructure Assessment
+                  Request Enterprise Telco & IT Assessment
                </C9Button>
                <C9Button 
                  variant="outline"
@@ -784,7 +784,7 @@ const FinalCTA = () => (
                    document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
                  }}
                >
-                  Talk to an Infrastructure Architect
+                  Talk to a Telco & IT Architect
                </C9Button>
            </div>
            <div className="mt-8">
