@@ -12,12 +12,12 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
     problemStatement: "Single-ISP Dependency Creates Business Continuity Risk",
     problemContext: "Reliance on a single internet provider creates a critical single point of failure. When your ISP goes down, your entire business stops. For enterprises managing multiple locations, this risk is multiplied across your infrastructure.",
     solutionTitle: "Carrier-Grade Internet Infrastructure",
-    solutionDescription: "Multi-carrier internet redundancy with automatic failover, 99.99% uptime SLA, and 24/7 proactive monitoring. Designed for enterprises that cannot tolerate downtime.",
+    solutionDescription: "Multi-carrier internet redundancy with automatic failover, 99.99% uptime SLA, and proactive infrastructure monitoring. Designed for enterprises that cannot tolerate downtime.",
     features: [
       "Dual internet connections from independent carriers",
       "Automatic failover (<30 seconds, zero downtime)",
       "99.99% uptime SLA with financial penalties",
-      "24/7 Network Operations Center (NOC) monitoring",
+      "Centralised Network Operations Center (NOC) monitoring",
       "15-minute response guarantee for any issues",
       "Dedicated account management and escalation"
     ],
@@ -27,7 +27,7 @@ export const ENTERPRISE_CAPABILITIES_DATA: OfferingData[] = [
       "Reduces operational risk by 95%+",
       "Meets regulatory business continuity requirements",
       "Provides financial protection through SLA penalties",
-      "Enables 24/7 operations without interruption"
+      "Enables continuous operations without interruption"
     ],
     numbers: [
       { label: "Uptime SLA", value: "99.99%" },

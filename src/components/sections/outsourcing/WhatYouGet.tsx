@@ -13,8 +13,8 @@ const services = [
   {
     icon: Activity,
     title: "Proactive monitoring",
-    body: "Your servers, network, and devices monitored 24/7. Issues flagged and resolved before your staff notice them. Not reactive support — prevention built in.",
-    tags: ['24/7 Monitoring', 'Issue Detection', 'Network Health'],
+    body: "Your servers, network, and devices monitored around the clock. Issues flagged and resolved before your staff notice them. Not reactive support — prevention built in.",
+    tags: ['Continuous Monitoring', 'Issue Detection', 'Network Health'],
     link: null
   },
   {

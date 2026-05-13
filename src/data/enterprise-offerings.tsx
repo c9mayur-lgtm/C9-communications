@@ -42,7 +42,7 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       "Network (Unified management, basic security controls)",
       "Phone System (Basic compliance, call recording)",
       "Email & Collaboration (Microsoft 365 Standard)",
-      "24/7 Support (Standard response time)"
+      "Priority Business Support (Standard response time)"
     ],
     infrastructure: [
       "Dual internet connections with automatic failover",
@@ -52,7 +52,7 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       "Email migration and training"
     ],
     support: [
-      "24/7 support (phone, email, chat)",
+      "Priority Business Support (phone, email, chat),",
       "2-hour response time guarantee",
       "Monthly performance reports",
       "Basic troubleshooting and maintenance",
@@ -106,7 +106,7 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       "Email & Collaboration (Microsoft 365 Premium)",
       "CCTV (Integrated surveillance, compliance-ready)",
       "Print Infrastructure (Managed, optimized, supplies included)",
-      "24/7 Premium Support (1-hour response)"
+      "Senior Engineering Support (1-hour response)"
     ],
     infrastructure: [
       "Multi-location network design and optimization",
@@ -118,7 +118,7 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       "Initial security assessment"
     ],
     support: [
-      "24/7 Premium Support (phone, email, chat)",
+      "Senior Engineering Support (phone, email, chat),",
       "1-hour response time guarantee",
       "Dedicated account manager",
       "Quarterly business reviews",
@@ -140,7 +140,7 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       "Multi-location operations",
       "Want comprehensive solution",
       "Strategic partnership focus",
-      "Need 24/7 support"
+      "Need Priority Support"
     ],
     strategicValue: [
       "Consolidate 5-8 vendors into one partnership",
@@ -181,7 +181,7 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       "Modern Workplace (Device management, zero-trust security)",
       "Access Control (Multi-location, visitor management, emergency protocols)",
       "Security Services (Advanced threat protection, vulnerability scanning)",
-      "24/7 Premium Support (30-minute response)"
+      "Senior Engineering Support (30-minute response)"
     ],
     infrastructure: [
       "Multi-carrier internet with full redundancy",
@@ -196,7 +196,7 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       "Business continuity planning"
     ],
     support: [
-      "24/7 Premium Support (dedicated team)",
+      "Senior Engineering Support (dedicated team),",
       "30-minute response time guarantee",
       "Dedicated account team (2-3 people)",
       "Monthly business reviews",

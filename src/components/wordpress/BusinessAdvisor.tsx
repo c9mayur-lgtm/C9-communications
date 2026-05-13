@@ -15,7 +15,7 @@ const INDUSTRIES = [
       { name: 'C9 Defense Security', href: 'https://c9defense.com.au/' },
       { name: 'Managed IT Support', href: '/managed-it/helpdesk-support' }
     ],
-    benefit: 'HIPAA/Privacy Act-compliant IT with zero-touch device setup and 24/7 monitoring.'
+    benefit: 'HIPAA/Privacy Act-compliant IT with zero-touch device setup and continuous monitoring.'
   },
   { 
     id: 'legal', icon: Scale, label: 'Legal & Finance', tag: 'Professional',
@@ -99,7 +99,7 @@ function getResponse(query: string): ChatResponse {
   }
   if (q.match(/fast.?fibre|c9.?fibre|fibre.?internet/)) {
     return { 
-      text: "C9 Fibre is our flagship internet solution — offering asymmetrical and symmetrical speeds up to 10,000 Mbps with a 99.95% uptime guarantee and 24/7 engineering support. It's built for performance-critical businesses.", 
+      text: "C9 Fibre is our flagship internet solution — offering asymmetrical and symmetrical speeds up to 10,000 Mbps with a 99.95% uptime guarantee and priority engineering support. It's built for performance-critical businesses.", 
       links: [{ label: 'Fast Fibre', href: '/telco/fast-fibre' }]
     };
   }
@@ -147,7 +147,7 @@ function getResponse(query: string): ChatResponse {
   }
   if (q.match(/security|cyber|threat|ransomware|breach|c9.?defense|defence/)) {
     return { 
-      text: "C9 Defense is our dedicated security solution — 24/7 threat detection, endpoint protection, and managed firewall. We help businesses achieve 'Essential 8' compliance and protect against modern cyber threats.", 
+      text: "C9 Defense is our dedicated security solution — continuous threat detection, endpoint protection, and managed firewall. We help businesses achieve 'Essential 8' compliance and protect against modern cyber threats.", 
       links: [{ label: 'C9 Defense', href: 'https://c9defense.com.au/' }, { label: 'Security Solutions', href: 'https://c9defense.com.au/' }]
     };
   }
@@ -177,7 +177,7 @@ function getResponse(query: string): ChatResponse {
   }
   if (q.match(/voice.?ai|ai.?receptionist/)) {
     return { 
-      text: "Reduce missed calls with C9 Voice AI. Our AI Receptionist answers, qualifies, and routes inbound calls 24/7, freeing your staff from routine enquiries.", 
+      text: "Reduce missed calls with C9 Voice AI. Our AI Receptionist answers, qualifies, and routes inbound calls around the clock, freeing your staff from routine enquiries.", 
       links: [{ label: 'Voice AI', href: '/telco' }]
     };
   }

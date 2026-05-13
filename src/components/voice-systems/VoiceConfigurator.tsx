@@ -47,7 +47,7 @@ export const VoiceConfigurator = () => {
             Build your <span className="text-[#5D00D6]">Voice System.</span>
           </motion.h2>
           <p className="text-slate-500 text-[16px] max-w-2xl mx-auto">
-            Select what your business needs. C9 handles the configuration, deployment, and 24/7 support.
+            Select what your business needs. C9 handles the configuration, deployment, and ongoing support.
           </p>
         </div>
 

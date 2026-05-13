@@ -12,7 +12,7 @@ export const WpSupport = () => {
             Proactive Monitoring. <br className="hidden md:block" /> Rapid Response.
           </h2>
           <p className="c9-body max-w-3xl mx-auto">
-            24/7 monitoring and responsive support ensure issues are detected and resolved before they impact operations. We don’t just fix problems—we prevent them.
+            Proactive monitoring and rapid response support ensure issues are detected and resolved before they impact operations. We don’t just fix problems—we prevent them.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export const WpSupport = () => {
             },
             {
               title: "Ongoing System Monitoring",
-              desc: "We monitor your network and endpoints 24/7, detecting and neutralising threats or performance bottlenecks before you even notice them.",
+              desc: "We monitor your network and endpoints proactively, detecting and neutralising threats or performance bottlenecks before you even notice them.",
               img: "/images/support/safeguarding-support.jpg",
               link: "SEE MONITORING"
             },
@@ -90,7 +90,7 @@ export const WpSupport = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent opacity-60" />
             </div>
             <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-[24px] shadow-2xl max-w-[280px] border border-gray-100 hidden md:block">
-              <div className="text-[#5D00D6] font-medium text-[36px] mb-1 leading-none tracking-tighter">24/7</div>
+              <div className="text-[#5D00D6] font-medium text-[36px] mb-1 leading-none tracking-tighter">Rapid</div>
               <div className="c9-eyebrow !text-gray-900 !text-[9px] !leading-snug">Critical Support<br />Guarantee</div>
             </div>
           </div>

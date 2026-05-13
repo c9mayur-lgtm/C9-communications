@@ -29,7 +29,7 @@ export const WpHeroV2 = () => {
 
               {/* Uptime, Support, No Lock-In marks */}
               <div className="flex items-center gap-5 md:gap-8 mt-10 md:mt-12 flex-wrap pb-4">
-                {['99.99% SLA Uptime', '24/7 AU-Managed Support', '0 Lock-In Contracts'].map((t, i) => (
+                {['99.99% SLA Uptime', 'AU-Managed Senior Support', '0 Lock-In Contracts'].map((t, i) => (
                   <span key={i} className="flex items-center gap-2 text-[14px] font-bold text-slate-500 tracking-tight" >
                     <CheckCircle size={12} className="text-[#5D00D6]" /> {t}
                   </span>

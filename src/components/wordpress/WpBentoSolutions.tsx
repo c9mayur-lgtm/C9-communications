@@ -278,7 +278,7 @@ export const WpBentoSolutions = () => {
                   Endpoint Security
                 </h3>
                 <p className="c9-body mb-4">
-                  Laptops and tablets monitored, patched, and protected 24/7.
+                  Laptops and tablets monitored, patched, and protected proactively.
                 </p>
                 <div className="mt-auto flex flex-nowrap gap-2">
                   <span className="px-3 py-1.5 bg-[#F4F0FA] border border-gray-100 text-[#5D00D6] shadow-sm c9-eyebrow !text-[9px] rounded-full whitespace-nowrap">Security First</span>

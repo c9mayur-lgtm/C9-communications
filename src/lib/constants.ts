@@ -18,7 +18,7 @@ export const NAV_LINKS = {
 };
 
 export const MANAGED_IT_FEATURES = [
-  "Helpdesk & 24/7 support",
+  "Senior Helpdesk & Engineering Support",
   "IT infrastructure design & management",
   "Cloud migrations & ongoing management",
   "Backup, DR, and business continuity"

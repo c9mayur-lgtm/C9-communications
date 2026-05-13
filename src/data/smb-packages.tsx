@@ -63,7 +63,7 @@ export const SMB_PACKAGES: PackageTier[] = [
     ],
     
     support: [
-      "24/5 support (Mon-Fri, 8am-6pm)",
+      "Priority Business Support (Mon-Fri, 8am-6pm)",
       "Monthly check-ins",
       "Basic troubleshooting",
       "Email support"
@@ -125,7 +125,7 @@ export const SMB_PACKAGES: PackageTier[] = [
       "Email & Collaboration (Microsoft 365 Business Standard)",
       "CCTV (4-8 cameras, cloud storage, 30-day retention)",
       "Managed Print (2-4 devices, supplies included)",
-      "24/7 Support (phone, email, chat, 2-hour response)"
+      "Priority Business Support (phone, email, chat, 2-hour response)"
     ],
     
     infrastructure: [
@@ -139,7 +139,7 @@ export const SMB_PACKAGES: PackageTier[] = [
     ],
     
     support: [
-      "24/7 support (phone, email, chat)",
+      "Priority Business Support (phone, email, chat),",
       "Monthly performance reviews",
       "Quarterly business reviews",
       "Proactive monitoring",
@@ -160,7 +160,7 @@ export const SMB_PACKAGES: PackageTier[] = [
       "Growing businesses (10-50 employees)",
       "Consolidating multiple vendors",
       "Want comprehensive solution",
-      "Need 24/7 support",
+      "Need Priority Support",
       "1-2 locations"
     ],
     
@@ -208,7 +208,7 @@ export const SMB_PACKAGES: PackageTier[] = [
       "Managed Print (8+ devices, supplies, optimization)",
       "Modern Workplace (Device management, security)",
       "Access Control (Visitor management, multi-location)",
-      "24/7 Premium Support (dedicated team, 30-min response)"
+      "Senior Engineering Support (dedicated team, 30-min response)"
     ],
     
     infrastructure: [
@@ -224,7 +224,7 @@ export const SMB_PACKAGES: PackageTier[] = [
     ],
     
     support: [
-      "24/7 Premium Support (dedicated team)",
+      "Senior Engineering Support (dedicated team),",
       "30-minute response guarantee",
       "Dedicated account manager",
       "Quarterly business reviews",
