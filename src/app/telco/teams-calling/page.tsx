@@ -20,14 +20,16 @@ import {
   Headphones,
   CheckCircle,
   Smartphone,
-  ChevronRight
+  ChevronRight,
+  Activity,
+  Zap
 } from 'lucide-react';
 
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
 import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
 import { Section } from "@/components/design-system/Section";
-import { Button } from "@/components/ui/button";
+import { C9Button } from "@/components/design-system/C9Button";
 import { ContinueJourney } from "@/components/sections/ContinueJourney";
 
 /* ─────────────────────────────────────────────────────────
@@ -124,14 +126,14 @@ export default function TeamsCallingPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                 <Link href="#consultation-section" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-[1.02]">
+                  <C9Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-[1.02]">
                     Plan My Teams Calling Migration 
-                  </Button>
+                  </C9Button>
                 </Link>
                 <Link href="#consultation-section" className="w-full sm:w-auto">
-                  <Button variant="outline" size="lg" className="w-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white px-8 h-14 text-[14px] font-bold rounded-full transition-all">
+                  <C9Button variant="outline" size="lg" className="w-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white px-8 h-14 text-[14px] font-bold rounded-full transition-all">
                     Move Business Numbers to Teams
-                  </Button>
+                  </C9Button>
                 </Link>
               </div>
               
@@ -249,14 +251,14 @@ export default function TeamsCallingPage() {
               <div className="mt-10">
                 <div className="flex flex-wrap gap-4">
                   <Link href="#consultation-section">
-                    <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 rounded-full h-14">
+                    <C9Button size="lg" className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 rounded-full h-14">
                       Plan a Teams Migration <ArrowRight size={16} className="ml-2" />
-                    </Button>
+                    </C9Button>
                   </Link>
                   <Link href="#consultation-section">
-                    <Button variant="ghost" className="text-[#5D00D6] hover:text-[#4d00b3] font-bold">
+                    <C9Button variant="ghost" className="text-[#5D00D6] hover:text-[#4d00b3] font-bold">
                       Improve Teams Voice Quality <ChevronRight size={16} className="ml-1" />
-                    </Button>
+                    </C9Button>
                   </Link>
                 </div>
               </div>
@@ -279,9 +281,9 @@ export default function TeamsCallingPage() {
               Our specialists review your existing environment to map out a safe, staged transition path.
             </p>
             <Link href="#consultation-section">
-              <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95">
+              <C9Button size="lg" className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95">
                 Review My Existing Voice Environment
-              </Button>
+              </C9Button>
             </Link>
           </FadeIn>
         </div>
@@ -479,14 +481,14 @@ export default function TeamsCallingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#consultation-section">
-                <Button size="lg" className="bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
+                <C9Button size="lg" className="bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
                   Book a Teams Voice Migration Review 
-                </Button>
+                </C9Button>
               </Link>
               <Link href="#consultation-section">
-                <Button variant="outline" size="lg" className="border-2 border-slate-200 text-[#0c1024] hover:bg-slate-50 px-10 h-16 text-[15px] font-bold rounded-full transition-all">
+                <C9Button variant="outline" size="lg" className="border-2 border-slate-200 text-[#0c1024] hover:bg-slate-50 px-10 h-16 text-[15px] font-bold rounded-full transition-all">
                   Speak With a Teams Calling Specialist
-                </Button>
+                </C9Button>
               </Link>
             </div>
             <div className="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">

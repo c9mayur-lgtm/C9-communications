@@ -102,7 +102,8 @@ export const VoiceSystemOverview = () => {
                 Explore feature
               </div>
             </Link>
-          ))}
+              );
+            })}
         </div>
 
         <div className="flex justify-center mt-14">

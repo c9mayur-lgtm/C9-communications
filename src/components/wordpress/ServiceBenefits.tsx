@@ -60,7 +60,8 @@ export const ServiceBenefits = ({
                 
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
       </div>
     </section>

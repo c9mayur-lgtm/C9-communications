@@ -3,7 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Users, Lock, Settings, Activity, CheckCircle2, AlertTriangle, Eye, LayoutGrid, Database, Zap, Briefcase, Command, Target, Radio, Clock, BarChart3 } from 'lucide-react';
+import { ShieldCheck, Users, Lock, Settings, Activity, CheckCircle2, AlertTriangle, Eye, LayoutGrid, Database, Zap, Briefcase, Command, Target, Radio, Clock, BarChart3, RefreshCw } from 'lucide-react';
+import { C9Button } from '@/components/design-system/C9Button';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
@@ -56,12 +57,12 @@ export default function M365GovernancePage() {
 
               <FadeIn delay={0.2} direction="right">
                 <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
-                    Request Workplace Assessment 
-                  </Link>
-                  <Link href="#consultation-section" className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full hover:bg-slate-50 transition-all h-14 px-8 text-[15px] font-bold">
-                    Review Your Setup
-                  </Link>
+                  <C9Button className="bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold" asChild>
+                    <Link href="#consultation-section">Request Workplace Assessment</Link>
+                  </C9Button>
+                  <C9Button variant="outline" className="border-2 border-slate-200 text-slate-600 rounded-full hover:bg-slate-50 transition-all h-14 px-8 text-[15px] font-bold" asChild>
+                    <Link href="#consultation-section">Review Your Setup</Link>
+                  </C9Button>
                 </div>
               </FadeIn>
 
@@ -205,9 +206,9 @@ export default function M365GovernancePage() {
                   </div>
                 ))}
               </div>
-              <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10 h-14 px-8 text-[15px] font-bold">
-                Talk to a Workplace Specialist
-              </Link>
+              <C9Button className="bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10 h-14 px-8 text-[15px] font-bold" asChild>
+                <Link href="#consultation-section">Talk to a Workplace Specialist</Link>
+              </C9Button>
             </FadeIn>
 
             <FadeIn direction="left">
@@ -294,8 +295,9 @@ export default function M365GovernancePage() {
                       <CheckCircle2 size={14} className="text-emerald-500" /> Enterprise Standard
                    </div>
                 </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -472,9 +474,4 @@ export default function M365GovernancePage() {
   );
 }
 
-// Missing icon helper
-function RefreshCw(props: any) {
-  return (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
-  );
-}
+

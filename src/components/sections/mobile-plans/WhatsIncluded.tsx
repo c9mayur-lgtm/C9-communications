@@ -155,8 +155,9 @@ export default function WhatsIncluded() {
                   </React.Fragment>
                 ))}
               </div>
-            </div>
-          ))}
+                </div>
+                  );
+            })}
         </div>
 
       </div>

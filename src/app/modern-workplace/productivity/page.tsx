@@ -303,8 +303,9 @@ const ManagedScopeUI = () => {
               </div>
             ))}
           </div>
-        </FadeUp>
-      ))}
+            </FadeUp>
+          );
+      })}
     </div>
   );
 };

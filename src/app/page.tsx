@@ -18,8 +18,9 @@ import { WpServices } from "@/components/wordpress/WpServices";
 import { WpSolutions } from "@/components/wordpress/WpSolutions";
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
 import { WpVendors } from "@/components/wordpress/WpVendors";
-import { WpCompliance } from "@/components/wordpress/WpCompliance";
+import { TrustArchitecture } from "@/components/sections/shared/TrustArchitecture";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
+
 
 export default function Homepage() {
   return (
@@ -39,7 +40,7 @@ export default function Homepage() {
             <span className="c9-eyebrow mb-3 block">WHAT WE DO</span>
             <h2 className="c9-section-heading">Three Pillars. One Accountable Partner.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 label: 'Managed IT',
@@ -160,14 +161,14 @@ export default function Homepage() {
           }
         ]}
       />
-      <WpCompliance />
+      <TrustArchitecture />
       <WpFAQAndFeedback />
       
       {/* 10. POSITIONING — Site-wide final statement */}
       <section className="py-20 bg-[#0c1024] text-white">
         <div className="container mx-auto px-8 max-w-[1240px] text-center">
           <p className="c9-body !text-white/95 max-w-4xl mx-auto text-xl md:text-2xl leading-relaxed">
-            C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by 24/7 operations, SLA-driven support, and proven large-scale deployments.
+            C9 Communications delivers enterprise-grade managed IT, network, and security services for multi-site organisations across Australia, backed by continuous operations, SLA-driven support, and proven large-scale deployments.
           </p>
         </div>
       </section>

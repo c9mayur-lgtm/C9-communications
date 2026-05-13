@@ -32,7 +32,7 @@ import {
 } from 'lucide-react';
 
 import { Section } from '@/components/design-system/Section';
-import { Button } from '@/components/ui/button';
+import { C9Button } from '@/components/design-system/C9Button';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
@@ -201,14 +201,14 @@ export default function AiVoicePage() {
 
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                  <Link href="#consultation-section" className="w-full sm:w-auto">
-                    <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all hover:scale-[1.02]">
+                    <C9Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all hover:scale-[1.02]">
                       Review My AI Voice Use Cases
-                    </Button>
+                    </C9Button>
                  </Link>
                  <Link href="#how-it-works" className="w-full sm:w-auto">
-                    <Button variant="outline" size="lg" className="w-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white px-8 h-14 text-[14px] font-bold rounded-full transition-all">
+                    <C9Button variant="outline" size="lg" className="w-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white px-8 h-14 text-[14px] font-bold rounded-full transition-all">
                       See How AI Voice Works
-                    </Button>
+                    </C9Button>
                  </Link>
               </div>
 
@@ -599,9 +599,9 @@ export default function AiVoicePage() {
                          "AI Voice shouldn't be a black box. Our managed approach ensures that automation remains a visible, controllable, and accountable part of your business communications stack."
                       </p>
                       <div className="pt-6 border-t border-slate-100">
-                         <Button className="w-full bg-[#0c1024] hover:bg-slate-800 text-white rounded-full">
+                         <C9Button className="w-full bg-[#0c1024] hover:bg-slate-800 text-white rounded-full">
                             Request Governance Overview
-                         </Button>
+                         </C9Button>
                       </div>
                    </div>
                 </div>
@@ -624,14 +624,14 @@ export default function AiVoicePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#consultation-section">
-                <Button size="lg" className="bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
+                <C9Button size="lg" className="bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
                   Book an AI Voice Strategy Review
-                </Button>
+                </C9Button>
               </Link>
               <Link href="#consultation-section">
-                <Button variant="outline" size="lg" className="border-2 border-slate-200 text-[#0c1024] hover:bg-slate-50 px-10 h-16 text-[15px] font-bold rounded-full transition-all">
+                <C9Button variant="outline" size="lg" className="border-2 border-slate-200 text-[#0c1024] hover:bg-slate-50 px-10 h-16 text-[15px] font-bold rounded-full transition-all">
                   Review AI Voice Opportunities
-                </Button>
+                </C9Button>
               </Link>
             </div>
             <div className="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-6 opacity-60">

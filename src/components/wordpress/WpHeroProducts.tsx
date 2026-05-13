@@ -85,8 +85,9 @@ export const WpHeroProducts = () => {
                 <span className="c9-card-title !text-[14px] md:!text-[16px] transition-colors group-hover:text-[#5D00D6]">
                   {product.label}
                 </span>
-              </Link>
-            ))}
+                </Link>
+                  );
+            })}
           </div>
 
           {/* Subtle Right Fade Gradient */}

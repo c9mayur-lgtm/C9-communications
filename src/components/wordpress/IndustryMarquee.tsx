@@ -96,7 +96,8 @@ const IndustryCard = ({ industry }: { industry: typeof INDUSTRIES[0] }) => {
       ))}
     </div>
   </div>
-);
+  );
+};
 
 export const IndustryMarquee = () => {
   const col1 = useMemo(() => INDUSTRIES.slice(0, 2), []);

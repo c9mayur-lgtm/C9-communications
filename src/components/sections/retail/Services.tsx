@@ -101,8 +101,9 @@ export default function Services() {
               <Link href={s.link} className="flex items-center c9-eyebrow !text-[12px] group-hover:underline">
                 Learn more
               </Link>
-            </div>
-          ))}
+                </div>
+                  );
+            })}
         </div>
       </div>
     </section>

@@ -8,6 +8,7 @@ import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { C9Button } from '@/components/design-system/C9Button';
 import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
+import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 
 const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
   children: React.ReactNode; 

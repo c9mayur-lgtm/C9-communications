@@ -259,8 +259,9 @@ export default function ContactCentrePage() {
                     </div>
                   </div>
                 </div>
-              </FadeIn>
-            ))}
+                  </FadeIn>
+                );
+            })}
           </div>
         </div>
       </Section>
@@ -313,9 +314,9 @@ export default function ContactCentrePage() {
                     </C9Button>
                  </Link>
                  <Link href="#consultation-section">
-                    <Button variant="ghost" className="text-[#5D00D6] hover:text-[#4d00b3] font-bold h-14">
+                    <C9Button variant="outline" className="text-[#5D00D6] hover:text-[#4d00b3] font-bold h-14 rounded-full border-2 border-[#5D00D6]">
                        Reduce Abandoned Calls <ChevronRight size={16} className="ml-1" />
-                    </Button>
+                    </C9Button>
                  </Link>
               </div>
             </FadeIn>
@@ -610,9 +611,9 @@ export default function ContactCentrePage() {
                     </C9Button>
                   </Link>
                   <Link href="#consultation-section">
-                    <Button variant="outline" className="border-2 border-white/20 text-white hover:bg-white hover:text-[#0c1024] px-12 h-16 text-lg font-bold rounded-full transition-all">
+                    <C9Button variant="outline" className="border-2 border-white/20 text-white hover:bg-white hover:text-[#0c1024] px-12 h-16 text-lg font-bold rounded-full transition-all">
                        Speak With a Contact Centre Specialist
-                    </Button>
+                    </C9Button>
                   </Link>
                 </div>
               </div>

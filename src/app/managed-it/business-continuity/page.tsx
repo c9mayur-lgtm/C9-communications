@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ShieldAlert, Activity, GitBranch, CheckCircle2, AlertTriangle, Zap, Layers, ShieldCheck, RefreshCw, BarChart3, Users, Target, Command, Radio, Clock, TrendingDown } from 'lucide-react';
+import { C9Button } from '@/components/design-system/C9Button';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
 
@@ -65,12 +66,12 @@ export default function BusinessContinuityPage() {
 
             <FadeIn delay={0.2}>
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <Link href="#consultation-section" className="inline-flex items-center justify-center gap-3 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold">
-                  Request Continuity Assessment 
-                </Link>
-                <Link href="#consultation-section" className="inline-flex items-center justify-center gap-3 border-2 border-slate-200 text-slate-600 rounded-full hover:bg-slate-50 transition-all h-14 px-8 text-[15px] font-bold">
-                  Review Your Current Readiness
-                </Link>
+                <C9Button className="bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/20 h-14 px-8 text-[15px] font-bold" asChild>
+                  <Link href="#consultation-section">Request Continuity Assessment</Link>
+                </C9Button>
+                <C9Button variant="outline" className="border-2 border-slate-200 text-slate-600 rounded-full hover:bg-slate-50 transition-all h-14 px-8 text-[15px] font-bold" asChild>
+                  <Link href="#consultation-section">Review Your Current Readiness</Link>
+                </C9Button>
               </div>
             </FadeIn>
 
@@ -198,9 +199,9 @@ export default function BusinessContinuityPage() {
                   </div>
                 ))}
               </div>
-              <Link href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10 h-14 px-8 text-[15px] font-bold">
-                Speak to an Operations Specialist
-              </Link>
+              <C9Button className="bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-lg shadow-[#5D00D6]/10 h-14 px-8 text-[15px] font-bold" asChild>
+                <Link href="#consultation-section">Speak to an Operations Specialist</Link>
+              </C9Button>
             </FadeIn>
 
             <FadeIn direction="left">
@@ -287,8 +288,9 @@ export default function BusinessContinuityPage() {
                       <CheckCircle2 size={14} className="text-emerald-500" /> Operational Standard
                    </div>
                 </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </section>

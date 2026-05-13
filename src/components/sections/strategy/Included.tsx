@@ -68,7 +68,8 @@ export default function Included() {
                 {item.body}
               </p>
             </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

@@ -150,8 +150,9 @@ export const WpWhyPartner = () => {
                   </React.Fragment>
                 ))}
               </div>
-            </div>
-          ))}
+                </div>
+                  );
+            })}
         </div>
 
         {/* Bottom CTA */}

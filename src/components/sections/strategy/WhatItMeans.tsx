@@ -97,7 +97,8 @@ export default function WhatItMeans() {
                 
               </div>
             </div>
-          ))}
+              );
+            })}
         </div>
       </div>
     </section>

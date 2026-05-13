@@ -101,8 +101,9 @@ export default function Services() {
               <Link href={s.link} className="flex items-center text-[12px] font-bold text-[#5D00D6] group-hover:underline uppercase tracking-[0.15em]" style={fontStyle}>
                 Learn more
               </Link>
-            </div>
-          ))}
+                </div>
+                  );
+            })}
         </div>
       </div>
     </section>

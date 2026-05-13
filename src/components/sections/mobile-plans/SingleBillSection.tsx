@@ -107,8 +107,9 @@ export default function SingleBillSection() {
                       <p className="c9-body !text-[14px] mb-1">{service.body}</p>
                       <span className="c9-eyebrow !text-[#5D00D6] !text-[10px]">{service.link}</span>
                     </div>
-                  </motion.a>
-                ))}
+                    </motion.a>
+                  );
+                })}
              </div>
           </div>
         </div>

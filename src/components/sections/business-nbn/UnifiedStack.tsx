@@ -74,8 +74,9 @@ export default function UnifiedStack() {
                 <p className="c9-body mb-10 flex-1">
                    {item.desc}
                 </p>
-             </motion.div>
-           ))}
+                </motion.div>
+              );
+            })}
         </div>
 
       </div>
