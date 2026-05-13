@@ -4,7 +4,24 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldCheck, AlertTriangle, RefreshCcw, Users, Lock, CheckCircle2, LayoutDashboard, HardDrive, PhoneCall } from 'lucide-react';
+import { 
+  ShieldCheck, 
+  AlertTriangle, 
+  RefreshCcw, 
+  Users, 
+  Lock, 
+  CheckCircle2, 
+  LayoutDashboard, 
+  HardDrive, 
+  PhoneCall, 
+  ArrowRight,
+  Settings,
+  UserPlus,
+  Headphones,
+  CheckCircle,
+  Smartphone,
+  ChevronRight
+} from 'lucide-react';
 
 import { WpClientTicker } from "@/components/wordpress/WpClientTicker";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
@@ -12,6 +29,37 @@ import { WpConsultationForm } from "@/components/wordpress/WpConsultationForm";
 import { Section } from "@/components/design-system/Section";
 import { Button } from "@/components/ui/button";
 import { ContinueJourney } from "@/components/sections/ContinueJourney";
+
+/* ─────────────────────────────────────────────────────────
+   ANIMATION HELPER
+   ───────────────────────────────────────────────────────── */
+const FadeIn = ({
+  children,
+  delay = 0,
+  className = '',
+  direction = 'up',
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+  direction?: 'up' | 'left' | 'right' | 'none';
+}) => {
+  const y = direction === 'up' ? 28 : 0;
+  const x = direction === 'left' ? -28 : direction === 'right' ? 28 : 0;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y, x }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] as const }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
 
 const OrbitalVisual = () => (
   <div className="relative w-full h-full min-h-[400px] flex items-center justify-center bg-transparent overflow-hidden">
@@ -64,389 +112,387 @@ export default function TeamsCallingPage() {
         <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#5D00D6]/5 rounded-full blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto max-w-[1240px] relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-2xl relative z-10">
-            <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Enterprise Communication</span>
-            <h1 className="c9-hero-title text-[#0c1024] mb-6">
-              Bring Your Business Calling Into Microsoft Teams — <span className="text-[#5D00D6]">Without Disruption.</span>
-            </h1>
-            <p className="c9-body mb-8 max-w-xl">
-              Changing communication systems creates business risk. Downtime affects your customers first. C9 manages your Teams Calling migration, support, and accountability end-to-end so your operations improve without skipping a beat.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <Link href="#consultation-section" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-[1.02]">
-                  Plan Your Teams Calling Migration 
-                </Button>
-              </Link>
-              <Link href="#consultation-section" className="w-full sm:w-auto">
-                <Button variant="outline" size="lg" className="w-full border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 h-14 text-[14px] font-bold rounded-full transition-all">
-                  Talk to a Specialist
-                </Button>
-              </Link>
+          <FadeIn direction="left">
+            <div className="max-w-2xl">
+              <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Managed Microsoft Teams Calling</span>
+              <h1 className="c9-hero-title text-[#0c1024] mb-6">
+                Move Your Business Calling Into Teams — <span className="text-[#5D00D6]">Safely & Seamlessly.</span>
+              </h1>
+              <p className="c9-body mb-8 max-w-xl text-slate-700">
+                Transitioning to Teams Calling shouldn't be a business risk. C9 manages the full migration lifecycle — from number porting and call flow configuration to user onboarding and ongoing support. Modernise your voice environment without operational disruption.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                <Link href="#consultation-section" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-[#5D00D6]/20 transition-all hover:scale-[1.02]">
+                    Plan My Teams Calling Migration 
+                  </Button>
+                </Link>
+                <Link href="#consultation-section" className="w-full sm:w-auto">
+                  <Button variant="outline" size="lg" className="w-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white px-8 h-14 text-[14px] font-bold rounded-full transition-all">
+                    Move Business Numbers to Teams
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-slate-100">
+                {[
+                  { label: 'Carrier-Grade Voice', icon: <PhoneCall size={16} /> },
+                  { label: 'Managed Migration', icon: <RefreshCcw size={16} /> },
+                  { label: 'SLA-Backed Support', icon: <ShieldCheck size={16} /> }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <span className="text-[#5D00D6]">{item.icon}</span>
+                    <span className="text-[11px] font-bold text-slate-800 uppercase tracking-wider">{item.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            <div className="mt-8 p-5 bg-slate-50 border border-slate-100 rounded-2xl flex items-center gap-4">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm text-[#5D00D6]">
-                    <AlertTriangle size={18} />
-                </div>
-                <p className="c9-body !text-[13px] !mb-0 font-bold !text-slate-700">
-                    If your calling system fails during rollout, your customers feel it first. Safe migration is a requirement.
-                </p>
-            </div>
-          </div>
+          </FadeIn>
 
-          <div className="relative z-10 w-full h-[400px] lg:h-[500px] flex items-center justify-center">
-            <OrbitalVisual />
-          </div>
+          <FadeIn direction="right" className="hidden lg:flex items-center justify-center">
+            <div className="relative w-full h-[500px]">
+              <OrbitalVisual />
+            </div>
+          </FadeIn>
         </div>
       </Section>
 
       <WpClientTicker />
 
-      {/* 2. RISK SECTION */}
-      <Section bg="white" className="py-10 md:py-14">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Operational Continuity</span>
-          <h2 className="c9-section-heading mb-4 text-[#0c1024]">
-            The Real Risk Is Not Moving — <br className="hidden md:block" />It Is Moving Poorly.
-          </h2>
-          <p className="c9-body mx-auto max-w-2xl">
-            Migration should not feel like a business risk. But poorly handled rollouts damage reputation, frustrate teams, and create internal resistance.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1240px] mx-auto">
-          {[
-            { 
-              title: "Downtime Consequences", 
-              desc: "Failed migrations create communication blackouts that immediately affect sales and customer trust.",
-              icon: AlertTriangle
-            },
-            { 
-              title: "Disconnected Systems", 
-              desc: "Incomplete planning leads to fragmented workarounds and lost call data during the transition.",
-              icon: RefreshCcw
-            },
-            { 
-              title: "Adoption Failures", 
-              desc: "Without proper onboarding, teams reject the new system, undermining the investment.",
-              icon: Users
-            },
-            { 
-              title: "Vendor Chaos", 
-              desc: "Managing multiple voice and IT vendors increases support complexity and troubleshooting delays.",
-              icon: Lock
-            },
-            { 
-              title: "Support Accountability", 
-              desc: "Generic resellers lack the carrier-grade engineering needed to own the outcome when things go wrong.",
-              icon: ShieldCheck
-            }
-          ].map((item, i) => {
-            const Icon = item.icon;
-            return (
-            <div key={i} className="bg-slate-50 border border-slate-100 p-8 rounded-3xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-5 transform group-hover:scale-110">
-                <Icon size={24} strokeWidth={1.5} />
-              </div>
-              <h3 className="c9-card-title mb-2">{item.title}</h3>
-              <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
-            </div>
-          )})}
-        </div>
-      </Section>
-
-      {/* 3. HUMAN TRUST BREAK 1 */}
-      <section className="relative min-h-[400px] py-14 flex items-center overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/teams-calling/leadership.png" 
-            alt="Business leadership and operations" 
-            fill 
-            className="object-cover opacity-40 grayscale mix-blend-luminosity hover:grayscale-0 transition-all duration-[2s]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent" />
-        </div>
-        
-        <div className="container mx-auto px-6 md:px-8 max-w-[1240px] relative z-10">
-          <div className="max-w-3xl">
-            <h2 className="c9-section-heading !text-white mb-6">
-              Replacing your phone system should reduce operational risk — <span className="text-[#5D00D6]">not create it.</span>
-            </h2>
-            <p className="c9-body !text-slate-300 !text-[18px] border-l-4 border-[#5D00D6] pl-6">
-              The right migration feels controlled, not dangerous. We don't just provide the license; we own the transition and ensure your customer communication never drops.
-            </p>
+      {/* 2. WHAT C9 MANAGES SECTION */}
+      <Section bg="white" className="py-16 md:py-24 border-b border-slate-100">
+        <div className="container mx-auto max-w-[1240px]">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn>
+              <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Operational Excellence</span>
+              <h2 className="c9-section-heading mb-6 text-[#0c1024]">What C9 Operationally Manages.</h2>
+              <p className="c9-body text-slate-600">
+                We don't just provide the license. We own the environment. C9 handles the technical complexity so your team can focus on communication, not troubleshooting.
+              </p>
+            </FadeIn>
           </div>
-        </div>
-      </section>
 
-      {/* 4. WHY MOVE SECTION */}
-      <Section bg="gray" className="py-10 md:py-14 bg-[#F8FAFC]">
-        <div className="max-w-[1240px] mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
-          <div>
-            <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Strategic Drivers</span>
-            <h2 className="c9-section-heading mb-10 text-[#0c1024]">Why Businesses Move to Teams Calling.</h2>
-            <div className="flex flex-col gap-8">
-              {[
-                { title: "Replacing Outdated Legacy Systems", desc: "Retire expensive, fragmented on-premise hardware and transition to a single, resilient cloud communication environment." },
-                { title: "Reducing Vendor Complexity", desc: "Eliminate multiple telephony bills and support contracts by unifying voice into the Microsoft ecosystem you already pay for." },
-                { title: "Supporting Workforce Flexibility", desc: "Enable teams to make and receive business calls from any device — office, mobile, or remote — with zero friction." },
-                { title: "Improving Operational Control", desc: "Gain centralized visibility over call routing, user provisioning, and performance reporting across the entire organization." }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-6 items-start">
-                  <div className="w-8 h-8 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center shrink-0 mt-1 group-hover:border-[#5D00D6] group-hover:bg-[#5D00D6] transition-all">
-                    <CheckCircle2 className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
-                  </div>
-                  <div>
-                    <h3 className="c9-card-title text-[#0c1024] mb-2">{item.title}</h3>
-                    <p className="c9-body !text-[14px] !mb-0">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-[32px] bg-slate-200 overflow-hidden shadow-2xl relative border border-slate-200">
-              <Image 
-                src="/modern_office_workplace.png" 
-                alt="Modern collaborative workplace" 
-                fill 
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            </div>
-            <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-[24px] shadow-2xl border border-slate-100 max-w-sm">
-                <div className="w-10 h-10 rounded-full bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] mb-4">
-                    <LayoutDashboard size={20} />
-                </div>
-                <p className="c9-card-title mb-2">Single Environment Control</p>
-                <p className="c9-body !text-[13px] !mb-0">Stop managing disjointed systems. Start managing operations with total clarity.</p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* 5. WHY CHOOSE C9 */}
-      <Section bg="white" className="py-10 md:py-14 border-b border-slate-100">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Accountable Partner</span>
-          <h2 className="c9-section-heading mb-4 text-[#0c1024]">When things go wrong, who owns it?</h2>
-          <p className="c9-body mx-auto max-w-2xl">
-            That is the real buying question. Businesses choose C9 because we provide a single point of accountability for migration, delivery, and ongoing support.
-          </p>
-        </div>
-
-        <div className="bg-white border-y border-gray-200 max-w-[1240px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { 
-                title: "Safe Migration Planning", 
-                desc: "Rigorous assessment and staged rollout strategy to ensure business continuity during transition.",
-                metric: "Safe",
-                isLast: false
-              },
-              { 
-                title: "Continuity Focus", 
-                desc: "Direct access to our carrier-grade voice core ensuring seamless communication for customers.",
-                metric: "100%",
-                isLast: false
-              },
-              { 
-                title: "Anywhere Support", 
-                desc: "Engineering support for office hardware, mobile applications, and remote workforce users.",
-                metric: "All",
-                isLast: false
-              },
-              { 
-                title: "Accountable Delivery", 
-                desc: "One partner. One invoice. Reduced operational friction and simplified communication management.",
-                metric: "1",
-                isLast: true
-              }
+              { title: "Number Porting", desc: "Expert management of business number transitions to ensure zero downtime during cut-over.", icon: ArrowRight },
+              { title: "Call Queues", desc: "Strategic configuration of call distribution to optimise customer service and response times.", icon: Users },
+              { title: "Auto Attendants", desc: "Professional IVR and routing design to ensure every caller reaches the right department.", icon: Headphones },
+              { title: "Teams Voice Policies", desc: "Custom governance and permissions to control how your business communicates.", icon: Lock },
+              { title: "Remote & Mobile Calling", desc: "Enabling secure business voice across any device. Improve hybrid calling outcomes.", icon: Smartphone },
+              { title: "Desk Phone Integration", desc: "Certified hardware deployment and management for office environments.", icon: HardDrive },
+              { title: "User Onboarding", desc: "Structured training and support to ensure high adoption and user confidence.", icon: UserPlus },
+              { title: "Ongoing Support", desc: "Direct access to Australian engineers for escalation and system management.", icon: Settings }
             ].map((item, i) => (
-              <div
-                key={i}
-                className={`p-8 md:p-10 lg:p-12 flex flex-col items-start text-left min-h-[380px] relative  ${!item.isLast ? 'border-b lg:border-b-0 lg:border-r border-gray-200' : ''}`}
-              >
-                {/* Title */}
-                <h3 className="c9-card-title mb-4 group-hover:text-[#5D00D6] transition-colors duration-300">
-                  {item.title}
-                </h3>
-
-                {/* Description */}
-                <p className="c9-body mb-auto max-w-[280px]">
-                  {item.desc}
-                </p>
-
-                {/* Large metric number */}
-                <div className="mt-12">
-                  <span className="block text-[64px] md:text-[80px] font-medium text-[#0c1024] leading-none tracking-tighter group-hover:text-[#5D00D6] transition-colors duration-500">
-                    {item.metric}
-                  </span>
+              <FadeIn key={i} delay={i * 0.05}>
+                <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 h-full hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300">
+                    <item.icon size={22} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="c9-card-title mb-3 text-[#0c1024]">{item.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
                 </div>
-
-                {/* Bottom hover bar */}
-                <div className="absolute inset-x-0 bottom-0 h-1 bg-[#5D00D6] scale-x-0 group-hover:scale-x-100 duration-500 origin-left" />
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </Section>
 
-
-      {/* 7. MIGRATION PROCESS */}
-      <Section bg="white" className="py-10 md:py-14 overflow-visible bg-[#F8FAFC]">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Execution Framework</span>
-            <h2 className="c9-section-heading mb-4 text-[#0c1024]">Migration Without Business Disruption.</h2>
-            <p className="c9-body mx-auto max-w-2xl">
-              We remove the biggest objection: the fear of change. Our battle-tested framework ensures a safe transition for enterprise voice.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1240px] mx-auto">
-              {[
-                  { step: "01", title: "Assessment", desc: "Audit of current call flows, hardware requirements, and network readiness." },
-                  { step: "02", title: "Planning", desc: "Customized routing logic and strict contingency preparation to protect customer continuity." },
-                  { step: "03", title: "Rollout", desc: "Managed cut-over with zero-downtime engineering and precise number migration." },
-                  { step: "04", title: "Adoption", desc: "Structured user onboarding, staff training, and accountable post-launch support." }
-              ].map((item, i) => (
-                  <div key={i} className="flex flex-col gap-4 p-8 rounded-[24px] bg-white border border-slate-200 hover:border-[#5D00D6] transition-all duration-500 hover:shadow-xl">
-                      <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-[#0c1024] font-bold text-sm group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
-                          {item.step}
-                      </div>
-                      <div>
-                        <h3 className="c9-card-title mb-2 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
-                        <p className="c9-body !text-[13px] !mb-0">{item.desc}</p>
-                      </div>
-                  </div>
-              ))}
-          </div>
-      </Section>
-
-      {/* 8. SUPPORT & CONTROL */}
-      <Section bg="dark" className="py-10 md:py-14 overflow-hidden relative bg-[#0c1024]">
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-[#5D00D6]/20 blur-[160px] rounded-full pointer-events-none" />
-        
-        <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10 max-w-[1240px] mx-auto">
-          <div className="flex flex-col gap-10">
-            <div>
-              <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Operational Sovereignty</span>
-              <h2 className="c9-section-heading !text-white mb-6">Support, Visibility, and Operational Control.</h2>
-              <p className="c9-body !text-slate-400">
-                Reduce executive risk with a calling system built for professional management. The best communication systems are the ones your teams never need to think about — because everything simply works.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-8">
-                {[
-                    { title: "Support Ownership", desc: "Direct access to Australian engineers. No vague support language or call center delays.", icon: PhoneCall },
-                    { title: "Escalation Clarity", desc: "Rigorous SLAs for uptime and support response times. Immediate accountability.", icon: ShieldCheck },
-                    { title: "Reporting Visibility", desc: "Comprehensive call data, usage analytics, and insights inside one unified portal.", icon: LayoutDashboard },
-                    { title: "User Management", desc: "Centrally provision users, assign numbers, and manage permissions instantly.", icon: Users },
-                    { title: "System Reliability", desc: "Geo-redundant voice core ensuring constant connectivity and fewer vendor dependencies.", icon: RefreshCcw },
-                    { title: "Long-Term Confidence", desc: "A robust foundation that scales with your business without continuous friction.", icon: HardDrive }
-                ].map((item, i) => {
-                    const Icon = item.icon;
-                    return (
-                    <div key={i} className="flex flex-col gap-3">
-                        <div className="flex items-center gap-3">
-                            <div className="p-2.5 rounded-xl bg-white/5 text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-300 border border-white/10 group-hover:border-[#5D00D6]">
-                                <Icon className="w-4 h-4 shrink-0" />
-                            </div>
-                            <h3 className="c9-card-title !text-white !mb-0">{item.title}</h3>
-                        </div>
-                        <p className="c9-body !text-slate-400 !text-[13px] !mb-0">{item.desc}</p>
-                    </div>
-                )})}
-            </div>
-          </div>
-
-          <div className="relative h-[560px] rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
-              <Image 
-                src="/mobile_workforce_executive_control.png" 
-                alt="Executive operational control" 
-                fill 
-                className="object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-[2s]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024] via-[#0c1024]/40 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8 p-6 backdrop-blur-md bg-[#0c1024]/60 border border-white/10 rounded-[20px]">
-                  <p className="c9-body !text-white !text-[16px] italic mb-4">
-                    "The right migration feels controlled. We don't just provide the license; we own the transition. Our goal is fewer operational disruptions and stronger executive confidence."
+      {/* 3. TRANSITION PAIN POINTS */}
+      <Section bg="gray" className="py-16 md:py-24 bg-slate-50">
+        <div className="container mx-auto max-w-[1240px]">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn direction="left">
+              <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl border border-slate-200">
+                <Image 
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200" 
+                  alt="IT and operations team reviewing Teams Calling migration" 
+                  fill 
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 p-6 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl">
+                  <p className="text-white text-sm font-medium italic">
+                    "Safe migration is a requirement, not a feature. We move business numbers and workflows with zero tolerance for downtime."
                   </p>
-                  <div className="flex items-center gap-3">
-                      <div className="w-6 h-px bg-[#5D00D6]" />
-                      <span className="c9-eyebrow !text-[#5D00D6] !mb-0">C9 Delivery Engineering</span>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="right">
+              <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Overcoming Migration Fear</span>
+              <h2 className="c9-section-heading mb-8 text-[#0c1024]">Why Businesses Hesitate (And How We Solve It).</h2>
+              <div className="space-y-8">
+                {[
+                  { title: "Old PBX Frustrations", desc: "Moving away from rigid legacy hardware to a flexible cloud environment without losing core features.", icon: AlertTriangle },
+                  { title: "Disconnected Remote Users", desc: "Unifying mobile and office staff into a single, high-quality voice ecosystem.", icon: Smartphone },
+                  { title: "Poor Teams Voice Quality", desc: "Optimising network paths and carrier connections to guarantee crystal-clear calling.", icon: CheckCircle },
+                  { title: "Number Porting Anxiety", desc: "Managed porting processes that ensure you never lose contact with your customers.", icon: RefreshCcw }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-5">
+                    <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center shrink-0 mt-1 text-[#5D00D6]">
+                      <item.icon size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#0c1024] mb-1">{item.title}</h4>
+                      <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
+                ))}
               </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* 10. COMMERCIAL OUTCOMES */}
-      <Section bg="white" className="py-10 md:py-14">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Measurable Impact</span>
-          <h2 className="c9-section-heading mb-4 text-[#0c1024]">Commercial Outcomes.</h2>
-          <p className="c9-body mx-auto max-w-2xl">
-            Believable, operational benefits delivered through accountable migration and expert communication management.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1240px] mx-auto">
-          {[
-            "Smoother migration outcomes with zero customer disruption",
-            "Reduced vendor complexity and simplified support management",
-            "Stronger customer communication continuity",
-            "Improved workforce flexibility across office, mobile, and remote",
-            "Fewer operational disruptions through proactive monitoring",
-            "Stronger executive confidence with a single accountable partner"
-          ].map((outcome, i) => (
-            <div key={i} className="flex gap-4 items-start bg-slate-50 p-6 rounded-[20px] border border-slate-100 hover:border-[#5D00D6]/30 hover:bg-white hover:shadow-md transition-all duration-300">
-              <div className="w-6 h-6 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center shrink-0 group-hover:bg-[#5D00D6] group-hover:border-[#5D00D6] transition-colors mt-0.5">
-                <CheckCircle2 className="w-3 h-3 text-[#5D00D6] group-hover:text-white transition-colors" />
-              </div>
-              <span className="c9-body !text-[#0c1024] !font-bold !text-[14px] !mb-0">{outcome}</span>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* 11. MID-PAGE CTA */}
-      <section className="py-14 bg-[#5D00D6] text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-white/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-black/20 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 pointer-events-none" />
-          
-          <div className="container mx-auto px-6 md:px-8 max-w-[1240px] text-center relative z-10">
-            <div className="max-w-4xl mx-auto flex flex-col gap-10 items-center">
-                <h2 className="c9-section-heading !text-white mb-6">
-                    If your current calling system is fragmented, outdated, or creating operational friction, migration is not the risk — <span className="text-[#0c1024]">staying there is.</span>
-                </h2>
-                <p className="c9-body !text-white/90 !text-[18px] max-w-2xl mx-auto mb-8">
-                  Let's review your environment and map out a safe transition path.
-                </p>
-                <Link href="#consultation-section">
-                    <Button size="lg" className="bg-white text-[#5D00D6] hover:bg-[#0c1024] hover:text-white px-10 h-14 text-[14px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
-                        Book a Teams Calling Migration Review 
+              <div className="mt-10">
+                <div className="flex flex-wrap gap-4">
+                  <Link href="#consultation-section">
+                    <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 rounded-full h-14">
+                      Plan a Teams Migration <ArrowRight size={16} className="ml-2" />
                     </Button>
-                </Link>
-            </div>
+                  </Link>
+                  <Link href="#consultation-section">
+                    <Button variant="ghost" className="text-[#5D00D6] hover:text-[#4d00b3] font-bold">
+                      Improve Teams Voice Quality <ChevronRight size={16} className="ml-1" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
           </div>
+        </div>
+      </Section>
+
+      {/* 4. MID-PAGE CTA BLOCK */}
+      <section className="py-20 bg-[#0c1024] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#5D00D6] opacity-5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
+        
+        <div className="container mx-auto px-6 md:px-8 max-w-[1240px] relative z-10 text-center">
+          <FadeIn>
+            <h2 className="c9-section-heading !text-white mb-6 !text-3xl md:!text-4xl lg:max-w-4xl mx-auto">
+              Move Business Calling Into Microsoft Teams Without Operational Disruption.
+            </h2>
+            <p className="c9-body !text-slate-400 mb-10 max-w-2xl mx-auto">
+              Our specialists review your existing environment to map out a safe, staged transition path.
+            </p>
+            <Link href="#consultation-section">
+              <Button size="lg" className="bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95">
+                Review My Existing Voice Environment
+              </Button>
+            </Link>
+          </FadeIn>
+        </div>
       </section>
 
-      {/* 12. CONSULTATION / BOTTOM CTA */}
-      <div id="consultation-section" className="bg-white py-10">
-        <WpConsultationForm 
-          showHeader={false} 
-          eyebrow="TEAMS CALLING CONTINUITY"
-          title="Talk to C9 About Teams Calling Built for Business Continuity."
-          description="Interested in moving your telephony to Microsoft Teams safely? Our specialists provide seamless migration and accountable engineering support."
-          formTitle="Request Teams Calling Proposal"
-        />
-      </div>
+      {/* 5. MIGRATION JOURNEY (ALTERNATING) */}
+      <Section bg="white" className="py-16 md:py-24 overflow-hidden">
+        <div className="container mx-auto max-w-[1240px]">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <FadeIn>
+              <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">The Migration Framework</span>
+              <h2 className="c9-section-heading mb-6 text-[#0c1024]">A Controlled Journey to Modern Voice.</h2>
+              <p className="c9-body text-slate-600">
+                We remove the biggest objection: the fear of change. Our battle-tested framework ensures a safe transition for enterprise voice.
+              </p>
+            </FadeIn>
+          </div>
 
-      {/* 13. RELATED SOLUTIONS */}
+          <div className="space-y-24">
+            {/* Step 1 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <FadeIn direction="left">
+                <span className="text-[12px] font-black text-[#5D00D6] uppercase tracking-[0.2em] mb-4 block">PHASE 01: ASSESSMENT</span>
+                <h3 className="c9-section-heading !text-2xl md:!text-3xl mb-6 text-[#0c1024]">Audit & Network Readiness.</h3>
+                <p className="c9-body text-slate-700 mb-8">
+                  We conduct a rigorous audit of your current call flows, hardware requirements, and network capabilities. Understanding your environment is the first step in preventing disruption.
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    "Network bandwidth & latency testing",
+                    "Device & hardware compatibility audit",
+                    "Call flow & IVR mapping",
+                    "Number porting eligibility check"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm font-medium text-slate-800">
+                      <CheckCircle size={16} className="text-[#5D00D6]" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
+              <FadeIn direction="right">
+                <div className="relative aspect-video rounded-[32px] overflow-hidden shadow-2xl border border-slate-100">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" 
+                    alt="IT team reviewing Teams Calling migration plan" 
+                    fill 
+                    className="object-cover"
+                  />
+                </div>
+              </FadeIn>
+            </div>
+
+            {/* Step 2 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <FadeIn direction="right" className="lg:order-2">
+                <span className="text-[12px] font-black text-[#5D00D6] uppercase tracking-[0.2em] mb-4 block">PHASE 02: PLANNING</span>
+                <h3 className="c9-section-heading !text-2xl md:!text-3xl mb-6 text-[#0c1024]">Custom Logic & Contingency.</h3>
+                <p className="c9-body text-slate-700 mb-8">
+                  We design your Teams Voice policies and routing logic to match your operational needs. Every migration includes a strict contingency plan to protect your customer continuity.
+                </p>
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                  <div className="flex items-center gap-3 mb-3">
+                    <ShieldCheck size={20} className="text-[#5D00D6]" />
+                    <span className="font-bold text-slate-900">Safety First Strategy</span>
+                  </div>
+                  <p className="text-sm text-slate-600">Zero-downtime engineering ensures your existing system remains active until the new environment is fully validated.</p>
+                </div>
+              </FadeIn>
+              <FadeIn direction="left" className="lg:order-1">
+                <div className="relative aspect-video rounded-[32px] overflow-hidden shadow-2xl border border-slate-100">
+                  <Image 
+                    src="/Planning.png" 
+                    alt="Customer service team receiving calls through Microsoft Teams" 
+                    fill 
+                    className="object-cover"
+                  />
+                </div>
+              </FadeIn>
+            </div>
+
+            {/* Step 3 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <FadeIn direction="left">
+                <span className="text-[12px] font-black text-[#5D00D6] uppercase tracking-[0.2em] mb-4 block">PHASE 03: ROLLOUT</span>
+                <h3 className="c9-section-heading !text-2xl md:!text-3xl mb-6 text-[#0c1024]">Managed Cut-Over.</h3>
+                <p className="c9-body text-slate-700 mb-8">
+                  Our engineers manage the precise number migration and cut-over process. We handle the heavy lifting, ensuring your numbers land correctly in Teams with zero communication blackouts.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <div className="text-xl font-black text-[#5D00D6]">100%</div>
+                    <div className="text-[10px] font-bold uppercase text-slate-500">Porting Success</div>
+                  </div>
+                  <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <div className="text-xl font-black text-[#5D00D6]">ZERO</div>
+                    <div className="text-[10px] font-bold uppercase text-slate-500">Service Gaps</div>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn direction="right">
+                <div className="relative aspect-video rounded-[32px] overflow-hidden shadow-2xl border border-slate-100">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
+                    alt="Business users collaborating through Teams voice" 
+                    fill 
+                    className="object-cover"
+                  />
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* 6. SUPPORT & PROOF SECTION */}
+      <Section bg="dark" className="py-20 bg-[#0c1024] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent opacity-40" />
+        <div className="container mx-auto px-6 md:px-8 max-w-[1240px] relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <FadeIn>
+                <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Accountable Engineering</span>
+                <h2 className="c9-section-heading !text-white mb-8">Ongoing Support, Not Just Implementation.</h2>
+                <p className="c9-body !text-slate-400 mb-10">
+                  C9 provides a single point of truth for your voice environment. We own the escalation, the management, and the uptime — so you never have to deal with Microsoft support directly.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-8">
+                  {[
+                    { title: "Direct Escalation", desc: "Skip the queues. Speak with Australian engineers who know your environment.", icon: Headphones },
+                    { title: "Hybrid Workforce Support", desc: "Expert troubleshooting for office, mobile, and home-office users.", icon: Smartphone },
+                    { title: "Uptime Accountability", desc: "Rigorous SLAs that ensure your communication stays online 24/7.", icon: ShieldCheck },
+                    { title: "Workflow Optimization", desc: "Continuous refinement of call flows and auto attendants as you grow.", icon: Settings }
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4">
+                      <div className="text-[#5D00D6] shrink-0 mt-1"><item.icon size={18} /></div>
+                      <div>
+                        <h4 className="font-bold text-white text-sm mb-1">{item.title}</h4>
+                        <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </FadeIn>
+            </div>
+
+            <FadeIn direction="right">
+              <div className="bg-white/5 backdrop-blur-sm p-10 rounded-[40px] border border-white/10 shadow-2xl">
+                <span className="text-[11px] font-black text-[#5D00D6] uppercase tracking-[0.2em] mb-6 block">SUCCESSFUL MIGRATIONS</span>
+                <h3 className="text-2xl font-bold text-white mb-6">Proven Operational Impact</h3>
+                <div className="space-y-6">
+                  {[
+                    { label: "Successful Teams Migrations", val: "500+" },
+                    { label: "Remote Users Enabled", val: "10,000+" },
+                    { label: "Avg. Implementation Time", val: "2 Weeks" },
+                    { label: "Support Resolution Rate", val: "98.4%" }
+                  ].map((row, i) => (
+                    <div key={i} className="flex items-center justify-between pb-4 border-b border-white/10 last:border-0">
+                      <span className="text-sm font-semibold text-white/80">{row.label}</span>
+                      <span className="text-sm font-black text-[#5D00D6] bg-[#5D00D6]/10 px-3 py-1 rounded-full">{row.val}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                   <p className="text-xs text-slate-400 leading-relaxed italic">
+                     "C9 took the complexity out of our move to Teams. We didn't lose a single call during the transition, and the ongoing support has been second to none."
+                   </p>
+                   <div className="mt-4 flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-slate-800" />
+                      <div>
+                        <div className="text-[10px] font-bold text-white">Operations Director</div>
+                        <div className="text-[10px] text-slate-500">Australian Logistics Firm</div>
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </Section>
+
+      {/* 7. FINAL CTA SECTION */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-slate-100" />
+        <div className="container mx-auto px-6 md:px-8 max-w-[1240px] text-center relative z-10">
+          <FadeIn>
+            <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Ready to Modernise?</span>
+            <h2 className="c9-section-heading mb-6 !text-4xl lg:!text-5xl text-[#0c1024]">
+              Modernise Business Calling With Managed Teams Voice.
+            </h2>
+            <p className="c9-body mb-12 max-w-3xl mx-auto text-lg leading-relaxed text-slate-600">
+              C9 helps Australian businesses migrate, configure, support, and manage Microsoft Teams Calling environments with minimal disruption and full operational accountability.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="#consultation-section">
+                <Button size="lg" className="bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
+                  Book a Teams Voice Migration Review 
+                </Button>
+              </Link>
+              <Link href="#consultation-section">
+                <Button variant="outline" size="lg" className="border-2 border-slate-200 text-[#0c1024] hover:bg-slate-50 px-10 h-16 text-[15px] font-bold rounded-full transition-all">
+                  Speak With a Teams Calling Specialist
+                </Button>
+              </Link>
+            </div>
+            <div className="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+               {/* Small badge style trust indicators */}
+               {["Microsoft Solutions Partner", "Carrier-Grade Core", "99.99% Uptime SLA", "24/7 Managed Support"].map((badge, i) => (
+                 <div key={i} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-900">
+                   <CheckCircle2 size={12} className="text-[#5D00D6]" /> {badge}
+                 </div>
+               ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* 8. RELATED SOLUTIONS */}
       <ContinueJourney 
         title="Teams Calling Is One Piece. Here's the Full Stack."
         description="Most businesses that move to Teams Calling also consolidate their broader communication infrastructure. These are the services that complete the picture."
@@ -459,6 +505,17 @@ export default function TeamsCallingPage() {
       />
 
       <WpFAQAndFeedback />
+
+      {/* 9. CONSULTATION / BOTTOM CTA */}
+      <div id="consultation-section" className="bg-slate-50 py-10">
+        <WpConsultationForm 
+          showHeader={false} 
+          eyebrow="TEAMS CALLING CONTINUITY"
+          title="Talk to C9 About Teams Calling Built for Business Continuity."
+          description="Interested in moving your telephony to Microsoft Teams safely? Our specialists provide seamless migration and accountable engineering support."
+          formTitle="Request Teams Calling Proposal"
+        />
+      </div>
 
     </main>
   );

@@ -534,18 +534,7 @@ export default function MobilePlansPage() {
         </div>
       </section>
 
-      {/* ══ 12. BOTTOM CTA & FORM ════════════════════════════════════════ */}
-      <section id="consultation-section" className="bg-white">
-        <WpConsultationForm 
-          showHeader={false} 
-          eyebrow="EXECUTIVE ENGAGEMENT"
-          title="Talk to C9 About Mobile Solutions Built for Business Continuity"
-          description="We work with businesses to consolidate vendors, regain visibility, and secure their workforce. Book a confidential review of your current mobile infrastructure."
-          formTitle="Schedule Mobility Review"
-        />
-      </section>
-
-      {/* ══ 13. RELATED SOLUTIONS ════════════════════════════════════════ */}
+      {/* ══ 12. RELATED SOLUTIONS ════════════════════════════════════════ */}
       <ContinueJourney 
         title="Mobile Is One Layer. Here's the Connected Stack."
         description="Businesses with a managed mobile fleet often consolidate voice, connectivity, and IT under one partner next. These are the services that build a complete, accountable environment."
@@ -555,6 +544,26 @@ export default function MobilePlansPage() {
           { label: "Fast Fibre", path: "/telco/fast-fibre" },
           { label: "Managed IT Infrastructure", path: "/managed-it/infrastructure" }
         ]} 
+      />
+
+      {/* ══ 13. BOTTOM CTA & FORM ════════════════════════════════════════ */}
+      <section id="consultation-section" className="bg-white border-t border-slate-100">
+        <WpConsultationForm 
+          showHeader={false} 
+          eyebrow="EXECUTIVE ENGAGEMENT"
+          title="Talk to C9 About Mobile Solutions Built for Business Continuity"
+          description="We work with businesses to consolidate vendors, regain visibility, and secure their workforce. Book a confidential review of your current mobile infrastructure."
+          formTitle="Schedule Mobility Review"
+        />
+      </section>
+
+      <WpFAQAndFeedback 
+        faqItems={[
+          { q: "Can we keep our existing mobile numbers?", a: "Yes. C9 manages the entire porting process from your current provider. We coordinate the transition to ensure zero downtime and complete continuity for your staff." },
+          { q: "How do shared data pools work?", a: "We aggregate your total data allowance across all users in your fleet. This eliminates individual overages and provides maximum flexibility for users with varying data needs." },
+          { q: "What happens if a device is lost or stolen?", a: "We provide immediate support to lock SIM cards and can assist with remote wipe protocols for managed devices. We then coordinate rapid replacement hardware and SIMs to get your user back online." },
+          { q: "Do you support international roaming?", a: "Yes. We offer managed roaming solutions that provide cost-predictability and visibility while your team is overseas, ensuring they stay connected without hidden expense." }
+        ]}
       />
       
     </main>

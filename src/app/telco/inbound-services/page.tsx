@@ -30,7 +30,7 @@ export default function InboundServicesPage() {
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-7">
                <PhoneCall size={13} className="text-[#5D00D6]" />
-               <span className="c9-eyebrow !mb-0 !text-[#5D00D6]">Customer Access Infrastructure</span>
+               <span className="c9-eyebrow !mb-0 !text-[#5D00D6]">Managed Inbound Call Flow</span>
             </div>
 
             <h1 className="c9-hero-title mb-6 !leading-[1.1]">
@@ -38,18 +38,18 @@ export default function InboundServicesPage() {
             </h1>
 
             <p className="c9-body mb-8 max-w-[620px] text-lg">
-               Inbound communication is the front door of your business. Poor call routing and management creates lost revenue and damages trust. C9 delivers intelligent inbound systems that ensure your customers reach the right person, every time.
+               C9 ensures every customer reaches the right person quickly through managed inbound numbers (1300/1800), smart routing, and overflow handling. We provide total visibility into your call queues and missed-call prevention.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                <Link href="#consultation-section" className="w-full sm:w-auto">
                  <Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all">
-                   Review Your Customer Call Flow 
+                   Review My Customer Call Flow 
                  </Button>
                </Link>
                <Link href="#consultation-section" className="w-full sm:w-auto">
                  <Button variant="outline" size="lg" className="w-full border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 h-14 text-[14px] font-bold rounded-full transition-all">
-                   Talk to a Specialist
+                   Set Up 1300 / 1800 Numbers
                  </Button>
                </Link>
             </div>
@@ -79,7 +79,7 @@ export default function InboundServicesPage() {
              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 aspect-[4/5]">
                 <img
                    src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2000&auto=format&fit=crop"
-                   alt="Customer Support Excellence"
+                   alt="Australian customer service team handling inbound calls with clear queue visibility"
                    className="w-full h-full object-cover object-center duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/80 via-transparent to-transparent" />
@@ -118,21 +118,21 @@ export default function InboundServicesPage() {
       {/* 2. THE BUSINESS PROBLEM */}
       <Section bg="gray" className="border-y border-slate-100">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="c9-eyebrow mb-4 block text-rose-600">Operational Risk</span>
-          <h2 className="c9-section-heading mb-4 text-[#0c1024]">Bad call flow quietly damages good businesses.</h2>
+          <span className="c9-eyebrow mb-4 block text-rose-600">The Revenue Risk</span>
+          <h2 className="c9-section-heading mb-4 text-[#0c1024]">Is poor call handling costing you customers?</h2>
           <p className="c9-body text-lg mx-auto">
-            Telephony isn't a utility; it's a critical management lever. When your inbound handling is opaque or fragmented, you lose visibility into customer demand and operational performance.
+            Your inbound call flow is a critical management lever. When your handling is opaque or fragmented, you lose visibility into customer demand and revenue opportunities.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { icon: <PhoneOff />, title: "Missed Revenue", text: "Every unanswered call is a potential lead walking away. Without tracking and overflow logic, you never know what you've lost." },
-            { icon: <AlertTriangle />, title: "Customer Frustration", text: "Poor routing and excessive wait times damage brand equity faster than any other touchpoint. Accessibility is trust." },
-            { icon: <Signal />, title: "Management Blind Spots", text: "If you can't see your call volumes, abandonment rates, and peak periods, you cannot manage your resource effectively." },
-            { icon: <Globe />, title: "Fragmented Teams", text: "Distributing calls across multiple sites and remote workers shouldn't be complex. Legacy systems create isolation." },
-            { icon: <TrendingUp />, title: "Inbound Bottlenecks", text: "Manual call handling slows your business down. Without intelligent automation, growth is limited by receptionist capacity." },
-            { icon: <ShieldAlert />, title: "Support Anarchy", text: "When everyone is responsible for answering, no one is. Accountability requires clear routing and escalation logic." }
+            { icon: <PhoneOff />, title: "Missed Calls", text: "Every unanswered call is a potential lead walking away. Without tracking and overflow logic, you never know what you've lost." },
+            { icon: <AlertTriangle />, title: "Poor Routing", text: "Long wait times and misrouted calls damage brand equity faster than any other touchpoint. Accessibility is trust." },
+            { icon: <Signal />, title: "No Visibility", text: "If you can't see your call volumes, abandonment rates, and peak periods, you cannot manage your resources effectively." },
+            { icon: <Globe />, title: "Multi-Site Gaps", text: "Distributing calls across multiple sites and remote workers shouldn't be complex. Legacy systems create isolation." },
+            { icon: <TrendingUp />, title: "Inbound Bottlenecks", text: "Manual call handling slows your business down. Without intelligent automation, growth is limited by staff capacity." },
+            { icon: <ShieldAlert />, title: "No Support Ownership", text: "When everyone is responsible for answering, no one is. Accountability requires clear routing and escalation logic." }
           ].map((item, i) => (
             <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:border-[#5D00D6]/20">
                <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-600 mb-6 group-hover:scale-110">
@@ -171,10 +171,10 @@ export default function InboundServicesPage() {
 
       {/* 4. STRATEGIC RATIONALE */}
       <Section bg="gray" className="py-10 md:py-14">
-        <div className="max-w-[1240px] mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
+        <div className="max-w-[1240px] mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
           <div>
-            <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Strategic Drivers</span>
-            <h2 className="c9-section-heading mb-10 text-[#0c1024]">Why Executives Prioritize Inbound Infrastructure.</h2>
+            <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Customer Reachability</span>
+            <h2 className="c9-section-heading mb-10 text-[#0c1024]">The Impact of Managed Inbound Routing.</h2>
             <div className="flex flex-col gap-8">
               {[
                 { title: "Universal Customer Accessibility", desc: "A national business presence that makes it easy for customers to find and reach you from anywhere in the country." },
@@ -194,11 +194,12 @@ export default function InboundServicesPage() {
               ))}
             </div>
           </div>
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl bg-slate-200 overflow-hidden shadow-2xl relative border border-slate-100">
+          <div className="sticky top-32">
+            <div className="relative">
+              <div className="aspect-[4/5] rounded-2xl bg-slate-200 overflow-hidden shadow-2xl relative border border-slate-100">
               <img 
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop" 
-                alt="Executive operational control" 
+                alt="Manager reviewing inbound call dashboard showing wait time, answered calls, and overflow performance" 
                 className="w-full h-full object-cover duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -211,6 +212,7 @@ export default function InboundServicesPage() {
                 <p className="text-slate-500 text-[13px] leading-relaxed !mb-0">Stop managing disjointed systems. Start managing operations with total clarity and visibility.</p>
             </div>
           </div>
+          </div>
         </div>
       </Section>
 
@@ -218,24 +220,24 @@ export default function InboundServicesPage() {
       <Section bg="white">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16">
           <div className="max-w-2xl">
-            <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">The C9 Approach</span>
+            <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Our Inbound Standard</span>
             <h2 className="c9-section-heading text-[#0c1024]">If customers cannot reach you easily, they will reach someone else.</h2>
           </div>
           <Link href="#consultation-section" className="shrink-0">
              <Button size="lg" className="rounded-full bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-8 h-14 text-[14px] font-bold shadow-xl transition-all">
-                Request a Call Flow Audit 
+                 Audit Customer Access 
              </Button>
           </Link>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { icon: <Layers />, title: "Smart Inbound Routing", text: "Complex call handling simplified. Route by time of day, location, skill-set, or availability with ease." },
-            { icon: <ShieldCheck />, title: "Response Continuity", text: "Overflow logic ensures that if your primary team is busy, the call is captured elsewhere. No more busy tones." },
-            { icon: <Activity />, title: "Real-Time Visibility", text: "Full transparency into your call flow. Monitor volumes and performance with intuitive live dashboards." },
-            { icon: <Building2 />, title: "National Presence", text: "Look like a national leader with 13, 1300, or 1800 numbers that centralize your brand identity." },
-            { icon: <RefreshCcw />, title: "Simplified Ownership", text: "One bill, one portal, one accountable partner. No more chasing multiple providers for simple changes." },
-            { icon: <Headphones />, title: "Accountable Support", text: "Direct access to local C9 engineers who understand your business-critical communication logic." }
+            { icon: <Layers />, title: "Managed Inbound Routing", text: "Complex call handling simplified. Route by time of day, location, skill-set, or availability with ease." },
+            { icon: <ShieldCheck />, title: "Overflow Handling", text: "Smart logic ensures that if your primary team is busy, the call is captured elsewhere. No more busy tones." },
+            { icon: <Activity />, title: "Call Visibility & Reporting", text: "Full transparency into your call flow. Monitor volumes and performance with intuitive live dashboards." },
+            { icon: <Building2 />, title: "Inbound Numbers (13/1300)", text: "Look like a national leader with 13, 1300, or 1800 numbers that centralize your brand identity." },
+            { icon: <RefreshCcw />, title: "Managed Voice Support", text: "One bill, one portal, one accountable partner. No more chasing multiple providers for simple changes." },
+            { icon: <Headphones />, title: "End-to-End Ownership", text: "Direct access to local C9 engineers who understand your business-critical communication logic." }
           ].map((item, i) => (
             <div key={i} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-500">
               <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#5D00D6] mb-8 shadow-sm group-hover:scale-110 duration-500">
@@ -248,15 +250,44 @@ export default function InboundServicesPage() {
         </div>
       </Section>
 
+      {/* 5.5. WHERE INBOUND SERVICES MATTER MOST */}
+      <Section bg="gray" className="py-16 lg:py-24 border-y border-slate-100">
+        <div className="max-w-3xl mb-16 mx-auto text-center">
+          <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Industry Focus</span>
+          <h2 className="c9-section-heading text-[#0c1024]">Where inbound services matter most</h2>
+          <p className="c9-body text-lg mt-6">
+            Managed inbound routing is critical for businesses where customer access directly impacts revenue and service delivery.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1240px] mx-auto">
+          {[
+            { icon: <Building2 />, title: "Retail & Franchise Groups", text: "Consistent national presence with smart routing to local stores based on caller location." },
+            { icon: <Clock />, title: "Healthcare & Appointment-Based", text: "Ensuring zero missed calls for bookings with automated overflow and after-hours routing." },
+            { icon: <Scale />, title: "Real Estate & Professional Services", text: "Professional call handling that ensures high-value enquiries are always answered." },
+            { icon: <Globe />, title: "Multi-Site Operations", text: "One national number managing complex call flows across multiple Australian locations." },
+            { icon: <Users />, title: "Support & Service Teams", text: "Optimised call queues and IVRs to reduce wait times and improve resolution speed." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
+               <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6">
+                  {item.icon}
+               </div>
+               <h4 className="font-bold text-slate-900 text-[17px] mb-3">{item.title}</h4>
+               <p className="text-slate-500 text-[14px] leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* 6. OPERATIONAL MATURITY (VISIBILITY) */}
       <Section bg="dark" className="relative text-white overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5D00D6] rounded-full blur-[160px] opacity-20 -mr-64 -mt-64 pointer-events-none" />
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 lg:gap-24 items-center relative z-10">
           <div>
-            <span className="c9-eyebrow mb-4 block !text-[#a56eff]">Operational Maturity</span>
-            <h2 className="c9-section-heading !text-white mb-8">Visibility changes decisions.</h2>
+            <span className="c9-eyebrow mb-4 block !text-[#a56eff]">Inbound Visibility</span>
+            <h2 className="c9-section-heading !text-white mb-8">Missed calls shouldn't be invisible.</h2>
             <p className="c9-body text-white/70 text-lg mb-8">
-              Stop managing your customer experience in the dark. C9 provides the reporting and performance insights needed to optimize staffing, identify bottlenecks, and improve service levels.
+              Stop managing your customer experience in the dark. C9 provides the reporting and performance insights needed to optimize staffing, eliminate bottlenecks, and fix missed calls.
             </p>
             <div className="grid sm:grid-cols-2 gap-x-8 gap-y-8">
               {[
@@ -317,8 +348,8 @@ export default function InboundServicesPage() {
       {/* 7. EXECUTION FRAMEWORK (MIGRATION) */}
       <Section bg="white" className="border-b border-slate-100">
         <div className="max-w-3xl mb-16">
-          <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Execution Framework</span>
-          <h2 className="c9-section-heading text-[#0c1024]">Setup and Migration Without Service Disruption.</h2>
+          <span className="c9-eyebrow mb-4 block !text-[#5D00D6]">Managed Migration</span>
+          <h2 className="c9-section-heading text-[#0c1024]">Transitioning Your Numbers with Zero Downtime.</h2>
           <p className="c9-body text-lg mt-6">
             Transitioning your inbound numbers and routing logic shouldn't be high-risk. C9 manages the entire setup and porting process with engineering precision to ensure zero downtime.
           </p>
@@ -410,7 +441,7 @@ export default function InboundServicesPage() {
                 </p>
                 <Link href="#consultation-section">
                     <Button size="lg" className="bg-white text-[#5D00D6] hover:bg-[#0c1024] hover:text-white px-10 h-14 text-[14px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
-                        Book an Inbound Infrastructure Review 
+                        Book an Inbound Call Flow Review 
                     </Button>
                 </Link>
             </div>
@@ -419,7 +450,7 @@ export default function InboundServicesPage() {
 
       {/* 10. RELATED SOLUTIONS */}
       <ContinueJourney 
-        title="Complete Your Communication Infrastructure."
+        title="Complete Your Voice Stack."
         description="Reliable communication requires complete infrastructure control. Explore the solutions that integrate seamlessly with your inbound systems."
         links={[
           { label: "Contact Centre Solutions", path: "/telco/contact-centre" },
@@ -432,10 +463,10 @@ export default function InboundServicesPage() {
       <div id="consultation-section" className="bg-white">
         <WpConsultationForm 
           showHeader={false} 
-          eyebrow="INBOUND AUDIT"
-          title="Ready to modernize your customer access?"
-          description="Book a technical strategy session with our senior engineers to review your current call flows and design a zero-disruption transition."
-          formTitle="Request an Inbound System Review"
+          eyebrow="CALL FLOW AUDIT"
+          title="Fix Your Inbound Routing & Missed Calls"
+          description="Book a technical strategy session with our senior team to review your current call flows and design a zero-disruption transition."
+          formTitle="Review My Customer Call Flow"
         />
       </div>
 

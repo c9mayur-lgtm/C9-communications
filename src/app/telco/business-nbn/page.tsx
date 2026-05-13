@@ -138,8 +138,9 @@ export default function BusinessNbnPage() {
       {/* ══ 2. WHY BUSINESSES LEAVE THEIR CURRENT PROVIDER ═════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 overflow-hidden">
         <div className={C}>
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <FadeIn direction="left" className="order-2 lg:order-1">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            <div className="sticky top-32">
+              <FadeIn direction="left" className="order-2 lg:order-1">
                <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square max-w-md mx-auto lg:max-w-none">
                   {/* [IMAGE PLACEHOLDER: Retail business owner frustrated with EFTPOS downtime or slow POS transactions] */}
                   <img 
@@ -155,7 +156,8 @@ export default function BusinessNbnPage() {
                     <div className="text-xl font-bold text-slate-900">Lost Sales & POS Lag</div>
                   </div>
                </div>
-            </FadeIn>
+             </FadeIn>
+            </div>
 
             <FadeIn direction="right" className="order-1 lg:order-2">
                <span className="c9-eyebrow mb-4">The Standard Telco Trap</span>
@@ -224,8 +226,9 @@ export default function BusinessNbnPage() {
       {/* ══ 4. QUALIFICATION ═════════════════════════ */}
       <section id="qualification" className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
         <div className={C}>
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <FadeIn direction="left">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            <div className="sticky top-32">
+              <FadeIn direction="left">
                <span className="c9-eyebrow mb-4">Qualification Engine</span>
                <h2 className="c9-section-heading mb-6">
                   Not Sure Which Setup Your Business Needs?
@@ -248,7 +251,8 @@ export default function BusinessNbnPage() {
                <C9Button className="h-14 px-8 rounded-full bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl text-white font-bold" asChild>
                   <Link href="#plans">Compare nbn Business Plans</Link>
                </C9Button>
-            </FadeIn>
+              </FadeIn>
+            </div>
 
             <FadeIn direction="right" className="bg-[#0c1024] p-10 lg:p-14 rounded-[40px] text-white relative overflow-hidden shadow-2xl">
                <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
@@ -402,8 +406,9 @@ export default function BusinessNbnPage() {
       {/* ══ 6. BUSINESS OUTCOMES / PROOF ═════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-white">
         <div className={C}>
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-             <FadeIn direction="left">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+             <div className="sticky top-32">
+              <FadeIn direction="left">
                 <span className="c9-eyebrow mb-4">Measurable Impact</span>
                 <h2 className="c9-section-heading mb-6">Predictable Connectivity. Predictable Revenue.</h2>
                 <p className="c9-body mb-10 text-slate-600">
@@ -424,6 +429,7 @@ export default function BusinessNbnPage() {
                    ))}
                 </div>
              </FadeIn>
+            </div>
 
              <FadeIn direction="right" delay={0.1}>
                <div className="bg-white p-6 rounded-[48px] border border-slate-100 shadow-xl shadow-slate-200/50">

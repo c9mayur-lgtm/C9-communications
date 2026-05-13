@@ -161,7 +161,7 @@ const SectionOperationalRisk = () => (
 const SectionFailurePoints = () => (
    <section className="py-16 lg:py-24 bg-white relative">
       <div className={C}>
-         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <FadeIn direction="left">
                <span className="c9-eyebrow mb-4">System Vulnerabilities</span>
                <h2 className="c9-section-heading mb-6">Where Network Stability Fails</h2>
@@ -184,30 +184,32 @@ const SectionFailurePoints = () => (
                </div>
             </FadeIn>
 
-            <FadeIn direction="right" className="relative">
-               <div className="bg-[#0c1024] rounded-lg p-12 text-white relative overflow-hidden shadow-2xl">
-                  <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
-                  <div className="relative z-10">
-                     <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                        <AlertTriangle className="text-red-400" /> System Failure Modes
-                     </h3>
-                     <div className="space-y-6">
-                        {[
-                           "Inconsistent configurations across sites",
-                           "Undetected hardware saturation",
-                           "Lack of real-time performance data",
-                           "Uncoordinated incident response",
-                           "No centralized control policy"
-                        ].map((text, i) => (
-                           <div key={i} className="flex items-center gap-4 py-3 border-b border-white/5 last:border-0">
-                              <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
-                              <span className="text-white/80 font-medium">{text}</span>
-                           </div>
-                        ))}
+            <div className="sticky top-32">
+               <FadeIn direction="right" className="relative">
+                  <div className="bg-[#0c1024] rounded-lg p-12 text-white relative overflow-hidden shadow-2xl">
+                     <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
+                     <div className="relative z-10">
+                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+                           <AlertTriangle className="text-red-400" /> System Failure Modes
+                        </h3>
+                        <div className="space-y-6">
+                           {[
+                              "Inconsistent configurations across sites",
+                              "Undetected hardware saturation",
+                              "Lack of real-time performance data",
+                              "Uncoordinated incident response",
+                              "No centralized control policy"
+                           ].map((text, i) => (
+                              <div key={i} className="flex items-center gap-4 py-3 border-b border-white/5 last:border-0">
+                                 <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
+                                 <span className="text-white/80 font-medium">{text}</span>
+                              </div>
+                           ))}
+                        </div>
                      </div>
                   </div>
-               </div>
-            </FadeIn>
+               </FadeIn>
+            </div>
          </div>
       </div>
    </section>
@@ -256,31 +258,33 @@ const SectionHowWeOperate = () => (
 const SectionStandardisation = () => (
    <section className="py-16 lg:py-24 bg-white">
       <div className={C}>
-         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <FadeIn direction="left">
-               <div className="bg-slate-50 rounded-lg p-10 border border-slate-100 relative overflow-hidden shadow-xl">
-                  <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-[0.03] rounded-full blur-[100px]" />
-                  <div className="relative z-10">
-                     <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                        <ShieldCheck className="text-[#5D00D6]" /> Control Model
-                     </h3>
-                     
-                     <div className="space-y-4">
-                        {[
-                           { label: "Standardisation", value: "Predictable Performance" },
-                           { label: "Configuration Sync", value: "Zero Operational Variance" },
-                           { label: "Centralized Policy", value: "Unified Global Control" },
-                           { label: "Audit Trails", value: "Full Accountability" }
-                        ].map((row, i) => (
-                           <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                              <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-1">{row.label}</div>
-                              <div className="font-bold text-slate-900 text-[14px]">{row.value}</div>
-                           </div>
-                        ))}
+         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="sticky top-32">
+               <FadeIn direction="left">
+                  <div className="bg-slate-50 rounded-lg p-10 border border-slate-100 relative overflow-hidden shadow-xl">
+                     <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-[0.03] rounded-full blur-[100px]" />
+                     <div className="relative z-10">
+                        <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                           <ShieldCheck className="text-[#5D00D6]" /> Control Model
+                        </h3>
+                        
+                        <div className="space-y-4">
+                           {[
+                              { label: "Standardisation", value: "Predictable Performance" },
+                              { label: "Configuration Sync", value: "Zero Operational Variance" },
+                              { label: "Centralized Policy", value: "Unified Global Control" },
+                              { label: "Audit Trails", value: "Full Accountability" }
+                           ].map((row, i) => (
+                              <div key={i} className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                                 <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-1">{row.label}</div>
+                                 <div className="font-bold text-slate-900 text-[14px]">{row.value}</div>
+                              </div>
+                           ))}
+                        </div>
                      </div>
                   </div>
-               </div>
-            </FadeIn>
+               </FadeIn>
+            </div>
 
             <FadeIn direction="right">
                <span className="c9-eyebrow mb-4">Maturity Signal</span>
@@ -316,7 +320,7 @@ const SectionStandardisation = () => (
 const SectionPerformanceVisibility = () => (
    <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
       <div className={C}>
-         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <FadeIn direction="left">
                <span className="c9-eyebrow mb-4">Operational Stability</span>
                <h2 className="c9-section-heading mb-6">Control at Scale</h2>
@@ -342,34 +346,36 @@ const SectionPerformanceVisibility = () => (
                </div>
             </FadeIn>
 
-            <FadeIn direction="right" className="bg-[#0c1024] rounded-lg p-8 lg:p-12 text-white relative overflow-hidden shadow-2xl">
-               <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
-               <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-8">Existing Integration</h3>
-                  <p className="text-white/70 mb-8 leading-relaxed">
-                     We integrate with your current infrastructure to provide immediate operational control without forced replacement.
-                  </p>
-                  <div className="space-y-6">
-                     {[
-                        "Works with existing vendors",
-                        "Supports hybrid environments",
-                        "No forced hardware replacement",
-                        "Minimal operational disruption",
-                        "Carrier-neutral management"
-                     ].map((text, i) => (
-                        <div key={i} className="flex items-center gap-4">
-                           <CheckCircle className="text-emerald-400" size={18} />
-                           <span className="text-white/90 font-medium">{text}</span>
-                        </div>
-                     ))}
-                  </div>
-                  <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10">
-                     <p className="text-sm italic text-white/60">
-                        "C9 eliminates enterprise resistance by leveraging existing investments while introducing necessary management discipline."
+            <div className="sticky top-32">
+               <FadeIn direction="right" className="bg-[#0c1024] rounded-lg p-8 lg:p-12 text-white relative overflow-hidden shadow-2xl">
+                  <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#5D00D6] opacity-10 rounded-full blur-[100px]" />
+                  <div className="relative z-10">
+                     <h3 className="text-2xl font-bold mb-8">Existing Integration</h3>
+                     <p className="text-white/70 mb-8 leading-relaxed">
+                        We integrate with your current infrastructure to provide immediate operational control without forced replacement.
                      </p>
+                     <div className="space-y-6">
+                        {[
+                           "Works with existing vendors",
+                           "Supports hybrid environments",
+                           "No forced hardware replacement",
+                           "Minimal operational disruption",
+                           "Carrier-neutral management"
+                        ].map((text, i) => (
+                           <div key={i} className="flex items-center gap-4">
+                              <CheckCircle className="text-emerald-400" size={18} />
+                              <span className="text-white/90 font-medium">{text}</span>
+                           </div>
+                        ))}
+                     </div>
+                     <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <p className="text-sm italic text-white/60">
+                           "C9 eliminates enterprise resistance by leveraging existing investments while introducing necessary management discipline."
+                        </p>
+                     </div>
                   </div>
-               </div>
-            </FadeIn>
+               </FadeIn>
+            </div>
          </div>
       </div>
    </section>
@@ -416,7 +422,7 @@ const SectionBusinessImpact = () => (
 const SectionWhyItMatters = () => (
    <section className="py-12 lg:py-16 bg-[#0c1024] text-white relative overflow-hidden">
       <div className={C}>
-         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
+         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
             <FadeIn direction="left">
                <h2 className="c9-section-heading !text-white mb-6">Why Operational Control Matters</h2>
                <div className="space-y-6">
@@ -435,20 +441,22 @@ const SectionWhyItMatters = () => (
                   ))}
                </div>
             </FadeIn>
-            <FadeIn direction="right">
-               <div className="p-10 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <p className="text-xl font-medium leading-relaxed italic text-white/90 mb-8">
-                     "C9 doesn't just support devices. We operate the systems that keep your business online. That is the difference between reactive IT and enterprise infrastructure stability."
-                  </p>
-                  <div className="flex items-center gap-4">
-                     <div className="w-12 h-12 rounded-full bg-slate-800 border border-white/10" />
-                     <div>
-                        <div className="font-bold">Head of Infrastructure</div>
-                        <div className="text-xs text-white/40">C9 Communications</div>
+            <div className="sticky top-32">
+               <FadeIn direction="right">
+                  <div className="p-10 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
+                     <p className="text-xl font-medium leading-relaxed italic text-white/90 mb-8">
+                        "C9 doesn't just support devices. We operate the systems that keep your business online. That is the difference between reactive IT and enterprise infrastructure stability."
+                     </p>
+                     <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-full bg-slate-800 border border-white/10" />
+                        <div>
+                           <div className="font-bold">Head of Infrastructure</div>
+                           <div className="text-xs text-white/40">C9 Communications</div>
+                        </div>
                      </div>
                   </div>
-               </div>
-            </FadeIn>
+               </FadeIn>
+            </div>
          </div>
       </div>
    </section>

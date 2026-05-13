@@ -39,9 +39,6 @@ export default function C9VoicePage() {
 
       {/* <PhoneCompatibility /> */}
       <FinalCTA />
-      {/* Ported from Homepage */}
-      <WpFAQAndFeedback />
-      
 
       <div id="consultation-section">
         <WpConsultationForm 
@@ -52,6 +49,10 @@ export default function C9VoicePage() {
           formTitle="Request C9 Voice Proposal"
         />
       </div>
+
+      {/* Ported from Homepage */}
+      <WpFAQAndFeedback />
+      
 
           </main>
   );
