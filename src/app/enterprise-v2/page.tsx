@@ -134,8 +134,8 @@ const Hero = () => (
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.4} direction="right" className="relative hidden lg:block">
-          <div className="relative z-10 rounded-none overflow-hidden shadow-2xl max-w-[90%] ml-auto aspect-[4/3] border border-slate-100">
+        <FadeIn delay={0.4} direction="right" className="relative mt-12 lg:mt-0">
+          <div className="relative z-10 rounded-none overflow-hidden shadow-2xl max-w-full lg:max-w-[90%] ml-auto aspect-[4/3] border border-slate-100">
             <Image
               src="/images/hero/enterprise.png"
               alt="Enterprise Control Center"
@@ -143,12 +143,12 @@ const Hero = () => (
               className="object-cover"
               priority
               fetchPriority="high"
-              sizes="(max-width: 1280px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/60 to-transparent" />
           </div>
           
-          <div className="absolute -bottom-4 -left-2 bg-white p-5 rounded-none shadow-xl border border-slate-100 z-20">
+          <div className="absolute -bottom-4 left-4 lg:-left-2 bg-white p-5 rounded-none shadow-xl border border-slate-100 z-20">
              <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-none bg-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6]">
                    <Activity size={20} aria-hidden="true" />
@@ -169,9 +169,9 @@ const Hero = () => (
    SECTION 2  PROBLEM FRAMING (HIGH IMPACT)
     */
 const SectionProblem = () => (
-  <section className="py-10 bg-slate-50 border-y border-slate-100">
+  <section className="py-12 md:py-20 bg-slate-50 border-y border-slate-100">
     <div className={C}>
-      <div className="max-w-3xl mb-10">
+      <div className="max-w-3xl mb-8 md:mb-12">
         <FadeIn>
           <span className="c9-eyebrow mb-4">Operational Risk & Governance Gaps</span>
           <h2 className="c9-section-heading">
@@ -183,7 +183,7 @@ const SectionProblem = () => (
         </FadeIn>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {[
           { icon: <Handshake size={24} aria-hidden="true" />, title: 'Ownership Deadlocks', desc: 'Incidents are disputed between telco, IT, and cloud vendors instead of being resolved. No single entity owns the recovery outcome.' },
           { icon: <RefreshCw size={24} aria-hidden="true" />, title: 'Operational Drift', desc: 'Inconsistent configurations across locations create systemic vulnerabilities and prevent standard security enforcement.' },
@@ -193,11 +193,11 @@ const SectionProblem = () => (
           { icon: <Globe size={24} aria-hidden="true" />, title: 'Expansion Lag', desc: 'The absence of standardised infrastructure blueprints prevents rapid site rollouts and consistent performance at scale.' }
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.05}>
-            <div className="bg-white p-8 rounded-none border border-slate-200 h-full shadow-sm hover:border-[#5D00D6]/30 transition-all">
-               <div className="w-12 h-12 rounded-none bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-6 group-hover:scale-110 origin-left">
+            <div className="bg-white p-6 md:p-8 rounded-none border border-slate-200 h-full shadow-sm hover:border-[#5D00D6]/30 transition-all">
+               <div className="w-10 h-10 md:w-12 md:h-12 rounded-none bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-4 md:mb-6 group-hover:scale-110 origin-left">
                   {item.icon}
                </div>
-               <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
+               <h3 className="text-lg font-bold text-slate-900 mb-2 md:mb-3">{item.title}</h3>
                <p className="text-sm text-slate-800 leading-relaxed">{item.desc}</p>
             </div>
           </FadeIn>
@@ -225,7 +225,7 @@ const SectionCapabilities = () => (
 const SectionHowItWorks = () => (
   <section className="py-12 bg-white overflow-hidden">
     <div className={C}>
-      <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <FadeIn direction="left">
            <span className="c9-eyebrow mb-4">Multi-Site Operating Model</span>
            <h2 className="c9-section-heading mb-6">Centralised Control. Distributed Execution.</h2>
@@ -269,7 +269,7 @@ const SectionHowItWorks = () => (
         </FadeIn>
 
         <FadeIn direction="right" className="relative">
-           <div className="bg-slate-900 rounded-none p-12 text-white shadow-2xl relative overflow-hidden border border-white/5">
+           <div className="bg-slate-900 rounded-none p-8 md:p-12 text-white shadow-2xl relative overflow-hidden border border-white/5">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/10 blur-3xl rounded-full" />
               <h3 className="text-2xl font-bold mb-8 text-white">Operating Responsibility Matrix</h3>
               <div className="space-y-6">
@@ -315,7 +315,7 @@ const SectionModelDetail = () => (
           </FadeIn>
        </div>
 
-       <div className="grid md:grid-cols-4 gap-6">
+       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { 
               title: 'Single Ownership Model', 
@@ -385,7 +385,7 @@ const SectionSLA = () => (
           </FadeIn>
 
           <FadeIn direction="right">
-             <div className="bg-[#0c1024] rounded-none overflow-hidden shadow-2xl border border-white/5">
+             <div className="bg-[#0c1024] rounded-none overflow-x-auto shadow-2xl border border-white/5">
                 <Table>
                    <TableHeader className="bg-white/5 border-b border-white/10">
                       <TableRow className="hover:bg-transparent border-none">
@@ -421,7 +421,7 @@ const SectionSLA = () => (
 const SectionScalability = () => (
   <section className="py-12 bg-slate-50 border-y border-slate-100">
     <div className={C}>
-       <div className="grid lg:grid-cols-2 gap-20 items-center">
+       <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <FadeIn direction="right" className="order-2 lg:order-1">
              <div className="relative">
                 <div className="rounded-none overflow-hidden shadow-2xl aspect-[16/10] relative border border-slate-100">
@@ -481,7 +481,7 @@ const SectionSecurity = () => (
              <h2 className="c9-section-heading">Continuous Security Governance & Response</h2>
           </FadeIn>
        </div>
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { icon: <Activity aria-hidden="true" />, title: 'Continuous Monitoring', desc: '24/7 surveillance of network traffic and endpoint behavior for anomaly detection.' },
             { icon: <Lock aria-hidden="true" />, title: 'Access Control Structure', desc: 'Rigorous enforcement of Zero-Trust protocols and MFA across all enterprise sites.' },
@@ -516,7 +516,7 @@ const SectionCapabilityPack = () => (
 const SectionArchitecture = () => (
   <section id="architecture" className="py-12 bg-slate-50 border-y border-slate-100">
     <div className={C}>
-       <div className="grid lg:grid-cols-2 gap-16 items-center">
+       <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <FadeIn direction="right">
              <span className="c9-eyebrow mb-4">System Integration</span>
              <h2 className="c9-section-heading mb-6">Integration with Existing Environments</h2>
@@ -631,11 +631,11 @@ const SectionCommercial = () => (
   <section className="py-14 bg-slate-900 text-white overflow-hidden relative">
     <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
     <div className={C}>
-       <div className="grid lg:grid-cols-2 gap-16 items-center">
+       <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <FadeIn direction="right">
              <span className="c9-eyebrow mb-4 !text-white">Co-Managed Infrastructure</span>
              <h2 className="c9-section-heading !text-white !text-left mb-8">Working with Internal IT Teams</h2>
-             <p className="c9-body text-white/95 mb-12 max-w-lg leading-relaxed">
+             <p className="c9-body text-white/95 mb-10 max-w-lg leading-relaxed">
                We empower internal IT departments by removing the operational burden of multi-site infrastructure management. Our model is built on role clarity, not replacement.
              </p>
              <div className="flex gap-4">
@@ -688,7 +688,7 @@ const SectionEcosystem = () => (
              </p>
           </FadeIn>
        </div>
-        <div className="grid md:grid-cols-4 gap-8 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-14">
           {[
             { 
               label: 'Small Business', 
@@ -732,7 +732,7 @@ const SectionEcosystem = () => (
              </p>
           </FadeIn>
        </div>
-        <div className="grid md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           {[
             { label: 'Cloud Services', icon: <Cloud aria-hidden="true" /> },
             { label: 'Network Solutions', icon: <Network aria-hidden="true" /> },

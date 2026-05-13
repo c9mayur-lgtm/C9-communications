@@ -42,7 +42,7 @@ export default function CapabilityPack() {
   return (
     <section className="py-20 lg:py-28 bg-slate-50 border-y border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
-        <div className="bg-white rounded-none p-10 md:p-20 shadow-2xl shadow-purple-900/5 border border-slate-100 relative overflow-hidden">
+        <div className="bg-white rounded-none p-8 md:p-12 lg:p-20 shadow-2xl shadow-purple-900/5 border border-slate-100 relative overflow-hidden">
           {/* Decorative Gradient */}
           <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#5D00D6]/5 to-transparent rounded-none pointer-events-none" />
 
@@ -50,7 +50,7 @@ export default function CapabilityPack() {
           <div className="max-w-4xl mx-auto text-center relative z-10 mb-24">
             <FadeIn>
               <span className="c9-eyebrow mb-6">ENTERPRISE RESOURCES</span>
-              <h3 className="text-3xl md:text-5xl font-bold mb-8 font-clash leading-tight text-slate-900">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-clash leading-tight text-slate-900">
                 Complex Environments Require <br/><span className="text-[#5D00D6]">Custom Architecture.</span>
               </h3>
               

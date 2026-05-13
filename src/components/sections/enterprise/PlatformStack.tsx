@@ -67,7 +67,7 @@ export default function PlatformStack() {
           </FadeIn>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {platforms.map((p, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-[32px] p-10 h-full flex flex-col hover:bg-white/10 transition-all duration-500">

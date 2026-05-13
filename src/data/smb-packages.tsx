@@ -91,19 +91,19 @@ export const SMB_PACKAGES: PackageTier[] = [
     
     primaryCTA: {
       text: "Start with Starter",
-      link: "/smb/starter-package",
+      link: "#consultation-section",
       tracking: "cta_smb_starter_primary"
     },
     
     secondaryCTA: {
-      text: "Compare All Packages",
-      link: "/smb/packages-comparison",
+      text: "Explore Solutions",
+      link: "/business",
       tracking: "cta_smb_starter_secondary"
     },
     
     tertiaryCTA: {
-      text: "Schedule Free Consultation",
-      link: "/smb/consultation",
+      text: "Speak to a Specialist",
+      link: "#consultation-section",
       tracking: "cta_smb_starter_tertiary"
     },
     
@@ -173,19 +173,19 @@ export const SMB_PACKAGES: PackageTier[] = [
     
     primaryCTA: {
       text: "Start with Growth",
-      link: "/smb/growth-package",
+      link: "#consultation-section",
       tracking: "cta_smb_growth_primary"
     },
     
     secondaryCTA: {
-      text: "See What's Included",
-      link: "/smb/growth-details",
+      text: "Explore Modern Workplace",
+      link: "/modern-workplace",
       tracking: "cta_smb_growth_secondary"
     },
     
     tertiaryCTA: {
-      text: "Schedule Demo",
-      link: "/smb/demo",
+      text: "Schedule Strategic Assessment",
+      link: "#consultation-section",
       tracking: "cta_smb_growth_tertiary"
     },
     
@@ -264,19 +264,19 @@ export const SMB_PACKAGES: PackageTier[] = [
     
     primaryCTA: {
       text: "Start with Scale",
-      link: "/smb/scale-package",
+      link: "#consultation-section",
       tracking: "cta_smb_scale_primary"
     },
     
     secondaryCTA: {
-      text: "See What's Included",
-      link: "/smb/scale-details",
+      text: "Enterprise Solutions",
+      link: "/enterprise",
       tracking: "cta_smb_scale_secondary"
     },
     
     tertiaryCTA: {
       text: "Schedule Strategic Review",
-      link: "/smb/strategic-review",
+      link: "#consultation-section",
       tracking: "cta_smb_scale_tertiary"
     },
     

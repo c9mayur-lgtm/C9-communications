@@ -621,7 +621,7 @@ export const FAQSection = ({ items = FAQS }: { items?: { q: string; a: string }[
         <FadeUp key={i} delay={i * 0.04}>
           <div className="border-b" style={{ borderColor: BD }}>
             <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-start justify-between gap-6 py-6 text-left">
-              <span className={`c9-card-title !text-[18px] md:!text-[20px] transition-colors ${open===i ? '!text-[#5D00D6]' : '!text-[#0c1024]'}`}>{f.q}</span>
+              <span className={`c9-card-title transition-colors ${open===i ? '!text-[#5D00D6]' : '!text-[#0c1024]'}`}>{f.q}</span>
               <ChevronDown size={20} className={`shrink-0 mt-0.5 duration-300 ${open===i?'rotate-180':''}`} style={{ color: open===i ? P : 'gray' }} />
             </button>
             <AnimatePresence>
@@ -846,9 +846,9 @@ export const FullStackSection = ({
   <section className="py-24 bg-[#F8FAFF]">
     <div className="c9-container">
       <div className="mb-12">
-        <div className="text-[12px] font-bold text-[#5D00D6] uppercase tracking-[0.2em] mb-4">C9 Communications</div>
-        <h2 className="text-[32px] md:text-[42px] font-medium text-[#0c1024] mb-6 tracking-tight">{title}</h2>
-        <p className="text-[17px] text-gray-500 max-w-2xl leading-relaxed font-normal">
+        <div className="c9-eyebrow mb-4">C9 Communications</div>
+        <h2 className="c9-section-heading mb-6">{title}</h2>
+        <p className="c9-body max-w-2xl">
           {description}
         </p>
       </div>

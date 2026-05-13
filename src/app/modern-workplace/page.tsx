@@ -44,11 +44,11 @@ export default function ModernWorkplacePage() {
             <div>
               <FadeUp>
                 <Eyebrow>Unified Workplace Infrastructure</Eyebrow>
-                <h1 className="c9-hero-title mb-8 leading-[1.1] font-bold">
+                <h1 className="c9-hero-title mb-8">
                   A Unified Workplace Stack Powered by <br />
                   <span className="text-[#5D00D6]">Unified Communications.</span>
                 </h1>
-                <p className="c9-body text-slate-800 mb-10 text-xl max-w-2xl leading-relaxed font-medium">
+                <p className="c9-body text-slate-800 mb-10 max-w-2xl">
                   Stop treating voice, devices, and security as separate problems. We design, integrate, and manage your entire workplace as a single communication-driven system—delivering a seamless experience for your users and total control for your IT team.
                 </p>
               </FadeUp>
@@ -113,7 +113,7 @@ export default function ModernWorkplacePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {[{v:'60+',l:'Active Enterprise Sites'},{v:'99.9%',l:'Infrastructure Uptime'},{v:'Real-Time',l:'Incident Response'},{v:'Managed',l:'AU Data Sovereignty'}].map(({ v, l }, i) => (
               <FadeUp key={l} delay={i * 0.07} className="text-center">
-                <div className="text-[32px] md:text-[42px] font-black leading-none tracking-tight mb-3" style={{ color: P }}>{v}</div>
+                <div className="text-[32px] md:text-[42px] font-bold leading-none tracking-tight mb-3" style={{ color: P }}>{v}</div>
                 <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-800">{l}</div>
               </FadeUp>
             ))}
@@ -152,10 +152,10 @@ export default function ModernWorkplacePage() {
       <section id="services" className="py-12 md:py-20" style={{ background: '#F9FBFF' }}>
         <div className="c9-container">
           <FadeUp className="text-center max-w-[720px] mx-auto mb-20">
-            <h2 className="c9-section-heading mb-6 font-bold">
+            <h2 className="c9-section-heading mb-6">
               One Unified System.<br />Fully Managed.
             </h2>
-            <p className="c9-body text-xl">
+            <p className="c9-body">
               We eliminate the friction of fragmented tools. By placing communication at the core, we build a seamless environment where your calling, collaboration, devices, and security operate as a single managed stack.
             </p>
           </FadeUp>
@@ -301,11 +301,11 @@ export default function ModernWorkplacePage() {
               <div className="inline-flex items-center gap-2 bg-[#5D00D6]/5 px-4 py-2 rounded-none mb-6 border border-[#5D00D6]/10">
                 <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Unification Protocol</span>
               </div>
-              <h2 className="text-[32px] md:text-[42px] font-black leading-[1.1] mb-8 font-proxima tracking-tight text-[#0c1024]">
+              <h2 className="c9-section-heading mb-8">
                 The C9 Managed <br />
                 <span className="text-[#5D00D6]">System Unification Protocol.</span>
               </h2>
-              <p className="text-[18px] text-slate-800 mb-10 leading-relaxed font-bold">
+              <p className="c9-body mb-10">
                 Transitioning from fragmented tools to a unified stack shouldn&apos;t disrupt operations. We utilize a structured integration protocol to audit, secure, and connect your environment seamlessly.
               </p>
               <div className="space-y-6">
@@ -331,11 +331,11 @@ export default function ModernWorkplacePage() {
               <div className="inline-flex items-center gap-2 bg-[#5D00D6]/5 px-4 py-2 rounded-none mb-6 border border-[#5D00D6]/10">
                 <span className="text-[#5D00D6] text-[10px] font-bold uppercase tracking-widest">The Unified Launch Guarantee</span>
               </div>
-              <h2 className="text-[32px] md:text-[42px] font-black leading-[1.1] mb-8 font-proxima tracking-tight text-[#0c1024]">
+              <h2 className="c9-section-heading mb-8">
                 The Mandatory <br />
                 <span className="text-[#5D00D6]">Day One Integration.</span>
               </h2>
-              <p className="text-[18px] text-slate-800 mb-10 leading-relaxed font-bold">
+              <p className="c9-body mb-10">
                 For new sites and startups, we bypass fragmentation entirely. We guarantee a fully unified, communication-driven workplace environment on your first day of operation.
               </p>
               <div className="bg-[#0c1024] border border-white/5 rounded-none p-8 relative overflow-hidden hover:border-[#5D00D6]/20 transition-all shadow-2xl">
@@ -375,7 +375,7 @@ export default function ModernWorkplacePage() {
             <h2 className="c9-section-heading mb-5 !text-white">
               Risk-Managed Transformation. Zero Disruption.
             </h2>
-            <p className="c9-body !text-white/95 font-medium">
+            <p className="c9-body !text-white/95">
               We manage the entire shift from disconnected vendors to a unified C9 stack. Our staged integration model ensures your core communications remain active while we connect your devices, apps, and security policies.
             </p>
           </FadeUp>
@@ -404,7 +404,7 @@ export default function ModernWorkplacePage() {
         <div className="c9-container">
           <FadeUp className="text-center max-w-[640px] mx-auto mb-20">
             <Eyebrow>System-Wide Outcomes</Eyebrow>
-            <h2 className="c9-section-heading font-bold">The Power of a Unified Stack.</h2>
+            <h2 className="c9-section-heading">The Power of a Unified Stack.</h2>
           </FadeUp>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -451,7 +451,7 @@ export default function ModernWorkplacePage() {
         <div className="c9-container">
           <FadeUp className="text-center max-w-[640px] mx-auto mb-20">
             <Eyebrow>SLA-Backed Unified Management</Eyebrow>
-            <h2 className="c9-section-heading mb-6 font-bold">Predictable Investment.<br />Complete System Ownership.</h2>
+            <h2 className="c9-section-heading mb-6">Predictable Investment.<br />Complete System Ownership.</h2>
             <p className="c9-body">Transparent pricing for a fully integrated workplace stack. All plans include Australian engineering leads and zero hidden integration fees.</p>
           </FadeUp>
           <div className="grid md:grid-cols-3 gap-6">

@@ -83,13 +83,13 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       tracking: "cta_enterprise_foundation_primary"
     },
     secondaryCTA: {
-      text: "View Foundation Details",
-      link: "/enterprise/foundation-details",
+      text: "Review Enterprise Capabilities",
+      link: "/enterprise",
       tracking: "cta_enterprise_foundation_secondary"
     },
     tertiaryCTA: {
-      text: "Download Capabilities Guide",
-      link: "/enterprise/capabilities-guide",
+      text: "Speak to a Specialist",
+      link: "#consultation-section",
       tracking: "cta_enterprise_foundation_tertiary"
     }
   },
@@ -155,13 +155,13 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       tracking: "cta_enterprise_strategic_primary"
     },
     secondaryCTA: {
-      text: "View Strategic Details",
-      link: "/enterprise/strategic-details",
+      text: "Review Enterprise Capabilities",
+      link: "/enterprise",
       tracking: "cta_enterprise_strategic_secondary"
     },
     tertiaryCTA: {
-      text: "View Case Studies",
-      link: "/case-studies/enterprise-strategic",
+      text: "View Case Study",
+      link: "/case-studies/multi-site-retail-stabilisation",
       tracking: "cta_enterprise_strategic_tertiary"
     }
   },
@@ -237,13 +237,13 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       tracking: "cta_enterprise_premium_primary"
     },
     secondaryCTA: {
-      text: "View Premium Details",
-      link: "/enterprise/premium-details",
+      text: "Review Enterprise Capabilities",
+      link: "/enterprise",
       tracking: "cta_enterprise_premium_secondary"
     },
     tertiaryCTA: {
-      text: "View Case Studies",
-      link: "/case-studies/enterprise-premium",
+      text: "View Workplace Case Study",
+      link: "/case-studies/ent-workplace",
       tracking: "cta_enterprise_premium_tertiary"
     }
   },
@@ -304,13 +304,13 @@ export const ENTERPRISE_OFFERINGS_DATA: EnterpriseTier[] = [
       tracking: "cta_enterprise_custom_primary"
     },
     secondaryCTA: {
-      text: "View Custom Solutions",
-      link: "/enterprise/custom-solutions",
+      text: "Review Enterprise Capabilities",
+      link: "/enterprise",
       tracking: "cta_enterprise_custom_secondary"
     },
     tertiaryCTA: {
-      text: "Download Capabilities Guide",
-      link: "/enterprise/capabilities-guide",
+      text: "Speak to a Specialist",
+      link: "#consultation-section",
       tracking: "cta_enterprise_custom_tertiary"
     }
   }

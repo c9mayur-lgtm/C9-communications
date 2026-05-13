@@ -10,7 +10,7 @@ interface WpClientTickerProps {
 
 export const WpClientTicker = ({ 
   grayscale = true, 
-  opacity = 0.4,
+  opacity = 0.6,
   className = "" 
 }: WpClientTickerProps) => {
   return (
@@ -67,9 +67,9 @@ export const WpClientTicker = ({
       `}</style>
 
       {/* Gradient fade masks */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-[80px] md:w-[180px]"
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-[40px] md:w-[180px]"
         style={{ background: 'linear-gradient(to right, #ffffff 60%, transparent 100%)' }} />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-[80px] md:w-[180px]"
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-[40px] md:w-[180px]"
         style={{ background: 'linear-gradient(to left, #ffffff 60%, transparent 100%)' }} />
 
       <div className="ticker-wrapper overflow-hidden">
