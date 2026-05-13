@@ -144,9 +144,9 @@ export default function FastFibrePage() {
             <span className="text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em] relative inline-block before:absolute before:top-1/2 before:-left-12 before:w-8 before:h-[1px] before:bg-slate-200 after:absolute after:top-1/2 after:-right-12 after:w-8 after:h-[1px] after:bg-slate-200 mb-4">
               Carrier Independence
             </span>
-            <h3 className="text-2xl font-bold text-slate-900">We Source the Best Build Costs.</h3>
+            <h3 className="text-2xl font-bold text-slate-900">Carrier-Neutral Fibre Solutions Built Around Your Site</h3>
             <p className="text-slate-600 mt-4">
-               C9 partners with all major Tier-1 carriers (Vocus, Telstra, Optus, TPG, nbn) to find the fastest deployment timeline and lowest build cost for your address. You get a single C9 bill and single C9 support, running on the best physical path.
+               C9 works with multiple Australian Tier-1 carriers including Vocus, Telstra, Optus, TPG, and nbn to assess fibre availability, carrier pathways, deployment timelines, and operational suitability for each business location. Every site has different infrastructure availability and performance considerations. We evaluate carrier options, site compatibility, and business requirements to help deliver the most suitable fibre solution for your operational environment — not just the lowest-cost connection.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-slate-200 border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
@@ -165,6 +165,9 @@ export default function FastFibrePage() {
               </div>
             ))}
           </div>
+          <p className="text-center text-slate-400 text-xs mt-8">
+            Carrier availability, build requirements, and deployment pathways vary by location. C9 evaluates the available options to help businesses secure the most suitable connectivity outcome.
+          </p>
         </div>
       </section>
 
