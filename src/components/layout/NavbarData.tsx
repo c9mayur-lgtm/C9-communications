@@ -161,7 +161,7 @@ export const TELCO_FIXED = {
             { label: 'Inbound Services', path: '/telco/inbound-services' },
             { label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { label: 'SIP Trunking', path: '/telco/sip-trunking' },
-            { label: 'Voice Systems', path: '/telco/voice-systems' },
+            // { label: 'Voice Systems', path: '/telco/voice-systems' },
             { label: 'Contact Centre', path: '/telco/contact-centre' },
           ]
         }

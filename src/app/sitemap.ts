@@ -58,7 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/telco/phone-system',
     '/telco/sip-trunking',
     '/telco/teams-calling',
-    '/telco/voice-systems',
     '/terms',
     '/help/new-office-setup',
     '/help/fast-secure-internet',
