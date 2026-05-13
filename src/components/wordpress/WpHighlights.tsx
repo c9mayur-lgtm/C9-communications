@@ -11,7 +11,7 @@ export const WpHighlights = () => {
             <div className="flex flex-col items-center lg:items-start">
               <div className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-2.5 leading-none">Reviewed on</div>
               <div className="flex items-center gap-4">
-                <span className="font-extrabold text-[26px] tracking-tighter text-slate-800 leading-none">Google</span>
+                <span className="font-bold text-[26px] tracking-tighter text-slate-800 leading-none">Google</span>
                 <div className="flex flex-col gap-1">
                   <div className="flex text-[#4285F4] text-[10px] leading-none">★★★★★</div>
                   <span className="text-[10px] font-bold text-gray-500 uppercase tracking-tight leading-none whitespace-nowrap">4.9/5 Rating</span>

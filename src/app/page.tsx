@@ -18,6 +18,7 @@ import { WpServices } from "@/components/wordpress/WpServices";
 import { WpSolutions } from "@/components/wordpress/WpSolutions";
 import { WpDefenseBanner } from "@/components/wordpress/WpDefenseBanner";
 import { WpVendors } from "@/components/wordpress/WpVendors";
+import { WpCapabilityCarousel } from "@/components/wordpress/WpCapabilityCarousel";
 import { WpCapabilityNavigator } from "@/components/wordpress/WpCapabilityNavigator";
 import { TrustArchitecture } from "@/components/sections/shared/TrustArchitecture";
 import { WpFAQAndFeedback } from "@/components/wordpress/WpFAQAndFeedback";
@@ -31,7 +32,10 @@ export default function Homepage() {
       <WpClientTicker />
       <WpHighlights />
 
-      <WpHeroProducts />
+      {/* <WpHeroProducts /> */}
+      {/* <WpCapabilityCarousel /> */}
+      <WpCapabilityNavigator />
+      
       <WpSimplifyingIT />
 
       {/* ── CAPABILITY PILLARS — Direct links to the 3 major hubs ── */}
@@ -113,7 +117,6 @@ export default function Homepage() {
       <WpServices />
       <WpSolutions />
 
-      <WpCapabilityNavigator />
       <WpDefenseBanner 
         title="Security Built Into Everything"
         description="Protection across endpoints, networks, and users—continuously monitored and actively managed."

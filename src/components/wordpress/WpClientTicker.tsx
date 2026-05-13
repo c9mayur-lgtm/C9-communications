@@ -66,6 +66,11 @@ export const WpClientTicker = ({
         }
       `}</style>
 
+      {/* Ticker Title */}
+      <div className="container mx-auto px-6 mb-12 text-center">
+        <span className="c9-eyebrow !text-[#6B7280]">Trust Infrastructure & Enterprise Partners</span>
+      </div>
+
       {/* Gradient fade masks */}
       <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-[40px] md:w-[180px]"
         style={{ background: 'linear-gradient(to right, #ffffff 60%, transparent 100%)' }} />

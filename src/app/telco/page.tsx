@@ -2,33 +2,73 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Wifi, PhoneCall, Smartphone, PhoneIncoming, GitBranch, Clock, CheckCircle, Activity, ShieldCheck, Settings, Monitor, Lock, Check, Building2, Search, Zap, ShieldAlert, Layers, Database, Server, RefreshCw, Users, Target } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Wifi, 
+  PhoneCall, 
+  ShieldCheck, 
+  CheckCircle, 
+  Activity, 
+  Server, 
+  RefreshCw, 
+  Target, 
+  Zap, 
+  ShieldAlert, 
+  Clock, 
+  GitBranch, 
+  Layers,
+  ArrowRight,
+  Shield,
+  Monitor,
+  Check,
+  Search,
+  Settings,
+  Users,
+  HardDrive,
+  BarChart,
+  ClipboardCheck,
+  TrendingUp,
+  AlertTriangle
+} from 'lucide-react';
+
+// Custom Components
+import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { Button } from '@/components/ui/button';
+import { WpCapabilityNavigator } from '@/components/wordpress/WpCapabilityNavigator';
+import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
+import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
+import { C9Button } from '@/components/design-system/C9Button';
 import { handleCtaClick } from '@/lib/utils';
+import { 
+  Table, 
+  TableHeader, 
+  TableBody, 
+  TableHead, 
+  TableRow, 
+  TableCell 
+} from "@/components/ui/table";
 
-const C = "container mx-auto px-6 md:px-8 max-w-[1240px]";
+const C = "container mx-auto px-6 md:px-8 max-w-[1400px]";
 
-const FadeIn = ({ children, delay = 0, className, direction = 'up' }: { 
-  children: React.ReactNode; 
-  delay?: number; 
+const FadeIn = ({
+  children,
+  delay = 0,
+  className = '',
+  direction = 'up',
+}: {
+  children: React.ReactNode;
+  delay?: number;
   className?: string;
-  direction?: 'up' | 'down' | 'left' | 'right' 
+  direction?: 'up' | 'left' | 'right' | 'none';
 }) => {
-  const variants = {
-    up: { y: 20, opacity: 0 },
-    down: { y: -20, opacity: 0 },
-    left: { x: 20, opacity: 0 },
-    right: { x: -20, opacity: 0 }
-  };
-
+  const y = direction === 'up' ? 28 : 0;
+  const x = direction === 'left' ? -28 : direction === 'right' ? 28 : 0;
   return (
     <motion.div
-      initial={variants[direction]}
-      whileInView={{ y: 0, x: 0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0, y, x }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] as const }}
       className={className}
     >
       {children}
@@ -37,481 +77,136 @@ const FadeIn = ({ children, delay = 0, className, direction = 'up' }: {
 };
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 1 — HERO (OPERATIONAL CONTINUITY)
+   SECTION 1 — HERO
    ───────────────────────────────────────────────────────── */
-const SectionHero = () => (
-  <section className="relative min-h-[85vh] bg-[#0c1024] flex flex-col justify-center overflow-hidden pt-32 pb-24">
-    {/* Background Connectivity Visual */}
-    <div className="absolute inset-0 z-0">
-      {/* [IMAGE PLACEHOLDER: Australian enterprise operations room monitoring multi-site connectivity and voice systems] */}
-      <img 
-        src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop" 
-        alt="Managed Telco Operations"
-        className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0c1024] via-[#0c1024]/80 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024] via-transparent to-transparent" />
-    </div>
+const Hero = () => (
+  <section className="relative overflow-hidden bg-white pt-8 pb-16 lg:pt-12 lg:pb-24">
+    <div
+      className="pointer-events-none absolute inset-0 opacity-[0.025]"
+      style={{
+        backgroundImage: 'linear-gradient(#5D00D6 1px, transparent 1px), linear-gradient(90deg, #5D00D6 1px, transparent 1px)',
+        backgroundSize: '52px 52px',
+      }}
+    />
 
-    <div className={C + " relative z-10"}>
-      <div className="max-w-4xl">
-        <FadeIn>
-          <span className="c9-eyebrow !text-[#a56eff] mb-6">Business Internet & Voice Continuity</span>
-          <h1 className="c9-hero-title !text-white mb-8 leading-[1.1]">
-            Managed Telco & Connectivity <br />
-            <span className="text-[#a56eff]">Built for True Reliability.</span>
-          </h1>
-          <p className="c9-body !text-white/80 mb-10 text-xl max-w-3xl leading-relaxed">
-            We are the managed communications partner that designs, installs, governs, and maintains business-critical internet, voice, and failover environments for Australian businesses. Absolute connectivity ownership, zero finger-pointing.
-          </p>
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <Button 
-              size="lg" 
-              className="rounded-full shadow-xl bg-[#5D00D6] hover:bg-[#4a00ab] text-white font-bold"
-              onClick={handleCtaClick}
-            >
-              Review My Connectivity Risks
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg" 
-              className="rounded-full border-white/20 text-white hover:bg-white/10 font-bold"
-              onClick={handleCtaClick}
-            >
-              Speak With a Connectivity Specialist
-            </Button>
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={0.3}>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-              <span className="text-white/95 text-sm font-bold uppercase tracking-widest">NOC Carrier Escalation Active</span>
-            </div>
-            <div className="h-4 w-px bg-white/10" />
-            <div className="text-white/95 text-sm font-bold tracking-tight">SLA-Backed Voice & Data</div>
-          </div>
-        </FadeIn>
-      </div>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 2 — THE OPERATIONAL CRISIS (MIRRORING REALITY)
-   ───────────────────────────────────────────────────────── */
-const SectionProblems = () => (
-  <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
-    <div className={C}>
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
-        <FadeIn direction="right">
-          <span className="c9-eyebrow mb-4">Operational Risk & Complexity</span>
-          <h2 className="c9-section-heading mb-6">Why Standard Providers Cost You Revenue.</h2>
-          <p className="c9-body mb-8">
-            When your internet drops or voice systems fail, standard carriers point fingers. In business-critical environments, split responsibility between your IT, your telco, and your voice provider leads to unacceptable downtime, frustrated staff, and delayed site openings.
-          </p>
-          <div className="space-y-4 mb-10">
-            {[
-              { icon: <GitBranch size={20} />, text: "Vendor Blame Shifting: IT and Telco blaming each other while you suffer payment disruption." },
-              { icon: <ShieldAlert size={20} />, text: "Failed Teams Calls: Poorly configured connectivity causing dropouts and poor voice quality." },
-              { icon: <Clock size={20} />, text: "Unresolved Carrier Tickets: Waiting days for generic carriers to acknowledge a critical outage." },
-              { icon: <Layers size={20} />, text: "Inconsistent Site Standards: A mess of different providers and bills across retail or warehouse locations." }
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-slate-200 shadow-sm transition-colors hover:border-[#5D00D6]/20">
-                <div className="text-red-600 mt-1" aria-hidden="true">{item.icon}</div>
-                <span className="font-semibold text-slate-900 leading-snug">{item.text}</span>
-              </div>
-            ))}
-          </div>
-          <Button 
-            variant="link" 
-            className="p-0 h-auto font-bold flex items-center gap-2 text-lg text-[#5D00D6] hover:no-underline"
-            onClick={handleCtaClick}
-          >
-            Review My Connectivity Risks 
-          </Button>
-        </FadeIn>
-
-        <FadeIn direction="left">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-            {/* [IMAGE PLACEHOLDER: Frustrated operations manager in a disconnected Australian multi-site retail or warehouse environment] */}
-            <img 
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000&auto=format&fit=crop" 
-              alt="High-Stakes Business Operations Environment" 
-              className="w-full aspect-[4/5] object-cover grayscale-[0.5]"
-            />
-            <div className="absolute inset-0 bg-[#0c1024]/10 mix-blend-multiply" aria-hidden="true" />
-          </div>
-        </FadeIn>
-      </div>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 3 — WHY BUSINESSES MOVE TO C9 (THE SWITCH)
-   ───────────────────────────────────────────────────────── */
-const SectionApproach = () => (
-  <section className="py-16 lg:py-24 bg-white overflow-hidden">
-    <div className={C}>
-      <div className="grid lg:grid-cols-2 gap-20 items-center">
-        <FadeIn direction="right" className="order-2 lg:order-1">
-          <div className="grid grid-cols-2 gap-6">
-             <div className="space-y-6">
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-xl border border-slate-100">
-                   {/* [IMAGE PLACEHOLDER: Field engineering running fibre installation for an Australian warehouse] */}
-                   <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover" alt="Business Connectivity Engineering" />
-                </div>
-                <div className="bg-[#5D00D6] p-8 rounded-3xl text-white border border-[#5D00D6]/20">
-                   <div className="text-4xl font-bold mb-2">Single</div>
-                   <div className="text-sm font-bold uppercase tracking-widest opacity-95">Accountable Partner</div>
-                </div>
-             </div>
-             <div className="space-y-6 pt-12">
-                <div className="bg-slate-900 p-8 rounded-3xl text-white border border-white/5">
-                   <div className="text-4xl font-bold mb-2">Zero</div>
-                   <div className="text-sm font-bold uppercase tracking-widest opacity-95">Vendor Blame</div>
-                </div>
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-xl border border-slate-100">
-                   {/* [IMAGE PLACEHOLDER: Professional Australian local support team managing NOC escalations] */}
-                   <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover" alt="Telco Support Team" />
-                </div>
-             </div>
-          </div>
-        </FadeIn>
-
-        <FadeIn direction="left" className="order-1 lg:order-2">
-          <span className="c9-eyebrow mb-4">The Operations Partner Difference</span>
-          <h2 className="c9-section-heading mb-6">Most Providers Stop at Provisioning. We Stay Accountable.</h2>
-          <p className="c9-body mb-8 leading-relaxed">
-            We don't just resell internet lines. We actively manage carrier relationships, handle escalations, coordinate installations, support rollout projects, and govern failover. While others walk away after deployment, we stay engaged to protect your business uptime.
-          </p>
-          <div className="space-y-6 mb-10">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-[#5D00D6]/5 rounded-2xl border border-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0">
-                <Target size={24} aria-hidden="true" />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 mb-1">Carrier Escalation Ownership</h4>
-                <p className="text-sm text-slate-700 font-medium">We sit between you and the carriers. If a line degrades, we own the resolution through local Australian escalation.</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-[#5D00D6]/5 rounded-2xl border border-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] shrink-0">
-                <RefreshCw size={24} aria-hidden="true" />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 mb-1">Voice Continuity & Failover</h4>
-                <p className="text-sm text-slate-700 font-medium">Designing environments that automatically failover, keeping your voice, POS, and EFTPOS live during primary outages.</p>
-              </div>
-            </div>
-          </div>
-          <Button 
-            size="lg"
-            className="rounded-full shadow-lg bg-[#5D00D6] hover:bg-[#4a00ab] text-white font-bold"
-            onClick={handleCtaClick}
-          >
-            Improve My Voice & Internet Reliability
-          </Button>
-        </FadeIn>
-      </div>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 4 — MANAGED INFRASTRUCTURE (CORE CAPABILITIES)
-   ───────────────────────────────────────────────────────── */
-const SectionServices = () => (
-  <section className="py-16 lg:py-24 bg-slate-50">
-    <div className={C}>
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <FadeIn>
-          <span className="c9-eyebrow mb-4">One Managed Connectivity Ecosystem</span>
-          <h2 className="c9-section-heading">Integrated Internet, Voice, and Failover</h2>
-          <p className="c9-body mt-6 max-w-3xl mx-auto">
-            From symmetrical fibre to seamless cloud voice, we build and orchestrate the resilient communications ecosystem required for high-execution business operations.
-          </p>
-        </FadeIn>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {[
-          { 
-            icon: <Wifi size={24} />, 
-            title: "Business nbn & Fast Fibre", 
-            desc: "Business-grade internet ranging from reliable nbn™ to uncontended, symmetrical 1000Mbps Fast Fibre." 
-          },
-          { 
-            icon: <Server size={24} />, 
-            title: "Enterprise Ethernet", 
-            desc: "Dedicated SLA-backed fibre networks engineered for enterprise workloads and multi-site connectivity." 
-          },
-          { 
-            icon: <PhoneCall size={24} />, 
-            title: "Teams Calling & SIP Voice", 
-            desc: "Seamless SIP and VoIP phone systems managed for zero-drop reliability and centralized control." 
-          },
-          { 
-            icon: <ShieldCheck size={24} />, 
-            title: "Managed Firewall & Failover", 
-            desc: "Integrated security and automatic 4G/5G failover links that trigger instantly to protect revenue." 
-          }
-        ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 h-full border-b-4 hover:border-b-[#5D00D6]">
-            <div className="w-14 h-14 bg-[#5D00D6]/5 rounded-2xl border border-[#5D00D6]/10 flex items-center justify-center text-[#5D00D6] mb-6" aria-hidden="true">
-              {item.icon}
-            </div>
-            <h3 className="text-lg font-bold mb-3 text-slate-900">{item.title}</h3>
-            <p className="text-sm text-slate-800 leading-relaxed mb-6 font-medium">{item.desc}</p>
-            <div className="flex items-center gap-2 text-[10px] font-bold text-[#5D00D6] uppercase tracking-widest">
-              Connectivity Ecosystem ✓
+    <div className={`${C} relative z-10`}>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <FadeIn>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-8">
+              <ShieldCheck size={14} className="text-[#5D00D6]" aria-hidden="true" />
+              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Connectivity & Carrier Governance</span>
             </div>
           </FadeIn>
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 5 — UPTIME CONFIDENCE (RELIABILITY)
-   ───────────────────────────────────────────────────────── */
-const SectionResilience = () => (
-  <section className="py-16 lg:py-24 bg-[#0c1024] text-white relative overflow-hidden">
-    <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
-    <div className={C}>
-      <div className="grid lg:grid-cols-[1.1fr_1fr] gap-20 items-center">
-        <FadeIn direction="right">
-          <span className="c9-eyebrow !text-[#a56eff] mb-4">Internet Resilience</span>
-          <h2 className="c9-section-heading !text-white mb-6">Execution-Focused Reliability.</h2>
-          <p className="c9-body text-white/80 mb-10 leading-relaxed">
-            We don't hope for uptime; we engineer it. Our network environments are designed with multiple layers of failover to ensure your internet and voice stay connected through every failure scenario.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-8 mb-10">
-            {[
-              { title: "Multi-Carrier Failover", desc: "Automatic carrier diversity to eliminate single points of failure." },
-              { title: "Proactive Link Monitoring", desc: "Proactive pings to detect link degradation before downtime occurs." },
-              { title: "Seamless Voice Failover", desc: "Your Teams calls and phone lines stay active even if primary internet drops." },
-              { title: "SLA-Backed Escalation", desc: "Structured carrier escalation to ensure rapid incident resolution." }
-            ].map((item, i) => (
-              <div key={i} className="space-y-2">
-                <div className="flex items-center gap-2">
-                   <CheckCircle size={16} className="text-[#a56eff]" aria-hidden="true" />
-                   <h4 className="font-bold text-white text-sm uppercase tracking-wide">{item.title}</h4>
-                </div>
-                <p className="text-xs text-white/90 leading-relaxed font-medium">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <Button 
-            size="lg"
-            className="rounded-full shadow-lg bg-[#5D00D6] hover:bg-[#4a00ab] text-white font-bold"
-            onClick={handleCtaClick}
-          >
-            Plan My Business Connectivity
-          </Button>
-        </FadeIn>
+          <FadeIn delay={0.08}>
+            <h1 className="c9-hero-title mb-8">
+              Managed Connectivity Operations for Businesses That <br />
+              <span className="text-[#5D00D6]">Cannot Afford Downtime.</span>
+            </h1>
+          </FadeIn>
 
-        <FadeIn direction="left">
-          <div className="relative p-1 bg-gradient-to-br from-white/20 to-transparent rounded-3xl">
-             <div className="bg-[#0c1024] p-10 rounded-[22px] border border-white/10 shadow-2xl">
-                <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
-                   <span className="text-[11px] font-bold text-white/95 uppercase tracking-widest">Connectivity Monitor</span>
-                   <div className="flex items-center gap-2 text-[11px] text-emerald-400 font-bold uppercase tracking-widest">
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" aria-hidden="true" />
-                      Operationally Sound
-                   </div>
-                </div>
-                <div className="space-y-6">
-                   {[
-                     { label: 'Primary Managed Link', status: 'Optimal', val: 'Enterprise Fibre High-Availability', color: 'text-emerald-400' },
-                     { label: 'Carrier Backup Link', status: 'Ready', val: 'Diverse Path 4G/5G', color: 'text-purple-400' },
-                     { label: 'Voice Continuity', status: 'Active', val: 'Managed SIP Core', color: 'text-emerald-400' }
-                   ].map((item, i) => (
-                     <div key={i} className="flex items-center justify-between">
-                        <div>
-                           <div className="text-[14px] font-bold text-white mb-0.5">{item.label}</div>
-                           <div className="text-[11px] text-white/90 uppercase tracking-widest font-semibold">{item.val}</div>
-                        </div>
-                        <div className={`text-[12px] font-bold uppercase tracking-widest ${item.color}`}>
-                           {item.status}
-                        </div>
-                     </div>
-                   ))}
-                </div>
-                <div className="mt-10 pt-8 border-t border-white/10 grid grid-cols-2 gap-6">
-                   <div className="bg-white/5 p-5 rounded-2xl border border-white/5">
-                      <div className="text-[10px] text-white/90 font-bold uppercase mb-1">Target Uptime</div>
-                      <div className="text-xl font-bold text-white">99.99%</div>
-                   </div>
-                   <div className="bg-white/5 p-5 rounded-2xl border border-white/5">
-                      <div className="text-[10px] text-white/90 font-bold uppercase mb-1">Carrier Response</div>
-                      <div className="text-xl font-bold text-white">&lt; 15min</div>
-                   </div>
-                </div>
-             </div>
-          </div>
-        </FadeIn>
-      </div>
-    </div>
-  </section>
-);
+          <FadeIn delay={0.15}>
+            <p className="c9-body mb-10 max-w-[580px] text-slate-800 text-lg leading-relaxed">
+              Most providers only provision services. C9 actively manages carrier coordination, failover, escalation, and voice continuity. We are the operational control layer for your business internet and voice.
+            </p>
+          </FadeIn>
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 6 — ROLLOUT & MIGRATION FRAMEWORK (TRUST)
-   ───────────────────────────────────────────────────────── */
-const SectionProcess = () => (
-   <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
-      <div className={C}>
-         <div className="max-w-4xl mx-auto text-center mb-16">
-            <FadeIn>
-               <span className="c9-eyebrow mb-4">Rollout & Migration Governance</span>
-               <h2 className="c9-section-heading mb-6">Structured Execution. Zero Opening-Day Failures.</h2>
-               <p className="c9-body">Whether you are opening new retail sites or consolidating existing warehouses, our framework ensures a predictable, accountable transition of your communications.</p>
-            </FadeIn>
-         </div>
-
-         <div className="grid md:grid-cols-4 gap-6 relative">
-            {[
-               { step: '01', title: "Audit", desc: "Absolute audit of your current connectivity environment to identify risks and contract traps." },
-               { step: '02', title: "Strategy", desc: "Design of a standardized, multi-site internet and voice blueprint for your business." },
-               { step: '03', title: "Execution", desc: "Managed rollout or migration with dedicated carrier coordination and installation support." },
-               { step: '04', title: "Governance", desc: "NOC monitoring, proactive carrier management, and quarterly reviews." }
-            ].map((s, i) => (
-               <FadeIn key={i} delay={i * 0.1} className="relative bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-[#5D00D6]/30 transition-all border-b-4 hover:border-b-[#5D00D6]">
-                  <div className="text-[40px] font-bold text-slate-100 absolute top-6 right-6 leading-none" aria-hidden="true">
-                     {s.step}
-                  </div>
-                  <div className="w-10 h-10 rounded-xl bg-[#5D00D6] text-white flex items-center justify-center font-bold text-[16px] mb-6 relative z-10 shadow-md">
-                     {i + 1}
-                  </div>
-                  <h4 className="c9-card-title mb-3 relative z-10">{s.title}</h4>
-                  <p className="text-slate-800 text-[15px] leading-relaxed relative z-10 font-medium">{s.desc}</p>
-               </FadeIn>
-            ))}
-         </div>
-      </div>
-   </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 7 — PROACTIVE INFRASTRUCTURE SURVEILLANCE
-   ───────────────────────────────────────────────────────── */
-const SectionMonitoring = () => (
-  <section className="py-16 lg:py-24 bg-slate-900 text-white overflow-hidden relative">
-    <div className="absolute inset-0 opacity-[0.2]">
-       {/* [IMAGE PLACEHOLDER: NOC monitoring operations focusing on Australian business uptime] */}
-       <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover" alt="Managed Telco NOC" />
-       <div className="absolute inset-0 bg-slate-900/90" />
-    </div>
-    <div className={C + " relative z-10"}>
-       <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <FadeIn direction="right">
-             <span className="c9-eyebrow !text-[#a56eff] mb-4">Carrier Management</span>
-             <h2 className="c9-section-heading !text-white mb-6">Issues Resolved Before Operational Impact.</h2>
-             <p className="c9-body !text-white/95 mb-10 leading-relaxed font-medium">
-                Our NOC continuously governs every managed connection. We identify drops, packet loss, or latency in real-time and handle the carrier escalation directly, ensuring your business stays connected.
-             </p>
-             <div className="space-y-4 mb-10">
-                {[
-                  "Proactive link degradation monitoring",
-                  "Automated escalation triggers for critical faults",
-                  "Direct carrier intervention and accountability",
-                  "SLA-backed failover testing and oversight"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                     <div className="w-5 h-5 rounded-md bg-[#5D00D6]/20 flex items-center justify-center border border-[#5D00D6]/30">
-                        <Check size={12} className="text-[#a56eff]" aria-hidden="true" />
-                     </div>
-                     <span className="text-sm font-bold text-white/95">{item}</span>
-                  </div>
-                ))}
-             </div>
-             <Button 
-                size="lg"
-                className="rounded-full shadow-lg bg-[#5D00D6] hover:bg-[#4a00ab] text-white font-bold"
+          <FadeIn delay={0.22}>
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <C9Button 
+                size="lg" 
+                className="rounded-full shadow-xl shadow-purple-900/20 h-14 px-8"
                 onClick={handleCtaClick}
-             >
-                Audit My Multi-Site Environment
-             </Button>
+              >
+                Review My Connectivity Risks
+              </C9Button>
+              <C9Button 
+                variant="outline"
+                size="lg" 
+                className="rounded-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all h-14 px-8"
+                onClick={handleCtaClick}
+              >
+                Replace My Current Provider
+              </C9Button>
+            </div>
           </FadeIn>
 
-          <FadeIn direction="left">
-             <div className="relative">
-                <div className="rounded-none overflow-hidden border-8 border-white/5 shadow-2xl">
-                   {/* [IMAGE PLACEHOLDER: Connectivity performance dashboard showing multi-site uptime and link stability] */}
-                   <img 
-                     src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop" 
-                     alt="Connectivity Monitoring Dashboard" 
-                     className="w-full aspect-video object-cover grayscale-[0.3]"
-                   />
+          <FadeIn delay={0.3}>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-4 border-t border-slate-100 pt-8 mt-4">
+              {[
+                { label: 'Carrier Coordination', icon: <RefreshCw size={14} className="text-[#5D00D6]" /> },
+                { label: 'Failover Governance', icon: <Zap size={14} className="text-[#5D00D6]" /> },
+                { label: 'SLA Escalation', icon: <TrendingUp size={14} className="text-[#5D00D6]" /> },
+                { label: 'Multi-Site Continuity', icon: <Layers size={14} className="text-[#5D00D6]" /> }
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col gap-2">
+                  <div className="text-[#5D00D6]">{item.icon}</div>
+                  <span className="text-[10px] font-black text-slate-700 uppercase tracking-widest">{item.label}</span>
                 </div>
-                {/* Floating Stats */}
-                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl max-w-[220px] border border-slate-100">
-                   <div className="text-3xl font-bold text-[#5D00D6] mb-1">99.99%</div>
-                   <div className="text-[10px] font-bold text-slate-700 uppercase tracking-widest">SLA Uptime Commitment</div>
-                </div>
-             </div>
+              ))}
+            </div>
           </FadeIn>
-       </div>
+        </div>
+
+        <FadeIn delay={0.4} direction="right" className="relative hidden lg:block">
+          <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-8 border-white">
+            <img 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop" 
+              alt="Australian operations team managing business connectivity and voice environments across multiple sites"
+              className="w-full h-full object-cover grayscale-[0.2]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
+          </div>
+          
+          <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 z-20 max-w-[280px]">
+             <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
+                   <Activity size={20} />
+                </div>
+                <div className="text-[11px] font-black text-slate-800 uppercase tracking-widest leading-tight">NOC Active Monitoring</div>
+             </div>
+             <p className="text-[12px] text-slate-600 font-medium">Continuous link governance and proactive carrier escalation active across all managed sites.</p>
+          </div>
+        </FadeIn>
+      </div>
     </div>
   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 8 — STRATEGIC ALIGNMENT (PERSONAS)
+   SECTION 2 — COMMERCIAL TENSION
    ───────────────────────────────────────────────────────── */
-const SectionPersonas = () => (
-  <section className="py-16 lg:py-24 bg-white">
+const SectionTension = () => (
+  <section className="py-24 bg-slate-50 border-y border-slate-100">
     <div className={C}>
-      <div className="max-w-4xl mx-auto text-center mb-16">
+      <div className="max-w-3xl mb-20 text-center mx-auto">
         <FadeIn>
-          <span className="c9-eyebrow mb-4">Strategic Alignment</span>
-          <h2 className="c9-section-heading">How can we support your operations?</h2>
+          <span className="c9-eyebrow mb-4">Why Businesses Replace Their Existing Providers</span>
+          <h2 className="c9-section-heading">Operational Vulnerability & <br /> <span className="text-red-600">Provider Blame-Shifting.</span></h2>
+          <p className="c9-body mt-6 text-lg text-slate-800">
+            Standard carriers provision lines and then step back. When outages hit, you are left in the middle of a vendor dispute while your revenue stops. C9 replaces generic telcos with absolute operational accountability.
+          </p>
         </FadeIn>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { 
-            title: "Opening a New Retail or Warehouse Site", 
-            tag: "ZERO-FAILURE LAUNCH",
-            desc: "Ensure your new locations are operationally ready from day one. We coordinate the carriers, hardware, and activation." 
-          },
-          { 
-            title: "Replacing Unreliable Business Internet", 
-            tag: "MIGRATION WITHOUT DISRUPTION",
-            desc: "Safely consolidate your internet. We take over oversight, eliminate dropouts, and restore true business uptime." 
-          },
-          { 
-            title: "Managing Multi-Site Connectivity", 
-            tag: "ENTERPRISE UPTIME & SLA",
-            desc: "Standardized performance across dozens of sites. Centralized visibility and robust failover strategies." 
-          },
-          { 
-            title: "Improving Microsoft Teams Call Quality", 
-            tag: "VOICE CONTINUITY",
-            desc: "Eliminate jitter, dropouts, and echo. We manage the SIP, VoIP, and underlying connectivity to guarantee crisp calling." 
-          },
-          { 
-            title: "Consolidating Multiple Providers", 
-            tag: "SINGLE ACCOUNTABLE PARTNER",
-            desc: "Stop dealing with five different telcos. Bring your connectivity into one managed ecosystem with a single local bill." 
-          }
-        ].map((persona, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-500 h-full flex flex-col border-b-4 hover:border-b-[#5D00D6]">
-            <span className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest mb-4">{persona.tag}</span>
-            <h3 className="text-xl font-bold mb-4 text-slate-900">{persona.title}</h3>
-            <p className="text-slate-800 text-sm leading-relaxed mb-8 flex-grow font-medium">{persona.desc}</p>
-            <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
-               <div className="flex items-center gap-2 text-[11px] font-bold text-slate-900 uppercase">
-                  <CheckCircle size={14} className="text-emerald-500" aria-hidden="true" /> Execution Focused
-               </div>
+          { title: "Internet outages impacting operations", icon: <Wifi className="text-red-600" size={24} /> },
+          { title: "Teams and voice instability", icon: <PhoneCall className="text-red-600" size={24} /> },
+          { title: "Provider blame shifting", icon: <GitBranch className="text-red-600" size={24} /> },
+          { title: "Slow escalations", icon: <Clock className="text-red-600" size={24} /> },
+          { title: "Failed site rollouts", icon: <ShieldAlert className="text-red-600" size={24} /> },
+          { title: "Multi-site inconsistency", icon: <Layers className="text-red-600" size={24} /> },
+          { title: "No failover ownership", icon: <RefreshCw className="text-red-600" size={24} /> },
+          { title: "Disconnected support vendors", icon: <Shield className="text-red-600" size={24} /> }
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.05}>
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 h-full shadow-sm hover:border-red-600/30 transition-all group flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                {item.icon}
+              </div>
+              <h3 className="text-[15px] font-bold text-slate-900 leading-tight pt-1">{item.title}</h3>
             </div>
           </FadeIn>
         ))}
@@ -521,76 +216,336 @@ const SectionPersonas = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 9 — OPERATIONAL OUTCOMES
+   SECTION 3 — CAPABILITY NAVIGATOR
    ───────────────────────────────────────────────────────── */
-const SectionOutcomes = () => (
-  <section className="py-16 lg:py-24 bg-slate-50 border-y border-slate-100">
+const SectionCapabilities = () => {
+  const telcoCards = [
+    {
+      title: 'Business Connectivity',
+      descriptor: 'Problem: Carrier finger-pointing during outages. Outcome: Managed internet environments with proactive monitoring, failover governance, and carrier escalation ownership.',
+      image: '/Managed IT_SMB.png',
+      imageAlt: 'Business connectivity operations',
+      link: '/telco/business-nbn',
+      tag: 'Internet Governance',
+    },
+    {
+      title: 'Teams Calling',
+      descriptor: 'Problem: Fragmented voice quality and dropouts. Outcome: Business voice continuity across office, remote, and multi-site environments with managed SIP delivery.',
+      image: '/Teams Calling_Telco.png',
+      imageAlt: 'Business voice continuity',
+      link: '/telco/teams-calling',
+      tag: 'Voice Continuity',
+    },
+    {
+      title: 'Fast Fibre',
+      descriptor: 'Problem: Unstable or contended bandwidth causing cloud bottlenecks. Outcome: Symmetrical, uncontended business-grade fibre up to 1000Mbps with managed performance governance.',
+      image: '/Fast Fibre_Telco.png',
+      imageAlt: 'Fast Fibre internet connection',
+      link: '/telco/fast-fibre',
+      tag: 'Connectivity',
+    },
+    {
+      title: 'AI Voice',
+      descriptor: 'Problem: High operational overhead in customer triage and basic inquiries. Outcome: AI-driven voice agents that automate initial handling, improve routing, and scale operations without headcount.',
+      image: '/AI Voice_Telco.png',
+      imageAlt: 'AI Voice automation',
+      link: '/telco/ai-voice',
+      tag: 'AI Automation',
+    },
+    {
+      title: 'Enterprise Ethernet',
+      descriptor: 'Problem: Insufficient bandwidth guarantees and weak SLAs for high-execution sites. Outcome: Dedicated fibre circuits with enterprise-grade SLAs and 1:1 contention for critical workloads.',
+      image: '/Enterprise Ethernet_Telco.png',
+      imageAlt: 'Enterprise Ethernet infrastructure',
+      link: '/telco/enterprise-ethernet',
+      tag: 'Infrastructure',
+    },
+    {
+      title: 'Contact Centre Operations',
+      descriptor: 'Problem: Zero visibility into queue performance and customer wait times. Outcome: Managed customer communication visibility, queue performance, and active support operations.',
+      image: '/Contact center_Telco.png',
+      imageAlt: 'Operations manager reviewing contact centre performance',
+      link: '/telco/contact-centre',
+      tag: 'Operational Intelligence',
+    },
+    {
+      title: 'Cybersecurity Integration',
+      descriptor: 'Problem: Security gaps in connectivity layers. Outcome: Connectivity and security governed together to reduce operational risk and closing deployment gaps.',
+      image: '/Cyber Security_Telco.png',
+      imageAlt: 'Cybersecurity integration',
+      link: '/telco/security',
+      tag: 'Security Governance',
+    },
+  ];
+
+  return (
+    <WpCapabilityNavigator 
+      eyebrow="Managed Operational Capabilities"
+      headline="Connectivity, Voice, and Carrier Accountability — Unified."
+      subtext="We don't just provision services; we orchestrate the entire connectivity ecosystem. Each capability is designed to solve a specific operational risk and deliver a measurable business outcome."
+      cards={telcoCards}
+      ctaLabel="Review My Connectivity Risks"
+      ctaHref="#consultation-section"
+    />
+  );
+};
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 4 — QUALIFICATION
+   ───────────────────────────────────────────────────────── */
+const SectionQualification = () => (
+  <section className="py-24 bg-white">
     <div className={C}>
-       <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-             <FadeIn direction="right">
-                <h2 className="c9-section-heading text-left mb-6">Predictable Connectivity. <br /> Predictable Operations.</h2>
-                <p className="c9-body mb-10 leading-relaxed">
-                   When internet and voice are governed centrally, your leadership team can stop managing outages and start focusing on operational expansion.
-                </p>
-                 <Button 
-                    size="lg"
-                    className="rounded-full shadow-lg bg-[#5D00D6] hover:bg-[#4a00ab] text-white font-bold"
-                    onClick={handleCtaClick}
-                 >
-                    Audit My Multi-Site Environment
-                 </Button>
-             </FadeIn>
- 
-             <FadeIn direction="left" className="grid grid-cols-1 gap-4">
-                {[
-                  { val: "99.99%", label: "Target Uptime for Managed Sites" },
-                  { val: "Zero", label: "Day-One Connectivity Failures" },
-                  { val: "100%", label: "Visibility into Link Health" },
-                  { val: "1 Partner", label: "Absolute Ownership of Escalations" }
-                ].map((stat, i) => (
-                  <div key={i} className="bg-white p-6 rounded-2xl border border-slate-200 flex items-center gap-6 shadow-sm border-l-4 border-l-[#5D00D6]">
-                     <div className="text-2xl font-bold text-[#5D00D6] shrink-0">{stat.val}</div>
-                     <div className="text-sm font-bold text-slate-800 leading-tight tracking-tight">{stat.label}</div>
-                  </div>
-                ))}
-             </FadeIn>
-          </div>
-       </div>
+      <div className="max-w-3xl mb-20">
+        <FadeIn>
+          <span className="c9-eyebrow mb-4">Environment Qualification</span>
+          <h2 className="c9-section-heading">Which Environment Are You Managing?</h2>
+          <p className="c9-body mt-6 text-lg">
+            Our managed telco framework adapts to your specific operational context, whether you are building new or modernising the existing.
+          </p>
+        </FadeIn>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {[
+          { title: "Opening a New Site", desc: "Greenfield rollout governance from planning to opening day." },
+          { title: "Replacing Existing Providers", desc: "Structured migration of internet and voice with zero downtime." },
+          { title: "Managing Multi-Site Operations", desc: "Standardising connectivity and support across all locations." },
+          { title: "Improving Teams & Voice Reliability", desc: "Solving voice quality issues and instability in Teams." },
+          { title: "Modernising Legacy Connectivity", desc: "Transitioning from slow copper/old fibre to enterprise fibre." },
+          { title: "Scaling Enterprise Operations", desc: "Managed governance for high-growth, high-execution firms." }
+        ].map((item, i) => (
+          <FadeIn key={i} delay={i * 0.1}>
+            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 hover:border-[#5D00D6]/20 transition-all h-full group flex flex-col">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
+              <p className="text-slate-700 text-sm leading-relaxed flex-grow">{item.desc}</p>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn delay={0.4} className="flex justify-center">
+         <C9Button 
+            size="lg" 
+            className="rounded-full shadow-xl shadow-purple-900/20 h-15 px-10 text-lg"
+            onClick={handleCtaClick}
+         >
+            Review My Connectivity Environment
+         </C9Button>
+      </FadeIn>
     </div>
   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 10 — FINAL CTA (OPERATIONAL UPGRADE)
+   SECTION 5 — HOW WE OPERATE
+   ───────────────────────────────────────────────────────── */
+const SectionHowItWorks = () => (
+  <section className="py-24 bg-[#0c1024] text-white relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6]/5 blur-[120px] rounded-full" />
+    <div className={C}>
+      <div className="grid lg:grid-cols-[1fr_1.5fr] gap-20 items-start">
+        <div className="sticky top-32">
+          <FadeIn>
+            <span className="c9-eyebrow !text-[#a56eff] mb-4">Operational Process</span>
+            <h2 className="c9-section-heading !text-white mb-8">How C9 Operates. <br /> <span className="text-white/40">Absolute Accountability.</span></h2>
+            <p className="text-white/70 mb-12 text-lg">
+              Most providers stop at provisioning. C9 stays operationally accountable through a continuous governance framework.
+            </p>
+            <C9Button 
+              size="lg" 
+              className="rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white"
+              onClick={handleCtaClick}
+            >
+              Plan My Connectivity Rollout
+            </C9Button>
+          </FadeIn>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-x-12 gap-y-16">
+          {[
+            { 
+              step: "01", 
+              title: "Discovery & Risk Review", 
+              desc: "We audit your current connectivity to identify single points of failure, single carrier traps, and bandwidth bottlenecks." 
+            },
+            { 
+              step: "02", 
+              title: "Carrier & Environment Assessment", 
+              desc: "Strategic assessment of available carrier infrastructure at every site to ensure maximum resilience and cost-efficiency." 
+            },
+            { 
+              step: "03", 
+              title: "Architecture & Failover Planning", 
+              desc: "Designing the redundant logic that protects your revenue. We plan for the failure so you never experience the outage." 
+            },
+            { 
+              step: "04", 
+              title: "Rollout & Migration Governance", 
+              desc: "Active management of the transition. We coordinate carriers and on-site hardware to ensure zero opening-day failures." 
+            },
+            { 
+              step: "05", 
+              title: "Monitoring & Escalation Ownership", 
+              desc: "Our NOC actively monitors link health. If a line degrades, we own the escalation to the carrier through to resolution." 
+            },
+            { 
+              step: "06", 
+              title: "Quarterly Operational Reviews", 
+              desc: "Continuous refinement of your connectivity strategy based on usage data, new infrastructure availability, and business growth." 
+            }
+          ].map((item, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+               <div className="relative">
+                  <div className="text-4xl font-black text-white/10 absolute -top-4 -left-6 select-none" aria-hidden="true">{item.step}</div>
+                  <h4 className="text-xl font-bold text-white mb-4 relative z-10">{item.title}</h4>
+                  <p className="text-white/50 text-sm leading-relaxed relative z-10">{item.desc}</p>
+               </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 6 — RESPONSIBILITY MATRIX
+   ───────────────────────────────────────────────────────── */
+const SectionGovernance = () => (
+  <section className="py-24 bg-white overflow-hidden">
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <FadeIn direction="left">
+           <span className="c9-eyebrow mb-4">Operational Governance</span>
+           <h2 className="c9-section-heading mb-8">Most Providers Provision. <br /> <span className="text-[#5D00D6]">We Operate.</span></h2>
+           <p className="c9-body text-slate-800 mb-10 text-lg leading-relaxed">
+             Stop accepting vendor blame-shifting. C9 sits between you and the carriers as a single point of accountability for link health, voice quality, and failover triggers.
+           </p>
+           <div className="space-y-6">
+              {[
+                { title: 'Carrier Coordination & Escalation', val: 'C9 Managed' },
+                { title: 'Failover Orchestration & Testing', val: 'C9 Managed' },
+                { title: 'Voice Quality & SIP Governance', val: 'C9 Managed' },
+                { title: 'Multi-Site Configuration Drift', val: 'C9 Managed' },
+                { title: 'Hardware Health & Maintenance', val: 'C9 Managed' }
+              ].map((row, i) => (
+                <div key={i} className="flex items-center justify-between py-4 border-b border-slate-100 last:border-0">
+                   <span className="text-[15px] font-bold text-slate-900">{row.title}</span>
+                   <div className="flex items-center gap-2 text-[#5D00D6]">
+                      <CheckCircle size={14} />
+                      <span className="text-[11px] font-black uppercase tracking-widest">{row.val}</span>
+                   </div>
+                </div>
+              ))}
+           </div>
+        </FadeIn>
+
+        <FadeIn direction="right" className="relative">
+           <div className="bg-slate-50 rounded-3xl p-10 md:p-12 border border-slate-200 shadow-xl">
+              <h3 className="text-2xl font-bold mb-8 text-slate-900">Uptime SLA Targets</h3>
+              <div className="space-y-8">
+                 {[
+                   { p: 'P1 - Critical Outage', r: '< 15 mins', s: '< 4 hours', color: 'bg-red-500' },
+                   { p: 'P2 - Major Degradation', r: '< 30 mins', s: '< 8 hours', color: 'bg-orange-500' },
+                   { p: 'P3 - Standard Service', r: '< 2 hours', s: '< 24 hours', color: 'bg-blue-500' }
+                 ].map((row, i) => (
+                   <div key={i} className="relative">
+                      <div className="flex justify-between items-center mb-3">
+                         <span className="font-bold text-slate-900 text-sm">{row.p}</span>
+                         <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Target: {row.s}</span>
+                      </div>
+                      <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                         <div className={`h-full ${row.color} opacity-80`} style={{ width: i === 0 ? '95%' : i === 1 ? '85%' : '75%' }} />
+                      </div>
+                      <div className="flex justify-between mt-2 text-[10px] font-medium text-slate-500">
+                         <span>Response: {row.r}</span>
+                         <span>NOC Escalation: Instant</span>
+                      </div>
+                   </div>
+                 ))}
+              </div>
+              <div className="mt-12 pt-8 border-t border-slate-200 flex items-center justify-between">
+                 <div>
+                    <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Historical Uptime</div>
+                    <div className="text-3xl font-black text-[#5D00D6]">99.99%</div>
+                 </div>
+                 <C9Button variant="outline" size="sm" className="rounded-full" onClick={handleCtaClick}>
+                    View Live Dashboard
+                 </C9Button>
+              </div>
+           </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 7 — PROOF
+   ───────────────────────────────────────────────────────── */
+const SectionProof = () => (
+  <section className="py-24 bg-slate-50">
+    <div className={C}>
+       <div className="max-w-3xl mx-auto text-center mb-20">
+          <FadeIn>
+             <span className="c9-eyebrow mb-4">IMPACT REALIZED</span>
+             <h2 className="c9-section-heading">Migration Success & <br /> <span className="text-[#5D00D6]">Rollout Stability.</span></h2>
+             <p className="c9-body mt-6 text-lg">We measure success by outages prevented, migration windows hit, and carrier escalations resolved. Zero-fluff operational outcomes.</p>
+          </FadeIn>
+       </div>
+       
+       <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {[
+             { label: 'Migration Outcomes', val: '100%', sub: 'Zero-Downtime Transitions' },
+             { label: 'Carrier Response', val: '-40%', sub: 'Reduction in Resolution Time' },
+             { label: 'Multi-Site Governance', val: '500+', sub: 'Managed Sites Across ANZ' }
+          ].map((stat, i) => (
+             <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 rounded-3xl border border-slate-100 text-center shadow-sm">
+                <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.2em] mb-4">{stat.label}</div>
+                <div className="text-5xl font-semibold text-[#5D00D6] mb-2">{stat.val}</div>
+                <div className="text-sm font-semibold text-slate-900">{stat.sub}</div>
+             </FadeIn>
+          ))}
+       </div>
+
+       <WpCaseStudies />
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 8 — FINAL CTA
    ───────────────────────────────────────────────────────── */
 const SectionFinalCTA = () => (
-  <section className="py-16 lg:py-24 bg-white">
+  <section className="py-24 bg-white">
     <div className={C}>
-       <div className="bg-[#0c1024] rounded-3xl p-12 lg:p-24 text-center relative overflow-hidden shadow-2xl border border-white/10">
+       <div className="bg-[#0c1024] rounded-[40px] p-12 lg:p-24 text-center relative overflow-hidden shadow-2xl border border-white/5">
           <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} aria-hidden="true" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5D00D6]/10 blur-[120px] rounded-full -mr-64 -mt-64" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#a56eff]/5 blur-[100px] rounded-full -ml-48 -mb-48" />
           
-          <FadeIn>
-             <h2 className="c9-section-heading !text-white !text-4xl lg:!text-5xl mb-8">Upgrade Your Connectivity <br /> Support Experience</h2>
-             <p className="c9-body !text-white/95 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
-                Stop accepting vendor blame-shifting as a cost of business. Partner with an accountable communications leader who manages your internet and voice environment with absolute maturity.
+          <FadeIn className="relative z-10">
+             <h2 className="c9-section-heading !text-white !text-3xl md:!text-4xl lg:!text-5xl mb-10 leading-[1.1] max-w-4xl mx-auto">Bring Connectivity, Voice, Failover, and <br className="hidden md:block" /> Carrier Accountability Under One Managed Partner.</h2>
+             <p className="c9-body !text-white/80 mb-14 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
+                C9 helps Australian businesses operate through managed connectivity environments with operational governance, proactive support, escalation ownership, and multi-site consistency. Stop accepting provider finger-pointing.
              </p>
-             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
+             <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <C9Button 
                   size="lg" 
-                  className="rounded-full shadow-xl bg-[#5D00D6] hover:bg-[#4a00ab] text-white font-bold"
+                  className="rounded-full shadow-2xl shadow-purple-900/40 h-14 md:h-15 px-10 text-[15px] md:text-lg"
                   onClick={handleCtaClick}
                 >
-                  Plan My Business Connectivity
-                </Button>
-                <Button 
+                  Book a Connectivity Operations Review
+                </C9Button>
+                <C9Button 
                   variant="outline"
                   size="lg" 
-                  className="rounded-full border-white/20 text-white hover:bg-white/10 font-bold"
+                  className="rounded-full border-2 border-white/20 text-white hover:bg-white hover:text-[#0c1024] h-14 md:h-15 px-10 text-[15px] md:text-lg transition-all"
                   onClick={handleCtaClick}
                 >
                   Speak With a Connectivity Specialist
-                </Button>
+                </C9Button>
              </div>
           </FadeIn>
        </div>
@@ -601,18 +556,54 @@ const SectionFinalCTA = () => (
 export default function TelcoPage() {
   return (
     <main className="bg-white">
-      <SectionHero />
-      <SectionProblems />
-      <SectionApproach />
-      <SectionServices />
-      <SectionResilience />
-      <SectionProcess />
-      <SectionMonitoring />
-      <SectionPersonas />
-      <SectionOutcomes />
-      <SectionFinalCTA />
+      <Hero />
+      
+      <div className="py-12 border-y border-slate-50">
+        <WpClientTicker />
+      </div>
 
-      <section id="consultation-section" className="pt-12 pb-24 bg-slate-50">
+      <SectionTension />
+      <SectionCapabilities />
+      
+      <section className="relative py-28 bg-white overflow-hidden border-y border-slate-50">
+         <div 
+            className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+            style={{ 
+               backgroundImage: 'radial-gradient(#5D00D6 1px, transparent 1px)', 
+               backgroundSize: '40px 40px' 
+            }} 
+         />
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#5D00D6]/5 blur-[120px] rounded-full pointer-events-none" />
+         
+         <div className={`${C} relative z-10 text-center`}>
+            <FadeIn>
+               <span className="c9-eyebrow mb-6 inline-block">Accountability Shift</span>
+               <h3 className="c9-section-heading !text-3xl md:!text-5xl mb-10 max-w-4xl mx-auto leading-tight">
+                  Most Providers Stop at Provisioning. <br /> 
+                  <span className="text-[#5D00D6]">C9 Stays Operationally Accountable.</span>
+               </h3>
+               <p className="c9-body mb-12 max-w-2xl mx-auto text-slate-700">
+                  Stop accepting carrier finger-pointing as a cost of doing business. Partner with an operational leader who owns the outcome from rollout to resolution.
+               </p>
+               <C9Button 
+                  size="lg" 
+                  className="rounded-full shadow-xl shadow-purple-900/20 h-15 px-10 text-lg" 
+                  onClick={handleCtaClick}
+               >
+                  Review My Current Environment
+               </C9Button>
+            </FadeIn>
+         </div>
+      </section>
+
+      <SectionHowItWorks />
+      <SectionQualification />
+      <SectionGovernance />
+      <SectionProof />
+      
+      <WpFAQAndFeedback />
+
+      <section id="consultation-section" className="bg-slate-50">
         <WpConsultationForm 
           eyebrow="READY TO GOVERN YOUR CONNECTIVITY?"
           title="Connectivity Operations Review"
@@ -620,6 +611,8 @@ export default function TelcoPage() {
           formTitle="Request Connectivity Audit"
         />
       </section>
+
+      <SectionFinalCTA />
     </main>
   );
 }

@@ -7,6 +7,9 @@ import Link from 'next/link';
 
 export const FloatingCEO = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  if (!isVisible) return null;
 
   return (
     <div className="fixed bottom-28 right-6 z-[400] font-sans hidden lg:block">
@@ -16,7 +19,7 @@ export const FloatingCEO = () => {
           layout: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
         }}
         className={`
-          relative overflow-hidden bg-[#0c1024] rounded-xl shadow-2xl border-4 border-white  cursor-pointer
+          relative overflow-hidden bg-[#0c1024] rounded-xl shadow-2xl border-4 border-white cursor-pointer group
           ${isOpen ? 'w-[320px] md:w-[350px] h-[520px] md:h-[580px]' : 'w-28 h-44 md:w-32 md:h-52'}
         `}
         onClick={() => !isOpen && setIsOpen(true)}
@@ -35,15 +38,27 @@ export const FloatingCEO = () => {
           <div className={`absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent ${isOpen ? 'opacity-90' : 'opacity-40'}`} />
         </motion.div>
 
-        {/* Close Button */}
+        {/* Global Close Button (Expanded) */}
         {isOpen && (
           <motion.button 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             onClick={(e) => { e.stopPropagation(); setIsOpen(false); }}
-            className="absolute top-6 right-6 w-8 h-8 rounded-full bg-black/20 backdrop-blur-md flex items-center justify-center text-white z-40 border border-white/10 hover:bg-black/40 pointer-events-auto"
+            className="absolute top-6 right-6 w-8 h-8 rounded-full bg-black/20 backdrop-blur-md flex items-center justify-center text-white z-50 border border-white/10 hover:bg-black/40 pointer-events-auto"
           >
             <X size={16} />
+          </motion.button>
+        )}
+
+        {/* Mini-Card Close Button */}
+        {!isOpen && (
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            onClick={(e) => { e.stopPropagation(); setIsVisible(false); }}
+            className="absolute top-2 right-2 w-5 h-5 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white/70 z-50 border border-white/10 hover:bg-black/60 hover:text-white transition-all opacity-0 group-hover:opacity-100"
+          >
+            <X size={10} />
           </motion.button>
         )}
 
@@ -58,8 +73,8 @@ export const FloatingCEO = () => {
             <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/30 mb-3 group-hover:bg-[#5D00D6] group-hover:border-[#5D00D6] transition-all">
               <Play size={16} fill="currentColor" />
             </div>
-            <p className="text-[8px] font-bold text-white/50 uppercase tracking-widest mb-1">Meet Jaspreet</p>
-            <p className="text-[10px] font-bold text-white leading-tight">Founder's Note</p>
+            <p className="text-[8px] font-semibold text-white/50 uppercase tracking-widest mb-1">Meet Jaspreet</p>
+            <p className="text-[10px] font-semibold text-white leading-tight">Founder's Note</p>
           </motion.div>
         )}
 
@@ -78,9 +93,9 @@ export const FloatingCEO = () => {
                   <div className="w-6 h-6 rounded-full border border-white/30 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100" alt="CEO" />
                   </div>
-                  <span className="text-xs font-bold text-white">jaspreet_m <span className="text-white/40 font-normal ml-1">· Managing Director</span></span>
+                  <span className="text-xs font-semibold text-white">jaspreet_m <span className="text-white/40 font-normal ml-1">· Managing Director</span></span>
                 </div>
-                <p className="text-xl font-bold text-white leading-tight mb-2">
+                <p className="text-xl font-semibold text-white leading-tight mb-2">
                   "Building infrastructure with absolute accountability."
                 </p>
                 <p className="text-[11px] text-white/60 leading-relaxed">
@@ -92,14 +107,14 @@ export const FloatingCEO = () => {
               <div className="flex flex-col gap-2 pointer-events-auto">
                 <Link 
                   href="/contact" 
-                  className="w-full bg-white text-black font-bold py-3.5 rounded-lg flex items-center justify-center gap-2 hover:bg-slate-100 transition-colors shadow-lg text-sm"
+                  className="w-full bg-white text-black font-semibold py-3.5 rounded-lg flex items-center justify-center gap-2 hover:bg-slate-100 transition-colors shadow-lg text-sm"
                   onClick={() => setIsOpen(false)}
                 >
                   <Calendar size={16} /> Book Technical Session
                 </Link>
                 <Link 
                   href="/about" 
-                  className="w-full bg-white/10 backdrop-blur-md text-white font-bold py-3.5 rounded-lg flex items-center justify-center gap-2 border border-white/20 hover:bg-white/20 transition-colors text-sm"
+                  className="w-full bg-white/10 backdrop-blur-md text-white font-semibold py-3.5 rounded-lg flex items-center justify-center gap-2 border border-white/20 hover:bg-white/20 transition-colors text-sm"
                   onClick={() => setIsOpen(false)}
                 >
                   <Info size={16} /> Our Operational Model

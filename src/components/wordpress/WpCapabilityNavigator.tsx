@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import { ArrowRight, Plus, ChevronLeft, ChevronRight } from 'lucide-react';
 
 /* ─── Types ──────────────────────────────────────────────── */
@@ -115,20 +116,20 @@ const MobileCard = ({ card }: { card: CapabilityCard }) => (
 
     {/* Top tag */}
     <div className="absolute top-4 left-4">
-      <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/55 bg-white/10 border border-white/10 px-2.5 py-1 rounded-full">
+      <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-white/55 bg-white/10 border border-white/10 px-2.5 py-1 rounded-full">
         {card.tag ?? 'C9 Managed'}
       </span>
     </div>
 
     {/* Bottom content */}
     <div className="absolute bottom-0 left-0 right-0 p-5">
-      <h3 className="text-[18px] font-bold text-white leading-tight tracking-tight mb-1.5">
+      <h3 className="text-[18px] font-semibold text-white leading-tight tracking-tight mb-1.5">
         {card.title}
       </h3>
       <p className="text-[12px] text-white/55 leading-relaxed mb-4 line-clamp-2">
         {card.descriptor}
       </p>
-      <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white/60">
+      <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60">
         Learn more <ArrowRight size={11} />
       </span>
     </div>
@@ -149,29 +150,43 @@ const DesktopAccordion = ({
   cards: CapabilityCard[];
   activeIndex: number;
   setActiveIndex: (i: number) => void;
-}) => (
-  <div
-    className="hidden md:flex gap-[4px] rounded-2xl overflow-hidden"
-    style={{ height: '500px' }}
-  >
-    {cards.map((card, i) => {
-      const isActive = i === activeIndex;
-      return (
-        <div
-          key={i}
-          className="relative overflow-hidden cursor-pointer"
-          style={{
-            flex: isActive ? '5 0 0%' : '1 0 72px',
-            transition: 'flex 550ms cubic-bezier(0.22, 1, 0.36, 1)',
-            minWidth: 0,
-          }}
-          onClick={() => setActiveIndex(i)}
-          onMouseEnter={() => setActiveIndex(i)}
-          role="button"
-          aria-label={`Explore ${card.title}`}
-          tabIndex={0}
-          onKeyDown={(e) => e.key === 'Enter' && setActiveIndex(i)}
-        >
+}) => {
+  const router = useRouter();
+
+  return (
+    <div
+      className="hidden md:flex gap-[4px] rounded-2xl overflow-hidden"
+      style={{ height: '500px' }}
+    >
+      {cards.map((card, i) => {
+        const isActive = i === activeIndex;
+        return (
+          <div
+            key={i}
+            className="relative overflow-hidden cursor-pointer"
+            style={{
+              flex: isActive ? '5 0 0%' : '1 0 72px',
+              transition: 'flex 550ms cubic-bezier(0.22, 1, 0.36, 1)',
+              minWidth: 0,
+            }}
+            onClick={() => {
+              if (isActive) {
+                router.push(card.link);
+              } else {
+                setActiveIndex(i);
+              }
+            }}
+            onMouseEnter={() => setActiveIndex(i)}
+            role="button"
+            aria-label={`Explore ${card.title}`}
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                if (isActive) router.push(card.link);
+                else setActiveIndex(i);
+              }
+            }}
+          >
           {/* Background Image */}
           <div
             className="absolute inset-0 will-change-transform"
@@ -235,7 +250,7 @@ const DesktopAccordion = ({
               }}
             >
               <span
-                className="text-[13px] font-bold text-white/80 tracking-wide leading-none whitespace-nowrap block"
+                className="text-[13px] font-semibold text-white/80 tracking-wide leading-none whitespace-nowrap block"
                 style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
               >
                 {card.title}
@@ -252,10 +267,10 @@ const DesktopAccordion = ({
                   exit={{ opacity: 0, y: 4 }}
                   transition={{ duration: 0.28, delay: 0.15, ease: 'easeOut' }}
                 >
-                  <span className="inline-block text-[9px] font-bold uppercase tracking-[0.22em] text-white/50 bg-white/10 border border-white/10 px-2.5 py-1 rounded-full mb-3">
+                  <span className="inline-block text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50 bg-white/10 border border-white/10 px-2.5 py-1 rounded-full mb-3">
                     {card.tag ?? 'C9 Managed'}
                   </span>
-                  <h3 className="text-[22px] font-bold text-white leading-tight tracking-tight mb-2">
+                  <h3 className="text-[22px] font-semibold text-white leading-tight tracking-tight mb-2">
                     {card.title}
                   </h3>
                   <p className="text-[13px] text-white/55 leading-relaxed mb-5 max-w-[300px]">
@@ -263,7 +278,7 @@ const DesktopAccordion = ({
                   </p>
                   <Link
                     href={card.link}
-                    className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white/70 hover:text-white transition-colors group/link"
+                    className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70 hover:text-white transition-colors group/link"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Learn more
@@ -276,8 +291,9 @@ const DesktopAccordion = ({
         </div>
       );
     })}
-  </div>
-);
+    </div>
+  );
+};
 
 /* ─────────────────────────────────────────────────────────
    MAIN COMPONENT
@@ -327,7 +343,7 @@ export const WpCapabilityNavigator = ({
           {/* Desktop CTA */}
           <Link
             href={ctaHref}
-            className="hidden md:flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-[#5D00D6] transition-colors flex-shrink-0 group"
+            className="hidden md:flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 hover:text-[#5D00D6] transition-colors flex-shrink-0 group"
           >
             {ctaLabel}
             <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -382,7 +398,7 @@ export const WpCapabilityNavigator = ({
         <div className="flex justify-center mt-8 px-6">
           <Link
             href={ctaHref}
-            className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-[#5D00D6] transition-colors"
+            className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 hover:text-[#5D00D6] transition-colors"
           >
             {ctaLabel} <ArrowRight size={13} />
           </Link>
@@ -398,26 +414,6 @@ export const WpCapabilityNavigator = ({
         />
       </div>
 
-      {/* ── Trust Footer ─────────────────────────────────────── */}
-      <div className="container mx-auto px-6 md:px-8 max-w-[1400px]">
-        <div className="mt-10 md:mt-12 h-px w-full bg-slate-100" />
-        <div className="flex flex-wrap gap-x-6 md:gap-x-10 gap-y-3 md:gap-y-4 mt-6 md:mt-8">
-          {[
-            '500+ Sites Delivered Across AU & NZ',
-            'Single Accountable Provider',
-            'Human-Staffed Support',
-            'Enterprise-Grade SLAs',
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400"
-            >
-              <span className="w-1 h-1 rounded-full bg-[#5D00D6] inline-block flex-shrink-0" />
-              {item}
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };
