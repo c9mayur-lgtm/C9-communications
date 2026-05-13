@@ -90,11 +90,11 @@ export default function BusinessNbnPage() {
 
               <FadeIn delay={0.3}>
                  <div className="flex flex-col sm:flex-row gap-4">
-                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                      <Link href="#consultation-section">Get a Connectivity Assessment</Link>
+                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full font-bold" asChild>
+                      <Link href="#plans">Compare Business nbn Plans</Link>
                     </C9Button>
-                    <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#solutions">Explore Solutions</Link>
+                    <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white font-bold" asChild>
+                      <Link href="#consultation-section">Review My Existing Internet Setup</Link>
                     </C9Button>
                  </div>
               </FadeIn>
@@ -135,12 +135,13 @@ export default function BusinessNbnPage() {
 
       <WpClientTicker />
 
-      {/* ══ 2. THE REAL BUSINESS PROBLEM ═════════════════════════════ */}
+      {/* ══ 2. WHY BUSINESSES LEAVE THEIR CURRENT PROVIDER ═════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 overflow-hidden">
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left" className="order-2 lg:order-1">
                <div className="relative rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 aspect-square max-w-md mx-auto lg:max-w-none">
+                  {/* [IMAGE PLACEHOLDER: Business owner frustrated with poor internet or phone dropouts] */}
                   <img 
                     src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2000&auto=format&fit=crop" 
                     alt="Network engineer managing complex infrastructure to reduce operational risk" 
@@ -151,21 +152,21 @@ export default function BusinessNbnPage() {
                     <div className="flex items-center gap-2 text-rose-600 font-bold text-[10px] uppercase tracking-widest mb-1">
                        <ShieldAlert size={14} /> Risk Detected
                     </div>
-                    <div className="text-xl font-bold text-slate-900">Link Failure Exposure</div>
+                    <div className="text-xl font-bold text-slate-900">Provider Finger-Pointing</div>
                   </div>
                </div>
             </FadeIn>
 
             <FadeIn direction="right" className="order-1 lg:order-2">
-               <span className="c9-eyebrow mb-4">Operational Risk</span>
+               <span className="c9-eyebrow mb-4">The Standard Telco Trap</span>
                <h2 className="c9-section-heading mb-6">
-                  When Connectivity Stops, Business Stops.
+                  Why Standard Internet Providers Fail SMBs.
                </h2>
                <div className="space-y-6 mb-8">
                   {[
-                     { title: 'Retail & Hospitality', desc: 'Broken POS systems and missed payments due to link dropouts.' },
-                     { title: 'Warehouses & Logistics', desc: 'Inventory delays and operational blind spots in the rollout.' },
-                     { title: 'Multi-Site Offices', desc: 'Fragmented vendors and finger-pointing during regional outages.' }
+                     { title: 'Dropouts & Unstable VoIP', desc: 'Congested connections that ruin Teams calls and drop critical customer interactions.' },
+                     { title: 'Provider Blame Shifting', desc: 'IT blames the telco, the telco blames IT. You get nowhere while your business stays offline.' },
+                     { title: 'Slow Support Escalations', desc: 'Sitting in hours-long queues just to speak to an offshore level 1 tech reading a script.' }
                   ].map((item, i) => (
                      <div key={i} className="flex gap-4">
                         <div className="w-6 h-6 rounded-full bg-rose-500/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -180,34 +181,33 @@ export default function BusinessNbnPage() {
                </div>
                <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm mb-6">
                   <p className="text-slate-900 font-bold text-[18px]">
-                     Unreliable providers leave you exposed. C9 removes the risk.
+                     Unreliable providers leave you exposed. C9 takes ownership and stops the dropouts.
                   </p>
                </div>
-               <a href="#consultation-section" className="inline-flex items-center justify-center gap-2 bg-[#5D00D6] text-white rounded-full hover:bg-[#4d00b3] transition-all shadow-xl shadow-purple-900/20 h-14 px-8 text-[15px] font-bold">
-                Check My Address
-                
-              </a>
+               <C9Button className="h-14 px-8 rounded-full bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl text-white font-bold" asChild>
+                 <Link href="#consultation-section">Review My Existing Internet Setup</Link>
+               </C9Button>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* ══ 3. HOW C9 SOLVES IT ══════════════════════════════════════ */}
+      {/* ══ 3. HOW C9 SOLVES IT (FAILOVER & MIGRATION) ══════════════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-white">
         <div className={C}>
           <FadeIn className="text-center mb-16">
-            <span className="c9-eyebrow mb-4">The Managed Solution</span>
-            <h2 className="c9-section-heading">Operational Continuity, Not Just a Connection.</h2>
+            <span className="c9-eyebrow mb-4">Failover & Migration Confidence</span>
+            <h2 className="c9-section-heading">Never Rely on a Single Connection Again.</h2>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: <Zap />, title: "Primary & Backup Path", desc: "We architect primary and redundant paths (4G/5G) to ensure you never go offline." },
-              { icon: <Activity />, title: "Proactive Monitoring", desc: "Our NOC monitors your link 24/7. We resolve issues before your team notices." },
-              { icon: <Users />, title: "Escalation Ownership", desc: "Stop chasing carriers. C9 owns the entire ticket lifecycle. We fight the battle for you." },
-              { icon: <Clock />, title: "Managed Installation", desc: "A senior engineer oversees your deployment, ensuring Day One operational readiness." },
-              { icon: <ShieldCheck />, title: "Senior Local Support", desc: "Speak directly to a senior Australian engineer. No offshore queues, no scripts." },
-              { icon: <Layers />, title: "Single Vendor Model", desc: "Consolidate internet, voice, and security into one managed, accountable environment." }
+              { icon: <Zap />, title: "Automatic 4G/5G Failover", desc: "If the nbn™ drops, your connection instantly fails over. Your EFTPOS and voice keep running." },
+              { icon: <Activity />, title: "Proactive NOC Monitoring", desc: "Our Australian team monitors your line 24/7. We detect and fix packet loss before you even notice." },
+              { icon: <Users />, title: "Zero Provider Chaos", desc: "We coordinate everything. If there's an issue, we handle the carrier escalation while you stay online." },
+              { icon: <Clock />, title: "Safe, Disruption-Free Migration", desc: "Switching providers shouldn't mean downtime. We plan the cutover to ensure zero business interruption." },
+              { icon: <ShieldCheck />, title: "Failover Validation", desc: "We actively test your failover setup to guarantee it works when you actually need it." },
+              { icon: <Layers />, title: "Consolidated IT & Voice", desc: "Bring your internet, Teams calling, and IT support under one accountable managed partner." }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.05} className="bg-slate-50 border border-slate-100 p-8 rounded-3xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-xl transition-all text-center flex flex-col items-center">
                 <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-5 transform group-hover:scale-110">
@@ -221,59 +221,45 @@ export default function BusinessNbnPage() {
         </div>
       </section>
 
-      {/* ══ 4. BUILT FOR YOUR BUSINESS STAGE ═════════════════════════ */}
-      <section id="solutions" className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+      {/* ══ 4. QUALIFICATION ═════════════════════════ */}
+      <section id="qualification" className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Strategic Relevance</span>
+               <span className="c9-eyebrow mb-4">Qualification Assessment</span>
                <h2 className="c9-section-heading mb-6">
-                  Infrastructure That Adapts to Your Stage.
+                  Not Sure What Setup Your Business Actually Needs?
                </h2>
-               <div className="space-y-8">
+               <div className="space-y-4 mb-8">
+                 <p className="text-slate-600 font-medium">Getting the right connectivity means answering a few operational questions first:</p>
                   {[
-                    { 
-                      icon: <Building2 />, 
-                      title: "Opening a New Site?", 
-                      context: "Greenfield Deployment",
-                      desc: "Fast installation and Day-One readiness. We manage the site survey and ensure you are live before opening day." 
-                    },
-                    { 
-                      icon: <TrendingUp />, 
-                      title: "Running an Existing Business?", 
-                      context: "Migration & Stability",
-                      desc: "Safe migration without disruption. We takeover fragmented environments and consolidate regional providers." 
-                    },
-                    { 
-                      icon: <Monitor />, 
-                      title: "Managing Enterprise Operations?", 
-                      context: "Governance & Scale",
-                      desc: "Centralized visibility and guaranteed uptime confidence across dozens or hundreds of locations." 
-                    }
+                     "How many staff and connected devices?",
+                     "Are you heavily reliant on cloud apps or syncing large files?",
+                     "Do you use Teams calling or VoIP systems that require QoS?",
+                     "Are you running POS or EFTPOS systems that must stay online?",
+                     "Do you have multiple sites that need to connect securely?"
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-5">
-                       <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-400 group-hover:bg-[#5D00D6] group-hover:text-white transition-all shadow-sm shrink-0 mt-1">
-                          {item.icon}
-                       </div>
-                       <div>
-                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 block">{item.context}</span>
-                          <h3 className="c9-card-title !text-[20px] mb-2">{item.title}</h3>
-                          <p className="c9-body text-slate-500">{item.desc}</p>
-                       </div>
+                    <div key={i} className="flex gap-3 items-start">
+                       <CheckCircle size={18} className="text-[#5D00D6] shrink-0 mt-0.5" />
+                       <span className="text-slate-700 font-bold">{item}</span>
                     </div>
                   ))}
                </div>
+               <C9Button className="h-14 px-8 rounded-full bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl text-white font-bold" asChild>
+                  <Link href="#consultation-section">Plan a Business nbn Migration</Link>
+               </C9Button>
             </FadeIn>
 
             <FadeIn direction="right" className="bg-[#0c1024] p-10 lg:p-14 rounded-[40px] text-white relative overflow-hidden shadow-2xl">
                <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
                <div className="relative z-10">
+                  {/* [IMAGE PLACEHOLDER: Modern small business or retail environment with seamless payment and communication systems] */}
                   <h2 className="c9-section-heading !text-white mb-6 leading-tight">Identify Your <br/> Connectivity Gaps.</h2>
                   <p className="c9-body !text-white/60 mb-10 text-lg">
                     Most failures happen because of poor planning, not bad hardware. Let our engineers audit your environment and identify the risks.
                   </p>
-                  <C9Button className="w-full h-14 bg-[#5D00D6] hover:bg-[#4d00b3] rounded-full shadow-2xl shadow-purple-900/40" asChild>
-                    <Link href="#consultation-section">Book a Connectivity Review</Link>
+                  <C9Button className="w-full h-14 bg-white text-[#5D00D6] hover:bg-slate-100 rounded-full shadow-2xl font-bold" asChild>
+                    <Link href="#consultation-section">Check My Business Address</Link>
                   </C9Button>
                </div>
             </FadeIn>
@@ -282,31 +268,41 @@ export default function BusinessNbnPage() {
       </section>
 
       {/* ══ 4.5. SMALL BUSINESS NBN PLANS ════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-white border-y border-slate-100">
+      <section id="plans" className="py-16 lg:py-24 bg-white border-y border-slate-100">
         <div className={C}>
           <div className="max-w-3xl mx-auto text-center mb-16">
             <FadeIn>
               <span className="c9-eyebrow mb-4">Connectivity Options</span>
-              <h2 className="c9-section-heading mb-6">Small Business NBN Plans</h2>
+              <h2 className="c9-section-heading mb-6">Business nbn™ Plans</h2>
               <p className="c9-body text-lg mb-8 text-slate-600">
-                Flexible connectivity options designed for business environments — fully managed, supported, and optimised by C9.
+                Business-grade setups optimized for VoIP, cloud apps, and continuous uptime.
               </p>
-              <div className="inline-block bg-[#5D00D6]/5 border border-[#5D00D6]/20 px-6 py-4 rounded-2xl text-left shadow-sm">
-                <p className="text-[15px] leading-relaxed text-[#5D00D6] font-medium m-0">
-                  <span className="font-bold">Connectivity is only one part of your network.</span><br/>
-                  C9 ensures your NBN service is configured, monitored, and supported as part of your complete IT environment.
-                </p>
-              </div>
             </FadeIn>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
             {[
-              { name: "Essential", speed: "50/20", typical: "50 Mbps", price: "79" },
-              { name: "Ultimate", speed: "100/40", typical: "99 Mbps", price: "99", popular: true },
-              { name: "Advanced", speed: "250/100", typical: "248 Mbps", price: "149" },
-              { name: "Superfast", speed: "500/200", typical: "300 Mbps", price: "POA" },
-              { name: "Ultrafast", speed: "1000/400", typical: "600 Mbps", price: "POA" }
+              { 
+                name: "Standard Business", speed: "100/40", typical: "99 Mbps", price: "99", 
+                ideal: "Small offices (1-5 staff)",
+                voip: "Basic VoIP suitable",
+                cloud: "Light cloud usage",
+                pos: "Perfect for EFTPOS"
+              },
+              { 
+                name: "High Performance", speed: "250/100", typical: "248 Mbps", price: "149", popular: true,
+                ideal: "Growing teams (5-20 staff)",
+                voip: "Teams Calling optimized",
+                cloud: "Heavy Microsoft 365 usage",
+                pos: "POS + Guest Wi-Fi"
+              },
+              { 
+                name: "Maximum Speed", speed: "1000/400", typical: "600 Mbps", price: "POA",
+                ideal: "Large offices (20+ staff)",
+                voip: "Enterprise SIP Trunks",
+                cloud: "Heavy file syncing & backups",
+                pos: "Multi-site VPNs"
+              }
             ].map((plan, i) => (
               <FadeIn key={i} delay={i * 0.1} className={`bg-white border rounded-[24px] p-8 transition-all relative flex flex-col ${plan.popular ? 'border-[#5D00D6] shadow-xl shadow-purple-900/10 ring-1 ring-[#5D00D6]' : 'border-slate-100 hover:border-[#5D00D6]/30 hover:shadow-xl'}`}>
                 {plan.popular && (
@@ -318,18 +314,21 @@ export default function BusinessNbnPage() {
                 <div className="text-[#5D00D6] font-bold uppercase tracking-widest text-[11px] mb-2">{plan.name}</div>
                 <h3 className="text-[28px] font-bold text-slate-900 mb-6 leading-none tracking-tight">{plan.speed}</h3>
                 
-                <div className="flex items-baseline gap-1 mb-8 pb-8 border-b border-slate-100">
+                <div className="flex items-baseline gap-1 mb-6 pb-6 border-b border-slate-100">
                    {plan.price !== 'POA' && <span className="text-slate-400 font-bold">$</span>}
                    <span className="text-[32px] font-bold text-slate-900 tracking-tight leading-none">{plan.price}</span>
                    {plan.price !== 'POA' && <span className="text-[13px] font-bold text-slate-400 uppercase tracking-widest ml-1">/mo</span>}
                 </div>
                 
                 <div className="flex-1 space-y-4 mb-8">
+                   <div className="text-[13px] font-bold text-slate-800 bg-slate-50 p-3 rounded-lg text-center">
+                     Best for: {plan.ideal}
+                   </div>
                   {[
-                    "Unlimited Data",
-                    "Included Static IP",
-                    `Typical: ${plan.typical}`,
-                    "Australian Support"
+                    `Cloud: ${plan.cloud}`,
+                    `Voice: ${plan.voip}`,
+                    `POS: ${plan.pos}`,
+                    "Unlimited Data & Static IP"
                   ].map((feat, j) => (
                     <div key={j} className="flex items-start gap-3 text-[14px] text-slate-600 font-medium">
                       <CheckCircle2 size={16} className="text-[#5D00D6] shrink-0 mt-0.5" />
@@ -338,8 +337,8 @@ export default function BusinessNbnPage() {
                   ))}
                 </div>
                 
-                <C9Button variant={plan.popular ? "default" : "outline"} className={`w-full justify-center rounded-full h-12 ${plan.popular ? 'bg-[#5D00D6] hover:bg-[#4d00b3] text-white border-transparent' : 'bg-white border-slate-200 text-slate-700 hover:border-[#5D00D6] hover:text-[#5D00D6]'}`} asChild>
-                  <Link href="#consultation-section">Select Plan</Link>
+                <C9Button variant={plan.popular ? "default" : "outline"} className={`w-full justify-center rounded-full h-12 font-bold ${plan.popular ? 'bg-[#5D00D6] hover:bg-[#4d00b3] text-white border-transparent' : 'bg-white border-slate-200 text-slate-700 hover:border-[#5D00D6] hover:text-[#5D00D6]'}`} asChild>
+                  <Link href="#consultation-section">Compare Business nbn Plans</Link>
                 </C9Button>
               </FadeIn>
             ))}
@@ -351,46 +350,15 @@ export default function BusinessNbnPage() {
              </p>
           </FadeIn>
 
-          {/* ── SUPPORT SECTION (AFTER PLANS) ── */}
-          <FadeIn className="bg-[#0c1024] rounded-[40px] p-10 lg:p-16 text-white text-center max-w-5xl mx-auto shadow-2xl relative overflow-hidden mb-16">
-             <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
-             <div className="relative z-10">
-                <span className="c9-eyebrow !text-[#a56eff] mb-4">Operational Support</span>
-                <h3 className="c9-section-heading !text-white mb-10">More Than Just Connectivity</h3>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-                   <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors">
-                      <Activity className="text-[#a56eff] mb-4" size={24} />
-                      <div className="font-bold text-white mb-2 text-[16px]">Proactive Monitoring</div>
-                      <p className="text-white/60 text-[14px] leading-relaxed">We track line health 24/7 to detect packet loss or latency before they affect operations.</p>
-                   </div>
-                   <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors">
-                      <ShieldAlert className="text-[#a56eff] mb-4" size={24} />
-                      <div className="font-bold text-white mb-2 text-[16px]">Fault Resolution</div>
-                      <p className="text-white/60 text-[14px] leading-relaxed">No waiting on hold with carriers. We own the fault resolution end-to-end.</p>
-                   </div>
-                   <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors">
-                      <PhoneCall className="text-[#a56eff] mb-4" size={24} />
-                      <div className="font-bold text-white mb-2 text-[16px]">Escalation Handling</div>
-                      <p className="text-white/60 text-[14px] leading-relaxed">Direct access to senior Australian engineers who understand your exact deployment.</p>
-                   </div>
-                   <div className="bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors">
-                      <Server className="text-[#a56eff] mb-4" size={24} />
-                      <div className="font-bold text-white mb-2 text-[16px]">Network Integration</div>
-                      <p className="text-white/60 text-[14px] leading-relaxed">Seamlessly integrated into your firewall, SD-WAN, and broader IT environment.</p>
-                   </div>
-                </div>
-             </div>
-          </FadeIn>
-
           {/* ── CTA AFTER PLANS ── */}
           <div className="text-center max-w-2xl mx-auto">
              <FadeIn>
-                <h3 className="c9-section-heading mb-4">Not Sure Which Plan Fits Your Business?</h3>
+                <h3 className="c9-section-heading mb-4">Want Total Continuity? Add Failover.</h3>
                 <p className="c9-body text-slate-600 mb-8">
-                   We’ll assess your requirements and recommend the right connectivity option based on your usage, locations, and operational needs.
+                   Pair any business nbn™ connection with our 4G/5G backup link to ensure your EFTPOS and internet never go offline.
                 </p>
-                <C9Button className="px-10 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-full shadow-xl shadow-purple-900/20" asChild>
-                   <Link href="#consultation-section">Get a Recommendation</Link>
+                <C9Button className="px-10 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] text-white rounded-full shadow-xl shadow-purple-900/20 font-bold" asChild>
+                   <Link href="#consultation-section">Add Backup Internet Protection</Link>
                 </C9Button>
              </FadeIn>
           </div>
@@ -501,8 +469,8 @@ export default function BusinessNbnPage() {
                 <p className="c9-body !text-white/70 mb-10 max-w-2xl mx-auto text-lg">
                   Stop accepting downtime as a cost of business. Partner with an accountable leader who takes full ownership of your infrastructure.
                 </p>
-                <C9Button className="px-10 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation-section">Request Connectivity Audit</Link>
+                <C9Button className="px-10 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg font-bold" asChild>
+                  <Link href="#consultation-section">Plan a Business nbn Migration</Link>
                 </C9Button>
               </div>
            </div>

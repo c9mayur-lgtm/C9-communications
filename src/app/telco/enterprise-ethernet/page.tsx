@@ -75,11 +75,11 @@ export default function EnterpriseEthernetPage() {
 
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
-                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
-                      <Link href="#consultation-section">Book an Enterprise Network Review</Link>
+                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full font-bold" asChild>
+                      <Link href="#consultation-section">Request Network Architecture Review</Link>
                     </C9Button>
-                    <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#consultation-section">Speak to a Network Specialist</Link>
+                    <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white font-bold" asChild>
+                      <Link href="#consultation-section">Discuss SD-WAN Connectivity</Link>
                     </C9Button>
                  </div>
               </FadeIn>
@@ -134,27 +134,27 @@ export default function EnterpriseEthernetPage() {
 
       <WpClientTicker />
 
-      {/* ══ 2. WHEN DOWNTIME IS NOT AN OPTION ════════════════════════ */}
+      {/* ══ 2. OPERATIONAL EXPOSURE ════════════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 overflow-hidden">
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="left">
                <span className="c9-eyebrow mb-4 text-rose-600">Decision Framing</span>
-               <h2 className="c9-section-heading mb-6">When Downtime is Not an Option.</h2>
+               <h2 className="c9-section-heading mb-6">When Network Instability Creates Financial Exposure.</h2>
                <p className="c9-body text-lg mb-8">
-                  Operational downtime directly impacts revenue. If your connectivity relies on shared infrastructure or fragmented support, you are managing a hidden commercial liability.
+                  For mid-market and enterprise organizations, network failure is not an IT problem—it is a financial liability. If your multi-site operations rely on fragmented infrastructure, you lack the governance required to scale securely.
                </p>
-               <C9Button variant="outline" className="rounded-full h-12 px-8 border-slate-200 text-[#5D00D6] hover:border-[#5D00D6]" asChild>
-                  <Link href="#consultation-section">Request a Risk Assessment</Link>
+               <C9Button variant="outline" className="rounded-full h-12 px-8 border-slate-200 text-[#5D00D6] hover:border-[#5D00D6] font-bold" asChild>
+                  <Link href="#consultation-section">Audit Our Network Governance</Link>
                </C9Button>
             </FadeIn>
 
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { icon: <ShieldAlert />, title: "Revenue Exposure", text: "Operational downtime costs immediate revenue." },
-                { icon: <Activity />, title: "Network Congestion", text: "Shared bandwidth creates instability." },
-                { icon: <Users />, title: "Accountability Failure", text: "Fragmented providers delay business recovery." },
-                { icon: <Clock />, title: "Escalation Lag", text: "Poor escalation creates IT risk." }
+                { icon: <ShieldAlert />, title: "Packet Loss Vulnerability", text: "Micro-disruptions degrade ERP performance and voice continuity across sites." },
+                { icon: <Activity />, title: "SLA Ambiguity", text: "Standard telco agreements lack the rigid eSLA required for true accountability." },
+                { icon: <Users />, title: "Fragmented Governance", text: "Multiple vendors mean disjointed reporting and inconsistent security policies." },
+                { icon: <Clock />, title: "Escalation Friction", text: "Delays in vendor response directly extend mean-time-to-resolution (MTTR)." }
               ].map((item, i) => (
                 <FadeIn key={i} delay={i * 0.1} className="bg-white p-6 rounded-[28px] border border-slate-200 shadow-sm">
                    <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-rose-600 mb-4">
@@ -169,35 +169,36 @@ export default function EnterpriseEthernetPage() {
         </div>
       </section>
 
-      {/* ══ 3. WHY ENTERPRISE BUSINESSES CHOOSE C9 ═══════════════════ */}
+      {/* ══ 3. SD-WAN & MULTI-SITE FOCUS ═══════════════════ */}
       <section className="py-12 lg:py-16 bg-white overflow-hidden">
         <div className={C}>
-          <FadeIn className="text-center mb-16">
-            <span className="c9-eyebrow mb-4">The C9 Advantage</span>
-            <h2 className="c9-section-heading">Why Leaders Choose C9 Over <br/>Standard Providers.</h2>
+          <FadeIn className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="c9-eyebrow mb-4">The Connectivity Backbone</span>
+            <h2 className="c9-section-heading">High-Availability Architecture for Multi-Site Operations.</h2>
+            <p className="c9-body mt-4">Enterprise Ethernet is not just a fast link—it is the foundation of a resilient, secure SD-WAN topology connecting headquarters, branches, and data centers.</p>
           </FadeIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { 
-                icon: <Zap />, 
-                title: "Guaranteed Performance", 
-                desc: "1:1 dedicated bandwidth ensures peak-hour stability for ERP and logistics systems." 
+                icon: <Network />, 
+                title: "SD-WAN Optimization", 
+                desc: "Integrate Enterprise Ethernet with intelligent SD-WAN routing to prioritize critical ERP, SIP, and video traffic automatically." 
               },
               { 
-                icon: <ShieldCheck />, 
-                title: "Single Accountability", 
-                desc: "One accountable partner across both implementation and 24/7 senior engineering support." 
-              },
-              { 
-                icon: <Activity />, 
-                title: "Proactive Response", 
-                desc: "Real-time monitoring detects and resolves anomalies before they impact your site operations." 
+                icon: <Lock />, 
+                title: "Private IP & MPLS Transition", 
+                desc: "Securely replace legacy MPLS with agile, encrypted networks that provide deep visibility and granular control." 
               },
               { 
                 icon: <Globe />, 
-                title: "Multi-Site Governance", 
-                desc: "Consistent infrastructure and unified billing across your entire national location portfolio." 
+                title: "Carrier Path Diversity", 
+                desc: "We engineer solutions with complete path diversity, ensuring no single point of physical failure in the carrier network." 
+              },
+              { 
+                icon: <ShieldCheck />, 
+                title: "Unified Perimeter Security", 
+                desc: "Seamless integration with Next-Gen Firewalls (NGFW) to enforce standardized security policies across all locations." 
               }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1} className="bg-slate-50/50 p-8 rounded-[32px] border border-slate-100 hover:bg-white hover:border-[#5D00D6]/20 transition-all hover:shadow-xl">
@@ -285,23 +286,23 @@ export default function EnterpriseEthernetPage() {
         </div>
       </section>
 
-      {/* ══ 5. MULTI-SITE AND CRITICAL INFRASTRUCTURE SUPPORT ═══════ */}
+      {/* ══ 5. REDUNDANCY ARCHITECTURE ═══════ */}
       <section className="py-12 lg:py-16 bg-white overflow-hidden">
         <div className={C}>
           <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Enterprise Capability</span>
-               <h2 className="c9-section-heading mb-6">Infrastructure Readiness for <br/>Distributed Location Portfolios.</h2>
+               <span className="c9-eyebrow mb-4">Fail-Safe Engineering</span>
+               <h2 className="c9-section-heading mb-6">Guaranteed Uptime via <br/>Redundancy Architecture.</h2>
                <p className="c9-body mb-10 text-lg">
-                  Enterprise Ethernet provides the consistent backbone required for high-density multi-site operations. We ensure your core systems remain protected across every site.
+                  A single physical fibre, no matter how fast, remains a single point of failure. We design high-availability networks utilizing BGP routing and diverse secondary paths to ensure seamless failover.
                </p>
                
                <div className="grid sm:grid-cols-2 gap-8">
                   {[
-                    { title: "Offices & HQ", text: "Symmetrical bandwidth for high-density video and cloud collaboration." },
-                    { title: "Warehousing", text: "Zero-latency paths for inventory management and logistics platforms." },
-                    { title: "Retail Groups", text: "Guaranteed POS availability and real-time transaction security." },
-                    { title: "Healthcare Ops", text: "Compliance-ready connectivity for patient data and record syncing." }
+                    { title: "BGP Routing", text: "Automated protocol shifting ensures traffic instantly reroutes without dropping active sessions." },
+                    { title: "5G & LEO Backup", text: "Integration with high-speed 5G or Starlink arrays for resilient, out-of-band redundancy." },
+                    { title: "Carrier Diversity", text: "Secondary fibre links sourced from entirely different carriers to prevent localized outages." },
+                    { title: "Automated Failover", text: "Zero-touch failover mechanics governed by strict SD-WAN policies." }
                   ].map((item, i) => (
                     <div key={i}>
                        <h4 className="font-bold text-slate-900 text-[16px] mb-2">{item.title}</h4>
@@ -313,9 +314,9 @@ export default function EnterpriseEthernetPage() {
 
             <FadeIn direction="right" delay={0.2} className="relative">
                <div className="bg-slate-50 rounded-[48px] p-10 lg:p-16 border border-slate-100">
-                  <h3 className="text-xl font-bold text-slate-900 mb-8">Systems Protected</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-8">Architectural Resilience</h3>
                   <div className="space-y-4">
-                     {['ERP & CRM Cloud Instances', 'Real-Time Financial Systems', 'Critical VOIP & Video QoS', 'Multi-Site VLAN Infrastructure'].map(t => (
+                     {['No Single Point of Failure (SPoF)', 'Automated Traffic Steering', 'Constant Latency Monitoring', 'Seamless Packet Recovery'].map(t => (
                        <div key={t} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
                           <CheckCircle2 size={12} className="text-[#5D00D6]" />
                           <span className="text-[14px] font-bold text-slate-800">{t}</span>
@@ -436,10 +437,10 @@ export default function EnterpriseEthernetPage() {
                   If your business depends on uptime, standard connectivity is already a risk.
                 </h3>
                 <p className="c9-body mb-10 text-lg">
-                  Let&apos;s review whether your current network is protecting operations or exposing them.
+                  Let&apos;s review your multi-site architecture and implement a true high-availability strategy.
                 </p>
-                <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation-section">Request an Enterprise Connectivity Review</Link>
+                <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg font-bold" asChild>
+                  <Link href="#consultation-section">Request Network Architecture Review</Link>
                 </C9Button>
               </FadeIn>
            </div>
@@ -459,8 +460,8 @@ export default function EnterpriseEthernetPage() {
                 <p className="c9-body !text-white/70 mb-10 max-w-2xl mx-auto text-lg">
                    Stop settling for generic infrastructure. Talk to C9 about Enterprise Connectivity built for business continuity and long-term growth.
                 </p>
-                <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation-section">Talk to C9 About Enterprise Connectivity</Link>
+                <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg font-bold" asChild>
+                  <Link href="#consultation-section">Talk to a Senior Network Architect</Link>
                 </C9Button>
               </div>
            </div>

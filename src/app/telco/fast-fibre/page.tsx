@@ -76,11 +76,11 @@ export default function FastFibrePage() {
 
               <FadeIn delay={0.22}>
                  <div className="flex flex-col sm:flex-row gap-4">
-                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full" asChild>
+                    <C9Button className="px-9 h-14 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl shadow-purple-900/20 rounded-full font-bold" asChild>
                       <Link href="#consultation-section">Check Fibre Availability</Link>
                     </C9Button>
-                    <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white" asChild>
-                      <Link href="#consultation-section">Talk to a Connectivity Specialist</Link>
+                    <C9Button variant="outline" className="px-9 h-14 border-slate-200 text-slate-600 hover:border-[#5D00D6] hover:text-[#5D00D6] rounded-full bg-white font-bold" asChild>
+                      <Link href="#consultation-section">Request Build Costs</Link>
                     </C9Button>
                  </div>
               </FadeIn>
@@ -134,27 +134,27 @@ export default function FastFibrePage() {
       </section>
 
 
-      {/* ══ 1.5 STRATEGIC PARTNERS ════════════════════════════════════ */}
+      {/* ══ 1.5 CARRIER DIVERSITY & STRATEGIC PARTNERS ════════════════════════════════════ */}
       <section className="py-16 bg-white border-b border-slate-100 overflow-hidden relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px]" style={{ background: 'radial-gradient(ellipse, rgba(93,0,214,0.05) 0%, transparent 70%)' }} />
         </div>
         <div className={`${C} relative z-10`}>
-          <div className="text-center mb-12">
-            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em] relative inline-block before:absolute before:top-1/2 before:-left-12 before:w-8 before:h-[1px] before:bg-slate-200 after:absolute after:top-1/2 after:-right-12 after:w-8 after:h-[1px] after:bg-slate-200">
-              Carrier-Grade Infrastructure. Powered by Global Leaders.
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em] relative inline-block before:absolute before:top-1/2 before:-left-12 before:w-8 before:h-[1px] before:bg-slate-200 after:absolute after:top-1/2 after:-right-12 after:w-8 after:h-[1px] after:bg-slate-200 mb-4">
+              Carrier Independence
             </span>
+            <h3 className="text-2xl font-bold text-slate-900">We Source the Best Build Costs.</h3>
+            <p className="text-slate-600 mt-4">
+               C9 partners with all major Tier-1 carriers (Vocus, Telstra, Optus, TPG, nbn) to find the fastest deployment timeline and lowest build cost for your address. You get a single C9 bill and single C9 support, running on the best physical path.
+            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-slate-200 border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
             {[
               { src: '/Vendors/NBN_Co-Logo.wine.png', alt: 'nbn', w: 'w-[100px] md:w-[120px]' },
               { src: '/Vendors/Telstra%20logo.svg', alt: 'Telstra', w: 'w-[100px] md:w-[120px]' },
               { src: '/Vendors/vocus.png', alt: 'Vocus', w: 'w-[100px] md:w-[120px]' },
-              { src: '/Vendors/cisco.png', alt: 'Cisco', w: 'w-[70px] md:w-[90px]' },
-              { src: '/Vendors/PANW_Parent_Brand_Primary_Logo_RGB.png', alt: 'Palo Alto Networks', w: 'w-[130px] md:w-[160px]' },
-              { src: '/Vendors/fortinet.png', alt: 'Fortinet', w: 'w-[100px] md:w-[120px]' },
-              { src: '/Vendors/UI_BIG.png', alt: 'Ubiquiti', w: 'w-[70px] md:w-[90px]' },
-              { src: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg', alt: 'Microsoft Azure', w: 'w-[110px] md:w-[130px]' }
+              { src: 'https://upload.wikimedia.org/wikipedia/commons/3/30/Optus_logo.svg', alt: 'Optus', w: 'w-[100px] md:w-[120px]' }
             ].map((logo, i) => (
               <div key={i} className="bg-white flex items-center justify-center p-8 md:p-12 hover:bg-slate-50 transition-colors duration-300">
                 <img 
@@ -168,44 +168,44 @@ export default function FastFibrePage() {
         </div>
       </section>
 
-      {/* ══ 2. WHY SPEED ALONE IS NOT ENOUGH ═════════════════════════ */}
+      {/* ══ 2. DEMYSTIFYING 1:1 FIBRE ═════════════════════════ */}
       <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 overflow-hidden">
         <div className={C}>
           <FadeIn className="max-w-3xl mb-16">
-            <span className="c9-eyebrow mb-4">The Resilience Problem</span>
+            <span className="c9-eyebrow mb-4">Dedicated Performance</span>
             <h2 className="c9-section-heading mb-6">
-               Fast Internet Without Reliability is Still Operational Risk.
+               What "1:1 Contention" Actually Means for Your Business.
             </h2>
             <p className="c9-body text-lg">
-               Unstable performance impacts POS, cloud applications, video communication, and staff productivity. If your connection is fast but fragile, your business remains exposed.
+               Standard broadband is shared with the rest of your street. During peak hours, your speeds drop. 1:1 Fast Fibre means the line goes straight to your premises and is not shared with anyone else. You get exactly the speed you pay for, 24/7.
             </p>
           </FadeIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { 
-                icon: <ShieldAlert className="text-rose-500" />, 
-                title: "Fragile Productivity", 
-                desc: "High-traffic offices experience productivity collapse during peak hours when generic fibre oversubscribes." 
+                icon: <Server className="text-emerald-500" />, 
+                title: "Instant File Syncing", 
+                desc: "Move massive design files, databases, or backups to the cloud instantly without saturating the office network." 
               },
               { 
-                icon: <Smartphone className="text-rose-500" />, 
-                title: "Customer Experience", 
-                desc: "Customer-facing businesses suffer when POS or payment terminals lag, impacting brand trust and revenue." 
+                icon: <Monitor className="text-emerald-500" />, 
+                title: "Crystal Clear Video", 
+                desc: "Symmetric upload speeds guarantee that all company Teams and Zoom meetings run flawlessly, even with dozens of active cameras." 
               },
               { 
-                icon: <Layers className="text-rose-500" />, 
-                title: "Cloud Application Latency", 
-                desc: "Fragmented performance creates friction in critical ERP, CRM, and logistics management systems." 
+                icon: <Smartphone className="text-emerald-500" />, 
+                title: "Zero POS Lag", 
+                desc: "For retail and hospitality, dedicated fibre ensures payment terminals and guest networks operate with zero transaction delay." 
               },
               { 
-                icon: <Activity className="text-rose-500" />, 
-                title: "Provider Blame Cycles", 
-                desc: "When performance drops, generic providers blame hardware, leaving you stuck in the middle." 
+                icon: <Activity className="text-emerald-500" />, 
+                title: "Symmetric Speeds", 
+                desc: "Your upload speed is just as fast as your download speed, which is critical for cloud-heavy modern workloads." 
               }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-lg transition-all">
-                <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center mb-6 group-hover:scale-110">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center mb-6 group-hover:scale-110">
                   {item.icon}
                 </div>
                 <h3 className="c9-card-title mb-3 text-[18px]">{item.title}</h3>
@@ -223,32 +223,32 @@ export default function FastFibrePage() {
                 Shift your thinking from &ldquo;faster internet&rdquo; toward &ldquo;business resilience.&rdquo;
               </p>
             </div>
-            <C9Button variant="outline" className="rounded-full h-12 px-8 border-slate-200 text-[#5D00D6] hover:border-[#5D00D6]" asChild>
-              <Link href="#consultation-section">Assess Your Resilience</Link>
+            <C9Button className="rounded-full h-12 px-8 bg-[#5D00D6] hover:bg-[#4d00b3] shadow-xl text-white font-bold" asChild>
+              <Link href="#consultation-section">Review Fibre Options</Link>
             </C9Button>
           </FadeIn>
         </div>
       </section>
 
-      {/* ══ 3. HOW C9 DELIVERS RELIABLE FIBRE ════════════════════════ */}
+      {/* ══ 3. SLA & ACCOUNTABILITY ════════════════════════ */}
       <section className="py-12 lg:py-16 bg-white overflow-hidden">
         <div className={C}>
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeIn direction="left">
-               <span className="c9-eyebrow mb-4">Operational Excellence</span>
+               <span className="c9-eyebrow mb-4">Enterprise Grade SLA</span>
                <h2 className="c9-section-heading mb-6">
-                  Business-Grade Fibre Delivery Backed by Accountability.
+                  Backed by a 99.95% Operational Guarantee.
                </h2>
                <p className="c9-body mb-10">
-                  We don&apos;t just provide a link. We architect your connectivity to ensure consistent performance under heavy operational pressure.
+                  When you invest in Fast Fibre, you aren't just buying speed—you're buying an insurance policy against downtime. Our Service Level Agreement (SLA) puts financial penalties on the line if we don't deliver.
                </p>
                
                <div className="space-y-6">
                   {[
-                    { title: "Consistent Performance", text: "Dedicated bandwidth ensures 100% of your speed is available when you need it most." },
-                    { title: "Proactive Monitoring Layer", text: "Our NOC detects and resolves anomalies before they impact your operations." },
-                    { title: "Failover & Redundancy", text: "Integrated backup planning with automated failover paths (nbn™ or 5G)." },
-                    { title: "Installation Coordination", text: "Full ownership of the deployment, trade coordination, and commissioning." }
+                    { title: "99.95% Uptime Target", text: "Mathematically, this means no more than a few hours of downtime annually. In practice, our failover designs aim for 100%." },
+                    { title: "Priority Restoration", text: "In the rare event of a physical fibre cut, your ticket jumps the queue to immediate enterprise priority." },
+                    { title: "Proactive NOC Layer", text: "Our engineers monitor latency and packet loss 24/7, catching anomalies before your team notices." },
+                    { title: "Absolute Ownership", text: "If there's an issue, we handle the carrier escalation. You speak to an Australian engineer, not a script." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="w-6 h-6 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0 mt-1">
@@ -264,16 +264,16 @@ export default function FastFibrePage() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2} className="relative">
-              <div className="bg-slate-50 rounded-[48px] p-10 lg:p-16 border border-slate-100 relative">
+              <div className="bg-slate-50 rounded-[48px] p-10 lg:p-16 border border-slate-100 relative shadow-inner">
                  <div className="absolute top-10 right-10 opacity-5">
-                    <Globe size={160} className="text-[#5D00D6]" />
+                    <ShieldCheck size={160} className="text-[#5D00D6]" />
                  </div>
-                 <h3 className="text-2xl font-bold text-slate-900 mb-8">Performance Metrics</h3>
+                 <h3 className="text-2xl font-bold text-slate-900 mb-8">SLA Metrics</h3>
                  <div className="space-y-8 relative z-10">
                     {[
-                      { label: "Contention Ratio", val: "1:1 Dedicated", width: "100%" },
-                      { label: "Packet Delivery Rate", val: "99.99%", width: "99%" },
-                      { label: "Network Availability", val: "99.95% SLA", width: "95%" }
+                      { label: "Target Availability", val: "99.95%", width: "99.95%" },
+                      { label: "Contention", val: "1:1 Dedicated", width: "100%" },
+                      { label: "Latency Target", val: "< 5ms", width: "95%" }
                     ].map((m, i) => (
                       <div key={i}>
                         <div className="flex justify-between mb-2">
@@ -486,13 +486,13 @@ export default function FastFibrePage() {
            <div className="max-w-4xl mx-auto text-center">
               <FadeIn>
                 <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6">
-                  If your business depends on stable connectivity, speed alone is not enough.
+                  Ready to see if your address qualifies for $0 fibre build?
                 </h3>
                 <p className="c9-body mb-10 text-lg">
-                  Let&apos;s assess whether your current setup is protecting operations or creating hidden risk.
+                  Depending on your location, carriers will often waive the physical construction costs. Let us run an address check and secure the best build pricing for you.
                 </p>
-                <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation-section">Book a Fibre Performance Review</Link>
+                <C9Button className="px-10 h-16 bg-[#5D00D6] text-white hover:bg-[#4d00b3] shadow-xl rounded-full text-lg font-bold" asChild>
+                  <Link href="#consultation-section">Request Build Costs</Link>
                 </C9Button>
               </FadeIn>
            </div>
@@ -512,8 +512,8 @@ export default function FastFibrePage() {
                 <p className="c9-body !text-white/70 mb-10 max-w-2xl mx-auto text-lg">
                   Stop settling for consumer-grade service. Partner with C9 for business fibre that performs when it matters most to your bottom line.
                 </p>
-                <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg" asChild>
-                  <Link href="#consultation-section">Talk to C9 About Business Fibre</Link>
+                <C9Button className="px-12 h-16 bg-white text-[#5D00D6] hover:bg-slate-50 shadow-xl rounded-full text-lg font-bold" asChild>
+                  <Link href="#consultation-section">Talk to a Connectivity Specialist</Link>
                 </C9Button>
               </div>
            </div>
