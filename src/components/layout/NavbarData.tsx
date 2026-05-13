@@ -161,6 +161,8 @@ export const TELCO_FIXED = {
             { label: 'Inbound Services', path: '/telco/inbound-services' },
             { label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { label: 'SIP Trunking', path: '/telco/sip-trunking' },
+            { label: 'AI Voice', path: '/telco/ai-voice' },
+            { label: 'SMS Solutions', path: '/telco/sms' },
             // { label: 'Voice Systems', path: '/telco/voice-systems' },
             { label: 'Contact Centre', path: '/telco/contact-centre' },
           ]
@@ -329,6 +331,8 @@ export const BUSINESS_TELCO = {
             { icon: <Headphones size={14} />, label: 'Inbound Services',            path: '/telco/inbound-services' },
             { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling',     path: '/telco/teams-calling' },
             { icon: <Network size={14} />,    label: 'SIP Trunking',                path: '/telco/sip-trunking' },
+            { icon: <Phone size={14} />,      label: 'AI Voice',                    path: '/telco/ai-voice' },
+            { icon: <MessageSquare size={14} />, label: 'SMS Solutions',                path: '/telco/sms' },
             { icon: <Headphones size={14} />, label: 'Contact Centre',              path: '/telco/contact-centre' },
           ]
         }
@@ -495,6 +499,8 @@ export const ENTERPRISE_TELCO = {
             { icon: <Headphones size={14} />, label: 'Inbound 13/1300/1800',    path: '/telco/inbound-services' },
             { icon: <Phone size={14} />,      label: 'Microsoft Teams Calling', path: '/telco/teams-calling' },
             { icon: <Network size={14} />,    label: 'SIP Trunking (Bulk)',      path: '/telco/sip-trunking' },
+            { icon: <Phone size={14} />,      label: 'AI Voice',                 path: '/telco/ai-voice' },
+            { icon: <MessageSquare size={14} />, label: 'SMS Solutions',             path: '/telco/sms' },
             { icon: <Headphones size={14} />, label: 'Contact Centre',              path: '/telco/contact-centre' },
           ]
         }

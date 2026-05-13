@@ -59,7 +59,7 @@ export const WpHighlights = () => {
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-[32px] md:text-[36px] font-medium text-[#0c1024] leading-none tracking-tight">500+</span>
               </div>
-              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">Enterprise Sites Live</span>
+              <span className="c9-eyebrow !text-[10px] !text-[#5D00D6] text-center lg:text-left">sites delivered across Aus and Nz</span>
             </div>
           </div>
 
