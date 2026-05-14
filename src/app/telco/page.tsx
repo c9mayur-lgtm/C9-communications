@@ -99,9 +99,9 @@ const Hero = ({ openModal }: { openModal: (name: string, type: any) => void }) =
 
     <div className={`${C} relative z-10`}>
       <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
-        <div>
+        <div className="order-last lg:order-first">
           <FadeIn>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-8">
+            <div className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-8">
               <span className="c9-eyebrow !mb-0 text-[#5D00D6]">BUSINESS TELCO THAT ACTUALLY CONNECTS THE DOTS</span>
             </div>
           </FadeIn>
@@ -162,8 +162,15 @@ const Hero = ({ openModal }: { openModal: (name: string, type: any) => void }) =
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.4} direction="right" className="relative mt-12 lg:mt-0">
-           <HeroVisual />
+        <FadeIn delay={0.4} direction="right" className="relative order-first lg:order-last">
+           <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[600px] rounded-[32px] overflow-hidden shadow-2xl">
+             <img 
+               src="/Telco hero.png" 
+               alt="C9 Telco Services Hero" 
+               className="w-full h-full object-cover object-center"
+             />
+             <div className="absolute inset-0 border border-slate-900/10 rounded-[32px]" />
+           </div>
         </FadeIn>
       </div>
     </div>
