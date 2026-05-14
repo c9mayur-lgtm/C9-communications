@@ -130,14 +130,14 @@ export default function VoiceAiPage() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="text-[44px] md:text-[84px] font-bold leading-[1] text-white tracking-tighter mb-8 max-w-4xl">
+              <h1 className="c9-hero-title font-proxima font-bold text-white mb-8 max-w-4xl">
                 Enterprise-Ready <span className="text-[#5D00D6]">Voice AI Agents</span> for Automated Calls.
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.2}>
               <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed font-medium">
-                Deploy custom, low-latency AI agents to scale sales, support, and operations. Synthflow-grade performance with C9's carrier-grade reliability.
+                Deploy custom, low-latency AI agents to scale sales, support, and operations — built on C9's carrier-grade Australian infrastructure.
               </p>
             </FadeIn>
 
@@ -194,8 +194,8 @@ export default function VoiceAiPage() {
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="max-w-2xl">
-              <span className="text-[#5D00D6] font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Interactive Showroom</span>
-              <h2 className="text-[36px] md:text-[56px] font-bold text-[#0c1024] leading-[1] tracking-tighter">Hear AI Voice Agents in Action</h2>
+              <span className="c9-eyebrow mb-4">Interactive Showroom</span>
+              <h2 className="c9-section-heading font-proxima font-bold leading-tight tracking-tight text-[#0c1024]">Hear AI Voice Agents in Action</h2>
             </div>
             <div className="flex gap-2 p-1 bg-white rounded-full border border-slate-200 shadow-sm">
               {Object.keys(demos).map((id) => (
@@ -305,8 +305,8 @@ export default function VoiceAiPage() {
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
              <div className="w-full lg:w-1/2">
-                <span className="text-[#5D00D6] font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Unified Infrastructure</span>
-                <h2 className="text-[36px] md:text-[56px] font-bold text-[#0c1024] leading-[1] tracking-tighter mb-8">End-to-End Voice AI Operating System</h2>
+                <span className="c9-eyebrow mb-4">Unified Infrastructure</span>
+                <h2 className="c9-section-heading font-proxima font-bold leading-tight tracking-tight text-[#0c1024] mb-8">End-to-End Voice AI Operating System</h2>
                 <p className="text-lg text-slate-500 leading-relaxed mb-10 font-medium">
                   Automate, manage, and scale thousands of calls from one unified Voice AI Operating System. Design, launch, and operate Voice AI Agents with configurable workflows, enterprise telephony, and deep analytics.
                 </p>
@@ -353,9 +353,9 @@ export default function VoiceAiPage() {
       <section className="py-24 md:py-32 bg-[#fcfaff]">
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
-             <span className="text-[#5D00D6] font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Omnichannel Orchestration</span>
-             <h2 className="text-[36px] md:text-[56px] font-bold text-[#0c1024] leading-[1] tracking-tighter mb-6">Inbound. Outbound. Follow-up.</h2>
-             <p className="text-slate-500 text-lg font-medium">Scale your reach across every voice channel with native SMS integration and contextual handoffs.</p>
+             <span className="c9-eyebrow mb-4">Omnichannel Orchestration</span>
+             <h2 className="c9-section-heading font-proxima font-bold leading-tight tracking-tight text-[#0c1024] mb-6">Inbound. Outbound. Follow-up.</h2>
+             <p className="c9-body">Scale your reach across every voice channel with native SMS integration and contextual handoffs.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -402,9 +402,9 @@ export default function VoiceAiPage() {
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
-             <span className="text-[#5D00D6] font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Proven Methodology</span>
-             <h2 className="text-[36px] md:text-[56px] font-bold text-[#0c1024] leading-[1] tracking-tighter mb-6">Deploy Voice AI Without the Risks</h2>
-             <p className="text-slate-500 text-lg font-medium">The C9 BELL Framework connects every stage of the agent lifecycle into one repeatable process.</p>
+             <span className="c9-eyebrow mb-4">Proven Methodology</span>
+             <h2 className="c9-section-heading font-proxima font-bold leading-tight tracking-tight text-[#0c1024] mb-6">Deploy Voice AI Without the Risks</h2>
+             <p className="c9-body">The C9 BELL Framework connects every stage of the agent lifecycle into one repeatable process.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -459,8 +459,8 @@ export default function VoiceAiPage() {
         <div className="container mx-auto max-w-[1240px] px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <span className="text-[#5D00D6] font-bold text-[10px] uppercase tracking-[0.3em] mb-6 block">Industry-Leading Telephony</span>
-              <h2 className="text-[36px] md:text-[56px] font-bold leading-[1] tracking-tighter mb-8">Crystal-Clear. Carrier-Grade. <span className="text-[#5D00D6]">Global.</span></h2>
+              <span className="c9-eyebrow mb-4">Industry-Leading Telephony</span>
+              <h2 className="c9-section-heading font-proxima font-bold leading-tight tracking-tight text-white mb-8">Crystal-Clear. Carrier-Grade. <span className="text-[#5D00D6]">Global.</span></h2>
               
               <div className="space-y-10">
                 <div className="flex gap-5">
@@ -519,8 +519,8 @@ export default function VoiceAiPage() {
       <section className="py-24 md:py-32 bg-slate-50">
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
-             <span className="text-[#5D00D6] font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Vertical Specialization</span>
-             <h2 className="text-[36px] md:text-[56px] font-bold text-[#0c1024] leading-[1] tracking-tighter mb-6">Production-Ready Agents for Every Industry</h2>
+             <span className="c9-eyebrow mb-4">Vertical Specialization</span>
+             <h2 className="c9-section-heading font-proxima font-bold leading-tight tracking-tight text-[#0c1024] mb-6">Production-Ready Agents for Every Industry</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -551,8 +551,8 @@ export default function VoiceAiPage() {
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="max-w-2xl">
-              <span className="text-[#5D00D6] font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Proven Outcomes</span>
-              <h2 className="text-[36px] md:text-[56px] font-bold text-[#0c1024] leading-[1] tracking-tighter">The ROI for Your Business</h2>
+              <span className="c9-eyebrow mb-4">Proven Outcomes</span>
+              <h2 className="c9-section-heading font-proxima font-bold leading-tight tracking-tight text-[#0c1024]">The ROI for Your Business</h2>
             </div>
             <C9Button variant="outline" className="rounded-full border-slate-200">Explore All Stories</C9Button>
           </div>
