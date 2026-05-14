@@ -5,16 +5,28 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Bot, 
+  Users, 
+  Clock, 
+  MessageSquare, 
   Zap, 
+  PhoneCall, 
   ArrowRight,
+  ShieldCheck,
   Activity,
+  CheckCircle2,
   Settings,
+  Database,
+  Network,
   Globe,
   Play,
   Cpu,
   Layers,
   Repeat,
-  Search
+  Search,
+  Building2,
+  Briefcase,
+  Smartphone,
+  Headphones
 } from 'lucide-react';
 
 import { C9Button } from '@/components/design-system/C9Button';
@@ -52,6 +64,10 @@ const FadeIn = ({
     </motion.div>
   );
 };
+
+function cn(...classes: (string | boolean | undefined)[]) {
+  return classes.filter(Boolean).join(' ');
+}
 
 /* ─────────────────────────────────────────────────────────
    PAGE COMPONENT
@@ -92,7 +108,6 @@ export default function VoiceAiPage() {
       
       {/* 1. HERO SECTION — Dark, High-Tech, Aggressive */}
       <section className="relative pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-[#0c1024]">
-        {/* Animated Grid Background */}
         <div 
           className="absolute inset-0 opacity-10 pointer-events-none"
           style={{
@@ -102,7 +117,6 @@ export default function VoiceAiPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0c1024]/50 to-[#0c1024]" />
         
-        {/* Glowing Orbs */}
         <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-[#5D00D6]/20 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 -right-20 w-[500px] h-[500px] bg-[#5D00D6]/10 rounded-full blur-[150px] pointer-events-none" />
 
@@ -155,7 +169,27 @@ export default function VoiceAiPage() {
         </div>
       </section>
 
-      {/* 3. INTERACTIVE DEMO SECTION — Inspired by Synthflow */}
+      {/* 2.5 STATS BAR — From User Screenshot */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto max-w-[1240px] px-6">
+          <div className="bg-white rounded-[40px] border border-slate-100 shadow-[0_32px_64px_-12px_rgba(93,0,214,0.06)] p-10 md:p-16 grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
+             {[
+               { label: '65M+', title: 'Customer Calls', desc: 'Proven voice AI performance across real, high-volume phone operations.' },
+               { label: '4M+', title: 'Hours Saved', desc: 'Less time on manual calls. More time for growth, sales, and support.' },
+               { label: '+35%', title: 'Answered Calls', desc: 'Voice agents respond instantly — no hold music, no missed opportunities.' },
+               { label: '99.99%', title: 'Uptime', desc: 'AI voice agents your business can rely on, every minute of every day.' }
+             ].map((stat, idx) => (
+               <div key={idx} className="space-y-4">
+                 <div className="text-[44px] md:text-[56px] font-bold text-[#5D00D6] leading-none tracking-tight">{stat.label}</div>
+                 <h4 className="text-lg font-bold text-[#0c1024]">{stat.title}</h4>
+                 <p className="text-sm text-slate-500 leading-relaxed">{stat.desc}</p>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. INTERACTIVE DEMO SECTION */}
       <section id="demos" className="py-24 md:py-32 bg-slate-50 overflow-hidden">
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
@@ -266,7 +300,105 @@ export default function VoiceAiPage() {
         </div>
       </section>
 
-      {/* 4. THE BELL FRAMEWORK — Build, Evaluate, Launch, Learn */}
+      {/* 3.5 END-TO-END SOLUTION — The Operating System */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container mx-auto max-w-[1240px] px-6">
+          <div className="flex flex-col lg:flex-row gap-20 items-center">
+             <div className="w-full lg:w-1/2">
+                <span className="text-[#5D00D6] font-bold text-xs uppercase tracking-widest mb-4 block">Unified Infrastructure</span>
+                <h2 className="text-[32px] md:text-[48px] font-bold text-[#0c1024] leading-tight mb-8">End-to-End Voice AI Operating System</h2>
+                <p className="text-lg text-slate-500 leading-relaxed mb-10">
+                  Automate, manage, and scale thousands of calls from one unified Voice AI Operating System. Design, launch, and operate Voice AI Agents with configurable workflows, enterprise telephony, and deep analytics.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-8">
+                   {[
+                     { icon: Smartphone, title: 'Multi-Agent System', desc: 'Architect modular voice flows where subflows act as specialized agents.' },
+                     { icon: ShieldCheck, title: 'AI Sandbox', desc: 'Preview, compare, and roll back safely without downtime.' },
+                     { icon: Activity, title: 'Real-Time Monitoring', desc: 'Visibility into every call, webhook, and API to debug faster.' },
+                     { icon: Database, title: 'Data Fine-Tuning', desc: 'Improve model accuracy using your own conversation data.' }
+                   ].map((feat, idx) => (
+                     <div key={idx} className="space-y-3">
+                        <feat.icon size={20} className="text-[#5D00D6]" />
+                        <h4 className="font-bold text-[#0c1024]">{feat.title}</h4>
+                        <p className="text-xs text-slate-400 leading-relaxed">{feat.desc}</p>
+                     </div>
+                   ))}
+                </div>
+             </div>
+             <div className="w-full lg:w-1/2 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#5D00D6]/20 to-transparent blur-[100px] pointer-events-none" />
+                <div className="bg-slate-900 rounded-[32px] p-8 shadow-2xl border border-white/10 relative z-10">
+                   <div className="flex items-center gap-3 mb-8 border-b border-white/10 pb-6">
+                      <div className="w-3 h-3 rounded-full bg-red-500" />
+                      <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                      <div className="w-3 h-3 rounded-full bg-green-500" />
+                      <span className="ml-4 text-xs font-mono text-white/40">c9-voice-os-v1.0.4</span>
+                   </div>
+                   <div className="space-y-6 font-mono text-[11px]">
+                      <div className="text-green-400">{"// Initializing Enterprise Agent..."}</div>
+                      <div className="text-white">{"[SYSTEM] Connecting to Regional PBX (Melbourne)..."}</div>
+                      <div className="text-[#5D00D6] font-bold">{"[VOICE] Latency: 42ms | Transcription: Active"}</div>
+                      <div className="text-white/60">{"[LOG] Intent: Reservation Enquire"}</div>
+                      <div className="text-white/60">{"[LOG] Entity extraction: Date=Tomorrow, Party=4"}</div>
+                      <div className="text-green-400">{"[SUCCESS] Slot found. Sending SMS Confirmation..."}</div>
+                      <div className="animate-pulse text-white">_</div>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3.7 OMNICHANNEL CONVERSATIONAL AI */}
+      <section className="py-24 md:py-32 bg-[#fcfaff]">
+        <div className="container mx-auto max-w-[1240px] px-6">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+             <span className="text-[#5D00D6] font-bold text-xs uppercase tracking-widest mb-4 block">Omnichannel Orchestration</span>
+             <h2 className="text-[32px] md:text-[48px] font-bold text-[#0c1024] mb-6">Inbound. Outbound. Follow-up.</h2>
+             <p className="text-slate-500 text-lg">Scale your reach across every voice channel with native SMS integration and contextual handoffs.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+             {[
+               { 
+                 title: 'Inbound Inquiries', 
+                 desc: 'Handle FAQs, routing, and booking without human intervention.', 
+                 icon: Headphones,
+                 points: ['Smart IVR', 'Instant Verification', '24/7 Availability']
+               },
+               { 
+                 title: 'Outbound Campaigns', 
+                 desc: 'Automated lead reactivation and appointment reminders with human-like tone.', 
+                 icon: PhoneCall,
+                 points: ['Voicemail Detection', 'Cold Lead Re-engagement', 'Local Presence Dialing']
+               },
+               { 
+                 title: 'SMS Flow Integration', 
+                 desc: 'Automatically send links, confirmations, and follow-ups during or after calls.', 
+                 icon: MessageSquare,
+                 points: ['Instant Booking Links', 'Post-Call Summaries', 'WhatsApp Fallback']
+               }
+             ].map((box, idx) => (
+               <div key={idx} className="bg-white p-10 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all">
+                  <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6] mb-8">
+                    <box.icon size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#0c1024] mb-4">{box.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-8">{box.desc}</p>
+                  <ul className="space-y-3">
+                    {box.points.map(p => (
+                      <li key={p} className="flex items-center gap-2 text-xs font-bold text-[#0c1024]">
+                        <CheckCircle2 size={14} className="text-[#5D00D6]" /> {p}
+                      </li>
+                    ))}
+                  </ul>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. THE BELL FRAMEWORK */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto max-w-[1240px] px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -320,24 +452,24 @@ export default function VoiceAiPage() {
         </div>
       </section>
 
-      {/* 5. PERFORMANCE SECTION — Dark Tech Style */}
+      {/* 5. PERFORMANCE & TELEPHONY TECH — Dark Tech Style */}
       <section className="py-24 bg-[#0c1024] text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-[#5D00D6]/5 blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto max-w-[1240px] px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <span className="text-[#5D00D6] font-bold text-xs uppercase tracking-widest mb-6 block">Infrastructure Advantage</span>
-              <h2 className="text-[32px] md:text-[44px] font-bold leading-tight mb-8">Performance You Can <span className="text-[#5D00D6]">Rely On.</span></h2>
+              <span className="text-[#5D00D6] font-bold text-xs uppercase tracking-widest mb-6 block">Industry-Leading Telephony</span>
+              <h2 className="text-[32px] md:text-[44px] font-bold leading-tight mb-8">Crystal-Clear. Carrier-Grade. <span className="text-[#5D00D6]">Global.</span></h2>
               
               <div className="space-y-10">
                 <div className="flex gap-5">
                   <div className="w-12 h-12 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0">
-                    <Activity size={24} className="text-[#5D00D6]" />
+                    <Network size={24} className="text-[#5D00D6]" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold mb-2 tracking-tight">Sub-100ms Latency</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">Strategically deployed voice infrastructure in local regions reduces lag and ensuring crystal-clear quality.</p>
+                    <h4 className="text-lg font-bold mb-2 tracking-tight">Direct Network Peering</h4>
+                    <p className="text-slate-400 text-sm leading-relaxed">We strategically peer with major carriers globally to minimize routing hops, keeping latency below 100ms.</p>
                   </div>
                 </div>
 
@@ -346,18 +478,18 @@ export default function VoiceAiPage() {
                     <Globe size={24} className="text-[#5D00D6]" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold mb-2 tracking-tight">Freedom to Choose Your Network</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">Connect through your own carriers or SIP trunks. No vendor lock-in, just enterprise flexibility.</p>
+                    <h4 className="text-lg font-bold mb-2 tracking-tight">BYO Carrier or SIP Trunk</h4>
+                    <p className="text-slate-400 text-sm leading-relaxed">Connect through your own existing infrastructure (Cisco, Avaya, RingCentral) without replacing your setup.</p>
                   </div>
                 </div>
 
                 <div className="flex gap-5">
                   <div className="w-12 h-12 rounded-full bg-[#5D00D6]/10 flex items-center justify-center shrink-0">
-                    <Settings size={24} className="text-[#5D00D6]" />
+                    <ShieldCheck size={24} className="text-[#5D00D6]" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold mb-2 tracking-tight">Built to Fit Your Stack</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">Direct connection to Cisco, Avaya, Genesys, and more. No rebuilds, just instant compatibility.</p>
+                    <h4 className="text-lg font-bold mb-2 tracking-tight">Regional Compliance (GDPR/HIPAA)</h4>
+                    <p className="text-slate-400 text-sm leading-relaxed">Data stays in-region. Encryption and security protocols designed for healthcare, finance, and enterprise.</p>
                   </div>
                 </div>
               </div>
@@ -379,6 +511,37 @@ export default function VoiceAiPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5.5 PRODUCTION-READY AGENTS — Industry Grid */}
+      <section className="py-24 md:py-32 bg-slate-50">
+        <div className="container mx-auto max-w-[1240px] px-6">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+             <span className="text-[#5D00D6] font-bold text-xs uppercase tracking-widest mb-4 block">Vertical Specialization</span>
+             <h2 className="text-[32px] md:text-[48px] font-bold text-[#0c1024] mb-6">Production-Ready Agents for Every Industry</h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+             {[
+               { title: 'Real Estate', icon: Building2, desc: 'Lead qualification & property tour bookings.' },
+               { title: 'Healthcare', icon: Activity, desc: 'Patient intake & appointment management.' },
+               { title: 'Retail', icon: Smartphone, desc: 'Order status & customer support.' },
+               { title: 'BPO', icon: Users, desc: 'Scaling high-volume inbound call handling.' },
+               { title: 'Financial Services', icon: Briefcase, desc: 'Identity verification & account enquiries.' },
+               { title: 'Professional Services', icon: Clock, desc: 'Meeting scheduling & lead capture.' },
+               { title: 'Hospitality', icon: Play, desc: 'Reservations & concierge services.' },
+               { title: 'Logistics', icon: Network, desc: 'Delivery tracking & driver coordination.' }
+             ].map((ind, idx) => (
+               <div key={idx} className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                  <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-[#0c1024] mb-6 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
+                    <ind.icon size={20} />
+                  </div>
+                  <h4 className="font-bold text-[#0c1024] mb-2">{ind.title}</h4>
+                  <p className="text-xs text-slate-400 leading-relaxed">{ind.desc}</p>
+               </div>
+             ))}
           </div>
         </div>
       </section>
@@ -481,8 +644,4 @@ export default function VoiceAiPage() {
       />
     </main>
   );
-}
-
-function cn(...classes: (string | boolean | undefined)[]) {
-  return classes.filter(Boolean).join(' ');
 }
