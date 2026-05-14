@@ -689,7 +689,7 @@ const SectionComparison = ({ openModal }: { openModal: (name: string, type: any)
 /* ─────────────────────────────────────────────────────────
    SECTION 9 — TRUST / LOCAL BUSINESS SUPPORT
    ───────────────────────────────────────────────────────── */
-const SectionTrust = () => (
+const SectionTrust = ({ openModal }: { openModal: (name: string, type: any) => void }) => (
   <section className="py-20 md:py-32 bg-white">
     <div className={C}>
       <div className="text-center mb-16">
