@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Wifi, 
@@ -185,6 +186,7 @@ const CoreProducts = ({ openModal }: { openModal: (name: string, type: any) => v
     {
       title: "C9 Phone System",
       type: 'phone' as const,
+      link: '/telco/phone-system',
       description: "A modern business phone system for office, remote and mobile teams. Manage calls, users, voicemail, call routing and business numbers through a flexible cloud-based setup that can grow with your organisation.",
       goodFor: [
         "Replacing outdated office phones",
@@ -199,6 +201,7 @@ const CoreProducts = ({ openModal }: { openModal: (name: string, type: any) => v
     {
       title: "Business nbn",
       type: 'internet' as const,
+      link: '/telco/business-nbn',
       description: "Reliable business internet for everyday operations, cloud apps, EFTPOS, video calls, email, browsing and office connectivity. C9 helps you choose the right Business nbn option based on your location, speed requirements and usage.",
       goodFor: [
         "Small and growing businesses",
@@ -213,6 +216,7 @@ const CoreProducts = ({ openModal }: { openModal: (name: string, type: any) => v
     {
       title: "Fast Fibre",
       type: 'internet' as const,
+      link: '/telco/fast-fibre',
       description: "High-speed fibre internet for businesses that need faster, more reliable connectivity than standard internet services. Fast Fibre is suited to teams using cloud platforms, voice, video, large file transfers and business-critical online systems.",
       goodFor: [
         "Growing teams",
@@ -227,6 +231,7 @@ const CoreProducts = ({ openModal }: { openModal: (name: string, type: any) => v
     {
       title: "Enterprise Ethernet",
       type: 'internet' as const,
+      link: '/telco/enterprise-ethernet',
       description: "Enterprise-grade connectivity for organisations that need stronger performance, scalable bandwidth and dependable business internet across critical environments. Ideal for larger offices, multi-site businesses and companies with high connectivity demands.",
       goodFor: [
         "Larger offices",
@@ -241,6 +246,7 @@ const CoreProducts = ({ openModal }: { openModal: (name: string, type: any) => v
     {
       title: "AI Voice",
       type: 'ai' as const,
+      link: '/telco/voice-ai',
       description: "AI Voice helps businesses handle calls smarter with AI-assisted call answering, routing, enquiry handling and customer interaction support. It can help reduce missed calls, improve response times and support teams that receive regular customer enquiries.",
       goodFor: [
         "Busy reception teams",
@@ -297,13 +303,23 @@ const CoreProducts = ({ openModal }: { openModal: (name: string, type: any) => v
                    </ul>
                 </div>
 
-                <C9Button 
-                  variant="outline" 
-                  className="w-full rounded-full border-2 border-slate-200 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all h-14"
-                  onClick={() => openModal(product.title, product.type)}
-                >
-                  {product.cta}
-                </C9Button>
+                {product.link ? (
+                  <C9Button 
+                    asChild
+                    variant="outline" 
+                    className="w-full rounded-full border-2 border-slate-200 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all h-14"
+                  >
+                    <Link href={product.link}>{product.cta}</Link>
+                  </C9Button>
+                ) : (
+                  <C9Button 
+                    variant="outline" 
+                    className="w-full rounded-full border-2 border-slate-200 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all h-14"
+                    onClick={() => openModal(product.title, product.type)}
+                  >
+                    {product.cta}
+                  </C9Button>
+                )}
               </div>
             </FadeIn>
           ))}
@@ -429,37 +445,49 @@ const SectionUnified = ({ openModal }: { openModal: (name: string, type: any) =>
    ───────────────────────────────────────────────────────── */
 const SupportingServices = ({ openModal }: { openModal: (name: string, type: any) => void }) => {
   const services = [
-    { title: "Microsoft Teams Calling", type: 'phone' as const, copy: "Make and receive external business calls through Microsoft Teams.", icon: <Smartphone size={18} /> },
-    { title: "SIP Trunks", type: 'phone' as const, copy: "Connect your phone system to the public phone network with flexible SIP voice services.", icon: <MoveHorizontal size={18} /> },
+    { title: "Microsoft Teams Calling", type: 'phone' as const, link: '/telco/teams-calling', copy: "Make and receive external business calls through Microsoft Teams.", icon: <Smartphone size={18} /> },
+    { title: "SIP Trunks", type: 'phone' as const, link: '/telco/sip-trunking', copy: "Connect your phone system to the public phone network with flexible SIP voice services.", icon: <MoveHorizontal size={18} /> },
     { title: "VoIP Handsets", type: 'phone' as const, copy: "Business-grade desk phones and softphone options for office, remote and hybrid teams.", icon: <Monitor size={18} /> },
     { title: "Number Porting", type: 'phone' as const, copy: "Move existing business numbers to your new phone system where possible.", icon: <ArrowRight size={18} /> },
     { title: "4G/5G Backup", type: 'internet' as const, icon: <Wifi size={18} />, copy: "Add backup connectivity so your business has a fallback if the main internet service drops." },
     { title: "Managed Routers", type: 'internet' as const, copy: "Routers configured, managed and supported for your business internet environment.", icon: <Server size={18} /> },
     { title: "Multi-Site Connectivity", type: 'internet' as const, copy: "Standardise phone and internet services across multiple offices, branches or locations.", icon: <Layers size={18} /> },
     { title: "Telco Relocation Support", type: 'generic' as const, copy: "Plan internet and phone services when opening, relocating or expanding a business site.", icon: <Globe size={18} /> },
-    { title: "Business Mobile", type: 'generic' as const, copy: "Mobile connectivity options to support staff, sites and business continuity.", icon: <Smartphone size={18} /> }
+    { title: "Business Mobile", type: 'generic' as const, link: '/telco/mobile-plans', copy: "Mobile connectivity options to support staff, sites and business continuity.", icon: <Smartphone size={18} /> }
   ];
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+  
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'left' ? -300 : 300;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="py-20 md:py-32 bg-white">
       <div className={C}>
-        <div className="max-w-3xl mb-16 md:mb-24">
-          <FadeIn>
-            <span className="c9-eyebrow mb-4 block">Supporting Telco Services</span>
-            <h2 className="c9-section-heading mb-6">Everything Else Your Business May Need Around Phone and Internet</h2>
-            <p className="c9-body text-lg">
-              Once your core phone and internet services are in place, C9 can support the additional pieces that make your telco environment easier to manage.
-            </p>
-          </FadeIn>
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-12 md:mb-24 gap-6">
+          <div className="max-w-3xl">
+            <FadeIn>
+              <span className="c9-eyebrow mb-4 block">Supporting Telco Services</span>
+              <h2 className="c9-section-heading mb-6">Everything Else Your Business May Need Around Phone and Internet</h2>
+              <p className="c9-body text-lg">
+                Once your core phone and internet services are in place, C9 can support the additional pieces that make your telco environment easier to manage.
+              </p>
+            </FadeIn>
+          </div>
+          <div className="flex gap-3 sm:hidden mb-2">
+            <button onClick={() => scroll('left')} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-colors" aria-label="Scroll left"><ChevronLeft size={20}/></button>
+            <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-colors" aria-label="Scroll right"><ChevronRight size={20}/></button>
+          </div>
         </div>
 
-        <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none pb-8 sm:pb-0 gap-4 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3 -mx-6 px-6 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {services.map((service, i) => (
-            <FadeIn key={i} delay={i * 0.04} className="w-[85vw] sm:w-auto shrink-0 snap-center h-full">
-              <div 
-                className="bg-slate-50 border border-slate-100 p-6 rounded-2xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-lg transition-all duration-300 group flex flex-col gap-3 cursor-pointer h-full"
-                onClick={() => openModal(service.title, service.type)}
-              >
+        <div ref={scrollRef} className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none pb-8 sm:pb-0 gap-4 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3 -mx-6 px-6 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden scroll-smooth">
+          {services.map((service, i) => {
+            const content = (
+              <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-lg transition-all duration-300 group flex flex-col gap-3 cursor-pointer h-full">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
                     {service.icon}
@@ -468,8 +496,22 @@ const SupportingServices = ({ openModal }: { openModal: (name: string, type: any
                 </div>
                 <p className="text-slate-600 text-[13px] leading-relaxed font-medium flex-grow">{service.copy}</p>
               </div>
-            </FadeIn>
-          ))}
+            );
+
+            return (
+              <FadeIn key={i} delay={i * 0.04} className="w-[85vw] sm:w-auto shrink-0 snap-center h-full">
+                {service.link ? (
+                  <Link href={service.link} className="block h-full outline-none">
+                    {content}
+                  </Link>
+                ) : (
+                  <div onClick={() => openModal(service.title, service.type)} className="h-full">
+                    {content}
+                  </div>
+                )}
+              </FadeIn>
+            );
+          })}
         </div>
 
         <FadeIn delay={0.4} className="mt-16 flex justify-center">
@@ -536,10 +578,10 @@ const SectionHowItWorks = ({ openModal }: { openModal: (name: string, type: any)
    ───────────────────────────────────────────────────────── */
 const SectionScenarios = ({ openModal }: { openModal: (name: string, type: any) => void }) => {
   const scenarios = [
-    { title: "I need a new phone system", type: 'phone' as const, image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=800", copy: "C9 can help you move to a modern business phone system with call routing, voicemail, business numbers, remote user support and optional Teams Calling.", cta: "Upgrade My Phone System" },
-    { title: "I need better business internet", type: 'internet' as const, image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", copy: "C9 can review your current connection and help you choose from Business nbn, Fast Fibre or Enterprise Ethernet based on your location and usage.", cta: "Check Internet Options" },
+    { title: "I need a new phone system", type: 'phone' as const, link: '/telco/phone-system', image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=800", copy: "C9 can help you move to a modern business phone system with call routing, voicemail, business numbers, remote user support and optional Teams Calling.", cta: "Upgrade My Phone System" },
+    { title: "I need better business internet", type: 'internet' as const, link: '/telco/business-nbn', image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", copy: "C9 can review your current connection and help you choose from Business nbn, Fast Fibre or Enterprise Ethernet based on your location and usage.", cta: "Check Internet Options" },
     { title: "I am opening a new site", type: 'internet' as const, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800", copy: "C9 can help plan internet, phones, routers, backup connectivity and setup support before your new office, shop, clinic or warehouse goes live.", cta: "Plan a New Site" },
-    { title: "I want smarter call handling", type: 'ai' as const, image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800", copy: "C9 AI Voice can help with call answering, routing, enquiry handling and reducing missed calls during busy periods or after hours.", cta: "Explore AI Voice" },
+    { title: "I want smarter call handling", type: 'ai' as const, link: '/telco/voice-ai', image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800", copy: "C9 AI Voice can help with call answering, routing, enquiry handling and reducing missed calls during busy periods or after hours.", cta: "Explore AI Voice" },
     { title: "I want to switch telco provider", type: 'generic' as const, image: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=800", copy: "C9 can review your current provider setup, identify what needs to move and help manage the transition with less confusion.", cta: "Help Me Switch" },
     { title: "I manage multiple locations", type: 'internet' as const, image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800", copy: "C9 can help standardise internet, phone systems and support across branches, offices or operational sites.", cta: "Connect My Sites" }
   ];
@@ -564,9 +606,15 @@ const SectionScenarios = ({ openModal }: { openModal: (name: string, type: any) 
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4 font-clash relative z-10">{scenario.title}</h3>
                   <p className="text-slate-600 text-[14px] leading-relaxed mb-8 flex-grow relative z-10">{scenario.copy}</p>
-                  <C9Button variant="outline" className="w-full rounded-full border-2 border-slate-200 group-hover:border-[#5D00D6] group-hover:text-[#5D00D6] relative z-10" onClick={() => openModal(scenario.title, scenario.type)}>
-                     {scenario.cta}
-                  </C9Button>
+                  {scenario.link ? (
+                    <C9Button asChild variant="outline" className="w-full rounded-full border-2 border-slate-200 group-hover:border-[#5D00D6] group-hover:text-[#5D00D6] relative z-10">
+                       <Link href={scenario.link}>{scenario.cta}</Link>
+                    </C9Button>
+                  ) : (
+                    <C9Button variant="outline" className="w-full rounded-full border-2 border-slate-200 group-hover:border-[#5D00D6] group-hover:text-[#5D00D6] relative z-10" onClick={() => openModal(scenario.title, scenario.type)}>
+                       {scenario.cta}
+                    </C9Button>
+                  )}
                </div>
             </FadeIn>
           ))}
