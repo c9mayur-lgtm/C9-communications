@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Wifi, 
   PhoneCall, 
@@ -11,44 +10,51 @@ import {
   Activity, 
   Server, 
   RefreshCw, 
-  Target, 
   Zap, 
-  ShieldAlert, 
   Clock, 
-  GitBranch, 
   Layers,
   ArrowRight,
   Shield,
-  Monitor,
+  ShieldAlert,
   Check,
-  Search,
-  Settings,
+  ChevronRight,
+  ChevronLeft,
+  MessageSquare,
+  Network,
+  Smartphone,
+  MoveHorizontal,
+  Plus,
+  HelpCircle,
   Users,
-  HardDrive,
-  BarChart,
-  ClipboardCheck,
-  TrendingUp,
-  AlertTriangle
+  Mic2,
+  Cpu,
+  Monitor,
+  Search,
+  Globe
 } from 'lucide-react';
 
 // Custom Components
-import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
-import { WpCapabilityNavigator } from '@/components/wordpress/WpCapabilityNavigator';
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { C9Button } from '@/components/design-system/C9Button';
-import { Section } from '@/components/design-system/Section';
-import { LeadCaptureModal } from '@/components/modals/LeadCaptureModal';
 import { handleCtaClick } from '@/lib/utils';
+import { ConsultationFormCore } from '@/components/forms/ConsultationFormCore';
+import { TelcoProductModal } from '@/components/forms/TelcoForms';
+import { WpCapabilityNavigator } from '@/components/wordpress/WpCapabilityNavigator';
 import { 
-  Table, 
-  TableHeader, 
-  TableBody, 
-  TableHead, 
-  TableRow, 
-  TableCell 
-} from "@/components/ui/table";
+  HeroVisual, 
+  PhoneSystemVisual, 
+  InternetVisual, 
+  FibreVisual, 
+  EthernetVisual, 
+  AIVoiceVisual,
+  ProblemSolutionVisual,
+  ConnectivityDiagram,
+  ComparisonStackVisual,
+  ProcessTimeline,
+  FinalCtaVisual
+} from '@/components/telco/TelcoVisuals';
 
 const C = "container mx-auto px-6 md:px-8 max-w-[1240px]";
 
@@ -63,14 +69,14 @@ const FadeIn = ({
   className?: string;
   direction?: 'up' | 'left' | 'right' | 'none';
 }) => {
-  const y = direction === 'up' ? 28 : 0;
-  const x = direction === 'left' ? -28 : direction === 'right' ? 28 : 0;
+  const y = direction === 'up' ? 24 : 0;
+  const x = direction === 'left' ? -24 : direction === 'right' ? 24 : 0;
   return (
     <motion.div
       initial={{ opacity: 0, y, x }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] as const }}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] as const }}
       className={className}
     >
       {children}
@@ -81,95 +87,84 @@ const FadeIn = ({
 /* ─────────────────────────────────────────────────────────
    SECTION 1 — HERO
    ───────────────────────────────────────────────────────── */
-const Hero = ({ onOpenModal }: { onOpenModal: () => void }) => (
-  <section className="relative overflow-hidden bg-white pt-10 pb-20 lg:pt-16 lg:pb-32">
+const Hero = ({ openModal }: { openModal: (name: string, type: any) => void }) => (
+  <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-20 lg:pb-32">
     <div
-      className="pointer-events-none absolute inset-0 opacity-[0.025]"
+      className="pointer-events-none absolute inset-0 opacity-[0.03]"
       style={{
         backgroundImage: 'linear-gradient(#5D00D6 1px, transparent 1px), linear-gradient(90deg, #5D00D6 1px, transparent 1px)',
-        backgroundSize: '52px 52px',
+        backgroundSize: '40px 40px',
       }}
     />
 
     <div className={`${C} relative z-10`}>
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
         <div>
           <FadeIn>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-8">
               <ShieldCheck size={14} className="text-[#5D00D6]" aria-hidden="true" />
-              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">Enterprise Connectivity & Carrier Governance</span>
+              <span className="c9-eyebrow !mb-0 text-[#5D00D6]">BUSINESS TELCO THAT ACTUALLY CONNECTS THE DOTS</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-8">
-              Managed Connectivity Operations for Businesses That <br />
-              <span className="text-[#5D00D6]">Cannot Afford Downtime.</span>
+              Stop Chasing Telco Providers. Get Phones, Internet and AI Voice Managed by C9.
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <p className="c9-body mb-10 max-w-[580px] text-slate-800 text-lg leading-relaxed">
-              Most providers only provision services. C9 actively manages carrier coordination, failover, escalation, and voice continuity. We are the operational control layer for your business internet and voice.
-            </p>
+            <div className="c9-body mb-10 max-w-[620px] text-slate-800 text-lg leading-relaxed space-y-4">
+              <p>
+                C9 gives Australian businesses one clear place to manage the telco services they actually depend on — C9 Phone System, Business nbn, Fast Fibre, Enterprise Ethernet and AI Voice.
+              </p>
+              <p>
+                No messy provider runaround. No disconnected phone and internet setup. Just the right business telco services, installed and supported by a team that understands how your business needs to work.
+              </p>
+            </div>
           </FadeIn>
 
           <FadeIn delay={0.22}>
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <C9Button 
                 size="lg" 
-                className="rounded-full shadow-xl shadow-purple-900/20 h-14 px-8"
-                onClick={handleCtaClick}
+                className="rounded-full shadow-xl shadow-purple-900/20 h-14 px-10"
+                onClick={() => openModal('Telco Health Check Request', 'generic')}
               >
-                Review My Connectivity Risks
+                Telco Health Check
               </C9Button>
               <C9Button 
+                asChild
                 variant="outline"
                 size="lg" 
-                className="rounded-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all h-14 px-8"
-                onClick={onOpenModal}
+                className="rounded-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all h-14 px-10"
               >
-                Download Connectivity Report
+                <a href="#core-products">View C9 Telco Services</a>
               </C9Button>
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.3}>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-4 border-t border-slate-100 pt-8 mt-4">
+
+
+          <FadeIn delay={0.35}>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-4 border-t border-slate-100 pt-10">
               {[
-                { label: 'Carrier Coordination', icon: <RefreshCw size={14} className="text-[#5D00D6]" /> },
-                { label: 'Failover Governance', icon: <Zap size={14} className="text-[#5D00D6]" /> },
-                { label: 'SLA Escalation', icon: <TrendingUp size={14} className="text-[#5D00D6]" /> },
-                { label: 'Multi-Site Continuity', icon: <Layers size={14} className="text-[#5D00D6]" /> }
+                { label: 'Business internet and phone systems', icon: <Wifi size={14} className="text-[#5D00D6]" /> },
+                { label: 'Setup, migration and support', icon: <RefreshCw size={14} className="text-[#5D00D6]" /> },
+                { label: 'Australian business telco partner', icon: <ShieldCheck size={14} className="text-[#5D00D6]" /> },
+                { label: 'Built for small, growing and multi-site businesses', icon: <Activity size={14} className="text-[#5D00D6]" /> }
               ].map((item, i) => (
-                <div key={i} className="flex flex-col gap-2">
+                <div key={i} className="flex items-center gap-3">
                   <div className="text-[#5D00D6]">{item.icon}</div>
-                  <span className="text-[10px] font-black text-slate-700 uppercase tracking-widest">{item.label}</span>
+                  <span className="text-[12px] font-bold text-slate-700">{item.label}</span>
                 </div>
               ))}
             </div>
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.4} direction="right" className="relative mt-16 lg:mt-0 w-full">
-          <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[16/10] sm:aspect-[4/3] border-4 md:border-8 border-white">
-            <img 
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop" 
-              alt="Australian operations team managing business connectivity and voice environments across multiple sites"
-              className="w-full h-full object-cover grayscale-[0.2]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
-          </div>
-          
-          <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-5 md:p-6 rounded-2xl shadow-2xl border border-slate-100 z-20 max-w-[240px] md:max-w-[280px]">
-             <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
-                   <Activity size={20} />
-                </div>
-                <div className="text-[11px] font-black text-slate-800 uppercase tracking-widest leading-tight">NOC Active Monitoring</div>
-             </div>
-             <p className="text-[12px] text-slate-600 font-medium">Continuous link governance and proactive carrier escalation active across all managed sites.</p>
-          </div>
+        <FadeIn delay={0.4} direction="right" className="relative hidden lg:block">
+           <HeroVisual />
         </FadeIn>
       </div>
     </div>
@@ -177,231 +172,243 @@ const Hero = ({ onOpenModal }: { onOpenModal: () => void }) => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 2 — COMMERCIAL TENSION
+   SECTION 2 — CORE TELCO PRODUCTS
    ───────────────────────────────────────────────────────── */
-const SectionTension = () => (
-  <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
-    <div className={C}>
-      <div className="max-w-3xl mb-20 text-center mx-auto">
-        <FadeIn>
-          <span className="c9-eyebrow mb-4">Why Businesses Replace Their Existing Providers</span>
-          <h2 className="c9-section-heading px-4 md:px-0">Operational Vulnerability & <br className="hidden md:block" /> <span className="text-red-600">Provider Blame-Shifting.</span></h2>
-          <p className="c9-body mt-6 text-lg text-slate-800">
-            Standard carriers provision lines and then step back. When outages hit, you are left in the middle of a vendor dispute while your revenue stops. C9 replaces generic telcos with absolute operational accountability.
-          </p>
-        </FadeIn>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-        {[
-          { title: "Internet outages impacting operations", icon: <Wifi className="text-red-600" size={24} /> },
-          { title: "Teams and voice instability", icon: <PhoneCall className="text-red-600" size={24} /> },
-          { title: "Provider blame shifting", icon: <GitBranch className="text-red-600" size={24} /> },
-          { title: "Slow escalations", icon: <Clock className="text-red-600" size={24} /> },
-          { title: "Failed site rollouts", icon: <ShieldAlert className="text-red-600" size={24} /> },
-          { title: "Multi-site inconsistency", icon: <Layers className="text-red-600" size={24} /> },
-          { title: "No failover ownership", icon: <RefreshCw className="text-red-600" size={24} /> },
-          { title: "Disconnected support vendors", icon: <Shield className="text-red-600" size={24} /> }
-        ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.05}>
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 h-full shadow-sm hover:border-red-600/30 transition-all group flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                {item.icon}
-              </div>
-              <h3 className="text-[15px] font-bold text-slate-900 leading-tight pt-1">{item.title}</h3>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 3 — CAPABILITY NAVIGATOR
-   ───────────────────────────────────────────────────────── */
-const SectionCapabilities = () => {
-  const telcoCards = [
+const CoreProducts = ({ openModal }: { openModal: (name: string, type: any) => void }) => {
+  const products = [
     {
-      title: 'Business Connectivity',
-      descriptor: 'Problem: Carrier finger-pointing during outages. Outcome: Managed internet environments with proactive monitoring, failover governance, and carrier escalation ownership.',
-      image: '/Managed IT_SMB.png',
-      imageAlt: 'Business connectivity operations',
-      link: '/telco/business-nbn',
-      tag: 'Internet Governance',
+      title: "C9 Phone System",
+      type: 'phone' as const,
+      description: "A modern business phone system for office, remote and mobile teams. Manage calls, users, voicemail, call routing and business numbers through a flexible cloud-based setup that can grow with your organisation.",
+      goodFor: [
+        "Replacing outdated office phones",
+        "Supporting hybrid and remote teams",
+        "Keeping business numbers professional",
+        "Improving call routing and customer experience",
+        "Managing users across one or multiple sites"
+      ],
+      cta: "Upgrade Your Phone System",
+      icon: <PhoneCall className="text-[#5D00D6]" size={28} />
     },
     {
-      title: 'Teams Calling',
-      descriptor: 'Problem: Fragmented voice quality and dropouts. Outcome: Business voice continuity across office, remote, and multi-site environments with managed SIP delivery.',
-      image: '/Teams Calling_Telco.png',
-      imageAlt: 'Business voice continuity',
-      link: '/telco/teams-calling',
-      tag: 'Voice Continuity',
+      title: "Business nbn",
+      type: 'internet' as const,
+      description: "Reliable business internet for everyday operations, cloud apps, EFTPOS, video calls, email, browsing and office connectivity. C9 helps you choose the right Business nbn option based on your location, speed requirements and usage.",
+      goodFor: [
+        "Small and growing businesses",
+        "Offices, clinics, shops and warehouses",
+        "General business connectivity",
+        "Cloud applications and online tools",
+        "Businesses needing managed internet support"
+      ],
+      cta: "Check Business nbn Options",
+      icon: <Wifi className="text-[#5D00D6]" size={28} />
     },
     {
-      title: 'Fast Fibre',
-      descriptor: 'Problem: Unstable or contended bandwidth causing cloud bottlenecks. Outcome: Symmetrical, uncontended business-grade fibre up to 1000Mbps with managed performance governance.',
-      image: '/Fast Fibre_Telco.png',
-      imageAlt: 'Fast Fibre internet connection',
-      link: '/telco/fast-fibre',
-      tag: 'Connectivity',
+      title: "Fast Fibre",
+      type: 'internet' as const,
+      description: "High-speed fibre internet for businesses that need faster, more reliable connectivity than standard internet services. Fast Fibre is suited to teams using cloud platforms, voice, video, large file transfers and business-critical online systems.",
+      goodFor: [
+        "Growing teams",
+        "High cloud usage",
+        "Video meetings and VoIP",
+        "Faster upload and download needs",
+        "Businesses ready to move beyond basic internet"
+      ],
+      cta: "Explore Fast Fibre",
+      icon: <Zap className="text-[#5D00D6]" size={28} />
     },
     {
-      title: 'AI Voice',
-      descriptor: 'Problem: High operational overhead in customer triage and basic inquiries. Outcome: AI-driven voice agents that automate initial handling, improve routing, and scale operations without headcount.',
-      image: '/AI Voice_Telco.png',
-      imageAlt: 'AI Voice automation',
-      link: '/telco/ai-voice',
-      tag: 'AI Automation',
+      title: "Enterprise Ethernet",
+      type: 'internet' as const,
+      description: "Enterprise-grade connectivity for organisations that need stronger performance, scalable bandwidth and dependable business internet across critical environments. Ideal for larger offices, multi-site businesses and companies with high connectivity demands.",
+      goodFor: [
+        "Larger offices",
+        "Multi-site businesses",
+        "Critical cloud applications",
+        "High bandwidth requirements",
+        "Businesses needing enterprise-grade reliability"
+      ],
+      cta: "Discuss Enterprise Ethernet",
+      icon: <Network className="text-[#5D00D6]" size={28} />
     },
     {
-      title: 'Enterprise Ethernet',
-      descriptor: 'Problem: Insufficient bandwidth guarantees and weak SLAs for high-execution sites. Outcome: Dedicated fibre circuits with enterprise-grade SLAs and 1:1 contention for critical workloads.',
-      image: '/Enterprise Ethernet_Telco.png',
-      imageAlt: 'Enterprise Ethernet infrastructure',
-      link: '/telco/enterprise-ethernet',
-      tag: 'Infrastructure',
-    },
-    {
-      title: 'Contact Centre Operations',
-      descriptor: 'Problem: Zero visibility into queue performance and customer wait times. Outcome: Managed customer communication visibility, queue performance, and active support operations.',
-      image: '/Contact center_Telco.png',
-      imageAlt: 'Operations manager reviewing contact centre performance',
-      link: '/telco/contact-centre',
-      tag: 'Operational Intelligence',
-    },
-    {
-      title: 'Cybersecurity Integration',
-      descriptor: 'Problem: Security gaps in connectivity layers. Outcome: Connectivity and security governed together to reduce operational risk and closing deployment gaps.',
-      image: '/Cyber Security_Telco.png',
-      imageAlt: 'Cybersecurity integration',
-      link: '/telco/security',
-      tag: 'Security Governance',
-    },
+      title: "AI Voice",
+      type: 'ai' as const,
+      description: "AI Voice helps businesses handle calls smarter with AI-assisted call answering, routing, enquiry handling and customer interaction support. It can help reduce missed calls, improve response times and support teams that receive regular customer enquiries.",
+      goodFor: [
+        "Busy reception teams",
+        "Customer service-heavy businesses",
+        "Missed-call reduction",
+        "After-hours enquiry handling",
+        "Smarter call triage and routing"
+      ],
+      cta: "Explore AI Voice",
+      icon: <Mic2 className="text-[#5D00D6]" size={28} />
+    }
   ];
 
   return (
-    <WpCapabilityNavigator 
-      eyebrow="Managed Operational Capabilities"
-      headline="Connectivity, Voice, and Carrier Accountability — Unified."
-      subtext="We don't just provision services; we orchestrate the entire connectivity ecosystem. Each capability is designed to solve a specific operational risk and deliver a measurable business outcome."
-      cards={telcoCards}
-      ctaLabel="Review My Connectivity Risks"
-      ctaHref="#consultation-section"
-    />
+    <section id="core-products" className="py-20 md:py-32 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+        <div className="max-w-3xl mb-16 md:mb-24">
+          <FadeIn>
+            <span className="c9-eyebrow mb-4 block">Core Telco Products</span>
+            <h2 className="c9-section-heading mb-6">Choose the Telco Service Your Business Needs</h2>
+            <p className="c9-body text-lg">
+              C9’s telco services are built around the products businesses actually search for, buy and rely on every day — phone systems, business internet, fibre, Enterprise Ethernet and AI-powered voice solutions.
+            </p>
+          </FadeIn>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {products.map((product, i) => (
+            <FadeIn key={i} delay={i * 0.1} className="flex h-full">
+              <div className="bg-white p-8 md:p-10 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 flex flex-col w-full group">
+                <div className="w-16 h-16 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                  {product.icon}
+                </div>
+                
+                {/* Product Specific Mini Visuals */}
+                {product.type === 'phone' && <PhoneSystemVisual />}
+                {product.title === 'Business nbn' && <InternetVisual />}
+                {product.title === 'Fast Fibre' && <FibreVisual />}
+                {product.title === 'Enterprise Ethernet' && <EthernetVisual />}
+                {product.type === 'ai' && <AIVoiceVisual />}
+
+                <h3 className="text-2xl font-bold text-slate-900 mb-6 font-clash">{product.title}</h3>
+                <p className="text-slate-600 text-[15px] leading-relaxed mb-8 flex-grow">{product.description}</p>
+                
+                <div className="mb-10">
+                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-5">Good for:</p>
+                   <ul className="space-y-3">
+                      {product.goodFor.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckCircle size={14} className="text-emerald-500 mt-0.5 shrink-0" />
+                          <span className="text-[13px] font-bold text-slate-700">{item}</span>
+                        </li>
+                      ))}
+                   </ul>
+                </div>
+
+                <C9Button 
+                  variant="outline" 
+                  className="w-full rounded-full border-2 border-slate-200 hover:border-[#5D00D6] hover:text-[#5D00D6] transition-all h-14"
+                  onClick={() => openModal(product.title, product.type)}
+                >
+                  {product.cta}
+                </C9Button>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <FadeIn delay={0.4} className="mt-16 flex justify-center">
+              <C9Button size="lg" className="rounded-full shadow-2xl shadow-purple-900/20 px-10 h-15 group" onClick={() => openModal('Telco Health Check Request', 'generic')}>
+                Telco Health Check <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </C9Button>
+        </FadeIn>
+      </div>
+    </section>
   );
 };
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 4 — QUALIFICATION
+   SECTION 3 — WHY BUSINESSES COME TO C9
    ───────────────────────────────────────────────────────── */
-const SectionQualification = () => (
-  <section className="py-16 md:py-24 bg-white">
-    <div className={C}>
-      <div className="max-w-3xl mb-12 md:mb-20">
-        <FadeIn>
-          <span className="c9-eyebrow mb-4">Environment Qualification</span>
-          <h2 className="c9-section-heading">Which Environment Are You Managing?</h2>
-          <p className="c9-body mt-6 text-lg">
-            Our managed telco framework adapts to your specific operational context, whether you are building new or modernising the existing.
-          </p>
-        </FadeIn>
-      </div>
+const SectionPains = ({ openModal }: { openModal: (name: string, type: any) => void }) => {
+  const pains = [
+    { title: "Our phone system is outdated", copy: "Your current phones are hard to manage, call routing is poor, remote staff are difficult to support or customers are not reaching the right person quickly." },
+    { title: "Our internet is too slow or unreliable", copy: "Dropouts, slow speeds or poor upload performance are affecting cloud apps, EFTPOS, calls, video meetings, customer service or everyday work." },
+    { title: "We need a better setup for a new site", copy: "You are opening or relocating an office, shop, clinic, warehouse or branch and need internet, phones, routers and backup ready before launch." },
+    { title: "We are stuck with too many providers", copy: "Internet, phones, routers, Microsoft 365 and IT support are handled by different vendors, making every issue harder to resolve." },
+    { title: "We are missing calls or responding too slowly", copy: "Your reception or customer service team needs better call routing, voicemail, overflow handling or AI-assisted voice support." },
+    { title: "We need stronger business-grade connectivity", copy: "Your business has grown beyond basic internet and now needs fibre, Enterprise Ethernet or a better multi-site connectivity setup." }
+  ];
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
-        {[
-          { title: "Opening a New Site", desc: "Greenfield rollout governance from planning to opening day." },
-          { title: "Replacing Existing Providers", desc: "Structured migration of internet and voice with zero downtime." },
-          { title: "Managing Multi-Site Operations", desc: "Standardising connectivity and support across all locations." },
-          { title: "Improving Teams & Voice Reliability", desc: "Solving voice quality issues and instability in Teams." },
-          { title: "Modernising Legacy Connectivity", desc: "Transitioning from slow copper/old fibre to enterprise fibre." },
-          { title: "Scaling Enterprise Operations", desc: "Managed governance for high-growth, high-execution firms." }
-        ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.1}>
-            <div className="bg-slate-50 p-7 md:p-10 rounded-[24px] md:rounded-3xl border border-slate-100 hover:border-[#5D00D6]/20 transition-all h-full group flex flex-col">
-              <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
-              <p className="text-slate-700 text-sm leading-relaxed flex-grow">{item.desc}</p>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
-
-      <FadeIn delay={0.4} className="flex justify-center">
-         <C9Button 
-            size="lg" 
-            className="rounded-full shadow-xl shadow-purple-900/20 h-15 px-10 text-lg"
-            onClick={handleCtaClick}
-         >
-            Review My Connectivity Environment
-         </C9Button>
-      </FadeIn>
-    </div>
-  </section>
-);
-
-/* ─────────────────────────────────────────────────────────
-   SECTION 5 — HOW WE OPERATE
-   ───────────────────────────────────────────────────────── */
-const SectionHowItWorks = () => (
-  <section className="py-16 md:py-24 bg-[#0c1024] text-white relative overflow-hidden">
-    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6]/5 blur-[120px] rounded-full" />
-    <div className={C}>
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20 items-start">
-        <div className="lg:sticky lg:top-32 mb-12 lg:mb-0">
+  return (
+    <section className="py-20 md:py-32 bg-white">
+      <div className={C}>
+        <div className="max-w-3xl mb-16 md:mb-24">
           <FadeIn>
-            <span className="c9-eyebrow !text-[#a56eff] mb-4">Operational Process</span>
-            <h2 className="c9-section-heading !text-white mb-8">How C9 Operates. <br /> <span className="text-white/40">Absolute Accountability.</span></h2>
-            <p className="text-white/70 mb-12 text-lg">
-              Most providers stop at provisioning. C9 stays operationally accountable through a continuous governance framework.
+            <span className="c9-eyebrow mb-4 block">Why Businesses Come to C9</span>
+            <h2 className="c9-section-heading mb-6">When Your Phone System or Internet Starts Holding the Business Back</h2>
+            <p className="c9-body text-lg">
+              Most businesses do not look for a new telco provider unless something is already frustrating the team, customers or day-to-day workflow. C9 helps businesses replace weak phone systems, improve internet performance and simplify telco support.
             </p>
-            <C9Button 
-              size="lg" 
-              className="rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white"
-              onClick={handleCtaClick}
-            >
-              Plan My Connectivity Rollout
-            </C9Button>
           </FadeIn>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-x-12 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {pains.map((pain, i) => (
+            <FadeIn key={i} delay={i * 0.05}>
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-red-500/20 transition-all group h-full">
+                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-sm text-red-500">
+                   <ShieldAlert size={24} />
+                </div>
+                <h3 className="text-[18px] font-bold text-slate-900 mb-4 font-clash">{pain.title}</h3>
+                <p className="text-slate-600 text-[14px] leading-relaxed">{pain.copy}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <FadeIn delay={0.4}>
+           <ProblemSolutionVisual />
+        </FadeIn>
+
+        <FadeIn delay={0.4} className="mt-16 flex justify-center">
+           <C9Button size="lg" className="rounded-full shadow-2xl shadow-purple-900/20 px-12 h-15" onClick={() => openModal('General Telco Consultation', 'generic')}>
+              Talk to a Telco Specialist
+           </C9Button>
+        </FadeIn>
+      </div>
+    </section>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 4 — PHONE SYSTEM + INTERNET TOGETHER
+   ───────────────────────────────────────────────────────── */
+const SectionUnified = ({ openModal }: { openModal: (name: string, type: any) => void }) => (
+  <section className="py-20 md:py-32 bg-[#0c1024] text-white relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6]/10 blur-[120px] rounded-full -mr-32 -mt-32" />
+    <div className={C}>
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <FadeIn direction="left">
+          <span className="c9-eyebrow !text-[#a56eff] mb-4 block">The C9 Difference</span>
+          <h2 className="c9-section-heading !text-white mb-8">Phone Systems and Business Internet Work Better When They Are Designed Together</h2>
+          <p className="text-white/70 text-lg leading-relaxed mb-10">
+            A business phone system is only as reliable as the internet and network behind it. C9 looks at the full telco environment — phones, internet, routers, Microsoft Teams, fibre, backup connections and site requirements — so your business gets a setup that works properly from day one.
+            <br /><br />
+            This is where C9 is different from a basic telco provider. We do not just sell one connection or one phone product. We help you choose, install and support the telco services your business actually depends on.
+          </p>
+          <C9Button size="lg" className="rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white h-15 px-10" onClick={() => openModal('Full Telco Environment Review', 'generic')}>
+            Review My Telco Setup
+          </C9Button>
+          
+          <div className="mt-12 hidden lg:block">
+             <ConnectivityDiagram />
+          </div>
+        </FadeIn>
+
+        <div className="space-y-6">
           {[
-            { 
-              step: "01", 
-              title: "Discovery & Risk Review", 
-              desc: "We audit your current connectivity to identify single points of failure, single carrier traps, and bandwidth bottlenecks." 
-            },
-            { 
-              step: "02", 
-              title: "Carrier & Environment Assessment", 
-              desc: "Strategic assessment of available carrier infrastructure at every site to ensure maximum resilience and cost-efficiency." 
-            },
-            { 
-              step: "03", 
-              title: "Architecture & Failover Planning", 
-              desc: "Designing the redundant logic that protects your revenue. We plan for the failure so you never experience the outage." 
-            },
-            { 
-              step: "04", 
-              title: "Rollout & Migration Governance", 
-              desc: "Active management of the transition. We coordinate carriers and on-site hardware to ensure zero opening-day failures." 
-            },
-            { 
-              step: "05", 
-              title: "Monitoring & Escalation Ownership", 
-              desc: "Our NOC actively monitors link health. If a line degrades, we own the escalation to the carrier through to resolution." 
-            },
-            { 
-              step: "06", 
-              title: "Quarterly Operational Reviews", 
-              desc: "Continuous refinement of your connectivity strategy based on usage data, new infrastructure availability, and business growth." 
-            }
-          ].map((item, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
-               <div className="relative">
-                  <div className="text-4xl font-black text-white/10 absolute -top-4 -left-6 select-none" aria-hidden="true">{item.step}</div>
-                  <h4 className="text-xl font-bold text-white mb-4 relative z-10">{item.title}</h4>
-                  <p className="text-white/50 text-sm leading-relaxed relative z-10">{item.desc}</p>
+            { title: "For calls", copy: "C9 helps with cloud phone systems, business numbers, call routing, voicemail, SIP, VoIP and Microsoft Teams Calling options.", icon: <PhoneCall size={24} /> },
+            { title: "For internet", copy: "C9 helps with Business nbn, Fast Fibre, Enterprise Ethernet, managed routers and backup connectivity.", icon: <Globe size={24} /> },
+            { title: "For growth", copy: "C9 supports new sites, multiple locations, remote teams, relocations and businesses moving from old telco setups to modern services.", icon: <Activity size={24} /> }
+          ].map((block, i) => (
+            <FadeIn key={i} delay={i * 0.1} direction="right">
+               <div className="bg-white/5 border border-white/10 p-8 rounded-[32px] backdrop-blur-sm group hover:bg-white/10 transition-all">
+                  <div className="flex items-center gap-6">
+                    <div className="w-14 h-14 rounded-2xl bg-[#5D00D6]/20 flex items-center justify-center text-[#a56eff] group-hover:bg-[#5D00D6] group-hover:text-white transition-all duration-500">
+                      {block.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 font-clash">{block.title}</h3>
+                      <p className="text-white/60 text-[14px] leading-relaxed">{block.copy}</p>
+                    </div>
+                  </div>
                </div>
             </FadeIn>
           ))}
@@ -412,212 +419,728 @@ const SectionHowItWorks = () => (
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 6 — RESPONSIBILITY MATRIX
+   SECTION 5 — SUPPORTING TELCO SERVICES
    ───────────────────────────────────────────────────────── */
-const SectionGovernance = () => (
-  <section className="py-16 md:py-24 bg-white overflow-hidden">
-    <div className={C}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <FadeIn direction="left">
-           <span className="c9-eyebrow mb-4">Operational Governance</span>
-           <h2 className="c9-section-heading mb-8">Most Providers Provision. <br /> <span className="text-[#5D00D6]">We Operate.</span></h2>
-           <p className="c9-body text-slate-800 mb-10 text-lg leading-relaxed">
-             Stop accepting vendor blame-shifting. C9 sits between you and the carriers as a single point of accountability for link health, voice quality, and failover triggers.
-           </p>
-           <div className="space-y-6">
-              {[
-                { title: 'Carrier Coordination & Escalation', val: 'C9 Managed' },
-                { title: 'Failover Orchestration & Testing', val: 'C9 Managed' },
-                { title: 'Voice Quality & SIP Governance', val: 'C9 Managed' },
-                { title: 'Multi-Site Configuration Drift', val: 'C9 Managed' },
-                { title: 'Hardware Health & Maintenance', val: 'C9 Managed' }
-              ].map((row, i) => (
-                <div key={i} className="flex items-center justify-between py-4 border-b border-slate-100 last:border-0">
-                   <span className="text-[15px] font-bold text-slate-900">{row.title}</span>
-                   <div className="flex items-center gap-2 text-[#5D00D6]">
-                      <CheckCircle size={14} />
-                      <span className="text-[11px] font-black uppercase tracking-widest">{row.val}</span>
-                   </div>
+const SupportingServices = ({ openModal }: { openModal: (name: string, type: any) => void }) => {
+  const services = [
+    { title: "Microsoft Teams Calling", type: 'phone' as const, copy: "Make and receive external business calls through Microsoft Teams.", icon: <Smartphone size={18} /> },
+    { title: "SIP Trunks", type: 'phone' as const, copy: "Connect your phone system to the public phone network with flexible SIP voice services.", icon: <MoveHorizontal size={18} /> },
+    { title: "VoIP Handsets", type: 'phone' as const, copy: "Business-grade desk phones and softphone options for office, remote and hybrid teams.", icon: <Monitor size={18} /> },
+    { title: "Number Porting", type: 'phone' as const, copy: "Move existing business numbers to your new phone system where possible.", icon: <ArrowRight size={18} /> },
+    { title: "4G/5G Backup", type: 'internet' as const, icon: <Wifi size={18} />, copy: "Add backup connectivity so your business has a fallback if the main internet service drops." },
+    { title: "Managed Routers", type: 'internet' as const, copy: "Routers configured, managed and supported for your business internet environment.", icon: <Server size={18} /> },
+    { title: "Multi-Site Connectivity", type: 'internet' as const, copy: "Standardise phone and internet services across multiple offices, branches or locations.", icon: <Layers size={18} /> },
+    { title: "Telco Relocation Support", type: 'generic' as const, copy: "Plan internet and phone services when opening, relocating or expanding a business site.", icon: <Globe size={18} /> },
+    { title: "Business Mobile", type: 'generic' as const, copy: "Mobile connectivity options to support staff, sites and business continuity.", icon: <Smartphone size={18} /> }
+  ];
+
+  return (
+    <section className="py-20 md:py-32 bg-white">
+      <div className={C}>
+        <div className="max-w-3xl mb-16 md:mb-24">
+          <FadeIn>
+            <span className="c9-eyebrow mb-4 block">Supporting Telco Services</span>
+            <h2 className="c9-section-heading mb-6">Everything Else Your Business May Need Around Phone and Internet</h2>
+            <p className="c9-body text-lg">
+              Once your core phone and internet services are in place, C9 can support the additional pieces that make your telco environment easier to manage.
+            </p>
+          </FadeIn>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          {services.map((service, i) => (
+            <FadeIn key={i} delay={i * 0.04}>
+              <div 
+                className="bg-slate-50 border border-slate-100 p-6 rounded-2xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-lg transition-all duration-300 group flex flex-col gap-3 cursor-pointer"
+                onClick={() => openModal(service.title, service.type)}
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-[#5D00D6] group-hover:bg-[#5D00D6] group-hover:text-white transition-all">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-[15px] font-bold text-slate-900 font-clash">{service.title}</h3>
                 </div>
-              ))}
+                <p className="text-slate-600 text-[13px] leading-relaxed font-medium">{service.copy}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <FadeIn delay={0.4} className="mt-16 flex justify-center">
+           <C9Button variant="outline" className="rounded-full border-2 border-slate-200 hover:border-[#5D00D6] hover:text-[#5D00D6] px-10 h-14" onClick={() => openModal('Additional Telco Services', 'generic')}>
+              Ask About Add-On Services
+           </C9Button>
+        </FadeIn>
+      </div>
+    </section>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 6 — HOW IT WORKS
+   ───────────────────────────────────────────────────────── */
+const SectionHowItWorks = ({ openModal }: { openModal: (name: string, type: any) => void }) => {
+  const steps = [
+    { title: "Review", copy: "We look at your current phone system, internet services, business numbers, site requirements, contracts and user needs." },
+    { title: "Recommend", copy: "We recommend the right mix of C9 Phone System, Business nbn, Fast Fibre, Enterprise Ethernet, AI Voice and supporting services." },
+    { title: "Set Up or Migrate", copy: "We help coordinate internet setup, phone system configuration, number porting, router configuration, call routing and service activation." },
+    { title: "Support", copy: "Once live, C9 supports your telco environment with clear escalation, responsive service and practical help when your team needs it." }
+  ];
+
+  return (
+    <section className="py-20 md:py-32 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+        <div className="max-w-3xl mb-16 md:mb-24">
+          <FadeIn>
+            <span className="c9-eyebrow mb-4 block">How It Works</span>
+            <h2 className="c9-section-heading mb-6">From Telco Review to Setup, Migration and Support</h2>
+          </FadeIn>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+               <div className="relative">
+                  <div className="text-[64px] font-black text-[#5D00D6]/5 absolute -top-8 -left-2 select-none" aria-hidden="true">0{i+1}</div>
+                  <div className="relative z-10">
+                     <h4 className="text-xl font-bold text-slate-900 mb-4 font-clash">{step.title}</h4>
+                     <p className="text-slate-600 text-[14px] leading-relaxed">{step.copy}</p>
+                  </div>
+               </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <FadeIn delay={0.4} className="mt-12">
+           <ProcessTimeline />
+        </FadeIn>
+
+        <FadeIn delay={0.4} className="mt-16 flex justify-center">
+           <C9Button size="lg" className="rounded-full shadow-2xl shadow-purple-900/20 px-12 h-15" onClick={() => openModal('Initial Telco Review', 'generic')}>
+              Start With a Telco Review
+           </C9Button>
+        </FadeIn>
+      </div>
+    </section>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 7 — CUSTOMER SCENARIOS
+   ───────────────────────────────────────────────────────── */
+const SectionScenarios = ({ openModal }: { openModal: (name: string, type: any) => void }) => {
+  const scenarios = [
+    { title: "I need a new phone system", type: 'phone' as const, copy: "C9 can help you move to a modern business phone system with call routing, voicemail, business numbers, remote user support and optional Teams Calling.", cta: "Upgrade My Phone System" },
+    { title: "I need better business internet", type: 'internet' as const, copy: "C9 can review your current connection and help you choose from Business nbn, Fast Fibre or Enterprise Ethernet based on your location and usage.", cta: "Check Internet Options" },
+    { title: "I am opening a new site", type: 'internet' as const, copy: "C9 can help plan internet, phones, routers, backup connectivity and setup support before your new office, shop, clinic or warehouse goes live.", cta: "Plan a New Site" },
+    { title: "I want smarter call handling", type: 'ai' as const, copy: "C9 AI Voice can help with call answering, routing, enquiry handling and reducing missed calls during busy periods or after hours.", cta: "Explore AI Voice" },
+    { title: "I want to switch telco provider", type: 'generic' as const, copy: "C9 can review your current provider setup, identify what needs to move and help manage the transition with less confusion.", cta: "Help Me Switch" },
+    { title: "I manage multiple locations", type: 'internet' as const, copy: "C9 can help standardise internet, phone systems and support across branches, offices or operational sites.", cta: "Connect My Sites" }
+  ];
+
+  return (
+    <section className="py-20 md:py-32 bg-white">
+      <div className={C}>
+        <div className="max-w-3xl mb-16 md:mb-24">
+          <FadeIn>
+            <span className="c9-eyebrow mb-4 block">Real Business Scenarios</span>
+            <h2 className="c9-section-heading mb-6">Find the Right Telco Setup for Your Situation</h2>
+          </FadeIn>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {scenarios.map((scenario, i) => (
+            <FadeIn key={i} delay={i * 0.05}>
+               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col h-full hover:bg-white hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 font-clash">{scenario.title}</h3>
+                  <p className="text-slate-600 text-[14px] leading-relaxed mb-8 flex-grow">{scenario.copy}</p>
+                  <C9Button variant="outline" className="w-full rounded-full border-2 border-slate-200 group-hover:border-[#5D00D6] group-hover:text-[#5D00D6]" onClick={() => openModal(scenario.title, scenario.type)}>
+                     {scenario.cta}
+                  </C9Button>
+               </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 8 — WHY CHOOSE C9 OVER A STANDARD TELCO
+   ───────────────────────────────────────────────────────── */
+const SectionComparison = ({ openModal }: { openModal: (name: string, type: any) => void }) => (
+  <section className="py-20 md:py-32 bg-slate-50 border-y border-slate-100 overflow-hidden">
+    <div className={C}>
+      <div className="max-w-3xl mb-16 md:mb-24 mx-auto text-center">
+        <FadeIn>
+          <span className="c9-eyebrow mb-4 block">Why Choose C9</span>
+          <h2 className="c9-section-heading mb-6">More Than a Connection Provider</h2>
+          <p className="c9-body text-lg">
+            Many telco providers sell the service and leave the rest to you. C9 takes a more complete approach by helping with the phone system, internet connection, setup, migration, routers, Microsoft environment and ongoing support.
+          </p>
+        </FadeIn>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <FadeIn direction="left">
+           <div className="bg-white p-10 rounded-[40px] border border-slate-200 h-full">
+              <h3 className="text-2xl font-bold text-slate-400 mb-10 font-clash">Standard Telco Provider</h3>
+              <ul className="space-y-6">
+                 {[
+                   "Sells internet or phone services separately",
+                   "May not understand your IT environment",
+                   "Support can become slow or fragmented",
+                   "Phone, internet and network issues may sit with different providers",
+                   "Limited help with business setup, migration or user experience"
+                 ].map((point, i) => (
+                   <li key={i} className="flex items-start gap-4 text-slate-500">
+                      <div className="w-5 h-5 rounded-full bg-slate-100 flex items-center justify-center shrink-0 mt-0.5">
+                         <Plus size={10} className="rotate-45" />
+                      </div>
+                      <span className="text-[15px] font-medium">{point}</span>
+                   </li>
+                 ))}
+              </ul>
            </div>
         </FadeIn>
 
-        <FadeIn direction="right" className="relative">
-           <div className="bg-slate-50 rounded-[32px] p-7 md:p-10 lg:p-12 border border-slate-200 shadow-xl">
-              <h3 className="text-2xl font-bold mb-8 text-slate-900">Uptime SLA Targets</h3>
-              <div className="space-y-8">
+        <FadeIn direction="right">
+           <div className="bg-[#0c1024] p-10 rounded-[40px] text-white h-full relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/20 blur-[80px] -mr-32 -mt-32 rounded-full" />
+              <h3 className="text-2xl font-bold text-white mb-10 font-clash">C9 Communications</h3>
+              <ul className="space-y-6">
                  {[
-                   { p: 'P1 - Critical Outage', r: '< 15 mins', s: '< 4 hours', color: 'bg-red-500' },
-                   { p: 'P2 - Major Degradation', r: '< 30 mins', s: '< 8 hours', color: 'bg-orange-500' },
-                   { p: 'P3 - Standard Service', r: '< 2 hours', s: '< 24 hours', color: 'bg-blue-500' }
-                 ].map((row, i) => (
-                   <div key={i} className="relative">
-                      <div className="flex justify-between items-center mb-3">
-                         <span className="font-bold text-slate-900 text-sm">{row.p}</span>
-                         <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Target: {row.s}</span>
+                   "Provides core telco products including C9 Phone System, Business nbn, Fast Fibre, Enterprise Ethernet and AI Voice",
+                   "Helps design the right phone and internet setup for your business",
+                   "Understands how telco connects with Microsoft 365, networking, devices and support",
+                   "Helps with migration, setup, number porting and ongoing support",
+                   "Gives your business one accountable technology partner"
+                 ].map((point, i) => (
+                   <li key={i} className="flex items-start gap-4">
+                      <div className="w-5 h-5 rounded-full bg-[#5D00D6] flex items-center justify-center shrink-0 mt-0.5 text-white">
+                         <Check size={12} strokeWidth={3} />
                       </div>
-                      <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-                         <div className={`h-full ${row.color} opacity-80`} style={{ width: i === 0 ? '95%' : i === 1 ? '85%' : '75%' }} />
-                      </div>
-                      <div className="flex justify-between mt-2 text-[10px] font-medium text-slate-500">
-                         <span>Response: {row.r}</span>
-                         <span>NOC Escalation: Instant</span>
-                      </div>
-                   </div>
+                      <span className="text-[15px] font-bold text-white/90">{point}</span>
+                   </li>
                  ))}
-              </div>
-              <div className="mt-12 pt-8 border-t border-slate-200">
-                 <div>
-                    <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Historical Uptime</div>
-                    <div className="text-3xl font-black text-[#5D00D6]">99.99%</div>
-                 </div>
-              </div>
+              </ul>
            </div>
         </FadeIn>
+      </div>
+
+      <FadeIn delay={0.4}>
+         <ComparisonStackVisual />
+      </FadeIn>
+
+      <FadeIn delay={0.4} className="mt-16 flex justify-center">
+         <C9Button size="lg" className="rounded-full shadow-2xl shadow-purple-900/20 px-12 h-15" onClick={() => openModal('C9 Telco Advantage Inquiry', 'generic')}>
+            See If C9 Is the Right Fit
+         </C9Button>
+      </FadeIn>
+    </div>
+  </section>
+);
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 9 — TRUST / LOCAL BUSINESS SUPPORT
+   ───────────────────────────────────────────────────────── */
+const SectionTrust = () => (
+  <section className="py-20 md:py-32 bg-white">
+    <div className={C}>
+      <div className="text-center mb-16">
+         <FadeIn>
+            <span className="c9-eyebrow mb-4 block">Trusted by Australian Organisations</span>
+            <h2 className="c9-section-heading mb-6">Telco, IT and Support Working Together</h2>
+         </FadeIn>
+      </div>
+
+
+
+      <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
+         <FadeIn direction="left">
+            <p className="c9-body text-xl leading-relaxed text-slate-800 mb-10">
+              C9 supports Australian businesses across telco, managed IT, cloud, networking and security. Our telco services are designed for businesses that need more than a basic connection — they need the right products, the right setup and a partner who understands the full technology environment.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+               {[
+                 "Australian business support",
+                 "Phone systems and business internet expertise",
+                 "Telco and IT knowledge under one roof",
+                 "Support for office, remote and multi-site teams",
+                 "Practical advice before you commit",
+                 "Help with setup, migration and ongoing service"
+               ].map((point, i) => (
+                 <div key={i} className="flex items-center gap-3">
+                    <CheckCircle size={16} className="text-[#5D00D6] shrink-0" />
+                    <span className="text-[14px] font-bold text-slate-700">{point}</span>
+                 </div>
+               ))}
+            </div>
+         </FadeIn>
+
+         <FadeIn direction="right">
+            <div className="rounded-[40px] overflow-hidden shadow-2xl aspect-[4/3] border border-slate-100">
+               <img 
+                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
+                 alt="C9 operations centre providing local Australian support"
+                 className="w-full h-full object-cover"
+               />
+            </div>
+         </FadeIn>
       </div>
     </div>
   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 7 — PROOF
+   SECTION 10 — FAQ
    ───────────────────────────────────────────────────────── */
-const SectionProof = () => (
-  <section className="py-16 md:py-24 bg-slate-50">
-    <div className={C}>
-       <div className="max-w-3xl mx-auto text-center mb-20">
-          <FadeIn>
-             <span className="c9-eyebrow mb-4">IMPACT REALIZED</span>
-             <h2 className="c9-section-heading">Migration Success & <br /> <span className="text-[#5D00D6]">Rollout Stability.</span></h2>
-             <p className="c9-body mt-6 text-lg">We measure success by outages prevented, migration windows hit, and carrier escalations resolved. Zero-fluff operational outcomes.</p>
-          </FadeIn>
-       </div>
-       
-       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
-          {[
-             { label: 'Migration Outcomes', val: '100%', sub: 'Zero-Downtime Transitions' },
-             { label: 'Carrier Response', val: '-40%', sub: 'Reduction in Resolution Time' },
-             { label: 'Multi-Site Governance', val: '500+', sub: 'Managed Sites Across ANZ' }
-          ].map((stat, i) => (
-             <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100 text-center shadow-sm">
-                <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.2em] mb-4">{stat.label}</div>
-                <div className="text-5xl font-semibold text-[#5D00D6] mb-2">{stat.val}</div>
-                <div className="text-sm font-semibold text-slate-900">{stat.sub}</div>
-             </FadeIn>
-          ))}
-       </div>
+const SectionFAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-       <WpCaseStudies />
+  const faqs = [
+    { q: "What telco products does C9 provide?", a: "C9 provides C9 Phone System, Business nbn, Fast Fibre, Enterprise Ethernet, AI Voice and supporting telco services including Microsoft Teams Calling, SIP trunks, VoIP handsets, number porting, 4G/5G backup, managed routers and multi-site connectivity." },
+    { q: "Does C9 provide business phone systems?", a: "Yes. C9 provides modern business phone systems for office, remote and mobile teams. This can include call routing, voicemail, business numbers, VoIP, SIP, handsets, softphones and Microsoft Teams Calling options." },
+    { q: "Can C9 help with Business nbn?", a: "Yes. C9 can help businesses review available Business nbn options and choose a suitable service based on location, speed needs, usage and support requirements." },
+    { q: "What is Fast Fibre used for?", a: "Fast Fibre is suited to businesses that need higher-speed internet for cloud apps, voice, video calls, file transfers and growing teams that need stronger connectivity than basic services." },
+    { q: "Who is Enterprise Ethernet for?", a: "Enterprise Ethernet is suited to organisations that need scalable, business-grade connectivity for larger offices, multi-site environments, critical cloud systems or higher bandwidth requirements." },
+    { q: "What is AI Voice?", a: "AI Voice helps businesses handle calls smarter with AI-assisted answering, routing, enquiry support and call triage. It can help reduce missed calls and improve response times for busy teams." },
+    { q: "Can C9 help us switch from our current telco provider?", a: "Yes. C9 can review your current phone and internet setup, recommend suitable replacement options and help manage the transition, including setup, number porting and service coordination where required." },
+    { q: "Can we keep our existing business phone numbers?", a: "In many cases, yes. C9 can review your existing numbers and help manage number porting as part of your phone system migration." },
+    { q: "Can C9 support multiple business locations?", a: "Yes. C9 can help businesses standardise phone systems, internet services, backup connectivity and support across multiple offices, branches or sites." },
+    { q: "Is C9 only for large enterprises?", a: "No. C9 works with small businesses, growing companies, new sites, multi-site businesses and larger organisations that need reliable phone, internet and telco support." }
+  ];
+
+  return (
+    <section className="py-20 md:py-32 bg-slate-50 border-y border-slate-100">
+      <div className={C}>
+        <div className="max-w-3xl mb-16 md:mb-24">
+          <FadeIn>
+            <span className="c9-eyebrow mb-4 block">Frequently Asked Questions</span>
+            <h2 className="c9-section-heading mb-6">Common Questions About C9 Telco Services</h2>
+          </FadeIn>
+        </div>
+
+        <div className="max-w-4xl space-y-4">
+          {faqs.map((faq, i) => (
+            <FadeIn key={i} delay={i * 0.05}>
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                <button 
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  className="w-full px-8 py-6 text-left flex items-center justify-between group"
+                >
+                  <span className="text-[17px] font-bold text-slate-900 font-clash">{faq.q}</span>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${openIndex === i ? 'bg-[#5D00D6] text-white rotate-45' : 'bg-slate-50 text-slate-400 group-hover:bg-slate-100'}`}>
+                     <Plus size={20} />
+                  </div>
+                </button>
+                <AnimatePresence>
+                  {openIndex === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="px-8 pb-8 text-slate-600 text-[15px] leading-relaxed border-t border-slate-50 pt-4">
+                        {faq.a}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────
+   SECTION 11 — FINAL CTA / FORM
+   ───────────────────────────────────────────────────────── */
+const FinalCTA = () => {
+   const [formData, setFormData] = useState({
+     firstName: '',
+     lastName: '',
+     email: '',
+     organisation: '',
+     message: '',
+     service: 'Not Sure Yet'
+   });
+   const [isSubmitting, setIsSubmitting] = useState(false);
+   const [isSuccess, setIsSuccess] = useState(false);
+
+   const services = [
+     "C9 Phone System", "Business nbn", "Fast Fibre", "Enterprise Ethernet", 
+     "AI Voice", "Microsoft Teams Calling", "SIP / VoIP", "4G/5G Backup", 
+     "Multi-Site Connectivity", "Switching Provider", "New Site Setup", "Not Sure Yet"
+   ];
+
+   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      const { name, value } = e.target;
+      setFormData(prev => ({ ...prev, [name]: value }));
+   };
+
+   const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      setIsSubmitting(true);
+      try {
+         // Import the server action dynamically to avoid issues if needed, 
+         // but since it's a client component, we should import it at the top.
+         // For now, I'll assume it's imported.
+         const { submitConsultationForm } = await import("@/app/actions/form-actions");
+         const result = await submitConsultationForm({
+            ...formData,
+            path: `Telco: ${formData.service}`,
+            message: `Service Interest: ${formData.service}\n\n${formData.message}`
+         });
+
+         if (result.success) {
+            setIsSuccess(true);
+         }
+      } catch (error) {
+         console.error('Submission error:', error);
+         alert('There was an error sending your request. Please try again later.');
+      } finally {
+         setIsSubmitting(false);
+      }
+   };
+
+   if (isSuccess) {
+      return (
+         <section id="consultation-section" className="py-20 md:py-32 bg-[#E4E0FD] overflow-hidden">
+            <div className={C}>
+               <div className="bg-white rounded-[40px] p-12 md:p-20 shadow-2xl border border-slate-100 text-center max-w-4xl mx-auto">
+                  <div className="w-20 h-20 bg-[#5D00D6] rounded-3xl flex items-center justify-center text-white mb-8 mx-auto shadow-xl shadow-purple-900/20">
+                     <Zap size={40} />
+                  </div>
+                  <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-clash">Request Received</h2>
+                  <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                     Thank you for your telco quote request. A C9 engineer has been notified and will review your requirements. You can expect a response within **2 hours**.
+                  </p>
+                  <C9Button 
+                     onClick={() => setIsSuccess(false)}
+                     size="lg"
+                     className="rounded-full shadow-2xl shadow-purple-900/20 px-12 h-15"
+                  >
+                     Send Another Request
+                  </C9Button>
+               </div>
+            </div>
+         </section>
+      );
+   }
+
+   return (
+     <section id="consultation-section" className="py-20 md:py-32 bg-[#E4E0FD] overflow-hidden">
+       <div className={C}>
+         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24 items-center">
+            <div className="max-w-[580px]">
+               <FadeIn>
+                  <span className="c9-eyebrow !text-white bg-[#0c1024] px-4 py-1.5 rounded-lg mb-8 block w-fit uppercase tracking-widest text-[10px] font-bold">
+                    Ready to Improve Your Business Telco?
+                  </span>
+                  
+                  <h2 className="c9-section-heading text-[#0c1024] mb-8 !text-3xl md:!text-5xl leading-tight">
+                    Get Phone Systems, Business Internet and AI Voice Managed by One Australian Partner
+                  </h2>
+
+                  <p className="c9-body !text-[#0c1024]/70 mb-10 text-lg leading-relaxed">
+                    Tell us what you need help with — C9 Phone System, Business nbn, Fast Fibre, Enterprise Ethernet, AI Voice, backup connectivity, multi-site telco or switching providers. C9 will review your requirements and recommend the right next step.
+                  </p>
+                  
+                  <div className="mb-12">
+                    <p className="text-[20px] sm:text-[24px] font-bold text-[#0c1024] font-clash">
+                      Call us today: <a href="tel:1800000299" className="text-[#5D00D6] hover:text-[#4c00b0] transition-colors decoration-[#5D00D6]/20 underline underline-offset-8">1800 000 299</a>
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                     {[
+                       { title: "Direct Engineer Response", icon: <ShieldCheck size={14} /> },
+                       { title: "2-Hour Response Time", icon: <Clock size={14} /> },
+                       { title: "No confusing telco language", icon: <MessageSquare size={14} /> }
+                     ].map((item, i) => (
+                       <div key={i} className="flex items-center gap-3 text-[#0c1024]/60">
+                          <div className="text-[#5D00D6]">{item.icon}</div>
+                          <span className="text-[12px] font-black uppercase tracking-widest">{item.title}</span>
+                       </div>
+                     ))}
+                  </div>
+               </FadeIn>
+            </div>
+
+            {/* FinalCtaVisual removed as per request */}
+
+
+            <FadeIn delay={0.2}>
+               <div className="bg-white rounded-[40px] p-8 md:p-12 shadow-2xl border border-slate-100">
+                  <div className="mb-8 text-center">
+                     <h3 className="text-2xl font-bold text-slate-900 mb-2 font-clash">Request a Telco Quote</h3>
+                     <p className="text-slate-500 text-sm">Select the service you're interested in below.</p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="space-y-1.5">
+                           <label htmlFor="firstName" className="text-[10px] font-black text-slate-400 uppercase tracking-widest">First Name</label>
+                           <input 
+                              id="firstName"
+                              name="firstName"
+                              type="text" 
+                              required
+                              value={formData.firstName}
+                              onChange={handleInputChange}
+                              placeholder="John" 
+                              className="w-full px-5 py-3 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-sm font-semibold" 
+                           />
+                        </div>
+                        <div className="space-y-1.5">
+                           <label htmlFor="lastName" className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Last Name</label>
+                           <input 
+                              id="lastName"
+                              name="lastName"
+                              type="text" 
+                              required
+                              value={formData.lastName}
+                              onChange={handleInputChange}
+                              placeholder="Doe" 
+                              className="w-full px-5 py-3 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-sm font-semibold" 
+                           />
+                        </div>
+                     </div>
+                     <div className="space-y-1.5">
+                        <label htmlFor="email" className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Work Email</label>
+                        <input 
+                           id="email"
+                           name="email"
+                           type="email" 
+                           required
+                           value={formData.email}
+                           onChange={handleInputChange}
+                           placeholder="john@company.com.au" 
+                           className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-sm font-semibold" 
+                        />
+                     </div>
+                     <div className="space-y-1.5">
+                        <label htmlFor="organisation" className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Organisation</label>
+                        <input 
+                           id="organisation"
+                           name="organisation"
+                           type="text" 
+                           required
+                           value={formData.organisation}
+                           onChange={handleInputChange}
+                           placeholder="Organisation name" 
+                           className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-sm font-semibold" 
+                        />
+                     </div>
+                     <div className="space-y-1.5">
+                        <label htmlFor="service" className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Service Required</label>
+                        <select 
+                           id="service"
+                           name="service"
+                           value={formData.service} 
+                           onChange={handleInputChange}
+                           className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-sm font-semibold appearance-none"
+                        >
+                           {services.map(s => <option key={s} value={s}>{s}</option>)}
+                        </select>
+                     </div>
+                     <div className="space-y-1.5">
+                        <label htmlFor="message" className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Current Setup / Requirements</label>
+                        <textarea 
+                           id="message"
+                           name="message"
+                           required
+                           value={formData.message}
+                           onChange={handleInputChange}
+                           placeholder="Tell us about your current phone system or internet setup..." 
+                           className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:border-[#5D00D6] outline-none transition-all text-sm font-semibold min-h-[120px] resize-none" 
+                        />
+                     </div>
+                     
+                     <div className="pt-4">
+                        <C9Button 
+                           type="submit"
+                           disabled={isSubmitting}
+                           size="lg" 
+                           className="w-full rounded-full shadow-2xl shadow-purple-900/30 h-15 text-lg"
+                        >
+                           {isSubmitting ? "Sending..." : "Request My Telco Quote"}
+                        </C9Button>
+                        <p className="mt-6 text-center text-[12px] font-medium text-slate-400">
+                          No confusing telco language. No pressure. Just clear advice.
+                        </p>
+                     </div>
+                  </form>
+               </div>
+            </FadeIn>
+         </div>
+       </div>
+     </section>
+   );
+};
+
+/* ─────────────────────────────────────────────────────────
+   SECTION — SWITCH STRIP
+   ───────────────────────────────────────────────────────── */
+const SectionStrip = ({ openModal }: { openModal: (name: string, type: any) => void }) => (
+  <section className="bg-[#f0ebff] py-6 px-6">
+    <div className={`${C} flex flex-col sm:flex-row items-center justify-between gap-6`}>
+      <div className="flex items-center gap-5">
+        <div className="w-12 h-12 rounded-2xl bg-white border border-[#5D00D6]/10 flex items-center justify-center shrink-0 shadow-sm">
+          <ArrowRight size={20} className="text-[#5D00D6]" />
+        </div>
+        <div>
+          <p className="text-[13px] font-black uppercase tracking-[0.15em] text-slate-900 mb-1">SWITCH YOUR TELCO TO C9</p>
+          <p className="text-[14px] text-slate-600 leading-snug max-w-xl">
+            Get business phones, internet, fibre and AI Voice supported by one team — without chasing separate providers when something needs fixing.
+          </p>
+        </div>
+      </div>
+      <button
+        onClick={() => openModal('Setup Review Request', 'generic')}
+        className="shrink-0 inline-flex items-center gap-2 bg-[#0c1024] text-white text-[11px] font-black uppercase tracking-[0.2em] px-7 py-4 rounded-full hover:bg-[#5D00D6] transition-colors whitespace-nowrap shadow-md"
+      >
+        Review My Setup <ArrowRight size={14} />
+      </button>
     </div>
   </section>
 );
 
 /* ─────────────────────────────────────────────────────────
-   SECTION 8 — FINAL CTA
+   SECTION 10 — FEATURE BANNER
    ───────────────────────────────────────────────────────── */
-const SectionFinalCTA = () => (
-  <section className="py-12 md:py-24 bg-white px-4 md:px-0">
+const SectionBanner = ({ openModal }: { openModal: (name: string, type: any) => void }) => (
+  <section className="py-12 md:py-24 bg-white">
     <div className={C}>
-       <div className="bg-[#0c1024] rounded-[32px] md:rounded-[40px] p-8 md:p-16 lg:p-24 text-center relative overflow-hidden shadow-2xl border border-white/5">
-          <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} aria-hidden="true" />
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5D00D6]/10 blur-[120px] rounded-full -mr-64 -mt-64" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#a56eff]/5 blur-[100px] rounded-full -ml-48 -mb-48" />
-          
-          <FadeIn className="relative z-10">
-             <h2 className="c9-section-heading !text-white !text-3xl md:!text-4xl lg:!text-5xl mb-10 leading-[1.1] max-w-4xl mx-auto">Bring Connectivity, Voice, Failover, and <br className="hidden md:block" /> Carrier Accountability Under One Managed Partner.</h2>
-             <p className="c9-body !text-white/80 mb-12 md:mb-14 max-w-3xl mx-auto text-[16px] md:text-xl leading-relaxed px-4 md:px-0">
-                C9 helps Australian businesses operate through managed connectivity environments with operational governance, proactive support, escalation ownership, and multi-site consistency. Stop accepting provider finger-pointing.
-             </p>
-             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
+      <div className="bg-[#0c1024] rounded-[48px] overflow-hidden relative min-h-[500px] flex items-center shadow-2xl">
+        <div className="grid lg:grid-cols-2 gap-0 items-stretch w-full">
+          <div className="p-10 md:p-16 lg:p-20 flex flex-col justify-center relative z-10">
+            <FadeIn>
+              <span className="text-emerald-400 font-bold uppercase tracking-[0.2em] text-[11px] mb-6 block">Enterprise Telco Management</span>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight font-clash">
+                BUSINESS TELCO THAT WORKS FROM DAY ONE
+              </h2>
+              <p className="text-white/70 text-lg leading-relaxed mb-12 max-w-xl">
+                Get your phone system, business internet, fibre and AI Voice set up properly — with C9 managing the advice, installation and support behind it.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
                 <C9Button 
-                  size="lg" 
-                  className="w-full sm:w-auto rounded-full shadow-2xl shadow-purple-900/40 h-14 md:h-15 px-8 md:px-10 text-[14px] md:text-lg"
-                  onClick={handleCtaClick}
+                  className="rounded-full h-15 px-10 bg-[#5D00D6] text-white border-none shadow-xl shadow-[#5D00D6]/20"
+                  onClick={() => openModal('Telco Services Inquiry', 'generic')}
                 >
-                  Book a Connectivity Operations Review
+                  Explore C9 Telco Services <ArrowRight className="ml-2" size={16} />
                 </C9Button>
                 <C9Button 
                   variant="outline"
-                  size="lg" 
-                  className="rounded-full border-2 border-white/20 text-white hover:bg-white hover:text-[#0c1024] h-14 md:h-15 px-10 text-[15px] md:text-lg transition-all"
-                  onClick={handleCtaClick}
+                  className="rounded-full h-15 px-10 border-white/20 text-white hover:bg-white hover:text-[#0c1024] transition-all"
+                  onClick={() => openModal('Telco Quote Request', 'generic')}
                 >
-                  Speak With a Connectivity Specialist
+                  Get a Telco Quote <ArrowRight className="ml-2" size={16} />
                 </C9Button>
-             </div>
-          </FadeIn>
-       </div>
+              </div>
+            </FadeIn>
+          </div>
+          <div className="relative hidden lg:block min-h-[500px]">
+            <img 
+              src="/Enterprise Ethernet_Telco.png" 
+              alt="C9 Enterprise Ethernet" 
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            {/* Gradient overlay to blend the image into the dark text area */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0c1024] via-[#0c1024]/20 to-transparent" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 );
 
 export default function TelcoPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeProduct, setActiveProduct] = useState({ name: '', type: 'generic' as any });
+
+  const openModal = (name: string, type: 'phone' | 'internet' | 'ai' | 'generic') => {
+    setActiveProduct({ name, type });
+    setModalOpen(true);
+  };
+
+  const telcoCards = [
+    {
+      title: 'C9 Phone System',
+      descriptor: 'A modern business phone system for office, remote and mobile teams. Manage calls, users, voicemail, call routing and business numbers through a flexible cloud-based setup that can grow with your organisation.',
+      image: '/images/realistic_business_voice_poly_yealink_1776077360073.png',
+      imageAlt: 'C9 Phone System interface and management',
+      link: '/telco/phone-system',
+      tag: 'Voice',
+    },
+    {
+      title: 'Business nbn',
+      descriptor: 'Reliable business internet for everyday operations, cloud apps, EFTPOS, video calls, email, browsing and office connectivity. C9 helps you choose the right Business nbn option based on your location, speed requirements and usage.',
+      image: '/images/nbn-feature.png',
+      imageAlt: 'Business nbn connectivity',
+      link: '/telco/business-nbn',
+      tag: 'Internet',
+    },
+    {
+      title: 'Fast Fibre',
+      descriptor: 'High-speed fibre internet for businesses that need faster, more reliable connectivity than standard internet services. Fast Fibre is suited to teams using cloud platforms, voice, video, large file transfers and business-critical online systems.',
+      image: '/images/fibre-feature.png',
+      imageAlt: 'Fast Fibre high speed connection',
+      link: '/telco/fast-fibre',
+      tag: 'Fiber',
+    },
+    {
+      title: 'Enterprise Ethernet',
+      descriptor: 'Enterprise-grade connectivity for organisations that need stronger performance, scalable bandwidth and dependable business internet across critical environments. Ideal for larger offices, multi-site businesses and companies with high connectivity demands.',
+      image: '/images/realistic_business_networking_rack_1776077491291.png',
+      imageAlt: 'Enterprise Ethernet network nodes',
+      link: '/telco/enterprise-ethernet',
+      tag: 'Networking',
+    },
+    {
+      title: 'AI Voice',
+      descriptor: 'AI Voice helps businesses handle calls smarter with AI-assisted call answering, routing, enquiry handling and customer interaction support. It can help reduce missed calls, improve response times and support teams that receive regular customer enquiries.',
+      image: '/images/voice_ai_realistic_dashboard.jpg',
+      imageAlt: 'AI Voice assistant workflows',
+      link: '/telco/ai-voice',
+      tag: 'AI Voice',
+    },
+  ];
 
   return (
-    <main className="bg-white">
-      <Hero onOpenModal={() => setIsModalOpen(true)} />
-      
-      <div className="py-12 border-y border-slate-50">
-        <WpClientTicker />
-      </div>
+    <main className="bg-white selection:bg-[#5D00D6]/10 selection:text-[#5D00D6]">
+      <Hero openModal={openModal} />
+      <SectionStrip openModal={openModal} />
 
-      <SectionTension />
-      <SectionCapabilities />
-      
-      <section className="relative py-16 md:py-28 bg-white overflow-hidden border-y border-slate-50">
-         <div 
-            className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-            style={{ 
-               backgroundImage: 'radial-gradient(#5D00D6 1px, transparent 1px)', 
-               backgroundSize: '40px 40px' 
-            }} 
-         />
-         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#5D00D6]/5 blur-[120px] rounded-full pointer-events-none" />
-         
-         <div className={`${C} relative z-10 text-center`}>
-            <FadeIn>
-               <span className="c9-eyebrow mb-6 inline-block">Accountability Shift</span>
-               <h3 className="c9-section-heading !text-3xl md:!text-5xl mb-10 max-w-4xl mx-auto leading-tight">
-                  Most Providers Stop at Provisioning. <br /> 
-                  <span className="text-[#5D00D6]">C9 Stays Operationally Accountable.</span>
-               </h3>
-               <p className="c9-body mb-12 max-w-2xl mx-auto text-slate-700">
-                  Stop accepting carrier finger-pointing as a cost of doing business. Partner with an operational leader who owns the outcome from rollout to resolution.
-               </p>
-               <C9Button 
-                  size="lg" 
-                  className="rounded-full shadow-xl shadow-purple-900/20 h-15 px-10 text-lg" 
-                  onClick={handleCtaClick}
-               >
-                  Review My Current Environment
-               </C9Button>
-            </FadeIn>
-         </div>
-      </section>
+      <WpCapabilityNavigator 
+        eyebrow="Managed Operational Capabilities"
+        headline="Phone, Internet, and AI Managed as a Single Controlled System."
+        subtext="From cloud phone systems and business internet to managed fibre and AI voice automation — C9 handles every operational layer with a single point of accountability."
+        cards={telcoCards}
+        ctaLabel=""
+        ctaHref=""
+      />
 
-      <SectionHowItWorks />
-      <SectionQualification />
-      <SectionGovernance />
-      <SectionProof />
-      
-      <WpFAQAndFeedback />
+      <SectionBanner openModal={openModal} />
 
-      <section id="consultation-section" className="bg-slate-50">
-        <WpConsultationForm 
-          eyebrow="READY TO GOVERN YOUR CONNECTIVITY?"
-          title="Connectivity Operations Review"
-          description="We'll audit your current internet and voice setup, identify single points of failure, and show you exactly how to build a resilient, always-on communications ecosystem."
-          formTitle="Request Connectivity Audit"
-        />
-      </section>
+      <SupportingServices openModal={openModal} />
+      <SectionScenarios openModal={openModal} />
+      <SectionComparison openModal={openModal} />
+      <SectionTrust />
+      <SectionFAQ />
+      <FinalCTA />
 
-      <SectionFinalCTA />
-
-      <LeadCaptureModal 
-        isOpen={isModalOpen} 
-        onOpenChange={setIsModalOpen} 
+      <TelcoProductModal 
+        isOpen={modalOpen} 
+        onOpenChange={setModalOpen} 
+        productName={activeProduct.name} 
+        productType={activeProduct.type} 
       />
     </main>
   );

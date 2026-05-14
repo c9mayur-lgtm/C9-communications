@@ -126,10 +126,10 @@ const MobileCard = ({ card }: { card: CapabilityCard }) => (
       <h3 className="text-[18px] font-semibold text-white leading-tight tracking-tight mb-1.5">
         {card.title}
       </h3>
-      <p className="text-[12px] text-white/55 leading-relaxed mb-4 line-clamp-2">
+      <p className="text-[12px] text-white/90 leading-relaxed mb-4 line-clamp-2">
         {card.descriptor}
       </p>
-      <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60">
+      <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
         Learn more <ArrowRight size={11} />
       </span>
     </div>
@@ -273,12 +273,12 @@ const DesktopAccordion = ({
                   <h3 className="text-[22px] font-semibold text-white leading-tight tracking-tight mb-2">
                     {card.title}
                   </h3>
-                  <p className="text-[13px] text-white/55 leading-relaxed mb-5 max-w-[300px]">
+                  <p className="text-[13px] text-white/90 leading-relaxed mb-5 max-w-[300px]">
                     {card.descriptor}
                   </p>
                   <Link
                     href={card.link}
-                    className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70 hover:text-white transition-colors group/link"
+                    className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white hover:text-white transition-colors group/link"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Learn more
@@ -340,14 +340,15 @@ export const WpCapabilityNavigator = ({
             <h2 className="c9-section-heading text-[#0c1024] leading-[1.1] mb-4 md:mb-5">{headline}</h2>
             <p className="text-[14px] md:text-[15px] text-slate-500 leading-relaxed max-w-[560px]">{subtext}</p>
           </div>
-          {/* Desktop CTA */}
-          <Link
-            href={ctaHref}
-            className="hidden md:flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 hover:text-[#5D00D6] transition-colors flex-shrink-0 group"
-          >
-            {ctaLabel}
-            <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-200" />
-          </Link>
+          {ctaLabel && (
+            <Link
+              href={ctaHref}
+              className="hidden md:flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 hover:text-[#5D00D6] transition-colors flex-shrink-0 group"
+            >
+              {ctaLabel}
+              <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-200" />
+            </Link>
+          )}
         </div>
       </div>
 
@@ -395,14 +396,16 @@ export const WpCapabilityNavigator = ({
         </div>
 
         {/* Mobile CTA */}
-        <div className="flex justify-center mt-8 px-6">
-          <Link
-            href={ctaHref}
-            className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 hover:text-[#5D00D6] transition-colors"
-          >
-            {ctaLabel} <ArrowRight size={13} />
-          </Link>
-        </div>
+        {ctaLabel && (
+          <div className="flex justify-center mt-8 px-6">
+            <Link
+              href={ctaHref}
+              className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 hover:text-[#5D00D6] transition-colors"
+            >
+              {ctaLabel} <ArrowRight size={13} />
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* ── DESKTOP: Accordion Strip ────────────────────────── */}
