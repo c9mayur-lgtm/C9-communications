@@ -79,7 +79,7 @@ const FadeIn = ({
 /* ─────────────────────────────────────────────────────────
    SECTION 1 — HERO
    ───────────────────────────────────────────────────────── */
-const Hero = () => (
+const Hero = ({ onOpenModal }: { onOpenModal: () => void }) => (
   <section className="relative overflow-hidden bg-white pt-10 pb-20 lg:pt-16 lg:pb-32">
     <div
       className="pointer-events-none absolute inset-0 opacity-[0.025]"
@@ -125,9 +125,9 @@ const Hero = () => (
                 variant="outline"
                 size="lg" 
                 className="rounded-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all h-14 px-8"
-                onClick={handleCtaClick}
+                onClick={onOpenModal}
               >
-                Replace My Current Provider
+                Download Connectivity Report
               </C9Button>
             </div>
           </FadeIn>
@@ -551,9 +551,11 @@ const SectionFinalCTA = () => (
 );
 
 export default function TelcoPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="bg-white">
-      <Hero />
+      <Hero onOpenModal={() => setIsModalOpen(true)} />
       
       <div className="py-12 border-y border-slate-50">
         <WpClientTicker />
@@ -610,6 +612,11 @@ export default function TelcoPage() {
       </section>
 
       <SectionFinalCTA />
+
+      <LeadCaptureModal 
+        isOpen={isModalOpen} 
+        onOpenChange={setIsModalOpen} 
+      />
     </main>
   );
 }

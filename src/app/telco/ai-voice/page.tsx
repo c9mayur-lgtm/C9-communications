@@ -37,6 +37,8 @@ import { WpClientTicker } from '@/components/wordpress/WpClientTicker';
 import { ContinueJourney } from '@/components/sections/ContinueJourney';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { WpConsultationForm } from '@/components/wordpress/WpConsultationForm';
+import { LeadCaptureModal } from '@/components/modals/LeadCaptureModal';
+import { useState } from 'react';
 
 /* ─────────────────────────────────────────────────────────
    ANIMATION HELPER
@@ -169,6 +171,8 @@ const AiVoiceHeroVisual = () => (
 );
 
 export default function AiVoicePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-white">
       
@@ -200,11 +204,13 @@ export default function AiVoicePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                 <Link href="#consultation-section" className="w-full sm:w-auto">
-                    <C9Button size="lg" className="w-full bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all hover:scale-[1.02]">
-                      Review My AI Voice Use Cases
-                    </C9Button>
-                 </Link>
+                 <C9Button 
+                   size="lg" 
+                   className="w-full sm:w-auto bg-[#5D00D6] hover:bg-[#4d00b3] text-white px-8 h-14 text-[14px] font-bold rounded-full shadow-xl shadow-purple-900/20 transition-all hover:scale-[1.02]"
+                   onClick={() => setIsModalOpen(true)}
+                 >
+                   Download AI Voice Revolution Report
+                 </C9Button>
                  <Link href="#how-it-works" className="w-full sm:w-auto">
                     <C9Button variant="outline" size="lg" className="w-full border-2 border-[#5D00D6] text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white px-8 h-14 text-[14px] font-bold rounded-full transition-all">
                       See How AI Voice Works
@@ -677,6 +683,19 @@ export default function AiVoicePage() {
         />
       </div>
 
+      <LeadCaptureModal 
+        isOpen={isModalOpen} 
+        onOpenChange={setIsModalOpen} 
+        config={{
+          leftBg: 'bg-gradient-to-br from-[#0c1024] to-[#5D00D6]',
+          title: 'The AI Voice Revolution',
+          subtitle: 'Automating Enterprise Communications for 2026',
+          image: '/c9_ai_voice_revolution_cover_1778738324661.png',
+          formTitle: 'Wait, before you go!',
+          formSubtitle: 'Interested to learn how AI Voice is going to change CX in 2026? Download our new report.',
+          ctaLabel: 'Download AI Report'
+        }}
+      />
     </main>
   );
 }
