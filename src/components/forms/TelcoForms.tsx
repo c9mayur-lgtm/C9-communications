@@ -20,7 +20,7 @@ const SuccessState = ({ onReset }: { onReset: () => void }) => (
     </div>
     <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 font-clash">Request Received</h3>
     <p className="text-slate-600 mb-10 max-w-sm mx-auto leading-relaxed">
-      Thank you. A C9 telco engineer will review your requirements and respond within **2 hours**.
+      Thanks. We’ve got your details. A C9 engineer is already looking into it and will get back to you within 2 hours with a clear plan.
     </p>
     <C9Button onClick={onReset} size="lg" className="rounded-full px-12">
       Send Another Request
@@ -43,7 +43,7 @@ const FormFooter = ({ isSubmitting, ctaText }: { isSubmitting: boolean; ctaText:
         <span className="flex items-center gap-1.5 whitespace-nowrap"><Shield size={12} className="text-[#5D00D6]" /> Engineer Review</span>
         <span className="flex items-center gap-1.5 whitespace-nowrap"><Clock size={12} className="text-[#5D00D6]" /> 2H Response</span>
       </div>
-      <p className="text-[12px] text-slate-400 font-medium text-center">No sales pressure. Just direct technical advice.</p>
+      <p className="text-[12px] text-slate-400 font-medium text-center">No confusing jargon. No pressure. Just practical help.</p>
     </div>
   </div>
 );

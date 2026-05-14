@@ -230,8 +230,8 @@ export default function AiVoicePage() {
           </FadeIn>
 
           <FadeIn direction="right" className="flex items-center justify-center mt-12 lg:mt-0 w-full">
-            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
-              <AiVoiceHeroVisual />
+            <div className="relative w-full aspect-[4/3] sm:aspect-video lg:aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl border border-slate-100">
+              <img src="/Media.jpg" alt="AI Voice" className="w-full h-full object-cover" />
             </div>
           </FadeIn>
         </div>

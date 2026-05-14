@@ -85,7 +85,7 @@ export const WpSupport = () => {
           </div>
           <div className="relative">
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl relative">
-              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2000" alt="Customer Care" className="w-full h-full object-cover" />
+              <img src="/Support.png" alt="Customer Care" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-[#5D00D6]/10 mix-blend-overlay" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0c1024]/40 via-transparent to-transparent opacity-60" />
             </div>
