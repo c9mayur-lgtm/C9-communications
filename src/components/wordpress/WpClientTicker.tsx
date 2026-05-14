@@ -67,7 +67,7 @@ export const WpClientTicker = ({
       `}</style>
 
       {/* Ticker Title */}
-      <div className="container mx-auto px-6 mb-12 text-center">
+      <div className="container mx-auto px-6 max-w-[1240px] mb-12 text-center">
         <span className="c9-eyebrow !text-[#6B7280]">Trust Infrastructure & Enterprise Partners</span>
       </div>
 

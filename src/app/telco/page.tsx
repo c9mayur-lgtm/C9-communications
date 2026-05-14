@@ -48,7 +48,7 @@ import {
   TableCell 
 } from "@/components/ui/table";
 
-const C = "container mx-auto px-6 md:px-8 max-w-[1400px]";
+const C = "container mx-auto px-6 md:px-8 max-w-[1240px]";
 
 const FadeIn = ({
   children,
@@ -80,7 +80,7 @@ const FadeIn = ({
    SECTION 1 — HERO
    ───────────────────────────────────────────────────────── */
 const Hero = () => (
-  <section className="relative overflow-hidden bg-white pt-8 pb-16 lg:pt-12 lg:pb-24">
+  <section className="relative overflow-hidden bg-white pt-10 pb-20 lg:pt-16 lg:pb-32">
     <div
       className="pointer-events-none absolute inset-0 opacity-[0.025]"
       style={{
@@ -149,8 +149,8 @@ const Hero = () => (
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.4} direction="right" className="relative hidden lg:block">
-          <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-8 border-white">
+        <FadeIn delay={0.4} direction="right" className="relative mt-16 lg:mt-0 w-full">
+          <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[16/10] sm:aspect-[4/3] border-4 md:border-8 border-white">
             <img 
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop" 
               alt="Australian operations team managing business connectivity and voice environments across multiple sites"
@@ -159,7 +159,7 @@ const Hero = () => (
             <div className="absolute inset-0 bg-gradient-to-t from-[#0c1024]/40 to-transparent" />
           </div>
           
-          <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 z-20 max-w-[280px]">
+          <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-5 md:p-6 rounded-2xl shadow-2xl border border-slate-100 z-20 max-w-[240px] md:max-w-[280px]">
              <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
                    <Activity size={20} />
@@ -178,19 +178,19 @@ const Hero = () => (
    SECTION 2 — COMMERCIAL TENSION
    ───────────────────────────────────────────────────────── */
 const SectionTension = () => (
-  <section className="py-24 bg-slate-50 border-y border-slate-100">
+  <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
     <div className={C}>
       <div className="max-w-3xl mb-20 text-center mx-auto">
         <FadeIn>
           <span className="c9-eyebrow mb-4">Why Businesses Replace Their Existing Providers</span>
-          <h2 className="c9-section-heading">Operational Vulnerability & <br /> <span className="text-red-600">Provider Blame-Shifting.</span></h2>
+          <h2 className="c9-section-heading px-4 md:px-0">Operational Vulnerability & <br className="hidden md:block" /> <span className="text-red-600">Provider Blame-Shifting.</span></h2>
           <p className="c9-body mt-6 text-lg text-slate-800">
             Standard carriers provision lines and then step back. When outages hit, you are left in the middle of a vendor dispute while your revenue stops. C9 replaces generic telcos with absolute operational accountability.
           </p>
         </FadeIn>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {[
           { title: "Internet outages impacting operations", icon: <Wifi className="text-red-600" size={24} /> },
           { title: "Teams and voice instability", icon: <PhoneCall className="text-red-600" size={24} /> },
@@ -294,9 +294,9 @@ const SectionCapabilities = () => {
    SECTION 4 — QUALIFICATION
    ───────────────────────────────────────────────────────── */
 const SectionQualification = () => (
-  <section className="py-24 bg-white">
+  <section className="py-16 md:py-24 bg-white">
     <div className={C}>
-      <div className="max-w-3xl mb-20">
+      <div className="max-w-3xl mb-12 md:mb-20">
         <FadeIn>
           <span className="c9-eyebrow mb-4">Environment Qualification</span>
           <h2 className="c9-section-heading">Which Environment Are You Managing?</h2>
@@ -306,7 +306,7 @@ const SectionQualification = () => (
         </FadeIn>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
         {[
           { title: "Opening a New Site", desc: "Greenfield rollout governance from planning to opening day." },
           { title: "Replacing Existing Providers", desc: "Structured migration of internet and voice with zero downtime." },
@@ -316,7 +316,7 @@ const SectionQualification = () => (
           { title: "Scaling Enterprise Operations", desc: "Managed governance for high-growth, high-execution firms." }
         ].map((item, i) => (
           <FadeIn key={i} delay={i * 0.1}>
-            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 hover:border-[#5D00D6]/20 transition-all h-full group flex flex-col">
+            <div className="bg-slate-50 p-7 md:p-10 rounded-[24px] md:rounded-3xl border border-slate-100 hover:border-[#5D00D6]/20 transition-all h-full group flex flex-col">
               <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#5D00D6] transition-colors">{item.title}</h3>
               <p className="text-slate-700 text-sm leading-relaxed flex-grow">{item.desc}</p>
             </div>
@@ -341,11 +341,11 @@ const SectionQualification = () => (
    SECTION 5 — HOW WE OPERATE
    ───────────────────────────────────────────────────────── */
 const SectionHowItWorks = () => (
-  <section className="py-24 bg-[#0c1024] text-white relative overflow-hidden">
+  <section className="py-16 md:py-24 bg-[#0c1024] text-white relative overflow-hidden">
     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#5D00D6]/5 blur-[120px] rounded-full" />
     <div className={C}>
-      <div className="grid lg:grid-cols-[1fr_1.5fr] gap-20 items-start">
-        <div className="sticky top-32">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20 items-start">
+        <div className="lg:sticky lg:top-32 mb-12 lg:mb-0">
           <FadeIn>
             <span className="c9-eyebrow !text-[#a56eff] mb-4">Operational Process</span>
             <h2 className="c9-section-heading !text-white mb-8">How C9 Operates. <br /> <span className="text-white/40">Absolute Accountability.</span></h2>
@@ -413,9 +413,9 @@ const SectionHowItWorks = () => (
    SECTION 6 — RESPONSIBILITY MATRIX
    ───────────────────────────────────────────────────────── */
 const SectionGovernance = () => (
-  <section className="py-24 bg-white overflow-hidden">
+  <section className="py-16 md:py-24 bg-white overflow-hidden">
     <div className={C}>
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         <FadeIn direction="left">
            <span className="c9-eyebrow mb-4">Operational Governance</span>
            <h2 className="c9-section-heading mb-8">Most Providers Provision. <br /> <span className="text-[#5D00D6]">We Operate.</span></h2>
@@ -442,7 +442,7 @@ const SectionGovernance = () => (
         </FadeIn>
 
         <FadeIn direction="right" className="relative">
-           <div className="bg-slate-50 rounded-3xl p-10 md:p-12 border border-slate-200 shadow-xl">
+           <div className="bg-slate-50 rounded-[32px] p-7 md:p-10 lg:p-12 border border-slate-200 shadow-xl">
               <h3 className="text-2xl font-bold mb-8 text-slate-900">Uptime SLA Targets</h3>
               <div className="space-y-8">
                  {[
@@ -465,14 +465,11 @@ const SectionGovernance = () => (
                    </div>
                  ))}
               </div>
-              <div className="mt-12 pt-8 border-t border-slate-200 flex items-center justify-between">
+              <div className="mt-12 pt-8 border-t border-slate-200">
                  <div>
                     <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Historical Uptime</div>
                     <div className="text-3xl font-black text-[#5D00D6]">99.99%</div>
                  </div>
-                 <C9Button variant="outline" size="sm" className="rounded-full" onClick={handleCtaClick}>
-                    View Live Dashboard
-                 </C9Button>
               </div>
            </div>
         </FadeIn>
@@ -485,7 +482,7 @@ const SectionGovernance = () => (
    SECTION 7 — PROOF
    ───────────────────────────────────────────────────────── */
 const SectionProof = () => (
-  <section className="py-24 bg-slate-50">
+  <section className="py-16 md:py-24 bg-slate-50">
     <div className={C}>
        <div className="max-w-3xl mx-auto text-center mb-20">
           <FadeIn>
@@ -495,13 +492,13 @@ const SectionProof = () => (
           </FadeIn>
        </div>
        
-       <div className="grid md:grid-cols-3 gap-8 mb-20">
+       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
           {[
              { label: 'Migration Outcomes', val: '100%', sub: 'Zero-Downtime Transitions' },
              { label: 'Carrier Response', val: '-40%', sub: 'Reduction in Resolution Time' },
              { label: 'Multi-Site Governance', val: '500+', sub: 'Managed Sites Across ANZ' }
           ].map((stat, i) => (
-             <FadeIn key={i} delay={i * 0.1} className="bg-white p-10 rounded-3xl border border-slate-100 text-center shadow-sm">
+             <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 md:p-10 rounded-2xl md:rounded-3xl border border-slate-100 text-center shadow-sm">
                 <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.2em] mb-4">{stat.label}</div>
                 <div className="text-5xl font-semibold text-[#5D00D6] mb-2">{stat.val}</div>
                 <div className="text-sm font-semibold text-slate-900">{stat.sub}</div>
@@ -518,22 +515,22 @@ const SectionProof = () => (
    SECTION 8 — FINAL CTA
    ───────────────────────────────────────────────────────── */
 const SectionFinalCTA = () => (
-  <section className="py-24 bg-white">
+  <section className="py-12 md:py-24 bg-white px-4 md:px-0">
     <div className={C}>
-       <div className="bg-[#0c1024] rounded-[40px] p-12 lg:p-24 text-center relative overflow-hidden shadow-2xl border border-white/5">
+       <div className="bg-[#0c1024] rounded-[32px] md:rounded-[40px] p-8 md:p-16 lg:p-24 text-center relative overflow-hidden shadow-2xl border border-white/5">
           <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#5D00D6 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} aria-hidden="true" />
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#5D00D6]/10 blur-[120px] rounded-full -mr-64 -mt-64" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#a56eff]/5 blur-[100px] rounded-full -ml-48 -mb-48" />
           
           <FadeIn className="relative z-10">
              <h2 className="c9-section-heading !text-white !text-3xl md:!text-4xl lg:!text-5xl mb-10 leading-[1.1] max-w-4xl mx-auto">Bring Connectivity, Voice, Failover, and <br className="hidden md:block" /> Carrier Accountability Under One Managed Partner.</h2>
-             <p className="c9-body !text-white/80 mb-14 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
+             <p className="c9-body !text-white/80 mb-12 md:mb-14 max-w-3xl mx-auto text-[16px] md:text-xl leading-relaxed px-4 md:px-0">
                 C9 helps Australian businesses operate through managed connectivity environments with operational governance, proactive support, escalation ownership, and multi-site consistency. Stop accepting provider finger-pointing.
              </p>
-             <div className="flex flex-col sm:flex-row gap-6 justify-center">
+             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
                 <C9Button 
                   size="lg" 
-                  className="rounded-full shadow-2xl shadow-purple-900/40 h-14 md:h-15 px-10 text-[15px] md:text-lg"
+                  className="w-full sm:w-auto rounded-full shadow-2xl shadow-purple-900/40 h-14 md:h-15 px-8 md:px-10 text-[14px] md:text-lg"
                   onClick={handleCtaClick}
                 >
                   Book a Connectivity Operations Review
@@ -565,7 +562,7 @@ export default function TelcoPage() {
       <SectionTension />
       <SectionCapabilities />
       
-      <section className="relative py-28 bg-white overflow-hidden border-y border-slate-50">
+      <section className="relative py-16 md:py-28 bg-white overflow-hidden border-y border-slate-50">
          <div 
             className="absolute inset-0 opacity-[0.03] pointer-events-none" 
             style={{ 

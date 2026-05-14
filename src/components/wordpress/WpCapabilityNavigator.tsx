@@ -333,7 +333,7 @@ export const WpCapabilityNavigator = ({
       />
 
       {/* ── Section Header ─────────────────────────────────── */}
-      <div className="container mx-auto px-6 md:px-8 max-w-[1400px] mb-10 md:mb-12">
+      <div className="container mx-auto px-6 md:px-8 max-w-[1240px] mb-10 md:mb-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
           <div className="max-w-2xl">
             <span className="c9-eyebrow !text-[#5D00D6] mb-3 md:mb-4 block">{eyebrow}</span>
@@ -406,7 +406,7 @@ export const WpCapabilityNavigator = ({
       </div>
 
       {/* ── DESKTOP: Accordion Strip ────────────────────────── */}
-      <div className="hidden md:block px-6 md:px-8 max-w-[1400px] mx-auto">
+      <div className="hidden md:block px-6 md:px-8 max-w-[1240px] mx-auto">
         <DesktopAccordion
           cards={cards}
           activeIndex={activeIndex}

@@ -100,14 +100,14 @@ const AiVoiceHeroVisual = () => (
       {/* Rotating Nodes */}
       <motion.div 
         className="absolute inset-0 z-10"
-        animate={{ rotate: 360 }}
+        animate={{ rotate: [0, 360] }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       >
         {[
-          { icon: PhoneCall, degree: 0, label: 'Voice' },
-          { icon: MessageSquare, degree: 90, label: 'Logic' },
-          { icon: Users, degree: 180, label: 'Team' },
-          { icon: Database, degree: 270, label: 'CRM' }
+          { icon: MessageSquare, degree: 0, label: 'Logic' },
+          { icon: Users, degree: 90, label: 'Team' },
+          { icon: Database, degree: 180, label: 'CRM' },
+          { icon: PhoneCall, degree: 270, label: 'Voice' }
         ].map((node, i) => (
           <div 
             key={i} 
@@ -116,11 +116,11 @@ const AiVoiceHeroVisual = () => (
           >
             <motion.div 
               className="w-12 h-12 -ml-6 -mt-6 rounded-2xl bg-white shadow-xl border border-slate-100 flex items-center justify-center text-[#5D00D6]"
-              animate={{ rotate: -360 }}
+              animate={{ rotate: [-node.degree, -360 - node.degree] }}
               transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
               whileHover={{ scale: 1.2, color: '#0c1024' }}
             >
-              <node.icon size={20} />
+              <node.icon size={20} style={{ transform: 'rotate(0deg)' }} />
             </motion.div>
           </div>
         ))}
@@ -173,7 +173,7 @@ export default function AiVoicePage() {
     <main className="min-h-screen bg-white">
       
       {/* 1. HERO SECTION */}
-      <Section bg="white" className="pt-12 pb-10 md:pt-16 md:pb-12 overflow-hidden border-b border-slate-100 relative">
+      <Section bg="white" className="pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden border-b border-slate-100 relative">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[120px] -mr-32 -mt-32 opacity-60 pointer-events-none" />
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.02]"
@@ -223,8 +223,8 @@ export default function AiVoicePage() {
             </div>
           </FadeIn>
 
-          <FadeIn direction="right" className="hidden lg:flex items-center justify-center">
-            <div className="relative w-full h-[500px]">
+          <FadeIn direction="right" className="flex items-center justify-center mt-12 lg:mt-0 w-full">
+            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
               <AiVoiceHeroVisual />
             </div>
           </FadeIn>
@@ -611,7 +611,7 @@ export default function AiVoicePage() {
       </Section>
 
       {/* 10. FINAL CTA SECTION */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-slate-100" />
         <div className="container mx-auto px-6 md:px-8 max-w-[1240px] text-center relative z-10">
           <FadeIn>
@@ -623,13 +623,13 @@ export default function AiVoicePage() {
                C9 helps Australian businesses implement managed AI Voice workflows that scale communication capacity while protecting customer experience and business continuity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="#consultation-section">
-                <C9Button size="lg" className="bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-10 h-16 text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
+              <Link href="#consultation-section" className="w-full sm:w-auto">
+                <C9Button size="lg" className="w-full bg-[#5D00D6] text-white hover:bg-[#4d00b3] px-8 md:px-10 h-14 md:h-16 text-[14px] md:text-[15px] font-bold rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 border-none">
                   Book an AI Voice Strategy Review
                 </C9Button>
               </Link>
-              <Link href="#consultation-section">
-                <C9Button variant="outline" size="lg" className="border-2 border-slate-200 text-[#0c1024] hover:bg-slate-50 px-10 h-16 text-[15px] font-bold rounded-full transition-all">
+              <Link href="#consultation-section" className="w-full sm:w-auto">
+                <C9Button variant="outline" size="lg" className="w-full border-2 border-slate-200 text-[#0c1024] hover:bg-slate-50 px-8 md:px-10 h-14 md:h-16 text-[14px] md:text-[15px] font-bold rounded-full transition-all">
                   Review AI Voice Opportunities
                 </C9Button>
               </Link>

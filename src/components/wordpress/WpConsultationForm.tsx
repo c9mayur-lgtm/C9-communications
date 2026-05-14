@@ -35,7 +35,7 @@ export const WpConsultationForm = ({
   return (
     <section 
       id="consultation-section" 
-      className="bg-[#E4E0FD] py-8 md:py-12 overflow-hidden" 
+      className="bg-[#E4E0FD] py-16 md:py-24 overflow-hidden" 
     >
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
