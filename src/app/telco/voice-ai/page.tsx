@@ -130,7 +130,7 @@ export default function VoiceAiPage() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="c9-hero-title font-proxima font-bold text-white mb-8 max-w-4xl">
+              <h1 className="font-proxima font-bold text-white leading-[1.05] tracking-[-0.05em] text-[clamp(32px,8vw,56px)] mb-8 max-w-4xl">
                 Enterprise-Ready <span className="text-[#5D00D6]">Voice AI Agents</span> for Automated Calls.
               </h1>
             </FadeIn>
