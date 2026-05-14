@@ -1319,7 +1319,7 @@ export default function TelcoPage() {
     {
       title: 'AI Voice',
       descriptor: 'AI Voice helps businesses handle calls smarter with AI-assisted call answering, routing, enquiry handling and customer interaction support. It can help reduce missed calls, improve response times and support teams that receive regular customer enquiries.',
-      image: '/media.jpg',
+      image: '/Media.jpg',
       imageAlt: 'AI Voice assistant workflows',
       link: '/telco/ai-voice',
       tag: 'AI Voice',
