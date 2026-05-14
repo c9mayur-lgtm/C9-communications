@@ -693,70 +693,18 @@ const SectionTrust = () => (
   </section>
 );
 
-/* ─────────────────────────────────────────────────────────
-   SECTION 10 — FAQ
-   ───────────────────────────────────────────────────────── */
-const SectionFAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const faqs = [
-    { q: "What telco products does C9 provide?", a: "C9 provides C9 Phone System, Business nbn, Fast Fibre, Enterprise Ethernet, AI Voice and supporting telco services including Microsoft Teams Calling, SIP trunks, VoIP handsets, number porting, 4G/5G backup, managed routers and multi-site connectivity." },
-    { q: "Does C9 provide business phone systems?", a: "Yes. C9 provides modern business phone systems for office, remote and mobile teams. This can include call routing, voicemail, business numbers, VoIP, SIP, handsets, softphones and Microsoft Teams Calling options." },
-    { q: "Can C9 help with Business nbn?", a: "Yes. C9 can help businesses review available Business nbn options and choose a suitable service based on location, speed needs, usage and support requirements." },
-    { q: "What is Fast Fibre used for?", a: "Fast Fibre is suited to businesses that need higher-speed internet for cloud apps, voice, video calls, file transfers and growing teams that need stronger connectivity than basic services." },
-    { q: "Who is Enterprise Ethernet for?", a: "Enterprise Ethernet is suited to organisations that need scalable, business-grade connectivity for larger offices, multi-site environments, critical cloud systems or higher bandwidth requirements." },
-    { q: "What is AI Voice?", a: "AI Voice helps businesses handle calls smarter with AI-assisted answering, routing, enquiry support and call triage. It can help reduce missed calls and improve response times for busy teams." },
-    { q: "Can C9 help us switch from our current telco provider?", a: "Yes. C9 can review your current phone and internet setup, recommend suitable replacement options and help manage the transition, including setup, number porting and service coordination where required." },
-    { q: "Can we keep our existing business phone numbers?", a: "In many cases, yes. C9 can review your existing numbers and help manage number porting as part of your phone system migration." },
-    { q: "Can C9 support multiple business locations?", a: "Yes. C9 can help businesses standardise phone systems, internet services, backup connectivity and support across multiple offices, branches or sites." },
-    { q: "Is C9 only for large enterprises?", a: "No. C9 works with small businesses, growing companies, new sites, multi-site businesses and larger organisations that need reliable phone, internet and telco support." }
-  ];
-
-  return (
-    <section className="py-20 md:py-32 bg-slate-50 border-y border-slate-100">
-      <div className={C}>
-        <div className="max-w-3xl mb-16 md:mb-24">
-          <FadeIn>
-            <span className="c9-eyebrow mb-4 block">Frequently Asked Questions</span>
-            <h2 className="c9-section-heading mb-6">Common Questions About C9 Telco Services</h2>
-          </FadeIn>
-        </div>
-
-        <div className="max-w-4xl space-y-4">
-          {faqs.map((faq, i) => (
-            <FadeIn key={i} delay={i * 0.05}>
-              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-                <button 
-                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between group"
-                >
-                  <span className="text-[17px] font-bold text-slate-900 font-clash">{faq.q}</span>
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${openIndex === i ? 'bg-[#5D00D6] text-white rotate-45' : 'bg-slate-50 text-slate-400 group-hover:bg-slate-100'}`}>
-                     <Plus size={20} />
-                  </div>
-                </button>
-                <AnimatePresence>
-                  {openIndex === i && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="px-8 pb-8 text-slate-600 text-[15px] leading-relaxed border-t border-slate-50 pt-4">
-                        {faq.a}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+const telcoFaqs = [
+  { q: "What telco products does C9 provide?", a: "C9 provides C9 Phone System, Business nbn, Fast Fibre, Enterprise Ethernet, AI Voice and supporting telco services including Microsoft Teams Calling, SIP trunks, VoIP handsets, number porting, 4G/5G backup, managed routers and multi-site connectivity." },
+  { q: "Does C9 provide business phone systems?", a: "Yes. C9 provides modern business phone systems for office, remote and mobile teams. This can include call routing, voicemail, business numbers, VoIP, SIP, handsets, softphones and Microsoft Teams Calling options." },
+  { q: "Can C9 help with Business nbn?", a: "Yes. C9 can help businesses review available Business nbn options and choose a suitable service based on location, speed needs, usage and support requirements." },
+  { q: "What is Fast Fibre used for?", a: "Fast Fibre is suited to businesses that need higher-speed internet for cloud apps, voice, video calls, file transfers and growing teams that need stronger connectivity than basic services." },
+  { q: "Who is Enterprise Ethernet for?", a: "Enterprise Ethernet is suited to organisations that need scalable, business-grade connectivity for larger offices, multi-site environments, critical cloud systems or higher bandwidth requirements." },
+  { q: "What is AI Voice?", a: "AI Voice helps businesses handle calls smarter with AI-assisted answering, routing, enquiry support and call triage. It can help reduce missed calls and improve response times for busy teams." },
+  { q: "Can C9 help us switch from our current telco provider?", a: "Yes. C9 can review your current phone and internet setup, recommend suitable replacement options and help manage the transition, including setup, number porting and service coordination where required." },
+  { q: "Can we keep our existing business phone numbers?", a: "In many cases, yes. C9 can review your existing numbers and help manage number porting as part of your phone system migration." },
+  { q: "Can C9 support multiple business locations?", a: "Yes. C9 can help businesses standardise phone systems, internet services, backup connectivity and support across multiple offices, branches or sites." },
+  { q: "Is C9 only for large enterprises?", a: "No. C9 works with small businesses, growing companies, new sites, multi-site businesses and larger organisations that need reliable phone, internet and telco support." }
+];
 
 /* ─────────────────────────────────────────────────────────
    SECTION 11 — FINAL CTA / FORM
@@ -989,8 +937,9 @@ const FinalCTA = () => {
    SECTION — SWITCH STRIP
    ───────────────────────────────────────────────────────── */
 const SectionStrip = ({ openModal }: { openModal: (name: string, type: any) => void }) => (
-  <section className="bg-[#f0ebff] py-6 px-6">
-    <div className={`${C} flex flex-col sm:flex-row items-center justify-between gap-6`}>
+  <section className="py-8">
+    <div className={`${C}`}>
+      <div className="bg-[#f0ebff] rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-[#5D00D6]/10 shadow-sm">
       <div className="flex items-center gap-5">
         <div className="w-12 h-12 rounded-2xl bg-white border border-[#5D00D6]/10 flex items-center justify-center shrink-0 shadow-sm">
           <ArrowRight size={20} className="text-[#5D00D6]" />
@@ -1008,6 +957,7 @@ const SectionStrip = ({ openModal }: { openModal: (name: string, type: any) => v
       >
         Review My Setup <ArrowRight size={14} />
       </button>
+      </div>
     </div>
   </section>
 );
@@ -1133,7 +1083,7 @@ export default function TelcoPage() {
       <SectionScenarios openModal={openModal} />
       <SectionComparison openModal={openModal} />
       <SectionTrust />
-      <SectionFAQ />
+      <WpFAQAndFeedback faqItems={telcoFaqs} showTestimonials={false} />
       <FinalCTA />
 
       <TelcoProductModal 
