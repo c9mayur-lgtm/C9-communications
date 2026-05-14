@@ -38,6 +38,8 @@ import { WpCapabilityNavigator } from '@/components/wordpress/WpCapabilityNaviga
 import { WpCaseStudies } from '@/components/wordpress/WpCaseStudies';
 import { WpFAQAndFeedback } from '@/components/wordpress/WpFAQAndFeedback';
 import { C9Button } from '@/components/design-system/C9Button';
+import { Section } from '@/components/design-system/Section';
+import { LeadCaptureModal } from '@/components/modals/LeadCaptureModal';
 import { handleCtaClick } from '@/lib/utils';
 import { 
   Table, 
