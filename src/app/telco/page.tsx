@@ -102,7 +102,6 @@ const Hero = ({ openModal }: { openModal: (name: string, type: any) => void }) =
         <div>
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/8 border border-[#5D00D6]/20 mb-8">
-              <ShieldCheck size={14} className="text-[#5D00D6]" aria-hidden="true" />
               <span className="c9-eyebrow !mb-0 text-[#5D00D6]">BUSINESS TELCO THAT ACTUALLY CONNECTS THE DOTS</span>
             </div>
           </FadeIn>
@@ -163,7 +162,7 @@ const Hero = ({ openModal }: { openModal: (name: string, type: any) => void }) =
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.4} direction="right" className="relative hidden lg:block">
+        <FadeIn delay={0.4} direction="right" className="relative mt-12 lg:mt-0">
            <HeroVisual />
         </FadeIn>
       </div>
@@ -261,10 +260,10 @@ const CoreProducts = ({ openModal }: { openModal: (name: string, type: any) => v
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-8 md:pb-0 gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 -mx-6 px-6 md:mx-0 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {products.map((product, i) => (
-            <FadeIn key={i} delay={i * 0.1} className="flex h-full">
-              <div className="bg-white p-8 md:p-10 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 flex flex-col w-full group">
+            <FadeIn key={i} delay={i * 0.1} className="w-[85vw] md:w-auto shrink-0 snap-center flex h-full">
+              <div className="bg-white p-8 md:p-10 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-500 flex flex-col w-full group h-full">
                 <div className="w-16 h-16 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                   {product.icon}
                 </div>
@@ -339,10 +338,10 @@ const SectionPains = ({ openModal }: { openModal: (name: string, type: any) => v
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-8 md:pb-0 gap-6 md:grid-cols-2 lg:grid-cols-3 -mx-6 px-6 md:mx-0 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {pains.map((pain, i) => (
-            <FadeIn key={i} delay={i * 0.05}>
-              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-red-500/20 transition-all group h-full">
+            <FadeIn key={i} delay={i * 0.05} className="w-[85vw] md:w-auto shrink-0 snap-center h-full">
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-red-500/20 transition-all group h-full flex flex-col">
                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-sm text-red-500">
                    <ShieldAlert size={24} />
                 </div>
@@ -447,11 +446,11 @@ const SupportingServices = ({ openModal }: { openModal: (name: string, type: any
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none pb-8 sm:pb-0 gap-4 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3 -mx-6 px-6 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {services.map((service, i) => (
-            <FadeIn key={i} delay={i * 0.04}>
+            <FadeIn key={i} delay={i * 0.04} className="w-[85vw] sm:w-auto shrink-0 snap-center h-full">
               <div 
-                className="bg-slate-50 border border-slate-100 p-6 rounded-2xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-lg transition-all duration-300 group flex flex-col gap-3 cursor-pointer"
+                className="bg-slate-50 border border-slate-100 p-6 rounded-2xl hover:bg-white hover:border-[#5D00D6]/20 hover:shadow-lg transition-all duration-300 group flex flex-col gap-3 cursor-pointer h-full"
                 onClick={() => openModal(service.title, service.type)}
               >
                 <div className="flex items-center gap-4">
@@ -460,7 +459,7 @@ const SupportingServices = ({ openModal }: { openModal: (name: string, type: any
                   </div>
                   <h3 className="text-[15px] font-bold text-slate-900 font-clash">{service.title}</h3>
                 </div>
-                <p className="text-slate-600 text-[13px] leading-relaxed font-medium">{service.copy}</p>
+                <p className="text-slate-600 text-[13px] leading-relaxed font-medium flex-grow">{service.copy}</p>
               </div>
             </FadeIn>
           ))}
@@ -530,12 +529,12 @@ const SectionHowItWorks = ({ openModal }: { openModal: (name: string, type: any)
    ───────────────────────────────────────────────────────── */
 const SectionScenarios = ({ openModal }: { openModal: (name: string, type: any) => void }) => {
   const scenarios = [
-    { title: "I need a new phone system", type: 'phone' as const, copy: "C9 can help you move to a modern business phone system with call routing, voicemail, business numbers, remote user support and optional Teams Calling.", cta: "Upgrade My Phone System" },
-    { title: "I need better business internet", type: 'internet' as const, copy: "C9 can review your current connection and help you choose from Business nbn, Fast Fibre or Enterprise Ethernet based on your location and usage.", cta: "Check Internet Options" },
-    { title: "I am opening a new site", type: 'internet' as const, copy: "C9 can help plan internet, phones, routers, backup connectivity and setup support before your new office, shop, clinic or warehouse goes live.", cta: "Plan a New Site" },
-    { title: "I want smarter call handling", type: 'ai' as const, copy: "C9 AI Voice can help with call answering, routing, enquiry handling and reducing missed calls during busy periods or after hours.", cta: "Explore AI Voice" },
-    { title: "I want to switch telco provider", type: 'generic' as const, copy: "C9 can review your current provider setup, identify what needs to move and help manage the transition with less confusion.", cta: "Help Me Switch" },
-    { title: "I manage multiple locations", type: 'internet' as const, copy: "C9 can help standardise internet, phone systems and support across branches, offices or operational sites.", cta: "Connect My Sites" }
+    { title: "I need a new phone system", type: 'phone' as const, image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=800", copy: "C9 can help you move to a modern business phone system with call routing, voicemail, business numbers, remote user support and optional Teams Calling.", cta: "Upgrade My Phone System" },
+    { title: "I need better business internet", type: 'internet' as const, image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", copy: "C9 can review your current connection and help you choose from Business nbn, Fast Fibre or Enterprise Ethernet based on your location and usage.", cta: "Check Internet Options" },
+    { title: "I am opening a new site", type: 'internet' as const, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800", copy: "C9 can help plan internet, phones, routers, backup connectivity and setup support before your new office, shop, clinic or warehouse goes live.", cta: "Plan a New Site" },
+    { title: "I want smarter call handling", type: 'ai' as const, image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800", copy: "C9 AI Voice can help with call answering, routing, enquiry handling and reducing missed calls during busy periods or after hours.", cta: "Explore AI Voice" },
+    { title: "I want to switch telco provider", type: 'generic' as const, image: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=800", copy: "C9 can review your current provider setup, identify what needs to move and help manage the transition with less confusion.", cta: "Help Me Switch" },
+    { title: "I manage multiple locations", type: 'internet' as const, image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800", copy: "C9 can help standardise internet, phone systems and support across branches, offices or operational sites.", cta: "Connect My Sites" }
   ];
 
   return (
@@ -548,13 +547,17 @@ const SectionScenarios = ({ openModal }: { openModal: (name: string, type: any) 
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-8 md:pb-0 gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 -mx-6 px-6 md:mx-0 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {scenarios.map((scenario, i) => (
-            <FadeIn key={i} delay={i * 0.05}>
-               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col h-full hover:bg-white hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-slate-900 mb-4 font-clash">{scenario.title}</h3>
-                  <p className="text-slate-600 text-[14px] leading-relaxed mb-8 flex-grow">{scenario.copy}</p>
-                  <C9Button variant="outline" className="w-full rounded-full border-2 border-slate-200 group-hover:border-[#5D00D6] group-hover:text-[#5D00D6]" onClick={() => openModal(scenario.title, scenario.type)}>
+            <FadeIn key={i} delay={i * 0.05} className="w-[85vw] md:w-auto shrink-0 snap-center flex h-full">
+               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col h-full hover:bg-white hover:shadow-xl hover:border-[#5D00D6]/20 transition-all duration-300 overflow-hidden group w-full">
+                  <div className="-mx-8 -mt-8 mb-6 h-48 overflow-hidden relative">
+                    <img src={scenario.image} alt={scenario.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-50 to-transparent opacity-50" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 font-clash relative z-10">{scenario.title}</h3>
+                  <p className="text-slate-600 text-[14px] leading-relaxed mb-8 flex-grow relative z-10">{scenario.copy}</p>
+                  <C9Button variant="outline" className="w-full rounded-full border-2 border-slate-200 group-hover:border-[#5D00D6] group-hover:text-[#5D00D6] relative z-10" onClick={() => openModal(scenario.title, scenario.type)}>
                      {scenario.cta}
                   </C9Button>
                </div>
@@ -984,14 +987,14 @@ const SectionBanner = ({ openModal }: { openModal: (name: string, type: any) => 
                   className="rounded-full h-15 px-10 bg-[#5D00D6] text-white border-none shadow-xl shadow-[#5D00D6]/20"
                   onClick={() => openModal('Telco Services Inquiry', 'generic')}
                 >
-                  Explore C9 Telco Services <ArrowRight className="ml-2" size={16} />
+                  Explore C9 Telco Services
                 </C9Button>
                 <C9Button 
                   variant="outline"
                   className="rounded-full h-15 px-10 border-white/20 text-white hover:bg-white hover:text-[#0c1024] transition-all"
                   onClick={() => openModal('Telco Quote Request', 'generic')}
                 >
-                  Get a Telco Quote <ArrowRight className="ml-2" size={16} />
+                  Get a Telco Quote
                 </C9Button>
               </div>
             </FadeIn>
