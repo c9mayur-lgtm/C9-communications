@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 export const TelcoSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-[#F8F9FA]">
+    <section className="py-12 md:py-20 bg-[#F8F9FA]">
       <div className="container mx-auto px-6 md:px-8 max-w-[1240px]">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
@@ -15,29 +15,24 @@ export const TelcoSection = () => {
             
             <div className="grid grid-cols-2 gap-6 relative z-10">
               {[
-                { name: "C9 phone system Managed Handset", icon: Phone, color: "from-blue-500/10 to-transparent" },
-                { name: "Wireless Enterprise AP", icon: Signal, color: "from-brand-purple/10 to-transparent" },
-                { name: "Premium Headset", icon: Headphones, color: "from-indigo-500/10 to-transparent" },
-                { name: "Security Gateway / Router", icon: Shield, color: "from-cyan-500/10 to-transparent" }
-              ].map((product, i) => {
-                const Icon = product.icon;
-                return (
-                  <div key={i} className="bg-white p-8 rounded-[32px] border border-brand-purple/5 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden relative">
-                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-brand-purple/5 to-transparent pointer-events-none" />
-                     
-                     <div className="flex flex-col items-center gap-6 relative z-10">
-                        <div className={`p-6 rounded-2xl bg-gradient-to-br ${product.color} group-hover:scale-110 duration-500`}>
-                          <Icon className="text-[#5D00D6] w-8 h-8" />
-                        </div>
-                        <span className="c9-eyebrow !text-[#0c1024] !text-[12px] text-center">
-                          {product.name}
-                        </span>
-                     </div>
-                     
-                     <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#5D00D6]/5 rounded-tl-full translate-x-4 translate-y-4 group-hover:scale-150 duration-700" />
-                  </div>
-                );
-              })}
+                { name: "Desk Terminals", image: "/Desk Phon.png" },
+                { name: "Wireless Headsets", image: "/images/yealink-bh71.png" },
+                { name: "DECT Cordless", image: "/DECT.png" },
+                { name: "Conference Phones", image: "/conf phone.png" }
+              ].map((product, i) => (
+                <div key={i} className={`bg-white p-6 md:p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden relative group ${i % 2 !== 0 ? 'mt-8' : ''}`}>
+                   <div className="flex flex-col items-center gap-6 relative z-10 text-center">
+                      <div className="h-24 md:h-28 w-full flex items-center justify-center mb-2">
+                        <img src={product.image} alt={product.name} className="w-auto h-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                      </div>
+                      <span className="text-[11px] md:text-[12px] font-black text-[#5D00D6] uppercase tracking-[0.2em] leading-tight px-4">
+                        {product.name}
+                      </span>
+                   </div>
+                   
+                   <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#5D00D6]/5 rounded-tl-full translate-x-4 translate-y-4 group-hover:scale-150 duration-700" />
+                </div>
+              ))}
               
               {/* Promo Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 bg-[#5D00D6] text-white rounded-3xl shadow-[0_20px_60px_-10px_rgba(93,0,214,0.6)] z-20 flex flex-col items-center gap-2 w-56 text-center transform -rotate-6 hover:rotate-0 cursor-pointer">

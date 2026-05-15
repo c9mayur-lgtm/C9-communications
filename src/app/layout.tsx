@@ -6,7 +6,6 @@ import { WpFloatingContact } from "@/components/wordpress/WpFloatingContact";
 import { BusinessAdvisor } from "@/components/wordpress/BusinessAdvisor";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { FloatingCEO } from "@/components/layout/FloatingCEO";
-import { ScrollTriggeredModal } from "@/components/modals/ScrollTriggeredModal";
 import { InquiryProvider } from "@/components/context/InquiryContext";
 import { AudienceProvider } from "@/components/context/AudienceContext";
 import { AudienceSwitcher } from "@/components/layout/AudienceSwitcher";
@@ -180,7 +179,7 @@ export default function RootLayout({
             <BusinessAdvisor />
             <FloatingCEO />
             <CookieConsent />
-            <ScrollTriggeredModal />
+
             <Analytics />
             <SpeedInsights />
           </InquiryProvider>

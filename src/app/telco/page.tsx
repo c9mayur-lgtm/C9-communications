@@ -112,7 +112,7 @@ const Hero = ({ openModal }: { openModal: (name: string, type: any) => void }) =
 
           <FadeIn delay={0.08}>
             <h1 className="c9-hero-title mb-8 text-slate-900 leading-[1.1]">
-              We Help Australian Businesses Set Up and Manage <span className="text-[#5D00D6]">Business Phones, Internet & Networks</span> Properly
+              We Help Australian Businesses Set Up and Manage <span className="text-[#5D00D6]">Business Phones, Internet & Network</span> Properly
             </h1>
           </FadeIn>
 

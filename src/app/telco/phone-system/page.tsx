@@ -75,7 +75,7 @@ const C = 'container mx-auto px-6 md:px-8 max-w-[1240px]';
    SECTION: HERO
    ───────────────────────────────────────────────────────── */
 const Hero = () => (
-  <section className="relative overflow-hidden bg-white pt-12 pb-0 lg:pt-20 border-b border-slate-50">
+  <section className="relative overflow-hidden bg-white pt-8 pb-0 lg:pt-12 border-b border-slate-50">
     <div
       className="pointer-events-none absolute inset-0 opacity-[0.03]"
       style={{
@@ -85,8 +85,9 @@ const Hero = () => (
     />
     
     <div className={`${C} relative z-10`}>
-      <div className="grid lg:grid-cols-[0.65fr_1.35fr] gap-12 lg:gap-16 items-center pb-16 lg:pb-24">
-        <div>
+      <div className="grid lg:grid-cols-[0.65fr_1.35fr] gap-8 lg:gap-16 items-center pb-10 lg:pb-16">
+        {/* Text content — order-2 on mobile (below image), order-1 on lg+ */}
+        <div className="order-2 lg:order-1">
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5D00D6]/5 border border-[#5D00D6]/10 mb-7">
                <PhoneCall size={13} className="text-[#5D00D6]" />
@@ -95,7 +96,7 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.08}>
-             <h1 className="c9-hero-title mb-6 !leading-[1.1]">
+             <h1 className="c9-hero-title text-[#0c1024] mb-6">
                 Business Phone Systems That Are Supplied, Set Up and <span className="text-[#5D00D6]">Managed for You.</span>
              </h1>
           </FadeIn>
@@ -107,7 +108,7 @@ const Hero = () => (
           </FadeIn>
 
           <FadeIn delay={0.3}>
-             <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
+             <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
                 <C9Button className="w-full sm:w-auto h-14 px-8 rounded-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white text-[15px] font-bold shadow-xl shadow-purple-900/20" asChild>
                   <Link href="#builder">Build My Phone System</Link>
                 </C9Button>
@@ -132,7 +133,8 @@ const Hero = () => (
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.2} direction="right" className="relative">
+        {/* Hero image — order-1 on mobile (above text), order-2 on lg+ */}
+        <FadeIn delay={0.2} direction="right" className="relative order-1 lg:order-2">
            <div className="relative w-full mx-auto">
               <img 
                 src="/Phone System Hero.png" 
@@ -179,7 +181,7 @@ const BusinessStats = () => {
        <div className={C}>
           <motion.div 
             onViewportEnter={() => setIsInView(true)}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-4 items-center text-center"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-2 md:gap-x-4 items-center text-center"
           >
              {[
                { label: "Active Extensions", val: 12000, suffix: "+" },
@@ -189,10 +191,10 @@ const BusinessStats = () => {
              ].map((item, i) => (
                <div key={i} className="relative px-4">
                   <FadeIn delay={i * 0.1}>
-                     <div className="text-[44px] md:text-[56px] lg:text-[64px] font-medium text-[#0c1024] tracking-tight leading-none mb-4">
+                      <div className="text-[36px] md:text-[56px] lg:text-[64px] font-medium text-[#0c1024] tracking-tight leading-none mb-4">
                         {isInView ? <AnimatedNumber value={item.val} /> : 0}{item.suffix}
                      </div>
-                     <div className="text-[11px] md:text-[12px] font-bold text-[#5D00D6] uppercase tracking-[0.25em] whitespace-nowrap">
+                      <div className="c9-eyebrow !text-[#5D00D6] leading-tight">
                         {item.label}
                      </div>
                   </FadeIn>
@@ -210,17 +212,35 @@ const BusinessStats = () => {
 /* ─────────────────────────────────────────────────────────
    SECTION: USE CASES
    ───────────────────────────────────────────────────────── */
-const UseCases = () => (
-  <section className="py-20 lg:py-32 bg-slate-50 border-b border-slate-100">
+const UseCases = () => {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const scroll = (dir: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({ left: dir === 'left' ? -300 : 300, behavior: 'smooth' });
+  };
+  return (
+  <section className="py-12 lg:py-20 bg-slate-50 border-b border-slate-100">
     <div className={C}>
-      <div className="max-w-3xl mx-auto text-center mb-16">
+      <div className="max-w-3xl mx-auto text-center mb-10">
         <FadeIn>
           <span className="c9-eyebrow mb-4 text-[#5D00D6]">Scenarios</span>
           <h2 className="c9-section-heading">Choose the Setup That Matches Your Business</h2>
         </FadeIn>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Mobile scroll arrows — hidden on sm+ */}
+      <div className="flex gap-3 sm:hidden mb-4 justify-end">
+        <button onClick={() => scroll('left')} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-colors" aria-label="Scroll left">
+          <ChevronRight size={20} className="rotate-180" />
+        </button>
+        <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-colors" aria-label="Scroll right">
+          <ChevronRight size={20} />
+        </button>
+      </div>
+
+      <div
+        ref={scrollRef}
+        className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none no-scrollbar pb-8 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
         {[
           {
             title: "New Office or Site Opening",
@@ -247,7 +267,7 @@ const UseCases = () => (
             cta: "Enable Teams"
           }
         ].map((item, i) => (
-          <FadeIn key={i} delay={i * 0.1} className="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
+          <FadeIn key={i} delay={i * 0.1} className="min-w-[85%] sm:min-w-0 snap-center bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
              <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center mb-8 group-hover:bg-[#5D00D6] group-hover:text-white transition-colors">
                 {item.icon}
              </div>
@@ -261,60 +281,43 @@ const UseCases = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 /* ─────────────────────────────────────────────────────────
    SECTION: WHAT YOU GET / MSP ACCOUNTABILITY
    ───────────────────────────────────────────────────────── */
 const WhatYouGet = () => (
-  <section className="py-20 lg:py-32 bg-white">
+  <section className="py-12 lg:py-20 bg-white overflow-hidden">
     <div className={C}>
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-24 items-center">
+        {/* Left: Content (Frameless) */}
         <FadeIn direction="left">
-          <span className="c9-eyebrow mb-4 text-[#5D00D6]">The Standard</span>
-          <h2 className="c9-section-heading mb-8 text-[#0c1024]">Everything Required to Run Business Calling</h2>
-          <p className="c9-body text-lg text-slate-600 mb-10">
-            C9 handles the entire system. We provide the accountable layer that ensures your phones, calling, and support are managed together as one unified outcome.
-          </p>
-
-          <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8">
-            {[
-              { t: "Yealink Devices", d: "Pre-configured handsets." },
-              { t: "Business Calling", d: "Unlimited AU call plans." },
-              { t: "Number Porting", d: "Keep your current numbers." },
-              { t: "Call Routing", d: "IVR, Queues & Auto-Attendant." },
-              { t: "Installation", d: "Professional on-site setup." },
-              { t: "Ongoing Support", d: "Local expert AU management." }
-            ].map((item, i) => (
-              <div key={i} className="relative pl-8">
-                <div className="absolute left-0 top-1.5 w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                  <Check size={12} strokeWidth={3} />
-                </div>
-                <h4 className="font-bold text-slate-900 text-[16px] mb-1">{item.t}</h4>
-                <p className="text-slate-400 text-[13px] font-medium">{item.d}</p>
-              </div>
-            ))}
+          <div className="relative z-10">
+            <div className="w-16 h-16 rounded-2xl bg-[#5D00D6] flex items-center justify-center mb-8 shadow-xl">
+               <ShieldCheck size={32} className="text-white" />
+            </div>
+            <h3 className="c9-section-heading text-[#0c1024] mb-6">
+              One partner responsible for every call.
+            </h3>
+            <p className="text-slate-600 mb-10 text-lg leading-relaxed max-w-xl">
+              We treat phones as a managed endpoint. C9 owns the hardware, the network, and the support layer — so you only have one team to call when you need help.
+            </p>
+            <C9Button className="bg-[#5D00D6] text-white hover:bg-[#4c00b0] rounded-full px-10 h-14 font-bold shadow-lg shadow-purple-900/20" asChild>
+               <Link href="#consultation-section">Book your free site audit</Link>
+            </C9Button>
           </div>
         </FadeIn>
 
+        {/* Right: Site Audit Image (Full Size, No Frame) */}
         <FadeIn direction="right" delay={0.2} className="relative">
-           <div className="bg-[#0c1024] rounded-[48px] p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/20 blur-[100px] rounded-full" />
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-[#5D00D6] flex items-center justify-center mb-8 shadow-xl">
-                   <ShieldCheck size={32} />
-                </div>
-                <h3 className="text-[28px] lg:text-[36px] font-bold mb-6 leading-tight">
-                  One partner responsible for every call.
-                </h3>
-                <p className="text-white/60 mb-10 text-lg leading-relaxed">
-                  We treat phones as a managed endpoint. C9 owns the hardware, the network, and the support layer — so you only have one team to call when you need help.
-                </p>
-                <C9Button className="bg-white text-[#0c1024] hover:bg-slate-100 rounded-full px-8 h-12 font-bold" asChild>
-                   <Link href="#consultation-section">Learn About Managed Voice</Link>
-                </C9Button>
-              </div>
-           </div>
+          <div className="relative">
+            <img 
+              src="/Phone system_site audit.png" 
+              alt="C9 Phone System Site Audit" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </FadeIn>
       </div>
     </div>
@@ -324,10 +327,15 @@ const WhatYouGet = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION: SIMPLIFY YOUR COMMUNICATION
    ───────────────────────────────────────────────────────── */
-const SimplifyCommunication = () => (
-  <section className="py-20 lg:py-32 bg-slate-50 border-y border-slate-100">
+const SimplifyCommunication = () => {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const scroll = (dir: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({ left: dir === 'left' ? -300 : 300, behavior: 'smooth' });
+  };
+  return (
+  <section className="py-12 lg:py-20 bg-slate-50 border-y border-slate-100">
      <div className={C}>
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-10">
            <FadeIn>
               <span className="c9-eyebrow mb-4 text-[#5D00D6]">Operational Capability</span>
               <h2 className="c9-section-heading">Simplify Business Communication Without Sacrificing Capability</h2>
@@ -337,29 +345,43 @@ const SimplifyCommunication = () => (
            </FadeIn>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-           {[
-             { title: "Route Calls Faster", desc: "Smart auto-attendants direct customers to the right team immediately.", icon: <Settings /> },
-             { title: "Keep Teams Connected", desc: "Unified internal dialling across all your business locations.", icon: <Building2 /> },
-             { title: "Work From Anywhere", desc: "Mobile calling apps ensure remote staff are always reachable.", icon: <Globe /> },
-             { title: "Never Miss a Message", desc: "Voicemail-to-email ensures critical messages are logged instantly.", icon: <MessageSquare /> },
-             { title: "Manage Reception", desc: "Clear call queue visibility for efficient frontline handling.", icon: <Users /> },
-             { title: "Seamless Meetings", desc: "Conference and Teams calling built right into your hardware.", icon: <Layout /> }
-           ].map((feat, i) => (
-             <FadeIn key={i} delay={i * 0.1} className="bg-white p-6 rounded-[24px] border border-slate-200 shadow-sm flex gap-4 items-start">
-                <div className="w-10 h-10 rounded-xl bg-slate-50 text-[#5D00D6] flex items-center justify-center shrink-0 border border-slate-100">
-                   {feat.icon}
-                </div>
-                <div>
-                   <h4 className="font-bold text-slate-900 text-[15px] mb-1.5">{feat.title}</h4>
-                   <p className="text-slate-500 text-[13px] leading-relaxed">{feat.desc}</p>
-                </div>
-             </FadeIn>
-           ))}
+        {/* Mobile scroll arrows — hidden on sm+ */}
+        <div className="flex gap-3 sm:hidden mb-4 justify-end">
+          <button onClick={() => scroll('left')} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-colors" aria-label="Scroll left">
+            <ChevronRight size={20} className="rotate-180" />
+          </button>
+          <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-colors" aria-label="Scroll right">
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
+        <div
+          ref={scrollRef}
+          className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none no-scrollbar pb-8 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+        >
+             {[
+               { title: "Route Calls Faster", desc: "Smart auto-attendants direct customers to the right team immediately.", icon: <Settings /> },
+               { title: "Keep Teams Connected", desc: "Unified internal dialling across all your business locations.", icon: <Building2 /> },
+               { title: "Work From Anywhere", desc: "Mobile calling apps ensure remote staff are always reachable.", icon: <Globe /> },
+               { title: "Never Miss a Message", desc: "Voicemail-to-email ensures critical messages are logged instantly.", icon: <MessageSquare /> },
+               { title: "Manage Reception", desc: "Clear call queue visibility for efficient frontline handling.", icon: <Users /> },
+               { title: "Seamless Meetings", desc: "Conference and Teams calling built right into your hardware.", icon: <Layout /> }
+             ].map((feat, i) => (
+               <FadeIn key={i} delay={i * 0.1} className="min-w-[85%] sm:min-w-0 snap-center bg-white p-6 rounded-[24px] border border-slate-200 shadow-sm flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-xl bg-slate-50 text-[#5D00D6] flex items-center justify-center shrink-0 border border-slate-100">
+                     {feat.icon}
+                  </div>
+                  <div>
+                     <h4 className="font-bold text-slate-900 text-[15px] mb-1.5">{feat.title}</h4>
+                     <p className="text-slate-500 text-[13px] leading-relaxed">{feat.desc}</p>
+                  </div>
+               </FadeIn>
+             ))}
         </div>
      </div>
   </section>
-);
+  );
+};
 
 /* ─────────────────────────────────────────────────────────
    SECTION: PRODUCT CATEGORIES (ECOSYSTEMS)
@@ -447,32 +469,35 @@ const CommunicationEcosystems = () => {
   const activeStep = ECOSYSTEM_STEPS.find(s => s.id === activeTab) || ECOSYSTEM_STEPS[0];
 
   return (
-    <section className="py-20 lg:py-32 bg-white border-y border-slate-100">
+    <section className="py-12 lg:py-20 bg-white border-y border-slate-100 overflow-hidden">
       <div className={C}>
-        <div className="mb-12 text-center">
-          <span className="c9-eyebrow mb-4 block text-[#5D00D6]">HARDWARE ECOSYSTEMS</span>
-          <h2 className="c9-section-heading mb-6 mx-auto max-w-2xl text-[#0c1024]">
+        <div className="mb-8 text-center">
+          <span className="c9-eyebrow mb-4 block">HARDWARE ECOSYSTEMS</span>
+          <h2 className="c9-section-heading text-[#0c1024] mb-6 mx-auto max-w-2xl">
             Communication That Flows Through Your Business
           </h2>
           
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
-            {ECOSYSTEM_STEPS.map((tab) => {
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 md:gap-3 px-5 md:px-6 py-2.5 md:py-3 text-[12px] md:text-[13px] font-bold transition-all rounded-full border-2 ${
-                    isActive 
-                      ? 'bg-[#5D00D6] text-white border-[#5D00D6] shadow-lg shadow-purple-900/20 scale-105' 
-                      : 'bg-white text-gray-500 border-gray-100 hover:border-[#5D00D6]/30 hover:text-[#5D00D6] hover:bg-purple-50/50'
-                  }`}
-                >
-                  <span className={isActive ? 'text-white' : 'text-[#5D00D6]'}>{tab.icon}</span>
-                  <span className="uppercase tracking-wider">{tab.label}</span>
-                </button>
-              );
-            })}
+          {/* Tab bar: scrollable on mobile, centred on md+ */}
+          <div className="-mx-6 md:mx-0 px-6 md:px-0 overflow-x-auto no-scrollbar mb-6 md:mb-10">
+            <div className="inline-flex md:flex md:flex-wrap md:justify-center gap-2 md:gap-3 py-2 md:py-4">
+              {ECOSYSTEM_STEPS.map((tab) => {
+                const isActive = activeTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`flex items-center justify-center gap-2 md:gap-3 p-3 md:px-5 md:py-2.5 text-[12px] md:text-[13px] font-bold transition-all rounded-full border-2 shrink-0 ${
+                      isActive 
+                        ? 'bg-[#5D00D6] text-white border-[#5D00D6] shadow-xl shadow-purple-900/20 scale-105' 
+                        : 'bg-white text-gray-500 border-gray-100 hover:border-[#5D00D6]/30 hover:text-[#5D00D6] hover:bg-purple-50/50'
+                    }`}
+                  >
+                    <span className={isActive ? 'text-white' : 'text-[#5D00D6]'}>{tab.icon}</span>
+                    <span className="uppercase tracking-widest hidden md:inline">{tab.label}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -484,81 +509,60 @@ const CommunicationEcosystems = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="grid lg:grid-cols-[1.3fr_1fr] gap-8 md:gap-16 items-start"
+              className="flex flex-col lg:grid lg:grid-cols-[1.3fr_1fr] gap-6 md:gap-8 lg:gap-16 items-center lg:items-start"
             >
-              <div className="w-full relative group">
-                <div className="relative z-10">
+              <div className="w-full relative group mb-8 lg:mb-0 overflow-hidden">
+                <div className="relative z-10 w-full max-w-[340px] sm:max-w-none mx-auto flex items-center justify-center">
                   <img 
                     src={activeStep.image} 
                     alt={activeStep.heading} 
-                    className="w-full h-[280px] sm:h-[380px] md:h-[450px] lg:h-[550px] object-contain p-4 object-center"
+                    className="w-full h-auto max-h-[240px] sm:max-h-[300px] md:max-h-[550px] object-contain p-2 md:p-4"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#5D00D6]/5 rounded-full blur-3xl -z-10" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#5D00D6]/5 rounded-full blur-[80px] -z-10" />
               </div>
 
-              <div className="flex flex-col">
-                <div className="mb-6 md:mb-8">
+              <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
+                <div className="mb-6 md:mb-8 flex flex-col items-center lg:items-start w-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="px-4 py-1.5 bg-[#5D00D6]/5 text-[#5D00D6] text-[11px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#5D00D6]/10">
+                    <div className="px-4 py-1.5 bg-[#5D00D6]/5 text-[#5D00D6] text-[10px] md:text-[11px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#5D00D6]/10">
                       Ideal for • {activeStep.phase}
                     </div>
                   </div>
-                  <h3 className="text-[24px] md:text-[32px] font-bold mb-4 leading-[1.2] text-[#0c1024] tracking-tight">
+                  <h3 className="c9-section-heading text-[#0c1024] mb-4">
                     {activeStep.heading}
                   </h3>
-                  <p className="text-[14px] md:text-[15px] leading-relaxed text-slate-500 font-medium">
+                  <p className="text-[14px] md:text-[15px] leading-relaxed text-slate-500 font-medium max-w-lg">
                     {activeStep.description}
                   </p>
                 </div>
 
-                <div className="pt-2">
-                  <div className="mb-6 flex items-center justify-between">
-                     <span className="text-[12px] font-black uppercase tracking-[0.3em] text-[#5D00D6]">
+                <div className="pt-2 w-full">
+                  <div className="mb-6 flex items-center justify-center lg:justify-between">
+                     <span className="text-[11px] md:text-[12px] font-black uppercase tracking-[0.3em] text-[#5D00D6]">
                         Included Features
                      </span>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-x-8 gap-y-7">
+                  {/* Feature cards: 2-col grid on mobile, 2-col grid on sm+ */}
+                  <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
                     {activeStep.options.map((option, idx) => (
                       <motion.div 
                         key={idx} 
                         initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.05 }}
-                        className="group"
+                        className="group flex flex-col sm:flex-row items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white border border-slate-100 shadow-sm"
                       >
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-6 h-6 rounded-lg bg-[#5D00D6]/10 text-[#5D00D6] flex items-center justify-center shrink-0 shadow-sm">
-                            {option.icon}
-                          </div>
-                          <h4 className="text-[15px] font-bold text-[#0c1024] group-hover:text-[#5D00D6] transition-colors leading-tight">
-                            {option.title}
-                          </h4>
+                        <div className="hidden sm:flex w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#5D00D6]/5 items-center justify-center text-[#5D00D6] shrink-0">
+                          {option.icon}
                         </div>
-                        <p className="text-[12px] font-medium text-slate-400 leading-normal pl-9">
-                          {option.desc}
-                        </p>
+                        <div>
+                          <p className="font-bold text-[#0c1024] text-[13px] sm:text-[14px] mb-1 leading-tight">{option.title}</p>
+                          <p className="text-[12px] sm:text-[13px] text-slate-500 leading-relaxed">{option.desc}</p>
+                        </div>
                       </motion.div>
                     ))}
-                  </div>
-
-                  <div className="mt-12 pt-8 border-t border-slate-100">
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-                      <div>
-                        <h4 className="text-[15px] font-bold text-[#0c1024] mb-1 text-center sm:text-left">Need this setup?</h4>
-                        <p className="text-[13px] text-slate-400 font-medium text-center sm:text-left">Configure this hardware in your system.</p>
-                      </div>
-                      <C9Button 
-                        asChild
-                        variant="outline"
-                        className="rounded-full border-[#5D00D6]/20 text-[#5D00D6] hover:bg-[#5D00D6] hover:text-white transition-all px-8 h-12 font-bold flex items-center justify-center"
-                      >
-                        <Link href="#builder">
-                          Build Setup
-                        </Link>
-                      </C9Button>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -574,10 +578,12 @@ const CommunicationEcosystems = () => {
    SECTION: INTERACTIVE BUILDER (PREMIUM CONSULTATION)
    ───────────────────────────────────────────────────────── */
 const HARDWARE = [
-  { id: 'desk', name: 'Desk Terminals', price: 15, desc: 'Enterprise Grade', image: '/images/yealink-t54w.png' },
-  { id: 'cordless', name: 'DECT Cordless', price: 12, desc: 'Mobile Mobility', image: '/images/yealink-w73p.png' },
-  { id: 'headset', name: 'Wireless Headsets', price: 8, desc: 'Bluetooth Audio', image: '/images/yealink-bh71.png' }
-  /* { id: 'meeting', name: 'Meeting Rooms', price: 25, desc: 'Conference Audio', image: '/images/yealink-phone-4.jpg' } */
+  { id: 'pbx', name: 'Hosted PBX', price: 0, desc: 'Enterprise Logic', image: '/hosted pbx.png' },
+  { id: 'desk', name: 'Desk Terminals', price: 15, desc: 'Enterprise Grade', image: '/Desk Phon.png' },
+  { id: 'cordless', name: 'DECT Cordless', price: 12, desc: 'Mobile Mobility', image: '/DECT.png' },
+  { id: 'meeting', name: 'Conference Phone', price: 25, desc: 'Crystal Clear Audio', image: '/conf phone.png' },
+  { id: 'headset', name: 'Wireless Headsets', price: 8, desc: 'Bluetooth Audio', image: '/images/yealink-bh71.png' },
+  { id: 'ai', name: 'AI Voice', price: 10, desc: 'Managed Intelligence', image: '/AI Voice_Telco.png' }
 ];
 
 const FEATURES = [
@@ -626,10 +632,10 @@ const VoiceConfigurator = () => {
   const totalPerMonth = (basePrice + hardwarePrice + accessoryPrice) * users;
 
   return (
-    <section id="builder" className="py-20 lg:py-32 bg-slate-50 relative overflow-hidden border-y border-slate-100">
+    <section id="builder" className="py-12 lg:py-20 bg-slate-50 relative overflow-hidden border-y border-slate-100">
       <div className={C}>
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <FadeIn>
             <span className="c9-eyebrow mb-4 text-[#5D00D6]">Self-Qualify</span>
             <h2 className="c9-section-heading mb-6">Build your <span className="text-[#5D00D6]">Phone System</span></h2>
@@ -639,15 +645,15 @@ const VoiceConfigurator = () => {
           </FadeIn>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* ── STEPPED SELECTION AREA ── */}
           <div className="lg:col-span-8">
-            <div className="bg-white rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-[24px] md:rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
               
               {/* STEP INDICATOR */}
-              <div className="bg-slate-50/50 border-b border-slate-100 px-8 py-6 flex items-center justify-between">
-                <div className="flex items-center gap-6 overflow-x-auto no-scrollbar">
+              <div className="bg-slate-50/50 border-b border-slate-100 px-5 py-4 md:px-8 md:py-6 flex items-center justify-between">
+                <div className="flex items-center gap-4 md:gap-6 overflow-x-auto no-scrollbar pb-1">
                   {STEPS.map((s, idx) => {
                     const Icon = s.icon;
                     const isActive = idx === activeStep;
@@ -656,20 +662,20 @@ const VoiceConfigurator = () => {
                       <button 
                         key={s.id} 
                         onClick={() => setActiveStep(idx)}
-                        className={`flex items-center gap-3 shrink-0 transition-all ${isActive ? 'opacity-100' : 'opacity-40 hover:opacity-70'}`}
+                        className={`flex items-center gap-2 md:gap-3 shrink-0 transition-all ${isActive ? 'opacity-100' : 'opacity-40 hover:opacity-70'}`}
                       >
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-[13px] ${isActive ? 'bg-[#5D00D6] text-white' : isDone ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-500'}`}>
+                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-[11px] md:text-[13px] ${isActive ? 'bg-[#5D00D6] text-white' : isDone ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-500'}`}>
                           {isDone ? <Check size={14} strokeWidth={3} /> : idx + 1}
                         </div>
-                        <span className={`text-[13px] font-bold uppercase tracking-widest ${isActive ? 'text-[#0c1024]' : 'text-slate-500'}`}>{s.label}</span>
+                        <span className={`text-[11px] md:text-[13px] font-bold uppercase tracking-widest hidden sm:inline ${isActive ? 'text-[#0c1024]' : 'text-slate-500'}`}>{s.label}</span>
                       </button>
                     );
                   })}
                 </div>
-                <div className="hidden sm:block text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Step {activeStep + 1} of 4</div>
+                <div className="text-[10px] md:text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] whitespace-nowrap ml-4">Step {activeStep + 1}/4</div>
               </div>
 
-              <div className="p-8 md:p-12 min-h-[420px] flex flex-col">
+              <div className="p-5 md:p-12 min-h-[420px] flex flex-col">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeStep}
@@ -680,8 +686,11 @@ const VoiceConfigurator = () => {
                     className="flex-1"
                   >
                     <div className="flex items-center gap-4 mb-8">
-                      <div className="w-12 h-12 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6]">
-                        {React.createElement(STEPS[activeStep].icon, { size: 24 })}
+                      <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6]">
+                        {(() => {
+                          const Icon = STEPS[activeStep].icon;
+                          return <Icon size={24} />;
+                        })()}
                       </div>
                       <div>
                         <h3 className="text-[20px] font-bold text-[#0c1024]">{STEPS[activeStep].title}</h3>
@@ -691,8 +700,8 @@ const VoiceConfigurator = () => {
 
                     {/* RENDER STEP CONTENT */}
                     {activeStep === 0 && (
-                      <div className="pt-8">
-                        <div className="px-4">
+                      <div className="pt-4 md:pt-8">
+                        <div className="px-2 md:px-4">
                           <input 
                             type="range" 
                             min="5" 
@@ -702,40 +711,46 @@ const VoiceConfigurator = () => {
                             onChange={(e) => setUsers(parseInt(e.target.value))}
                             className="w-full h-3 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-[#5D00D6]"
                           />
-                          <div className="flex justify-between mt-8 text-[14px] font-bold text-slate-400 uppercase tracking-widest items-center">
-                            <span className="bg-slate-50 px-4 py-2 rounded-xl">5 Staff</span>
-                            <div className="text-center">
-                               <span className="block text-[42px] font-bold text-[#5D00D6] leading-none mb-1">{users}</span>
+                          <div className="flex flex-col md:flex-row justify-between mt-8 text-[12px] md:text-[14px] font-bold text-slate-400 uppercase tracking-widest items-center gap-6 md:gap-0">
+                            <span className="bg-slate-50 px-4 py-2 rounded-xl order-2 md:order-1">Min: 5 Staff</span>
+                            <div className="text-center order-1 md:order-2">
+                               <span className="block text-[42px] md:text-[56px] font-bold text-[#5D00D6] leading-none mb-1">{users}</span>
                                <span className="text-[11px] text-slate-400 tracking-[0.2em]">STAFF MEMBERS</span>
                             </div>
-                            <span className="bg-slate-50 px-4 py-2 rounded-xl">100+ Staff</span>
+                            <span className="bg-slate-50 px-4 py-2 rounded-xl order-3">Max: 100+ Staff</span>
                           </div>
                         </div>
                       </div>
                     )}
 
                     {activeStep === 1 && (
-                      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {HARDWARE.map((hw) => (
                           <button
                             key={hw.id}
                             onClick={() => toggleHardware(hw.id)}
-                            className={`flex flex-col items-center gap-3 p-4 rounded-[32px] border transition-all relative overflow-hidden group ${
+                            className={`flex flex-col items-center gap-4 p-5 md:p-6 rounded-[24px] md:rounded-[32px] border-2 transition-all relative overflow-hidden group ${
                               hardware.includes(hw.id) 
-                                ? 'border-[#5D00D6] bg-purple-50/30' 
+                                ? 'border-[#5D00D6] bg-white shadow-xl shadow-purple-900/10 scale-[1.02]' 
                                 : 'border-gray-100 hover:border-[#5D00D6]/30 bg-white'
                             }`}
                           >
-                            <div className="h-16 w-full flex items-center justify-center">
-                              <img src={hw.image} alt={hw.name} className={`w-auto h-full object-contain transition-transform ${hardware.includes(hw.id) ? 'scale-110' : 'group-hover:scale-105'}`} />
+                            <div className="h-20 md:h-24 w-full flex items-center justify-center mb-2">
+                              {hw.id === 'ai' ? (
+                                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-[#5D00D6]/5 flex items-center justify-center text-[#5D00D6]">
+                                  <Zap size={24} className="md:w-8 md:h-8" />
+                                </div>
+                              ) : (
+                                <img src={hw.image} alt={hw.name} className={`w-auto h-full object-contain transition-transform duration-500 ${hardware.includes(hw.id) ? 'scale-110' : 'group-hover:scale-105'}`} />
+                              )}
                             </div>
                             <div className="text-center">
-                               <p className="text-[13px] font-bold text-[#0c1024] leading-tight mb-1">{hw.name}</p>
-                               <p className="text-[9px] text-slate-400 font-medium uppercase tracking-wider">{hw.desc}</p>
+                               <p className="text-[14px] md:text-[15px] font-bold text-[#0c1024] leading-tight mb-1">{hw.name}</p>
+                               <p className="text-[9px] md:text-[10px] text-[#5D00D6]/60 font-black uppercase tracking-[0.15em]">{hw.desc}</p>
                             </div>
                             {hardware.includes(hw.id) && (
-                              <div className="absolute top-3 right-3 w-6 h-6 bg-[#5D00D6] rounded-full flex items-center justify-center">
-                                <Check size={14} className="text-white" strokeWidth={3} />
+                              <div className="absolute top-3 right-3 md:top-4 md:right-4 w-5 h-5 md:w-6 md:h-6 bg-[#5D00D6] rounded-full flex items-center justify-center shadow-md">
+                                <Check size={10} className="text-white md:w-3 md:h-3" strokeWidth={4} />
                               </div>
                             )}
                           </button>
@@ -744,29 +759,29 @@ const VoiceConfigurator = () => {
                     )}
 
                     {activeStep === 2 && (
-                      <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {ACCESSORIES.map((acc) => {
                           const Icon = acc.icon;
                           return (
                             <button
                               key={acc.id}
                               onClick={() => toggleAccessory(acc.id)}
-                              className={`flex items-center gap-4 p-3.5 rounded-full border transition-all relative overflow-hidden group ${
+                              className={`flex items-center gap-3 md:gap-4 p-3 md:p-3.5 rounded-full border transition-all relative overflow-hidden group ${
                                 accessories.includes(acc.id) 
                                   ? 'border-[#5D00D6] bg-purple-50/30' 
                                   : 'border-gray-100 hover:border-[#5D00D6]/30 bg-white'
                               }`}
                             >
-                              <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${accessories.includes(acc.id) ? 'bg-[#5D00D6] text-white' : 'bg-slate-50 text-slate-400 border border-slate-100'}`}>
-                                <Icon size={16} />
+                              <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center shrink-0 ${accessories.includes(acc.id) ? 'bg-[#5D00D6] text-white' : 'bg-slate-50 text-slate-400 border border-slate-100'}`}>
+                                <Icon size={14} className="md:w-4 md:h-4" />
                               </div>
-                              <div className="text-left flex-1">
-                                 <p className="text-[14px] font-bold text-[#0c1024] leading-tight">{acc.name}</p>
-                                 <p className="text-[10px] text-slate-400 font-medium mt-0.5 uppercase tracking-wide">{acc.desc}</p>
+                              <div className="text-left flex-1 min-w-0">
+                                 <p className="text-[13px] md:text-[14px] font-bold text-[#0c1024] leading-tight truncate">{acc.name}</p>
+                                 <p className="text-[9px] md:text-[10px] text-slate-400 font-medium mt-0.5 uppercase tracking-wide truncate">{acc.desc}</p>
                               </div>
                               {accessories.includes(acc.id) && (
-                                <div className="w-5 h-5 bg-[#5D00D6] rounded-full flex items-center justify-center shrink-0">
-                                  <Check size={12} className="text-white" strokeWidth={3} />
+                                <div className="w-4 h-4 md:w-5 md:h-5 bg-[#5D00D6] rounded-full flex items-center justify-center shrink-0">
+                                  <Check size={10} className="text-white" strokeWidth={3} />
                                 </div>
                               )}
                             </button>
@@ -776,25 +791,25 @@ const VoiceConfigurator = () => {
                     )}
 
                     {activeStep === 3 && (
-                      <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {FEATURES.map((feat) => {
                           const Icon = feat.icon;
                           return (
                             <button
                               key={feat.id}
                               onClick={() => toggleFeature(feat.id)}
-                              className={`flex items-center gap-4 p-3.5 rounded-full border transition-all ${
+                              className={`flex items-center gap-3 md:gap-4 p-3 md:p-3.5 rounded-full border transition-all ${
                                 features.includes(feat.id) 
                                   ? 'border-[#5D00D6] bg-purple-50/30' 
                                   : 'border-gray-100 hover:border-[#5D00D6]/30 bg-white'
                               }`}
                             >
-                              <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${features.includes(feat.id) ? 'bg-[#5D00D6] text-white' : 'bg-slate-50 text-slate-400 border border-slate-100'}`}>
-                                <Icon size={16} />
+                              <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center shrink-0 ${features.includes(feat.id) ? 'bg-[#5D00D6] text-white' : 'bg-slate-50 text-slate-400 border border-slate-100'}`}>
+                                <Icon size={14} className="md:w-4 md:h-4" />
                               </div>
-                              <div className="text-left">
-                                 <span className="block text-[14px] font-bold text-[#0c1024] leading-tight">{feat.name}</span>
-                                 <span className="block text-[10px] text-slate-400 mt-0.5 italic uppercase tracking-wider">Managed Logic</span>
+                              <div className="text-left min-w-0">
+                                 <span className="block text-[13px] md:text-[14px] font-bold text-[#0c1024] leading-tight truncate">{feat.name}</span>
+                                 <span className="block text-[9px] md:text-[10px] text-slate-400 mt-0.5 italic uppercase tracking-wider truncate">Managed Logic</span>
                               </div>
                             </button>
                           );
@@ -805,31 +820,33 @@ const VoiceConfigurator = () => {
                 </AnimatePresence>
 
                 {/* NAVIGATION BUTTONS */}
-                <div className="mt-12 pt-8 border-t border-slate-50 flex items-center justify-between">
-                  <button 
-                    onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
-                    disabled={activeStep === 0}
-                    className={`flex items-center gap-2 text-[14px] font-bold uppercase tracking-widest transition-all ${activeStep === 0 ? 'opacity-0 pointer-events-none' : 'text-slate-400 hover:text-[#5D00D6]'}`}
-                  >
-                    <ArrowRight className="rotate-180" size={16} /> Back
-                  </button>
+                <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-slate-50 flex flex-col sm:flex-row items-center justify-between gap-6">
+                  <div className="flex items-center justify-between w-full sm:w-auto gap-8">
+                    <button 
+                      onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
+                      disabled={activeStep === 0}
+                      className={`flex items-center gap-2 text-[13px] md:text-[14px] font-bold uppercase tracking-widest transition-all ${activeStep === 0 ? 'opacity-0 pointer-events-none' : 'text-slate-400 hover:text-[#5D00D6]'}`}
+                    >
+                      <ArrowRight className="rotate-180" size={14} /> Back
+                    </button>
 
-                  <div className="flex gap-2">
-                    {STEPS.map((_, i) => (
-                      <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all ${i === activeStep ? 'bg-[#5D00D6] w-6' : 'bg-slate-200'}`} />
-                    ))}
+                    <div className="flex gap-2">
+                      {STEPS.map((_, i) => (
+                        <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all ${i === activeStep ? 'bg-[#5D00D6] w-5 md:w-6' : 'bg-slate-200'}`} />
+                      ))}
+                    </div>
                   </div>
 
                   {activeStep < 3 ? (
                     <button 
                       onClick={() => setActiveStep(Math.min(3, activeStep + 1))}
-                      className="bg-[#5D00D6] text-white px-8 py-3 rounded-xl font-bold text-[14px] uppercase tracking-widest hover:bg-[#4c00b0] transition-all flex items-center gap-2 shadow-lg shadow-purple-900/10"
+                      className="w-full sm:w-auto bg-[#5D00D6] text-white px-8 py-3.5 rounded-xl font-bold text-[13px] md:text-[14px] uppercase tracking-widest hover:bg-[#4c00b0] transition-all flex items-center justify-center gap-2 shadow-lg shadow-purple-900/10"
                     >
                       Next Step <ArrowRight size={16} />
                     </button>
                   ) : (
-                    <div className="text-[13px] font-bold text-emerald-600 flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-lg">
-                      <CheckCircle size={16} /> Final Configuration
+                    <div className="w-full sm:w-auto text-[13px] font-bold text-emerald-600 flex items-center justify-center gap-2 bg-emerald-50 px-6 py-3 rounded-xl">
+                      <CheckCircle size={16} /> Ready to Finalise
                     </div>
                   )}
                 </div>
@@ -840,10 +857,10 @@ const VoiceConfigurator = () => {
           {/* ── SUMMARY STICKY ── */}
           <div className="lg:col-span-4 lg:sticky lg:top-28">
             <FadeIn delay={0.4} direction="right">
-              <div className="bg-[#0c1024] rounded-[32px] p-10 text-white shadow-2xl relative overflow-hidden">
+              <div className="bg-[#0c1024] rounded-[24px] md:rounded-[32px] p-6 md:p-10 text-white shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#5D00D6]/20 blur-[80px] rounded-full pointer-events-none" />
                 
-                <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-8">System Summary</h4>
+                <h4 className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-[#5D00D6] mb-6 md:mb-8">System Summary</h4>
                 
                 <div className="space-y-6 mb-12 relative z-10">
                   <div className="flex justify-between items-end border-b border-white/5 pb-4">
@@ -862,17 +879,17 @@ const VoiceConfigurator = () => {
                     <p className="text-white font-medium">${(users * (hardwarePrice + accessoryPrice)).toLocaleString()}/mo</p>
                   </div>
                   
-                  <div className="flex justify-between items-center text-[#5D00D6] pt-2">
-                    <p className="text-[14px] font-bold uppercase tracking-widest">Est. Monthly Total</p>
-                    <p className="text-[32px] font-bold text-white tracking-tighter">${totalPerMonth.toLocaleString()}</p>
+                  <div className="flex justify-between items-center text-[#5D00D6] pt-2 mb-8">
+                    <p className="text-[12px] md:text-[14px] font-bold uppercase tracking-widest">Est. Monthly Total</p>
+                    <p className="text-[28px] md:text-[32px] font-bold text-white tracking-tighter">${totalPerMonth.toLocaleString()}</p>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-3 relative z-10">
-                  <C9Button className="w-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full h-14 text-[15px] font-bold flex items-center justify-center gap-2" asChild>
+                  <C9Button className="w-full bg-[#5D00D6] hover:bg-[#4c00b0] text-white rounded-full h-14 text-[14px] md:text-[15px] font-bold flex items-center justify-center gap-2" asChild>
                     <Link href="#consultation-section">Get Formal Quote</Link>
                   </C9Button>
-                  <C9Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10 rounded-full h-12 text-[13px] font-bold flex items-center justify-center gap-2" asChild>
+                  <C9Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10 rounded-full h-12 text-[12px] md:text-[13px] font-bold flex items-center justify-center gap-2" asChild>
                     <Link href="#consultation-section">Request Price Match</Link>
                   </C9Button>
                 </div>
@@ -882,20 +899,6 @@ const VoiceConfigurator = () => {
           </div>
         </div>
 
-        <FadeIn delay={0.5} className="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-6 px-8 py-6 bg-white rounded-full border border-slate-100 shadow-sm max-w-5xl mx-auto">
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <p className="text-[13px] text-slate-600 font-bold tracking-wide uppercase">Zero-downtime porting</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <p className="text-[13px] text-slate-600 font-bold tracking-wide uppercase">100% Australian support</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <p className="text-[13px] text-slate-600 font-bold tracking-wide uppercase">Custom call flow design</p>
-            </div>
-        </FadeIn>
       </div>
     </section>
   );
@@ -905,13 +908,13 @@ const VoiceConfigurator = () => {
    SECTION: MIGRATION
    ───────────────────────────────────────────────────────── */
 const Migration = () => (
-  <section className="py-20 lg:py-32 bg-[#0c1024] text-white relative overflow-hidden">
+  <section className="py-12 lg:py-20 bg-[#0c1024] text-white relative overflow-hidden">
      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#5D00D6 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
      <div className={C}>
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
            <FadeIn direction="left">
-              <span className="text-[#5D00D6] font-bold uppercase tracking-[0.2em] text-[11px] mb-4 block">BROWNFIELD TRANSITION</span>
-              <h2 className="text-[32px] lg:text-[48px] font-bold mb-8 leading-tight">Moving From an Old Phone System?</h2>
+              <span className="c9-eyebrow mb-4 block">BROWNFIELD TRANSITION</span>
+              <h2 className="c9-section-heading mb-8">Moving From an Old Phone System?</h2>
               <p className="text-white/60 text-lg leading-relaxed mb-10">
                 Migration is where most phone system upgrades fail. C9 uses a structured transition framework to ensure your business stays reachable throughout the entire cutover process. No dropped numbers. No unexpected downtime.
               </p>
@@ -937,9 +940,9 @@ const Migration = () => (
            </FadeIn>
 
            <FadeIn direction="right" delay={0.2} className="relative">
-              <div className="bg-white/5 border border-white/10 p-10 lg:p-16 rounded-[48px] backdrop-blur-sm shadow-2xl relative overflow-hidden">
+              <div className="bg-white/5 border border-white/10 p-6 md:p-10 lg:p-16 rounded-[32px] md:rounded-[48px] backdrop-blur-sm shadow-2xl relative overflow-hidden">
                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#5D00D6]/30 blur-[60px] rounded-full" />
-                 <h3 className="text-2xl font-bold mb-6">Review My Current Setup</h3>
+                 <h3 className="c9-card-title !text-white mb-6">Review My Current Setup</h3>
                  <p className="text-white/60 mb-10 leading-relaxed">
                    Already have pricing from another provider, or looking to replace a legacy PBX? Send us your current bill and we’ll show where C9 can simplify your system.
                  </p>
@@ -962,7 +965,7 @@ const AdvertisingBanner = () => (
       <div className={C}>
          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
             <div className="max-w-2xl text-center lg:text-left">
-               <h2 className="text-[28px] lg:text-[36px] font-bold text-white leading-tight mb-4">
+               <h2 className="c9-section-heading !text-white mb-4">
                   Switch Your Business Phone System Without the Usual Disruption.
                </h2>
                <p className="text-white/80 text-lg">
@@ -983,7 +986,7 @@ const AdvertisingBanner = () => (
    SECTION: YEALINK PARTNER
    ───────────────────────────────────────────────────────── */
 const YealinkPartner = () => (
-  <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+  <section className="py-12 lg:py-20 bg-white relative overflow-hidden">
     <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-full bg-slate-50 -z-10 rounded-l-[80px]" />
     <div className={C}>
       <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -1019,25 +1022,25 @@ const YealinkPartner = () => (
         </FadeIn>
 
         <FadeIn direction="right" delay={0.2} className="relative">
-           <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-6 pt-12">
-                 <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-500">
-                    <img src="/images/yealink-t54w.png" alt="Desk Phone" className="w-full h-auto mb-6" />
-                    <p className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest">Desk Terminals</p>
+           <div className="grid grid-cols-2 gap-3 md:gap-6">
+              <div className="space-y-3 md:space-y-6 pt-8 md:pt-12">
+                 <div className="bg-white p-4 md:p-8 rounded-[20px] md:rounded-[32px] border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-500">
+                    <img src="/images/yealink-t54w.png" alt="Desk Phone" className="w-full h-auto mb-3 md:mb-6" />
+                    <p className="text-[9px] md:text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest">Desk Terminals</p>
                  </div>
-                 <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-500">
-                    <img src="/images/yealink-w73p.png" alt="Cordless Phone" className="w-full h-auto mb-6" />
-                    <p className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest">DECT Cordless</p>
+                 <div className="bg-white p-4 md:p-8 rounded-[20px] md:rounded-[32px] border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-500">
+                    <img src="/images/yealink-w73p.png" alt="Cordless Phone" className="w-full h-auto mb-3 md:mb-6" />
+                    <p className="text-[9px] md:text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest">DECT Cordless</p>
                  </div>
               </div>
-              <div className="space-y-6">
-                 {/* <div className="bg-[#0c1024] p-8 rounded-[32px] shadow-2xl hover:-translate-y-2 transition-transform duration-500">
-                    <img src="/images/yealink-phone-4.jpg" alt="Conference Room" className="w-full h-auto rounded-2xl mb-6 opacity-90" />
-                    <p className="text-[11px] font-bold text-white/50 uppercase tracking-widest">Meeting Rooms</p>
-                 </div> */}
-                 <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-500">
-                    <img src="/images/yealink-bh71.png" alt="Headset" className="w-full h-auto mb-6" />
-                    <p className="text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest">Wireless Headsets</p>
+              <div className="space-y-3 md:space-y-6">
+                 <div className="bg-[#0c1024] p-4 md:p-8 rounded-[20px] md:rounded-[32px] shadow-2xl hover:-translate-y-2 transition-transform duration-500">
+                    <img src="/conf phone.png" alt="Conference Room" className="w-full h-auto rounded-xl md:rounded-2xl mb-3 md:mb-6 opacity-90" />
+                    <p className="text-[9px] md:text-[11px] font-bold text-white/50 uppercase tracking-widest">Meeting Rooms</p>
+                 </div>
+                 <div className="bg-white p-4 md:p-8 rounded-[20px] md:rounded-[32px] border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-500">
+                    <img src="/images/yealink-bh71.png" alt="Headset" className="w-full h-auto mb-3 md:mb-6" />
+                    <p className="text-[9px] md:text-[11px] font-bold text-[#5D00D6] uppercase tracking-widest">Wireless Headsets</p>
                  </div>
               </div>
            </div>
@@ -1051,52 +1054,58 @@ const YealinkPartner = () => (
    SECTION: DOWNLOADABLE GUIDE
    ───────────────────────────────────────────────────────── */
 const DownloadableGuide = () => (
-   <section className="py-20 bg-slate-50 border-t border-slate-100">
+   <section className="py-16 lg:py-24 bg-white border-t border-slate-100 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-slate-50 rounded-full blur-[120px] -mr-32 -mt-32 pointer-events-none" />
       <div className={C}>
-         <div className="bg-white rounded-[48px] p-10 lg:p-16 border border-slate-200 shadow-xl flex flex-col lg:flex-row items-center gap-12 lg:gap-24 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-50 rounded-full blur-[100px] -mr-32 -mt-32 pointer-events-none" />
-            
-            <FadeIn direction="left" className="flex-1 relative z-10">
-               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 mb-6 text-slate-600 font-bold text-[12px] uppercase tracking-widest">
+         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-24 relative z-10 text-center lg:text-left">
+            <FadeIn direction="up" className="flex-1">
+               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 mb-6 c9-eyebrow">
                   <Download size={14} /> Free Resource
                </div>
-               <h2 className="text-[32px] lg:text-[40px] font-bold text-slate-900 leading-tight mb-6">
+               <h2 className="c9-section-heading mb-6 md:mb-8">
                   Business Phone System Planning Guide
                </h2>
-               <p className="text-slate-600 text-lg leading-relaxed mb-8">
+               <p className="text-slate-600 text-base md:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
                   Download our practical guide to modernising your business communications. Learn how to map out multi-site setups, prepare for migration, and select the right devices for your team.
                </p>
-               <ul className="space-y-3 mb-10">
-                  {["Migration checklists & timelines", "Teams calling vs PBX considerations", "Device selection framework"].map((item, i) => (
-                     <li key={i} className="flex items-center gap-3 text-slate-700 font-medium text-[15px]">
-                        <CheckCircle size={16} className="text-[#5D00D6]" /> {item}
-                     </li>
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-10 md:mb-12 text-left">
+                  {["Migration checklists & timelines", "Teams calling vs PBX considerations", "Device selection framework", "Cost comparison models"].map((item, i) => (
+                     <div key={i} className="flex items-center gap-3 text-slate-700 font-bold text-[14px] md:text-[15px] bg-slate-50/50 p-3 rounded-xl border border-slate-100/50">
+                        <div className="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                           <Check size={12} strokeWidth={3} />
+                        </div>
+                        {item}
+                     </div>
                   ))}
-               </ul>
-               <C9Button className="bg-[#0c1024] text-white hover:bg-slate-800 rounded-full px-8 h-14 font-bold shadow-lg">
+               </div>
+               <C9Button className="w-full sm:w-auto bg-[#5D00D6] text-white hover:bg-[#4c00b0] rounded-full px-10 h-14 md:h-16 text-[14px] md:text-[15px] font-bold shadow-xl shadow-purple-900/20">
                   Download the Guide
                </C9Button>
             </FadeIn>
 
-            <FadeIn direction="right" delay={0.2} className="w-full max-w-md mx-auto lg:mx-0 relative z-10">
-               <div className="relative aspect-[3/4] bg-slate-100 rounded-[24px] shadow-2xl border border-slate-200 overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-500 flex flex-col">
-                  <div className="bg-[#5D00D6] p-8 text-white flex-1 flex flex-col justify-between">
+            <FadeIn direction="up" delay={0.2} className="w-full max-w-[240px] sm:max-w-sm md:max-w-md mx-auto lg:mx-0 relative">
+               <div className="relative aspect-[3/4] bg-slate-100 rounded-[24px] md:rounded-[32px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] border border-slate-200 overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-700 flex flex-col">
+                  <div className="bg-[#5D00D6] p-6 md:p-10 text-white flex-1 flex flex-col justify-between text-left">
                      <div>
-                        <div className="font-bold text-[14px] opacity-80 mb-2">C9 Communications</div>
-                        <div className="text-[28px] font-bold leading-tight">The Modern Phone System Playbook</div>
+                        <div className="font-bold text-[10px] md:text-[14px] opacity-80 mb-2 md:mb-3 tracking-widest uppercase">C9 Communications</div>
+                        <div className="c9-card-title !text-white leading-tight">The Modern Phone System Playbook</div>
                      </div>
-                     <div className="text-[12px] uppercase tracking-widest opacity-60">2026 Edition</div>
+                     <div className="text-[10px] md:text-[12px] uppercase tracking-[0.2em] opacity-60 font-bold">2026 Edition</div>
                   </div>
-                  <div className="h-1/3 bg-white p-6 relative">
-                     <div className="absolute -top-12 right-6 w-24 h-24 bg-white rounded-full border-4 border-slate-100 shadow-xl flex items-center justify-center p-4">
+                  <div className="h-1/3 bg-white p-5 md:p-8 relative">
+                     <div className="absolute -top-10 md:-top-16 right-5 md:right-8 w-20 md:w-32 h-20 md:h-32 bg-white rounded-full border-2 md:border-4 border-slate-50 shadow-2xl flex items-center justify-center p-3 md:p-6">
                         <img src="/images/yealink-t54w.png" alt="Phone" className="w-full" />
                      </div>
-                     <div className="space-y-2 mt-4">
-                        <div className="w-1/2 h-2 bg-slate-100 rounded-full" />
-                        <div className="w-3/4 h-2 bg-slate-100 rounded-full" />
-                        <div className="w-2/3 h-2 bg-slate-100 rounded-full" />
+                     <div className="space-y-2 md:space-y-3 mt-4 md:mt-6">
+                        <div className="w-1/2 h-2 md:h-2.5 bg-slate-100 rounded-full" />
+                        <div className="w-3/4 h-2 md:h-2.5 bg-slate-100 rounded-full" />
+                        <div className="w-2/3 h-2 md:h-2.5 bg-slate-100 rounded-full" />
                      </div>
                   </div>
+               </div>
+               {/* Decorative floating elements */}
+               <div className="absolute -bottom-4 md:-bottom-6 -left-4 md:-left-6 w-16 md:w-24 h-16 md:h-24 bg-white rounded-xl md:rounded-2xl shadow-xl border border-slate-100 flex items-center justify-center p-3 md:p-4 transform -rotate-12 hidden sm:flex">
+                  <CheckCircle size={32} className="text-emerald-500 w-8 md:w-10 h-8 md:h-10" />
                </div>
             </FadeIn>
          </div>
@@ -1125,7 +1134,7 @@ export default function PhoneSystemPage() {
       <DownloadableGuide />
 
       {/* SUPPORT SECTION */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-12 lg:py-20 bg-white">
          <div className={C}>
             <div className="max-w-4xl mx-auto text-center">
                <FadeIn>
@@ -1135,7 +1144,7 @@ export default function PhoneSystemPage() {
                     We don't just supply the hardware. We manage the logic, the routing, and the performance every single day. One accountable partner.
                   </p>
                   
-                  <div className="grid md:grid-cols-3 gap-8 text-left">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 text-left">
                      {[
                        { t: "AU Engineering", d: "Speak to real experts, not scripts." },
                        { t: "Zero-Downtime Guarantee", d: "Reliable failover path configuration." },

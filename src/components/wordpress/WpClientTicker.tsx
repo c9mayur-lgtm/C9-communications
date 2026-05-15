@@ -14,7 +14,7 @@ export const WpClientTicker = ({
   className = "" 
 }: WpClientTickerProps) => {
   return (
-    <section className={`bg-transparent py-10 md:py-16 overflow-hidden relative ${className}`}>
+    <section className={`bg-transparent py-6 md:py-10 overflow-hidden relative ${className}`}>
       <style>{`
         @keyframes ticker-left {
           0%   { transform: translateX(0); }
@@ -67,7 +67,7 @@ export const WpClientTicker = ({
       `}</style>
 
       {/* Ticker Title */}
-      <div className="container mx-auto px-6 max-w-[1240px] mb-12 text-center">
+      <div className="container mx-auto px-6 max-w-[1240px] mb-8 text-center">
         <span className="c9-eyebrow !text-[#6B7280]">Trust Infrastructure & Enterprise Partners</span>
       </div>
 
