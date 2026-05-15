@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -111,8 +111,8 @@ const Hero = ({ openModal }: { openModal: (name: string, type: any) => void }) =
           </FadeIn>
 
           <FadeIn delay={0.08}>
-            <h1 className="c9-hero-title mb-8 text-slate-900">
-              Business Phones and Internet, Managed Properly.
+            <h1 className="c9-hero-title mb-8 text-slate-900 leading-[1.1]">
+              We Help Australian Businesses Set Up and Manage <span className="text-[#5D00D6]">Business Phones, Internet & Networks</span> Properly
             </h1>
           </FadeIn>
 
@@ -1035,31 +1035,57 @@ const SectionOperationalProof = () => (
 /* ─────────────────────────────────────────────────────────
    SECTION — STATS BAR
    ───────────────────────────────────────────────────────── */
-const SectionStats = () => (
-  <section className="py-10 bg-white border-b border-slate-100">
-    <div className={C}>
-      <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-slate-200">
-        {[
-          { value: '1,200+', label: 'Active Lines Managed' },
-          { value: '3,500+', label: 'Voice Calls Daily' },
-          { value: '500+',   label: 'Business Clients' },
-          { value: '10Gbps', label: 'Max Fibre Speed' },
-        ].map((stat, idx) => (
-          <FadeIn key={idx} delay={idx * 0.08} className="flex-1 py-8 sm:py-0 px-4 sm:px-8 first:pt-0 sm:first:pt-0 sm:first:pl-0 last:pb-0 sm:last:pb-0 sm:last:pr-0 text-center sm:text-left">
-            <div className="space-y-2 sm:space-y-3">
-              <div className="text-[40px] sm:text-[clamp(32px,4vw,52px)] font-normal text-[#0c1024] leading-none tracking-tight font-proxima">
-                {stat.value}
+const AnimatedNumber = ({ value, duration = 2 }: { value: number, duration?: number }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number | null = null;
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+      setCount(Math.floor(progress * value));
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    requestAnimationFrame(animate);
+  }, [value, duration]);
+
+  return <span>{count.toLocaleString()}</span>;
+};
+
+const SectionStats = () => {
+  const [isInView, setIsInView] = useState(false);
+
+  return (
+    <section className="py-10 bg-white border-b border-slate-100 overflow-hidden">
+      <div className={C}>
+        <motion.div 
+          onViewportEnter={() => setIsInView(true)}
+          className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-slate-200"
+        >
+          {[
+            { value: 1200, suffix: '+', label: 'Active Lines Managed' },
+            { value: 20000, suffix: 'K+', label: 'Voice Calls Daily', isK: true },
+            { value: 500,  suffix: '+', label: 'Sites Delivered Across Aus & NZ' },
+            { value: 10,   suffix: 'Gbps', label: 'Max Fibre Speed' },
+          ].map((stat, idx) => (
+            <FadeIn key={idx} delay={idx * 0.08} className="flex-1 py-8 sm:py-0 px-4 sm:px-8 first:pt-0 sm:first:pt-0 sm:first:pl-0 last:pb-0 sm:last:pb-0 sm:last:pr-0 text-center sm:text-left">
+              <div className="space-y-2 sm:space-y-3">
+                <div className="text-[40px] sm:text-[clamp(32px,4vw,52px)] font-normal text-[#0c1024] leading-none tracking-tight font-proxima">
+                  {isInView ? <AnimatedNumber value={stat.isK ? stat.value / 1000 : stat.value} /> : 0}{stat.suffix}
+                </div>
+                <div className="text-[11px] sm:text-[10px] font-bold uppercase tracking-[0.25em] text-[#5D00D6]">
+                  {stat.label}
+                </div>
               </div>
-              <div className="text-[11px] sm:text-[10px] font-bold uppercase tracking-[0.25em] text-[#5D00D6]">
-                {stat.label}
-              </div>
-            </div>
-          </FadeIn>
-        ))}
+            </FadeIn>
+          ))}
+        </motion.div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 /* ─────────────────────────────────────────────────────────
    SECTION — SWITCH STRIP
